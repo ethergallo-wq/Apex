@@ -177,20 +177,24 @@ function AuthScreen({ onAuth }) {
   const [err,setErr]=useState('');
 
   async function submit() {
-    setLoading(true); setErr('');
-    try {
-      if (mode==='login') {
-        const {data,error}=await supabase.auth.signInWithPassword({email,password:pwd});
-        if(error)throw error;
-        onAuth(data.user);
-      } else {
-        const {data,error}=await supabase.auth.signUp({email,password:pwd});
-        if(error)throw error;
-        onAuth(data.user);
-      }
-    } catch(e){ setErr(e.message||'Errore'); }
-    setLoading(false);
-  }
+  setLoading(true); setErr('');
+  try {
+    if (mode==='login') {
+      const {data,error}=await supabase.auth.signInWithPassword({email,password:pwd});
+      if(error)throw error;
+      onAuth(data.user);
+      const userAnimals = await loadUserAnimals(data.user.id);
+      setUserAnimals(userAnimals);
+    } else {
+      const {data,error}=await supabase.auth.signUp({email,password:pwd});
+      if(error)throw error;
+      onAuth(data.user);
+      const userAnimals = await loadUserAnimals(data.user.id);
+      setUserAnimals(userAnimals);
+    }
+  } catch(e){ setErr(e.message||'Errore'); }
+  setLoading(false);
+}
 
   return (
     <div style={{height:'100vh',background:'#1C1C1E',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:24}}>
