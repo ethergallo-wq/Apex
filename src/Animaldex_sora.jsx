@@ -218,7 +218,7 @@ function AuthScreen({ onAuth }) {
 
 // ── Badge Toast ───────────────────────────────────────────────
 function BadgeToast({ badges, onDismiss }) {
-  useEffect(()=>{ if(!badges.length)return; const t=setTimeout(onDismiss,4000); return()=>clearTimeout(t); },[badges]);
+  useEffect(()=>{ if(!badges.length)return; const t=setTimeout(onDismiss,4000); return()=>clearTimeout(t); },[badges, onDismiss]);
   if(!badges.length)return null;
   return (
     <div style={{position:'fixed',bottom:100,left:'50%',transform:'translateX(-50%)',zIndex:200,display:'flex',flexDirection:'column',gap:8,pointerEvents:'none'}}>
