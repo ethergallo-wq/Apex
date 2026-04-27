@@ -853,7 +853,7 @@ function Detail({ a, onBack }) {
   const [showInfoModal,setShowInfoModal]=useState(false);
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
-  
+  const ra=RARITY[a.rarity]||RARITY['Comune'];
   const scale=SCALE[statMode];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
