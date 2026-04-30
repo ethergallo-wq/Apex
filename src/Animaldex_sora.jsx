@@ -217,6 +217,18 @@ const RARITY_CSS = `
   text-shadow: 0 0 10px rgba(220,180,255,0.7), 0 1px 3px rgba(0,0,0,0.8) !important;
 }
 
+/* ── Tab slide transitions ── */
+@keyframes tabFromRight {
+  from { transform: translateX(56px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes tabFromLeft {
+  from { transform: translateX(-56px); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+.tab-from-right { animation: tabFromRight 0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
+.tab-from-left  { animation: tabFromLeft  0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
+
 /* pallino rarità nella griglia */
 .rarity-dot-comune     { background: linear-gradient(135deg,#C47A35,#F0B060); box-shadow: 0 0 6px rgba(196,122,53,0.7); }
 .rarity-dot-non-comune { background: linear-gradient(135deg,#888,#EEE); box-shadow: 0 0 6px rgba(180,180,180,0.7); }
@@ -400,7 +412,7 @@ function GaugeSVG({ wt_str }) {
   const n2 = polarToXY(angle + 4, 8);
 
   return (
-    <svg viewBox="0 0 120 78" width="100%" height="52" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 120 78" width="100%" height="42" xmlns="http://www.w3.org/2000/svg">
       <g dangerouslySetInnerHTML={{ __html: arcs }} />
       <polygon points={`${n1.x},${n1.y} ${nx},${ny} ${n2.x},${n2.y}`} fill={col} />
       <circle cx={cx} cy={cy} r="4" fill={col} />
@@ -982,13 +994,21 @@ function Grid({ onSelect }) {
 }
 
 // ── Detail ────────────────────────────────────────────────────────────
+const TAB_ORDER = ['abilita','statistiche','tassonomia'];
 function Detail({ a, onBack }) {
   const [statMode,setStatMode]=useState('statistiche');
+  const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(a.status || 'non visto');
   const [showStatusMenu,setShowStatusMenu]=useState(false);
   const [showInfoModal,setShowInfoModal]=useState(false);
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
+
+  const handleTab = (m) => {
+    if (m===statMode) return;
+    setSlideDir(TAB_ORDER.indexOf(m) > TAB_ORDER.indexOf(statMode) ? 1 : -1);
+    setStatMode(m);
+  };
   
   const scale = 1;
   return (
@@ -1036,14 +1056,14 @@ function Detail({ a, onBack }) {
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
           {/* PESO: tachimetro */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:0 }}>
-            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center', marginBottom:0 }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
-            <div style={{ width:'100%', maxWidth:'110px' }}><GaugeSVG wt_str={a.wt} /></div>
-            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:0 }}>{a.wt}</div>
+          <div style={{ background:'#111113', borderRadius:12, padding:'6px 6px 6px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:0 }}>
+            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center', lineHeight:1 }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
+            <div style={{ width:'100%', maxWidth:'110px', marginTop:1, marginBottom:-2 }}><GaugeSVG wt_str={a.wt} /></div>
+            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
           </div>
 
           {/* DIMENSIONI */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 7px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', minHeight:70 }}>
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 7px 8px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', minHeight:70 }}>
             <div style={{ fontSize:12, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.ln}</div>
           </div>
 
@@ -1058,84 +1078,86 @@ function Detail({ a, onBack }) {
           {/* Tab bar */}
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'12px 12px 0 0', padding:4, gap:4 }}>
             {['abilita','statistiche','tassonomia'].map(m=>(
-              <button key={m} onClick={()=>setStatMode(m)} style={{ padding:'8px 0', borderRadius:8, background:statMode===m?c.mid:'transparent', color:statMode===m?'white':'rgba(255,255,255,.38)', fontSize:11, fontWeight:700, border:'none', cursor:'pointer', textTransform:'capitalize' }}>
+              <button key={m} onClick={()=>handleTab(m)} style={{ padding:'8px 0', borderRadius:8, background:statMode===m?c.mid:'transparent', color:statMode===m?'white':'rgba(255,255,255,.38)', fontSize:11, fontWeight:700, border:'none', cursor:'pointer', textTransform:'capitalize' }}>
                 {m==='abilita'?'Abilità':m==='statistiche'?'Statistiche':'Tassonomia'}
               </button>
             ))}
           </div>
 
-          {/* Fixed-height content area — sized on tassonomia (7 rows) */}
-          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 14px 14px', padding:'12px 10px', minHeight:280, boxSizing:'border-box' }}>
+          {/* Fixed-height content — height sized to tassonomia (tallest tab) */}
+          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 14px 14px', padding:'12px 10px', height:290, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
+            <div key={statMode} className={slideDir>0?'tab-from-right':'tab-from-left'} style={{ height:'100%' }}>
 
-            {/* Abilità */}
-            {statMode==='abilita'&&(
-              <div>
-                {a.categories?.length>0?(
-                  <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                    {a.categories.map(cat=>{
-                      const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
-                      const curiosity=a.cat_curiosities?.[cat];
-                      return (
-                        <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
-                          <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                            <span style={{ fontSize:20, flexShrink:0 }}>{meta.icon}</span>
-                            <div style={{ flex:1 }}>
-                              <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
-                              {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
+              {/* Abilità */}
+              {statMode==='abilita'&&(
+                <div>
+                  {a.categories?.length>0?(
+                    <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                      {a.categories.map(cat=>{
+                        const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
+                        const curiosity=a.cat_curiosities?.[cat];
+                        return (
+                          <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
+                            <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+                              <span style={{ fontSize:20, flexShrink:0 }}>{meta.icon}</span>
+                              <div style={{ flex:1 }}>
+                                <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
+                                {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
+                              </div>
+                              <div style={{ width:8, height:8, borderRadius:'50%', background:meta.color||c.accent, flexShrink:0 }}/>
                             </div>
-                            <div style={{ width:8, height:8, borderRadius:'50%', background:meta.color||c.accent, flexShrink:0 }}/>
                           </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ):(
-                  <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
-                    <p style={{ color:'rgba(255,255,255,.5)', fontSize:13, margin:0 }}>Nessuna abilità speciale registrata</p>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Statistiche */}
-            {statMode==='statistiche'&&(
-              localStatus !== 'non visto' ? (
-                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px' }}>
-                  <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
-                  <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
-                  {a.lifespan != null && (
-                    <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:11 }}>
-                      <span style={{ color:'rgba(255,255,255,.6)', fontSize:12, fontWeight:600, width:90, flexShrink:0 }}>Vita</span>
-                      <div style={{ flex:1, height:7, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
-                        <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
-                      </div>
-                      <span style={{ color:'white', fontSize:12, fontWeight:700, minWidth:60, textAlign:'right' }}>{a.lifespan} anni</span>
+                        );
+                      })}
+                    </div>
+                  ):(
+                    <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
+                      <p style={{ color:'rgba(255,255,255,.5)', fontSize:13, margin:0 }}>Nessuna abilità speciale registrata</p>
                     </div>
                   )}
-                  <StatRow label='Forza' base={a.stats?.forza ?? 0} scale={scale} color={c.accent} unit='%'/>
-                  <StatRow label='Resistenza' base={a.stats?.resistenza ?? 0} scale={scale} color={c.accent} unit='%'/>
-                  <StatRow label='Intelligenza' base={a.stats?.intelligenza ?? 0} scale={scale} color={c.accent} unit='%'/>
-                  <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit='%'/>
                 </div>
-              ) : (
-                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
-                  <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca selezionando lo status sopra</p>
-                </div>
-              )
-            )}
+              )}
 
-            {/* Tassonomia */}
-            {statMode==='tassonomia'&&(
-              <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'4px 16px 16px' }}>
-                {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
-                  <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'10px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
-                    <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
-                    <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:600, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined }}>{v}</span>
+              {/* Statistiche */}
+              {statMode==='statistiche'&&(
+                localStatus !== 'non visto' ? (
+                  <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px' }}>
+                    <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
+                    <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
+                    {a.lifespan != null && (
+                      <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:11 }}>
+                        <span style={{ color:'rgba(255,255,255,.6)', fontSize:12, fontWeight:600, width:90, flexShrink:0 }}>Vita</span>
+                        <div style={{ flex:1, height:7, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
+                          <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
+                        </div>
+                        <span style={{ color:'white', fontSize:12, fontWeight:700, minWidth:60, textAlign:'right' }}>{a.lifespan} anni</span>
+                      </div>
+                    )}
+                    <StatRow label='Forza' base={a.stats?.forza ?? 0} scale={scale} color={c.accent} unit='%'/>
+                    <StatRow label='Resistenza' base={a.stats?.resistenza ?? 0} scale={scale} color={c.accent} unit='%'/>
+                    <StatRow label='Intelligenza' base={a.stats?.intelligenza ?? 0} scale={scale} color={c.accent} unit='%'/>
+                    <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit='%'/>
                   </div>
-                ))}
-              </div>
-            )}
+                ) : (
+                  <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
+                    <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca selezionando lo status sopra</p>
+                  </div>
+                )
+              )}
 
+              {/* Tassonomia */}
+              {statMode==='tassonomia'&&(
+                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'4px 16px 16px' }}>
+                  {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
+                    <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'10px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
+                      <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
+                      <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:600, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined }}>{v}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+            </div>
           </div>
         </div>
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Etimologia</p>
