@@ -507,12 +507,16 @@ function DistMap({ hab, accentColor, countriesPresent }) {
         .then(r => r.json())
         .then(countries => {
           const countryNamesEn = countriesPresent.map(code => ISO_TO_EN[code] || code);
+          const isoSet = new Set(countriesPresent.map(c => c.toUpperCase()));
           let highlightedBounds = null;
           L.geoJSON(countries, {
             style: () => ({ color: 'rgba(255,255,255,.2)', weight: 0.5, fillOpacity: 0.3, fillColor: 'rgba(100,100,100,.1)' }),
             onEachFeature: (feature, layer) => {
-              const countryName = feature.properties?.NAME || '';
-              if (countryNamesEn.includes(countryName)) {
+              const isoA2 = (feature.properties?.ISO_A2 || '').toUpperCase();
+              const isoA3 = (feature.properties?.ISO_A3 || '').toUpperCase();
+              const countryName = feature.properties?.NAME || feature.properties?.ADMIN || '';
+              const isMatch = isoSet.has(isoA2) || isoSet.has(isoA3) || countryNamesEn.includes(countryName);
+              if (isMatch) {
                 layer.setStyle({ fillColor: accentColor, fillOpacity: 0.7, color: accentColor, weight: 1.5 });
                 layer.bringToFront();
                 try {
@@ -1032,16 +1036,15 @@ function Detail({ a, onBack }) {
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
           {/* PESO: tachimetro */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:0 }}>
-            <div style={{ flex:1 }}/>
-            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center', marginBottom:1 }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:0 }}>
+            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center', marginBottom:0 }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
             <div style={{ width:'100%', maxWidth:'110px' }}><GaugeSVG wt_str={a.wt} /></div>
-            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:1 }}>{a.wt}</div>
+            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:0 }}>{a.wt}</div>
           </div>
 
           {/* DIMENSIONI */}
           <div style={{ background:'#111113', borderRadius:12, padding:'7px 7px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', minHeight:70 }}>
-            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.ln}</div>
+            <div style={{ fontSize:12, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.ln}</div>
           </div>
 
           {/* PIRAMIDE: trofico */}
@@ -1052,7 +1055,8 @@ function Detail({ a, onBack }) {
         </div>
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
         <div style={{ marginBottom:20 }}>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:12, background:'rgba(0,0,0,.38)', borderRadius:12, padding:4, gap:4 }}>
+          {/* Tab bar */}
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'12px 12px 0 0', padding:4, gap:4 }}>
             {['abilita','statistiche','tassonomia'].map(m=>(
               <button key={m} onClick={()=>setStatMode(m)} style={{ padding:'8px 0', borderRadius:8, background:statMode===m?c.mid:'transparent', color:statMode===m?'white':'rgba(255,255,255,.38)', fontSize:11, fontWeight:700, border:'none', cursor:'pointer', textTransform:'capitalize' }}>
                 {m==='abilita'?'Abilità':m==='statistiche'?'Statistiche':'Tassonomia'}
@@ -1060,41 +1064,43 @@ function Detail({ a, onBack }) {
             ))}
           </div>
 
-          {/* Abilità */}
-          {statMode==='abilita'&&(
-            <div>
-              {a.categories?.length>0?(
-                <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                  {a.categories.map(cat=>{
-                    const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
-                    const curiosity=a.cat_curiosities?.[cat];
-                    return (
-                      <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
-                        <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                          <span style={{ fontSize:20, flexShrink:0 }}>{meta.icon}</span>
-                          <div style={{ flex:1 }}>
-                            <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
-                            {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
-                          </div>
-                          <div style={{ width:8, height:8, borderRadius:'50%', background:meta.color||c.accent, flexShrink:0 }}/>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ):(
-                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
-                  <p style={{ color:'rgba(255,255,255,.5)', fontSize:13, margin:0 }}>Nessuna abilità speciale registrata</p>
-                </div>
-              )}
-            </div>
-          )}
+          {/* Fixed-height content area — sized on tassonomia (7 rows) */}
+          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 14px 14px', padding:'12px 10px', minHeight:280, boxSizing:'border-box' }}>
 
-          {/* Statistiche */}
-          {statMode==='statistiche'&&(
-            localStatus !== 'non visto' ? (
+            {/* Abilità */}
+            {statMode==='abilita'&&(
               <div>
-                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px', marginBottom:8 }}>
+                {a.categories?.length>0?(
+                  <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                    {a.categories.map(cat=>{
+                      const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
+                      const curiosity=a.cat_curiosities?.[cat];
+                      return (
+                        <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
+                          <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+                            <span style={{ fontSize:20, flexShrink:0 }}>{meta.icon}</span>
+                            <div style={{ flex:1 }}>
+                              <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
+                              {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
+                            </div>
+                            <div style={{ width:8, height:8, borderRadius:'50%', background:meta.color||c.accent, flexShrink:0 }}/>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ):(
+                  <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
+                    <p style={{ color:'rgba(255,255,255,.5)', fontSize:13, margin:0 }}>Nessuna abilità speciale registrata</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Statistiche */}
+            {statMode==='statistiche'&&(
+              localStatus !== 'non visto' ? (
+                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px' }}>
                   <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
                   <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
                   {a.lifespan != null && (
@@ -1111,47 +1117,45 @@ function Detail({ a, onBack }) {
                   <StatRow label='Intelligenza' base={a.stats?.intelligenza ?? 0} scale={scale} color={c.accent} unit='%'/>
                   <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit='%'/>
                 </div>
-              </div>
-            ) : (
-              <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
-                <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca selezionando lo status sopra</p>
-              </div>
-            )
-          )}
-
-          {/* Tassonomia */}
-          {statMode==='tassonomia'&&(
-            <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'4px 16px 16px' }}>
-              {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
-                <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'10px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
-                  <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
-                  <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:600, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined }}>{v}</span>
+              ) : (
+                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
+                  <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca selezionando lo status sopra</p>
                 </div>
-              ))}
-            </div>
-          )}
+              )
+            )}
+
+            {/* Tassonomia */}
+            {statMode==='tassonomia'&&(
+              <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'4px 16px 16px' }}>
+                {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
+                  <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'10px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
+                    <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
+                    <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:600, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined }}>{v}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+          </div>
         </div>
-        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px' }}>Etimologia</p>
+        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Etimologia</p>
         <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
         {a.bio && (
           <>
-            <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px' }}>Biologia</p>
+            <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Biologia</p>
             <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.bio}</p></div>
           </>
         )}
-        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px' }}>Distribuzione</p>
+        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present}/>
-        {/* Endemico + Orario avvistamento (sotto mappa) */}
-        <div style={{ display:'flex', gap:8, marginTop:10, marginBottom:4, flexWrap:'wrap' }}>
-          {a.is_endemic&&<div style={{ background:'rgba(0,0,0,.35)', borderRadius:10, padding:'8px 12px', display:'flex', alignItems:'center', gap:6 }}>
-            <span style={{ fontSize:14 }}>📍</span><span style={{ color:'#90D84A', fontSize:11, fontWeight:700 }}>Endemico{a.endemic_iso?.length>0?` (${a.endemic_iso.join(', ')})`:''}</span>
-          </div>}
-          {a.spotlightHours?.map(h=>(
-            <span key={h} style={{ background:'rgba(255,255,255,.1)', color:'white', fontSize:11, fontWeight:700, padding:'6px 10px', borderRadius:8, display:'flex', alignItems:'center', gap:4 }}>
-              ⏰ <span style={{ textTransform:'capitalize' }}>{h}</span>
-            </span>
-          ))}
-        </div>
+        {/* Endemico sotto mappa */}
+        {a.is_endemic && (
+          <div style={{ display:'flex', gap:8, marginTop:10, marginBottom:4 }}>
+            <div style={{ background:'rgba(0,0,0,.35)', borderRadius:10, padding:'8px 12px', display:'flex', alignItems:'center', gap:6 }}>
+              <span style={{ fontSize:14 }}>📍</span><span style={{ color:'#90D84A', fontSize:11, fontWeight:700 }}>Endemico{a.endemic_iso?.length>0?` (${a.endemic_iso.join(', ')})`:''}</span>
+            </div>
+          </div>
+        )}
 
       </div>
 
