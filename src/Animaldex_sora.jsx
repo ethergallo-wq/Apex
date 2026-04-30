@@ -595,11 +595,12 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   const [imgErr, setImgErr] = useState(false);
   const status = overrideStatus !== undefined ? overrideStatus : a.status;
   const found = status && status !== 'non visto';
+  const pad = Math.round(size * 0.125);
   if (a.image_url && !imgErr) {
     return (
-      <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+      <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
-          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center',
+          style={{ width:'100%', height:'100%', objectFit:'contain', objectPosition:'center',
             filter:found?'none':'brightness(0.14) saturate(0)' }} />
       </div>
     );
