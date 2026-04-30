@@ -609,7 +609,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
     return (
       <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
-          style={{ width:'100%', height:'100%', objectFit:'contain', objectPosition:'center bottom',
+          style={{ width:'100%', height:'100%', objectFit:'contain',
             filter:found?'none':'brightness(0.14) saturate(0)',
             dropShadow:'none',
             WebkitFilter: found ? `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` : 'brightness(0.14) saturate(0)' }} />
@@ -980,7 +980,6 @@ function Grid({ onSelect }) {
 // ── Detail ────────────────────────────────────────────────────────────
 function Detail({ a, onBack }) {
   const [statMode,setStatMode]=useState('statistiche');
-  const [taxOpen,setTaxOpen]=useState(false);
   const [localStatus,setLocalStatus]=useState(a.status || 'non visto');
   const [showStatusMenu,setShowStatusMenu]=useState(false);
   const [showInfoModal,setShowInfoModal]=useState(false);
@@ -1028,24 +1027,21 @@ function Detail({ a, onBack }) {
           <h1 style={{ margin:0, color:'white', fontSize:26, fontWeight:900, letterSpacing:-.3 }}>{a.com}</h1>
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
-        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:16, display:'flex', gap:12, alignItems:'flex-start' }}>
-          <div style={{ fontSize:34, flexShrink:0 }}>{c.icon}</div>
-          <p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc} {a.bio}</p>
+        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:16 }}>
+          <p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
           {/* PESO: tachimetro */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', gap:2 }}>
-            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center' }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:0 }}>
+            <div style={{ flex:1 }}/>
+            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center', marginBottom:1 }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
             <div style={{ width:'100%', maxWidth:'110px' }}><GaugeSVG wt_str={a.wt} /></div>
-            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
+            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:1 }}>{a.wt}</div>
           </div>
 
-          {/* DIMENSIONI: sagoma umana a sinistra */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 7px 5px', display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'flex-end', minHeight:70 }}>
-            <div style={{ flex:1, display:'flex', alignItems:'flex-end', paddingBottom:2 }}>
-              <HumanSilhouette h={50} />
-            </div>
-            <div style={{ fontSize:11, fontWeight:800, color:'white', letterSpacing:'-.3px' }}>{a.ln}</div>
+          {/* DIMENSIONI */}
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 7px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', minHeight:70 }}>
+            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.ln}</div>
           </div>
 
           {/* PIRAMIDE: trofico */}
@@ -1099,14 +1095,22 @@ function Detail({ a, onBack }) {
             localStatus !== 'non visto' ? (
               <div>
                 <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px', marginBottom:8 }}>
-                  {STATS_DEF.map(({k,l,u})=><StatRow key={k} label={l} base={a.stats?.[k] ?? 0} scale={scale} color={c.accent} unit={u}/>)}
+                  <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
+                  <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
+                  {a.lifespan != null && (
+                    <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:11 }}>
+                      <span style={{ color:'rgba(255,255,255,.6)', fontSize:12, fontWeight:600, width:90, flexShrink:0 }}>Vita</span>
+                      <div style={{ flex:1, height:7, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
+                        <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
+                      </div>
+                      <span style={{ color:'white', fontSize:12, fontWeight:700, minWidth:60, textAlign:'right' }}>{a.lifespan} anni</span>
+                    </div>
+                  )}
+                  <StatRow label='Forza' base={a.stats?.forza ?? 0} scale={scale} color={c.accent} unit='%'/>
+                  <StatRow label='Resistenza' base={a.stats?.resistenza ?? 0} scale={scale} color={c.accent} unit='%'/>
+                  <StatRow label='Intelligenza' base={a.stats?.intelligenza ?? 0} scale={scale} color={c.accent} unit='%'/>
+                  <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit='%'/>
                 </div>
-                {a.lifespan&&(
-                  <div style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'10px 14px', display:'flex', alignItems:'center', gap:8 }}>
-                    <span style={{ fontSize:16 }}>⏳</span>
-                    <span style={{ color:'rgba(255,255,255,.7)', fontSize:12, fontWeight:600 }}>Aspettativa di vita: ~{a.lifespan} anni</span>
-                  </div>
-                )}
               </div>
             ) : (
               <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
@@ -1129,6 +1133,12 @@ function Detail({ a, onBack }) {
         </div>
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px' }}>Etimologia</p>
         <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
+        {a.bio && (
+          <>
+            <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px' }}>Biologia</p>
+            <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.bio}</p></div>
+          </>
+        )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px' }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present}/>
         {/* Endemico + Orario avvistamento (sotto mappa) */}
@@ -1143,22 +1153,6 @@ function Detail({ a, onBack }) {
           ))}
         </div>
 
-        <div style={{ marginTop:20 }}>
-          <button onClick={()=>setTaxOpen(v=>!v)} style={{ width:'100%', background:'rgba(0,0,0,.35)', border:`1px solid ${taxOpen?c.accent+'55':'rgba(255,255,255,.1)'}`, borderRadius:taxOpen?'14px 14px 0 0':14, padding:'13px 16px', display:'flex', justifyContent:'space-between', color:'white', fontSize:14, fontWeight:700, cursor:'pointer' }}>
-            Tassonomia completa
-            <span style={{ color:'rgba(255,255,255,.28)', display:'inline-block', transition:'transform .25s', transform:taxOpen?'rotate(180deg)':undefined }}>▼</span>
-          </button>
-          {taxOpen&&(
-            <div style={{ background:'rgba(0,0,0,.45)', borderRadius:'0 0 14px 14px', padding:'4px 16px 16px', border:`1px solid ${c.accent}33`, borderTop:'none' }}>
-              {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
-                <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'9px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
-                  <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
-                  <span style={{ color:l==='Specie'||l==='Genere'?c.accent:'white', fontSize:12, fontWeight:600, fontStyle:l==='Specie'||l==='Genere'?'italic':undefined }}>{v}</span>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
       </div>
 
       {/* Info Modal */}
