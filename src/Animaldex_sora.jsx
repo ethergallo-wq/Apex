@@ -45,6 +45,10 @@ const RARITY = {
   'Raro':        { c:'#FFE566', bg:'#7A5800', s:3, label:'Raro', glow:true },
   'Leggendario': { c:'#EAC8FF', bg:'#3D0070', s:4, label:'Leggendario', animate:true },
 };
+const RARITY_CYCLE = ['Comune','Non comune','Raro','Leggendario'];
+const RARITY_COLOR = {'Comune':'#F5DEB3','Non comune':'#E8E8E8','Raro':'#FFE566','Leggendario':'#EAC8FF'};
+const RARITY_BG = {'Comune':'#5C3310','Non comune':'#5A5A5A','Raro':'#7A5800','Leggendario':'#3D0070'};
+const RARITY_BORDER = {'Comune':'#7A4418','Non comune':'#707070','Raro':'#9A7A00','Leggendario':'#5A1088'};
 const TROPHIC = {
   1:{ label:'Produttore',      c:'#5CC85A', bg:'#1A3B19' },
   2:{ label:'Erbivoro',        c:'#A8D84A', bg:'#283B14' },
@@ -326,6 +330,124 @@ function buildTree(animals) {
   return root;
 }
 
+// ── Weight gauge with logarithmic scale ────────────────────────────────
+const WEIGHT_CATS = [
+  { id:'piuma', label:'Piuma', range:'1g–5kg', color:'#5BB8F5' },
+  { id:'medio', label:'Medio', range:'5kg–100kg', color:'#F0C84E' },
+  { id:'massimo', label:'Massimo', range:'100kg–2000kg', color:'#F55454' },
+];
+
+function logMap(weight_kg) {
+  const logMin = -3, logMax = 3.3;
+  const logVal = Math.log10(Math.max(0.001, weight_kg));
+  const frac = (logVal - logMin) / (logMax - logMin);
+  return -80 + frac * 160;
+}
+
+function getWeightCat(wt_str) {
+  if (!wt_str) return WEIGHT_CATS[1];
+  const s = wt_str.toLowerCase();
+  let mult = s.includes(' kg') ? 1 : s.includes(' g') ? 0.001 : 1;
+  const nums = s.match(/[\d.]+/g);
+  if (!nums) return WEIGHT_CATS[1];
+  const avg = (parseFloat(nums[0]) + parseFloat(nums[nums.length-1])) / 2 * mult;
+  if (avg < 5) return WEIGHT_CATS[0];
+  if (avg < 100) return WEIGHT_CATS[1];
+  return WEIGHT_CATS[2];
+}
+
+function getGaugeAngle(wt_str) {
+  if (!wt_str) return 0;
+  const s = wt_str.toLowerCase();
+  let mult = s.includes(' kg') ? 1 : s.includes(' g') ? 0.001 : 1;
+  const nums = s.match(/[\d.]+/g);
+  if (!nums) return 0;
+  const avg = (parseFloat(nums[0]) + parseFloat(nums[nums.length-1])) / 2 * mult;
+  return logMap(avg);
+}
+
+function GaugeSVG({ wt_str }) {
+  const cat = getWeightCat(wt_str);
+  const angle = getGaugeAngle(wt_str);
+  const col = cat.color;
+  const cx = 60, cy = 58;
+
+  function polarToXY(deg, radius) {
+    const rad = (deg - 90) * Math.PI / 180;
+    return { x: cx + radius * Math.cos(rad), y: cy + radius * Math.sin(rad) };
+  }
+
+  function arcPath(startDeg, endDeg, r1, r2) {
+    const s1 = polarToXY(startDeg, r1), e1 = polarToXY(endDeg, r1);
+    const s2 = polarToXY(startDeg, r2), e2 = polarToXY(endDeg, r2);
+    const large = (endDeg - startDeg) > 180 ? 1 : 0;
+    return `M${s1.x},${s1.y} A${r1},${r1},0,${large},1,${e1.x},${e1.y} L${e2.x},${e2.y} A${r2},${r2},0,${large},0,${s2.x},${s2.y} Z`;
+  }
+
+  const segColors = WEIGHT_CATS.map(c => c.color);
+  const catIdx = WEIGHT_CATS.indexOf(cat);
+  let arcs = '';
+  for (let i = 0; i < 3; i++) {
+    const s = -80 + i * 53.33, e = s + 50;
+    const isActive = i === catIdx;
+    arcs += `<path d="${arcPath(s, e, 42, 52)}" fill="${isActive ? segColors[i] : 'rgba(255,255,255,.08)'}"/>`;
+  }
+
+  const needleRad = (angle - 90) * Math.PI / 180;
+  const nx = cx + 36 * Math.cos(needleRad);
+  const ny = cy + 36 * Math.sin(needleRad);
+  const n1 = polarToXY(angle - 4, 8);
+  const n2 = polarToXY(angle + 4, 8);
+
+  return (
+    <svg viewBox="0 0 120 78" width="100%" height="52" xmlns="http://www.w3.org/2000/svg">
+      <g dangerouslySetInnerHTML={{ __html: arcs }} />
+      <polygon points={`${n1.x},${n1.y} ${nx},${ny} ${n2.x},${n2.y}`} fill={col} />
+      <circle cx={cx} cy={cy} r="4" fill={col} />
+      <circle cx={cx} cy={cy} r="2" fill="#111113" />
+    </svg>
+  );
+}
+
+// ── Human silhouette SVG ────────────────────────────────────────────────
+function HumanSilhouette({ h = 50 }) {
+  return (
+    <svg viewBox="0 0 32 120" width="14" height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block' }}>
+      <circle cx="16" cy="15" r="8" fill="rgba(255,255,255,.3)"/>
+      <rect x="14" y="23" width="4" height="4" fill="rgba(255,255,255,.3)"/>
+      <ellipse cx="16" cy="32" rx="14" ry="7" fill="rgba(255,255,255,.3)"/>
+      <rect x="8" y="35" width="16" height="18" rx="4" fill="rgba(255,255,255,.3)"/>
+      <rect x="9" y="53" width="14" height="14" rx="3" fill="rgba(255,255,255,.25)"/>
+      <ellipse cx="16" cy="72" rx="13" ry="8" fill="rgba(255,255,255,.2)"/>
+      <rect x="6" y="77" width="6" height="38" rx="3" fill="rgba(255,255,255,.25)"/>
+      <rect x="20" y="77" width="6" height="38" rx="3" fill="rgba(255,255,255,.25)"/>
+      <rect x="2" y="37" width="5" height="28" rx="2.5" fill="rgba(255,255,255,.25)" transform="rotate(-20 4.5 37)"/>
+      <rect x="25" y="37" width="5" height="28" rx="2.5" fill="rgba(255,255,255,.25)" transform="rotate(20 27.5 37)"/>
+    </svg>
+  );
+}
+
+// ── Trophic pyramid ────────────────────────────────────────────────────
+function TrophicPyramid({ trophic, compact = false }) {
+  const levels = [4, 3, 2, 1];
+  const widths = compact ? [22, 32, 44, 56] : [32, 46, 62, 76];
+  const vbW = compact ? 60 : 80;
+  const rowH = compact ? 9 : 13;
+  const barH = compact ? 6 : 9;
+  const svgW = compact ? 52 : 68;
+  const svgH = compact ? 36 : 52;
+  const colors = { 1:'#5CC85A', 2:'#A8D84A', 3:'#F5A828', 4:'#F55454' };
+  return (
+    <svg viewBox={`0 0 ${vbW} ${rowH*4}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg">
+      {levels.map((lv, i) => {
+        const isActive = lv === trophic;
+        const x = (vbW - widths[i]) / 2;
+        return <rect key={lv} x={x} y={i*rowH} width={widths[i]} height={barH} rx="2" fill={isActive ? colors[lv] : 'rgba(255,255,255,.1)'} />;
+      })}
+    </svg>
+  );
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────
 function StatRow({ label, base, scale, color, unit }) {
   const statKey = Object.keys(STAT_MAXES).find(k => STATS_DEF.some(s => s.k === k && s.l === label));
@@ -468,19 +590,23 @@ function StatusBadge({ status, accentColor, onClick }) {
   );
 }
 
-function AnimalImg({ a, size=102, fontSize=52 }) {
+function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
-  const found = a.status && a.status !== 'non visto';
+  const status = overrideStatus !== undefined ? overrideStatus : a.status;
+  const found = status && status !== 'non visto';
   if (a.image_url && !imgErr) {
     return (
-      <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', filter:found?'none':'brightness(0.14) saturate(0)' }}>
-        <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)} style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+      <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+        <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
+          style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center',
+            filter:found?'none':'brightness(0.14) saturate(0)' }} />
       </div>
     );
   }
   return (
-    <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', fontSize, filter:found?'none':'brightness(0.14) saturate(0)' }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', fontSize,
+      filter:found?'none':'brightness(0.14) saturate(0)' }}>{c.icon}</div>
   );
 }
 
@@ -849,7 +975,7 @@ function Detail({ a, onBack }) {
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
   
-  const scale=SCALE[statMode];
+  const scale = 1;
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
@@ -866,8 +992,10 @@ function Detail({ a, onBack }) {
             </span>
           ))}
         </div>
-        <div style={{ display:'flex', gap:12, marginBottom:16 }}>
-          <div style={{ width:132, height:132, borderRadius:16, overflow:'hidden', flexShrink:0 }}><AnimalImg a={a} size={132} fontSize={76} /></div>
+        <div style={{ display:'flex', gap:12, marginBottom:16, padding:'0 4px' }}>
+          <div style={{ width:132, height:132, borderRadius:16, overflow:'hidden', flexShrink:0, background:c.img }}>
+            <AnimalImg a={a} size={132} fontSize={76} overrideStatus={localStatus} />
+          </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con classe animata */}
             <div className={rarityClass(a.rarity)} style={{ borderRadius:12, padding:'10px 12px', fontSize:14, fontWeight:700, textAlign:'center' }}>{a.rarity||'Comune'}</div>
@@ -893,9 +1021,26 @@ function Detail({ a, onBack }) {
           <p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc} {a.bio}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
-          <div style={{ background:'rgba(0,0,0,.38)', borderRadius:12, padding:'11px 8px', textAlign:'center' }}><div style={{ fontSize:17, marginBottom:4 }}>⚖️</div><div style={{ color:'white', fontSize:10, fontWeight:600 }}>{a.wt}</div></div>
-          <div style={{ background:'rgba(0,0,0,.38)', borderRadius:12, padding:'11px 8px', textAlign:'center' }}><div style={{ fontSize:17, marginBottom:4 }}>📏</div><div style={{ color:'white', fontSize:10, fontWeight:600 }}>{a.ln}</div></div>
-          <TrophicTile level={a.trophic}/>
+          {/* PESO: tachimetro */}
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', gap:2 }}>
+            <div style={{ fontSize:9, fontWeight:800, color:getWeightCat(a.wt).color, textTransform:'uppercase', letterSpacing:'.4px', textAlign:'center' }}>{getWeightCat(a.wt).label.toUpperCase()}</div>
+            <div style={{ width:'100%', maxWidth:'110px' }}><GaugeSVG wt_str={a.wt} /></div>
+            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
+          </div>
+
+          {/* DIMENSIONI: sagoma umana a sinistra */}
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 7px 5px', display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'flex-end', minHeight:70 }}>
+            <div style={{ flex:1, display:'flex', alignItems:'flex-end', paddingBottom:2 }}>
+              <HumanSilhouette h={50} />
+            </div>
+            <div style={{ fontSize:11, fontWeight:800, color:'white', letterSpacing:'-.3px' }}>{a.ln}</div>
+          </div>
+
+          {/* PIRAMIDE: trofico */}
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:4 }}>
+            <TrophicPyramid trophic={a.trophic} compact={true} />
+            <div style={{ fontSize:9, fontWeight:800, color:TROPHIC[a.trophic]?.color || c.accent, textAlign:'center', letterSpacing:'-.2px', lineHeight:1.2 }}>{TROPHIC[a.trophic]?.label || ''}</div>
+          </div>
         </div>
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
         <div style={{ marginBottom:20 }}>
@@ -942,7 +1087,7 @@ function Detail({ a, onBack }) {
             localStatus !== 'non visto' ? (
               <div>
                 <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px', marginBottom:8 }}>
-                  {STATS_DEF.map(({k,l,u})=><StatRow key={k} label={l} base={a.stats[k]} scale={scale} color={c.accent} unit={u}/>)}
+                  {STATS_DEF.map(({k,l,u})=><StatRow key={k} label={l} base={a.stats?.[k] ?? 0} scale={scale} color={c.accent} unit={u}/>)}
                 </div>
                 {a.lifespan&&(
                   <div style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'10px 14px', display:'flex', alignItems:'center', gap:8 }}>
