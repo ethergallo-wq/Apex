@@ -590,18 +590,29 @@ function StatusBadge({ status, accentColor, onClick }) {
   );
 }
 
+const RARITY_GLOW = {
+  'Comune':     'rgba(245,222,179,.45)',
+  'Non comune': 'rgba(232,232,232,.35)',
+  'Raro':       'rgba(255,229,102,.6)',
+  'Leggendario':'rgba(234,200,255,.7)',
+};
+
 function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const status = overrideStatus !== undefined ? overrideStatus : a.status;
   const found = status && status !== 'non visto';
-  const pad = Math.round(size * 0.125);
+  const pad = Math.round(size * 0.16); // ~1/6: margine generoso
+  const glow = found ? (RARITY_GLOW[a.rarity] || 'rgba(255,255,255,.2)') : 'none';
+  const shadow = found ? `0 0 ${Math.round(size*0.18)}px ${Math.round(size*0.06)}px ${glow}` : 'none';
   if (a.image_url && !imgErr) {
     return (
       <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
-          style={{ width:'100%', height:'100%', objectFit:'contain', objectPosition:'center',
-            filter:found?'none':'brightness(0.14) saturate(0)' }} />
+          style={{ width:'100%', height:'100%', objectFit:'contain', objectPosition:'center bottom',
+            filter:found?'none':'brightness(0.14) saturate(0)',
+            dropShadow:'none',
+            WebkitFilter: found ? `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` : 'brightness(0.14) saturate(0)' }} />
       </div>
     );
   }
