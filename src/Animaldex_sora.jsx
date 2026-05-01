@@ -651,7 +651,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
       return (
         <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55 }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? 0.9 : 1.2})` }} />
         </div>
       );
     }
@@ -664,7 +664,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   if (a.image_url && !imgErr) {
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
-    const imgScale = gridMode ? 1.5 : 1;
+    const imgScale = gridMode ? 1.35 : 1.2;
     return (
       <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}

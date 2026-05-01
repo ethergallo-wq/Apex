@@ -29,6 +29,24 @@ const CLS = {
   Eutardigrada:   { mid:'#606060', img:'#808080', badge:'#303030', accent:'#C0C0C0', detailTop:'#404040', detailBg:'#282828', label:'Tardigrado',   icon:'🔬' },
   Coelacanthi:    { mid:'#1C3A80', img:'#2A52A8', badge:'#0C1840', accent:'#6088F8', detailTop:'#102258', detailBg:'#081438', label:'Celacanto',    icon:'🐟' },
 };
+
+// Icone silhouette per stato "non visto" — una per ogni classe
+const CLASS_ICONS = {
+  Mammalia:       '/icone_unknown/class-mammalia.png',
+  Aves:           '/icone_unknown/class-aves.png',
+  Reptilia:       '/icone_unknown/class-reptilia.png',
+  Amphibia:       '/icone_unknown/class-amphibia.png',
+  Actinopterygii: '/icone_unknown/class-actinopterygii.png',
+  Elasmobranchii: '/icone_unknown/class-chondrichthyes.png',
+  Insecta:        '/icone_unknown/class-insecta.png',
+  Arachnida:      '/icone_unknown/class-arachnida.png',
+  Malacostraca:   '/icone_unknown/class-malacostraca.png',
+  Chilopoda:      '/icone_unknown/class-chilopoda.png',
+  Diplopoda:      '/icone_unknown/class-diplopoda.png',
+  Gastropoda:     '/icone_unknown/class-gastropoda.png',
+  Cephalopoda:    '/icone_unknown/class-cephalopoda.png',
+  Bivalvia:       '/icone_unknown/class-bivalvia.png',
+};
 const CONS = {
   EX: { lbl:'EX', full:'Extinct',                 c:'#FFFFFF', bg:'#1A1A1A' },
   EW: { lbl:'EW', full:'Extinct in the Wild',     c:'#FFFFFF', bg:'#1A1A1A' },
@@ -618,43 +636,63 @@ const RARITY_GLOW = {
   'Leggendario':'rgba(234,200,255,.7)',
 };
 
-function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
+function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
+  const [iconErr, setIconErr] = useState(false);
   const status = overrideStatus !== undefined ? overrideStatus : a.status;
   const found = status && status !== 'non visto';
-  const pad = Math.round(size * 0.16); // ~1/6: margine generoso
   const glow = found ? (RARITY_GLOW[a.rarity] || 'rgba(255,255,255,.2)') : 'none';
-  const shadow = found ? `0 0 ${Math.round(size*0.18)}px ${Math.round(size*0.06)}px ${glow}` : 'none';
-  if (a.image_url && !imgErr) {
+  const classIcon = CLASS_ICONS[a.cls];
+
+  // ── Non visto: mostra icona silhouette della classe ──
+  if (!found) {
+    if (classIcon && !iconErr) {
+      return (
+        <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
+          <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55 }} />
+        </div>
+      );
+    }
     return (
-      <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
+      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.1 }}>{c.icon}</div>
+    );
+  }
+
+  // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
+  if (a.image_url && !imgErr) {
+    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
+    const pad = gridMode ? 0 : Math.round(size * 0.12);
+    const imgScale = gridMode ? 1.5 : 1;
+    return (
+      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
-            filter:found?'none':'brightness(0.14) saturate(0)',
-            dropShadow:'none',
-            WebkitFilter: found ? `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` : 'brightness(0.14) saturate(0)' }} />
+            transform: `scale(${imgScale})`,
+            filter: dropShadow,
+            WebkitFilter: dropShadow }} />
       </div>
     );
   }
   return (
-    <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', fontSize,
-      filter:found?'none':'brightness(0.14) saturate(0)' }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const found = a.status && a.status !== 'non visto';
+  const glowShadow = found ? `0 0 14px 2px ${c.accent}55, 0 0 4px 1px ${c.accent}33` : 'none';
   return (
-    <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease' }}
+    <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease, box-shadow .3s ease', boxShadow:glowShadow }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.93)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
       onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}>
       <div style={{ position:'absolute', top:6, left:6, zIndex:2, background:'rgba(0,0,0,.55)', color:'rgba(255,255,255,.7)', fontSize:10, fontWeight:700, padding:'2px 6px', borderRadius:8 }}>{a.no}</div>
       {/* Pallino rarità */}
       <div className={rarityDotClass(a.rarity)} style={{ position:'absolute', top:7, right:7, zIndex:2, width:10, height:10, borderRadius:'50%' }}/>
-      <AnimalImg a={a} size={102} fontSize={52} />
+      <AnimalImg a={a} size={102} fontSize={52} gridMode={true} />
       <div style={{ background:found?c.mid:'#1C1C1E', padding:'7px 6px 4px', color:found?'white':'#2E2E30', fontSize:12, fontWeight:700, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.com}</div>
     </div>
   );
@@ -827,7 +865,7 @@ function RarityLegendRows() {
 }
 
 // ── Grid ──────────────────────────────────────────────────────────────
-function Grid({ onSelect }) {
+function Grid({ onSelect, statusMap = {} }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -842,7 +880,7 @@ function Grid({ onSelect }) {
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
 
-  const list = ANIMALS.filter(a => {
+  const list = ANIMALS.map(a => ({ ...a, status: statusMap[a.id] ?? a.status })).filter(a => {
     const q = search.toLowerCase();
     const status = a.status || 'non visto';
     if (q && !a.com.toLowerCase().includes(q) && !a.sci.toLowerCase().includes(q)) return false;
@@ -915,7 +953,11 @@ function Grid({ onSelect }) {
             Albero Tassonomico {fTax && ' ✓'}
           </button>
           <button onClick={()=>setShowMenu(!showMenu)} style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4H17L10 12.5V16L7 18V12.5L3 4Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
+              <line x1="1" y1="2"  x2="19" y2="2"  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="4" y1="8"  x2="16" y2="8"  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="7" y1="14" x2="13" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
           </button>
         </div>
         <div style={{ textAlign:'center', fontSize:11, fontWeight:600, color:'rgba(255,255,255,.7)', padding:'4px 0' }}>{list.length} risultati</div>
@@ -983,6 +1025,20 @@ function Grid({ onSelect }) {
                 {[{k:'D',l:'Decomponente',desc:'Detritofago'},{k:'F',l:'Filtratore',desc:'Filtra particelle dall\'acqua'},{k:1,l:'Produttore',desc:'Organismi autotrofi'},{k:2,l:'Erbivoro',desc:'Si nutre di piante'},{k:4,l:'Predatore Apice',desc:'Vertice della catena'},{k:3,l:'Predatore',desc:'Carnivoro medio'}].map(({k,l,desc})=>{const tr=TROPHIC[k]||TROPHIC[1];return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:tr.bg,color:tr.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{l}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
               </div>
             </div>
+            <div style={{ marginTop:24 }}>
+              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⚖️ Tachimetro Peso</h3>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {[{label:'Piuma',range:'< 1 kg',color:'#5BB8F5',desc:'Animali leggerissimi, spesso volatili o insetti'},{label:'Medio',range:'1 kg – 200 kg',color:'#F5A623',desc:'La maggior parte dei mammiferi e rettili medi'},{label:'Massimo',range:'> 200 kg',color:'#E74C3C',desc:'Grandi predatori, elefanti, cetacei e megafauna'}].map(({label,range,color,desc})=>(
+                  <div key={label} style={{display:'flex',gap:10,alignItems:'flex-start'}}>
+                    <div style={{background:color+'22',color,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{label}</div>
+                    <div style={{flex:1}}>
+                      <div style={{color:'white',fontSize:12,fontWeight:700}}>{range}</div>
+                      <div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -998,22 +1054,112 @@ function Grid({ onSelect }) {
   );
 }
 
+// ── Image Lightbox ────────────────────────────────────────────────────
+function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
+  const handleClose = () => { setVisible(false); setTimeout(onClose, 350); };
+
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+
+  // Starting box position and size (the image container in the detail page)
+  const startLeft   = originRect ? originRect.left : vw * 0.1;
+  const startTop    = originRect ? originRect.top  : vh * 0.1;
+  const startW      = originRect ? originRect.width  : vw * 0.4;
+  const startH      = originRect ? originRect.height : vh * 0.3;
+
+  // Interpolate box from origin → fullscreen
+  const boxStyle = visible ? {
+    position:'fixed', left:0, top:0, width:'100vw', height:'100vh',
+    background: bgColor || '#1a1a1c',
+    transition:'all .38s cubic-bezier(.4,0,.2,1)',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    zIndex:300, cursor:'zoom-out',
+  } : {
+    position:'fixed',
+    left: startLeft, top: startTop,
+    width: startW, height: startH,
+    borderRadius: 16,
+    background: bgColor || '#1a1a1c',
+    transition:'all .38s cubic-bezier(.4,0,.2,1)',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    zIndex:300, cursor:'zoom-out',
+  };
+
+  return (
+    <>
+      {/* Dark overlay */}
+      <div onClick={handleClose} style={{
+        position:'fixed', inset:0, zIndex:299,
+        background: visible ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)',
+        transition:'background .35s ease',
+      }}/>
+      {/* Expanding colored box */}
+      <div onClick={handleClose} style={boxStyle}>
+        <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
+          maxWidth:'88%', maxHeight:'88%',
+          objectFit:'contain',
+          opacity: visible ? 1 : 0,
+          transition:'opacity .25s ease .1s',
+          filter: `drop-shadow(0 0 40px ${accentColor}99)`,
+          cursor:'default',
+        }}/>
+        <button onClick={handleClose} style={{
+          position:'absolute', top:16, right:16,
+          background:'rgba(0,0,0,.25)', border:'none',
+          color:'white', fontSize:20, width:40, height:40,
+          borderRadius:'50%', cursor:'pointer', display:'flex',
+          alignItems:'center', justifyContent:'center',
+          opacity: visible ? 1 : 0, transition:'opacity .3s ease .15s',
+        }}>×</button>
+      </div>
+    </>
+  );
+}
+
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
-function Detail({ a, onBack }) {
+function Detail({ a, onBack, onStatusChange }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(a.status || 'non visto');
   const [showStatusMenu,setShowStatusMenu]=useState(false);
   const [showInfoModal,setShowInfoModal]=useState(false);
+  const [showLightbox,setShowLightbox]=useState(false);
+  const [lightboxRect,setLightboxRect]=useState(null);
+  const [pullProgress,setPullProgress]=useState(0);
+  const scrollRef = useRef(null);
+  const imgRef = useRef(null);
+  const touchStartY = useRef(0);
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
+  const found = localStatus && localStatus !== 'non visto';
 
   const handleTab = (m) => {
     if (m===statMode) return;
     setSlideDir(TAB_ORDER.indexOf(m) > TAB_ORDER.indexOf(statMode) ? 1 : -1);
     setStatMode(m);
   };
+
+  const openLightbox = (rect) => {
+    if (!found || !a.image_url) return;
+    setLightboxRect(rect || (imgRef.current ? imgRef.current.getBoundingClientRect() : null));
+    setShowLightbox(true);
+    setPullProgress(0);
+  };
+
+  const handleTouchStart = (e) => { touchStartY.current = e.touches[0].clientY; };
+  const handleTouchMove  = (e) => {
+    if (!scrollRef.current || scrollRef.current.scrollTop > 2) return;
+    const delta = e.touches[0].clientY - touchStartY.current;
+    if (delta > 0 && found && a.image_url) {
+      const progress = Math.min(1, delta / 120);
+      setPullProgress(progress);
+      if (delta > 110) openLightbox();
+    }
+  };
+  const handleTouchEnd = () => { if (!showLightbox) setPullProgress(0); };
   
   const scale = 1;
   return (
@@ -1023,7 +1169,8 @@ function Detail({ a, onBack }) {
         <span style={{ color:'white', fontSize:17, fontWeight:800 }}>{a.com}</span>
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
       </div>
-      <div style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
+      <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
+        style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
         <div style={{ display:'flex', flexWrap:'wrap', gap:3, alignItems:'center', marginBottom:14 }}>
           {[a.kin,a.phy,a.cls,a.ord,a.fam].map((p,i,arr)=>(
             <span key={i} style={{ display:'flex', alignItems:'center', gap:3 }}>
@@ -1033,8 +1180,18 @@ function Detail({ a, onBack }) {
           ))}
         </div>
         <div style={{ display:'flex', gap:12, marginBottom:16, padding:'0 4px' }}>
-          <div style={{ width:132, height:132, borderRadius:16, overflow:'hidden', flexShrink:0, background:c.img }}>
-            <AnimalImg a={a} size={132} fontSize={76} overrideStatus={localStatus} />
+          <div ref={imgRef}
+            onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
+            style={{
+              width: Math.round(168 + pullProgress * (window.innerWidth - 168)),
+              height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
+              borderRadius: Math.round(16 - pullProgress * 16),
+              overflow:'hidden', flexShrink:0, background:c.img,
+              cursor: found && a.image_url ? 'zoom-in' : 'default',
+              boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none',
+              transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
+            }}>
+            <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
           </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con classe animata */}
@@ -1045,7 +1202,7 @@ function Detail({ a, onBack }) {
               {showStatusMenu && (
                 <div style={{ position:'absolute', top:40, left:0, right:0, background:c.detailBg, border:`1px solid ${c.accent}33`, borderRadius:12, padding:8, display:'flex', flexDirection:'column', gap:6, zIndex:10 }}>
                   {['non visto','avvistato','fotografato'].map(s=>(
-                    <button key={s} onClick={()=>{setLocalStatus(s);setShowStatusMenu(false);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{s}</button>
+                    <button key={s} onClick={()=>{setLocalStatus(s);setShowStatusMenu(false);if(onStatusChange)onStatusChange(a.id,s);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{s}</button>
                   ))}
                 </div>
               )}
@@ -1073,7 +1230,7 @@ function Detail({ a, onBack }) {
           </div>
 
           {/* PIRAMIDE: trofico */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 7px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:5 }}>
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 8px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:4 }}>
             <TrophicPyramid trophic={a.trophic} compact={false} />
             <div style={{ fontSize:11, fontWeight:800, color:TROPHIC[a.trophic]?.c || c.accent, textAlign:'center', letterSpacing:'-.2px', lineHeight:1.2 }}>{TROPHIC[a.trophic]?.label || ''}</div>
           </div>
@@ -1101,10 +1258,12 @@ function Detail({ a, onBack }) {
                       {a.categories.map(cat=>{
                         const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
                         const curiosity=a.cat_curiosities?.[cat];
+                        const badgeUrl=`/badges/${cat.toLowerCase()}.png`;
                         return (
                           <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
                             <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                              <span style={{ fontSize:20, flexShrink:0 }}>{meta.icon}</span>
+                              <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none';e.currentTarget.nextSibling.style.display='inline';}} style={{ width:32, height:32, objectFit:'contain', flexShrink:0 }} />
+                              <span style={{ fontSize:20, flexShrink:0, display:'none' }}>{meta.icon}</span>
                               <div style={{ flex:1 }}>
                                 <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
                                 {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
@@ -1216,9 +1375,24 @@ function Detail({ a, onBack }) {
                 {[{k:'D',l:'Decomponente',desc:'Detritofago'},{k:'F',l:'Filtratore',desc:'Filtra particelle dall\'acqua'},{k:1,l:'Produttore',desc:'Organismi autotrofi'},{k:2,l:'Erbivoro',desc:'Si nutre di piante'},{k:4,l:'Predatore Apice',desc:'Vertice della catena'},{k:3,l:'Predatore',desc:'Carnivoro medio'}].map(({k,l,desc})=>{const tr=TROPHIC[k]||TROPHIC[1];return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:tr.bg,color:tr.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{l}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
               </div>
             </div>
+            <div style={{ marginTop:24 }}>
+              <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⚖️ Tachimetro Peso</h3>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {[{label:'Piuma',range:'< 1 kg',color:'#5BB8F5',desc:'Animali leggerissimi, spesso volatili o insetti'},{label:'Medio',range:'1 kg – 200 kg',color:'#F5A623',desc:'La maggior parte dei mammiferi e rettili medi'},{label:'Massimo',range:'> 200 kg',color:'#E74C3C',desc:'Grandi predatori, elefanti, cetacei e megafauna'}].map(({label,range,color,desc})=>(
+                  <div key={label} style={{display:'flex',gap:10,alignItems:'flex-start'}}>
+                    <div style={{background:color+'22',color,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{label}</div>
+                    <div style={{flex:1}}>
+                      <div style={{color:'white',fontSize:12,fontWeight:700}}>{range}</div>
+                      <div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
+      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} bgColor={c.img} originRect={lightboxRect} onClose={()=>{setShowLightbox(false);setPullProgress(0);}}/>}
     </div>
   );
 }
@@ -1226,6 +1400,7 @@ function Detail({ a, onBack }) {
 // ── Root ──────────────────────────────────────────────────────────────
 export default function App() {
   const [sel,setSel]=useState(null);
+  const [statusMap,setStatusMap]=useState({});
   useEffect(()=>{
     const l=document.createElement('link');
     l.rel='stylesheet';
@@ -1237,9 +1412,19 @@ export default function App() {
     style.textContent = RARITY_CSS;
     document.head.appendChild(style);
   },[]);
+
+  const handleStatusChange = (id, status) => {
+    setStatusMap(prev => ({ ...prev, [id]: status }));
+  };
+
+  const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
+
   return (
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E' }}>
-      {sel?<Detail a={sel} onBack={()=>setSel(null)}/>:<Grid onSelect={setSel}/>}
+      {enriched
+        ? <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
+        : <Grid onSelect={setSel} statusMap={statusMap}/>
+      }
     </div>
   );
 }
