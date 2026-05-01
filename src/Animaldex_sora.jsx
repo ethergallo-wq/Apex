@@ -649,9 +649,9 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   if (!found) {
     if (classIcon && !iconErr) {
       return (
-        <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+        <div style={{ width:'100%', height:size, overflow:'hidden', borderRadius:'inherit' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'60%', height:'60%', objectFit:'contain', opacity:0.22, filter:'brightness(0) invert(1)' }} />
+            style={{ width:'100%', height:'100%', objectFit:'cover' }} />
         </div>
       );
     }
@@ -662,11 +662,13 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
 
   // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
   if (a.image_url && !imgErr) {
+    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${c.accent}) drop-shadow(0 0 ${Math.round(size*0.18)}px ${c.accent}88)`;
     return (
-      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'visible' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
-            WebkitFilter: `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` }} />
+            filter: dropShadow,
+            WebkitFilter: dropShadow }} />
       </div>
     );
   }
