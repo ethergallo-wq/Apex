@@ -651,7 +651,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
       return (
         <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? 0.792 : 1.2})` }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? 0.9 : 1.2})` }} />
         </div>
       );
     }
@@ -664,7 +664,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   if (a.image_url && !imgErr) {
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
-    const imgScale = gridMode ? 1.188 : 1.2;
+    const imgScale = gridMode ? 1.35 : 1.2;
     return (
       <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
@@ -1252,13 +1252,9 @@ function Detail({ a, onBack, onStatusChange }) {
 
               {/* Abilità */}
               {statMode==='abilita'&&(
-                <div
-                  onTouchStart={e=>e.stopPropagation()}
-                  onTouchMove={e=>e.stopPropagation()}
-                  style={{ height:'100%', overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', touchAction:'pan-y', paddingRight:2 }}
-                >
+                <div>
                   {a.categories?.length>0?(
-                    <div style={{ display:'flex', flexDirection:'column', gap:8, paddingBottom:10 }}>
+                    <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
                       {a.categories.map(cat=>{
                         const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
                         const curiosity=a.cat_curiosities?.[cat];
@@ -1266,8 +1262,8 @@ function Detail({ a, onBack, onStatusChange }) {
                         return (
                           <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
                             <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                              <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none';e.currentTarget.nextSibling.style.display='inline-flex';}} style={{ width:44, height:44, objectFit:'contain', flexShrink:0, borderRadius:'50%' }} />
-                              <span style={{ width:44, height:44, borderRadius:'50%', background:'rgba(255,255,255,.08)', alignItems:'center', justifyContent:'center', fontSize:26, flexShrink:0, display:'none' }}>{meta.icon}</span>
+                              <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none';e.currentTarget.nextSibling.style.display='inline';}} style={{ width:32, height:32, objectFit:'contain', flexShrink:0 }} />
+                              <span style={{ fontSize:20, flexShrink:0, display:'none' }}>{meta.icon}</span>
                               <div style={{ flex:1 }}>
                                 <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
                                 {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
