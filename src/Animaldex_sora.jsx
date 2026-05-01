@@ -511,38 +511,43 @@ function DistMap({ hab, accentColor, countriesPresent }) {
       document.head.appendChild(script);
     } else { initMap(); }
     function initMap() {
+      console.log('[Map] countriesPresent:', countriesPresent);
       const L = window.L;
       if (mapInstance.current) { mapInstance.current.remove(); }
       mapInstance.current = L.map(mapContainer.current, { zoomControl: false, attributionControl: false }).setView([20, 0], 2);
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 19, minZoom: 1 }).addTo(mapInstance.current);
-      fetch('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/10m_cultural/10m_admin_0_countries.geojson')
+      fetch('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson')
         .then(r => r.json())
-        .then(countries => {
-          const countryNamesEn = countriesPresent.map(code => ISO_TO_EN[code] || code);
+        .then(data => {
           const isoSet = new Set(countriesPresent.map(c => c.toUpperCase()));
           let highlightedBounds = null;
-          L.geoJSON(countries, {
-            style: () => ({ color: 'rgba(255,255,255,.2)', weight: 0.5, fillOpacity: 0.3, fillColor: 'rgba(100,100,100,.1)' }),
+          L.geoJSON(data, {
+            style: () => ({ color: 'rgba(255,255,255,.15)', weight: 0.5, fillOpacity: 0.25, fillColor: 'rgba(120,120,120,.12)' }),
             onEachFeature: (feature, layer) => {
-              const isoA2 = (feature.properties?.ISO_A2 || '').toUpperCase();
-              const isoA3 = (feature.properties?.ISO_A3 || '').toUpperCase();
-              const countryName = feature.properties?.NAME || feature.properties?.ADMIN || '';
-              const isMatch = isoSet.has(isoA2) || isoSet.has(isoA3) || countryNamesEn.includes(countryName);
+              const p = feature.properties || {};
+              const iso2 = (p.ISO_A2 || p.iso_a2 || '').toUpperCase();
+              const iso2alt = (p.ADM0_A3 || '').toUpperCase();
+              const nameEn = ISO_TO_EN;
+              // also try matching via our ISO_TO_EN reverse lookup
+              const matchByName = Object.entries(nameEn).some(([k,v]) =>
+                isoSet.has(k.toUpperCase()) && (v === p.NAME || v === p.ADMIN || v === p.NAME_LONG)
+              );
+              const isMatch = (iso2 && isoSet.has(iso2)) || matchByName;
               if (isMatch) {
-                layer.setStyle({ fillColor: accentColor, fillOpacity: 0.7, color: accentColor, weight: 1.5 });
+                layer.setStyle({ fillColor: accentColor, fillOpacity: 0.75, color: accentColor, weight: 1.5 });
                 layer.bringToFront();
                 try {
                   const bounds = layer.getBounds();
-                  if (bounds && bounds.isValid()) { highlightedBounds = highlightedBounds ? highlightedBounds.extend(bounds) : bounds; }
+                  if (bounds?.isValid()) { highlightedBounds = highlightedBounds ? highlightedBounds.extend(bounds) : bounds; }
                 } catch (e) {}
               }
-              layer.bindPopup(`<b>${countryName}</b>`);
+              layer.bindPopup(`<b>${p.NAME || p.ADMIN || ''}</b>`);
             }
           }).addTo(mapInstance.current);
-          if (highlightedBounds && highlightedBounds.isValid()) {
-            setTimeout(() => { mapInstance.current.fitBounds(highlightedBounds, { padding: [50, 50], maxZoom: 6 }); }, 300);
+          if (highlightedBounds?.isValid()) {
+            setTimeout(() => { mapInstance.current.fitBounds(highlightedBounds, { padding: [40, 40], maxZoom: 6 }); }, 300);
           }
-        }).catch(() => {});
+        }).catch(err => console.warn('Map GeoJSON error:', err));
     }
   }, [countriesPresent, accentColor]);
   return (
@@ -1068,9 +1073,9 @@ function Detail({ a, onBack }) {
           </div>
 
           {/* PIRAMIDE: trofico */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 5px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:4 }}>
-            <TrophicPyramid trophic={a.trophic} compact={true} />
-            <div style={{ fontSize:9, fontWeight:800, color:TROPHIC[a.trophic]?.color || c.accent, textAlign:'center', letterSpacing:'-.2px', lineHeight:1.2 }}>{TROPHIC[a.trophic]?.label || ''}</div>
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 7px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:5 }}>
+            <TrophicPyramid trophic={a.trophic} compact={false} />
+            <div style={{ fontSize:11, fontWeight:800, color:TROPHIC[a.trophic]?.c || c.accent, textAlign:'center', letterSpacing:'-.2px', lineHeight:1.2 }}>{TROPHIC[a.trophic]?.label || ''}</div>
           </div>
         </div>
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
