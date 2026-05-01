@@ -649,7 +649,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   if (!found) {
     if (classIcon && !iconErr) {
       return (
-        <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#111113', display:'flex', alignItems:'center', justifyContent:'center' }}>
+        <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
             style={{ width:'67%', height:'67%', objectFit:'contain', opacity:0.55 }} />
         </div>
@@ -663,8 +663,9 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
   if (a.image_url && !imgErr) {
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${c.accent}) drop-shadow(0 0 ${Math.round(size*0.18)}px ${c.accent}88)`;
+    const pad = Math.round(size * 0.12);
     return (
-      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'visible' }}>
+      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'visible', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             filter: dropShadow,
@@ -1051,56 +1052,63 @@ function Grid({ onSelect, statusMap = {} }) {
 function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
   const [visible, setVisible] = useState(false);
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
-  const handleClose = () => { setVisible(false); setTimeout(onClose, 300); };
+  const handleClose = () => { setVisible(false); setTimeout(onClose, 350); };
 
-  // Calculate transform origin from image rect to fullscreen
   const vw = window.innerWidth;
   const vh = window.innerHeight;
-  const scaleX = originRect ? originRect.width / vw : 0.15;
-  const scaleY = originRect ? originRect.height / vh : 0.15;
-  const initScale = Math.max(scaleX, scaleY);
-  const originCX = originRect ? originRect.left + originRect.width / 2 : vw / 2;
-  const originCY = originRect ? originRect.top + originRect.height / 2 : vh / 2;
-  const tx = originCX - vw / 2;
-  const ty = originCY - vh / 2;
+
+  // Starting box position and size (the image container in the detail page)
+  const startLeft   = originRect ? originRect.left : vw * 0.1;
+  const startTop    = originRect ? originRect.top  : vh * 0.1;
+  const startW      = originRect ? originRect.width  : vw * 0.4;
+  const startH      = originRect ? originRect.height : vh * 0.3;
+
+  // Interpolate box from origin → fullscreen
+  const boxStyle = visible ? {
+    position:'fixed', left:0, top:0, width:'100vw', height:'100vh',
+    background: bgColor || '#1a1a1c',
+    transition:'all .38s cubic-bezier(.4,0,.2,1)',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    zIndex:300, cursor:'zoom-out',
+  } : {
+    position:'fixed',
+    left: startLeft, top: startTop,
+    width: startW, height: startH,
+    borderRadius: 16,
+    background: bgColor || '#1a1a1c',
+    transition:'all .38s cubic-bezier(.4,0,.2,1)',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    zIndex:300, cursor:'zoom-out',
+  };
 
   return (
-    <div onClick={handleClose} style={{
-      position:'fixed', inset:0, zIndex:300,
-      background: visible ? 'rgba(0,0,0,.92)' : 'rgba(0,0,0,0)',
-      transition:'background .3s ease', cursor:'zoom-out',
-      overflow:'hidden',
-    }}>
-      {/* Colored bg that expands from image position */}
-      <div style={{
-        position:'absolute', inset:0,
-        background: bgColor || 'transparent',
-        opacity: visible ? 0.35 : 0,
-        transition:'opacity .3s ease',
+    <>
+      {/* Dark overlay */}
+      <div onClick={handleClose} style={{
+        position:'fixed', inset:0, zIndex:299,
+        background: visible ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)',
+        transition:'background .35s ease',
       }}/>
-      <div style={{
-        position:'absolute', inset:0,
-        display:'flex', alignItems:'center', justifyContent:'center',
-        transform: visible ? 'none' : `translate(${tx}px, ${ty}px) scale(${initScale})`,
-        transition:'transform .35s cubic-bezier(.34,1.2,.64,1)',
-        transformOrigin:'center center',
-      }}>
+      {/* Expanding colored box */}
+      <div onClick={handleClose} style={boxStyle}>
         <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
-          width:'100vw', maxHeight:'92vh',
+          maxWidth:'88%', maxHeight:'88%',
           objectFit:'contain',
+          opacity: visible ? 1 : 0,
+          transition:'opacity .25s ease .1s',
           filter: `drop-shadow(0 0 40px ${accentColor}99)`,
           cursor:'default',
         }}/>
+        <button onClick={handleClose} style={{
+          position:'absolute', top:16, right:16,
+          background:'rgba(0,0,0,.25)', border:'none',
+          color:'white', fontSize:20, width:40, height:40,
+          borderRadius:'50%', cursor:'pointer', display:'flex',
+          alignItems:'center', justifyContent:'center',
+          opacity: visible ? 1 : 0, transition:'opacity .3s ease .15s',
+        }}>×</button>
       </div>
-      <button onClick={handleClose} style={{
-        position:'absolute', top:20, right:20,
-        background:'rgba(255,255,255,.12)', border:'none',
-        color:'white', fontSize:22, width:44, height:44,
-        borderRadius:'50%', cursor:'pointer', display:'flex',
-        alignItems:'center', justifyContent:'center',
-        opacity: visible ? 1 : 0, transition:'opacity .3s ease',
-      }}>×</button>
-    </div>
+    </>
   );
 }
 
