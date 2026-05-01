@@ -651,7 +651,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
       return (
         <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? 0.9 : 1.2})` }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? 0.673 : 1.2})` }} />
         </div>
       );
     }
@@ -664,7 +664,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   if (a.image_url && !imgErr) {
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
-    const imgScale = gridMode ? 1.35 : 1.2;
+    const imgScale = gridMode ? 1.01 : 1.2;
     return (
       <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
@@ -865,7 +865,7 @@ function RarityLegendRows() {
 }
 
 // ── Grid ──────────────────────────────────────────────────────────────
-function Grid({ onSelect, statusMap = {} }) {
+function Grid({ onSelect, statusMap = {}, onHome }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -909,10 +909,12 @@ function Grid({ onSelect, statusMap = {} }) {
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', position:'relative', overflow:'hidden' }}>
       {/* Header */}
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'14px 16px 11px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
-        <span/>
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'8px 12px 8px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
+        <button onClick={onHome} aria-label="Home" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
         <span style={{ color:'white', fontSize:18, fontWeight:900 }}>Animaldex</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:46, height:46, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10 }}>ⓘ</button>
       </div>
 
       {/* Active filter chips */}
@@ -1252,9 +1254,13 @@ function Detail({ a, onBack, onStatusChange }) {
 
               {/* Abilità */}
               {statMode==='abilita'&&(
-                <div>
+                <div
+                  onTouchStart={e=>e.stopPropagation()}
+                  onTouchMove={e=>e.stopPropagation()}
+                  style={{ height:'100%', overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', touchAction:'pan-y', paddingRight:2 }}
+                >
                   {a.categories?.length>0?(
-                    <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                    <div style={{ display:'flex', flexDirection:'column', gap:8, paddingBottom:10 }}>
                       {a.categories.map(cat=>{
                         const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
                         const curiosity=a.cat_curiosities?.[cat];
@@ -1262,8 +1268,8 @@ function Detail({ a, onBack, onStatusChange }) {
                         return (
                           <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
                             <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                              <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none';e.currentTarget.nextSibling.style.display='inline';}} style={{ width:32, height:32, objectFit:'contain', flexShrink:0 }} />
-                              <span style={{ fontSize:20, flexShrink:0, display:'none' }}>{meta.icon}</span>
+                              <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none';e.currentTarget.nextSibling.style.display='inline-flex';}} style={{ width:44, height:44, objectFit:'contain', flexShrink:0, borderRadius:'50%' }} />
+                              <span style={{ width:44, height:44, borderRadius:'50%', background:'rgba(255,255,255,.08)', alignItems:'center', justifyContent:'center', fontSize:26, flexShrink:0, display:'none' }}>{meta.icon}</span>
                               <div style={{ flex:1 }}>
                                 <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
                                 {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
@@ -1397,10 +1403,216 @@ function Detail({ a, onBack, onStatusChange }) {
   );
 }
 
+
+// ── Main Menu & Extra Pages ──────────────────────────────────────────
+const BADGE_PLACEHOLDERS = [
+  { id:'campione-1', name:'Fiocco Campione', cat:'Campione', icon:'🏆', color:'#7A241C' },
+  { id:'campione-2', name:'Fiocco Campione Oro', cat:'Campione', icon:'🥇', color:'#7A241C' },
+  { id:'classe-1', name:'Fiocco Classe: Fuoco', cat:'Classe', icon:'🔥', color:'#8A1E18' },
+  { id:'classe-2', name:'Fiocco Classe: Acqua', cat:'Classe', icon:'💧', color:'#244A80' },
+  { id:'bellezza-1', name:'Fiocco Bellezza', cat:'Bellezza', icon:'💎', color:'#284D82' },
+  { id:'bellezza-2', name:'Fiocco Bellezza: Livello 2', cat:'Bellezza', icon:'🦋', color:'#284D82' },
+  { id:'grazia-1', name:'Fiocco Grazia', cat:'Grazia', icon:'🌸', color:'#774B56' },
+  { id:'grazia-2', name:'Fiocco Grazia: Livello 2', cat:'Grazia', icon:'🎀', color:'#774B56' },
+  { id:'acume-1', name:'Fiocco Acume', cat:'Acume', icon:'🧠', color:'#154F0A' },
+  { id:'acume-2', name:'Fiocco Acume: Livello 2', cat:'Acume', icon:'⭐', color:'#154F0A' },
+  { id:'record-1', name:'Fiocco Record', cat:'Record', icon:'📜', color:'#695820' },
+  { id:'evento-1', name:'Fiocco Evento', cat:'Evento', icon:'✨', color:'#5A2568' },
+];
+
+const REGION_PLACEHOLDERS = [
+  { id:'africa-nord', name:'Nord Africa', hint:'Deserti, altopiani rocciosi, coste mediterranee', colors:['#7CA64C','#D0A35B','#1E6D8F'] },
+  { id:'sahara', name:'Sahara Centrale', hint:'Dune, oasi e fauna xerofila', colors:['#C88B35','#E2C16D','#5C3B16'] },
+  { id:'europa', name:'Europa Temperata', hint:'Boschi, campagne, coste e zone umide', colors:['#3D7E45','#86B86B','#326B93'] },
+  { id:'amazonia', name:'Amazzonia', hint:'Foreste tropicali e grandi bacini fluviali', colors:['#145D3A','#1B8A5A','#2D8CA8'] },
+  { id:'ande', name:'Ande', hint:'Montagne, altipiani e valli fredde', colors:['#567070','#9EA7A2','#315E82'] },
+  { id:'indo-pacifico', name:'Indo-Pacifico', hint:'Barriere coralline, isole e mangrovie', colors:['#1B86A8','#4EC4C8','#1F5F7E'] },
+  { id:'australia', name:'Australia Interna', hint:'Outback, savane secche e coste aride', colors:['#B76A2A','#D89D54','#567A35'] },
+  { id:'artico', name:'Artico', hint:'Ghiacci, tundra e mari freddi', colors:['#D8EEF5','#83AFC8','#445E78'] },
+];
+
+function PageHeader({ title, onBack, right }) {
+  return (
+    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:'1px solid #2A2A2C', flexShrink:0, background:'#1C1C1E' }}>
+      <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      </button>
+      <div style={{ color:'white', fontSize:20, fontWeight:900, letterSpacing:'-.2px' }}>{title}</div>
+      <div style={{ width:46, height:46, display:'flex', alignItems:'center', justifyContent:'center' }}>{right}</div>
+    </div>
+  );
+}
+
+function MainMenu({ onOpen, onBack }) {
+  const items = [
+    { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
+    { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Collezione e filtri' },
+    { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Zone del mondo' },
+    { id:'settings', label:'Impostazioni', icon:'⚙️', bg:'#4A4A50', desc:'Preferenze app' },
+    { id:'abilities', label:'Abilità', icon:'✨', bg:'#5A2E80', desc:'Catalogo abilità' },
+  ];
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+      <PageHeader title="Menu" onBack={onBack} right={<span style={{ color:'#90D84A', fontSize:22 }}>⌂</span>} />
+      <div style={{ flex:1, overflowY:'auto', padding:'18px 16px 24px' }}>
+        <div style={{ background:'linear-gradient(135deg,#2E5A10,#1A3808)', borderRadius:22, padding:22, marginBottom:16, boxShadow:'0 18px 50px rgba(0,0,0,.32)' }}>
+          <div style={{ color:'#90D84A', fontSize:13, fontWeight:800, textTransform:'uppercase', letterSpacing:.8, marginBottom:6 }}>Animaldex</div>
+          <div style={{ color:'white', fontSize:28, fontWeight:900, letterSpacing:'-.7px' }}>Menu principale</div>
+          <div style={{ color:'rgba(255,255,255,.68)', fontSize:13, lineHeight:1.6, marginTop:8 }}>Scegli una sezione per profilo, badge, regioni, impostazioni o abilità.</div>
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+          {items.map(item=>(
+            <button key={item.id} onClick={()=>onOpen(item.id)} style={{ minHeight:138, border:'none', borderRadius:20, background:item.bg, color:'white', cursor:'pointer', padding:16, display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'space-between', textAlign:'left', boxShadow:'0 12px 34px rgba(0,0,0,.28)' }}>
+              <div style={{ width:54, height:54, borderRadius:18, background:'rgba(255,255,255,.16)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28 }}>{item.icon}</div>
+              <div>
+                <div style={{ fontSize:17, fontWeight:900, marginBottom:4 }}>{item.label}</div>
+                <div style={{ fontSize:11, color:'rgba(255,255,255,.66)', lineHeight:1.35 }}>{item.desc}</div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProfilePage({ onBack }) {
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+      <PageHeader title="Profilo" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:18 }}>
+        <div style={{ background:'linear-gradient(135deg,#254A70,#13283D)', borderRadius:24, padding:22, textAlign:'center', marginBottom:16 }}>
+          <div style={{ width:96, height:96, borderRadius:'50%', background:'rgba(255,255,255,.16)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 12px' }}>👤</div>
+          <div style={{ color:'white', fontSize:24, fontWeight:900 }}>Esploratore</div>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, marginTop:4 }}>Profilo placeholder</div>
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+          {[['Animali visti','—'],['Fotografati','—'],['Badge','—'],['Regioni','—']].map(([k,v])=>(
+            <div key={k} style={{ background:'#111113', borderRadius:16, padding:16 }}>
+              <div style={{ color:'#90D84A', fontSize:24, fontWeight:900 }}>{v}</div>
+              <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:700, marginTop:4 }}>{k}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function BadgesPage({ onBack }) {
+  const cats = ['Tutti', ...Array.from(new Set(BADGE_PLACEHOLDERS.map(b=>b.cat)))];
+  const [cat, setCat] = useState('Tutti');
+  const [search, setSearch] = useState('');
+  const badges = BADGE_PLACEHOLDERS.filter(b => (cat==='Tutti'||b.cat===cat) && (!search.trim() || b.name.toLowerCase().includes(search.toLowerCase())));
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
+      <PageHeader title="Badge" onBack={onBack} />
+      <div style={{ padding:'12px 12px 8px', flexShrink:0 }}>
+        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca badge..." style={{ width:'100%', height:44, borderRadius:12, background:'#3A3A3C', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+        <div style={{ display:'flex', gap:8, overflowX:'auto', paddingTop:10, paddingBottom:2 }}>
+          {cats.map(c=>(
+            <button key={c} onClick={()=>setCat(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:cat===c?'#777':'#3A3A3C', color:'white', fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>
+          ))}
+        </div>
+      </div>
+      <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
+          {badges.map(b=>(
+            <div key={b.id} style={{ background:b.color, borderRadius:14, padding:10, minHeight:128, display:'flex', flexDirection:'column', justifyContent:'space-between', boxShadow:'0 10px 30px rgba(0,0,0,.25)' }}>
+              <div style={{ height:78, borderRadius:10, background:'rgba(255,255,255,.26)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:38, border:'1px solid rgba(255,255,255,.16)' }}>{b.icon}</div>
+              <div style={{ color:'white', fontSize:12, fontWeight:900, lineHeight:1.25, textAlign:'center', marginTop:8 }}>{b.name}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RegionsPage({ onBack }) {
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
+      <PageHeader title="Regioni" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
+        {REGION_PLACEHOLDERS.map(r=>(
+          <div key={r.id} style={{ marginBottom:14, borderBottom:'1px solid rgba(255,255,255,.1)', paddingBottom:14 }}>
+            <div style={{ height:118, borderRadius:12, overflow:'hidden', position:'relative', background:`linear-gradient(120deg, ${r.colors[0]}, ${r.colors[1]} 48%, ${r.colors[2]})`, boxShadow:'inset 0 0 0 1px rgba(255,255,255,.08)' }}>
+              <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 20% 25%, rgba(255,255,255,.32), transparent 22%), radial-gradient(circle at 74% 40%, rgba(0,0,0,.18), transparent 26%), linear-gradient(0deg, rgba(0,0,0,.12), rgba(255,255,255,.1))' }} />
+              <div style={{ position:'absolute', left:'8%', top:'32%', width:'38%', height:'34%', borderRadius:'48% 42% 55% 35%', background:'rgba(30,80,40,.35)', filter:'blur(.2px)', transform:'rotate(-8deg)' }} />
+              <div style={{ position:'absolute', right:'9%', bottom:'20%', width:'34%', height:'28%', borderRadius:'45% 55% 40% 50%', background:'rgba(20,100,140,.28)', transform:'rotate(10deg)' }} />
+            </div>
+            <div style={{ display:'flex', alignItems:'baseline', justifyContent:'space-between', gap:12, padding:'9px 2px 0' }}>
+              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>{r.name}</div>
+              <div style={{ color:'rgba(255,255,255,.45)', fontSize:11, fontWeight:700, textAlign:'right' }}>{r.hint}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SettingsPage({ onBack }) {
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+      <PageHeader title="Impostazioni" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:16 }}>
+        {[
+          ['Audio','Effetti e notifiche'],
+          ['Tema','Colori e contrasto'],
+          ['Dati','Backup e sincronizzazione'],
+          ['Privacy','Permessi e preferenze'],
+        ].map(([t,d])=>(
+          <div key={t} style={{ background:'#111113', borderRadius:16, padding:16, marginBottom:10, display:'flex', alignItems:'center', justifyContent:'space-between' }}>
+            <div><div style={{ color:'white', fontSize:15, fontWeight:800 }}>{t}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:12, marginTop:3 }}>{d}</div></div>
+            <div style={{ color:'rgba(255,255,255,.35)', fontSize:20 }}>›</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function AbilitiesPage({ onBack }) {
+  const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, count: ANIMALS.filter(a=>a.categories?.includes(id)).length }));
+  const [search, setSearch] = useState('');
+  const rows = abilityRows.filter(a => !search.trim() || a.label.toLowerCase().includes(search.toLowerCase()) || a.id.toLowerCase().includes(search.toLowerCase()));
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+      <PageHeader title="Abilità" onBack={onBack} />
+      <div style={{ padding:'12px 14px', flexShrink:0 }}>
+        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca abilità..." style={{ width:'100%', height:44, borderRadius:12, background:'#222226', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+      </div>
+      <div style={{ flex:1, overflowY:'auto', padding:'0 14px 28px' }}>
+        {rows.map(meta=>{
+          const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
+          return (
+            <div key={meta.id} style={{ background:'rgba(255,255,255,.05)', borderRadius:18, padding:14, marginBottom:10, display:'flex', alignItems:'center', gap:14, border:`1px solid ${meta.color}33` }}>
+              <div style={{ width:66, height:66, borderRadius:'50%', background:`${meta.color}22`, border:`2px solid ${meta.color}`, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, overflow:'hidden', boxShadow:`0 0 18px ${meta.color}33` }}>
+                <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:56, height:56, objectFit:'contain', borderRadius:'50%' }} />
+                <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:'100%', height:'100%', fontSize:34 }}>{meta.icon}</span>
+              </div>
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ color:'white', fontSize:16, fontWeight:900, lineHeight:1.25 }}>{meta.label}</div>
+                <div style={{ color:'rgba(255,255,255,.44)', fontSize:11, fontWeight:700, marginTop:4, wordBreak:'break-word' }}>{meta.id}</div>
+              </div>
+              <div style={{ minWidth:42, textAlign:'center', background:'rgba(0,0,0,.28)', borderRadius:12, padding:'7px 8px' }}>
+                <div style={{ color:meta.color, fontSize:16, fontWeight:900 }}>{meta.count}</div>
+                <div style={{ color:'rgba(255,255,255,.38)', fontSize:9, fontWeight:800 }}>ANIMALI</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 // ── Root ──────────────────────────────────────────────────────────────
 export default function App() {
   const [sel,setSel]=useState(null);
   const [statusMap,setStatusMap]=useState({});
+  const [page,setPage]=useState('grid');
   useEffect(()=>{
     const l=document.createElement('link');
     l.rel='stylesheet';
@@ -1418,13 +1630,22 @@ export default function App() {
   };
 
   const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
+  const openPage = (nextPage) => { setSel(null); setPage(nextPage); };
+
+  const renderPage = () => {
+    if (enriched) return <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>;
+    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} />;
+    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} />;
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} />;
+    if (page === 'regions') return <RegionsPage onBack={()=>setPage('menu')} />;
+    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
+    if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} />;
+    return <Grid onSelect={setSel} statusMap={statusMap} onHome={()=>setPage('menu')} />;
+  };
 
   return (
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E' }}>
-      {enriched
-        ? <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
-        : <Grid onSelect={setSel} statusMap={statusMap}/>
-      }
+      {renderPage()}
     </div>
   );
 }
