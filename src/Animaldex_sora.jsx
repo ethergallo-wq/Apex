@@ -649,14 +649,14 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   if (!found) {
     if (classIcon && !iconErr) {
       return (
-        <div style={{ width:'100%', height:size, overflow:'hidden', borderRadius:'inherit' }}>
+        <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+            style={{ width:'45%', height:'45%', objectFit:'contain', opacity:0.12, filter:'brightness(0) invert(1)' }} />
         </div>
       );
     }
     return (
-      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.2 }}>{c.icon}</div>
+      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.1 }}>{c.icon}</div>
     );
   }
 
@@ -1018,6 +1018,20 @@ function Grid({ onSelect }) {
                 {[{k:'D',l:'Decomponente',desc:'Detritofago'},{k:'F',l:'Filtratore',desc:'Filtra particelle dall\'acqua'},{k:1,l:'Produttore',desc:'Organismi autotrofi'},{k:2,l:'Erbivoro',desc:'Si nutre di piante'},{k:4,l:'Predatore Apice',desc:'Vertice della catena'},{k:3,l:'Predatore',desc:'Carnivoro medio'}].map(({k,l,desc})=>{const tr=TROPHIC[k]||TROPHIC[1];return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:tr.bg,color:tr.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{l}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
               </div>
             </div>
+            <div style={{ marginTop:24 }}>
+              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⚖️ Tachimetro Peso</h3>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {[{label:'Piuma',range:'< 1 kg',color:'#5BB8F5',desc:'Animali leggerissimi, spesso volatili o insetti'},{label:'Medio',range:'1 kg – 200 kg',color:'#F5A623',desc:'La maggior parte dei mammiferi e rettili medi'},{label:'Massimo',range:'> 200 kg',color:'#E74C3C',desc:'Grandi predatori, elefanti, cetacei e megafauna'}].map(({label,range,color,desc})=>(
+                  <div key={label} style={{display:'flex',gap:10,alignItems:'flex-start'}}>
+                    <div style={{background:color+'22',color,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{label}</div>
+                    <div style={{flex:1}}>
+                      <div style={{color:'white',fontSize:12,fontWeight:700}}>{range}</div>
+                      <div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -1034,31 +1048,57 @@ function Grid({ onSelect }) {
 }
 
 // ── Image Lightbox ────────────────────────────────────────────────────
-function ImageLightbox({ src, alt, accentColor, onClose }) {
+function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
   const [visible, setVisible] = useState(false);
-  useEffect(() => { requestAnimationFrame(() => setVisible(true)); }, []);
-  const handleClose = () => { setVisible(false); setTimeout(onClose, 280); };
+  useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
+  const handleClose = () => { setVisible(false); setTimeout(onClose, 300); };
+
+  // Calculate transform origin from image rect to fullscreen
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const scaleX = originRect ? originRect.width / vw : 0.15;
+  const scaleY = originRect ? originRect.height / vh : 0.15;
+  const initScale = Math.max(scaleX, scaleY);
+  const originCX = originRect ? originRect.left + originRect.width / 2 : vw / 2;
+  const originCY = originRect ? originRect.top + originRect.height / 2 : vh / 2;
+  const tx = originCX - vw / 2;
+  const ty = originCY - vh / 2;
+
   return (
     <div onClick={handleClose} style={{
       position:'fixed', inset:0, zIndex:300,
-      background: visible ? 'rgba(0,0,0,.93)' : 'rgba(0,0,0,0)',
-      display:'flex', alignItems:'center', justifyContent:'center',
-      transition:'background .28s ease', cursor:'zoom-out',
+      background: visible ? 'rgba(0,0,0,.92)' : 'rgba(0,0,0,0)',
+      transition:'background .3s ease', cursor:'zoom-out',
+      overflow:'hidden',
     }}>
-      <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
-        width:'100%', maxWidth:'100vw', maxHeight:'92vh',
-        objectFit:'contain',
-        transform: visible ? 'scale(1)' : 'scale(0.12)',
-        transition:'transform .32s cubic-bezier(.34,1.4,.64,1)',
-        filter: `drop-shadow(0 0 32px ${accentColor}88)`,
-        cursor:'default',
+      {/* Colored bg that expands from image position */}
+      <div style={{
+        position:'absolute', inset:0,
+        background: bgColor || 'transparent',
+        opacity: visible ? 0.35 : 0,
+        transition:'opacity .3s ease',
       }}/>
+      <div style={{
+        position:'absolute', inset:0,
+        display:'flex', alignItems:'center', justifyContent:'center',
+        transform: visible ? 'none' : `translate(${tx}px, ${ty}px) scale(${initScale})`,
+        transition:'transform .35s cubic-bezier(.34,1.2,.64,1)',
+        transformOrigin:'center center',
+      }}>
+        <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
+          width:'100vw', maxHeight:'92vh',
+          objectFit:'contain',
+          filter: `drop-shadow(0 0 40px ${accentColor}99)`,
+          cursor:'default',
+        }}/>
+      </div>
       <button onClick={handleClose} style={{
         position:'absolute', top:20, right:20,
         background:'rgba(255,255,255,.12)', border:'none',
         color:'white', fontSize:22, width:44, height:44,
         borderRadius:'50%', cursor:'pointer', display:'flex',
         alignItems:'center', justifyContent:'center',
+        opacity: visible ? 1 : 0, transition:'opacity .3s ease',
       }}>×</button>
     </div>
   );
@@ -1073,7 +1113,10 @@ function Detail({ a, onBack }) {
   const [showStatusMenu,setShowStatusMenu]=useState(false);
   const [showInfoModal,setShowInfoModal]=useState(false);
   const [showLightbox,setShowLightbox]=useState(false);
+  const [lightboxRect,setLightboxRect]=useState(null);
+  const [pullProgress,setPullProgress]=useState(0);
   const scrollRef = useRef(null);
+  const imgRef = useRef(null);
   const touchStartY = useRef(0);
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
@@ -1085,13 +1128,24 @@ function Detail({ a, onBack }) {
     setStatMode(m);
   };
 
-  const openLightbox = () => { if (found && a.image_url) setShowLightbox(true); };
+  const openLightbox = (rect) => {
+    if (!found || !a.image_url) return;
+    setLightboxRect(rect || (imgRef.current ? imgRef.current.getBoundingClientRect() : null));
+    setShowLightbox(true);
+    setPullProgress(0);
+  };
 
   const handleTouchStart = (e) => { touchStartY.current = e.touches[0].clientY; };
   const handleTouchMove  = (e) => {
     if (!scrollRef.current || scrollRef.current.scrollTop > 2) return;
-    if (e.touches[0].clientY - touchStartY.current > 80) openLightbox();
+    const delta = e.touches[0].clientY - touchStartY.current;
+    if (delta > 0 && found && a.image_url) {
+      const progress = Math.min(1, delta / 120);
+      setPullProgress(progress);
+      if (delta > 110) openLightbox();
+    }
   };
+  const handleTouchEnd = () => { if (!showLightbox) setPullProgress(0); };
   
   const scale = 1;
   return (
@@ -1101,7 +1155,7 @@ function Detail({ a, onBack }) {
         <span style={{ color:'white', fontSize:17, fontWeight:800 }}>{a.com}</span>
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
       </div>
-      <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}
+      <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
         style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
         <div style={{ display:'flex', flexWrap:'wrap', gap:3, alignItems:'center', marginBottom:14 }}>
           {[a.kin,a.phy,a.cls,a.ord,a.fam].map((p,i,arr)=>(
@@ -1112,8 +1166,18 @@ function Detail({ a, onBack }) {
           ))}
         </div>
         <div style={{ display:'flex', gap:12, marginBottom:16, padding:'0 4px' }}>
-          <div onClick={openLightbox} style={{ width:132, height:132, borderRadius:16, overflow:'hidden', flexShrink:0, background:c.img, cursor: found && a.image_url ? 'zoom-in' : 'default', boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none' }}>
-            <AnimalImg a={a} size={132} fontSize={76} overrideStatus={localStatus} />
+          <div ref={imgRef}
+            onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
+            style={{
+              width: Math.round(108 + pullProgress * (window.innerWidth - 108)),
+              height: Math.round(108 + pullProgress * (window.innerWidth - 108)),
+              borderRadius: Math.round(16 - pullProgress * 16),
+              overflow:'hidden', flexShrink:0, background:c.img,
+              cursor: found && a.image_url ? 'zoom-in' : 'default',
+              boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none',
+              transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
+            }}>
+            <AnimalImg a={a} size={108} fontSize={68} overrideStatus={localStatus} />
           </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con classe animata */}
@@ -1152,7 +1216,7 @@ function Detail({ a, onBack }) {
           </div>
 
           {/* PIRAMIDE: trofico */}
-          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 7px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:5 }}>
+          <div style={{ background:'#111113', borderRadius:12, padding:'7px 6px 8px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:4 }}>
             <TrophicPyramid trophic={a.trophic} compact={false} />
             <div style={{ fontSize:11, fontWeight:800, color:TROPHIC[a.trophic]?.c || c.accent, textAlign:'center', letterSpacing:'-.2px', lineHeight:1.2 }}>{TROPHIC[a.trophic]?.label || ''}</div>
           </div>
@@ -1295,10 +1359,24 @@ function Detail({ a, onBack }) {
                 {[{k:'D',l:'Decomponente',desc:'Detritofago'},{k:'F',l:'Filtratore',desc:'Filtra particelle dall\'acqua'},{k:1,l:'Produttore',desc:'Organismi autotrofi'},{k:2,l:'Erbivoro',desc:'Si nutre di piante'},{k:4,l:'Predatore Apice',desc:'Vertice della catena'},{k:3,l:'Predatore',desc:'Carnivoro medio'}].map(({k,l,desc})=>{const tr=TROPHIC[k]||TROPHIC[1];return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:tr.bg,color:tr.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{l}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
               </div>
             </div>
+            <div style={{ marginTop:24 }}>
+              <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⚖️ Tachimetro Peso</h3>
+              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+                {[{label:'Piuma',range:'< 1 kg',color:'#5BB8F5',desc:'Animali leggerissimi, spesso volatili o insetti'},{label:'Medio',range:'1 kg – 200 kg',color:'#F5A623',desc:'La maggior parte dei mammiferi e rettili medi'},{label:'Massimo',range:'> 200 kg',color:'#E74C3C',desc:'Grandi predatori, elefanti, cetacei e megafauna'}].map(({label,range,color,desc})=>(
+                  <div key={label} style={{display:'flex',gap:10,alignItems:'flex-start'}}>
+                    <div style={{background:color+'22',color,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{label}</div>
+                    <div style={{flex:1}}>
+                      <div style={{color:'white',fontSize:12,fontWeight:700}}>{range}</div>
+                      <div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       )}
-      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} onClose={()=>setShowLightbox(false)}/>}
+      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} bgColor={c.img} originRect={lightboxRect} onClose={()=>{setShowLightbox(false);setPullProgress(0);}}/>}
     </div>
   );
 }
