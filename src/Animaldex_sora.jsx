@@ -636,7 +636,7 @@ const RARITY_GLOW = {
   'Leggendario':'rgba(234,200,255,.7)',
 };
 
-function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
+function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [iconErr, setIconErr] = useState(false);
@@ -663,11 +663,13 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
   if (a.image_url && !imgErr) {
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
-    const pad = Math.round(size * 0.12);
+    const pad = gridMode ? 0 : Math.round(size * 0.12);
+    const imgScale = gridMode ? 1.5 : 1;
     return (
-      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'visible', padding:pad, boxSizing:'border-box' }}>
+      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
+            transform: `scale(${imgScale})`,
             filter: dropShadow,
             WebkitFilter: dropShadow }} />
       </div>
@@ -690,7 +692,7 @@ function AnimalCard({ a, onClick }) {
       <div style={{ position:'absolute', top:6, left:6, zIndex:2, background:'rgba(0,0,0,.55)', color:'rgba(255,255,255,.7)', fontSize:10, fontWeight:700, padding:'2px 6px', borderRadius:8 }}>{a.no}</div>
       {/* Pallino rarità */}
       <div className={rarityDotClass(a.rarity)} style={{ position:'absolute', top:7, right:7, zIndex:2, width:10, height:10, borderRadius:'50%' }}/>
-      <AnimalImg a={a} size={102} fontSize={52} />
+      <AnimalImg a={a} size={102} fontSize={52} gridMode={true} />
       <div style={{ background:found?c.mid:'#1C1C1E', padding:'7px 6px 4px', color:found?'white':'#2E2E30', fontSize:12, fontWeight:700, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.com}</div>
     </div>
   );
