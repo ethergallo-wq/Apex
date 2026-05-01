@@ -649,9 +649,9 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   if (!found) {
     if (classIcon && !iconErr) {
       return (
-        <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+        <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#111113', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'45%', height:'45%', objectFit:'contain', opacity:0.12, filter:'brightness(0) invert(1)' }} />
+            style={{ width:'67%', height:'67%', objectFit:'contain', opacity:0.28 }} />
         </div>
       );
     }
@@ -862,7 +862,7 @@ function RarityLegendRows() {
 }
 
 // ── Grid ──────────────────────────────────────────────────────────────
-function Grid({ onSelect }) {
+function Grid({ onSelect, statusMap = {} }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -877,7 +877,7 @@ function Grid({ onSelect }) {
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
 
-  const list = ANIMALS.filter(a => {
+  const list = ANIMALS.map(a => ({ ...a, status: statusMap[a.id] ?? a.status })).filter(a => {
     const q = search.toLowerCase();
     const status = a.status || 'non visto';
     if (q && !a.com.toLowerCase().includes(q) && !a.sci.toLowerCase().includes(q)) return false;
@@ -1106,7 +1106,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
 
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
-function Detail({ a, onBack }) {
+function Detail({ a, onBack, onStatusChange }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(a.status || 'non visto');
@@ -1169,15 +1169,15 @@ function Detail({ a, onBack }) {
           <div ref={imgRef}
             onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
             style={{
-              width: Math.round(108 + pullProgress * (window.innerWidth - 108)),
-              height: Math.round(108 + pullProgress * (window.innerWidth - 108)),
+              width: Math.round(86 + pullProgress * (window.innerWidth - 86)),
+              height: Math.round(86 + pullProgress * (window.innerWidth - 86)),
               borderRadius: Math.round(16 - pullProgress * 16),
               overflow:'hidden', flexShrink:0, background:c.img,
               cursor: found && a.image_url ? 'zoom-in' : 'default',
               boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none',
               transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
             }}>
-            <AnimalImg a={a} size={108} fontSize={68} overrideStatus={localStatus} />
+            <AnimalImg a={a} size={86} fontSize={56} overrideStatus={localStatus} />
           </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con classe animata */}
@@ -1188,7 +1188,7 @@ function Detail({ a, onBack }) {
               {showStatusMenu && (
                 <div style={{ position:'absolute', top:40, left:0, right:0, background:c.detailBg, border:`1px solid ${c.accent}33`, borderRadius:12, padding:8, display:'flex', flexDirection:'column', gap:6, zIndex:10 }}>
                   {['non visto','avvistato','fotografato'].map(s=>(
-                    <button key={s} onClick={()=>{setLocalStatus(s);setShowStatusMenu(false);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{s}</button>
+                    <button key={s} onClick={()=>{setLocalStatus(s);setShowStatusMenu(false);if(onStatusChange)onStatusChange(a.id,s);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{s}</button>
                   ))}
                 </div>
               )}
@@ -1384,6 +1384,7 @@ function Detail({ a, onBack }) {
 // ── Root ──────────────────────────────────────────────────────────────
 export default function App() {
   const [sel,setSel]=useState(null);
+  const [statusMap,setStatusMap]=useState({});
   useEffect(()=>{
     const l=document.createElement('link');
     l.rel='stylesheet';
@@ -1395,9 +1396,19 @@ export default function App() {
     style.textContent = RARITY_CSS;
     document.head.appendChild(style);
   },[]);
+
+  const handleStatusChange = (id, status) => {
+    setStatusMap(prev => ({ ...prev, [id]: status }));
+  };
+
+  const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
+
   return (
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E' }}>
-      {sel?<Detail a={sel} onBack={()=>setSel(null)}/>:<Grid onSelect={setSel}/>}
+      {enriched
+        ? <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
+        : <Grid onSelect={setSel} statusMap={statusMap}/>
+      }
     </div>
   );
 }
