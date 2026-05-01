@@ -641,7 +641,6 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   const [iconErr, setIconErr] = useState(false);
   const status = overrideStatus !== undefined ? overrideStatus : a.status;
   const found = status && status !== 'non visto';
-  const pad = Math.round(size * 0.16);
   const glow = found ? (RARITY_GLOW[a.rarity] || 'rgba(255,255,255,.2)') : 'none';
   const classIcon = CLASS_ICONS[a.cls];
 
@@ -649,22 +648,21 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   if (!found) {
     if (classIcon && !iconErr) {
       return (
-        <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding: Math.round(size * 0.12) }}>
+        <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.22, filter:'brightness(0) invert(1)' }} />
+            style={{ width:'60%', height:'60%', objectFit:'contain', opacity:0.22, filter:'brightness(0) invert(1)' }} />
         </div>
       );
     }
-    // fallback emoji se icona non disponibile
     return (
       <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.2 }}>{c.icon}</div>
     );
   }
 
-  // ── Avvistato / Fotografato: immagine reale ──
+  // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
   if (a.image_url && !imgErr) {
     return (
-      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
+      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             WebkitFilter: `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` }} />
