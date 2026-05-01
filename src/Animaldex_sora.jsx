@@ -651,7 +651,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
       return (
         <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#111113', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'67%', height:'67%', objectFit:'contain', opacity:0.28 }} />
+            style={{ width:'67%', height:'67%', objectFit:'contain', opacity:0.55 }} />
         </div>
       );
     }
@@ -1169,15 +1169,15 @@ function Detail({ a, onBack, onStatusChange }) {
           <div ref={imgRef}
             onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
             style={{
-              width: Math.round(86 + pullProgress * (window.innerWidth - 86)),
-              height: Math.round(86 + pullProgress * (window.innerWidth - 86)),
+              width: Math.round(168 + pullProgress * (window.innerWidth - 168)),
+              height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
               borderRadius: Math.round(16 - pullProgress * 16),
               overflow:'hidden', flexShrink:0, background:c.img,
               cursor: found && a.image_url ? 'zoom-in' : 'default',
               boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none',
               transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
             }}>
-            <AnimalImg a={a} size={86} fontSize={56} overrideStatus={localStatus} />
+            <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
           </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con classe animata */}
