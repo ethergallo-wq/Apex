@@ -76,8 +76,8 @@ const SHIELD_PATHS = {
 };
 
 const MYSTERY_PLACEHOLDER = '/icone_unknown/mystery_animal.png';
-const GRID_IMAGE_SCALE = 0.8585;
-const GRID_SILHOUETTE_SCALE = 0.572;
+const GRID_IMAGE_SCALE = 0.730;
+const GRID_SILHOUETTE_SCALE = 0.486;
 
 const ANIMAL_STATUS = {
   misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Bloccato: identità nascosta e nome non mostrato.' },
@@ -383,10 +383,10 @@ const RARITY_CSS = `
   position: absolute;
   inset: 2px 5px 2px 31px;
   border-radius: 10px;
-  z-index: -1;
-  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.05) 22%, rgba(255,255,255,.62) 42%, rgba(255,255,255,.10) 58%, transparent 76%);
+  z-index: 3;
+  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.025) 22%, rgba(255,255,255,.31) 42%, rgba(255,255,255,.05) 58%, transparent 76%);
   background-size: 260% 100%;
-  animation: oroShine 4.4s linear infinite;
+  animation: oroShine 5.2s linear infinite;
   mix-blend-mode: screen;
   pointer-events: none;
 }
@@ -410,7 +410,10 @@ const RARITY_CSS = `
 .rarity-badge.small::before { inset: 3px 4px 3px 24px; border-radius: 999px; }
 .rarity-badge.small::after { inset: 2px 5px 2px 25px; border-radius: 999px; }
 .rarity-badge.small .rarity-shield { width: 34px; height: 34px; left: -8px; }
-.rarity-badge.full { width: 100%; box-sizing: border-box; }
+.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:76px; }
+.rarity-badge.full::before { left: 42px; }
+.rarity-badge.full::after { left: 0px; }
+.rarity-badge.full .rarity-shield { left: 8px; width:58px; height:58px; }
 .rarity-metal-comune { background: linear-gradient(180deg,#f4c39a 0%,#d0895c 45%,#7b3c1d 100%); }
 .rarity-metal-comune::before { background: radial-gradient(circle at 25% 20%, rgba(255,238,210,.55), transparent 28%), linear-gradient(135deg,#532311,#d0895c 38%,#ffd0a4 50%,#8a421f 72%,#3b170a 100%); }
 .rarity-metal-non-comune { background: linear-gradient(180deg,#eef2f6 0%,#a1a8b2 48%,#4e5660 100%); }
@@ -420,13 +423,28 @@ const RARITY_CSS = `
 .rarity-metal-raro { box-shadow: inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 5px rgba(0,0,0,.45), 0 0 12px rgba(240,196,73,.45), 0 5px 12px rgba(0,0,0,.28); }
 .rarity-metal-leggendario { background: linear-gradient(180deg,#d2a9ff 0%,#8f34f5 48%,#2d064e 100%); border-color: rgba(220,220,235,.86); box-shadow: inset 0 1px 0 rgba(255,255,255,.82), inset 0 -2px 5px rgba(0,0,0,.48), 0 0 16px rgba(143,52,245,.58), 0 0 32px rgba(143,52,245,.25), 0 5px 12px rgba(0,0,0,.28); }
 .rarity-metal-leggendario::before { background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.72), transparent 18%), radial-gradient(circle at 72% 64%, rgba(255,255,255,.28), transparent 14%), linear-gradient(135deg,#210036 0%,#8f34f5 34%,#f4d9ff 50%,#7b1de1 66%,#260046 100%); }
-.rarity-metal-leggendario::after { background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.12) 17%, rgba(255,255,255,.92) 38%, rgba(207,148,255,.28) 54%, transparent 76%); background-size: 300% 100%; animation: oroShine 3.6s linear infinite; }
+.rarity-metal-leggendario::after { background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.06) 17%, rgba(255,255,255,.46) 38%, rgba(207,148,255,.14) 54%, transparent 76%); background-size: 300% 100%; animation: oroShine 3.6s linear infinite; }
 
-/* pallino rarità nella griglia: glow solo raro e leggendario */
-.rarity-dot-comune     { background:#d0895c; box-shadow:none; }
-.rarity-dot-non-comune { background:#a1a8b2; box-shadow:none; }
-.rarity-dot-raro       { background:#f0c449; box-shadow: 0 0 8px rgba(240,196,73,0.88), 0 0 16px rgba(240,196,73,0.38); }
-.rarity-dot-leggendario{ background:#8f34f5; box-shadow: 0 0 10px rgba(143,52,245,0.95), 0 0 22px rgba(143,52,245,0.42); }
+/* pallino rarità nella griglia: niente glow, solo riflesso periodico */
+@keyframes rarityDotSweep {
+  0%, 58% { transform: translateX(-180%) rotate(25deg); opacity: 0; }
+  64%     { opacity: .45; }
+  82%     { opacity: .18; }
+  100%    { transform: translateX(180%) rotate(25deg); opacity: 0; }
+}
+.rarity-dot { position: relative; overflow: hidden; box-shadow: none !important; }
+.rarity-dot::after {
+  content:'';
+  position:absolute;
+  top:-35%; bottom:-35%; left:-60%; width:60%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.44), transparent);
+  animation: rarityDotSweep 4.8s ease-in-out infinite;
+  pointer-events:none;
+}
+.rarity-dot-comune     { background:#d0895c; box-shadow:none !important; }
+.rarity-dot-non-comune { background:#a1a8b2; box-shadow:none !important; }
+.rarity-dot-raro       { background:#f0c449; box-shadow:none !important; }
+.rarity-dot-leggendario{ background:#8f34f5; box-shadow:none !important; }
 `;
 
 // ── Flag Emoji Generator ──────────────────────────────────────────────
@@ -527,7 +545,7 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
   return (
     <div className={classes} onClick={onClick} style={{ cursor:onClick?'pointer':'default', ...style }}>
       <img className="rarity-shield" src={SHIELD_PATHS[r]} alt="" aria-hidden="true" />
-      <span style={{ position:'relative', zIndex:1 }}>{r}{suffix}</span>
+      <span style={{ position:'relative', zIndex:4 }}>{r}{suffix}</span>
     </div>
   );
 }
@@ -827,6 +845,24 @@ const RARITY_GLOW = {
   'Leggendario':'rgba(234,200,255,.7)',
 };
 
+function flattenSearchText(value) {
+  if (value == null) return '';
+  if (Array.isArray(value)) return value.map(flattenSearchText).join(' ');
+  if (typeof value === 'object') return Object.values(value).map(flattenSearchText).join(' ');
+  return String(value);
+}
+
+function getAnimalSearchText(a) {
+  const categoryText = (a.categories || []).map(id => `${id} ${CATEGORY_META[id]?.label || ''}`).join(' ');
+  return [
+    a.com, a.sci,
+    a.habitat, a.habitats, a.hab,
+    a.biome, a.biomes, a.ecosystem, a.ecosystems,
+    categoryText,
+    a.rarity, a.cons,
+  ].map(flattenSearchText).join(' ').toLowerCase();
+}
+
 function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
@@ -900,7 +936,7 @@ function AnimalCard({ a, onClick }) {
       onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}>
       <div style={{ position:'absolute', top:6, left:6, zIndex:2, background:'rgba(0,0,0,.55)', color:'rgba(255,255,255,.7)', fontSize:10, fontWeight:700, padding:'2px 6px', borderRadius:8 }}>{a.no}</div>
       {/* Pallino rarità */}
-      <div className={rarityDotClass(a.rarity)} style={{ position:'absolute', top:7, right:7, zIndex:2, width:10, height:10, borderRadius:'50%' }}/>
+      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:7, right:7, zIndex:2, width:10, height:10, borderRadius:'50%' }}/>
       <AnimalImg a={a} size={102} fontSize={52} gridMode={true} />
       <div style={{
         background: revealed ? c.mid : '#1C1C1E',
@@ -908,7 +944,7 @@ function AnimalCard({ a, onClick }) {
         minHeight:38,
         height:38,
         boxSizing:'border-box',
-        color:mystery?'transparent':'white',
+        color:mystery?'#b7bbc3':'white',
         fontSize:12,
         fontWeight:800,
         textAlign:'center',
@@ -918,7 +954,7 @@ function AnimalCard({ a, onClick }) {
         WebkitBoxOrient:'vertical',
         overflow:'hidden',
         wordBreak:'break-word',
-      }}>{mystery ? 'Animale misterioso' : a.com}</div>
+      }}>{mystery ? a.com : a.com}</div>
     </div>
   );
 }
@@ -949,7 +985,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
     <Sheet title={title} onClose={onClose}>
       {withSearch && (
         <div style={{ padding:'0 14px 12px', flexShrink:0 }}>
-          <input type="text" placeholder="Cerca nazione..." value={search} onChange={e => setSearch(e.target.value)} style={{ width:'100%', height:38, borderRadius:10, background:'#2A2A2C', color:'white', border:'1px solid rgba(255,255,255,.2)', padding:'0 12px', fontSize:14, outline:'none' }} />
+          <input type="text" placeholder={title==='Geografia'?'Cerca nazione...':'Cerca...'} value={search} onChange={e => setSearch(e.target.value)} style={{ width:'100%', height:38, borderRadius:10, background:'#2A2A2C', color:'white', border:'1px solid rgba(255,255,255,.2)', padding:'0 12px', fontSize:14, outline:'none' }} />
         </div>
       )}
       <div style={{ display:'flex', gap:8, padding:'0 14px 12px', flexShrink:0 }}>
@@ -999,6 +1035,30 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
       <div style={{ position:'sticky', bottom:0, background:'#2A2A2C', padding:'10px 14px 24px', display:'flex', gap:8, flexShrink:0 }}>
         <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Annulla</button>
         <button onClick={()=>{onApply([...local]);onClose();}} style={{ flex:2, height:44, borderRadius:12, background:'#E8C040', color:'#1A1000', fontSize:14, fontWeight:800, border:'none', cursor:'pointer' }}>Applica</button>
+      </div>
+    </Sheet>
+  );
+}
+
+
+function SortSheet({ title, options, selected, onApply, onClose }) {
+  const [local, setLocal] = useState(selected || 'no');
+  return (
+    <Sheet title={title} onClose={onClose}>
+      <div style={{ padding:'0 14px 86px' }}>
+        {options.map(opt => {
+          const on = local === opt.value;
+          return (
+            <button key={opt.value} onClick={()=>setLocal(opt.value)} style={{ width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'14px', marginBottom:8, borderRadius:14, border:`1.5px solid ${on ? (opt.c||'#fff') : 'transparent'}`, background:opt.bg||'#333', color:'white', cursor:'pointer', fontFamily:'inherit' }}>
+              <span style={{ display:'flex', alignItems:'center', gap:10, fontSize:14, fontWeight:800 }}><span style={{ color:opt.c||'#fff' }}>↕</span>{opt.label}</span>
+              <span style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?(opt.c||'#fff'):'rgba(255,255,255,.25)'}`, background:on?(opt.c||'#fff'):'transparent', color:'#111', fontWeight:900, display:'flex', alignItems:'center', justifyContent:'center' }}>{on?'✓':''}</span>
+            </button>
+          );
+        })}
+      </div>
+      <div style={{ position:'sticky', bottom:0, background:'#2A2A2C', padding:'10px 14px 24px', display:'flex', gap:8, flexShrink:0 }}>
+        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Annulla</button>
+        <button onClick={()=>{onApply(local);onClose();}} style={{ flex:2, height:44, borderRadius:12, background:'#E8C040', color:'#1A1000', fontSize:14, fontWeight:800, border:'none', cursor:'pointer' }}>Applica</button>
       </div>
     </Sheet>
   );
@@ -1116,7 +1176,7 @@ function StatusLegendRows() {
 }
 
 // ── Grid ──────────────────────────────────────────────────────────────
-function Grid({ onSelect, statusMap = {}, onHome }) {
+function Grid({ onSelect, statusMap = {}, onHome, preset }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -1128,30 +1188,69 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
   const [fStatus, setFStatus]     = useState([]);
   const [fTrophic,setFTrophic]    = useState([]);
   const [fGeography, setFGeography] = useState([]);
+  const [fCategory, setFCategory] = useState([]);
+  const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
 
-  const list = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => {
-    const q = search.toLowerCase();
-    const status = normalizeAnimalStatus(a.status);
-    if (q && !a.com.toLowerCase().includes(q) && !a.sci.toLowerCase().includes(q)) return false;
-    if (clsF && a.cls !== clsF) return false;
-    if (fRarity.length   && !fRarity.includes(a.rarity))                   return false;
-    if (fCons.length     && !fCons.includes(a.cons))                    return false;
-    if (fStatus.length   && !fStatus.includes(status))                  return false;
-    if (fTrophic.length  && !fTrophic.includes(String(a.trophic)))      return false;
-    if (fGeography.length && !a.distribution?.countries_present?.some(c => fGeography.includes(c))) return false;
-    if (fTax             && a[TAX_KEY_MAP[fTax.key]] !== fTax.value)    return false;
-    return true;
-  });
+  useEffect(() => {
+    if (!preset?.id) return;
+    if (preset.type === 'status') {
+      setFStatus(preset.statuses || []);
+      setSearch('');
+      setClsF(null);
+      setFRarity([]);
+      setFCons([]);
+      setFTrophic([]);
+      setFGeography([]);
+      setFCategory([]);
+      setFTax(null);
+      setSortBy('no');
+    }
+  }, [preset?.id]);
 
-  const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fTax;
+  const list = ANIMALS
+    .map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }))
+    .filter(a => {
+      const q = search.toLowerCase().trim();
+      const status = normalizeAnimalStatus(a.status);
+      if (q && !getAnimalSearchText(a).includes(q)) return false;
+      if (clsF && a.cls !== clsF) return false;
+      if (fRarity.length   && !fRarity.includes(a.rarity))                   return false;
+      if (fCons.length     && !fCons.includes(a.cons))                    return false;
+      if (fStatus.length   && !fStatus.includes(status))                  return false;
+      if (fTrophic.length  && !fTrophic.includes(String(a.trophic)))      return false;
+      if (fGeography.length && !a.distribution?.countries_present?.some(c => fGeography.includes(c))) return false;
+      if (fCategory.length && !(a.categories || []).some(cat => fCategory.includes(cat))) return false;
+      if (fTax             && a[TAX_KEY_MAP[fTax.key]] !== fTax.value)    return false;
+      return true;
+    })
+    .sort((a,b) => {
+      const noA = Number(a.no || a.id || 0), noB = Number(b.no || b.id || 0);
+      if (sortBy === 'name_asc') return String(a.com).localeCompare(String(b.com), 'it');
+      if (sortBy === 'name_desc') return String(b.com).localeCompare(String(a.com), 'it');
+      if (sortBy === 'rarity') return (RARITY[b.rarity]?.s || 0) - (RARITY[a.rarity]?.s || 0) || noA - noB;
+      if (sortBy === 'status') return ANIMAL_STATUS_ORDER.indexOf(a.status) - ANIMAL_STATUS_ORDER.indexOf(b.status) || noA - noB;
+      if (sortBy === 'class') return String(a.cls).localeCompare(String(b.cls), 'it') || noA - noB;
+      return noA - noB;
+    });
+
+  const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fTax||sortBy!=='no';
 
   const rarityOpts = Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg }));
   const consOpts   = Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg }));
   const statusOpts = ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:ANIMAL_STATUS[k].bg }));
   const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
   const geographyOpts = COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }));
+  const categoryOpts = Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` }));
+  const sortOpts = [
+    { value:'no', label:'Numero ID', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
+    { value:'name_asc', label:'Nome A → Z', c:'#5BBEF8', bg:'rgba(91,190,248,.16)' },
+    { value:'name_desc', label:'Nome Z → A', c:'#5BBEF8', bg:'rgba(91,190,248,.16)' },
+    { value:'rarity', label:'Rarità più alta', c:'#F0C449', bg:'rgba(240,196,73,.16)' },
+    { value:'status', label:'Status', c:'#FFFFFF', bg:'rgba(255,255,255,.12)' },
+    { value:'class', label:'Classe', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
+  ];
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', position:'relative', overflow:'hidden' }}>
@@ -1178,6 +1277,9 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
             return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>;
           })}
           {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
+          {fGeography.map(g=><span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{getFlagEmoji(g)} {g} ×</span>)}
+          {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
+          {sortBy!=='no' && <span onClick={()=>setSortBy('no')} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>↕ {sortOpts.find(o=>o.value===sortBy)?.label||'Ordina'} ×</span>}
         </div>
       )}
 
@@ -1198,8 +1300,11 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
           <button onClick={()=>setShowSearchBar(!showSearchBar)} style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
           </button>
-          <button onClick={()=>{setSheet('tax');setShowMenu(false);}} style={{ flex:1, height:46, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:14, fontWeight:700 }}>
-            Albero Tassonomico {fTax && ' ✓'}
+          <button onClick={()=>{setSheet('tax');setShowMenu(false);}} style={{ flex:1, height:46, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:13, fontWeight:700 }}>
+            Tassonomia {fTax && ' ✓'}
+          </button>
+          <button onClick={()=>{setSheet('sort');setShowMenu(false);}} style={{ width:46, height:46, borderRadius:10, background:sortBy!=='no'?'rgba(255,255,255,.16)':'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }} aria-label="Ordina">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
           <button onClick={()=>setShowMenu(!showMenu)} style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
@@ -1221,6 +1326,7 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
               { label:'Conservazione', icon:'🛡', onClick:()=>{setSheet('cons');setShowMenu(false);}, active:fCons.length>0, color:'#DC143C' },
               { label:'Gerarchia', icon:'⛓', onClick:()=>{setSheet('trophic');setShowMenu(false);}, active:fTrophic.length>0, color:'#F5A828' },
               { label:'Status', icon:'📷', onClick:()=>{setSheet('status');setShowMenu(false);}, active:fStatus.length>0, color:'#00BFFF' },
+              { label:'Categorie', icon:'◉', onClick:()=>{setSheet('category');setShowMenu(false);}, active:fCategory.length>0, color:'#B860F8' },
               { label:'Geografia', icon:'🌍', onClick:()=>{setSheet('geography');setShowMenu(false);}, active:fGeography.length>0, color:'#20B2AA' },
             ].map((item,i)=>(
               <button key={i} onClick={item.onClick} style={{ width:'100%', padding:'14px 16px', borderBottom:'1px solid rgba(255,255,255,.05)', background:'transparent', border:'none', display:'flex', alignItems:'center', gap:12, cursor:'pointer', color:item.active?item.color:'white', fontWeight:item.active?700:600 }}>
@@ -1229,7 +1335,7 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
                 {item.active && <span style={{ marginLeft:'auto', color:item.color, fontSize:12 }}>✓</span>}
               </button>
             ))}
-            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus([]);setFTrophic([]);setFTax(null);setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>
+            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus([]);setFTrophic([]);setFGeography([]);setFCategory([]);setFTax(null);setSortBy('no');setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>
               Resetta filtri
             </button>
           </div>
@@ -1240,7 +1346,7 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
       {showSearchBar && (
         <div style={{ position:'absolute', top:58, left:12, right:12, background:'#252527', borderRadius:12, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
           <button onClick={()=>{setSearch('');setShowSearchBar(false);}} style={{ width:40, height:40, borderRadius:8, background:'#3A3A3C', border:'none', color:'rgba(255,255,255,.6)', fontSize:18, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>×</button>
-          <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca..." style={{ flex:1, height:40, borderRadius:8, background:'#333', border:'1px solid #444', color:'white', fontSize:14, padding:'0 12px', outline:'none', fontFamily:'inherit' }} autoFocus/>
+          <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca nome, scientifico, habitat o categoria..." style={{ flex:1, height:40, borderRadius:8, background:'#333', border:'1px solid #444', color:'white', fontSize:14, padding:'0 12px', outline:'none', fontFamily:'inherit' }} autoFocus/>
         </div>
       )}
 
@@ -1298,6 +1404,8 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
       {sheet==='status'  && <MultiSheet title="Status Animale" options={statusOpts} selected={fStatus} onApply={setFStatus} onClose={()=>setSheet(null)}/>}
       {sheet==='trophic' && <MultiSheet title="Catena Alimentare" options={trophicOpts} selected={fTrophic} onApply={setFTrophic} onClose={()=>setSheet(null)}/>}
       {sheet==='geography' && <MultiSheet title="Geografia" options={geographyOpts} selected={fGeography} onApply={setFGeography} onClose={()=>setSheet(null)} withSearch/>}
+      {sheet==='category' && <MultiSheet title="Categorie" options={categoryOpts} selected={fCategory} onApply={setFCategory} onClose={()=>setSheet(null)} withSearch/>}
+      {sheet==='sort' && <SortSheet title="Ordina" options={sortOpts} selected={sortBy} onApply={setSortBy} onClose={()=>setSheet(null)}/>}
       {sheet==='tax'     && <TaxSheet current={fTax} onApply={v=>{setFTax(v);}} onClose={()=>setSheet(null)}/>}
     </div>
   );
@@ -1723,22 +1831,37 @@ function MainMenu({ onOpen, onBack }) {
   );
 }
 
-function ProfilePage({ onBack }) {
+function ProfilePage({ onBack, statusMap = {}, onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
+  const fileInputRef = useRef(null);
+  const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
+  const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
+  const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
+  const regionsCount = new Set(animalsWithStatus
+    .filter(a => a.status === 'avvistato' || a.status === 'catturato')
+    .flatMap(a => a.distribution?.countries_present || [])).size;
+  const badgeCount = Math.min(BADGE_PLACEHOLDERS.length, Math.max(0, Math.floor(seenCount / 5)));
+  const statCards = [
+    { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
+    { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
+    { label:'Badge', value:badgeCount, onClick:onOpenBadges },
+    { label:'Regioni', value:regionsCount, onClick:onOpenRegions },
+  ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title="Profilo" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
-        <div style={{ background:'linear-gradient(135deg,#254A70,#13283D)', borderRadius:24, padding:22, textAlign:'center', marginBottom:16 }}>
-          <div style={{ width:96, height:96, borderRadius:'50%', background:'rgba(255,255,255,.16)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 12px' }}>👤</div>
-          <div style={{ color:'white', fontSize:24, fontWeight:900 }}>Esploratore</div>
-          <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, marginTop:4 }}>Profilo placeholder</div>
+        <div style={{ background:'linear-gradient(135deg,#102B4D 0%,#1B567B 58%,#0B1D35 100%)', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.08)' }}>
+          <button onClick={()=>fileInputRef.current?.click()} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(135,198,255,.18)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)' }}>👤</button>
+          <input ref={fileInputRef} type="file" accept="image/*" style={{ display:'none' }} onChange={()=>{}} />
+          <div style={{ color:'white', fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>Esploratore</div>
+          <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>Profilo placeholder</div>
         </div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
-          {[['Animali visti','—'],['Fotografati','—'],['Badge','—'],['Regioni','—']].map(([k,v])=>(
-            <div key={k} style={{ background:'#111113', borderRadius:16, padding:16 }}>
-              <div style={{ color:'#90D84A', fontSize:24, fontWeight:900 }}>{v}</div>
-              <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:700, marginTop:4 }}>{k}</div>
-            </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+          {statCards.map(card=>(
+            <button key={card.label} onClick={card.onClick} style={{ background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit' }}>
+              <div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1 }}>{card.value}</div>
+              <div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{card.label}</div>
+            </button>
           ))}
         </div>
       </div>
@@ -1799,21 +1922,98 @@ function RegionsPage({ onBack }) {
   );
 }
 
+function ToggleRow({ label, initial = true }) {
+  const [on, setOn] = useState(initial);
+  return (
+    <button onClick={()=>setOn(v=>!v)} style={{ width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, cursor:'pointer', fontFamily:'inherit' }}>
+      <span style={{ color:'white', fontSize:14, fontWeight:800 }}>{label}</span>
+      <span style={{ width:48, height:28, borderRadius:999, background:on?'#90D84A':'#3A3A3C', position:'relative', transition:'background .2s ease' }}>
+        <span style={{ position:'absolute', top:3, left:on?23:3, width:22, height:22, borderRadius:'50%', background:'white', transition:'left .2s ease' }} />
+      </span>
+    </button>
+  );
+}
+
+function SettingsSubPage({ title, onBack, children }) {
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+      <PageHeader title={title} onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:16 }}>{children}</div>
+    </div>
+  );
+}
+
+
+function GalleryPage({ onBack, statusMap = {}, onSelect }) {
+  const captured = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => a.status === 'catturato');
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+      <PageHeader title="Galleria" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'14px 12px 28px' }}>
+        {captured.length === 0 ? (
+          <div style={{ color:'rgba(255,255,255,.45)', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale fotografato/catturato.</div>
+        ) : (
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:12 }}>
+            {captured.map(a => {
+              const c = CLS[a.cls] || CLS.Mammalia;
+              return (
+                <button key={a.id} onClick={()=>onSelect?.(a)} style={{ border:'none', borderRadius:18, overflow:'hidden', background:'#222', cursor:'pointer', padding:0, textAlign:'left', fontFamily:'inherit', boxShadow:'0 12px 32px rgba(0,0,0,.28)' }}>
+                  <AnimalImg a={a} size={126} fontSize={48} overrideStatus="catturato" />
+                  <div style={{ padding:10, background:c.mid }}>
+                    <div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{a.com}</div>
+                    <div style={{ color:'rgba(255,255,255,.65)', fontSize:10, fontStyle:'italic', marginTop:3, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.sci}</div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function SettingsPage({ onBack }) {
+  const [sub, setSub] = useState(null);
+  if (sub === 'audio') return (
+    <SettingsSubPage title="Audio" onBack={()=>setSub(null)}>
+      <ToggleRow label="Suoni interfaccia" />
+      <ToggleRow label="Versi degli animali" />
+      <ToggleRow label="Notifiche push eventi" />
+    </SettingsSubPage>
+  );
+  if (sub === 'theme') return (
+    <SettingsSubPage title="Tema" onBack={()=>setSub(null)}>
+      {['Scuro','Chiaro','Sistema','Modalità daltonismo'].map((t,i)=><button key={t} style={{ width:'100%', background:'#222222', border:`1px solid ${i===0?'#90D84A':'rgba(255,255,255,.06)'}`, borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{i===0?'●':'○'} {t}</button>)}
+    </SettingsSubPage>
+  );
+  if (sub === 'data') return (
+    <SettingsSubPage title="Dati" onBack={()=>setSub(null)}>
+      {['Sincronizza ora sul Cloud','Esporta dati Animaldex','Spazio foto: placeholder'].map(t=><button key={t} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
+    </SettingsSubPage>
+  );
+  if (sub === 'privacy') return (
+    <SettingsSubPage title="Privacy" onBack={()=>setSub(null)}>
+      <ToggleRow label="Permesso fotocamera" />
+      <ToggleRow label="Posizione GPS per geotag" />
+      {['Termini di servizio','Elimina account'].map((t,i)=><button key={t} style={{ width:'100%', background:i?'rgba(255,59,48,.12)':'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:i?'#FF6B6B':'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
+    </SettingsSubPage>
+  );
+  const rows = [
+    { id:'audio', title:'Audio', subtitle:'Effetti e notifiche' },
+    { id:'theme', title:'Tema', subtitle:'Colori e contrasto' },
+    { id:'data', title:'Dati', subtitle:'Backup e sincronizzazione' },
+    { id:'privacy', title:'Privacy', subtitle:'Permessi e preferenze' },
+  ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title="Impostazioni" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>
-        {[
-          ['Audio','Effetti e notifiche'],
-          ['Tema','Colori e contrasto'],
-          ['Dati','Backup e sincronizzazione'],
-          ['Privacy','Permessi e preferenze'],
-        ].map(([t,d])=>(
-          <div key={t} style={{ background:'#111113', borderRadius:16, padding:16, marginBottom:10, display:'flex', alignItems:'center', justifyContent:'space-between' }}>
-            <div><div style={{ color:'white', fontSize:15, fontWeight:800 }}>{t}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:12, marginTop:3 }}>{d}</div></div>
-            <div style={{ color:'rgba(255,255,255,.35)', fontSize:20 }}>›</div>
-          </div>
+        {rows.map(row=>(
+          <button key={row.id} onClick={()=>setSub(row.id)} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:8, display:'flex', alignItems:'center', justifyContent:'space-between', cursor:'pointer', fontFamily:'inherit' }}>
+            <span style={{ textAlign:'left' }}><span style={{ display:'block', color:'white', fontSize:15, fontWeight:900 }}>{row.title}</span><span style={{ display:'block', color:'rgba(255,255,255,.48)', fontSize:12, marginTop:3 }}>{row.subtitle}</span></span>
+            <span style={{ color:'rgba(255,255,255,.35)', fontSize:22 }}>›</span>
+          </button>
         ))}
       </div>
     </div>
@@ -1860,6 +2060,7 @@ export default function App() {
   const [sel,setSel]=useState(null);
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('grid');
+  const [gridPreset,setGridPreset]=useState(null);
   useEffect(()=>{
     const l=document.createElement('link');
     l.rel='stylesheet';
@@ -1897,16 +2098,39 @@ export default function App() {
 
   const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
   const openPage = (nextPage) => { setSel(null); setPage(nextPage); };
+  const openGridWithStatus = (statuses) => {
+    setSel(null);
+    setGridPreset({ id: Date.now(), type:'status', statuses });
+    setPage('grid');
+  };
 
   const renderPage = () => {
-    if (enriched) return <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>;
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} />;
-    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} />;
+    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} />;
     if (page === 'regions') return <RegionsPage onBack={()=>setPage('menu')} />;
+    if (page === 'gallery') return (
+      <div style={{ height:'100%', position:'relative', overflow:'hidden' }}>
+        <GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />
+        {enriched && (
+          <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}>
+            <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
+          </div>
+        )}
+      </div>
+    );
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} />;
-    return <Grid onSelect={setSel} statusMap={statusMap} onHome={()=>setPage('menu')} />;
+    return (
+      <div style={{ height:'100%', position:'relative', overflow:'hidden' }}>
+        <Grid onSelect={setSel} statusMap={statusMap} onHome={()=>setPage('menu')} preset={gridPreset} />
+        {enriched && (
+          <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}>
+            <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
+          </div>
+        )}
+      </div>
+    );
   };
 
   return (

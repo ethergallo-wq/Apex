@@ -58,15 +58,117 @@ const CONS = {
   DD: { lbl:'DD', full:'Data Deficient',          c:'#FFFFFF', bg:'#808080' },
 };
 const RARITY = {
-  'Comune':      { c:'#F5DEB3', bg:'#5C3310', s:1, label:'Comune' },
-  'Non comune':  { c:'#E8E8E8', bg:'#5A5A5A', s:2, label:'Non comune' },
-  'Raro':        { c:'#FFE566', bg:'#7A5800', s:3, label:'Raro', glow:true },
-  'Leggendario': { c:'#EAC8FF', bg:'#3D0070', s:4, label:'Leggendario', animate:true },
+  'Comune':      { c:'#d0895c', bg:'#4a2412', s:1, label:'Comune', shield:'/shields/common_shield.png' },
+  'Non comune':  { c:'#a1a8b2', bg:'#343a42', s:2, label:'Non comune', shield:'/shields/noncommon_shield.png' },
+  'Raro':        { c:'#f0c449', bg:'#5f4200', s:3, label:'Raro', glow:true, shield:'/shields/rare_shield.png' },
+  'Leggendario': { c:'#8f34f5', bg:'#25003f', s:4, label:'Leggendario', glow:true, animate:true, shield:'/shields/legendary_shield.png' },
 };
 const RARITY_CYCLE = ['Comune','Non comune','Raro','Leggendario'];
-const RARITY_COLOR = {'Comune':'#F5DEB3','Non comune':'#E8E8E8','Raro':'#FFE566','Leggendario':'#EAC8FF'};
-const RARITY_BG = {'Comune':'#5C3310','Non comune':'#5A5A5A','Raro':'#7A5800','Leggendario':'#3D0070'};
-const RARITY_BORDER = {'Comune':'#7A4418','Non comune':'#707070','Raro':'#9A7A00','Leggendario':'#5A1088'};
+const RARITY_COLOR = {'Comune':'#d0895c','Non comune':'#a1a8b2','Raro':'#f0c449','Leggendario':'#8f34f5'};
+const RARITY_BG = {'Comune':'#4a2412','Non comune':'#343a42','Raro':'#5f4200','Leggendario':'#25003f'};
+const RARITY_BORDER = {'Comune':'#d0895c','Non comune':'#a1a8b2','Raro':'#f0c449','Leggendario':'#8f34f5'};
+
+const SHIELD_PATHS = {
+  'Comune': '/shields/common_shield.png',
+  'Non comune': '/shields/noncommon_shield.png',
+  'Raro': '/shields/rare_shield.png',
+  'Leggendario': '/shields/legendary_shield.png',
+};
+
+const MYSTERY_PLACEHOLDER = '/icone_unknown/mystery_animal.png';
+const GRID_IMAGE_SCALE = 0.8585;
+const GRID_SILHOUETTE_SCALE = 0.572;
+
+const ANIMAL_STATUS = {
+  misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Bloccato: identità nascosta e nome non mostrato.' },
+  ricercato:  { label:'Ricercato',  short:'RIC.',  c:'#ffffff', bg:'rgba(255,255,255,.10)', border:'1.5px solid rgba(255,255,255,.24)', dot:'#ffffff', desc:'Non visto: nome visibile, animale ancora da trovare.' },
+  avvistato:  { label:'Avvistato',  short:'AVV.',  c:'#90D84A', bg:'rgba(144,216,74,.12)', border:'1.5px solid #90D84A', dot:'#90D84A', desc:'Avvistato in natura.' },
+  catturato:  { label:'Catturato',  short:'CAT.',  c:'#ffffff', bg:'#90D84A', border:'1.5px solid rgba(255,255,255,.32)', dot:'#ffffff', desc:'Catturato/registrato: massimo riconoscimento.' },
+};
+const ANIMAL_STATUS_ORDER = ['misterioso','ricercato','avvistato','catturato'];
+
+function normalizeAnimalStatus(status) {
+  const s = String(status || '').toLowerCase().trim();
+  if (s === 'misterioso' || s === 'bloccato' || s === 'locked') return 'misterioso';
+  if (s === 'ricercato' || s === 'non visto' || s === 'non_visto' || s === 'not_seen' || s === 'unknown') return 'ricercato';
+  if (s === 'avvistato' || s === 'visto' || s === 'seen') return 'avvistato';
+  if (s === 'catturato' || s === 'fotografato' || s === 'captured' || s === 'photographed') return 'catturato';
+  return 'ricercato';
+}
+function isMysteryStatus(status) { return normalizeAnimalStatus(status) === 'misterioso'; }
+function isRevealedStatus(status) {
+  const s = normalizeAnimalStatus(status);
+  return s === 'avvistato' || s === 'catturato';
+}
+function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(status)] || ANIMAL_STATUS.ricercato; }
+
+function getSupabaseConfig() {
+  let env = {};
+  try { env = import.meta.env || {}; } catch { env = {}; }
+  const win = typeof window !== 'undefined' ? window : {};
+  return {
+    url: String(env.VITE_SUPABASE_URL || win.ANIMALDEX_SUPABASE_URL || '').replace(/\/$/, ''),
+    anonKey: String(env.VITE_SUPABASE_ANON_KEY || win.ANIMALDEX_SUPABASE_ANON_KEY || ''),
+    table: String(env.VITE_ANIMALDEX_STATUS_TABLE || win.ANIMALDEX_STATUS_TABLE || 'user_animal_status'),
+  };
+}
+
+function getAnimaldexUserId() {
+  if (typeof window === 'undefined') return 'local-preview-user';
+  if (window.ANIMALDEX_USER_ID) return String(window.ANIMALDEX_USER_ID);
+  const key = 'animaldex_user_id';
+  try {
+    const existing = window.localStorage.getItem(key);
+    if (existing) return existing;
+    const randomPart = window.crypto?.randomUUID ? window.crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    const id = `anon-${randomPart}`;
+    window.localStorage.setItem(key, id);
+    return id;
+  } catch {
+    return 'local-preview-user';
+  }
+}
+
+async function loadSupabaseStatusMap() {
+  const cfg = getSupabaseConfig();
+  if (!cfg.url || !cfg.anonKey || typeof fetch === 'undefined') return {};
+  const userId = getAnimaldexUserId();
+  const url = `${cfg.url}/rest/v1/${cfg.table}?select=animal_id,status&user_id=eq.${encodeURIComponent(userId)}`;
+  const res = await fetch(url, {
+    headers: { apikey: cfg.anonKey, Authorization: `Bearer ${cfg.anonKey}` },
+  });
+  if (!res.ok) throw new Error(`Supabase status load failed: ${res.status}`);
+  const rows = await res.json();
+  return (Array.isArray(rows) ? rows : []).reduce((acc,row)=>{
+    acc[row.animal_id] = normalizeAnimalStatus(row.status);
+    return acc;
+  }, {});
+}
+
+async function upsertSupabaseAnimalStatus(animalId, status) {
+  const cfg = getSupabaseConfig();
+  if (!cfg.url || !cfg.anonKey || typeof fetch === 'undefined') return false;
+  const userId = getAnimaldexUserId();
+  const url = `${cfg.url}/rest/v1/${cfg.table}?on_conflict=user_id,animal_id`;
+  const payload = {
+    user_id: userId,
+    animal_id: String(animalId),
+    status: normalizeAnimalStatus(status),
+    updated_at: new Date().toISOString(),
+  };
+  const res = await fetch(url, {
+    method:'POST',
+    headers: {
+      apikey: cfg.anonKey,
+      Authorization: `Bearer ${cfg.anonKey}`,
+      'Content-Type':'application/json',
+      Prefer:'resolution=merge-duplicates,return=minimal',
+    },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error(`Supabase status upsert failed: ${res.status}`);
+  return true;
+}
 const TROPHIC = {
   1:{ label:'Produttore',      c:'#5CC85A', bg:'#1A3B19' },
   2:{ label:'Erbivoro',        c:'#A8D84A', bg:'#283B14' },
@@ -247,11 +349,84 @@ const RARITY_CSS = `
 .tab-from-right { animation: tabFromRight 0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
 .tab-from-left  { animation: tabFromLeft  0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
 
-/* pallino rarità nella griglia */
-.rarity-dot-comune     { background: linear-gradient(135deg,#C47A35,#F0B060); box-shadow: 0 0 6px rgba(196,122,53,0.7); }
-.rarity-dot-non-comune { background: linear-gradient(135deg,#888,#EEE); box-shadow: 0 0 6px rgba(180,180,180,0.7); }
-.rarity-dot-raro       { background: linear-gradient(135deg,#D4A000,#FFD700); box-shadow: 0 0 8px rgba(255,200,0,0.8); }
-.rarity-dot-leggendario{ background: linear-gradient(135deg,#7B20C8,#C8A0FF); box-shadow: 0 0 10px rgba(160,80,255,0.85); }
+/* rarità: barra con stemma e lastra metallica/amethyst */
+.rarity-badge {
+  position: relative;
+  isolation: isolate;
+  min-height: 34px;
+  border-radius: 13px;
+  padding: 8px 14px 8px 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .2px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.75), 0 0 8px rgba(255,255,255,.22);
+  border: 1.5px solid rgba(242,242,242,.62);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.72), inset 0 -2px 5px rgba(0,0,0,.45), 0 5px 12px rgba(0,0,0,.28);
+}
+.rarity-badge::before {
+  content: '';
+  position: absolute;
+  inset: 3px 4px 3px 30px;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: .98;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.35), inset 0 -3px 9px rgba(0,0,0,.36);
+}
+.rarity-badge::after {
+  content: '';
+  position: absolute;
+  inset: 2px 5px 2px 31px;
+  border-radius: 10px;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.05) 22%, rgba(255,255,255,.62) 42%, rgba(255,255,255,.10) 58%, transparent 76%);
+  background-size: 260% 100%;
+  animation: oroShine 4.4s linear infinite;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.rarity-shield {
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,.55));
+  pointer-events: none;
+}
+.rarity-badge.compact { min-height: 28px; padding: 5px 10px 5px 34px; border-radius: 999px; }
+.rarity-badge.compact::before { inset: 3px 4px 3px 25px; border-radius: 999px; }
+.rarity-badge.compact::after { inset: 2px 5px 2px 26px; border-radius: 999px; }
+.rarity-badge.compact .rarity-shield { width: 36px; height: 36px; left: -8px; }
+.rarity-badge.small { min-height: 26px; padding: 4px 9px 4px 32px; font-size: 11px; border-radius: 999px; }
+.rarity-badge.small::before { inset: 3px 4px 3px 24px; border-radius: 999px; }
+.rarity-badge.small::after { inset: 2px 5px 2px 25px; border-radius: 999px; }
+.rarity-badge.small .rarity-shield { width: 34px; height: 34px; left: -8px; }
+.rarity-badge.full { width: 100%; box-sizing: border-box; }
+.rarity-metal-comune { background: linear-gradient(180deg,#f4c39a 0%,#d0895c 45%,#7b3c1d 100%); }
+.rarity-metal-comune::before { background: radial-gradient(circle at 25% 20%, rgba(255,238,210,.55), transparent 28%), linear-gradient(135deg,#532311,#d0895c 38%,#ffd0a4 50%,#8a421f 72%,#3b170a 100%); }
+.rarity-metal-non-comune { background: linear-gradient(180deg,#eef2f6 0%,#a1a8b2 48%,#4e5660 100%); }
+.rarity-metal-non-comune::before { background: radial-gradient(circle at 22% 22%, rgba(255,255,255,.70), transparent 30%), linear-gradient(135deg,#3d454d,#a1a8b2 40%,#ffffff 50%,#67717c 72%,#252a30 100%); }
+.rarity-metal-raro { background: linear-gradient(180deg,#fff0a5 0%,#f0c449 46%,#8c6500 100%); }
+.rarity-metal-raro::before { background: radial-gradient(circle at 26% 20%, rgba(255,247,190,.68), transparent 30%), linear-gradient(135deg,#5a3900,#f0c449 38%,#fff5b8 50%,#a77b00 72%,#3b2500 100%); }
+.rarity-metal-raro { box-shadow: inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 5px rgba(0,0,0,.45), 0 0 12px rgba(240,196,73,.45), 0 5px 12px rgba(0,0,0,.28); }
+.rarity-metal-leggendario { background: linear-gradient(180deg,#d2a9ff 0%,#8f34f5 48%,#2d064e 100%); border-color: rgba(220,220,235,.86); box-shadow: inset 0 1px 0 rgba(255,255,255,.82), inset 0 -2px 5px rgba(0,0,0,.48), 0 0 16px rgba(143,52,245,.58), 0 0 32px rgba(143,52,245,.25), 0 5px 12px rgba(0,0,0,.28); }
+.rarity-metal-leggendario::before { background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.72), transparent 18%), radial-gradient(circle at 72% 64%, rgba(255,255,255,.28), transparent 14%), linear-gradient(135deg,#210036 0%,#8f34f5 34%,#f4d9ff 50%,#7b1de1 66%,#260046 100%); }
+.rarity-metal-leggendario::after { background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.12) 17%, rgba(255,255,255,.92) 38%, rgba(207,148,255,.28) 54%, transparent 76%); background-size: 300% 100%; animation: oroShine 3.6s linear infinite; }
+
+/* pallino rarità nella griglia: glow solo raro e leggendario */
+.rarity-dot-comune     { background:#d0895c; box-shadow:none; }
+.rarity-dot-non-comune { background:#a1a8b2; box-shadow:none; }
+.rarity-dot-raro       { background:#f0c449; box-shadow: 0 0 8px rgba(240,196,73,0.88), 0 0 16px rgba(240,196,73,0.38); }
+.rarity-dot-leggendario{ background:#8f34f5; box-shadow: 0 0 10px rgba(143,52,245,0.95), 0 0 22px rgba(143,52,245,0.42); }
 `;
 
 // ── Flag Emoji Generator ──────────────────────────────────────────────
@@ -342,6 +517,19 @@ function rarityClass(rarity) {
 }
 function rarityDotClass(rarity) {
   return 'rarity-dot-' + (rarity || 'Comune').toLowerCase().replace(' ', '-');
+}
+function rarityMetalClass(rarity) {
+  return 'rarity-metal-' + (rarity || 'Comune').toLowerCase().replace(' ', '-');
+}
+function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
+  const r = RARITY[rarity] ? rarity : 'Comune';
+  const classes = ['rarity-badge', rarityMetalClass(r), compact ? 'compact' : '', small ? 'small' : '', full ? 'full' : ''].filter(Boolean).join(' ');
+  return (
+    <div className={classes} onClick={onClick} style={{ cursor:onClick?'pointer':'default', ...style }}>
+      <img className="rarity-shield" src={SHIELD_PATHS[r]} alt="" aria-hidden="true" />
+      <span style={{ position:'relative', zIndex:1 }}>{r}{suffix}</span>
+    </div>
+  );
 }
 
 // ── Build taxonomy tree ───────────────────────────────────────────────
@@ -616,18 +804,21 @@ function DistMap({ hab, accentColor, countriesPresent }) {
 }
 
 function StatusBadge({ status, accentColor, onClick }) {
-  const cfg = status==='fotografato'
-    ? { label:'FOTOGRAFATO', c:'#fff', bg:accentColor }
-    : status==='avvistato'
-    ? { label:'AVVISTATO', c:accentColor, bg:'rgba(0,0,0,.45)', border:`1.5px solid ${accentColor}` }
-    : { label:'NON VISTO', c:'rgba(255,255,255,.3)', bg:'rgba(0,0,0,.3)', border:'1.5px solid rgba(255,255,255,.1)' };
+  const normalized = normalizeAnimalStatus(status);
+  const base = getStatusMeta(normalized);
+  const cfg = normalized === 'avvistato'
+    ? { ...base, c: accentColor, border:`1.5px solid ${accentColor}`, dot: accentColor }
+    : normalized === 'catturato'
+    ? { ...base, bg: accentColor, c:'#fff', dot:'#fff' }
+    : base;
   return (
-    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:6, padding:'10px 12px', borderRadius:12, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:700, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%' }}>
-      {status && <span style={{ width:6, height:6, borderRadius:'50%', background:status==='fotografato'?'white':accentColor, display:'inline-block' }} />}
+    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:12, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%' }}>
+      <span style={{ width:7, height:7, borderRadius:'50%', background:cfg.dot || cfg.c, display:'inline-block', boxShadow:normalized==='catturato'?'0 0 8px rgba(255,255,255,.55)':'none' }} />
       {cfg.label}
     </div>
   );
 }
+
 
 const RARITY_GLOW = {
   'Comune':     'rgba(245,222,179,.45)',
@@ -640,31 +831,46 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [iconErr, setIconErr] = useState(false);
-  const status = overrideStatus !== undefined ? overrideStatus : a.status;
-  const found = status && status !== 'non visto';
-  const glow = found ? (RARITY_GLOW[a.rarity] || 'rgba(255,255,255,.2)') : 'none';
+  const [mysteryErr, setMysteryErr] = useState(false);
+  const status = normalizeAnimalStatus(overrideStatus !== undefined ? overrideStatus : a.status);
+  const mystery = isMysteryStatus(status);
+  const revealed = isRevealedStatus(status);
   const classIcon = CLASS_ICONS[a.cls];
 
-  // ── Non visto: mostra icona silhouette della classe ──
-  if (!found) {
+  // ── Misterioso: placeholder dedicato, identità nascosta ──
+  if (mystery) {
+    return (
+      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
+        {!mysteryErr ? (
+          <img src={MYSTERY_PLACEHOLDER} alt="misterioso" onError={()=>setMysteryErr(true)}
+            style={{ width:'78%', height:'78%', objectFit:'contain', opacity:0.62, filter:'drop-shadow(0 0 10px rgba(255,255,255,.10))' }} />
+        ) : (
+          <div style={{ width:54, height:54, borderRadius:'50%', background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.14)', color:'rgba(255,255,255,.34)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30, fontWeight:900 }}>?</div>
+        )}
+      </div>
+    );
+  }
+
+  // ── Ricercato: mostra silhouette della classe, nome visibile nella card ──
+  if (!revealed) {
     if (classIcon && !iconErr) {
       return (
         <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? 0.673 : 1.2})` }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? GRID_SILHOUETTE_SCALE : 1.2})` }} />
         </div>
       );
     }
     return (
-      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.1 }}>{c.icon}</div>
+      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.18 }}>{c.icon}</div>
     );
   }
 
-  // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
+  // ── Avvistato / Catturato: immagine reale ──
   if (a.image_url && !imgErr) {
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
-    const imgScale = gridMode ? 1.01 : 1.2;
+    const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
     return (
       <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
@@ -680,10 +886,13 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   );
 }
 
+
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
-  const found = a.status && a.status !== 'non visto';
-  const glowShadow = found ? `0 0 14px 2px ${c.accent}55, 0 0 4px 1px ${c.accent}33` : 'none';
+  const status = normalizeAnimalStatus(a.status);
+  const mystery = isMysteryStatus(status);
+  const revealed = isRevealedStatus(status);
+  const glowShadow = revealed ? `0 0 14px 2px ${c.accent}55, 0 0 4px 1px ${c.accent}33` : 'none';
   return (
     <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease, box-shadow .3s ease', boxShadow:glowShadow }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.93)'}
@@ -693,10 +902,27 @@ function AnimalCard({ a, onClick }) {
       {/* Pallino rarità */}
       <div className={rarityDotClass(a.rarity)} style={{ position:'absolute', top:7, right:7, zIndex:2, width:10, height:10, borderRadius:'50%' }}/>
       <AnimalImg a={a} size={102} fontSize={52} gridMode={true} />
-      <div style={{ background:found?c.mid:'#1C1C1E', padding:'7px 6px 4px', color:found?'white':'#2E2E30', fontSize:12, fontWeight:700, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.com}</div>
+      <div style={{
+        background: revealed ? c.mid : '#1C1C1E',
+        padding:'6px 6px 6px',
+        minHeight:38,
+        height:38,
+        boxSizing:'border-box',
+        color:mystery?'transparent':'white',
+        fontSize:12,
+        fontWeight:800,
+        textAlign:'center',
+        lineHeight:'13px',
+        display:'-webkit-box',
+        WebkitLineClamp:2,
+        WebkitBoxOrient:'vertical',
+        overflow:'hidden',
+        wordBreak:'break-word',
+      }}>{mystery ? 'Animale misterioso' : a.com}</div>
     </div>
   );
 }
+
 
 function Sheet({ title, onClose, children, tall }) {
   return (
@@ -735,16 +961,25 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
           const on = local.has(opt.value);
           const flag = withSearch ? getFlagEmoji(opt.value) : '';
           const isRarity = ['Comune','Non comune','Raro','Leggendario'].includes(opt.value);
+          if (isRarity) {
+            return (
+              <div key={opt.value} onClick={()=>toggle(opt.value)} style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, padding:'8px 6px 8px 18px', marginBottom:8, borderRadius:14, background:on?'rgba(255,255,255,.08)':'rgba(0,0,0,.12)', border:`1.5px solid ${on?'rgba(255,255,255,.28)':'transparent'}`, cursor:'pointer' }}>
+                <RarityBadge rarity={opt.value} compact style={{ flex:1, minWidth:0 }} />
+                <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?'rgba(255,255,255,0.65)':'rgba(255,255,255,.25)'}`, background:on?'rgba(255,255,255,0.25)':'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+                  {on&&<span style={{ fontSize:13, fontWeight:900, lineHeight:1 }}>✓</span>}
+                </div>
+              </div>
+            );
+          }
           return (
             <div
               key={opt.value}
-              className={isRarity ? rarityClass(opt.value) : ''}
               onClick={()=>toggle(opt.value)}
               style={{
                 display:'flex', alignItems:'center', justifyContent:'space-between',
                 padding:'13px 14px', marginBottom:6, borderRadius:12,
-                background: isRarity ? undefined : (opt.bg||'#333'),
-                border:`1.5px solid ${on ? (isRarity ? 'rgba(255,255,255,0.4)' : (opt.c||'#666')) : 'transparent'}`,
+                background: opt.bg||'#333',
+                border:`1.5px solid ${on ? (opt.c||'#666') : 'transparent'}`,
                 cursor:'pointer'
               }}
             >
@@ -752,7 +987,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
                 {flag && <span style={{ fontSize:16 }}>{flag}</span>}
                 <span style={{ fontSize:14, fontWeight:700 }}>{opt.label}</span>
               </div>
-              <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?(isRarity?'rgba(255,255,255,0.6)':opt.c||'#666'):'rgba(255,255,255,.25)'}`, background:on?(isRarity?'rgba(255,255,255,0.25)':opt.c||'#666'):'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+              <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?(opt.c||'#666'):'rgba(255,255,255,.25)'}`, background:on?(opt.c||'#666'):'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
                 {on&&<span style={{ fontSize:13, fontWeight:900, lineHeight:1 }}>✓</span>}
               </div>
             </div>
@@ -853,13 +1088,29 @@ function RarityLegendRows() {
         {k:'Raro',       desc:'Specie molto rara, difficile da trovare'},
         {k:'Leggendario',desc:'Specie estremamente rara e leggendaria'},
       ].map(({k,desc})=>(
-        <div key={k} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
-          <div className={rarityClass(k)} style={{ padding:'6px 12px', borderRadius:8, fontSize:12, fontWeight:700, whiteSpace:'nowrap', flexShrink:0 }}>{k}</div>
+        <div key={k} style={{ display:'flex', gap:12, alignItems:'center' }}>
+          <RarityBadge rarity={k} compact style={{ width:150, flexShrink:0 }} />
           <div style={{ flex:1 }}>
             <div style={{ color:'rgba(255,255,255,.75)', fontSize:11, marginTop:2 }}>{desc}</div>
           </div>
         </div>
       ))}
+    </>
+  );
+}
+
+function StatusLegendRows() {
+  return (
+    <>
+      {ANIMAL_STATUS_ORDER.map(k=>{
+        const so = ANIMAL_STATUS[k];
+        return (
+          <div key={k} style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+            <div style={{ background:so.bg, color:so.c, border:so.border, padding:'6px 12px', borderRadius:8, fontSize:12, fontWeight:800, whiteSpace:'nowrap', flexShrink:0, textTransform:'uppercase' }}>{so.label}</div>
+            <div style={{ flex:1 }}><div style={{ color:'rgba(255,255,255,.75)', fontSize:11, marginTop:2 }}>{so.desc}</div></div>
+          </div>
+        );
+      })}
     </>
   );
 }
@@ -880,9 +1131,9 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
 
-  const list = ANIMALS.map(a => ({ ...a, status: statusMap[a.id] ?? a.status })).filter(a => {
+  const list = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => {
     const q = search.toLowerCase();
-    const status = a.status || 'non visto';
+    const status = normalizeAnimalStatus(a.status);
     if (q && !a.com.toLowerCase().includes(q) && !a.sci.toLowerCase().includes(q)) return false;
     if (clsF && a.cls !== clsF) return false;
     if (fRarity.length   && !fRarity.includes(a.rarity))                   return false;
@@ -898,11 +1149,7 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
 
   const rarityOpts = Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg }));
   const consOpts   = Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg }));
-  const statusOpts = [
-    { value:'non visto',   label:'Non visto',   c:'rgba(255,255,255,.4)', bg:'rgba(100,100,100,.2)' },
-    { value:'avvistato',   label:'Avvistato',   c:'#FFD700', bg:'rgba(255,215,0,.15)' },
-    { value:'fotografato', label:'Fotografato', c:'#00BFFF', bg:'rgba(0,191,255,.15)' },
-  ];
+  const statusOpts = ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:ANIMAL_STATUS[k].bg }));
   const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
   const geographyOpts = COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }));
 
@@ -923,12 +1170,12 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
           {clsF && <span onClick={()=>setClsF(null)} style={{ background:CLS[clsF].mid, color:CLS[clsF].accent, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{CLS[clsF].icon} {CLS[clsF].label} ×</span>}
           {fTax && <span onClick={()=>setFTax(null)} style={{ background:'rgba(232,192,64,.2)', color:'#E8C040', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{fTax.label} ×</span>}
           {fRarity.map(r=>(
-            <span key={r} className={rarityClass(r)} onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{r} ×</span>
+            <RarityBadge key={r} rarity={r} small suffix=" ×" onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ flexShrink:0 }} />
           ))}
           {fCons.map(c=><span key={c} onClick={()=>setFCons(p=>p.filter(x=>x!==c))} style={{ background:CONS[c].bg, color:CONS[c].c, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{c} ×</span>)}
           {fStatus.map(s=>{
-            const so = { 'non visto':{ c:'rgba(255,255,255,.4)', bg:'rgba(100,100,100,.2)' }, 'avvistato':{ c:'#FFD700', bg:'rgba(255,215,0,.15)' }, 'fotografato':{ c:'#00BFFF', bg:'rgba(0,191,255,.15)' } }[s];
-            return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so?.bg||'#2A2A2C', color:so?.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{s} ×</span>;
+            const so = getStatusMeta(s);
+            return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>;
           })}
           {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
         </div>
@@ -1016,9 +1263,9 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div>
             </div>
             <div style={{ marginBottom:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Avvistamento</h3>
+              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Animale</h3>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[{v:'non visto',desc:'Animale non ancora avvistato'},{v:'avvistato',desc:'Avvistato in natura'},{v:'fotografato',desc:'Fotografato, massimo riconoscimento!'}].map(({v,desc})=>{const so={'non visto':{c:'rgba(255,255,255,.4)',bg:'rgba(100,100,100,.2)'},'avvistato':{c:'#FFD700',bg:'rgba(255,215,0,.15)'},'fotografato':{c:'#00BFFF',bg:'rgba(0,191,255,.15)'}}[v];return <div key={v} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:so.bg,color:so.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0,textTransform:'capitalize'}}>{v}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
+                <StatusLegendRows />
               </div>
             </div>
             <div>
@@ -1048,7 +1295,7 @@ function Grid({ onSelect, statusMap = {}, onHome }) {
       {sheet==='cls'     && <ClassSheet sel={clsF} onSel={k=>{setClsF(k);setSheet(null);}} onClose={()=>setSheet(null)}/>}
       {sheet==='rarity'  && <MultiSheet title="Rarità" options={rarityOpts} selected={fRarity} onApply={setFRarity} onClose={()=>setSheet(null)}/>}
       {sheet==='cons'    && <MultiSheet title="Stato di Conservazione" options={consOpts} selected={fCons} onApply={setFCons} onClose={()=>setSheet(null)}/>}
-      {sheet==='status'  && <MultiSheet title="Tipo di Avvistamento" options={statusOpts} selected={fStatus} onApply={setFStatus} onClose={()=>setSheet(null)}/>}
+      {sheet==='status'  && <MultiSheet title="Status Animale" options={statusOpts} selected={fStatus} onApply={setFStatus} onClose={()=>setSheet(null)}/>}
       {sheet==='trophic' && <MultiSheet title="Catena Alimentare" options={trophicOpts} selected={fTrophic} onApply={setFTrophic} onClose={()=>setSheet(null)}/>}
       {sheet==='geography' && <MultiSheet title="Geografia" options={geographyOpts} selected={fGeography} onApply={setFGeography} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='tax'     && <TaxSheet current={fTax} onApply={v=>{setFTax(v);}} onClose={()=>setSheet(null)}/>}
@@ -1125,7 +1372,7 @@ const TAB_ORDER = ['abilita','statistiche','tassonomia'];
 function Detail({ a, onBack, onStatusChange }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
-  const [localStatus,setLocalStatus]=useState(a.status || 'non visto');
+  const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
   const [showStatusMenu,setShowStatusMenu]=useState(false);
   const [showInfoModal,setShowInfoModal]=useState(false);
   const [showLightbox,setShowLightbox]=useState(false);
@@ -1136,7 +1383,7 @@ function Detail({ a, onBack, onStatusChange }) {
   const touchStartY = useRef(0);
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
-  const found = localStatus && localStatus !== 'non visto';
+  const found = isRevealedStatus(localStatus);
 
   const handleTab = (m) => {
     if (m===statMode) return;
@@ -1196,15 +1443,15 @@ function Detail({ a, onBack, onStatusChange }) {
             <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
           </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
-            {/* Rarità con classe animata */}
-            <div className={rarityClass(a.rarity)} style={{ borderRadius:12, padding:'10px 12px', fontSize:14, fontWeight:700, textAlign:'center' }}>{a.rarity||'Comune'}</div>
+            {/* Rarità con stemma */}
+            <RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:14 }} />
             <div style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
             <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%' }}>
               <StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/>
               {showStatusMenu && (
                 <div style={{ position:'absolute', top:40, left:0, right:0, background:c.detailBg, border:`1px solid ${c.accent}33`, borderRadius:12, padding:8, display:'flex', flexDirection:'column', gap:6, zIndex:10 }}>
-                  {['non visto','avvistato','fotografato'].map(s=>(
-                    <button key={s} onClick={()=>{setLocalStatus(s);setShowStatusMenu(false);if(onStatusChange)onStatusChange(a.id,s);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{s}</button>
+                  {ANIMAL_STATUS_ORDER.map(s=>(
+                    <button key={s} onClick={()=>{const next=normalizeAnimalStatus(s);setLocalStatus(next);setShowStatusMenu(false);if(onStatusChange)onStatusChange(a.id,next);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{getStatusMeta(s).label}</button>
                   ))}
                 </div>
               )}
@@ -1290,7 +1537,7 @@ function Detail({ a, onBack, onStatusChange }) {
 
               {/* Statistiche */}
               {statMode==='statistiche'&&(
-                localStatus !== 'non visto' ? (
+                isRevealedStatus(localStatus) ? (
                   <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px 14px 6px' }}>
                     <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
                     <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
@@ -1310,7 +1557,7 @@ function Detail({ a, onBack, onStatusChange }) {
                   </div>
                 ) : (
                   <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
-                    <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca selezionando lo status sopra</p>
+                    <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca passando ad Avvistato o Catturato</p>
                   </div>
                 )
               )}
@@ -1370,9 +1617,9 @@ function Detail({ a, onBack, onStatusChange }) {
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div>
             </div>
             <div style={{ marginBottom:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Avvistamento</h3>
+              <h3 style={{ margin:'0 0 12px', color:c.accent, fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Animale</h3>
               <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[{v:'non visto',desc:'Non ancora avvistato'},{v:'avvistato',desc:'Avvistato in natura'},{v:'fotografato',desc:'Fotografato, massimo riconoscimento!'}].map(({v,desc})=>{const so={'non visto':{c:'rgba(255,255,255,.4)',bg:'rgba(100,100,100,.2)'},'avvistato':{c:'#FFD700',bg:'rgba(255,215,0,.15)'},'fotografato':{c:'#00BFFF',bg:'rgba(0,191,255,.15)'}}[v];return <div key={v} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:so.bg,color:so.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0,textTransform:'capitalize'}}>{v}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
+                <StatusLegendRows />
               </div>
             </div>
             <div>
@@ -1623,10 +1870,29 @@ export default function App() {
     const style=document.createElement('style');
     style.textContent = RARITY_CSS;
     document.head.appendChild(style);
+
+    return () => {
+      try { document.head.removeChild(l); document.head.removeChild(style); } catch {}
+    };
+  },[]);
+
+  useEffect(()=>{
+    let cancelled = false;
+    loadSupabaseStatusMap()
+      .then(remoteMap => {
+        if (!cancelled && remoteMap && Object.keys(remoteMap).length) {
+          setStatusMap(prev => ({ ...remoteMap, ...prev }));
+        }
+      })
+      .catch(err => console.warn('[Animaldex] Supabase status sync non disponibile:', err));
+    return () => { cancelled = true; };
   },[]);
 
   const handleStatusChange = (id, status) => {
-    setStatusMap(prev => ({ ...prev, [id]: status }));
+    const nextStatus = normalizeAnimalStatus(status);
+    setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
+    upsertSupabaseAnimalStatus(id, nextStatus)
+      .catch(err => console.warn('[Animaldex] Salvataggio status Supabase fallito:', err));
   };
 
   const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
