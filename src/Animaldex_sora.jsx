@@ -29,7 +29,24 @@ const CLS = {
   Eutardigrada:   { mid:'#606060', img:'#808080', badge:'#303030', accent:'#C0C0C0', detailTop:'#404040', detailBg:'#282828', label:'Tardigrado',   icon:'🔬' },
   Coelacanthi:    { mid:'#1C3A80', img:'#2A52A8', badge:'#0C1840', accent:'#6088F8', detailTop:'#102258', detailBg:'#081438', label:'Celacanto',    icon:'🐟' },
 };
-const CONS = {
+
+// Icone silhouette per stato "non visto" — una per ogni classe
+const CLASS_ICONS = {
+  Mammalia:       '/icons/class-mammalia.png',
+  Aves:           '/icons/class-aves.png',
+  Reptilia:       '/icons/class-reptilia.png',
+  Amphibia:       '/icons/class-amphibia.png',
+  Actinopterygii: '/icons/class-actinopterygii.png',
+  Elasmobranchii: '/icons/class-chondrichthyes.png',
+  Insecta:        '/icons/class-insecta.png',
+  Arachnida:      '/icons/class-arachnida.png',
+  Malacostraca:   '/icons/class-malacostraca.png',
+  Chilopoda:      '/icons/class-chilopoda.png',
+  Diplopoda:      '/icons/class-diplopoda.png',
+  Gastropoda:     '/icons/class-gastropoda.png',
+  Cephalopoda:    '/icons/class-cephalopoda.png',
+  Bivalvia:       '/icons/class-bivalvia.png',
+};
   EX: { lbl:'EX', full:'Extinct',                 c:'#FFFFFF', bg:'#1A1A1A' },
   EW: { lbl:'EW', full:'Extinct in the Wild',     c:'#FFFFFF', bg:'#1A1A1A' },
   CR: { lbl:'CR', full:'Critically Endangered',   c:'#FFFFFF', bg:'#DC143C' },
@@ -621,33 +638,50 @@ const RARITY_GLOW = {
 function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
+  const [iconErr, setIconErr] = useState(false);
   const status = overrideStatus !== undefined ? overrideStatus : a.status;
   const found = status && status !== 'non visto';
-  const pad = Math.round(size * 0.16); // ~1/6: margine generoso
+  const pad = Math.round(size * 0.16);
   const glow = found ? (RARITY_GLOW[a.rarity] || 'rgba(255,255,255,.2)') : 'none';
-  const shadow = found ? `0 0 ${Math.round(size*0.18)}px ${Math.round(size*0.06)}px ${glow}` : 'none';
+  const classIcon = CLASS_ICONS[a.cls];
+
+  // ── Non visto: mostra icona silhouette della classe ──
+  if (!found) {
+    if (classIcon && !iconErr) {
+      return (
+        <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding: Math.round(size * 0.12) }}>
+          <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.22, filter:'brightness(0) invert(1)' }} />
+        </div>
+      );
+    }
+    // fallback emoji se icona non disponibile
+    return (
+      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.2 }}>{c.icon}</div>
+    );
+  }
+
+  // ── Avvistato / Fotografato: immagine reale ──
   if (a.image_url && !imgErr) {
     return (
-      <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
+      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad }}>
         <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
-            filter:found?'none':'brightness(0.14) saturate(0)',
-            dropShadow:'none',
-            WebkitFilter: found ? `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` : 'brightness(0.14) saturate(0)' }} />
+            WebkitFilter: `drop-shadow(0 0 ${Math.round(size*0.1)}px ${glow})` }} />
       </div>
     );
   }
   return (
-    <div style={{ width:'100%', height:size, background:found?c.img:'#202022', display:'flex', alignItems:'center', justifyContent:'center', fontSize,
-      filter:found?'none':'brightness(0.14) saturate(0)' }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const found = a.status && a.status !== 'non visto';
+  const glowShadow = found ? `0 0 14px 2px ${c.accent}55, 0 0 4px 1px ${c.accent}33` : 'none';
   return (
-    <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease' }}
+    <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease, box-shadow .3s ease', boxShadow:glowShadow }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.93)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
       onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}>
@@ -998,6 +1032,37 @@ function Grid({ onSelect }) {
   );
 }
 
+// ── Image Lightbox ────────────────────────────────────────────────────
+function ImageLightbox({ src, alt, accentColor, onClose }) {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => { requestAnimationFrame(() => setVisible(true)); }, []);
+  const handleClose = () => { setVisible(false); setTimeout(onClose, 280); };
+  return (
+    <div onClick={handleClose} style={{
+      position:'fixed', inset:0, zIndex:300,
+      background: visible ? 'rgba(0,0,0,.93)' : 'rgba(0,0,0,0)',
+      display:'flex', alignItems:'center', justifyContent:'center',
+      transition:'background .28s ease', cursor:'zoom-out',
+    }}>
+      <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
+        width:'100%', maxWidth:'100vw', maxHeight:'92vh',
+        objectFit:'contain',
+        transform: visible ? 'scale(1)' : 'scale(0.12)',
+        transition:'transform .32s cubic-bezier(.34,1.4,.64,1)',
+        filter: `drop-shadow(0 0 32px ${accentColor}88)`,
+        cursor:'default',
+      }}/>
+      <button onClick={handleClose} style={{
+        position:'absolute', top:20, right:20,
+        background:'rgba(255,255,255,.12)', border:'none',
+        color:'white', fontSize:22, width:44, height:44,
+        borderRadius:'50%', cursor:'pointer', display:'flex',
+        alignItems:'center', justifyContent:'center',
+      }}>×</button>
+    </div>
+  );
+}
+
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
 function Detail({ a, onBack }) {
@@ -1006,13 +1071,25 @@ function Detail({ a, onBack }) {
   const [localStatus,setLocalStatus]=useState(a.status || 'non visto');
   const [showStatusMenu,setShowStatusMenu]=useState(false);
   const [showInfoModal,setShowInfoModal]=useState(false);
+  const [showLightbox,setShowLightbox]=useState(false);
+  const scrollRef = useRef(null);
+  const touchStartY = useRef(0);
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
+  const found = localStatus && localStatus !== 'non visto';
 
   const handleTab = (m) => {
     if (m===statMode) return;
     setSlideDir(TAB_ORDER.indexOf(m) > TAB_ORDER.indexOf(statMode) ? 1 : -1);
     setStatMode(m);
+  };
+
+  const openLightbox = () => { if (found && a.image_url) setShowLightbox(true); };
+
+  const handleTouchStart = (e) => { touchStartY.current = e.touches[0].clientY; };
+  const handleTouchMove  = (e) => {
+    if (!scrollRef.current || scrollRef.current.scrollTop > 2) return;
+    if (e.touches[0].clientY - touchStartY.current > 80) openLightbox();
   };
   
   const scale = 1;
@@ -1023,7 +1100,8 @@ function Detail({ a, onBack }) {
         <span style={{ color:'white', fontSize:17, fontWeight:800 }}>{a.com}</span>
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
       </div>
-      <div style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
+      <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}
+        style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
         <div style={{ display:'flex', flexWrap:'wrap', gap:3, alignItems:'center', marginBottom:14 }}>
           {[a.kin,a.phy,a.cls,a.ord,a.fam].map((p,i,arr)=>(
             <span key={i} style={{ display:'flex', alignItems:'center', gap:3 }}>
@@ -1033,7 +1111,7 @@ function Detail({ a, onBack }) {
           ))}
         </div>
         <div style={{ display:'flex', gap:12, marginBottom:16, padding:'0 4px' }}>
-          <div style={{ width:132, height:132, borderRadius:16, overflow:'hidden', flexShrink:0, background:c.img }}>
+          <div onClick={openLightbox} style={{ width:132, height:132, borderRadius:16, overflow:'hidden', flexShrink:0, background:c.img, cursor: found && a.image_url ? 'zoom-in' : 'default', boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none' }}>
             <AnimalImg a={a} size={132} fontSize={76} overrideStatus={localStatus} />
           </div>
           <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
@@ -1219,6 +1297,7 @@ function Detail({ a, onBack }) {
           </div>
         </div>
       )}
+      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} onClose={()=>setShowLightbox(false)}/>}
     </div>
   );
 }
