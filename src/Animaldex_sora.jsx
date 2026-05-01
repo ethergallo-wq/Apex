@@ -47,7 +47,7 @@ const CLASS_ICONS = {
   Cephalopoda:    '/icons/class-cephalopoda.png',
   Bivalvia:       '/icons/class-bivalvia.png',
 };
-  EX: { lbl:'EX', full:'Extinct',                 c:'#FFFFFF', bg:'#1A1A1A' },
+const CONS = {                 c:'#FFFFFF', bg:'#1A1A1A' },
   EW: { lbl:'EW', full:'Extinct in the Wild',     c:'#FFFFFF', bg:'#1A1A1A' },
   CR: { lbl:'CR', full:'Critically Endangered',   c:'#FFFFFF', bg:'#DC143C' },
   EN: { lbl:'EN', full:'Endangered',              c:'#000000', bg:'#FF8C00' },
