@@ -651,7 +651,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
       return (
         <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
           <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'67%', height:'67%', objectFit:'contain', opacity:0.55 }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55 }} />
         </div>
       );
     }
@@ -662,7 +662,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus }) {
 
   // ── Avvistato / Fotografato: immagine reale, nessun padding forzato ──
   if (a.image_url && !imgErr) {
-    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${c.accent}) drop-shadow(0 0 ${Math.round(size*0.18)}px ${c.accent}88)`;
+    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
     const pad = Math.round(size * 0.12);
     return (
       <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'visible', padding:pad, boxSizing:'border-box' }}>
@@ -951,7 +951,11 @@ function Grid({ onSelect, statusMap = {} }) {
             Albero Tassonomico {fTax && ' ✓'}
           </button>
           <button onClick={()=>setShowMenu(!showMenu)} style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 4H17L10 12.5V16L7 18V12.5L3 4Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
+            <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
+              <line x1="1" y1="2"  x2="19" y2="2"  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="4" y1="8"  x2="16" y2="8"  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="7" y1="14" x2="13" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
           </button>
         </div>
         <div style={{ textAlign:'center', fontSize:11, fontWeight:600, color:'rgba(255,255,255,.7)', padding:'4px 0' }}>{list.length} risultati</div>
