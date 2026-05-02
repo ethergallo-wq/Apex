@@ -289,6 +289,66 @@ async function saveUserAnimalStatus(userId, animal, status) {
   if (error) throw error;
   return true;
 }
+
+async function fetchUserBadgeIds(userId) {
+  const { data, error } = await supabase
+    .from('user_badges')
+    .select('badge_id')
+    .eq('user_id', userId);
+
+  if (error) throw error;
+  return Array.from(new Set((data || []).map(row => String(row.badge_id)).filter(Boolean)));
+}
+
+async function persistEarnedBadges(userId, badgeIds = []) {
+  const cleanIds = Array.from(new Set((badgeIds || []).map(String).filter(Boolean)));
+  if (!userId || !cleanIds.length) return [];
+
+  const { data: existingRows, error: existingError } = await supabase
+    .from('user_badges')
+    .select('badge_id')
+    .eq('user_id', userId)
+    .in('badge_id', cleanIds);
+
+  if (existingError) throw existingError;
+
+  const existing = new Set((existingRows || []).map(row => String(row.badge_id)));
+  const missing = cleanIds.filter(id => !existing.has(id));
+  if (!missing.length) return cleanIds;
+
+  const now = new Date().toISOString();
+  const payload = missing.map(badge_id => ({
+    user_id: userId,
+    badge_id,
+    earned_at: now,
+  }));
+
+  const { error } = await supabase
+    .from('user_badges')
+    .insert(payload);
+
+  if (error) throw error;
+  return cleanIds;
+}
+
+async function persistUserDestination(userId, iso, tripTags = []) {
+  const cleanIso = String(iso || '').toUpperCase().trim();
+  if (!userId || !cleanIso) return false;
+
+  const { error } = await supabase
+    .from('user_destinations')
+    .insert({
+      user_id: userId,
+      iso: cleanIso,
+      trip_tags: tripTags,
+      visited_at: new Date().toISOString().slice(0,10),
+    });
+
+  // 23505 = duplicate key. Se hai una unique(user_id, iso, visited_at) o simile,
+  // non blocchiamo la RPC: la destinazione risulta già registrata.
+  if (error && error.code !== '23505') throw error;
+  return true;
+}
 const TROPHIC = {
   1:{ label:'Produttore',      c:'#5CC85A', bg:'#1A3B19' },
   2:{ label:'Erbivoro',        c:'#A8D84A', bg:'#283B14' },
@@ -2346,13 +2406,13 @@ function MainMenu({ onOpen, onBack, onLogout }) {
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
   const fileInputRef = useRef(null);
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
-  const badgeCount = computeUnlockedAwards(statusMap, visitedCountries).length;
+  const badgeCount = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)]).size;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
@@ -2437,12 +2497,12 @@ function AwardModal({ rule, unlocked, currentValue, onClose }) {
   );
 }
 
-function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [] }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
   const metrics = computeAwardMetrics(statusMap, visitedCountries);
-  const unlockedSet = new Set(computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId));
+  const unlockedSet = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)]);
   const macros = ['Tutti', ...AWARD_MACROS];
   const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)));
   return (
@@ -2828,6 +2888,7 @@ export default function App() {
   const [regionsInitialView,setRegionsInitialView]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
+  const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
   const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
@@ -2872,15 +2933,18 @@ export default function App() {
     setDataError('');
     try {
       ensureUserProfile(activeUser);
-      const [remoteAnimals, destinations] = await Promise.all([
+      const [remoteAnimals, destinations, remoteBadgeIds] = await Promise.all([
         fetchAnimalsFromSupabase(activeUser.id),
         fetchUserDestinations(activeUser.id),
+        fetchUserBadgeIds(activeUser.id),
       ]);
       if (remoteAnimals?.length) setAnimalsData(remoteAnimals);
       const nextStatusMap = Object.fromEntries((remoteAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
       setStatusMap(nextStatusMap);
       setVisitedCountries(destinations);
       saveVisitedCountries(destinations);
+      setEarnedBadgeIds(remoteBadgeIds || []);
+      persistAwardUnlocks(remoteBadgeIds || []);
     } catch (err) {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
@@ -2897,14 +2961,28 @@ export default function App() {
   },[user?.id]);
 
   useEffect(() => {
-    const saved = getAwardUnlockSet();
+    const localSaved = getAwardUnlockSet();
+    const dbSaved = new Set(earnedBadgeIds);
+    const alreadyKnown = new Set([...Array.from(localSaved), ...Array.from(dbSaved)]);
     const current = unlockedAwards.map(a => a.badgeId);
-    const fresh = unlockedAwards.filter(a => !saved.has(a.badgeId));
-    if (fresh.length) {
-      setAwardQueue(prev => [...prev, ...fresh]);
-      persistAwardUnlocks([...Array.from(saved), ...current]);
+    const fresh = unlockedAwards.filter(a => !alreadyKnown.has(a.badgeId));
+
+    if (fresh.length) setAwardQueue(prev => [...prev, ...fresh]);
+
+    const merged = Array.from(new Set([...earnedBadgeIds, ...current]));
+    if (merged.length !== earnedBadgeIds.length) {
+      setEarnedBadgeIds(merged);
+      persistAwardUnlocks(merged);
+      if (user?.id) {
+        persistEarnedBadges(user.id, merged).catch(err => {
+          console.warn('[Animaldex] Salvataggio user_badges fallito:', err);
+          setDataError(err?.message || 'Errore salvataggio badge');
+        });
+      }
+    } else {
+      persistAwardUnlocks(merged);
     }
-  }, [unlockedAwards]);
+  }, [unlockedAwards, earnedBadgeIds, user?.id]);
 
   useEffect(() => {
     if (!activeAwardToast) return;
@@ -2933,15 +3011,7 @@ export default function App() {
     setDestinationsLoading(true);
     setDataError('');
     try {
-      const { error: insertError } = await supabase
-        .from('user_destinations')
-        .insert({
-          user_id: user.id,
-          iso: cleanIso,
-          trip_tags: tripTags,
-          visited_at: new Date().toISOString().slice(0,10),
-        });
-      if (insertError && insertError.code !== '23505') throw insertError;
+      await persistUserDestination(user.id, cleanIso, tripTags);
 
       const { error: rpcError } = await supabase.rpc('unlock_animals_for_destination', {
         p_user_id: user.id,
@@ -3007,8 +3077,8 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} />;
-    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} />;
+    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
