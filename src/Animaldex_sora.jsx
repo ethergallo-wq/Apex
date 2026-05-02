@@ -285,7 +285,7 @@ const RARITY_CSS = `
 }
 .rarity-shield-wrap {
   position: absolute;
-  left: 3px;
+  left: -5px;
   top: 50%;
   transform: translateY(-50%);
   width: 48px;
@@ -311,15 +311,15 @@ const RARITY_CSS = `
 .rarity-badge.compact { min-height: 28px; padding: 5px 10px 5px 40px; border-radius: 999px; }
 .rarity-badge.compact::before { inset: 3px 4px 3px 21px; border-radius: 999px; }
 .rarity-badge.compact::after { inset: 2px 5px 2px 22px; border-radius: 999px; }
-.rarity-badge.compact .rarity-shield-wrap { width: 36px; height: 36px; left: 0px; }
+.rarity-badge.compact .rarity-shield-wrap { width: 36px; height: 36px; left: -4px; }
 .rarity-badge.small { min-height: 26px; padding: 4px 9px 4px 38px; font-size: 11px; border-radius: 999px; }
 .rarity-badge.small::before { inset: 3px 4px 3px 20px; border-radius: 999px; }
 .rarity-badge.small::after { inset: 2px 5px 2px 21px; border-radius: 999px; }
-.rarity-badge.small .rarity-shield-wrap { width: 34px; height: 34px; left: 0px; }
-.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:92px; }
+.rarity-badge.small .rarity-shield-wrap { width: 34px; height: 34px; left: -4px; }
+.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:82px; }
 .rarity-badge.full::before { left: 48px; }
 .rarity-badge.full::after { left: 49px; }
-.rarity-badge.full .rarity-shield-wrap { left: 18px; width:58px; height:58px; }
+.rarity-badge.full .rarity-shield-wrap { left: 5px; width:58px; height:58px; }
 .rarity-metal-comune { background: linear-gradient(180deg,#f4c39a 0%,#d0895c 45%,#7b3c1d 100%); }
 .rarity-metal-comune::before { background: radial-gradient(circle at 25% 20%, rgba(255,238,210,.42), transparent 28%), linear-gradient(135deg,#532311,#d0895c 38%,#ffd0a4 50%,#8a421f 72%,#3b170a 100%); }
 .rarity-metal-non-comune { background: linear-gradient(180deg,#eef2f6 0%,#a1a8b2 48%,#4e5660 100%); }
@@ -505,6 +505,48 @@ const GEO_FILTER_OPTIONS = [
   ...GEO_REGION_GROUPS.map(group => ({ value:`continent:${group.id}`, label:`${group.label} (continente)`, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: group.regions.flatMap(r=>r.iso) })),
   ...GEO_REGION_MAP.map(region => ({ value:`region:${region.id}`, label:region.label, c:'#20B2AA', bg:'rgba(32,178,170,.15)', iso:region.iso }))
 ];
+
+function getVisitedCountries() {
+  if (typeof window === 'undefined') return [];
+  try { return JSON.parse(window.localStorage.getItem('animaldex_visited_countries') || '[]'); } catch { return []; }
+}
+function saveVisitedCountries(list = []) {
+  if (typeof window === 'undefined') return;
+  try { window.localStorage.setItem('animaldex_visited_countries', JSON.stringify(Array.from(new Set(list)).sort())); } catch {}
+}
+function getCountryDisplayName(code) {
+  const c = String(code || '').toUpperCase();
+  const local = COUNTRIES.find(x => x.code === c)?.name;
+  if (local) return local;
+  try {
+    const n = new Intl.DisplayNames(['it'], { type:'region' }).of(c);
+    if (n && n !== c) return n;
+  } catch {}
+  const overrides = {
+    AX:'Isole Åland', FO:'Isole Fær Øer', GG:'Guernsey', IM:'Isola di Man', JE:'Jersey', LU:'Lussemburgo',
+    LI:'Liechtenstein', MC:'Monaco', AD:'Andorra', SM:'San Marino', VA:'Città del Vaticano', GI:'Gibilterra',
+    BM:'Bermuda', PM:'Saint-Pierre e Miquelon', GL:'Groenlandia', VG:'Isole Vergini Britanniche', AI:'Anguilla',
+    AG:'Antigua e Barbuda', BL:'Saint-Barthélemy', MF:'Saint-Martin', SX:'Sint Maarten', KN:'Saint Kitts e Nevis',
+    LC:'Saint Lucia', VC:'Saint Vincent e Grenadine', DM:'Dominica', GP:'Guadalupa', MQ:'Martinica', MS:'Montserrat',
+    GD:'Grenada', TC:'Turks e Caicos', AW:'Aruba', CW:'Curaçao', BQ:'Caraibi olandesi', GF:'Guyana francese',
+    EH:'Sahara Occidentale', CV:'Capo Verde', ST:'São Tomé e Príncipe', PS:'Palestina', HK:'Hong Kong', MO:'Macao',
+    MV:'Maldive', NF:'Isola Norfolk', CX:'Isola di Natale', CC:'Isole Cocos', NC:'Nuova Caledonia', GU:'Guam',
+    MP:'Isole Marianne Settentrionali', UM:'Isole minori esterne USA', AS:'Samoa Americane', CK:'Isole Cook',
+    NU:'Niue', PF:'Polinesia Francese', PN:'Pitcairn', TK:'Tokelau', TV:'Tuvalu', WF:'Wallis e Futuna',
+    RE:'Riunione', YT:'Mayotte', IO:'Territorio Britannico dell’Oceano Indiano', SJ:'Svalbard e Jan Mayen',
+    AQ:'Antartide', BV:'Isola Bouvet', GS:'Georgia del Sud e Sandwich Australi', HM:'Heard e McDonald',
+    TF:'Terre australi francesi', SH:'Sant’Elena'
+  };
+  return overrides[c] || 'Nazione';
+}
+function getAllScratchCountries() {
+  const set = new Set([
+    ...COUNTRIES.map(c => c.code),
+    ...GEO_REGION_MAP.flatMap(r => r.iso),
+  ]);
+  return Array.from(set).sort((a,b)=>getCountryDisplayName(a).localeCompare(getCountryDisplayName(b),'it'));
+}
+
 function getGeoOptionIsoCodes(value) {
   if (!value) return [];
   const opt = GEO_FILTER_OPTIONS.find(o => o.value === value);
@@ -633,7 +675,8 @@ const AWARD_MACROS = Array.from(new Set(AWARD_RULES.map(r => r.macro)));
 function buildAwardImagePath(badgeId) {
   return `/awards/${String(badgeId || '').toLowerCase()}.png`;
 }
-function computeAwardMetrics(statusMap = {}) {
+function computeAwardMetrics(statusMap = {}, visitedCountries = null) {
+  const visitedCountrySet = new Set(visitedCountries || getVisitedCountries());
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, _status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const recorded = animalsWithStatus.filter(a => ['avvistato','catturato'].includes(a._status));
   const captured = recorded.filter(a => a._status === 'catturato');
@@ -662,7 +705,7 @@ function computeAwardMetrics(statusMap = {}) {
     ai_corrections: Number((typeof window !== 'undefined' && (window.ANIMALDEX_AI_CORRECTIONS || window.localStorage.getItem('animaldex_ai_corrections'))) || 0),
     apex_count: recorded.filter(a => String(a.trophic) === '4').length,
     base_trophic_count: recorded.filter(a => String(a.trophic) === '1' || String(a.trophic) === 'F').length,
-    countries_count: countries.size,
+    countries_count: visitedCountrySet.size,
     home_country_biodiversity: homeCountryBiodiversity,
     biomes_count: biomes.size,
     all_biomes: allBiomesCount > 0 && biomes.size >= allBiomesCount ? 1 : 0,
@@ -677,8 +720,8 @@ function computeAwardMetrics(statusMap = {}) {
   };
   return metrics;
 }
-function computeUnlockedAwards(statusMap = {}) {
-  const metrics = computeAwardMetrics(statusMap);
+function computeUnlockedAwards(statusMap = {}, visitedCountries = null) {
+  const metrics = computeAwardMetrics(statusMap, visitedCountries);
   return AWARD_RULES.filter(rule => Number(metrics[rule.metric] || 0) >= Number(rule.threshold || 0))
     .map(rule => ({ ...rule, image: buildAwardImagePath(rule.badgeId), currentValue: metrics[rule.metric] || 0 }));
 }
@@ -1946,13 +1989,13 @@ function MainMenu({ onOpen, onBack }) {
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
   const fileInputRef = useRef(null);
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
-  const badgeCount = computeUnlockedAwards(statusMap).length;
+  const badgeCount = computeUnlockedAwards(statusMap, visitedCountries).length;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
@@ -1977,11 +2020,11 @@ function ProfilePage({ onBack, statusMap = {}, onOpenGridStatus, onOpenBadges, o
   );
 }
 
-function BadgesPage({ onBack, statusMap = {} }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [search, setSearch] = useState('');
-  const unlockedSet = new Set(computeUnlockedAwards(statusMap).map(a => a.badgeId));
+  const unlockedSet = new Set(computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId));
   const macros = ['Tutti', ...AWARD_MACROS];
   const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)) && (!search.trim() || `${rule.name} ${rule.sub} ${rule.badgeId}`.toLowerCase().includes(search.toLowerCase())));
   return (
@@ -2010,7 +2053,7 @@ function BadgesPage({ onBack, statusMap = {} }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, onSelect }) {
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onSelect }) {
   const [view, setView] = useState('continents');
   const [continentId, setContinentId] = useState(null);
   const [regionId, setRegionId] = useState(null);
@@ -2021,22 +2064,65 @@ function RegionsPage({ onBack, statusMap = {}, onSelect }) {
   useEffect(() => { if (typeof window !== 'undefined') window.localStorage.setItem('animaldex_region_unlocks', JSON.stringify(unlockMap)); }, [unlockMap]);
   const continent = GEO_REGION_GROUPS.find(c => c.id === continentId) || null;
   const region = GEO_REGION_BY_ID[regionId] || null;
+  const [countrySearch, setCountrySearch] = useState('');
+  const scratchCountries = getAllScratchCountries().filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()));
+  const visitedSet = new Set(visitedCountries);
+  const toggleVisitedCountry = (code) => {
+    const next = new Set(visitedCountries);
+    if (next.has(code)) next.delete(code); else next.add(code);
+    const list = Array.from(next).sort();
+    saveVisitedCountries(list);
+    onVisitedCountriesChange?.(list);
+  };
   const regionAnimals = region ? ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => (a.distribution?.countries_present || []).some(code => region.iso.includes(code))) : [];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
-      <PageHeader title={view==='continents' ? 'Regioni' : view==='regions' ? (continent?.label || 'Continente') : (region?.label || 'Regione')} onBack={()=>{ if (view==='continents') onBack(); else if (view==='regions') setView('continents'); else setView('regions'); }} />
+      <PageHeader title={view==='countries' ? 'Scratch map' : view==='continents' ? 'Regioni' : view==='regions' ? (continent?.label || 'Continente') : (region?.label || 'Regione')} onBack={()=>{ if (view==='continents') onBack(); else if (view==='regions') setView('continents'); else if (view==='countries') setView('continents'); else setView('regions'); }} />
       <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
+        {view==='continents' && (
+          <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:18, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
+            <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+              <div style={{ width:52, height:52, borderRadius:16, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28 }}>🗺️</div>
+              <div style={{ flex:1 }}>
+                <div style={{ fontSize:18, fontWeight:900 }}>Scratch map nazioni visitate</div>
+                <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Logga le nazioni in cui sei stato: valgono per gli award Geografia.</div>
+              </div>
+              <div style={{ color:'#90D84A', fontSize:20, fontWeight:900 }}>{visitedCountries.length}</div>
+            </div>
+          </button>
+        )}
         {view==='continents' && GEO_REGION_GROUPS.map((group, idx)=>(
           <button key={group.id} onClick={()=>{ setContinentId(group.id); setView('regions'); }} style={{ width:'100%', marginBottom:14, border:'none', borderRadius:14, padding:0, overflow:'hidden', background:'#1A1A1C', cursor:'pointer', textAlign:'left' }}>
             <RegionArt src={group.image} fallbackColors={['#245B58','#4A8F7D','#25474A']} height={118} />
             <div style={{ padding:'10px 12px' }}><div style={{ color:'white', fontSize:18, fontWeight:900 }}>{group.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{group.regions.length} regioni</div></div>
           </button>
         ))}
+        {view==='countries' && (
+          <div>
+            <div style={{ background:'#151517', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
+              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Nazioni visitate</div>
+              <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:4 }}>{visitedCountries.length} nazioni selezionate</div>
+              <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+              {scratchCountries.map(code => {
+                const active = visitedSet.has(code);
+                return (
+                  <button key={code} onClick={()=>toggleVisitedCountry(code)} style={{ minHeight:52, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
+                    <span style={{ fontSize:22 }}>{getFlagEmoji(code)}</span>
+                    <span style={{ flex:1, fontSize:12, fontWeight:800, lineHeight:1.2 }}>{getCountryDisplayName(code)}</span>
+                    <span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:16 }}>{active?'✓':'+'}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
         {view==='regions' && continent && continent.regions.map((reg, idx)=>(
           <div key={reg.id} style={{ marginBottom:14, borderRadius:14, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
             <RegionArt src={reg.image} grayscale={!unlockMap[reg.id]} fallbackColors={['#4B5A62','#7E8B93','#39464D']} height={120} />
             <div style={{ padding:'10px 12px', display:'flex', alignItems:'center', gap:10 }}>
-              <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontSize:17, fontWeight:900 }}>{reg.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{reg.iso.length} codici ISO collegati</div></div>
+              <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontSize:17, fontWeight:900 }}>{reg.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{reg.iso.length} nazioni collegate</div></div>
               {!unlockMap[reg.id] ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca regione</button> : <button onClick={()=>{ setRegionId(reg.id); setView('animals'); }} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Apri</button>}
             </div>
           </div>
@@ -2194,7 +2280,8 @@ export default function App() {
   const [gridPreset,setGridPreset]=useState(null);
   const [gridReturnAnimal,setGridReturnAnimal]=useState(null);
   const [awardQueue,setAwardQueue]=useState([]);
-  const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap), [statusMap]);
+  const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
+  const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
 
   useEffect(()=>{
@@ -2238,7 +2325,7 @@ export default function App() {
   };
 
   const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
-  const openPage = (nextPage) => { setSel(null); setPage(nextPage); };
+  const openPage = (nextPage) => { setSel(null); setGridReturnAnimal(null); setPage(nextPage || 'menu'); };
   const openGridWithStatus = (statuses) => {
     setSel(null); setGridReturnAnimal(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
   };
@@ -2260,13 +2347,13 @@ export default function App() {
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} />;
-    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
+    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} />;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>setPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnAnimal ? returnFromPresetToDetail : null} />{renderDetailOverlay()}</div>;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>openPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnAnimal ? returnFromPresetToDetail : null} />{renderDetailOverlay()}</div>;
   };
 
   return (
