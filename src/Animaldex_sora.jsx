@@ -1141,6 +1141,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
 
 
+
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
@@ -1148,33 +1149,57 @@ function AnimalCard({ a, onClick }) {
   const revealed = isRevealedStatus(status);
   const unrevealed = !revealed && !mystery;
   const glowAccent = getClassGlowColor(a.cls);
-  const glowShadow = revealed ? `0 0 16px 2px ${glowAccent}66, 0 0 4px 1px ${glowAccent}33` : 'none';
-  const imageSize = typeof window !== 'undefined' && window.innerWidth <= 390 ? 90 : 102;
+  const glowShadow = revealed ? `0 0 16px 2px ${glowAccent}55, 0 0 4px 1px ${glowAccent}22` : 'none';
+  const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
+  const cardH = isNarrow ? 124 : 134;
   return (
-    <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease, box-shadow .3s ease', boxShadow:glowShadow }}
-      onMouseDown={e=>e.currentTarget.style.transform='scale(0.93)'}
-      onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
-      onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}>
-      <div style={{ position:'absolute', top:6, left:6, zIndex:2, background:'rgba(0,0,0,.55)', color:'rgba(255,255,255,.7)', fontSize:10, fontWeight:700, padding:'2px 6px', borderRadius:8 }}>{a.no}</div>
-      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:7, right:7, zIndex:2, width:11, height:11, borderRadius:'50%' }}/>
-      <AnimalImg a={a} size={imageSize} fontSize={52} gridMode={true} />
-      <div style={{
-        background: revealed ? c.mid : mystery ? '#3B3D42' : '#6B7077',
-        padding:'7px 6px 6px',
-        minHeight:44,
-        height:44,
-        boxSizing:'border-box',
-        color:mystery ? '#B7BBC3' : unrevealed ? '#2F3339' : 'white',
-        fontSize:12,
-        fontWeight:800,
-        textAlign:'center',
-        lineHeight:'14px',
-        display:'-webkit-box',
-        WebkitLineClamp:2,
-        WebkitBoxOrient:'vertical',
+    <div
+      onClick={()=>onClick(a)}
+      style={{
+        height:cardH,
+        borderRadius:18,
         overflow:'hidden',
-        wordBreak:'break-word',
-      }}>{mystery ? '' : a.com}</div>
+        cursor:'pointer',
+        position:'relative',
+        userSelect:'none',
+        transition:'transform .1s ease, box-shadow .3s ease',
+        boxShadow:glowShadow,
+        background: revealed ? c.img : '#27282D'
+      }}
+      onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
+      onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
+      onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}
+    >
+      <AnimalImg a={a} size={cardH} fontSize={52} gridMode={true} />
+      <div style={{ position:'absolute', top:7, left:7, zIndex:3, background:'rgba(0,0,0,.62)', color:'rgba(255,255,255,.74)', fontSize:10, fontWeight:800, padding:'2px 7px', borderRadius:999, backdropFilter:'blur(4px)' }}>{a.no}</div>
+      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
+      {!mystery && (
+        <div
+          style={{
+            position:'absolute',
+            left:0,
+            right:0,
+            bottom:0,
+            minHeight:34,
+            padding:'7px 8px 8px',
+            boxSizing:'border-box',
+            background: revealed
+              ? `linear-gradient(180deg, transparent 0%, ${c.mid}E6 28%, ${c.mid} 100%)`
+              : 'linear-gradient(180deg, rgba(125,132,141,.84), rgba(114,121,130,.98))',
+            color: unrevealed ? '#272B32' : 'white',
+            fontSize:isNarrow ? 10.5 : 11.5,
+            fontWeight:900,
+            textAlign:'center',
+            lineHeight:'12.5px',
+            textShadow: revealed ? '0 1px 2px rgba(0,0,0,.55)' : 'none',
+            display:'-webkit-box',
+            WebkitLineClamp:2,
+            WebkitBoxOrient:'vertical',
+            overflow:'hidden',
+            wordBreak:'break-word',
+          }}
+        >{a.com}</div>
+      )}
     </div>
   );
 }
@@ -1946,6 +1971,62 @@ function PageHeader({ title, onBack, right }) {
   );
 }
 
+
+function getAwardDescription(rule) {
+  if (!rule) return '';
+  return `Sblocca questo award completando l'obiettivo: ${rule.goal.toLowerCase()} in ${rule.sub}.`;
+}
+
+function getAbilityDescription(id, meta = {}) {
+  const custom = {
+    OFF_PERFECT_STRIKE:'Precisione offensiva estrema: colpi rapidi, mirati o quasi inevitabili.',
+    OFF_VENOM_TOXINS:'Veleni, tossine e secrezioni capaci di difendere o neutralizzare una preda.',
+    OFF_BIO_BLADES:'Artigli, lame naturali e strutture taglienti usate per presa o attacco.',
+    OFF_TUSKS_PIERCERS:'Zanne, canini, rostri o perforatori naturali usati per colpire o scavare.',
+    DEF_ACTIVE_CAMOUFLAGE:'Capacità di confondersi con l’ambiente o cambiare aspetto per sopravvivere.',
+    DEF_SHELL_ARMOR:'Corazze, gusci o placche che proteggono il corpo.',
+    DEF_SPURS_SPINES:'Spine, speroni o strutture difensive appuntite.',
+    DEF_TOUGH_SKIN:'Pelle resistente, spessa o coriacea contro urti e predatori.',
+    SENS_EXTREME_SENSORY:'Sensi molto sviluppati per caccia, orientamento o comunicazione.',
+    SENS_NOCTURNAL_SPECIALISTS:'Adattamenti alla vita notturna o in condizioni di poca luce.',
+    COG_HIGH_INTELLIGENCE:'Comportamenti complessi, apprendimento rapido o uso avanzato dell’ambiente.',
+    COG_NETWORK_MINDS:'Cooperazione, colonie, sciami o intelligenza distribuita.',
+    PHYS_EXTREME_SPEED:'Scatti, volo o nuoto a velocità superiori alla media.',
+    PHYS_FEATHERWEIGHTS:'Specie molto leggere o dal corpo estremamente ridotto.',
+    PHYS_HEAVYWEIGHTS:'Specie grandi, massicce o dalla forza fisica notevole.',
+    PHYS_RECORD_BREAKERS:'Specie note per record biologici o prestazioni fuori scala.',
+    BEH_LONG_MIGRATION:'Spostamenti stagionali o viaggi su grandi distanze.',
+    BEH_PAIR_BONDING:'Legami di coppia stabili o strategie riproduttive collaborative.',
+    BEH_PARENTAL_CARE:'Cure parentali sviluppate e protezione attiva della prole.',
+    SURV_EXTREME_RESILIENCE:'Resistenza a condizioni ambientali difficili o estreme.',
+    ECO_ENGINEERS:'Specie che modificano habitat e influenzano interi ecosistemi.',
+    ECO_GLOBAL_DISPERSERS:'Specie capaci di diffondersi su vaste aree geografiche.',
+    ECO_INVISIBLE_HOSTS:'Organismi piccoli o nascosti, spesso legati ad altri esseri viventi.',
+    EVO_DOMESTICATION:'Specie domesticate o profondamente legate alla storia umana.',
+    EVO_ENDEMIC_SPECIES:'Specie legate a un’area geografica limitata.',
+    EVO_EXTREME_DIMORPHISM:'Differenze marcate tra maschi e femmine.',
+    EVO_INSULAR_DWARFISM:'Adattamenti insulari che portano a taglie ridotte.',
+    EVO_INSULAR_GIGANTISM:'Adattamenti insulari che portano a taglie aumentate.',
+    EVO_LIVING_FOSSILS:'Linee evolutive antiche con tratti rimasti quasi invariati.',
+    LIFESPAN_LONGEVITY:'Specie longeve o con cicli vitali particolarmente lunghi.',
+    HAB_DEEP_ABYSS:'Adattamenti ad abissi, profondità marine o ambienti estremi.'
+  };
+  if (custom[id]) return custom[id];
+  if (id.startsWith('OFF_')) return 'Abilità offensiva utile per caccia, difesa attiva o competizione.';
+  if (id.startsWith('DEF_')) return 'Abilità difensiva che aumenta protezione, sopravvivenza o mimetismo.';
+  if (id.startsWith('SENS_')) return 'Specializzazione sensoriale per percepire meglio l’ambiente.';
+  if (id.startsWith('COG_')) return 'Comportamento complesso legato a intelligenza, memoria o cooperazione.';
+  if (id.startsWith('PHYS_')) return 'Tratto fisico notevole per massa, velocità, forza o prestazione.';
+  if (id.startsWith('BEH_')) return 'Comportamento caratteristico nella vita sociale o riproduttiva.';
+  if (id.startsWith('ECO_')) return 'Ruolo ecologico importante nella rete degli ecosistemi.';
+  if (id.startsWith('EVO_')) return 'Tratto evolutivo distintivo o adattamento specializzato.';
+  return `Categoria naturale: ${meta.label || 'abilità'} osservabile in più specie.`;
+}
+
+function countAnimalsForGeoValue(value) {
+  return ANIMALS.filter(a => matchGeographySelection(a, [value])).length;
+}
+
 function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], grayscale=false, height=128 }) {
   const [err, setErr] = useState(false);
   if (src && !err) {
@@ -2033,52 +2114,125 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], onOpenGrid
   );
 }
 
+
+function AwardCard({ rule, unlocked }) {
+  const [flipped, setFlipped] = useState(false);
+  const img = buildAwardImagePath(rule.badgeId);
+  return (
+    <button
+      onClick={()=>setFlipped(v=>!v)}
+      style={{
+        border:'none',
+        borderRadius:18,
+        padding:0,
+        minHeight:158,
+        background:unlocked ? 'linear-gradient(180deg,#464646,#272727)' : 'linear-gradient(180deg,#343436,#252527)',
+        boxShadow:'0 10px 26px rgba(0,0,0,.24)',
+        cursor:'pointer',
+        fontFamily:'inherit',
+        perspective:800,
+        color:'white',
+        overflow:'hidden'
+      }}
+    >
+      <div style={{ position:'relative', width:'100%', height:'100%', minHeight:158, transition:'transform .32s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', padding:'12px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between' }}>
+          <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'82%', maxWidth:96, height:92, objectFit:'contain', filter:unlocked?'drop-shadow(0 5px 10px rgba(0,0,0,.35))':'grayscale(1) opacity(.68)' }} />
+          <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:92, height:92, fontSize:42 }}>🏅</span>
+          <div style={{ color:unlocked?'#fff':'rgba(255,255,255,.58)', fontSize:12.5, fontWeight:900, lineHeight:1.13, textAlign:'center', minHeight:30, display:'flex', alignItems:'center' }}>{rule.name}</div>
+        </div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:12, boxSizing:'border-box', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', textAlign:'center', background:'linear-gradient(180deg,#1F1F22,#151517)' }}>
+          <div style={{ color:'#F0C449', fontSize:11, fontWeight:900, textTransform:'uppercase', marginBottom:6 }}>{rule.goal}</div>
+          <div style={{ color:'white', fontSize:12, fontWeight:900, lineHeight:1.2, marginBottom:7 }}>{rule.name}</div>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:10.5, lineHeight:1.35 }}>{getAwardDescription(rule)}</div>
+        </div>
+      </div>
+    </button>
+  );
+}
+
 function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
-  const [search, setSearch] = useState('');
   const unlockedSet = new Set(computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId));
   const macros = ['Tutti', ...AWARD_MACROS];
-  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)) && (!search.trim() || `${rule.name} ${rule.sub} ${rule.badgeId}`.toLowerCase().includes(search.toLowerCase())));
+  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)));
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
       <PageHeader title="Badge" onBack={onBack} />
       <div style={{ padding:'12px 12px 8px', flexShrink:0 }}>
-        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca award..." style={{ width:'100%', height:44, borderRadius:12, background:'#3A3A3C', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
-        <div style={{ display:'flex', gap:8, overflowX:'auto', paddingTop:10, paddingBottom:2 }}>{macros.map(c=><button key={c} onClick={()=>setMacro(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:macro===c?'#777':'#3A3A3C', color:'white', fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>)}</div>
+        <div style={{ display:'flex', gap:8, overflowX:'auto', paddingBottom:6 }}>
+          {macros.map(c=><button key={c} onClick={()=>setMacro(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:macro===c?'#777':'#3A3A3C', color:'white', fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>)}
+        </div>
         <button onClick={()=>setOnlyUnlocked(v=>!v)} style={{ marginTop:8, width:'100%', height:40, borderRadius:12, background:onlyUnlocked?'rgba(144,216,74,.2)':'#3A3A3C', border:'1px solid rgba(255,255,255,.08)', color:onlyUnlocked?'#90D84A':'white', fontWeight:800, cursor:'pointer' }}>{onlyUnlocked ? 'Mostra tutti' : 'Solo sbloccati'}</button>
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
-          {awards.map(rule=>{
-            const unlocked = unlockedSet.has(rule.badgeId);
-            return (
-              <div key={rule.badgeId} style={{ background:unlocked?'#5A2E20':'#3A3A3C', borderRadius:14, padding:10, minHeight:152, display:'flex', flexDirection:'column', justifyContent:'space-between', boxShadow:'0 10px 30px rgba(0,0,0,.25)', opacity:unlocked?1:.72 }}>
-                <div style={{ height:82, borderRadius:10, background:unlocked?'rgba(255,255,255,.16)':'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', border:'1px solid rgba(255,255,255,.16)', overflow:'hidden' }}><img src={buildAwardImagePath(rule.badgeId)} alt={rule.name} style={{ width:60, height:60, objectFit:'contain', filter:unlocked?'none':'grayscale(1)' }} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} /><span style={{ display:'none', fontSize:34 }}>🏅</span></div>
-                <div style={{ color:'white', fontSize:12, fontWeight:900, lineHeight:1.2, textAlign:'center', marginTop:8 }}>{rule.name}</div>
-                <div style={{ color:'rgba(255,255,255,.52)', fontSize:10, textAlign:'center', marginTop:4 }}>{rule.goal}</div>
-              </div>
-            );
-          })}
+          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(rule.badgeId)} />)}
         </div>
       </div>
     </div>
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onSelect }) {
-  const [view, setView] = useState('continents');
+
+function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
+  const visited = visitedCountries.slice(0, 24);
+  return (
+    <div style={{ position:'relative', height:184, borderRadius:20, overflow:'hidden', background:'linear-gradient(180deg,#101820,#081014)', border:'1px solid rgba(255,255,255,.09)', boxShadow:'inset 0 0 40px rgba(32,178,170,.08)', marginBottom:12 }}>
+      <div style={{ position:'absolute', inset:0, opacity:.9, background:'radial-gradient(circle at 22% 34%, rgba(64,120,84,.64) 0 14%, transparent 15%), radial-gradient(circle at 46% 42%, rgba(66,130,88,.58) 0 18%, transparent 19%), radial-gradient(circle at 72% 35%, rgba(72,126,92,.64) 0 20%, transparent 21%), radial-gradient(circle at 77% 69%, rgba(72,130,94,.50) 0 12%, transparent 13%), radial-gradient(circle at 34% 76%, rgba(70,128,92,.52) 0 15%, transparent 16%), linear-gradient(135deg, rgba(30,80,120,.45), rgba(12,30,44,.55))' }} />
+      <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.78)', fontSize:12, fontWeight:900 }}>Mappa nazioni visitate</div>
+      {visited.length === 0 && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:700, textAlign:'center', padding:24 }}>Aggiungi una nazione visitata per creare i tuoi pin.</div>}
+      {visited.map((code, i)=>{
+        const cols = [18,34,50,66,82];
+        const rows = [36,54,72];
+        const left = cols[i % cols.length] + ((i*7)%9 - 4);
+        const top = rows[Math.floor(i / cols.length) % rows.length] + ((i*5)%7 - 3);
+        const active = selectedCountry === code;
+        return (
+          <button key={code} onClick={()=>onSelectCountry(code)} title={getCountryDisplayName(code)} style={{ position:'absolute', left:`${left}%`, top:`${top}%`, transform:'translate(-50%,-50%)', width:active?36:30, height:active?36:30, borderRadius:'50%', border:`2px solid ${active?'#90D84A':'rgba(255,255,255,.75)'}`, background:active?'rgba(144,216,74,.28)':'rgba(0,0,0,.55)', color:'white', fontSize:16, cursor:'pointer', boxShadow:active?'0 0 18px rgba(144,216,74,.5)':'0 4px 14px rgba(0,0,0,.3)' }}>{getFlagEmoji(code)}</button>
+        );
+      })}
+    </div>
+  );
+}
+
+function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
+  const [flipped, setFlipped] = useState(false);
+  const count = countAnimalsForGeoValue(code);
+  return (
+    <div onClick={()=>setFlipped(v=>!v)} style={{ minHeight:72, borderRadius:14, background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', overflow:'hidden', cursor:'pointer', perspective:700 }}>
+      <div style={{ position:'relative', minHeight:72, transition:'transform .28s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', display:'flex', alignItems:'center', gap:10, padding:'10px 12px', boxSizing:'border-box' }}>
+          <span style={{ fontSize:24 }}>{getFlagEmoji(code)}</span>
+          <span style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.15, flex:1 }}>{getCountryDisplayName(code)}</span>
+          <button onClick={e=>{e.stopPropagation();onRemove?.(code);}} style={{ width:28, height:28, borderRadius:8, border:'none', background:'rgba(255,255,255,.08)', color:'rgba(255,255,255,.6)', cursor:'pointer' }}>×</button>
+        </div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:'10px 12px', boxSizing:'border-box', display:'flex', alignItems:'center', gap:10 }}>
+          <div style={{ color:'#90D84A', fontSize:22, fontWeight:900, minWidth:34, textAlign:'center' }}>{count}</div>
+          <div style={{ color:'rgba(255,255,255,.65)', fontSize:11, fontWeight:700, lineHeight:1.2, flex:1 }}>animali associati a questa nazione</div>
+          <button onClick={e=>{e.stopPropagation();onOpenAnimals?.(code);}} style={{ height:34, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onSelect, onOpenCountry, onOpenRegion, initialView }) {
+  const [view, setView] = useState(initialView || 'continents');
   const [continentId, setContinentId] = useState(null);
   const [regionId, setRegionId] = useState(null);
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const [unlockMap, setUnlockMap] = useState(() => {
     if (typeof window === 'undefined') return {};
     try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks') || '{}'); } catch { return {}; }
   });
+  const [countrySearch, setCountrySearch] = useState('');
+  useEffect(() => { if (initialView) setView(initialView); }, [initialView]);
   useEffect(() => { if (typeof window !== 'undefined') window.localStorage.setItem('animaldex_region_unlocks', JSON.stringify(unlockMap)); }, [unlockMap]);
   const continent = GEO_REGION_GROUPS.find(c => c.id === continentId) || null;
   const region = GEO_REGION_BY_ID[regionId] || null;
-  const [countrySearch, setCountrySearch] = useState('');
-  const scratchCountries = getAllScratchCountries().filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()));
+  const scratchCountries = getAllScratchCountries().filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
   const visitedSet = new Set(visitedCountries);
   const toggleVisitedCountry = (code) => {
     const next = new Set(visitedCountries);
@@ -2086,6 +2240,13 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     const list = Array.from(next).sort();
     saveVisitedCountries(list);
     onVisitedCountriesChange?.(list);
+    setSelectedCountry(code);
+  };
+  const removeVisitedCountry = (code) => {
+    const list = visitedCountries.filter(c => c !== code);
+    saveVisitedCountries(list);
+    onVisitedCountriesChange?.(list);
+    if (selectedCountry === code) setSelectedCountry(null);
   };
   const regionAnimals = region ? ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => (a.distribution?.countries_present || []).some(code => region.iso.includes(code))) : [];
   return (
@@ -2096,15 +2257,12 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
           <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:18, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
             <div style={{ display:'flex', alignItems:'center', gap:12 }}>
               <div style={{ width:52, height:52, borderRadius:16, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28 }}>🗺️</div>
-              <div style={{ flex:1 }}>
-                <div style={{ fontSize:18, fontWeight:900 }}>Scratch map nazioni visitate</div>
-                <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Logga le nazioni in cui sei stato: valgono per gli award Geografia.</div>
-              </div>
+              <div style={{ flex:1 }}><div style={{ fontSize:18, fontWeight:900 }}>Scratch map nazioni visitate</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Conta per gli award Geografia.</div></div>
               <div style={{ color:'#90D84A', fontSize:20, fontWeight:900 }}>{visitedCountries.length}</div>
             </div>
           </button>
         )}
-        {view==='continents' && GEO_REGION_GROUPS.map((group, idx)=>(
+        {view==='continents' && GEO_REGION_GROUPS.map(group=>(
           <button key={group.id} onClick={()=>{ setContinentId(group.id); setView('regions'); }} style={{ width:'100%', marginBottom:14, border:'none', borderRadius:14, padding:0, overflow:'hidden', background:'#1A1A1C', cursor:'pointer', textAlign:'left' }}>
             <RegionArt src={group.image} fallbackColors={['#245B58','#4A8F7D','#25474A']} height={118} />
             <div style={{ padding:'10px 12px' }}><div style={{ color:'white', fontSize:18, fontWeight:900 }}>{group.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{group.regions.length} regioni</div></div>
@@ -2112,39 +2270,39 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         ))}
         {view==='countries' && (
           <div>
+            <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
+            {selectedCountry && (
+              <div style={{ background:'#151517', border:'1px solid rgba(144,216,74,.28)', borderRadius:16, padding:14, marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
+                <span style={{ fontSize:28 }}>{getFlagEmoji(selectedCountry)}</span>
+                <div style={{ flex:1 }}><div style={{ color:'white', fontSize:16, fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.48)', fontSize:11, marginTop:3 }}>{countAnimalsForGeoValue(selectedCountry)} animali collegati</div></div>
+                <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:38, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
+              </div>
+            )}
             <div style={{ background:'#151517', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
-              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Nazioni visitate</div>
-              <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:4 }}>{visitedCountries.length} nazioni selezionate</div>
+              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi nazioni visitate</div>
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
+                {scratchCountries.map(code => {
+                  const active = visitedSet.has(code);
+                  return <button key={code} onClick={()=>toggleVisitedCountry(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
+                })}
+              </div>
             </div>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-              {scratchCountries.map(code => {
-                const active = visitedSet.has(code);
-                return (
-                  <button key={code} onClick={()=>toggleVisitedCountry(code)} style={{ minHeight:52, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
-                    <span style={{ fontSize:22 }}>{getFlagEmoji(code)}</span>
-                    <span style={{ flex:1, fontSize:12, fontWeight:800, lineHeight:1.2 }}>{getCountryDisplayName(code)}</span>
-                    <span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:16 }}>{active?'✓':'+'}</span>
-                  </button>
-                );
-              })}
-            </div>
+            <div style={{ color:'white', fontSize:18, fontWeight:900, margin:'16px 0 10px' }}>Nazioni visitate</div>
+            {visitedCountries.length === 0 ? <div style={{ color:'rgba(255,255,255,.42)', fontSize:13, padding:'16px 6px' }}>Nessuna nazione visitata aggiunta.</div> : <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>{visitedCountries.map(code=><VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry}/>)}</div>}
           </div>
         )}
-        {view==='regions' && continent && continent.regions.map((reg, idx)=>(
+        {view==='regions' && continent && continent.regions.map(reg=>(
           <div key={reg.id} style={{ marginBottom:14, borderRadius:14, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
             <RegionArt src={reg.image} grayscale={!unlockMap[reg.id]} fallbackColors={['#4B5A62','#7E8B93','#39464D']} height={120} />
             <div style={{ padding:'10px 12px', display:'flex', alignItems:'center', gap:10 }}>
-              <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontSize:17, fontWeight:900 }}>{reg.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{reg.iso.length} nazioni collegate</div></div>
-              {!unlockMap[reg.id] ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca regione</button> : <button onClick={()=>{ setRegionId(reg.id); setView('animals'); }} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Apri</button>}
+              <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontSize:17, fontWeight:900 }}>{reg.label}</div></div>
+              {!unlockMap[reg.id] ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca regione</button> : <button onClick={()=>onOpenRegion?.(`region:${reg.id}`, reg.label)} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Vedi animali</button>}
             </div>
           </div>
         ))}
         {view==='animals' && region && (
-          <>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginBottom:12 }}>Animali presenti nella regione sbloccata.</div>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>{regionAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}</div>
-          </>
+          <><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginBottom:12 }}>Animali presenti nella regione sbloccata.</div><div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>{regionAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}</div></>
         )}
       </div>
     </div>
@@ -2249,10 +2407,37 @@ function SettingsPage({ onBack }) {
   );
 }
 
-function AbilitiesPage({ onBack }) {
-  const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, count: ANIMALS.filter(a=>a.categories?.includes(id)).length }));
+
+function AbilityCard({ meta, onOpenAnimals }) {
+  const [flipped, setFlipped] = useState(false);
+  const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
+  return (
+    <div onClick={()=>setFlipped(v=>!v)} style={{ minHeight:112, borderRadius:18, background:'rgba(255,255,255,.05)', border:`1px solid ${meta.color}33`, overflow:'hidden', perspective:800, cursor:'pointer', marginBottom:10 }}>
+      <div style={{ position:'relative', minHeight:112, transformStyle:'preserve-3d', transition:'transform .3s ease', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', padding:14, display:'flex', alignItems:'center', gap:14, boxSizing:'border-box' }}>
+          <div style={{ width:76, height:76, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:76, height:76, objectFit:'contain', filter:`drop-shadow(0 0 16px ${meta.color}44)` }} />
+            <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:'100%', height:'100%', fontSize:42 }}>{meta.icon}</span>
+          </div>
+          <div style={{ flex:1, minWidth:0 }}>
+            <div style={{ color:'white', fontSize:16, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:11.5, lineHeight:1.35, marginTop:6 }}>{meta.description}</div>
+          </div>
+        </div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:14, boxSizing:'border-box', display:'flex', alignItems:'center', gap:14, background:'linear-gradient(135deg,rgba(0,0,0,.35),rgba(255,255,255,.04))' }}>
+          <div style={{ color:meta.color, fontSize:30, fontWeight:900, minWidth:54, textAlign:'center' }}>{meta.count}</div>
+          <div style={{ flex:1 }}><div style={{ color:'white', fontSize:14, fontWeight:900 }}>{meta.label}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11, marginTop:4 }}>animali hanno questa abilità</div></div>
+          <button onClick={e=>{e.stopPropagation();onOpenAnimals?.(meta.id, meta.label);}} style={{ height:38, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function AbilitiesPage({ onBack, onOpenAbility }) {
+  const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, description:getAbilityDescription(id, meta), count: ANIMALS.filter(a=>a.categories?.includes(id)).length }));
   const [search, setSearch] = useState('');
-  const rows = abilityRows.filter(a => !search.trim() || a.label.toLowerCase().includes(search.toLowerCase()) || a.id.toLowerCase().includes(search.toLowerCase()));
+  const rows = abilityRows.filter(a => !search.trim() || a.label.toLowerCase().includes(search.toLowerCase()) || a.description.toLowerCase().includes(search.toLowerCase()));
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
       <PageHeader title="Abilità" onBack={onBack} />
@@ -2260,25 +2445,7 @@ function AbilitiesPage({ onBack }) {
         <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca abilità..." style={{ width:'100%', height:44, borderRadius:12, background:'#222226', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'0 14px 28px' }}>
-        {rows.map(meta=>{
-          const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
-          return (
-            <div key={meta.id} style={{ background:'rgba(255,255,255,.05)', borderRadius:18, padding:14, marginBottom:10, display:'flex', alignItems:'center', gap:14, border:`1px solid ${meta.color}33` }}>
-              <div style={{ width:66, height:66, borderRadius:'50%', background:`${meta.color}22`, border:`2px solid ${meta.color}`, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, overflow:'hidden', boxShadow:`0 0 18px ${meta.color}33` }}>
-                <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:56, height:56, objectFit:'contain', borderRadius:'50%' }} />
-                <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:'100%', height:'100%', fontSize:34 }}>{meta.icon}</span>
-              </div>
-              <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ color:'white', fontSize:16, fontWeight:900, lineHeight:1.25 }}>{meta.label}</div>
-                <div style={{ color:'rgba(255,255,255,.44)', fontSize:11, fontWeight:700, marginTop:4, wordBreak:'break-word' }}>{meta.id}</div>
-              </div>
-              <div style={{ minWidth:42, textAlign:'center', background:'rgba(0,0,0,.28)', borderRadius:12, padding:'7px 8px' }}>
-                <div style={{ color:meta.color, fontSize:16, fontWeight:900 }}>{meta.count}</div>
-                <div style={{ color:'rgba(255,255,255,.38)', fontSize:9, fontWeight:800 }}>ANIMALI</div>
-              </div>
-            </div>
-          );
-        })}
+        {rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpenAnimals={onOpenAbility} />)}
       </div>
     </div>
   );
@@ -2291,7 +2458,8 @@ export default function App() {
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('grid');
   const [gridPreset,setGridPreset]=useState(null);
-  const [gridReturnAnimal,setGridReturnAnimal]=useState(null);
+  const [gridReturnTarget,setGridReturnTarget]=useState(null);
+  const [regionsInitialView,setRegionsInitialView]=useState(null);
   const [awardQueue,setAwardQueue]=useState([]);
   const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
@@ -2337,36 +2505,42 @@ export default function App() {
     upsertSupabaseAnimalStatus(id, nextStatus).catch(err => console.warn('[Animaldex] Salvataggio status Supabase fallito:', err));
   };
 
-  const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
-  const openPage = (nextPage) => { setSel(null); setGridReturnAnimal(null); setPage(nextPage || 'menu'); };
-  const openGridWithStatus = (statuses) => {
-    setSel(null); setGridReturnAnimal(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
-  };
-  const jumpToClassFromDetail = (cls, animal) => {
-    setGridReturnAnimal(animal);
-    setSel(null);
-    setGridPreset({ id: Date.now(), type:'class', cls, title:`Classe · ${cls}` });
-    setPage('grid');
-  };
-  const returnFromPresetToDetail = () => {
-    if (!gridReturnAnimal) return setPage('grid');
-    setSel(gridReturnAnimal);
-    setGridReturnAnimal(null);
-    setGridPreset(null);
-    setPage('grid');
-  };
 
-  const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap}/></div> : null;
+const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
+const openPage = (nextPage) => { setSel(null); setGridReturnTarget(null); if (nextPage !== 'regions') setRegionsInitialView(null); setPage(nextPage || 'menu'); };
+const openGridWithStatus = (statuses) => {
+  setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
+};
+const openGridWithCategory = (categoryId, label) => {
+  setSel(null); setGridPreset({ id: Date.now(), type:'category', categories:[categoryId], title: label || 'Abilità' }); setGridReturnTarget({ page:'abilities' }); setPage('grid');
+};
+const openGridWithGeography = (geoValue, label, returnView='countries') => {
+  setSel(null); setGridPreset({ id: Date.now(), type:'geography', geography:[geoValue], title: label || 'Geografia' }); setGridReturnTarget({ page:'regions', view:returnView }); setPage('grid');
+};
+const jumpToClassFromDetail = (cls, animal) => {
+  setGridReturnTarget({ page:'detail', animal }); setSel(null); setGridPreset({ id: Date.now(), type:'class', cls, title:`Classe · ${cls}` }); setPage('grid');
+};
+const returnFromFilteredGrid = () => {
+  const target = gridReturnTarget;
+  setGridReturnTarget(null);
+  setGridPreset(null);
+  if (target?.page === 'detail' && target.animal) { setSel(target.animal); setPage('grid'); return; }
+  if (target?.page === 'abilities') { setSel(null); setPage('abilities'); return; }
+  if (target?.page === 'regions') { setSel(null); setRegionsInitialView(target.view || 'countries'); setPage('regions'); return; }
+  setSel(null); setPage('grid');
+};
+
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap}/></div> : null;
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} onSelect={setSel} />{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
-    if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>openPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnAnimal ? returnFromPresetToDetail : null} />{renderDetailOverlay()}</div>;
+    if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>openPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} />{renderDetailOverlay()}</div>;
   };
 
   return (
