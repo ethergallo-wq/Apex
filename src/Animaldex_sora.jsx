@@ -77,8 +77,8 @@ const SHIELD_PATHS = {
 
 const MYSTERY_PLACEHOLDER = '/icone_unknown/mystery_animal.png';
 const GRID_IMAGE_SCALE = 0.949;
-const GRID_MYSTERY_SCALE = 1.0;
-const GRID_SILHOUETTE_SCALE = 0.632;
+const GRID_MYSTERY_SCALE = 1.14;
+const GRID_SILHOUETTE_SCALE = 0.74;
 
 const ANIMAL_STATUS = {
   misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Bloccato: identità nascosta e nome non mostrato.' },
@@ -364,6 +364,17 @@ const RARITY_CSS = `
   0%,100% { transform: scale(1); opacity:.55; }
   50% { transform: scale(1.04); opacity:1; }
 }
+@keyframes interactiveWiggle {
+  0%,100% { transform: translateZ(0) rotate(0deg); }
+  18% { transform: translateZ(0) rotate(.8deg) translateX(1px); }
+  36% { transform: translateZ(0) rotate(-.8deg) translateX(-1px); }
+  54% { transform: translateZ(0) rotate(.45deg) translateX(.5px); }
+  72% { transform: translateZ(0) rotate(-.35deg) translateX(-.5px); }
+}
+.interactive-hint {
+  animation: interactiveWiggle .46s ease-in-out .55s 1;
+}
+
 `;
 
 // ── Flag Emoji Generator ──────────────────────────────────────────────
@@ -1142,6 +1153,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
 
 
+
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
@@ -1152,6 +1164,8 @@ function AnimalCard({ a, onClick }) {
   const glowShadow = revealed ? `0 0 16px 2px ${glowAccent}55, 0 0 4px 1px ${glowAccent}22` : 'none';
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const cardH = isNarrow ? 124 : 134;
+  const labelH = isNarrow ? 36 : 38;
+  const imageH = revealed ? cardH : cardH - labelH + 8;
   return (
     <div
       onClick={()=>onClick(a)}
@@ -1170,7 +1184,13 @@ function AnimalCard({ a, onClick }) {
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
       onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}
     >
-      <AnimalImg a={a} size={cardH} fontSize={52} gridMode={true} />
+      {revealed ? (
+        <AnimalImg a={a} size={cardH} fontSize={52} gridMode={true} />
+      ) : (
+        <div style={{ position:'absolute', left:0, right:0, top:0, height:imageH, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+          <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
+        </div>
+      )}
       <div style={{ position:'absolute', top:7, left:7, zIndex:3, background:'rgba(0,0,0,.62)', color:'rgba(255,255,255,.74)', fontSize:10, fontWeight:800, padding:'2px 7px', borderRadius:999, backdropFilter:'blur(4px)' }}>{a.no}</div>
       <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
       {!mystery && (
@@ -1180,12 +1200,12 @@ function AnimalCard({ a, onClick }) {
             left:0,
             right:0,
             bottom:0,
-            minHeight:34,
-            padding:'7px 8px 8px',
+            minHeight:labelH,
+            padding:'8px 8px 8px',
             boxSizing:'border-box',
             background: revealed
-              ? `linear-gradient(180deg, transparent 0%, ${c.mid}E6 28%, ${c.mid} 100%)`
-              : 'linear-gradient(180deg, rgba(125,132,141,.84), rgba(114,121,130,.98))',
+              ? `linear-gradient(180deg, transparent 0%, ${c.mid}D8 26%, ${c.mid} 100%)`
+              : 'linear-gradient(180deg, transparent 0%, rgba(125,132,141,.84) 34%, rgba(114,121,130,.98) 100%)',
             color: unrevealed ? '#272B32' : 'white',
             fontSize:isNarrow ? 10.5 : 11.5,
             fontWeight:900,
@@ -1813,24 +1833,9 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass }) {
                 >
                   {a.categories?.length>0?(
                     <div style={{ display:'flex', flexDirection:'column', gap:8, paddingBottom:10 }}>
-                      {a.categories.map(cat=>{
-                        const meta=CATEGORY_META?.[cat]||{label:cat,icon:'🔹',color:c.accent};
-                        const curiosity=a.cat_curiosities?.[cat];
-                        const badgeUrl=`/badges/${cat.toLowerCase()}.png`;
-                        return (
-                          <div key={cat} style={{ background:'rgba(0,0,0,.35)', borderRadius:12, padding:'11px 14px' }}>
-                            <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                              <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none';e.currentTarget.nextSibling.style.display='inline-flex';}} style={{ width:44, height:44, objectFit:'contain', flexShrink:0, borderRadius:'50%' }} />
-                              <span style={{ width:44, height:44, borderRadius:'50%', background:'rgba(255,255,255,.08)', alignItems:'center', justifyContent:'center', fontSize:26, flexShrink:0, display:'none' }}>{meta.icon}</span>
-                              <div style={{ flex:1 }}>
-                                <div style={{ color:'white', fontSize:13, fontWeight:700 }}>{meta.label}</div>
-                                {curiosity&&<div style={{ color:'rgba(255,255,255,.6)', fontSize:11, lineHeight:1.6, marginTop:4 }}>{curiosity}</div>}
-                              </div>
-                              <div style={{ width:8, height:8, borderRadius:'50%', background:meta.color||c.accent, flexShrink:0 }}/>
-                            </div>
-                          </div>
-                        );
-                      })}
+                      {a.categories.map(cat=>(
+                        <DetailAbilityCard key={cat} cat={cat} animal={a} accentColor={c.accent} />
+                      ))}
                     </div>
                   ):(
                     <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
@@ -2027,6 +2032,40 @@ function countAnimalsForGeoValue(value) {
   return ANIMALS.filter(a => matchGeographySelection(a, [value])).length;
 }
 
+
+function DetailAbilityCard({ cat, animal, accentColor }) {
+  const [flipped, setFlipped] = useState(false);
+  const meta = CATEGORY_META?.[cat] || { label:cat, icon:'🔹', color:accentColor };
+  const curiosity = animal.cat_curiosities?.[cat] || getAbilityDescription(cat, meta);
+  const badgeUrl = `/badges/${cat.toLowerCase()}.png`;
+  return (
+    <div
+      className="interactive-hint"
+      onClick={()=>setFlipped(v=>!v)}
+      style={{
+        minHeight:86,
+        borderRadius:14,
+        background:'rgba(0,0,0,.35)',
+        overflow:'hidden',
+        cursor:'pointer',
+        perspective:900,
+        border:`1px solid ${(meta.color || accentColor)}22`
+      }}
+    >
+      <div style={{ position:'relative', minHeight:86, transformStyle:'preserve-3d', transition:'transform .36s cubic-bezier(.2,.8,.2,1)', transform:flipped?'rotateX(180deg)':'rotateX(0deg)' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', padding:'12px 14px', display:'flex', alignItems:'center', gap:14, boxSizing:'border-box' }}>
+          <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='inline-flex';}} style={{ width:66, height:66, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 14px ${(meta.color || accentColor)}44)` }} />
+          <span style={{ display:'none', width:66, height:66, alignItems:'center', justifyContent:'center', fontSize:36, flexShrink:0 }}>{meta.icon}</span>
+          <div style={{ color:'white', fontSize:15, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
+        </div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'13px 14px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.44),rgba(255,255,255,.04))' }}>
+          <div style={{ color:'rgba(255,255,255,.75)', fontSize:12, lineHeight:1.45, fontWeight:650 }}>{curiosity}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], grayscale=false, height=128 }) {
   const [err, setErr] = useState(false);
   if (src && !err) {
@@ -2055,6 +2094,7 @@ function AwardToast({ award }) {
 
 function MainMenu({ onOpen, onBack }) {
   const items = [
+    { id:'grid', label:'Animaldex', icon:'🦁', bg:'#2E5A10', desc:'Torna alla griglia animali' },
     { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
     { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Award e obiettivi' },
     { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Continenti e regioni' },
@@ -2063,7 +2103,9 @@ function MainMenu({ onOpen, onBack }) {
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <PageHeader title="Menu" onBack={onBack} right={<span style={{ color:'#90D84A', fontSize:22 }}>⌂</span>} />
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'center', padding:'18px 12px 14px', borderBottom:'1px solid #2A2A2C', background:'#1C1C1E', flexShrink:0 }}>
+        <div style={{ color:'white', fontSize:22, fontWeight:900, letterSpacing:'-.3px' }}>Menu</div>
+      </div>
       <div style={{ flex:1, overflowY:'auto', padding:'18px 16px 24px' }}>
         <div style={{ background:'linear-gradient(135deg,#2E5A10,#1A3808)', borderRadius:22, padding:22, marginBottom:16, boxShadow:'0 18px 50px rgba(0,0,0,.32)' }}>
           <div style={{ color:'#90D84A', fontSize:13, fontWeight:800, textTransform:'uppercase', letterSpacing:.8, marginBottom:6 }}>Animaldex</div>
@@ -2115,45 +2157,71 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], onOpenGrid
 }
 
 
-function AwardCard({ rule, unlocked }) {
-  const [flipped, setFlipped] = useState(false);
+
+function AwardCard({ rule, unlocked, onOpen }) {
   const img = buildAwardImagePath(rule.badgeId);
   return (
     <button
-      onClick={()=>setFlipped(v=>!v)}
+      className="interactive-hint"
+      onClick={()=>onOpen?.(rule)}
       style={{
         border:'none',
         borderRadius:18,
-        padding:0,
+        padding:'12px 8px 10px',
         minHeight:158,
         background:unlocked ? 'linear-gradient(180deg,#464646,#272727)' : 'linear-gradient(180deg,#343436,#252527)',
         boxShadow:'0 10px 26px rgba(0,0,0,.24)',
         cursor:'pointer',
         fontFamily:'inherit',
-        perspective:800,
         color:'white',
-        overflow:'hidden'
+        overflow:'hidden',
+        display:'flex',
+        flexDirection:'column',
+        alignItems:'center',
+        justifyContent:'space-between'
       }}
     >
-      <div style={{ position:'relative', width:'100%', height:'100%', minHeight:158, transition:'transform .32s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', padding:'12px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between' }}>
-          <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'82%', maxWidth:96, height:92, objectFit:'contain', filter:unlocked?'drop-shadow(0 5px 10px rgba(0,0,0,.35))':'grayscale(1) opacity(.68)' }} />
-          <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:92, height:92, fontSize:42 }}>🏅</span>
-          <div style={{ color:unlocked?'#fff':'rgba(255,255,255,.58)', fontSize:12.5, fontWeight:900, lineHeight:1.13, textAlign:'center', minHeight:30, display:'flex', alignItems:'center' }}>{rule.name}</div>
-        </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:12, boxSizing:'border-box', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', textAlign:'center', background:'linear-gradient(180deg,#1F1F22,#151517)' }}>
-          <div style={{ color:'#F0C449', fontSize:11, fontWeight:900, textTransform:'uppercase', marginBottom:6 }}>{rule.goal}</div>
-          <div style={{ color:'white', fontSize:12, fontWeight:900, lineHeight:1.2, marginBottom:7 }}>{rule.name}</div>
-          <div style={{ color:'rgba(255,255,255,.62)', fontSize:10.5, lineHeight:1.35 }}>{getAwardDescription(rule)}</div>
-        </div>
-      </div>
+      <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'92%', maxWidth:118, height:108, objectFit:'contain', filter:unlocked?'drop-shadow(0 6px 12px rgba(0,0,0,.36))':'grayscale(1) opacity(.7)' }} />
+      <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:108, height:108, fontSize:50 }}>🏅</span>
+      <div style={{ color:unlocked?'#fff':'rgba(255,255,255,.62)', fontSize:12.5, fontWeight:900, lineHeight:1.13, textAlign:'center', minHeight:30, display:'flex', alignItems:'center' }}>{rule.name}</div>
     </button>
+  );
+}
+
+function AwardModal({ rule, unlocked, currentValue, onClose }) {
+  if (!rule) return null;
+  const img = buildAwardImagePath(rule.badgeId);
+  const progress = Math.min(100, Math.round((Number(currentValue || 0) / Math.max(1, Number(rule.threshold || 1))) * 100));
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:390, borderRadius:28, background:'linear-gradient(180deg,#2D2D31,#151517)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out' }}>
+        <button onClick={onClose} style={{ float:'right', width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer' }}>×</button>
+        <div style={{ height:18 }} />
+        <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:190, height:190, objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px' }} />
+        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:190, height:190, fontSize:82, margin:'0 auto 8px' }}>🏅</span>
+        <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
+        <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro} · Livello {rule.level}</div>
+        <div style={{ color:'rgba(255,255,255,.76)', fontSize:14, lineHeight:1.55, marginTop:18 }}>{getAwardDescription(rule)}</div>
+        {!unlocked && (
+          <div style={{ marginTop:18, background:'rgba(255,255,255,.07)', borderRadius:16, padding:14 }}>
+            <div style={{ display:'flex', justifyContent:'space-between', color:'rgba(255,255,255,.68)', fontSize:12, fontWeight:800, marginBottom:8 }}>
+              <span>Progresso</span><span>{Number(currentValue || 0)} / {rule.threshold}</span>
+            </div>
+            <div style={{ height:10, borderRadius:999, background:'rgba(0,0,0,.35)', overflow:'hidden' }}>
+              <div style={{ width:`${progress}%`, height:'100%', borderRadius:999, background:'#90D84A' }} />
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }
 
 function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
+  const [selectedAward, setSelectedAward] = useState(null);
+  const metrics = computeAwardMetrics(statusMap, visitedCountries);
   const unlockedSet = new Set(computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId));
   const macros = ['Tutti', ...AWARD_MACROS];
   const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)));
@@ -2168,40 +2236,78 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
-          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(rule.badgeId)} />)}
+          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(rule.badgeId)} onOpen={setSelectedAward} />)}
         </div>
       </div>
+      {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(selectedAward.badgeId)} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} />}
     </div>
   );
 }
+
 
 
 function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
-  const visited = visitedCountries.slice(0, 24);
+  const visited = visitedCountries.slice(0, 36);
+  const continents = [
+    'M70,78 C92,38 150,30 174,72 C142,78 136,116 96,118 C74,112 54,98 70,78 Z',
+    'M154,122 C190,122 214,156 198,202 C172,192 158,160 154,122 Z',
+    'M235,82 C264,48 322,52 348,92 C324,116 284,110 252,124 C236,114 224,102 235,82 Z',
+    'M294,124 C332,128 354,172 330,214 C292,204 280,162 294,124 Z',
+    'M378,78 C426,38 504,52 542,100 C500,132 448,116 404,144 C372,132 360,104 378,78 Z',
+    'M470,190 C506,176 552,194 566,224 C534,246 488,240 462,216 C458,204 460,196 470,190 Z'
+  ];
+  const getPoint = (code, i) => {
+    const c = String(code || '');
+    const seed = [...c].reduce((n,ch)=>n+ch.charCodeAt(0),0) + i*17;
+    const bands = {
+      EU:[315,98], AF:[310,150], AS:[430,105], NA:[120,86], SA:[172,160], OC:[505,210], SP:[510,238]
+    };
+    let b = bands.EU;
+    if (['US','CA','MX','GL','BM','PM'].includes(c) || ['BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY'].includes(c)) b=bands.NA;
+    if (['CO','VE','EC','PE','BO','BR','GF','GY','SR','AR','CL','UY','PY','FK'].includes(c)) b=bands.SA;
+    if (['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD','SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS','ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS','MG'].includes(c)) b=bands.AF;
+    if (['RU','KZ','MN','TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF','PK','IN','BD','LK','NP','BT','MV','CN','HK','MO','TW','KR','KP','JP','MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'].includes(c)) b=bands.AS;
+    if (['AU','NF','CX','CC','NZ','PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'].includes(c)) b=bands.OC;
+    if (['AQ','BV','GS','HM','TF','SH'].includes(c)) b=bands.SP;
+    return { x:b[0] + ((seed % 41)-20), y:b[1] + (((seed*7) % 33)-16) };
+  };
   return (
-    <div style={{ position:'relative', height:184, borderRadius:20, overflow:'hidden', background:'linear-gradient(180deg,#101820,#081014)', border:'1px solid rgba(255,255,255,.09)', boxShadow:'inset 0 0 40px rgba(32,178,170,.08)', marginBottom:12 }}>
-      <div style={{ position:'absolute', inset:0, opacity:.9, background:'radial-gradient(circle at 22% 34%, rgba(64,120,84,.64) 0 14%, transparent 15%), radial-gradient(circle at 46% 42%, rgba(66,130,88,.58) 0 18%, transparent 19%), radial-gradient(circle at 72% 35%, rgba(72,126,92,.64) 0 20%, transparent 21%), radial-gradient(circle at 77% 69%, rgba(72,130,94,.50) 0 12%, transparent 13%), radial-gradient(circle at 34% 76%, rgba(70,128,92,.52) 0 15%, transparent 16%), linear-gradient(135deg, rgba(30,80,120,.45), rgba(12,30,44,.55))' }} />
-      <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.78)', fontSize:12, fontWeight:900 }}>Mappa nazioni visitate</div>
-      {visited.length === 0 && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:700, textAlign:'center', padding:24 }}>Aggiungi una nazione visitata per creare i tuoi pin.</div>}
-      {visited.map((code, i)=>{
-        const cols = [18,34,50,66,82];
-        const rows = [36,54,72];
-        const left = cols[i % cols.length] + ((i*7)%9 - 4);
-        const top = rows[Math.floor(i / cols.length) % rows.length] + ((i*5)%7 - 3);
-        const active = selectedCountry === code;
-        return (
-          <button key={code} onClick={()=>onSelectCountry(code)} title={getCountryDisplayName(code)} style={{ position:'absolute', left:`${left}%`, top:`${top}%`, transform:'translate(-50%,-50%)', width:active?36:30, height:active?36:30, borderRadius:'50%', border:`2px solid ${active?'#90D84A':'rgba(255,255,255,.75)'}`, background:active?'rgba(144,216,74,.28)':'rgba(0,0,0,.55)', color:'white', fontSize:16, cursor:'pointer', boxShadow:active?'0 0 18px rgba(144,216,74,.5)':'0 4px 14px rgba(0,0,0,.3)' }}>{getFlagEmoji(code)}</button>
-        );
-      })}
+    <div style={{ position:'relative', height:230, borderRadius:20, overflow:'hidden', background:'linear-gradient(180deg,#0E1B24,#071017)', border:'1px solid rgba(255,255,255,.09)', boxShadow:'inset 0 0 40px rgba(32,178,170,.08)', marginBottom:12 }}>
+      <svg viewBox="0 0 620 260" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }} preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <filter id="softGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <rect x="0" y="0" width="620" height="260" fill="url(#ocean)" />
+        <g opacity=".22">
+          <path d="M0 62 C120 22 210 88 320 50 S500 38 620 82" fill="none" stroke="#72D6FF" strokeWidth="1"/>
+          <path d="M0 190 C120 150 210 216 320 178 S500 166 620 210" fill="none" stroke="#72D6FF" strokeWidth="1"/>
+        </g>
+        <g>
+          {continents.map((d,i)=><path key={i} d={d} fill="#214A3D" stroke="rgba(255,255,255,.16)" strokeWidth="1.5" />)}
+        </g>
+        {visited.map((code,i)=>{
+          const p = getPoint(code,i);
+          const active = selectedCountry === code;
+          return (
+            <g key={code} onClick={()=>onSelectCountry(code)} style={{ cursor:'pointer' }} filter={active?'url(#softGlow)':undefined}>
+              <circle cx={p.x} cy={p.y} r={active?12:9} fill={active?'#90D84A':'#F0C449'} opacity={active?'.95':'.82'} />
+              <circle cx={p.x} cy={p.y} r={active?20:15} fill="none" stroke={active?'#90D84A':'rgba(255,255,255,.55)'} strokeWidth="2" opacity=".55" />
+            </g>
+          );
+        })}
+      </svg>
+      <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900 }}>Mappa nazioni visitate</div>
+      {visited.length === 0 && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:700, textAlign:'center', padding:24 }}>Aggiungi una nazione visitata per evidenziarla sulla mappa.</div>}
     </div>
   );
 }
+
 
 function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   const [flipped, setFlipped] = useState(false);
   const count = countAnimalsForGeoValue(code);
   return (
-    <div onClick={()=>setFlipped(v=>!v)} style={{ minHeight:72, borderRadius:14, background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', overflow:'hidden', cursor:'pointer', perspective:700 }}>
+    <div className="interactive-hint" onClick={()=>setFlipped(v=>!v)} style={{ minHeight:72, borderRadius:14, background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', overflow:'hidden', cursor:'pointer', perspective:700 }}>
       <div style={{ position:'relative', minHeight:72, transition:'transform .28s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', display:'flex', alignItems:'center', gap:10, padding:'10px 12px', boxSizing:'border-box' }}>
           <span style={{ fontSize:24 }}>{getFlagEmoji(code)}</span>
@@ -2408,27 +2514,42 @@ function SettingsPage({ onBack }) {
 }
 
 
-function AbilityCard({ meta, onOpenAnimals }) {
-  const [flipped, setFlipped] = useState(false);
+
+function AbilityCard({ meta, onOpen }) {
   const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
   return (
-    <div onClick={()=>setFlipped(v=>!v)} style={{ minHeight:112, borderRadius:18, background:'rgba(255,255,255,.05)', border:`1px solid ${meta.color}33`, overflow:'hidden', perspective:800, cursor:'pointer', marginBottom:10 }}>
-      <div style={{ position:'relative', minHeight:112, transformStyle:'preserve-3d', transition:'transform .3s ease', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', padding:14, display:'flex', alignItems:'center', gap:14, boxSizing:'border-box' }}>
-          <div style={{ width:76, height:76, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:76, height:76, objectFit:'contain', filter:`drop-shadow(0 0 16px ${meta.color}44)` }} />
-            <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:'100%', height:'100%', fontSize:42 }}>{meta.icon}</span>
-          </div>
-          <div style={{ flex:1, minWidth:0 }}>
-            <div style={{ color:'white', fontSize:16, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:11.5, lineHeight:1.35, marginTop:6 }}>{meta.description}</div>
-          </div>
+    <button
+      className="interactive-hint"
+      onClick={()=>onOpen?.(meta)}
+      style={{ minHeight:116, borderRadius:18, background:'rgba(255,255,255,.05)', border:`1px solid ${meta.color}33`, cursor:'pointer', marginBottom:10, padding:14, display:'flex', alignItems:'center', gap:16, width:'100%', textAlign:'left', fontFamily:'inherit', color:'white', overflow:'hidden' }}
+    >
+      <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:96, height:96, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 18px ${meta.color}44)` }} />
+      <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:96, height:96, fontSize:50, flexShrink:0 }}>{meta.icon}</span>
+      <div style={{ flex:1, minWidth:0 }}>
+        <div style={{ color:'white', fontSize:17, fontWeight:900, lineHeight:1.18 }}>{meta.label}</div>
+        <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.4, marginTop:7 }}>{meta.description}</div>
+      </div>
+    </button>
+  );
+}
+
+function AbilityModal({ meta, onClose, onOpenAnimals }) {
+  if (!meta) return null;
+  const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:390, borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:`1px solid ${meta.color}55`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out' }}>
+        <button onClick={onClose} style={{ float:'right', width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer' }}>×</button>
+        <div style={{ height:14 }} />
+        <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:190, height:190, objectFit:'contain', filter:`drop-shadow(0 12px 28px ${meta.color}44)`, margin:'0 auto 8px' }} />
+        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:190, height:190, fontSize:82, margin:'0 auto 8px' }}>{meta.icon}</span>
+        <div style={{ color:'white', fontSize:25, fontWeight:900, lineHeight:1.1 }}>{meta.label}</div>
+        <div style={{ color:'rgba(255,255,255,.70)', fontSize:14, lineHeight:1.55, marginTop:16 }}>{meta.description}</div>
+        <div style={{ marginTop:18, background:'rgba(255,255,255,.07)', borderRadius:16, padding:14 }}>
+          <div style={{ color:meta.color, fontSize:28, fontWeight:900 }}>{meta.count}</div>
+          <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800 }}>animali hanno questa abilità</div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:14, boxSizing:'border-box', display:'flex', alignItems:'center', gap:14, background:'linear-gradient(135deg,rgba(0,0,0,.35),rgba(255,255,255,.04))' }}>
-          <div style={{ color:meta.color, fontSize:30, fontWeight:900, minWidth:54, textAlign:'center' }}>{meta.count}</div>
-          <div style={{ flex:1 }}><div style={{ color:'white', fontSize:14, fontWeight:900 }}>{meta.label}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11, marginTop:4 }}>animali hanno questa abilità</div></div>
-          <button onClick={e=>{e.stopPropagation();onOpenAnimals?.(meta.id, meta.label);}} style={{ height:38, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
-        </div>
+        <button onClick={()=>onOpenAnimals?.(meta.id, meta.label)} style={{ marginTop:16, height:46, width:'100%', borderRadius:14, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:14, cursor:'pointer' }}>Vedi animali</button>
       </div>
     </div>
   );
@@ -2437,7 +2558,9 @@ function AbilityCard({ meta, onOpenAnimals }) {
 function AbilitiesPage({ onBack, onOpenAbility }) {
   const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, description:getAbilityDescription(id, meta), count: ANIMALS.filter(a=>a.categories?.includes(id)).length }));
   const [search, setSearch] = useState('');
+  const [selectedAbility, setSelectedAbility] = useState(null);
   const rows = abilityRows.filter(a => !search.trim() || a.label.toLowerCase().includes(search.toLowerCase()) || a.description.toLowerCase().includes(search.toLowerCase()));
+  const openAnimals = (id, label) => { setSelectedAbility(null); onOpenAbility?.(id, label); };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
       <PageHeader title="Abilità" onBack={onBack} />
@@ -2445,11 +2568,13 @@ function AbilitiesPage({ onBack, onOpenAbility }) {
         <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca abilità..." style={{ width:'100%', height:44, borderRadius:12, background:'#222226', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'0 14px 28px' }}>
-        {rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpenAnimals={onOpenAbility} />)}
+        {rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpen={setSelectedAbility} />)}
       </div>
+      {selectedAbility && <AbilityModal meta={selectedAbility} onClose={()=>setSelectedAbility(null)} onOpenAnimals={openAnimals} />}
     </div>
   );
 }
+
 
 // ── Root ──────────────────────────────────────────────────────────────
 
@@ -2507,7 +2632,13 @@ export default function App() {
 
 
 const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
-const openPage = (nextPage) => { setSel(null); setGridReturnTarget(null); if (nextPage !== 'regions') setRegionsInitialView(null); setPage(nextPage || 'menu'); };
+const openPage = (nextPage) => {
+  setSel(null);
+  setGridReturnTarget(null);
+  if (nextPage !== 'regions') setRegionsInitialView(null);
+  if (nextPage === 'grid') { setGridPreset(null); setPage('grid'); return; }
+  setPage(nextPage || 'menu');
+};
 const openGridWithStatus = (statuses) => {
   setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
 };
