@@ -343,7 +343,7 @@ const RARITY_CSS = `
 .rarity-dot-comune     { background:#d0895c; box-shadow:none !important; }
 .rarity-dot-non-comune { background:#a1a8b2; box-shadow:none !important; }
 .rarity-dot-raro       { background:#f0c449; box-shadow:none !important; }
-.rarity-dot-leggendario{ background:#8f34f5; box-shadow:none !important; }
+.rarity-dot-leggendario{ background:#8f34f5; box-shadow:0 0 8px rgba(143,52,245,.65), 0 0 14px rgba(143,52,245,.28) !important; }
 
 .award-toast-sparkles::before,
 .award-toast-sparkles::after {
@@ -2058,8 +2058,8 @@ function DetailAbilityCard({ cat, animal, accentColor }) {
           <span style={{ display:'none', width:66, height:66, alignItems:'center', justifyContent:'center', fontSize:36, flexShrink:0 }}>{meta.icon}</span>
           <div style={{ color:'white', fontSize:15, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'13px 14px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.44),rgba(255,255,255,.04))' }}>
-          <div style={{ color:'rgba(255,255,255,.75)', fontSize:12, lineHeight:1.45, fontWeight:650 }}>{curiosity}</div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'13px 14px 13px 94px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.44),rgba(255,255,255,.04))' }}>
+          <div style={{ color:'rgba(255,255,255,.75)', fontSize:12, lineHeight:1.45, fontWeight:650, textAlign:'left' }}>{curiosity}</div>
         </div>
       </div>
     </div>
@@ -2162,7 +2162,6 @@ function AwardCard({ rule, unlocked, onOpen }) {
   const img = buildAwardImagePath(rule.badgeId);
   return (
     <button
-      className="interactive-hint"
       onClick={()=>onOpen?.(rule)}
       style={{
         border:'none',
@@ -2194,11 +2193,11 @@ function AwardModal({ rule, unlocked, currentValue, onClose }) {
   const progress = Math.min(100, Math.round((Number(currentValue || 0) / Math.max(1, Number(rule.threshold || 1))) * 100));
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
-      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:390, borderRadius:28, background:'linear-gradient(180deg,#2D2D31,#151517)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out' }}>
-        <button onClick={onClose} style={{ float:'right', width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer' }}>×</button>
-        <div style={{ height:18 }} />
-        <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:190, height:190, objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px' }} />
-        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:190, height:190, fontSize:82, margin:'0 auto 8px' }}>🏅</span>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, borderRadius:28, background:'linear-gradient(180deg,#2D2D31,#151517)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
+        <button onClick={onClose} style={{ position:'absolute', top:14, right:14, width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer', zIndex:2 }}>×</button>
+        <div style={{ height:8 }} />
+        <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
+        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:266, height:266, maxWidth:'82vw', fontSize:104, margin:'0 auto 8px' }}>🏅</span>
         <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
         <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro} · Livello {rule.level}</div>
         <div style={{ color:'rgba(255,255,255,.76)', fontSize:14, lineHeight:1.55, marginTop:18 }}>{getAwardDescription(rule)}</div>
@@ -2246,21 +2245,15 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
 
 
 
+
 function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
-  const visited = visitedCountries.slice(0, 36);
-  const continents = [
-    'M70,78 C92,38 150,30 174,72 C142,78 136,116 96,118 C74,112 54,98 70,78 Z',
-    'M154,122 C190,122 214,156 198,202 C172,192 158,160 154,122 Z',
-    'M235,82 C264,48 322,52 348,92 C324,116 284,110 252,124 C236,114 224,102 235,82 Z',
-    'M294,124 C332,128 354,172 330,214 C292,204 280,162 294,124 Z',
-    'M378,78 C426,38 504,52 542,100 C500,132 448,116 404,144 C372,132 360,104 378,78 Z',
-    'M470,190 C506,176 552,194 566,224 C534,246 488,240 462,216 C458,204 460,196 470,190 Z'
-  ];
+  const visited = visitedCountries.slice(0, 60);
+  const [mapErr, setMapErr] = useState(false);
   const getPoint = (code, i) => {
     const c = String(code || '');
     const seed = [...c].reduce((n,ch)=>n+ch.charCodeAt(0),0) + i*17;
     const bands = {
-      EU:[315,98], AF:[310,150], AS:[430,105], NA:[120,86], SA:[172,160], OC:[505,210], SP:[510,238]
+      EU:[51,39], AF:[52,58], AS:[70,42], NA:[24,38], SA:[34,67], OC:[82,74], SP:[73,83]
     };
     let b = bands.EU;
     if (['US','CA','MX','GL','BM','PM'].includes(c) || ['BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY'].includes(c)) b=bands.NA;
@@ -2269,35 +2262,40 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
     if (['RU','KZ','MN','TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF','PK','IN','BD','LK','NP','BT','MV','CN','HK','MO','TW','KR','KP','JP','MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'].includes(c)) b=bands.AS;
     if (['AU','NF','CX','CC','NZ','PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'].includes(c)) b=bands.OC;
     if (['AQ','BV','GS','HM','TF','SH'].includes(c)) b=bands.SP;
-    return { x:b[0] + ((seed % 41)-20), y:b[1] + (((seed*7) % 33)-16) };
+    return { x:b[0] + ((seed % 9)-4), y:b[1] + (((seed*7) % 9)-4) };
   };
+  const fallbackContinents = [
+    'M70,78 C92,38 150,30 174,72 C142,78 136,116 96,118 C74,112 54,98 70,78 Z',
+    'M154,122 C190,122 214,156 198,202 C172,192 158,160 154,122 Z',
+    'M235,82 C264,48 322,52 348,92 C324,116 284,110 252,124 C236,114 224,102 235,82 Z',
+    'M294,124 C332,128 354,172 330,214 C292,204 280,162 294,124 Z',
+    'M378,78 C426,38 504,52 542,100 C500,132 448,116 404,144 C372,132 360,104 378,78 Z',
+    'M470,190 C506,176 552,194 566,224 C534,246 488,240 462,216 C458,204 460,196 470,190 Z'
+  ];
   return (
-    <div style={{ position:'relative', height:230, borderRadius:20, overflow:'hidden', background:'linear-gradient(180deg,#0E1B24,#071017)', border:'1px solid rgba(255,255,255,.09)', boxShadow:'inset 0 0 40px rgba(32,178,170,.08)', marginBottom:12 }}>
-      <svg viewBox="0 0 620 260" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }} preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <filter id="softGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <rect x="0" y="0" width="620" height="260" fill="url(#ocean)" />
-        <g opacity=".22">
-          <path d="M0 62 C120 22 210 88 320 50 S500 38 620 82" fill="none" stroke="#72D6FF" strokeWidth="1"/>
-          <path d="M0 190 C120 150 210 216 320 178 S500 166 620 210" fill="none" stroke="#72D6FF" strokeWidth="1"/>
-        </g>
-        <g>
-          {continents.map((d,i)=><path key={i} d={d} fill="#214A3D" stroke="rgba(255,255,255,.16)" strokeWidth="1.5" />)}
-        </g>
-        {visited.map((code,i)=>{
-          const p = getPoint(code,i);
-          const active = selectedCountry === code;
-          return (
-            <g key={code} onClick={()=>onSelectCountry(code)} style={{ cursor:'pointer' }} filter={active?'url(#softGlow)':undefined}>
-              <circle cx={p.x} cy={p.y} r={active?12:9} fill={active?'#90D84A':'#F0C449'} opacity={active?'.95':'.82'} />
-              <circle cx={p.x} cy={p.y} r={active?20:15} fill="none" stroke={active?'#90D84A':'rgba(255,255,255,.55)'} strokeWidth="2" opacity=".55" />
-            </g>
-          );
-        })}
-      </svg>
+    <div style={{ position:'relative', height:240, borderRadius:20, overflow:'hidden', background:'linear-gradient(180deg,#0E1B24,#071017)', border:'1px solid rgba(255,255,255,.09)', boxShadow:'inset 0 0 40px rgba(32,178,170,.08)', marginBottom:12 }}>
+      {!mapErr ? (
+        <img src="/maps/world-map.svg" alt="Mappa del mondo" onError={()=>setMapErr(true)} style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', opacity:.72, filter:'sepia(.25) hue-rotate(110deg) saturate(.9) brightness(.62)' }} />
+      ) : (
+        <svg viewBox="0 0 620 260" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }} preserveAspectRatio="xMidYMid slice">
+          <rect x="0" y="0" width="620" height="260" fill="#0B1820" />
+          <g opacity=".24">
+            <path d="M0 62 C120 22 210 88 320 50 S500 38 620 82" fill="none" stroke="#72D6FF" strokeWidth="1"/>
+            <path d="M0 190 C120 150 210 216 320 178 S500 166 620 210" fill="none" stroke="#72D6FF" strokeWidth="1"/>
+          </g>
+          <g>{fallbackContinents.map((d,i)=><path key={i} d={d} fill="#214A3D" stroke="rgba(255,255,255,.16)" strokeWidth="1.5" />)}</g>
+        </svg>
+      )}
+      <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 50% 50%, transparent, rgba(0,0,0,.42))' }} />
       <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900 }}>Mappa nazioni visitate</div>
       {visited.length === 0 && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:700, textAlign:'center', padding:24 }}>Aggiungi una nazione visitata per evidenziarla sulla mappa.</div>}
+      {visited.map((code,i)=>{
+        const p = getPoint(code,i);
+        const active = selectedCountry === code;
+        return (
+          <button key={code} onClick={()=>onSelectCountry(code)} title={getCountryDisplayName(code)} style={{ position:'absolute', left:`${p.x}%`, top:`${p.y}%`, transform:'translate(-50%,-50%)', width:active?28:22, height:active?28:22, borderRadius:'50%', border:`2px solid ${active?'#90D84A':'rgba(255,255,255,.78)'}`, background:active?'rgba(144,216,74,.78)':'rgba(240,196,73,.86)', color:'white', cursor:'pointer', boxShadow:active?'0 0 16px rgba(144,216,74,.7)':'0 4px 12px rgba(0,0,0,.34)' }} />
+        );
+      })}
     </div>
   );
 }
@@ -2384,6 +2382,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:38, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
               </div>
             )}
+            <div style={{ color:'white', fontSize:18, fontWeight:900, margin:'16px 0 10px' }}>Nazioni visitate</div>
+            {visitedCountries.length === 0 ? <div style={{ color:'rgba(255,255,255,.42)', fontSize:13, padding:'16px 6px', marginBottom:12 }}>Nessuna nazione visitata aggiunta.</div> : <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:14 }}>{visitedCountries.map(code=><VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry}/>)}</div>}
             <div style={{ background:'#151517', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
               <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi nazioni visitate</div>
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
@@ -2394,8 +2394,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 })}
               </div>
             </div>
-            <div style={{ color:'white', fontSize:18, fontWeight:900, margin:'16px 0 10px' }}>Nazioni visitate</div>
-            {visitedCountries.length === 0 ? <div style={{ color:'rgba(255,255,255,.42)', fontSize:13, padding:'16px 6px' }}>Nessuna nazione visitata aggiunta.</div> : <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>{visitedCountries.map(code=><VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry}/>)}</div>}
           </div>
         )}
         {view==='regions' && continent && continent.regions.map(reg=>(
@@ -2538,11 +2536,11 @@ function AbilityModal({ meta, onClose, onOpenAnimals }) {
   const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
-      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:390, borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:`1px solid ${meta.color}55`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out' }}>
-        <button onClick={onClose} style={{ float:'right', width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer' }}>×</button>
-        <div style={{ height:14 }} />
-        <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:190, height:190, objectFit:'contain', filter:`drop-shadow(0 12px 28px ${meta.color}44)`, margin:'0 auto 8px' }} />
-        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:190, height:190, fontSize:82, margin:'0 auto 8px' }}>{meta.icon}</span>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:`1px solid ${meta.color}55`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
+        <button onClick={onClose} style={{ position:'absolute', top:14, right:14, width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer', zIndex:2 }}>×</button>
+        <div style={{ height:8 }} />
+        <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:`drop-shadow(0 12px 28px ${meta.color}44)`, margin:'0 auto 8px', display:'block' }} />
+        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:266, height:266, maxWidth:'82vw', fontSize:104, margin:'0 auto 8px' }}>{meta.icon}</span>
         <div style={{ color:'white', fontSize:25, fontWeight:900, lineHeight:1.1 }}>{meta.label}</div>
         <div style={{ color:'rgba(255,255,255,.70)', fontSize:14, lineHeight:1.55, marginTop:16 }}>{meta.description}</div>
         <div style={{ marginTop:18, background:'rgba(255,255,255,.07)', borderRadius:16, padding:14 }}>
