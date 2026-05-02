@@ -297,11 +297,11 @@ async function fetchUserBadgeIds(userId) {
     .eq('user_id', userId);
 
   if (error) throw error;
-  return Array.from(new Set((data || []).map(row => normalizeBadgeId(row.badge_id)).filter(Boolean)));
+  return Array.from(new Set((data || []).map(row => String(row.badge_id)).filter(Boolean)));
 }
 
 async function persistEarnedBadges(userId, badgeIds = []) {
-  const cleanIds = Array.from(new Set((badgeIds || []).map(normalizeBadgeId).filter(Boolean)));
+  const cleanIds = Array.from(new Set((badgeIds || []).map(String).filter(Boolean)));
   if (!userId || !cleanIds.length) return [];
 
   const { data: existingRows, error: existingError } = await supabase
@@ -312,7 +312,7 @@ async function persistEarnedBadges(userId, badgeIds = []) {
 
   if (existingError) throw existingError;
 
-  const existing = new Set((existingRows || []).map(row => normalizeBadgeId(row.badge_id)));
+  const existing = new Set((existingRows || []).map(row => String(row.badge_id)));
   const missing = cleanIds.filter(id => !existing.has(id));
   if (!missing.length) return cleanIds;
 
@@ -348,10 +348,6 @@ async function persistUserDestination(userId, iso, tripTags = []) {
   // non blocchiamo la RPC: la destinazione risulta già registrata.
   if (error && error.code !== '23505') throw error;
   return true;
-}
-
-function normalizeBadgeId(id) {
-  return String(id || '').trim().toUpperCase();
 }
 const TROPHIC = {
   1:{ label:'Produttore',      c:'#5CC85A', bg:'#1A3B19' },
@@ -921,11 +917,11 @@ function computeUnlockedAwards(statusMap = {}, visitedCountries = null) {
 }
 function getAwardUnlockSet() {
   if (typeof window === 'undefined') return new Set();
-  try { return new Set(JSON.parse(window.localStorage.getItem('animaldex_awards_unlocked') || '[]').map(normalizeBadgeId)); } catch { return new Set(); }
+  try { return new Set(JSON.parse(window.localStorage.getItem('animaldex_awards_unlocked') || '[]')); } catch { return new Set(); }
 }
 function persistAwardUnlocks(ids = []) {
   if (typeof window === 'undefined') return;
-  try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set((ids || []).map(normalizeBadgeId).filter(Boolean))))); } catch {}
+  try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set(ids)))); } catch {}
 }
 
 // ── Rarity class helper ───────────────────────────────────────────────
@@ -1844,63 +1840,25 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
 // ── Image Lightbox ────────────────────────────────────────────────────
 function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
   const [visible, setVisible] = useState(false);
-  const [zoom, setZoom] = useState(1);
-  const [lastTap, setLastTap] = useState(0);
-  const pinchRef = useRef({ active:false, startDist:0, startZoom:1 });
-
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
   const handleClose = () => { setVisible(false); setTimeout(onClose, 350); };
 
-  const vw = typeof window !== 'undefined' ? window.innerWidth : 390;
-  const vh = typeof window !== 'undefined' ? window.innerHeight : 800;
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
 
+  // Starting box position and size (the image container in the detail page)
   const startLeft   = originRect ? originRect.left : vw * 0.1;
   const startTop    = originRect ? originRect.top  : vh * 0.1;
   const startW      = originRect ? originRect.width  : vw * 0.4;
   const startH      = originRect ? originRect.height : vh * 0.3;
 
-  const distance = (touches) => {
-    if (!touches || touches.length < 2) return 0;
-    const dx = touches[0].clientX - touches[1].clientX;
-    const dy = touches[0].clientY - touches[1].clientY;
-    return Math.sqrt(dx*dx + dy*dy);
-  };
-
-  const handleTouchStart = (e) => {
-    if (e.touches?.length === 2) {
-      e.preventDefault();
-      pinchRef.current = { active:true, startDist:distance(e.touches), startZoom:zoom };
-    }
-  };
-  const handleTouchMove = (e) => {
-    if (pinchRef.current.active && e.touches?.length === 2) {
-      e.preventDefault();
-      const d = distance(e.touches);
-      if (pinchRef.current.startDist > 0) {
-        const next = Math.max(1, Math.min(4, pinchRef.current.startZoom * (d / pinchRef.current.startDist)));
-        setZoom(next);
-      }
-    }
-  };
-  const handleTouchEnd = () => {
-    pinchRef.current.active = false;
-  };
-  const handleDoubleTap = (e) => {
-    const now = Date.now();
-    if (now - lastTap < 280) {
-      e.preventDefault?.();
-      setZoom(z => z > 1 ? 1 : 2.25);
-    }
-    setLastTap(now);
-  };
-
+  // Interpolate box from origin → fullscreen
   const boxStyle = visible ? {
     position:'fixed', left:0, top:0, width:'100vw', height:'100vh',
     background: bgColor || '#1a1a1c',
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
-    zIndex:300, cursor:'default', overflow:'hidden',
-    touchAction:'none',
+    zIndex:300, cursor:'zoom-out',
   } : {
     position:'fixed',
     left: startLeft, top: startTop,
@@ -1909,44 +1867,27 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
     background: bgColor || '#1a1a1c',
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
-    zIndex:300, cursor:'default', overflow:'hidden',
-    touchAction:'none',
+    zIndex:300, cursor:'zoom-out',
   };
 
   return (
     <>
+      {/* Dark overlay */}
       <div onClick={handleClose} style={{
         position:'fixed', inset:0, zIndex:299,
         background: visible ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)',
         transition:'background .35s ease',
       }}/>
-      <div
-        onClick={e=>e.stopPropagation()}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-        style={boxStyle}
-      >
-        <img
-          src={src}
-          alt={alt}
-          onClick={e=>e.stopPropagation()}
-          onTouchEnd={handleDoubleTap}
-          draggable={false}
-          style={{
-            maxWidth:'88%', maxHeight:'88%',
-            objectFit:'contain',
-            opacity: visible ? 1 : 0,
-            transition:'opacity .25s ease .1s, transform .12s ease-out',
-            transform:`scale(${zoom})`,
-            transformOrigin:'center center',
-            filter: `drop-shadow(0 0 40px ${accentColor}99)`,
-            cursor:'default',
-            userSelect:'none',
-            WebkitUserSelect:'none',
-            touchAction:'none',
-          }}
-        />
+      {/* Expanding colored box */}
+      <div onClick={handleClose} style={boxStyle}>
+        <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
+          maxWidth:'88%', maxHeight:'88%',
+          objectFit:'contain',
+          opacity: visible ? 1 : 0,
+          transition:'opacity .25s ease .1s',
+          filter: `drop-shadow(0 0 40px ${accentColor}99)`,
+          cursor:'default',
+        }}/>
         <button onClick={handleClose} style={{
           position:'absolute', top:16, right:16,
           background:'rgba(0,0,0,.25)', border:'none',
@@ -1954,16 +1895,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
           borderRadius:'50%', cursor:'pointer', display:'flex',
           alignItems:'center', justifyContent:'center',
           opacity: visible ? 1 : 0, transition:'opacity .3s ease .15s',
-          zIndex:2,
         }}>×</button>
-        {zoom > 1 && (
-          <button onClick={()=>setZoom(1)} style={{
-            position:'absolute', bottom:18, left:'50%', transform:'translateX(-50%)',
-            height:38, padding:'0 14px', borderRadius:999, border:'none',
-            background:'rgba(0,0,0,.32)', color:'white', fontSize:12, fontWeight:900,
-            cursor:'pointer', zIndex:2,
-          }}>Reset zoom</button>
-        )}
       </div>
     </>
   );
@@ -2344,6 +2276,7 @@ function DetailAbilityCard({ cat, animal, accentColor }) {
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'13px 14px 13px 94px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.44),rgba(255,255,255,.04))' }}>
           <div style={{ color:'rgba(255,255,255,.75)', fontSize:12, lineHeight:1.45, fontWeight:650, textAlign:'left' }}>{curiosity}</div>
         </div>
+        <button onClick={onLogout} style={{ marginTop:14, width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,59,48,.12)', color:'#FF7B7B', fontWeight:900, cursor:'pointer' }}>Logout</button>
       </div>
     </div>
   );
@@ -2479,7 +2412,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
-  const badgeCount = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)).size;
+  const badgeCount = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)]).size;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
@@ -2569,9 +2502,9 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
   const metrics = computeAwardMetrics(statusMap, visitedCountries);
-  const unlockedSet = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId));
+  const unlockedSet = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)]);
   const macros = ['Tutti', ...AWARD_MACROS];
-  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(normalizeBadgeId(rule.badgeId))));
+  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)));
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
       <PageHeader title="Badge" onBack={onBack} />
@@ -2583,10 +2516,10 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
-          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(normalizeBadgeId(rule.badgeId))} onOpen={setSelectedAward} />)}
+          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(rule.badgeId)} onOpen={setSelectedAward} />)}
         </div>
       </div>
-      {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(normalizeBadgeId(selectedAward.badgeId))} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} />}
+      {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(selectedAward.badgeId)} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} />}
     </div>
   );
 }
@@ -3010,7 +2943,7 @@ export default function App() {
       setStatusMap(nextStatusMap);
       setVisitedCountries(destinations);
       saveVisitedCountries(destinations);
-      setEarnedBadgeIds((remoteBadgeIds || []).map(normalizeBadgeId));
+      setEarnedBadgeIds(remoteBadgeIds || []);
       persistAwardUnlocks(remoteBadgeIds || []);
     } catch (err) {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
@@ -3029,14 +2962,14 @@ export default function App() {
 
   useEffect(() => {
     const localSaved = getAwardUnlockSet();
-    const dbSaved = new Set((earnedBadgeIds || []).map(normalizeBadgeId));
+    const dbSaved = new Set(earnedBadgeIds);
     const alreadyKnown = new Set([...Array.from(localSaved), ...Array.from(dbSaved)]);
-    const current = unlockedAwards.map(a => normalizeBadgeId(a.badgeId));
-    const fresh = unlockedAwards.filter(a => !alreadyKnown.has(normalizeBadgeId(a.badgeId)));
+    const current = unlockedAwards.map(a => a.badgeId);
+    const fresh = unlockedAwards.filter(a => !alreadyKnown.has(a.badgeId));
 
     if (fresh.length) setAwardQueue(prev => [...prev, ...fresh]);
 
-    const merged = Array.from(new Set([...(earnedBadgeIds || []).map(normalizeBadgeId), ...current]));
+    const merged = Array.from(new Set([...earnedBadgeIds, ...current]));
     if (merged.length !== earnedBadgeIds.length) {
       setEarnedBadgeIds(merged);
       persistAwardUnlocks(merged);
