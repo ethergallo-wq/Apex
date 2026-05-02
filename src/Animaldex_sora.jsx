@@ -76,8 +76,9 @@ const SHIELD_PATHS = {
 };
 
 const MYSTERY_PLACEHOLDER = '/icone_unknown/mystery_animal.png';
-const GRID_IMAGE_SCALE = 0.730;
-const GRID_SILHOUETTE_SCALE = 0.486;
+const GRID_IMAGE_SCALE = 0.949;
+const GRID_MYSTERY_SCALE = 1.0;
+const GRID_SILHOUETTE_SCALE = 0.632;
 
 const ANIMAL_STATUS = {
   misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Bloccato: identità nascosta e nome non mostrato.' },
@@ -231,112 +232,6 @@ const SCALE = { Min:0.7, Base:1, Max:1.3 };
 
 // ── Rarity CSS injection ──────────────────────────────────────────────
 const RARITY_CSS = `
-@keyframes bronzoShine {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-@keyframes argentoShine {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-@keyframes oroShine {
-  0%   { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-@keyframes acquaShine {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ── COMUNE – riflesso bronzo continuo ── */
-.rarity-comune {
-  background: linear-gradient(
-    105deg,
-    #3D1E08 0%,
-    #7A4018 18%,
-    #C47A35 30%,
-    #F0B060 38%,
-    #FFDCA0 45%,
-    #F0B060 52%,
-    #C47A35 60%,
-    #7A4018 72%,
-    #3D1E08 100%
-  ) !important;
-  background-size: 300% 100% !important;
-  animation: bronzoShine 3.2s linear infinite !important;
-  color: #FFE0AA !important;
-  border: none !important;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7) !important;
-}
-
-/* ── NON COMUNE – riflesso argento continuo ── */
-.rarity-non-comune {
-  background: linear-gradient(
-    105deg,
-    #3A3A3A 0%,
-    #6E6E6E 15%,
-    #B0B0B0 28%,
-    #ECECEC 38%,
-    #FFFFFF 45%,
-    #ECECEC 52%,
-    #B0B0B0 62%,
-    #6E6E6E 75%,
-    #3A3A3A 100%
-  ) !important;
-  background-size: 300% 100% !important;
-  animation: argentoShine 3.2s linear infinite !important;
-  color: #FFFFFF !important;
-  border: none !important;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
-}
-
-/* ── RARO – riflesso oro continuo + glow ── */
-.rarity-raro {
-  background: linear-gradient(
-    105deg,
-    #4A3000 0%,
-    #8B5E00 15%,
-    #D4A000 28%,
-    #FFD700 38%,
-    #FFF0A0 45%,
-    #FFD700 52%,
-    #D4A000 62%,
-    #8B5E00 75%,
-    #4A3000 100%
-  ) !important;
-  background-size: 300% 100% !important;
-  animation: oroShine 3.2s linear infinite !important;
-  color: #FFF8C0 !important;
-  border: none !important;
-  box-shadow: 0 0 10px rgba(255,200,0,0.55), 0 0 22px rgba(255,170,0,0.28) !important;
-  text-shadow: 0 0 8px rgba(255,220,0,0.6), 0 1px 3px rgba(0,0,0,0.7) !important;
-}
-
-/* ── LEGGENDARIO – viola epico, riflesso acqua + glow ── */
-.rarity-leggendario {
-  background: linear-gradient(
-    130deg,
-    #1A0030 0%,
-    #4B0082 12%,
-    #7B20C8 24%,
-    #A060E8 32%,
-    #C8A0FF 40%,
-    #E0C8FF 46%,
-    #C8A0FF 52%,
-    #A060E8 60%,
-    #7B20C8 72%,
-    #4B0082 84%,
-    #1A0030 100%
-  ) !important;
-  background-size: 300% 300% !important;
-  animation: acquaShine 4.5s ease-in-out infinite !important;
-  color: #F0DAFF !important;
-  border: none !important;
-  box-shadow: 0 0 12px rgba(160,80,255,0.6), 0 0 28px rgba(120,40,220,0.3), inset 0 0 12px rgba(200,160,255,0.15) !important;
-  text-shadow: 0 0 10px rgba(220,180,255,0.7), 0 1px 3px rgba(0,0,0,0.8) !important;
-}
-
 /* ── Tab slide transitions ── */
 @keyframes tabFromRight {
   from { transform: translateX(56px); opacity: 0; }
@@ -355,7 +250,7 @@ const RARITY_CSS = `
   isolation: isolate;
   min-height: 34px;
   border-radius: 13px;
-  padding: 8px 14px 8px 42px;
+  padding: 8px 14px 8px 52px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -364,87 +259,111 @@ const RARITY_CSS = `
   font-weight: 900;
   letter-spacing: .2px;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.75), 0 0 8px rgba(255,255,255,.22);
+  text-shadow: 0 1px 3px rgba(0,0,0,.75), 0 0 8px rgba(255,255,255,.12);
   border: 1.5px solid rgba(242,242,242,.62);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.72), inset 0 -2px 5px rgba(0,0,0,.45), 0 5px 12px rgba(0,0,0,.28);
 }
 .rarity-badge::before {
   content: '';
   position: absolute;
-  inset: 3px 4px 3px 30px;
+  inset: 3px 4px 3px 24px;
   border-radius: 10px;
   z-index: -1;
   opacity: .98;
   border: 1px solid rgba(255,255,255,.18);
-  box-shadow: inset 0 1px 2px rgba(255,255,255,.35), inset 0 -3px 9px rgba(0,0,0,.36);
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.24), inset 0 -3px 9px rgba(0,0,0,.36);
 }
 .rarity-badge::after {
   content: '';
   position: absolute;
-  inset: 2px 5px 2px 31px;
+  inset: 2px 5px 2px 25px;
   border-radius: 10px;
   z-index: 3;
-  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.025) 22%, rgba(255,255,255,.31) 42%, rgba(255,255,255,.05) 58%, transparent 76%);
-  background-size: 260% 100%;
-  animation: oroShine 5.2s linear infinite;
+  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.012) 22%, rgba(255,255,255,.155) 42%, rgba(255,255,255,.024) 58%, transparent 76%);
   mix-blend-mode: screen;
   pointer-events: none;
 }
-.rarity-shield {
+.rarity-shield-wrap {
   position: absolute;
-  left: -12px;
+  left: 3px;
   top: 50%;
   transform: translateY(-50%);
   width: 48px;
   height: 48px;
-  object-fit: contain;
   z-index: 2;
-  filter: drop-shadow(0 3px 4px rgba(0,0,0,.55));
   pointer-events: none;
 }
-.rarity-badge.compact { min-height: 28px; padding: 5px 10px 5px 34px; border-radius: 999px; }
-.rarity-badge.compact::before { inset: 3px 4px 3px 25px; border-radius: 999px; }
-.rarity-badge.compact::after { inset: 2px 5px 2px 26px; border-radius: 999px; }
-.rarity-badge.compact .rarity-shield { width: 36px; height: 36px; left: -8px; }
-.rarity-badge.small { min-height: 26px; padding: 4px 9px 4px 32px; font-size: 11px; border-radius: 999px; }
-.rarity-badge.small::before { inset: 3px 4px 3px 24px; border-radius: 999px; }
-.rarity-badge.small::after { inset: 2px 5px 2px 25px; border-radius: 999px; }
-.rarity-badge.small .rarity-shield { width: 34px; height: 34px; left: -8px; }
-.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:76px; }
-.rarity-badge.full::before { left: 42px; }
-.rarity-badge.full::after { left: 0px; }
-.rarity-badge.full .rarity-shield { left: 8px; width:58px; height:58px; }
-.rarity-metal-comune { background: linear-gradient(180deg,#f4c39a 0%,#d0895c 45%,#7b3c1d 100%); }
-.rarity-metal-comune::before { background: radial-gradient(circle at 25% 20%, rgba(255,238,210,.55), transparent 28%), linear-gradient(135deg,#532311,#d0895c 38%,#ffd0a4 50%,#8a421f 72%,#3b170a 100%); }
-.rarity-metal-non-comune { background: linear-gradient(180deg,#eef2f6 0%,#a1a8b2 48%,#4e5660 100%); }
-.rarity-metal-non-comune::before { background: radial-gradient(circle at 22% 22%, rgba(255,255,255,.70), transparent 30%), linear-gradient(135deg,#3d454d,#a1a8b2 40%,#ffffff 50%,#67717c 72%,#252a30 100%); }
-.rarity-metal-raro { background: linear-gradient(180deg,#fff0a5 0%,#f0c449 46%,#8c6500 100%); }
-.rarity-metal-raro::before { background: radial-gradient(circle at 26% 20%, rgba(255,247,190,.68), transparent 30%), linear-gradient(135deg,#5a3900,#f0c449 38%,#fff5b8 50%,#a77b00 72%,#3b2500 100%); }
-.rarity-metal-raro { box-shadow: inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 5px rgba(0,0,0,.45), 0 0 12px rgba(240,196,73,.45), 0 5px 12px rgba(0,0,0,.28); }
-.rarity-metal-leggendario { background: linear-gradient(180deg,#d2a9ff 0%,#8f34f5 48%,#2d064e 100%); border-color: rgba(220,220,235,.86); box-shadow: inset 0 1px 0 rgba(255,255,255,.82), inset 0 -2px 5px rgba(0,0,0,.48), 0 0 16px rgba(143,52,245,.58), 0 0 32px rgba(143,52,245,.25), 0 5px 12px rgba(0,0,0,.28); }
-.rarity-metal-leggendario::before { background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.72), transparent 18%), radial-gradient(circle at 72% 64%, rgba(255,255,255,.28), transparent 14%), linear-gradient(135deg,#210036 0%,#8f34f5 34%,#f4d9ff 50%,#7b1de1 66%,#260046 100%); }
-.rarity-metal-leggendario::after { background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.06) 17%, rgba(255,255,255,.46) 38%, rgba(207,148,255,.14) 54%, transparent 76%); background-size: 300% 100%; animation: oroShine 3.6s linear infinite; }
-
-/* pallino rarità nella griglia: niente glow, solo riflesso periodico */
-@keyframes rarityDotSweep {
-  0%, 58% { transform: translateX(-180%) rotate(25deg); opacity: 0; }
-  64%     { opacity: .45; }
-  82%     { opacity: .18; }
-  100%    { transform: translateX(180%) rotate(25deg); opacity: 0; }
+.rarity-shield {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,.55));
 }
-.rarity-dot { position: relative; overflow: hidden; box-shadow: none !important; }
+.rarity-shield-sheen {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,.14) 40%, rgba(255,255,255,.03) 54%, transparent 70%);
+  mix-blend-mode: screen;
+}
+.rarity-badge.compact { min-height: 28px; padding: 5px 10px 5px 40px; border-radius: 999px; }
+.rarity-badge.compact::before { inset: 3px 4px 3px 21px; border-radius: 999px; }
+.rarity-badge.compact::after { inset: 2px 5px 2px 22px; border-radius: 999px; }
+.rarity-badge.compact .rarity-shield-wrap { width: 36px; height: 36px; left: 0px; }
+.rarity-badge.small { min-height: 26px; padding: 4px 9px 4px 38px; font-size: 11px; border-radius: 999px; }
+.rarity-badge.small::before { inset: 3px 4px 3px 20px; border-radius: 999px; }
+.rarity-badge.small::after { inset: 2px 5px 2px 21px; border-radius: 999px; }
+.rarity-badge.small .rarity-shield-wrap { width: 34px; height: 34px; left: 0px; }
+.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:92px; }
+.rarity-badge.full::before { left: 48px; }
+.rarity-badge.full::after { left: 49px; }
+.rarity-badge.full .rarity-shield-wrap { left: 18px; width:58px; height:58px; }
+.rarity-metal-comune { background: linear-gradient(180deg,#f4c39a 0%,#d0895c 45%,#7b3c1d 100%); }
+.rarity-metal-comune::before { background: radial-gradient(circle at 25% 20%, rgba(255,238,210,.42), transparent 28%), linear-gradient(135deg,#532311,#d0895c 38%,#ffd0a4 50%,#8a421f 72%,#3b170a 100%); }
+.rarity-metal-non-comune { background: linear-gradient(180deg,#eef2f6 0%,#a1a8b2 48%,#4e5660 100%); }
+.rarity-metal-non-comune::before { background: radial-gradient(circle at 22% 22%, rgba(255,255,255,.44), transparent 30%), linear-gradient(135deg,#3d454d,#a1a8b2 40%,#ffffff 50%,#67717c 72%,#252a30 100%); }
+.rarity-metal-raro { background: linear-gradient(180deg,#fff0a5 0%,#f0c449 46%,#8c6500 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 5px rgba(0,0,0,.45), 0 0 12px rgba(240,196,73,.35), 0 5px 12px rgba(0,0,0,.28); }
+.rarity-metal-raro::before { background: radial-gradient(circle at 26% 20%, rgba(255,247,190,.42), transparent 30%), linear-gradient(135deg,#5a3900,#f0c449 38%,#fff5b8 50%,#a77b00 72%,#3b2500 100%); }
+.rarity-metal-leggendario { background: linear-gradient(180deg,#d2a9ff 0%,#8f34f5 48%,#2d064e 100%); border-color: rgba(220,220,235,.86); box-shadow: inset 0 1px 0 rgba(255,255,255,.82), inset 0 -2px 5px rgba(0,0,0,.48), 0 0 16px rgba(143,52,245,.38), 0 0 32px rgba(143,52,245,.15), 0 5px 12px rgba(0,0,0,.28); }
+.rarity-metal-leggendario::before { background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.44), transparent 18%), radial-gradient(circle at 72% 64%, rgba(255,255,255,.14), transparent 14%), linear-gradient(135deg,#210036 0%,#8f34f5 34%,#f4d9ff 50%,#7b1de1 66%,#260046 100%); }
+
+/* pallino rarità nella griglia: fisso, nessun glow */
+.rarity-dot { position: relative; overflow: hidden; box-shadow: none !important; border:1px solid rgba(255,255,255,.2); }
 .rarity-dot::after {
   content:'';
   position:absolute;
-  top:-35%; bottom:-35%; left:-60%; width:60%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.44), transparent);
-  animation: rarityDotSweep 4.8s ease-in-out infinite;
+  inset: 1px 2px auto 2px;
+  height: 35%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255,255,255,.36), rgba(255,255,255,0));
   pointer-events:none;
 }
 .rarity-dot-comune     { background:#d0895c; box-shadow:none !important; }
 .rarity-dot-non-comune { background:#a1a8b2; box-shadow:none !important; }
 .rarity-dot-raro       { background:#f0c449; box-shadow:none !important; }
 .rarity-dot-leggendario{ background:#8f34f5; box-shadow:none !important; }
+
+.award-toast-sparkles::before,
+.award-toast-sparkles::after {
+  content:'';
+  position:absolute;
+  inset:-12px;
+  background:
+    radial-gradient(circle at 10% 22%, rgba(255,255,255,.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 82% 18%, rgba(255,255,255,.72) 0 2px, transparent 3px),
+    radial-gradient(circle at 18% 78%, rgba(255,255,255,.75) 0 2px, transparent 3px),
+    radial-gradient(circle at 88% 84%, rgba(255,255,255,.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 56% 8%, rgba(255,225,120,.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 42% 92%, rgba(255,225,120,.7) 0 2px, transparent 3px);
+  pointer-events:none;
+  animation: awardPulse 1.8s ease-in-out infinite;
+}
+@keyframes awardPulse {
+  0%,100% { transform: scale(1); opacity:.55; }
+  50% { transform: scale(1.04); opacity:1; }
+}
 `;
 
 // ── Flag Emoji Generator ──────────────────────────────────────────────
@@ -529,6 +448,249 @@ const COUNTRIES = [
   {code:'NR',name:'Nauru'},{code:'TL',name:'Timor Est'},{code:'BN',name:'Brunei'},
 ];
 
+
+const GEO_REGION_GROUPS = [
+  {
+    id:'europa', label:'Europa', image:'/regions/continents/europa.png', regions:[
+      { id:'europa-boreale', label:'Europa boreale', image:'/regions/europa/europa-boreale.png', iso:['IS','NO','SE','FI','DK','FO','AX'] },
+      { id:'europa-temperata', label:'Europa temperata', image:'/regions/europa/europa-temperata.png', iso:['IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE'] },
+      { id:'europa-mediterranea', label:'Europa mediterranea', image:'/regions/europa/europa-mediterranea.png', iso:['ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS'] },
+    ]
+  },
+  {
+    id:'america', label:'America', image:'/regions/continents/america.png', regions:[
+      { id:'nord-america-boreale', label:'Nord America boreale', image:'/regions/america/nord-america-boreale.png', iso:['CA'] },
+      { id:'nord-america-temperato', label:'Nord America temperato', image:'/regions/america/nord-america-temperato.png', iso:['US','BM','PM'] },
+      { id:'nord-america-desertico', label:'Nord America desertico', image:'/regions/america/nord-america-desertico.png', iso:['GL'] },
+      { id:'america-tropicale', label:'America tropicale', image:'/regions/america/america-tropicale.png', iso:['MX','BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY','CO','VE','EC','PE','BO','BR','GF','GY','SR'] },
+      { id:'sud-america-temperato', label:'Sud America temperato', image:'/regions/america/sud-america-temperato.png', iso:['AR','CL','UY','PY','FK'] },
+    ]
+  },
+  {
+    id:'africa', label:'Africa', image:'/regions/continents/africa.png', regions:[
+      { id:'africa-arida', label:'Africa arida', image:'/regions/africa/africa-arida.png', iso:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD'] },
+      { id:'africa-tropicale', label:'Africa tropicale', image:'/regions/africa/africa-tropicale.png', iso:['SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'] },
+      { id:'africa-australe', label:'Africa australe', image:'/regions/africa/africa-australe.png', iso:['ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS'] },
+      { id:'madagascar', label:'Madagascar', image:'/regions/africa/madagascar.png', iso:['MG'] },
+    ]
+  },
+  {
+    id:'asia', label:'Asia', image:'/regions/continents/asia.png', regions:[
+      { id:'asia-boreale-steppa', label:'Asia boreale e steppa', image:'/regions/asia/asia-boreale-steppa.png', iso:['RU','KZ','MN'] },
+      { id:'asia-occidentale-centrale', label:'Asia occidentale e centrale', image:'/regions/asia/asia-occidentale-centrale.png', iso:['TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF'] },
+      { id:'asia-meridionale', label:'Asia meridionale', image:'/regions/asia/asia-meridionale.png', iso:['PK','IN','BD','LK','NP','BT','MV'] },
+      { id:'asia-orientale', label:'Asia orientale', image:'/regions/asia/asia-orientale.png', iso:['CN','HK','MO','TW','KR','KP'] },
+      { id:'giappone', label:'Giappone', image:'/regions/asia/giappone.png', iso:['JP'] },
+      { id:'sud-est-asiatico', label:'Sud-est asiatico', image:'/regions/asia/sud-est-asiatico.png', iso:['MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'] },
+    ]
+  },
+  {
+    id:'oceania', label:'Oceania', image:'/regions/continents/oceania.png', regions:[
+      { id:'australia', label:'Australia', image:'/regions/oceania/australia.png', iso:['AU','NF','CX','CC'] },
+      { id:'nuova-zel&&a', label:'Nuova Zel&&a', image:'/regions/oceania/nuova-zel&&a.png', iso:['NZ'] },
+      { id:'pacifico-tropicale', label:'Pacifico tropicale', image:'/regions/oceania/pacifico-tropicale.png', iso:['PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'] },
+    ]
+  },
+  {
+    id:'speciali', label:'Regioni speciali', image:'/regions/continents/speciali.png', regions:[
+      { id:'isole-oceano-indiano', label:'Isole Oceano Indiano', image:'/regions/speciali/isole-oceano-indiano.png', iso:['MU','RE','YT','KM','SC','IO'] },
+      { id:'artide', label:'Artide', image:'/regions/speciali/artide.png', iso:['GL','SJ'] },
+      { id:'antartide', label:'Antartide', image:'/regions/speciali/antartide.png', iso:['AQ','BV','GS','HM','TF','SH'] },
+    ]
+  },
+];
+const GEO_REGION_MAP = GEO_REGION_GROUPS.flatMap(group => group.regions.map(region => ({ ...region, continentId: group.id, continentLabel: group.label })));
+const GEO_REGION_BY_ID = Object.fromEntries(GEO_REGION_MAP.map(r => [r.id, r]));
+const GEO_FILTER_OPTIONS = [
+  ...GEO_REGION_GROUPS.map(group => ({ value:`continent:${group.id}`, label:`${group.label} (continente)`, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: group.regions.flatMap(r=>r.iso) })),
+  ...GEO_REGION_MAP.map(region => ({ value:`region:${region.id}`, label:region.label, c:'#20B2AA', bg:'rgba(32,178,170,.15)', iso:region.iso }))
+];
+function getGeoOptionIsoCodes(value) {
+  if (!value) return [];
+  const opt = GEO_FILTER_OPTIONS.find(o => o.value === value);
+  return opt?.iso || [];
+}
+function matchGeographySelection(animal, selections = []) {
+  if (!selections.length) return true;
+  const countries = animal.distribution?.countries_present || [];
+  return selections.some(sel => {
+    if (sel.startsWith('region:') || sel.startsWith('continent:')) {
+      const iso = getGeoOptionIsoCodes(sel);
+      return countries.some(code => iso.includes(code));
+    }
+    return countries.includes(sel);
+  });
+}
+function extractAverageWeightKg(wt) {
+  if (!wt) return 0;
+  const s = String(wt).toLowerCase();
+  const nums = (s.match(/[\d.]+/g) || []).map(Number).filter(Boolean);
+  if (!nums.length) return 0;
+  const avg = (nums[0] + nums[nums.length - 1]) / 2;
+  if (s.includes(' g')) return avg / 1000;
+  return avg;
+}
+function getObservationCount(a) {
+  const keys = ['obs_total','observations_total','observations','gbif_obs','occurrence_count','obs'];
+  for (const key of keys) {
+    const val = a?.[key];
+    if (typeof val === 'number') return val;
+    if (typeof val === 'string' && /^\d/.test(val)) return Number(val.replace(/[^\d.]/g,'')) || 0;
+  }
+  return Infinity;
+}
+function getAnimalBiomes(a) {
+  const raw = [a.biome, a.biomes, a.habitat, a.habitats, a.hab, a.ecosystem, a.ecosystems].filter(Boolean).join(',');
+  return raw.split(/[;,|]/).map(v => String(v).trim()).filter(Boolean);
+}
+function getUsageStreak() {
+  if (typeof window === 'undefined') return 1;
+  const key = 'animaldex_usage_streak_v1';
+  const today = new Date().toISOString().slice(0,10);
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(key) || '{}');
+    if (saved.lastDate === today) return saved.streak || 1;
+    const prevDate = saved.lastDate ? new Date(saved.lastDate) : null;
+    const currDate = new Date(today);
+    const diff = prevDate ? Math.round((currDate - prevDate) / 86400000) : null;
+    const streak = diff === 1 ? (saved.streak || 1) + 1 : 1;
+    window.localStorage.setItem(key, JSON.stringify({ lastDate: today, streak }));
+    return streak;
+  } catch {
+    return 1;
+  }
+}
+function getHomeCountry() {
+  if (typeof window === 'undefined') return '';
+  return String(window.ANIMALDEX_HOME_COUNTRY || window.localStorage.getItem('animaldex_home_country') || '').toUpperCase();
+}
+const AWARD_RULES = [
+  {badgeId:'ARS-01-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:1, name:'Incisore di Solchi', goal:'3 specie', metric:'bio_blades', threshold:3},
+  {badgeId:'ARS-01-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:2, name:'Curatore di Artigli', goal:'10 specie', metric:'bio_blades', threshold:10},
+  {badgeId:'ARS-01-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:3, name:'Maestro della Presa Mortale', goal:'30 specie', metric:'bio_blades', threshold:30},
+  {badgeId:'ARS-02-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:1, name:"Interprete delle Zanne", goal:'3 specie', metric:'tusks', threshold:3},
+  {badgeId:'ARS-02-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:2, name:'Archivista dei Perforatori', goal:'10 specie', metric:'tusks', threshold:10},
+  {badgeId:'ARS-02-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:3, name:'Araldo del Morso Primordiale', goal:'30 specie', metric:'tusks', threshold:30},
+  {badgeId:'CON-01-L1', macroId:'CON', macro:'Conservazione', subId:'CON-01', sub:'Specie Critiche (CR)', level:1, name:'Sentinella del Rischio', goal:'1 specie', metric:'cr_count', threshold:1},
+  {badgeId:'CON-01-L2', macroId:'CON', macro:'Conservazione', subId:'CON-01', sub:'Specie Critiche (CR)', level:2, name:'Cronista della Fragilità', goal:'5 specie', metric:'cr_count', threshold:5},
+  {badgeId:'CON-01-L3', macroId:'CON', macro:'Conservazione', subId:'CON-01', sub:'Specie Critiche (CR)', level:3, name:'Ultimo Baluardo', goal:'15 specie', metric:'cr_count', threshold:15},
+  {badgeId:'CON-02-L1', macroId:'CON', macro:'Conservazione', subId:'CON-02', sub:'Varietà Stati IUCN', level:1, name:'Cartografo del Rischio', goal:'3 stati', metric:'iucn_variety', threshold:3},
+  {badgeId:'CON-02-L2', macroId:'CON', macro:'Conservazione', subId:'CON-02', sub:'Varietà Stati IUCN', level:2, name:'Atlante della Vulnerabilità', goal:'tutti i 6 stati', metric:'iucn_variety', threshold:6},
+  {badgeId:'CON-02-L3', macroId:'CON', macro:'Conservazione', subId:'CON-02', sub:'Varietà Stati IUCN', level:3, name:'Sigillo della Lista Rossa', goal:'5 specie per stato', metric:'iucn_five_each', threshold:1},
+  {badgeId:'ELI-01-L1', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:1, name:'Rilevatore di Primati', goal:'1 record', metric:'record_count', threshold:1},
+  {badgeId:'ELI-01-L2', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:2, name:'Archivista dei Record', goal:'5 record', metric:'record_count', threshold:5},
+  {badgeId:'ELI-01-L3', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:3, name:'Cacciatore di Record', goal:'10 record', metric:'record_count', threshold:10},
+  {badgeId:'ELI-02-L1', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. <100)', level:1, name:"Cercatore dell'Improbabile", goal:'1 specie', metric:'obs_under_100', threshold:1},
+  {badgeId:'ELI-02-L2', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. <100)', level:2, name:'Archivista del Quasi Impossibile', goal:'5 specie', metric:'obs_under_100', threshold:5},
+  {badgeId:'ELI-02-L3', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. <100)', level:3, name:'Mito Vivente', goal:'10 specie', metric:'obs_under_100', threshold:10},
+  {badgeId:'ENG-01-L1', macroId:'ENG', macro:'Engagement', subId:'ENG-01', sub:'Giorni consecutivi', level:1, name:'Sentinella della Costanza', goal:'3 giorni', metric:'usage_streak', threshold:3},
+  {badgeId:'ENG-01-L2', macroId:'ENG', macro:'Engagement', subId:'ENG-01', sub:'Giorni consecutivi', level:2, name:'Custode del Ritmo', goal:'10 giorni', metric:'usage_streak', threshold:10},
+  {badgeId:'ENG-01-L3', macroId:'ENG', macro:'Engagement', subId:'ENG-01', sub:'Giorni consecutivi', level:3, name:'Naturalista Perpetuo', goal:'30 giorni', metric:'usage_streak', threshold:30},
+  {badgeId:'ENG-02-L1', macroId:'ENG', macro:'Engagement', subId:'ENG-02', sub:'Correzione dati AI', level:1, name:'Occhio Critico', goal:'5 correzioni', metric:'ai_corrections', threshold:5},
+  {badgeId:'ENG-02-L2', macroId:'ENG', macro:'Engagement', subId:'ENG-02', sub:'Correzione dati AI', level:2, name:'Scriba della Verifica', goal:'20 correzioni', metric:'ai_corrections', threshold:20},
+  {badgeId:'ENG-02-L3', macroId:'ENG', macro:'Engagement', subId:'ENG-02', sub:'Correzione dati AI', level:3, name:"Arbitro dell'Evidenza", goal:'100 correzioni', metric:'ai_corrections', threshold:100},
+  {badgeId:'TRO-01-L1', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:1, name:'Avvistatore Alfa', goal:'3 specie', metric:'apex_count', threshold:3},
+  {badgeId:'TRO-01-L2', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:2, name:'Curatore dei Predatori Apicali', goal:'10 specie', metric:'apex_count', threshold:10},
+  {badgeId:'TRO-01-L3', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:3, name:'Sovrano della Catena', goal:'25 specie', metric:'apex_count', threshold:25},
+  {badgeId:'TRO-02-L1', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:1, name:'Rilevatore Trofico', goal:'5 specie', metric:'base_trophic_count', threshold:5},
+  {badgeId:'TRO-02-L2', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:2, name:'Atlante della Biomassa', goal:'20 specie', metric:'base_trophic_count', threshold:20},
+  {badgeId:'TRO-02-L3', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:3, name:'Custode delle Sorgenti', goal:'50 specie', metric:'base_trophic_count', threshold:50},
+  {badgeId:'GEO-01-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:1, name:'Esploratore di Frontiere', goal:'3 nazioni', metric:'countries_count', threshold:3},
+  {badgeId:'GEO-01-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:2, name:'Cartografo dei Continenti', goal:'10 nazioni', metric:'countries_count', threshold:10},
+  {badgeId:'GEO-01-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:3, name:'Diplomatico della Biodiversità', goal:'30 nazioni', metric:'countries_count', threshold:30},
+  {badgeId:'GEO-02-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:1, name:'Rilevatore del Territorio', goal:'10%', metric:'home_country_biodiversity', threshold:10},
+  {badgeId:'GEO-02-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:2, name:'Atlante del Patrimonio Locale', goal:'50%', metric:'home_country_biodiversity', threshold:50},
+  {badgeId:'GEO-02-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:3, name:'Sigillo del Patrimonio Vivente', goal:'100%', metric:'home_country_biodiversity', threshold:100},
+  {badgeId:'GEO-03-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:1, name:'Esploratore dei Biomi', goal:'3 biomi', metric:'biomes_count', threshold:3},
+  {badgeId:'GEO-03-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:2, name:'Ecologo di Frontiera', goal:'7 biomi', metric:'biomes_count', threshold:7},
+  {badgeId:'GEO-03-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:3, name:'Signore degli Ecosistemi', goal:'tutti i biomi', metric:'all_biomes', threshold:1},
+  {badgeId:'MAS-01-L1', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:1, name:'Araldo dei Colossi', goal:'50 t', metric:'total_mass_tons', threshold:50},
+  {badgeId:'MAS-01-L2', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:2, name:'Censore di Giganti', goal:'500 t', metric:'total_mass_tons', threshold:500},
+  {badgeId:'MAS-01-L3', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:3, name:'Collezionista di Titani', goal:'2.000 t', metric:'total_mass_tons', threshold:2000},
+  {badgeId:'MAS-02-L1', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:1, name:'Rilevatore del Minuscolo', goal:'3 specie', metric:'tiny_species_count', threshold:3},
+  {badgeId:'MAS-02-L2', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:2, name:'Decifratore delle Microforme', goal:'10 specie', metric:'tiny_species_count', threshold:10},
+  {badgeId:'MAS-02-L3', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:3, name:"Maestro dell'Infinitesimo", goal:'30 specie', metric:'tiny_species_count', threshold:30},
+  {badgeId:'MOR-01-L1', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:1, name:"Misuratore d'Estremi", goal:'2 specie', metric:'extremes_count', threshold:2},
+  {badgeId:'MOR-01-L2', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:2, name:'Cartografo delle Taglie', goal:'5 specie', metric:'extremes_count', threshold:5},
+  {badgeId:'MOR-01-L3', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:3, name:'Sovrano delle Proporzioni', goal:'10 specie', metric:'extremes_count', threshold:10},
+  {badgeId:'STA-01-L1', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:1, name:'Cronista Visivo', goal:'10 foto', metric:'captured_count', threshold:10},
+  {badgeId:'STA-01-L2', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:2, name:'Fotografo Naturalista', goal:'50 foto', metric:'captured_count', threshold:50},
+  {badgeId:'STA-01-L3', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:3, name:'Iconografo del Selvatico', goal:'200 foto', metric:'captured_count', threshold:200},
+  {badgeId:'STA-02-L1', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:1, name:'Scout Silenzioso', goal:'5 avvistamenti', metric:'sighting_only_count', threshold:5},
+  {badgeId:'STA-02-L2', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:2, name:'Ombra del Territorio', goal:'20 avvistamenti', metric:'sighting_only_count', threshold:20},
+  {badgeId:'STA-02-L3', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:3, name:'Fantasma dei Boschi', goal:'50 avvistamenti', metric:'sighting_only_count', threshold:50},
+  {badgeId:'TAX-01-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:1, name:'Araldista di Stirpe', goal:'3 specie', metric:'max_family_count', threshold:3},
+  {badgeId:'TAX-01-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:2, name:'Genealogista di Famiglia', goal:'10 specie', metric:'max_family_count', threshold:10},
+  {badgeId:'TAX-01-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:3, name:'Monografo di Famiglia', goal:'30 specie', metric:'max_family_count', threshold:30},
+  {badgeId:'TAX-02-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:1, name:"Decifratore d'Ordine", goal:'10 specie', metric:'max_order_count', threshold:10},
+  {badgeId:'TAX-02-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:2, name:'Curatore del Clade', goal:'50 specie', metric:'max_order_count', threshold:50},
+  {badgeId:'TAX-02-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:3, name:'Architetto Filogenetico', goal:'150 specie', metric:'max_order_count', threshold:150},
+  {badgeId:'TAX-03-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:1, name:'Censitore di Generi', goal:'5 generi', metric:'genera_count', threshold:5},
+  {badgeId:'TAX-03-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:2, name:'Cartografo dei Generi', goal:'20 generi', metric:'genera_count', threshold:20},
+  {badgeId:'TAX-03-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:3, name:'Maestro della Sistematica', goal:'100 generi', metric:'genera_count', threshold:100},
+];
+const AWARD_MACROS = Array.from(new Set(AWARD_RULES.map(r => r.macro)));
+function buildAwardImagePath(badgeId) {
+  return `/awards/${String(badgeId || '').toLowerCase()}.png`;
+}
+function computeAwardMetrics(statusMap = {}) {
+  const animalsWithStatus = ANIMALS.map(a => ({ ...a, _status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
+  const recorded = animalsWithStatus.filter(a => ['avvistato','catturato'].includes(a._status));
+  const captured = recorded.filter(a => a._status === 'catturato');
+  const sightOnly = recorded.filter(a => a._status === 'avvistato');
+  const consCounts = recorded.reduce((acc, a) => { acc[a.cons] = (acc[a.cons] || 0) + 1; return acc; }, {});
+  const familyCounts = recorded.reduce((acc, a) => { acc[a.fam] = (acc[a.fam] || 0) + 1; return acc; }, {});
+  const orderCounts = recorded.reduce((acc, a) => { acc[a.ord] = (acc[a.ord] || 0) + 1; return acc; }, {});
+  const countries = new Set(recorded.flatMap(a => a.distribution?.countries_present || []));
+  const biomes = new Set(recorded.flatMap(a => getAnimalBiomes(a)));
+  const recordedByHome = getHomeCountry();
+  const homeCountryPool = recordedByHome ? ANIMALS.filter(a => (a.distribution?.countries_present || []).includes(recordedByHome)) : [];
+  const homeCountrySeen = recordedByHome ? recorded.filter(a => (a.distribution?.countries_present || []).includes(recordedByHome)) : [];
+  const homeCountryBiodiversity = recordedByHome && homeCountryPool.length ? Math.round((homeCountrySeen.length / homeCountryPool.length) * 100) : 0;
+  const iucnSet = new Set(recorded.map(a => a.cons).filter(Boolean));
+  const targetSix = ['LC','NT','VU','EN','CR','DD'];
+  const allBiomesCount = new Set(ANIMALS.flatMap(a => getAnimalBiomes(a))).size;
+  const metrics = {
+    bio_blades: recorded.filter(a => (a.categories || []).includes('OFF_BIO_BLADES')).length,
+    tusks: recorded.filter(a => (a.categories || []).includes('OFF_TUSKS_PIERCERS')).length,
+    cr_count: consCounts.CR || 0,
+    iucn_variety: iucnSet.size,
+    iucn_five_each: targetSix.every(code => (consCounts[code] || 0) >= 5) ? 1 : 0,
+    record_count: recorded.filter(a => (a.categories || []).includes('PHYS_RECORD_BREAKERS') || (a.categories || []).includes('ELITE_WORLD_RECORD') || !!a.world_record).length,
+    obs_under_100: recorded.filter(a => getObservationCount(a) < 100).length,
+    usage_streak: getUsageStreak(),
+    ai_corrections: Number((typeof window !== 'undefined' && (window.ANIMALDEX_AI_CORRECTIONS || window.localStorage.getItem('animaldex_ai_corrections'))) || 0),
+    apex_count: recorded.filter(a => String(a.trophic) === '4').length,
+    base_trophic_count: recorded.filter(a => String(a.trophic) === '1' || String(a.trophic) === 'F').length,
+    countries_count: countries.size,
+    home_country_biodiversity: homeCountryBiodiversity,
+    biomes_count: biomes.size,
+    all_biomes: allBiomesCount > 0 && biomes.size >= allBiomesCount ? 1 : 0,
+    total_mass_tons: recorded.reduce((sum, a) => sum + extractAverageWeightKg(a.wt), 0) / 1000,
+    tiny_species_count: recorded.filter(a => extractAverageWeightKg(a.wt) > 0 && extractAverageWeightKg(a.wt) <= 0.1).length,
+    extremes_count: recorded.filter(a => (a.categories || []).some(cat => ['EVO_INSULAR_DWARFISM','EVO_INSULAR_GIGANTISM','PHYS_RECORD_BREAKERS'].includes(cat))).length,
+    captured_count: captured.length,
+    sighting_only_count: sightOnly.length,
+    max_family_count: Math.max(0, ...Object.values(familyCounts)),
+    max_order_count: Math.max(0, ...Object.values(orderCounts)),
+    genera_count: new Set(recorded.map(a => a.gen).filter(Boolean)).size,
+  };
+  return metrics;
+}
+function computeUnlockedAwards(statusMap = {}) {
+  const metrics = computeAwardMetrics(statusMap);
+  return AWARD_RULES.filter(rule => Number(metrics[rule.metric] || 0) >= Number(rule.threshold || 0))
+    .map(rule => ({ ...rule, image: buildAwardImagePath(rule.badgeId), currentValue: metrics[rule.metric] || 0 }));
+}
+function getAwardUnlockSet() {
+  if (typeof window === 'undefined') return new Set();
+  try { return new Set(JSON.parse(window.localStorage.getItem('animaldex_awards_unlocked') || '[]')); } catch { return new Set(); }
+}
+function persistAwardUnlocks(ids = []) {
+  if (typeof window === 'undefined') return;
+  try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set(ids)))); } catch {}
+}
+
 // ── Rarity class helper ───────────────────────────────────────────────
 function rarityClass(rarity) {
   return 'rarity-' + (rarity || 'Comune').toLowerCase().replace(' ', '-');
@@ -539,12 +701,16 @@ function rarityDotClass(rarity) {
 function rarityMetalClass(rarity) {
   return 'rarity-metal-' + (rarity || 'Comune').toLowerCase().replace(' ', '-');
 }
+
 function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
   const r = RARITY[rarity] ? rarity : 'Comune';
   const classes = ['rarity-badge', rarityMetalClass(r), compact ? 'compact' : '', small ? 'small' : '', full ? 'full' : ''].filter(Boolean).join(' ');
   return (
     <div className={classes} onClick={onClick} style={{ cursor:onClick?'pointer':'default', ...style }}>
-      <img className="rarity-shield" src={SHIELD_PATHS[r]} alt="" aria-hidden="true" />
+      <span className="rarity-shield-wrap" aria-hidden="true">
+        <img className="rarity-shield" src={SHIELD_PATHS[r]} alt="" />
+        <span className="rarity-shield-sheen" />
+      </span>
       <span style={{ position:'relative', zIndex:4 }}>{r}{suffix}</span>
     </div>
   );
@@ -863,6 +1029,13 @@ function getAnimalSearchText(a) {
   ].map(flattenSearchText).join(' ').toLowerCase();
 }
 
+
+function getClassGlowColor(cls) {
+  if (cls === 'Reptilia') return '#C8FF8C';
+  if (cls === 'Insecta') return '#FFD890';
+  return (CLS[cls] || CLS.Mammalia).accent;
+}
+
 function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
@@ -879,7 +1052,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
       <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
         {!mysteryErr ? (
           <img src={MYSTERY_PLACEHOLDER} alt="misterioso" onError={()=>setMysteryErr(true)}
-            style={{ width:'78%', height:'78%', objectFit:'contain', opacity:0.62, filter:'drop-shadow(0 0 10px rgba(255,255,255,.10))' }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.68, transform:`scale(${gridMode ? GRID_MYSTERY_SCALE : 1.15})`, filter:'drop-shadow(0 0 10px rgba(255,255,255,.10))' }} />
         ) : (
           <div style={{ width:54, height:54, borderRadius:'50%', background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.14)', color:'rgba(255,255,255,.34)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30, fontWeight:900 }}>?</div>
         )}
@@ -904,7 +1077,8 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
   // ── Avvistato / Catturato: immagine reale ──
   if (a.image_url && !imgErr) {
-    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.06)}px ${c.accent}ff) drop-shadow(0 0 ${Math.round(size*0.14)}px ${c.accent}cc) drop-shadow(0 0 ${Math.round(size*0.22)}px ${c.accent}66)`;
+    const glowColor = getClassGlowColor(a.cls);
+    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
     return (
@@ -923,38 +1097,41 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 }
 
 
+
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
   const revealed = isRevealedStatus(status);
-  const glowShadow = revealed ? `0 0 14px 2px ${c.accent}55, 0 0 4px 1px ${c.accent}33` : 'none';
+  const unrevealed = !revealed && !mystery;
+  const glowAccent = getClassGlowColor(a.cls);
+  const glowShadow = revealed ? `0 0 16px 2px ${glowAccent}66, 0 0 4px 1px ${glowAccent}33` : 'none';
+  const imageSize = typeof window !== 'undefined' && window.innerWidth <= 390 ? 90 : 102;
   return (
     <div onClick={()=>onClick(a)} style={{ borderRadius:14, overflow:'hidden', cursor:'pointer', position:'relative', userSelect:'none', transition:'transform .1s ease, box-shadow .3s ease', boxShadow:glowShadow }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.93)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
       onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}>
       <div style={{ position:'absolute', top:6, left:6, zIndex:2, background:'rgba(0,0,0,.55)', color:'rgba(255,255,255,.7)', fontSize:10, fontWeight:700, padding:'2px 6px', borderRadius:8 }}>{a.no}</div>
-      {/* Pallino rarità */}
-      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:7, right:7, zIndex:2, width:10, height:10, borderRadius:'50%' }}/>
-      <AnimalImg a={a} size={102} fontSize={52} gridMode={true} />
+      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:7, right:7, zIndex:2, width:11, height:11, borderRadius:'50%' }}/>
+      <AnimalImg a={a} size={imageSize} fontSize={52} gridMode={true} />
       <div style={{
-        background: revealed ? c.mid : '#1C1C1E',
-        padding:'6px 6px 6px',
-        minHeight:38,
-        height:38,
+        background: revealed ? c.mid : mystery ? '#3B3D42' : '#6B7077',
+        padding:'7px 6px 6px',
+        minHeight:44,
+        height:44,
         boxSizing:'border-box',
-        color:mystery?'#b7bbc3':'white',
+        color:mystery ? '#B7BBC3' : unrevealed ? '#2F3339' : 'white',
         fontSize:12,
         fontWeight:800,
         textAlign:'center',
-        lineHeight:'13px',
+        lineHeight:'14px',
         display:'-webkit-box',
         WebkitLineClamp:2,
         WebkitBoxOrient:'vertical',
         overflow:'hidden',
         wordBreak:'break-word',
-      }}>{mystery ? a.com : a.com}</div>
+      }}>{mystery ? '' : a.com}</div>
     </div>
   );
 }
@@ -1176,7 +1353,8 @@ function StatusLegendRows() {
 }
 
 // ── Grid ──────────────────────────────────────────────────────────────
-function Grid({ onSelect, statusMap = {}, onHome, preset }) {
+
+function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -1192,21 +1370,20 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
   const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
+  const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
 
   useEffect(() => {
     if (!preset?.id) return;
-    if (preset.type === 'status') {
-      setFStatus(preset.statuses || []);
-      setSearch('');
-      setClsF(null);
-      setFRarity([]);
-      setFCons([]);
-      setFTrophic([]);
-      setFGeography([]);
-      setFCategory([]);
-      setFTax(null);
-      setSortBy('no');
-    }
+    setSearch(preset.search || '');
+    setClsF(preset.type === 'class' ? preset.cls : null);
+    setFRarity(preset.rarity || []);
+    setFCons(preset.cons || []);
+    setFStatus(preset.type === 'status' ? (preset.statuses || []) : (preset.statuses || []));
+    setFTrophic(preset.trophic || []);
+    setFGeography(preset.type === 'region' ? [preset.regionValue] : (preset.geography || []));
+    setFCategory(preset.categories || []);
+    setFTax(preset.tax || null);
+    setSortBy(preset.sortBy || 'no');
   }, [preset?.id]);
 
   const list = ANIMALS
@@ -1216,13 +1393,13 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
       const status = normalizeAnimalStatus(a.status);
       if (q && !getAnimalSearchText(a).includes(q)) return false;
       if (clsF && a.cls !== clsF) return false;
-      if (fRarity.length   && !fRarity.includes(a.rarity))                   return false;
-      if (fCons.length     && !fCons.includes(a.cons))                    return false;
-      if (fStatus.length   && !fStatus.includes(status))                  return false;
-      if (fTrophic.length  && !fTrophic.includes(String(a.trophic)))      return false;
-      if (fGeography.length && !a.distribution?.countries_present?.some(c => fGeography.includes(c))) return false;
+      if (fRarity.length   && !fRarity.includes(a.rarity)) return false;
+      if (fCons.length     && !fCons.includes(a.cons)) return false;
+      if (fStatus.length   && !fStatus.includes(status)) return false;
+      if (fTrophic.length  && !fTrophic.includes(String(a.trophic))) return false;
+      if (fGeography.length && !matchGeographySelection(a, fGeography)) return false;
       if (fCategory.length && !(a.categories || []).some(cat => fCategory.includes(cat))) return false;
-      if (fTax             && a[TAX_KEY_MAP[fTax.key]] !== fTax.value)    return false;
+      if (fTax && a[TAX_KEY_MAP[fTax.key]] !== fTax.value) return false;
       return true;
     })
     .sort((a,b) => {
@@ -1236,12 +1413,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
     });
 
   const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fTax||sortBy!=='no';
-
   const rarityOpts = Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg }));
   const consOpts   = Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg }));
   const statusOpts = ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:ANIMAL_STATUS[k].bg }));
   const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
-  const geographyOpts = COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }));
+  const geographyOpts = [...GEO_FILTER_OPTIONS, ...COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))];
   const categoryOpts = Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` }));
   const sortOpts = [
     { value:'no', label:'Numero ID', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
@@ -1251,75 +1427,60 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
     { value:'status', label:'Status', c:'#FFFFFF', bg:'rgba(255,255,255,.12)' },
     { value:'class', label:'Classe', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
   ];
+  const buttonSize = isNarrow ? 40 : 46;
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', position:'relative', overflow:'hidden' }}>
-      {/* Header */}
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'8px 12px 8px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
-        <button onClick={onHome} aria-label="Home" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </button>
-        <span style={{ color:'white', fontSize:18, fontWeight:900 }}>Animaldex</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:46, height:46, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10 }}>ⓘ</button>
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
+        {onBackToOrigin ? (
+          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+        ) : (
+          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+        )}
+        <span style={{ color:'white', fontSize:isNarrow?17:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Animaldex'}</span>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10, flexShrink:0 }}>ⓘ</button>
       </div>
 
-      {/* Active filter chips */}
-      {(anyExtra||clsF) && (
+      {(anyExtra||clsF||search) && (
         <div style={{ display:'flex', gap:6, padding:'8px 12px 4px', flexWrap:'wrap', flexShrink:0 }}>
+          {search && <span onClick={()=>setSearch('')} style={{ background:'rgba(255,255,255,.1)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>🔎 {search} ×</span>}
           {clsF && <span onClick={()=>setClsF(null)} style={{ background:CLS[clsF].mid, color:CLS[clsF].accent, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{CLS[clsF].icon} {CLS[clsF].label} ×</span>}
           {fTax && <span onClick={()=>setFTax(null)} style={{ background:'rgba(232,192,64,.2)', color:'#E8C040', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{fTax.label} ×</span>}
-          {fRarity.map(r=>(
-            <RarityBadge key={r} rarity={r} small suffix=" ×" onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ flexShrink:0 }} />
-          ))}
+          {fRarity.map(r=><RarityBadge key={r} rarity={r} small suffix=" ×" onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ flexShrink:0 }} />)}
           {fCons.map(c=><span key={c} onClick={()=>setFCons(p=>p.filter(x=>x!==c))} style={{ background:CONS[c].bg, color:CONS[c].c, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{c} ×</span>)}
-          {fStatus.map(s=>{
-            const so = getStatusMeta(s);
-            return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>;
-          })}
+          {fStatus.map(s=>{ const so = getStatusMeta(s); return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>; })}
           {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
-          {fGeography.map(g=><span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{getFlagEmoji(g)} {g} ×</span>)}
+          {fGeography.map(g=>{ const opt = geographyOpts.find(o=>o.value===g); return <span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{opt?.label || g} ×</span>; })}
           {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
           {sortBy!=='no' && <span onClick={()=>setSortBy('no')} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>↕ {sortOpts.find(o=>o.value===sortBy)?.label||'Ordina'} ×</span>}
         </div>
       )}
 
-      {/* Grid */}
-      <div style={{ flex:1, overflowY:'auto', padding:'12px 12px 0' }}>
-        {list.length===0
-          ? <p style={{ color:'#555', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale trovato</p>
-          : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>
-              {list.map(a=><AnimalCard key={a.id} a={a} onClick={onSelect}/>)}
-            </div>
-        }
+      <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
+        {list.length===0 ? <p style={{ color:'#555', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale trovato</p> : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={onSelect}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
-      {/* Bottom filter bar */}
-      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:'6px 12px 4px', flexShrink:0, position:'relative' }}>
-        <div style={{ display:'flex', gap:12, alignItems:'center', marginBottom:8 }}>
-          <button onClick={()=>setShowSearchBar(!showSearchBar)} style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 4px':'6px 12px 4px', flexShrink:0, position:'relative' }}>
+        <div style={{ display:'flex', gap:isNarrow?8:12, alignItems:'center', marginBottom:6 }}>
+          <button onClick={()=>setShowSearchBar(!showSearchBar)} style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
           </button>
-          <button onClick={()=>{setSheet('tax');setShowMenu(false);}} style={{ flex:1, height:46, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:13, fontWeight:700 }}>
-            Tassonomia {fTax && ' ✓'}
-          </button>
-          <button onClick={()=>{setSheet('sort');setShowMenu(false);}} style={{ width:46, height:46, borderRadius:10, background:sortBy!=='no'?'rgba(255,255,255,.16)':'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }} aria-label="Ordina">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-          </button>
-          <button onClick={()=>setShowMenu(!showMenu)} style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
-              <line x1="1" y1="2"  x2="19" y2="2"  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              <line x1="4" y1="8"  x2="16" y2="8"  stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              <line x1="7" y1="14" x2="13" y2="14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
+          <button onClick={()=>{setSheet('tax');setShowMenu(false);}} style={{ flex:1, height:buttonSize, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:12, fontWeight:700 }}>Tassonomia {fTax && ' ✓'}</button>
+          <button onClick={()=>{setSheet('sort');setShowMenu(false);}} style={{ width:isNarrow?90:106, height:buttonSize, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:6, color:'white', fontSize:12, fontWeight:800, flexShrink:0 }}>↕ Ordina</button>
+          <button onClick={()=>setShowMenu(v=>!v)} style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/></svg>
           </button>
         </div>
-        <div style={{ textAlign:'center', fontSize:11, fontWeight:600, color:'rgba(255,255,255,.7)', padding:'4px 0' }}>{list.length} risultati</div>
+        <div style={{ textAlign:'center', fontSize:11, fontWeight:600, color:'rgba(255,255,255,.7)', padding:'2px 0' }}>{list.length} risultati</div>
       </div>
 
-      {/* Menu drawer */}
       {showMenu && (
-        <div style={{ position:'absolute', top:100, right:12, width:280, background:'#252527', border:'1px solid #333', borderRadius:14, boxShadow:'0 12px 32px rgba(0,0,0,.5)', zIndex:40, overflow:'hidden' }}>
+        <div style={{ position:'absolute', top:isNarrow?94:100, right:12, width:280, background:'#252527', border:'1px solid #333', borderRadius:14, boxShadow:'0 12px 32px rgba(0,0,0,.5)', zIndex:40, overflow:'hidden' }}>
           <div style={{ display:'flex', flexDirection:'column' }}>
             {[
               { label:'Rarità', icon:'★', onClick:()=>{setSheet('rarity');setShowMenu(false);}, active:fRarity.length>0, color:'#C9A961' },
@@ -1328,6 +1489,7 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
               { label:'Status', icon:'📷', onClick:()=>{setSheet('status');setShowMenu(false);}, active:fStatus.length>0, color:'#00BFFF' },
               { label:'Categorie', icon:'◉', onClick:()=>{setSheet('category');setShowMenu(false);}, active:fCategory.length>0, color:'#B860F8' },
               { label:'Geografia', icon:'🌍', onClick:()=>{setSheet('geography');setShowMenu(false);}, active:fGeography.length>0, color:'#20B2AA' },
+              { label:'Classe', icon:'🧬', onClick:()=>{setSheet('cls');setShowMenu(false);}, active:!!clsF, color:'#90D84A' },
             ].map((item,i)=>(
               <button key={i} onClick={item.onClick} style={{ width:'100%', padding:'14px 16px', borderBottom:'1px solid rgba(255,255,255,.05)', background:'transparent', border:'none', display:'flex', alignItems:'center', gap:12, cursor:'pointer', color:item.active?item.color:'white', fontWeight:item.active?700:600 }}>
                 <span style={{ fontSize:18 }}>{item.icon}</span>
@@ -1335,70 +1497,30 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
                 {item.active && <span style={{ marginLeft:'auto', color:item.color, fontSize:12 }}>✓</span>}
               </button>
             ))}
-            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus([]);setFTrophic([]);setFGeography([]);setFCategory([]);setFTax(null);setSortBy('no');setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>
-              Resetta filtri
-            </button>
+            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus([]);setFTrophic([]);setFGeography([]);setFCategory([]);setFTax(null);setSortBy('no');setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>Resetta filtri</button>
           </div>
         </div>
       )}
 
-      {/* Floating search bar */}
       {showSearchBar && (
-        <div style={{ position:'absolute', top:58, left:12, right:12, background:'#252527', borderRadius:12, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
+        <div style={{ position:'absolute', top:isNarrow?52:58, left:12, right:12, background:'#252527', borderRadius:12, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
           <button onClick={()=>{setSearch('');setShowSearchBar(false);}} style={{ width:40, height:40, borderRadius:8, background:'#3A3A3C', border:'none', color:'rgba(255,255,255,.6)', fontSize:18, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>×</button>
           <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca nome, scientifico, habitat o categoria..." style={{ flex:1, height:40, borderRadius:8, background:'#333', border:'1px solid #444', color:'white', fontSize:14, padding:'0 12px', outline:'none', fontFamily:'inherit' }} autoFocus/>
         </div>
       )}
 
-      {/* Info Modal */}
       {showInfoModalGrid && (
         <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
           <div style={{ background:'#1A1A1C', borderRadius:20, padding:28, maxHeight:'90vh', overflowY:'auto', maxWidth:520, width:'100%', border:'2px solid #A84637' }}>
-            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}>
-              <h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>📚 Legenda Completa</h2>
-              <button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'none', border:'none', color:'#A84637', fontSize:24, cursor:'pointer', padding:0 }}>×</button>
-            </div>
-            <div style={{ marginBottom:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato Conservazione (IUCN)</h3>
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
-              </div>
-            </div>
-            <div style={{ marginBottom:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>★ Rarità Animale</h3>
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div>
-            </div>
-            <div style={{ marginBottom:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Animale</h3>
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                <StatusLegendRows />
-              </div>
-            </div>
-            <div>
-              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⛓ Gerarchia Alimentare</h3>
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[{k:'D',l:'Decomponente',desc:'Detritofago'},{k:'F',l:'Filtratore',desc:'Filtra particelle dall\'acqua'},{k:1,l:'Produttore',desc:'Organismi autotrofi'},{k:2,l:'Erbivoro',desc:'Si nutre di piante'},{k:4,l:'Predatore Apice',desc:'Vertice della catena'},{k:3,l:'Predatore',desc:'Carnivoro medio'}].map(({k,l,desc})=>{const tr=TROPHIC[k]||TROPHIC[1];return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:tr.bg,color:tr.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{l}</div><div style={{flex:1}}><div style={{color:'rgba(255,255,255,.75)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}
-              </div>
-            </div>
-            <div style={{ marginTop:24 }}>
-              <h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⚖️ Tachimetro Peso</h3>
-              <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-                {[{label:'Piuma',range:'< 1 kg',color:'#5BB8F5',desc:'Animali leggerissimi, spesso volatili o insetti'},{label:'Medio',range:'1 kg – 200 kg',color:'#F5A623',desc:'La maggior parte dei mammiferi e rettili medi'},{label:'Massimo',range:'> 200 kg',color:'#E74C3C',desc:'Grandi predatori, elefanti, cetacei e megafauna'}].map(({label,range,color,desc})=>(
-                  <div key={label} style={{display:'flex',gap:10,alignItems:'flex-start'}}>
-                    <div style={{background:color+'22',color,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{label}</div>
-                    <div style={{flex:1}}>
-                      <div style={{color:'white',fontSize:12,fontWeight:700}}>{range}</div>
-                      <div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}><h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>📚 Legenda Completa</h2><button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'none', border:'none', color:'#A84637', fontSize:24, cursor:'pointer', padding:0 }}>×</button></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato Conservazione (IUCN)</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}>{[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}</div></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>★ Rarità Animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div></div>
+            <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><StatusLegendRows /></div></div>
           </div>
         </div>
       )}
 
-      {sheet==='cls'     && <ClassSheet sel={clsF} onSel={k=>{setClsF(k);setSheet(null);}} onClose={()=>setSheet(null)}/>}
+      {sheet==='cls' && <ClassSheet sel={clsF} onSel={k=>{setClsF(k);setSheet(null);}} onClose={()=>setSheet(null)}/>}
       {sheet==='rarity'  && <MultiSheet title="Rarità" options={rarityOpts} selected={fRarity} onApply={setFRarity} onClose={()=>setSheet(null)}/>}
       {sheet==='cons'    && <MultiSheet title="Stato di Conservazione" options={consOpts} selected={fCons} onApply={setFCons} onClose={()=>setSheet(null)}/>}
       {sheet==='status'  && <MultiSheet title="Status Animale" options={statusOpts} selected={fStatus} onApply={setFStatus} onClose={()=>setSheet(null)}/>}
@@ -1406,10 +1528,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset }) {
       {sheet==='geography' && <MultiSheet title="Geografia" options={geographyOpts} selected={fGeography} onApply={setFGeography} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='category' && <MultiSheet title="Categorie" options={categoryOpts} selected={fCategory} onApply={setFCategory} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='sort' && <SortSheet title="Ordina" options={sortOpts} selected={sortBy} onApply={setSortBy} onClose={()=>setSheet(null)}/>}
-      {sheet==='tax'     && <TaxSheet current={fTax} onApply={v=>{setFTax(v);}} onClose={()=>setSheet(null)}/>}
+      {sheet==='tax' && <TaxSheet current={fTax} onApply={v=>{setFTax(v);}} onClose={()=>setSheet(null)}/>}
     </div>
   );
 }
+
 
 // ── Image Lightbox ────────────────────────────────────────────────────
 function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
@@ -1477,7 +1600,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
 
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
-function Detail({ a, onBack, onStatusChange }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -1528,14 +1651,20 @@ function Detail({ a, onBack, onStatusChange }) {
       </div>
       <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
         style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
-        <div style={{ display:'flex', flexWrap:'wrap', gap:3, alignItems:'center', marginBottom:14 }}>
-          {[a.kin,a.phy,a.cls,a.ord,a.fam].map((p,i,arr)=>(
-            <span key={i} style={{ display:'flex', alignItems:'center', gap:3 }}>
-              <span style={{ color:i===2?c.accent:'rgba(255,255,255,.32)', fontSize:11, fontWeight:400, fontStyle:i!==2?'italic':undefined }}>{p}</span>
-              {i<arr.length-1&&<span style={{ color:'rgba(255,255,255,.18)', fontSize:11 }}>›</span>}
-            </span>
-          ))}
-        </div>
+        
+<div style={{ display:'flex', flexWrap:'wrap', gap:3, alignItems:'center', marginBottom:14 }}>
+  {[a.kin,a.phy,a.cls,a.ord,a.fam].map((p,i,arr)=>(
+    <span key={i} style={{ display:'flex', alignItems:'center', gap:3 }}>
+      {i===2 ? (
+        <button onClick={()=>onJumpToClass?.(a.cls, a)} style={{ color:c.accent, fontSize:11, fontWeight:700, background:'transparent', border:'none', padding:0, cursor:'pointer', textDecoration:'underline' }}>{p}</button>
+      ) : (
+        <span style={{ color:'rgba(255,255,255,.32)', fontSize:11, fontWeight:400, fontStyle:'italic' }}>{p}</span>
+      )}
+      {i<arr.length-1&&<span style={{ color:'rgba(255,255,255,.18)', fontSize:11 }}>›</span>}
+    </span>
+  ))}
+</div>
+
         <div style={{ display:'flex', gap:12, marginBottom:16, padding:'0 4px' }}>
           <div ref={imgRef}
             onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
@@ -1759,41 +1888,30 @@ function Detail({ a, onBack, onStatusChange }) {
 }
 
 
+
 // ── Main Menu & Extra Pages ──────────────────────────────────────────
-const BADGE_PLACEHOLDERS = [
-  { id:'campione-1', name:'Fiocco Campione', cat:'Campione', icon:'🏆', color:'#7A241C' },
-  { id:'campione-2', name:'Fiocco Campione Oro', cat:'Campione', icon:'🥇', color:'#7A241C' },
-  { id:'classe-1', name:'Fiocco Classe: Fuoco', cat:'Classe', icon:'🔥', color:'#8A1E18' },
-  { id:'classe-2', name:'Fiocco Classe: Acqua', cat:'Classe', icon:'💧', color:'#244A80' },
-  { id:'bellezza-1', name:'Fiocco Bellezza', cat:'Bellezza', icon:'💎', color:'#284D82' },
-  { id:'bellezza-2', name:'Fiocco Bellezza: Livello 2', cat:'Bellezza', icon:'🦋', color:'#284D82' },
-  { id:'grazia-1', name:'Fiocco Grazia', cat:'Grazia', icon:'🌸', color:'#774B56' },
-  { id:'grazia-2', name:'Fiocco Grazia: Livello 2', cat:'Grazia', icon:'🎀', color:'#774B56' },
-  { id:'acume-1', name:'Fiocco Acume', cat:'Acume', icon:'🧠', color:'#154F0A' },
-  { id:'acume-2', name:'Fiocco Acume: Livello 2', cat:'Acume', icon:'⭐', color:'#154F0A' },
-  { id:'record-1', name:'Fiocco Record', cat:'Record', icon:'📜', color:'#695820' },
-  { id:'evento-1', name:'Fiocco Evento', cat:'Evento', icon:'✨', color:'#5A2568' },
-];
+function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], grayscale=false, height=128 }) {
+  const [err, setErr] = useState(false);
+  if (src && !err) {
+    return <img src={src} alt="" onError={()=>setErr(true)} style={{ width:'100%', height, objectFit:'cover', filter:grayscale?'grayscale(1) saturate(.1)':'none', display:'block' }} />;
+  }
+  return <div style={{ width:'100%', height, background:`linear-gradient(125deg, ${fallbackColors[0]}, ${fallbackColors[1]} 55%, ${fallbackColors[2]})`, filter:grayscale?'grayscale(1)':'none' }} />;
+}
 
-const REGION_PLACEHOLDERS = [
-  { id:'africa-nord', name:'Nord Africa', hint:'Deserti, altopiani rocciosi, coste mediterranee', colors:['#7CA64C','#D0A35B','#1E6D8F'] },
-  { id:'sahara', name:'Sahara Centrale', hint:'Dune, oasi e fauna xerofila', colors:['#C88B35','#E2C16D','#5C3B16'] },
-  { id:'europa', name:'Europa Temperata', hint:'Boschi, campagne, coste e zone umide', colors:['#3D7E45','#86B86B','#326B93'] },
-  { id:'amazonia', name:'Amazzonia', hint:'Foreste tropicali e grandi bacini fluviali', colors:['#145D3A','#1B8A5A','#2D8CA8'] },
-  { id:'ande', name:'Ande', hint:'Montagne, altipiani e valli fredde', colors:['#567070','#9EA7A2','#315E82'] },
-  { id:'indo-pacifico', name:'Indo-Pacifico', hint:'Barriere coralline, isole e mangrovie', colors:['#1B86A8','#4EC4C8','#1F5F7E'] },
-  { id:'australia', name:'Australia Interna', hint:'Outback, savane secche e coste aride', colors:['#B76A2A','#D89D54','#567A35'] },
-  { id:'artico', name:'Artico', hint:'Ghiacci, tundra e mari freddi', colors:['#D8EEF5','#83AFC8','#445E78'] },
-];
-
-function PageHeader({ title, onBack, right }) {
+function AwardToast({ award }) {
+  const [imgErr, setImgErr] = useState(false);
   return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:'1px solid #2A2A2C', flexShrink:0, background:'#1C1C1E' }}>
-      <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-      </button>
-      <div style={{ color:'white', fontSize:20, fontWeight:900, letterSpacing:'-.2px' }}>{title}</div>
-      <div style={{ width:46, height:46, display:'flex', alignItems:'center', justifyContent:'center' }}>{right}</div>
+    <div style={{ position:'absolute', top:18, left:12, right:12, zIndex:200, display:'flex', justifyContent:'center', pointerEvents:'none' }}>
+      <div className="award-toast-sparkles" style={{ position:'relative', width:'100%', maxWidth:360, background:'rgba(18,18,22,.96)', border:'1px solid rgba(255,255,255,.12)', borderRadius:22, padding:'14px 16px', boxShadow:'0 16px 40px rgba(0,0,0,.38)', display:'flex', alignItems:'center', gap:14 }}>
+        <div style={{ width:64, height:64, borderRadius:16, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>
+          {!imgErr ? <img src={award.image} alt={award.name} onError={()=>setImgErr(true)} style={{ width:56, height:56, objectFit:'contain' }} /> : <span style={{ fontSize:34 }}>🏅</span>}
+        </div>
+        <div style={{ minWidth:0 }}>
+          <div style={{ color:'#F0C449', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.7 }}>Nuovo award sbloccato</div>
+          <div style={{ color:'white', fontSize:16, fontWeight:900, lineHeight:1.2, marginTop:3 }}>{award.name}</div>
+          <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, marginTop:4 }}>{award.macro} · {award.goal}</div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -1801,8 +1919,8 @@ function PageHeader({ title, onBack, right }) {
 function MainMenu({ onOpen, onBack }) {
   const items = [
     { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
-    { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Collezione e filtri' },
-    { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Zone del mondo' },
+    { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Award e obiettivi' },
+    { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Continenti e regioni' },
     { id:'settings', label:'Impostazioni', icon:'⚙️', bg:'#4A4A50', desc:'Preferenze app' },
     { id:'abilities', label:'Abilità', icon:'✨', bg:'#5A2E80', desc:'Catalogo abilità' },
   ];
@@ -1813,16 +1931,13 @@ function MainMenu({ onOpen, onBack }) {
         <div style={{ background:'linear-gradient(135deg,#2E5A10,#1A3808)', borderRadius:22, padding:22, marginBottom:16, boxShadow:'0 18px 50px rgba(0,0,0,.32)' }}>
           <div style={{ color:'#90D84A', fontSize:13, fontWeight:800, textTransform:'uppercase', letterSpacing:.8, marginBottom:6 }}>Animaldex</div>
           <div style={{ color:'white', fontSize:28, fontWeight:900, letterSpacing:'-.7px' }}>Menu principale</div>
-          <div style={{ color:'rgba(255,255,255,.68)', fontSize:13, lineHeight:1.6, marginTop:8 }}>Scegli una sezione per profilo, badge, regioni, impostazioni o abilità.</div>
+          <div style={{ color:'rgba(255,255,255,.68)', fontSize:13, lineHeight:1.6, marginTop:8 }}>Scegli una sezione per profilo, award, regioni, impostazioni o abilità.</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
           {items.map(item=>(
             <button key={item.id} onClick={()=>onOpen(item.id)} style={{ minHeight:138, border:'none', borderRadius:20, background:item.bg, color:'white', cursor:'pointer', padding:16, display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'space-between', textAlign:'left', boxShadow:'0 12px 34px rgba(0,0,0,.28)' }}>
               <div style={{ width:54, height:54, borderRadius:18, background:'rgba(255,255,255,.16)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28 }}>{item.icon}</div>
-              <div>
-                <div style={{ fontSize:17, fontWeight:900, marginBottom:4 }}>{item.label}</div>
-                <div style={{ fontSize:11, color:'rgba(255,255,255,.66)', lineHeight:1.35 }}>{item.desc}</div>
-              </div>
+              <div><div style={{ fontSize:17, fontWeight:900, marginBottom:4 }}>{item.label}</div><div style={{ fontSize:11, color:'rgba(255,255,255,.66)', lineHeight:1.35 }}>{item.desc}</div></div>
             </button>
           ))}
         </div>
@@ -1836,10 +1951,8 @@ function ProfilePage({ onBack, statusMap = {}, onOpenGridStatus, onOpenBadges, o
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
-  const regionsCount = new Set(animalsWithStatus
-    .filter(a => a.status === 'avvistato' || a.status === 'catturato')
-    .flatMap(a => a.distribution?.countries_present || [])).size;
-  const badgeCount = Math.min(BADGE_PLACEHOLDERS.length, Math.max(0, Math.floor(seenCount / 5)));
+  const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
+  const badgeCount = computeUnlockedAwards(statusMap).length;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
@@ -1857,66 +1970,83 @@ function ProfilePage({ onBack, statusMap = {}, onOpenGridStatus, onOpenBadges, o
           <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>Profilo placeholder</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
-          {statCards.map(card=>(
-            <button key={card.label} onClick={card.onClick} style={{ background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit' }}>
-              <div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1 }}>{card.value}</div>
-              <div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{card.label}</div>
-            </button>
-          ))}
+          {statCards.map(card=>(<button key={card.label} onClick={card.onClick} style={{ background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit' }}><div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1 }}>{card.value}</div><div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{card.label}</div></button>))}
         </div>
       </div>
     </div>
   );
 }
 
-function BadgesPage({ onBack }) {
-  const cats = ['Tutti', ...Array.from(new Set(BADGE_PLACEHOLDERS.map(b=>b.cat)))];
-  const [cat, setCat] = useState('Tutti');
+function BadgesPage({ onBack, statusMap = {} }) {
+  const [macro, setMacro] = useState('Tutti');
+  const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [search, setSearch] = useState('');
-  const badges = BADGE_PLACEHOLDERS.filter(b => (cat==='Tutti'||b.cat===cat) && (!search.trim() || b.name.toLowerCase().includes(search.toLowerCase())));
+  const unlockedSet = new Set(computeUnlockedAwards(statusMap).map(a => a.badgeId));
+  const macros = ['Tutti', ...AWARD_MACROS];
+  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)) && (!search.trim() || `${rule.name} ${rule.sub} ${rule.badgeId}`.toLowerCase().includes(search.toLowerCase())));
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
       <PageHeader title="Badge" onBack={onBack} />
       <div style={{ padding:'12px 12px 8px', flexShrink:0 }}>
-        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca badge..." style={{ width:'100%', height:44, borderRadius:12, background:'#3A3A3C', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
-        <div style={{ display:'flex', gap:8, overflowX:'auto', paddingTop:10, paddingBottom:2 }}>
-          {cats.map(c=>(
-            <button key={c} onClick={()=>setCat(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:cat===c?'#777':'#3A3A3C', color:'white', fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>
-          ))}
-        </div>
+        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca award..." style={{ width:'100%', height:44, borderRadius:12, background:'#3A3A3C', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+        <div style={{ display:'flex', gap:8, overflowX:'auto', paddingTop:10, paddingBottom:2 }}>{macros.map(c=><button key={c} onClick={()=>setMacro(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:macro===c?'#777':'#3A3A3C', color:'white', fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>)}</div>
+        <button onClick={()=>setOnlyUnlocked(v=>!v)} style={{ marginTop:8, width:'100%', height:40, borderRadius:12, background:onlyUnlocked?'rgba(144,216,74,.2)':'#3A3A3C', border:'1px solid rgba(255,255,255,.08)', color:onlyUnlocked?'#90D84A':'white', fontWeight:800, cursor:'pointer' }}>{onlyUnlocked ? 'Mostra tutti' : 'Solo sbloccati'}</button>
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
-          {badges.map(b=>(
-            <div key={b.id} style={{ background:b.color, borderRadius:14, padding:10, minHeight:128, display:'flex', flexDirection:'column', justifyContent:'space-between', boxShadow:'0 10px 30px rgba(0,0,0,.25)' }}>
-              <div style={{ height:78, borderRadius:10, background:'rgba(255,255,255,.26)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:38, border:'1px solid rgba(255,255,255,.16)' }}>{b.icon}</div>
-              <div style={{ color:'white', fontSize:12, fontWeight:900, lineHeight:1.25, textAlign:'center', marginTop:8 }}>{b.name}</div>
-            </div>
-          ))}
+          {awards.map(rule=>{
+            const unlocked = unlockedSet.has(rule.badgeId);
+            return (
+              <div key={rule.badgeId} style={{ background:unlocked?'#5A2E20':'#3A3A3C', borderRadius:14, padding:10, minHeight:152, display:'flex', flexDirection:'column', justifyContent:'space-between', boxShadow:'0 10px 30px rgba(0,0,0,.25)', opacity:unlocked?1:.72 }}>
+                <div style={{ height:82, borderRadius:10, background:unlocked?'rgba(255,255,255,.16)':'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', border:'1px solid rgba(255,255,255,.16)', overflow:'hidden' }}><img src={buildAwardImagePath(rule.badgeId)} alt={rule.name} style={{ width:60, height:60, objectFit:'contain', filter:unlocked?'none':'grayscale(1)' }} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} /><span style={{ display:'none', fontSize:34 }}>🏅</span></div>
+                <div style={{ color:'white', fontSize:12, fontWeight:900, lineHeight:1.2, textAlign:'center', marginTop:8 }}>{rule.name}</div>
+                <div style={{ color:'rgba(255,255,255,.52)', fontSize:10, textAlign:'center', marginTop:4 }}>{rule.goal}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
 
-function RegionsPage({ onBack }) {
+function RegionsPage({ onBack, statusMap = {}, onSelect }) {
+  const [view, setView] = useState('continents');
+  const [continentId, setContinentId] = useState(null);
+  const [regionId, setRegionId] = useState(null);
+  const [unlockMap, setUnlockMap] = useState(() => {
+    if (typeof window === 'undefined') return {};
+    try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks') || '{}'); } catch { return {}; }
+  });
+  useEffect(() => { if (typeof window !== 'undefined') window.localStorage.setItem('animaldex_region_unlocks', JSON.stringify(unlockMap)); }, [unlockMap]);
+  const continent = GEO_REGION_GROUPS.find(c => c.id === continentId) || null;
+  const region = GEO_REGION_BY_ID[regionId] || null;
+  const regionAnimals = region ? ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => (a.distribution?.countries_present || []).some(code => region.iso.includes(code))) : [];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
-      <PageHeader title="Regioni" onBack={onBack} />
+      <PageHeader title={view==='continents' ? 'Regioni' : view==='regions' ? (continent?.label || 'Continente') : (region?.label || 'Regione')} onBack={()=>{ if (view==='continents') onBack(); else if (view==='regions') setView('continents'); else setView('regions'); }} />
       <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
-        {REGION_PLACEHOLDERS.map(r=>(
-          <div key={r.id} style={{ marginBottom:14, borderBottom:'1px solid rgba(255,255,255,.1)', paddingBottom:14 }}>
-            <div style={{ height:118, borderRadius:12, overflow:'hidden', position:'relative', background:`linear-gradient(120deg, ${r.colors[0]}, ${r.colors[1]} 48%, ${r.colors[2]})`, boxShadow:'inset 0 0 0 1px rgba(255,255,255,.08)' }}>
-              <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 20% 25%, rgba(255,255,255,.32), transparent 22%), radial-gradient(circle at 74% 40%, rgba(0,0,0,.18), transparent 26%), linear-gradient(0deg, rgba(0,0,0,.12), rgba(255,255,255,.1))' }} />
-              <div style={{ position:'absolute', left:'8%', top:'32%', width:'38%', height:'34%', borderRadius:'48% 42% 55% 35%', background:'rgba(30,80,40,.35)', filter:'blur(.2px)', transform:'rotate(-8deg)' }} />
-              <div style={{ position:'absolute', right:'9%', bottom:'20%', width:'34%', height:'28%', borderRadius:'45% 55% 40% 50%', background:'rgba(20,100,140,.28)', transform:'rotate(10deg)' }} />
-            </div>
-            <div style={{ display:'flex', alignItems:'baseline', justifyContent:'space-between', gap:12, padding:'9px 2px 0' }}>
-              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>{r.name}</div>
-              <div style={{ color:'rgba(255,255,255,.45)', fontSize:11, fontWeight:700, textAlign:'right' }}>{r.hint}</div>
+        {view==='continents' && GEO_REGION_GROUPS.map((group, idx)=>(
+          <button key={group.id} onClick={()=>{ setContinentId(group.id); setView('regions'); }} style={{ width:'100%', marginBottom:14, border:'none', borderRadius:14, padding:0, overflow:'hidden', background:'#1A1A1C', cursor:'pointer', textAlign:'left' }}>
+            <RegionArt src={group.image} fallbackColors={['#245B58','#4A8F7D','#25474A']} height={118} />
+            <div style={{ padding:'10px 12px' }}><div style={{ color:'white', fontSize:18, fontWeight:900 }}>{group.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{group.regions.length} regioni</div></div>
+          </button>
+        ))}
+        {view==='regions' && continent && continent.regions.map((reg, idx)=>(
+          <div key={reg.id} style={{ marginBottom:14, borderRadius:14, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
+            <RegionArt src={reg.image} grayscale={!unlockMap[reg.id]} fallbackColors={['#4B5A62','#7E8B93','#39464D']} height={120} />
+            <div style={{ padding:'10px 12px', display:'flex', alignItems:'center', gap:10 }}>
+              <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontSize:17, fontWeight:900 }}>{reg.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{reg.iso.length} codici ISO collegati</div></div>
+              {!unlockMap[reg.id] ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca regione</button> : <button onClick={()=>{ setRegionId(reg.id); setView('animals'); }} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Apri</button>}
             </div>
           </div>
         ))}
+        {view==='animals' && region && (
+          <>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginBottom:12 }}>Animali presenti nella regione sbloccata.</div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>{regionAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}</div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -2056,86 +2186,93 @@ function AbilitiesPage({ onBack }) {
 }
 
 // ── Root ──────────────────────────────────────────────────────────────
+
 export default function App() {
   const [sel,setSel]=useState(null);
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('grid');
   const [gridPreset,setGridPreset]=useState(null);
+  const [gridReturnAnimal,setGridReturnAnimal]=useState(null);
+  const [awardQueue,setAwardQueue]=useState([]);
+  const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap), [statusMap]);
+  const activeAwardToast = awardQueue[0] || null;
+
   useEffect(()=>{
     const l=document.createElement('link');
     l.rel='stylesheet';
     l.href='https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap';
     document.head.appendChild(l);
     document.body.style.cssText='margin:0;background:#1C1C1E;overflow:hidden';
-
     const style=document.createElement('style');
     style.textContent = RARITY_CSS;
     document.head.appendChild(style);
-
-    return () => {
-      try { document.head.removeChild(l); document.head.removeChild(style); } catch {}
-    };
+    return () => { try { document.head.removeChild(l); document.head.removeChild(style); } catch {} };
   },[]);
 
   useEffect(()=>{
     let cancelled = false;
-    loadSupabaseStatusMap()
-      .then(remoteMap => {
-        if (!cancelled && remoteMap && Object.keys(remoteMap).length) {
-          setStatusMap(prev => ({ ...remoteMap, ...prev }));
-        }
-      })
-      .catch(err => console.warn('[Animaldex] Supabase status sync non disponibile:', err));
+    loadSupabaseStatusMap().then(remoteMap => { if (!cancelled && remoteMap && Object.keys(remoteMap).length) setStatusMap(prev => ({ ...remoteMap, ...prev })); }).catch(err => console.warn('[Animaldex] Supabase status sync non disponibile:', err));
     return () => { cancelled = true; };
   },[]);
+
+  useEffect(() => {
+    const saved = getAwardUnlockSet();
+    const current = unlockedAwards.map(a => a.badgeId);
+    const fresh = unlockedAwards.filter(a => !saved.has(a.badgeId));
+    if (fresh.length) {
+      setAwardQueue(prev => [...prev, ...fresh]);
+      persistAwardUnlocks([...Array.from(saved), ...current]);
+    }
+  }, [unlockedAwards]);
+
+  useEffect(() => {
+    if (!activeAwardToast) return;
+    const t = setTimeout(() => setAwardQueue(prev => prev.slice(1)), 3200);
+    return () => clearTimeout(t);
+  }, [activeAwardToast]);
 
   const handleStatusChange = (id, status) => {
     const nextStatus = normalizeAnimalStatus(status);
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
-    upsertSupabaseAnimalStatus(id, nextStatus)
-      .catch(err => console.warn('[Animaldex] Salvataggio status Supabase fallito:', err));
+    upsertSupabaseAnimalStatus(id, nextStatus).catch(err => console.warn('[Animaldex] Salvataggio status Supabase fallito:', err));
   };
 
   const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
   const openPage = (nextPage) => { setSel(null); setPage(nextPage); };
   const openGridWithStatus = (statuses) => {
+    setSel(null); setGridReturnAnimal(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
+  };
+  const jumpToClassFromDetail = (cls, animal) => {
+    setGridReturnAnimal(animal);
     setSel(null);
-    setGridPreset({ id: Date.now(), type:'status', statuses });
+    setGridPreset({ id: Date.now(), type:'class', cls, title:`Classe · ${cls}` });
     setPage('grid');
   };
+  const returnFromPresetToDetail = () => {
+    if (!gridReturnAnimal) return setPage('grid');
+    setSel(gridReturnAnimal);
+    setGridReturnAnimal(null);
+    setGridPreset(null);
+    setPage('grid');
+  };
+
+  const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap}/></div> : null;
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} />;
-    if (page === 'regions') return <RegionsPage onBack={()=>setPage('menu')} />;
-    if (page === 'gallery') return (
-      <div style={{ height:'100%', position:'relative', overflow:'hidden' }}>
-        <GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />
-        {enriched && (
-          <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}>
-            <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
-          </div>
-        )}
-      </div>
-    );
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} />;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
+    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} />;
-    return (
-      <div style={{ height:'100%', position:'relative', overflow:'hidden' }}>
-        <Grid onSelect={setSel} statusMap={statusMap} onHome={()=>setPage('menu')} preset={gridPreset} />
-        {enriched && (
-          <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}>
-            <Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} statusMap={statusMap}/>
-          </div>
-        )}
-      </div>
-    );
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>setPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnAnimal ? returnFromPresetToDetail : null} />{renderDetailOverlay()}</div>;
   };
 
   return (
-    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E' }}>
+    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
+      {activeAwardToast && <AwardToast award={activeAwardToast} />}
     </div>
   );
 }
