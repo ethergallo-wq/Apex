@@ -202,20 +202,38 @@ function normalizeLocalAnimal(a) {
 }
 
 async function ensureUserProfile(user) {
-  if (!user?.id) return;
-  const { data, error } = await supabase
-    .from('user_profiles')
-    .select('user_id')
-    .eq('user_id', user.id)
-    .maybeSingle();
+  if (!user?.id) return false;
 
-  if (error && error.code !== 'PGRST116') throw error;
-  if (!data) {
-    const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+  const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+
+  try {
+    const { data, error } = await supabase
+      .from('user_profiles')
+      .select('user_id')
+      .eq('user_id', user.id)
+      .maybeSingle();
+
+    if (error && error.code !== 'PGRST116') throw error;
+    if (data) return true;
+
     const { error: insertError } = await supabase
       .from('user_profiles')
-      .insert({ user_id: user.id, username });
-    if (insertError) throw insertError;
+      .upsert(
+        { user_id: user.id, username },
+        { onConflict:'user_id' }
+      );
+
+    // In signup con conferma email attiva Supabase può restituire un user non ancora utilizzabile
+    // lato FK/RLS. Non blocchiamo l'app: riproveremo dopo login/sessione valida.
+    if (insertError) {
+      console.warn('[Animaldex] Profilo non ancora creabile:', insertError);
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.warn('[Animaldex] ensureUserProfile skipped:', err);
+    return false;
   }
 }
 
@@ -2247,8 +2265,7 @@ function AuthScreen({ onAuthReady }) {
         ? await supabase.auth.signUp({ email, password })
         : await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      if (data?.user) await ensureUserProfile(data.user);
-      setMessage(mode === 'signup' ? 'Account creato. Controlla la mail se Supabase richiede conferma.' : 'Accesso effettuato.');
+      setMessage(mode === 'signup' ? 'Account creato. Controlla la mail se Supabase richiede conferma, poi fai login.' : 'Accesso effettuato.');
       onAuthReady?.();
     } catch (err) {
       setMessage(err?.message || 'Errore autenticazione.');
@@ -2833,7 +2850,7 @@ export default function App() {
     setDataLoading(true);
     setDataError('');
     try {
-      await ensureUserProfile(activeUser);
+      ensureUserProfile(activeUser);
       const [remoteAnimals, destinations] = await Promise.all([
         fetchAnimalsFromSupabase(activeUser.id),
         fetchUserDestinations(activeUser.id),
