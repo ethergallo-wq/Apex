@@ -1393,10 +1393,11 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
-  const found = isRevealedStatus(status);
   const imageVisible = !mystery;
+  // Ricercato, Avvistato e Catturato condividono la resa grafica completa in griglia.
+  const found = imageVisible;
   const revealed = imageVisible;
-  const unrevealed = imageVisible && !found;
+  const unrevealed = false;
   const glowAccent = getClassGlowColor(a.cls);
   const glowShadow = found ? `0 0 16px 2px ${glowAccent}55, 0 0 4px 1px ${glowAccent}22` : 'none';
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
@@ -3127,7 +3128,7 @@ function GalleryPage({ onBack, statusMap = {}, onSelect }) {
   );
 }
 
-function SettingsPage({ onBack }) {
+function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial }) {
   const [sub, setSub] = useState(null);
   if (sub === 'audio') return (
     <SettingsSubPage title="Audio" onBack={()=>setSub(null)}>
@@ -3163,6 +3164,15 @@ function SettingsPage({ onBack }) {
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title="Impostazioni" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>
+        <div style={{ background:'linear-gradient(135deg,rgba(144,216,74,.14),rgba(143,52,245,.10))', border:'1px solid rgba(144,216,74,.22)', borderRadius:18, padding:14, marginBottom:14 }}>
+          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Tutorial e onboarding</div>
+          <div style={{ color:'white', fontSize:16, fontWeight:1000, marginTop:5 }}>Modalità test guidata</div>
+          <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:6 }}>Riavvia i flussi senza cambiare account. Utile per controllare UI, reward, radar e spiegazioni operative.</div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginTop:12 }}>
+            <button onClick={onStartInitialOnboarding} style={{ width:'100%', minHeight:44, borderRadius:13, border:'none', background:'#90D84A', color:'#101410', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Riavvia onboarding iniziale</button>
+            <button onClick={onStartOperationalTutorial} style={{ width:'100%', minHeight:44, borderRadius:13, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Riavvia tutorial operativo</button>
+          </div>
+        </div>
         {rows.map(row=>(
           <button key={row.id} onClick={()=>setSub(row.id)} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:8, display:'flex', alignItems:'center', justifyContent:'space-between', cursor:'pointer', fontFamily:'inherit' }}>
             <span style={{ textAlign:'left' }}><span style={{ display:'block', color:'white', fontSize:15, fontWeight:900 }}>{row.title}</span><span style={{ display:'block', color:'rgba(255,255,255,.48)', fontSize:12, marginTop:3 }}>{row.subtitle}</span></span>
@@ -3586,6 +3596,40 @@ export default function App() {
     setPage('grid');
   };
 
+
+  const startInitialOnboardingFromSettings = () => {
+    setSel(null);
+    setGridPreset(null);
+    setGridReturnTarget(null);
+    setRegionsInitialView(null);
+    setTutorialStep(null);
+    setTutorialAnimalId(null);
+    setTutorialStamp(false);
+    setPage('grid');
+    setUserProfile(prev => ({
+      ...(prev || buildFallbackProfile(user, false)),
+      onboarding_completed:false,
+      has_completed_tutorial:false,
+    }));
+  };
+
+  const startOperationalTutorialFromSettings = () => {
+    const target = getTutorialAnimal();
+    setSel(null);
+    setGridPreset(null);
+    setGridReturnTarget(null);
+    setRegionsInitialView(null);
+    setPage('grid');
+    setTutorialAnimalId(target?.id || null);
+    setTutorialStamp(false);
+    setTutorialStep('grid');
+    setUserProfile(prev => ({
+      ...(prev || buildFallbackProfile(user, true)),
+      onboarding_completed:true,
+      has_completed_tutorial:false,
+    }));
+  };
+
 const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
 const openPage = (nextPage) => {
   setSel(null);
@@ -3659,7 +3703,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
-    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
+    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>openPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
@@ -3668,7 +3712,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
-      {(dataLoading || dataError) && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:dataError?'rgba(255,59,48,.92)':'rgba(20,20,24,.88)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataLoading ? 'Sincronizzazione Supabase...' : dataError}</div>}
+      {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
     </div>
   );
