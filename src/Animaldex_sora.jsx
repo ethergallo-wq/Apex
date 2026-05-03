@@ -278,6 +278,30 @@ async function fetchUserProfile(user) {
   }
 }
 
+function withTimeout(promise, ms, fallbackValue, label='timeout') {
+  let timer;
+  return Promise.race([
+    promise.finally(() => clearTimeout(timer)),
+    new Promise(resolve => {
+      timer = setTimeout(() => {
+        console.warn(`[Animaldex] ${label} dopo ${ms}ms`);
+        resolve(fallbackValue);
+      }, ms);
+    })
+  ]);
+}
+
+function buildFallbackProfile(user, onboardingCompleted = true) {
+  const username = String(user?.email || 'esploratore').split('@')[0] || 'esploratore';
+  return {
+    user_id: user?.id,
+    username,
+    nickname: username,
+    onboarding_completed: onboardingCompleted,
+    first_login_reward_shown: false,
+  };
+}
+
 async function fetchAnimalsFromSupabase(userId) {
   const { data: animals, error: animalsError } = await supabase
     .from('animals')
@@ -3186,28 +3210,58 @@ export default function App() {
     if (!activeUser?.id) return;
     setDataLoading(true);
     setDataError('');
+
     try {
-      ensureUserProfile(activeUser);
-      const [remoteAnimals, destinations, remoteBadgeIds] = await Promise.all([
-        fetchAnimalsFromSupabase(activeUser.id),
-        fetchUserDestinations(activeUser.id),
-        fetchUserBadgeIds(activeUser.id),
-      ]);
-      if (remoteAnimals?.length) setAnimalsData(remoteAnimals);
-      const nextStatusMap = Object.fromEntries((remoteAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
+      // Non bloccare mai la UI sul profilo: se Supabase/RLS rallenta, usiamo fallback.
+      await withTimeout(
+        ensureUserProfile(activeUser).catch(err => {
+          console.warn('[Animaldex] ensure profile non bloccante:', err);
+          return false;
+        }),
+        3500,
+        false,
+        'ensureUserProfile'
+      );
+
+      const profile = await withTimeout(
+        fetchUserProfile(activeUser),
+        4500,
+        buildFallbackProfile(activeUser, true),
+        'fetchUserProfile'
+      );
+      setUserProfile(profile || buildFallbackProfile(activeUser, true));
+
+      const [remoteAnimals, destinations, remoteBadgeIds] = await withTimeout(
+        Promise.all([
+          fetchAnimalsFromSupabase(activeUser.id),
+          fetchUserDestinations(activeUser.id),
+          fetchUserBadgeIds(activeUser.id),
+        ]),
+        14000,
+        [null, getVisitedCountries(), []],
+        'caricamento dati Supabase'
+      );
+
+      const nextAnimals = remoteAnimals?.length ? remoteAnimals : LOCAL_ANIMALS.map(normalizeLocalAnimal);
+      setAnimalsData(nextAnimals);
+
+      const nextStatusMap = Object.fromEntries((nextAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
       setStatusMap(nextStatusMap);
-      setVisitedCountries(destinations);
-      saveVisitedCountries(destinations);
+
+      const nextDestinations = destinations || [];
+      setVisitedCountries(nextDestinations);
+      saveVisitedCountries(nextDestinations);
+
       setEarnedBadgeIds((remoteBadgeIds || []).map(normalizeBadgeId));
       persistAwardUnlocks(remoteBadgeIds || []);
-      setUserProfile(profile);
     } catch (err) {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
+
       const fallback = LOCAL_ANIMALS.map(normalizeLocalAnimal);
       setAnimalsData(fallback);
       setStatusMap(Object.fromEntries(fallback.map(a => [a.id, normalizeAnimalStatus(a.status)])));
-      if (activeUser?.id) setUserProfile(await fetchUserProfile(activeUser));
+      setUserProfile(prev => prev || buildFallbackProfile(activeUser, true));
     } finally {
       setDataLoading(false);
     }
@@ -3412,6 +3466,15 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     return (
       <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
+      </div>
+    );
+  }
+
+  if (!userProfile && !dataLoading) {
+    setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
+    return (
+      <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Animaldex...</div>
       </div>
     );
   }
