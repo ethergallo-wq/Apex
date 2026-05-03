@@ -282,10 +282,11 @@ async function fetchUserProfile(user) {
   }
 }
 
-function withTimeout(promise, ms, fallbackValue, label='timeout') {
+function withTimeout(promiseLike, ms, fallbackValue, label='timeout') {
   let timer;
+  const safePromise = Promise.resolve(promiseLike);
   return Promise.race([
-    promise.finally(() => clearTimeout(timer)),
+    safePromise.finally(() => clearTimeout(timer)),
     new Promise(resolve => {
       timer = setTimeout(() => {
         console.warn(`[Animaldex] ${label} dopo ${ms}ms`);
@@ -2798,7 +2799,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
           </div>
           <div style={{ display:'grid', gap:9 }}>
             <button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Sincronizza e sblocca'}</button>
-            {error && <button onClick={()=>onFinish?.({ skipReload:true })} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Continua comunque</button>}
+            {error && <button onClick={()=>{ setError(''); onFinish?.({ skipReload:true }); }} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Continua comunque</button>}
           </div>
         </div>
       )}
@@ -3709,7 +3710,7 @@ export default function App() {
     }
   };
 
-  const finishOnboarding = async () => {
+  const finishOnboarding = async (options = {}) => {
     setUserProfile(prev => ({
       ...(prev || buildFallbackProfile(user, true)),
       onboarding_completed:true,
@@ -3719,7 +3720,9 @@ export default function App() {
     setSel(null);
     setPage('grid');
     // Ricarica silenziosa: non bloccare mai la schermata finale dell’onboarding.
-    reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload post-onboarding non bloccante:', err));
+    if (!options?.skipReload) {
+      reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload post-onboarding non bloccante:', err));
+    }
   };
 
   const openAwardFromToast = (award) => {
