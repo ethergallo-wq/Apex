@@ -714,61 +714,145 @@ const COUNTRIES = [
 ];
 
 
-const GEO_REGION_GROUPS = [
+const LEGACY_REGION_ISO = {
+  europa_boreale:['IS','NO','SE','FI','DK','FO','AX'],
+  europa_temperata:['IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE'],
+  europa_mediterranea:['ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS'],
+  nord_america_boreale:['CA'],
+  nord_america_temperato:['US','BM','PM'],
+  nord_america_desertico:['GL'],
+  america_tropicale:['MX','BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY','CO','VE','EC','PE','BO','BR','GF','GY','SR'],
+  sud_america_temperato:['AR','CL','UY','PY','FK'],
+  africa_arida:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD'],
+  africa_tropicale:['SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'],
+  africa_australe:['ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS'],
+  madagascar:['MG'],
+  asia_boreale_steppa:['RU','KZ','MN'],
+  asia_occidentale_centrale:['TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF'],
+  asia_meridionale:['PK','IN','BD','LK','NP','BT','MV'],
+  asia_orientale:['CN','HK','MO','TW','KR','KP'],
+  giappone:['JP'],
+  sud_est_asiatico:['MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'],
+  australia:['AU','NF','CX','CC'],
+  nuova_zelanda:['NZ'],
+  pacifico_tropicale:['PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'],
+  isole_oceano_indiano:['MU','RE','YT','KM','SC','IO'],
+  artide:['GL','SJ'],
+  antartide:['AQ','BV','GS','HM','TF','SH']
+};
+
+const uniqIso = (...lists) => Array.from(new Set(lists.flat().filter(Boolean)));
+
+const TERRESTRIAL_REALMS = [
   {
-    id:'europa', label:'Europa', image:'/regions/europa.jpg', regions:[
-      { id:'europa-boreale', label:'Europa boreale', image:'/regions/Europa_boreale.jpg', iso:['IS','NO','SE','FI','DK','FO','AX'] },
-      { id:'europa-temperata', label:'Europa temperata', image:'/regions/Europa-temperata.jpg', iso:['IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE'] },
-      { id:'europa-mediterranea', label:'Europa mediterranea', image:'/regions/Europa_mediterranea.jpg', iso:['ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS'] },
+    id:'nearctic', label:'Nearctic', image:'/regions/america.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'boreal-north-america', label:'Boreal North America', image:'/regions/nord_America_boreale.jpg', iso:uniqIso(LEGACY_REGION_ISO.nord_america_boreale, LEGACY_REGION_ISO.artide), legacy:['Nord America boreale','Artide'] },
+      { id:'temperate-north-america', label:'Temperate North America', image:'/regions/nord_america_temperato.jpg', iso:LEGACY_REGION_ISO.nord_america_temperato, legacy:['Nord America temperato'] },
+      { id:'deserts-north-america', label:'Deserts North America', image:'/regions/Nord_America_desertico.jpg', iso:LEGACY_REGION_ISO.nord_america_desertico, legacy:['Nord America desertico'] },
     ]
   },
   {
-    id:'america', label:'America', image:'/regions/america.jpg', regions:[
-      { id:'nord-america-boreale', label:'Nord America boreale', image:'/regions/nord_America_boreale.jpg', iso:['CA'] },
-      { id:'nord-america-temperato', label:'Nord America temperato', image:'/regions/nord_america_temperato.jpg', iso:['US','BM','PM'] },
-      { id:'nord-america-desertico', label:'Nord America desertico', image:'/regions/Nord_America_desertico.jpg', iso:['GL'] },
-      { id:'america-tropicale', label:'America tropicale', image:'/regions/America_tropicale.jpg', iso:['MX','BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY','CO','VE','EC','PE','BO','BR','GF','GY','SR'] },
-      { id:'sud-america-temperato', label:'Sud America temperato', image:'/regions/America_temperato.jpg', iso:['AR','CL','UY','PY','FK'] },
+    id:'neotropical', label:'Neotropical', image:'/regions/America_tropicale.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'amazonia', label:'Amazonia', image:null, iso:['BR','PE','CO','VE','EC','BO','GF','GY','SR'], pendingImage:true },
+      { id:'tropical-andes', label:'Tropical Andes', image:null, iso:['CO','EC','PE','BO'], pendingImage:true },
+      { id:'atlantic-forest', label:'Atlantic Forest', image:null, iso:['BR','PY','AR'], pendingImage:true },
+      { id:'dry-neotropics', label:'Dry Neotropics', image:'/regions/America_temperato.jpg', iso:LEGACY_REGION_ISO.sud_america_temperato, legacy:['Sud America temperato'] },
+      { id:'caribbean', label:'Caribbean', image:'/regions/America_tropicale.jpg', iso:LEGACY_REGION_ISO.america_tropicale, legacy:['America tropicale'] },
     ]
   },
   {
-    id:'africa', label:'Africa', image:'/regions/africa.jpg', regions:[
-      { id:'africa-arida', label:'Africa arida', image:'/regions/africa_arida.jpg', iso:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD'] },
-      { id:'africa-tropicale', label:'Africa tropicale', image:'/regions/africa_tropicale.jpg', iso:['SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'] },
-      { id:'africa-australe', label:'Africa australe', image:'/regions/africa_australe.jpg', iso:['ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS'] },
-      { id:'madagascar', label:'Madagascar', image:'/regions/madagascar.jpg', iso:['MG'] },
+    id:'palearctic', label:'Palearctic', image:'/regions/europa.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'western-palearctic', label:'Western Palearctic', image:'/regions/Europa-temperata.jpg', iso:uniqIso(LEGACY_REGION_ISO.europa_temperata, LEGACY_REGION_ISO.africa_arida), legacy:['Europa temperata','Africa arida'] },
+      { id:'eastern-palearctic', label:'Eastern Palearctic', image:'/regions/asia_orientale.jpg', iso:uniqIso(LEGACY_REGION_ISO.asia_boreale_steppa, LEGACY_REGION_ISO.asia_orientale, LEGACY_REGION_ISO.giappone), legacy:['Asia boreale e steppa','Asia orientale','Giappone'] },
+      { id:'mediterranean', label:'Mediterranean', image:'/regions/Europa_mediterranea.jpg', iso:LEGACY_REGION_ISO.europa_mediterranea, legacy:['Europa mediterranea'] },
+      { id:'central-asian-deserts', label:'Central Asian Deserts', image:'/regions/asia_occidentale_centrale.jpg', iso:LEGACY_REGION_ISO.asia_occidentale_centrale, legacy:['Asia occidentale e centrale'] },
+      { id:'siberian-boreal', label:'Siberian Boreal', image:'/regions/Europa_boreale.jpg', iso:LEGACY_REGION_ISO.europa_boreale, legacy:['Europa boreale'] },
     ]
   },
   {
-    id:'asia', label:'Asia', image:'/regions/asia.jpg', regions:[
-      { id:'asia-boreale-steppa', label:'Asia boreale e steppa', image:'/regions/asia_boreale_steppa.jpg', iso:['RU','KZ','MN'] },
-      { id:'asia-occidentale-centrale', label:'Asia occidentale e centrale', image:'/regions/asia_occidentale_centrale.jpg', iso:['TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF'] },
-      { id:'asia-meridionale', label:'Asia meridionale', image:'/regions/asia_meridionale.jpg', iso:['PK','IN','BD','LK','NP','BT','MV'] },
-      { id:'asia-orientale', label:'Asia orientale', image:'/regions/asia_orientale.jpg', iso:['CN','HK','MO','TW','KR','KP'] },
-      { id:'giappone', label:'Giappone', image:'/regions/giappone.jpg', iso:['JP'] },
-      { id:'sud-est-asiatico', label:'Sud-est asiatico', image:'/regions/sudest_asiatico.jpg', iso:['MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'] },
+    id:'afrotropical', label:'Afrotropical', image:'/regions/africa.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'congo-basin', label:'Congo Basin', image:'/regions/africa_tropicale.jpg', iso:LEGACY_REGION_ISO.africa_tropicale, legacy:['Africa tropicale'] },
+      { id:'east-african-savanna', label:'East African Savanna', image:null, iso:['ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'], pendingImage:true },
+      { id:'southern-african', label:'Southern African', image:'/regions/africa_australe.jpg', iso:LEGACY_REGION_ISO.africa_australe, legacy:['Africa australe'] },
+      { id:'madagascar', label:'Madagascar', image:'/regions/madagascar.jpg', iso:uniqIso(LEGACY_REGION_ISO.madagascar, LEGACY_REGION_ISO.isole_oceano_indiano), legacy:['Madagascar','Isole Oceano Indiano'] },
     ]
   },
   {
-    id:'oceania', label:'Oceania', image:'/regions/oceania.jpg', regions:[
-      { id:'australia', label:'Australia', image:'/regions/australia.jpg', iso:['AU','NF','CX','CC'] },
-      { id:'nuova-zelanda', label:'Nuova Zelanda', image:'/regions/nuova_zelanda.jpg', iso:['NZ'] },
-      { id:'pacifico-tropicale', label:'Pacifico tropicale', image:'/regions/pacifico_tropicale.jpg', iso:['PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'] },
+    id:'indomalayan', label:'Indomalayan', image:'/regions/asia.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'indian-subcontinent', label:'Indian Subcontinent', image:'/regions/asia_meridionale.jpg', iso:LEGACY_REGION_ISO.asia_meridionale, legacy:['Asia meridionale'] },
+      { id:'indochina', label:'Indochina', image:'/regions/sudest_asiatico.jpg', iso:['MM','TH','LA','KH','VN'], legacy:['Sud-est asiatico continentale'] },
+      { id:'sundaland', label:'Sundaland', image:null, iso:['MY','SG','ID','BN'], pendingImage:true },
+      { id:'wallacea', label:'Wallacea', image:null, iso:['ID','TL','PH'], pendingImage:true },
     ]
   },
   {
-    id:'speciali', label:'Regioni speciali', image:'/regions/regioni_speciali.jpg', regions:[
-      { id:'isole-oceano-indiano', label:'Isole Oceano Indiano', image:'/regions/isole_oceano_indiano.jpg', iso:['MU','RE','YT','KM','SC','IO'] },
-      { id:'artide', label:'Artide', image:'/regions/artide.jpg', iso:['GL','SJ'] },
-      { id:'antartide', label:'Antartide', image:'/regions/antartide.jpg', iso:['AQ','BV','GS','HM','TF','SH'] },
+    id:'australasian', label:'Australasian', image:'/regions/oceania.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'australia', label:'Australia', image:'/regions/australia.jpg', iso:LEGACY_REGION_ISO.australia, legacy:['Australia'] },
+      { id:'new-guinea', label:'New Guinea', image:null, iso:['PG'], pendingImage:true },
+      { id:'tasmania', label:'Tasmania', image:'/regions/nuova_zelanda.jpg', iso:LEGACY_REGION_ISO.nuova_zelanda, legacy:['Nuova Zelanda'] },
+    ]
+  },
+  {
+    id:'oceanian', label:'Oceanian', image:'/regions/pacifico_tropicale.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'micronesia', label:'Micronesia', image:null, iso:['FM','GU','KI','MH','MP','NR','PW','UM'], pendingImage:true },
+      { id:'polynesia', label:'Polynesia', image:'/regions/pacifico_tropicale.jpg', iso:LEGACY_REGION_ISO.pacifico_tropicale, legacy:['Pacifico tropicale'] },
+      { id:'melanesia', label:'Melanesia', image:null, iso:['PG','SB','VU','NC','FJ'], pendingImage:true },
+    ]
+  },
+  {
+    id:'antarctic', label:'Antarctic', image:'/regions/antartide.jpg', realmType:'terrestrial',
+    regions:[
+      { id:'antarctica-continentale', label:'Antarctica continentale', image:'/regions/antartide.jpg', iso:LEGACY_REGION_ISO.antartide, legacy:['Antartide'] },
+      { id:'subantarctic-islands', label:'Subantarctic islands', image:null, iso:['BV','GS','HM','TF','SH'], pendingImage:true },
     ]
   },
 ];
-const GEO_REGION_MAP = GEO_REGION_GROUPS.flatMap(group => group.regions.map(region => ({ ...region, continentId: group.id, continentLabel: group.label })));
+
+const MARINE_REALMS = [
+  'Arctic',
+  'Temperate Northern Atlantic',
+  'Temperate Northern Pacific',
+  'Tropical Atlantic',
+  'Western Indo-Pacific',
+  'Central Indo-Pacific',
+  'Eastern Indo-Pacific',
+  'Tropical Eastern Pacific',
+  'Temperate South America',
+  'Temperate Southern Africa',
+  'Temperate Australasia',
+  'Southern Ocean',
+].map(label => ({
+  id: label.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),
+  label,
+  image:null,
+  iso:[],
+  realmType:'marine',
+  pendingImage:true,
+  aliases:[label]
+}));
+
+const GEO_REGION_GROUPS = TERRESTRIAL_REALMS;
+const GEO_REGION_MAP = [
+  ...TERRESTRIAL_REALMS.flatMap(group => group.regions.map(region => ({ ...region, type:'subrealm', continentId: group.id, continentLabel: group.label, realmId:group.id, realmLabel:group.label, realmType:'terrestrial' }))),
+  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Reami marini', realmId:'marine-realms', realmLabel:'Reami marini', realmType:'marine' })),
+];
 const GEO_REGION_BY_ID = Object.fromEntries(GEO_REGION_MAP.map(r => [r.id, r]));
+const GEO_REALM_BY_ID = Object.fromEntries([
+  ...TERRESTRIAL_REALMS.map(r => [r.id, r]),
+  ['marine-realms', { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine' }]
+]);
 const GEO_FILTER_OPTIONS = [
-  ...GEO_REGION_GROUPS.map(group => ({ value:`continent:${group.id}`, label:`${group.label} (continente)`, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: group.regions.flatMap(r=>r.iso) })),
-  ...GEO_REGION_MAP.map(region => ({ value:`region:${region.id}`, label:region.label, c:'#20B2AA', bg:'rgba(32,178,170,.15)', iso:region.iso }))
+  { value:'realm-group:terrestrial', label:'Reami terrestri', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: TERRESTRIAL_REALMS.flatMap(r=>r.regions.flatMap(s=>s.iso || [])), matchLabels:['terrestrial','terrestrial realms','reami terrestri'] },
+  { value:'realm-group:marine', label:'Reami marini', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], matchLabels:['marine','marine realms','reami marini'] },
+  ...TERRESTRIAL_REALMS.map(group => ({ value:`realm:${group.id}`, label:`${group.label} (reami terrestre)`, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: group.regions.flatMap(r=>r.iso || []), matchLabels:[group.label, group.id] })),
+  ...GEO_REGION_MAP.map(region => ({ value:`${region.realmType === 'marine' ? 'marine' : 'subrealm'}:${region.id}`, label:region.label, c:region.realmType === 'marine' ? '#4FB3FF' : '#20B2AA', bg:region.realmType === 'marine' ? 'rgba(79,179,255,.15)' : 'rgba(32,178,170,.15)', iso:region.iso || [], matchLabels:[region.label, region.id, ...(region.aliases || []), ...(region.legacy || [])] }))
 ];
 
 function getVisitedCountries() {
@@ -817,13 +901,35 @@ function getGeoOptionIsoCodes(value) {
   const opt = GEO_FILTER_OPTIONS.find(o => o.value === value);
   return opt?.iso || [];
 }
+function getGeoOptionMatchLabels(value) {
+  const opt = GEO_FILTER_OPTIONS.find(o => o.value === value);
+  return (opt?.matchLabels || []).map(v => String(v).toLowerCase());
+}
+function getAnimalRegionTokens(animal) {
+  const raw = [
+    animal.geo?.game_regions,
+    animal.geo?.bio_regions,
+    animal.game_regions,
+    animal.bio_regions,
+    animal.map_profile,
+    animal.geo?.map_profile,
+    animal.habitats,
+    animal.geo?.habitats,
+  ].flat().filter(Boolean);
+  return raw.map(v => String(v).toLowerCase());
+}
 function matchGeographySelection(animal, selections = []) {
   if (!selections.length) return true;
   const countries = animal.distribution?.countries_present || animal.geo?.iso || animal.iso || [];
+  const regionTokens = getAnimalRegionTokens(animal);
   return selections.some(sel => {
-    if (sel.startsWith('region:') || sel.startsWith('continent:')) {
+    if (sel.startsWith('region:')) sel = sel.replace('region:', 'subrealm:');
+    if (sel.startsWith('continent:')) sel = sel.replace('continent:', 'realm:');
+    if (sel.startsWith('subrealm:') || sel.startsWith('realm:') || sel.startsWith('marine:') || sel.startsWith('realm-group:')) {
       const iso = getGeoOptionIsoCodes(sel);
-      return countries.some(code => iso.includes(code));
+      if (iso.length && countries.some(code => iso.includes(code))) return true;
+      const labels = getGeoOptionMatchLabels(sel);
+      return labels.some(label => regionTokens.some(token => token.includes(label) || label.includes(token)));
     }
     return countries.includes(sel);
   });
@@ -3157,9 +3263,15 @@ function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, initialView }) {
-  const [view, setView] = useState(initialView || 'continents');
-  const [continentId, setContinentId] = useState(null);
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false }) {
+  const normalizeInitialView = (v) => {
+    if (v === 'countries') return 'countries';
+    if (v === 'continents' || !v) return 'planet';
+    return v;
+  };
+  const [view, setView] = useState(normalizeInitialView(initialView));
+  const [realmMode, setRealmMode] = useState('terrestrial');
+  const [realmId, setRealmId] = useState(null);
   const [regionId, setRegionId] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [unlockMap, setUnlockMap] = useState(() => {
@@ -3176,59 +3288,161 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setSelectedCountry(selectedDestinationIso);
     setSelectedTripTags([]);
   };
-  useEffect(() => { if (initialView) setView(initialView); }, [initialView]);
+  useEffect(() => { if (initialView) setView(normalizeInitialView(initialView)); }, [initialView]);
   useEffect(() => { if (typeof window !== 'undefined') window.localStorage.setItem('animaldex_region_unlocks', JSON.stringify(unlockMap)); }, [unlockMap]);
-  const continent = GEO_REGION_GROUPS.find(c => c.id === continentId) || null;
+
+  const realm = realmMode === 'marine'
+    ? { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine' }
+    : TERRESTRIAL_REALMS.find(r => r.id === realmId) || null;
   const region = GEO_REGION_BY_ID[regionId] || null;
   const scratchCountries = getAllScratchCountries().filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
   const visitedSet = new Set(visitedCountries);
-  const toggleVisitedCountry = (code) => {
-    const next = new Set(visitedCountries);
-    if (next.has(code)) next.delete(code); else next.add(code);
-    const list = Array.from(next).sort();
-    saveVisitedCountries(list);
-    onVisitedCountriesChange?.(list);
-    setSelectedCountry(code);
-  };
   const removeVisitedCountry = (code) => {
     const list = visitedCountries.filter(c => c !== code);
     saveVisitedCountries(list);
     onVisitedCountriesChange?.(list);
     if (selectedCountry === code) setSelectedCountry(null);
   };
-  const regionAnimals = region ? ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => (a.distribution?.countries_present || []).some(code => region.iso.includes(code))) : [];
+  const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
+  const regionAnimals = region ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [`${region.realmType === 'marine' ? 'marine' : 'subrealm'}:${region.id}`])) : [];
+  const getTitle = () => {
+    if (view === 'countries') return 'Scratch map';
+    if (view === 'planet') return 'Pianeta Terra';
+    if (view === 'realms') return realmMode === 'marine' ? 'Reami marini' : 'Reami terrestri';
+    if (view === 'subrealms') return realm?.label || 'Reame';
+    if (view === 'animals') return region?.label || 'Animali';
+    return 'Regioni';
+  };
+  const goBack = () => {
+    if (view === 'planet') return onBack();
+    if (view === 'countries') return setView('planet');
+    if (view === 'realms') return setView('planet');
+    if (view === 'subrealms') return setView('realms');
+    if (view === 'animals') {
+      if (region?.realmType === 'marine') return setView('realms');
+      return setView('subrealms');
+    }
+    return setView('planet');
+  };
+  const cardShell = { marginBottom:14, borderRadius:18, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', fontFamily:'inherit', color:'white', textAlign:'left', width:'100%' };
+  const openSubrealmAnimals = (sub) => {
+    setRegionId(sub.id);
+    setView('animals');
+  };
+
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
-      <PageHeader title={view==='countries' ? 'Scratch map' : view==='continents' ? 'Regioni' : view==='regions' ? (continent?.label || 'Continente') : (region?.label || 'Regione')} onBack={()=>{ if (view==='continents') onBack(); else if (view==='regions') setView('continents'); else if (view==='countries') setView('continents'); else setView('regions'); }} />
+      <PageHeader title={getTitle()} onBack={goBack} />
       <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
-        {view==='continents' && (
-          <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:18, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
-            <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-              <div style={{ width:52, height:52, borderRadius:16, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28 }}>🗺️</div>
-              <div style={{ flex:1 }}><div style={{ fontSize:18, fontWeight:900 }}>Scratch map nazioni visitate</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Conta per gli award Geografia.</div></div>
-              <div style={{ color:'#90D84A', fontSize:20, fontWeight:900 }}>{visitedCountries.length}</div>
+        {view==='planet' && (
+          <>
+            <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:22, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
+              <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ width:56, height:56, borderRadius:18, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
+                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:900 }}>Scratch map nazioni visitate</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Conta per award geografia e sblocca animali locali.</div></div>
+                <div style={{ color:'#90D84A', fontSize:20, fontWeight:900 }}>{visitedCountries.length}</div>
+              </div>
+            </button>
+
+            <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
+              <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
+              <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un sistema biogeografico</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>I reami terrestri sono suddivisi in sottoreami. I reami marini sono già presenti come struttura, in attesa delle immagini dedicate.</div>
+            </div>
+
+            <button onClick={()=>{setRealmMode('terrestrial');setView('realms');}} style={{ ...cardShell }}>
+              <RegionArt src="/regions/europa.jpg" fallbackColors={['#254A38','#3A735D','#13201D']} height={120} />
+              <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ fontSize:30 }}>🌍</div>
+                <div style={{ flex:1 }}>
+                  <div style={{ color:'white', fontSize:20, fontWeight:1000 }}>Reami terrestri</div>
+                  <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:3 }}>8 reami · 29 sottoreami</div>
+                </div>
+                <div style={{ color:'#90D84A', fontSize:24 }}>›</div>
+              </div>
+            </button>
+
+            <button onClick={()=>{setRealmMode('marine');setView('realms');}} style={{ ...cardShell }}>
+              <RegionArt src={null} fallbackColors={['#0B314A','#116B89','#051B2A']} height={120} />
+              <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ fontSize:30 }}>🌊</div>
+                <div style={{ flex:1 }}>
+                  <div style={{ color:'white', fontSize:20, fontWeight:1000 }}>Reami marini</div>
+                  <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:3 }}>12 reami · immagini in arrivo</div>
+                </div>
+                <div style={{ color:'#4FB3FF', fontSize:24 }}>›</div>
+              </div>
+            </button>
+          </>
+        )}
+
+        {view==='realms' && realmMode==='terrestrial' && TERRESTRIAL_REALMS.map(r=>(
+          <button key={r.id} onClick={()=>{setRealmId(r.id);setView('subrealms');}} style={{ ...cardShell }}>
+            <RegionArt src={r.image} fallbackColors={['#30494D','#53706D','#1C2B2E']} height={128} />
+            <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
+              <div style={{ flex:1 }}>
+                <div style={{ color:'white', fontSize:20, fontWeight:1000 }}>{r.label}</div>
+                <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:3 }}>{r.regions.length} sottoreami</div>
+              </div>
+              <div style={{ color:'#90D84A', fontSize:24 }}>›</div>
             </div>
           </button>
-        )}
-        {view==='continents' && GEO_REGION_GROUPS.map(group=>(
-          <button key={group.id} onClick={()=>{ setContinentId(group.id); setView('regions'); }} style={{ width:'100%', marginBottom:14, border:'none', borderRadius:14, padding:0, overflow:'hidden', background:'#1A1A1C', cursor:'pointer', textAlign:'left' }}>
-            <RegionArt src={group.image} fallbackColors={['#245B58','#4A8F7D','#25474A']} height={118} />
-            <div style={{ padding:'10px 12px' }}><div style={{ color:'white', fontSize:18, fontWeight:900 }}>{group.label}</div><div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>{group.regions.length} regioni</div></div>
-          </button>
         ))}
+
+        {view==='realms' && realmMode==='marine' && MARINE_REALMS.map(r=>(
+          <div key={r.id} style={{ ...cardShell, cursor:'default' }}>
+            <RegionArt src={r.image} grayscale={!unlockMap[r.id]} fallbackColors={['#0B314A','#116B89','#051B2A']} height={112} />
+            <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
+              <div style={{ width:44, height:44, borderRadius:15, background:'rgba(79,179,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>🌊</div>
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{r.label}</div>
+                <div style={{ color:'rgba(255,255,255,.42)', fontSize:11, marginTop:4 }}>Immagine in arrivo · matching tramite dati marini</div>
+              </div>
+              {!unlockMap[r.id]
+                ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [r.id]: true }))} style={{ height:36, padding:'0 11px', borderRadius:11, border:'none', background:'#4FB3FF', color:'#061018', fontWeight:900, cursor:'pointer' }}>Sblocca</button>
+                : <button onClick={()=>openSubrealmAnimals(r)} style={{ height:36, padding:'0 11px', borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Vedi</button>}
+            </div>
+          </div>
+        ))}
+
+        {view==='subrealms' && realm && realm.regions.map(reg=>(
+          <div key={reg.id} style={{ marginBottom:14, borderRadius:18, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
+            <RegionArt src={reg.image} grayscale={!unlockMap[reg.id]} fallbackColors={reg.pendingImage ? ['#4B4B50','#68686F','#242428'] : ['#4B5A62','#7E8B93','#39464D']} height={122} />
+            <div style={{ padding:'11px 12px', display:'flex', alignItems:'center', gap:10 }}>
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.12 }}>{reg.label}</div>
+                <div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>
+                  {reg.pendingImage ? 'Immagine in arrivo' : (reg.legacy?.length ? `Da: ${reg.legacy.join(', ')}` : `${reg.iso?.length || 0} codici ISO`)}
+                </div>
+              </div>
+              {!unlockMap[reg.id]
+                ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:12, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca</button>
+                : <button onClick={()=>openSubrealmAnimals(reg)} style={{ height:38, padding:'0 12px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Vedi animali</button>}
+            </div>
+          </div>
+        ))}
+
         {view==='countries' && (
           <div>
             <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
             {selectedCountry && (
-              <div style={{ background:'#151517', border:'1px solid rgba(144,216,74,.28)', borderRadius:16, padding:14, marginBottom:12, display:'flex', alignItems:'center', gap:12 }}>
-                <span style={{ fontSize:28 }}>{getFlagEmoji(selectedCountry)}</span>
-                <div style={{ flex:1 }}><div style={{ color:'white', fontSize:16, fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.48)', fontSize:11, marginTop:3 }}>{countAnimalsForGeoValue(selectedCountry)} animali collegati</div></div>
-                <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:38, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
+              <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.2)', borderRadius:16, padding:14, marginBottom:12 }}>
+                <div style={{ display:'flex', alignItems:'center', gap:10 }}>
+                  <span style={{ fontSize:28 }}>{getFlagEmoji(selectedCountry)}</span>
+                  <div style={{ flex:1 }}><div style={{ color:'white', fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:12 }}>{countAnimalsForGeoValue(selectedCountry)} animali associati</div></div>
+                  <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:36, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
+                </div>
               </div>
             )}
-            <div style={{ color:'white', fontSize:18, fontWeight:900, margin:'16px 0 10px' }}>Nazioni visitate</div>
-            {visitedCountries.length === 0 ? <div style={{ color:'rgba(255,255,255,.42)', fontSize:13, padding:'16px 6px', marginBottom:12 }}>Nessuna nazione visitata aggiunta.</div> : <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:14 }}>{visitedCountries.map(code=><VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry}/>)}</div>}
-            <div style={{ background:'#151517', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
+            {visitedCountries.length > 0 && (
+              <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
+                <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:10 }}>Nazioni visitate</div>
+                <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+                  {visitedCountries.map(code => <VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry} />)}
+                </div>
+              </div>
+            )}
+            <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
               <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi nazioni visitate</div>
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
@@ -3246,125 +3460,18 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             </div>
           </div>
         )}
-        {view==='regions' && continent && continent.regions.map(reg=>(
-          <div key={reg.id} style={{ marginBottom:14, borderRadius:14, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
-            <RegionArt src={reg.image} grayscale={!unlockMap[reg.id]} fallbackColors={['#4B5A62','#7E8B93','#39464D']} height={120} />
-            <div style={{ padding:'10px 12px', display:'flex', alignItems:'center', gap:10 }}>
-              <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontSize:17, fontWeight:900 }}>{reg.label}</div></div>
-              {!unlockMap[reg.id] ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca regione</button> : <button onClick={()=>onOpenRegion?.(`region:${reg.id}`, reg.label)} style={{ height:38, padding:'0 12px', borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Vedi animali</button>}
-            </div>
-          </div>
-        ))}
+
         {view==='animals' && region && (
-          <><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginBottom:12 }}>Animali presenti nella regione sbloccata.</div><div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>{regionAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}</div></>
+          <>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginBottom:12 }}>
+              {region.realmType === 'marine' ? 'Animali associati al reame marino quando disponibili nei dati.' : 'Animali presenti nel sottoreame sbloccato.'}
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>
+              {regionAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}
+            </div>
+            {regionAnimals.length === 0 && <div style={{ color:'rgba(255,255,255,.45)', fontSize:13, textAlign:'center', padding:30 }}>Nessun animale collegato per ora. La struttura è pronta per dati e immagini dedicate.</div>}
+          </>
         )}
-      </div>
-    </div>
-  );
-}
-
-function ToggleRow({ label, initial = true }) {
-  const [on, setOn] = useState(initial);
-  return (
-    <button onClick={()=>setOn(v=>!v)} style={{ width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, cursor:'pointer', fontFamily:'inherit' }}>
-      <span style={{ color:'white', fontSize:14, fontWeight:800 }}>{label}</span>
-      <span style={{ width:48, height:28, borderRadius:999, background:on?'#90D84A':'#3A3A3C', position:'relative', transition:'background .2s ease' }}>
-        <span style={{ position:'absolute', top:3, left:on?23:3, width:22, height:22, borderRadius:'50%', background:'white', transition:'left .2s ease' }} />
-      </span>
-    </button>
-  );
-}
-
-function SettingsSubPage({ title, onBack, children }) {
-  return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
-      <PageHeader title={title} onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:16 }}>{children}</div>
-    </div>
-  );
-}
-
-
-function GalleryPage({ onBack, statusMap = {}, onSelect }) {
-  const captured = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => a.status === 'catturato');
-  return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <PageHeader title="Galleria" onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:'14px 12px 28px' }}>
-        {captured.length === 0 ? (
-          <div style={{ color:'rgba(255,255,255,.45)', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale fotografato/catturato.</div>
-        ) : (
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:12 }}>
-            {captured.map(a => {
-              const c = CLS[a.cls] || CLS.Mammalia;
-              return (
-                <button key={a.id} onClick={()=>onSelect?.(a)} style={{ border:'none', borderRadius:18, overflow:'hidden', background:'#222', cursor:'pointer', padding:0, textAlign:'left', fontFamily:'inherit', boxShadow:'0 12px 32px rgba(0,0,0,.28)' }}>
-                  <AnimalImg a={a} size={126} fontSize={48} overrideStatus="catturato" />
-                  <div style={{ padding:10, background:c.mid }}>
-                    <div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{a.com}</div>
-                    <div style={{ color:'rgba(255,255,255,.65)', fontSize:10, fontStyle:'italic', marginTop:3, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.sci}</div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial }) {
-  const [sub, setSub] = useState(null);
-  if (sub === 'audio') return (
-    <SettingsSubPage title="Audio" onBack={()=>setSub(null)}>
-      <ToggleRow label="Suoni interfaccia" />
-      <ToggleRow label="Versi degli animali" />
-      <ToggleRow label="Notifiche push eventi" />
-    </SettingsSubPage>
-  );
-  if (sub === 'theme') return (
-    <SettingsSubPage title="Tema" onBack={()=>setSub(null)}>
-      {['Scuro','Chiaro','Sistema','Modalità daltonismo'].map((t,i)=><button key={t} style={{ width:'100%', background:'#222222', border:`1px solid ${i===0?'#90D84A':'rgba(255,255,255,.06)'}`, borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{i===0?'●':'○'} {t}</button>)}
-    </SettingsSubPage>
-  );
-  if (sub === 'data') return (
-    <SettingsSubPage title="Dati" onBack={()=>setSub(null)}>
-      {['Sincronizza ora sul Cloud','Esporta dati Animaldex','Spazio foto: placeholder'].map(t=><button key={t} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
-    </SettingsSubPage>
-  );
-  if (sub === 'privacy') return (
-    <SettingsSubPage title="Privacy" onBack={()=>setSub(null)}>
-      <ToggleRow label="Permesso fotocamera" />
-      <ToggleRow label="Posizione GPS per geotag" />
-      {['Termini di servizio','Elimina account'].map((t,i)=><button key={t} style={{ width:'100%', background:i?'rgba(255,59,48,.12)':'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:i?'#FF6B6B':'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
-    </SettingsSubPage>
-  );
-  const rows = [
-    { id:'audio', title:'Audio', subtitle:'Effetti e notifiche' },
-    { id:'theme', title:'Tema', subtitle:'Colori e contrasto' },
-    { id:'data', title:'Dati', subtitle:'Backup e sincronizzazione' },
-    { id:'privacy', title:'Privacy', subtitle:'Permessi e preferenze' },
-  ];
-  return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
-      <PageHeader title="Impostazioni" onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:16 }}>
-        <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.20),rgba(240,168,64,.08))', border:'1px solid rgba(168,70,55,.42)', borderRadius:24, padding:16, marginBottom:14, boxShadow:'0 18px 50px rgba(0,0,0,.22)' }}>
-          <div style={{ color:'#D98674', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Percorsi guidati</div>
-          <div style={{ color:'white', fontSize:18, fontWeight:1000, marginTop:5 }}>Onboarding professionale</div>
-          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.5, marginTop:7 }}>Puoi rivedere l’intera esperienza: configurazione iniziale, radar, rewards, status animali, filtri, regioni, profilo e statistiche.</div>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:9, marginTop:13 }}>
-            <button onClick={onStartInitialOnboarding} style={{ width:'100%', minHeight:48, borderRadius:17, border:'none', background:'linear-gradient(135deg,#A84637,#C45D3F)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:'0 12px 30px rgba(168,70,55,.30)' }}>Avvia percorso primo accesso</button>
-            <button onClick={onStartOperationalTutorial} style={{ width:'100%', minHeight:48, borderRadius:17, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Avvia tour operativo dell’app</button>
-          </div>
-        </div>
-        {rows.map(row=>(
-          <button key={row.id} onClick={()=>setSub(row.id)} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:8, display:'flex', alignItems:'center', justifyContent:'space-between', cursor:'pointer', fontFamily:'inherit' }}>
-            <span style={{ textAlign:'left' }}><span style={{ display:'block', color:'white', fontSize:15, fontWeight:900 }}>{row.title}</span><span style={{ display:'block', color:'rgba(255,255,255,.48)', fontSize:12, marginTop:3 }}>{row.subtitle}</span></span>
-            <span style={{ color:'rgba(255,255,255,.35)', fontSize:22 }}>›</span>
-          </button>
-        ))}
       </div>
     </div>
   );
