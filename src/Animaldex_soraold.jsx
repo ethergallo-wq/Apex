@@ -1,5 +1,8 @@
 import { useState, useEffect, useMemo, useRef } from "react";
-import { ANIMALS } from './animals-data';
+import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
+import { supabase } from './supabaseClient';
+
+let ANIMALS = LOCAL_ANIMALS;
 
 // ── Config ────────────────────────────────────────────────────────────
 const CLS = {
@@ -91,9 +94,9 @@ const ANIMAL_STATUS_ORDER = ['misterioso','ricercato','avvistato','catturato'];
 function normalizeAnimalStatus(status) {
   const s = String(status || '').toLowerCase().trim();
   if (s === 'misterioso' || s === 'bloccato' || s === 'locked') return 'misterioso';
-  if (s === 'ricercato' || s === 'non visto' || s === 'non_visto' || s === 'not_seen' || s === 'unknown') return 'ricercato';
+  if (s === 'ricercato' || s === 'non visto' || s === 'non_visto' || s === 'not_seen' || s === 'unknown' || s === 'unlocked') return 'ricercato';
   if (s === 'avvistato' || s === 'visto' || s === 'seen') return 'avvistato';
-  if (s === 'catturato' || s === 'fotografato' || s === 'captured' || s === 'photographed') return 'catturato';
+  if (s === 'catturato' || s === 'fotografato' || s === 'captured' || s === 'photographed' || s === 'collected') return 'catturato';
   return 'ricercato';
 }
 function isMysteryStatus(status) { return normalizeAnimalStatus(status) === 'misterioso'; }
@@ -103,72 +106,252 @@ function isRevealedStatus(status) {
 }
 function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(status)] || ANIMAL_STATUS.ricercato; }
 
-function getSupabaseConfig() {
-  let env = {};
-  try { env = import.meta.env || {}; } catch { env = {}; }
-  const win = typeof window !== 'undefined' ? window : {};
+
+function appStatusToSupabase(status) {
+  const s = normalizeAnimalStatus(status);
+  if (s === 'misterioso') return 'locked';
+  if (s === 'ricercato') return 'unlocked';
+  if (s === 'avvistato') return 'seen';
+  if (s === 'catturato') return 'collected';
+  return 'locked';
+}
+
+function supabaseStatusToApp(status) {
+  const s = String(status || '').toLowerCase().trim();
+  if (s === 'locked') return 'misterioso';
+  if (s === 'unlocked') return 'ricercato';
+  if (s === 'seen') return 'avvistato';
+  if (s === 'collected') return 'catturato';
+  return normalizeAnimalStatus(s);
+}
+
+function getRawValue(raw, keys, fallback = undefined) {
+  if (!raw || typeof raw !== 'object') return fallback;
+  for (const k of keys) {
+    if (raw[k] !== undefined && raw[k] !== null) return raw[k];
+  }
+  return fallback;
+}
+
+function toArraySafe(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value.filter(Boolean);
+  if (typeof value === 'string') return value.split(/[;,|]/).map(v => v.trim()).filter(Boolean);
+  return [];
+}
+
+function normalizeSupabaseAnimal(row, userAnimal) {
+  const raw = row?.raw && typeof row.raw === 'object' ? row.raw : {};
+  const geo = Array.isArray(row?.animal_geo) ? row.animal_geo[0] : row?.animal_geo;
+  const countries = toArraySafe(geo?.iso || raw?.distribution?.countries_present || raw?.countries_present || raw?.iso);
+  const categories = toArraySafe(getRawValue(raw, ['categories', 'category_ids', 'badges', 'abilities'], []));
+  const status = supabaseStatusToApp(userAnimal?.unlock_status || 'locked');
+
   return {
-    url: String(env.VITE_SUPABASE_URL || win.ANIMALDEX_SUPABASE_URL || '').replace(/\/$/, ''),
-    anonKey: String(env.VITE_SUPABASE_ANON_KEY || win.ANIMALDEX_SUPABASE_ANON_KEY || ''),
-    table: String(env.VITE_ANIMALDEX_STATUS_TABLE || win.ANIMALDEX_STATUS_TABLE || 'user_animal_status'),
+    ...raw,
+    ...row,
+    desc: row?.description || raw.desc || raw.description || '',
+    description: row?.description || raw.description || raw.desc || '',
+    image_url: row?.image_url || raw.image_url || raw.img || '',
+    com: row?.com || raw.com || raw.name || '',
+    sci: row?.sci || raw.sci || raw.scientific_name || '',
+    com_en: row?.com_en || raw.com_en || '',
+    no: row?.no || raw.no || String(row?.id || '').padStart(3, '0'),
+    cls: row?.cls || raw.cls || raw.class || 'Mammalia',
+    ord: row?.ord || raw.ord || raw.order || '',
+    fam: row?.fam || raw.fam || raw.family || '',
+    gen: row?.gen || raw.gen || raw.genus || '',
+    phy: row?.phy || raw.phy || raw.phylum || '',
+    kin: row?.kin || raw.kin || raw.kingdom || 'Animalia',
+    rarity: row?.rarity || raw.rarity || 'Comune',
+    cons: raw.cons || raw.iucn || raw.conservation || 'DD',
+    trophic: raw.trophic || raw.trophic_level || '2',
+    wt: raw.wt || raw.weight || '',
+    ln: raw.ln || raw.length || '',
+    stats: raw.stats || {},
+    categories,
+    cat_curiosities: raw.cat_curiosities || raw.category_curiosities || {},
+    distribution: {
+      ...(raw.distribution || {}),
+      countries_present: countries,
+    },
+    geo: geo || null,
+    map_profile: geo?.map_profile || raw.map_profile || '',
+    confidence: geo?.confidence || raw.confidence || '',
+    bio_regions: toArraySafe(geo?.bio_regions || raw.bio_regions),
+    game_regions: toArraySafe(geo?.game_regions || raw.game_regions),
+    habitats: toArraySafe(geo?.habitats || raw.habitats || raw.habitat),
+    userStatus: userAnimal?.unlock_status || 'locked',
+    userAnimal: userAnimal || null,
+    status,
   };
 }
 
-function getAnimaldexUserId() {
-  if (typeof window === 'undefined') return 'local-preview-user';
-  if (window.ANIMALDEX_USER_ID) return String(window.ANIMALDEX_USER_ID);
-  const key = 'animaldex_user_id';
+function normalizeLocalAnimal(a) {
+  return {
+    ...a,
+    geo: a.geo || null,
+    confidence: a.confidence || a.geo?.confidence || '',
+    map_profile: a.map_profile || a.geo?.map_profile || '',
+    bio_regions: toArraySafe(a.bio_regions || a.geo?.bio_regions),
+    game_regions: toArraySafe(a.game_regions || a.geo?.game_regions),
+    habitats: toArraySafe(a.habitats || a.habitat || a.geo?.habitats),
+    userStatus: appStatusToSupabase(a.status),
+    status: normalizeAnimalStatus(a.status),
+  };
+}
+
+async function ensureUserProfile(user) {
+  if (!user?.id) return false;
+
+  const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+
   try {
-    const existing = window.localStorage.getItem(key);
-    if (existing) return existing;
-    const randomPart = window.crypto?.randomUUID ? window.crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
-    const id = `anon-${randomPart}`;
-    window.localStorage.setItem(key, id);
-    return id;
-  } catch {
-    return 'local-preview-user';
+    const { data, error } = await supabase
+      .from('user_profiles')
+      .select('user_id')
+      .eq('user_id', user.id)
+      .maybeSingle();
+
+    if (error && error.code !== 'PGRST116') throw error;
+    if (data) return true;
+
+    const { error: insertError } = await supabase
+      .from('user_profiles')
+      .upsert(
+        { user_id: user.id, username },
+        { onConflict:'user_id' }
+      );
+
+    // In signup con conferma email attiva Supabase può restituire un user non ancora utilizzabile
+    // lato FK/RLS. Non blocchiamo l'app: riproveremo dopo login/sessione valida.
+    if (insertError) {
+      console.warn('[Animaldex] Profilo non ancora creabile:', insertError);
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.warn('[Animaldex] ensureUserProfile skipped:', err);
+    return false;
   }
 }
 
-async function loadSupabaseStatusMap() {
-  const cfg = getSupabaseConfig();
-  if (!cfg.url || !cfg.anonKey || typeof fetch === 'undefined') return {};
-  const userId = getAnimaldexUserId();
-  const url = `${cfg.url}/rest/v1/${cfg.table}?select=animal_id,status&user_id=eq.${encodeURIComponent(userId)}`;
-  const res = await fetch(url, {
-    headers: { apikey: cfg.anonKey, Authorization: `Bearer ${cfg.anonKey}` },
-  });
-  if (!res.ok) throw new Error(`Supabase status load failed: ${res.status}`);
-  const rows = await res.json();
-  return (Array.isArray(rows) ? rows : []).reduce((acc,row)=>{
-    acc[row.animal_id] = normalizeAnimalStatus(row.status);
-    return acc;
-  }, {});
+async function fetchAnimalsFromSupabase(userId) {
+  const { data: animals, error: animalsError } = await supabase
+    .from('animals')
+    .select(`
+      *,
+      animal_geo (*)
+    `);
+
+  if (animalsError) throw animalsError;
+
+  const { data: userAnimals, error: userAnimalsError } = await supabase
+    .from('user_animals')
+    .select('*')
+    .eq('user_id', userId);
+
+  if (userAnimalsError) throw userAnimalsError;
+
+  const userAnimalsById = Object.fromEntries((userAnimals || []).map(row => [row.animal_id, row]));
+  return (animals || []).map(a => normalizeSupabaseAnimal(a, userAnimalsById[a.id]));
 }
 
-async function upsertSupabaseAnimalStatus(animalId, status) {
-  const cfg = getSupabaseConfig();
-  if (!cfg.url || !cfg.anonKey || typeof fetch === 'undefined') return false;
-  const userId = getAnimaldexUserId();
-  const url = `${cfg.url}/rest/v1/${cfg.table}?on_conflict=user_id,animal_id`;
+async function fetchUserDestinations(userId) {
+  const { data, error } = await supabase
+    .from('user_destinations')
+    .select('iso')
+    .eq('user_id', userId);
+  if (error) throw error;
+  return Array.from(new Set((data || []).map(r => String(r.iso || '').toUpperCase()).filter(Boolean))).sort();
+}
+
+async function saveUserAnimalStatus(userId, animal, status) {
+  const nextAppStatus = normalizeAnimalStatus(status);
+  const unlock_status = appStatusToSupabase(nextAppStatus);
+  const now = new Date().toISOString();
+  const existing = animal?.userAnimal || null;
   const payload = {
     user_id: userId,
-    animal_id: String(animalId),
-    status: normalizeAnimalStatus(status),
-    updated_at: new Date().toISOString(),
+    animal_id: animal.id,
+    unlock_status,
+    updated_at: now,
   };
-  const res = await fetch(url, {
-    method:'POST',
-    headers: {
-      apikey: cfg.anonKey,
-      Authorization: `Bearer ${cfg.anonKey}`,
-      'Content-Type':'application/json',
-      Prefer:'resolution=merge-duplicates,return=minimal',
-    },
-    body: JSON.stringify(payload),
-  });
-  if (!res.ok) throw new Error(`Supabase status upsert failed: ${res.status}`);
+
+  if (unlock_status !== 'locked' && !existing?.unlocked_at) payload.unlocked_at = now;
+  if (unlock_status === 'seen') payload.seen_at = now;
+  if (unlock_status === 'collected') payload.collected_at = now;
+
+  const { error } = await supabase
+    .from('user_animals')
+    .upsert(payload, { onConflict:'user_id,animal_id' });
+  if (error) throw error;
   return true;
+}
+
+async function fetchUserBadgeIds(userId) {
+  const { data, error } = await supabase
+    .from('user_badges')
+    .select('badge_id')
+    .eq('user_id', userId);
+
+  if (error) throw error;
+  return Array.from(new Set((data || []).map(row => normalizeBadgeId(row.badge_id)).filter(Boolean)));
+}
+
+async function persistEarnedBadges(userId, badgeIds = []) {
+  const cleanIds = Array.from(new Set((badgeIds || []).map(normalizeBadgeId).filter(Boolean)));
+  if (!userId || !cleanIds.length) return [];
+
+  const { data: existingRows, error: existingError } = await supabase
+    .from('user_badges')
+    .select('badge_id')
+    .eq('user_id', userId)
+    .in('badge_id', cleanIds);
+
+  if (existingError) throw existingError;
+
+  const existing = new Set((existingRows || []).map(row => normalizeBadgeId(row.badge_id)));
+  const missing = cleanIds.filter(id => !existing.has(id));
+  if (!missing.length) return cleanIds;
+
+  const now = new Date().toISOString();
+  const payload = missing.map(badge_id => ({
+    user_id: userId,
+    badge_id,
+    earned_at: now,
+  }));
+
+  const { error } = await supabase
+    .from('user_badges')
+    .insert(payload);
+
+  if (error) throw error;
+  return cleanIds;
+}
+
+async function persistUserDestination(userId, iso, tripTags = []) {
+  const cleanIso = String(iso || '').toUpperCase().trim();
+  if (!userId || !cleanIso) return false;
+
+  const { error } = await supabase
+    .from('user_destinations')
+    .insert({
+      user_id: userId,
+      iso: cleanIso,
+      trip_tags: tripTags,
+      visited_at: new Date().toISOString().slice(0,10),
+    });
+
+  // 23505 = duplicate key. Se hai una unique(user_id, iso, visited_at) o simile,
+  // non blocchiamo la RPC: la destinazione risulta già registrata.
+  if (error && error.code !== '23505') throw error;
+  return true;
+}
+
+function normalizeBadgeId(id) {
+  return String(id || '').trim().toUpperCase();
 }
 const TROPHIC = {
   1:{ label:'Produttore',      c:'#5CC85A', bg:'#1A3B19' },
@@ -462,51 +645,51 @@ const COUNTRIES = [
 
 const GEO_REGION_GROUPS = [
   {
-    id:'europa', label:'Europa', image:'/regions/continents/europa.png', regions:[
-      { id:'europa-boreale', label:'Europa boreale', image:'/regions/europa/europa-boreale.png', iso:['IS','NO','SE','FI','DK','FO','AX'] },
-      { id:'europa-temperata', label:'Europa temperata', image:'/regions/europa/europa-temperata.png', iso:['IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE'] },
-      { id:'europa-mediterranea', label:'Europa mediterranea', image:'/regions/europa/europa-mediterranea.png', iso:['ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS'] },
+    id:'europa', label:'Europa', image:'/regions/europa.jpg', regions:[
+      { id:'europa-boreale', label:'Europa boreale', image:'/regions/Europa_boreale.jpg', iso:['IS','NO','SE','FI','DK','FO','AX'] },
+      { id:'europa-temperata', label:'Europa temperata', image:'/regions/Europa-temperata.jpg', iso:['IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE'] },
+      { id:'europa-mediterranea', label:'Europa mediterranea', image:'/regions/Europa_mediterranea.jpg', iso:['ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS'] },
     ]
   },
   {
-    id:'america', label:'America', image:'/regions/continents/america.png', regions:[
-      { id:'nord-america-boreale', label:'Nord America boreale', image:'/regions/america/nord-america-boreale.png', iso:['CA'] },
-      { id:'nord-america-temperato', label:'Nord America temperato', image:'/regions/america/nord-america-temperato.png', iso:['US','BM','PM'] },
-      { id:'nord-america-desertico', label:'Nord America desertico', image:'/regions/america/nord-america-desertico.png', iso:['GL'] },
-      { id:'america-tropicale', label:'America tropicale', image:'/regions/america/america-tropicale.png', iso:['MX','BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY','CO','VE','EC','PE','BO','BR','GF','GY','SR'] },
-      { id:'sud-america-temperato', label:'Sud America temperato', image:'/regions/america/sud-america-temperato.png', iso:['AR','CL','UY','PY','FK'] },
+    id:'america', label:'America', image:'/regions/america.jpg', regions:[
+      { id:'nord-america-boreale', label:'Nord America boreale', image:'/regions/nord_America_boreale.jpg', iso:['CA'] },
+      { id:'nord-america-temperato', label:'Nord America temperato', image:'/regions/nord_america_temperato.jpg', iso:['US','BM','PM'] },
+      { id:'nord-america-desertico', label:'Nord America desertico', image:'/regions/Nord_America_desertico.jpg', iso:['GL'] },
+      { id:'america-tropicale', label:'America tropicale', image:'/regions/America_tropicale.jpg', iso:['MX','BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY','CO','VE','EC','PE','BO','BR','GF','GY','SR'] },
+      { id:'sud-america-temperato', label:'Sud America temperato', image:'/regions/America_temperato.jpg', iso:['AR','CL','UY','PY','FK'] },
     ]
   },
   {
-    id:'africa', label:'Africa', image:'/regions/continents/africa.png', regions:[
-      { id:'africa-arida', label:'Africa arida', image:'/regions/africa/africa-arida.png', iso:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD'] },
-      { id:'africa-tropicale', label:'Africa tropicale', image:'/regions/africa/africa-tropicale.png', iso:['SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'] },
-      { id:'africa-australe', label:'Africa australe', image:'/regions/africa/africa-australe.png', iso:['ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS'] },
-      { id:'madagascar', label:'Madagascar', image:'/regions/africa/madagascar.png', iso:['MG'] },
+    id:'africa', label:'Africa', image:'/regions/africa.jpg', regions:[
+      { id:'africa-arida', label:'Africa arida', image:'/regions/africa_arida.jpg', iso:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD'] },
+      { id:'africa-tropicale', label:'Africa tropicale', image:'/regions/africa_tropicale.jpg', iso:['SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'] },
+      { id:'africa-australe', label:'Africa australe', image:'/regions/africa_australe.jpg', iso:['ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS'] },
+      { id:'madagascar', label:'Madagascar', image:'/regions/madagascar.jpg', iso:['MG'] },
     ]
   },
   {
-    id:'asia', label:'Asia', image:'/regions/continents/asia.png', regions:[
-      { id:'asia-boreale-steppa', label:'Asia boreale e steppa', image:'/regions/asia/asia-boreale-steppa.png', iso:['RU','KZ','MN'] },
-      { id:'asia-occidentale-centrale', label:'Asia occidentale e centrale', image:'/regions/asia/asia-occidentale-centrale.png', iso:['TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF'] },
-      { id:'asia-meridionale', label:'Asia meridionale', image:'/regions/asia/asia-meridionale.png', iso:['PK','IN','BD','LK','NP','BT','MV'] },
-      { id:'asia-orientale', label:'Asia orientale', image:'/regions/asia/asia-orientale.png', iso:['CN','HK','MO','TW','KR','KP'] },
-      { id:'giappone', label:'Giappone', image:'/regions/asia/giappone.png', iso:['JP'] },
-      { id:'sud-est-asiatico', label:'Sud-est asiatico', image:'/regions/asia/sud-est-asiatico.png', iso:['MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'] },
+    id:'asia', label:'Asia', image:'/regions/asia.jpg', regions:[
+      { id:'asia-boreale-steppa', label:'Asia boreale e steppa', image:'/regions/asia_boreale_steppa.jpg', iso:['RU','KZ','MN'] },
+      { id:'asia-occidentale-centrale', label:'Asia occidentale e centrale', image:'/regions/asia_occidentale_centrale.jpg', iso:['TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF'] },
+      { id:'asia-meridionale', label:'Asia meridionale', image:'/regions/asia_meridionale.jpg', iso:['PK','IN','BD','LK','NP','BT','MV'] },
+      { id:'asia-orientale', label:'Asia orientale', image:'/regions/asia_orientale.jpg', iso:['CN','HK','MO','TW','KR','KP'] },
+      { id:'giappone', label:'Giappone', image:'/regions/giappone.jpg', iso:['JP'] },
+      { id:'sud-est-asiatico', label:'Sud-est asiatico', image:'/regions/sudest_asiatico.jpg', iso:['MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'] },
     ]
   },
   {
-    id:'oceania', label:'Oceania', image:'/regions/continents/oceania.png', regions:[
-      { id:'australia', label:'Australia', image:'/regions/oceania/australia.png', iso:['AU','NF','CX','CC'] },
-      { id:'nuova-zel&&a', label:'Nuova Zel&&a', image:'/regions/oceania/nuova-zel&&a.png', iso:['NZ'] },
-      { id:'pacifico-tropicale', label:'Pacifico tropicale', image:'/regions/oceania/pacifico-tropicale.png', iso:['PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'] },
+    id:'oceania', label:'Oceania', image:'/regions/oceania.jpg', regions:[
+      { id:'australia', label:'Australia', image:'/regions/australia.jpg', iso:['AU','NF','CX','CC'] },
+      { id:'nuova-zelanda', label:'Nuova Zelanda', image:'/regions/nuova_zelanda.jpg', iso:['NZ'] },
+      { id:'pacifico-tropicale', label:'Pacifico tropicale', image:'/regions/pacifico_tropicale.jpg', iso:['PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'] },
     ]
   },
   {
-    id:'speciali', label:'Regioni speciali', image:'/regions/continents/speciali.png', regions:[
-      { id:'isole-oceano-indiano', label:'Isole Oceano Indiano', image:'/regions/speciali/isole-oceano-indiano.png', iso:['MU','RE','YT','KM','SC','IO'] },
-      { id:'artide', label:'Artide', image:'/regions/speciali/artide.png', iso:['GL','SJ'] },
-      { id:'antartide', label:'Antartide', image:'/regions/speciali/antartide.png', iso:['AQ','BV','GS','HM','TF','SH'] },
+    id:'speciali', label:'Regioni speciali', image:'/regions/regioni_speciali.jpg', regions:[
+      { id:'isole-oceano-indiano', label:'Isole Oceano Indiano', image:'/regions/isole_oceano_indiano.jpg', iso:['MU','RE','YT','KM','SC','IO'] },
+      { id:'artide', label:'Artide', image:'/regions/artide.jpg', iso:['GL','SJ'] },
+      { id:'antartide', label:'Antartide', image:'/regions/antartide.jpg', iso:['AQ','BV','GS','HM','TF','SH'] },
     ]
   },
 ];
@@ -565,7 +748,7 @@ function getGeoOptionIsoCodes(value) {
 }
 function matchGeographySelection(animal, selections = []) {
   if (!selections.length) return true;
-  const countries = animal.distribution?.countries_present || [];
+  const countries = animal.distribution?.countries_present || animal.geo?.iso || animal.iso || [];
   return selections.some(sel => {
     if (sel.startsWith('region:') || sel.startsWith('continent:')) {
       const iso = getGeoOptionIsoCodes(sel);
@@ -738,11 +921,11 @@ function computeUnlockedAwards(statusMap = {}, visitedCountries = null) {
 }
 function getAwardUnlockSet() {
   if (typeof window === 'undefined') return new Set();
-  try { return new Set(JSON.parse(window.localStorage.getItem('animaldex_awards_unlocked') || '[]')); } catch { return new Set(); }
+  try { return new Set(JSON.parse(window.localStorage.getItem('animaldex_awards_unlocked') || '[]').map(normalizeBadgeId)); } catch { return new Set(); }
 }
 function persistAwardUnlocks(ids = []) {
   if (typeof window === 'undefined') return;
-  try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set(ids)))); } catch {}
+  try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set((ids || []).map(normalizeBadgeId).filter(Boolean))))); } catch {}
 }
 
 // ── Rarity class helper ───────────────────────────────────────────────
@@ -1455,6 +1638,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
   const [fTrophic,setFTrophic]    = useState([]);
   const [fGeography, setFGeography] = useState([]);
   const [fCategory, setFCategory] = useState([]);
+  const [fConfidence, setFConfidence] = useState([]);
+  const [fMapProfile, setFMapProfile] = useState([]);
+  const [fBioRegion, setFBioRegion] = useState([]);
+  const [fGameRegion, setFGameRegion] = useState([]);
+  const [fHabitat, setFHabitat] = useState([]);
   const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
@@ -1470,6 +1658,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
     setFTrophic(preset.trophic || []);
     setFGeography(preset.type === 'region' ? [preset.regionValue] : (preset.geography || []));
     setFCategory(preset.categories || []);
+    setFConfidence(preset.confidence || []);
+    setFMapProfile(preset.map_profile || []);
+    setFBioRegion(preset.bio_regions || []);
+    setFGameRegion(preset.game_regions || []);
+    setFHabitat(preset.habitats || []);
     setFTax(preset.tax || null);
     setSortBy(preset.sortBy || 'no');
   }, [preset?.id]);
@@ -1487,6 +1680,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
       if (fTrophic.length  && !fTrophic.includes(String(a.trophic))) return false;
       if (fGeography.length && !matchGeographySelection(a, fGeography)) return false;
       if (fCategory.length && !(a.categories || []).some(cat => fCategory.includes(cat))) return false;
+      if (fConfidence.length && !fConfidence.includes(a.confidence || a.geo?.confidence)) return false;
+      if (fMapProfile.length && !fMapProfile.includes(a.map_profile || a.geo?.map_profile)) return false;
+      if (fBioRegion.length && !toArraySafe(a.bio_regions || a.geo?.bio_regions).some(v => fBioRegion.includes(v))) return false;
+      if (fGameRegion.length && !toArraySafe(a.game_regions || a.geo?.game_regions).some(v => fGameRegion.includes(v))) return false;
+      if (fHabitat.length && !toArraySafe(a.habitats || a.habitat || a.geo?.habitats).some(v => fHabitat.includes(v))) return false;
       if (fTax && a[TAX_KEY_MAP[fTax.key]] !== fTax.value) return false;
       return true;
     })
@@ -1500,13 +1698,19 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
       return noA - noB;
     });
 
-  const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fTax||sortBy!=='no';
+  const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
   const rarityOpts = Object.entries(RARITY).map(([k,v])=>({ value:k, label:k, c:v.c, bg:v.bg }));
   const consOpts   = Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg }));
   const statusOpts = ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:ANIMAL_STATUS[k].bg }));
   const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
   const geographyOpts = [...GEO_FILTER_OPTIONS, ...COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))];
   const categoryOpts = Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` }));
+  const uniqueOpt = (values, color='#7AC7FF') => Array.from(new Set(values.flatMap(v => toArraySafe(v)).filter(Boolean))).sort().map(v=>({ value:v, label:v, c:color, bg:`${color}22` }));
+  const confidenceOpts = ['high','medium','low'].map(v=>({ value:v, label:`confidence ${v}`, c:v==='high'?'#90D84A':v==='medium'?'#F0C449':'#F06060', bg:'rgba(255,255,255,.10)' }));
+  const mapProfileOpts = uniqueOpt(ANIMALS.map(a=>a.map_profile || a.geo?.map_profile), '#5BBEF8');
+  const bioRegionOpts = uniqueOpt(ANIMALS.map(a=>a.bio_regions || a.geo?.bio_regions), '#6CE5C7');
+  const gameRegionOpts = uniqueOpt(ANIMALS.map(a=>a.game_regions || a.geo?.game_regions), '#B860F8');
+  const habitatOpts = uniqueOpt(ANIMALS.map(a=>a.habitats || a.habitat || a.geo?.habitats), '#F0A840');
   const sortOpts = [
     { value:'no', label:'Numero ID', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
     { value:'name_asc', label:'Nome A → Z', c:'#5BBEF8', bg:'rgba(91,190,248,.16)' },
@@ -1544,6 +1748,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
           {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
           {fGeography.map(g=>{ const opt = geographyOpts.find(o=>o.value===g); return <span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{opt?.label || g} ×</span>; })}
           {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
+          {fConfidence.map(v=><span key={v} onClick={()=>setFConfidence(p=>p.filter(x=>x!==v))} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>confidence {v} ×</span>)}
+          {fMapProfile.map(v=><span key={v} onClick={()=>setFMapProfile(p=>p.filter(x=>x!==v))} style={{ background:'rgba(91,190,248,.16)', color:'#5BBEF8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
+          {fBioRegion.map(v=><span key={v} onClick={()=>setFBioRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(108,229,199,.16)', color:'#6CE5C7', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
+          {fGameRegion.map(v=><span key={v} onClick={()=>setFGameRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(184,96,248,.16)', color:'#B860F8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
+          {fHabitat.map(v=><span key={v} onClick={()=>setFHabitat(p=>p.filter(x=>x!==v))} style={{ background:'rgba(240,168,64,.16)', color:'#F0A840', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
           {sortBy!=='no' && <span onClick={()=>setSortBy('no')} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>↕ {sortOpts.find(o=>o.value===sortBy)?.label||'Ordina'} ×</span>}
         </div>
       )}
@@ -1577,6 +1786,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
               { label:'Status', icon:'📷', onClick:()=>{setSheet('status');setShowMenu(false);}, active:fStatus.length>0, color:'#00BFFF' },
               { label:'Categorie', icon:'◉', onClick:()=>{setSheet('category');setShowMenu(false);}, active:fCategory.length>0, color:'#B860F8' },
               { label:'Geografia', icon:'🌍', onClick:()=>{setSheet('geography');setShowMenu(false);}, active:fGeography.length>0, color:'#20B2AA' },
+              { label:'Confidence', icon:'✓', onClick:()=>{setSheet('confidence');setShowMenu(false);}, active:fConfidence.length>0, color:'#90D84A' },
+              { label:'Map profile', icon:'▣', onClick:()=>{setSheet('mapProfile');setShowMenu(false);}, active:fMapProfile.length>0, color:'#5BBEF8' },
+              { label:'Bio regioni', icon:'☘', onClick:()=>{setSheet('bioRegion');setShowMenu(false);}, active:fBioRegion.length>0, color:'#6CE5C7' },
+              { label:'Game regioni', icon:'◆', onClick:()=>{setSheet('gameRegion');setShowMenu(false);}, active:fGameRegion.length>0, color:'#B860F8' },
+              { label:'Habitat', icon:'⌁', onClick:()=>{setSheet('habitat');setShowMenu(false);}, active:fHabitat.length>0, color:'#F0A840' },
               { label:'Classe', icon:'🧬', onClick:()=>{setSheet('cls');setShowMenu(false);}, active:!!clsF, color:'#90D84A' },
             ].map((item,i)=>(
               <button key={i} onClick={item.onClick} style={{ width:'100%', padding:'14px 16px', borderBottom:'1px solid rgba(255,255,255,.05)', background:'transparent', border:'none', display:'flex', alignItems:'center', gap:12, cursor:'pointer', color:item.active?item.color:'white', fontWeight:item.active?700:600 }}>
@@ -1585,7 +1799,7 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
                 {item.active && <span style={{ marginLeft:'auto', color:item.color, fontSize:12 }}>✓</span>}
               </button>
             ))}
-            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus([]);setFTrophic([]);setFGeography([]);setFCategory([]);setFTax(null);setSortBy('no');setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>Resetta filtri</button>
+            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus([]);setFTrophic([]);setFGeography([]);setFCategory([]);setFConfidence([]);setFMapProfile([]);setFBioRegion([]);setFGameRegion([]);setFHabitat([]);setFTax(null);setSortBy('no');setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>Resetta filtri</button>
           </div>
         </div>
       )}
@@ -1615,6 +1829,11 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
       {sheet==='trophic' && <MultiSheet title="Catena Alimentare" options={trophicOpts} selected={fTrophic} onApply={setFTrophic} onClose={()=>setSheet(null)}/>}
       {sheet==='geography' && <MultiSheet title="Geografia" options={geographyOpts} selected={fGeography} onApply={setFGeography} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='category' && <MultiSheet title="Categorie" options={categoryOpts} selected={fCategory} onApply={setFCategory} onClose={()=>setSheet(null)} withSearch/>}
+      {sheet==='confidence' && <MultiSheet title="Confidence" options={confidenceOpts} selected={fConfidence} onApply={setFConfidence} onClose={()=>setSheet(null)} />}
+      {sheet==='mapProfile' && <MultiSheet title="Map profile" options={mapProfileOpts} selected={fMapProfile} onApply={setFMapProfile} onClose={()=>setSheet(null)} withSearch/>}
+      {sheet==='bioRegion' && <MultiSheet title="Bio regioni" options={bioRegionOpts} selected={fBioRegion} onApply={setFBioRegion} onClose={()=>setSheet(null)} withSearch/>}
+      {sheet==='gameRegion' && <MultiSheet title="Game regioni" options={gameRegionOpts} selected={fGameRegion} onApply={setFGameRegion} onClose={()=>setSheet(null)} withSearch/>}
+      {sheet==='habitat' && <MultiSheet title="Habitat" options={habitatOpts} selected={fHabitat} onApply={setFHabitat} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='sort' && <SortSheet title="Ordina" options={sortOpts} selected={sortBy} onApply={setSortBy} onClose={()=>setSheet(null)}/>}
       {sheet==='tax' && <TaxSheet current={fTax} onApply={v=>{setFTax(v);}} onClose={()=>setSheet(null)}/>}
     </div>
@@ -1625,25 +1844,63 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin }) {
 // ── Image Lightbox ────────────────────────────────────────────────────
 function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
   const [visible, setVisible] = useState(false);
+  const [zoom, setZoom] = useState(1);
+  const [lastTap, setLastTap] = useState(0);
+  const pinchRef = useRef({ active:false, startDist:0, startZoom:1 });
+
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
   const handleClose = () => { setVisible(false); setTimeout(onClose, 350); };
 
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
+  const vw = typeof window !== 'undefined' ? window.innerWidth : 390;
+  const vh = typeof window !== 'undefined' ? window.innerHeight : 800;
 
-  // Starting box position and size (the image container in the detail page)
   const startLeft   = originRect ? originRect.left : vw * 0.1;
   const startTop    = originRect ? originRect.top  : vh * 0.1;
   const startW      = originRect ? originRect.width  : vw * 0.4;
   const startH      = originRect ? originRect.height : vh * 0.3;
 
-  // Interpolate box from origin → fullscreen
+  const distance = (touches) => {
+    if (!touches || touches.length < 2) return 0;
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx*dx + dy*dy);
+  };
+
+  const handleTouchStart = (e) => {
+    if (e.touches?.length === 2) {
+      e.preventDefault();
+      pinchRef.current = { active:true, startDist:distance(e.touches), startZoom:zoom };
+    }
+  };
+  const handleTouchMove = (e) => {
+    if (pinchRef.current.active && e.touches?.length === 2) {
+      e.preventDefault();
+      const d = distance(e.touches);
+      if (pinchRef.current.startDist > 0) {
+        const next = Math.max(1, Math.min(4, pinchRef.current.startZoom * (d / pinchRef.current.startDist)));
+        setZoom(next);
+      }
+    }
+  };
+  const handleTouchEnd = () => {
+    pinchRef.current.active = false;
+  };
+  const handleDoubleTap = (e) => {
+    const now = Date.now();
+    if (now - lastTap < 280) {
+      e.preventDefault?.();
+      setZoom(z => z > 1 ? 1 : 2.25);
+    }
+    setLastTap(now);
+  };
+
   const boxStyle = visible ? {
     position:'fixed', left:0, top:0, width:'100vw', height:'100vh',
     background: bgColor || '#1a1a1c',
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
-    zIndex:300, cursor:'zoom-out',
+    zIndex:300, cursor:'default', overflow:'hidden',
+    touchAction:'none',
   } : {
     position:'fixed',
     left: startLeft, top: startTop,
@@ -1652,27 +1909,44 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
     background: bgColor || '#1a1a1c',
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
-    zIndex:300, cursor:'zoom-out',
+    zIndex:300, cursor:'default', overflow:'hidden',
+    touchAction:'none',
   };
 
   return (
     <>
-      {/* Dark overlay */}
       <div onClick={handleClose} style={{
         position:'fixed', inset:0, zIndex:299,
         background: visible ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)',
         transition:'background .35s ease',
       }}/>
-      {/* Expanding colored box */}
-      <div onClick={handleClose} style={boxStyle}>
-        <img src={src} alt={alt} onClick={e=>e.stopPropagation()} style={{
-          maxWidth:'88%', maxHeight:'88%',
-          objectFit:'contain',
-          opacity: visible ? 1 : 0,
-          transition:'opacity .25s ease .1s',
-          filter: `drop-shadow(0 0 40px ${accentColor}99)`,
-          cursor:'default',
-        }}/>
+      <div
+        onClick={e=>e.stopPropagation()}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={boxStyle}
+      >
+        <img
+          src={src}
+          alt={alt}
+          onClick={e=>e.stopPropagation()}
+          onTouchEnd={handleDoubleTap}
+          draggable={false}
+          style={{
+            maxWidth:'88%', maxHeight:'88%',
+            objectFit:'contain',
+            opacity: visible ? 1 : 0,
+            transition:'opacity .25s ease .1s, transform .12s ease-out',
+            transform:`scale(${zoom})`,
+            transformOrigin:'center center',
+            filter: `drop-shadow(0 0 40px ${accentColor}99)`,
+            cursor:'default',
+            userSelect:'none',
+            WebkitUserSelect:'none',
+            touchAction:'none',
+          }}
+        />
         <button onClick={handleClose} style={{
           position:'absolute', top:16, right:16,
           background:'rgba(0,0,0,.25)', border:'none',
@@ -1680,7 +1954,16 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
           borderRadius:'50%', cursor:'pointer', display:'flex',
           alignItems:'center', justifyContent:'center',
           opacity: visible ? 1 : 0, transition:'opacity .3s ease .15s',
+          zIndex:2,
         }}>×</button>
+        {zoom > 1 && (
+          <button onClick={()=>setZoom(1)} style={{
+            position:'absolute', bottom:18, left:'50%', transform:'translateX(-50%)',
+            height:38, padding:'0 14px', borderRadius:999, border:'none',
+            background:'rgba(0,0,0,.32)', color:'white', fontSize:12, fontWeight:900,
+            cursor:'pointer', zIndex:2,
+          }}>Reset zoom</button>
+        )}
       </div>
     </>
   );
@@ -2092,7 +2375,72 @@ function AwardToast({ award }) {
   );
 }
 
-function MainMenu({ onOpen, onBack }) {
+
+function AuthScreen({ onAuthReady }) {
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
+  const [mode,setMode]=useState('login');
+  const [loading,setLoading]=useState(false);
+  const [message,setMessage]=useState('');
+
+  const loginWithGoogle = async () => {
+    setLoading(true);
+    setMessage('');
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin,
+        },
+      });
+      if (error) throw error;
+    } catch (err) {
+      setMessage(err?.message || 'Errore login Google.');
+      setLoading(false);
+    }
+  };
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage('');
+    try {
+      const { data, error } = mode === 'signup'
+        ? await supabase.auth.signUp({ email, password })
+        : await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+      setMessage(mode === 'signup' ? 'Account creato. Controlla la mail se Supabase richiede conferma, poi fai login.' : 'Accesso effettuato.');
+      onAuthReady?.();
+    } catch (err) {
+      setMessage(err?.message || 'Errore autenticazione.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
+      <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,#222226,#161618)', border:'1px solid rgba(255,255,255,.10)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.45)' }}>
+        <div style={{ color:'#90D84A', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Animaldex</div>
+        <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
+        <p style={{ margin:'0 0 18px', color:'rgba(255,255,255,.58)', fontSize:13, lineHeight:1.45 }}>Login richiesto per sincronizzare animali, destinazioni, status e badge con Supabase.</p>
+        <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10 }} />
+        <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14 }} />
+        <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading?.7:1 }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
+        <button disabled={loading} type="button" onClick={loginWithGoogle} style={{ width:'100%', height:46, marginTop:10, borderRadius:14, border:'1px solid rgba(255,255,255,.14)', background:'#FFFFFF', color:'#151515', fontWeight:900, fontSize:14, cursor:loading?'default':'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:10 }}>
+          <span style={{ width:20, height:20, borderRadius:'50%', background:'linear-gradient(135deg,#4285F4 0 25%,#34A853 25% 50%,#FBBC05 50% 75%,#EA4335 75% 100%)', display:'inline-block' }} />
+          Continua con Google
+        </button>
+        <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'transparent', color:'rgba(255,255,255,.78)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
+        {message && <div style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF7777':'#BFEFA4', fontSize:12, lineHeight:1.4 }}>{message}</div>}
+      </form>
+    </div>
+  );
+}
+
+const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
+
+function MainMenu({ onOpen, onBack, onLogout }) {
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁', bg:'#2E5A10', desc:'Torna alla griglia animali' },
     { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
@@ -2125,13 +2473,13 @@ function MainMenu({ onOpen, onBack }) {
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
   const fileInputRef = useRef(null);
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
-  const badgeCount = computeUnlockedAwards(statusMap, visitedCountries).length;
+  const badgeCount = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)).size;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
@@ -2216,14 +2564,14 @@ function AwardModal({ rule, unlocked, currentValue, onClose }) {
   );
 }
 
-function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [] }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
   const metrics = computeAwardMetrics(statusMap, visitedCountries);
-  const unlockedSet = new Set(computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId));
+  const unlockedSet = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId));
   const macros = ['Tutti', ...AWARD_MACROS];
-  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(rule.badgeId)));
+  const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(normalizeBadgeId(rule.badgeId))));
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
       <PageHeader title="Badge" onBack={onBack} />
@@ -2235,10 +2583,10 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [] }) {
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
-          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(rule.badgeId)} onOpen={setSelectedAward} />)}
+          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(normalizeBadgeId(rule.badgeId))} onOpen={setSelectedAward} />)}
         </div>
       </div>
-      {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(selectedAward.badgeId)} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} />}
+      {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(normalizeBadgeId(selectedAward.badgeId))} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} />}
     </div>
   );
 }
@@ -2322,7 +2670,7 @@ function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onSelect, onOpenCountry, onOpenRegion, initialView }) {
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, initialView }) {
   const [view, setView] = useState(initialView || 'continents');
   const [continentId, setContinentId] = useState(null);
   const [regionId, setRegionId] = useState(null);
@@ -2332,6 +2680,15 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks') || '{}'); } catch { return {}; }
   });
   const [countrySearch, setCountrySearch] = useState('');
+  const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
+  const [selectedTripTags, setSelectedTripTags] = useState([]);
+  const toggleTripTag = (tag) => setSelectedTripTags(prev => prev.includes(tag) ? prev.filter(t=>t!==tag) : [...prev, tag]);
+  const submitDestination = async () => {
+    if (!selectedDestinationIso) return;
+    await onAddDestination?.(selectedDestinationIso, selectedTripTags);
+    setSelectedCountry(selectedDestinationIso);
+    setSelectedTripTags([]);
+  };
   useEffect(() => { if (initialView) setView(initialView); }, [initialView]);
   useEffect(() => { if (typeof window !== 'undefined') window.localStorage.setItem('animaldex_region_unlocks', JSON.stringify(unlockMap)); }, [unlockMap]);
   const continent = GEO_REGION_GROUPS.find(c => c.id === continentId) || null;
@@ -2389,10 +2746,16 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
                 {scratchCountries.map(code => {
-                  const active = visitedSet.has(code);
-                  return <button key={code} onClick={()=>toggleVisitedCountry(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
+                  const active = visitedSet.has(code) || selectedDestinationIso === code;
+                  return <button key={code} onClick={()=>setSelectedDestinationIso(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
                 })}
               </div>
+              <div style={{ marginTop:12, display:'flex', flexWrap:'wrap', gap:7 }}>
+                {TRIP_TAGS.map(tag=>(
+                  <button key={tag} onClick={()=>toggleTripTag(tag)} style={{ border:'none', borderRadius:999, padding:'7px 10px', background:selectedTripTags.includes(tag)?'rgba(144,216,74,.24)':'rgba(255,255,255,.08)', color:selectedTripTags.includes(tag)?'#BFEFA4':'rgba(255,255,255,.68)', fontSize:11, fontWeight:800, cursor:'pointer' }}>{tag}</button>
+                ))}
+              </div>
+              <button disabled={!selectedDestinationIso || destinationsLoading} onClick={submitDestination} style={{ marginTop:12, width:'100%', height:42, borderRadius:13, border:'none', background:selectedDestinationIso?'#90D84A':'#3A3A3C', color:selectedDestinationIso?'#111':'rgba(255,255,255,.38)', fontWeight:900, cursor:selectedDestinationIso?'pointer':'default' }}>{destinationsLoading ? 'Sblocco animali...' : selectedDestinationIso ? `Aggiungi ${getCountryDisplayName(selectedDestinationIso)}` : 'Seleziona una nazione'}</button>
             </div>
           </div>
         )}
@@ -2577,13 +2940,22 @@ function AbilitiesPage({ onBack, onOpenAbility }) {
 // ── Root ──────────────────────────────────────────────────────────────
 
 export default function App() {
+  const [session,setSession]=useState(null);
+  const [user,setUser]=useState(null);
+  const [authLoading,setAuthLoading]=useState(true);
+  const [dataLoading,setDataLoading]=useState(false);
+  const [dataError,setDataError]=useState('');
+  const [animalsData,setAnimalsData]=useState(() => LOCAL_ANIMALS.map(normalizeLocalAnimal));
+  ANIMALS = animalsData;
   const [sel,setSel]=useState(null);
   const [statusMap,setStatusMap]=useState({});
   const [page,setPage]=useState('grid');
   const [gridPreset,setGridPreset]=useState(null);
   const [gridReturnTarget,setGridReturnTarget]=useState(null);
   const [regionsInitialView,setRegionsInitialView]=useState(null);
+  const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
+  const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
   const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
@@ -2601,20 +2973,83 @@ export default function App() {
   },[]);
 
   useEffect(()=>{
-    let cancelled = false;
-    loadSupabaseStatusMap().then(remoteMap => { if (!cancelled && remoteMap && Object.keys(remoteMap).length) setStatusMap(prev => ({ ...remoteMap, ...prev })); }).catch(err => console.warn('[Animaldex] Supabase status sync non disponibile:', err));
-    return () => { cancelled = true; };
+    let mounted = true;
+    supabase.auth.getSession().then(({ data }) => {
+      if (!mounted) return;
+      setSession(data.session || null);
+      setUser(data.session?.user || null);
+      setAuthLoading(false);
+    });
+    const { data: listener } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
+      setSession(nextSession || null);
+      setUser(nextSession?.user || null);
+      setAuthLoading(false);
+      if (nextSession?.user) {
+        try { await ensureUserProfile(nextSession.user); } catch (err) { console.warn('[Animaldex] Profilo Supabase:', err); }
+      }
+    });
+    return () => {
+      mounted = false;
+      listener?.subscription?.unsubscribe?.();
+    };
   },[]);
 
-  useEffect(() => {
-    const saved = getAwardUnlockSet();
-    const current = unlockedAwards.map(a => a.badgeId);
-    const fresh = unlockedAwards.filter(a => !saved.has(a.badgeId));
-    if (fresh.length) {
-      setAwardQueue(prev => [...prev, ...fresh]);
-      persistAwardUnlocks([...Array.from(saved), ...current]);
+  const reloadSupabaseData = async (activeUser = user) => {
+    if (!activeUser?.id) return;
+    setDataLoading(true);
+    setDataError('');
+    try {
+      ensureUserProfile(activeUser);
+      const [remoteAnimals, destinations, remoteBadgeIds] = await Promise.all([
+        fetchAnimalsFromSupabase(activeUser.id),
+        fetchUserDestinations(activeUser.id),
+        fetchUserBadgeIds(activeUser.id),
+      ]);
+      if (remoteAnimals?.length) setAnimalsData(remoteAnimals);
+      const nextStatusMap = Object.fromEntries((remoteAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
+      setStatusMap(nextStatusMap);
+      setVisitedCountries(destinations);
+      saveVisitedCountries(destinations);
+      setEarnedBadgeIds((remoteBadgeIds || []).map(normalizeBadgeId));
+      persistAwardUnlocks(remoteBadgeIds || []);
+    } catch (err) {
+      console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
+      setDataError(err?.message || 'Errore caricamento Supabase');
+      const fallback = LOCAL_ANIMALS.map(normalizeLocalAnimal);
+      setAnimalsData(fallback);
+      setStatusMap(Object.fromEntries(fallback.map(a => [a.id, normalizeAnimalStatus(a.status)])));
+    } finally {
+      setDataLoading(false);
     }
-  }, [unlockedAwards]);
+  };
+
+  useEffect(()=>{
+    if (user?.id) reloadSupabaseData(user);
+  },[user?.id]);
+
+  useEffect(() => {
+    const localSaved = getAwardUnlockSet();
+    const dbSaved = new Set((earnedBadgeIds || []).map(normalizeBadgeId));
+    const alreadyKnown = new Set([...Array.from(localSaved), ...Array.from(dbSaved)]);
+    const current = unlockedAwards.map(a => normalizeBadgeId(a.badgeId));
+    const fresh = unlockedAwards.filter(a => !alreadyKnown.has(normalizeBadgeId(a.badgeId)));
+
+    if (fresh.length) setAwardQueue(prev => [...prev, ...fresh]);
+
+    const merged = Array.from(new Set([...(earnedBadgeIds || []).map(normalizeBadgeId), ...current]));
+    if (merged.length !== earnedBadgeIds.length) {
+      setEarnedBadgeIds(merged);
+      persistAwardUnlocks(merged);
+      if (user?.id) {
+        persistEarnedBadges(user.id, merged).catch(err => {
+          console.warn('[Animaldex] Salvataggio user_badges fallito:', err);
+          setDataError(err?.message || 'Errore salvataggio badge');
+        });
+      }
+    } else {
+      persistAwardUnlocks(merged);
+    }
+  }, [unlockedAwards, earnedBadgeIds, user?.id]);
 
   useEffect(() => {
     if (!activeAwardToast) return;
@@ -2622,10 +3057,46 @@ export default function App() {
     return () => clearTimeout(t);
   }, [activeAwardToast]);
 
-  const handleStatusChange = (id, status) => {
+  const handleStatusChange = async (id, status) => {
+    if (!user?.id) return;
     const nextStatus = normalizeAnimalStatus(status);
+    const currentAnimal = animalsData.find(a => a.id === id);
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
-    upsertSupabaseAnimalStatus(id, nextStatus).catch(err => console.warn('[Animaldex] Salvataggio status Supabase fallito:', err));
+    setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
+    try {
+      await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
+      await reloadSupabaseData(user);
+    } catch (err) {
+      console.warn('[Animaldex] Salvataggio user_animals fallito:', err);
+      setDataError(err?.message || 'Errore salvataggio status animale');
+    }
+  };
+
+  const handleAddDestination = async (iso, tripTags = []) => {
+    if (!user?.id || !iso) return;
+    const cleanIso = String(iso).toUpperCase();
+    setDestinationsLoading(true);
+    setDataError('');
+    try {
+      await persistUserDestination(user.id, cleanIso, tripTags);
+
+      const { error: rpcError } = await supabase.rpc('unlock_animals_for_destination', {
+        p_user_id: user.id,
+        p_iso: cleanIso,
+        p_trip_tags: tripTags,
+      });
+      if (rpcError) throw rpcError;
+
+      const nextVisited = Array.from(new Set([...visitedCountries, cleanIso])).sort();
+      setVisitedCountries(nextVisited);
+      saveVisitedCountries(nextVisited);
+      await reloadSupabaseData(user);
+    } catch (err) {
+      console.warn('[Animaldex] Aggiungi destinazione fallito:', err);
+      setDataError(err?.message || 'Errore aggiunta destinazione');
+    } finally {
+      setDestinationsLoading(false);
+    }
   };
 
 
@@ -2661,11 +3132,21 @@ const returnFromFilteredGrid = () => {
 
 const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap}/></div> : null;
 
+  if (authLoading) {
+    return (
+      <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento sessione...</div>
+      </div>
+    );
+  }
+
+  if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
+
   const renderPage = () => {
-    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} />;
-    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} />{renderDetailOverlay()}</div>;
+    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} />;
+    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
@@ -2675,6 +3156,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   return (
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
+      {(dataLoading || dataError) && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:dataError?'rgba(255,59,48,.92)':'rgba(20,20,24,.88)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataLoading ? 'Sincronizzazione Supabase...' : dataError}</div>}
       {activeAwardToast && <AwardToast award={activeAwardToast} />}
     </div>
   );

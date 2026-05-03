@@ -237,6 +237,47 @@ async function ensureUserProfile(user) {
   }
 }
 
+async function fetchUserProfile(user) {
+  if (!user?.id) return null;
+  try {
+    const { data, error } = await supabase
+      .from('user_profiles')
+      .select('*')
+      .eq('user_id', user.id)
+      .maybeSingle();
+
+    if (error && error.code !== 'PGRST116') throw error;
+
+    const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+    if (!data) {
+      return {
+        user_id: user.id,
+        username,
+        nickname: username,
+        onboarding_completed: false,
+        first_login_reward_shown: false,
+      };
+    }
+
+    return {
+      ...data,
+      nickname: data.nickname || data.username || username,
+      onboarding_completed: Boolean(data.onboarding_completed),
+      first_login_reward_shown: Boolean(data.first_login_reward_shown),
+    };
+  } catch (err) {
+    console.warn('[Animaldex] fetchUserProfile fallback:', err);
+    const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+    return {
+      user_id: user.id,
+      username,
+      nickname: username,
+      onboarding_completed: false,
+      first_login_reward_shown: false,
+    };
+  }
+}
+
 async function fetchAnimalsFromSupabase(userId) {
   const { data: animals, error: animalsError } = await supabase
     .from('animals')
@@ -801,6 +842,7 @@ function getHomeCountry() {
   return String(window.ANIMALDEX_HOME_COUNTRY || window.localStorage.getItem('animaldex_home_country') || '').toUpperCase();
 }
 const AWARD_RULES = [
+  {badgeId:'ONB-01-L1', macroId:'ONB', macro:'Onboarding', subId:'ONB-01', sub:'Primo Viaggio', level:1, name:'Primo Viaggio', goal:'1 nazione', metric:'onboarding_first_trip', threshold:1},
   {badgeId:'ARS-01-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:1, name:'Incisore di Solchi', goal:'3 specie', metric:'bio_blades', threshold:3},
   {badgeId:'ARS-01-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:2, name:'Curatore di Artigli', goal:'10 specie', metric:'bio_blades', threshold:10},
   {badgeId:'ARS-01-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:3, name:'Maestro della Presa Mortale', goal:'30 specie', metric:'bio_blades', threshold:30},
@@ -899,6 +941,7 @@ function computeAwardMetrics(statusMap = {}, visitedCountries = null) {
     ai_corrections: Number((typeof window !== 'undefined' && (window.ANIMALDEX_AI_CORRECTIONS || window.localStorage.getItem('animaldex_ai_corrections'))) || 0),
     apex_count: recorded.filter(a => String(a.trophic) === '4').length,
     base_trophic_count: recorded.filter(a => String(a.trophic) === '1' || String(a.trophic) === 'F').length,
+    onboarding_first_trip: visitedCountrySet.size > 0 ? 1 : 0,
     countries_count: visitedCountrySet.size,
     home_country_biodiversity: homeCountryBiodiversity,
     biomes_count: biomes.size,
@@ -1276,14 +1319,10 @@ function getClassGlowColor(cls) {
 function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
-  const [iconErr, setIconErr] = useState(false);
   const [mysteryErr, setMysteryErr] = useState(false);
   const status = normalizeAnimalStatus(overrideStatus !== undefined ? overrideStatus : a.status);
   const mystery = isMysteryStatus(status);
-  const revealed = isRevealedStatus(status);
-  const classIcon = CLASS_ICONS[a.cls];
 
-  // ── Misterioso: placeholder dedicato, identità nascosta ──
   if (mystery) {
     return (
       <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
@@ -1297,22 +1336,6 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
     );
   }
 
-  // ── Ricercato: mostra silhouette della classe, nome visibile nella card ──
-  if (!revealed) {
-    if (classIcon && !iconErr) {
-      return (
-        <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#2a2a2e', display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <img src={classIcon} alt={a.cls} onError={()=>setIconErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.55, transform: `scale(${gridMode ? GRID_SILHOUETTE_SCALE : 1.2})` }} />
-        </div>
-      );
-    }
-    return (
-      <div style={{ width:'100%', height:size, background:'#111113', display:'flex', alignItems:'center', justifyContent:'center', fontSize, opacity:0.18 }}>{c.icon}</div>
-    );
-  }
-
-  // ── Avvistato / Catturato: immagine reale ──
   if (a.image_url && !imgErr) {
     const glowColor = getClassGlowColor(a.cls);
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
@@ -1328,6 +1351,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
       </div>
     );
   }
+
   return (
     <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
@@ -1336,19 +1360,20 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
 
 
-
 function AnimalCard({ a, onClick }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
-  const revealed = isRevealedStatus(status);
-  const unrevealed = !revealed && !mystery;
+  const found = isRevealedStatus(status);
+  const imageVisible = !mystery;
+  const revealed = imageVisible;
+  const unrevealed = imageVisible && !found;
   const glowAccent = getClassGlowColor(a.cls);
-  const glowShadow = revealed ? `0 0 16px 2px ${glowAccent}55, 0 0 4px 1px ${glowAccent}22` : 'none';
+  const glowShadow = found ? `0 0 16px 2px ${glowAccent}55, 0 0 4px 1px ${glowAccent}22` : 'none';
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const cardH = isNarrow ? 124 : 134;
   const labelH = isNarrow ? 36 : 38;
-  const imageH = revealed ? cardH : cardH - labelH + 8;
+  const imageH = imageVisible ? cardH : cardH - labelH + 8;
   return (
     <div
       onClick={()=>onClick(a)}
@@ -1361,13 +1386,13 @@ function AnimalCard({ a, onClick }) {
         userSelect:'none',
         transition:'transform .1s ease, box-shadow .3s ease',
         boxShadow:glowShadow,
-        background: revealed ? c.img : '#27282D'
+        background: imageVisible ? c.img : '#27282D'
       }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
       onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}
     >
-      {revealed ? (
+      {imageVisible ? (
         <AnimalImg a={a} size={cardH} fontSize={52} gridMode={true} />
       ) : (
         <div style={{ position:'absolute', left:0, right:0, top:0, height:imageH, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
@@ -1386,7 +1411,7 @@ function AnimalCard({ a, onClick }) {
             minHeight:labelH,
             padding:'8px 8px 8px',
             boxSizing:'border-box',
-            background: revealed
+            background: found
               ? `linear-gradient(180deg, transparent 0%, ${c.mid}D8 26%, ${c.mid} 100%)`
               : 'linear-gradient(180deg, transparent 0%, rgba(125,132,141,.84) 34%, rgba(114,121,130,.98) 100%)',
             color: unrevealed ? '#272B32' : 'white',
@@ -1394,7 +1419,7 @@ function AnimalCard({ a, onClick }) {
             fontWeight:900,
             textAlign:'center',
             lineHeight:'12.5px',
-            textShadow: revealed ? '0 1px 2px rgba(0,0,0,.55)' : 'none',
+            textShadow: found ? '0 1px 2px rgba(0,0,0,.55)' : 'none',
             display:'-webkit-box',
             WebkitLineClamp:2,
             WebkitBoxOrient:'vertical',
@@ -1986,6 +2011,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass }) {
   const c=CLS[a.cls]||CLS.Mammalia;
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
+  const canViewImage = !isMysteryStatus(localStatus) && !!a.image_url;
 
   const handleTab = (m) => {
     if (m===statMode) return;
@@ -1994,7 +2020,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass }) {
   };
 
   const openLightbox = (rect) => {
-    if (!found || !a.image_url) return;
+    if (!canViewImage) return;
     setLightboxRect(rect || (imgRef.current ? imgRef.current.getBoundingClientRect() : null));
     setShowLightbox(true);
     setPullProgress(0);
@@ -2004,7 +2030,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass }) {
   const handleTouchMove  = (e) => {
     if (!scrollRef.current || scrollRef.current.scrollTop > 2) return;
     const delta = e.touches[0].clientY - touchStartY.current;
-    if (delta > 0 && found && a.image_url) {
+    if (delta > 0 && canViewImage) {
       const progress = Math.min(1, delta / 120);
       setPullProgress(progress);
       if (delta > 110) openLightbox();
@@ -2044,8 +2070,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass }) {
               height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
               borderRadius: Math.round(16 - pullProgress * 16),
               overflow:'hidden', flexShrink:0, background:c.img,
-              cursor: found && a.image_url ? 'zoom-in' : 'default',
-              boxShadow: found ? `0 0 18px 3px ${c.accent}44` : 'none',
+              cursor: canViewImage ? 'zoom-in' : 'default',
+              boxShadow: canViewImage ? `0 0 18px 3px ${c.accent}44` : 'none',
               transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
             }}>
             <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
@@ -2357,24 +2383,175 @@ function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], gray
   return <div style={{ width:'100%', height, background:`linear-gradient(125deg, ${fallbackColors[0]}, ${fallbackColors[1]} 55%, ${fallbackColors[2]})`, filter:grayscale?'grayscale(1)':'none' }} />;
 }
 
-function AwardToast({ award }) {
+function AwardToast({ award, onOpen, onDismiss }) {
   const [imgErr, setImgErr] = useState(false);
+  const touchStartY = useRef(null);
+  const handleTouchStart = (e) => { touchStartY.current = e.touches?.[0]?.clientY ?? null; };
+  const handleTouchEnd = (e) => {
+    if (touchStartY.current == null) return;
+    const endY = e.changedTouches?.[0]?.clientY ?? touchStartY.current;
+    if (touchStartY.current - endY > 42) onDismiss?.();
+    touchStartY.current = null;
+  };
   return (
-    <div style={{ position:'absolute', top:18, left:12, right:12, zIndex:200, display:'flex', justifyContent:'center', pointerEvents:'none' }}>
-      <div className="award-toast-sparkles" style={{ position:'relative', width:'100%', maxWidth:360, background:'rgba(18,18,22,.96)', border:'1px solid rgba(255,255,255,.12)', borderRadius:22, padding:'14px 16px', boxShadow:'0 16px 40px rgba(0,0,0,.38)', display:'flex', alignItems:'center', gap:14 }}>
+    <div style={{ position:'absolute', top:18, left:12, right:12, zIndex:200, display:'flex', justifyContent:'center', pointerEvents:'auto' }}>
+      <div
+        className="award-toast-sparkles"
+        onClick={()=>onOpen?.(award)}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        style={{ position:'relative', width:'100%', maxWidth:360, background:'rgba(18,18,22,.96)', border:'1px solid rgba(255,255,255,.12)', borderRadius:22, padding:'14px 16px', boxShadow:'0 16px 40px rgba(0,0,0,.38)', display:'flex', alignItems:'center', gap:14, cursor:'pointer', userSelect:'none' }}
+      >
         <div style={{ width:64, height:64, borderRadius:16, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>
           {!imgErr ? <img src={award.image} alt={award.name} onError={()=>setImgErr(true)} style={{ width:56, height:56, objectFit:'contain' }} /> : <span style={{ fontSize:34 }}>🏅</span>}
         </div>
-        <div style={{ minWidth:0 }}>
+        <div style={{ minWidth:0, flex:1 }}>
           <div style={{ color:'#F0C449', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.7 }}>Nuovo award sbloccato</div>
           <div style={{ color:'white', fontSize:16, fontWeight:900, lineHeight:1.2, marginTop:3 }}>{award.name}</div>
           <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, marginTop:4 }}>{award.macro} · {award.goal}</div>
+          <div style={{ color:'rgba(255,255,255,.35)', fontSize:10, marginTop:3 }}>Tocca per aprire · swipe su per chiudere</div>
         </div>
       </div>
     </div>
   );
 }
 
+
+function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, onFinish }) {
+  const [step,setStep]=useState('nickname');
+  const [nickname,setNickname]=useState(initialNickname || String(user?.email || 'esploratore').split('@')[0] || 'Esploratore');
+  const [countrySearch,setCountrySearch]=useState('');
+  const [selectedCountries,setSelectedCountries]=useState([]);
+  const [cardIndex,setCardIndex]=useState(0);
+  const [seenAnimals,setSeenAnimals]=useState([]);
+  const [loading,setLoading]=useState(false);
+  const [result,setResult]=useState(null);
+  const [error,setError]=useState('');
+
+  const allCountries = useMemo(() => getAllScratchCountries(), []);
+  const filteredCountries = allCountries.filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
+
+  const radarAnimals = useMemo(() => {
+    if (!selectedCountries.length) return [];
+    const set = new Set(selectedCountries);
+    return animals
+      .filter(a => {
+        const iso = a.distribution?.countries_present || a.geo?.iso || a.iso || [];
+        return iso.some(code => set.has(code));
+      })
+      .filter(a => a.image_url)
+      .slice(0, 10);
+  }, [animals, selectedCountries]);
+
+  const currentAnimal = radarAnimals[cardIndex] || null;
+  const toggleCountry = (code) => setSelectedCountries(prev => prev.includes(code) ? prev.filter(x=>x!==code) : [...prev, code]);
+  const markRadar = (seen) => {
+    if (seen && currentAnimal) setSeenAnimals(prev => Array.from(new Set([...prev, currentAnimal.id])));
+    setCardIndex(i => i + 1);
+  };
+  const complete = async () => {
+    setLoading(true);
+    setError('');
+    setStep('sync');
+    try {
+      const data = await onComplete?.({ nickname, countries:selectedCountries, seenAnimalIds:seenAnimals, tripTags:['nature'] });
+      setResult(data || {});
+      setStep('wow');
+    } catch (err) {
+      console.warn('[Animaldex] Onboarding failed:', err);
+      setError(err?.message || 'Errore onboarding');
+      setStep('radar');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const panelStyle = { margin:18, borderRadius:26, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.10)', padding:20, boxShadow:'0 28px 80px rgba(0,0,0,.42)' };
+
+  return (
+    <div style={{ height:'100%', background:'radial-gradient(circle at 50% 0%, rgba(144,216,74,.18), transparent 36%), linear-gradient(180deg,#111113,#050506)', color:'white', display:'flex', flexDirection:'column', overflow:'hidden' }}>
+      <div style={{ padding:'22px 20px 8px', flexShrink:0 }}>
+        <div style={{ color:'#90D84A', fontSize:12, fontWeight:900, letterSpacing:.9, textTransform:'uppercase' }}>Animaldex onboarding</div>
+        <div style={{ color:'white', fontSize:28, fontWeight:900, letterSpacing:'-.7px', marginTop:4 }}>{step==='nickname'?'Nome in codice':step==='countries'?'Quali terre hai esplorato?':step==='radar'?'Radar avvistamenti':step==='sync'?'Sincronizzazione':'Primi progressi sbloccati'}</div>
+      </div>
+
+      {step==='nickname' && (
+        <div style={panelStyle}>
+          <p style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginTop:0 }}>Scegli un nickname. Lo useremo nel profilo, senza form lunghi.</p>
+          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Lynx-7" style={{ width:'100%', height:48, borderRadius:14, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', outline:'none' }} />
+          <button disabled={!nickname.trim()} onClick={()=>setStep('countries')} style={{ marginTop:16, width:'100%', height:48, borderRadius:15, border:'none', background:nickname.trim()?'#90D84A':'#3A3A3C', color:nickname.trim()?'#101410':'rgba(255,255,255,.4)', fontWeight:900, cursor:nickname.trim()?'pointer':'default' }}>Avanti</button>
+        </div>
+      )}
+
+      {step==='countries' && (
+        <div style={{ ...panelStyle, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
+          <p style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginTop:0 }}>Seleziona le nazioni in cui sei stato. Non scriviamo ancora nulla su Supabase.</p>
+          <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ width:'100%', height:44, borderRadius:13, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 12px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10 }} />
+          <div style={{ flex:1, overflowY:'auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, paddingRight:2 }}>
+            {filteredCountries.map(code => {
+              const active = selectedCountries.includes(code);
+              return (
+                <button key={code} onClick={()=>toggleCountry(code)} style={{ minHeight:46, borderRadius:13, border:`1px solid ${active?'rgba(144,216,74,.7)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left' }}>
+                  <span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span>
+                  <span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
+                  <span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontWeight:900 }}>{active?'✓':'+'}</span>
+                </button>
+              );
+            })}
+          </div>
+          <button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={{ marginTop:14, width:'100%', height:48, borderRadius:15, border:'none', background:selectedCountries.length?'#90D84A':'#3A3A3C', color:selectedCountries.length?'#101410':'rgba(255,255,255,.4)', fontWeight:900, cursor:selectedCountries.length?'pointer':'default' }}>Avanti · {selectedCountries.length}</button>
+        </div>
+      )}
+
+      {step==='radar' && (
+        <div style={{ ...panelStyle, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
+          <p style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginTop:0 }}>Analisi biomi... Hai mai incrociato queste creature?</p>
+          {!currentAnimal ? (
+            <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', textAlign:'center', fontWeight:800 }}>Radar completato.</div>
+          ) : (
+            <div style={{ flex:1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+              <div style={{ width:'82%', maxWidth:280, borderRadius:24, background:'#202024', overflow:'hidden', boxShadow:'0 28px 70px rgba(0,0,0,.45)', border:'1px solid rgba(255,255,255,.10)' }}>
+                <AnimalImg a={{...currentAnimal, status:'ricercato'}} size={220} fontSize={82} overrideStatus="ricercato" />
+                <div style={{ padding:14, textAlign:'center' }}>
+                  <div style={{ color:'white', fontSize:18, fontWeight:900, lineHeight:1.12 }}>{currentAnimal.com}</div>
+                  <div style={{ color:'rgba(255,255,255,.45)', fontSize:12, marginTop:5, fontStyle:'italic' }}>{currentAnimal.sci}</div>
+                </div>
+              </div>
+              <div style={{ display:'flex', gap:12, marginTop:18, width:'100%' }}>
+                <button onClick={()=>markRadar(false)} style={{ flex:1, height:48, borderRadius:15, border:'1px solid rgba(255,255,255,.12)', background:'#2A2A2C', color:'rgba(255,255,255,.72)', fontWeight:900, cursor:'pointer' }}>Mai visto</button>
+                <button onClick={()=>markRadar(true)} style={{ flex:1, height:48, borderRadius:15, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, cursor:'pointer' }}>Visto</button>
+              </div>
+            </div>
+          )}
+          <button onClick={complete} disabled={loading} style={{ marginTop:14, width:'100%', height:48, borderRadius:15, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Sincronizza Animaldex</button>
+          {error && <div style={{ color:'#FF7777', fontSize:12, marginTop:10 }}>{error}</div>}
+        </div>
+      )}
+
+      {step==='sync' && (
+        <div style={{ ...panelStyle, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
+          <div>
+            <div style={{ width:92, height:92, borderRadius:'50%', margin:'0 auto 18px', background:'conic-gradient(from 90deg,#90D84A,#8f34f5,#244A70,#90D84A)', boxShadow:'0 0 40px rgba(144,216,74,.32)', animation:'interactiveWiggle .7s ease-in-out infinite' }} />
+            <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Sincronizzazione database biologico...</div>
+            <div style={{ color:'rgba(255,255,255,.52)', fontSize:12, marginTop:8 }}>Assegnazione statistiche e ricompense.</div>
+          </div>
+        </div>
+      )}
+
+      {step==='wow' && (
+        <div style={{ ...panelStyle, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
+          <div>
+            <div style={{ fontSize:64, marginBottom:12 }}>🏅</div>
+            <div style={{ color:'#F0C449', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
+            <div style={{ color:'white', fontSize:28, fontWeight:900, marginTop:10 }}>{result?.unlocked_count ?? selectedCountries.length}</div>
+            <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati caricati nel tuo Animaldex</div>
+            <button onClick={()=>onFinish?.()} style={{ marginTop:22, width:'100%', height:50, borderRadius:16, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, cursor:'pointer' }}>Entra nell’Animaldex</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function AuthScreen({ onAuthReady }) {
   const [email,setEmail]=useState('');
@@ -2564,7 +2741,7 @@ function AwardModal({ rule, unlocked, currentValue, onClose }) {
   );
 }
 
-function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [] }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], openBadgeId=null, onBadgeOpened }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
@@ -2572,6 +2749,15 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
   const unlockedSet = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId));
   const macros = ['Tutti', ...AWARD_MACROS];
   const awards = AWARD_RULES.filter(rule => (macro === 'Tutti' || rule.macro === macro) && (!onlyUnlocked || unlockedSet.has(normalizeBadgeId(rule.badgeId))));
+  useEffect(() => {
+    if (!openBadgeId) return;
+    const match = AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(openBadgeId));
+    if (match) {
+      setSelectedAward(match);
+      setMacro('Tutti');
+      onBadgeOpened?.();
+    }
+  }, [openBadgeId]);
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
       <PageHeader title="Badge" onBack={onBack} />
@@ -2945,6 +3131,8 @@ export default function App() {
   const [authLoading,setAuthLoading]=useState(true);
   const [dataLoading,setDataLoading]=useState(false);
   const [dataError,setDataError]=useState('');
+  const [userProfile,setUserProfile]=useState(null);
+  const [toastOpenBadgeId,setToastOpenBadgeId]=useState(null);
   const [animalsData,setAnimalsData]=useState(() => LOCAL_ANIMALS.map(normalizeLocalAnimal));
   ANIMALS = animalsData;
   const [sel,setSel]=useState(null);
@@ -3012,12 +3200,14 @@ export default function App() {
       saveVisitedCountries(destinations);
       setEarnedBadgeIds((remoteBadgeIds || []).map(normalizeBadgeId));
       persistAwardUnlocks(remoteBadgeIds || []);
+      setUserProfile(profile);
     } catch (err) {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
       const fallback = LOCAL_ANIMALS.map(normalizeLocalAnimal);
       setAnimalsData(fallback);
       setStatusMap(Object.fromEntries(fallback.map(a => [a.id, normalizeAnimalStatus(a.status)])));
+      if (activeUser?.id) setUserProfile(await fetchUserProfile(activeUser));
     } finally {
       setDataLoading(false);
     }
@@ -3100,6 +3290,82 @@ export default function App() {
   };
 
 
+  const handleCompleteOnboarding = async ({ nickname, countries, seenAnimalIds, tripTags }) => {
+    if (!user?.id) throw new Error('Sessione non valida');
+    setDataError('');
+    try {
+      const { data, error } = await supabase.rpc('complete_user_onboarding', {
+        p_user_id: user.id,
+        p_nickname: nickname,
+        p_iso_list: countries,
+        p_seen_animal_ids: seenAnimalIds,
+        p_trip_tags: tripTags || [],
+      });
+      if (error) throw error;
+
+      const badgeIds = (data?.badge_ids || data?.badges || []).map(normalizeBadgeId);
+      if (badgeIds.length) {
+        setEarnedBadgeIds(prev => Array.from(new Set([...prev.map(normalizeBadgeId), ...badgeIds])));
+        const awards = badgeIds.map(id => AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === id)).filter(Boolean);
+        if (awards.length) setAwardQueue(prev => [...prev, ...awards]);
+      }
+      return data || {};
+    } catch (err) {
+      console.warn('[Animaldex] RPC onboarding fallita, uso fallback frontend:', err);
+      const cleanCountries = (countries || []).map(c => String(c).toUpperCase()).filter(Boolean);
+      for (const iso of cleanCountries) {
+        await persistUserDestination(user.id, iso, tripTags || []);
+        const { error: rpcError } = await supabase.rpc('unlock_animals_for_destination', {
+          p_user_id: user.id,
+          p_iso: iso,
+          p_trip_tags: tripTags || [],
+        });
+        if (rpcError) console.warn('[Animaldex] unlock fallback non riuscito:', rpcError);
+      }
+
+      const now = new Date().toISOString();
+      if (seenAnimalIds?.length) {
+        const rows = seenAnimalIds.map(animal_id => ({
+          user_id: user.id,
+          animal_id,
+          unlock_status:'seen',
+          unlocked_at: now,
+          seen_at: now,
+          updated_at: now,
+        }));
+        const { error: seenError } = await supabase.from('user_animals').upsert(rows, { onConflict:'user_id,animal_id' });
+        if (seenError) throw seenError;
+      }
+
+      await supabase.from('user_profiles').upsert({
+        user_id:user.id,
+        username:userProfile?.username || String(user.email || 'esploratore').split('@')[0],
+        nickname,
+        onboarding_completed:true,
+        onboarding_completed_at:now,
+      }, { onConflict:'user_id' });
+
+      await persistEarnedBadges(user.id, ['ONB-01-L1']);
+      setEarnedBadgeIds(prev => Array.from(new Set([...prev.map(normalizeBadgeId), 'ONB-01-L1'])));
+      const first = AWARD_RULES.find(rule => rule.badgeId === 'ONB-01-L1');
+      if (first) setAwardQueue(prev => [...prev, first]);
+      return { ok:true, unlocked_count:cleanCountries.length, seen_count:seenAnimalIds?.length || 0, badge_ids:['ONB-01-L1'] };
+    }
+  };
+
+  const finishOnboarding = async () => {
+    setUserProfile(prev => ({ ...(prev || {}), onboarding_completed:true }));
+    await reloadSupabaseData(user);
+    setPage('grid');
+  };
+
+  const openAwardFromToast = (award) => {
+    if (!award?.badgeId) return;
+    setToastOpenBadgeId(normalizeBadgeId(award.badgeId));
+    setAwardQueue(prev => prev.slice(1));
+    setPage('badges');
+  };
+
 const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
 const openPage = (nextPage) => {
   setSel(null);
@@ -3142,10 +3408,26 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (!user) return <AuthScreen onAuthReady={()=>supabase.auth.getSession().then(({data})=>{setSession(data.session||null);setUser(data.session?.user||null);})} />;
 
+  if (!userProfile && dataLoading) {
+    return (
+      <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
+      </div>
+    );
+  }
+
+  if (userProfile && userProfile.onboarding_completed === false) {
+    return (
+      <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
+        <OnboardingFlow user={user} animals={animalsData} initialNickname={userProfile.nickname || userProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
+      </div>
+    );
+  }
+
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} />;
@@ -3157,7 +3439,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {(dataLoading || dataError) && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:dataError?'rgba(255,59,48,.92)':'rgba(20,20,24,.88)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataLoading ? 'Sincronizzazione Supabase...' : dataError}</div>}
-      {activeAwardToast && <AwardToast award={activeAwardToast} />}
+      {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
     </div>
   );
 }
