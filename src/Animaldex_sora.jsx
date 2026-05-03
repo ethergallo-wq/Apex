@@ -79,7 +79,7 @@ const SHIELD_PATHS = {
 };
 
 const MYSTERY_PLACEHOLDER = '/icone_unknown/mystery_animal.png';
-const GRID_IMAGE_SCALE = 0.949;
+const GRID_IMAGE_SCALE = 0.759;
 const GRID_MYSTERY_SCALE = 1.14;
 const GRID_SILHOUETTE_SCALE = 0.74;
 
@@ -1827,24 +1827,28 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
         <div style={{ height:6 }}/>
       </div>
 
-      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 4px':'6px 12px 4px', flexShrink:0, position:'relative' }}>
-        <div style={{ display:'flex', gap:isNarrow?8:12, alignItems:'center', marginBottom:6 }}>
-          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.5" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 6px':'7px 12px 6px', flexShrink:0, position:'relative' }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
+          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
           </button>
-          <button onClick={()=>{setSheet('tax');setShowMenu(false);}} style={{ flex:1, height:buttonSize, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:12, fontWeight:700 }}>Tassonomia {fTax && ' ✓'}</button>
-          <button onClick={()=>{setSheet('sort');setShowMenu(false);}} style={{ width:isNarrow?90:106, height:buttonSize, borderRadius:10, background:'transparent', border:'none', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:6, color:'white', fontSize:12, fontWeight:800, flexShrink:0 }}>↕ Ordina</button>
-          <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/></svg>
-          </button>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{list.length} risultati</div>
+          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
+            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0 }}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+            <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} aria-label="Filtra" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+              <svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round"/></svg>
+            </button>
+          </div>
         </div>
-        <div style={{ textAlign:'center', fontSize:11, fontWeight:600, color:'rgba(255,255,255,.7)', padding:'2px 0' }}>{list.length} risultati</div>
       </div>
 
       {showMenu && (
         <div style={{ position:'absolute', top:isNarrow?94:100, right:12, width:280, background:'#252527', border:'1px solid #333', borderRadius:14, boxShadow:'0 12px 32px rgba(0,0,0,.5)', zIndex:40, overflow:'hidden' }}>
           <div style={{ display:'flex', flexDirection:'column' }}>
             {[
+              { label:'Tassonomia', icon:'⌬', onClick:()=>{setSheet('tax');setShowMenu(false);}, active:!!fTax, color:'#E8C040' },
               { label:'Rarità', icon:'★', onClick:()=>{setSheet('rarity');setShowMenu(false);}, active:fRarity.length>0, color:'#C9A961' },
               { label:'Conservazione', icon:'🛡', onClick:()=>{setSheet('cons');setShowMenu(false);}, active:fCons.length>0, color:'#DC143C' },
               { label:'Gerarchia', icon:'⛓', onClick:()=>{setSheet('trophic');setShowMenu(false);}, active:fTrophic.length>0, color:'#F5A828' },
@@ -2036,7 +2040,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
 
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
-function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, captureStamp=false }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -2084,11 +2088,12 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
   }, [tutorialStep]);
 
   const scale = 1;
+  const longName = String(a.com || '').length > 24;
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
         <button onClick={onBack} style={{ background:'none', border:'none', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:0 }}>‹ Animaldex</button>
-        <span style={{ color:'white', fontSize:17, fontWeight:800 }}>{a.com}</span>
+        <span style={{ color:'white', fontSize:longName?14:17, fontWeight:800, maxWidth:180, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', transform:longName?'scaleX(.8)':'none', transformOrigin:'center' }}>{a.com}</span>
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
       </div>
       <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
@@ -2138,7 +2143,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
           </div>
         </div>
         <div style={{ textAlign:'center', marginBottom:18 }}>
-          <h1 style={{ margin:0, color:'white', fontSize:26, fontWeight:900, letterSpacing:-.3 }}>{a.com}</h1>
+          <h1 style={{ margin:0, color:'white', fontSize:longName?22:26, fontWeight:900, letterSpacing:longName?-.6:-.3, lineHeight:1.06, transform:longName?'scaleX(.8)':'none', transformOrigin:'center', maxWidth:'124%', marginLeft:longName?'-12%':0, marginRight:longName?'-12%':0 }}>{a.com}</h1>
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
         <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:16 }}>
@@ -2188,7 +2193,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
                   {a.categories?.length>0?(
                     <div style={{ display:'flex', flexDirection:'column', gap:8, paddingBottom:10 }}>
                       {a.categories.map(cat=>(
-                        <DetailAbilityCard key={cat} cat={cat} animal={a} accentColor={c.accent} />
+                        <DetailAbilityCard key={cat} cat={cat} animal={a} accentColor={c.accent} tutorialActive={tutorialStep==='detail-abilities'} onTutorialClick={onTutorialAbilityClick} />
                       ))}
                     </div>
                   ):(
@@ -2393,7 +2398,7 @@ function countAnimalsForGeoValue(value) {
 }
 
 
-function DetailAbilityCard({ cat, animal, accentColor }) {
+function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onTutorialClick }) {
   const [flipped, setFlipped] = useState(false);
   const meta = CATEGORY_META?.[cat] || { label:cat, icon:'🔹', color:accentColor };
   const curiosity = animal.cat_curiosities?.[cat] || getAbilityDescription(cat, meta);
@@ -2401,7 +2406,7 @@ function DetailAbilityCard({ cat, animal, accentColor }) {
   return (
     <div
       className="interactive-hint"
-      onClick={()=>setFlipped(v=>!v)}
+      onClick={()=>{setFlipped(v=>!v); if(tutorialActive) onTutorialClick?.();}}
       style={{
         minHeight:86,
         borderRadius:14,
@@ -2409,7 +2414,8 @@ function DetailAbilityCard({ cat, animal, accentColor }) {
         overflow:'hidden',
         cursor:'pointer',
         perspective:900,
-        border:`1px solid ${(meta.color || accentColor)}22`
+        border:`1px solid ${tutorialActive ? '#A84637' : (meta.color || accentColor)}${tutorialActive ? 'cc' : '22'}`,
+        boxShadow:tutorialActive?'0 0 0 3px rgba(168,70,55,.32), 0 0 28px rgba(168,70,55,.34)':'none'
       }}
     >
       <div style={{ position:'relative', minHeight:86, transformStyle:'preserve-3d', transition:'transform .36s cubic-bezier(.2,.8,.2,1)', transform:flipped?'rotateX(180deg)':'rotateX(0deg)' }}>
@@ -2472,7 +2478,7 @@ function AwardToast({ award, onOpen, onDismiss }) {
 function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish, onSkip }) {
   if (!step) return null;
   const OCHRE = '#A84637';
-  const sequence = ['grid','detail-stats','detail-abilities','detail-capture','rewards','regions','profile'];
+  const sequence = ['grid','detail-stats','detail-abilities','detail-capture','rewards','reward-modal','regions','profile'];
   const index = Math.max(0, sequence.indexOf(step));
   const pct = Math.round(((index + 1) / sequence.length) * 100);
 
@@ -2481,56 +2487,66 @@ function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish,
       icon:'🧭',
       title:'Terminale Animaldex',
       kicker:'Database biologico',
-      body:`Questa è la tua centrale operativa. Cerca, ordina e filtra per tassonomia, rarità, status, geografia, habitat, abilità e affidabilità dati. Il bersaglio evidenziato${animal?.com ? ` (${animal.com})` : ''} è già disponibile: aprilo per leggere la scheda.`,
-      chips:['Misterioso = identità nascosta','Ricercato = PNG visibile, da trovare','Avvistato = registrato','Catturato = confermato'],
-      hint:'Tocca la card evidenziata nella griglia per procedere.',
+      body:`Questa è la griglia principale. Cerca, ordina e filtra per nome, scientifico, tassonomia, status, rarità, geografia, habitat, confidence e abilità. Il bersaglio evidenziato${animal?.com ? ` (${animal.com})` : ''} è già disponibile: aprilo per leggere la scheda.`,
+      chips:['Misterioso: identità nascosta','Ricercato: PNG visibile, da trovare','Avvistato: registrato','Catturato: confermato'],
+      hint:'Tocca la card evidenziata nella griglia.',
       action:null,
     },
     'detail-stats': {
       icon:'📊',
-      title:'Rarità e statistiche',
-      kicker:'Analisi specie',
-      body:'Ogni scheda riassume rarità, conservazione e dati biometrici. Le statistiche servono a capire comportamento e profilo biologico: velocità, forza, resistenza, agilità, intelligenza e altri parametri quando disponibili.',
-      chips:['Rarità influenza priorità e prestigio','Statistiche aiutano la comparazione','Tassonomia collega gruppi simili'],
-      action:'Continua',
+      title:'Scheda animale: dati e legenda',
+      kicker:'Rarità, status e statistiche',
+      body:'Qui leggi la specie in profondità. La Rarità ha quattro livelli: Comune, Non comune, Raro e Leggendario. I comuni sono la base del catalogo, i non comuni richiedono più attenzione, i rari sono bersagli di valore, i leggendari sono specie eccezionali o iconiche. Il box conservazione usa sigle IUCN come LC, NT, VU, EN, CR o DD: tocca “i” per più dettagli.',
+      chips:['Statistiche: velocità, vita, forza, resistenza, agilità','Status: ricercato, avvistato, catturato','Tassonomia cliccabile dalla classe'],
+      action:'Mostra abilità',
     },
     'detail-abilities': {
       icon:'✨',
-      title:'Abilità e curiosità',
-      kicker:'Adattamenti naturali',
-      body:'Le abilità raccontano cosa rende speciale una specie: veleno, corazze, sensi estremi, migrazioni, intelligenza, record, mimetismo e molto altro. Toccare una card rivela una curiosità contestuale.',
-      chips:['Le abilità alimentano filtri dedicati','Contribuiscono ai reward','Aiutano a scoprire animali simili'],
-      action:'Continua',
+      title:'Abilità dell’animale',
+      kicker:'Card interattive',
+      body:'Le abilità spiegano adattamenti e comportamenti: veleno, corazze, mimetismo, sensi estremi, migrazione, intelligenza, record e molto altro. Ogni card ha un retro con una curiosità che spiega perché questa specie possiede quell’abilità.',
+      chips:['Tocca una card abilità','Il retro contiene la curiosità','Le abilità sono filtrabili dalla sezione Abilità'],
+      hint:'Tocca una card abilità nella scheda per proseguire.',
+      action:null,
     },
     'detail-capture': {
       icon:'📸',
       title:'Registrazione ufficiale',
       kicker:'Avvistato → Catturato',
-      body:'Quando hai una prova reale o vuoi confermare una specie, registrala come Catturata. Questo aggiorna user_animals su Supabase, aumenta le statistiche profilo e può sbloccare nuovi award.',
-      chips:['Seen = avvistato','Collected = catturato','I progressi restano sincronizzati'],
+      body:'Quando hai una prova reale o vuoi confermare la specie, registrala come Catturata. Questo aggiorna user_animals su Supabase, aumenta le statistiche profilo e può sbloccare nuovi award.',
+      chips:['Seen = avvistato','Collected = catturato','Progressi sincronizzati'],
       action:'Registra catturato',
     },
     rewards: {
       icon:'🏅',
-      title:'Rewards e progressione',
-      kicker:'Sistema obiettivi',
-      body:'Gli award premiano molte dimensioni: geografia, tassonomia, rarità, conservazione, abilità, massa, foto caricate e costanza. Quando appare una notifica reward, puoi toccarla per aprire il dettaglio oppure trascinarla verso l’alto per chiuderla.',
-      chips:['Progressi permanenti','Modal aperto dal toast','Categorie filtrabili nella sezione Badge'],
-      action:'Continua',
+      title:'Sezione Rewards',
+      kicker:'Award e memoria di progresso',
+      body:'Ora sei nella sezione Badge. Le card reward sono interattive: aprono un dettaglio con immagine grande, descrizione e progresso. Gli award premiano tassonomia, geografia, abilità, rarità, conservazione, massa, foto e costanza.',
+      chips:['Tocca un badge evidenziato','Il dettaglio mostra come ottenerlo','Le notifiche reward sono cliccabili'],
+      hint:'Tocca un badge nella griglia per aprire il dettaglio.',
+      action:null,
+    },
+    'reward-modal': {
+      icon:'🔍',
+      title:'Dettaglio Reward',
+      kicker:'Card aperta',
+      body:'Questo è il comportamento da ricordare: badge e rewards non sono solo icone, ma schede consultabili. Se non hai ancora completato un award, qui trovi il progresso attuale e la condizione richiesta.',
+      chips:['Tap su reward = dettaglio','Progressi permanenti','Categorie filtrabili'],
+      action:'Vai alle regioni',
     },
     regions: {
       icon:'🗺️',
       title:'Espansione territoriale',
-      kicker:'Scratch map e regioni',
-      body:'In Regioni registri le nazioni visitate. La RPC di Supabase sblocca gli animali locali come Ricercati: li vedrai con PNG reale, pronti da cercare, avvistare e catturare.',
-      chips:['Nazioni visitate','Aree geografiche','Animali locali ricercati'],
-      action:'Continua',
+      kicker:'Regioni e scratch map',
+      body:'La sezione Regioni mostra continenti, aree geografiche e scratch map. Quando visiti una nazione o una regione, registrala: Animaldex sblocca gli animali locali come Ricercati, visibili con PNG reale e pronti da avvistare.',
+      chips:['Sblocca regioni quando viaggi','Nazioni visitate contano per award GEO','“Vedi animali” apre una grid già filtrata'],
+      action:'Mostra profilo',
     },
     profile: {
       icon:'👤',
       title:'Profilo esploratore',
       kicker:'Archivio personale',
-      body:'Il Profilo riassume il percorso: animali visti, catturati, badge ottenuti e regioni esplorate. Da qui puoi rientrare rapidamente in liste filtrate, galleria, badge e mappa.',
+      body:'Il Profilo riassume il percorso: animali visti, catturati, badge ottenuti e regioni esplorate. Da qui rientri rapidamente in liste filtrate, galleria, badge e mappa.',
       chips:['Dashboard progressi','Collegamenti rapidi','Dati salvati per utente'],
       action:'Inizia spedizione',
     },
@@ -2538,7 +2554,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish,
 
   const copy = copyMap[step];
   if (!copy) return null;
-  const isGrid = step === 'grid';
+  const noPrimary = step === 'grid' || step === 'detail-abilities' || step === 'rewards';
   const primary = step === 'detail-capture' ? onCapture : step === 'profile' ? onFinish : onNext;
 
   return (
@@ -2578,7 +2594,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish,
 
           <div style={{ display:'flex', gap:9, marginTop:14 }}>
             <button onClick={onSkip} style={{ height:44, padding:'0 14px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.62)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Salta</button>
-            {!isGrid && <button onClick={primary} style={{ flex:1, height:44, borderRadius:15, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 12px 32px ${OCHRE}40` }}>{copy.action}</button>}
+            {!noPrimary && <button onClick={primary} style={{ flex:1, height:44, borderRadius:15, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 12px 32px ${OCHRE}40` }}>{copy.action}</button>}
           </div>
         </div>
       </div>
@@ -2821,6 +2837,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
             <div style={{ color:'white', fontSize:42, fontWeight:1000, marginTop:8 }}>{result?.unlocked_count ?? predictedUnlocks}</div>
             <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati caricati nel tuo Animaldex</div>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Oltre ai 10 animali proposti dal radar, potrai dichiarare altri avvistamenti filtrando la grid per nazione oppure aprendo la scratch map: tocca una nazione visitata e usa “Vedi animali” per trovarli già filtrati.</div>
             {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Animaldex entra subito, la sincronizzazione continua in background.</div>}
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:20 }}>
               <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🎯</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercati visibili</div></div>
@@ -2902,12 +2919,12 @@ const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert'
 
 function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null }) {
   const items = [
-    { id:'grid', label:'Animaldex', icon:'🦁', bg:'#2E5A10', desc:'Torna alla griglia animali' },
-    { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
+    { id:'grid', label:'Animaldex', icon:'🦁', bg:'#2E5A10', desc:'Griglia animali' },
+    { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Continenti e scratch map' },
     { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Award e obiettivi' },
-    { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Continenti e regioni' },
-    { id:'settings', label:'Impostazioni', icon:'⚙️', bg:'#4A4A50', desc:'Preferenze app' },
     { id:'abilities', label:'Abilità', icon:'✨', bg:'#5A2E80', desc:'Catalogo abilità' },
+    { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
+    { id:'settings', label:'Impostazioni', icon:'⚙️', bg:'#4A4A50', desc:'Preferenze app' },
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
@@ -2915,11 +2932,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null }) {
         <div style={{ color:'white', fontSize:22, fontWeight:900, letterSpacing:'-.3px' }}>Menu</div>
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'18px 16px 24px' }}>
-        <div style={{ background:'linear-gradient(135deg,#2E5A10,#1A3808)', borderRadius:22, padding:22, marginBottom:16, boxShadow:'0 18px 50px rgba(0,0,0,.32)' }}>
-          <div style={{ color:'#90D84A', fontSize:13, fontWeight:800, textTransform:'uppercase', letterSpacing:.8, marginBottom:6 }}>Animaldex</div>
-          <div style={{ color:'white', fontSize:28, fontWeight:900, letterSpacing:'-.7px' }}>Menu principale</div>
-          <div style={{ color:'rgba(255,255,255,.68)', fontSize:13, lineHeight:1.6, marginTop:8 }}>Scegli una sezione per profilo, award, regioni, impostazioni o abilità.</div>
-        </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
           {items.map(item=>{
             const focused = tutorialFocus === item.id;
@@ -2970,7 +2982,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
 
 
 
-function AwardCard({ rule, unlocked, onOpen }) {
+function AwardCard({ rule, unlocked, onOpen, tutorialHighlight=false }) {
   const img = buildAwardImagePath(rule.badgeId);
   return (
     <button
@@ -2981,7 +2993,9 @@ function AwardCard({ rule, unlocked, onOpen }) {
         padding:'12px 8px 10px',
         minHeight:158,
         background:unlocked ? 'linear-gradient(180deg,#464646,#272727)' : 'linear-gradient(180deg,#343436,#252527)',
-        boxShadow:'0 10px 26px rgba(0,0,0,.24)',
+        boxShadow:tutorialHighlight?'0 0 0 3px #A84637, 0 0 34px rgba(168,70,55,.50)':'0 10px 26px rgba(0,0,0,.24)',
+        position:'relative',
+        zIndex:tutorialHighlight?180:1,
         cursor:'pointer',
         fontFamily:'inherit',
         color:'white',
@@ -3028,7 +3042,7 @@ function AwardModal({ rule, unlocked, currentValue, onClose }) {
   );
 }
 
-function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], openBadgeId=null, onBadgeOpened }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], openBadgeId=null, onBadgeOpened, tutorialActive=false, onTutorialBadgeOpen }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
@@ -3056,7 +3070,7 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:12 }}>
-          {awards.map(rule=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(normalizeBadgeId(rule.badgeId))} onOpen={setSelectedAward} />)}
+          {awards.map((rule,idx)=><AwardCard key={rule.badgeId} rule={rule} unlocked={unlockedSet.has(normalizeBadgeId(rule.badgeId))} tutorialHighlight={tutorialActive && idx===0} onOpen={(r)=>{setSelectedAward(r); if(tutorialActive) onTutorialBadgeOpen?.(r);}} />)}
         </div>
       </div>
       {selectedAward && <AwardModal rule={selectedAward} unlocked={unlockedSet.has(normalizeBadgeId(selectedAward.badgeId))} currentValue={metrics[selectedAward.metric]} onClose={()=>setSelectedAward(null)} />}
@@ -3745,8 +3759,20 @@ export default function App() {
   const handleTutorialNext = () => {
     if (tutorialStep === 'detail-stats') { setTutorialStep('detail-abilities'); return; }
     if (tutorialStep === 'detail-abilities') { setTutorialStep('detail-capture'); return; }
-    if (tutorialStep === 'rewards') { setSel(null); setPage('menu'); setTutorialStep('regions'); return; }
-    if (tutorialStep === 'regions') { setSel(null); setPage('menu'); setTutorialStep('profile'); return; }
+    if (tutorialStep === 'reward-modal') { setSel(null); setRegionsInitialView('continents'); setPage('regions'); setTutorialStep('regions'); return; }
+    if (tutorialStep === 'regions') { setSel(null); setPage('profile'); setTutorialStep('profile'); return; }
+  };
+
+  const handleTutorialAbilityClick = () => {
+    if (tutorialStep === 'detail-abilities') {
+      setTimeout(() => setTutorialStep('detail-capture'), 520);
+    }
+  };
+
+  const handleTutorialBadgeOpen = () => {
+    if (tutorialStep === 'rewards') {
+      setTimeout(() => setTutorialStep('reward-modal'), 360);
+    }
   };
 
   const handleTutorialCapture = async () => {
@@ -3758,7 +3784,8 @@ export default function App() {
     setTimeout(() => {
       setTutorialStamp(false);
       setSel(null);
-      setPage('menu');
+      setToastOpenBadgeId(null);
+      setPage('badges');
       setTutorialStep('rewards');
     }, 650);
   };
@@ -3848,7 +3875,7 @@ const returnFromFilteredGrid = () => {
   setSel(null); setPage('grid');
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -3888,7 +3915,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} />;
+    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} />;
