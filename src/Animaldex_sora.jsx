@@ -2470,75 +2470,138 @@ function AwardToast({ award, onOpen, onDismiss }) {
 
 function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish, onSkip }) {
   if (!step) return null;
-  const copy = {
+  const OCHRE = '#A84637';
+  const sequence = ['grid','detail-stats','detail-abilities','detail-capture','rewards','regions','profile'];
+  const index = Math.max(0, sequence.indexOf(step));
+  const pct = Math.round(((index + 1) / sequence.length) * 100);
+
+  const copyMap = {
     grid: {
-      title:'Terminale Animaldex online',
-      body:`Qui risiede il tuo database biologico. Gli animali oscurati sono ancora misteriosi; quelli illuminati sono stati sbloccati dalle tue esplorazioni. Tocca il bersaglio evidenziato${animal?.com ? `: ${animal.com}` : ''}.`,
+      icon:'🧭',
+      title:'Terminale Animaldex',
+      kicker:'Database biologico',
+      body:`Questa è la tua centrale operativa. Cerca, ordina e filtra per tassonomia, rarità, status, geografia, habitat, abilità e affidabilità dati. Il bersaglio evidenziato${animal?.com ? ` (${animal.com})` : ''} è già disponibile: aprilo per leggere la scheda.`,
+      chips:['Misterioso = identità nascosta','Ricercato = PNG visibile, da trovare','Avvistato = registrato','Catturato = confermato'],
+      hint:'Tocca la card evidenziata nella griglia per procedere.',
       action:null,
-      hint:'Tocca la card evidenziata per procedere.'
     },
     'detail-stats': {
-      title:'Analisi biometrica',
-      body:'Ogni specie possiede una rarità e parametri unici: velocità, forza, resistenza, agilità e intelligenza. Questi dati raccontano quanto è speciale e difficile da trovare.',
-      action:'Continua'
+      icon:'📊',
+      title:'Rarità e statistiche',
+      kicker:'Analisi specie',
+      body:'Ogni scheda riassume rarità, conservazione e dati biometrici. Le statistiche servono a capire comportamento e profilo biologico: velocità, forza, resistenza, agilità, intelligenza e altri parametri quando disponibili.',
+      chips:['Rarità influenza priorità e prestigio','Statistiche aiutano la comparazione','Tassonomia collega gruppi simili'],
+      action:'Continua',
     },
     'detail-abilities': {
-      title:'Abilità e adattamenti',
-      body:'Le Abilità descrivono veleni, corazze, sensi estremi, migrazioni, intelligenza e molte altre specializzazioni. Toccare una card rivela una curiosità associata alla specie.',
-      action:'Continua'
+      icon:'✨',
+      title:'Abilità e curiosità',
+      kicker:'Adattamenti naturali',
+      body:'Le abilità raccontano cosa rende speciale una specie: veleno, corazze, sensi estremi, migrazioni, intelligenza, record, mimetismo e molto altro. Toccare una card rivela una curiosità contestuale.',
+      chips:['Le abilità alimentano filtri dedicati','Contribuiscono ai reward','Aiutano a scoprire animali simili'],
+      action:'Continua',
     },
     'detail-capture': {
+      icon:'📸',
       title:'Registrazione ufficiale',
-      body:'Quando hai una prova reale, registra l’esemplare come Catturato. Questo aggiorna statistiche, profilo e progressi verso nuovi reward.',
-      action:'Registra catturato'
+      kicker:'Avvistato → Catturato',
+      body:'Quando hai una prova reale o vuoi confermare una specie, registrala come Catturata. Questo aggiorna user_animals su Supabase, aumenta le statistiche profilo e può sbloccare nuovi award.',
+      chips:['Seen = avvistato','Collected = catturato','I progressi restano sincronizzati'],
+      action:'Registra catturato',
     },
     rewards: {
+      icon:'🏅',
       title:'Rewards e progressione',
-      body:'Ogni scoperta può contribuire agli Award: tassonomia, geografia, abilità, rarità, massa, conservazione e costanza. Le notifiche reward si possono toccare per aprire il dettaglio o trascinare verso l’alto per chiuderle.',
-      action:'Continua'
+      kicker:'Sistema obiettivi',
+      body:'Gli award premiano molte dimensioni: geografia, tassonomia, rarità, conservazione, abilità, massa, foto caricate e costanza. Quando appare una notifica reward, puoi toccarla per aprire il dettaglio oppure trascinarla verso l’alto per chiuderla.',
+      chips:['Progressi permanenti','Modal aperto dal toast','Categorie filtrabili nella sezione Badge'],
+      action:'Continua',
     },
     regions: {
+      icon:'🗺️',
       title:'Espansione territoriale',
-      body:'La sezione Regioni espande il tuo radar. Registra le nazioni visitate nella scratch map: Animaldex sbloccherà gli animali locali come Ricercati, pronti da cercare.',
-      action:'Continua'
+      kicker:'Scratch map e regioni',
+      body:'In Regioni registri le nazioni visitate. La RPC di Supabase sblocca gli animali locali come Ricercati: li vedrai con PNG reale, pronti da cercare, avvistare e catturare.',
+      chips:['Nazioni visitate','Aree geografiche','Animali locali ricercati'],
+      action:'Continua',
     },
     profile: {
-      title:'Eredità esploratore',
-      body:'Profilo e Badge raccolgono il tuo percorso: animali visti, catturati, nazioni visitate, statistiche e award. Tutto resta sincronizzato con Supabase.',
-      action:'Inizia spedizione'
-    }
-  }[step];
+      icon:'👤',
+      title:'Profilo esploratore',
+      kicker:'Archivio personale',
+      body:'Il Profilo riassume il percorso: animali visti, catturati, badge ottenuti e regioni esplorate. Da qui puoi rientrare rapidamente in liste filtrate, galleria, badge e mappa.',
+      chips:['Dashboard progressi','Collegamenti rapidi','Dati salvati per utente'],
+      action:'Inizia spedizione',
+    },
+  };
+
+  const copy = copyMap[step];
   if (!copy) return null;
   const isGrid = step === 'grid';
   const primary = step === 'detail-capture' ? onCapture : step === 'profile' ? onFinish : onNext;
+
   return (
     <div style={{ position:'absolute', inset:0, zIndex:260, pointerEvents:'none' }}>
-      <div style={{ position:'absolute', inset:0, background:'rgba(0,0,0,.46)', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', left:14, right:14, bottom:18, pointerEvents:'auto', background:'linear-gradient(180deg,rgba(22,24,28,.98),rgba(10,12,14,.98))', border:'1px solid rgba(144,216,74,.34)', borderRadius:22, padding:16, boxShadow:'0 22px 70px rgba(0,0,0,.55), 0 0 28px rgba(144,216,74,.12)' }}>
-        <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9, marginBottom:6 }}>Avvio sistema</div>
-        <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{copy.title}</div>
-        <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.55, marginTop:9 }}>{copy.body}</div>
-        {copy.hint && <div style={{ color:'rgba(144,216,74,.72)', fontSize:11, fontWeight:800, marginTop:9 }}>{copy.hint}</div>}
-        <div style={{ display:'flex', gap:8, marginTop:14 }}>
-          <button onClick={onSkip} style={{ height:40, padding:'0 12px', borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.58)', fontWeight:900, cursor:'pointer' }}>Salta</button>
-          {!isGrid && <button onClick={primary} style={{ flex:1, height:40, borderRadius:12, border:'none', background:'#90D84A', color:'#101410', fontWeight:1000, cursor:'pointer' }}>{copy.action}</button>}
+      <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 50% 28%, rgba(168,70,55,.08), rgba(0,0,0,.58) 42%, rgba(0,0,0,.72))', pointerEvents:'none' }} />
+      <div style={{ position:'absolute', left:12, right:12, bottom:14, pointerEvents:'auto' }}>
+        <div style={{ background:'linear-gradient(180deg,rgba(28,28,31,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, borderRadius:28, padding:16, boxShadow:`0 24px 80px rgba(0,0,0,.62), 0 0 34px ${OCHRE}28`, overflow:'hidden' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+            <div style={{ width:52, height:52, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:27, boxShadow:`0 0 28px ${OCHRE}55`, flexShrink:0 }}>{copy.icon}</div>
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>{copy.kicker}</div>
+              <div style={{ color:'white', fontSize:20, fontWeight:1000, letterSpacing:'-.4px', lineHeight:1.08, marginTop:3 }}>{copy.title}</div>
+            </div>
+            <div style={{ width:48, height:48, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', color:'rgba(255,255,255,.72)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+              <span style={{ fontSize:14, fontWeight:1000 }}>{index+1}</span>
+              <span style={{ fontSize:9, fontWeight:900, color:'rgba(255,255,255,.38)' }}>/{sequence.length}</span>
+            </div>
+          </div>
+
+          <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', margin:'14px 0 12px' }}>
+            <div style={{ width:`${pct}%`, height:'100%', borderRadius:999, background:`linear-gradient(90deg,${OCHRE},#F0A840)`, transition:'width .25s ease' }} />
+          </div>
+
+          <div style={{ color:'rgba(255,255,255,.76)', fontSize:13, lineHeight:1.55 }}>{copy.body}</div>
+
+          <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginTop:12 }}>
+            {copy.chips.map(chip => (
+              <span key={chip} style={{ borderRadius:999, background:'rgba(168,70,55,.14)', border:`1px solid ${OCHRE}33`, color:'rgba(255,255,255,.84)', padding:'6px 9px', fontSize:10.5, fontWeight:850, lineHeight:1.1 }}>{chip}</span>
+            ))}
+          </div>
+
+          {copy.hint && (
+            <div style={{ marginTop:12, borderRadius:16, background:'rgba(240,168,64,.10)', border:'1px solid rgba(240,168,64,.24)', padding:'10px 11px', color:'#F0CFA5', fontSize:11.5, lineHeight:1.38, fontWeight:850 }}>
+              {copy.hint}
+            </div>
+          )}
+
+          <div style={{ display:'flex', gap:9, marginTop:14 }}>
+            <button onClick={onSkip} style={{ height:44, padding:'0 14px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.62)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Salta</button>
+            {!isGrid && <button onClick={primary} style={{ flex:1, height:44, borderRadius:15, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 12px 32px ${OCHRE}40` }}>{copy.action}</button>}
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
+
 function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, onFinish }) {
-  const [step,setStep]=useState('nickname');
+  const OCHRE = '#A84637';
+  const [step,setStep]=useState('intro');
   const [nickname,setNickname]=useState(initialNickname || String(user?.email || 'esploratore').split('@')[0] || 'Esploratore');
   const [countrySearch,setCountrySearch]=useState('');
   const [selectedCountries,setSelectedCountries]=useState([]);
+  const [selectedTripTags,setSelectedTripTags]=useState(['nature']);
   const [cardIndex,setCardIndex]=useState(0);
   const [seenAnimals,setSeenAnimals]=useState([]);
   const [loading,setLoading]=useState(false);
   const [result,setResult]=useState(null);
   const [error,setError]=useState('');
 
+  const steps = ['intro','nickname','countries','radar','review','sync','wow'];
+  const stepIndex = Math.max(0, steps.indexOf(step));
+  const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
   const allCountries = useMemo(() => getAllScratchCountries(), []);
   const filteredCountries = allCountries.filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
 
@@ -2555,109 +2618,217 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   }, [animals, selectedCountries]);
 
   const currentAnimal = radarAnimals[cardIndex] || null;
+  const predictedUnlocks = useMemo(() => {
+    if (!selectedCountries.length) return 0;
+    const set = new Set(selectedCountries);
+    return animals.filter(a => {
+      const iso = a.distribution?.countries_present || a.geo?.iso || a.iso || [];
+      return iso.some(code => set.has(code));
+    }).length;
+  }, [animals, selectedCountries]);
+
   const toggleCountry = (code) => setSelectedCountries(prev => prev.includes(code) ? prev.filter(x=>x!==code) : [...prev, code]);
+  const toggleTripTag = (tag) => setSelectedTripTags(prev => prev.includes(tag) ? prev.filter(x=>x!==tag) : [...prev, tag]);
+
   const markRadar = (seen) => {
     if (seen && currentAnimal) setSeenAnimals(prev => Array.from(new Set([...prev, currentAnimal.id])));
     setCardIndex(i => i + 1);
   };
-  const complete = async () => {
+
+  const runSync = async () => {
     setLoading(true);
     setError('');
     setStep('sync');
+    const payload = { nickname, countries:selectedCountries, seenAnimalIds:seenAnimals, tripTags:selectedTripTags };
     try {
-      const data = await onComplete?.({ nickname, countries:selectedCountries, seenAnimalIds:seenAnimals, tripTags:['nature'] });
-      setResult(data || {});
+      const timeoutResult = {
+        ok:true,
+        timed_out:true,
+        unlocked_count:Math.max(predictedUnlocks, selectedCountries.length),
+        seen_count:seenAnimals.length,
+        badge_ids:['ONB-01-L1'],
+      };
+      const data = await Promise.race([
+        Promise.resolve(onComplete?.(payload)),
+        new Promise(resolve => setTimeout(() => resolve(timeoutResult), 16000))
+      ]);
+      setResult(data || timeoutResult);
       setStep('wow');
     } catch (err) {
-      console.warn('[Animaldex] Onboarding failed:', err);
-      setError(err?.message || 'Errore onboarding');
-      setStep('radar');
+      console.warn('[Animaldex] Onboarding sync failed:', err);
+      setError(err?.message || 'Sincronizzazione non completata. Puoi riprovare o continuare: Animaldex tenterà di salvare in background.');
+      setResult({ ok:false, unlocked_count:Math.max(predictedUnlocks, selectedCountries.length), seen_count:seenAnimals.length, badge_ids:['ONB-01-L1'] });
+      setStep('review');
     } finally {
       setLoading(false);
     }
   };
 
-  const panelStyle = { margin:18, borderRadius:26, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.10)', padding:20, boxShadow:'0 28px 80px rgba(0,0,0,.42)' };
+  const panel = { margin:16, borderRadius:30, background:'linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.035))', border:'1px solid rgba(255,255,255,.10)', padding:18, boxShadow:'0 28px 80px rgba(0,0,0,.46)' };
+  const primaryButton = { width:'100%', minHeight:50, borderRadius:18, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 14px 34px ${OCHRE}38` };
+  const disabledButton = { ...primaryButton, background:'#3A3A3C', color:'rgba(255,255,255,.42)', boxShadow:'none', cursor:'default' };
+  const Pill = ({ children, active=false, onClick }) => <button onClick={onClick} style={{ borderRadius:999, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.10)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.055)', color:active?'#FFD4C8':'rgba(255,255,255,.74)', padding:'8px 11px', fontSize:11.5, fontWeight:900, cursor:'pointer', fontFamily:'inherit' }}>{children}</button>;
 
   return (
-    <div style={{ height:'100%', background:'radial-gradient(circle at 50% 0%, rgba(144,216,74,.18), transparent 36%), linear-gradient(180deg,#111113,#050506)', color:'white', display:'flex', flexDirection:'column', overflow:'hidden' }}>
-      <div style={{ padding:'22px 20px 8px', flexShrink:0 }}>
-        <div style={{ color:'#90D84A', fontSize:12, fontWeight:900, letterSpacing:.9, textTransform:'uppercase' }}>Animaldex onboarding</div>
-        <div style={{ color:'white', fontSize:28, fontWeight:900, letterSpacing:'-.7px', marginTop:4 }}>{step==='nickname'?'Nome in codice':step==='countries'?'Quali terre hai esplorato?':step==='radar'?'Radar avvistamenti':step==='sync'?'Sincronizzazione':'Primi progressi sbloccati'}</div>
+    <div style={{ height:'100%', background:`radial-gradient(circle at 50% 0%, ${OCHRE}2A, transparent 36%), linear-gradient(180deg,#111113,#050506)`, color:'white', display:'flex', flexDirection:'column', overflow:'hidden' }}>
+      <div style={{ padding:'20px 18px 8px', flexShrink:0 }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12 }}>
+          <div>
+            <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Avvio sistema</div>
+            <div style={{ color:'white', fontSize:28, fontWeight:1000, letterSpacing:'-.8px', marginTop:3 }}>
+              {step==='intro'?'Benvenuto esploratore':step==='nickname'?'Nome in codice':step==='countries'?'Terre esplorate':step==='radar'?'Radar avvistamenti':step==='review'?'Riepilogo missione':step==='sync'?'Sincronizzazione':'Sistema online'}
+            </div>
+          </div>
+          <div style={{ width:54, height:54, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:26, boxShadow:`0 0 32px ${OCHRE}44` }}>🧬</div>
+        </div>
+        <div style={{ height:8, background:'rgba(255,255,255,.08)', borderRadius:999, overflow:'hidden', marginTop:14 }}>
+          <div style={{ width:`${progress}%`, height:'100%', background:`linear-gradient(90deg,${OCHRE},#F0A840)`, borderRadius:999, transition:'width .28s ease' }} />
+        </div>
       </div>
 
+      {step==='intro' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+            <div style={{ fontSize:48, marginBottom:12 }}>🛰️</div>
+            <div style={{ color:'white', fontSize:22, fontWeight:1000, letterSpacing:'-.4px', lineHeight:1.1 }}>Il tuo Animaldex parte già con progressi reali.</div>
+            <p style={{ color:'rgba(255,255,255,.68)', fontSize:13.5, lineHeight:1.6 }}>In pochi passaggi registriamo nickname, nazioni visitate e primi avvistamenti. Una sola sincronizzazione batch sbloccherà animali locali, status iniziali e primo reward.</p>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:14 }}>
+              {[
+                ['🗺️','Regioni','le nazioni sbloccano animali locali'],
+                ['🎯','Ricercati','PNG visibile, ancora da trovare'],
+                ['✨','Abilità','adattamenti e curiosità filtrabili'],
+                ['🏅','Rewards','badge permanenti sul profilo'],
+              ].map(([ic,t,d])=>(
+                <div key={t} style={{ borderRadius:20, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:12 }}>
+                  <div style={{ fontSize:24 }}>{ic}</div><div style={{ fontWeight:1000, fontSize:13, marginTop:5 }}>{t}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, lineHeight:1.3, marginTop:3 }}>{d}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <button onClick={()=>setStep('nickname')} style={primaryButton}>Inizia configurazione</button>
+        </div>
+      )}
+
       {step==='nickname' && (
-        <div style={panelStyle}>
-          <p style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginTop:0 }}>Scegli un nickname. Lo useremo nel profilo, senza form lunghi.</p>
-          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Lynx-7" style={{ width:'100%', height:48, borderRadius:14, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', outline:'none' }} />
-          <button disabled={!nickname.trim()} onClick={()=>setStep('countries')} style={{ marginTop:16, width:'100%', height:48, borderRadius:15, border:'none', background:nickname.trim()?'#90D84A':'#3A3A3C', color:nickname.trim()?'#101410':'rgba(255,255,255,.4)', fontWeight:900, cursor:nickname.trim()?'pointer':'default' }}>Avanti</button>
+        <div style={panel}>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Scegli un nickname. Verrà salvato nel profilo e usato come identità esploratore.</p>
+          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Lynx-7" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit' }} />
+          <button disabled={!nickname.trim()} onClick={()=>setStep('countries')} style={{ ...(nickname.trim()?primaryButton:disabledButton), marginTop:16 }}>Continua</button>
         </div>
       )}
 
       {step==='countries' && (
-        <div style={{ ...panelStyle, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
-          <p style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginTop:0 }}>Seleziona le nazioni in cui sei stato. Non scriviamo ancora nulla su Supabase.</p>
-          <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ width:'100%', height:44, borderRadius:13, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 12px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10 }} />
+        <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona le nazioni in cui sei stato. Non scriviamo ancora nulla: restano in memoria fino alla sincronizzazione finale.</p>
+          <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione o ISO..." style={{ width:'100%', height:44, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10, fontFamily:'inherit' }} />
+          <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginBottom:10 }}>
+            {TRIP_TAGS.map(tag=><Pill key={tag} active={selectedTripTags.includes(tag)} onClick={()=>toggleTripTag(tag)}>{tag}</Pill>)}
+          </div>
           <div style={{ flex:1, overflowY:'auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, paddingRight:2 }}>
             {filteredCountries.map(code => {
               const active = selectedCountries.includes(code);
               return (
-                <button key={code} onClick={()=>toggleCountry(code)} style={{ minHeight:46, borderRadius:13, border:`1px solid ${active?'rgba(144,216,74,.7)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left' }}>
-                  <span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span>
-                  <span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
-                  <span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontWeight:900 }}>{active?'✓':'+'}</span>
+                <button key={code} onClick={()=>toggleCountry(code)} style={{ minHeight:48, borderRadius:17, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.08)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.045)', color:'white', display:'flex', alignItems:'center', gap:8, padding:'8px 10px', cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}>
+                  <span style={{ fontSize:21 }}>{getFlagEmoji(code)}</span>
+                  <span style={{ flex:1, fontSize:11.5, fontWeight:900, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span>
+                  <span style={{ color:active?'#FFD4C8':'rgba(255,255,255,.22)', fontWeight:1000 }}>{active?'✓':'+'}</span>
                 </button>
               );
             })}
           </div>
-          <button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={{ marginTop:14, width:'100%', height:48, borderRadius:15, border:'none', background:selectedCountries.length?'#90D84A':'#3A3A3C', color:selectedCountries.length?'#101410':'rgba(255,255,255,.4)', fontWeight:900, cursor:selectedCountries.length?'pointer':'default' }}>Avanti · {selectedCountries.length}</button>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+            <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{selectedCountries.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>nazioni</div></div>
+            <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{predictedUnlocks}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali potenziali</div></div>
+          </div>
+          <button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={{ ...(selectedCountries.length?primaryButton:disabledButton), marginTop:12 }}>Apri radar</button>
         </div>
       )}
 
       {step==='radar' && (
-        <div style={{ ...panelStyle, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
-          <p style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginTop:0 }}>Analisi biomi... Hai mai incrociato queste creature?</p>
+        <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
+          <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.45, margin:0 }}>Hai già incrociato alcune specie?</p>
+            <span style={{ color:OCHRE, fontWeight:1000, fontSize:12 }}>{Math.min(cardIndex+1, Math.max(1, radarAnimals.length))}/{Math.max(1, radarAnimals.length)}</span>
+          </div>
           {!currentAnimal ? (
-            <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', textAlign:'center', fontWeight:800 }}>Radar completato.</div>
+            <div style={{ flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
+              <div>
+                <div style={{ fontSize:46 }}>✅</div>
+                <div style={{ color:'white', fontWeight:1000, fontSize:18, marginTop:8 }}>Radar completato</div>
+                <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:5 }}>{seenAnimals.length} specie segnate come avvistate.</div>
+              </div>
+            </div>
           ) : (
             <div style={{ flex:1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-              <div style={{ width:'82%', maxWidth:280, borderRadius:24, background:'#202024', overflow:'hidden', boxShadow:'0 28px 70px rgba(0,0,0,.45)', border:'1px solid rgba(255,255,255,.10)' }}>
-                <AnimalImg a={{...currentAnimal, status:'ricercato'}} size={220} fontSize={82} overrideStatus="ricercato" />
-                <div style={{ padding:14, textAlign:'center' }}>
-                  <div style={{ color:'white', fontSize:18, fontWeight:900, lineHeight:1.12 }}>{currentAnimal.com}</div>
+              <div style={{ width:'86%', maxWidth:292, borderRadius:28, background:'#202024', overflow:'hidden', boxShadow:'0 28px 70px rgba(0,0,0,.48)', border:`1px solid ${OCHRE}44` }}>
+                <AnimalImg a={{...currentAnimal, status:'ricercato'}} size={230} fontSize={82} overrideStatus="ricercato" />
+                <div style={{ padding:15, textAlign:'center' }}>
+                  <div style={{ color:'white', fontSize:19, fontWeight:1000, lineHeight:1.12 }}>{currentAnimal.com}</div>
                   <div style={{ color:'rgba(255,255,255,.45)', fontSize:12, marginTop:5, fontStyle:'italic' }}>{currentAnimal.sci}</div>
                 </div>
               </div>
               <div style={{ display:'flex', gap:12, marginTop:18, width:'100%' }}>
-                <button onClick={()=>markRadar(false)} style={{ flex:1, height:48, borderRadius:15, border:'1px solid rgba(255,255,255,.12)', background:'#2A2A2C', color:'rgba(255,255,255,.72)', fontWeight:900, cursor:'pointer' }}>Mai visto</button>
-                <button onClick={()=>markRadar(true)} style={{ flex:1, height:48, borderRadius:15, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, cursor:'pointer' }}>Visto</button>
+                <button onClick={()=>markRadar(false)} style={{ flex:1, height:50, borderRadius:17, border:'1px solid rgba(255,255,255,.12)', background:'#2A2A2C', color:'rgba(255,255,255,.72)', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Mai visto</button>
+                <button onClick={()=>markRadar(true)} style={{ flex:1, height:50, borderRadius:17, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Visto</button>
               </div>
             </div>
           )}
-          <button onClick={complete} disabled={loading} style={{ marginTop:14, width:'100%', height:48, borderRadius:15, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Sincronizza Animaldex</button>
-          {error && <div style={{ color:'#FF7777', fontSize:12, marginTop:10 }}>{error}</div>}
+          <button onClick={()=>setStep('review')} style={{ ...primaryButton, marginTop:14 }}>Vai al riepilogo</button>
+        </div>
+      )}
+
+      {step==='review' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+            <div style={{ color:'white', fontSize:21, fontWeight:1000, lineHeight:1.12 }}>Pacchetto iniziale pronto</div>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6 }}>Ora una singola RPC batch sincronizza nazioni, animali ricercati, avvistamenti e primo award. Se la rete rallenta, l’app non resta bloccata.</p>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+              {[
+                ['🗺️', selectedCountries.length, 'nazioni visitate'],
+                ['🎯', predictedUnlocks, 'ricercati potenziali'],
+                ['👁️', seenAnimals.length, 'avvistati radar'],
+                ['🏅', 1, 'award iniziale'],
+              ].map(([ic,n,l])=>(
+                <div key={l} style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:13 }}>
+                  <div style={{ fontSize:24 }}>{ic}</div><div style={{ color:OCHRE, fontSize:24, fontWeight:1000, marginTop:4 }}>{n}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11, lineHeight:1.2 }}>{l}</div>
+                </div>
+              ))}
+            </div>
+            {error && <div style={{ marginTop:12, borderRadius:16, background:'rgba(255,70,70,.12)', border:'1px solid rgba(255,70,70,.22)', color:'#FF9A9A', padding:12, fontSize:12, lineHeight:1.45 }}>{error}</div>}
+          </div>
+          <div style={{ display:'grid', gap:9 }}>
+            <button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Sincronizza e sblocca'}</button>
+            {error && <button onClick={()=>onFinish?.({ skipReload:true })} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Continua comunque</button>}
+          </div>
         </div>
       )}
 
       {step==='sync' && (
-        <div style={{ ...panelStyle, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
+        <div style={{ ...panel, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
           <div>
-            <div style={{ width:92, height:92, borderRadius:'50%', margin:'0 auto 18px', background:'conic-gradient(from 90deg,#90D84A,#8f34f5,#244A70,#90D84A)', boxShadow:'0 0 40px rgba(144,216,74,.32)', animation:'interactiveWiggle .7s ease-in-out infinite' }} />
-            <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Sincronizzazione database biologico...</div>
-            <div style={{ color:'rgba(255,255,255,.52)', fontSize:12, marginTop:8 }}>Assegnazione statistiche e ricompense.</div>
+            <div style={{ width:98, height:98, borderRadius:'50%', margin:'0 auto 18px', background:`conic-gradient(from 90deg,${OCHRE},#F0A840,#8f34f5,${OCHRE})`, boxShadow:`0 0 46px ${OCHRE}50`, animation:'interactiveWiggle .7s ease-in-out infinite' }} />
+            <div style={{ color:'white', fontSize:19, fontWeight:1000 }}>Sincronizzazione database biologico</div>
+            <div style={{ color:'rgba(255,255,255,.55)', fontSize:12.5, marginTop:8, lineHeight:1.45 }}>RPC batch in corso: destinazioni, animali ricercati, avvistamenti, rewards.</div>
           </div>
         </div>
       )}
 
       {step==='wow' && (
-        <div style={{ ...panelStyle, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center' }}>
           <div>
             <div style={{ fontSize:64, marginBottom:12 }}>🏅</div>
-            <div style={{ color:'#F0C449', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
-            <div style={{ color:'white', fontSize:28, fontWeight:900, marginTop:10 }}>{result?.unlocked_count ?? selectedCountries.length}</div>
-            <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati caricati nel tuo Animaldex</div>
-            <button onClick={()=>onFinish?.()} style={{ marginTop:22, width:'100%', height:50, borderRadius:16, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, cursor:'pointer' }}>Entra nell’Animaldex</button>
+            <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
+            <div style={{ color:'white', fontSize:42, fontWeight:1000, marginTop:8 }}>{result?.unlocked_count ?? predictedUnlocks}</div>
+            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati caricati nel tuo Animaldex</div>
+            {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Animaldex entra subito, la sincronizzazione continua in background.</div>}
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:20 }}>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🎯</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercati visibili</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>✨</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Abilità filtrabili</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🏅</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Rewards attivi</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>📊</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Statistiche profilo</div></div>
+            </div>
           </div>
+          <button onClick={()=>onFinish?.()} style={primaryButton}>Entra nell’Animaldex</button>
         </div>
       )}
     </div>
@@ -3164,13 +3335,13 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title="Impostazioni" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>
-        <div style={{ background:'linear-gradient(135deg,rgba(144,216,74,.14),rgba(143,52,245,.10))', border:'1px solid rgba(144,216,74,.22)', borderRadius:18, padding:14, marginBottom:14 }}>
-          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Tutorial e onboarding</div>
-          <div style={{ color:'white', fontSize:16, fontWeight:1000, marginTop:5 }}>Modalità test guidata</div>
-          <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:6 }}>Riavvia i flussi senza cambiare account. Utile per controllare UI, reward, radar e spiegazioni operative.</div>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginTop:12 }}>
-            <button onClick={onStartInitialOnboarding} style={{ width:'100%', minHeight:44, borderRadius:13, border:'none', background:'#90D84A', color:'#101410', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Riavvia onboarding iniziale</button>
-            <button onClick={onStartOperationalTutorial} style={{ width:'100%', minHeight:44, borderRadius:13, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Riavvia tutorial operativo</button>
+        <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.20),rgba(240,168,64,.08))', border:'1px solid rgba(168,70,55,.42)', borderRadius:24, padding:16, marginBottom:14, boxShadow:'0 18px 50px rgba(0,0,0,.22)' }}>
+          <div style={{ color:'#D98674', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Percorsi guidati</div>
+          <div style={{ color:'white', fontSize:18, fontWeight:1000, marginTop:5 }}>Onboarding professionale</div>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.5, marginTop:7 }}>Puoi rivedere l’intera esperienza: configurazione iniziale, radar, rewards, status animali, filtri, regioni, profilo e statistiche.</div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:9, marginTop:13 }}>
+            <button onClick={onStartInitialOnboarding} style={{ width:'100%', minHeight:48, borderRadius:17, border:'none', background:'linear-gradient(135deg,#A84637,#C45D3F)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:'0 12px 30px rgba(168,70,55,.30)' }}>Avvia percorso primo accesso</button>
+            <button onClick={onStartOperationalTutorial} style={{ width:'100%', minHeight:48, borderRadius:17, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Avvia tour operativo dell’app</button>
           </div>
         </div>
         {rows.map(row=>(
@@ -3473,13 +3644,19 @@ export default function App() {
     if (!user?.id) throw new Error('Sessione non valida');
     setDataError('');
     try {
-      const { data, error } = await supabase.rpc('complete_user_onboarding', {
-        p_user_id: user.id,
-        p_nickname: nickname,
-        p_iso_list: countries,
-        p_seen_animal_ids: seenAnimalIds,
-        p_trip_tags: tripTags || [],
-      });
+      const rpcResult = await withTimeout(
+        supabase.rpc('complete_user_onboarding', {
+          p_user_id: user.id,
+          p_nickname: nickname,
+          p_iso_list: countries,
+          p_seen_animal_ids: seenAnimalIds,
+          p_trip_tags: tripTags || [],
+        }),
+        12000,
+        { data:{ ok:true, timed_out:true, unlocked_count:(countries || []).length, seen_count:(seenAnimalIds || []).length, badge_ids:['ONB-01-L1'] }, error:null },
+        'complete_user_onboarding'
+      );
+      const { data, error } = rpcResult || {};
       if (error) throw error;
 
       const badgeIds = (data?.badge_ids || data?.badges || []).map(normalizeBadgeId);
@@ -3493,12 +3670,12 @@ export default function App() {
       console.warn('[Animaldex] RPC onboarding fallita, uso fallback frontend:', err);
       const cleanCountries = (countries || []).map(c => String(c).toUpperCase()).filter(Boolean);
       for (const iso of cleanCountries) {
-        await persistUserDestination(user.id, iso, tripTags || []);
-        const { error: rpcError } = await supabase.rpc('unlock_animals_for_destination', {
+        await withTimeout(persistUserDestination(user.id, iso, tripTags || []), 3500, false, 'persistUserDestination');
+        const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
           p_user_id: user.id,
           p_iso: iso,
           p_trip_tags: tripTags || [],
-        });
+        }), 4500, { error:null }, 'unlock_animals_for_destination');
         if (rpcError) console.warn('[Animaldex] unlock fallback non riuscito:', rpcError);
       }
 
@@ -3533,9 +3710,16 @@ export default function App() {
   };
 
   const finishOnboarding = async () => {
-    setUserProfile(prev => ({ ...(prev || {}), onboarding_completed:true }));
-    await reloadSupabaseData(user);
+    setUserProfile(prev => ({
+      ...(prev || buildFallbackProfile(user, true)),
+      onboarding_completed:true,
+      has_completed_tutorial:false,
+      onboarding_completed_at:new Date().toISOString(),
+    }));
+    setSel(null);
     setPage('grid');
+    // Ricarica silenziosa: non bloccare mai la schermata finale dell’onboarding.
+    reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload post-onboarding non bloccante:', err));
   };
 
   const openAwardFromToast = (award) => {
@@ -3598,6 +3782,7 @@ export default function App() {
 
 
   const startInitialOnboardingFromSettings = () => {
+    setDataError('');
     setSel(null);
     setGridPreset(null);
     setGridReturnTarget(null);
