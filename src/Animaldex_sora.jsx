@@ -3109,15 +3109,27 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
     <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, minHeight:flipped?268:204, perspective:900, cursor:locked?'default':'pointer', transition:'min-height .28s ease' }}>
       <div style={{ position:'relative', minHeight:204, transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
-          <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={126} />
-          <div style={{ padding:'13px 16px', display:'flex', alignItems:'center', gap:12, background:'rgba(38,38,40,.68)', backdropFilter:'blur(8px)' }}>
-            <div style={{ flex:1, minWidth:0 }}>
+          <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={204} />
+          <div style={{
+            position:'absolute',
+            left:0,
+            right:0,
+            bottom:0,
+            minHeight:94,
+            padding:'38px 16px 14px',
+            boxSizing:'border-box',
+            display:'flex',
+            alignItems:'flex-end',
+            gap:12,
+            background:'linear-gradient(180deg, rgba(38,38,40,0) 0%, rgba(38,38,40,.30) 34%, rgba(38,38,40,.72) 68%, rgba(38,38,40,.98) 100%)'
+          }}>
+            <div style={{ flex:1, minWidth:0, textShadow:'0 2px 10px rgba(0,0,0,.72)' }}>
               <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
-              {subtitle && <div style={{ color:'rgba(255,255,255,.50)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
+              {subtitle && <div style={{ color:'rgba(255,255,255,.62)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
             </div>
             {locked
-              ? <button data-sound="map" onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:accent, color:'#071017', fontWeight:950, cursor:'pointer' }}>Sblocca</button>
-              : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation();setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer' }}>Map</button>)}
+              ? <button data-sound="map" onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:accent, color:'#071017', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Sblocca</button>
+              : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation();setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Map</button>)}
           </div>
         </div>
         <div style={{ position:'absolute', top:0, bottom:0, left:-14, right:-14, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
