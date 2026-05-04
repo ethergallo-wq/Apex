@@ -142,8 +142,11 @@ function toArraySafe(value) {
 
 function normalizeSupabaseAnimal(row, userAnimal) {
   const raw = row?.raw && typeof row.raw === 'object' ? row.raw : {};
-  const geo = Array.isArray(row?.animal_geo) ? row.animal_geo[0] : row?.animal_geo;
-  const countries = toArraySafe(geo?.iso || raw?.distribution?.countries_present || raw?.countries_present || raw?.iso);
+  const geoRow = Array.isArray(row?.animal_geo) ? row.animal_geo[0] : row?.animal_geo;
+  const rawGeo = raw?.geo && typeof raw.geo === 'object' ? raw.geo : {};
+  const rawGeoFromRow = geoRow?.raw_geo && typeof geoRow.raw_geo === 'object' ? geoRow.raw_geo : {};
+  const geo = { ...rawGeo, ...rawGeoFromRow, ...(geoRow || {}) };
+  const countries = toArraySafe(geo?.iso?.primary || geo?.iso || raw?.distribution?.countries_present || raw?.countries_present || raw?.iso);
   const categories = toArraySafe(getRawValue(raw, ['categories', 'category_ids', 'badges', 'abilities'], []));
   const status = supabaseStatusToApp(userAnimal?.unlock_status || 'locked');
 
@@ -176,11 +179,14 @@ function normalizeSupabaseAnimal(row, userAnimal) {
       countries_present: countries,
     },
     geo: geo || null,
+    bioregions_v4: toArraySafe(geo?.bioregions_v4 || rawGeo?.bioregions_v4 || raw.bioregions_v4),
+    map_bioregion_ids_v4: toArraySafe(geo?.map_bioregion_ids_v4 || rawGeo?.map_bioregion_ids_v4 || raw.map_bioregion_ids_v4),
+    map_bioregion_domains_v4: toArraySafe(geo?.map_bioregion_domains_v4 || rawGeo?.map_bioregion_domains_v4 || raw.map_bioregion_domains_v4),
     map_profile: geo?.map_profile || raw.map_profile || '',
-    confidence: geo?.confidence || raw.confidence || '',
+    confidence: geo?.confidence || geo?.bioregion_confidence || raw.confidence || '',
     bio_regions: toArraySafe(geo?.bio_regions || raw.bio_regions),
     game_regions: toArraySafe(geo?.game_regions || raw.game_regions),
-    habitats: toArraySafe(geo?.habitats || raw.habitats || raw.habitat),
+    habitats: toArraySafe(geo?.habitats || geo?.habitat_ids || raw.habitats || raw.habitat),
     userStatus: userAnimal?.unlock_status || 'locked',
     userAnimal: userAnimal || null,
     status,
@@ -191,14 +197,39 @@ function normalizeLocalAnimal(a) {
   return {
     ...a,
     geo: a.geo || null,
-    confidence: a.confidence || a.geo?.confidence || '',
+    bioregions_v4: toArraySafe(a.bioregions_v4 || a.geo?.bioregions_v4),
+    map_bioregion_ids_v4: toArraySafe(a.map_bioregion_ids_v4 || a.geo?.map_bioregion_ids_v4),
+    map_bioregion_domains_v4: toArraySafe(a.map_bioregion_domains_v4 || a.geo?.map_bioregion_domains_v4),
+    confidence: a.confidence || a.geo?.confidence || a.geo?.bioregion_confidence || '',
     map_profile: a.map_profile || a.geo?.map_profile || '',
     bio_regions: toArraySafe(a.bio_regions || a.geo?.bio_regions),
     game_regions: toArraySafe(a.game_regions || a.geo?.game_regions),
-    habitats: toArraySafe(a.habitats || a.habitat || a.geo?.habitats),
+    habitats: toArraySafe(a.habitats || a.habitat || a.geo?.habitats || a.geo?.habitat_ids),
     userStatus: appStatusToSupabase(a.status),
     status: normalizeAnimalStatus(a.status),
   };
+}
+
+
+const LOCAL_ANIMAL_BY_ID = Object.fromEntries(LOCAL_ANIMALS.map(a => [a.id, normalizeLocalAnimal(a)]));
+function mergeRemoteWithLocalBioregions(remoteList = []) {
+  return (remoteList || []).map(remote => {
+    const local = LOCAL_ANIMAL_BY_ID[remote.id];
+    if (!local) return remote;
+    const remoteIds = getAnimalBioregionIdsV4(remote);
+    if (remoteIds.length) return remote;
+    return {
+      ...remote,
+      geo:{ ...(remote.geo || {}), ...(local.geo || {}) },
+      bioregions_v4: local.bioregions_v4 || [],
+      map_bioregion_ids_v4: local.map_bioregion_ids_v4 || [],
+      map_bioregion_domains_v4: local.map_bioregion_domains_v4 || [],
+      distribution: remote.distribution?.countries_present?.length ? remote.distribution : local.distribution,
+      bio_regions: remote.bio_regions?.length ? remote.bio_regions : local.bio_regions,
+      game_regions: remote.game_regions?.length ? remote.game_regions : local.game_regions,
+      habitats: remote.habitats?.length ? remote.habitats : local.habitats,
+    };
+  });
 }
 
 async function ensureUserProfile(user) {
@@ -714,146 +745,46 @@ const COUNTRIES = [
 ];
 
 
-const LEGACY_REGION_ISO = {
-  europa_boreale:['IS','NO','SE','FI','DK','FO','AX'],
-  europa_temperata:['IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE'],
-  europa_mediterranea:['ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS'],
-  nord_america_boreale:['CA'],
-  nord_america_temperato:['US','BM','PM'],
-  nord_america_desertico:['GL'],
-  america_tropicale:['MX','BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY','CO','VE','EC','PE','BO','BR','GF','GY','SR'],
-  sud_america_temperato:['AR','CL','UY','PY','FK'],
-  africa_arida:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD'],
-  africa_tropicale:['SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'],
-  africa_australe:['ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS'],
-  madagascar:['MG'],
-  asia_boreale_steppa:['RU','KZ','MN'],
-  asia_occidentale_centrale:['TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF'],
-  asia_meridionale:['PK','IN','BD','LK','NP','BT','MV'],
-  asia_orientale:['CN','HK','MO','TW','KR','KP'],
-  giappone:['JP'],
-  sud_est_asiatico:['MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'],
-  australia:['AU','NF','CX','CC'],
-  nuova_zelanda:['NZ'],
-  pacifico_tropicale:['PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'],
-  isole_oceano_indiano:['MU','RE','YT','KM','SC','IO'],
-  artide:['GL','SJ'],
-  antartide:['AQ','BV','GS','HM','TF','SH']
-};
-
 const uniqIso = (...lists) => Array.from(new Set(lists.flat().filter(Boolean)));
 
-const TERRESTRIAL_REALMS = [
-  {
-    id:'nearctic', label:'Nearctic', image:'/regions/america.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'boreal-north-america', label:'Boreal North America', image:'/regions/nord_America_boreale.jpg', iso:uniqIso(LEGACY_REGION_ISO.nord_america_boreale, LEGACY_REGION_ISO.artide), legacy:['Nord America boreale','Artide'] },
-      { id:'temperate-north-america', label:'Temperate North America', image:'/regions/nord_america_temperato.jpg', iso:LEGACY_REGION_ISO.nord_america_temperato, legacy:['Nord America temperato'] },
-      { id:'deserts-north-america', label:'Deserts North America', image:'/regions/Nord_America_desertico.jpg', iso:LEGACY_REGION_ISO.nord_america_desertico, legacy:['Nord America desertico'] },
-    ]
-  },
-  {
-    id:'neotropical', label:'Neotropical', image:'/regions/America_tropicale.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'amazonia', label:'Amazonia', image:null, iso:['BR','PE','CO','VE','EC','BO','GF','GY','SR'], pendingImage:true },
-      { id:'tropical-andes', label:'Tropical Andes', image:null, iso:['CO','EC','PE','BO'], pendingImage:true },
-      { id:'atlantic-forest', label:'Atlantic Forest', image:null, iso:['BR','PY','AR'], pendingImage:true },
-      { id:'dry-neotropics', label:'Dry Neotropics', image:'/regions/America_temperato.jpg', iso:LEGACY_REGION_ISO.sud_america_temperato, legacy:['Sud America temperato'] },
-      { id:'caribbean', label:'Caribbean', image:'/regions/America_tropicale.jpg', iso:LEGACY_REGION_ISO.america_tropicale, legacy:['America tropicale'] },
-    ]
-  },
-  {
-    id:'palearctic', label:'Palearctic', image:'/regions/europa.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'western-palearctic', label:'Western Palearctic', image:'/regions/Europa-temperata.jpg', iso:uniqIso(LEGACY_REGION_ISO.europa_temperata, LEGACY_REGION_ISO.africa_arida), legacy:['Europa temperata','Africa arida'] },
-      { id:'eastern-palearctic', label:'Eastern Palearctic', image:'/regions/asia_orientale.jpg', iso:uniqIso(LEGACY_REGION_ISO.asia_boreale_steppa, LEGACY_REGION_ISO.asia_orientale, LEGACY_REGION_ISO.giappone), legacy:['Asia boreale e steppa','Asia orientale','Giappone'] },
-      { id:'mediterranean', label:'Mediterranean', image:'/regions/Europa_mediterranea.jpg', iso:LEGACY_REGION_ISO.europa_mediterranea, legacy:['Europa mediterranea'] },
-      { id:'central-asian-deserts', label:'Central Asian Deserts', image:'/regions/asia_occidentale_centrale.jpg', iso:LEGACY_REGION_ISO.asia_occidentale_centrale, legacy:['Asia occidentale e centrale'] },
-      { id:'siberian-boreal', label:'Siberian Boreal', image:'/regions/Europa_boreale.jpg', iso:LEGACY_REGION_ISO.europa_boreale, legacy:['Europa boreale'] },
-    ]
-  },
-  {
-    id:'afrotropical', label:'Afrotropical', image:'/regions/africa.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'congo-basin', label:'Congo Basin', image:'/regions/africa_tropicale.jpg', iso:LEGACY_REGION_ISO.africa_tropicale, legacy:['Africa tropicale'] },
-      { id:'east-african-savanna', label:'East African Savanna', image:null, iso:['ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS'], pendingImage:true },
-      { id:'southern-african', label:'Southern African', image:'/regions/africa_australe.jpg', iso:LEGACY_REGION_ISO.africa_australe, legacy:['Africa australe'] },
-      { id:'madagascar', label:'Madagascar', image:'/regions/madagascar.jpg', iso:uniqIso(LEGACY_REGION_ISO.madagascar, LEGACY_REGION_ISO.isole_oceano_indiano), legacy:['Madagascar','Isole Oceano Indiano'] },
-    ]
-  },
-  {
-    id:'indomalayan', label:'Indomalayan', image:'/regions/asia.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'indian-subcontinent', label:'Indian Subcontinent', image:'/regions/asia_meridionale.jpg', iso:LEGACY_REGION_ISO.asia_meridionale, legacy:['Asia meridionale'] },
-      { id:'indochina', label:'Indochina', image:'/regions/sudest_asiatico.jpg', iso:['MM','TH','LA','KH','VN'], legacy:['Sud-est asiatico continentale'] },
-      { id:'sundaland', label:'Sundaland', image:null, iso:['MY','SG','ID','BN'], pendingImage:true },
-      { id:'wallacea', label:'Wallacea', image:null, iso:['ID','TL','PH'], pendingImage:true },
-    ]
-  },
-  {
-    id:'australasian', label:'Australasian', image:'/regions/oceania.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'australia', label:'Australia', image:'/regions/australia.jpg', iso:LEGACY_REGION_ISO.australia, legacy:['Australia'] },
-      { id:'new-guinea', label:'New Guinea', image:null, iso:['PG'], pendingImage:true },
-      { id:'tasmania', label:'Tasmania', image:'/regions/nuova_zelanda.jpg', iso:LEGACY_REGION_ISO.nuova_zelanda, legacy:['Nuova Zelanda'] },
-    ]
-  },
-  {
-    id:'oceanian', label:'Oceanian', image:'/regions/pacifico_tropicale.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'micronesia', label:'Micronesia', image:null, iso:['FM','GU','KI','MH','MP','NR','PW','UM'], pendingImage:true },
-      { id:'polynesia', label:'Polynesia', image:'/regions/pacifico_tropicale.jpg', iso:LEGACY_REGION_ISO.pacifico_tropicale, legacy:['Pacifico tropicale'] },
-      { id:'melanesia', label:'Melanesia', image:null, iso:['PG','SB','VU','NC','FJ'], pendingImage:true },
-    ]
-  },
-  {
-    id:'antarctic', label:'Antarctic', image:'/regions/antartide.jpg', realmType:'terrestrial',
-    regions:[
-      { id:'antarctica-continentale', label:'Antarctica continentale', image:'/regions/antartide.jpg', iso:LEGACY_REGION_ISO.antartide, legacy:['Antartide'] },
-      { id:'subantarctic-islands', label:'Subantarctic islands', image:null, iso:['BV','GS','HM','TF','SH'], pendingImage:true },
-    ]
-  },
-];
+// Bioregioni v4: 53 ecoregioni terrestri + 12 reami marini.
+// Le geometrie complete sono caricate da /geo/bioregions-v4-terrestrial-marine-kepler.geojson.
+const BIOREGION_V4_CONTINENTS = [{"id":"america","label":"America","source_continente":"Americhe","image":["/regions/continents/america.jpg","/regions/america.jpg","/regions/America_tropicale.jpg"],"realmType":"terrestrial","regions":[{"id":"nord-america-boreale","label":"Nord America Boreale","image":["/regions/regions/nord-america-boreale.jpg","/regions/nord-america-boreale.jpg","/regions/nord_America_boreale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_003","label":"Alaska","display_name":"Alaska","name_en":"Alaska","bioregionId":"TER_SR_003","image":["/regions/ecoregions/alaska.jpg","/regions/alaska.jpg","/regions/nord_America_boreale.jpg"],"iso":["CA","US"],"source_ecoregions":"Ahklun and Kilbuck Upland Tundra;Alaska Peninsula montane taiga;Alaska-St. Elias Range tundra;Aleutian Islands tundra;Arctic coastal tundra;Arctic foothills tundra;Beringia lowland tundra;Beringia upland tundra;Brooks-British Range tundra;Cook Inlet taiga;Copper Plateau taiga;Interior Alaska-Yukon lowland taiga;Interior Yukon-Alaska alpine tundra;Northern Pacific Alaskan coastal forests;Pacific Coastal Mountain icefields and tundra","area_km2":1614916.157,"realmType":"terrestrial"},{"id":"TER_SR_001","label":"Groenlandia","display_name":"Groenlandia","name_en":"Greenland","bioregionId":"TER_SR_001","image":["/regions/ecoregions/groenlandia.jpg","/regions/groenlandia.jpg","/regions/artide.jpg","/regions/Nord_America_desertico.jpg"],"iso":["GL"],"source_ecoregions":"Kalaallit Nunaat Arctic steppe;Kalaallit Nunaat High Arctic tundra","area_km2":476846.409,"realmType":"terrestrial"},{"id":"TER_SR_004","label":"Foreste boreali canadesi","display_name":"Foreste boreali canadesi","name_en":"Canadian Boreal Forests","bioregionId":"TER_SR_004","image":["/regions/ecoregions/foreste-boreali-canadesi.jpg","/regions/foreste-boreali-canadesi.jpg","/regions/nord_America_boreale.jpg"],"iso":["CA","US"],"source_ecoregions":"Alberta-British Columbia foothills forests;Canadian Aspen forests and parklands;Central British Columbia Mountain forests;Central Canadian Shield forests;Eastern Canadian Forest-Boreal transition;Eastern Canadian Shield taiga;Eastern Canadian forests;Fraser Plateau and Basin conifer forests;Mid-Canada Boreal Plains forests;Midwest Canadian Shield forests;Muskwa-Slave Lake taiga;Northern Cordillera forests;Northern Rockies conifer forests;Okanogan dry forests;Southern Hudson Bay taiga;Torngat Mountain tundra","area_km2":5045811.842,"realmType":"terrestrial"},{"id":"TER_SR_002","label":"Tundra canadese","display_name":"Tundra canadese","name_en":"Canadian Tundra","bioregionId":"TER_SR_002","image":["/regions/ecoregions/tundra-canadese.jpg","/regions/tundra-canadese.jpg","/regions/nord_America_boreale.jpg"],"iso":["CA","US"],"source_ecoregions":"Canadian High Arctic tundra;Canadian Low Arctic tundra;Canadian Middle Arctic Tundra;Davis Highlands tundra;Northern Canadian Shield taiga;Northwest Territories taiga;Ogilvie-MacKenzie alpine tundra;Watson Highlands taiga","area_km2":4082662.608,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_003","TER_SR_001","TER_SR_004","TER_SR_002"],"iso":["CA","GL","US"]},{"id":"nord-america-temperato","label":"Nord America Temperato","image":["/regions/regions/nord-america-temperato.jpg","/regions/nord-america-temperato.jpg","/regions/nord_america_temperato.jpg","/regions/America_temperato.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_005","label":"Costa del Pacifico settentrionale","display_name":"Costa del Pacifico settentrionale","name_en":"North Pacific Coast","bioregionId":"TER_SR_005","image":["/regions/ecoregions/costa-del-pacifico-settentrionale.jpg","/regions/costa-del-pacifico-settentrionale.jpg","/regions/nord_america_temperato.jpg"],"iso":["CA","MX","US"],"source_ecoregions":"British Columbia coastal conifer forests;California coastal sage and chaparral;Central Pacific Northwest coastal forests;Central-Southern Cascades Forests;Eastern Cascades forests;Klamath-Siskiyou forests;North Cascades conifer forests;Northern California coastal forests;Puget lowland forests;Queen Charlotte Islands conifer forests;Sierra Nevada forests","area_km2":530154.927,"realmType":"terrestrial"},{"id":"TER_SR_009","label":"Foreste nordamericane","display_name":"Foreste nordamericane","name_en":"Northeast American Forests","bioregionId":"TER_SR_009","image":["/regions/ecoregions/foreste-nordamericane.jpg","/regions/foreste-nordamericane.jpg","/regions/nord_america_temperato.jpg"],"iso":["CA","US"],"source_ecoregions":"Allegheny Highlands forests;Appalachian Piedmont forests;Appalachian mixed mesophytic forests;Appalachian-Blue Ridge forests;Eastern Great Lakes lowland forests;New England-Acadian forests;Northeast US Coastal forests;Western Great Lakes forests","area_km2":1411819.674,"realmType":"terrestrial"},{"id":"TER_SR_008","label":"Grandi Pianure","display_name":"Grandi Pianure","name_en":"Great Plains","bioregionId":"TER_SR_008","image":["/regions/ecoregions/grandi-pianure.jpg","/regions/grandi-pianure.jpg","/regions/America_temperato.jpg"],"iso":["CA","MX","US"],"source_ecoregions":"California Central Valley grasslands;Central Tallgrass prairie;Central US forest-grasslands transition;Central-Southern US mixed grasslands;Cross-Timbers savanna-woodland;Edwards Plateau savanna;Flint Hills tallgrass prairie;Montana Valley and Foothill grasslands;Nebraska Sand Hills mixed grasslands;Northern Shortgrass prairie;Northern Tallgrass prairie;Palouse prairie;Texas blackland prairies;Western Gulf coastal grasslands;Western shortgrass prairie","area_km2":2750181.708,"realmType":"terrestrial"},{"id":"TER_SR_006","label":"Ovest americano","display_name":"Ovest americano","name_en":"American West","bioregionId":"TER_SR_006","image":["/regions/ecoregions/ovest-americano.jpg","/regions/ovest-americano.jpg","/regions/nord_america_temperato.jpg"],"iso":["CA","MX","US"],"source_ecoregions":"Arizona Mountains forests;Blue Mountains forests;California interior chaparral and woodlands;California montane chaparral and woodlands;Colorado Plateau shrublands;Colorado Rockies forests;East Central Texas forests;Great Basin montane forests;Great Basin shrub steppe;Gulf of California xeric scrub;Gulf of St. Lawrence lowland forests;Mojave desert;Ozark Highlands mixed forests;Ozark Mountain forests;Santa Lucia Montane Chaparral & Woodlands;Snake-Columbia shrub steppe;South Central Rockies forests;Upper Midwest US forest-savanna transition;Wasatch and Uinta montane forests;Willamette Valley oak savanna;Wyoming Basin shrub steppe","area_km2":2135396.38,"realmType":"terrestrial"},{"id":"TER_SR_010","label":"Savane e foreste del sud-est degli Stati Uniti","display_name":"Savane e foreste del sud-est degli Stati Uniti","name_en":"Southeast US Savannas & Forests","bioregionId":"TER_SR_010","image":["/regions/ecoregions/savane-e-foreste-del-sud-est-degli-stati-uniti.jpg","/regions/savane-e-foreste-del-sud-est-degli-stati-uniti.jpg","/regions/nord_america_temperato.jpg"],"iso":["CA","US"],"source_ecoregions":"Atlantic coastal pine barrens;Interior Plateau US Hardwood Forests;Mid-Atlantic US coastal savannas;Mississippi lowland forests;Piney Woods;Southeast US conifer savannas;Southeast US mixed woodlands and savannas;Southern Great Lakes forests","area_km2":1233314.96,"realmType":"terrestrial"},{"id":"TER_SR_007","label":"Zone aride messicane","display_name":"Zone aride messicane","name_en":"Mexican Drylands","bioregionId":"TER_SR_007","image":["/regions/ecoregions/zone-aride-messicane.jpg","/regions/zone-aride-messicane.jpg","/regions/Nord_America_desertico.jpg"],"iso":["MX","US"],"source_ecoregions":"Baja California desert;Bajío dry forests;Balsas dry forests;Central Mexican matorral;Chihuahuan desert;Islas Revillagigedo dry forests;Jalisco dry forests;Meseta Central matorral;Northern Mesoamerican Pacific mangroves;Oaxacan montane forests;San Lucan xeric scrub;Sierra Madre Occidental pine-oak forests;Sierra Madre Oriental pine-oak forests;Sierra Madre de Oaxaca pine-oak forests;Sierra Madre del Sur pine-oak forests;Sierra de la Laguna dry forests;Sierra de la Laguna pine-oak forests;Sinaloan dry forests;Sonoran desert;Sonoran-Sinaloan subtropical dry forest;Southern Pacific dry forests;Tamaulipan matorral;Tamaulipan mezquital;Tehuacán Valley matorral;Trans-Mexican Volcanic Belt pine-oak forests;Veracruz dry forests","area_km2":1915739.33,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_005","TER_SR_009","TER_SR_008","TER_SR_006","TER_SR_010","TER_SR_007"],"iso":["CA","MX","US"]},{"id":"america-centrale-e-caraibi","label":"America Centrale e Caraibi","image":["/regions/regions/america-centrale-e-caraibi.jpg","/regions/america-centrale-e-caraibi.jpg","/regions/America_tropicale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_012","label":"America Centrale","display_name":"America Centrale","name_en":"Central America","bioregionId":"TER_SR_012","image":["/regions/ecoregions/america-centrale.jpg","/regions/america-centrale.jpg","/regions/America_tropicale.jpg"],"iso":["BZ","CO","CR","GT","HN","MX","NI","PA","SV"],"source_ecoregions":"Belizian pine savannas;Central American Atlantic moist forests;Central American dry forests;Central American montane forests;Central American pine-oak forests;Chiapas Depression dry forests;Chiapas montane forests;Costa Rican seasonal moist forests;Eastern Panamanian montane forests;Isthmian-Atlantic moist forests;Isthmian-Pacific moist forests;Motagua Valley thornscrub;Panamanian dry forests;Petén-Veracruz moist forests;Sierra Madre de Chiapas moist forests;Sierra de los Tuxtlas;Veracruz moist forests;Veracruz montane forests;Yucatán dry forests;Yucatán moist forests","area_km2":769691.265,"realmType":"terrestrial"},{"id":"TER_SR_011","label":"Caraibi","display_name":"Caraibi","name_en":"Caribbean","bioregionId":"TER_SR_011","image":["/regions/ecoregions/caraibi.jpg","/regions/caraibi.jpg","/regions/America_tropicale.jpg"],"iso":["AG","BB","BR","BS","BZ","CO","CR","CU","DM","DO","GD","GT","GY","HN","HT","JM","KN","LC","MX","NI","PA","PR","SR","TT","US","VC","VE"],"source_ecoregions":"Amazon-Orinoco-Southern Caribbean mangroves;Bahamian pineyards;Bahamian-Antillean mangroves;Bermuda subtropical conifer forests;Caribbean shrublands;Cordillera La Costa montane forests;Cordillera de Merida páramo;Cuban cactus scrub;Cuban dry forests;Cuban moist forests;Cuban pine forests;Cuban wetlands;Guajira-Barranquilla xeric scrub;Hispaniolan dry forests;Hispaniolan moist forests;Hispaniolan pine forests;Jamaican dry forests;Jamaican moist forests;Lara-Falcón dry forests;Leeward Islands moist forests;Lesser Antillean dry forests;Mesoamerican Gulf-Caribbean mangroves;Paraguaná xeric scrub;Puerto Rican dry forests;Puerto Rican moist forests;Santa Marta montane forests;Santa Marta páramo;Sinú Valley dry forests;Trinidad and Tobago dry forest;Trinidad and Tobago moist forest;Windward Islands moist forests","area_km2":412090.603,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_012","TER_SR_011"],"iso":["AG","BB","BR","BS","BZ","CO","CR","CU","DM","DO","GD","GT","GY","HN","HT","JM","KN","LC","MX","NI","PA","PR","SR","SV","TT","US","VC","VE"]},{"id":"sud-america-tropicale","label":"Sud America Tropicale","image":["/regions/regions/sud-america-tropicale.jpg","/regions/sud-america-tropicale.jpg","/regions/America_tropicale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_014","label":"Amazzonia","display_name":"Amazzonia","name_en":"Amazonia","bioregionId":"TER_SR_014","image":["/regions/ecoregions/amazzonia.jpg","/regions/amazzonia.jpg","/regions/America_tropicale.jpg"],"iso":["BO","BR","CO","EC","PE","VE"],"source_ecoregions":"Beni savanna;Chiquitano dry forests;Gurupa várzea;Iquitos várzea;Japurá-Solimões-Negro moist forests;Juruá-Purus moist forests;Madeira-Tapajós moist forests;Napo moist forests;Negro-Branco moist forests;Purus várzea;Purus-Madeira moist forests;Rio Negro campinarana;Southwest Amazon moist forests;Tapajós-Xingu moist forests;Tocantins/Pindare moist forests;Ucayali moist forests;Xingu-Tocantins-Araguaia moist forests","area_km2":4257547.418,"realmType":"terrestrial"},{"id":"TER_SR_013","label":"America meridionale settentrionale","display_name":"America meridionale settentrionale","name_en":"Upper South America","bioregionId":"TER_SR_013","image":["/regions/ecoregions/america-meridionale-settentrionale.jpg","/regions/america-meridionale-settentrionale.jpg"],"iso":["BR","CO","GY","PE","SR","VE"],"source_ecoregions":"Apure-Villavicencio dry forests;Caqueta moist forests;Catatumbo moist forests;Cordillera Oriental montane forests;Guianan freshwater swamp forests;Guianan piedmont moist forests;Guianan savanna;Llanos;Magdalena Valley montane forests;Maracaibo dry forests;Marajó várzea;Maranhão Babaçu forests;Orinoco Delta swamp forests;Solimões-Japurá moist forests;Uatumã-Trombetas moist forests","area_km2":2090004.134,"realmType":"terrestrial"},{"id":"TER_SR_015","label":"Cerrado brasiliano e costa atlantica","display_name":"Cerrado brasiliano e costa atlantica","name_en":"Brazil Cerrado & Atlantic Coast","bioregionId":"TER_SR_015","image":["/regions/ecoregions/cerrado-brasiliano-e-costa-atlantica.jpg","/regions/cerrado-brasiliano-e-costa-atlantica.jpg","/regions/America_temperato.jpg"],"iso":["AR","BO","BR","PY","UY"],"source_ecoregions":"Alto Paraná Atlantic forests;Araucaria moist forests;Atlantic Coast restingas;Bahia coastal forests;Bahia interior forests;Brazilian Atlantic dry forests;Caatinga;Caatinga Enclaves moist forests;Campos Rupestres montane savanna;Cerrado;Fernando de Noronha-Atol das Rocas moist forests;Mato Grosso tropical dry forests;Northeast Brazil restingas;Pantanal;Pernambuco coastal forests;Pernambuco interior forests;Serra do Mar coastal forests;Southern Atlantic Brazilian mangroves;St. Peter and St. Paul Rocks","area_km2":4579579.052,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_014","TER_SR_013","TER_SR_015"],"iso":["AR","BO","BR","CO","EC","GY","PE","PY","SR","UY","VE"]},{"id":"sud-america-andino-e-temperato","label":"Sud America Andino e Temperato","image":["/regions/regions/sud-america-andino-e-temperato.jpg","/regions/sud-america-andino-e-temperato.jpg","/regions/America_temperato.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_017","label":"Ande e costa del Pacifico","display_name":"Ande e costa del Pacifico","name_en":"Andes Mountains & Pacific Coast","bioregionId":"TER_SR_017","image":["/regions/ecoregions/ande-e-costa-del-pacifico.jpg","/regions/ande-e-costa-del-pacifico.jpg"],"iso":["AR","BO","BR","CL","CO","CR","DO","EC","GT","GY","HN","HT","MX","NI","PA","PE","SR","SV","US","VE"],"source_ecoregions":"Araya and Paria xeric scrub;Atacama desert;Bolivian Yungas;Bolivian montane dry forests;Cauca Valley dry forests;Cauca Valley montane forests;Cayos Miskitos-San Andrés and Providencia moist forests;Central Andean dry puna;Central Andean puna;Central Andean wet puna;Chilean Matorral;Chimalapas montane forests;Chocó-Darién moist forests;Clipperton Island shrub and grasslands;Cocos Island moist forests;Cordillera Central páramo;Eastern Cordillera Real montane forests;Ecuadorian dry forests;Enriquillo wetlands;Everglades flooded grasslands;Galápagos Islands xeric scrub;Guayaquil flooded grasslands;Guianan Highlands moist forests;Guianan lowland moist forests;Juan Fernández Islands temperate forests;La Costa xeric shrublands;Magdalena Valley dry forests;Magdalena-Urabá moist forests;Magellanic subpolar forests;Malpelo Island xeric scrub;Marañón dry forests;Miskito pine forests;Northern Andean páramo;Northwest Andean montane forests;Orinoco wetlands;Pantanos de Centla;Pantepui forests & shrublands;Patía valley dry forests;Peruvian Yungas;San Félix-San Ambrosio Islands temperate forests;Sechura desert;South American Pacific mangroves;Southern Andean Yungas;Southern Andean steppe;Southern Mesoamerican Pacific mangroves;Talamancan montane forests;Trindade-Martin Vaz Islands tropical forests;Tumbes-Piura dry forests;Valdivian temperate forests;Venezuelan Andes montane forests;Western Ecuador moist forests","area_km2":3415826.95,"realmType":"terrestrial"},{"id":"TER_SR_016","label":"Praterie sudamericane","display_name":"Praterie sudamericane","name_en":"South American Grasslands","bioregionId":"TER_SR_016","image":["/regions/ecoregions/praterie-sudamericane.jpg","/regions/praterie-sudamericane.jpg","/regions/America_temperato.jpg"],"iso":["AR","BO","BR","CL","FK","PY","UY"],"source_ecoregions":"Dry Chaco;Espinal;High Monte;Humid Chaco;Humid Pampas;Low Monte;Monte Alegre várzea;Paraná flooded savanna;Patagonian steppe;Southern Cone Mesopotamian savanna;Uruguayan savanna","area_km2":3305054.491,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_017","TER_SR_016"],"iso":["AR","BO","BR","CL","CO","CR","DO","EC","FK","GT","GY","HN","HT","MX","NI","PA","PE","PY","SR","SV","US","UY","VE"]}],"bioregionIds":["TER_SR_003","TER_SR_001","TER_SR_004","TER_SR_002","TER_SR_005","TER_SR_009","TER_SR_008","TER_SR_006","TER_SR_010","TER_SR_007","TER_SR_012","TER_SR_011","TER_SR_014","TER_SR_013","TER_SR_015","TER_SR_017","TER_SR_016"],"iso":["AG","AR","BB","BO","BR","BS","BZ","CA","CL","CO","CR","CU","DM","DO","EC","FK","GD","GL","GT","GY","HN","HT","JM","KN","LC","MX","NI","PA","PE","PR","PY","SR","SV","TT","US","UY","VC","VE"]},{"id":"eurasia","label":"Eurasia","source_continente":"Eurasia","image":["/regions/continents/eurasia.jpg","/regions/eurasia.jpg","/regions/asia.jpg","/regions/europa.jpg"],"realmType":"terrestrial","regions":[{"id":"eurasia-occidentale","label":"Eurasia Occidentale","image":["/regions/regions/eurasia-occidentale.jpg","/regions/eurasia-occidentale.jpg","/regions/europa.jpg","/regions/Europa-temperata.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_027","label":"Mediterraneo","display_name":"Mediterraneo","name_en":"Mediterranean","bioregionId":"TER_SR_027","image":["/regions/ecoregions/mediterraneo.jpg","/regions/mediterraneo.jpg","/regions/Europa_mediterranea.jpg"],"iso":["BG","CY","DZ","EG","ES","GR","HR","IL","IQ","IT","JO","LB","LY","MA","MK","PS","PT","RS","RU","SA","SY","TN","TR"],"source_ecoregions":"Aegean and Western Turkey sclerophyllous and mixed forests;Azores temperate mixed forests;Corsican montane broadleaf and mixed forests;Crete Mediterranean forests;Crimean Submediterranean forest complex;Cyprus Mediterranean forests;Eastern Mediterranean conifer-broadleaf forests;Iberian conifer forests;Iberian sclerophyllous and semi-deciduous forests;Italian sclerophyllous and semi-deciduous forests;Madeira evergreen forests;Mediterranean High Atlas juniper steppe;Mediterranean conifer and mixed forests;Mediterranean dry woodlands and steppe;Mediterranean woodlands and forests;Northeast Spain and Southern France Mediterranean forests;Northwest Iberian montane forests;Rodope montane mixed forests;Southeast Iberian shrubs and woodlands;Southwest Iberian Mediterranean sclerophyllous and mixed forests;Tyrrhenian-Adriatic sclerophyllous and mixed forests","area_km2":1783068.96,"realmType":"terrestrial"},{"id":"TER_SR_030","label":"Europa Temperata","display_name":"Europa Temperata","name_en":"Greater European Forests","bioregionId":"TER_SR_030","image":["/regions/ecoregions/europa-temperata.jpg","/regions/europa-temperata.jpg","/regions/Europa-temperata.jpg"],"iso":["AT","BA","BE","BY","CH","CZ","DE","DK","GB","HR","HU","IT","LT","LU","MD","NL","PL","RO","RS","RU","SE","SI","SK","UA"],"source_ecoregions":"Baltic mixed forests;Central European mixed forests;English Lowlands beech forests;European Atlantic mixed forests;Pannonian mixed forests;Po Basin mixed forests;Western European broadleaf forests","area_km2":2124879.763,"realmType":"terrestrial"},{"id":"TER_SR_029","label":"Foreste montane europee","display_name":"Foreste montane europee","name_en":"European Mountain Forests","bioregionId":"TER_SR_029","image":["/regions/ecoregions/foreste-montane-europee.jpg","/regions/foreste-montane-europee.jpg"],"iso":["AL","AT","BA","BG","CH","CZ","DE","ES","GR","HR","HU","IT","ME","MK","PL","PT","RO","RS","SI","SK","TR","UA"],"source_ecoregions":"Alps conifer and mixed forests;Appenine deciduous montane forests;Balkan mixed forests;Cantabrian mixed forests;Carpathian montane forests;Dinaric Mountains mixed forests;Illyrian deciduous forests;Pindus Mountains mixed forests;Pyrenees conifer and mixed forests;South Apennine mixed montane forests","area_km2":789972.546,"realmType":"terrestrial"},{"id":"TER_SR_031","label":"Isole anglo-celtiche","display_name":"Isole anglo-celtiche","name_en":"Anglo-Celtic Isles","bioregionId":"TER_SR_031","image":["/regions/ecoregions/isole-anglo-celtiche.jpg","/regions/isole-anglo-celtiche.jpg"],"iso":["GB","IE","IS"],"source_ecoregions":"Celtic broadleaf forests;Faroe Islands boreal grasslands;Iceland boreal birch forests and alpine tundra;North Atlantic moist mixed forests","area_km2":343045.945,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_027","TER_SR_030","TER_SR_029","TER_SR_031"],"iso":["AL","AT","BA","BE","BG","BY","CH","CY","CZ","DE","DK","DZ","EG","ES","GB","GR","HR","HU","IE","IL","IQ","IS","IT","JO","LB","LT","LU","LY","MA","MD","ME","MK","NL","PL","PS","PT","RO","RS","RU","SA","SE","SI","SK","SY","TN","TR","UA"]},{"id":"eurasia-settentrionale","label":"Eurasia Settentrionale","image":["/regions/regions/eurasia-settentrionale.jpg","/regions/eurasia-settentrionale.jpg","/regions/Europa_boreale.jpg","/regions/asia_boreale_steppa.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_035","label":"Mare di Okhotsk e tundra/taiga di Bering","display_name":"Mare di Okhotsk e tundra/taiga di Bering","name_en":"Sea of Okhotsk & Bering Tundra-Taiga","bioregionId":"TER_SR_035","image":["/regions/ecoregions/mare-di-okhotsk-e-tundra-taiga-di-bering.jpg","/regions/mare-di-okhotsk-e-tundra-taiga-di-bering.jpg"],"iso":["RU"],"source_ecoregions":"Cherskii-Kolyma mountain tundra;Chukchi Peninsula tundra;Kamchatka taiga;Kamchatka tundra;Kamchatka-Kurile meadows and sparse forests;Russian Bering tundra;Sakhalin Island taiga;Wrangel Island Arctic desert","area_km2":1696996.247,"realmType":"terrestrial"},{"id":"TER_SR_033","label":"Scandinavia e foreste boreali occidentali","display_name":"Scandinavia e foreste boreali occidentali","name_en":"Scandinavian Boreal Forests","bioregionId":"TER_SR_033","image":["/regions/ecoregions/scandinavia-e-foreste-boreali-occidentali.jpg","/regions/scandinavia-e-foreste-boreali-occidentali.jpg","/regions/Europa_boreale.jpg"],"iso":["BY","EE","FI","GB","LT","LV","RU","SE"],"source_ecoregions":"Caledon conifer forests;Sarmatic mixed forests;Scandinavian Montane Birch forest and grasslands;Scandinavian and Russian taiga","area_km2":3288083.739,"realmType":"terrestrial"},{"id":"TER_SR_034","label":"Siberia e foreste boreali orientali","display_name":"Siberia e foreste boreali orientali","name_en":"Siberian Boreal Forests","bioregionId":"TER_SR_034","image":["/regions/ecoregions/siberia-e-foreste-boreali-orientali.jpg","/regions/siberia-e-foreste-boreali-orientali.jpg","/regions/asia_boreale_steppa.jpg"],"iso":["CN","RU"],"source_ecoregions":"East Siberian taiga;Northeast Siberian coastal tundra;Northeast Siberian taiga;South Siberian forest steppe;West Siberian taiga","area_km2":7122827.2,"realmType":"terrestrial"},{"id":"TER_SR_032","label":"Tundra paleartica","display_name":"Tundra paleartica","name_en":"Palearctic Tundra","bioregionId":"TER_SR_032","image":["/regions/ecoregions/tundra-paleartica.jpg","/regions/tundra-paleartica.jpg"],"iso":["RU"],"source_ecoregions":"Kola Peninsula tundra;Northwest Russian-Novaya Zemlya tundra;Novosibirsk Islands Arctic desert;Russian Arctic desert;Scandinavian coastal conifer forests;Taimyr-Central Siberian tundra;Yamal-Gydan tundra","area_km2":1941307.834,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_035","TER_SR_033","TER_SR_034","TER_SR_032"],"iso":["BY","CN","EE","FI","GB","LT","LV","RU","SE"]},{"id":"eurasia-centrale","label":"Eurasia Centrale","image":["/regions/regions/eurasia-centrale.jpg","/regions/eurasia-centrale.jpg","/regions/asia_occidentale_centrale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_025","label":"Grande penisola arabica","display_name":"Grande penisola arabica","name_en":"Greater Arabian Peninsula","bioregionId":"TER_SR_025","image":["/regions/ecoregions/grande-penisola-arabica.jpg","/regions/grande-penisola-arabica.jpg"],"iso":["AE","EG","IL","IQ","IR","JO","KW","OM","PS","SA","SD","SY","TR","YE"],"source_ecoregions":"Al-Hajar foothill xeric woodlands and shrublands;Al-Hajar montane woodlands and shrublands;Arabian desert;Arabian sand desert;East Arabian fog shrublands and sand desert;North Arabian desert;North Arabian highland shrublands;Red Sea coastal desert;Red Sea-Arabian Desert shrublands;South Arabian plains and plateau desert;Syrian xeric grasslands and shrublands;Tigris-Euphrates alluvial salt marsh","area_km2":2988797.314,"realmType":"terrestrial"},{"id":"TER_SR_044","label":"Mar Caspio e deserti dell'Asia centrale","display_name":"Mar Caspio e deserti dell'Asia centrale","name_en":"Caspian Sea & Central Asian Deserts","bioregionId":"TER_SR_044","image":["/regions/ecoregions/mar-caspio-e-deserti-dell-asia-centrale.jpg","/regions/mar-caspio-e-deserti-dell-asia-centrale.jpg"],"iso":["AF","AZ","IQ","IR","KG","KZ","PK","RU","TJ","TM","UZ"],"source_ecoregions":"Afghan Mountains semi-desert;Badghyz and Karabil semi-desert;Caspian Hyrcanian mixed forests;Caspian lowland desert;Central Asian northern desert;Central Asian riparian woodlands;Central Asian southern desert;Gissaro-Alai open woodlands;Kopet Dag semi-desert;Kopet Dag woodlands and forest steppe;Paropamisus xeric woodlands;South Iran Nubo-Sindian desert and semi-desert","area_km2":2486784.154,"realmType":"terrestrial"},{"id":"TER_SR_042","label":"Monti Altai-Sayan","display_name":"Monti Altai-Sayan","name_en":"Altai-Sayan Mountains","bioregionId":"TER_SR_042","image":["/regions/ecoregions/monti-altai-sayan.jpg","/regions/monti-altai-sayan.jpg"],"iso":["CN","KZ","MN","RU"],"source_ecoregions":"Altai alpine meadow and tundra;Altai montane forest and forest steppe;Altai steppe and semi-desert;Sayan Intermontane steppe;Sayan alpine meadows and tundra;Sayan montane conifer forests;Trans-Baikal Bald Mountain tundra;Trans-Baikal conifer forests","area_km2":1210394.391,"realmType":"terrestrial"},{"id":"TER_SR_045","label":"Monti Tien Shan","display_name":"Monti Tien Shan","name_en":"Tien Shan Mountains","bioregionId":"TER_SR_045","image":["/regions/ecoregions/monti-tien-shan.jpg","/regions/monti-tien-shan.jpg"],"iso":["CN","KG","KZ","TJ","TM","UZ"],"source_ecoregions":"Alai-Western Tian Shan steppe;Emin Valley steppe;Tian Shan foothill arid steppe;Tian Shan montane conifer forests;Tian Shan montane steppe and meadows","area_km2":630237.048,"realmType":"terrestrial"},{"id":"TER_SR_043","label":"Steppe kazake e foreste emiboreali","display_name":"Steppe kazake e foreste emiboreali","name_en":"Kazakh Steppes & Hemiboreal Forests","bioregionId":"TER_SR_043","image":["/regions/ecoregions/steppe-kazake-e-foreste-emiboreali.jpg","/regions/steppe-kazake-e-foreste-emiboreali.jpg"],"iso":["BG","KZ","MD","RO","RU","UA"],"source_ecoregions":"East European forest steppe;Kazakh forest steppe;Kazakh semi-desert;Kazakh steppe;Kazakh upland steppe;Urals montane forest and taiga;Western Siberian hemiboreal forests","area_km2":3112802.985,"realmType":"terrestrial"},{"id":"TER_SR_046","label":"Deserti e foreste persiane","display_name":"Deserti e foreste persiane","name_en":"Persian Deserts & Forests","bioregionId":"TER_SR_046","image":["/regions/ecoregions/deserti-e-foreste-persiane.jpg","/regions/deserti-e-foreste-persiane.jpg"],"iso":["AE","AF","AM","AZ","EG","IL","IN","IQ","IR","JO","KW","OM","PK","PS","QA","SA","SY","TR"],"source_ecoregions":"Arabian-Persian Gulf coastal plain desert;Baluchistan xeric woodlands;Central Afghan Mountains xeric woodlands;Central Persian desert basins;East Afghan montane conifer forests;Elburz Range forest steppe;Ghorat-Hazarajat alpine meadow;Kuh Rud and Eastern Iran montane woodlands;Mesopotamian shrub desert;Registan-North Pakistan sandy desert;Sulaiman Range alpine meadows;Zagros Mountains forest steppe","area_km2":2308332.586,"realmType":"terrestrial"},{"id":"TER_SR_028","label":"Foreste e steppe del Mar Nero","display_name":"Foreste e steppe del Mar Nero","name_en":"Black Sea Forests & Steppe","bioregionId":"TER_SR_028","image":["/regions/ecoregions/foreste-e-steppe-del-mar-nero.jpg","/regions/foreste-e-steppe-del-mar-nero.jpg"],"iso":["AM","AZ","BG","GE","IL","IR","KZ","LB","MD","RO","RU","SY","TR","UA"],"source_ecoregions":"Anatolian conifer and deciduous mixed forests;Azerbaijan shrub desert and steppe;Caucasus mixed forests;Central Anatolian steppe;Central Anatolian steppe and woodlands;Eastern Anatolian deciduous forests;Eastern Anatolian montane steppe;Euxine-Colchic broadleaf forests;Northern Anatolian conifer and deciduous forests;Pontic steppe;Southern Anatolian montane conifer and deciduous forests","area_km2":1946936.463,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_025","TER_SR_044","TER_SR_042","TER_SR_045","TER_SR_043","TER_SR_046","TER_SR_028"],"iso":["AE","AF","AM","AZ","BG","CN","EG","GE","IL","IN","IQ","IR","JO","KG","KW","KZ","LB","MD","MN","OM","PK","PS","QA","RO","RU","SA","SD","SY","TJ","TM","TR","UA","UZ","YE"]},{"id":"eurasia-orientale","label":"Eurasia Orientale","image":["/regions/regions/eurasia-orientale.jpg","/regions/eurasia-orientale.jpg","/regions/asia_orientale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_036","label":"Isole giapponesi","display_name":"Isole giapponesi","name_en":"Japanese Islands","bioregionId":"TER_SR_036","image":["/regions/ecoregions/isole-giapponesi.jpg","/regions/isole-giapponesi.jpg"],"iso":["JP","RU"],"source_ecoregions":"Hokkaido deciduous forests;Hokkaido montane conifer forests;Honshu alpine conifer forests;Nihonkai evergreen forests;Nihonkai montane deciduous forests;Taiheiyo evergreen forests","area_km2":337776.098,"realmType":"terrestrial"},{"id":"TER_SR_040","label":"Altopiano tibetano","display_name":"Altopiano tibetano","name_en":"Tibetan Plateau","bioregionId":"TER_SR_040","image":["/regions/ecoregions/altopiano-tibetano.jpg","/regions/altopiano-tibetano.jpg"],"iso":["AF","BT","CN","IN","KG","MM","NP","PK","TJ","UZ"],"source_ecoregions":"Central Tibetan Plateau alpine steppe;Eastern Himalayan alpine shrub and meadows;Hengduan Mountains subalpine conifer forests;Hindu Kush alpine meadow;Karakoram-West Tibetan Plateau alpine steppe;North Tibetan Plateau-Kunlun Mountains alpine desert;Northeast Himalayan subalpine conifer forests;Northwestern Himalayan alpine shrub and meadows;Nujiang Langcang Gorge alpine conifer and mixed forests;Pamir alpine desert and tundra;Qilian Mountains conifer forests;Qilian Mountains subalpine meadows;Southeast Tibet shrublands and meadows;Tarim Basin deciduous forests and steppe;Tibetan Plateau alpine shrublands and meadows;Western Himalayan alpine shrub and meadows;Yarlung Zanbo arid steppe","area_km2":2698629.164,"realmType":"terrestrial"},{"id":"TER_SR_041","label":"Deserti dell'Asia orientale","display_name":"Deserti dell'Asia orientale","name_en":"East Asian Deserts","bioregionId":"TER_SR_041","image":["/regions/ecoregions/deserti-dell-asia-orientale.jpg","/regions/deserti-dell-asia-orientale.jpg"],"iso":["CN","KZ","MN","RU"],"source_ecoregions":"Alashan Plateau semi-desert;Eastern Gobi desert steppe;Gobi Lakes Valley desert steppe;Great Lakes Basin desert steppe;Helanshan montane conifer forests;Junggar Basin semi-desert;Ordos Plateau steppe;Qaidam Basin semi-desert;Taklimakan desert","area_km2":2734207.512,"realmType":"terrestrial"},{"id":"TER_SR_039","label":"Foreste dell'Asia centro-orientale","display_name":"Foreste dell'Asia centro-orientale","name_en":"Central East Asian Forests","bioregionId":"TER_SR_039","image":["/regions/ecoregions/foreste-dell-asia-centro-orientale.jpg","/regions/foreste-dell-asia-centro-orientale.jpg"],"iso":["CN","JP"],"source_ecoregions":"Bohai Sea saline meadow;Central China Loess Plateau mixed forests;Changjiang Plain evergreen forests;Daba Mountains evergreen forests;Guizhou Plateau broadleaf and mixed forests;Huang He Plain mixed forests;Qin Ling Mountains deciduous forests;Qionglai-Minshan conifer forests;Sichuan Basin evergreen broadleaf forests;Taiheiyo montane deciduous forests;Yunnan Plateau subtropical evergreen forests","area_km2":2263771.486,"realmType":"terrestrial"},{"id":"TER_SR_037","label":"Foreste dell'Asia nord-orientale","display_name":"Foreste dell'Asia nord-orientale","name_en":"Northeast Asian Forests","bioregionId":"TER_SR_037","image":["/regions/ecoregions/foreste-dell-asia-nord-orientale.jpg","/regions/foreste-dell-asia-nord-orientale.jpg"],"iso":["CN","KP","KR","MN","RU"],"source_ecoregions":"Amur meadow steppe;Central Korean deciduous forests;Changbai Mountains mixed forests;Da Hinggan-Dzhagdy Mountains conifer forests;Manchurian mixed forests;Mongolian-Manchurian grassland;Nenjiang River grassland;Northeast China Plain deciduous forests;Okhotsk-Manchurian taiga;Southern Korea evergreen forests;Suiphun-Khanka meadows and forest meadows;Ussuri broadleaf and mixed forests;Yellow Sea saline meadow","area_km2":2877380.271,"realmType":"terrestrial"},{"id":"TER_SR_038","label":"Praterie mongole","display_name":"Praterie mongole","name_en":"Mongolian Grasslands","bioregionId":"TER_SR_038","image":["/regions/ecoregions/praterie-mongole.jpg","/regions/praterie-mongole.jpg"],"iso":["CN","MN","RU"],"source_ecoregions":"Daurian forest steppe;Khangai Mountains alpine meadow;Khangai Mountains conifer forests;Selenge-Orkhon forest steppe","area_km2":478049.12,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_036","TER_SR_040","TER_SR_041","TER_SR_039","TER_SR_037","TER_SR_038"],"iso":["AF","BT","CN","IN","JP","KG","KP","KR","KZ","MM","MN","NP","PK","RU","TJ","UZ"]},{"id":"eurasia-meridionale-e-sud-est","label":"Eurasia Meridionale e Sud-Est","image":["/regions/regions/eurasia-meridionale-e-sud-est.jpg","/regions/eurasia-meridionale-e-sud-est.jpg","/regions/sudest_asiatico.jpg","/regions/asia_meridionale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_049","label":"Malesia e Indonesia occidentale","display_name":"Malesia e Indonesia occidentale","name_en":"Malaysia & Western Indonesia","bioregionId":"TER_SR_049","image":["/regions/ecoregions/malesia-e-indonesia-occidentale.jpg","/regions/malesia-e-indonesia-occidentale.jpg","/regions/sudest_asiatico.jpg"],"iso":["BN","ID","MY","TH"],"source_ecoregions":"Borneo lowland rain forests;Borneo montane rain forests;Borneo peat swamp forests;Christmas and Cocos Islands tropical forests;Eastern Java-Bali montane rain forests;Eastern Java-Bali rain forests;Kinabalu montane alpine meadows;Mentawai Islands rain forests;Nicobar Islands rain forests;Peninsular Malaysian montane rain forests;Peninsular Malaysian peat swamp forests;Peninsular Malaysian rain forests;Southwest Borneo freshwater swamp forests;Sulu Archipelago rain forests;Sumatran freshwater swamp forests;Sumatran lowland rain forests;Sumatran montane rain forests;Sumatran peat swamp forests;Sumatran tropical pine forests;Sunda Shelf mangroves;Sundaland heath forests;Western Java montane rain forests;Western Java rain forests","area_km2":1493190.732,"realmType":"terrestrial"},{"id":"TER_SR_047","label":"Subcontinente indiano","display_name":"Subcontinente indiano","name_en":"Indian Subcontinent","bioregionId":"TER_SR_047","image":["/regions/ecoregions/subcontinente-indiano.jpg","/regions/subcontinente-indiano.jpg","/regions/asia_meridionale.jpg"],"iso":["AE","AF","BD","BT","CN","IN","LK","MM","NP","PK","QA","SA"],"source_ecoregions":"Aravalli west thorn scrub forests;Brahmaputra Valley semi-evergreen forests;Central Deccan Plateau dry deciduous forests;Chhota-Nagpur dry deciduous forests;Deccan thorn scrub forests;East Deccan dry-evergreen forests;East Deccan moist deciduous forests;Eastern Himalayan broadleaf forests;Eastern Himalayan subalpine conifer forests;Godavari-Krishna mangroves;Himalayan subtropical broadleaf forests;Himalayan subtropical pine forests;Indus River Delta-Arabian Sea mangroves;Indus Valley desert;Khathiar-Gir dry deciduous forests;Lower Gangetic Plains moist deciduous forests;Malabar Coast moist forests;Maldives-Lakshadweep-Chagos Archipelago tropical moist forests;Meghalaya subtropical forests;Mizoram-Manipur-Kachin rain forests;Narmada Valley dry deciduous forests;North Deccan dry deciduous forests;North Western Ghats moist deciduous forests;North Western Ghats montane rain forests;Northeast India-Myanmar pine forests;Orissa semi-evergreen forests;Rann of Kutch seasonal salt marsh;South Deccan Plateau dry deciduous forests;South Western Ghats moist deciduous forests;South Western Ghats montane rain forests;Sri Lanka dry-zone dry evergreen forests;Sri Lanka lowland rain forests;Sri Lanka montane rain forests;Sundarbans freshwater swamp forests;Sundarbans mangroves;Terai-Duar savanna and grasslands;Thar desert;Upper Gangetic Plains moist deciduous forests;Western Himalayan broadleaf forests;Western Himalayan subalpine conifer forests","area_km2":3823426.749,"realmType":"terrestrial"},{"id":"TER_SR_048","label":"Foreste del sud-est asiatico","display_name":"Foreste del sud-est asiatico","name_en":"Southeast Asian Forests","bioregionId":"TER_SR_048","image":["/regions/ecoregions/foreste-del-sud-est-asiatico.jpg","/regions/foreste-del-sud-est-asiatico.jpg","/regions/sudest_asiatico.jpg"],"iso":["BD","CN","IN","KH","LA","MM","MY","PH","PK","TH","TW","VN"],"source_ecoregions":"Andaman Islands rain forests;Cardamom Mountains rain forests;Central Indochina dry forests;Chao Phraya freshwater swamp forests;Chao Phraya lowland moist deciduous forests;Chin Hills-Arakan Yoma montane forests;Greater Negros-Panay rain forests;Hainan Island monsoon rain forests;Indochina mangroves;Irrawaddy dry forests;Irrawaddy freshwater swamp forests;Irrawaddy moist deciduous forests;Jian Nan subtropical evergreen forests;Kayah-Karen montane rain forests;Luang Prabang montane rain forests;Luzon montane rain forests;Luzon rain forests;Luzon tropical pine forests;Mindanao montane rain forests;Mindanao-Eastern Visayas rain forests;Mindoro rain forests;Myanmar Coast mangroves;Myanmar coastal rain forests;Nansei Islands subtropical evergreen forests;Northern Annamites rain forests;Northern Indochina subtropical forests;Northern Khorat Plateau moist deciduous forests;Northern Thailand-Laos moist deciduous forests;Northern Triangle subtropical forests;Northern Triangle temperate forests;Northern Vietnam lowland rain forests;Palawan rain forests;Red River freshwater swamp forests;South China Sea Islands;South China-Vietnam subtropical evergreen forests;South Taiwan monsoon rain forests;Southeast Indochina dry evergreen forests;Southern Annamites montane rain forests;Southern Vietnam lowland dry forests;Taiwan subtropical evergreen forests;Tenasserim-South Thailand semi-evergreen rain forests;Tonle Sap freshwater swamp forests;Tonle Sap-Mekong peat swamp forests","area_km2":3179841.066,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_049","TER_SR_047","TER_SR_048"],"iso":["AE","AF","BD","BN","BT","CN","ID","IN","KH","LA","LK","MM","MY","NP","PH","PK","QA","SA","TH","TW","VN"]}],"bioregionIds":["TER_SR_027","TER_SR_030","TER_SR_029","TER_SR_031","TER_SR_035","TER_SR_033","TER_SR_034","TER_SR_032","TER_SR_025","TER_SR_044","TER_SR_042","TER_SR_045","TER_SR_043","TER_SR_046","TER_SR_028","TER_SR_036","TER_SR_040","TER_SR_041","TER_SR_039","TER_SR_037","TER_SR_038","TER_SR_049","TER_SR_047","TER_SR_048"],"iso":["AE","AF","AL","AM","AT","AZ","BA","BD","BE","BG","BN","BT","BY","CH","CN","CY","CZ","DE","DK","DZ","EE","EG","ES","FI","GB","GE","GR","HR","HU","ID","IE","IL","IN","IQ","IR","IS","IT","JO","JP","KG","KH","KP","KR","KW","KZ","LA","LB","LK","LT","LU","LV","LY","MA","MD","ME","MK","MM","MN","MY","NL","NP","OM","PH","PK","PL","PS","PT","QA","RO","RS","RU","SA","SD","SE","SI","SK","SY","TH","TJ","TM","TN","TR","TW","UA","UZ","VN","YE"]},{"id":"africa","label":"Africa","source_continente":"Africa","image":["/regions/continents/africa.jpg","/regions/africa.jpg"],"realmType":"terrestrial","regions":[{"id":"africa-settentrionale","label":"Africa Settentrionale","image":["/regions/regions/africa-settentrionale.jpg","/regions/africa-settentrionale.jpg","/regions/africa_arida.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_026","label":"Nord Africa","display_name":"Nord Africa","name_en":"North Africa","bioregionId":"TER_SR_026","image":["/regions/ecoregions/nord-africa.jpg","/regions/nord-africa.jpg","/regions/africa_arida.jpg"],"iso":["DZ","EG","EH","LY","MA","ML","MR","NE","SD","TD","TN"],"source_ecoregions":"Canary Islands dry woodlands and forests;East Sahara Desert;East Saharan montane xeric woodlands;Mediterranean Acacia-Argania dry woodlands and succulent thickets;Nile Delta flooded savanna;North Saharan Xeric Steppe and Woodland;Saharan Atlantic coastal desert;Saharan halophytics;South Sahara desert;Tibesti-Jebel Uweinat montane xeric woodlands;West Sahara desert;West Saharan montane xeric woodlands","area_km2":7411104.74,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_026"],"iso":["DZ","EG","EH","LY","MA","ML","MR","NE","SD","TD","TN"]},{"id":"africa-centrale-e-orientale","label":"Africa Centrale e Orientale","image":["/regions/regions/africa-centrale-e-orientale.jpg","/regions/africa-centrale-e-orientale.jpg","/regions/africa_tropicale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_022","label":"Afrotropici equatoriali","display_name":"Afrotropici equatoriali","name_en":"Equatorial Afrotropics","bioregionId":"TER_SR_022","image":["/regions/ecoregions/afrotropici-equatoriali.jpg","/regions/afrotropici-equatoriali.jpg","/regions/africa_tropicale.jpg"],"iso":["AO","BJ","CD","CF","CG","CI","CM","GA","GH","GN","GQ","LR","ML","NG","RW","SL","SS","TG","UG"],"source_ecoregions":"Cameroon Highlands forests;Central African mangroves;Central Congolian lowland forests;Congolian coastal forests;Cross-Niger transition forests;Cross-Sanaga-Bioko coastal forests;Eastern Congolian swamp forests;Eastern Guinean forests;Guinean montane forests;Inner Niger Delta flooded savanna;Mount Cameroon and Bioko montane forests;Niger Delta swamp forests;Nigerian lowland forests;Northeast Congolian lowland forests;Northern Congolian Forest-Savanna;Northwest Congolian lowland forests;Rwenzori-Virunga montane moorlands;Southern Congolian forest-savanna;São Tomé, Príncipe, and Annobón forests;Western Congolian forest-savanna;Western Congolian swamp forests;Western Guinean lowland forests","area_km2":4104173.294,"realmType":"terrestrial"},{"id":"TER_SR_023","label":"Afrotropici sub-sahariani","display_name":"Afrotropici sub-sahariani","name_en":"Sub-Saharan Afrotropics","bioregionId":"TER_SR_023","image":["/regions/ecoregions/afrotropici-sub-sahariani.jpg","/regions/afrotropici-sub-sahariani.jpg","/regions/africa_tropicale.jpg"],"iso":["BF","BJ","CD","CF","CI","CM","DZ","ER","ET","GH","GM","GN","GW","KE","LR","ML","MR","NE","NG","SD","SL","SN","SS","TD","TG","UG"],"source_ecoregions":"Cape Verde Islands dry forests;East Sudanian savanna;Guinean forest-savanna;Guinean mangroves;Jos Plateau forest-grassland;Lake Chad flooded savanna;Mandara Plateau woodlands;Sahelian Acacia savanna;Sudd flooded grasslands;West Sudanian savanna","area_km2":7296624.863,"realmType":"terrestrial"},{"id":"TER_SR_024","label":"Corno d'Africa","display_name":"Corno d'Africa","name_en":"Horn of Africa","bioregionId":"TER_SR_024","image":["/regions/ecoregions/corno-d-africa.jpg","/regions/corno-d-africa.jpg","/regions/africa_tropicale.jpg"],"iso":["BI","CD","DJ","EG","ER","ET","KE","OM","RW","SA","SD","SO","SS","TZ","UG","YE"],"source_ecoregions":"Djibouti xeric shrublands;East African halophytics;East African montane forests;East African montane moorlands;Eritrean coastal desert;Ethiopian montane forests;Ethiopian montane grasslands and woodlands;Ethiopian montane moorlands;Hobyo grasslands and shrublands;Horn of Africa xeric bushlands;Masai xeric grasslands and shrublands;Northern Acacia-Commiphora bushlands and thickets;Red Sea mangroves;Serengeti volcanic grasslands;Socotra Island xeric shrublands;Somali Acacia-Commiphora bushlands and thickets;Somali montane xeric woodlands;South Arabian fog woodlands, shrublands, and dune;Southern Acacia-Commiphora bushlands and thickets;Southwest Arabian Escarpment shrublands and woodlands;Southwest Arabian coastal xeric shrublands;Southwest Arabian highland xeric scrub;Southwest Arabian montane woodlands and grasslands;Victoria Basin forest-savanna","area_km2":2739151.806,"realmType":"terrestrial"},{"id":"TER_SR_019","label":"Madagascar e costa dell'Africa orientale","display_name":"Madagascar e costa dell'Africa orientale","name_en":"Madagascar & East African Coast","bioregionId":"TER_SR_019","image":["/regions/ecoregions/madagascar-e-costa-dell-africa-orientale.jpg","/regions/madagascar-e-costa-dell-africa-orientale.jpg","/regions/madagascar.jpg"],"iso":["KE","KM","MG","MU","MZ","SC","SO","TZ"],"source_ecoregions":"Aldabra Island xeric scrub;Comoros forests;East African mangroves;Granitic Seychelles forests;Madagascar dry deciduous forests;Madagascar ericoid thickets;Madagascar humid forests;Madagascar mangroves;Madagascar spiny thickets;Madagascar subhumid forests;Madagascar succulent woodlands;Mascarene forests;Northern Swahili coastal forests;Southern Swahili coastal forests and woodlands;Zambezian coastal flooded savanna","area_km2":912762.925,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_022","TER_SR_023","TER_SR_024","TER_SR_019"],"iso":["AO","BF","BI","BJ","CD","CF","CG","CI","CM","DJ","DZ","EG","ER","ET","GA","GH","GM","GN","GQ","GW","KE","KM","LR","MG","ML","MR","MU","MZ","NE","NG","OM","RW","SA","SC","SD","SL","SN","SO","SS","TD","TG","TZ","UG","YE"]},{"id":"africa-meridionale","label":"Africa Meridionale","image":["/regions/regions/africa-meridionale.jpg","/regions/africa-meridionale.jpg","/regions/africa_australe.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_020","label":"Afrotropici meridionali","display_name":"Afrotropici meridionali","name_en":"Southern Afrotropics","bioregionId":"TER_SR_020","image":["/regions/ecoregions/afrotropici-meridionali.jpg","/regions/afrotropici-meridionali.jpg","/regions/africa_australe.jpg"],"iso":["AO","BW","LS","MZ","NA","SZ","ZA","ZW"],"source_ecoregions":"Albany thickets;Amsterdam-Saint Paul Islands temperate grasslands;Ascension scrub and grasslands;Central bushveld;Drakensberg Escarpment savanna and thicket;Drakensberg grasslands;Etosha Pan halophytics;Fynbos shrubland;Gariep Karoo;Highveld grasslands;Ile Europa and Bassas da India xeric scrub;Kalahari Acacia woodlands;Kalahari xeric savanna;Knysna-Amatole montane forests;Kwazulu Natal-Cape coastal forests;Limpopo lowveld;Makgadikgadi halophytics;Maputaland coastal forests and woodlands;Nama Karoo shrublands;Namaqualand-Richtersveld steppe;Namib Desert;Namibian savanna woodlands;Renosterveld shrubland;Southern Africa mangroves;St. Helena scrub and woodlands;Succulent Karoo xeric shrublands;Tristan Da Cunha-Gough Islands shrub and grasslands","area_km2":2315030.74,"realmType":"terrestrial"},{"id":"TER_SR_021","label":"Afrotropici subequatoriali","display_name":"Afrotropici subequatoriali","name_en":"Sub-Equatorial Afrotropics","bioregionId":"TER_SR_021","image":["/regions/ecoregions/afrotropici-subequatoriali.jpg","/regions/afrotropici-subequatoriali.jpg","/regions/africa_australe.jpg"],"iso":["AO","BI","BW","CD","KE","MW","MZ","NA","RW","TZ","UG","ZA","ZM","ZW"],"source_ecoregions":"Albertine Rift montane forests;Angolan montane forest-grassland;Angolan mopane woodlands;Angolan scarp savanna and woodlands;Angolan wet miombo woodlands;Central Zambezian wet miombo woodlands;Dry miombo woodlands;Eastern Arc forests;Itigi-Sumbu thicket;Kaokoveld desert;Mulanje Montane forest-grassland;Nyanga-Chimanimani Montane forest-grassland;Southern Rift Montane forest-grassland;Zambezian Baikiaea woodlands;Zambezian evergreen dry forests;Zambezian flooded grasslands;Zambezian mopane woodlands;Zambezian-Limpopo mixed woodlands","area_km2":4394307.657,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_020","TER_SR_021"],"iso":["AO","BI","BW","CD","KE","LS","MW","MZ","NA","RW","SZ","TZ","UG","ZA","ZM","ZW"]}],"bioregionIds":["TER_SR_026","TER_SR_022","TER_SR_023","TER_SR_024","TER_SR_019","TER_SR_020","TER_SR_021"],"iso":["AO","BF","BI","BJ","BW","CD","CF","CG","CI","CM","DJ","DZ","EG","EH","ER","ET","GA","GH","GM","GN","GQ","GW","KE","KM","LR","LS","LY","MA","MG","ML","MR","MU","MW","MZ","NA","NE","NG","OM","RW","SA","SC","SD","SL","SN","SO","SS","SZ","TD","TG","TN","TZ","UG","YE","ZA","ZM","ZW"]},{"id":"oceania-australasia","label":"Oceania & Australasia","source_continente":"Oceania & Australasia","image":["/regions/continents/oceania-australasia.jpg","/regions/oceania-australasia.jpg","/regions/oceania.jpg"],"realmType":"terrestrial","regions":[{"id":"australasia","label":"Australasia","image":["/regions/regions/australasia.jpg","/regions/australasia.jpg","/regions/australia.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_050","label":"Isole australasiatiche e Indonesia orientale","display_name":"Isole australasiatiche e Indonesia orientale","name_en":"Australasian Islands & East Indonesia","bioregionId":"TER_SR_050","image":["/regions/ecoregions/isole-australasiatiche-e-indonesia-orientale.jpg","/regions/isole-australasiatiche-e-indonesia-orientale.jpg"],"iso":["ID","NC","NZ","PG","SB","TL","VU"],"source_ecoregions":"Admiralty Islands lowland rain forests;Banda Sea Islands moist deciduous forests;Biak-Numfoor rain forests;Buru rain forests;Central Range Papuan montane rain forests;Halmahera rain forests;Huon Peninsula montane rain forests;Lesser Sundas deciduous forests;Lord Howe Island subtropical forests;New Britain-New Ireland lowland rain forests;New Britain-New Ireland montane rain forests;New Caledonia dry forests;New Caledonia rain forests;New Guinea mangroves;Norfolk Island subtropical forests;Northern New Guinea lowland rain and freshwater swamp forests;Northern New Guinea montane rain forests;Northland temperate kauri forests;Papuan Central Range sub-alpine grasslands;Seram rain forests;Solomon Islands rain forests;Southeast Papuan rain forests;Southern New Guinea freshwater swamp forests;Southern New Guinea lowland rain forests;Sulawesi lowland rain forests;Sulawesi montane rain forests;Sumba deciduous forests;Timor and Wetar deciduous forests;Trans Fly savanna and grasslands;Trobriand Islands rain forests;Vanuatu rain forests;Vogelkop montane rain forests;Vogelkop-Aru lowland rain forests;Yapen rain forests","area_km2":1302739.455,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_050"],"iso":["ID","NC","NZ","PG","SB","TL","VU"]},{"id":"oceania","label":"Oceania","image":["/regions/regions/oceania.jpg","/regions/oceania.jpg","/regions/pacifico_tropicale.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_018","label":"Isole oceaniche","display_name":"Isole oceaniche","name_en":"Oceanian Islands","bioregionId":"TER_SR_018","image":["/regions/ecoregions/isole-oceaniche.jpg","/regions/isole-oceaniche.jpg","/regions/pacifico_tropicale.jpg"],"iso":["FJ","FM","KI","MH","NR","PG","PW","SB","TO","TV","US","VU","WS"],"source_ecoregions":"Carolines tropical moist forests;Central Polynesian tropical moist forests;Cook Islands tropical moist forests;Eastern Micronesia tropical moist forests;Fiji tropical dry forests;Fiji tropical moist forests;Hawai'i tropical dry forests;Hawai'i tropical high shrublands;Hawai'i tropical low shrublands;Hawai'i tropical moist forests;Kermadec Islands subtropical moist forests;Marianas tropical dry forests;Marquesas tropical moist forests;Northwest Hawai'i scrub;Ogasawara subtropical moist forests;Palau tropical moist forests;Rapa Nui and Sala y Gómez subtropical forests;Samoan tropical moist forests;Society Islands tropical moist forests;Tongan tropical moist forests;Tuamotu tropical moist forests;Tubuai tropical moist forests;Western Polynesian tropical moist forests;Yap tropical dry forests","area_km2":44398.72,"realmType":"terrestrial"},{"id":"TER_SR_051","label":"Australia","display_name":"Australia","name_en":"Australia","bioregionId":"TER_SR_051","image":["/regions/ecoregions/australia.jpg","/regions/australia.jpg"],"iso":["AU"],"source_ecoregions":"Arnhem Land tropical savanna;Australian Alps montane grasslands;Brigalow tropical savanna;Cape York Peninsula tropical savanna;Carnarvon xeric shrublands;Carpentaria tropical savanna;Central Ranges xeric scrub;Coolgardie woodlands;Eastern Australia mulga shrublands;Eastern Australian temperate forests;Einasleigh upland savanna;Esperance mallee;Eyre and York mallee;Flinders-Lofty montane woodlands;Gibson desert;Great Sandy-Tanami desert;Great Victoria desert;Hampton mallee and woodlands;Jarrah-Karri forest and shrublands;Kimberly tropical savanna;Louisiade Archipelago rain forests;Mitchell Grass Downs;Murray-Darling woodlands and mallee;Naracoorte woodlands;Nullarbor Plains xeric shrublands;Pilbara shrublands;Queensland tropical rain forests;Simpson desert;Southeast Australia temperate forests;Southeast Australia temperate savanna;Southwest Australia savanna;Southwest Australia woodlands;Tasmanian Central Highland forests;Tasmanian temperate forests;Tasmanian temperate rain forests;Tirari-Sturt stony desert;Victoria Plains tropical savanna;Western Australian Mulga shrublands","area_km2":7687590.313,"realmType":"terrestrial"},{"id":"TER_SR_052","label":"Nuova Zelanda","display_name":"Nuova Zelanda","name_en":"New Zealand","bioregionId":"TER_SR_052","image":["/regions/ecoregions/nuova-zelanda.jpg","/regions/nuova-zelanda.jpg","/regions/nuova_zelanda.jpg"],"iso":["NZ"],"source_ecoregions":"Antipodes Subantarctic Islands tundra;Canterbury-Otago tussock grasslands;Chatham Island temperate forests;Fiordland temperate forests;Nelson Coast temperate forests;New Zealand North Island temperate forests;New Zealand South Island montane grasslands;New Zealand South Island temperate forests;Rakiura Island temperate forests;Richmond temperate forests;Westland temperate forests","area_km2":237518.051,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_018","TER_SR_051","TER_SR_052"],"iso":["AU","FJ","FM","KI","MH","NR","NZ","PG","PW","SB","TO","TV","US","VU","WS"]}],"bioregionIds":["TER_SR_050","TER_SR_018","TER_SR_051","TER_SR_052"],"iso":["AU","FJ","FM","ID","KI","MH","NC","NR","NZ","PG","PW","SB","TL","TO","TV","US","VU","WS"]},{"id":"antartide","label":"Antartide","source_continente":"Antartide","image":["/regions/continents/antartide.jpg","/regions/antartide.jpg"],"realmType":"terrestrial","regions":[{"id":"antartide","label":"Antartide","image":["/regions/regions/antartide.jpg","/regions/antartide.jpg"],"realmType":"terrestrial","ecoregions":[{"id":"TER_SR_053","label":"Continente e isole antartiche","display_name":"Continente e isole antartiche","name_en":"Antarctica (Continent & Islands)","bioregionId":"TER_SR_053","image":["/regions/ecoregions/continente-e-isole-antartiche.jpg","/regions/continente-e-isole-antartiche.jpg","/regions/antartide.jpg"],"iso":["AF","AQ","AR","BT","CA","CL","CN","GL","IN","IS","KG","NP","PK","TF","TJ","US"],"source_ecoregions":"Adelie Land tundra;Central South Antarctic Peninsula tundra;Dronning Maud Land tundra;East Antarctic tundra;Ellsworth Land tundra;Ellsworth Mountains tundra;Enderby Land tundra;Marie Byrd Land tundra;North Victoria Land tundra;Northeast Antarctic Peninsula tundra;Northwest Antarctic Peninsula tundra;Prince Charles Mountains tundra;Rock and Ice;Scotia Sea Islands tundra;South Antarctic Peninsula tundra;South Orkney Islands tundra;South Victoria Land tundra;Southern Indian Ocean Islands tundra;Transantarctic Mountains tundra","area_km2":14273473.359,"realmType":"terrestrial"}],"bioregionIds":["TER_SR_053"],"iso":["AF","AQ","AR","BT","CA","CL","CN","GL","IN","IS","KG","NP","PK","TF","TJ","US"]}],"bioregionIds":["TER_SR_053"],"iso":["AF","AQ","AR","BT","CA","CL","CN","GL","IN","IS","KG","NP","PK","TF","TJ","US"]}];
 
-const MARINE_REALMS = [
-  'Arctic',
-  'Temperate Northern Atlantic',
-  'Temperate Northern Pacific',
-  'Tropical Atlantic',
-  'Western Indo-Pacific',
-  'Central Indo-Pacific',
-  'Eastern Indo-Pacific',
-  'Tropical Eastern Pacific',
-  'Temperate South America',
-  'Temperate Southern Africa',
-  'Temperate Australasia',
-  'Southern Ocean',
-].map(label => ({
-  id: label.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),
-  label,
-  image:null,
-  iso:[],
-  realmType:'marine',
-  pendingImage:true,
-  aliases:[label]
-}));
+const MARINE_REALMS = [{"id":"MAR_R_001","label":"Artico","name_en":"Arctic","bioregionId":"MAR_R_001","bioregionIds":["MAR_R_001"],"image":["/regions/marine/artico.jpg","/regions/artico.jpg"],"iso":["CA","GL","IS","NO","RU","SJ","US"],"realmType":"marine"},{"id":"MAR_R_002","label":"Atlantico settentrionale temperato","name_en":"Temperate Northern Atlantic","bioregionId":"MAR_R_002","bioregionIds":["MAR_R_002"],"image":["/regions/marine/atlantico-settentrionale-temperato.jpg","/regions/atlantico-settentrionale-temperato.jpg"],"iso":["AL","BA","BE","BG","CA","CY","DE","DK","DZ","EE","EG","EH","ES","FI","FO","FR","GB","GE","GG","GI","GR","HR","IE","IL","IM","IS","IT","JE","LB","LT","LV","LY","MA","MC","ME","MR","MT","MX","NL","NO","PL","PM","PS","PT","RO","RU","SE","SI","SY","TN","TR","UA","US"],"realmType":"marine"},{"id":"MAR_R_003","label":"Pacifico settentrionale temperato","name_en":"Temperate Northern Pacific","bioregionId":"MAR_R_003","bioregionIds":["MAR_R_003"],"image":["/regions/marine/pacifico-settentrionale-temperato.jpg","/regions/pacifico-settentrionale-temperato.jpg"],"iso":["CA","CN","JP","KP","KR","MX","RU","TW","US"],"realmType":"marine"},{"id":"MAR_R_004","label":"Atlantico tropicale","name_en":"Tropical Atlantic","bioregionId":"MAR_R_004","bioregionIds":["MAR_R_004"],"image":["/regions/marine/atlantico-tropicale.jpg","/regions/atlantico-tropicale.jpg"],"iso":["AG","AI","AO","AW","BB","BL","BM","BQ","BR","BS","BZ","CD","CG","CM","CO","CR","CU","CV","CW","DM","DO","GA","GD","GF","GH","GM","GP","GQ","GT","GW","GY","HN","HT","JM","KN","KY","LC","LR","MF","MQ","MR","MS","MX","NG","NI","PA","PR","SH","SL","SN","SR","ST","SX","TC","TG","TT","US","VC","VE","VG","VI"],"realmType":"marine"},{"id":"MAR_R_005","label":"Indo-Pacifico occidentale","name_en":"Western Indo-Pacific","bioregionId":"MAR_R_005","bioregionIds":["MAR_R_005"],"image":["/regions/marine/indo-pacifico-occidentale.jpg","/regions/indo-pacifico-occidentale.jpg"],"iso":["AE","BD","BH","DJ","EG","ER","ID","IL","IN","IO","IQ","IR","JO","KE","KM","KW","LK","MG","MM","MU","MV","MZ","OM","PK","QA","RE","SA","SC","SD","SO","TF","TH","TZ","YE","YT","ZA"],"realmType":"marine"},{"id":"MAR_R_006","label":"Indo-Pacifico centrale","name_en":"Central Indo-Pacific","bioregionId":"MAR_R_006","bioregionIds":["MAR_R_006"],"image":["/regions/marine/indo-pacifico-centrale.jpg","/regions/indo-pacifico-centrale.jpg"],"iso":["AU","BN","CC","CN","CX","FJ","FM","GU","HK","ID","JP","KH","MO","MP","MY","NC","NF","NU","PG","PH","PW","SB","SG","TH","TL","TO","TW","VN","VU"],"realmType":"marine"},{"id":"MAR_R_007","label":"Indo-Pacifico orientale","name_en":"Eastern Indo-Pacific","bioregionId":"MAR_R_007","bioregionIds":["MAR_R_007"],"image":["/regions/marine/indo-pacifico-orientale.jpg","/regions/indo-pacifico-orientale.jpg"],"iso":["AS","CK","CL","KI","MH","NR","PF","PN","TK","TV","US","WF","WS"],"realmType":"marine"},{"id":"MAR_R_008","label":"Pacifico orientale tropicale","name_en":"Tropical Eastern Pacific","bioregionId":"MAR_R_008","bioregionIds":["MAR_R_008"],"image":["/regions/marine/pacifico-orientale-tropicale.jpg","/regions/pacifico-orientale-tropicale.jpg"],"iso":["CO","CR","EC","FR","GT","HN","MX","NI","PA","PE","SV"],"realmType":"marine"},{"id":"MAR_R_009","label":"Sud America temperato","name_en":"Temperate South America","bioregionId":"MAR_R_009","bioregionIds":["MAR_R_009"],"image":["/regions/marine/sud-america-temperato.jpg","/regions/sud-america-temperato.jpg"],"iso":["AR","BR","CL","FK","PE","SH","UY"],"realmType":"marine"},{"id":"MAR_R_010","label":"Africa meridionale temperata","name_en":"Temperate Southern Africa","bioregionId":"MAR_R_010","bioregionIds":["MAR_R_010"],"image":["/regions/marine/africa-meridionale-temperata.jpg","/regions/africa-meridionale-temperata.jpg"],"iso":["AO","MZ","NA","TF","ZA"],"realmType":"marine"},{"id":"MAR_R_011","label":"Australasia temperata","name_en":"Temperate Australasia","bioregionId":"MAR_R_011","bioregionIds":["MAR_R_011"],"image":["/regions/marine/australasia-temperata.jpg","/regions/australasia-temperata.jpg"],"iso":["AU","NZ"],"realmType":"marine"},{"id":"MAR_R_012","label":"Oceano Australe","name_en":"Southern Ocean","bioregionId":"MAR_R_012","bioregionIds":["MAR_R_012"],"image":["/regions/marine/oceano-australe.jpg","/regions/oceano-australe.jpg"],"iso":["AQ","AU","BV","GS","HM","NZ","TF","ZA"],"realmType":"marine"}];
 
+const TERRESTRIAL_REALMS = BIOREGION_V4_CONTINENTS;
 const GEO_REGION_GROUPS = TERRESTRIAL_REALMS;
+const BIOREGION_V4_ECOREGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.regions.flatMap(reg => reg.ecoregions.map(eco => ({ ...eco, parentRegionId:reg.id, parentRegionLabel:reg.label, continentId:cont.id, continentLabel:cont.label }))));
+const BIOREGION_V4_REGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.regions.map(reg => ({ ...reg, type:'terrestrial_region', continentId:cont.id, continentLabel:cont.label })));
 const GEO_REGION_MAP = [
-  ...TERRESTRIAL_REALMS.flatMap(group => group.regions.map(region => ({ ...region, type:'subrealm', continentId: group.id, continentLabel: group.label, realmId:group.id, realmLabel:group.label, realmType:'terrestrial' }))),
-  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Reami marini', realmId:'marine-realms', realmLabel:'Reami marini', realmType:'marine' })),
+  ...BIOREGION_V4_ECOREGIONS.map(eco => ({ ...eco, type:'ecoregion', realmType:'terrestrial', label:eco.label, id:eco.id, bioregionIds:[eco.id] })),
+  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Reami marini', realmId:'marine-realms', realmLabel:'Reami marini', realmType:'marine', bioregionIds:[region.id] })),
 ];
 const GEO_REGION_BY_ID = Object.fromEntries(GEO_REGION_MAP.map(r => [r.id, r]));
-const GEO_REALM_BY_ID = Object.fromEntries([
-  ...TERRESTRIAL_REALMS.map(r => [r.id, r]),
-  ['marine-realms', { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine' }]
+const GEO_REALM_BY_ID = new Map([
+  ...BIOREGION_V4_CONTINENTS.map(r => [r.id, r]),
+  ['marine-realms', { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id) }]
 ]);
+const BIOREGION_V4_BY_ID = Object.fromEntries([...BIOREGION_V4_ECOREGIONS, ...MARINE_REALMS].map(r => [r.id, r]));
+const BIOREGION_IDS_BY_ISO = BIOREGION_V4_ECOREGIONS.reduce((acc, eco) => {
+  (eco.iso || []).forEach(code => {
+    const key = String(code).toUpperCase();
+    if (!acc[key]) acc[key] = [];
+    acc[key].push(eco.id);
+  });
+  return acc;
+}, {});
+
 const GEO_FILTER_OPTIONS = [
-  { value:'realm-group:terrestrial', label:'Reami terrestri', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: TERRESTRIAL_REALMS.flatMap(r=>r.regions.flatMap(s=>s.iso || [])), matchLabels:['terrestrial','terrestrial realms','reami terrestri'] },
-  { value:'realm-group:marine', label:'Reami marini', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], matchLabels:['marine','marine realms','reami marini'] },
-  ...TERRESTRIAL_REALMS.map(group => ({ value:`realm:${group.id}`, label:`${group.label} (reami terrestre)`, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: group.regions.flatMap(r=>r.iso || []), matchLabels:[group.label, group.id] })),
-  ...GEO_REGION_MAP.map(region => ({ value:`${region.realmType === 'marine' ? 'marine' : 'subrealm'}:${region.id}`, label:region.label, c:region.realmType === 'marine' ? '#4FB3FF' : '#20B2AA', bg:region.realmType === 'marine' ? 'rgba(79,179,255,.15)' : 'rgba(32,178,170,.15)', iso:region.iso || [], matchLabels:[region.label, region.id, ...(region.aliases || []), ...(region.legacy || [])] }))
+  { value:'realm-group:terrestrial', label:'Reami terrestri', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: BIOREGION_V4_CONTINENTS.flatMap(c=>c.iso || []), bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id), matchLabels:['terrestrial','reami terrestri','ecoregioni terrestri'] },
+  { value:'realm-group:marine', label:'Reami marini', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], bioregionIds:MARINE_REALMS.map(r=>r.id), matchLabels:['marine','reami marini'] },
+  ...BIOREGION_V4_CONTINENTS.map(cont => ({ value:`continent:${cont.id}`, label:cont.label, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso:cont.iso || [], bioregionIds:cont.bioregionIds || [], matchLabels:[cont.label, cont.source_continente, cont.id] })),
+  ...BIOREGION_V4_REGIONS.map(reg => ({ value:`territory-region:${reg.id}`, label:reg.label, c:'#20B2AA', bg:'rgba(32,178,170,.15)', iso:reg.iso || [], bioregionIds:reg.bioregionIds || [], matchLabels:[reg.label, reg.id, reg.continentLabel] })),
+  ...BIOREGION_V4_ECOREGIONS.map(eco => ({ value:`ecoregion:${eco.id}`, label:eco.label, c:'#90D84A', bg:'rgba(144,216,74,.15)', iso:eco.iso || [], bioregionIds:[eco.id], matchLabels:[eco.label, eco.display_name, eco.name_en, eco.id] })),
+  ...MARINE_REALMS.map(region => ({ value:`marine:${region.id}`, label:region.label, c:'#4FB3FF', bg:'rgba(79,179,255,.15)', iso:[], bioregionIds:[region.id], matchLabels:[region.label, region.name_en, region.id, 'marine'] }))
 ];
+
 
 function getVisitedCountries() {
   if (typeof window === 'undefined') return [];
@@ -905,7 +836,28 @@ function getGeoOptionMatchLabels(value) {
   const opt = GEO_FILTER_OPTIONS.find(o => o.value === value);
   return (opt?.matchLabels || []).map(v => String(v).toLowerCase());
 }
+function getGeoOptionBioregionIds(value) {
+  if (!value) return [];
+  const opt = GEO_FILTER_OPTIONS.find(o => o.value === value);
+  return opt?.bioregionIds || [];
+}
+function getAnimalBioregionEntriesV4(animal) {
+  const direct = [animal?.bioregions_v4, animal?.geo?.bioregions_v4, animal?.raw?.geo?.bioregions_v4].flat().filter(Boolean);
+  return direct.filter(v => v && typeof v === 'object');
+}
+function getAnimalBioregionIdsV4(animal) {
+  const ids = [
+    animal?.map_bioregion_ids_v4,
+    animal?.geo?.map_bioregion_ids_v4,
+    getAnimalBioregionEntriesV4(animal).map(e => e.id || e.bioregion_id || e.unit_id),
+  ].flat().filter(Boolean).map(v => String(v));
+  return Array.from(new Set(ids));
+}
+function getAnimalBioregionNamesV4(animal) {
+  return getAnimalBioregionIdsV4(animal).map(id => BIOREGION_V4_BY_ID[id]?.label || BIOREGION_V4_BY_ID[id]?.display_name || id);
+}
 function getAnimalRegionTokens(animal) {
+  const entries = getAnimalBioregionEntriesV4(animal);
   const raw = [
     animal.geo?.game_regions,
     animal.geo?.bio_regions,
@@ -915,17 +867,24 @@ function getAnimalRegionTokens(animal) {
     animal.geo?.map_profile,
     animal.habitats,
     animal.geo?.habitats,
+    getAnimalBioregionIdsV4(animal),
+    entries.map(e => [e.continente, e.regione, e.ecoregione, e.name_en, e.id, e.bioregion_id]).flat(),
   ].flat().filter(Boolean);
   return raw.map(v => String(v).toLowerCase());
 }
 function matchGeographySelection(animal, selections = []) {
   if (!selections.length) return true;
-  const countries = animal.distribution?.countries_present || animal.geo?.iso || animal.iso || [];
+  const countries = animal.distribution?.countries_present || animal.geo?.iso?.primary || animal.geo?.iso || animal.iso || [];
   const regionTokens = getAnimalRegionTokens(animal);
+  const animalBioregionIds = getAnimalBioregionIdsV4(animal);
   return selections.some(sel => {
-    if (sel.startsWith('region:')) sel = sel.replace('region:', 'subrealm:');
-    if (sel.startsWith('continent:')) sel = sel.replace('continent:', 'realm:');
-    if (sel.startsWith('subrealm:') || sel.startsWith('realm:') || sel.startsWith('marine:') || sel.startsWith('realm-group:')) {
+    if (!sel) return false;
+    if (sel.startsWith('region:')) sel = sel.replace('region:', 'territory-region:');
+    if (sel.startsWith('subrealm:')) sel = sel.replace('subrealm:', 'ecoregion:');
+    if (sel.startsWith('realm:')) sel = sel.replace('realm:', 'continent:');
+    if (sel.startsWith('continent:') || sel.startsWith('territory-region:') || sel.startsWith('ecoregion:') || sel.startsWith('marine:') || sel.startsWith('realm-group:')) {
+      const wantedIds = getGeoOptionBioregionIds(sel);
+      if (wantedIds.length && animalBioregionIds.some(id => wantedIds.includes(id))) return true;
       const iso = getGeoOptionIsoCodes(sel);
       if (iso.length && countries.some(code => iso.includes(code))) return true;
       const labels = getGeoOptionMatchLabels(sel);
@@ -1299,81 +1258,30 @@ function TrophicTile({ level }) {
   );
 }
 
-function DistMap({ hab, accentColor, countriesPresent }) {
-  const mapContainer = useRef(null);
-  const mapInstance = useRef(null);
+function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[] }) {
   const [showLimitsModal, setShowLimitsModal] = useState(false);
-  useEffect(() => {
-    if (!mapContainer.current || !countriesPresent || countriesPresent.length === 0) return;
-    if (!window.L) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';
-      document.head.appendChild(link);
-      const script = document.createElement('script');
-      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';
-      script.async = true;
-      script.onload = initMap;
-      document.head.appendChild(script);
-    } else { initMap(); }
-    function initMap() {
-      console.log('[Map] countriesPresent:', countriesPresent);
-      const L = window.L;
-      if (mapInstance.current) { mapInstance.current.remove(); }
-      mapInstance.current = L.map(mapContainer.current, { zoomControl: false, attributionControl: false }).setView([20, 0], 2);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom: 19, minZoom: 1 }).addTo(mapInstance.current);
-      fetch('https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson')
-        .then(r => r.json())
-        .then(data => {
-          const isoSet = new Set(countriesPresent.map(c => c.toUpperCase()));
-          let highlightedBounds = null;
-          L.geoJSON(data, {
-            style: () => ({ color: 'rgba(255,255,255,.15)', weight: 0.5, fillOpacity: 0.25, fillColor: 'rgba(120,120,120,.12)' }),
-            onEachFeature: (feature, layer) => {
-              const p = feature.properties || {};
-              const iso2 = (p.ISO_A2 || p.iso_a2 || '').toUpperCase();
-              const iso2alt = (p.ADM0_A3 || '').toUpperCase();
-              const nameEn = ISO_TO_EN;
-              // also try matching via our ISO_TO_EN reverse lookup
-              const matchByName = Object.entries(nameEn).some(([k,v]) =>
-                isoSet.has(k.toUpperCase()) && (v === p.NAME || v === p.ADMIN || v === p.NAME_LONG)
-              );
-              const isMatch = (iso2 && isoSet.has(iso2)) || matchByName;
-              if (isMatch) {
-                layer.setStyle({ fillColor: accentColor, fillOpacity: 0.75, color: accentColor, weight: 1.5 });
-                layer.bringToFront();
-                try {
-                  const bounds = layer.getBounds();
-                  if (bounds?.isValid()) { highlightedBounds = highlightedBounds ? highlightedBounds.extend(bounds) : bounds; }
-                } catch (e) {}
-              }
-              layer.bindPopup(`<b>${p.NAME || p.ADMIN || ''}</b>`);
-            }
-          }).addTo(mapInstance.current);
-          if (highlightedBounds?.isValid()) {
-            setTimeout(() => { mapInstance.current.fitBounds(highlightedBounds, { padding: [40, 40], maxZoom: 6 }); }, 300);
-          }
-        }).catch(err => console.warn('Map GeoJSON error:', err));
-    }
-  }, [countriesPresent, accentColor]);
+  const ids = (bioregionIds || []).filter(Boolean);
   return (
     <div style={{ borderRadius:12, overflow:'hidden', background:'#07131F' }}>
-      {countriesPresent && countriesPresent.length > 0 && (
-        <div ref={mapContainer} style={{ width: '100%', height: 280, borderBottom:'1px solid rgba(255,255,255,.1)', background:'#0a0e1a' }} />
-      )}
-      {(!countriesPresent || countriesPresent.length === 0) && (
+      {ids.length > 0 ? (
+        <BioregionVectorMap highlightIds={ids} accent={accentColor} marine={false} height={280} showLabels />
+      ) : countriesPresent && countriesPresent.length > 0 ? (
+        <BioregionVectorMap highlightIds={Array.from(new Set(countriesPresent.flatMap(code => BIOREGION_IDS_BY_ISO[String(code).toUpperCase()] || [])))} accent={accentColor} marine={false} height={280} showLabels />
+      ) : (
         <div style={{ padding:12, borderBottom:'1px solid rgba(255,255,255,.1)' }}>
-          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE GEOGRAFICA</div>
+          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE BIOGEOGRAFICA</div>
           <span style={{ color:'rgba(255,255,255,.3)', fontSize:11 }}>Nessun dato disponibile</span>
         </div>
       )}
       <div style={{ padding:12, display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:8 }}>
         <div style={{ flex:1 }}>
-          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>HABITAT</div>
+          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>ECOREGIONI / HABITAT</div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:4 }}>
-            {hab && hab.map(h=>{
-              const capitalizedH = h.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-              return <span key={h} style={{ background:'rgba(255,255,255,.15)', color:'white', fontSize:11, fontWeight:700, padding:'5px 10px', borderRadius:8, letterSpacing:.3 }}>{capitalizedH}</span>;
+            {ids.slice(0,8).map(id => <span key={id} style={{ background:'rgba(144,216,74,.15)', color:'#D8FFC4', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{BIOREGION_V4_BY_ID[id]?.label || id}</span>)}
+            {ids.length > 8 && <span style={{ background:'rgba(255,255,255,.10)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8 }}>+{ids.length-8}</span>}
+            {hab && hab.slice(0,6).map(h=>{
+              const capitalizedH = String(h).split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+              return <span key={h} style={{ background:'rgba(255,255,255,.15)', color:'white', fontSize:10.5, fontWeight:700, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{capitalizedH}</span>;
             })}
           </div>
         </div>
@@ -1387,14 +1295,13 @@ function DistMap({ hab, accentColor, countriesPresent }) {
               <button onClick={()=>setShowLimitsModal(false)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.6)', fontSize:20, cursor:'pointer', padding:0, width:28, height:28, display:'flex', alignItems:'center', justifyContent:'center' }}>×</button>
             </div>
             <div style={{ background:'#050505', padding:16, borderRadius:12, border:'1px solid rgba(255,215,0,.15)' }}>
-              <p style={{ margin:'0 0 12px', color:'#FFD700', fontWeight:700, fontSize:13 }}>📍 I dati provengono da GBIF e possono includere:</p>
+              <p style={{ margin:'0 0 12px', color:'#FFD700', fontWeight:700, fontSize:13 }}>📍 La mappa evidenzia ecoregioni biogeografiche v4:</p>
               <ul style={{ margin:'0 0 14px', paddingLeft:20, color:'#E0E0E0', fontSize:12 }}>
-                <li style={{ marginBottom:6 }}>Osservazioni in cattività (zoo, acquari)</li>
-                <li style={{ marginBottom:6 }}>Dati storici non aggiornati</li>
-                <li style={{ marginBottom:6 }}>Errori di geo-localizzazione</li>
-                <li>Aree amministrative non attuali</li>
+                <li style={{ marginBottom:6 }}>È una visualizzazione gameplay-oriented, non una range map scientifica puntuale.</li>
+                <li style={{ marginBottom:6 }}>Le specie d’acqua dolce possono usare proxy territoriali.</li>
+                <li>Le specie marine usano i reami marini v4.</li>
               </ul>
-              <p style={{ margin:'0', padding:'12px 14px', background:'#000000', borderLeft:'4px solid #FFD700', color:'#FFFFFF', fontSize:12, borderRadius:6, lineHeight:1.6 }}>💡 <strong>Esempio:</strong> la "Guyana francese" (parte della Francia) può riportare specie con distribuzione diversa da quella reale.</p>
+              <p style={{ margin:'0', padding:'12px 14px', background:'#000000', borderLeft:'4px solid #FFD700', color:'#FFFFFF', fontSize:12, borderRadius:6, lineHeight:1.6 }}>💡 Più precisione arriverà aggiornando i dati Supabase con bioregions_v4.</p>
             </div>
           </div>
         </div>
@@ -2361,7 +2268,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
           </>
         )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
-        <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present}/>
+        <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} bioregionIds={getAnimalBioregionIdsV4(a)}/>
         {/* Endemico sotto mappa */}
         {a.is_endemic && (
           <div style={{ display:'flex', gap:8, marginTop:10, marginBottom:4 }}>
@@ -2539,11 +2446,141 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
 }
 
 function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], grayscale=false, height=128 }) {
-  const [err, setErr] = useState(false);
-  if (src && !err) {
-    return <img src={src} alt="" onError={()=>setErr(true)} style={{ width:'100%', height, objectFit:'cover', filter:grayscale?'grayscale(1) saturate(.1)':'none', display:'block' }} />;
+  const sources = Array.isArray(src) ? src.filter(Boolean) : (src ? [src] : []);
+  const [idx, setIdx] = useState(0);
+  useEffect(()=>{ setIdx(0); }, [JSON.stringify(sources)]);
+  const current = sources[idx];
+  if (current) {
+    return <img src={current} alt="" onError={()=>setIdx(i=>i+1)} style={{ width:'100%', height, objectFit:'cover', filter:grayscale?'grayscale(1) saturate(.1)':'none', display:'block' }} />;
   }
   return <div style={{ width:'100%', height, background:`linear-gradient(125deg, ${fallbackColors[0]}, ${fallbackColors[1]} 55%, ${fallbackColors[2]})`, filter:grayscale?'grayscale(1)':'none' }} />;
+}
+
+let BIOREGION_GEOJSON_CACHE = null;
+let BIOREGION_GEOJSON_PROMISE = null;
+const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson'];
+function useBioregionGeoJson() {
+  const [data, setData] = useState(BIOREGION_GEOJSON_CACHE);
+  const [error, setError] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    if (BIOREGION_GEOJSON_CACHE) { setData(BIOREGION_GEOJSON_CACHE); return; }
+    if (!BIOREGION_GEOJSON_PROMISE) {
+      BIOREGION_GEOJSON_PROMISE = (async () => {
+        let lastErr;
+        for (const url of BIOREGION_GEOJSON_URLS) {
+          try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const json = await res.json();
+            BIOREGION_GEOJSON_CACHE = json;
+            return json;
+          } catch (err) { lastErr = err; }
+        }
+        throw lastErr;
+      })();
+    }
+    BIOREGION_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Animaldex] bioregion geojson:', err); if (alive) setError(true); });
+    return () => { alive = false; };
+  }, []);
+  return { data, error };
+}
+function getFeatureBioregionId(feature) {
+  const p = feature?.properties || {};
+  return p.bioregion_id || p.unit_id || p.id || p.ID;
+}
+function projectLonLat(lon, lat) {
+  const x = ((Number(lon) + 180) / 360) * 1000;
+  const y = ((90 - Number(lat)) / 180) * 500;
+  return [Number.isFinite(x) ? x : 0, Number.isFinite(y) ? y : 0];
+}
+function ringToSvgPath(ring = [], maxPoints = 120) {
+  if (!ring.length) return '';
+  const step = Math.max(1, Math.ceil(ring.length / maxPoints));
+  const pts = ring.filter((_,i)=>i % step === 0 || i === ring.length - 1).map(([lon,lat]) => projectLonLat(lon,lat));
+  if (!pts.length) return '';
+  return `M${pts.map(([x,y])=>`${x.toFixed(1)},${y.toFixed(1)}`).join('L')}Z`;
+}
+function geometryToSvgPath(geometry, maxPoints = 120) {
+  if (!geometry) return '';
+  const polys = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
+  return polys.map(poly => (poly || []).map(ring => ringToSvgPath(ring, maxPoints)).join('')).join('');
+}
+function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clickable=false, height=180, accent='#90D84A', marine=false, showLabels=false }) {
+  const { data, error } = useBioregionGeoJson();
+  const highlightSet = new Set((highlightIds || []).map(String));
+  const features = data?.features || [];
+  const [hoverId, setHoverId] = useState(null);
+  const relevant = features.filter(f => {
+    const p = f.properties || {};
+    if (marine) return p.domain === 'marine';
+    return p.domain !== 'marine';
+  });
+  if (!data && !error) {
+    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#0B1820,#102A35)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
+  }
+  if (error) {
+    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#102A35,#0B1820)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Inserisci il GeoJSON in public/geo.</div>;
+  }
+  return (
+    <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#102A35,#071017)', border:'1px solid rgba(255,255,255,.10)' }}>
+      <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+        <rect width="1000" height="500" fill="#071017" />
+        <g opacity=".20">
+          <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#72D6FF" strokeWidth="1" />
+          <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#72D6FF" strokeWidth="1" />
+        </g>
+        <g>
+          {relevant.map(f => {
+            const id = String(getFeatureBioregionId(f) || '');
+            const active = highlightSet.has(id);
+            const selected = selectedId === id || hoverId === id;
+            const d = geometryToSvgPath(f.geometry, active ? 220 : 90);
+            if (!d) return null;
+            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(40,110,150,.42)' : 'rgba(60,98,82,.36)')} stroke={active ? accent : 'rgba(255,255,255,.13)'} strokeWidth={active ? 1.25 : 0.45} opacity={active ? 0.92 : 0.48} />;
+          })}
+        </g>
+      </svg>
+      {showLabels && (hoverId || selectedId) && <div style={{ position:'absolute', left:10, bottom:10, right:10, padding:'8px 10px', borderRadius:12, background:'rgba(0,0,0,.58)', color:'white', fontSize:11, fontWeight:900 }}>{BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId}</div>}
+    </div>
+  );
+}
+function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', mapIds=[] }) {
+  const [flipped, setFlipped] = useState(false);
+  const isMarine = item?.realmType === 'marine';
+  const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
+  return (
+    <div onClick={()=>setFlipped(v=>!v)} style={{ marginBottom:14, borderRadius:22, minHeight:204, perspective:900, cursor:'pointer' }}>
+      <div style={{ position:'relative', minHeight:204, transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
+          <RegionArt src={image || item?.image} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={126} />
+          <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
+            <div style={{ width:44, height:44, borderRadius:16, background:`${accent}22`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>{icon}</div>
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
+              {subtitle && <div style={{ color:'rgba(255,255,255,.50)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
+            </div>
+            {locked
+              ? <button onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:accent, color:'#071017', fontWeight:950, cursor:'pointer' }}>Sblocca</button>
+              : <button onClick={e=>{e.stopPropagation();onOpen?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer' }}>{openLabel}</button>}
+          </div>
+        </div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:12, boxSizing:'border-box' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
+            <div style={{ color:'white', fontSize:14, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
+            <div style={{ color:accent, fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>mappa</div>
+          </div>
+          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={accent} height={118} />
+          <div style={{ display:'flex', gap:8, marginTop:9 }}>
+            <button onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Copertina</button>
+            {locked
+              ? <button onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:accent, color:'#071017', fontWeight:950 }}>Sblocca</button>
+              : <button onClick={e=>{e.stopPropagation();onOpen?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function AwardToast({ award, onOpen, onDismiss }) {
@@ -3187,60 +3224,37 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
 
 
 
-function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
-  const visited = visitedCountries.slice(0, 60);
-  const [mapErr, setMapErr] = useState(false);
-  const getPoint = (code, i) => {
-    const c = String(code || '');
-    const seed = [...c].reduce((n,ch)=>n+ch.charCodeAt(0),0) + i*17;
-    const bands = {
-      EU:[51,39], AF:[52,58], AS:[70,42], NA:[24,38], SA:[34,67], OC:[82,74], SP:[73,83]
-    };
-    let b = bands.EU;
-    if (['US','CA','MX','GL','BM','PM'].includes(c) || ['BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY'].includes(c)) b=bands.NA;
-    if (['CO','VE','EC','PE','BO','BR','GF','GY','SR','AR','CL','UY','PY','FK'].includes(c)) b=bands.SA;
-    if (['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD','SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS','ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS','MG'].includes(c)) b=bands.AF;
-    if (['RU','KZ','MN','TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF','PK','IN','BD','LK','NP','BT','MV','CN','HK','MO','TW','KR','KP','JP','MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'].includes(c)) b=bands.AS;
-    if (['AU','NF','CX','CC','NZ','PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'].includes(c)) b=bands.OC;
-    if (['AQ','BV','GS','HM','TF','SH'].includes(c)) b=bands.SP;
-    return { x:b[0] + ((seed % 9)-4), y:b[1] + (((seed*7) % 9)-4) };
-  };
-  const fallbackContinents = [
-    'M70,78 C92,38 150,30 174,72 C142,78 136,116 96,118 C74,112 54,98 70,78 Z',
-    'M154,122 C190,122 214,156 198,202 C172,192 158,160 154,122 Z',
-    'M235,82 C264,48 322,52 348,92 C324,116 284,110 252,124 C236,114 224,102 235,82 Z',
-    'M294,124 C332,128 354,172 330,214 C292,204 280,162 294,124 Z',
-    'M378,78 C426,38 504,52 542,100 C500,132 448,116 404,144 C372,132 360,104 378,78 Z',
-    'M470,190 C506,176 552,194 566,224 C534,246 488,240 462,216 C458,204 460,196 470,190 Z'
-  ];
+function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry, selectedEcoregion, onSelectEcoregion, onOpenEcoregion }) {
+  const [mode, setMode] = useState('countries');
+  const visited = visitedCountries.slice(0, 90);
+  const countryDerivedIds = Array.from(new Set(visited.flatMap(code => BIOREGION_IDS_BY_ISO[String(code).toUpperCase()] || [])));
+  const highlightIds = mode === 'countries'
+    ? (selectedCountry ? (BIOREGION_IDS_BY_ISO[String(selectedCountry).toUpperCase()] || []) : countryDerivedIds)
+    : countryDerivedIds;
+  const activeEco = selectedEcoregion || highlightIds[0];
   return (
-    <div style={{ position:'relative', height:240, borderRadius:20, overflow:'hidden', background:'linear-gradient(180deg,#0E1B24,#071017)', border:'1px solid rgba(255,255,255,.09)', boxShadow:'inset 0 0 40px rgba(32,178,170,.08)', marginBottom:12 }}>
-      {!mapErr ? (
-        <img src="/maps/world-map.svg" alt="Mappa del mondo" onError={()=>setMapErr(true)} style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', opacity:.72, filter:'sepia(.25) hue-rotate(110deg) saturate(.9) brightness(.62)' }} />
-      ) : (
-        <svg viewBox="0 0 620 260" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }} preserveAspectRatio="xMidYMid slice">
-          <rect x="0" y="0" width="620" height="260" fill="#0B1820" />
-          <g opacity=".24">
-            <path d="M0 62 C120 22 210 88 320 50 S500 38 620 82" fill="none" stroke="#72D6FF" strokeWidth="1"/>
-            <path d="M0 190 C120 150 210 216 320 178 S500 166 620 210" fill="none" stroke="#72D6FF" strokeWidth="1"/>
-          </g>
-          <g>{fallbackContinents.map((d,i)=><path key={i} d={d} fill="#214A3D" stroke="rgba(255,255,255,.16)" strokeWidth="1.5" />)}</g>
-        </svg>
+    <div style={{ marginBottom:12 }}>
+      <div style={{ display:'flex', gap:8, marginBottom:8 }}>
+        <button onClick={()=>setMode('countries')} style={{ flex:1, height:36, borderRadius:12, border:'none', background:mode==='countries'?'#90D84A':'#2A2A2C', color:mode==='countries'?'#111':'white', fontWeight:900, cursor:'pointer' }}>Nazioni visitate</button>
+        <button onClick={()=>setMode('ecoregions')} style={{ flex:1, height:36, borderRadius:12, border:'none', background:mode==='ecoregions'?'#90D84A':'#2A2A2C', color:mode==='ecoregions'?'#111':'white', fontWeight:900, cursor:'pointer' }}>Ecoregioni</button>
+      </div>
+      <div style={{ position:'relative' }}>
+        <BioregionVectorMap highlightIds={highlightIds} selectedId={activeEco} onSelect={(id)=>{ onSelectEcoregion?.(id); }} clickable={mode==='ecoregions'} accent={mode==='countries'?'#F0C449':'#90D84A'} height={250} showLabels />
+        <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900, pointerEvents:'none' }}>{mode==='countries'?'Mappa reale: aree biogeografiche collegate alle nazioni visitate':'Mappa reale: ecoregioni visitate/sbloccate'}</div>
+      </div>
+      {mode==='countries' && visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi una nazione visitata per evidenziare le ecoregioni collegate.</div>}
+      {mode==='ecoregions' && activeEco && (
+        <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.20)', borderRadius:15, padding:12, marginTop:8, display:'flex', alignItems:'center', gap:10 }}>
+          <div style={{ flex:1 }}>
+            <div style={{ color:'white', fontWeight:900, fontSize:13 }}>{BIOREGION_V4_BY_ID[activeEco]?.label || activeEco}</div>
+            <div style={{ color:'rgba(255,255,255,.48)', fontSize:11, marginTop:3 }}>{countAnimalsForGeoValue(`ecoregion:${activeEco}`)} animali associati</div>
+          </div>
+          <button onClick={()=>onOpenEcoregion?.(activeEco)} style={{ height:34, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
+        </div>
       )}
-      <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 50% 50%, transparent, rgba(0,0,0,.42))' }} />
-      <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900 }}>Mappa nazioni visitate</div>
-      {visited.length === 0 && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:13, fontWeight:700, textAlign:'center', padding:24 }}>Aggiungi una nazione visitata per evidenziarla sulla mappa.</div>}
-      {visited.map((code,i)=>{
-        const p = getPoint(code,i);
-        const active = selectedCountry === code;
-        return (
-          <button key={code} onClick={()=>onSelectCountry(code)} title={getCountryDisplayName(code)} style={{ position:'absolute', left:`${p.x}%`, top:`${p.y}%`, transform:'translate(-50%,-50%)', width:active?28:22, height:active?28:22, borderRadius:'50%', border:`2px solid ${active?'#90D84A':'rgba(255,255,255,.78)'}`, background:active?'rgba(144,216,74,.78)':'rgba(240,196,73,.86)', color:'white', cursor:'pointer', boxShadow:active?'0 0 16px rgba(144,216,74,.7)':'0 4px 12px rgba(0,0,0,.34)' }} />
-        );
-      })}
     </div>
   );
 }
-
 
 function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   const [flipped, setFlipped] = useState(false);
@@ -3266,170 +3280,127 @@ function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
 function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false }) {
   const normalizeInitialView = (v) => {
     if (v === 'countries') return 'countries';
-    if (v === 'continents' || !v) return 'planet';
+    if (v === 'continents' || v === 'realms' || !v) return 'planet';
     return v;
   };
   const [view, setView] = useState(normalizeInitialView(initialView));
-  const [realmMode, setRealmMode] = useState('terrestrial');
-  const [realmId, setRealmId] = useState(null);
-  const [regionId, setRegionId] = useState(null);
+  const [selectedContinentId, setSelectedContinentId] = useState(null);
+  const [selectedRegionId, setSelectedRegionId] = useState(null);
+  const [selectedTerritory, setSelectedTerritory] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
-  const [unlockMap, setUnlockMap] = useState(() => {
-    if (typeof window === 'undefined') return {};
-    try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks') || '{}'); } catch { return {}; }
-  });
+  const [selectedEcoregion, setSelectedEcoregion] = useState(null);
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
-  const [selectedTripTags, setSelectedTripTags] = useState([]);
+  const [selectedTripTags, setSelectedTripTags] = useState(['nature']);
+  const [unlockMap, setUnlockMap] = useState(() => {
+    try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks_v4') || '{}'); } catch { return {}; }
+  });
+  useEffect(()=>{ try { window.localStorage.setItem('animaldex_region_unlocks_v4', JSON.stringify(unlockMap)); } catch {} }, [unlockMap]);
+  useEffect(()=>{ setView(normalizeInitialView(initialView)); }, [initialView]);
+
+  const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === selectedContinentId) || null;
+  const region = continent?.regions.find(r => r.id === selectedRegionId) || null;
+  const visitedSet = new Set(visitedCountries);
+  const scratchCountries = getAllScratchCountries().filter(code => {
+    const q = countrySearch.trim().toLowerCase();
+    if (!q) return true;
+    return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
+  }).slice(0,160);
   const toggleTripTag = (tag) => setSelectedTripTags(prev => prev.includes(tag) ? prev.filter(t=>t!==tag) : [...prev, tag]);
   const submitDestination = async () => {
     if (!selectedDestinationIso) return;
     await onAddDestination?.(selectedDestinationIso, selectedTripTags);
+    const next = Array.from(new Set([...visitedCountries, selectedDestinationIso])).sort();
+    onVisitedCountriesChange?.(next);
     setSelectedCountry(selectedDestinationIso);
-    setSelectedTripTags([]);
   };
-  useEffect(() => { if (initialView) setView(normalizeInitialView(initialView)); }, [initialView]);
-  useEffect(() => { if (typeof window !== 'undefined') window.localStorage.setItem('animaldex_region_unlocks', JSON.stringify(unlockMap)); }, [unlockMap]);
-
-  const realm = realmMode === 'marine'
-    ? { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine' }
-    : TERRESTRIAL_REALMS.find(r => r.id === realmId) || null;
-  const region = GEO_REGION_BY_ID[regionId] || null;
-  const scratchCountries = getAllScratchCountries().filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
-  const visitedSet = new Set(visitedCountries);
   const removeVisitedCountry = (code) => {
-    const list = visitedCountries.filter(c => c !== code);
-    saveVisitedCountries(list);
+    const list = visitedCountries.filter(c=>c!==code);
     onVisitedCountriesChange?.(list);
     if (selectedCountry === code) setSelectedCountry(null);
   };
   const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
-  const regionAnimals = region ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [`${region.realmType === 'marine' ? 'marine' : 'subrealm'}:${region.id}`])) : [];
-  const getTitle = () => {
-    if (view === 'countries') return 'Scratch map';
+  const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
+  const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
-    if (view === 'realms') return realmMode === 'marine' ? 'Reami marini' : 'Reami terrestri';
-    if (view === 'subrealms') return realm?.label || 'Reame';
-    if (view === 'animals') return region?.label || 'Animali';
-    return 'Regioni';
-  };
+    if (view === 'countries') return 'Scratch map';
+    if (view === 'terrestrial') return 'Reami terrestri';
+    if (view === 'marine') return 'Reami marini';
+    if (view === 'regions') return continent?.label || 'Regioni';
+    if (view === 'ecoregions') return region?.label || 'Ecoregioni';
+    if (view === 'animals') return selectedTerritory?.label || 'Animali';
+    return 'Territori';
+  })();
   const goBack = () => {
     if (view === 'planet') return onBack();
     if (view === 'countries') return setView('planet');
-    if (view === 'realms') return setView('planet');
-    if (view === 'subrealms') return setView('realms');
+    if (view === 'terrestrial' || view === 'marine') return setView('planet');
+    if (view === 'regions') return setView('terrestrial');
+    if (view === 'ecoregions') return setView('regions');
     if (view === 'animals') {
-      if (region?.realmType === 'marine') return setView('realms');
-      return setView('subrealms');
+      if (selectedTerritory?.kind === 'marine') return setView('marine');
+      if (selectedTerritory?.kind === 'ecoregion') return setView('ecoregions');
+      if (selectedTerritory?.kind === 'region') return setView('regions');
+      return setView('terrestrial');
     }
     return setView('planet');
   };
-  const cardShell = { marginBottom:14, borderRadius:18, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', fontFamily:'inherit', color:'white', textAlign:'left', width:'100%' };
-  const openSubrealmAnimals = (sub) => {
-    setRegionId(sub.id);
+  const openTerritoryAnimals = (territory, filterValue, kind) => {
+    setSelectedTerritory({ ...territory, filterValue, kind, label:territory.label });
     setView('animals');
   };
+  const unlock = (id) => setUnlockMap(prev => ({ ...prev, [id]: true }));
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
-      <PageHeader title={getTitle()} onBack={goBack} />
+      <PageHeader title={title} onBack={goBack} />
       <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
         {view==='planet' && (
           <>
-            <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:22, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
+            <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:24, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
               <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ width:56, height:56, borderRadius:18, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
-                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:900 }}>Scratch map nazioni visitate</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Conta per award geografia e sblocca animali locali.</div></div>
-                <div style={{ color:'#90D84A', fontSize:20, fontWeight:900 }}>{visitedCountries.length}</div>
+                <div style={{ width:58, height:58, borderRadius:20, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
+                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Scratch map</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Nazioni visitate o ecoregioni collegate, su mappa vettoriale.</div></div>
+                <div style={{ color:'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
               </div>
             </button>
-
             <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
               <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
-              <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un sistema biogeografico</div>
-              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>I reami terrestri sono suddivisi in sottoreami. I reami marini sono già presenti come struttura, in attesa delle immagini dedicate.</div>
+              <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un dominio</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>I reami terrestri portano a continenti, regioni ed ecoregioni. I reami marini usano i 12 grandi bacini biogeografici.</div>
             </div>
-
-            <button onClick={()=>{setRealmMode('terrestrial');setView('realms');}} style={{ ...cardShell }}>
-              <RegionArt src="/regions/europa.jpg" fallbackColors={['#254A38','#3A735D','#13201D']} height={120} />
-              <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ fontSize:30 }}>🌍</div>
-                <div style={{ flex:1 }}>
-                  <div style={{ color:'white', fontSize:20, fontWeight:1000 }}>Reami terrestri</div>
-                  <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:3 }}>8 reami · 29 sottoreami</div>
-                </div>
-                <div style={{ color:'#90D84A', fontSize:24 }}>›</div>
-              </div>
-            </button>
-
-            <button onClick={()=>{setRealmMode('marine');setView('realms');}} style={{ ...cardShell }}>
-              <RegionArt src={null} fallbackColors={['#0B314A','#116B89','#051B2A']} height={120} />
-              <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ fontSize:30 }}>🌊</div>
-                <div style={{ flex:1 }}>
-                  <div style={{ color:'white', fontSize:20, fontWeight:1000 }}>Reami marini</div>
-                  <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:3 }}>12 reami · immagini in arrivo</div>
-                </div>
-                <div style={{ color:'#4FB3FF', fontSize:24 }}>›</div>
-              </div>
-            </button>
+            <TerritoryCard item={{label:'Reami terrestri', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Reami terrestri" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} ecoregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="🌍" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} />
+            <TerritoryCard item={{label:'Reami marini', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Reami marini" subtitle={`${MARINE_REALMS.length} reami · dati marini v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="🌊" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} />
           </>
         )}
 
-        {view==='realms' && realmMode==='terrestrial' && TERRESTRIAL_REALMS.map(r=>(
-          <button key={r.id} onClick={()=>{setRealmId(r.id);setView('subrealms');}} style={{ ...cardShell }}>
-            <RegionArt src={r.image} fallbackColors={['#30494D','#53706D','#1C2B2E']} height={128} />
-            <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
-              <div style={{ flex:1 }}>
-                <div style={{ color:'white', fontSize:20, fontWeight:1000 }}>{r.label}</div>
-                <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, marginTop:3 }}>{r.regions.length} sottoreami</div>
-              </div>
-              <div style={{ color:'#90D84A', fontSize:24 }}>›</div>
-            </div>
-          </button>
+        {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni · ${cont.bioregionIds.length} ecoregioni`} image={cont.image} icon={cont.label==='Africa'?'🌍':cont.label==='America'?'🌎':cont.label.includes('Oceania')?'🌏':cont.label==='Antartide'?'❄️':'🌍'} accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
         ))}
 
-        {view==='realms' && realmMode==='marine' && MARINE_REALMS.map(r=>(
-          <div key={r.id} style={{ ...cardShell, cursor:'default' }}>
-            <RegionArt src={r.image} grayscale={!unlockMap[r.id]} fallbackColors={['#0B314A','#116B89','#051B2A']} height={112} />
-            <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
-              <div style={{ width:44, height:44, borderRadius:15, background:'rgba(79,179,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>🌊</div>
-              <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{r.label}</div>
-                <div style={{ color:'rgba(255,255,255,.42)', fontSize:11, marginTop:4 }}>Immagine in arrivo · matching tramite dati marini</div>
-              </div>
-              {!unlockMap[r.id]
-                ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [r.id]: true }))} style={{ height:36, padding:'0 11px', borderRadius:11, border:'none', background:'#4FB3FF', color:'#061018', fontWeight:900, cursor:'pointer' }}>Sblocca</button>
-                : <button onClick={()=>openSubrealmAnimals(r)} style={{ height:36, padding:'0 11px', borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Vedi</button>}
-            </div>
-          </div>
-        ))}
+        {view==='marine' && MARINE_REALMS.map(m => {
+          const locked = !unlockMap[m.id];
+          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Reame marino'} image={m.image} icon="🌊" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
+        })}
 
-        {view==='subrealms' && realm && realm.regions.map(reg=>(
-          <div key={reg.id} style={{ marginBottom:14, borderRadius:18, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
-            <RegionArt src={reg.image} grayscale={!unlockMap[reg.id]} fallbackColors={reg.pendingImage ? ['#4B4B50','#68686F','#242428'] : ['#4B5A62','#7E8B93','#39464D']} height={122} />
-            <div style={{ padding:'11px 12px', display:'flex', alignItems:'center', gap:10 }}>
-              <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.12 }}>{reg.label}</div>
-                <div style={{ color:'rgba(255,255,255,.45)', fontSize:11, marginTop:4 }}>
-                  {reg.pendingImage ? 'Immagine in arrivo' : (reg.legacy?.length ? `Da: ${reg.legacy.join(', ')}` : `${reg.iso?.length || 0} codici ISO`)}
-                </div>
-              </div>
-              {!unlockMap[reg.id]
-                ? <button onClick={()=>setUnlockMap(prev=>({ ...prev, [reg.id]: true }))} style={{ height:38, padding:'0 12px', borderRadius:12, border:'none', background:'#90D84A', color:'#111', fontWeight:900, cursor:'pointer' }}>Sblocca</button>
-                : <button onClick={()=>openSubrealmAnimals(reg)} style={{ height:38, padding:'0 12px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:900, cursor:'pointer' }}>Vedi animali</button>}
-            </div>
-          </div>
-        ))}
+        {view==='regions' && continent && continent.regions.map(reg => {
+          const locked = !unlockMap[reg.id];
+          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} ecoregioni`} image={reg.image} icon="▧" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+        })}
+
+        {view==='ecoregions' && region && region.ecoregions.map(eco => {
+          const locked = !unlockMap[eco.id];
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="◍" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(eco, `ecoregion:${eco.id}`, 'ecoregion')} mapIds={[eco.id]} />;
+        })}
 
         {view==='countries' && (
           <div>
-            <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
+            <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} selectedEcoregion={selectedEcoregion} onSelectEcoregion={setSelectedEcoregion} onOpenEcoregion={(id)=>onOpenRegion?.(`ecoregion:${id}`, BIOREGION_V4_BY_ID[id]?.label || id)} />
             {selectedCountry && (
               <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.2)', borderRadius:16, padding:14, marginBottom:12 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:10 }}>
                   <span style={{ fontSize:28 }}>{getFlagEmoji(selectedCountry)}</span>
-                  <div style={{ flex:1 }}><div style={{ color:'white', fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:12 }}>{countAnimalsForGeoValue(selectedCountry)} animali associati</div></div>
+                  <div style={{ flex:1 }}><div style={{ color:'white', fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:12 }}>{countAnimalsForGeoValue(selectedCountry)} animali associati · {(BIOREGION_IDS_BY_ISO[selectedCountry]||[]).length} ecoregioni</div></div>
                   <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:36, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
                 </div>
               </div>
@@ -3461,21 +3432,132 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
           </div>
         )}
 
-        {view==='animals' && region && (
+        {view==='animals' && selectedTerritory && (
           <>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginBottom:12 }}>
-              {region.realmType === 'marine' ? 'Animali associati al reame marino quando disponibili nei dati.' : 'Animali presenti nel sottoreame sbloccato.'}
+            <BioregionVectorMap highlightIds={selectedTerritory.bioregionIds || (selectedTerritory.bioregionId ? [selectedTerritory.bioregionId] : [])} marine={selectedTerritory.kind==='marine'} accent={selectedTerritory.kind==='marine'?'#4FB3FF':'#90D84A'} height={190} showLabels />
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, margin:'12px 0' }}>
+              Animali filtrati per {selectedTerritory.kind === 'marine' ? 'reame marino' : selectedTerritory.kind === 'region' ? 'regione' : 'ecoregione'}.
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>
-              {regionAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}
+              {territoryAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}
             </div>
-            {regionAnimals.length === 0 && <div style={{ color:'rgba(255,255,255,.45)', fontSize:13, textAlign:'center', padding:30 }}>Nessun animale collegato per ora. La struttura è pronta per dati e immagini dedicate.</div>}
+            {territoryAnimals.length === 0 && <div style={{ color:'rgba(255,255,255,.45)', fontSize:13, textAlign:'center', padding:30 }}>Nessun animale collegato per ora. La struttura è pronta per dati e immagini dedicate.</div>}
           </>
         )}
       </div>
     </div>
   );
 }
+
+
+function ToggleRow({ label, initial = true }) {
+  const [on, setOn] = useState(initial);
+  return (
+    <button onClick={()=>setOn(v=>!v)} style={{ width:'100%', display:'flex', alignItems:'center', justifyContent:'space-between', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, cursor:'pointer', fontFamily:'inherit' }}>
+      <span style={{ color:'white', fontSize:14, fontWeight:800 }}>{label}</span>
+      <span style={{ width:48, height:28, borderRadius:999, background:on?'#90D84A':'#3A3A3C', position:'relative', transition:'background .2s ease' }}>
+        <span style={{ position:'absolute', top:3, left:on?23:3, width:22, height:22, borderRadius:'50%', background:'white', transition:'left .2s ease' }} />
+      </span>
+    </button>
+  );
+}
+
+function SettingsSubPage({ title, onBack, children }) {
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+      <PageHeader title={title} onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:16 }}>{children}</div>
+    </div>
+  );
+}
+
+
+function GalleryPage({ onBack, statusMap = {}, onSelect }) {
+  const captured = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => a.status === 'catturato');
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+      <PageHeader title="Galleria" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'14px 12px 28px' }}>
+        {captured.length === 0 ? (
+          <div style={{ color:'rgba(255,255,255,.45)', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale fotografato/catturato.</div>
+        ) : (
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:12 }}>
+            {captured.map(a => {
+              const c = CLS[a.cls] || CLS.Mammalia;
+              return (
+                <button key={a.id} onClick={()=>onSelect?.(a)} style={{ border:'none', borderRadius:18, overflow:'hidden', background:'#222', cursor:'pointer', padding:0, textAlign:'left', fontFamily:'inherit', boxShadow:'0 12px 32px rgba(0,0,0,.28)' }}>
+                  <AnimalImg a={a} size={126} fontSize={48} overrideStatus="catturato" />
+                  <div style={{ padding:10, background:c.mid }}>
+                    <div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{a.com}</div>
+                    <div style={{ color:'rgba(255,255,255,.65)', fontSize:10, fontStyle:'italic', marginTop:3, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.sci}</div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial }) {
+  const [sub, setSub] = useState(null);
+  if (sub === 'audio') return (
+    <SettingsSubPage title="Audio" onBack={()=>setSub(null)}>
+      <ToggleRow label="Suoni interfaccia" />
+      <ToggleRow label="Versi degli animali" />
+      <ToggleRow label="Notifiche push eventi" />
+    </SettingsSubPage>
+  );
+  if (sub === 'theme') return (
+    <SettingsSubPage title="Tema" onBack={()=>setSub(null)}>
+      {['Scuro','Chiaro','Sistema','Modalità daltonismo'].map((t,i)=><button key={t} style={{ width:'100%', background:'#222222', border:`1px solid ${i===0?'#90D84A':'rgba(255,255,255,.06)'}`, borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{i===0?'●':'○'} {t}</button>)}
+    </SettingsSubPage>
+  );
+  if (sub === 'data') return (
+    <SettingsSubPage title="Dati" onBack={()=>setSub(null)}>
+      {['Sincronizza ora sul Cloud','Esporta dati Animaldex','Spazio foto: placeholder'].map(t=><button key={t} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
+    </SettingsSubPage>
+  );
+  if (sub === 'privacy') return (
+    <SettingsSubPage title="Privacy" onBack={()=>setSub(null)}>
+      <ToggleRow label="Permesso fotocamera" />
+      <ToggleRow label="Posizione GPS per geotag" />
+      {['Termini di servizio','Elimina account'].map((t,i)=><button key={t} style={{ width:'100%', background:i?'rgba(255,59,48,.12)':'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:i?'#FF6B6B':'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
+    </SettingsSubPage>
+  );
+  const rows = [
+    { id:'audio', title:'Audio', subtitle:'Effetti e notifiche' },
+    { id:'theme', title:'Tema', subtitle:'Colori e contrasto' },
+    { id:'data', title:'Dati', subtitle:'Backup e sincronizzazione' },
+    { id:'privacy', title:'Privacy', subtitle:'Permessi e preferenze' },
+  ];
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+      <PageHeader title="Impostazioni" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:16 }}>
+        <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.20),rgba(240,168,64,.08))', border:'1px solid rgba(168,70,55,.42)', borderRadius:24, padding:16, marginBottom:14, boxShadow:'0 18px 50px rgba(0,0,0,.22)' }}>
+          <div style={{ color:'#D98674', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Percorsi guidati</div>
+          <div style={{ color:'white', fontSize:18, fontWeight:1000, marginTop:5 }}>Onboarding professionale</div>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.5, marginTop:7 }}>Puoi rivedere l’intera esperienza: configurazione iniziale, radar, rewards, status animali, filtri, regioni, profilo e statistiche.</div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:9, marginTop:13 }}>
+            <button onClick={onStartInitialOnboarding} style={{ width:'100%', minHeight:48, borderRadius:17, border:'none', background:'linear-gradient(135deg,#A84637,#C45D3F)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:'0 12px 30px rgba(168,70,55,.30)' }}>Avvia percorso primo accesso</button>
+            <button onClick={onStartOperationalTutorial} style={{ width:'100%', minHeight:48, borderRadius:17, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontSize:13, fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Avvia tour operativo dell’app</button>
+          </div>
+        </div>
+        {rows.map(row=>(
+          <button key={row.id} onClick={()=>setSub(row.id)} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:8, display:'flex', alignItems:'center', justifyContent:'space-between', cursor:'pointer', fontFamily:'inherit' }}>
+            <span style={{ textAlign:'left' }}><span style={{ display:'block', color:'white', fontSize:15, fontWeight:900 }}>{row.title}</span><span style={{ display:'block', color:'rgba(255,255,255,.48)', fontSize:12, marginTop:3 }}>{row.subtitle}</span></span>
+            <span style={{ color:'rgba(255,255,255,.35)', fontSize:22 }}>›</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
 
 
 
@@ -3645,7 +3727,7 @@ export default function App() {
         'caricamento dati Supabase'
       );
 
-      const nextAnimals = remoteAnimals?.length ? remoteAnimals : LOCAL_ANIMALS.map(normalizeLocalAnimal);
+      const nextAnimals = remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal);
       setAnimalsData(nextAnimals);
 
       const nextStatusMap = Object.fromEntries((nextAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));

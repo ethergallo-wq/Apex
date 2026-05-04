@@ -1,0 +1,199 @@
+{
+  "schema_version": "v4.0-animal-bioregion-assignment",
+  "total_animals": 1080,
+  "total_assignments": 8763,
+  "animals_without_assignment": 0,
+  "status_counts": {
+    "freshwater_proxy_assigned": 269,
+    "global_human_associated": 172,
+    "terrestrial_assigned": 414,
+    "marine_assigned": 101,
+    "marine_pelagic_assigned": 117,
+    "marine_polar_assigned": 7
+  },
+  "confidence_counts": {
+    "high": 614,
+    "medium": 424,
+    "low": 42
+  },
+  "domain_decision_counts": {
+    "terrestrial": 851,
+    "marine": 229
+  },
+  "map_profile_counts": {
+    "freshwater_basin": 280,
+    "human_associated": 155,
+    "terrestrial_range": 349,
+    "coastal_marine": 121,
+    "pelagic_marine": 124,
+    "island_endemic": 36,
+    "polar": 7,
+    "polar_marine": 8
+  },
+  "assignment_count_per_animal": {
+    "1": 215,
+    "2": 176,
+    "3": 88,
+    "4": 63,
+    "5": 63,
+    "6": 42,
+    "7": 51,
+    "8": 27,
+    "9": 35,
+    "10": 45,
+    "11": 26,
+    "12": 31,
+    "13": 8,
+    "14": 30,
+    "15": 10,
+    "16": 25,
+    "17": 10,
+    "18": 11,
+    "19": 5,
+    "20": 8,
+    "21": 5,
+    "22": 6,
+    "23": 9,
+    "24": 5,
+    "25": 6,
+    "26": 14,
+    "27": 2,
+    "28": 3,
+    "29": 10,
+    "30": 5,
+    "31": 5,
+    "32": 6,
+    "33": 4,
+    "34": 2,
+    "35": 4,
+    "36": 4,
+    "37": 2,
+    "38": 2,
+    "39": 1,
+    "40": 1,
+    "41": 2,
+    "42": 1,
+    "43": 1,
+    "44": 2,
+    "45": 1,
+    "48": 1,
+    "49": 1,
+    "51": 5,
+    "52": 1
+  },
+  "bioregions_available": {
+    "terrestrial": 53,
+    "marine": 12,
+    "total": 65
+  },
+  "bioregions_used": 65,
+  "top_used_bioregions": [
+    {
+      "bioregion_id": "TER_SR_034",
+      "assignments": 258,
+      "name": "Siberia e foreste boreali orientali"
+    },
+    {
+      "bioregion_id": "TER_SR_036",
+      "assignments": 219,
+      "name": "Isole giapponesi"
+    },
+    {
+      "bioregion_id": "TER_SR_007",
+      "assignments": 212,
+      "name": "Zone aride messicane"
+    },
+    {
+      "bioregion_id": "TER_SR_032",
+      "assignments": 210,
+      "name": "Tundra paleartica"
+    },
+    {
+      "bioregion_id": "TER_SR_035",
+      "assignments": 210,
+      "name": "Mare di Okhotsk e tundra/taiga di Bering"
+    },
+    {
+      "bioregion_id": "TER_SR_010",
+      "assignments": 203,
+      "name": "Savane e foreste del sud-est degli Stati Uniti"
+    },
+    {
+      "bioregion_id": "TER_SR_029",
+      "assignments": 202,
+      "name": "Foreste montane europee"
+    },
+    {
+      "bioregion_id": "TER_SR_030",
+      "assignments": 201,
+      "name": "Europa Temperata"
+    },
+    {
+      "bioregion_id": "TER_SR_002",
+      "assignments": 198,
+      "name": "Tundra canadese"
+    },
+    {
+      "bioregion_id": "TER_SR_003",
+      "assignments": 198,
+      "name": "Alaska"
+    },
+    {
+      "bioregion_id": "TER_SR_004",
+      "assignments": 198,
+      "name": "Foreste boreali canadesi"
+    },
+    {
+      "bioregion_id": "TER_SR_009",
+      "assignments": 197,
+      "name": "Foreste nordamericane"
+    },
+    {
+      "bioregion_id": "TER_SR_027",
+      "assignments": 195,
+      "name": "Mediterraneo"
+    },
+    {
+      "bioregion_id": "TER_SR_039",
+      "assignments": 192,
+      "name": "Foreste dell'Asia centro-orientale"
+    },
+    {
+      "bioregion_id": "TER_SR_038",
+      "assignments": 185,
+      "name": "Praterie mongole"
+    },
+    {
+      "bioregion_id": "TER_SR_006",
+      "assignments": 181,
+      "name": "Ovest americano"
+    },
+    {
+      "bioregion_id": "TER_SR_042",
+      "assignments": 174,
+      "name": "Monti Altai-Sayan"
+    },
+    {
+      "bioregion_id": "TER_SR_040",
+      "assignments": 170,
+      "name": "Altopiano tibetano"
+    },
+    {
+      "bioregion_id": "TER_SR_043",
+      "assignments": 169,
+      "name": "Steppe kazake e foreste emiboreali"
+    },
+    {
+      "bioregion_id": "TER_SR_005",
+      "assignments": 167,
+      "name": "Costa del Pacifico settentrionale"
+    }
+  ],
+  "rules": {
+    "localized": "keeps all strong region matches; no fixed 1-5 cap",
+    "human_associated": "keeps broad compatible terrestrial ecoregions with role human_associated_presence",
+    "marine": "uses 12 marine realms, not terrestrial ecoregions",
+    "freshwater": "uses terrestrial ecoregions as freshwater proxy until freshwater basins are added",
+    "extinct": "not specially handled in this run, per user request"
+  }
+}
