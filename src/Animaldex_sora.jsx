@@ -786,6 +786,177 @@ const GEO_FILTER_OPTIONS = [
 ];
 
 
+function normalizeCoverKey(value) {
+  return String(value || '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/&/g,' e ')
+    .replace(/['’]/g,'')
+    .replace(/[^a-z0-9]+/g,' ')
+    .trim();
+}
+
+function pushUnique(list, value) {
+  if (!value) return;
+  if (!list.includes(value)) list.push(value);
+}
+
+const REGION_COVER_OVERRIDES = (() => {
+  const map = {};
+  const add = (keys, paths) => {
+    const arr = Array.isArray(paths) ? paths : [paths];
+    (Array.isArray(keys) ? keys : [keys]).forEach(key => {
+      const k = normalizeCoverKey(key);
+      if (!k) return;
+      if (!map[k]) map[k] = [];
+      arr.forEach(path => pushUnique(map[k], path));
+    });
+  };
+
+  // ── Continenti / macroaree ───────────────────────────────────────────
+  add(['America','america'], ['/regions/america.jpg']);
+  add(['Eurasia','eurasia'], ['/regions/Eurasia.jpg','/regions/eurasia.jpg']);
+  add(['Africa','africa'], ['/regions/africa.jpg']);
+  add(['Oceania & Australasia','Oceania e Australasia','oceania-australasia','oceania australasia'], ['/regions/oceania_australasia.jpg','/regions/oceania.jpg']);
+  add(['Antartide','Antarctic','Antarctica'], ['/regions/antartide.jpg']);
+
+  // ── Regioni terrestri ────────────────────────────────────────────────
+  add(['Nord America Boreale','nord-america-boreale'], ['/regions/region-nord-america-boreale.jpg']);
+  add(['Nord America Temperato','nord america temperato'], ['/regions/nord_america_temperato.jpg','/regions/region-nord-america-temperato.jpg']);
+  add(['America Centrale e Caraibi','America Centrale & Caraibi'], ['/regions/region-america-centrale-caraibi.jpg']);
+  add(['Sud America Tropicale'], ['/regions/region-sud-america-tropicale.jpg']);
+  add(['Sud America Andino e Temperato'], ['/regions/region-sud-america-andino-temperato.jpg']);
+
+  add(['Eurasia Occidentale'], ['/regions/region-eurasia-occidentale.jpg','/regions/Eurasia_Occidentale.jpg']);
+  add(['Eurasia Settentrionale'], ['/regions/region-eurasia-settentrionale.jpg']);
+  add(['Eurasia Centrale'], ['/regions/region-eurasia-centrale.jpg']);
+  add(['Eurasia Orientale'], ['/regions/region-eurasia-orientale.jpg']);
+  add(['Eurasia Meridionale e Sud-Est','Eurasia Meridionale e Sud Est'], ['/regions/foreste_sudest_asiatico.jpg','/regions/malesia_indonesia_occ.jpg']);
+
+  add(['Africa Settentrionale'], ['/regions/Nord_Africa.jpg','/regions/nord_africa.jpg']);
+  add(['Africa Centrale e Orientale'], ['/regions/region-africa-centrale-orientale.jpg']);
+  add(['Africa Meridionale'], ['/regions/region-africa-meridionale.jpg']);
+
+  add(['Australasia'], ['/regions/oceania_australasia.jpg','/regions/australia.jpg']);
+  add(['Oceania'], ['/regions/oceania.jpg','/regions/Isole_oceaniche.jpg']);
+  add(['Antartide'], ['/regions/antartide.jpg']);
+
+  // ── Ecoregioni terrestri ─────────────────────────────────────────────
+  add(['Alaska'], ['/regions/eco-alaska.jpg']);
+  add(['Groenlandia'], ['/regions/groenlandia.jpg']);
+  add(['Foreste boreali canadesi'], ['/regions/foreste_boreali_canadesi.jpg']);
+  add(['Tundra canadese'], ['/regions/eco-tundra-canadese.jpg']);
+  add(['Costa del Pacifico settentrionale'], ['/regions/eco-costa-pacifico-settentrionale.jpg']);
+  add(['Foreste nordamericane'], ['/regions/eco-foreste-nordamericane.jpg']);
+  add(['Grandi Pianure'], ['/regions/grandi_pianure.jpg']);
+  add(['Ovest americano'], ['/regions/Ovest_americano.jpg','/regions/ovest_americano.jpg']);
+  add(['Savane e foreste del sud-est degli Stati Uniti','Savane e foreste sud-est Stati Uniti'], ['/regions/eco-savana-foreste-sud-est-stati-uniti.jpg']);
+  add(['Zone aride messicane'], ['/regions/eco-zone-aride-messicane.jpg']);
+  add(['America Centrale'], ['/regions/eco-america-centrale.jpg']);
+  add(['Caraibi'], ['/regions/eco-caraibi.jpg']);
+  add(['Amazzonia'], ['/regions/amazzonia.jpg']);
+  add(['America meridionale settentrionale'], ['/regions/eco-america-meridionale-settentrionale.jpg']);
+  add(['Cerrado brasiliano e costa atlantica'], ['/regions/eco-cerrado-brasiliano-costa-atlantica.jpg']);
+  add(['Ande e costa del Pacifico'], ['/regions/eco-ande-costa-pacifico.jpg']);
+  add(['Praterie sudamericane'], ['/regions/eco-praterie-sudamericane.jpg']);
+
+  add(['Mediterraneo'], ['/regions/mediterraneao.jpg','/regions/mediterraneo.jpg']);
+  add(['Europa Temperata'], ['/regions/Europa_temperata.jpg','/regions/europa_temperata.jpg']);
+  add(['Foreste montane europee'], ['/regions/eco-foreste-montane-europee.jpg']);
+  add(['Isole anglo-celtiche'], ['/regions/eco-isole-anglo-celtiche.jpg']);
+  add(['Mare di Okhotsk e tundra/taiga di Bering','Mare di Okhotsk e tundra taiga di Bering'], ['/regions/eco-mare-okhotsk-tundra-taiga-bering.jpg']);
+  add(['Scandinavia e foreste boreali occidentali'], ['/regions/Scandinavia_foreste_boreali','/regions/Scandinavia_foreste_boreali.jpg','/regions/scandinavia_foreste_boreali.jpg']);
+  add(['Siberia e foreste boreali orientali'], ['/regions/eco-siberia-foreste-boreali-orientali.jpg']);
+  add(['Tundra paleartica'], ['/regions/eco-tundra-palearctica.jpg','/regions/eco-tundra-paleartica.jpg']);
+  add(['Grande penisola arabica'], ['/regions/eco-grande-penisola-arabica.jpg']);
+  add(["Mar Caspio e deserti dell'Asia centrale",'Mar Caspio e deserti Asia centrale'], ['/regions/caspio_asia_centrale','/regions/caspio_asia_centrale.jpg']);
+  add(['Monti Altai-Sayan'], ['/regions/eco-monti-altai-sayan.jpg']);
+  add(['Monti Tien Shan'], ['/regions/eco-monti-tien-shan.jpg']);
+  add(['Steppe kazake e foreste emiboreali'], ['/regions/Steppe_kazake_foreste.jpg','/regions/steppe_kazake_foreste.jpg']);
+  add(['Deserti e foreste persiane'], ['/regions/eco-deserti-foreste-persiane.jpg']);
+  add(['Foreste e steppe del Mar Nero'], ['/regions/eco-foreste-steppe-mar-nero.jpg']);
+  add(['Isole giapponesi'], ['/regions/Isole_giapponesi.jpg','/regions/isole_giapponesi.jpg']);
+  add(['Altopiano tibetano'], ['/regions/eco-altopiano-tibetano.jpg']);
+  add(["Deserti dell'Asia orientale",'Deserti Asia orientale'], ['/regions/eco-deserti-asia-orientale.jpg']);
+  add(["Foreste dell'Asia centro-orientale",'Foreste Asia centro orientale'], ['/regions/eco-foreste-asia-centro-orientale.jpg']);
+  add(["Foreste dell'Asia nord-orientale",'Foreste Asia nord orientale'], ['/regions/eco-foreste-asia-nord-orientale.jpg']);
+  add(['Praterie mongole'], ['/regions/eco-praterie-mongole.jpg']);
+  add(['Malesia e Indonesia occidentale'], ['/regions/malesia_indonesia_occ.jpg']);
+  add(['Subcontinente indiano'], ['/regions/subcontinente_indiano','/regions/subcontinente_indiano.jpg']);
+  add(['Foreste del sud-est asiatico','Foreste sud-est asiatico'], ['/regions/foreste_sudest_asiatico.jpg']);
+
+  add(['Nord Africa'], ['/regions/Nord_Africa.jpg','/regions/nord_africa.jpg']);
+  add(['Afrotropici equatoriali'], ['/regions/afrotropici_equatoriali.jpg']);
+  add(['Afrotropici sub-sahariani'], ['/regions/eco-afrotropici-sub-sahariani.jpg']);
+  add(["Corno d'Africa",'Corno Africa'], ['/regions/eco-corno-africa.jpg']);
+  add(["Madagascar e costa dell'Africa orientale",'Madagascar e costa Africa orientale'], ['/regions/madagascar.jpg']);
+  add(['Afrotropici meridionali'], ['/regions/afrotropici_meridionali.jpg']);
+  add(['Afrotropici subequatoriali'], ['/regions/eco-afrotropici-subequatoriali.jpg']);
+
+  add(['Isole australasiatiche e Indonesia orientale'], ['/regions/Isole_australasiatiche_Indonesia_orientale.jpg','/regions/isole_australasiatiche_indonesia_orientale.jpg']);
+  add(['Isole oceaniche'], ['/regions/Isole_oceaniche.jpg','/regions/isole_oceaniche.jpg']);
+  add(['Australia'], ['/regions/australia.jpg']);
+  add(['Nuova Zelanda'], ['/regions/nuova_zelanda.jpg']);
+  add(['Continente e isole antartiche'], ['/regions/eco-antartide.jpg','/regions/antartide.jpg']);
+
+  // ── Reami marini: per ora fallback oceanici se non arrivano immagini dedicate ──
+  add(['Reami marini','marine-realms'], ['/regions/oceania.jpg']);
+  add(['Artico'], ['/regions/artide.jpg','/regions/antartide.jpg']);
+  add(['Atlantico settentrionale temperato','Temperate Northern Atlantic'], ['/regions/atlantico-settentrionale-temperato.jpg','/regions/oceania.jpg']);
+  add(['Pacifico settentrionale temperato','Temperate Northern Pacific'], ['/regions/pacifico-settentrionale-temperato.jpg','/regions/oceania.jpg']);
+  add(['Atlantico tropicale','Tropical Atlantic'], ['/regions/atlantico-tropicale.jpg','/regions/oceania.jpg']);
+  add(['Indo-Pacifico occidentale','Western Indo-Pacific'], ['/regions/indo-pacifico-occidentale.jpg','/regions/oceania.jpg']);
+  add(['Indo-Pacifico centrale','Central Indo-Pacific'], ['/regions/indo-pacifico-centrale.jpg','/regions/oceania.jpg']);
+  add(['Indo-Pacifico orientale','Eastern Indo-Pacific'], ['/regions/indo-pacifico-orientale.jpg','/regions/oceania.jpg']);
+  add(['Pacifico orientale tropicale','Tropical Eastern Pacific'], ['/regions/pacifico-orientale-tropicale.jpg','/regions/oceania.jpg']);
+  add(['Sud America temperato','Temperate South America'], ['/regions/sud-america-temperato.jpg','/regions/region-sud-america-andino-temperato.jpg']);
+  add(['Africa meridionale temperata','Temperate Southern Africa'], ['/regions/africa-meridionale-temperata.jpg','/regions/region-africa-meridionale.jpg']);
+  add(['Australasia temperata','Temperate Australasia'], ['/regions/australasia-temperata.jpg','/regions/australia.jpg']);
+  add(['Oceano Australe','Southern Ocean'], ['/regions/oceano-australe.jpg','/regions/antartide.jpg']);
+
+  return map;
+})();
+
+function autoRegionCoverCandidates(label) {
+  const clean = normalizeCoverKey(label);
+  if (!clean) return [];
+  const hyphen = clean.replace(/\s+/g,'-');
+  const underscore = clean.replace(/\s+/g,'_');
+  return [
+    `/regions/${underscore}.jpg`,
+    `/regions/${hyphen}.jpg`,
+    `/regions/eco-${hyphen}.jpg`,
+    `/regions/region-${hyphen}.jpg`,
+    `/regions/ecoregions/${hyphen}.jpg`,
+    `/regions/regions/${hyphen}.jpg`,
+    `/regions/continents/${hyphen}.jpg`,
+  ];
+}
+
+function getRegionCoverSources(item, provided) {
+  const out = [];
+  const addSources = (sources) => {
+    (Array.isArray(sources) ? sources : (sources ? [sources] : [])).forEach(src => pushUnique(out, src));
+  };
+
+  const keys = [
+    item?.id,
+    item?.label,
+    item?.display_name,
+    item?.name_en,
+    item?.source_continente,
+    item?.bioregionId,
+  ].filter(Boolean);
+
+  keys.forEach(key => addSources(REGION_COVER_OVERRIDES[normalizeCoverKey(key)]));
+  keys.forEach(key => addSources(autoRegionCoverCandidates(key)));
+  addSources(provided || item?.image);
+
+  return out;
+}
+
+
+
 function getVisitedCountries() {
   if (typeof window === 'undefined') return [];
   try { return JSON.parse(window.localStorage.getItem('animaldex_visited_countries') || '[]'); } catch { return []; }
@@ -1242,6 +1413,15 @@ function StatRow({ label, base, scale, color, unit }) {
   );
 }
 
+
+function useAutoUnflip(flipped, setFlipped, delay = 5000) {
+  useEffect(() => {
+    if (!flipped) return undefined;
+    const t = setTimeout(() => setFlipped(false), delay);
+    return () => clearTimeout(t);
+  }, [flipped, setFlipped, delay]);
+}
+
 function TrophicTile({ level }) {
   const t = TROPHIC[level] || TROPHIC[3];
   return (
@@ -1260,25 +1440,35 @@ function TrophicTile({ level }) {
 
 function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[] }) {
   const [showLimitsModal, setShowLimitsModal] = useState(false);
+  const countryCodes = Array.from(new Set((countriesPresent || []).map(code => String(code).toUpperCase()).filter(Boolean)));
   const ids = (bioregionIds || []).filter(Boolean);
+  const hasCountries = countryCodes.length > 0;
   return (
     <div style={{ borderRadius:12, overflow:'hidden', background:'#07131F' }}>
-      {ids.length > 0 ? (
+      {hasCountries ? (
+        <BioregionVectorMap highlightIsoCodes={countryCodes} accent={accentColor} marine={false} height={280} showLabels />
+      ) : ids.length > 0 ? (
         <BioregionVectorMap highlightIds={ids} accent={accentColor} marine={false} height={280} showLabels />
-      ) : countriesPresent && countriesPresent.length > 0 ? (
-        <BioregionVectorMap highlightIds={Array.from(new Set(countriesPresent.flatMap(code => BIOREGION_IDS_BY_ISO[String(code).toUpperCase()] || [])))} accent={accentColor} marine={false} height={280} showLabels />
       ) : (
         <div style={{ padding:12, borderBottom:'1px solid rgba(255,255,255,.1)' }}>
-          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE BIOGEOGRAFICA</div>
+          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE</div>
           <span style={{ color:'rgba(255,255,255,.3)', fontSize:11 }}>Nessun dato disponibile</span>
         </div>
       )}
       <div style={{ padding:12, display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:8 }}>
         <div style={{ flex:1 }}>
-          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>ECOREGIONI / HABITAT</div>
+          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>
+            {hasCountries ? 'PAESI DI PRESENZA' : 'ECOREGIONI / HABITAT'}
+          </div>
           <div style={{ display:'flex', flexWrap:'wrap', gap:4 }}>
-            {ids.slice(0,8).map(id => <span key={id} style={{ background:'rgba(144,216,74,.15)', color:'#D8FFC4', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{BIOREGION_V4_BY_ID[id]?.label || id}</span>)}
-            {ids.length > 8 && <span style={{ background:'rgba(255,255,255,.10)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8 }}>+{ids.length-8}</span>}
+            {hasCountries && countryCodes.slice(0,14).map(code => (
+              <span key={code} style={{ background:'rgba(240,196,73,.15)', color:'#FFE9A8', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>
+                {getFlagEmoji(code)} {getCountryDisplayName(code)}
+              </span>
+            ))}
+            {hasCountries && countryCodes.length > 14 && <span style={{ background:'rgba(255,255,255,.10)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8 }}>+{countryCodes.length-14}</span>}
+            {!hasCountries && ids.slice(0,8).map(id => <span key={id} style={{ background:'rgba(144,216,74,.15)', color:'#D8FFC4', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{BIOREGION_V4_BY_ID[id]?.label || id}</span>)}
+            {!hasCountries && ids.length > 8 && <span style={{ background:'rgba(255,255,255,.10)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8 }}>+{ids.length-8}</span>}
             {hab && hab.slice(0,6).map(h=>{
               const capitalizedH = String(h).split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
               return <span key={h} style={{ background:'rgba(255,255,255,.15)', color:'white', fontSize:10.5, fontWeight:700, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{capitalizedH}</span>;
@@ -1295,13 +1485,13 @@ function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[] }) {
               <button onClick={()=>setShowLimitsModal(false)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.6)', fontSize:20, cursor:'pointer', padding:0, width:28, height:28, display:'flex', alignItems:'center', justifyContent:'center' }}>×</button>
             </div>
             <div style={{ background:'#050505', padding:16, borderRadius:12, border:'1px solid rgba(255,215,0,.15)' }}>
-              <p style={{ margin:'0 0 12px', color:'#FFD700', fontWeight:700, fontSize:13 }}>📍 La mappa evidenzia ecoregioni biogeografiche v4:</p>
+              <p style={{ margin:'0 0 12px', color:'#FFD700', fontWeight:700, fontSize:13 }}>📍 La mappa della scheda animale evidenzia i paesi di presenza:</p>
               <ul style={{ margin:'0 0 14px', paddingLeft:20, color:'#E0E0E0', fontSize:12 }}>
-                <li style={{ marginBottom:6 }}>È una visualizzazione gameplay-oriented, non una range map scientifica puntuale.</li>
-                <li style={{ marginBottom:6 }}>Le specie d’acqua dolce possono usare proxy territoriali.</li>
-                <li>Le specie marine usano i reami marini v4.</li>
+                <li style={{ marginBottom:6 }}>I paesi derivano da distribution.countries_present / IUCN quando disponibili.</li>
+                <li style={{ marginBottom:6 }}>Il layer vettoriale resta biogeografico: le aree illuminate sono il miglior proxy geografico per quei paesi.</li>
+                <li>Per ecoregioni e reami usa la sezione Territori/Regioni.</li>
               </ul>
-              <p style={{ margin:'0', padding:'12px 14px', background:'#000000', borderLeft:'4px solid #FFD700', color:'#FFFFFF', fontSize:12, borderRadius:6, lineHeight:1.6 }}>💡 Più precisione arriverà aggiornando i dati Supabase con bioregions_v4.</p>
+              <p style={{ margin:'0', padding:'12px 14px', background:'#000000', borderLeft:'4px solid #FFD700', color:'#FFFFFF', fontSize:12, borderRadius:6, lineHeight:1.6 }}>💡 Questo rende la scheda animale più leggibile: presenza per nazioni, non per ecoregioni assegnate.</p>
             </div>
           </div>
         </div>
@@ -2144,7 +2334,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
             <div data-tour="animal-rarity"><RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:14 }} /></div>
             <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
             <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%' }}>
-              <div data-tour="animal-status"><StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/></div>
+              <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/></div>
               {showStatusMenu && (
                 <div style={{ position:'absolute', top:40, left:0, right:0, background:c.detailBg, border:`1px solid ${c.accent}33`, borderRadius:12, padding:8, display:'flex', flexDirection:'column', gap:6, zIndex:10 }}>
                   {ANIMAL_STATUS_ORDER.map(s=>(
@@ -2268,7 +2458,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
           </>
         )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
-        <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} bioregionIds={getAnimalBioregionIdsV4(a)}/>
+        <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present}/>
         {/* Endemico sotto mappa */}
         {a.is_endemic && (
           <div style={{ display:'flex', gap:8, marginTop:10, marginBottom:4 }}>
@@ -2413,6 +2603,7 @@ function countAnimalsForGeoValue(value) {
 
 function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onTutorialClick }) {
   const [flipped, setFlipped] = useState(false);
+  useAutoUnflip(flipped, setFlipped, 5000);
   const meta = CATEGORY_META?.[cat] || { label:cat, icon:'🔹', color:accentColor };
   const curiosity = animal.cat_curiosities?.[cat] || getAbilityDescription(cat, meta);
   const badgeUrl = `/badges/${cat.toLowerCase()}.png`;
@@ -2506,9 +2697,10 @@ function geometryToSvgPath(geometry, maxPoints = 120) {
   const polys = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
   return polys.map(poly => (poly || []).map(ring => ringToSvgPath(ring, maxPoints)).join('')).join('');
 }
-function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clickable=false, height=180, accent='#90D84A', marine=false, showLabels=false }) {
+function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#90D84A', marine=false, showLabels=false }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
+  const isoHighlightSet = new Set((highlightIsoCodes || []).map(code => String(code).toUpperCase()).filter(Boolean));
   const features = data?.features || [];
   const [hoverId, setHoverId] = useState(null);
   const relevant = features.filter(f => {
@@ -2516,6 +2708,10 @@ function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clic
     if (marine) return p.domain === 'marine';
     return p.domain !== 'marine';
   });
+  const featureIso2 = (feature) => String(feature?.properties?.countries_iso2 || '')
+    .split(/[;,\s]+/)
+    .map(v => v.trim().toUpperCase())
+    .filter(Boolean);
   if (!data && !error) {
     return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#0B1820,#102A35)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
   }
@@ -2533,7 +2729,8 @@ function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clic
         <g>
           {relevant.map(f => {
             const id = String(getFeatureBioregionId(f) || '');
-            const active = highlightSet.has(id);
+            const isoActive = isoHighlightSet.size > 0 && featureIso2(f).some(code => isoHighlightSet.has(code));
+            const active = highlightSet.has(id) || isoActive;
             const selected = selectedId === id || hoverId === id;
             const d = geometryToSvgPath(f.geometry, active ? 220 : 90);
             if (!d) return null;
@@ -2547,13 +2744,15 @@ function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clic
 }
 function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', mapIds=[] }) {
   const [flipped, setFlipped] = useState(false);
+  useAutoUnflip(flipped, setFlipped, 5000);
   const isMarine = item?.realmType === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
+  const coverSources = getRegionCoverSources(item, image || item?.image);
   return (
     <div onClick={()=>setFlipped(v=>!v)} style={{ marginBottom:14, borderRadius:22, minHeight:204, perspective:900, cursor:'pointer' }}>
       <div style={{ position:'relative', minHeight:204, transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
-          <RegionArt src={image || item?.image} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={126} />
+          <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={126} />
           <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
             <div style={{ width:44, height:44, borderRadius:16, background:`${accent}22`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>{icon}</div>
             <div style={{ flex:1, minWidth:0 }}>
@@ -3258,6 +3457,7 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry, select
 
 function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   const [flipped, setFlipped] = useState(false);
+  useAutoUnflip(flipped, setFlipped, 5000);
   const count = countAnimalsForGeoValue(code);
   return (
     <div className="interactive-hint" onClick={()=>setFlipped(v=>!v)} style={{ minHeight:72, borderRadius:14, background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', overflow:'hidden', cursor:'pointer', perspective:700 }}>
