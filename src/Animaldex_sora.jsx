@@ -1513,8 +1513,8 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
                 <path
                   key={`${getFeatureBioregionId(f)}-${iso.join('-')}`}
                   d={d}
-                  fill={active ? accent : present ? 'rgba(120,165,115,.40)' : 'rgba(55,85,82,.31)'}
-                  stroke={active ? '#fff' : present ? `${accent}88` : 'rgba(255,255,255,.10)'}
+                  fill={active ? accent : present ? 'rgba(168,70,55,.46)' : 'rgba(72,85,78,.30)'}
+                  stroke={active ? '#FFD0B7' : present ? `${accent}99` : 'rgba(255,255,255,.10)'}
                   strokeWidth={active ? 1.15 : present ? .65 : .35}
                   opacity={active ? .88 : present ? .60 : .38}
                 />
@@ -1565,64 +1565,128 @@ function useAnimaldexSound(enabled = true) {
   const play = (type='tap') => {
     if (!enabled || typeof window === 'undefined') return;
     const nowTs = Date.now();
-    if (nowTs - lastRef.current < 38) return;
+    if (nowTs - lastRef.current < 42) return;
     lastRef.current = nowTs;
+
     try {
       const AC = window.AudioContext || window.webkitAudioContext;
       if (!AC) return;
-      const ctx = ctxRef.current || new AC();
+      const ctx = ctxRef.current || new AC({ latencyHint:'interactive' });
       ctxRef.current = ctx;
-      if (ctx.state === 'suspended') ctx.resume?.();
-      const now = ctx.currentTime;
-      const master = ctx.createGain();
-      master.gain.setValueAtTime(0.0001, now);
-      master.gain.exponentialRampToValueAtTime(type==='reward' ? 0.12 : type==='capture' ? 0.09 : 0.045, now + 0.012);
-      master.gain.exponentialRampToValueAtTime(0.0001, now + (type==='reward' ? 0.62 : type==='capture' ? 0.42 : 0.18));
-      master.connect(ctx.destination);
 
-      const tone = (freq, start, dur, wave='sine', gain=1, detune=0) => {
-        const osc = ctx.createOscillator();
-        const g = ctx.createGain();
-        osc.type = wave;
-        osc.frequency.setValueAtTime(freq, now + start);
-        osc.detune.setValueAtTime(detune, now + start);
-        g.gain.setValueAtTime(0.0001, now + start);
-        g.gain.exponentialRampToValueAtTime(0.9 * gain, now + start + 0.014);
-        g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
-        osc.connect(g); g.connect(master);
-        osc.start(now + start); osc.stop(now + start + dur + 0.03);
+      const synth = () => {
+        const now = ctx.currentTime + 0.005;
+        const master = ctx.createGain();
+        const comp = ctx.createDynamicsCompressor();
+        comp.threshold.setValueAtTime(-22, now);
+        comp.knee.setValueAtTime(18, now);
+        comp.ratio.setValueAtTime(4, now);
+        comp.attack.setValueAtTime(0.003, now);
+        comp.release.setValueAtTime(0.18, now);
+
+        const level = type==='reward' ? 0.30 : type==='capture' ? 0.24 : type==='map' ? 0.18 : type==='back' ? 0.15 : 0.13;
+        master.gain.setValueAtTime(0.0001, now);
+        master.gain.exponentialRampToValueAtTime(level, now + 0.010);
+        master.gain.exponentialRampToValueAtTime(0.0001, now + (type==='reward' ? 0.74 : type==='capture' ? 0.52 : type==='map' ? 0.34 : 0.22));
+        master.connect(comp);
+        comp.connect(ctx.destination);
+
+        const tone = (freq, start, dur, wave='sine', gain=1, detune=0, pan=0) => {
+          const osc = ctx.createOscillator();
+          const g = ctx.createGain();
+          const panner = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+          osc.type = wave;
+          osc.frequency.setValueAtTime(freq, now + start);
+          osc.detune.setValueAtTime(detune, now + start);
+          g.gain.setValueAtTime(0.0001, now + start);
+          g.gain.exponentialRampToValueAtTime(Math.max(0.0002, 0.75 * gain), now + start + 0.012);
+          g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
+          osc.connect(g);
+          if (panner) { panner.pan.setValueAtTime(pan, now + start); g.connect(panner); panner.connect(master); }
+          else g.connect(master);
+          osc.start(now + start); osc.stop(now + start + dur + 0.04);
+        };
+
+        const noise = (start, dur, gain=.08, hp=900, lp=4200) => {
+          const len = Math.max(1, Math.floor(ctx.sampleRate * dur));
+          const buffer = ctx.createBuffer(1, len, ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i=0;i<len;i++) data[i] = (Math.random()*2-1) * Math.pow(1-i/len, 1.5);
+          const src = ctx.createBufferSource();
+          const g = ctx.createGain();
+          const hi = ctx.createBiquadFilter();
+          const lo = ctx.createBiquadFilter();
+          hi.type='highpass'; hi.frequency.setValueAtTime(hp, now + start);
+          lo.type='lowpass'; lo.frequency.setValueAtTime(lp, now + start);
+          g.gain.setValueAtTime(0.0001, now + start);
+          g.gain.exponentialRampToValueAtTime(gain, now + start + 0.008);
+          g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
+          src.buffer = buffer;
+          src.connect(hi); hi.connect(lo); lo.connect(g); g.connect(master);
+          src.start(now + start); src.stop(now + start + dur + 0.02);
+        };
+
+        if (type === 'capture') {
+          noise(0, .10, .10, 700, 5200);
+          tone(196,0,.11,'triangle',.62,-5,-.12);
+          tone(392,.055,.18,'sine',.48,0,.10);
+          tone(784,.125,.23,'sine',.26,3,.18);
+        } else if (type === 'map') {
+          noise(0,.08,.055,450,2200);
+          tone(146.8,0,.12,'triangle',.55,-7,-.12);
+          tone(293.7,.055,.18,'triangle',.36,4,.12);
+          tone(440,.12,.10,'sine',.16,0,0);
+        } else if (type === 'reward') {
+          noise(0,.18,.075,900,7800);
+          [523.25,659.25,783.99,1046.5,1318.5].forEach((f,i)=>tone(f,i*.065,.20,'sine',.32,0,(i-2)*.08));
+        } else if (type === 'back') {
+          tone(270,0,.07,'triangle',.42,0,.1);
+          tone(180,.045,.12,'triangle',.28,-4,-.1);
+          noise(0,.06,.035,1000,3500);
+        } else if (type === 'filter') {
+          tone(520,0,.055,'square',.16,0,-.12);
+          tone(680,.040,.065,'sine',.16,0,.12);
+          noise(0,.045,.025,1800,6000);
+        } else {
+          tone(620,0,.060,'sine',.30,-2,-.06);
+          tone(930,.035,.085,'sine',.18,2,.08);
+          noise(0,.035,.022,2200,7200);
+        }
       };
 
-      if (type === 'capture') {
-        tone(220,0,0.10,'triangle',.75); tone(440,.045,.16,'sine',.55); tone(880,.11,.18,'sine',.28);
-      } else if (type === 'map') {
-        tone(146.8,0,.09,'triangle',.7); tone(293.7,.05,.13,'triangle',.36);
-      } else if (type === 'reward') {
-        [523.25,659.25,783.99,1046.5].forEach((f,i)=>tone(f,i*.075,.18,'sine',.35));
-      } else if (type === 'back') {
-        tone(260,0,.08,'triangle',.45); tone(180,.04,.11,'triangle',.24);
+      if (ctx.state === 'suspended') {
+        ctx.resume?.().then(synth).catch(synth);
       } else {
-        tone(620,0,.055,'sine',.30); tone(930,.035,.075,'sine',.16);
+        synth();
       }
-    } catch {}
+    } catch (err) {
+      // Audio deve essere decorativo: mai bloccare UX.
+    }
   };
 
   useEffect(() => {
     if (!enabled || typeof document === 'undefined') return;
     const handler = (e) => {
-      const el = e.target?.closest?.('button,[data-sound],.interactive-hint,.rarity-badge');
+      const el = e.target?.closest?.('button,[data-sound],.interactive-hint,.rarity-badge,input,select');
       if (!el) return;
-      const text = String(el.textContent || '').toLowerCase();
+      const text = String(el.textContent || el.getAttribute?.('aria-label') || '').toLowerCase();
       const sound = el.getAttribute?.('data-sound')
         || (text.includes('cattur') || text.includes('fotograf') ? 'capture'
         : text.includes('map') || text.includes('mappa') ? 'map'
-        : text.includes('badge') || text.includes('award') ? 'reward'
-        : text.includes('indietro') || text.includes('‹') || text.includes('×') ? 'back'
+        : text.includes('badge') || text.includes('award') || text.includes('reward') ? 'reward'
+        : text.includes('filtr') || text.includes('ordina') || text.includes('cerca') ? 'filter'
+        : text.includes('indietro') || text.includes('‹') || text.includes('×') || text.includes('chiudi') ? 'back'
         : 'tap');
       play(sound);
     };
     document.addEventListener('pointerdown', handler, { passive:true });
-    return () => document.removeEventListener('pointerdown', handler);
+    document.addEventListener('click', handler, { passive:true });
+    document.addEventListener('touchstart', handler, { passive:true });
+    return () => {
+      document.removeEventListener('pointerdown', handler);
+      document.removeEventListener('click', handler);
+      document.removeEventListener('touchstart', handler);
+    };
   }, [enabled]);
 
   return play;
@@ -2321,11 +2385,36 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
 }
 
 
+
+function getImageSrcCandidates(src) {
+  const raw = String(src || '').trim();
+  if (!raw) return [];
+  const out = [];
+  const add = (v) => { if (v && !out.includes(v)) out.push(v); };
+  add(raw);
+  try {
+    const file = raw.split('?')[0].split('#')[0].split('/').pop();
+    if (file && !/^https?:\/\//i.test(raw)) {
+      add(`/${raw.replace(/^\/+/, '')}`);
+      add(`/animals/${file}`);
+      add(`/animal-images/${file}`);
+      add(`/images/${file}`);
+      add(`/img/${file}`);
+      add(`/assets/${file}`);
+    }
+  } catch {}
+  return out;
+}
+
 // ── Image Lightbox ────────────────────────────────────────────────────
-function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
+function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, animal }) {
   const [visible, setVisible] = useState(false);
   const [zoom, setZoom] = useState(1);
   const [lastTap, setLastTap] = useState(0);
+  const candidates = getImageSrcCandidates(src);
+  const [srcIdx, setSrcIdx] = useState(0);
+  const currentSrc = candidates[srcIdx] || src;
+  const [hardFail, setHardFail] = useState(false);
   const pinchRef = useRef({ active:false, startDist:0, startZoom:1 });
 
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
@@ -2407,26 +2496,43 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
         onTouchEnd={handleTouchEnd}
         style={boxStyle}
       >
-        <img
-          src={src}
-          alt={alt}
-          onClick={e=>e.stopPropagation()}
-          onTouchEnd={handleDoubleTap}
-          draggable={false}
-          style={{
-            maxWidth:'88%', maxHeight:'88%',
-            objectFit:'contain',
+        {!hardFail ? (
+          <img
+            src={currentSrc}
+            alt={alt}
+            onError={() => {
+              if (srcIdx < candidates.length - 1) setSrcIdx(i => i + 1);
+              else setHardFail(true);
+            }}
+            onClick={e=>e.stopPropagation()}
+            onTouchEnd={handleDoubleTap}
+            draggable={false}
+            style={{
+              maxWidth:'88%', maxHeight:'88%',
+              objectFit:'contain',
+              opacity: visible ? 1 : 0,
+              transition:'opacity .25s ease .1s, transform .12s ease-out',
+              transform:`scale(${zoom})`,
+              transformOrigin:'center center',
+              filter: `drop-shadow(0 0 40px ${accentColor}99)`,
+              cursor:'default',
+              userSelect:'none',
+              WebkitUserSelect:'none',
+              touchAction:'none',
+            }}
+          />
+        ) : (
+          <div onClick={e=>e.stopPropagation()} onTouchEnd={handleDoubleTap} style={{
+            width:'88vw', maxWidth:520, height:'70vh', maxHeight:520,
+            display:'flex', alignItems:'center', justifyContent:'center',
             opacity: visible ? 1 : 0,
             transition:'opacity .25s ease .1s, transform .12s ease-out',
             transform:`scale(${zoom})`,
-            transformOrigin:'center center',
-            filter: `drop-shadow(0 0 40px ${accentColor}99)`,
-            cursor:'default',
-            userSelect:'none',
-            WebkitUserSelect:'none',
-            touchAction:'none',
-          }}
-        />
+            filter:`drop-shadow(0 0 40px ${accentColor}99)`,
+          }}>
+            {animal ? <AnimalImg a={animal} size={Math.min(520, Math.round((typeof window !== 'undefined' ? window.innerWidth : 390) * .88))} fontSize={120} overrideStatus={animal.status || 'ricercato'} /> : <div style={{ color:'white', fontWeight:900 }}>{alt}</div>}
+          </div>
+        )}
         <button onClick={handleClose} style={{
           position:'absolute', top:16, right:16,
           background:'rgba(0,0,0,.25)', border:'none',
@@ -2722,7 +2828,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
           </div>
         </div>
       )}
-      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} bgColor={c.img} originRect={lightboxRect} onClose={()=>{setShowLightbox(false);setPullProgress(0);}}/>}
+      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} bgColor={c.img} originRect={lightboxRect} animal={{...a,status:localStatus}} onClose={()=>{setShowLightbox(false);setPullProgress(0);}}/>}
     </div>
   );
 }
@@ -2896,7 +3002,48 @@ function geometryToSvgPath(geometry, maxPoints = 120) {
   const polys = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
   return polys.map(poly => (poly || []).map(ring => ringToSvgPath(ring, maxPoints)).join('')).join('');
 }
-function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#90D84A', marine=false, showLabels=false }) {
+function geometryProjectedBounds(geometry) {
+  if (!geometry) return null;
+  const coords = geometry.type === 'Polygon' ? geometry.coordinates : geometry.type === 'MultiPolygon' ? geometry.coordinates.flat(1) : [];
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  const visitRing = (ring) => {
+    (ring || []).forEach(([lon,lat]) => {
+      const [x,y] = projectLonLat(lon,lat);
+      if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+      minX = Math.min(minX,x); maxX = Math.max(maxX,x);
+      minY = Math.min(minY,y); maxY = Math.max(maxY,y);
+    });
+  };
+  (coords || []).forEach(polyOrRing => {
+    if (Array.isArray(polyOrRing?.[0]?.[0])) polyOrRing.forEach(visitRing);
+    else visitRing(polyOrRing);
+  });
+  if (!Number.isFinite(minX)) return null;
+  return { minX, minY, maxX, maxY };
+}
+function mergeProjectedBounds(bounds = []) {
+  const valid = bounds.filter(Boolean);
+  if (!valid.length) return null;
+  return valid.reduce((acc,b)=>({
+    minX:Math.min(acc.minX,b.minX), minY:Math.min(acc.minY,b.minY),
+    maxX:Math.max(acc.maxX,b.maxX), maxY:Math.max(acc.maxY,b.maxY),
+  }), { minX:Infinity, minY:Infinity, maxX:-Infinity, maxY:-Infinity });
+}
+function boundsToViewBox(b, padRatio=.34) {
+  if (!b) return '0 0 1000 500';
+  let w = Math.max(95, b.maxX - b.minX);
+  let h = Math.max(70, b.maxY - b.minY);
+  const pad = Math.max(w,h) * padRatio;
+  let x = Math.max(0, b.minX - pad);
+  let y = Math.max(0, b.minY - pad);
+  w = Math.min(1000 - x, w + pad * 2);
+  h = Math.min(500 - y, h + pad * 2);
+  if (w < 180) { const d=(180-w)/2; x=Math.max(0,x-d); w=Math.min(1000-x,180); }
+  if (h < 120) { const d=(120-h)/2; y=Math.max(0,y-d); h=Math.min(500-y,120); }
+  return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
+}
+
+function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, showLabels=false, fullBleed=false }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const isoHighlightSet = new Set((highlightIsoCodes || []).map(code => String(code).toUpperCase()).filter(Boolean));
@@ -2911,29 +3058,36 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     .split(/[;,\s]+/)
     .map(v => v.trim().toUpperCase())
     .filter(Boolean);
+  const isActiveFeature = (f) => {
+    const id = String(getFeatureBioregionId(f) || '');
+    const isoActive = isoHighlightSet.size > 0 && featureIso2(f).some(code => isoHighlightSet.has(code));
+    return highlightSet.has(id) || isoActive;
+  };
+  const activeFeatures = relevant.filter(isActiveFeature);
+  const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .22 : .42);
+
   if (!data && !error) {
-    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#0B1820,#102A35)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
+    return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
   }
   if (error) {
-    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#102A35,#0B1820)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
+    return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
   return (
-    <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#102A35,#071017)', border:'1px solid rgba(255,255,255,.10)' }}>
-      <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
-        <rect width="1000" height="500" fill="#071017" />
-        <g opacity=".20">
-          <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#72D6FF" strokeWidth="1" />
-          <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#72D6FF" strokeWidth="1" />
+    <div style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#3A211B,#180F0D 58%,#070504)', border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)' }}>
+      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+        <rect x="-2000" y="-2000" width="5000" height="5000" fill="#0B0706" />
+        <g opacity=".18">
+          <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#C87555" strokeWidth="1.2" />
+          <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#C87555" strokeWidth="1.2" />
         </g>
         <g>
           {relevant.map(f => {
             const id = String(getFeatureBioregionId(f) || '');
-            const isoActive = isoHighlightSet.size > 0 && featureIso2(f).some(code => isoHighlightSet.has(code));
-            const active = highlightSet.has(id) || isoActive;
+            const active = isActiveFeature(f);
             const selected = selectedId === id || hoverId === id;
-            const d = geometryToSvgPath(f.geometry, active ? 220 : 90);
+            const d = geometryToSvgPath(f.geometry, active ? 260 : 100);
             if (!d) return null;
-            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(40,110,150,.42)' : 'rgba(60,98,82,.36)')} stroke={active ? accent : 'rgba(255,255,255,.13)'} strokeWidth={active ? 1.25 : 0.45} opacity={active ? 0.92 : 0.48} />;
+            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(72,95,110,.42)' : 'rgba(86,78,62,.40)')} stroke={active ? '#FFD0B7' : 'rgba(255,255,255,.14)'} strokeWidth={active ? 1.45 : 0.45} opacity={active ? 0.95 : selected ? .66 : .46} />;
           })}
         </g>
       </svg>
@@ -2947,18 +3101,16 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
   const isMarine = item?.realmType === 'marine' || item?.kind === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
   const coverSources = getRegionCoverSources(item, image || item?.image);
-  const hasIcon = !!icon;
   const handleOpen = () => {
     if (locked) return;
     onOpen?.();
   };
   return (
-    <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, minHeight:204, perspective:900, cursor:locked?'default':'pointer' }}>
+    <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, minHeight:flipped?268:204, perspective:900, cursor:locked?'default':'pointer', transition:'min-height .28s ease' }}>
       <div style={{ position:'relative', minHeight:204, transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
           <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={126} />
-          <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
-            {hasIcon && <div style={{ width:44, height:44, borderRadius:16, background:`${accent}22`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:24, flexShrink:0 }}>{icon}</div>}
+          <div style={{ padding:'13px 16px', display:'flex', alignItems:'center', gap:12, background:'rgba(38,38,40,.68)', backdropFilter:'blur(8px)' }}>
             <div style={{ flex:1, minWidth:0 }}>
               <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
               {subtitle && <div style={{ color:'rgba(255,255,255,.50)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
@@ -2968,14 +3120,14 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
               : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation();setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer' }}>Map</button>)}
           </div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:12, boxSizing:'border-box' }}>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
+        <div style={{ position:'absolute', top:0, bottom:0, left:-14, right:-14, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'11px 13px', background:'rgba(38,38,40,.72)', backdropFilter:'blur(8px)' }}>
             <div style={{ color:'white', fontSize:14, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
             <div style={{ color:accent, fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>mappa</div>
           </div>
-          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={accent} height={118} />
-          <div style={{ display:'flex', gap:8, marginTop:9 }}>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Copertina</button>
+          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={186} fullBleed />
+          <div style={{ display:'flex', gap:8, padding:'9px 12px 11px', background:'rgba(16,17,20,.96)' }}>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
             <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
           </div>
         </div>
@@ -3775,22 +3927,22 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         )}
 
         {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni · ${cont.bioregionIds.length} ecoregioni`} image={cont.image} icon={cont.label==='Africa'?'🌍':cont.label==='America'?'🌎':cont.label.includes('Oceania')?'🌏':cont.label==='Antartide'?'❄️':'🌍'} accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni · ${cont.bioregionIds.length} ecoregioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
         ))}
 
         {view==='marine' && MARINE_REALMS.map(m => {
           const locked = !unlockMap[m.id];
-          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="🌊" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
+          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
         })}
 
         {view==='regions' && continent && continent.regions.map(reg => {
           const locked = !unlockMap[reg.id];
-          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} ecoregioni`} image={reg.image} icon="▧" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} ecoregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
         })}
 
         {view==='ecoregions' && region && region.ecoregions.map(eco => {
           const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="◍" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(eco, `ecoregion:${eco.id}`, 'ecoregion')} mapIds={[eco.id]} />;
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(eco, `ecoregion:${eco.id}`, 'ecoregion')} mapIds={[eco.id]} />;
         })}
 
         {view==='countries' && (
@@ -3829,7 +3981,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='animals' && selectedTerritory && (
           <>
-            <BioregionVectorMap highlightIds={selectedTerritory.bioregionIds || (selectedTerritory.bioregionId ? [selectedTerritory.bioregionId] : [])} marine={selectedTerritory.kind==='marine'} accent={selectedTerritory.kind==='marine'?'#4FB3FF':'#90D84A'} height={190} showLabels />
+            <div style={{ margin:'0 -14px 12px' }}><BioregionVectorMap highlightIds={selectedTerritory.bioregionIds || (selectedTerritory.bioregionId ? [selectedTerritory.bioregionId] : [])} marine={selectedTerritory.kind==='marine'} accent={'#A84637'} height={240} showLabels fullBleed /></div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, margin:'12px 0' }}>
               Animali filtrati per {selectedTerritory.kind === 'marine' ? 'reame marino' : selectedTerritory.kind === 'region' ? 'regione' : 'ecoregione'}.
             </div>
