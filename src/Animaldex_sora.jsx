@@ -759,12 +759,12 @@ const BIOREGION_V4_ECOREGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.reg
 const BIOREGION_V4_REGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.regions.map(reg => ({ ...reg, type:'terrestrial_region', continentId:cont.id, continentLabel:cont.label })));
 const GEO_REGION_MAP = [
   ...BIOREGION_V4_ECOREGIONS.map(eco => ({ ...eco, type:'ecoregion', realmType:'terrestrial', label:eco.label, id:eco.id, bioregionIds:[eco.id] })),
-  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Reami marini', realmId:'marine-realms', realmLabel:'Reami marini', realmType:'marine', bioregionIds:[region.id] })),
+  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Dominio marino', realmId:'marine-realms', realmLabel:'Dominio marino', realmType:'marine', bioregionIds:[region.id] })),
 ];
 const GEO_REGION_BY_ID = Object.fromEntries(GEO_REGION_MAP.map(r => [r.id, r]));
 const GEO_REALM_BY_ID = new Map([
   ...BIOREGION_V4_CONTINENTS.map(r => [r.id, r]),
-  ['marine-realms', { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id) }]
+  ['marine-realms', { id:'marine-realms', label:'Dominio marino', image:null, regions:MARINE_REALMS, realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id) }]
 ]);
 const BIOREGION_V4_BY_ID = Object.fromEntries([...BIOREGION_V4_ECOREGIONS, ...MARINE_REALMS].map(r => [r.id, r]));
 const BIOREGION_IDS_BY_ISO = BIOREGION_V4_ECOREGIONS.reduce((acc, eco) => {
@@ -777,8 +777,8 @@ const BIOREGION_IDS_BY_ISO = BIOREGION_V4_ECOREGIONS.reduce((acc, eco) => {
 }, {});
 
 const GEO_FILTER_OPTIONS = [
-  { value:'realm-group:terrestrial', label:'Reami terrestri', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: BIOREGION_V4_CONTINENTS.flatMap(c=>c.iso || []), bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id), matchLabels:['terrestrial','reami terrestri','ecoregioni terrestri'] },
-  { value:'realm-group:marine', label:'Reami marini', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], bioregionIds:MARINE_REALMS.map(r=>r.id), matchLabels:['marine','reami marini'] },
+  { value:'realm-group:terrestrial', label:'Dominio terrestre', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: BIOREGION_V4_CONTINENTS.flatMap(c=>c.iso || []), bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id), matchLabels:['terrestrial','reami terrestri','ecoregioni terrestri'] },
+  { value:'realm-group:marine', label:'Dominio marino', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], bioregionIds:MARINE_REALMS.map(r=>r.id), matchLabels:['marine','reami marini'] },
   ...BIOREGION_V4_CONTINENTS.map(cont => ({ value:`continent:${cont.id}`, label:cont.label, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso:cont.iso || [], bioregionIds:cont.bioregionIds || [], matchLabels:[cont.label, cont.source_continente, cont.id] })),
   ...BIOREGION_V4_REGIONS.map(reg => ({ value:`territory-region:${reg.id}`, label:reg.label, c:'#20B2AA', bg:'rgba(32,178,170,.15)', iso:reg.iso || [], bioregionIds:reg.bioregionIds || [], matchLabels:[reg.label, reg.id, reg.continentLabel] })),
   ...BIOREGION_V4_ECOREGIONS.map(eco => ({ value:`ecoregion:${eco.id}`, label:eco.label, c:'#90D84A', bg:'rgba(144,216,74,.15)', iso:eco.iso || [], bioregionIds:[eco.id], matchLabels:[eco.label, eco.display_name, eco.name_en, eco.id] })),
@@ -898,6 +898,22 @@ const REGION_COVER_OVERRIDES = (() => {
   add(['Australia'], ['/regions/australia.jpg']);
   add(['Nuova Zelanda'], ['/regions/nuova_zelanda.jpg']);
   add(['Continente e isole antartiche'], ['/regions/eco-antartide.jpg','/regions/antartide.jpg']);
+
+  // ── Domini e reami marini: immagini dedicate aggiunte in public/regions ──
+  add(['Dominio terrestre','Reami terrestri','realm-group:terrestrial','terrestrial domain','terrestrial_domain'], ['/regions/terrestrial_domain.jpg']);
+  add(['Dominio marino','Reami marini','marine-realms','realm-group:marine','marine domain','marine_domain'], ['/regions/marine_domain.jpg']);
+  add(['Artico','Arctic','MAR_R_001'], ['/regions/artic_sea.jpg','/regions/arctic_sea.jpg','/regions/artide.jpg']);
+  add(['Atlantico settentrionale temperato','Temperate Northern Atlantic','MAR_R_002'], ['/regions/temperate_northern_atlantic.jpg','/regions/Temperate_Northern_Atlantic.jpg']);
+  add(['Pacifico settentrionale temperato','Temperate Northern Pacific','MAR_R_003'], ['/regions/Temperate_Northern_Pacific.jpg','/regions/temperate_northern_pacific.jpg']);
+  add(['Atlantico tropicale','Tropical Atlantic','MAR_R_004'], ['/regions/Tropical_Atlantic.jpg','/regions/tropical_atlantic.jpg']);
+  add(['Indo-Pacifico occidentale','Western Indo-Pacific','Western Indo Pacific','MAR_R_005'], ['/regions/Western_Indo-Pacific.jpg','/regions/western_indo_pacific.jpg']);
+  add(['Indo-Pacifico centrale','Central Indo-Pacific','Central Indo Pacific','MAR_R_006'], ['/regions/central_indo_pacific.jpg','/regions/Central_Indo_Pacific.jpg']);
+  add(['Indo-Pacifico orientale','Eastern Indo-Pacific','Eastern Indo Pacific','MAR_R_007'], ['/regions/eastern_indo_pacific.jpg','/regions/Eastern_Indo_Pacific.jpg']);
+  add(['Pacifico orientale tropicale','Tropical Eastern Pacific','MAR_R_008'], ['/regions/Tropical_eastern_pacific.jpg','/regions/tropical_eastern_pacific.jpg']);
+  add(['Sud America temperato','Temperate South America','Temperate Southamerica','MAR_R_009'], ['/regions/temperate_southamerica.jpg','/regions/temperate_south_america.jpg']);
+  add(['Africa meridionale temperata','Temperate Southern Africa','MAR_R_010'], ['/regions/temperate_southern_africa.jpg']);
+  add(['Australasia temperata','Temperate Australasia','MAR_R_011'], ['/regions/temperate_australasia.jpg']);
+  add(['Oceano Australe','Southern Ocean','MAR_R_012'], ['/regions/southern_ocean.jpg']);
 
   // ── Reami marini: per ora fallback oceanici se non arrivano immagini dedicate ──
   add(['Reami marini','marine-realms'], ['/regions/oceania.jpg']);
@@ -1459,28 +1475,83 @@ function countryMapPoint(code) {
 }
 
 function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#F0C449', height=230, title='Mappa paesi' }) {
-  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,120);
+  const { data, error } = useBioregionGeoJson();
+  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,160);
   const selected = selectedCountry || codes[0] || null;
+  const codeSet = new Set(codes);
+  const selectedSet = new Set(selected ? [selected] : codes);
+  const [hoverCountry, setHoverCountry] = useState(null);
+  const features = data?.features || [];
+  const featureIso2 = (feature) => String(feature?.properties?.countries_iso2 || '')
+    .split(/[;,\s]+/)
+    .map(v => v.trim().toUpperCase())
+    .filter(Boolean);
+  const relevant = features.filter(f => {
+    const p = f.properties || {};
+    return p.domain !== 'marine';
+  });
+  const activeCountryLabel = hoverCountry || selected;
+  const hasVector = !!data && !error;
+
   return (
     <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%, #16364D 0%, #071521 60%, #03080E 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:.72 }}>
-        <path d="M10 34 C18 22 31 22 39 30 C48 24 59 25 67 34 C78 29 90 35 94 48 C85 45 79 51 70 49 C61 46 54 50 45 48 C36 46 30 51 22 47 C15 44 8 45 4 50 C4 44 6 38 10 34Z" fill="rgba(255,255,255,.10)" />
-        <path d="M24 52 C33 50 43 56 42 67 C41 80 35 89 29 91 C31 79 25 72 22 64 C19 58 19 54 24 52Z" fill="rgba(255,255,255,.08)" />
-        <path d="M50 45 C56 40 64 43 68 50 C72 58 69 70 62 77 C56 72 51 66 48 58 C46 53 46 48 50 45Z" fill="rgba(255,255,255,.08)" />
-        <path d="M69 57 C76 56 84 61 89 70 C82 73 75 72 69 67 C66 64 65 59 69 57Z" fill="rgba(255,255,255,.09)" />
-        <path d="M43 90 C55 88 67 89 78 92" stroke="rgba(255,255,255,.10)" strokeWidth="1.4" fill="none" />
-      </svg>
+      {hasVector ? (
+        <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+          <rect width="1000" height="500" fill="#071017" />
+          <g opacity=".18">
+            <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#72D6FF" strokeWidth="1" />
+            <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#72D6FF" strokeWidth="1" />
+          </g>
+          <g>
+            {relevant.map(f => {
+              const iso = featureIso2(f);
+              const active = iso.some(code => selectedSet.has(code));
+              const present = iso.some(code => codeSet.has(code));
+              const d = geometryToSvgPath(f.geometry, active ? 220 : 85);
+              if (!d) return null;
+              return (
+                <path
+                  key={`${getFeatureBioregionId(f)}-${iso.join('-')}`}
+                  d={d}
+                  fill={active ? accent : present ? 'rgba(120,165,115,.40)' : 'rgba(55,85,82,.31)'}
+                  stroke={active ? '#fff' : present ? `${accent}88` : 'rgba(255,255,255,.10)'}
+                  strokeWidth={active ? 1.15 : present ? .65 : .35}
+                  opacity={active ? .88 : present ? .60 : .38}
+                />
+              );
+            })}
+          </g>
+        </svg>
+      ) : (
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:.72 }}>
+          <path d="M10 34 C18 22 31 22 39 30 C48 24 59 25 67 34 C78 29 90 35 94 48 C85 45 79 51 70 49 C61 46 54 50 45 48 C36 46 30 51 22 47 C15 44 8 45 4 50 C4 44 6 38 10 34Z" fill="rgba(255,255,255,.10)" />
+          <path d="M24 52 C33 50 43 56 42 67 C41 80 35 89 29 91 C31 79 25 72 22 64 C19 58 19 54 24 52Z" fill="rgba(255,255,255,.08)" />
+          <path d="M50 45 C56 40 64 43 68 50 C72 58 69 70 62 77 C56 72 51 66 48 58 C46 53 46 48 50 45Z" fill="rgba(255,255,255,.08)" />
+          <path d="M69 57 C76 56 84 61 89 70 C82 73 75 72 69 67 C66 64 65 59 69 57Z" fill="rgba(255,255,255,.09)" />
+          <path d="M43 90 C55 88 67 89 78 92" stroke="rgba(255,255,255,.10)" strokeWidth="1.4" fill="none" />
+        </svg>
+      )}
+
       <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900, pointerEvents:'none' }}>{title}</div>
+
       {codes.map(code => {
         const p = countryMapPoint(code);
         const active = code === selected;
         return (
-          <button key={code} onClick={()=>onSelectCountry?.(code)} title={getCountryDisplayName(code)} style={{ position:'absolute', left:`${p.x}%`, top:`${p.y}%`, transform:'translate(-50%,-50%)', width:active?19:13, height:active?19:13, borderRadius:'50%', border:`2px solid ${active?'#fff':accent}`, background:active?accent:'rgba(255,255,255,.16)', boxShadow:active?`0 0 0 4px ${accent}33, 0 0 18px ${accent}`:`0 0 10px ${accent}88`, cursor:'pointer', padding:0 }} />
+          <button
+            key={code}
+            onClick={()=>onSelectCountry?.(code)}
+            onMouseEnter={()=>setHoverCountry(code)}
+            onMouseLeave={()=>setHoverCountry(null)}
+            title={getCountryDisplayName(code)}
+            style={{ position:'absolute', left:`${p.x}%`, top:`${p.y}%`, transform:'translate(-50%,-50%)', width:active?20:13, height:active?20:13, borderRadius:'50%', border:`2px solid ${active?'#fff':accent}`, background:active?accent:'rgba(255,255,255,.18)', boxShadow:active?`0 0 0 4px ${accent}33, 0 0 18px ${accent}`:`0 0 10px ${accent}88`, cursor:'pointer', padding:0 }}
+          />
         );
       })}
-      {selected && (
-        <div style={{ position:'absolute', right:10, bottom:10, maxWidth:'72%', background:'rgba(0,0,0,.54)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)' }}>
-          {getFlagEmoji(selected)} {getCountryDisplayName(selected)}
+
+      {activeCountryLabel && (
+        <div style={{ position:'absolute', right:10, bottom:10, maxWidth:'76%', background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)' }}>
+          {getFlagEmoji(activeCountryLabel)} {getCountryDisplayName(activeCountryLabel)}
         </div>
       )}
     </div>
@@ -2596,15 +2667,6 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
         )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
-        {/* Endemico sotto mappa */}
-        {a.is_endemic && (
-          <div style={{ display:'flex', gap:8, marginTop:10, marginBottom:4 }}>
-            <div style={{ background:'rgba(0,0,0,.35)', borderRadius:10, padding:'8px 12px', display:'flex', alignItems:'center', gap:6 }}>
-              <span style={{ fontSize:14 }}>📍</span><span style={{ color:'#90D84A', fontSize:11, fontWeight:700 }}>Endemico{a.endemic_iso?.length>0?` (${a.endemic_iso.join(', ')})`:''}</span>
-            </div>
-          </div>
-        )}
-
       </div>
 
       {captureStamp && (
@@ -2853,7 +2915,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#0B1820,#102A35)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
   }
   if (error) {
-    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#102A35,#0B1820)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Inserisci il GeoJSON in public/geo.</div>;
+    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#102A35,#0B1820)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
   return (
     <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#102A35,#071017)', border:'1px solid rgba(255,255,255,.10)' }}>
@@ -3588,7 +3650,7 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
         <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Paesi visitati</div>
         <div style={{ color:'#90D84A', fontSize:13, fontWeight:1000 }}>{visited.length}</div>
       </div>
-      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati · paesi visitati" />
+      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" />
       {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese visitato per evidenziarlo sulla mappa.</div>}
     </div>
   );
