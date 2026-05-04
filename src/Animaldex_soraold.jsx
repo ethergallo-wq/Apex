@@ -759,12 +759,12 @@ const BIOREGION_V4_ECOREGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.reg
 const BIOREGION_V4_REGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.regions.map(reg => ({ ...reg, type:'terrestrial_region', continentId:cont.id, continentLabel:cont.label })));
 const GEO_REGION_MAP = [
   ...BIOREGION_V4_ECOREGIONS.map(eco => ({ ...eco, type:'ecoregion', realmType:'terrestrial', label:eco.label, id:eco.id, bioregionIds:[eco.id] })),
-  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Reami marini', realmId:'marine-realms', realmLabel:'Reami marini', realmType:'marine', bioregionIds:[region.id] })),
+  ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Dominio marino', realmId:'marine-realms', realmLabel:'Dominio marino', realmType:'marine', bioregionIds:[region.id] })),
 ];
 const GEO_REGION_BY_ID = Object.fromEntries(GEO_REGION_MAP.map(r => [r.id, r]));
 const GEO_REALM_BY_ID = new Map([
   ...BIOREGION_V4_CONTINENTS.map(r => [r.id, r]),
-  ['marine-realms', { id:'marine-realms', label:'Reami marini', image:null, regions:MARINE_REALMS, realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id) }]
+  ['marine-realms', { id:'marine-realms', label:'Dominio marino', image:null, regions:MARINE_REALMS, realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id) }]
 ]);
 const BIOREGION_V4_BY_ID = Object.fromEntries([...BIOREGION_V4_ECOREGIONS, ...MARINE_REALMS].map(r => [r.id, r]));
 const BIOREGION_IDS_BY_ISO = BIOREGION_V4_ECOREGIONS.reduce((acc, eco) => {
@@ -777,13 +777,200 @@ const BIOREGION_IDS_BY_ISO = BIOREGION_V4_ECOREGIONS.reduce((acc, eco) => {
 }, {});
 
 const GEO_FILTER_OPTIONS = [
-  { value:'realm-group:terrestrial', label:'Reami terrestri', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: BIOREGION_V4_CONTINENTS.flatMap(c=>c.iso || []), bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id), matchLabels:['terrestrial','reami terrestri','ecoregioni terrestri'] },
-  { value:'realm-group:marine', label:'Reami marini', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], bioregionIds:MARINE_REALMS.map(r=>r.id), matchLabels:['marine','reami marini'] },
+  { value:'realm-group:terrestrial', label:'Dominio terrestre', c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso: BIOREGION_V4_CONTINENTS.flatMap(c=>c.iso || []), bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id), matchLabels:['terrestrial','reami terrestri','ecoregioni terrestri'] },
+  { value:'realm-group:marine', label:'Dominio marino', c:'#4FB3FF', bg:'rgba(79,179,255,.14)', iso: [], bioregionIds:MARINE_REALMS.map(r=>r.id), matchLabels:['marine','reami marini'] },
   ...BIOREGION_V4_CONTINENTS.map(cont => ({ value:`continent:${cont.id}`, label:cont.label, c:'#6CE5C7', bg:'rgba(108,229,199,.14)', iso:cont.iso || [], bioregionIds:cont.bioregionIds || [], matchLabels:[cont.label, cont.source_continente, cont.id] })),
   ...BIOREGION_V4_REGIONS.map(reg => ({ value:`territory-region:${reg.id}`, label:reg.label, c:'#20B2AA', bg:'rgba(32,178,170,.15)', iso:reg.iso || [], bioregionIds:reg.bioregionIds || [], matchLabels:[reg.label, reg.id, reg.continentLabel] })),
   ...BIOREGION_V4_ECOREGIONS.map(eco => ({ value:`ecoregion:${eco.id}`, label:eco.label, c:'#90D84A', bg:'rgba(144,216,74,.15)', iso:eco.iso || [], bioregionIds:[eco.id], matchLabels:[eco.label, eco.display_name, eco.name_en, eco.id] })),
   ...MARINE_REALMS.map(region => ({ value:`marine:${region.id}`, label:region.label, c:'#4FB3FF', bg:'rgba(79,179,255,.15)', iso:[], bioregionIds:[region.id], matchLabels:[region.label, region.name_en, region.id, 'marine'] }))
 ];
+
+
+function normalizeCoverKey(value) {
+  return String(value || '')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase()
+    .replace(/&/g,' e ')
+    .replace(/['’]/g,'')
+    .replace(/[^a-z0-9]+/g,' ')
+    .trim();
+}
+
+function pushUnique(list, value) {
+  if (!value) return;
+  if (!list.includes(value)) list.push(value);
+}
+
+const REGION_COVER_OVERRIDES = (() => {
+  const map = {};
+  const add = (keys, paths) => {
+    const arr = Array.isArray(paths) ? paths : [paths];
+    (Array.isArray(keys) ? keys : [keys]).forEach(key => {
+      const k = normalizeCoverKey(key);
+      if (!k) return;
+      if (!map[k]) map[k] = [];
+      arr.forEach(path => pushUnique(map[k], path));
+    });
+  };
+
+  // ── Continenti / macroaree ───────────────────────────────────────────
+  add(['America','america'], ['/regions/america.jpg']);
+  add(['Eurasia','eurasia'], ['/regions/Eurasia.jpg','/regions/eurasia.jpg']);
+  add(['Africa','africa'], ['/regions/africa.jpg']);
+  add(['Oceania & Australasia','Oceania e Australasia','oceania-australasia','oceania australasia'], ['/regions/oceania_australasia.jpg','/regions/oceania.jpg']);
+  add(['Antartide','Antarctic','Antarctica'], ['/regions/antartide.jpg']);
+
+  // ── Regioni terrestri ────────────────────────────────────────────────
+  add(['Nord America Boreale','nord-america-boreale'], ['/regions/region-nord-america-boreale.jpg']);
+  add(['Nord America Temperato','nord america temperato'], ['/regions/nord_america_temperato.jpg','/regions/region-nord-america-temperato.jpg']);
+  add(['America Centrale e Caraibi','America Centrale & Caraibi'], ['/regions/region-america-centrale-caraibi.jpg']);
+  add(['Sud America Tropicale'], ['/regions/region-sud-america-tropicale.jpg']);
+  add(['Sud America Andino e Temperato'], ['/regions/region-sud-america-andino-temperato.jpg']);
+
+  add(['Eurasia Occidentale'], ['/regions/region-eurasia-occidentale.jpg','/regions/Eurasia_Occidentale.jpg']);
+  add(['Eurasia Settentrionale'], ['/regions/region-eurasia-settentrionale.jpg']);
+  add(['Eurasia Centrale'], ['/regions/region-eurasia-centrale.jpg']);
+  add(['Eurasia Orientale'], ['/regions/region-eurasia-orientale.jpg']);
+  add(['Eurasia Meridionale e Sud-Est','Eurasia Meridionale e Sud Est'], ['/regions/foreste_sudest_asiatico.jpg','/regions/malesia_indonesia_occ.jpg']);
+
+  add(['Africa Settentrionale'], ['/regions/Nord_Africa.jpg','/regions/nord_africa.jpg']);
+  add(['Africa Centrale e Orientale'], ['/regions/region-africa-centrale-orientale.jpg']);
+  add(['Africa Meridionale'], ['/regions/region-africa-meridionale.jpg']);
+
+  add(['Australasia'], ['/regions/oceania_australasia.jpg','/regions/australia.jpg']);
+  add(['Oceania'], ['/regions/oceania.jpg','/regions/Isole_oceaniche.jpg']);
+  add(['Antartide'], ['/regions/antartide.jpg']);
+
+  // ── Ecoregioni terrestri ─────────────────────────────────────────────
+  add(['Alaska'], ['/regions/eco-alaska.jpg']);
+  add(['Groenlandia'], ['/regions/groenlandia.jpg']);
+  add(['Foreste boreali canadesi'], ['/regions/foreste_boreali_canadesi.jpg']);
+  add(['Tundra canadese'], ['/regions/eco-tundra-canadese.jpg']);
+  add(['Costa del Pacifico settentrionale'], ['/regions/eco-costa-pacifico-settentrionale.jpg']);
+  add(['Foreste nordamericane'], ['/regions/eco-foreste-nordamericane.jpg']);
+  add(['Grandi Pianure'], ['/regions/grandi_pianure.jpg']);
+  add(['Ovest americano'], ['/regions/Ovest_americano.jpg','/regions/ovest_americano.jpg']);
+  add(['Savane e foreste del sud-est degli Stati Uniti','Savane e foreste sud-est Stati Uniti'], ['/regions/eco-savana-foreste-sud-est-stati-uniti.jpg']);
+  add(['Zone aride messicane'], ['/regions/eco-zone-aride-messicane.jpg']);
+  add(['America Centrale'], ['/regions/eco-america-centrale.jpg']);
+  add(['Caraibi'], ['/regions/eco-caraibi.jpg']);
+  add(['Amazzonia'], ['/regions/amazzonia.jpg']);
+  add(['America meridionale settentrionale'], ['/regions/eco-america-meridionale-settentrionale.jpg']);
+  add(['Cerrado brasiliano e costa atlantica'], ['/regions/eco-cerrado-brasiliano-costa-atlantica.jpg']);
+  add(['Ande e costa del Pacifico'], ['/regions/eco-ande-costa-pacifico.jpg']);
+  add(['Praterie sudamericane'], ['/regions/eco-praterie-sudamericane.jpg']);
+
+  add(['Mediterraneo'], ['/regions/mediterraneao.jpg','/regions/mediterraneo.jpg']);
+  add(['Europa Temperata'], ['/regions/Europa_temperata.jpg','/regions/europa_temperata.jpg']);
+  add(['Foreste montane europee'], ['/regions/eco-foreste-montane-europee.jpg']);
+  add(['Isole anglo-celtiche'], ['/regions/eco-isole-anglo-celtiche.jpg']);
+  add(['Mare di Okhotsk e tundra/taiga di Bering','Mare di Okhotsk e tundra taiga di Bering'], ['/regions/eco-mare-okhotsk-tundra-taiga-bering.jpg']);
+  add(['Scandinavia e foreste boreali occidentali'], ['/regions/Scandinavia_foreste_boreali','/regions/Scandinavia_foreste_boreali.jpg','/regions/scandinavia_foreste_boreali.jpg']);
+  add(['Siberia e foreste boreali orientali'], ['/regions/eco-siberia-foreste-boreali-orientali.jpg']);
+  add(['Tundra paleartica'], ['/regions/eco-tundra-palearctica.jpg','/regions/eco-tundra-paleartica.jpg']);
+  add(['Grande penisola arabica'], ['/regions/eco-grande-penisola-arabica.jpg']);
+  add(["Mar Caspio e deserti dell'Asia centrale",'Mar Caspio e deserti Asia centrale'], ['/regions/caspio_asia_centrale','/regions/caspio_asia_centrale.jpg']);
+  add(['Monti Altai-Sayan'], ['/regions/eco-monti-altai-sayan.jpg']);
+  add(['Monti Tien Shan'], ['/regions/eco-monti-tien-shan.jpg']);
+  add(['Steppe kazake e foreste emiboreali'], ['/regions/Steppe_kazake_foreste.jpg','/regions/steppe_kazake_foreste.jpg']);
+  add(['Deserti e foreste persiane'], ['/regions/eco-deserti-foreste-persiane.jpg']);
+  add(['Foreste e steppe del Mar Nero'], ['/regions/eco-foreste-steppe-mar-nero.jpg']);
+  add(['Isole giapponesi'], ['/regions/Isole_giapponesi.jpg','/regions/isole_giapponesi.jpg']);
+  add(['Altopiano tibetano'], ['/regions/eco-altopiano-tibetano.jpg']);
+  add(["Deserti dell'Asia orientale",'Deserti Asia orientale'], ['/regions/eco-deserti-asia-orientale.jpg']);
+  add(["Foreste dell'Asia centro-orientale",'Foreste Asia centro orientale'], ['/regions/eco-foreste-asia-centro-orientale.jpg']);
+  add(["Foreste dell'Asia nord-orientale",'Foreste Asia nord orientale'], ['/regions/eco-foreste-asia-nord-orientale.jpg']);
+  add(['Praterie mongole'], ['/regions/eco-praterie-mongole.jpg']);
+  add(['Malesia e Indonesia occidentale'], ['/regions/malesia_indonesia_occ.jpg']);
+  add(['Subcontinente indiano'], ['/regions/subcontinente_indiano','/regions/subcontinente_indiano.jpg']);
+  add(['Foreste del sud-est asiatico','Foreste sud-est asiatico'], ['/regions/foreste_sudest_asiatico.jpg']);
+
+  add(['Nord Africa'], ['/regions/Nord_Africa.jpg','/regions/nord_africa.jpg']);
+  add(['Afrotropici equatoriali'], ['/regions/afrotropici_equatoriali.jpg']);
+  add(['Afrotropici sub-sahariani'], ['/regions/eco-afrotropici-sub-sahariani.jpg']);
+  add(["Corno d'Africa",'Corno Africa'], ['/regions/eco-corno-africa.jpg']);
+  add(["Madagascar e costa dell'Africa orientale",'Madagascar e costa Africa orientale'], ['/regions/madagascar.jpg']);
+  add(['Afrotropici meridionali'], ['/regions/afrotropici_meridionali.jpg']);
+  add(['Afrotropici subequatoriali'], ['/regions/eco-afrotropici-subequatoriali.jpg']);
+
+  add(['Isole australasiatiche e Indonesia orientale'], ['/regions/Isole_australasiatiche_Indonesia_orientale.jpg','/regions/isole_australasiatiche_indonesia_orientale.jpg']);
+  add(['Isole oceaniche'], ['/regions/Isole_oceaniche.jpg','/regions/isole_oceaniche.jpg']);
+  add(['Australia'], ['/regions/australia.jpg']);
+  add(['Nuova Zelanda'], ['/regions/nuova_zelanda.jpg']);
+  add(['Continente e isole antartiche'], ['/regions/eco-antartide.jpg','/regions/antartide.jpg']);
+
+  // ── Domini e reami marini: immagini dedicate aggiunte in public/regions ──
+  add(['Dominio terrestre','Reami terrestri','realm-group:terrestrial','terrestrial domain','terrestrial_domain'], ['/regions/terrestrial_domain.jpg']);
+  add(['Dominio marino','Reami marini','marine-realms','realm-group:marine','marine domain','marine_domain'], ['/regions/marine_domain.jpg']);
+  add(['Artico','Arctic','MAR_R_001'], ['/regions/artic_sea.jpg','/regions/arctic_sea.jpg','/regions/artide.jpg']);
+  add(['Atlantico settentrionale temperato','Temperate Northern Atlantic','MAR_R_002'], ['/regions/temperate_northern_atlantic.jpg','/regions/Temperate_Northern_Atlantic.jpg']);
+  add(['Pacifico settentrionale temperato','Temperate Northern Pacific','MAR_R_003'], ['/regions/Temperate_Northern_Pacific.jpg','/regions/temperate_northern_pacific.jpg']);
+  add(['Atlantico tropicale','Tropical Atlantic','MAR_R_004'], ['/regions/Tropical_Atlantic.jpg','/regions/tropical_atlantic.jpg']);
+  add(['Indo-Pacifico occidentale','Western Indo-Pacific','Western Indo Pacific','MAR_R_005'], ['/regions/Western_Indo-Pacific.jpg','/regions/western_indo_pacific.jpg']);
+  add(['Indo-Pacifico centrale','Central Indo-Pacific','Central Indo Pacific','MAR_R_006'], ['/regions/central_indo_pacific.jpg','/regions/Central_Indo_Pacific.jpg']);
+  add(['Indo-Pacifico orientale','Eastern Indo-Pacific','Eastern Indo Pacific','MAR_R_007'], ['/regions/eastern_indo_pacific.jpg','/regions/Eastern_Indo_Pacific.jpg']);
+  add(['Pacifico orientale tropicale','Tropical Eastern Pacific','MAR_R_008'], ['/regions/Tropical_eastern_pacific.jpg','/regions/tropical_eastern_pacific.jpg']);
+  add(['Sud America temperato','Temperate South America','Temperate Southamerica','MAR_R_009'], ['/regions/temperate_southamerica.jpg','/regions/temperate_south_america.jpg']);
+  add(['Africa meridionale temperata','Temperate Southern Africa','MAR_R_010'], ['/regions/temperate_southern_africa.jpg']);
+  add(['Australasia temperata','Temperate Australasia','MAR_R_011'], ['/regions/temperate_australasia.jpg']);
+  add(['Oceano Australe','Southern Ocean','MAR_R_012'], ['/regions/southern_ocean.jpg']);
+
+  // ── Reami marini: per ora fallback oceanici se non arrivano immagini dedicate ──
+  add(['Reami marini','marine-realms'], ['/regions/oceania.jpg']);
+  add(['Artico'], ['/regions/artide.jpg','/regions/antartide.jpg']);
+  add(['Atlantico settentrionale temperato','Temperate Northern Atlantic'], ['/regions/atlantico-settentrionale-temperato.jpg','/regions/oceania.jpg']);
+  add(['Pacifico settentrionale temperato','Temperate Northern Pacific'], ['/regions/pacifico-settentrionale-temperato.jpg','/regions/oceania.jpg']);
+  add(['Atlantico tropicale','Tropical Atlantic'], ['/regions/atlantico-tropicale.jpg','/regions/oceania.jpg']);
+  add(['Indo-Pacifico occidentale','Western Indo-Pacific'], ['/regions/indo-pacifico-occidentale.jpg','/regions/oceania.jpg']);
+  add(['Indo-Pacifico centrale','Central Indo-Pacific'], ['/regions/indo-pacifico-centrale.jpg','/regions/oceania.jpg']);
+  add(['Indo-Pacifico orientale','Eastern Indo-Pacific'], ['/regions/indo-pacifico-orientale.jpg','/regions/oceania.jpg']);
+  add(['Pacifico orientale tropicale','Tropical Eastern Pacific'], ['/regions/pacifico-orientale-tropicale.jpg','/regions/oceania.jpg']);
+  add(['Sud America temperato','Temperate South America'], ['/regions/sud-america-temperato.jpg','/regions/region-sud-america-andino-temperato.jpg']);
+  add(['Africa meridionale temperata','Temperate Southern Africa'], ['/regions/africa-meridionale-temperata.jpg','/regions/region-africa-meridionale.jpg']);
+  add(['Australasia temperata','Temperate Australasia'], ['/regions/australasia-temperata.jpg','/regions/australia.jpg']);
+  add(['Oceano Australe','Southern Ocean'], ['/regions/oceano-australe.jpg','/regions/antartide.jpg']);
+
+  return map;
+})();
+
+function autoRegionCoverCandidates(label) {
+  const clean = normalizeCoverKey(label);
+  if (!clean) return [];
+  const hyphen = clean.replace(/\s+/g,'-');
+  const underscore = clean.replace(/\s+/g,'_');
+  return [
+    `/regions/${underscore}.jpg`,
+    `/regions/${hyphen}.jpg`,
+    `/regions/eco-${hyphen}.jpg`,
+    `/regions/region-${hyphen}.jpg`,
+    `/regions/ecoregions/${hyphen}.jpg`,
+    `/regions/regions/${hyphen}.jpg`,
+    `/regions/continents/${hyphen}.jpg`,
+  ];
+}
+
+function getRegionCoverSources(item, provided) {
+  const out = [];
+  const addSources = (sources) => {
+    (Array.isArray(sources) ? sources : (sources ? [sources] : [])).forEach(src => pushUnique(out, src));
+  };
+
+  const keys = [
+    item?.id,
+    item?.label,
+    item?.display_name,
+    item?.name_en,
+    item?.source_continente,
+    item?.bioregionId,
+  ].filter(Boolean);
+
+  keys.forEach(key => addSources(REGION_COVER_OVERRIDES[normalizeCoverKey(key)]));
+  keys.forEach(key => addSources(autoRegionCoverCandidates(key)));
+  addSources(provided || item?.image);
+
+  return out;
+}
+
 
 
 function getVisitedCountries() {
@@ -1242,6 +1429,269 @@ function StatRow({ label, base, scale, color, unit }) {
   );
 }
 
+
+function useAutoUnflip(flipped, setFlipped, delay = 5000) {
+  useEffect(() => {
+    if (!flipped) return undefined;
+    const t = setTimeout(() => setFlipped(false), delay);
+    return () => clearTimeout(t);
+  }, [flipped, setFlipped, delay]);
+}
+
+function getCountryRegionGroup(code) {
+  const c = String(code || '').toUpperCase();
+  const groups = {
+    northAmerica:['US','CA','MX','GL','BM','PM'],
+    centralAmerica:['BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY'],
+    southAmerica:['CO','VE','EC','PE','BO','BR','GF','GY','SR','AR','CL','UY','PY','FK'],
+    europe:['IS','NO','SE','FI','DK','FO','AX','IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE','ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS','XK'],
+    africa:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD','SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','STP','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS','ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS','MG','MU','RE','YT','KM','SC','IO','SH'],
+    asia:['RU','KZ','MN','TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF','PK','IN','BD','LK','NP','BT','MV','CN','HK','MO','TW','KR','KP','JP','MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'],
+    oceania:['AU','NF','CX','CC','NZ','PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'],
+    antarctic:['AQ','BV','GS','HM','TF']
+  };
+  for (const [group, codes] of Object.entries(groups)) if (codes.includes(c)) return { group, index: codes.indexOf(c), total: codes.length };
+  return { group:'other', index:(c.charCodeAt(0)||0)+(c.charCodeAt(1)||0), total:16 };
+}
+
+function countryMapPoint(code) {
+  const { group, index, total } = getCountryRegionGroup(code);
+  const t = total > 1 ? index / (total - 1) : 0;
+  const wobble = ((String(code).charCodeAt(0) || 65) % 7 - 3) * .8;
+  const lerp = (a,b,v)=>a+(b-a)*v;
+  const ranges = {
+    northAmerica:[20,28,24,48],
+    centralAmerica:[26,42,48,62],
+    southAmerica:[33,43,58,83],
+    europe:[44,57,26,43],
+    africa:[46,60,47,78],
+    asia:[59,80,24,58],
+    oceania:[73,90,65,84],
+    antarctic:[45,62,88,94],
+    other:[50,56,48,58],
+  };
+  const [x1,x2,y1,y2] = ranges[group] || ranges.other;
+  return { x: lerp(x1,x2,t) + wobble, y: lerp(y1,y2, (t*1.37)%1) };
+}
+
+function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#F0C449', height=230, title='Mappa paesi' }) {
+  const { data, error } = useBioregionGeoJson();
+  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,160);
+  const selected = selectedCountry || codes[0] || null;
+  const codeSet = new Set(codes);
+  const selectedSet = new Set(selected ? [selected] : codes);
+  const [hoverCountry, setHoverCountry] = useState(null);
+  const features = data?.features || [];
+  const featureIso2 = (feature) => String(feature?.properties?.countries_iso2 || '')
+    .split(/[;,\s]+/)
+    .map(v => v.trim().toUpperCase())
+    .filter(Boolean);
+  const relevant = features.filter(f => {
+    const p = f.properties || {};
+    return p.domain !== 'marine';
+  });
+  const activeCountryLabel = hoverCountry || selected;
+  const hasVector = !!data && !error;
+
+  return (
+    <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%, #16364D 0%, #071521 60%, #03080E 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
+      {hasVector ? (
+        <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+          <rect width="1000" height="500" fill="#071017" />
+          <g opacity=".18">
+            <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#72D6FF" strokeWidth="1" />
+            <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#72D6FF" strokeWidth="1" />
+          </g>
+          <g>
+            {relevant.map(f => {
+              const iso = featureIso2(f);
+              const active = iso.some(code => selectedSet.has(code));
+              const present = iso.some(code => codeSet.has(code));
+              const d = geometryToSvgPath(f.geometry, active ? 220 : 85);
+              if (!d) return null;
+              return (
+                <path
+                  key={`${getFeatureBioregionId(f)}-${iso.join('-')}`}
+                  d={d}
+                  fill={active ? accent : present ? 'rgba(168,70,55,.46)' : 'rgba(72,85,78,.30)'}
+                  stroke={active ? '#FFD0B7' : present ? `${accent}99` : 'rgba(255,255,255,.10)'}
+                  strokeWidth={active ? 1.15 : present ? .65 : .35}
+                  opacity={active ? .88 : present ? .60 : .38}
+                />
+              );
+            })}
+          </g>
+        </svg>
+      ) : (
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:.72 }}>
+          <path d="M10 34 C18 22 31 22 39 30 C48 24 59 25 67 34 C78 29 90 35 94 48 C85 45 79 51 70 49 C61 46 54 50 45 48 C36 46 30 51 22 47 C15 44 8 45 4 50 C4 44 6 38 10 34Z" fill="rgba(255,255,255,.10)" />
+          <path d="M24 52 C33 50 43 56 42 67 C41 80 35 89 29 91 C31 79 25 72 22 64 C19 58 19 54 24 52Z" fill="rgba(255,255,255,.08)" />
+          <path d="M50 45 C56 40 64 43 68 50 C72 58 69 70 62 77 C56 72 51 66 48 58 C46 53 46 48 50 45Z" fill="rgba(255,255,255,.08)" />
+          <path d="M69 57 C76 56 84 61 89 70 C82 73 75 72 69 67 C66 64 65 59 69 57Z" fill="rgba(255,255,255,.09)" />
+          <path d="M43 90 C55 88 67 89 78 92" stroke="rgba(255,255,255,.10)" strokeWidth="1.4" fill="none" />
+        </svg>
+      )}
+
+      <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900, pointerEvents:'none' }}>{title}</div>
+
+      {codes.map(code => {
+        const p = countryMapPoint(code);
+        const active = code === selected;
+        return (
+          <button
+            key={code}
+            onClick={()=>onSelectCountry?.(code)}
+            onMouseEnter={()=>setHoverCountry(code)}
+            onMouseLeave={()=>setHoverCountry(null)}
+            title={getCountryDisplayName(code)}
+            style={{ position:'absolute', left:`${p.x}%`, top:`${p.y}%`, transform:'translate(-50%,-50%)', width:active?20:13, height:active?20:13, borderRadius:'50%', border:`2px solid ${active?'#fff':accent}`, background:active?accent:'rgba(255,255,255,.18)', boxShadow:active?`0 0 0 4px ${accent}33, 0 0 18px ${accent}`:`0 0 10px ${accent}88`, cursor:'pointer', padding:0 }}
+          />
+        );
+      })}
+
+      {activeCountryLabel && (
+        <div style={{ position:'absolute', right:10, bottom:10, maxWidth:'76%', background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)' }}>
+          {getFlagEmoji(activeCountryLabel)} {getCountryDisplayName(activeCountryLabel)}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function useAnimaldexSound(enabled = true) {
+  const ctxRef = useRef(null);
+  const lastRef = useRef(0);
+
+  const play = (type='tap') => {
+    if (!enabled || typeof window === 'undefined') return;
+    const nowTs = Date.now();
+    if (nowTs - lastRef.current < 42) return;
+    lastRef.current = nowTs;
+
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return;
+      const ctx = ctxRef.current || new AC({ latencyHint:'interactive' });
+      ctxRef.current = ctx;
+
+      const synth = () => {
+        const now = ctx.currentTime + 0.005;
+        const master = ctx.createGain();
+        const comp = ctx.createDynamicsCompressor();
+        comp.threshold.setValueAtTime(-22, now);
+        comp.knee.setValueAtTime(18, now);
+        comp.ratio.setValueAtTime(4, now);
+        comp.attack.setValueAtTime(0.003, now);
+        comp.release.setValueAtTime(0.18, now);
+
+        const level = type==='reward' ? 0.30 : type==='capture' ? 0.24 : type==='map' ? 0.18 : type==='back' ? 0.15 : 0.13;
+        master.gain.setValueAtTime(0.0001, now);
+        master.gain.exponentialRampToValueAtTime(level, now + 0.010);
+        master.gain.exponentialRampToValueAtTime(0.0001, now + (type==='reward' ? 0.74 : type==='capture' ? 0.52 : type==='map' ? 0.34 : 0.22));
+        master.connect(comp);
+        comp.connect(ctx.destination);
+
+        const tone = (freq, start, dur, wave='sine', gain=1, detune=0, pan=0) => {
+          const osc = ctx.createOscillator();
+          const g = ctx.createGain();
+          const panner = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+          osc.type = wave;
+          osc.frequency.setValueAtTime(freq, now + start);
+          osc.detune.setValueAtTime(detune, now + start);
+          g.gain.setValueAtTime(0.0001, now + start);
+          g.gain.exponentialRampToValueAtTime(Math.max(0.0002, 0.75 * gain), now + start + 0.012);
+          g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
+          osc.connect(g);
+          if (panner) { panner.pan.setValueAtTime(pan, now + start); g.connect(panner); panner.connect(master); }
+          else g.connect(master);
+          osc.start(now + start); osc.stop(now + start + dur + 0.04);
+        };
+
+        const noise = (start, dur, gain=.08, hp=900, lp=4200) => {
+          const len = Math.max(1, Math.floor(ctx.sampleRate * dur));
+          const buffer = ctx.createBuffer(1, len, ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i=0;i<len;i++) data[i] = (Math.random()*2-1) * Math.pow(1-i/len, 1.5);
+          const src = ctx.createBufferSource();
+          const g = ctx.createGain();
+          const hi = ctx.createBiquadFilter();
+          const lo = ctx.createBiquadFilter();
+          hi.type='highpass'; hi.frequency.setValueAtTime(hp, now + start);
+          lo.type='lowpass'; lo.frequency.setValueAtTime(lp, now + start);
+          g.gain.setValueAtTime(0.0001, now + start);
+          g.gain.exponentialRampToValueAtTime(gain, now + start + 0.008);
+          g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
+          src.buffer = buffer;
+          src.connect(hi); hi.connect(lo); lo.connect(g); g.connect(master);
+          src.start(now + start); src.stop(now + start + dur + 0.02);
+        };
+
+        if (type === 'capture') {
+          noise(0, .10, .10, 700, 5200);
+          tone(196,0,.11,'triangle',.62,-5,-.12);
+          tone(392,.055,.18,'sine',.48,0,.10);
+          tone(784,.125,.23,'sine',.26,3,.18);
+        } else if (type === 'map') {
+          noise(0,.08,.055,450,2200);
+          tone(146.8,0,.12,'triangle',.55,-7,-.12);
+          tone(293.7,.055,.18,'triangle',.36,4,.12);
+          tone(440,.12,.10,'sine',.16,0,0);
+        } else if (type === 'reward') {
+          noise(0,.18,.075,900,7800);
+          [523.25,659.25,783.99,1046.5,1318.5].forEach((f,i)=>tone(f,i*.065,.20,'sine',.32,0,(i-2)*.08));
+        } else if (type === 'back') {
+          tone(270,0,.07,'triangle',.42,0,.1);
+          tone(180,.045,.12,'triangle',.28,-4,-.1);
+          noise(0,.06,.035,1000,3500);
+        } else if (type === 'filter') {
+          tone(520,0,.055,'square',.16,0,-.12);
+          tone(680,.040,.065,'sine',.16,0,.12);
+          noise(0,.045,.025,1800,6000);
+        } else {
+          tone(620,0,.060,'sine',.30,-2,-.06);
+          tone(930,.035,.085,'sine',.18,2,.08);
+          noise(0,.035,.022,2200,7200);
+        }
+      };
+
+      if (ctx.state === 'suspended') {
+        ctx.resume?.().then(synth).catch(synth);
+      } else {
+        synth();
+      }
+    } catch (err) {
+      // Audio deve essere decorativo: mai bloccare UX.
+    }
+  };
+
+  useEffect(() => {
+    if (!enabled || typeof document === 'undefined') return;
+    const handler = (e) => {
+      const el = e.target?.closest?.('button,[data-sound],.interactive-hint,.rarity-badge,input,select');
+      if (!el) return;
+      const text = String(el.textContent || el.getAttribute?.('aria-label') || '').toLowerCase();
+      const sound = el.getAttribute?.('data-sound')
+        || (text.includes('cattur') || text.includes('fotograf') ? 'capture'
+        : text.includes('map') || text.includes('mappa') ? 'map'
+        : text.includes('badge') || text.includes('award') || text.includes('reward') ? 'reward'
+        : text.includes('filtr') || text.includes('ordina') || text.includes('cerca') ? 'filter'
+        : text.includes('indietro') || text.includes('‹') || text.includes('×') || text.includes('chiudi') ? 'back'
+        : 'tap');
+      play(sound);
+    };
+    document.addEventListener('pointerdown', handler, { passive:true });
+    document.addEventListener('click', handler, { passive:true });
+    document.addEventListener('touchstart', handler, { passive:true });
+    return () => {
+      document.removeEventListener('pointerdown', handler);
+      document.removeEventListener('click', handler);
+      document.removeEventListener('touchstart', handler);
+    };
+  }, [enabled]);
+
+  return play;
+}
+
 function TrophicTile({ level }) {
   const t = TROPHIC[level] || TROPHIC[3];
   return (
@@ -1258,28 +1708,36 @@ function TrophicTile({ level }) {
   );
 }
 
-function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[] }) {
+function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[], animal }) {
   const [showLimitsModal, setShowLimitsModal] = useState(false);
-  const ids = (bioregionIds || []).filter(Boolean);
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const countryCodes = Array.from(new Set((countriesPresent || []).map(code => String(code).toUpperCase()).filter(Boolean)));
+  const isEndemic = countryCodes.length === 1 || !!animal?.categories?.includes?.('EVO_ENDEMIC_SPECIES') || !!animal?.raw?.endemic;
+  const hasCountries = countryCodes.length > 0;
+  const activeCountry = selectedCountry || countryCodes[0] || null;
   return (
     <div style={{ borderRadius:12, overflow:'hidden', background:'#07131F' }}>
-      {ids.length > 0 ? (
-        <BioregionVectorMap highlightIds={ids} accent={accentColor} marine={false} height={280} showLabels />
-      ) : countriesPresent && countriesPresent.length > 0 ? (
-        <BioregionVectorMap highlightIds={Array.from(new Set(countriesPresent.flatMap(code => BIOREGION_IDS_BY_ISO[String(code).toUpperCase()] || [])))} accent={accentColor} marine={false} height={280} showLabels />
+      {hasCountries ? (
+        <CountryPresenceMap countryCodes={countryCodes} selectedCountry={activeCountry} onSelectCountry={setSelectedCountry} accent={accentColor} height={280} title="Mappa paesi di presenza" />
       ) : (
         <div style={{ padding:12, borderBottom:'1px solid rgba(255,255,255,.1)' }}>
-          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE BIOGEOGRAFICA</div>
-          <span style={{ color:'rgba(255,255,255,.3)', fontSize:11 }}>Nessun dato disponibile</span>
+          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE</div>
+          <span style={{ color:'rgba(255,255,255,.3)', fontSize:11 }}>Nessun paese di presenza disponibile</span>
         </div>
       )}
       <div style={{ padding:12, display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:8 }}>
         <div style={{ flex:1 }}>
-          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>ECOREGIONI / HABITAT</div>
-          <div style={{ display:'flex', flexWrap:'wrap', gap:4 }}>
-            {ids.slice(0,8).map(id => <span key={id} style={{ background:'rgba(144,216,74,.15)', color:'#D8FFC4', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{BIOREGION_V4_BY_ID[id]?.label || id}</span>)}
-            {ids.length > 8 && <span style={{ background:'rgba(255,255,255,.10)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8 }}>+{ids.length-8}</span>}
-            {hab && hab.slice(0,6).map(h=>{
+          <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>
+            PAESI DI PRESENZA
+          </div>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:5 }}>
+            {hasCountries && countryCodes.slice(0,14).map(code => (
+              <span key={code} style={{ background:code===activeCountry?'rgba(36,74,112,.95)':'rgba(36,74,112,.52)', border:'1px solid rgba(91,184,245,.22)', color:'#DCEEFF', fontSize:10.5, fontWeight:850, padding:'5px 9px', borderRadius:9, letterSpacing:.1 }}>
+                {getFlagEmoji(code)} {getCountryDisplayName(code)} {isEndemic && countryCodes.length===1 ? <strong style={{ color:'#90D84A', marginLeft:4 }}>· Endemico</strong> : null}
+              </span>
+            ))}
+            {hasCountries && countryCodes.length > 14 && <span style={{ background:'rgba(255,255,255,.10)', color:'rgba(255,255,255,.72)', fontSize:10.5, fontWeight:800, padding:'5px 9px', borderRadius:8 }}>+{countryCodes.length-14}</span>}
+            {!hasCountries && hab && hab.slice(0,6).map(h=>{
               const capitalizedH = String(h).split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
               return <span key={h} style={{ background:'rgba(255,255,255,.15)', color:'white', fontSize:10.5, fontWeight:700, padding:'5px 9px', borderRadius:8, letterSpacing:.1 }}>{capitalizedH}</span>;
             })}
@@ -1289,19 +1747,14 @@ function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[] }) {
       </div>
       {showLimitsModal && (
         <div style={{ position:'fixed', inset:0, background:'#000000', display:'flex', alignItems:'center', justifyContent:'center', zIndex:9999, padding:16 }}>
-          <div style={{ background:'#0A0A0C', borderRadius:16, padding:24, maxWidth:400, width:'100%', border:'2px solid rgba(255,215,0,.3)', boxShadow:'0 20px 80px rgba(0,0,0,.95)' }}>
+          <div style={{ background:'#0A0A0C', borderRadius:16, padding:24, maxWidth:400, width:'100%', border:'2px solid rgba(91,184,245,.3)', boxShadow:'0 20px 80px rgba(0,0,0,.95)' }}>
             <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:18 }}>
-              <h3 style={{ margin:0, color:'#FFD700', fontSize:18, fontWeight:800 }}>⚠️ Limiti della Visualizzazione</h3>
+              <h3 style={{ margin:0, color:'#9DD3FF', fontSize:18, fontWeight:800 }}>Paesi di presenza</h3>
               <button onClick={()=>setShowLimitsModal(false)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.6)', fontSize:20, cursor:'pointer', padding:0, width:28, height:28, display:'flex', alignItems:'center', justifyContent:'center' }}>×</button>
             </div>
-            <div style={{ background:'#050505', padding:16, borderRadius:12, border:'1px solid rgba(255,215,0,.15)' }}>
-              <p style={{ margin:'0 0 12px', color:'#FFD700', fontWeight:700, fontSize:13 }}>📍 La mappa evidenzia ecoregioni biogeografiche v4:</p>
-              <ul style={{ margin:'0 0 14px', paddingLeft:20, color:'#E0E0E0', fontSize:12 }}>
-                <li style={{ marginBottom:6 }}>È una visualizzazione gameplay-oriented, non una range map scientifica puntuale.</li>
-                <li style={{ marginBottom:6 }}>Le specie d’acqua dolce possono usare proxy territoriali.</li>
-                <li>Le specie marine usano i reami marini v4.</li>
-              </ul>
-              <p style={{ margin:'0', padding:'12px 14px', background:'#000000', borderLeft:'4px solid #FFD700', color:'#FFFFFF', fontSize:12, borderRadius:6, lineHeight:1.6 }}>💡 Più precisione arriverà aggiornando i dati Supabase con bioregions_v4.</p>
+            <div style={{ background:'#050505', padding:16, borderRadius:12, border:'1px solid rgba(91,184,245,.15)' }}>
+              <p style={{ margin:'0 0 12px', color:'#9DD3FF', fontWeight:700, fontSize:13 }}>La scheda animale evidenzia solo le nazioni in cui la specie è indicata come presente.</p>
+              <p style={{ margin:'0', padding:'12px 14px', background:'#000000', borderLeft:'4px solid #5BB8F5', color:'#FFFFFF', fontSize:12, borderRadius:6, lineHeight:1.6 }}>Per reami, regioni ed ecoregioni usa la sezione Territori.</p>
             </div>
           </div>
         </div>
@@ -1319,7 +1772,7 @@ function StatusBadge({ status, accentColor, onClick }) {
     ? { ...base, bg: accentColor, c:'#fff', dot:'#fff' }
     : base;
   return (
-    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:12, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%' }}>
+    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:12, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%', boxSizing:'border-box', maxWidth:'100%' }}>
       <span style={{ width:7, height:7, borderRadius:'50%', background:cfg.dot || cfg.c, display:'inline-block', boxShadow:normalized==='catturato'?'0 0 8px rgba(255,255,255,.55)':'none' }} />
       {cfg.label}
     </div>
@@ -1468,13 +1921,22 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
             textAlign:'center',
             lineHeight:'12.5px',
             textShadow: found ? '0 1px 2px rgba(0,0,0,.55)' : 'none',
+            display:'flex',
+            alignItems:'center',
+            justifyContent:'center',
+            overflow:'hidden',
+          }}
+        ><span style={{
             display:'-webkit-box',
             WebkitLineClamp:2,
             WebkitBoxOrient:'vertical',
             overflow:'hidden',
-            wordBreak:'break-word',
-          }}
-        >{a.com}</div>
+            textOverflow:'ellipsis',
+            wordBreak:'normal',
+            overflowWrap:'normal',
+            textWrap:'balance',
+            width:'100%'
+          }}>{a.com}</span></div>
       )}
     </div>
   );
@@ -1923,11 +2385,36 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
 }
 
 
+
+function getImageSrcCandidates(src) {
+  const raw = String(src || '').trim();
+  if (!raw) return [];
+  const out = [];
+  const add = (v) => { if (v && !out.includes(v)) out.push(v); };
+  add(raw);
+  try {
+    const file = raw.split('?')[0].split('#')[0].split('/').pop();
+    if (file && !/^https?:\/\//i.test(raw)) {
+      add(`/${raw.replace(/^\/+/, '')}`);
+      add(`/animals/${file}`);
+      add(`/animal-images/${file}`);
+      add(`/images/${file}`);
+      add(`/img/${file}`);
+      add(`/assets/${file}`);
+    }
+  } catch {}
+  return out;
+}
+
 // ── Image Lightbox ────────────────────────────────────────────────────
-function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) {
+function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, animal }) {
   const [visible, setVisible] = useState(false);
   const [zoom, setZoom] = useState(1);
   const [lastTap, setLastTap] = useState(0);
+  const candidates = getImageSrcCandidates(src);
+  const [srcIdx, setSrcIdx] = useState(0);
+  const currentSrc = candidates[srcIdx] || src;
+  const [hardFail, setHardFail] = useState(false);
   const pinchRef = useRef({ active:false, startDist:0, startZoom:1 });
 
   useEffect(() => { requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true))); }, []);
@@ -2009,26 +2496,43 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose }) 
         onTouchEnd={handleTouchEnd}
         style={boxStyle}
       >
-        <img
-          src={src}
-          alt={alt}
-          onClick={e=>e.stopPropagation()}
-          onTouchEnd={handleDoubleTap}
-          draggable={false}
-          style={{
-            maxWidth:'88%', maxHeight:'88%',
-            objectFit:'contain',
+        {!hardFail ? (
+          <img
+            src={currentSrc}
+            alt={alt}
+            onError={() => {
+              if (srcIdx < candidates.length - 1) setSrcIdx(i => i + 1);
+              else setHardFail(true);
+            }}
+            onClick={e=>e.stopPropagation()}
+            onTouchEnd={handleDoubleTap}
+            draggable={false}
+            style={{
+              maxWidth:'88%', maxHeight:'88%',
+              objectFit:'contain',
+              opacity: visible ? 1 : 0,
+              transition:'opacity .25s ease .1s, transform .12s ease-out',
+              transform:`scale(${zoom})`,
+              transformOrigin:'center center',
+              filter: `drop-shadow(0 0 40px ${accentColor}99)`,
+              cursor:'default',
+              userSelect:'none',
+              WebkitUserSelect:'none',
+              touchAction:'none',
+            }}
+          />
+        ) : (
+          <div onClick={e=>e.stopPropagation()} onTouchEnd={handleDoubleTap} style={{
+            width:'88vw', maxWidth:520, height:'70vh', maxHeight:520,
+            display:'flex', alignItems:'center', justifyContent:'center',
             opacity: visible ? 1 : 0,
             transition:'opacity .25s ease .1s, transform .12s ease-out',
             transform:`scale(${zoom})`,
-            transformOrigin:'center center',
-            filter: `drop-shadow(0 0 40px ${accentColor}99)`,
-            cursor:'default',
-            userSelect:'none',
-            WebkitUserSelect:'none',
-            touchAction:'none',
-          }}
-        />
+            filter:`drop-shadow(0 0 40px ${accentColor}99)`,
+          }}>
+            {animal ? <AnimalImg a={animal} size={Math.min(520, Math.round((typeof window !== 'undefined' ? window.innerWidth : 390) * .88))} fontSize={120} overrideStatus={animal.status || 'ricercato'} /> : <div style={{ color:'white', fontWeight:900 }}>{alt}</div>}
+          </div>
+        )}
         <button onClick={handleClose} style={{
           position:'absolute', top:16, right:16,
           background:'rgba(0,0,0,.25)', border:'none',
@@ -2139,12 +2643,12 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
             }}>
             <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
           </div>
-          <div style={{ flex:1, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
+          <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con stemma */}
             <div data-tour="animal-rarity"><RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:14 }} /></div>
             <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
             <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%' }}>
-              <div data-tour="animal-status"><StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/></div>
+              <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/></div>
               {showStatusMenu && (
                 <div style={{ position:'absolute', top:40, left:0, right:0, background:c.detailBg, border:`1px solid ${c.accent}33`, borderRadius:12, padding:8, display:'flex', flexDirection:'column', gap:6, zIndex:10 }}>
                   {ANIMAL_STATUS_ORDER.map(s=>(
@@ -2268,16 +2772,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
           </>
         )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
-        <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} bioregionIds={getAnimalBioregionIdsV4(a)}/>
-        {/* Endemico sotto mappa */}
-        {a.is_endemic && (
-          <div style={{ display:'flex', gap:8, marginTop:10, marginBottom:4 }}>
-            <div style={{ background:'rgba(0,0,0,.35)', borderRadius:10, padding:'8px 12px', display:'flex', alignItems:'center', gap:6 }}>
-              <span style={{ fontSize:14 }}>📍</span><span style={{ color:'#90D84A', fontSize:11, fontWeight:700 }}>Endemico{a.endemic_iso?.length>0?` (${a.endemic_iso.join(', ')})`:''}</span>
-            </div>
-          </div>
-        )}
-
+        <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
       </div>
 
       {captureStamp && (
@@ -2333,7 +2828,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
           </div>
         </div>
       )}
-      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} bgColor={c.img} originRect={lightboxRect} onClose={()=>{setShowLightbox(false);setPullProgress(0);}}/>}
+      {showLightbox && <ImageLightbox src={a.image_url} alt={a.com} accentColor={c.accent} bgColor={c.img} originRect={lightboxRect} animal={{...a,status:localStatus}} onClose={()=>{setShowLightbox(false);setPullProgress(0);}}/>}
     </div>
   );
 }
@@ -2413,6 +2908,7 @@ function countAnimalsForGeoValue(value) {
 
 function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onTutorialClick }) {
   const [flipped, setFlipped] = useState(false);
+  useAutoUnflip(flipped, setFlipped, 5000);
   const meta = CATEGORY_META?.[cat] || { label:cat, icon:'🔹', color:accentColor };
   const curiosity = animal.cat_curiosities?.[cat] || getAbilityDescription(cat, meta);
   const badgeUrl = `/badges/${cat.toLowerCase()}.png`;
@@ -2506,9 +3002,51 @@ function geometryToSvgPath(geometry, maxPoints = 120) {
   const polys = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.type === 'MultiPolygon' ? geometry.coordinates : [];
   return polys.map(poly => (poly || []).map(ring => ringToSvgPath(ring, maxPoints)).join('')).join('');
 }
-function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clickable=false, height=180, accent='#90D84A', marine=false, showLabels=false }) {
+function geometryProjectedBounds(geometry) {
+  if (!geometry) return null;
+  const coords = geometry.type === 'Polygon' ? geometry.coordinates : geometry.type === 'MultiPolygon' ? geometry.coordinates.flat(1) : [];
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  const visitRing = (ring) => {
+    (ring || []).forEach(([lon,lat]) => {
+      const [x,y] = projectLonLat(lon,lat);
+      if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+      minX = Math.min(minX,x); maxX = Math.max(maxX,x);
+      minY = Math.min(minY,y); maxY = Math.max(maxY,y);
+    });
+  };
+  (coords || []).forEach(polyOrRing => {
+    if (Array.isArray(polyOrRing?.[0]?.[0])) polyOrRing.forEach(visitRing);
+    else visitRing(polyOrRing);
+  });
+  if (!Number.isFinite(minX)) return null;
+  return { minX, minY, maxX, maxY };
+}
+function mergeProjectedBounds(bounds = []) {
+  const valid = bounds.filter(Boolean);
+  if (!valid.length) return null;
+  return valid.reduce((acc,b)=>({
+    minX:Math.min(acc.minX,b.minX), minY:Math.min(acc.minY,b.minY),
+    maxX:Math.max(acc.maxX,b.maxX), maxY:Math.max(acc.maxY,b.maxY),
+  }), { minX:Infinity, minY:Infinity, maxX:-Infinity, maxY:-Infinity });
+}
+function boundsToViewBox(b, padRatio=.34) {
+  if (!b) return '0 0 1000 500';
+  let w = Math.max(95, b.maxX - b.minX);
+  let h = Math.max(70, b.maxY - b.minY);
+  const pad = Math.max(w,h) * padRatio;
+  let x = Math.max(0, b.minX - pad);
+  let y = Math.max(0, b.minY - pad);
+  w = Math.min(1000 - x, w + pad * 2);
+  h = Math.min(500 - y, h + pad * 2);
+  if (w < 180) { const d=(180-w)/2; x=Math.max(0,x-d); w=Math.min(1000-x,180); }
+  if (h < 120) { const d=(120-h)/2; y=Math.max(0,y-d); h=Math.min(500-y,120); }
+  return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
+}
+
+function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, showLabels=false, fullBleed=false }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
+  const isoHighlightSet = new Set((highlightIsoCodes || []).map(code => String(code).toUpperCase()).filter(Boolean));
   const features = data?.features || [];
   const [hoverId, setHoverId] = useState(null);
   const relevant = features.filter(f => {
@@ -2516,28 +3054,40 @@ function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clic
     if (marine) return p.domain === 'marine';
     return p.domain !== 'marine';
   });
+  const featureIso2 = (feature) => String(feature?.properties?.countries_iso2 || '')
+    .split(/[;,\s]+/)
+    .map(v => v.trim().toUpperCase())
+    .filter(Boolean);
+  const isActiveFeature = (f) => {
+    const id = String(getFeatureBioregionId(f) || '');
+    const isoActive = isoHighlightSet.size > 0 && featureIso2(f).some(code => isoHighlightSet.has(code));
+    return highlightSet.has(id) || isoActive;
+  };
+  const activeFeatures = relevant.filter(isActiveFeature);
+  const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .22 : .42);
+
   if (!data && !error) {
-    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#0B1820,#102A35)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
+    return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
   }
   if (error) {
-    return <div style={{ height, borderRadius:16, background:'linear-gradient(135deg,#102A35,#0B1820)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Inserisci il GeoJSON in public/geo.</div>;
+    return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
   return (
-    <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#102A35,#071017)', border:'1px solid rgba(255,255,255,.10)' }}>
-      <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
-        <rect width="1000" height="500" fill="#071017" />
-        <g opacity=".20">
-          <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#72D6FF" strokeWidth="1" />
-          <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#72D6FF" strokeWidth="1" />
+    <div style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#3A211B,#180F0D 58%,#070504)', border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)' }}>
+      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+        <rect x="-2000" y="-2000" width="5000" height="5000" fill="#0B0706" />
+        <g opacity=".18">
+          <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#C87555" strokeWidth="1.2" />
+          <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#C87555" strokeWidth="1.2" />
         </g>
         <g>
           {relevant.map(f => {
             const id = String(getFeatureBioregionId(f) || '');
-            const active = highlightSet.has(id);
+            const active = isActiveFeature(f);
             const selected = selectedId === id || hoverId === id;
-            const d = geometryToSvgPath(f.geometry, active ? 220 : 90);
+            const d = geometryToSvgPath(f.geometry, active ? 260 : 100);
             if (!d) return null;
-            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(40,110,150,.42)' : 'rgba(60,98,82,.36)')} stroke={active ? accent : 'rgba(255,255,255,.13)'} strokeWidth={active ? 1.25 : 0.45} opacity={active ? 0.92 : 0.48} />;
+            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(72,95,110,.42)' : 'rgba(86,78,62,.40)')} stroke={active ? '#FFD0B7' : 'rgba(255,255,255,.14)'} strokeWidth={active ? 1.45 : 0.45} opacity={active ? 0.95 : selected ? .66 : .46} />;
           })}
         </g>
       </svg>
@@ -2545,37 +3095,52 @@ function BioregionVectorMap({ highlightIds = [], selectedId=null, onSelect, clic
     </div>
   );
 }
-function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', mapIds=[] }) {
+function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', mapIds=[], mapDisabled=false }) {
   const [flipped, setFlipped] = useState(false);
-  const isMarine = item?.realmType === 'marine';
+  useAutoUnflip(flipped, setFlipped, 5000);
+  const isMarine = item?.realmType === 'marine' || item?.kind === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
+  const coverSources = getRegionCoverSources(item, image || item?.image);
+  const handleOpen = () => {
+    if (locked) return;
+    onOpen?.();
+  };
   return (
-    <div onClick={()=>setFlipped(v=>!v)} style={{ marginBottom:14, borderRadius:22, minHeight:204, perspective:900, cursor:'pointer' }}>
+    <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, minHeight:flipped?268:204, perspective:900, cursor:locked?'default':'pointer', transition:'min-height .28s ease' }}>
       <div style={{ position:'relative', minHeight:204, transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
-          <RegionArt src={image || item?.image} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={126} />
-          <div style={{ padding:'12px 14px', display:'flex', alignItems:'center', gap:12 }}>
-            <div style={{ width:44, height:44, borderRadius:16, background:`${accent}22`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>{icon}</div>
-            <div style={{ flex:1, minWidth:0 }}>
+          <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={204} />
+          <div style={{
+            position:'absolute',
+            left:0,
+            right:0,
+            bottom:0,
+            minHeight:94,
+            padding:'38px 16px 14px',
+            boxSizing:'border-box',
+            display:'flex',
+            alignItems:'flex-end',
+            gap:12,
+            background:'linear-gradient(180deg, rgba(38,38,40,0) 0%, rgba(38,38,40,.30) 34%, rgba(38,38,40,.72) 68%, rgba(38,38,40,.98) 100%)'
+          }}>
+            <div style={{ flex:1, minWidth:0, textShadow:'0 2px 10px rgba(0,0,0,.72)' }}>
               <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
-              {subtitle && <div style={{ color:'rgba(255,255,255,.50)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
+              {subtitle && <div style={{ color:'rgba(255,255,255,.62)', fontSize:11.5, marginTop:4, lineHeight:1.25 }}>{subtitle}</div>}
             </div>
             {locked
-              ? <button onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:accent, color:'#071017', fontWeight:950, cursor:'pointer' }}>Sblocca</button>
-              : <button onClick={e=>{e.stopPropagation();onOpen?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer' }}>{openLabel}</button>}
+              ? <button data-sound="map" onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ height:36, padding:'0 11px', borderRadius:12, border:'none', background:accent, color:'#071017', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Sblocca</button>
+              : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation();setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Map</button>)}
           </div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:12, boxSizing:'border-box' }}>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
+        <div style={{ position:'absolute', top:0, bottom:0, left:-14, right:-14, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'11px 13px', background:'rgba(38,38,40,.72)', backdropFilter:'blur(8px)' }}>
             <div style={{ color:'white', fontSize:14, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
             <div style={{ color:accent, fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>mappa</div>
           </div>
-          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={accent} height={118} />
-          <div style={{ display:'flex', gap:8, marginTop:9 }}>
-            <button onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Copertina</button>
-            {locked
-              ? <button onClick={e=>{e.stopPropagation();onUnlock?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:accent, color:'#071017', fontWeight:950 }}>Sblocca</button>
-              : <button onClick={e=>{e.stopPropagation();onOpen?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>}
+          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={186} fullBleed />
+          <div style={{ display:'flex', gap:8, padding:'9px 12px 11px', background:'rgba(16,17,20,.96)' }}>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
+            <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
           </div>
         </div>
       </div>
@@ -2682,7 +3247,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish,
       title:'Espansione territoriale',
       kicker:'Regioni e scratch map',
       body:'La sezione Regioni mostra continenti, aree geografiche e scratch map. Quando visiti una nazione o una regione, registrala: Animaldex sblocca gli animali locali come Ricercati, visibili con PNG reale e pronti da avvistare.',
-      chips:['Sblocca regioni quando viaggi','Nazioni visitate contano per award GEO','“Vedi animali” apre una grid già filtrata'],
+      chips:['Sblocca regioni quando viaggi','Paesi visitati contano per award GEO','“Vedi animali” apre una grid già filtrata'],
       action:'Mostra profilo',
     },
     profile: {
@@ -2980,7 +3545,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
             <div style={{ color:'white', fontSize:42, fontWeight:1000, marginTop:8 }}>{result?.unlocked_count ?? predictedUnlocks}</div>
             <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati caricati nel tuo Animaldex</div>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Oltre ai 10 animali proposti dal radar, potrai dichiarare altri avvistamenti filtrando la grid per nazione oppure aprendo la scratch map: tocca una nazione visitata e usa “Vedi animali” per trovarli già filtrati.</div>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Oltre ai 10 animali proposti dal radar, potrai dichiarare altri avvistamenti filtrando la grid per paese oppure aprendo la scratch map: tocca un paese visitato e usa “Vedi animali” per trovarli già filtrati.</div>
             {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Animaldex entra subito, la sincronizzazione continua in background.</div>}
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:20 }}>
               <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🎯</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercati visibili</div></div>
@@ -3092,13 +3657,15 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null }) {
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, userProfile, user, onLogout }) {
   const fileInputRef = useRef(null);
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
   const badgeCount = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)).size;
+  const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
+  const residenceCountry = userProfile?.residence_country || userProfile?.country || visitedCountries?.[0] || null;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
@@ -3112,11 +3679,26 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
         <div style={{ background:'linear-gradient(135deg,#102B4D 0%,#1B567B 58%,#0B1D35 100%)', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.08)' }}>
           <button onClick={()=>fileInputRef.current?.click()} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(135,198,255,.18)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)' }}>👤</button>
           <input ref={fileInputRef} type="file" accept="image/*" style={{ display:'none' }} onChange={()=>{}} />
-          <div style={{ color:'white', fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>Esploratore</div>
-          <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>Profilo placeholder</div>
+          <div style={{ color:'white', fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>{displayName}</div>
+          <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>{user?.email || 'Profilo Animaldex'}</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
           {statCards.map(card=>(<button key={card.label} onClick={card.onClick} style={{ background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit' }}><div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1 }}>{card.value}</div><div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{card.label}</div></button>))}
+        </div>
+        <div style={{ marginTop:16, background:'#222226', border:'1px solid rgba(255,255,255,.08)', borderRadius:18, padding:16 }}>
+          <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:12 }}>Account</div>
+          {[
+            ['Nome', displayName],
+            ['Email', user?.email || '—'],
+            ['Paese di residenza', residenceCountry ? `${getFlagEmoji(residenceCountry)} ${getCountryDisplayName(residenceCountry)}` : 'Non impostato'],
+            ['Amici', 'In arrivo'],
+          ].map(([label,value])=>(
+            <div key={label} style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, padding:'11px 0', borderTop:'1px solid rgba(255,255,255,.06)' }}>
+              <span style={{ color:'rgba(255,255,255,.50)', fontSize:12, fontWeight:800 }}>{label}</span>
+              <span style={{ color:'white', fontSize:13, fontWeight:900, textAlign:'right', overflow:'hidden', textOverflow:'ellipsis' }}>{value}</span>
+            </div>
+          ))}
+          <button data-sound="back" onClick={onLogout} style={{ marginTop:14, width:'100%', height:44, borderRadius:14, border:'none', background:'rgba(255,59,48,.16)', color:'#FF8A80', fontWeight:900, fontFamily:'inherit', cursor:'pointer' }}>Log out</button>
         </div>
       </div>
     </div>
@@ -3224,40 +3806,23 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
 
 
 
-function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry, selectedEcoregion, onSelectEcoregion, onOpenEcoregion }) {
-  const [mode, setMode] = useState('countries');
-  const visited = visitedCountries.slice(0, 90);
-  const countryDerivedIds = Array.from(new Set(visited.flatMap(code => BIOREGION_IDS_BY_ISO[String(code).toUpperCase()] || [])));
-  const highlightIds = mode === 'countries'
-    ? (selectedCountry ? (BIOREGION_IDS_BY_ISO[String(selectedCountry).toUpperCase()] || []) : countryDerivedIds)
-    : countryDerivedIds;
-  const activeEco = selectedEcoregion || highlightIds[0];
+function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
+  const visited = Array.from(new Set((visitedCountries || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0, 120);
   return (
     <div style={{ marginBottom:12 }}>
-      <div style={{ display:'flex', gap:8, marginBottom:8 }}>
-        <button onClick={()=>setMode('countries')} style={{ flex:1, height:36, borderRadius:12, border:'none', background:mode==='countries'?'#90D84A':'#2A2A2C', color:mode==='countries'?'#111':'white', fontWeight:900, cursor:'pointer' }}>Nazioni visitate</button>
-        <button onClick={()=>setMode('ecoregions')} style={{ flex:1, height:36, borderRadius:12, border:'none', background:mode==='ecoregions'?'#90D84A':'#2A2A2C', color:mode==='ecoregions'?'#111':'white', fontWeight:900, cursor:'pointer' }}>Ecoregioni</button>
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:8 }}>
+        <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Paesi visitati</div>
+        <div style={{ color:'#90D84A', fontSize:13, fontWeight:1000 }}>{visited.length}</div>
       </div>
-      <div style={{ position:'relative' }}>
-        <BioregionVectorMap highlightIds={highlightIds} selectedId={activeEco} onSelect={(id)=>{ onSelectEcoregion?.(id); }} clickable={mode==='ecoregions'} accent={mode==='countries'?'#F0C449':'#90D84A'} height={250} showLabels />
-        <div style={{ position:'absolute', left:14, top:12, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900, pointerEvents:'none' }}>{mode==='countries'?'Mappa reale: aree biogeografiche collegate alle nazioni visitate':'Mappa reale: ecoregioni visitate/sbloccate'}</div>
-      </div>
-      {mode==='countries' && visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi una nazione visitata per evidenziare le ecoregioni collegate.</div>}
-      {mode==='ecoregions' && activeEco && (
-        <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.20)', borderRadius:15, padding:12, marginTop:8, display:'flex', alignItems:'center', gap:10 }}>
-          <div style={{ flex:1 }}>
-            <div style={{ color:'white', fontWeight:900, fontSize:13 }}>{BIOREGION_V4_BY_ID[activeEco]?.label || activeEco}</div>
-            <div style={{ color:'rgba(255,255,255,.48)', fontSize:11, marginTop:3 }}>{countAnimalsForGeoValue(`ecoregion:${activeEco}`)} animali associati</div>
-          </div>
-          <button onClick={()=>onOpenEcoregion?.(activeEco)} style={{ height:34, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
-        </div>
-      )}
+      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" />
+      {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese visitato per evidenziarlo sulla mappa.</div>}
     </div>
   );
 }
 
 function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   const [flipped, setFlipped] = useState(false);
+  useAutoUnflip(flipped, setFlipped, 5000);
   const count = countAnimalsForGeoValue(code);
   return (
     <div className="interactive-hint" onClick={()=>setFlipped(v=>!v)} style={{ minHeight:72, borderRadius:14, background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)', overflow:'hidden', cursor:'pointer', perspective:700 }}>
@@ -3269,7 +3834,7 @@ function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
         </div>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:'10px 12px', boxSizing:'border-box', display:'flex', alignItems:'center', gap:10 }}>
           <div style={{ color:'#90D84A', fontSize:22, fontWeight:900, minWidth:34, textAlign:'center' }}>{count}</div>
-          <div style={{ color:'rgba(255,255,255,.65)', fontSize:11, fontWeight:700, lineHeight:1.2, flex:1 }}>animali associati a questa nazione</div>
+          <div style={{ color:'rgba(255,255,255,.65)', fontSize:11, fontWeight:700, lineHeight:1.2, flex:1 }}>animali associati a questo paese</div>
           <button onClick={e=>{e.stopPropagation();onOpenAnimals?.(code);}} style={{ height:34, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
         </div>
       </div>
@@ -3288,10 +3853,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [selectedTerritory, setSelectedTerritory] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
-  const [selectedEcoregion, setSelectedEcoregion] = useState(null);
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
-  const [selectedTripTags, setSelectedTripTags] = useState(['nature']);
   const [unlockMap, setUnlockMap] = useState(() => {
     try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks_v4') || '{}'); } catch { return {}; }
   });
@@ -3306,13 +3869,14 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (!q) return true;
     return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
   }).slice(0,160);
-  const toggleTripTag = (tag) => setSelectedTripTags(prev => prev.includes(tag) ? prev.filter(t=>t!==tag) : [...prev, tag]);
   const submitDestination = async () => {
     if (!selectedDestinationIso) return;
-    await onAddDestination?.(selectedDestinationIso, selectedTripTags);
-    const next = Array.from(new Set([...visitedCountries, selectedDestinationIso])).sort();
+    const iso = selectedDestinationIso;
+    const next = Array.from(new Set([...visitedCountries, iso])).sort();
     onVisitedCountriesChange?.(next);
-    setSelectedCountry(selectedDestinationIso);
+    setSelectedCountry(iso);
+    setSelectedDestinationIso('');
+    try { await onAddDestination?.(iso, []); } catch (err) { console.warn('[Animaldex] aggiunta paese non bloccante:', err); }
   };
   const removeVisitedCountry = (code) => {
     const list = visitedCountries.filter(c=>c!==code);
@@ -3323,9 +3887,9 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
   const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
-    if (view === 'countries') return 'Scratch map';
-    if (view === 'terrestrial') return 'Reami terrestri';
-    if (view === 'marine') return 'Reami marini';
+    if (view === 'countries') return 'Paesi visitati';
+    if (view === 'terrestrial') return 'Dominio terrestre';
+    if (view === 'marine') return 'Dominio marino';
     if (view === 'regions') return continent?.label || 'Regioni';
     if (view === 'ecoregions') return region?.label || 'Ecoregioni';
     if (view === 'animals') return selectedTerritory?.label || 'Animali';
@@ -3360,81 +3924,76 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:24, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
               <div style={{ display:'flex', alignItems:'center', gap:12 }}>
                 <div style={{ width:58, height:58, borderRadius:20, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
-                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Scratch map</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Nazioni visitate o ecoregioni collegate, su mappa vettoriale.</div></div>
+                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
                 <div style={{ color:'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
               </div>
             </button>
             <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
               <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
               <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un dominio</div>
-              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>I reami terrestri portano a continenti, regioni ed ecoregioni. I reami marini usano i 12 grandi bacini biogeografici.</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Il dominio terrestre porta a continenti, regioni ed ecoregioni. Il dominio marino usa i 12 grandi bacini biogeografici.</div>
             </div>
-            <TerritoryCard item={{label:'Reami terrestri', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Reami terrestri" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} ecoregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="🌍" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} />
-            <TerritoryCard item={{label:'Reami marini', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Reami marini" subtitle={`${MARINE_REALMS.length} reami · dati marini v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="🌊" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} />
+            <TerritoryCard item={{label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} ecoregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} mapDisabled />
+            <TerritoryCard item={{label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} mapDisabled />
           </>
         )}
 
         {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni · ${cont.bioregionIds.length} ecoregioni`} image={cont.image} icon={cont.label==='Africa'?'🌍':cont.label==='America'?'🌎':cont.label.includes('Oceania')?'🌏':cont.label==='Antartide'?'❄️':'🌍'} accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni · ${cont.bioregionIds.length} ecoregioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
         ))}
 
         {view==='marine' && MARINE_REALMS.map(m => {
           const locked = !unlockMap[m.id];
-          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Reame marino'} image={m.image} icon="🌊" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
+          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
         })}
 
         {view==='regions' && continent && continent.regions.map(reg => {
           const locked = !unlockMap[reg.id];
-          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} ecoregioni`} image={reg.image} icon="▧" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} ecoregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
         })}
 
         {view==='ecoregions' && region && region.ecoregions.map(eco => {
           const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="◍" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(eco, `ecoregion:${eco.id}`, 'ecoregion')} mapIds={[eco.id]} />;
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(eco, `ecoregion:${eco.id}`, 'ecoregion')} mapIds={[eco.id]} />;
         })}
 
         {view==='countries' && (
           <div>
-            <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} selectedEcoregion={selectedEcoregion} onSelectEcoregion={setSelectedEcoregion} onOpenEcoregion={(id)=>onOpenRegion?.(`ecoregion:${id}`, BIOREGION_V4_BY_ID[id]?.label || id)} />
+            <ScratchMap visitedCountries={visitedCountries} selectedCountry={selectedCountry} onSelectCountry={setSelectedCountry} />
             {selectedCountry && (
               <div style={{ background:'#1A1A1C', border:'1px solid rgba(144,216,74,.2)', borderRadius:16, padding:14, marginBottom:12 }}>
                 <div style={{ display:'flex', alignItems:'center', gap:10 }}>
                   <span style={{ fontSize:28 }}>{getFlagEmoji(selectedCountry)}</span>
-                  <div style={{ flex:1 }}><div style={{ color:'white', fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:12 }}>{countAnimalsForGeoValue(selectedCountry)} animali associati · {(BIOREGION_IDS_BY_ISO[selectedCountry]||[]).length} ecoregioni</div></div>
+                  <div style={{ flex:1 }}><div style={{ color:'white', fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:12 }}>{countAnimalsForGeoValue(selectedCountry)} animali associati</div></div>
                   <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:36, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
                 </div>
               </div>
             )}
             {visitedCountries.length > 0 && (
               <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
-                <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:10 }}>Nazioni visitate</div>
+                <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:10 }}>Paesi visitati</div>
                 <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
                   {visitedCountries.map(code => <VisitedCountryCard key={code} code={code} onOpenAnimals={onOpenCountry} onRemove={removeVisitedCountry} />)}
                 </div>
               </div>
             )}
             <div style={{ background:'#111113', border:'1px solid rgba(255,255,255,.08)', borderRadius:16, padding:14, marginBottom:12 }}>
-              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi nazioni visitate</div>
-              <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+              <div style={{ color:'white', fontSize:18, fontWeight:900 }}>Aggiungi paesi visitati</div>
+              <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca paese..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
                 {scratchCountries.map(code => {
                   const active = visitedSet.has(code) || selectedDestinationIso === code;
                   return <button key={code} onClick={()=>setSelectedDestinationIso(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
                 })}
               </div>
-              <div style={{ marginTop:12, display:'flex', flexWrap:'wrap', gap:7 }}>
-                {TRIP_TAGS.map(tag=>(
-                  <button key={tag} onClick={()=>toggleTripTag(tag)} style={{ border:'none', borderRadius:999, padding:'7px 10px', background:selectedTripTags.includes(tag)?'rgba(144,216,74,.24)':'rgba(255,255,255,.08)', color:selectedTripTags.includes(tag)?'#BFEFA4':'rgba(255,255,255,.68)', fontSize:11, fontWeight:800, cursor:'pointer' }}>{tag}</button>
-                ))}
-              </div>
-              <button disabled={!selectedDestinationIso || destinationsLoading} onClick={submitDestination} style={{ marginTop:12, width:'100%', height:42, borderRadius:13, border:'none', background:selectedDestinationIso?'#90D84A':'#3A3A3C', color:selectedDestinationIso?'#111':'rgba(255,255,255,.38)', fontWeight:900, cursor:selectedDestinationIso?'pointer':'default' }}>{destinationsLoading ? 'Sblocco animali...' : selectedDestinationIso ? `Aggiungi ${getCountryDisplayName(selectedDestinationIso)}` : 'Seleziona una nazione'}</button>
+              <button disabled={!selectedDestinationIso || destinationsLoading} onClick={submitDestination} style={{ marginTop:12, width:'100%', height:42, borderRadius:13, border:'none', background:selectedDestinationIso?'#90D84A':'#3A3A3C', color:selectedDestinationIso?'#111':'rgba(255,255,255,.38)', fontWeight:900, cursor:selectedDestinationIso?'pointer':'default' }}>{destinationsLoading ? 'Sblocco animali...' : selectedDestinationIso ? `Aggiungi ${getCountryDisplayName(selectedDestinationIso)}` : 'Seleziona un paese'}</button>
             </div>
           </div>
         )}
 
         {view==='animals' && selectedTerritory && (
           <>
-            <BioregionVectorMap highlightIds={selectedTerritory.bioregionIds || (selectedTerritory.bioregionId ? [selectedTerritory.bioregionId] : [])} marine={selectedTerritory.kind==='marine'} accent={selectedTerritory.kind==='marine'?'#4FB3FF':'#90D84A'} height={190} showLabels />
+            <div style={{ margin:'0 -14px 12px' }}><BioregionVectorMap highlightIds={selectedTerritory.bioregionIds || (selectedTerritory.bioregionId ? [selectedTerritory.bioregionId] : [])} marine={selectedTerritory.kind==='marine'} accent={'#A84637'} height={240} showLabels fullBleed /></div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, margin:'12px 0' }}>
               Animali filtrati per {selectedTerritory.kind === 'marine' ? 'reame marino' : selectedTerritory.kind === 'region' ? 'regione' : 'ecoregione'}.
             </div>
@@ -3649,6 +4208,7 @@ export default function App() {
   const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
+  useAnimaldexSound(true);
   const getTutorialAnimal = () => {
     const list = (animalsData || []).map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
     return list.find(a => !isMysteryStatus(a.status) && a.image_url)
@@ -3819,25 +4379,23 @@ export default function App() {
   const handleAddDestination = async (iso, tripTags = []) => {
     if (!user?.id || !iso) return;
     const cleanIso = String(iso).toUpperCase();
+    const nextVisited = Array.from(new Set([...visitedCountries, cleanIso])).sort();
+    setVisitedCountries(nextVisited);
+    saveVisitedCountries(nextVisited);
     setDestinationsLoading(true);
     setDataError('');
     try {
-      await persistUserDestination(user.id, cleanIso, tripTags);
-
-      const { error: rpcError } = await supabase.rpc('unlock_animals_for_destination', {
+      await withTimeout(persistUserDestination(user.id, cleanIso, tripTags || []), 4500, false, 'persistUserDestination');
+      const { error: rpcError } = await withTimeout(supabase.rpc('unlock_animals_for_destination', {
         p_user_id: user.id,
         p_iso: cleanIso,
-        p_trip_tags: tripTags,
-      });
+        p_trip_tags: tripTags || [],
+      }), 7000, { error:null }, 'unlock_animals_for_destination');
       if (rpcError) throw rpcError;
-
-      const nextVisited = Array.from(new Set([...visitedCountries, cleanIso])).sort();
-      setVisitedCountries(nextVisited);
-      saveVisitedCountries(nextVisited);
-      await reloadSupabaseData(user);
+      reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload destinazione non bloccante:', err));
     } catch (err) {
       console.warn('[Animaldex] Aggiungi destinazione fallito:', err);
-      setDataError(err?.message || 'Errore aggiunta destinazione');
+      setDataError(err?.message || 'Errore aggiunta paese');
     } finally {
       setDestinationsLoading(false);
     }
@@ -4103,7 +4661,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} />;
-    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
+    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;

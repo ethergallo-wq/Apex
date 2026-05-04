@@ -1454,10 +1454,29 @@ function getCountryRegionGroup(code) {
   return { group:'other', index:(c.charCodeAt(0)||0)+(c.charCodeAt(1)||0), total:16 };
 }
 
+const COUNTRY_LONLAT = {
+  // Europe
+  IS:[-19,65], NO:[10,62], SE:[15,62], FI:[26,64], DK:[10,56], FO:[-7,62], AX:[20,60], IE:[-8,53], GB:[-2,54], GG:[-2.6,49.5], IM:[-4.5,54.2], JE:[-2.1,49.2], FR:[2,46], BE:[4.5,50.5], NL:[5.3,52.2], LU:[6.1,49.8], DE:[10,51], CH:[8.2,46.8], AT:[14,47.5], LI:[9.5,47.1], MC:[7.4,43.7], AD:[1.6,42.5], PL:[19,52], CZ:[15.5,49.8], SK:[19.5,48.7], HU:[19,47.2], RO:[25,45.8], BG:[25.5,42.8], MD:[28.5,47.2], UA:[31,49], BY:[28,53], LT:[24,55.2], LV:[25,57], EE:[25.5,58.7], ES:[-3.7,40.4], PT:[-8,39.5], IT:[12.5,42.8], MT:[14.4,35.9], SM:[12.5,43.9], VA:[12.45,41.9], GI:[-5.35,36.1], GR:[22,39], CY:[33,35], AL:[20,41], HR:[16,45], BA:[18,44], ME:[19.3,42.7], SI:[14.8,46.1], MK:[21.7,41.6], RS:[20.8,44],
+  // Americas
+  CA:[-105,57], US:[-98,39], MX:[-102,23], GL:[-42,72], BM:[-64.8,32.3], PM:[-56.3,46.8], BZ:[-88.7,17.2], GT:[-90.2,15.7], HN:[-86.2,14.8], SV:[-88.9,13.8], NI:[-85,13], CR:[-84,9.9], PA:[-80,8.5], CU:[-79.5,21.7], JM:[-77.3,18.1], HT:[-72.3,19], DO:[-70.2,19], PR:[-66.5,18.2], VI:[-64.8,18.1], VG:[-64.6,18.4], AI:[-63.1,18.2], AG:[-61.8,17.1], BL:[-62.8,17.9], MF:[-63.1,18.1], SX:[-63.05,18.04], KN:[-62.7,17.3], LC:[-60.98,13.9], VC:[-61.2,13.2], DM:[-61.35,15.4], GP:[-61.55,16.2], MQ:[-61,14.6], MS:[-62.2,16.7], GD:[-61.7,12.1], BB:[-59.5,13.2], TT:[-61.2,10.6], TC:[-71.8,21.7], AW:[-69.97,12.5], CW:[-69,12.2], BQ:[-68.3,12.2], BS:[-76,24.5], KY:[-80.5,19.4], CO:[-74,4.6], VE:[-66,7], EC:[-78.2,-1.5], PE:[-75,-9], BO:[-64.7,-16.3], BR:[-52,-10], GF:[-53.1,4], GY:[-58.9,5], SR:[-56,4], AR:[-64,-34], CL:[-71,-30], UY:[-56,-32.7], PY:[-58,-23.4], FK:[-59,-51.7],
+  // Africa
+  MA:[-6,32], DZ:[2,28], TN:[9,34], LY:[17,27], EG:[30,27], EH:[-13,24], MR:[-10,20], ML:[-4,17], NE:[8,17], TD:[18,15], SD:[30,15], SN:[-14,14.5], GM:[-15.3,13.4], GW:[-15,12], GN:[-10.9,10.4], SL:[-11.8,8.5], LR:[-9.4,6.5], CI:[-5.5,7.5], GH:[-1.2,7.9], TG:[1.1,8.6], BJ:[2.3,9.3], BF:[-1.7,12.2], NG:[8,9], CV:[-23.6,15.1], CM:[12,5.7], CF:[20.5,6.6], GQ:[10.3,1.6], GA:[11.6,-0.6], CG:[15.2,-1], CD:[23.7,-2.9], ST:[6.7,0.2], AO:[17.9,-12.3], ET:[40,9], ER:[39,15], DJ:[42.6,11.8], SO:[45.3,5.2], KE:[37.8,0.5], TZ:[35,-6], UG:[32.3,1.3], RW:[29.9,-1.9], BI:[29.9,-3.4], SS:[31.6,7.8], ZA:[24,-29], NA:[17,-22], BW:[24,-22], ZW:[29,-19], ZM:[27.8,-13.1], MW:[34,-13.3], MZ:[35.5,-18.5], SZ:[31.5,-26.5], LS:[28.2,-29.6], MG:[47,-19],
+  // Asia
+  RU:[90,60], KZ:[67,48], MN:[103,46], TR:[35,39], GE:[43.5,42], AM:[45,40], AZ:[47.5,40.3], IR:[53,32], IL:[35,31.5], PS:[35.2,31.9], JO:[36,31], LB:[35.9,33.9], SY:[38,35], IQ:[44,33], SA:[45,24], YE:[48,15.5], OM:[57,21], AE:[54,24], QA:[51.2,25.3], BH:[50.5,26], KW:[47.5,29.3], UZ:[64,41], TM:[59,39], TJ:[71,38.5], KG:[74.6,41.5], AF:[66,34], PK:[69,30], IN:[78,22], BD:[90.3,23.7], LK:[80.7,7.7], NP:[84,28.2], BT:[90.4,27.5], MV:[73.2,3.2], CN:[104,35], HK:[114.1,22.3], MO:[113.6,22.2], TW:[121,23.7], KR:[127.8,36], KP:[127,40], JP:[138,37], MM:[96,21], TH:[101,15], LA:[103.8,18], KH:[104.9,12.7], VN:[106,16], MY:[102,4], SG:[103.8,1.35], ID:[118,-2], BN:[114.7,4.5], TL:[125.7,-8.8], PH:[122,12],
+  // Oceania / Antarctica / islands
+  AU:[134,-25], NF:[167.9,-29], CX:[105.7,-10.5], CC:[96.9,-12.1], NZ:[172,-41], PG:[145,-6], SB:[160,-9], VU:[167,-16], NC:[165.5,-21.3], FJ:[178,-17.8], FM:[158,6.9], GU:[144.8,13.5], KI:[-157,1.9], MH:[171,7], MP:[145.7,15.2], NR:[166.9,-0.5], PW:[134.6,7.5], UM:[-162,6], AS:[-170.7,-14.3], CK:[-159.8,-21.2], NU:[-169.9,-19.1], PF:[-149,-17.7], PN:[-128.3,-24.4], TK:[-172,-9], TO:[-175.2,-21.2], TV:[179,-8], WF:[-176.2,-13.8], WS:[-172,-13.8], MU:[57.6,-20.2], RE:[55.5,-21.1], YT:[45.2,-12.8], KM:[43.3,-11.9], SC:[55.4,-4.6], IO:[72.4,-7.3], SJ:[20,78], AQ:[20,-82], BV:[3.4,-54.4], GS:[-36,-54.3], HM:[73.5,-53.1], TF:[69.3,-49.3], SH:[-5.7,-15.9]
+};
+
 function countryMapPoint(code) {
-  const { group, index, total } = getCountryRegionGroup(code);
+  const c = String(code || '').toUpperCase();
+  const lonlat = COUNTRY_LONLAT[c];
+  if (lonlat) {
+    const [x,y] = projectLonLat(lonlat[0], lonlat[1]);
+    return { x:x/10, y:y/5, lon:lonlat[0], lat:lonlat[1], px:x, py:y };
+  }
+  const { group, index, total } = getCountryRegionGroup(c);
   const t = total > 1 ? index / (total - 1) : 0;
-  const wobble = ((String(code).charCodeAt(0) || 65) % 7 - 3) * .8;
+  const wobble = ((String(c).charCodeAt(0) || 65) % 7 - 3) * .8;
   const lerp = (a,b,v)=>a+(b-a)*v;
   const ranges = {
     northAmerica:[20,28,24,48],
@@ -1471,86 +1490,164 @@ function countryMapPoint(code) {
     other:[50,56,48,58],
   };
   const [x1,x2,y1,y2] = ranges[group] || ranges.other;
-  return { x: lerp(x1,x2,t) + wobble, y: lerp(y1,y2, (t*1.37)%1) };
+  const x = lerp(x1,x2,t) + wobble;
+  const y = lerp(y1,y2, (t*1.37)%1);
+  return { x, y, px:x*10, py:y*5 };
 }
 
-function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#F0C449', height=230, title='Mappa paesi' }) {
+function pointsToViewBox(points = [], padRatio=.22) {
+  const valid = points.filter(p => Number.isFinite(p?.px) && Number.isFinite(p?.py));
+  if (!valid.length) return '0 0 1000 500';
+  const b = valid.reduce((acc,p)=>({
+    minX:Math.min(acc.minX,p.px), minY:Math.min(acc.minY,p.py),
+    maxX:Math.max(acc.maxX,p.px), maxY:Math.max(acc.maxY,p.py),
+  }), {minX:Infinity,minY:Infinity,maxX:-Infinity,maxY:-Infinity});
+  return boundsToViewBox(b, padRatio);
+}
+
+function clampWholeWords(text, maxChars = 31) {
+  const clean = String(text || '').trim().replace(/\s+/g,' ');
+  if (clean.length <= maxChars) return clean;
+  const words = clean.split(' ');
+  let out = '';
+  for (const word of words) {
+    const next = out ? `${out} ${word}` : word;
+    if (next.length > maxChars) break;
+    out = next;
+  }
+  return out || clean.slice(0, maxChars).replace(/\s+\S*$/,'');
+}
+
+function useInteractiveMapControls() {
+  const [zoom, setZoom] = useState(1);
+  const [pan, setPan] = useState({x:0,y:0});
+  const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
+  const reset = () => { setZoom(1); setPan({x:0,y:0}); };
+  const dist = (touches) => {
+    if (!touches || touches.length < 2) return 0;
+    const dx = touches[0].clientX - touches[1].clientX;
+    const dy = touches[0].clientY - touches[1].clientY;
+    return Math.sqrt(dx*dx + dy*dy);
+  };
+  const handlers = {
+    onWheel:(e)=> {
+      e.preventDefault?.();
+      const delta = e.deltaY > 0 ? -0.12 : 0.12;
+      setZoom(z => Math.max(1, Math.min(4.5, z + delta)));
+    },
+    onPointerDown:(e)=> {
+      if (e.pointerType === 'touch') return;
+      ref.current.dragging = true;
+      ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
+      e.currentTarget.setPointerCapture?.(e.pointerId);
+    },
+    onPointerMove:(e)=> {
+      if (!ref.current.dragging) return;
+      const dx = e.clientX - ref.current.lastX;
+      const dy = e.clientY - ref.current.lastY;
+      ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
+      setPan(p => ({ x:p.x+dx, y:p.y+dy }));
+    },
+    onPointerUp:(e)=> {
+      ref.current.dragging = false;
+      e.currentTarget.releasePointerCapture?.(e.pointerId);
+    },
+    onPointerCancel:()=> { ref.current.dragging = false; },
+    onTouchStart:(e)=> {
+      if (e.touches?.length === 2) {
+        ref.current.pinch = true;
+        ref.current.startDist = dist(e.touches);
+        ref.current.startZoom = zoom;
+      } else if (e.touches?.length === 1) {
+        ref.current.dragging = true;
+        ref.current.lastX = e.touches[0].clientX;
+        ref.current.lastY = e.touches[0].clientY;
+      }
+    },
+    onTouchMove:(e)=> {
+      if (e.touches?.length === 2 && ref.current.pinch) {
+        e.preventDefault?.();
+        const d = dist(e.touches);
+        if (ref.current.startDist > 0) setZoom(Math.max(1, Math.min(4.5, ref.current.startZoom * (d/ref.current.startDist))));
+      } else if (e.touches?.length === 1 && ref.current.dragging) {
+        e.preventDefault?.();
+        const dx = e.touches[0].clientX - ref.current.lastX;
+        const dy = e.touches[0].clientY - ref.current.lastY;
+        ref.current.lastX = e.touches[0].clientX;
+        ref.current.lastY = e.touches[0].clientY;
+        setPan(p => ({ x:p.x+dx, y:p.y+dy }));
+      }
+    },
+    onTouchEnd:()=> { ref.current.dragging=false; ref.current.pinch=false; }
+  };
+  const transform = `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`;
+  return { zoom, pan, reset, handlers, transform };
+}
+
+function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#A84637', height=230, title='Mappa paesi' }) {
   const { data, error } = useBioregionGeoJson();
-  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,160);
-  const selected = selectedCountry || codes[0] || null;
-  const codeSet = new Set(codes);
-  const selectedSet = new Set(selected ? [selected] : codes);
+  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,190);
+  const selected = selectedCountry || null;
   const [hoverCountry, setHoverCountry] = useState(null);
   const features = data?.features || [];
-  const featureIso2 = (feature) => String(feature?.properties?.countries_iso2 || '')
-    .split(/[;,\s]+/)
-    .map(v => v.trim().toUpperCase())
-    .filter(Boolean);
-  const relevant = features.filter(f => {
-    const p = f.properties || {};
-    return p.domain !== 'marine';
-  });
+  const mapControls = useInteractiveMapControls();
+  const points = codes.map(code => ({ code, ...countryMapPoint(code) }));
+  const viewBox = pointsToViewBox(points, codes.length > 12 ? .18 : .42);
   const activeCountryLabel = hoverCountry || selected;
+  const landFeatures = features.filter(f => (f.properties || {}).domain !== 'marine');
   const hasVector = !!data && !error;
 
   return (
-    <div style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%, #16364D 0%, #071521 60%, #03080E 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
-      {hasVector ? (
-        <svg viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
-          <rect width="1000" height="500" fill="#071017" />
-          <g opacity=".18">
-            <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#72D6FF" strokeWidth="1" />
-            <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#72D6FF" strokeWidth="1" />
-          </g>
-          <g>
-            {relevant.map(f => {
-              const iso = featureIso2(f);
-              const active = iso.some(code => selectedSet.has(code));
-              const present = iso.some(code => codeSet.has(code));
-              const d = geometryToSvgPath(f.geometry, active ? 220 : 85);
-              if (!d) return null;
-              return (
-                <path
-                  key={`${getFeatureBioregionId(f)}-${iso.join('-')}`}
-                  d={d}
-                  fill={active ? accent : present ? 'rgba(168,70,55,.46)' : 'rgba(72,85,78,.30)'}
-                  stroke={active ? '#FFD0B7' : present ? `${accent}99` : 'rgba(255,255,255,.10)'}
-                  strokeWidth={active ? 1.15 : present ? .65 : .35}
-                  opacity={active ? .88 : present ? .60 : .38}
-                />
-              );
-            })}
-          </g>
-        </svg>
-      ) : (
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position:'absolute', inset:0, width:'100%', height:'100%', opacity:.72 }}>
-          <path d="M10 34 C18 22 31 22 39 30 C48 24 59 25 67 34 C78 29 90 35 94 48 C85 45 79 51 70 49 C61 46 54 50 45 48 C36 46 30 51 22 47 C15 44 8 45 4 50 C4 44 6 38 10 34Z" fill="rgba(255,255,255,.10)" />
-          <path d="M24 52 C33 50 43 56 42 67 C41 80 35 89 29 91 C31 79 25 72 22 64 C19 58 19 54 24 52Z" fill="rgba(255,255,255,.08)" />
-          <path d="M50 45 C56 40 64 43 68 50 C72 58 69 70 62 77 C56 72 51 66 48 58 C46 53 46 48 50 45Z" fill="rgba(255,255,255,.08)" />
-          <path d="M69 57 C76 56 84 61 89 70 C82 73 75 72 69 67 C66 64 65 59 69 57Z" fill="rgba(255,255,255,.09)" />
-          <path d="M43 90 C55 88 67 89 78 92" stroke="rgba(255,255,255,.10)" strokeWidth="1.4" fill="none" />
-        </svg>
-      )}
+    <div
+      {...mapControls.handlers}
+      style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%, #143244 0%, #071521 62%, #03080E 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:'none' }}
+    >
+      <div style={{ position:'absolute', inset:0, transform:mapControls.transform, transformOrigin:'50% 50%', willChange:'transform' }}>
+        {hasVector ? (
+          <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+            <defs>
+              <filter id="countrySatNoise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+                <feColorMatrix in="n" type="saturate" values="0"/>
+                <feComponentTransfer><feFuncA type="table" tableValues="0 0.16"/></feComponentTransfer>
+              </filter>
+              <radialGradient id="countryOcean" cx="50%" cy="45%" r="70%"><stop offset="0%" stopColor="#0B2635"/><stop offset="65%" stopColor="#06131C"/><stop offset="100%" stopColor="#02070B"/></radialGradient>
+            </defs>
+            <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#countryOcean)" />
+            <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#countrySatNoise)" opacity=".55" />
+            <g opacity=".58">
+              {landFeatures.map(f => {
+                const id = String(getFeatureBioregionId(f) || '');
+                const d = geometryToSvgPath(f.geometry, 90);
+                if (!d) return null;
+                return <path key={id} d={d} fill="rgba(86,45,40,.46)" stroke="rgba(95,190,235,.28)" strokeWidth=".45" opacity=".78" />;
+              })}
+            </g>
+            <g>
+              {points.map(p => {
+                const active = p.code === selected;
+                return (
+                  <g key={p.code} onClick={(e)=>{e.stopPropagation(); onSelectCountry?.(p.code);}} onMouseEnter={()=>setHoverCountry(p.code)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }}>
+                    <circle cx={p.px} cy={p.py} r={active ? 13 : 9} fill={active ? accent : 'rgba(114,205,255,.18)'} stroke={active ? '#FFE1D2' : '#72D6FF'} strokeWidth={active ? 3.4 : 2.4} opacity=".98" />
+                    <circle cx={p.px} cy={p.py} r={active ? 22 : 15} fill="none" stroke={active ? accent : '#72D6FF'} strokeWidth={active ? 3 : 2} opacity={active ? .34 : .22} />
+                  </g>
+                );
+              })}
+            </g>
+          </svg>
+        ) : (
+          <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
+            <rect x="-2000" y="-2000" width="5000" height="5000" fill="#071017" />
+            {points.map(p => <circle key={p.code} cx={p.px} cy={p.py} r="11" fill="rgba(114,205,255,.18)" stroke="#72D6FF" strokeWidth="2.5" />)}
+          </svg>
+        )}
+      </div>
 
-      <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.84)', fontSize:12, fontWeight:900, pointerEvents:'none' }}>{title}</div>
-
-      {codes.map(code => {
-        const p = countryMapPoint(code);
-        const active = code === selected;
-        return (
-          <button
-            key={code}
-            onClick={()=>onSelectCountry?.(code)}
-            onMouseEnter={()=>setHoverCountry(code)}
-            onMouseLeave={()=>setHoverCountry(null)}
-            title={getCountryDisplayName(code)}
-            style={{ position:'absolute', left:`${p.x}%`, top:`${p.y}%`, transform:'translate(-50%,-50%)', width:active?20:13, height:active?20:13, borderRadius:'50%', border:`2px solid ${active?'#fff':accent}`, background:active?accent:'rgba(255,255,255,.18)', boxShadow:active?`0 0 0 4px ${accent}33, 0 0 18px ${accent}`:`0 0 10px ${accent}88`, cursor:'pointer', padding:0 }}
-          />
-        );
-      })}
+      <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.86)', fontSize:12, fontWeight:950, pointerEvents:'none', textShadow:'0 2px 10px rgba(0,0,0,.65)' }}>{title}</div>
+      <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900 }}>⌖</button>
 
       {activeCountryLabel && (
-        <div style={{ position:'absolute', right:10, bottom:10, maxWidth:'76%', background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)' }}>
+        <div style={{ position:'absolute', right:10, bottom:10, maxWidth:'76%', background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)', pointerEvents:'none' }}>
           {getFlagEmoji(activeCountryLabel)} {getCountryDisplayName(activeCountryLabel)}
         </div>
       )}
@@ -1565,7 +1662,7 @@ function useAnimaldexSound(enabled = true) {
   const play = (type='tap') => {
     if (!enabled || typeof window === 'undefined') return;
     const nowTs = Date.now();
-    if (nowTs - lastRef.current < 42) return;
+    if (nowTs - lastRef.current < 90) return;
     lastRef.current = nowTs;
 
     try {
@@ -1575,93 +1672,68 @@ function useAnimaldexSound(enabled = true) {
       ctxRef.current = ctx;
 
       const synth = () => {
-        const now = ctx.currentTime + 0.005;
+        const now = ctx.currentTime + 0.004;
         const master = ctx.createGain();
         const comp = ctx.createDynamicsCompressor();
-        comp.threshold.setValueAtTime(-22, now);
-        comp.knee.setValueAtTime(18, now);
-        comp.ratio.setValueAtTime(4, now);
-        comp.attack.setValueAtTime(0.003, now);
-        comp.release.setValueAtTime(0.18, now);
+        comp.threshold.setValueAtTime(-24, now);
+        comp.knee.setValueAtTime(16, now);
+        comp.ratio.setValueAtTime(3, now);
+        comp.attack.setValueAtTime(0.004, now);
+        comp.release.setValueAtTime(0.16, now);
 
-        const level = type==='reward' ? 0.30 : type==='capture' ? 0.24 : type==='map' ? 0.18 : type==='back' ? 0.15 : 0.13;
+        const level = type==='reward' ? 0.18 : type==='capture' ? 0.16 : type==='map' ? 0.115 : type==='back' ? 0.09 : type==='filter' ? 0.085 : 0.075;
         master.gain.setValueAtTime(0.0001, now);
-        master.gain.exponentialRampToValueAtTime(level, now + 0.010);
-        master.gain.exponentialRampToValueAtTime(0.0001, now + (type==='reward' ? 0.74 : type==='capture' ? 0.52 : type==='map' ? 0.34 : 0.22));
-        master.connect(comp);
-        comp.connect(ctx.destination);
+        master.gain.exponentialRampToValueAtTime(level, now + 0.012);
+        master.gain.exponentialRampToValueAtTime(0.0001, now + (type==='reward' ? 0.56 : type==='capture' ? 0.38 : type==='map' ? 0.26 : 0.16));
+        master.connect(comp); comp.connect(ctx.destination);
 
-        const tone = (freq, start, dur, wave='sine', gain=1, detune=0, pan=0) => {
+        const tone = (freq, start, dur, wave='sine', gain=1, pan=0) => {
           const osc = ctx.createOscillator();
           const g = ctx.createGain();
-          const panner = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
+          const p = ctx.createStereoPanner ? ctx.createStereoPanner() : null;
           osc.type = wave;
           osc.frequency.setValueAtTime(freq, now + start);
-          osc.detune.setValueAtTime(detune, now + start);
           g.gain.setValueAtTime(0.0001, now + start);
-          g.gain.exponentialRampToValueAtTime(Math.max(0.0002, 0.75 * gain), now + start + 0.012);
+          g.gain.exponentialRampToValueAtTime(Math.max(0.0002, 0.7 * gain), now + start + 0.010);
           g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
           osc.connect(g);
-          if (panner) { panner.pan.setValueAtTime(pan, now + start); g.connect(panner); panner.connect(master); }
+          if (p) { p.pan.setValueAtTime(pan, now + start); g.connect(p); p.connect(master); }
           else g.connect(master);
-          osc.start(now + start); osc.stop(now + start + dur + 0.04);
+          osc.start(now + start); osc.stop(now + start + dur + .025);
         };
-
-        const noise = (start, dur, gain=.08, hp=900, lp=4200) => {
-          const len = Math.max(1, Math.floor(ctx.sampleRate * dur));
-          const buffer = ctx.createBuffer(1, len, ctx.sampleRate);
-          const data = buffer.getChannelData(0);
-          for (let i=0;i<len;i++) data[i] = (Math.random()*2-1) * Math.pow(1-i/len, 1.5);
+        const clickDust = (start=.0, dur=.035, gain=.018) => {
+          const len = Math.floor(ctx.sampleRate * dur);
+          const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+          const d = buf.getChannelData(0);
+          for (let i=0;i<len;i++) d[i] = (Math.random()*2-1) * Math.pow(1-i/len, 2);
           const src = ctx.createBufferSource();
+          const hp = ctx.createBiquadFilter();
           const g = ctx.createGain();
-          const hi = ctx.createBiquadFilter();
-          const lo = ctx.createBiquadFilter();
-          hi.type='highpass'; hi.frequency.setValueAtTime(hp, now + start);
-          lo.type='lowpass'; lo.frequency.setValueAtTime(lp, now + start);
-          g.gain.setValueAtTime(0.0001, now + start);
-          g.gain.exponentialRampToValueAtTime(gain, now + start + 0.008);
-          g.gain.exponentialRampToValueAtTime(0.0001, now + start + dur);
-          src.buffer = buffer;
-          src.connect(hi); hi.connect(lo); lo.connect(g); g.connect(master);
-          src.start(now + start); src.stop(now + start + dur + 0.02);
+          hp.type='highpass'; hp.frequency.setValueAtTime(2200, now+start);
+          g.gain.setValueAtTime(gain, now+start);
+          g.gain.exponentialRampToValueAtTime(0.0001, now+start+dur);
+          src.buffer=buf; src.connect(hp); hp.connect(g); g.connect(master);
+          src.start(now+start); src.stop(now+start+dur+.02);
         };
 
         if (type === 'capture') {
-          noise(0, .10, .10, 700, 5200);
-          tone(196,0,.11,'triangle',.62,-5,-.12);
-          tone(392,.055,.18,'sine',.48,0,.10);
-          tone(784,.125,.23,'sine',.26,3,.18);
+          clickDust(0,.055,.026); tone(196,0,.10,'triangle',.50,-.1); tone(392,.055,.13,'sine',.36,.12); tone(784,.12,.16,'sine',.18,0);
         } else if (type === 'map') {
-          noise(0,.08,.055,450,2200);
-          tone(146.8,0,.12,'triangle',.55,-7,-.12);
-          tone(293.7,.055,.18,'triangle',.36,4,.12);
-          tone(440,.12,.10,'sine',.16,0,0);
+          clickDust(0,.04,.018); tone(146.8,0,.09,'triangle',.44,-.1); tone(293.7,.052,.12,'triangle',.24,.1);
         } else if (type === 'reward') {
-          noise(0,.18,.075,900,7800);
-          [523.25,659.25,783.99,1046.5,1318.5].forEach((f,i)=>tone(f,i*.065,.20,'sine',.32,0,(i-2)*.08));
+          clickDust(0,.08,.022); [523.25,659.25,783.99,1046.5].forEach((f,i)=>tone(f,i*.055,.16,'sine',.25,(i-1.5)*.07));
         } else if (type === 'back') {
-          tone(270,0,.07,'triangle',.42,0,.1);
-          tone(180,.045,.12,'triangle',.28,-4,-.1);
-          noise(0,.06,.035,1000,3500);
+          tone(240,0,.07,'triangle',.34,.08); tone(170,.04,.09,'triangle',.18,-.08);
         } else if (type === 'filter') {
-          tone(520,0,.055,'square',.16,0,-.12);
-          tone(680,.040,.065,'sine',.16,0,.12);
-          noise(0,.045,.025,1800,6000);
+          tone(520,0,.045,'sine',.22,-.06); tone(680,.034,.055,'sine',.13,.08); clickDust(0,.03,.012);
         } else {
-          tone(620,0,.060,'sine',.30,-2,-.06);
-          tone(930,.035,.085,'sine',.18,2,.08);
-          noise(0,.035,.022,2200,7200);
+          tone(620,0,.046,'sine',.20,-.04); tone(930,.032,.055,'sine',.10,.05);
         }
       };
 
-      if (ctx.state === 'suspended') {
-        ctx.resume?.().then(synth).catch(synth);
-      } else {
-        synth();
-      }
-    } catch (err) {
-      // Audio deve essere decorativo: mai bloccare UX.
-    }
+      if (ctx.state === 'suspended') ctx.resume?.().then(synth).catch(synth);
+      else synth();
+    } catch {}
   };
 
   useEffect(() => {
@@ -1672,7 +1744,7 @@ function useAnimaldexSound(enabled = true) {
       const text = String(el.textContent || el.getAttribute?.('aria-label') || '').toLowerCase();
       const sound = el.getAttribute?.('data-sound')
         || (text.includes('cattur') || text.includes('fotograf') ? 'capture'
-        : text.includes('map') || text.includes('mappa') ? 'map'
+        : text.includes('map') || text.includes('mappa') || text.includes('ricentra') ? 'map'
         : text.includes('badge') || text.includes('award') || text.includes('reward') ? 'reward'
         : text.includes('filtr') || text.includes('ordina') || text.includes('cerca') ? 'filter'
         : text.includes('indietro') || text.includes('‹') || text.includes('×') || text.includes('chiudi') ? 'back'
@@ -1680,13 +1752,7 @@ function useAnimaldexSound(enabled = true) {
       play(sound);
     };
     document.addEventListener('pointerdown', handler, { passive:true });
-    document.addEventListener('click', handler, { passive:true });
-    document.addEventListener('touchstart', handler, { passive:true });
-    return () => {
-      document.removeEventListener('pointerdown', handler);
-      document.removeEventListener('click', handler);
-      document.removeEventListener('touchstart', handler);
-    };
+    return () => document.removeEventListener('pointerdown', handler);
   }, [enabled]);
 
   return play;
@@ -1866,11 +1932,13 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   const revealed = imageVisible;
   const unrevealed = false;
   const glowAccent = getClassGlowColor(a.cls);
-  const glowShadow = found ? `0 0 16px 2px ${glowAccent}55, 0 0 4px 1px ${glowAccent}22` : 'none';
+  const glowShadow = 'none';
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const cardH = isNarrow ? 124 : 134;
   const labelH = isNarrow ? 36 : 38;
   const imageH = imageVisible ? cardH : cardH - labelH + 8;
+  const photographed = status === 'catturato' || !!a.photo_url || !!a.userAnimal?.photo_url || !!a.userAnimal?.photo_path;
+  const displayName = clampWholeWords(a.com, isNarrow ? 25 : 31);
   return (
     <div
       data-tour={tutorialHighlight ? 'grid-first-animal' : undefined}
@@ -1900,7 +1968,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
           <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
         </div>
       )}
-      <div style={{ position:'absolute', top:7, left:7, zIndex:3, background:'rgba(0,0,0,.62)', color:'rgba(255,255,255,.74)', fontSize:10, fontWeight:800, padding:'2px 7px', borderRadius:999, backdropFilter:'blur(4px)' }}>{a.no}</div>
+      {photographed && <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div>}
       <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
       {!mystery && (
         <div
@@ -1931,12 +1999,12 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
             WebkitLineClamp:2,
             WebkitBoxOrient:'vertical',
             overflow:'hidden',
-            textOverflow:'ellipsis',
+            textOverflow:'clip',
             wordBreak:'normal',
             overflowWrap:'normal',
             textWrap:'balance',
             width:'100%'
-          }}>{a.com}</span></div>
+          }}>{displayName}</span></div>
       )}
     </div>
   );
@@ -2763,14 +2831,14 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
             </div>
           </div>
         </div>
-        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Etimologia</p>
-        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
         {a.bio && (
           <>
             <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Biologia</p>
             <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.bio}</p></div>
           </>
         )}
+        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Etimologia</p>
+        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
       </div>
@@ -3049,6 +3117,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
   const isoHighlightSet = new Set((highlightIsoCodes || []).map(code => String(code).toUpperCase()).filter(Boolean));
   const features = data?.features || [];
   const [hoverId, setHoverId] = useState(null);
+  const mapControls = useInteractiveMapControls();
   const relevant = features.filter(f => {
     const p = f.properties || {};
     if (marine) return p.domain === 'marine';
@@ -3073,10 +3142,22 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
   return (
-    <div style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#3A211B,#180F0D 58%,#070504)', border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)' }}>
-      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
-        <rect x="-2000" y="-2000" width="5000" height="5000" fill="#0B0706" />
-        <g opacity=".18">
+    <div
+      {...mapControls.handlers}
+      style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:'none' }}
+    >
+      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%', transform:mapControls.transform, transformOrigin:'50% 50%', willChange:'transform' }}>
+        <defs>
+          <filter id="bioSatNoise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" seed="11" result="n"/>
+            <feColorMatrix in="n" type="saturate" values="0"/>
+            <feComponentTransfer><feFuncA type="table" tableValues="0 0.14"/></feComponentTransfer>
+          </filter>
+          <radialGradient id="bioOcean" cx="50%" cy="45%" r="75%"><stop offset="0%" stopColor="#102630"/><stop offset="62%" stopColor="#0B0A09"/><stop offset="100%" stopColor="#030202"/></radialGradient>
+        </defs>
+        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#bioOcean)" />
+        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#bioSatNoise)" opacity=".6" />
+        <g opacity=".22">
           <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#C87555" strokeWidth="1.2" />
           <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#C87555" strokeWidth="1.2" />
         </g>
@@ -3087,10 +3168,11 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
             const selected = selectedId === id || hoverId === id;
             const d = geometryToSvgPath(f.geometry, active ? 260 : 100);
             if (!d) return null;
-            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(72,95,110,.42)' : 'rgba(86,78,62,.40)')} stroke={active ? '#FFD0B7' : 'rgba(255,255,255,.14)'} strokeWidth={active ? 1.45 : 0.45} opacity={active ? 0.95 : selected ? .66 : .46} />;
+            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(64,90,100,.42)' : 'rgba(82,58,45,.48)')} stroke={active ? '#FFD0B7' : 'rgba(110,210,245,.18)'} strokeWidth={active ? 1.55 : 0.42} opacity={active ? 0.95 : selected ? .66 : .50} />;
           })}
         </g>
       </svg>
+      <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900 }}>⌖</button>
       {showLabels && (hoverId || selectedId) && <div style={{ position:'absolute', left:10, bottom:10, right:10, padding:'8px 10px', borderRadius:12, background:'rgba(0,0,0,.58)', color:'white', fontSize:11, fontWeight:900 }}>{BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId}</div>}
     </div>
   );
@@ -3106,8 +3188,8 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
     onOpen?.();
   };
   return (
-    <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, minHeight:flipped?268:204, perspective:900, cursor:locked?'default':'pointer', transition:'min-height .28s ease' }}>
-      <div style={{ position:'relative', minHeight:204, transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+    <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, height:flipped?252:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
+      <div style={{ position:'relative', height:'100%', transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
           <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={204} />
           <div style={{
@@ -3135,9 +3217,9 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
         <div style={{ position:'absolute', top:0, bottom:0, left:-14, right:-14, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
           <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'11px 13px', background:'rgba(38,38,40,.72)', backdropFilter:'blur(8px)' }}>
             <div style={{ color:'white', fontSize:14, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
-            <div style={{ color:accent, fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>mappa</div>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer' }}>↺</button>
           </div>
-          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={186} fullBleed />
+          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={144} fullBleed />
           <div style={{ display:'flex', gap:8, padding:'9px 12px 11px', background:'rgba(16,17,20,.96)' }}>
             <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
             <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
@@ -3833,6 +3915,7 @@ function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
           <button onClick={e=>{e.stopPropagation();onRemove?.(code);}} style={{ width:28, height:28, borderRadius:8, border:'none', background:'rgba(255,255,255,.08)', color:'rgba(255,255,255,.6)', cursor:'pointer' }}>×</button>
         </div>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', padding:'10px 12px', boxSizing:'border-box', display:'flex', alignItems:'center', gap:10 }}>
+          <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ position:'absolute', top:6, right:6, width:24, height:24, borderRadius:8, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:12, fontWeight:900, cursor:'pointer', zIndex:3 }}>↺</button>
           <div style={{ color:'#90D84A', fontSize:22, fontWeight:900, minWidth:34, textAlign:'center' }}>{count}</div>
           <div style={{ color:'rgba(255,255,255,.65)', fontSize:11, fontWeight:700, lineHeight:1.2, flex:1 }}>animali associati a questo paese</div>
           <button onClick={e=>{e.stopPropagation();onOpenAnimals?.(code);}} style={{ height:34, borderRadius:10, border:'none', background:'#244A70', color:'white', fontWeight:900, fontSize:11, padding:'0 10px', cursor:'pointer' }}>Vedi animali</button>
