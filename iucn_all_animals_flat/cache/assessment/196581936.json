@@ -1,0 +1,1727 @@
+{
+  "assessment_date": "2019-05-14T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 85333513,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/85333513/196581936",
+  "citation": "Godlevska, L., Bücs, S., Kruskop, S.V., Gazaryan, S., Benda, P. & Paunović, M. 2020. Pipistrellus pipistrellus (errata version published in 2021). The IUCN Red List of Threatened Species 2020: e.T85333513A196581936. Accessed on 05 May 2026.",
+  "assessment_id": 196581936,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 85333513,
+    "scientific_name": "Pipistrellus pipistrellus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CHIROPTERA",
+    "family_name": "VESPERTILIONIDAE",
+    "genus_name": "Pipistrellus",
+    "species_name": "pipistrellus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Schreber, 1774)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bat Specialist Group",
+        "url": "http://www.iucnbsg.org/",
+        "description": "Co-Chairs: Tigga Kingston (email: tigga.kingston@ttu.edu) and Rodrigo A. Medellin (email: medellin@miranda.ecologia.unam.mx)\nBat Red List Authority Coordinator (Old World): Dave Waldien (email: dwaldien@gmail.com)\nBat Red List Authority Coordinator (New World): Sergio Solari (email: sergiotys@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Murciélago Enano",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Pipistrelle commune",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Pipistrello nano",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Нетопырь-карлик",
+        "language": "rus"
+      },
+      {
+        "main": true,
+        "name": "Common Pipistrelle",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Vesperugo pipistrellus (Schreber, 1774)",
+        "status": "ACCEPTED",
+        "genus_name": "Vesperugo",
+        "species_name": "pipistrellus",
+        "species_author": "(Schreber, 1774)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Vespertilio pipistrellus Schreber, 1774",
+        "status": "ACCEPTED",
+        "genus_name": "Vespertilio",
+        "species_name": "pipistrellus",
+        "species_author": "Schreber, 1774",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": -20,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "5.4",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "A widespread western Palearctic species with a range extending from the  British Isles through southern Scandinavia, much of Europe (including  all the Mediterranean countries, but with the exception of northern  Fennoscandia) and through parts of north-western Africa (mountainous  areas of Morocco, Algeria and Tunisia, also in Cyrenaica in Libya) and  Middle to Central Asia, where a subspecies <em>P.p. aladdin</em> was described  from (Benda, Gaisler 2015). Recently, this species has also been  reported from Jordan, at the western edge of the region (Benda <em>et al.</em>  2010). Northern and eastern range margins in Russia, Ukraine and  Belarus are uncertain, because earlier records may refer to recently  differentiated <em>P. pygmaeus</em>. Any confirmed findings of <em>P. pipistrellus</em>  are absent from basins of Dnieper and Volga Rivers, as well as from the  Baltic countries. Its occurrence has been confirmed in Crimea, Dniester  and Left-Bank Dnipro Regions in Ukraine, the Caucasus and adjacent  regions of Southern Russia, but wasn't recorded elsewhere northwards  (Gazaryan <em>et al.</em> 2010, Godlevska, Rebrov 2018). Northernmost  records in Finland (Siivonen, Wermundsen 2003) and Estonia (Masing 2015)  derived from acoustic surveys and require further confirmation.",
+    "population": "Significant declines were recorded in some European countries (e.g. the UK), although in Britain at least the trend has stabilised (Battersby 2005). According to Article 17 reports, it has favourable status in<span lang=\"EN-GB\"> Atlantic, Black Sea, Continental and Pannonian regions within the European Union (EEA 2013).<span lang=\"EN-GB\">&#160;In the Boreal, Mediterranean and Steppic regions, the conservation status is ‘unfavourable-inadequate’. The only ‘unfavourable-bad’ reports originated from Sweden and France. Status in eastern parts of the range is unclear, although no cases of any obvious decline have ever been reported.</span>",
+    "habitats": "The common pipistrelle is an adaptable species that can be found hunting in a wide range of landscapes: from urban centres to arable land and woodland but would hunt close to woodlands or riparian areas, if available. Frequently forages around street lamps. It feeds on small moths and flies. Summer roosts are mainly found in buildings and trees, and colonies frequently change roost site through the maternity period. Most winter roosts in Europe were found in crevices in buildings, although cracks in cliffs and caves, as well as tree cavities are also utilised. Numerous winter aggregations are&#160;reported from several Romanian caves, with the largest consisting of 37,000 pipistrelles (Bücs <em>et al. </em>2018).&#160;In Europe, small Diptera (midges and flies) are preferred, while Lepidoptera was the major prey in Turkey (see the literature review in Kyheröinen <em>et al.</em> 2019).&#160;Although migratory behaviour is inferred by genetical studies (Bryja <em>et al.</em> 2009), direct evidence of long-distance migrations is lacking. The published record of a ringed animal found at 1,123 km from the place of banding in Voronezh Reserve (Buresh 1941 in Hutterer <em>et al.</em> 2005) most probably refers to&#160;<em>P. pygmaeus</em> or to the Nathusius' pipistrelle&#160;<em>P. nathusii</em>.",
+    "threats": "Habitat loss due to disappearance of landscape elements, which provide commuting routes for the species. Agricultural intensification leads to destruction of small-scale structured, insect-rich traditional agricultural landscapes and to decline in prey availability (Kyheröinen&#160;<em>et al.&#160;</em>2019). The species is vulnerable to timber treatment and building renovation such as refurbishing or insulation projects (Battersby 2005, Simon <em>et al. </em>2012). <span style=\"background-color: rgb(255, 255, 255);\">It may also suffer from light pollution at roosts and drinking sites (Voigt <em>et al. </em>2018). It has a high risk of collisions with vehicles&#160;</span>(Fensome, Mathews 2016).",
+    "measures": "It is protected by national legislation in most of the main&#160; range states, except Russia. There are also international legal obligations for its protection through the Convention on Migratory Species (CMS) and EUROBATS Agreement. It is included in Appendix III&#160; of the Council of Europe’s Convention on the Conservation of European Wildlife and Natural Habitats (Bern Convention). Also included in Annex IV of EU Habitats and Species Directive. Important habitats partially protected by Natura 2000 sites and national networks of protected areas.",
+    "use_trade": null,
+    "rationale": "The species is widespread and abundant, and there is no evidence of current significant population decline. Consequently it is assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "The species has recently been separated into two species,&#160;<em>Pipistrellus pipistrellus</em>&#160;and&#160;<em>P. pygmaeus</em>. Their respective distribution and status are not yet fully clarified (Simmons 2005)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Caves and Subterranean Habitats (non-aquatic) - Caves"
+      },
+      "code": "7_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kriti"
+      },
+      "code": "KRI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gruziya"
+      },
+      "code": "TCS-GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Holy See (Vatican City State)"
+      },
+      "code": "VA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "TCS-AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Adzhariya"
+      },
+      "code": "TCS-AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "San Marino"
+      },
+      "code": "SM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Abkhaziya"
+      },
+      "code": "TCS-AB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Andorra"
+      },
+      "code": "AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nagorno-Karabakh"
+      },
+      "code": "TCS-NK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uzbekistan"
+      },
+      "code": "UZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kyrgyzstan"
+      },
+      "code": "KG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tajikistan"
+      },
+      "code": "TJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Baleares"
+      },
+      "code": "BAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "East Aegean Is."
+      },
+      "code": "EAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Light pollution"
+      },
+      "code": "9_6_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Godlevska, L., Bücs, S., Kruskop, S.V., Gazaryan, S., Benda, P. & Paunović, M.",
+      "value": [
+        "Sergei V. Kruskop",
+        "Szilard Bücs",
+        "Lena Godlevska",
+        "Milan Paunović (Natural History Museum)",
+        "Petr Benda",
+        "Suren Gazaryan"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Waldien, D.L.",
+      "value": [
+        "David Waldien (Christopher Newport University)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Shpak, A., Smirnov, D., Çoraman, E., Vasenkov, D., Vlaschenko, A. & Masing, M.",
+      "value": [
+        "Aliaksej Shpak",
+        "Matti Masing",
+        "Anton Vlaschenko",
+        "Denis Vasenkov",
+        "Emrah Çoraman",
+        "Dmitry Smirnov"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This erratum version of the assessment was created to attach a corrected distribution map for this species."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Simmons, N.B. 2005. Order Chiroptera. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 312-529. The Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Order Chiroptera",
+      "author": "Simmons, N.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hutterer, R., Ivanova, T., Meyer-Cord, Ch. and Rodrigues, L. 2005. Bat Migrations in Europe. <i>Naturschutz und Biologische Vielfalt</i> 28: 162.",
+      "year": "2005",
+      "title": "Bat Migrations in Europe",
+      "author": "Hutterer, R., Ivanova, T., Meyer-Cord, Ch. and Rodrigues, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Siivonen Y. and Wermundsen T. 2003. First records of <i>Myotis dasycneme</i> and <i>Pipistrellus pipistrellus</i> in Finland. <i>Vespertilio</i> 7: 177-179.",
+      "year": "2003",
+      "title": "First records of <i>Myotis dasycneme</i> and <i>Pipistrellus pipistrellus</i> in Finland",
+      "author": "Siivonen Y. and Wermundsen T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Battersby, J. 2005. UK Mammals: Species Status and Population Trends.  First Report by the Tracking Mammals Partnership. JNCC / The Tracking Mammals Partnership.",
+      "year": "2005",
+      "title": "UK Mammals: Species Status and Population Trends",
+      "author": "Battersby, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Fensome, A.G. and Mathews, F. 2016. Roads and bats: a meta-analysis and review of the evidence on vehicle collisions and barrier effects. <i>Mammal Review </i> 46: 311-323.",
+      "year": "2016",
+      "title": "Roads and bats: a meta-analysis and review of the evidence on vehicle collisions and barrier effects.",
+      "author": "Fensome, A.G. and Mathews, F",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kyheröinen, E.M., S. Aulagnier, J. Dekker, M.-J. Dubourg-Savage, B. Ferrer, S. Gazaryan, P. Georgiakakis, D. Hamidovic, C. Harbusch, K. Haysom, H. Jahelková, T. Kervyn, M. Koch, M. Lundy, F. Marnell, A. Mitchell-Jones, J. Pir, D. Russo, H. Schofield, P.O. Syvertsen, A. Tsoar. 2019. <i>Guidance on the conservation and management of critical feeding areas and commuting routes for bats</i>.  UNEP/EUROBATS Secretariat, Bonn.",
+      "year": "2019",
+      "title": "Guidance on the conservation and management of critical feeding areas and commuting routes for bats",
+      "author": "Kyheröinen, E.M., S. Aulagnier, J. Dekker, M.-J. Dubourg-Savage, B. Ferrer, S. Gazaryan, P. Georgiakakis, D. Hamidovic, C. Harbusch, K. Haysom, H. Jahelková, T. Kervyn, M. Koch, M. Lundy, F. Marnell, A. Mitchell-Jones, J. Pir, D. Russo, H. Schofield, P.O. Syvertsen, A. Tsoar",
+      "citation_short": ""
+    },
+    {
+      "citation": "Voigt, C.C., Azam, C., Dekker, J., Ferguson, J., Fritze, M., Gazaryan, S., Hölker, F., Jones, G., Leader, N., Lewanzik, D., Limpens, H.J.G.A., Mathews, F., Rydell, J., Schofield, H., Spoelstra, K. & Zagmajster, M. 2018. 2018. <i>Guidelines for consideration of bats in lighting projects.</i> UNEP/EUROBATS Secretariat, Bonn.",
+      "year": "2018",
+      "title": "Guidelines for consideration of bats in lighting projects.",
+      "author": "Voigt, C.C., Azam, C., Dekker, J., Ferguson, J., Fritze, M., Gazaryan, S., Hölker, F., Jones, G., Leader, N., Lewanzik, D., Limpens, H.J.G.A., Mathews, F., Rydell, J., Schofield, H., Spoelstra, K. & Zagmajster, M. 2018. ",
+      "citation_short": null
+    },
+    {
+      "citation": "European Environment Agency. 2013. Species: Pipistrellus pipistrellus Report under the Article 17 of the Habitats Directive. . Available at: <a href=\"https://bd.eionet.europa.eu/article17/reports2012/species/summary/\">https://bd.eionet.europa.eu/article17/reports2012/species/summary/</a>. (Accessed: 01.01.2019).",
+      "year": "2013",
+      "title": "Species: Pipistrellus pipistrellus Report under the Article 17 of the Habitats Directive. ",
+      "author": "European Environment Agency ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gazaryan S. 2009. Distribution of Plecotus macrobullaris Kuzyakin, 1965 in the Russian Caucasus. Mammals of mountain territories: 259-263. Nalchik.",
+      "year": "2009",
+      "title": "Distribution of Plecotus macrobullaris Kuzyakin, 1965 in the Russian Caucasus",
+      "author": "Gazaryan S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Simon M., Gießelmann K., Köstermeyer H., Brand S. 2012. Managementempfehlungen für Arten des Anhangs IV der FFH-Richtlinie (Internethandbuch): Breitflügelfledermaus (Eptesicus serotinus). Available at: <a href=\"https://ffh-anhang4.bfn.de/arten-anhang-iv-ffh-richtlinie/saeugetiere-fledermaeuse/breitfluegelfledermaus-eptesicus-serotinus.html\">https://ffh-anhang4.bfn.de/arten-anhang-iv-ffh-richtlinie/saeugetiere-fledermaeuse/breitfluegelfledermaus-eptesicus-serotinus.html</a>. (Accessed: 01.04.2019).",
+      "year": "2012",
+      "title": "Managementempfehlungen für Arten des Anhangs IV der FFH-Richtlinie (Internethandbuch): Breitflügelfledermaus (Eptesicus serotinus)",
+      "author": "Simon M., Gießelmann K., Köstermeyer H., Brand S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Benda, P., Lučan, R. K., Obuch, J., Reiter, A., Andreas, M., Bačkor, P., Bohnenstengel, T., Eid, E. K., Ševčìk, M., Vallo, P. and Amr, Z. S. 2010. Bats(Mammalia: Chiroptera) of the Eastern Mediterranean and Middle East. Part 8. Bats of Jordan: fauna, ecology, echolocation, ectoparasites. <i>Acta Societatis Zoologicae Bohemicae</i> 74(3-4): 185-353.",
+      "year": "2010",
+      "title": "Bats(Mammalia: Chiroptera) of the Eastern Mediterranean and Middle East. Part 8. Bats of Jordan: fauna, ecology, echolocation, ectoparasites",
+      "author": "Benda, P., Lučan, R. K., Obuch, J., Reiter, A., Andreas, M., Bačkor, P., Bohnenstengel, T., Eid, E. K., Ševčìk, M., Vallo, P. and Amr, Z. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bryja, J., P. Kaňuch, A. Fornůsková, T. Bartonička, and Z. Řehák. 2009. Low population genetic structuring of two cryptic bat species suggest their migratory behaviour in continental Europe. <i>Biological Journal of the Linnean Society</i> 96: 103-114.",
+      "year": "2009",
+      "title": "Low population genetic structuring of two cryptic bat species suggest their migratory behaviour in continental Europe",
+      "author": "Bryja, J., P. Kaňuch, A. Fornůsková, T. Bartonička, and Z. Řehák",
+      "citation_short": null
+    },
+    {
+      "citation": "Bücs S.-L., I. Csősz, L. Barti,  T.-A. Sinculeț, E.-A. Telea, G. Crețu, I. Gönczi-Vass, C. Jére. The cave-dwelling bats of Romania: research and conservation in key European sites . <i>National Bat Conference, 7-9 September 2018, University of Nottingham</i>: 6.",
+      "year": null,
+      "title": "The cave-dwelling bats of Romania: research and conservation in key European sites ",
+      "author": " Bücs S.-L., I. Csősz, L. Barti,  T.-A. Sinculeț, E.-A. Telea, G. Crețu, I. Gönczi-Vass, C. Jére",
+      "citation_short": null
+    },
+    {
+      "citation": "Gazaryan S.V., Bachtadze G.B., Malinovkin A.V. 2010. Current state of knowledge on bats in Rostov Region. <i>Plecotus et al.</i> 13: 50-58.",
+      "year": "2010",
+      "title": "Current state of knowledge on bats in Rostov Region",
+      "author": "Gazaryan S.V., Bachtadze G.B., Malinovkin A.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Godlevska, L., Rebrov, S. 2018. Bats of the Left-Bank Dnipro Region in the northern part of Ukraine. <i>Theriologia Ukrainica</i> 16:  25–50.",
+      "year": "2018",
+      "title": "Bats of the Left-Bank Dnipro Region in the northern part of Ukraine",
+      "author": "Godlevska, L., Rebrov, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Masing M. 2015. <i>Bats of Estonia and Adjacent Regions</i>. Sicista Development Centre, Tallinn.",
+      "year": "2015",
+      "title": "Bats of Estonia and Adjacent Regions",
+      "author": "Masing M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mayer, F., von Helversen, O. 2001. Sympatric distribution of two cryptic bat species across Europe. <i>Biol. J. Linn. Soc. </i> 74: 365-374.",
+      "year": "2001",
+      "title": "Sympatric distribution of two cryptic bat species across Europe",
+      "author": "Mayer, F., von Helversen, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rodrigues, L., Bach, L., Dubourg-Savage, M.- J., Karapandža, B., Kovač, D., Kervyn, T., Dekker, J., Kepel, A., Bach, P., Collins, J., Harbusch, C., Park, K., Micevski, B., & Minderman, J. 2015. <i>Guidelines for consideration of bats in wind farm projects – Revision 2014. </i>. UNEP/EUROBATS Secretariat,, Bonn.",
+      "year": "2015",
+      "title": "Guidelines for consideration of bats in wind farm projects – Revision 2014. ",
+      "author": "Rodrigues, L., Bach, L., Dubourg-Savage, M.- J., Karapandža, B., Kovač, D., Kervyn, T., Dekker, J., Kepel, A., Bach, P., Collins, J., Harbusch, C., Park, K., Micevski, B., & Minderman, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 25 March 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

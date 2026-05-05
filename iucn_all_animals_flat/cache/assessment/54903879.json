@@ -1,0 +1,958 @@
+{
+  "assessment_date": "2016-08-19T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 10057,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/10057/54903879",
+  "citation": "Pollom, R. 2017. Hippocampus abdominalis. The IUCN Red List of Threatened Species 2017: e.T10057A54903879. Accessed on 05 May 2026.",
+  "assessment_id": 54903879,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 10057,
+    "scientific_name": "Hippocampus abdominalis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "SYNGNATHIFORMES",
+    "family_name": "SYNGNATHIDAE",
+    "genus_name": "Hippocampus",
+    "species_name": "abdominalis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Lesson, 1827",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Seahorse, Pipefish & Seadragon Specialist Group",
+        "url": "https://iucn-seahorse.org/",
+        "description": "Chair: Amanda Vincent (email: a.vincent@oceans.ubc.ca)\nRed List Authority Coordinator: Riley Pollom (email: r.pollom@fisheries.ubc.ca)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Big-belly Seahorse",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Hinamoki",
+        "language": "mao"
+      },
+      {
+        "main": false,
+        "name": "Kioremoana",
+        "language": "mao"
+      },
+      {
+        "main": false,
+        "name": "Manaia",
+        "language": "mao"
+      },
+      {
+        "main": true,
+        "name": "Pot-bellied Seahorse",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Hippocampus bleekeri Fowler, 1907",
+        "status": "ADD",
+        "genus_name": "Hippocampus",
+        "species_name": "bleekeri",
+        "species_author": "Fowler, 1907",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hippocampus agnesae Fowler, 1907",
+        "status": "ADD",
+        "genus_name": "Hippocampus",
+        "species_name": "agnesae",
+        "species_author": "Fowler, 1907",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hippocampus  graciliformis McCulloch, 1911",
+        "status": "ADD",
+        "genus_name": "Hippocampus ",
+        "species_name": "graciliformis",
+        "species_author": "McCulloch, 1911",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 104,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "Unknown",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "Unknown",
+    "all_individuals_in_one_subpopulation": "Unknown",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "<em>Hippocampus abdominalis</em> occurs in the marine waters of south-eastern Australia and all around New Zealand (Kuiter 2001, Nickel and Cursons 2012). In Australia the species occurs from the Great Australian Bight to Newcastle and throughout Tasmanian waters (Lourie<em> et al. </em>2016).",
+    "population": "To date there have been few dedicated surveys or population estimates for <em>Hippocampus abdominalis</em>. &#160;At most reported locations in Australia, <em>H. abdominalis</em> appears to be rare or scarce. Mean peak densities in the Derwent Estuary, Tasmania were 0.12–1.11 individuals per 100 m² in 2000–2002, but subsequently declined significantly. In Tasmanian macroalgal (<em>Ecklonia</em>) habitats, densities of fewer than one individual per 500 m² are generally recorded (K. Martin-Smith, pers. comm. 2006). Numbers from trawls in New Zealand suggest that on soft bottoms, the species may be widespread if scarce, but further documentation is needed. <br/> <br/>Exceptions to sparse populations are aggregations on some artificial structures and one documented report of large numbers aggregated on rafting seagrass (J. Manna pers. comm. 2006).<br/>Further research is needed in order to determine population size and trends in abundance for this species.",
+    "habitats": "<em>Hippocampus abdominalis</em> have been recorded from harbours, protected coastal bays and deep waters with sponges (Kuiter 1993, Kuiter 2001). Depth range varies considerably from the surface down to 104 m (Amaoka <em>et al</em>. 1990, Paulin and Roberts 1992, Francis 1998, Lourie <em>et al</em>. 1999, Stevenson and Beentjes 2001). Habitat varies from intertidal rock pools to, more commonly, amongst shallow macroalgal stands (e.g., <em>Ecklonia</em>, [Kuiter 2000]), submerged rocky outcrops, exposed open sea floor and artificial structures (Francis 1998, Woods 2003). In Tasmania, <em>H. abdominalis</em> are reported as common near the entrances of large estuaries on muddy bottoms, or near reef edges, feeding on small crustaceans (Last <em>et al</em>. 1983). They occur in water temperatures of 8-24°C, and have been shown to perish in captivity beyond 26°C (Martinez-Cardenas and Purser 2011). It is not definitively known whether they occupy home ranges or are free-ranging, although some evidence suggests certain populations may exhibit site fidelity (Van Dijken 2001). Unlike most seahorse species, <em>H. abdominalis</em> is a relatively strong swimmer and has been known to swim over hundreds of meters in the course of a day (Vincent 1990). Adults are also known to occur in open water and to raft on macroalgal rafts (Kingsford and Choat 1985) and seagrass (J. Manna pers. comm. 2006): this occurs at all times of the year in New Zealand (Kingsford and Choat 1985, Kingsford 1986). Artificial structures appear to be important habitats for <em>H. abdominalis</em>: in particular, jetties, nets and salmon cages. For example, hundreds of individuals have been observed on anti-predator nets surrounding salmon aquaculture pens in the Huon Estuary, Tasmania (Marshall 2004, K. Martin-Smith, pers. comm. 2006). Similarly, <em>H. abdominalis</em> have been observed in reasonably large numbers on the net of a swimming enclosure in Sydney Harbour since 2003 (K. Martin-Smith, pers. comm. 2006). <br/> <br/>As with other members of the seahorse and pipefish family, this species is ovoviviparous and males incubate eggs in an abdominal pouch and eventually release live young (Foster and Vincent 2004). The pouch is developed at about six months of age, but first breeding occurs closer to 12 months (R. Kuiter, pers comm. in Pogonoski <em>et al</em>. 2002). Spawning occurs mainly from (the Austral) spring to summer, where Woods (2005) found brooding males present throughout the year, but with an apparently lower incidence of brooding in winter. Similarly, Poortenaar <em>et al</em>. (2004) examined the reproductive biology of female <em>H. abdominalis</em>, looking at ovarian morphology, reproductive condition and sex steroid levels.  Using these indices, they found that females were capable of reproductive activity throughout the year, presenting the potential for a protracted spawning season (Poortenaar <em>et al</em>. 2004). The species is socially polygamous but genetically monogamous in that they display promiscuous courtship activities but become pregnant by one female only (Wilson and Martin-Smith 2007). They also exhibit mutual mate choice (Bahr <em>et al.</em> 2012).&#160;<br/> <br/>The number of juveniles (mean ± 1 SE) released per brood in a New Zealand population was 271.2 ± 27 (Woods 2005), whereas the maximum reported brood size for the species in aquaculture is 1,116 (R. Hawkins pers comm. in Lourie <em>et al</em>., 2004). Juveniles 16–19 mm in standard length, are released from the pouch after 24 days (Whittington <em>et al. </em>2015). Larger males produce more juveniles (Woods 2005). Juvenile length and weight are not correlated with the number of juveniles per brood, parent male size or parent male pouch volume. The percentage of pouch contents that are non-viable (i.e., premature or non-viable eggs) upon juvenile release tends to be low (1.1 ± 0.2%; mean ± 1 SE of the total pouch contents) (Woods 2005). Following release from the parent male, juveniles are believed to be pelagic, at least for several weeks, Juveniles up to 8 cm in length have been collected in surface waters of the open ocean over the Chatham Rise in New Zealand (Woods, pers. obs.) and adult <em>H. abdominalis</em> have been captured near-shore associated with floating seaweed and debris (Kingsford and Choat 1985). The propensity for rafting presents a possible large-scale dispersal mechanism for this species. <br/> <br/>The diet of wild adult <em>H. abdominalis</em> consists largely of crustaceans, in particular amphipods, caridean shrimp, and peracarids (Woods 2002). <strong><br/><br/></strong><strong></strong>Natural predators of&#160;<em>H. abdominalis</em>&#160;include fishes such as skates (<em>Dipturus</em>&#160;spp.), red cod (<em>Pseudophycis bachus</em>), trumpeter (<em>Latris lineata</em>), blue cod (<em>Parapercis colias</em>), ling (<em>Genypterus blacodes</em>), sea perch (<em>Helicolenus percoides</em>) (Graham 1974), and banded wrasse (<em>Notolabrus fucicola</em>) (Denny and Schiel 2001) in NZ. In Australia,&#160;<em>H. abdominalis</em>&#160;is taken by flathead (<em>Platycephalus</em>&#160;spp.), Australian salmon (<em>Arripsis truttacea</em>), striped anglerfish (<em>Antennarius striatus</em>) and birds such as cormorants (<em>Phalacrocorax</em>&#160;spp.) and fairy penguins (<em>Eudyptula minor</em>) (Kuiter 2000, K. Martin-Smith pers. comm. 2006). <br/><br/>This species is reported to be more active at dusk and at night than during the day in New Zealand (Paulin and Roberts 1992). In Australia, <em>H. abdominalis</em> has been observed aggregating in groups at night (K. Martin-Smith, pers. comm. 2006).",
+    "threats": "<em>Hippocampus abdominalis </em>is threatened by localized habitat loss and degradation due to coastal development and by being caught as bycatch in demersal trawl fisheries. Bycatch levels are thought to be low. <br/><strong></strong><br/><br/> <br/><strong></strong>",
+    "measures": "<strong></strong>Globally, all seahorses are listed on Appendix II of CITES. <br/><br/><strong></strong>In Australia all syngnathids have been subject to the export controls of the Commonwealth <em>Wildlife Protection (Regulation of Exports and Imports) Act 1982</em> since 1 January 1998 (Lourie <em>et al</em>. 2004). All syngnathids and solenostomids were gazetted as marine species under s248 of the Environment Protection and Biodiversity Conservation Act (EPBC) Act 1999.<br/>&#160;<br/>In New Zealand seahorses cannot be targeted by commercial fisheries, but can be sold to Licensed Fish Receivers as regulated quantities of bycatch.<br/><br/>This species occurs in several marine protected areas, including Jervis Bay Marine Park.",
+    "use_trade": "This species is recorded in trade in low numbers (Martin-Smith and Vincent 2006, CITES 2016). They are used as curios, in traditional medicines, and the aquarium trade (Vincent <em>et al.</em> 2011).",
+    "rationale": "<em>Hippocampus abdominalis </em>is a coastal seahorse that inhabits intertidal pools, macroalgae, rocky outcrops, and artificial structures. The species may be threatened locally by coastal development. They are caught as bycatch at low levels. The species is a habitat generalist, is protected by various state and federal measures throughout its range, is subject to CITES Appendix II, and occurs in several protected areas. Therefore <em>H. abdominalis </em>is listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Hippocampus abdominalis</em> was first described from New Zealand and there is a question as to whether specimens from Australia represent the same species. Studies that have addressed this question do not support the existence of multiple species based on morphological, meristic, and genetic data (357 bp, cyt b) and show more variation within populations than among populations (Armstrong 2001, Lourie <em>et al. </em>2016). There is some genetic divergence between Australian and New Zealand populations (814bp cytb, 624bp CO1, 404bp CR, plus four microsatellite loci), however, the level of divergence is low (1.4–1.7%, Nickel and Cursons 2012). Divergence within New Zealand is 0.7–2.2% without any clear geographical structure (Nickel 2009; Nickel and Cursons 2012). The name <em>H. abdominalis</em> takes precedence with <em>H. agnesae</em> and <em>H. bleekeri </em>being treated as synonyms. <em>Hippocampus graciliformis</em> is a juvenile specimen of <em>H. abdominalis </em>and therefore is also synonymized."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Intertidal - Salt Marshes (Emergent Grasses)"
+      },
+      "code": "12_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Marine - Marine Anthropogenic Structures"
+      },
+      "code": "15_11"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Marine - Mariculture Cages"
+      },
+      "code": "15_12"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Tidepools"
+      },
+      "code": "12_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tasmania"
+      },
+      "code": "TAS-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "None",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "None",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "evaluator",
+      "full": "Ralph, G.",
+      "value": [
+        "Gina Ralph (Marine Biodiversity Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "Pollom, R.",
+      "value": [
+        "Riley Pollom (Project Seahorse)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Lourie, S.A., Pollom, R.A. and Foster, S.J. 2016. A global revision of the seahorses <i>Hippocampus</i> Rafinesque 1810 (Actinopterygii: Syngnathiformes): Taxonomy and biogeography with recommendations for future research. <i>Zootaxa</i> 4146(1): 1-66.",
+      "year": "2016",
+      "title": "A global revision of the seahorses <i>Hippocampus</i> Rafinesque 1810 (Actinopterygii: Syngnathiformes): Taxonomy and biogeography with recommendations for future research",
+      "author": "Lourie, S.A., Pollom, R.A. and Foster, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Armstrong, P. 2001. Genetic and morphological variation in pot-bellied seahorses (<i>Hippocampus abdominalis</i>): is there evidence for two species? B.Sc. (Hons.) Thesis, School of Aquaculture, University of Tasmania.",
+      "year": "2001",
+      "title": "Genetic and morphological variation in pot-bellied seahorses (<i>Hippocampus abdominalis</i>): is there evidence for two species?",
+      "author": "Armstrong, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nickel, J. E. and Cursons, R. 2012. Genetic diversity and population structure of the pot-belly seahorse <i>Hippocampus abdominalis</i> in New Zealand. <i>New Zealand Journal of Marine and Freshwater Research</i> 46(2): 207-218.",
+      "year": "2012",
+      "title": "Genetic diversity and population structure of the pot-belly seahorse <i>Hippocampus abdominalis</i> in New Zealand",
+      "author": "Nickel, J. E. and Cursons, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuiter, R.H. 2001. Revision of the Australian seahorses of the genus <i>Hippocampus</i> (Syngnathiformes: Syngnathidae) with descriptions of nine new species. <i>Records of the Australian Museum</i> 53: 293-340.",
+      "year": "2001",
+      "title": "Revision of the Australian seahorses of the genus <i>Hippocampus</i> (Syngnathiformes: Syngnathidae) with descriptions of nine new species",
+      "author": "Kuiter, R.H",
+      "citation_short": null
+    },
+    {
+      "citation": "Lourie, S.A., Vincent, A.C.J. and Hall, H.J. 1999. <i>Seahorses: an identification guide to the world's species and their conservation</i>. Project Seahorse, London, U.K.",
+      "year": "1999",
+      "title": "Seahorses: an identification guide to the world's species and their conservation",
+      "author": "Lourie, S.A., Vincent, A.C.J. and Hall, H.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Lourie, S.A., Foster, S.J., Cooper, E.W.T. and Vincent, A.C.J. 2004. <i>A Guide to the Identification of Seahorses</i>. Project Seahorse and TRAFFIC North America, University of British Columbia and World Wildlife Fund, Washington D.C.",
+      "year": "2004",
+      "title": "A Guide to the Identification of Seahorses",
+      "author": "Lourie, S.A., Foster, S.J., Cooper, E.W.T. and Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vincent, A.C.J., Foster, S.J. and Koldewey, H.J. 2011. Conservation and management of seahorses and other Syngnathidae. <i>Journal of Fish Biology</i> 78: 1681-1724.",
+      "year": "2011",
+      "title": "Conservation and management of seahorses and other Syngnathidae",
+      "author": "Vincent, A.C.J., Foster, S.J. and Koldewey, H.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pogonoski, J.J., Pollard, D.A. and Paxton, J.R. 2002. <i>Conservation overview and action plan for Australian threatened and potentially threatened marine and estuarine fishes</i>. Environment Australia, Canberra, ACT, Australia.",
+      "year": "2002",
+      "title": "Conservation overview and action plan for Australian threatened and potentially threatened marine and estuarine fishes",
+      "author": "Pogonoski, J.J., Pollard, D.A. and Paxton, J.R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martin-Smith, K.M. and Vincent, A.C.J. 2006. Exploitation and trade of Australian seahorses and their relatives (syngnathids). <i>Oryx</i> 40(2): 141-151.",
+      "year": "2006",
+      "title": "Exploitation and trade of Australian seahorses and their relatives (syngnathids)",
+      "author": "Martin-Smith, K.M. and Vincent, A.C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Foster, S.J. and Vincent, A.C.J. 2004. Life history and ecology of seahorses: implications for conservation and management. <i>Journal of Fish Biology</i> 65: 1-61.",
+      "year": "2004",
+      "title": "Life history and ecology of seahorses: implications for conservation and management",
+      "author": "Foster, S.J. and Vincent, A.C.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Vincent, A.C.J. 1996. The International Trade in Seahorses. TRAFFIC International, Cambridge, UK.",
+      "year": "1996",
+      "title": "The International Trade in Seahorses",
+      "author": "Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Last, P.R., Scott, E.O.G. and Talbot, F.H. 1983. <i>Fishes of Tasmania</i>. Tasmania Fisheries Development Authority, Hobart.",
+      "year": "1983",
+      "title": "Fishes of Tasmania",
+      "author": "Last, P.R., Scott, E.O.G. and Talbot, F.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vincent, A.C.J. 1990. Reproductive ecology of seahorses. PhD thesis. University of Cambridge. Cambridge, UK",
+      "year": "1990",
+      "title": "Reproductive ecology of seahorses.",
+      "author": "Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kingsford, M.J. and Choat, J.H. 1985. The fauna associated with drift algae captured with a plankton-mesh purse seine net. <i>Limnology and Oceanography</i> 30(3): 618–630",
+      "year": "1985",
+      "title": "The fauna associated with drift algae captured with a plankton-mesh purse seine net",
+      "author": "Kingsford, M.J. and Choat, J.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Graham, D.H. 1974. <i>A treasury of New Zealand fishes</i>. A.H. & A.W. Reed, Wellington, New Zealand.",
+      "year": "1974",
+      "title": "A treasury of New Zealand fishes",
+      "author": "Graham, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin-Smith, K.M. and Vincent, A.C.J. 2005. Seahorse declines in the Derwent estuary, Tasmania in the absence of fishing pressure. <i>Biological Conservation</i> 123: 533–545.",
+      "year": "2005",
+      "title": "Seahorse declines in the Derwent estuary, Tasmania in the absence of fishing pressure",
+      "author": "Martin-Smith, K.M. and Vincent, A.C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woods, C.M.C. and Martin-Smith, K.M. 2004. Visible Implant fluorescent Elastomer tagging of the big-bellied seahorse, <i>Hippocampus abdominalis</i>. <i>Fisheries Research</i> 66(3): 363–371.",
+      "year": "2004",
+      "title": "Visible Implant fluorescent Elastomer tagging of the big-bellied seahorse, <i>Hippocampus abdominalis</i>",
+      "author": "Woods, C.M.C. and Martin-Smith, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Dijken, S. 2001. Aspects of the ecology of the New Zealand seahorse <i>Hippocampus abdominalis</i>. M.Sc. Thesis, University of Auckland, New Zealand",
+      "year": "2001",
+      "title": "Aspects of the ecology of the New Zealand seahorse <i>Hippocampus abdominalis</i>",
+      "author": "Van Dijken, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woods, C.M.C. 2005. Reproductive output of male seahorses, <i>Hippocampus abdominalis</i>, from Wellington Harbour, New Zealand: implications for conservation. <i>New Zealand Journal of Marine and Freshwater Research</i> 39(4): 811–888.",
+      "year": "2005",
+      "title": "Reproductive output of male seahorses, <i>Hippocampus abdominalis</i>, from Wellington Harbour, New Zealand: implications for conservation.",
+      "author": "Woods, C.M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woods, C.M.C. 2002. Natural diet of the seahorse <i>Hippocampus abdominalis</i>. New Zealand <i>Journal of Marine and Freshwater Research</i> 36(4): 655–660.",
+      "year": "2002",
+      "title": "Natural diet of the seahorse <i>Hippocampus abdominalis</i>",
+      "author": "Woods, C.M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Poortenaar, C.W., Woods, C.M.C., James, P., Giambartolomei, F.M. and Lokman, P.M. 2004. Reproductive biology of female big-bellied seahorses. <i>Journal of Fish Biology</i> 64: 1–9.",
+      "year": "2004",
+      "title": "Reproductive biology of female big-bellied seahorses",
+      "author": "Poortenaar, C.W., Woods, C.M.C., James, P., Giambartolomei, F.M. and Lokman, P.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Denny, C.M. and Schiel, D.R. 2001. Feeding ecology of the banded wrasse <i>Notolabrus fucicola</i> (Labridae) in southern New Zealand: prey items, seasonal differences, and ontogenetic variation. <i>New Zealand Journal of Marine and Freshwater Research</i> 35: 925–933.",
+      "year": "2001",
+      "title": "Feeding ecology of the banded wrasse <i>Notolabrus fucicola</i> (Labridae) in southern New Zealand: prey items, seasonal differences, and ontogenetic variation",
+      "author": "Denny, C.M. and Schiel, D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Francis, M.P. 1998. <i>Coastal fishes of New Zealand: an identification guide</i>. Reed Books, Auckland, New Zealand.",
+      "year": "1998",
+      "title": "Coastal fishes of New Zealand: an identification guide",
+      "author": "Francis, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuiter, R.H. 2000a. <i>Seahorses, Pipefishes and their Relatives. A Comprehensive Guide to Syngnathiformes.</i> TMC Publishing, Chorleywood, UK.",
+      "year": "2000",
+      "title": "Seahorses, Pipefishes and their Relatives. A Comprehensive Guide to Syngnathiformes.",
+      "author": "Kuiter, R.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Paulin, C. and Roberts, C.1992.<i>The Rockpool Fishes of New Zealand</i>. Museum of New Zealand, Wellington.",
+      "year": "1992",
+      "title": "The Rockpool Fishes of New Zealand",
+      "author": "Paulin, C. and Roberts, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woods, C.M.C. 2003d. Effect of stocking density and gender segregation in rearing the seahorse <i>Hippocampus abdominalis</i> in culture (Teleostei: Syngnathidae). <i>Aquaculture</i> 218(1–4): 167–176.",
+      "year": "2003",
+      "title": "Effect of stocking density and gender segregation in rearing the seahorse <i>Hippocampus abdominalis</i> in culture (Teleostei: Syngnathidae).",
+      "author": "Woods, C.M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Amaoka, K., Matsuura, K., Inada, T., Takeda, M. and Okada, K. (eds.) 1990. Fishes collected by the R/V Shinkai Maru around New Zealand. Japan Marine Fishery Resource Research Centre.",
+      "year": "1990",
+      "title": "Fishes collected by the R/V Shinkai Maru around New Zealand.",
+      "author": "Amaoka, K., Matsuura, K., Inada, T., Takeda, M. and Okada, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevenson, M.L. and Beentjes, M.P. 2001. Inshore trawl survey of the Canterbury Bight and Pegasus Bay, December 1999–January 2000 (KAH9917 & CMP9901). NIWA Technical Report 99.",
+      "year": "2001",
+      "title": "Inshore trawl survey of the Canterbury Bight and Pegasus Bay, December 1999–January 2000 (KAH9917 & CMP9901)",
+      "author": "Stevenson, M.L. and Beentjes, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marshall, D. 2004. The interactions of the big-bellied seahorse with artificial structure. Unpublished B.Sc. (Hons) thesis, University of Tasmania, Australia",
+      "year": "2004",
+      "title": "The interactions of the big-bellied seahorse with artificial structure",
+      "author": "Marshall, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kingsford, M.J. 1986. Distribution patterns of fish during the planktonic period of their life history. PhD thesis. University of Auckland, Department of Zoology.",
+      "year": "1986",
+      "title": "Distribution patterns of fish during the planktonic period of their life history",
+      "author": "Kingsford, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuiter, R.H. 1993. <i>Coastal fishes of south-eastern Australia</i>. Crawford House Press Pty Ltd., Australia.",
+      "year": "1993",
+      "title": "Coastal fishes of south-eastern Australia",
+      "author": "Kuiter, R.H",
+      "citation_short": null
+    },
+    {
+      "citation": "Bahr, A., Sommer, S., Mattie, B., and Wilson, A. B. 2012. Mutual mate choice in the potbellied seahorse (<i>Hippocampus abdominalis</i>). <i>Behavioral Ecology</i> 23(4): 869-878.",
+      "year": "2012",
+      "title": "Mutual mate choice in the potbellied seahorse (<i>Hippocampus abdominalis</i>)",
+      "author": "Bahr, A., Sommer, S., Mattie, B., and Wilson, A. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martinez-Cardenas, L. and Purser, G. J. 2011. Effect of temperature on growth and survival in cultured early juvenile pot-bellied seahorses, <i>Hippocampus abdominalis</i>. <i>Journal of the World Aquaculture Society</i> 42(6): 854-862.",
+      "year": "2011",
+      "title": "Effect of temperature on growth and survival in cultured early juvenile pot-bellied seahorses, <i>Hippocampus abdominalis</i>",
+      "author": "Martinez-Cardenas, L. and Purser, G. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gillanders, B. M., Tulloch, A. I. T., and Divecha, S. 2015. <i>Regional Biodiversity Management Plan</i>. Spencer Gulf Regional Sustainability Planning.  Report prepared for the Upper Spencer Gulf Common Purpose Group. 57 pp.",
+      "year": "2015",
+      "title": "Regional Biodiversity Management Plan",
+      "author": "Gillanders, B. M., Tulloch, A. I. T., and Divecha, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, A. B. and Martin-Smith, K. M. 2007. Genetic monogamy despite social promiscuity in the pot-bellied seahorse (<i>Hippocampus abdominalis</i>). <i>Molecular Ecology</i> 16(11): 2345-2352.",
+      "year": "2007",
+      "title": "Genetic monogamy despite social promiscuity in the pot-bellied seahorse (<i>Hippocampus abdominalis</i>)",
+      "author": "Wilson, A. B. and Martin-Smith, K. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2016. CITES Trade Data Base (<i>Hippocampus abdominalis</i>). Available at: <a href=\"http://trade.cites.org/\">http://trade.cites.org/</a>. (Accessed: 19-August-2015).",
+      "year": "2016",
+      "title": "CITES Trade Data Base (<i>Hippocampus abdominalis</i>)",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "4_5_6"
+    },
+    {
+      "description": {
+        "en": "Southwest Australian Shelf"
+      },
+      "code": "4_4_7"
+    },
+    {
+      "description": {
+        "en": "Southeast Australian Shelf"
+      },
+      "code": "4_4_6"
+    },
+    {
+      "description": {
+        "en": "East-Central Australian Shelf"
+      },
+      "code": "4_4_5"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,910 @@
+{
+  "assessment_date": "2019-10-24T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 13300893,
+  "criteria": "A2abd",
+  "url": "https://www.iucnredlist.org/species/13300893/13300904",
+  "citation": "Luiselli, L., Beraduccii, J., Howell, K., Msuya, C.A., Ngalason, W., Chirio, L., Kusamba, C., Gonwouo, N.L., LeBreton, M., Zassi-Boulou, A.-G. & Chippaux, J.-P. 2021. Bitis gabonica. The IUCN Red List of Threatened Species 2021: e.T13300893A13300904. Accessed on 05 May 2026.",
+  "assessment_id": 13300904,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 13300893,
+    "scientific_name": "Bitis gabonica",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VIPERIDAE",
+    "genus_name": "Bitis",
+    "species_name": "gabonica",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Duméril, Bibron &amp; Duméril, 1854)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Viper Specialist Group",
+        "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+        "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Gaboon Adder",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Gaboon Viper",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cerastes gabonica (Duméril, Bibron & Duméril, 1854)",
+        "status": "ACCEPTED",
+        "genus_name": "Cerastes",
+        "species_name": "gabonica",
+        "species_author": "(Duméril, Bibron & Duméril, 1854)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Echidna gabonica Duméril, Bibron & Duméril, 1854",
+        "status": "ACCEPTED",
+        "genus_name": "Echidna",
+        "species_name": "gabonica",
+        "species_author": "Duméril, Bibron & Duméril, 1854",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2100,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "5-8,6",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species ranges from Nigeria to the Democratic Republic of the Congo (DRC) and Uganda, with sporadic records in South Sudan and disjunctly further east in Uganda, Kenya and eastern Tanzania, south to Angola and Mbala in Zambia (Spawls <em>et al. </em>2018, Chippaux 2006, Penner <em>et al.</em> 2008, Warner 2009). Apparently isolated subpopulations occur in southeastern Africa as far south as coastal areas of northern Zululand (in eastern South Africa) (Branch 1998, Warner 2009). Along Africa's west coast, its range extends as far south as Gabon. West of the coastal savanna zone of Benin, it is replaced by the former subspecies <span style=\"font-style: italic;\">Bitis rhinoceros</span> (Chippaux 2006). Along Tanzania's east coast, it is restricted to coastal and montane forest fragments (L. Luiselli, J. Beraduccii, K. Howell, C.A. Msuya and W. Ngalason pers. comm.). It is found from sea level to 2,100 m asl. (Spawls <em>et al</em>. 2018).",
+    "population": "Within Central Africa, populations of this snake are believed to be declining, most especially close to urban or populated areas. A long-term study investigating the population trends of this species at Nigerian sites between 1995 and 2010 revealed a severe, rapid decline in a local subpopulation of this snake. Comparisons of mean numbers of individuals recorded annually at four well-protected sites between the \"pre-crash\" period (1994-1999) and those several years later (2005-2008) indicated a decline of 78.7 (males) -&#160; 81.9% (females) between 1999 and 2003, with no evidence of subsequent recovery (Reading <em>et al</em>. 2010). The causes of this decline cannot be established from these data (Reading <em>et al</em>. 2010), and consequently it is not clear whether these results can be extrapolated more broadly. As this study compared multiple snake species from varied geographic regions, and reported similar trends in most (Reading <em>et al. </em>2010), it is likely that this reflects genuine decline rather than a natural fluctuation in this particular subpopulation. Anecdotal evidence from other sites in Nigeria report similar findings, but more robust data are needed to confirm these trends (G. Akani and L. Luiselli unpubl. data). This species is subject to pressure both on its habitat and directly on its population, and so while the scale of declines cannot be inferred with any certainty, the species is considered to be declining, at a rate provisionally thought likely to have been between 30-50% over the preceding three generations (generation length being a minimum of 5 years, the youngest age at which females mature; in South Africa generation length was estimated to be 6-8 years). The South African subpopulation is estimated to number between 2,000 and 3,500 mature individuals (Warner 2009); as most of the species' distribution in this country is protected its population here is presumed to be stable.",
+    "habitats": "This nocturnal snake is found in moist and dry forests, including mature as well as secondary forests and forest-plantation mosaics consisting of Guinean savanna, rainforest and anthropogenic habitats (including both subsistence and agro-industrial plantations). Even gardens in towns surrounded by forest may be inhabited (Chippaux 2006, Luiselli and Akani 1999, Pauwels and Vande Weghe 2008). The snake is, however, more closely tied to rainforest habitats than most congeners (Bombi <em>et al.</em> 2011), and is lost rapidly from areas with no nearby forest or bush cover (L. Luiselli pers. comm. 2012). The South African subpopulation occurs mainly in coastal dune forest which occurs as a strip only a few kilometres wide along the coastline (Warner 2009).<br/><br/>This species feeds mainly on small mammals, however lizards, birds and frogs are also consumed by this snake (Luiselli and Akani 2003). It can eat even small forest antelopes (L. Luiselli and G. Akani, unpubl. data 2010). It is viviparous, giving birth to 13-15 young (Luiselli <em>et al. </em>1998, Chippaux 2006). A precise estimate of generation length is unavailable, however females mature at 5-8 years of age (with reproduction taking place every 2-3 years) and males at 4-6 (L. Luiselli unpubl. data). Generation length is therefore a minimum of five years, but is likely to be somewhat longer (6-8 years).",
+    "threats": "This species is exploited for the international pet trade (Auliya 2003), where it fetches moderate prices, but demand for vipers is limited and this is not a major threat. It is heavily harvested for food and sold in bushmeat markets, as well as for traditional medicine, and is one of the most prized species for both purposes in West Africa (L. Luiselli pers. comm. 2012). The skins of this species are also used for leather-type purposes (wallets, shoes, etc.). Habitat loss due to large-scale monocultures and plantation agriculture is an additional pressure, as this species cannot survive in areas without some native vegetation, and suitable ecotonal habitats are increasingly uncommon across much of this snake's range (L. Luiselli pers. comm. 2012). The causes of decline identified by Reading <em>et al</em>. (2010) in well-protected reserves in Nigeria are unclear, but while the habitat at these sites is protected, there may be some illegal harvest of animals (L. Luiselli pers. comm. 2012). Although modelling suggests that climate change will lead to an increase in the area of southern Nigeria and Cameroon climatically suitable for this species (Bombi <em>et al.</em> 2011), these models do not account for factors such as prey availability or competitive exclusion by other taxa (Bombi<em> et al.</em> 2011). In DRC there are reports of disease (porocephalus) causing localised loss of populations.",
+    "measures": "This species is not listed in the CITES Appendices, despite some demand in the specialist reptile market. Both international trade and harvesting for bushmeat should be monitored and possibly controlled with the imposition of quotas. Habitat loss should be limited. This species is found in protected areas, although population declines have been reported despite this protection (Reading <em>et al.</em> 2010). Molecular phylogenetic research on the different subpopulations is required.",
+    "use_trade": "This species is found in the international pet trade; in Europe it was marketed at a low to moderate price for a snake, and it is not in high demand (J. Penner pers. comm. 2012). It was found advertised for sale in larger numbers than any other African snake by Jensen <em>et al.</em> (2019), but numbers involved were low for such a widespread animal (235 individuals advertised for export between 2013 and 2017, across nine range states). It is widely-eaten by communities within its range, being a popular bushmeat in West and Central Africa, and is also used as a fetish and, heavily, in traditional medicine.",
+    "rationale": "This species is considered to be Vulnerable due to population declines provisionally estimated to be as much as to 30% globally over the past 15-18 years (three generations) (particularly in Nigeria and the Democratic Republic of the Congo), based on inference both from reported rates of direct decline and from levels of exploitation for bushmeat and traditional medicine, and because the known causes of decline have not ceased.",
+    "trend_justification": null,
+    "taxonomic_notes": "Molecular studies have indicated that the disjunct South African subpopulation is not substantially divergent from subpopulations to the north (W. Wüster and A. Barlow unpubl. data, 2007). The South African subpopulation is also morphologically similar to the closest subpopulation in Zimbabwe/Mozambique (e.g. Broadley 1990). The lack of genetic differentiation suggests that <em>Bitis gabonica</em> once had a large and continuous distribution that was fragmented only relatively recently, resulting in various isolated subpopulations such as the one in southern Africa. This subpopulation should be considered regionally important in terms of the overall conservation of the species and the maintenance of genetic variability.<em> Bitis rhinoceros</em> of West Africa is now treated as a full species and not a subspecies of <em>B. gabonica</em>, rendering the latter monotypic (Lenk <em>et al</em>. 2001)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "KwaZulu-Natal"
+      },
+      "code": "NAT-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Luiselli, L., Beraduccii, J., Howell, K., Msuya, C.A., Ngalason, W., Chirio, L., Kusamba, C., Gonwouo, N.L., LeBreton, M., Zassi-Boulou, A.-G. & Chippaux, J.-P.",
+      "value": [
+        "Joe Beraduccii",
+        "Ange-Ghislain Zassi-Boulou",
+        "Chifundera Kusamba",
+        "Matthew LeBreton (Global Viral Forecasting Initiative)",
+        "Luca Luiselli (Institute for Development Ecology Conservation and Cooperation (IDECC))",
+        "Kim Howell",
+        "LeGrand Nono Gonwouo (IUCN SSC Amphibian Specialist Group)",
+        "Charles Msuya (University of Dar es Salaam)",
+        "Laurent Chirio (Grasse, Provence-Alpes-Côte d'Azur, France)",
+        "Jean-Philippe Chippaux",
+        "Wilirk Ngalason"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P., Cox, N.A., Maritz, B. & Spear, S.",
+      "value": [
+        "Bryan Maritz (South African Reptile Assessment / Biodiversity and Conservation Biology Programme, University of the Western Cape, South Africa / IUCN SSC Viper Specialist Group)",
+        "Stephen Spear (IUCN SSC Viper Specialist Group / Wildlife Ecology, The Wilds, Cumberland, Ohio, USA)",
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Defex, T. & Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Tulia Defex (IUCN Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, Elsevier Science, San Diego, San Francisco, New York, Boston, London.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chippaux, J.-P. 2006. <i>Les serpents d'Afrique Occidentale et Centrale</i>. IRD Éditions, Paris.",
+      "year": "2006",
+      "title": "Les serpents d'Afrique Occidentale et Centrale",
+      "author": "Chippaux, J.-P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Auliya, M. 2003. Hot trade in cool creatures: A review of the live reptile trade in the European Union in the 1990s, with a focus on Germany. TRAFFIC Europe, Brussels.",
+      "year": "2003",
+      "title": "Hot trade in cool creatures: A review of the live reptile trade in the European Union in the 1990s, with a focus on Germany",
+      "author": "Auliya, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, W.R. 1998. <i>Field Guide to Snakes and other Reptiles of Southern Africa. Third Edition</i>. Struik Publishers, Cape Town.",
+      "year": "1998",
+      "title": "Field Guide to Snakes and other Reptiles of Southern Africa. Third Edition",
+      "author": "Branch, W.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Luiselli L., Akani, G.C. and Capizzi, D. 1998. Food resource partioning of a community of snakes in a swamp rainforest of south-eastern Nigeria. <i>The Zoological Society of London</i> 246: 125-133.",
+      "year": "1998",
+      "title": "Food resource partioning of a community of snakes in a swamp rainforest of south-eastern Nigeria",
+      "author": "Luiselli L., Akani, G.C. and Capizzi, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pauwels, O.S.G. and Vande Weghe, J.P. 2008. <i>Reptiles du Gabon</i>. Smithsonian Institute, Washington DC.",
+      "year": "2008",
+      "title": "Reptiles du Gabon",
+      "author": "Pauwels, O.S.G. and Vande Weghe, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lenk, P., Kalyabina, S., Wink, M. and Joger, U. 2001. Evolutionary relationships among the true vipers (Reptilia, Viperidae) inferred from mitochondrial DNA sequences. <i>Molecular Phylogenetics and Evolution</i> 19: 94-104.",
+      "year": "2001",
+      "title": "Evolutionary relationships among the true vipers (Reptilia, Viperidae) inferred from mitochondrial DNA sequences.",
+      "author": "Lenk, P., Kalyabina, S., Wink, M. and Joger, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Luiselli, L., Akani, C.G., Rugiero, L. and Politano, E. 2005. Relationships between body size, population abundance and niche characteristics in the communities of snakes from three habitats in southern Nigeria. <i>Journal of Zoology, London</i> 265: 207–213.",
+      "year": "2005",
+      "title": "Relationships between body size, population abundance and niche characteristics in the communities of snakes from three habitats in southern Nigeria",
+      "author": "Luiselli, L., Akani, C.G., Rugiero, L. and Politano, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Penner, J., Fruteau, C., Range, F. and Rödel, M. 2008. Finding a needle in a haystack: New methods of locating and working with Rhinoceros Vipers (<i>Bitis rhinoceros</i>). <i>Herpetological Review</i> 39(3): 310-314.",
+      "year": "2008",
+      "title": "Finding a needle in a haystack: New methods of locating and working with Rhinoceros Vipers (<i>Bitis rhinoceros</i>)",
+      "author": "Penner, J., Fruteau, C., Range, F. and Rödel, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Broadley, D.G. 1990. <i>FitzSimons' Snakes of Southern Africa</i>. Jonathan Ball and Ad. Donker Publishers, Parklands, South Africa.",
+      "year": "1990",
+      "title": "FitzSimons' Snakes of Southern Africa",
+      "author": "Broadley, D.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jensen, T.J., Auliya, M., Burgess, N.D., Aust, P.W., Pertoldi, C. and Strand, J. 2018. Exploring the international trade in African snakes not listed on CITES: highlighting the role of the internet and social media. <i>Biodiversity and Conservation</i>: 1-19 (in press).",
+      "year": "2018",
+      "title": "Exploring the international trade in African snakes not listed on CITES: highlighting the role of the internet and social media",
+      "author": "Jensen, T.J., Auliya, M., Burgess, N.D., Aust, P.W., Pertoldi, C. and Strand, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Broadley, D.G., Doria, C.T. and Wigge, J. 2003. <i>Snakes of Zambia. An Atlas and Field Guide</i>. Edition Chimaira, Frankfurt.",
+      "year": "2003",
+      "title": "Snakes of Zambia. An Atlas and Field Guide",
+      "author": "Broadley, D.G., Doria, C.T. and Wigge, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reading C.J., Luiselli L.M., Akani G.C., Bonnet, X., Amori, G., Ballouard, J.M., Filippi, E., Naulleau, G., Perason, D. and Rugiero, L. 2010. Are snake populations in widespread decline? <i>Biology Letters</i> 6(6): 777-780.",
+      "year": "2010",
+      "title": "Are snake populations in widespread decline?",
+      "author": "Reading C.J., Luiselli L.M., Akani G.C., Bonnet, X., Amori, G., Ballouard, J.M., Filippi, E., Naulleau, G., Perason, D. and Rugiero, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Lenk, P., Herrmann, H.W., Joger, U. and Wink, M. 1999. Phylogeny and taxonomic subdivision of <i>Bitis</i> (Reptilia: Viperidae) based on molecular evidence. <i>Kaupia (Darmstadt)</i> 8: 31-38.",
+      "year": "1999",
+      "title": "Phylogeny and taxonomic subdivision of <i>Bitis</i> (Reptilia: Viperidae) based on molecular evidence",
+      "author": "Lenk, P., Herrmann, H.W., Joger, U. and Wink, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bombi, P., Akani, G.C., Ebere, N. and Luiselli, L. 2011. Potential effects of climate change on high- and low-abundance populations of the Gaboon Viper (<i>Bitis gabonica</i>) and the nose-horned viper (<i>Bitis nasicornis</i>) in southern Nigeria. <i>Herpetological Journal</i> 21: 59-64.",
+      "year": "2011",
+      "title": "Potential effects of climate change on high- and low-abundance populations of the Gaboon Viper (<i>Bitis gabonica</i>) and the nose-horned viper (<i>Bitis nasicornis</i>) in southern Nigeria",
+      "author": "Bombi, P., Akani, G.C., Ebere, N. and Luiselli, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luiselli, L. and Akani, G.C. 2003. Diet of sympatric Gaboon Vipers (<i>Bitis gabonica</i>) and Nose‐horned Vipers (Bitis nasicornis) in southern Nigeria. <i>African Journal of Herpetology</i> 52(2): 101-106.",
+      "year": "2003",
+      "title": "Diet of sympatric Gaboon Vipers (<i>Bitis gabonica</i>) and Nose‐horned Vipers (Bitis nasicornis) in southern Nigeria",
+      "author": "Luiselli, L. and Akani, G.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Turner, A.A. 2014. <i>Bitis gabonica</i>. In: M.F. Bates, W.R. Branch, A.M. Bauer, M. Burger, J. Marais, G.J. Alexander and M.S. de Villiers (eds), <i>Atlas and Red List of the Reptiles of South Africa, Lesotho and Swaziland</i>, pp. 335-336. Suricata 1. South African National Biodiversity Institute, Pretoria.",
+      "year": "2014",
+      "title": "<i>Bitis gabonica</i>",
+      "author": "Turner, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Warner, J.K. 2009. Conservation biology of the Gaboon Viper (<i>Bitis gabonica</i>) in South Africa. Thesis. School of Animal, Plant and Environmental Sciences, University of the Witwatersrand.",
+      "year": "2009",
+      "title": "Conservation biology of the Gaboon Viper (<i>Bitis gabonica</i>) in South Africa",
+      "author": "Warner, J.K.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

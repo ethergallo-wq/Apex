@@ -1,0 +1,656 @@
+{
+  "assessment_date": "2018-08-31T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 8207,
+  "criteria": "A4cd",
+  "url": "https://www.iucnredlist.org/species/8207/115562499",
+  "citation": "Irwin, M. & King, T. 2020. Eulemur fulvus. The IUCN Red List of Threatened Species 2020: e.T8207A115562499. Accessed on 05 May 2026.",
+  "assessment_id": 115562499,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 8207,
+    "scientific_name": "Eulemur fulvus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "LEMURIDAE",
+    "genus_name": "Eulemur",
+    "species_name": "fulvus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(É. Geoffroy, 1796)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Brown Lemur",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Lémur Brun",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Maki Brun",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Varika",
+        "language": "mlg"
+      },
+      {
+        "main": true,
+        "name": "Brown Lemur",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Eulemur fulvus ssp. mayottensis (Schlegel, 1866)",
+        "status": "D",
+        "genus_name": "Eulemur",
+        "species_name": "fulvus",
+        "species_author": null,
+        "infrarank_author": "(Schlegel, 1866)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "mayottensis"
+      },
+      {
+        "name": "Eulemur fulvus ssp. fulvus (É. Geoffroy, 1796)",
+        "status": "undefined",
+        "genus_name": "Eulemur",
+        "species_name": "fulvus",
+        "species_author": null,
+        "infrarank_author": "(É. Geoffroy, 1796)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "fulvus"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1880,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "8",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "170182",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>This species is found in Madagascar in three populations. First, it is found in the west, between the Betsiboka&#160;River&#160;in the south and the Mahavavy du Nord River in the north (including several scattered forest fragments on the central plateau). Second, there is an isolated population in Ambohitantely Special Reserve (a small reserve of no more than 3,000 ha in the central plateau northwest of Antananarivo). Finally, this species has an eastern rainforest distribution from approximately the Ambatovaky Special Reserve in the north, to the Onive and Mangoro Rivers in the south (with additional small populations just south of the Mangoro River in the Vohitrambo and Vohibe forests; Rajaonson and King 2013). They are also on the island of Mayotte, where the species apparently was introduced by human agency (Mittermeier <em>et al.</em> 2010), however this population is possibly of partly hybrid origin (Mittermeier <em>et al.</em> 2008, 2010).&#160;</p><p> The western population can be divided into two subpopulations, a southern one extending from the Betsiboka River/Ankarafantsika National Park north to the Maevarano River, and a northern one ranging from the Andranomalaza River and Manongarivo Reserve to the Mahavavy du Nord River south of Ambilobe. Animals in the northern reaches of this range may also be found throughout the moister forests of the Sambirano region, as well as on the slopes of the Tsaratanana Massif, and are very similar in colouration to the Brown Lemurs found on the island of Mayotte (Mittermeier <em>et al</em>. 2010). It ranges from sea-level to 1,880 m.</p><p>It has been estimated that there will be a 46% reduction in the species' range from 2000 to 2080 due to climate change alone (Brown and Yoder 2015).</p><p>This species is likely affected by national trends in forest habitat loss: Madagascar lost 37% of its forest cover from 1973 to 2014, with an annual deforestation rate of 1.1%/year from 2010 to 2014. Almost half of Madagascar's forest (46%) is now located within less than 100 metres from the forest edge (Vieilledent <em>et al.</em> 2018).</p>",
+    "population": "<p>                  </p><p>The population is suspected to be declining, primarily due to habitat loss (Vieilledent&#160;<em>et al.</em>&#160;2018, Morelli&#160;<em>et al.</em>&#160;2019) and also due to hunting. In particular, this species is shown to be negatively impacted by habitat fragmentation (Eppley <em>et al. </em>2020).&#160;<span class=\"apple-converted-space\"><em>Eulemur fulvus</em><span class=\"apple-converted-space\">&#160;is suspected to be undergoing a reduction of 30% over a 24-year-period spanning the past and future (three generations, assuming a generation length of 8 years).</span></p><p>Population densities usually range from 40-60 individuals/km<sup>2</sup> (Mittermeier <em>et al.</em> 2010, Rakotomalala <em>et al.</em> 2017). In mid- to high-elevation rainforest in the Ankeniheny-Zahamena Corridor <em>E. fulvus</em> is one of the most frequently observed diurnal lemur species, with a mean density estimated at 42 individuals/km² and a localized high of 63 individuals/km² (H.L.L. Randrianarimanana/The Aspinall Foundation, unpublished reports), however in the 4,000 ha lowland rainforest fragment of Andriantantely that has become isolated from the main Ankeniheny-Zahamena Corridor <em>E. fulvus</em> is much scarcer, being observed less frequently in the eastern portion than <em>Indri indri</em>, <em>Varecia variegata</em> and <em>Propithecus diadema</em> (Seaman <em>et al.</em> 2018), with densities estimated at just 10 individuals per km² (H.N.T. Randriahaingo/The Aspinall Foundation, unpublished reports). The species continues to persist in even smaller lowland forest fragments, such as the 500 ha fragment of Vohibe (Andrianandrasana <em>et al.</em> 2013), the 200 ha fragment of Vohitrambo (Rajaonson and King 2013) and the 50 ha fragment of Vohiposa (Bonaventure <em>et al.</em> 2012).</p><p></p>",
+    "habitats": "<p>                  </p><p>This species occurs in the tropical/subtropical dry forest in the west, and tropical moist lowland and montane forest in the east. Groups vary in size from 3-12 (larger on Mayotte) and home ranges on Madagascar vary from approximately seven to 20 ha (Mittermeier <em>et al.</em> 2010). Recently groups of up to 13 individuals have been recorded in the mid- to high-elevation Ankeniheny-Zahamena Corridor, with a mean group size of five (H.L.L. Randrianarimanana/The Aspinall Foundation, unpublished data). The diet consists largely of fruits, young leaves, and flowers, supplemented with bark, tree exudates, soil, bird eggs and animal prey (including insects, centipedes, millipedes, nestlings, chameleons and frogs). Animals sometimes consume fruit from cultivated trees such as guava, which may bring them into conflict with humans. This species is cathemeral (active during both daylight and nighttime hours); at Ampijoroa the degree of nighttime activity was highest in the dry season; during the rainy season the species was largely diurnal (Ratsirarson and Ranaivonasy 2002, Rasmussen 2005). The mating season is in May and June. Most adult females produce offspring each year. One or two young are born in September or October, after a gestation period of around 120 days. Weaning occurs at 6–7 months, and sexual maturity at between 1–2 years. Individuals may live up to 30 years.</p><p></p>",
+    "threats": "<p>Forest destruction, due primarily to slash-and-burn practices, charcoal production and illegal logging, is the principal threat, but hunting is increasingly becoming a significant threat (including with blowpipes, firearms, bow-and-arrows and traps). Sometimes entire groups are captured. It is often seen as a pet in households and hotels within Madagascar (Reuter and Schaefer 2017).</p>",
+    "measures": "<p>This species is listed on Appendix I of CITES. This species is reported to occur in four national parks (Ankarafantsika, Andasibe-Mantadia, Andringitra, and Zahamena), two strict nature reserves (Tsaratanana and Zahamena), and seven special reserves (Ambatovaky, Ambohitantely, Analamazaotra, Bora, Mangerivola, Manongarivo, Marotandrano and Tampoketsa-Analamaitso) and other newer protected areas in lower protection categories (Corridor Ankeniheny-Zahamena, Maromizaha, Mangabe and Tampolo) (Mittermeier <em>et al.</em> 2010). The population in Bora Special Reserve may be extirpated due to extreme levels of deforestation within the reserve.</p>  <p>Several hundred <em>Eulemur fulvus</em> hybrids also inhabit the little island of M’Bouzi, off Mayotte in the Comoros, which serves as an unofficial lemur sanctuary. However, all <em>E. fulvus</em> in the Comoros may be of partially hybrid origin.</p>  As of 2019, there were approximately 140&#160;individuals<span class=\"MsoCommentReference\">&#160;in zoos around the world, mostly in Europe and Asia (ZIMS 2019), though unfortunately many of them would appear to be of unknown or mixed origins, including from the Comoros which are likely to be of hybrid origin. The European captive population numbers over 50 individuals but has no conservation role identified, either direct or indirect, and is recommended for replacement with other taxa (Johann <em>et al.</em> 2018). Many captive <em>E. fulvus</em> are held in Madagascar which are not included in the figures above, including approximately 100 individuals in registered facilities (E. Robsomanitrandrasana&#160;<em>in. litt.</em> 2016) and many others held illegally (Reuter and Schaefer 2017).",
+    "use_trade": "This species is hunted for food. It is often seen as a pet in households and hotels within Madagascar (Reuter and Schaefer 2017).",
+    "rationale": "<p>                  </p><p>The species has been assessed as Vulnerable due to suspected population declines. The taxon is suspected to be in decline due to continuing decline in area, extent and quality of habitat, in addition to exploitation through unsustainable hunting pressure.<span class=\"apple-converted-space\">&#160;<em>Eulemur fulvus</em><span class=\"apple-converted-space\"> is suspected to be undergoing a reduction of 30% over a 24-year-period spanning the past and future (three generations, assuming a generation length of 8 years).</span></p><p></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Eulemur fulvus mayottensis</em> (Schlegel 1886), described from the island of Mayotte is considered by Mittermeier <em>et al</em>. (2010) to be nothing more than descendants of <em>E. fulvus</em> which had been introduced to the island. Generic synonym = <em>Lemur</em>.</span>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Trend Unknown/Unrecorded"
+      },
+      "code": "7_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Irwin, M. & King, T.",
+      "value": [
+        "Mitch Irwin (Department of Anthropology, Northern Illinois University, USA)",
+        "Tony King (The Aspinall Foundation, Madagascar)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Reuter, K.E.",
+      "value": [
+        "Kim Reuter (IUCN SSC Primate SG)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Andriaholinirina, N., Baden, A., Blanco, M., Chikhi, L., Cooke, A., Dolch, R., Donati, G., Ganzhorn, J., Golden, C., Groeneveld, L.F., Hapke, A., Irwin, M., Johnson, S., Kappeler, P., King, T., Rakotondratsimba, M., Rakotondrainibe, H., Rakotoarisoa, G., Raharivololona, B., Patel, E., Mittermeier, R.A., Markolf, M., Lewis, R., Louis Jr, E.E., Mass, V., Nichols, R., Rabarivola, C.J., Rajaobelina, S., Rakotomanga, B., Rakotondratsimba, G., Ratsimbazafy, J., Rasoloharijaona, S., Rasamimananana, H., Randrianasolo, H., Randrianambinina, B., Ranaivoarisoa, J.F., Ralison, J., Rakotonirina, L., Ralainasolo, F.B., Ramahaleo, T., Randrianahaleo, S.I., Randrianarimanana, L., Randriatahina, G., Rasolofoharivelo, T., Ratelolahy, F., Zaramody, A., Youssouf, J., Volampeno, S., Salmona, J., Razafindramanana, J., Ratsimbazafy, N., Razafindraibe, H., Rowe, N., Seiler, M., Wright, P. & Zaonarivelo, J.",
+      "value": [
+        "Russell A. Mittermeier (Conservation International)",
+        "Harison Randrianasolo (Madagascar Reptile Assessment / Conservation International, Madagascar)",
+        "R. Nichols (Queen Mary University of London)",
+        "R. Lewis (Durrell Wildlife Conservation Trust)",
+        "Nicole Andriaholinirina (Mahajanga University, Madagascar)",
+        "Andrea Baden (Yale University, USA)",
+        "Marina Blanco (Duke University Lemur Center, USA)",
+        "Lounes Chikhi (Instituto Gulbenkian de Ci�ncia, Portugal)",
+        "Andrew Cooke (Ambatovy Minerals S.A.)",
+        "Rainer Dolch (Association Mitsinjo, Madagascar)",
+        "Giuseppe Donati (Nocturnal Primate Research Group, Oxford Brookes University, UK)",
+        "Jörg Ganzhorn (Institute of Zoology, Ecology and Conservation, University of Hamburg, Germany)",
+        "Christopher Golden (Harvard University Center for the Environment, USA)",
+        "Linn Fenna Groeneveld (Courant Research Centre Geobiology, G�ttingen University, Germany)",
+        "Andreas Hapke (Institute of Anthropology, Johannes Gutenberg University of Mainz, Germany)",
+        "Mitch Irwin (Department of Anthropology, Northern Illinois University, USA)",
+        "Steig Johnson (Department of Anthropology, Calgary University, Canada)",
+        "Peter Kappeler (German Primate Center, Goettingen, Germany)",
+        "Tony King (The Aspinall Foundation, Madagascar)",
+        "Edward E. Jr. Louis Jr (Madagascar Biodiversity Partnership, Henry Doorly Zoo, Omaha, USA)",
+        "Matthias Markolf (IUCN SSC  Center for Species Survival Cologne Zoo - Wild Pigs and Asian Songbirds)",
+        "Vanessa Mass (Ambatovy Minerals S.A.)",
+        "Erik Patel (SAVA Conservation Project, Duke University Lemur Center, USA)",
+        "Clément Joseph Rabarivola (Mahajanga University, Madagascar)",
+        "Brigitte Raharivololona (University of Antananarivo, Madagascar)",
+        "Serge Rajaobelina (Fanamby, Madagascar)",
+        "Gilbert Rakotoarisoa (Parc Botanique et Zoologique de Tsimbazaza, Madagascar)",
+        "Barson Rakotomanga (Ambatovy Minerals S.A.,)",
+        "Hajanirina Rakotondrainibe (Ambatovy Minerals S.A.,)",
+        "Gilbert Rakotondratsimba (Ambatovy Minerals S.A.,)",
+        "Marius Rakotondratsimba (The Peregrine Fund, Madagascar)",
+        "Laingoniaina Rakotonirina (The Aspinall Foundation, Madagascar)",
+        "Fidimalala Bruno Ralainasolo (Durrell Wildlife Conservation Trust - Madagascar Programme, Madagascar)",
+        "Jos� Ralison (G.E.R.P. (Groupe d'Etude et de Recherche sur les Primates de Madagascar))",
+        "Tiana Ramahaleo (WWF, Madagascar)",
+        "Jean Freddy Ranaivoarisoa (Madagascar Biodiversity Partnership, Antsiranana University, Madagascar)",
+        "Sahoby Ivy Randrianahaleo (D.G.F (Direction G�n�rale des For�ts), Madagascar)",
+        "Blanchard Randrianambinina (Mahajanga University, Madagascar)",
+        "Lucien Randrianarimanana (The Aspinall Foundation, Madagascar)",
+        "Guy Randriatahina (AEECL (Association Europ�enne pour l�Etude et la Conservation des L�muriens), Madagascar)",
+        "Hanta Rasamimananana (Ecole Normale Sup�rieure, University of Antananarivo, Madagascar )",
+        "Tovonanahary Rasolofoharivelo (The Aspinall Foundation, Madagascar)",
+        "Solofonirina Rasoloharijaona (Mahajanga University, Madagascar)",
+        "Felix Ratelolahy (Wildlife Conservation Society, Madagascar)",
+        "Jonah Ratsimbazafy (Durrell Wildlife Conservation Trust - Madagascar Programme)",
+        "Noro Ratsimbazafy (Ambatovy Minerals S.A.,)",
+        "Hanta Razafindraibe (Department of Animal Biology, University of Antananarivo, Madagascar)",
+        "Josia Razafindramanana (G.E.R.P. (Groupe d�Etude et de Recherche sur les Primates de Madagascar), Madagascar)",
+        "Noel Rowe (Primate Conservation Inc.)",
+        "Jordi Salmona (Population and Conservation Genetics Group, Instituto Gulbenkian de Ciencia, Portugal)",
+        "Melanie Seiler (Bristol Conservation and Science Foundation; School of Biological Sciences, University of Bristol, UK)",
+        "Sylviane Volampeno (AEECL (Association Europ�enne pour l�Etude et la Conservation des L�muriens), Madagascar)",
+        "Patricia Wright (Stony Brook University, Institute for the Conservation of Tropical Environments (ICTE), USA)",
+        "Jacky Youssouf (University of Toliara, Madagascar)",
+        "John Zaonarivelo (University of Antsiranana, Madagascar)",
+        "Alphonse Zaramody (Mahajanga University, Madagascar)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Chiozza, F., Pacifici, M. & Schwitzer, C.",
+      "value": [
+        "Federica Chiozza (Global Mammal Assessment)",
+        "Christoph Schwitzer (IUCN SSC Primate RLA / Bristol Conservation and Science Foundation , Bristol Zoo Gardens, Clifton, Bristol)",
+        "Michela Pacifici (Global Mammal Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Mittermeier, R.A., Louis Jr., E.E., Richardson, M., Schwitzer, C., Langrand, O., Rylands, A.B., Hawkins, F., Rajaobelina, S., Ratsimbazafy, J., Rasoloarison, R., Roos, C., Kappeler, P.M. and MacKinnon, J. 2010. <i>Lemurs of Madagascar. 3rd edition</i>. Conservation International, Arlington, VA.",
+      "year": "2010",
+      "title": "Lemurs of Madagascar. 3rd edition",
+      "author": "Mittermeier, R.A., Louis Jr., E.E., Richardson, M., Schwitzer, C., Langrand, O., Rylands, A.B., Hawkins, F., Rajaobelina, S., Ratsimbazafy, J., Rasoloarison, R., Roos, C., Kappeler, P.M. and MacKinnon, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mittermeier, R.A., Ganzhorn, J.U., Konstant, W.R., Glander, K., Tattersall, I., Groves, C.P., Rylands, A.B., Hapke, A., Ratsimbazafy, J., Mayor, M.I., Louis Jr, E.E., Rumpler, Y., Schwitzer, C. and Rasoloarison, R.M. 2008. Lemur diversity in Madagascar. <i>Int. J. Primatol.</i> 29: 1607-1656.",
+      "year": "2008",
+      "title": "Lemur diversity in Madagascar",
+      "author": "Mittermeier, R.A., Ganzhorn, J.U., Konstant, W.R., Glander, K., Tattersall, I., Groves, C.P., Rylands, A.B., Hapke, A., Ratsimbazafy, J., Mayor, M.I., Louis Jr, E.E., Rumpler, Y., Schwitzer, C. and Rasoloarison, R.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bonaventure, A., Lantovololona, F., Mihaminekena, T. H., Andrianandrasana, Z. A., Ravaloharimanitra, M., Ranaivosoa, P., Ratsimbazafy, J. & King, T. 2012. Conservation de Prolemur simus dans le site de basse altitude de Vohiposa, District de Brickaville. <i>Lemur News</i> 16: 15-20.",
+      "year": "2012",
+      "title": "Conservation de Prolemur simus dans le site de basse altitude de Vohiposa, District de Brickaville",
+      "author": "Bonaventure, A., Lantovololona, F., Mihaminekena, T. H., Andrianandrasana, Z. A., Ravaloharimanitra, M., Ranaivosoa, P., Ratsimbazafy, J. & King, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Brown, J.L. and Yoder A.D. 2015. Shifting ranges and conservation challenges for lemurs in face of climate change. <i>Ecology and Evolution</i> 5(6): 1131-1142.",
+      "year": "2015",
+      "title": "Shifting ranges and conservation challenges for lemurs in face of climate change",
+      "author": "Brown, J.L. and Yoder A.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rylands, A. B., Goodman, S. M., and Louis Jr., E. E. 2018. Species’ lists for lemurs in protected areas. In: S. M. Goodman, M. J. Raherilalao and S. Wohlauser (eds), <i>Les Aires Protegees Terrestres de Madagascar: Leur Histoire, Description et Biote / The Terrestrial Protected Areas of Madagascar: Their History, Description, and Biota. Volume I: Introduction. Volume II: Northern and Eastern Madagascar / Le Nord et l’Est de Madagascar. Volume III: Western and Southwestern Madagascar – Synthesis / L’Ouest et le Sud de Madagascar – Synthesis</i>, pp. 1716. Association Vahatra, Antananarivo, Madagascar.",
+      "year": "2018",
+      "title": "Species’ lists for lemurs in protected areas",
+      "author": "Rylands, A. B., Goodman, S. M., and Louis Jr., E. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vieilledent, G., Grinandc, C., Rakotomalalac, F.A., Ranaivosoad, R., Rakotoarijaonad, R.-J., Allnutte, T.F. and Acharda, F. 2018. Combining global tree cover loss data with historical national forest cover maps to look at six decades of deforestation and forest fragmentation in Madagascar. <i>Biological Conservation</i> 222: 189-197.",
+      "year": "2018",
+      "title": "Combining global tree cover loss data with historical national forest cover maps to look at six decades of deforestation and forest fragmentation in Madagascar",
+      "author": "Vieilledent, G., Grinandc, C., Rakotomalalac, F.A., Ranaivosoad, R., Rakotoarijaonad, R.-J., Allnutte, T.F. and Acharda, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "ZIMS. 2019. Species360 Zoological Information Management System (ZIMS). Available at: <a href=\"http://zims.Species360.org\">http://zims.Species360.org</a>. (Accessed: 21 December).",
+      "year": "2019",
+      "title": "Species360 Zoological Information Management System (ZIMS)",
+      "author": "ZIMS",
+      "citation_short": null
+    },
+    {
+      "citation": "Eppley, T.M., Santini, L., Tinsman, J.C. and Donati, G. 2020. Do functional traits offset the effects of fragmentation? The case of large-bodied diurnal large species. <i>American Journal of Primatology</i>: 10.1002/ajp.23104.",
+      "year": "2020",
+      "title": "Do functional traits offset the effects of fragmentation? The case of large-bodied diurnal large species",
+      "author": "Eppley, T.M., Santini, L., Tinsman, J.C. and Donati, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reuter, K.E. and Schaefer, M.S. 2017. Illegal captive lemurs in Madagascar: Comparing the use of online and in-person data collection methods. <i>American Journal of Primatology</i> 79: e22541.",
+      "year": "2017",
+      "title": "Illegal captive lemurs in Madagascar: Comparing the use of online and in-person data collection methods",
+      "author": "Reuter, K.E. and Schaefer, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Johann, A., Roullet, D., Herrmann, K. and Fienieg, E. 2018. Regional Collection Plan for the EAZA Prosimian Taxon Advisory Group – Edition One. EAZA Executive Office, Amsterdam.",
+      "year": "2018",
+      "title": "Regional Collection Plan for the EAZA Prosimian Taxon Advisory Group – Edition One",
+      "author": "Johann, A., Roullet, D., Herrmann, K. and Fienieg, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andrianandrasana, Z.A., Rasolofoharivelo, T., Chamberlan, C., Ratsimbazafy, J. and King, T. 2013. Etude préliminaire de Prolemur simus (Ramaimbangy) dans la forêt de basse altitude de Vohibe, bassin versant Nosivolo, Madagascar, et implications pour sa conservation. <i>Lemur News</i> 17: 43-49.",
+      "year": "2013",
+      "title": "Etude préliminaire de Prolemur simus (Ramaimbangy) dans la forêt de basse altitude de Vohibe, bassin versant Nosivolo, Madagascar, et implications pour sa conservation",
+      "author": "Andrianandrasana, Z.A., Rasolofoharivelo, T., Chamberlan, C., Ratsimbazafy, J. and King, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Morelli, T.L., Smith, A.B., Mancini, A.N., Balko, E.A., Borgerson, C., Dolch, R., Farris, Z., Federman, S., Golden, C.D., Holmes, S., Irwin, M., Jacobs, R.L., Johnson, S., King, T., Lehman, S., Louis Jr., E.E., Murphy, A., Randriahaingo, H.N.T., Randrianarimanana, H.L.L., Ratsimbazafy; J., Razafindratsima, O.H. and Baden, A.L. 2020. The fate of Madagascar's rainforest habitat. <i>Nature Climate Change</i> 10(89-96): DOI: 10.1038/s41558-019-0647-x.",
+      "year": "2020",
+      "title": "The fate of Madagascar's rainforest habitat",
+      "author": "Morelli, T.L., Smith, A.B., Mancini, A.N., Balko, E.A., Borgerson, C., Dolch, R., Farris, Z., Federman, S., Golden, C.D., Holmes, S., Irwin, M., Jacobs, R.L., Johnson, S., King, T., Lehman, S., Louis Jr., E.E., Murphy, A., Randriahaingo, H.N.T., Randrianarimanana, H.L.L., Ratsimbazafy; J., Razafindratsima, O.H. and Baden, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rakotomalala, J.-E., Proctor, S., Rakotondravony, D., Rakotondraparany, F., Raharison, J.-L. and Irwin, M.T. 2017. Influence des caractéristiques forestières et des perturbations anthropogéniques sur la distribution des lémuriens de la Forêt Classée d’Ankadivory (Tsinjoarivo-Ambatolampy). <i>Malagasy Nature</i> 12: 16-31.",
+      "year": "2017",
+      "title": "Influence des caractéristiques forestières et des perturbations anthropogéniques sur la distribution des lémuriens de la Forêt Classée d’Ankadivory (Tsinjoarivo-Ambatolampy)",
+      "author": "Rakotomalala, J.-E., Proctor, S., Rakotondravony, D., Rakotondraparany, F., Raharison, J.-L. and Irwin, M.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Seaman, D., Randriahaingo, H. N. T., Randrianarimanana, H. L. L., Ravaloharimanitra, M., Humle, T. and King, T. 2018. Edge effects on indri and black-and-white ruffed lemur distribution in the Andriantantely lowland rainforest, eastern Madagascar. <i>Lemur News</i> 21: 51-56.",
+      "year": "2018",
+      "title": "Edge effects on indri and black-and-white ruffed lemur distribution in the Andriantantely lowland rainforest, eastern Madagascar",
+      "author": "Seaman, D., Randriahaingo, H. N. T., Randrianarimanana, H. L. L., Ravaloharimanitra, M., Humle, T. and King, T",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rajaonson, A.,and King, T. 2013. Brown lemur (Eulemur fulvus) in the lowland forest of Vohitrambo, south of the Nosivolo River, Eastern Madagascar. <i>Lemur News</i> 17: 13-14.",
+      "year": "2013",
+      "title": "Brown lemur (Eulemur fulvus) in the lowland forest of Vohitrambo, south of the Nosivolo River, Eastern Madagascar",
+      "author": "Rajaonson, A.,and King, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rasmussen, M. A. 2005. Seasonality in predation risk: Varying activity periods in lemurs and other primates. In: D. K. Brockman and C. P. van Schaik (eds), <i>Seasonality in Primates: Studies of Living and Extinct Human and Non-Human Primates</i>, pp. 105-128. Cambridge University Press, Cambridge, UK.",
+      "year": "2005",
+      "title": "Seasonality in predation risk: Varying activity periods in lemurs and other primates",
+      "author": "Rasmussen, M. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ratsirarson, J., and Ranaivonasy J. 2002. Ecologie des lémuriens dans la forêt littorale de Tampolo. <i>Lemur News</i> 7: 26-30.",
+      "year": "2002",
+      "title": "Ecologie des lémuriens dans la forêt littorale de Tampolo",
+      "author": "Ratsirarson, J., and Ranaivonasy J.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

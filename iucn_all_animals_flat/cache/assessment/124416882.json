@@ -1,0 +1,908 @@
+{
+  "assessment_date": "2023-05-04T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41794,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41794/124416882",
+  "citation": "Finucci, B. & Charles, R. 2024. Chlamydoselachus anguineus. The IUCN Red List of Threatened Species 2024: e.T41794A124416882. Accessed on 05 May 2026.",
+  "assessment_id": 124416882,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41794,
+    "scientific_name": "Chlamydoselachus anguineus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "CHONDRICHTHYES",
+    "order_name": "HEXANCHIFORMES",
+    "family_name": "CHLAMYDOSELACHIDAE",
+    "genus_name": "Chlamydoselachus",
+    "species_name": "anguineus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Garman, 1884",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+        "url": "https://www.iucnssg.org",
+        "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Rabuka",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Tiburón anguila",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Frilled Shark",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 1520,
+    "upper_depth_limit": 17,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Frilled Shark has a widespread, yet patchy, distribution in the Atlantic and Pacific Oceans (Ebert <em>et al.</em> 2021).",
+    "population": "No data are available on population size, trends, and structure of the Frilled Shark. Global population trend is suspected to be stable based on refuge at depth from fishing effort in parts of its range.",
+    "habitats": "The Frilled Shark is epibenthic, pelagic, and demersal on offshore shelves and upper continental and island slopes at depths of 17−1,520 m (Ebert <em>et al. </em>2021). It reaches a maximum size of 196 cm total length (TL). Size at maturity is ~118 cm total length (TL) for males, 126−150 cm TL for females, and size at birth is ~39−60 cm TL (Ebert <em>et al.</em> 2021). Reproduction is viviparous with litter sizes of 2−15 pups per litter and a gestation period of 1−3 years (Ebert <em>et al.</em> 2021).",
+    "threats": "The Frilled Shark is infrequently taken as bycatch in demersal and midwater trawl, longline, and gillnet fisheries across most of its range (e.g., Neat <em>et al. </em>2015, Delgado <em>et al. </em>2017, Kyne <em>et al</em>. 2021). There are a few known regions where the species has been more frequently recorded, including off Japan and New Zealand (Kubota <em>et al.</em> 1991, B. Finucci, unpub. data).&#160;A single trawl off the mid-Atlantic Ridge to the north of the Azores recorded 34 Frilled Sharks in 2003 and it was suspected that this trawl took place during a mating event (Kukueva and Pavlov 2008). Any expansion of fisheries into deeper waters or previously unexploited areas where the Frilled Shark is known to occur should be closely monitored.",
+    "measures": "There are some national and regional initiatives aimed at reducing bycatch of deepwater sharks which benefit the Frilled Shark. For example, in the Northeast Atlantic Ocean, the&#160;North East Atlantic Fisheries Commission (NEAFC) banned targeted fishing for deepwater sharks, including Frilled Shark; restricted the expansion of the fishing footprint by designating existing fishing areas where bottom fishing is permitted; and has closed extensive areas to protect vulnerable marine ecosystems (VMEs) (ICES 2023). In the Southwest Pacific Ocean, most areas below 700 m are closed to trawling in the Commonwealth Trawl Sector of the Australian Southern and Eastern Scalefish and Shark Fishery (Patterson <em>et al.</em> 2022), providing refuge at depth for this species. Further research is needed on population size and trends, and life history, and catch rates should be monitored.",
+    "use_trade": "The Frilled Shark is utilized for fishmeal and meat, and is occasionally kept in aquaria in Japan (Higashi <em>et al.</em> 2015, Yamada <em>et al</em>. 2019).",
+    "rationale": "The Frilled Shark (<em>Chlamydoselachus anguineus</em>) is a medium-sized (to 196 cm total length) deepwater shark with a widespread, yet patchy, distribution in the Atlantic and Pacific Oceans. It is epibenthic, pelagic, and demersal on offshore shelves and upper continental and island slopes at depths of 17−1,520 m. No data are available on population size, trends, and structure. The Frilled Shark is infrequently taken as bycatch in demersal and midwater trawl, longline, and gillnet fisheries across most of its range although there are a few known locations where the species has been more frequently recorded, including off Japan and New Zealand. There are some national and regional management actions that will benefit the Frilled Shark, including the prohibition of targeted fishing for deepwater shark in some regions and areas closed to fishing activities. Thus, the species has significant refuge at depth in these regions and also in many parts of its range where fisheries do not operate to its maximum depth. Any expansion of fisheries into deeper waters or previously unexploited areas where the Frilled Shark is known to occur should be closely monitored. At this time, there is nothing to infer or suspect population decline and the Frilled Shark is assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "The Southern African Frilled Shark <em>Chlamydoselachus africana</em> Ebert &amp; Compagno, 2009 is distinct from <em>C. anguineus</em>."
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Hard Substrate"
+      },
+      "code": "11_1_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Soft Substrate"
+      },
+      "code": "11_1_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Deep Benthic - Seamount"
+      },
+      "code": "11_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Finucci, B. & Charles, R.",
+      "value": [
+        "Brit Finucci (IUCN SSC Shark Specialist Group)",
+        "Ryan Charles"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Vargas-Caro, C. & Rigby, C.L.",
+      "value": [
+        "Carolina Vargas-Caro",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Smart, J.J., Paul, L.J. & Fowler, S.L.",
+      "value": [
+        "Jonathan Smart (James Cook University, Queensland, Australia)",
+        "Larry Paul (National Institute of Water and Atmospheric Research, New Zealand)",
+        "Sarah Fowler (IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Jabado, R.W.",
+      "value": [
+        "Rima Jabado (Elasmo Project)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Kubota, T., Shiobara, Y. and Kubodera, T. 1991. Food habits of the frilled shark <i>Chlamydoselachus anguineus</i> collected from Suruga Bay, central Japan. <i>Bulletin of the Japanese Society of Scientific Fisheries</i>. 57(1): 15–20.",
+      "year": "1991",
+      "title": "Food habits of the frilled shark <i>Chlamydoselachus anguineus</i> collected from Suruga Bay, central Japan.",
+      "author": "Kubota, T., Shiobara, Y. and Kubodera, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kukueva, E.I. and  Pavlov, P.V. 2008. The first case of mass catch of a rare Frill Shark <i>Chlamydoselachus anguineus</i> over a seamount of the Mid-Atlantic Ridge. <i>Journal of Ichthyology</i> 48(8): 676–678.",
+      "year": "2008",
+      "title": "The first case of mass catch of a rare Frill Shark <i>Chlamydoselachus anguineus</i> over a seamount of the Mid-Atlantic Ridge",
+      "author": "Kukueva, E.I. and  Pavlov, P.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Delgado, J., Carvalho, D., Freitas, M., Biscoito, M. and de Gouveia, E.P. 2017. Records of some rare deep-sea fishes caught in the Lion, Susan, and Unicorn Seamounts, off the archipelago of Madeira (East-Central Atlantic). <i>Acta Ichthyologica et Piscatoria</i> 47(1): 91-96.",
+      "year": "2017",
+      "title": "Records of some rare deep-sea fishes caught in the Lion, Susan, and Unicorn Seamounts, off the archipelago of Madeira (East-Central Atlantic)",
+      "author": "Delgado, J., Carvalho, D., Freitas, M., Biscoito, M. and de Gouveia, E.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Neat, F.C., Burns, F., Jones, E. and Blasdale, T. 2015. The diversity, distribution and status of deep‐water elasmobranchs in the Rockall Trough, north‐east Atlantic Ocean. <i>Journal of Fish Biology</i> 87(6): 1469–1488.",
+      "year": "2015",
+      "title": "The diversity, distribution and status of deep‐water elasmobranchs in the Rockall Trough, north‐east Atlantic Ocean",
+      "author": "Neat, F.C., Burns, F., Jones, E. and Blasdale, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kyne, P.M., Heupel, M.R., White, W.T. and Simpfendorfer, C.A. 2021. <i>The Action Plan for Australian Sharks and Rays 2020</i>. National Environmental Science Program, Marine Biodiversity Hub, Hobart.",
+      "year": "2021",
+      "title": "The Action Plan for Australian Sharks and Rays 2020",
+      "author": "Kyne, P.M., Heupel, M.R., White, W.T. and Simpfendorfer, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ebert, D.A., Dando, M. and Fowler, S.F. 2021. <i>Sharks of the World. A complete guide.</i> Princeton University Press, New Jersey.",
+      "year": "2021",
+      "title": "Sharks of the World. A complete guide.",
+      "author": "Ebert, D.A., Dando, M. and Fowler, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 June 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-1"
+    },
+    {
+      "citation": "Higashi, K., Takeuchi, Y., Mukuno, A., Tomitori, H., Miya, M., Linhardt, R.J. and Toida, T. 2015. Composition of glycosaminoglycans in elasmobranchs including several deep-sea sharks: identification of chondroitin/dermatan sulfate from the dried fins of <i>Isurus oxyrinchus</i> and <i>Prionace glauca</i>. <i>Plos one</i> 10(3): p.e0120860.",
+      "year": "2015",
+      "title": "Composition of glycosaminoglycans in elasmobranchs including several deep-sea sharks: identification of chondroitin/dermatan sulfate from the dried fins of <i>Isurus oxyrinchus</i> and <i>Prionace glauca</i>",
+      "author": "Higashi, K., Takeuchi, Y., Mukuno, A., Tomitori, H., Miya, M., Linhardt, R.J. and Toida, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "International Council for the Exploration of the Sea (ICES). 2023. Oceanic Northeast Atlantic Ecosystem Overview. Copenhagen, Denmark. Available at: <a href=\"https://www.ices.dk/advice/ESD/Pages/NEAtlantic_description.aspx#:~:text=NEAFC%20has%20frozen%20the%20fishing,under%20an%20exploratory%20fishing%20protocol.\">https://www.ices.dk/advice/ESD/Pages/NEAtlantic_description.aspx#:~:text=NEAFC%20has%20frozen%20the%20fishing,under%20an%20exploratory%20fishing%20protocol.</a>. ",
+      "year": "2023",
+      "title": "Oceanic Northeast Atlantic Ecosystem Overview",
+      "author": "International Council for the Exploration of the Sea (ICES)",
+      "citation_short": null
+    },
+    {
+      "citation": "Patterson, H., Bromhead, D., Galeano, D., Larcombe, J., Timmiss, T., Woodhams, J. and Curtotti, R. 2022. <i>Fishery Status Reports 2022</i>. Australian Bureau of Agricultural and Resource Economics and Sciences, Canberra.",
+      "year": "2022",
+      "title": "Fishery Status Reports 2022",
+      "author": "Patterson, H., Bromhead, D., Galeano, D., Larcombe, J., Timmiss, T., Woodhams, J. and Curtotti, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yamada, K., Yamauchi, S., Suzuki, H., Komoda, A., Tanaka, S. and Horie, T. 2019. Frilled Shark Research Project. Aquamarine, Fukushima.",
+      "year": "2019",
+      "title": "Frilled Shark Research Project",
+      "author": "Yamada, K., Yamauchi, S., Suzuki, H., Komoda, A., Tanaka, S. and Horie, T.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,1885 @@
+{
+  "assessment_date": "2016-03-05T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41658,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41658/45214384",
+  "citation": "Skumatov, D., Abramov, A.V., Herrero, J., Kitchener, A., Maran, T., Kranz, A., Sándor, A., Saveljev, A., Savouré-Soubelet, A., Guinot-Ghestem, M., Zuberogoitia, I., Birks, J.D.S., Weber, A., Melisch, R. & Ruette, S. 2016. Mustela putorius. The IUCN Red List of Threatened Species 2016: e.T41658A45214384. Accessed on 05 May 2026.",
+  "assessment_id": 45214384,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41658,
+    "scientific_name": "Mustela putorius",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "MUSTELIDAE",
+    "genus_name": "Mustela",
+    "species_name": "putorius",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Carnivore Specialist Group",
+        "url": "http://www.iucn-scsg.org/",
+        "description": "Co-Chairs: Daniel Wilcox (email: willcox.daniel@gmail.com) and José F. González-Maya (email: jfgonzalezmaya@gmail.com)\nRed List Authority Coordinator: Will Duckworth (email: willduckworthdprk@yahoo.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "European Polecat",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Putois d'Europe",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Toirão",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Turón",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Waldiltis",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Western Polecat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2400,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "4.5",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Unknown"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "Western&#160;Polecat is widespread in the western Palaearctic east to the Ural Mountains in the Russian Federation; it is absent from Ireland, northern Scandinavia, much of the Balkans, much of the eastern Adriatic coast, and occurs in&#160;Greece&#160;only marginally, in the north. It is widespread in France, less&#160;so in the&#160;south-west and&#160;south-east&#160;(Berzins and Ruette 2014, Calenge <em>et al</em>. 2015), in mainland Spain (Grupo de carnívoros terrestres de la SECEM 2001,&#160;Virgós&#160;2007), in Romania (A.D.&#160;Sandor <em>pers. comm.</em> 2015) and in many other countries of its range.&#160;Since the year 2000 many distribution gaps in the Swiss Midlands and Jura have been filled and in the Grisons the species has expanded its range in the Vorderrhein Valley to almost the Oberalp Pass, and in the Vorderrhein Valley to the Via Mala area (Infofauna 2016).<br/><br/>There is&#160;some evidence of northern range expansion recently (references cited in&#160;Zabala&#160;<em>et al</em>. 2005, T. Maran <em>pers. comm.</em> 2016).&#160;The north-eastern border of regular occurrence runs approximately to Arkhangelsk city, Syktyvkar city and Perm city (Russia); north and east of this&#160;line, it&#160;is very rare, being replaced over the River Kama by its ecological analogue, Siberian Weasel&#160;<em>M. sibirica</em>;&#160;wild hybrids between the two, from west of the Kama, are known (D.&#160;Skumatov&#160;<em>pers. comm.</em>&#160;2015). It has recently been recorded at Cherdyn' (Perm province) at about 60°30'N, 57°E (S. Glebov per D. Skumatov <em>pers. comm. </em>2016). Western&#160;Polecat&#160;inhabits&#160;the west slope of the Middle and South Urals; recent occurrence east of the Urals&#160;(up to Kurgan city) is possible, but not proven. The species&#160;inhabits the&#160;forest-steppe zone from the&#160;southern Urals&#160;to the River Volga, River Don and the Azov Sea. To the&#160;south occurs&#160;Steppe&#160;Polecat&#160;<em>M. eversmanii</em>; hybridisation occurs&#160;(Ternovski and Ternovskaya 1994).<br/><br/>Populations of disputed taxonomic identity that are either part of, or close to, this species are found in North Africa, in the Moroccan Rif Mountains (Griffiths and Cuzin 2013) and in adjacent Algeria (Ahmim 2013). The feral range of the Domestic Ferret <em>Mustela furo</em>&#160;includes&#160;some&#160;areas within&#160;Western&#160;Polecat's native range (e.g. Britain) and some outside it such as New Zealand (Clapperton 2001).<br/><br/>In Europe,&#160;Western&#160;Polecat&#160;has been recorded from&#160;sea-level&#160;up to at least 1,600 m a.s.l. in&#160;Spain&#160;(Virgós&#160;2007) and&#160;up to 1,400 m for the French Pyrenees (C. Arthur <em>pers. comm.</em> 2016) and 1,500 m for the French Alps (P. Rigaux <em>pers. comm.</em> 2016); previous&#160;statements of occurrence up to 2,000 m a.s.l. in France remain to be corroborated, although in&#160;Switzerland&#160;there are recent records&#160;at altitudes&#160;probably above 1900 a.s.l. (P. Dollinger <em>pers. comm.</em> 2016). The African populations occur from&#160;sea level to 2,400 m (Griffiths and Cuzin 2013).",
+    "population": "In general the&#160;Western&#160;Polecat&#160;population is believed to be large and relatively stable in the eastern half to three-quarters&#160;of its range. Considerations&#160;of population trend must take into account that it loses&#160;more than half its population from autumn to spring annually (D.&#160;Skumatov&#160;<em>pers. comm.&#160;</em>2016). It is common in forested areas of European Russia, where the population&#160;density&#160;is&#160;about one individual per km² in winter in the southern taiga zone from the Belarus border in the west to Izhevsk city in the east (D. Skumatov <em>pers. comm.</em>&#160;2015). There is no precise&#160;information on population trend in the country. It is not a focus&#160;of the state hunting monitoring;&#160;information is collected only incidentally to the main species for monitoring and the hunting bag is not recorded&#160;(D.&#160;Skumatov&#160;<em>pers. comm.</em>&#160;2015). However,&#160;over its large range in the&#160;Russian&#160;Federation, which comprises a large proportion of the&#160;species' entire global range,&#160;annual official monitoring of wildlife by&#160;snow-tracking&#160;suggests&#160;that it is&#160;relatively&#160;stable, perhaps with&#160;some decline (but much less than 20%)&#160;since 2000&#160;(A. Saveljev <em>pers. comm.</em> 2015, D.&#160;Skumatov <em>pers. comm.</em>&#160;2015).&#160;Based on hunters' opinions, the population is&#160;stable or&#160;increasing in Estonia&#160;(T. Maran <em>pers. comm.</em> 2015).&#160;In Latvia the population is widespread and healthy, although the species is possibly being displaced from some areas around human settlement by Beech Marten&#160;<em>Martes foina</em>&#160;(J. Ozolins <em>pers. comm.</em> 2015). By contrast, in Belarus, the&#160;species is believed to be in decline, and recent&#160;surveys in&#160;Naliboki Forest and its rural surroundings found only 4.7-8.3 individuals per 100 km² (Sidorovich 2011,&#160;V.E.&#160;Sidorovich <em>pers.&#160;comm.</em> 2016).<br/><br/>Similarly,&#160;further&#160;south,&#160;in Romania, 2007/2008&#160;–&#160;2011/2012 hunting bag statistics and 2005–2013 population estimates (source: Ministry of Environment and Climate Change, www.mmediu.ro, accessed on 12 October 2014), for which there is no previous comparison period,&#160;converge in suggesting a 22–25% decline during the 14 years to 2013; notably, the hunting quota did not decline during&#160;2007/2008&#160;–&#160;2011/2012,&#160;so the drop in number taken was not driven by a change in regulation (A.D. Sandor <em>pers. comm.</em> 2015). Although the Polecat is considered by the public (game-keepers, scientists and lay public) to be the most common mustelid in Romania, a 2012–2014 transect survey for tracks&#160;focused on the centre and west of the country recorded it in only 54.25% of transects comprising apparently&#160;suitable habitat (compared with 65.57% for Pine Marten <em>Martes martes</em>, 76.12% for Wild Cat <em>Felis sylvestris</em> and 91.50% for Eurasian Otter <em>Lutra lutra</em>)&#160;(A.D.&#160;Sandor<em> pers. comm.</em> 2015).<br/><br/>In Western Europe, the species is scarce, typically occurring at densities of about 1 individual per 10 km², and rarely exceeding 5–10 individuals per 10 km², even in optimal habitat.&#160;In the United Kingdom numbers are now increasing, following a major persecution-driven decline from the 1800s to 1920s (Davison <em>et al</em>. 1999), although there is a significant degree of introgression with Domestic Ferret&#160;<em>M. furo</em> (Costa <em>et al</em>. 2013). In France the&#160;species' conservation status was&#160;assessed&#160;in 2007 (2002–2006) and in 2013 (2007–2012): it was 'Unfavourable – Inadequate' in 2013 versus 'Unknown' in 2007 in two biogeographic regions (Alpine and Mediterranean), but the improvement of knowledge allowed assessment as 'Favourable' in the two other regions (Atlantic and Continental). Its&#160;range dropped from 11,263 to 3,300 km² in the Alpine region and from 37,199 to 15,600 km² in the Mediterranean region between 2007 and 2013; the total French distribution area was 465,680 km² in 2007 but only 334,300 in 2013&#160;(Bensettiti and Puissauve 2015). A modelling approach intending to account for the search effort predicted a probable decrease in&#160;Polecat numbers&#160;in 30% of the French agricultural regions whereas an increase was probable in 20% of them&#160;(Calenge <em>et al</em>. 2016, in press). The southern French population has presumably&#160;decreased in line with this range contraction although&#160;no precise number exist. In Switzerland, a massive decline took place until the late 1970s but since then the population has stabilised and even, locally (in the Grisons) increased (Hausser 1995, Anderegg 2004); road-kill&#160;statistics&#160;show a huge,&#160;sustained&#160;increase in reported Polecats between 2009 and 2014 (from 2 to 153), an increase mirrored in&#160;such observation of&#160;few other&#160;species, and thus more likely to reflect an increasing Polecat population than changed reporting behaviour (P. Dollinger <em>pers. comm.</em> 2016).<br/><br/>In Spain it&#160;seems to live at generally low densities&#160;(J. Herrero <em>pers. comm.</em> 2015).&#160;Widespread declines are believed to be occurring in the Mediterranean climatic zones&#160;of&#160;Spain and Portugal, probably associated with use of pesticides but also reflecting the reduction of the European Rabbit&#160;<em>Oryctolagus cuniculus&#160;</em>population, but no quantitative data exist (E.J. Virgós <em>pers. comm.</em> 2015;&#160;I. Zuberogoitia <em>pers. comm.</em> 2015); the&#160;species is very much in the 'attention-shadow' of the larger carnivores. Intensive control programmes&#160;for American Mink&#160;<em>Neovison vison</em>&#160;in northern&#160;Spain reveal that the Polecat is now very&#160;scarce there&#160;(I. Zuberogoitia <em>pers. comm.</em> 2015).<br/><br/>In Austria, the hunting bag of polecats (Western and Steppe combined, the vast majority being the former) increased from 6,000 in 1955 to almost 14,000 in 1968 and then decreased back to 6,000 in 2003 (Reimoser <em>et al</em>. 2006). Official hunting bag&#160;statistics for 1983–2014 (provided by STATcube [Statistische Datenbank von Statistik Austria] per&#160;A Kranz <em>pers. comm.</em> 2016)&#160;show&#160;strong indication of periodical cycling (approximately 10 years between peaks, with troughs about three-quarters of the preceding peaks)&#160;but an obvious&#160;general downward trend resulting in an approximate halving of the hunting bag in the 31-year period. These data are consistent with ongoing&#160;population decline, but the role of variation in hunting effort is&#160;difficult to untangle, although at least the cycling&#160;seems more likely to reflect Polecat population than hunter behaviour. If&#160;so, this urges particular care when looking at trends in population (or in surrogates&#160;such as road-kills or hunting bags)&#160;derived from only a few years' data.<br/><br/>No monitoring or survey have been performed in Italy. The only data on this species's&#160;status&#160;come from road casualties, but these&#160;are not systematically collated. The present&#160;conservation status in Italy is thus&#160;considered unknown by the National Institute for Nature Protection (ISPRA)&#160;(M. Pavanello <em>pers. comm.</em> 2016).<br/><br/>In Germany, there is widespread&#160;opinion of decline, originally noted through decreasing hunting bags (A. Schreiber <em>pers. comm.</em> 2015). In Saxony, there was&#160;a&#160;steep decrease during the late twentieth century (H. Ansorge&#160;<em>pers.&#160;comm.</em>&#160;2015). The most detailed information comes from Saxony-Anhalt: between 1962–1989 and 2005–2014, the range in this state (total land area: 20,452 km²) dropped by 10,120 km²; and the number of Polecats found victim to road or rail accidents approximately halved between 2006–2007 and 2012, without the implementation of any polecat-specific&#160;protection measures on roads or railways, suggesting that the change reflects the local Polecat population density (A. Weber <em>pers.&#160;comm.&#160;</em>2015).&#160;It is impossible to judge how representative these alarming results are for a wider area, because of the lack comparable case studies from elsewhere. Comparable declines are&#160;strongly&#160;suspected&#160;in at least three other federal states of Germany (Mecklenburg&#160;–&#160;Western Pomerania, Brandenburg and Thuringia; more or less all eastern federal states with equal agricultural methods)&#160;(A. Weber <em>pers.&#160;comm.</em>&#160;2015). Moreover, there is nothing obviously unique about the general situation of agriculture and other human factors in these&#160;states of Germany, making it quite plausible that the situation is similar across much of&#160;Central Europe's agricultural landscape.<br/><br/>The status of the North African populations part of, or allied to, this species is poorly known; the species&#160;may now be very rare (Gippoliti 2011, Ahmim 2013,&#160;Griffiths and Cuzin 2013).",
+    "habitats": "Over its wide geographic range,&#160;Western&#160;Polecat is found in a wide variety of habitats (Zabala <em>et al</em>. 2005 and references therein). It occurs widely&#160;in lowland woods and in riparian zones, and in rural areas close to farms and villages in the winter; but it also uses wooded steppe, sand dunes, marshes and river valleys, agricultural land, forest edge and mosaic habitats (Birks 1999, Cabral <em>et al.</em> 2005). In&#160;the&#160;Russian&#160;Federation, which comprises&#160;the majority of its global range, waterside habitats are very important for the&#160;species&#160;(D.&#160;Skumatov&#160;<em>pers. comm.</em>&#160;2016).&#160;In Spain, it lives&#160;in a very wide range of environments, from Atlantic to Mediterranean habitats (Virgós&#160;2007,&#160;J. Herrero <em>pers. comm.</em> 2015) with again an association with water-edge habitats&#160;(Zabala&#160;<em>et al</em>. 2005). In general, mountainous areas are avoided. In the French Mediterranean region in particular, Polecat records&#160;are much less frequent than elsewhere in the country; the&#160;species' presence in this region&#160;seems linked to the presence of wetlands (S. Ruette and M. Guinot-Ghestem <em>pers. comm.</em> 2015), as has been&#160;found in&#160;Italy and Portugal (Rondinini <em>et al</em>. 2006, Mestre <em>et al</em>. 2007).<br/><br/>It feeds on live lagomorphs,&#160;rodents (various genera of voles, mice and hamsters), amphibians&#160;and other vertebrates, also sometimes on invertebrates and carrion (e.g. Birks 1999). In many Mediterranean areas, it is specialised in the predation of lagomorphs, notably&#160;European&#160;Rabbit&#160;<em>Oryctolagus cuniculus</em>&#160;(Roger 1991, Santos <em>et al</em>. 2009).",
+    "threats": "Population declines in western Europe have generally been attributed to over-hunting and to heavy loss or modification of the species' preferential habitats of wetlands and hedged farmland (e.g. Roger <em>et al</em>. 1988, Birks &amp; Kitchener 1999, Baghli and Verhagen 2003). Hunting is now likely to be less of a problem than formerly except at a local&#160;scale, whereas agrochmicals and introduced carnivores may be widespread and increasing threats (see below).<br/><br/>Wetland&#160;destruction has been identified as&#160;a cause of decline in&#160;Germany and&#160;Switzerland&#160;(A. Schreiber <em>pers. comm.</em> 2015,&#160;P. Dollinger<em> pers. comm.</em> 2015).&#160;In areas where the Polecat is associated with wetlands, reduction of these habitats is particularly damaging in autumn and winter, during periods of lower abundance of amphibians (Weber 1989, Lodé 1991, Baghli <em>et al</em>. 2002). In France, the drying of wetlands and the increase of agricultural land more than halved the total wetland area between 1940 and 1990 (Report Claude Bernard 1994).&#160;Hedges provide adequate cover for Polecat activity in otherwise open farmland&#160;(Birks 2000). Consequently, the wide destruction of hedgerows that occurred in western Europe in the mid and late 20th century&#160;is likely to have&#160;contributed to the decline of the species. Indeed, despite a slowdown in the uprooting of hedgerows since the 1990s, hedgerow surface area declined by 5% per year in France from 1982 to 1990 (Pointereau 2002).<br/><br/>Reduced prey-base also causes&#160;some&#160;declines, particularly in Mediterranean areas where European&#160;Rabbit <em>Oryctolagus cuniculus</em> forms a large part of the diet (see 'Habitats and ecology' section). Mediterranean Rabbit populations have been in steep decline for 25 years because of diseases, such as myxomatosis (Calvete <em>et al</em>. 1997) and rabbit haemorrhagic disease (RHD) (Moreno&#160;<em>et al</em>. 2007,&#160;Delibes-Mateos <em>et al</em>. 2009), and modification of its habitat and hunting (Calvete <em>et al</em>. 2006). The&#160;steep&#160;declines&#160;in Switzerland up to the 1970s were attributed in part to declining populations of&#160;amphibians (P. Dollinger <em>pers. comm.</em> 2015). Declines in other prey species, such as European Hamster&#160;<em>Cricetus cricetus</em>&#160;and even rats and mice (Muridae)&#160;probably contribute to the&#160;steep&#160;declines in parts of the range&#160;such as&#160;Saxony-Anhalt, Germany&#160;(A. Weber <em>pers. comm.</em> 2015). Such declines&#160;are driven by intensive agriculture (high pesticide use, rapid cultivation, choice of crops and the near-complete use of land.<br/><br/>Western&#160;Polecat is vulnerable to heavy trapping. It disappeared from most of Britain because of sustained intensive trapping, as a pest of game-birds and small livestock, from the 19th century into the early decades of the 20th (Langley and Yalden 1977). However, it recolonised the country following the near-cessation of this practice (Birks and Kitchener 1999, Birks 2000) and the resurgence of Rabbit populations (Birks 2000).<br/><br/>In western Europe,&#160;Western&#160;Polecat was formerly widely hunted for sport and fur and persecuted as a pest, but these threats have become less serious. The species is now protected in a number of range states and in such areas, the rates of hunting have greatly reduced. For example, in Switzerland, in each of the years 2009, 2013 and 2014 only a&#160;single individual (male) was killed under special license. Cantons issuing the licenses were Zurich, Berne and Argovia (P. Dollinger <em>pers. comm. </em>2016). In&#160;such areas, legal killing cannot be a threat. In France, Western Polecat&#160;was classified as 'pest' in half of (49) French departments in 1997, 1999 and 2001. But&#160;trapping of Polecats has progressively&#160;decreased since 1998, and has not been permitted since 2012 (Albaret <em>et al</em>. 2014), except in two areas (totalling around 3,500 km²). However, even before the ban, trapping&#160;intensity seemed limited: in 1998, catches were performed in only 8.6% (± 14%) of localities where the species could legally be trapped (Ruette&#160;<em>et al</em>. 2004), and only around 6,000 catches by trapping were registered in France in 2011 (Albaret &#160;<em>et al</em>. 2014). August 2012&#160;modification of the French legislation about 'pest' species meant that the Polecat could not be trapped until July 2015; subsequent legislation (July 2015 to July 2018) does not permit trapping of Polecats except in two areas. However,&#160;legal trapping for other mustelid species and non-selective predator control (see Treves and Naughton-Treves, 2005) could represent a threat for the Polecat (S. Ruette and M. Guinot-Ghestem <em>pers. comm.</em> 2015). In particular, trapping campaigns against the American Mink <em>Neovison vison</em>&#160;have resulted in many&#160;Polecats being killed in confusion (C. Arthur<em> pers. comm.</em> 2016). Hunting Western Polecat with guns remains legally permitted in France.&#160;The 2013 national enquiry estimated that fewer than 3,000 Polecats were hunted in 2013 in France (ONCFS-FNC in press).<br/><br/>Hunting, as a perceived&#160;pest of wild game, is legal throughout the year in Austria (A. Kranz <em>pers. comm.</em> 2016).<br/><br/>By contrast with much of western Europe, in European Russia the species is still hunted. However, intentional hunting is not intensive because the price per pelt is so cheap: only 30–50%&#160;of that of American Mink and 10–20%&#160;that of martens <em>Marte</em><em>s</em>. In the area of best habitat for the&#160;species in Russia, the&#160;southern forest expanses in the European part, the polecat is hunted intentionally only occasionally, for example as&#160;a pest of domestic animals&#160;such as&#160;chickens (D.&#160;Skumatov <em>pers. comm.</em>&#160;2015). Harvest usually occurs&#160;as a 'by-catch'of hunting for&#160;American Mink&#160;and Pine Marten <em>Martes martes</em> (A. Vaisman per R. Melisch,&#160;<em>pers. comm.</em>&#160;2016). The species is fairly frequent by-catch in traps&#160;set for&#160;American Mink, but only rarely in the baited leghold traps&#160;set for&#160;martens, beavers <em>Ca</em><em>s</em><em>tor</em>, Red Fox&#160;<em>Vulpe</em><em>s v</em><em>ulpe</em><em>s</em>, badgers <em>Mele</em><em>s</em>, Musk Rat&#160;<em>Ondatra zibethicus</em>, Eurasian Lynx <em>Lynx lynx</em> and others&#160;(D.&#160;Skumatov&#160;<em>pers. comm.&#160;</em>2015). In one area, the trapping of 4,000 Pine Martens resulted in only about 100 Western Polecats taken as bycatch (A. Saveljev pers. comm. 2016).&#160;Overall, trapping is not a threat to the&#160;species in Russia (A. Saveljev <em>pers. comm.</em> 2016).&#160;In Morocco and Algeria,&#160;in at least some areas, the species is captured for hunting (e.g. Ahmim 2013).<br/><br/>In Saxony-Anhalt, Germany, Polecats have a very high pollutant burden (PCB, PBB, PBDE, OCP and human medicine) leading to diminished reproductive output (which is particularly problematic for 'r-strategy' species such as this) (A. Weber <em>pers. comm.</em> 2015). There is too little comparable information from other parts of the&#160;species's range, but there is no reason not to think that similar pollutant loads will not be borne by populations elsewhere in lowland mesic&#160;western and central Europe, given patterns of human&#160;settlement and agriculture. Frogs&#160;sampled in Switzerland in the 1980s had high levels&#160;of PCBs and these pollutants were considered to have led to major declines in the country's&#160;Eurasian Otter <em>Lutra lutra</em> populations (Weber 1990);&#160;subsequently otter populations have strengthened in the country (P. Dollinger <em>pers. comm.</em> 2016); Polecat numbers have risen at the&#160;same time although the cause&#160;is not known.&#160;Secondary rodenticide poisoning (see&#160;Shore&#160;<em>et al</em>. 1996, 1999, 2003; Birks 1998; Fournier-Chambrillon&#160;<em>et al</em>. 2004; Giraudoux 2006) could potentially be an important threat, but its impact on Polecat populations remains to be evaluated extensively.<br/><br/>The introduced American Mink is likely to be a problematic, at&#160;some level,&#160;for&#160;the Polecat&#160;in the large parts of its&#160;range where this invasive species is now established. The long-term population-level consequences on the Polecat of the variety of&#160;effects of this&#160;species&#160;(see, e.g.&#160;Barrientos 2015) remain poorly understood. Three carnivore species&#160;are believed to be driving Polecat declines in Belarus: the introduced American Mink in valley ecosystems (competition for prey during raising kits, especially the decline in Water Voles <em>Arvicola amphibius</em>&#160;effected by American Mink, and interference towards vulnerable female Polecats); the introduced&#160;Raccoon Dog<em> Nyctereutes procyonoides</em>,&#160;mainly&#160;in forest–swamp mosaics&#160;(competition for carrion in late winter); and the Beech Marten&#160;<em>Martes foina</em>&#160;(interference in human settlements and their surroundings) (Sidorovich 2011, V.E. Sidorovich <em>pers.&#160;comm.</em> 2016). In Latvia the species is possibly being displaced from some areas around human settlement by Beech Marten&#160;(J. Ozolins <em>pers. comm. </em>2015).<br/><br/>The extent to which hybridisation threatens populations is unclear. Hybridisation&#160;with wild-living Domestic Ferrets&#160;<em>Mustela furo</em>&#160;occurs&#160;in the United Kingdom (Costa&#160;<em>et al</em>. 2013) but it&#160;seems unlikely that on the mainland populations will in the long-term depart phenotypically from wild-type Polecats. In Britain feral Ferrets generally only thrive on islands and appear to be unable to withstand competition from&#160;<em>M. putorius</em>&#160;(A. Kitchener <em>pers.&#160;comm.</em> 2015). In Saxony-Anhalt, Germany, introgression with Domestic Ferret was found in 6% of 34 individuals tested genetically, and in 10% of 104 checked morphologically (for skull constriction) (A. Weber <em>pers. comm.</em> 2016).&#160;Overall,&#160;the zone of sympatry between&#160;Western Polecat&#160;and&#160;Steppe Polecat&#160;<em>M. eversmanii</em> includes 43% of the former's&#160;distribution area and 20% of the latter's (Ternovski and Ternovskaya 1994). Wild-taken hybrids are held in museums of&#160;Ukraine, Belarus, and also in the Rostov-on-Don and Orel cities (Russia) (Ternivski and Ternovskaya 1994). The&#160;sympatry is not the result of recent range expansion,&#160;suggesting that&#160;such hybridisation is unlikely to be a threat to the&#160;species. Hybridisation also occurs with European Mink <em>M. lutreola</em>, but again this&#160;seems unlikely to be a threat to this&#160;species.<br/><br/>Mustelids are described as vulnerable to accidental mortality from road&#160;traffic (Birks 1993) and the widespread&#160;steep&#160;increase of road traffic in western Europe and increasingly elsewhere in the&#160;species' range might have population-level effects in areas of high&#160;road density. Moreover, the presence of Polecat prey on and near road-verges may also increase its traffic collision mortality of the predator (Birks 1993, Barrientos and Bolonio 2008).",
+    "measures": "Given the widespread&#160;opinion and localised evidence&#160;of recent steep declines in continental western Europe, the most important conservation&#160;requirement is for research to clarify the range of threats, and, for each, the intensity and geographic&#160;spread, to allow the design and implementation of effective conservation measures where they are needed. In particular, it is urgent to undertake, across Europe,&#160;research comparable to that&#160;in Saxony-Anhalt, Germany, which has indicated&#160;recent steep declines there (A. Weber <em>pers.&#160;comm.</em>&#160;2015;&#160;see 'Population'&#160;section).<br/><br/>Western&#160;Polecat is listed on Appendix III of the Convention on the Conservation of European Wildlife and Natural Habitats (Bern Convention) and Annex V of the EU Council’s Directive on the conservation of natural habitats and of wild fauna and flora (EU Habitats Directive). It is protected in Italy (M. Pavanello <em>pers. comm.</em> 2016) and under Schedule 6 of the Wildlife and Countryside Act (UK) and&#160;by the regional Red Data Book on southern border of its Russian&#160;area, in Rostovskaya oblast’ (Rostov-na-Donu city)&#160;(D.&#160;Skumatov&#160;<em>pers. comm.</em> 2015). In Spain, it is listed in the national&#160;Red Data Book&#160;as Near Threatened (Virgós&#160;2007). In Switzerland it was categorised as Vulnerable in 1994; it will&#160;shortly be reassessed (P. Dollinger <em>pers. comm.</em> 2016).&#160;The species was&#160;included in the 'pre-warning list' (analogous&#160;to Near Threatened) for Germany in 1998 and was&#160;kept therein in the new edition of the German Red List in 2009. This status is a compromise between the various red lists of the many German Bundesländer (provinces), some of which classify the polecat in higher threat categories, while there could still be provinces where the polecat is not included yet at all&#160;(A. Schreiber <em>pers. comm.</em> 2015).&#160;It is registered in Annex V to DHFF (Directive Habitats-Faune-Flore), France, and therefore benefited from an assessment of its conservation status in 2007 (2002–2006) and in 2013 (2007–2012) (Bensettiti and Puissauve 2015). It receives at least some level of protection in many other range&#160;states. In Saxony-Anhalt, Germany, where&#160;steep declines have recently been demonstrated,&#160;hunting is prohibited for the period 2015-2019 (with possibility of extension) to preserve Polecat numbers. This has prompted intensive&#160;study of&#160;occurrence, population dynamics, genetic monitoring, and survey of carcases&#160;(A. Weber<em> pers. comm.</em> 2016).&#160;It occurs in many protected areas across its range.<br/><br/>The decline in Switzerland up to the 1970s was combated by the improvement of habitat by creation of new ponds for amphibians and revitalisation of small rivers (P. Dollinger <em>pers. comm.</em> 2015). In much of continental western Europe it is very important to widen and restore river-banks and wetlands and to accept Eurasian Beaver <em>Castor fiber&#160;</em>as a promotor of natural habitat development. It is similarly important to restore the edges of woods and hedges and to minimise mowing of fallow agricultural land and of field boundaries. Restocking operations are trying to rebuild some Rabbit populations, particularly in the Mediterranean region (Letty&#160;<em>et al</em>. 2006), but methods need to be improved (Calvete&#160;<em>et al</em>. 1997, Moreno&#160;<em>et al</em>. 2007). These transactions may prove beneficial in maintaining the Polecat (Birks 2000). Conservation of&#160;Eurasian Hamster <em>Cricetus cricetus</em> is beneficial to the Polecat and warrants wider implementation.<br/><br/>Where either occurs, control of American Mink <em>Neovison vison</em>&#160;and Raccoon Dog <em>Nyctereutes procyonoides</em>&#160;important to prevent declines of Western Polecat.&#160;Reduced release of Domestic Ferrets <em>Mustela furo&#160;</em>into the wild would reduce the (apparently rather low) threat from introgression.<br/><br/>The taxonomic and conservation status of the North African populations part of, or allied to, this species is poorly known. They may now be very rare, an issue of concern if they are an autochthonous, potentially somewhat taxonomically distinct, form (Gippoliti 2011, Ahmim 2013,&#160;Griffiths and Cuzin 2013). A taxonomic assessment of these populations is a priority and if they are native, they warrant conservation measures.",
+    "use_trade": "Western&#160;Polecat is legally hunted in&#160;the&#160;Russian&#160;Federation&#160;and in various other countries&#160;for its fur. Because of the high variety of shades of hairs and their gradations it is difficult to find two or three hides of the same coloration, and it is impossible to find thirty or fifty similar hides for a jacket – hence Western Polecat furs harvested from the wild can be found on the Russian domestic market only in the form of smaller handicraft products&#160;such as&#160;hats and caps (N. Dronova and A. Vaisman per R. Melisch <em>pers. comm.</em> 2016). Industrial production use farmed hides from hybrid forms. According to Sergey Stolbov, President of the Russian Fur Union (A. Vaisman&#160;per R. Melisch <em>pers. comm.</em>&#160;2016), Western Polecat, as the&#160;species is treated by the Red List&#160;(pure-bred offspring of individuals taken from the wild), has never been farmed for hide production. Hybrids with Domestic Ferret&#160;(i.e. <em>M. putoris</em> ×&#160;<em>M. (putoris) furo</em>) are, however, farmed in Russia at two fur farms (one in Pushkino close to Moscow, one in Tver province) in industrial volumes, producing about 30,000-35,000 hides per year. These are&#160;all solely for the Russian domestic market and there are multiple regularly breeding coloured forms of furs: pearl, golden, snowy-white, coal-black, etc. Statements that&#160;the species is&#160;farmed for fur in the Russian Far East (e.g. Dronova and Shestakov 2005), many thousand kilometres from its natural range, are likely also to refer to the said hybrid form.<br/><br/>The EU-TWIX database and mailing list exchanges which concentrate on information on seized specimen of fauna and flora from the wild hold, as of February 2016, no information relating to this species. (http://www.eutwix.org/ ; http://www.traffic.org/home/2015/12/3/eu-twix-ten-years-of-enforcement-assistance.html; V. Sacré &#160;per&#160;R. Melisch&#160;<em>pers. comm. </em>2016). There is also no seizure information held in China on the&#160;species&#160;(Xiao Yu per&#160;R. Melisch&#160;<em>pers. comm.</em> 2016).",
+    "rationale": "Western Polecat is listed as Least Concern in view of its wide distribution, large population, and because it is unlikely to be declining at the rate required to qualify for listing in a threatened category or even as&#160;Near Threatened. The confidence of this assessment is low, given the paucity of recent precise and accurate information on population trend across most of&#160;its range. The geographic range and population (not known, but as&#160;inferred under a reasonable population density)&#160;are both well in excess of&#160;what would be required for the&#160;species to be listed as even Near Threatened on those grounds. However, the&#160;situation is less clear with population trend. As a&#160;species&#160;living largely in landscapes dominated by&#160;farming and other human endeavour, it is difficult to infer population trend from gross patterns of&#160;habitat change; changes&#160;in farming&#160;style&#160;and other human activities are likely to have much larger effects.&#160;There is&#160;evidence of recent strong decline in Saxony-Anhalt, Germany (A. Weber <em>pers.&#160;comm.</em>&#160;2015) and of decline in&#160;various other parts of western Europe&#160;(see 'Population'&#160;section) and it&#160;seems&#160;likely that the&#160;species is declining&#160;across much of this region. However, in&#160;some areas,&#160;such as&#160;Britain and&#160;Switzerland, populations which had&#160;shown heavy declines in the past are now rebounding.&#160;Europe west of the former 'Iron Curtain' accounts&#160;for only about a quarter of Western Polecat range, and in the remaining three-quarters the general opinion is of population&#160;stability. Moreover, population densities in this&#160;latter area are believed to be&#160;substantially higher than in Western Europe.&#160;If all this information is accurate,&#160;the overall global population trend&#160;seems unlikely to reach the rate of about 20% decline per 13-14 years (three generations) that would make a Near Threatened categorisation appropriate, despite the drastic&#160;situation in parts of western Europe.<br/><br/>The North African populations of disputed origin and taxonomic identity, either part of or close to this species, are poorly known but seem to be extremely rare and threatened (Gippoliti 2011, Ahmim 2013,&#160;Griffiths and Cuzin 2013); however, they comprise such a small proportion of the global population that they do not affect the Red List categorisation for the species as a whole.",
+    "trend_justification": null,
+    "taxonomic_notes": "Some authors (e.g., Pocock 1936, Ellerman and Morrison-Scott 1951) considered that&#160;<em>Mustela putorius</em> and Steppe Polecat <em>M. eversmanii</em> are conspecific, but most recognised these two taxa as closely related but distinct species (e.g. Heptner <em>et al</em>. 1967, Abramov 2000, Wozencraft 2005). Recent molecular studies support this point of view (Davison <em>et al</em>. 1999, Kurose <em>et al</em>. 2000, Koepfli <em>et al</em>. 2008).&#160;<em>Mustela putorius&#160;</em>is the probable ancestor of Domestic Ferret <em>M. furo</em>; this latter is often known as <em>M. p. furo</em>. The origin of the North African population allied to this species has been debated. Some authors contend that it is a feral population of Domestic Ferret, although fossil remains found in 2001 and ascribed to <em>M. putorius</em> suggest that the species might be native to North Africa (see Gippoliti 2011, Ahmim 2013,&#160;Griffiths and Cuzin 2013 and references therein). Much information published under the name&#160;<em>M. putorius</em>&#160;refers&#160;specifically to&#160;<em>M.&#160;</em><em>furo</em>; for example, only this latter&#160;has been introduced to New Zealand (Clapperton 2001)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Sand Dunes"
+      },
+      "code": "13_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andorra"
+      },
+      "code": "AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Neogale vison",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Mustela furo",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (domestic use)"
+      },
+      "code": "7_2_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (commercial use)"
+      },
+      "code": "7_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (agricultural use)"
+      },
+      "code": "7_2_7"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (commercial use)"
+      },
+      "code": "7_2_6"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (domestic use)"
+      },
+      "code": "7_2_5"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Skumatov, D., Abramov, A.V., Herrero, J., Kitchener, A., Maran, T., Kranz, A., Sándor, A., Saveljev, A., Savouré-Soubelet, A., Guinot-Ghestem, M., Zuberogoitia, I., Birks, J.D.S., Weber, A., Melisch, R. & Ruette, S.",
+      "value": [
+        "Johnny Birks",
+        "Tiit Maran (Foundation Lutreola, Tallinn Zoo)",
+        "D Skumatov (Russian Research Institute of Game Management and Fur Farming)",
+        "Andreas Kranz",
+        "A Saveljev (Russian Research Institute of Game Management and Fur Farming)",
+        "Alexei Abramov (Zoological Institute, Russian Academy of Sciences, St. Petersberg, Russia)",
+        "A. D. Sándor (BirdLife International)",
+        "Andrew Kitchener (NAT mUS sCOTLAND)",
+        "Juan  Herrero",
+        "Audre Savouré-Soubelet (Museum national d'Histoire naturelle, Paris, France)",
+        "Iñigo Zuberogoitia",
+        "Roland Melisch",
+        "Murielle Guinot-Ghestem",
+        "Sandrine Ruette",
+        "Antje Weber"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Pacifici, M.",
+      "value": [
+        "Michela Pacifici (Global Mammal Assessment)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Fernandes, M.L., Tikhonov, A., Conroy, J., Cavallini, P., Stubbe, M., Wozencraft, C, Gippoliti, S., Veron, G., Outhwaite, W, Oldfield, T.E.E., Dronova, N., Xiao, Y., Kecse-Nagy, K., Pavanello, M., Dollinger, P., Croose, E., Sacre, V. & Vaisman, A.",
+      "value": [
+        "A Tikhonov",
+        "Thomasina Oldfield (TRAFFIC International, Cambridge, UK)",
+        "Jim Conroy (Chair, IUCN Otter Specialist Group)",
+        "Chris Wozencraft (Was Chair IUCN SSC Carnivore SG, now deceased)",
+        "Willow Outhwaite (TRAFFIC)",
+        "Paolo Cavallini (Faunalia, Italy)",
+        "Spartaco Gippoliti",
+        "Géraldine Veron",
+        "M Stubbe",
+        "Margarida Lopes Fernandes",
+        "Katalin Kecse-Nagy",
+        "Vinciane Sacre",
+        "Yu Xiao",
+        "Alexey Vaisman",
+        "Natalia Dronova",
+        "Marco Pavanello",
+        "Lizzie Croose",
+        "Peter Dollinger"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Ellerman, J.R. and Morrison-Scott, T.C.S. 1951. <i>Checklist of Palaearctic and Indian Mammals 1758 to 1946</i>. British Museum (Natural History), London, UK.",
+      "year": "1951",
+      "title": "Checklist of Palaearctic and Indian Mammals 1758 to 1946",
+      "author": "Ellerman, J.R. and Morrison-Scott, T.C.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wozencraft, W.C. 1993. Order Carnivora. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference. Second Edition</i>, pp. 279-344. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1993",
+      "title": "Order Carnivora",
+      "author": "Wozencraft, W.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corbet, G.B. 1978. <i>The Mammals of the Palaearctic Region: a Taxonomic Review</i>. British Museum (Natural History) and Cornell University Press, London, UK and Ithaca, NY, USA.",
+      "year": "1978",
+      "title": "The Mammals of the Palaearctic Region: a Taxonomic Review",
+      "author": "Corbet, G.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cabral, M.J., Almeida, J., Almeida, P.R., Dellinger, T., Ferrand de Almeida, N., Oliveira, M. E., Palmeirim, J.M., Queiroz, A.I., Rogado, L. and Santos-Reis, M. (eds). 2005. <i>Livro Vermelho dos Vertebrados de Portugal</i>. Instituto da Conservação da Natureza, Lisboa.",
+      "year": "2005",
+      "title": "Livro Vermelho dos Vertebrados de Portugal",
+      "author": "Cabral, M.J., Almeida, J., Almeida, P.R., Dellinger, T., Ferrand de Almeida, N., Oliveira, M. E., Palmeirim, J.M., Queiroz, A.I., Rogado, L. and Santos-Reis, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Battersby, J. 2005. UK Mammals: Species Status and Population Trends.  First Report by the Tracking Mammals Partnership. JNCC / The Tracking Mammals Partnership.",
+      "year": "2005",
+      "title": "UK Mammals: Species Status and Population Trends",
+      "author": "Battersby, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Birks, J. 1999. <i>Mustela putorius</i>. In: A. J. Mitchell-Jones, G. Amori, W. Bogdanowicz, B. Kryštufek, P. J. H. Reijnders, F. Spitzenberger, M. Stubbe, J. B. M. Thissen, V. Vohralík and J. Zima (eds), <i>The Atlas of European Mammals</i>, Academic Press, London, UK.",
+      "year": "1999",
+      "title": "<i>Mustela putorius</i>",
+      "author": "Birks, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, H. and Cuzin, F. In press. <i>Mustela putorius</i>. In: J. S. Kingdon and M. Hoffmann (eds), <i>The Mammals of Africa</i>, Academic Press, Amsterdam, The Netherlands.",
+      "year": "In press",
+      "title": "<i>Mustela putorius</i>",
+      "author": "Griffiths, H. and Cuzin, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Matos, H. and Santos-Reis, M. 2003. Distribuçao relativo e abundancia relativa de <i>Martes martes</i> e <i>Mustela putorius</i> [Present distribution and relative abundance of <i>Martes martes</i> and <i>Mustela putorius</i>].",
+      "year": "2003",
+      "title": "Distribuçao relativo e abundancia relativa de <i>Martes martes</i> e <i>Mustela putorius</i> [Present distribution and relative abundance of <i>Martes martes</i> and <i>Mustela putorius</i>]",
+      "author": "Matos, H. and Santos-Reis, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Clapperton, B. K. 2001. Advances in New Zealand Mammalogy 1990-2000: Feral Ferret. <i>Journal of the Royal Society of New Zealand</i> 31(1): 185-203.",
+      "year": "2001",
+      "title": "Advances in New Zealand Mammalogy 1990-2000: Feral Ferret",
+      "author": "Clapperton, B. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Heptner, V.G., Naumov, N.P., Yurgenson P.B., Sludskii, A.A., Chirkova, A.F. and Bannikov, A.G. 1967. <i>Mammals of Soviet Union. Vol. 2(1). Sea Cows and Carnivora</i>. Vyshaya shkola, Moscow, Russia.",
+      "year": "1967",
+      "title": "Mammals of Soviet Union. Vol. 2(1). Sea Cows and Carnivora",
+      "author": "Heptner, V.G., Naumov, N.P., Yurgenson P.B., Sludskii, A.A., Chirkova, A.F. and Bannikov, A.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koepfli, K.-P., Deer, K.A., Slater, G.J., Begg, C., Begg, K., Grassman, L., Lucherini, M., Veron, G. and Wayne, R.K. 2008. Multigene phylogeny of the Mustelidae: resolving relationships, tempo and biogeographic history of a mammalian adaptive radiation. <i>BMC Biology</i> 6: 10. doi:10.1186/1741-7007-6-10.",
+      "year": "2008",
+      "title": "Multigene phylogeny of the Mustelidae: resolving relationships, tempo and biogeographic history of a mammalian adaptive radiation",
+      "author": "Koepfli, K.-P., Deer, K.A., Slater, G.J., Begg, C., Begg, K., Grassman, L., Lucherini, M., Veron, G. and Wayne, R.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abramov, A.V. and Khlyap, L.A. 2012. Order Carnivora. In: I.Y. Pavlinov and A.A. Lissovsky (eds), <i>The mammals of Russia: a taxonomic and geographic reference</i>, pp. 313–382. KMK Scientific Press, Moscow, Russia.",
+      "year": "2012",
+      "title": "Order Carnivora",
+      "author": "Abramov, A.V. and Khlyap, L.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kurose, N., Abramov, A.V. and Masuda, R. 2000. Intrageneric diversity of the cytochrome b gene and phylogeny of Eurasian species of the genus <i>Mustela</i> (Mustelidae, Carnivora). <i>Zoological Science</i> 17: 673–679.",
+      "year": "2000",
+      "title": "Intrageneric diversity of the cytochrome b gene and phylogeny of Eurasian species of the genus <i>Mustela</i> (Mustelidae, Carnivora)",
+      "author": "Kurose, N., Abramov, A.V. and Masuda, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Abramov, A.V. 2000. A taxonomic review of the genus <i>Mustela</i> (Mammalia, Carnivora). <i>Zoosystematica Rossica</i> 8: 357–364.",
+      "year": "2000",
+      "title": "A taxonomic review of the genus <i>Mustela</i> (Mammalia, Carnivora)",
+      "author": "Abramov, A.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shore, R.F., Birks, J.D.S., Afsar, A., Wienburg, C.L. and Kitchener, A.C. 2003. Spatial and temporal analysis of second-generation anticoagulant rodenticide residues in Polecats (<i>Mustela putorius</i>) from throughout their range in Britain, 1992-1999. <i>Environmental Pollution</i> 122: 183-193.",
+      "year": "2003",
+      "title": "Spatial and temporal analysis of second-generation anticoagulant rodenticide residues in Polecats (<i>Mustela putorius</i>) from throughout their range in Britain, 1992-1999",
+      "author": "Shore, R.F., Birks, J.D.S., Afsar, A., Wienburg, C.L. and Kitchener, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grupo de carnívoros terrestres de la SECEM. 2001. Distribución y estatus del turón (<i>Mustela putorius</i>) en España: un análisis basado en encuestas. <i>Galemys</i> 13: 39-61.",
+      "year": "2001",
+      "title": "Distribución y estatus del turón (<i>Mustela putorius</i>) en España: un análisis basado en encuestas",
+      "author": "Grupo de carnívoros terrestres de la SECEM",
+      "citation_short": null
+    },
+    {
+      "citation": "Birks, J.D.S. 2000. The recovery of the Polecat, <i>Mustela putorius</i>, in Britain. In: H.I. Griffiths (ed.), <i>Mustelids in a modern world - management and conservation aspects of Small carnivore: human interactions</i>, pp. 141-152. Backhuys Publishers, Leiden, The Netherlands.",
+      "year": "2000",
+      "title": "The recovery of the Polecat, <i>Mustela putorius</i>, in Britain",
+      "author": "Birks, J.D.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lodé, T. 1991. Evolution annuelle du régime alimentaire du Putois en fonction de la disponibilité des proies. <i>Bulletin d'Écologie</i> 22: 337-342.",
+      "year": "1991",
+      "title": "Evolution annuelle du régime alimentaire du Putois en fonction de la disponibilité des proies",
+      "author": "Lodé, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mestre, F.M., Ferreira, J.P. and Mira, A. 2007. Modelling the distribution of the European Polecat <i>Mustela putorius</i> in a Mediterranean agricultural landscape. <i>Revue d'Ecologie, Terre et Vie</i> 62: 35-47.",
+      "year": "2007",
+      "title": "Modelling the distribution of the European Polecat <i>Mustela putorius</i> in a Mediterranean agricultural landscape.",
+      "author": "Mestre, F.M., Ferreira, J.P. and Mira, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zabala, J., Zuberogoitia, I. and Martínez-Climent, J.A. 2005. Site and landscape features ruling the habitat use and occupancy of the polecat (<i>Mustela putorius</i>) in a low density area: a multiscale approach. <i>European Journal of Wildlife Research</i> 51: 157-162.",
+      "year": "2005",
+      "title": "Site and landscape features ruling the habitat use and occupancy of the polecat (<i>Mustela putorius</i>) in a low density area: a multiscale approach.",
+      "author": "Zabala, J., Zuberogoitia, I. and Martínez-Climent, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calenge, C., Chadoeuf, J., Giraud, C., Huet, S., Julliard, R., Monestiez, P. Piffady, J. Pinaud, D. and Ruette, S. 2015. The spatial distribution of Mustelidae in France. <i>PLoS One</i> 10(3 (e0121689)): 1-18.",
+      "year": "2015",
+      "title": "The spatial distribution of Mustelidae in France",
+      "author": "Calenge, C., Chadoeuf, J., Giraud, C., Huet, S., Julliard, R., Monestiez, P. Piffady, J. Pinaud, D. and Ruette, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Infofauna. 2016. <i>Mustela putorius</i> Linnaeus, 1758. Available at: <a href=\"http://lepus.unine.ch/carto/index.php?nuesp=70752&rivieres=on&lacs=on&hillsh=on&data=on&year=2000\">http://lepus.unine.ch/carto/index.php?nuesp=70752&rivieres=on&lacs=on&hillsh=on&data=on&year=2000</a>. (Accessed: 5 March 2016).",
+      "year": "2016",
+      "title": "<i>Mustela putorius</i> Linnaeus, 1758",
+      "author": "Infofauna",
+      "citation_short": null
+    },
+    {
+      "citation": "Roger, M. 1991. Régime et disponibilités alimentaires chez le Putois (<i>Mustela putorius</i> L.). <i>Revue d'Ecologie: Terre et Vie</i> 46: 245-261.",
+      "year": "1991",
+      "title": "Régime et disponibilités alimentaires chez le Putois (<i>Mustela putorius</i> L.)",
+      "author": "Roger, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barrientos, R. 2015. Adult sex-ratio distortion in the native European Polecat is related to the expansion of the invasive American Mink. <i>Biological Conservation</i> 186: 28-34.",
+      "year": "2015",
+      "title": "Adult sex-ratio distortion in the native European Polecat is related to the expansion of the invasive American Mink",
+      "author": "Barrientos, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Giraudoux, P., Tremollières, C., Barbier, B., Defaut, R., Rieffel, D., Bernard, N., Lucot, E. and Berny, P. 2006. Persistence of bromadiolone anticoagulant rodenticide in <i>Arvicola terrestris</i> populations after field control. <i>Environmental Research</i> 102: 291-298.",
+      "year": "2006",
+      "title": "Persistence of bromadiolone anticoagulant rodenticide in <i>Arvicola terrestris</i> populations after field control",
+      "author": "Giraudoux, P., Tremollières, C., Barbier, B., Defaut, R., Rieffel, D., Bernard, N., Lucot, E. and Berny, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shore, R.F., Birks, J.D.S., Freestone, P. and Kitchener, A.C. 1996. Second-generation rodenticides and Polecats (<i>Mustela putorius</i>) in Britain. <i>Environmental Pollution</i> 91: 279-282.",
+      "year": "1996",
+      "title": "Second-generation rodenticides and Polecats (<i>Mustela putorius</i>) in Britain",
+      "author": "Shore, R.F., Birks, J.D.S., Freestone, P. and Kitchener, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Santos, M.J., Matos, H.M., Baltazar, C., Grilo, C. and Santos-Reis, M. 2009. Is Polecat (<i>Mustela putorius</i>) affected by 'mediterraneity'? <i>Mammalian Biology</i> 74: 448-455.",
+      "year": "2009",
+      "title": "Is Polecat (<i>Mustela putorius</i>) affected by 'mediterraneity'?",
+      "author": "Santos, M.J., Matos, H.M., Baltazar, C., Grilo, C. and Santos-Reis, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Berzins, R. and Ruette, S. 2014. Status of the Polecat <i>Mustela putorius</i> (Linnaeus,1758) in France and management implications. <i>Munibe Monographs, Nature Series</i> 3: 101-108.",
+      "year": "2014",
+      "title": "Status of the Polecat <i>Mustela putorius</i> (Linnaeus,1758) in France and management implications.",
+      "author": "Berzins, R. and Ruette, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fournier-Chambrillon, C., Berny, P.J., Coiffier, O., Barbedienne, P., Dassé, B., Delas, G., Galineau, H., Mazet, A., Pouzenc, P., Rosoux, R. and Fournier, P. 2004. Evidence of secondary poisoning of free-ranging riparian mustelids by anticoagulant rodenticides in France: implications for conservation of European Mink (<i>Mustela lutreola</i>). <i>Journal of Wildlife Diseases</i> 40: 688-695.",
+      "year": "2004",
+      "title": "Evidence of secondary poisoning of free-ranging riparian mustelids by anticoagulant rodenticides in France: implications for conservation of European Mink (<i>Mustela lutreola</i>)",
+      "author": "Fournier-Chambrillon, C., Berny, P.J., Coiffier, O., Barbedienne, P., Dassé, B., Delas, G., Galineau, H., Mazet, A., Pouzenc, P., Rosoux, R. and Fournier, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ansorge, H. 2009. Waldiltis (Iltis) <i>Mustela putorius</i> Linnaeus, 1758. In: Hauer, S., Ansorge, H. and Zöphel, U. (eds), <i>Atlas der Säugetiere Sachsens</i>, pp. 288-290. Zentraler Broschürenversand der Sächsischen Staatsregierung, Dresden.",
+      "year": "2009",
+      "title": "Waldiltis (Iltis) <i>Mustela putorius</i> Linnaeus, 1758",
+      "author": "Ansorge, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calenge C., Albaret M., Léger, F., Vandel, J.-M., Chadoeuf, J., Giraud, C., Huet, S., Julliard, R., Monestiez, P., Piffady, J., Pinaud, D. and Ruette, S. in press. Premières cartes d’abondance relative de six mustélidés en France. Modélisation des données collectées dans les « carnets de bord petits carnivores » de l’ONCFS. <i>Faune Sauvage</i> 310 (in press).",
+      "year": "in press",
+      "title": "Premières cartes d’abondance relative de six mustélidés en France. Modélisation des données collectées dans les « carnets de bord petits carnivores » de l’ONCFS.",
+      "author": "Calenge C., Albaret M., Léger, F., Vandel, J.-M., Chadoeuf, J., Giraud, C., Huet, S., Julliard, R., Monestiez, P., Piffady, J., Pinaud, D. and Ruette, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Virgós, E. 2007. <i>Mustela putorius,</i> Linnaeus, 1758. In: Palomo, L.J., Gisbert, J. and Blanco J.C. (eds), <i>Atlas y Libro Rojo de los mamíferos terrestres de España</i>, pp. 294-298. Dirección General de Conservación de la Naturaleza, SECEM-SECEMU, Madrid, Spain.",
+      "year": "2007",
+      "title": "<i>Mustela putorius,</i> Linnaeus, 1758.",
+      "author": "Virgós, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Birks, J.D.S. 1998. Secondary poisoning risk arising from winter farmyard used by the European Polecat <i>Mustela putorius</i>. <i>Biological Conservation</i> 85: 233-240.",
+      "year": "1998",
+      "title": "Secondary poisoning risk arising from winter farmyard used by the European Polecat <i>Mustela putorius</i>",
+      "author": "Birks, J.D.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Birks, J.D.S. and Kitchener, A.C. 1999. The distribution and status of the Polecat <i>Mustela putorius</i> in Britain in 1990s. The Vincent Wildlife Trust, London.",
+      "year": "1999",
+      "title": "The distribution and status of the Polecat <i>Mustela putorius</i> in Britain in 1990s",
+      "author": "Birks, J.D.S. and Kitchener, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bensettiti F. and Puissauve R. 2015. Résultats de l’évaluation de l’état de conservation des habitats et des espèces dans le cadre de la directive Habitats-Faune-Flore en France. Rapportage « article 17 ». Période 2007-2012. . MNHN-SPN, MEDDE, Paris.",
+      "year": "2015",
+      "title": "Résultats de l’évaluation de l’état de conservation des habitats et des espèces dans le cadre de la directive Habitats-Faune-Flore en France. Rapportage « article 17 ». Période 2007-2012. ",
+      "author": "Bensettiti F. and Puissauve R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Birks, J.D.S. 1993. The return of the Polecat. <i>British Wildlife</i> 5: 16-25.",
+      "year": "1993",
+      "title": "The return of the Polecat",
+      "author": "Birks, J.D.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calvete, C., Pelayo, E.  and Sampietro, J. 2006. Habitat factors related to wild Rabbit population trends after the initial impact of rabbit haemorrhagic disease. <i>Wildlife Research</i> 33: 467-474.",
+      "year": "2006",
+      "title": "Habitat factors related to wild Rabbit population trends after the initial impact of rabbit haemorrhagic disease",
+      "author": "Calvete, C., Pelayo, E.  and Sampietro, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Treves, A. and Naughton-Treves, L. 2005. , Evaluating non-lethal control in the management of human-wildlife conflict. In: R. Woodroffe, S. Thirgood and A. Rabinowitz (eds), <i>People and wildlife: conflict or coexistence</i>, pp. 86-106. Cambridge University Press, Cambridge, U.K.",
+      "year": "2005",
+      "title": ", Evaluating non-lethal control in the management of human-wildlife conflict",
+      "author": "Treves, A. and Naughton-Treves, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "ONCFS-FNC. in press. Enquête nationale sur les tableaux de chasse à tir- Saison 2013-2014- Résultats nationaux. <i>Faune Sauvage</i> (in press).",
+      "year": "in press",
+      "title": "Enquête nationale sur les tableaux de chasse à tir- Saison 2013-2014- Résultats nationaux.",
+      "author": "ONCFS-FNC",
+      "citation_short": null
+    },
+    {
+      "citation": "Sidorovich, V.E. 2011. <i>Analysis of vertebrate predator-prey community.</i> Tesey, Minsk, Belarus.",
+      "year": "2011",
+      "title": "Analysis of vertebrate predator-prey community.",
+      "author": "Sidorovich, V.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ahmim, M. 2013. Presence of a small population of a polecat-like mustelid in north Algeria, potentially the wild progenitor of Domestic Ferret <i>Mustela furo</i>. <i>Small Carnivore Conservation</i> 48: 87–88.",
+      "year": "2013",
+      "title": "Presence of a small population of a polecat-like mustelid in north Algeria, potentially the wild progenitor of Domestic Ferret <i>Mustela furo</i>",
+      "author": "Ahmim, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barrientos, R. and Bolonio, L. 2008. The presence of Rabbits adjacent to roads increases Polecat road mortality. <i>Biodiversity and Conservation</i> 18: 405-418.",
+      "year": "2008",
+      "title": "The presence of Rabbits adjacent to roads increases Polecat road mortality",
+      "author": "Barrientos, R. and Bolonio, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davison, A., Birks, J.D.S., Griffiths, H.I., Kitchener, A.C., Biggins, D. and Butlin, R.K. 1999. Hybridization and the phylogenetic relationship between Polecats and Domestic Ferrets in Britain. <i>Biological Conservation</i> 87: 155–161.",
+      "year": "1999",
+      "title": "Hybridization and the phylogenetic relationship between Polecats and Domestic Ferrets in Britain",
+      "author": "Davison, A., Birks, J.D.S., Griffiths, H.I., Kitchener, A.C., Biggins, D. and Butlin, R.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baghli, A., Engel, E. and Verhagen, R. 2002. Feeding habits and trophic niche overlap of two sympatric Mustelidae, the Polecat <i>Mustela putorius</i> and the Beech Marten <i>Martes foina</i>. <i>Zeitschrift für Jagdwissenschaft</i> 48: 217-225.",
+      "year": "2002",
+      "title": "Feeding habits and trophic niche overlap of two sympatric Mustelidae, the Polecat <i>Mustela putorius</i> and the Beech Marten <i>Martes foina</i>",
+      "author": "Baghli, A., Engel, E. and Verhagen, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Ferreras, P. and Villafuerte, R. 2009. European Rabbit population trends and associated factors: a review of the situation in the Iberian Peninsula. <i>Mammal Review</i> 39: 124-140.",
+      "year": "2009",
+      "title": "European Rabbit population trends and associated factors: a review of the situation in the Iberian Peninsula",
+      "author": "Delibes-Mateos, M., Ferreras, P. and Villafuerte, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Albaret, M., Ruette, S. and Guinot-Ghestem, M. 2014. Nouvelle enquête sur la destruction des espèces classes nuisibles en France - saisons 2011-2012 et 2012-2013. <i>Faune Sauvage</i> 305: 10-16.",
+      "year": "2014",
+      "title": "Nouvelle enquête sur la destruction des espèces classes nuisibles en France - saisons 2011-2012 et 2012-2013.",
+      "author": "Albaret, M., Ruette, S. and Guinot-Ghestem, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reimoser, S., Reimoser, F. and Klansek, E. 2006. Lebensraum & Abschuss 10. Teil. Abschussdichten verschiedener Wildarten in den österreichischen Bezirken seit 1955. <i>Weidwerk (Forschungsinstitut für Wildtierkunde und Ökologie der Veterinärmedizinischen Universität Wien)</i> '2006'(3): 9-11.",
+      "year": "2006",
+      "title": "Lebensraum & Abschuss 10. Teil. Abschussdichten verschiedener Wildarten in den österreichischen Bezirken seit 1955.",
+      "author": "Reimoser, S., Reimoser, F. and Klansek, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dronova, N. and Shestakov, A. 2005. Trapping a Living: Conservation and Socio-Economic Aspects of the Fur Trade in the Russian Far East. TRAFFIC Europe - Russia.",
+      "year": "2005",
+      "title": "Trapping a Living: Conservation and Socio-Economic Aspects of the Fur Trade in the Russian Far East",
+      "author": "Dronova, N. and Shestakov, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shore, R.F., Birks, J.D.S. and Freestone, P. 1999. Exposure of nontarget vertebrates to second-generation rodenticides in Britain, with particular reference to the Polecat <i>Mustela putorius</i>. <i>New Zealand Journal of Ecology</i> 23: 199–206.",
+      "year": "1999",
+      "title": "Exposure of nontarget vertebrates to second-generation rodenticides in Britain, with particular reference to the Polecat <i>Mustela putorius</i>",
+      "author": "Shore, R.F., Birks, J.D.S. and Freestone, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rondinini, C., Ercoli V. and Boitani, L. 2006. Habitat use and preference by Polecats (<i>Mustela putorius</i> L.) in a Mediterranean agricultural landscape. <i>Journal of Zoology, London</i> 269: 213-219.",
+      "year": "2006",
+      "title": "Habitat use and preference by Polecats (<i>Mustela putorius</i> L.) in a Mediterranean agricultural landscape",
+      "author": "Rondinini, C., Ercoli V. and Boitani, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pointereau, P. 2002. Les haies, évolution du linéaire en France depuis quarante ans. <i>Le Courrier de l'environnement de l'INRA</i> 46: 69-73.",
+      "year": "2002",
+      "title": "Les haies, évolution du linéaire en France depuis quarante ans",
+      "author": "Pointereau, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weber, D. 1989. The diet of Polecats (<i>Mustela putorius</i> L.) in Switzerland. <i>Zeitschrift für Säugetierkunde</i> 54: 157-171.",
+      "year": "1989",
+      "title": "The diet of Polecats (<i>Mustela putorius</i> L.) in Switzerland",
+      "author": "Weber, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Letty, J., Aubineau, J., Berger, F. and Marchandeau, S. 2006. Repeuplements de lapins de garenne: enseignements des suivis par radio-pistage. <i>Faune Sauvage</i> 274: 76-88.",
+      "year": "2006",
+      "title": "Repeuplements de lapins de garenne: enseignements des suivis par radio-pistage",
+      "author": "Letty, J., Aubineau, J., Berger, F. and Marchandeau, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roger, M., Delattre, P. and Herrenschmidt, V. 1988. Le Putois (</>Mustela putorius</i> Linnaeus, 1758). <i>Encyclopédie des Carnivores de France</i> 15: 1-38.",
+      "year": "1988",
+      "title": "Le Putois (</>Mustela putorius</i> Linnaeus, 1758)",
+      "author": "Roger, M., Delattre, P. and Herrenschmidt, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Langley, P.J.W. and Yalden, D.W. 1977. The decline of the rarer carnivores in Great Britain during the nineteenth century. <i>Mammal Review</i> 7: 95-116.",
+      "year": "1977",
+      "title": "The decline of the rarer carnivores in Great Britain during the nineteenth century",
+      "author": "Langley, P.J.W. and Yalden, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moreno, S., Beltrán, J.F., Cotilla, I., Kuffner, B., Laffite, R., Jordán, G., Ayala, J., Quintero, C., Jiménez, A., Castro, F., Cabezas, S. and Villafuerte, R. 2007. Long-term decline of the European Wild Rabbit (<i>Oryctolagus cuniculus</i>) in south-western Spain. <i>Wildlife Research</i> 34: 652-658.",
+      "year": "2007",
+      "title": "Long-term decline of the European Wild Rabbit (<i>Oryctolagus cuniculus</i>) in south-western Spain",
+      "author": "Moreno, S., Beltrán, J.F., Cotilla, I., Kuffner, B., Laffite, R., Jordán, G., Ayala, J., Quintero, C., Jiménez, A., Castro, F., Cabezas, S. and Villafuerte, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruette, S., Léger, F., Albaret, M., Stahl, P., Migot, P. and Landry, P. 2004. Enquête sur la répartition de la Martre, de la Fouine, de la Belette, de l’Hermine et du Putois en France. <i>Faune Sauvage</i> 263: 28-34.",
+      "year": "2004",
+      "title": "Enquête sur la répartition de la Martre, de la Fouine, de la Belette, de l’Hermine et du Putois en France",
+      "author": "Ruette, S., Léger, F., Albaret, M., Stahl, P., Migot, P. and Landry, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Costa, M., Fernandes, C., Birks, J.D.S., Kitchener, A.C., Santos-Reis, M. and Bruford, M.W. 2013. The genetic legacy of the 19th-century decline of the British Polecat: evidence for extensive introgression from feral Ferrets. <i>Molecular Ecology</i> 22: 5130–5147.",
+      "year": "2013",
+      "title": "The genetic legacy of the 19th-century decline of the British Polecat: evidence for extensive introgression from feral Ferrets",
+      "author": "Costa, M., Fernandes, C., Birks, J.D.S., Kitchener, A.C., Santos-Reis, M. and Bruford, M.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ternovski, D.V. and Ternovskaya, Yu.G. 1994. <i>Ecology of Mustelids.</i> Nauka, Novosibirsk, Russia.",
+      "year": "1994",
+      "title": "Ecology of Mustelids.",
+      "author": "Ternovski, D.V. and Ternovskaya, Yu.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Calvete, C., Villafuerte, R., Lucientes, J. and Oscar, J.J. 1997. Effectiveness of traditional wild Rabbit restocking in Spain. <i>Journal of Zoology, London</i> 241: 271-277.",
+      "year": "1997",
+      "title": "Effectiveness of traditional wild Rabbit restocking in Spain",
+      "author": "Calvete, C., Villafuerte, R., Lucientes, J. and Oscar, J.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baghli, A. and Verhagen, R. 2003. The distribution and status of the Polecat <i>Mustela putorius</i> in Luxembourg. <i>Mammal Review</i> 33: 57-68.",
+      "year": "2003",
+      "title": "The distribution and status of the Polecat <i>Mustela putorius</i> in Luxembourg",
+      "author": "Baghli, A. and Verhagen, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gippoliti, S. 2011.  Taxonomic impediment to conservation: the case of the Moroccan ‘ferret’, <i>Mustela putorius</i> ssp. <i>Small Carnivore Conservation</i> 45: 5–7.",
+      "year": "2011",
+      "title": " Taxonomic impediment to conservation: the case of the Moroccan ‘ferret’, <i>Mustela putorius</i> ssp.",
+      "author": "Gippoliti, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gao, Y. <i>et al</i>. 1987. <i>Fauna Sinica. Mammalia. Vol.8: Carnivora</i>. Science Press, Beijing, China [in Chinese].",
+      "year": "1987",
+      "title": "Fauna Sinica. Mammalia. Vol.8: Carnivora",
+      "author": "Gao, Y. <i>et al</i>.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang Yingxiang and Yan Kun (eds). 2007. <i>A field guide to the mammals of China</i>. China Forestry Publishing House, Beijing, China. (In Chinese.).",
+      "year": "2007",
+      "title": "A field guide to the mammals of China",
+      "author": "Wang Yingxiang and Yan Kun",
+      "citation_short": null
+    },
+    {
+      "citation": "Pocock, R.I. 1936. The polecats of the genera <i>Putorius</i> and <i>Vormela</i> in the British Museum. <i>Proceedings of the Zoological Society of London</i> '1936': 691–723.",
+      "year": "1936",
+      "title": "The polecats of the genera <i>Putorius</i> and <i>Vormela</i> in the British Museum",
+      "author": "Pocock, R.I.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

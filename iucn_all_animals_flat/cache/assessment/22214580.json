@@ -1,0 +1,362 @@
+{
+  "assessment_date": "2016-06-10T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 101228458,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/101228458/22214580",
+  "citation": "Marinho-Filho, J., & Emmons, L. 2016. Coendou prehensilis. The IUCN Red List of Threatened Species 2016: e.T101228458A22214580. Accessed on 05 May 2026.",
+  "assessment_id": 22214580,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 101228458,
+    "scientific_name": "Coendou prehensilis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "RODENTIA",
+    "family_name": "ERETHIZONTIDAE",
+    "genus_name": "Coendou",
+    "species_name": "prehensilis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Brazilian Porcupine",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Coendou sanctamartae Allen, 1904",
+        "status": "ACCEPTED",
+        "genus_name": "Coendou",
+        "species_name": "sanctamartae",
+        "species_author": "Allen, 1904",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs in Argentina, Bolivia, Brazil, Colombia, French Guiana, Guyana, Paraguay, Peru, Suriname, Trinidad and Tobago, and Venezuela (Barthelmess 2016,&#160;Voss 2015).",
+    "population": "While the species is rare in some areas, it is generally the common and dominant mammal in others (Voss 2015).&#160;<em>Coendou sanctamartae</em>&#160;has been combined with <em>Coendou prehensilis </em>(Voss 2015).",
+    "habitats": "The species is nocturnal, herbivorous, and solitary. It occurs in lowland rainforest, dry forests, and riparian woodlands in savanna landscapes. They feed mostly on fruit, immature seeds, and sometimes bark (Voss 2015).",
+    "threats": "This species is sometimes hunted for meat (Emmons and Feer 1997).",
+    "measures": "There are no known conservation measures specific to this species. However, there are several protected areas within its range.",
+    "use_trade": null,
+    "rationale": "This species is listed as Least Concern in view of its wide distribution, presumed large population, and because it is unlikely to be declining at nearly the rate required to qualify for listing in a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "This species has a considerable geographic variation and this may be a species complex (Marinho-Filho and Langguth pers. comm.).&#160;<em>Coendou sanctamartae</em>&#160;has been combined with&#160;<em>Coendou prehensilis&#160;</em>(Voss 2015), this assessment is of the new broader concept."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Marinho-Filho, J., & Emmons, L.",
+      "value": null
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Amori, G.",
+      "value": [
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Queirolo, D.",
+      "value": [
+        "D. Queirolo"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Barthelmess, E.L. 2016. Family Erethizontidae. In: Wilson, D.E., Lacher, T.E., Jr and Mittermeier, R.A. (eds), <i>Handbook of Mammals of the World. Vol. 6. Lagomorphs and Rodents: Part 1</i>, Lynx, Barcelona.",
+      "year": "2016",
+      "title": "Family Erethizontidae",
+      "author": "Barthelmess, E.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Voss, R.S. 2015. Family Erethizontidae Bonaparte, 1845. In: Patton, J.L., Pardiñas, U.F.J. and D'Elía, G. (eds), <i>Mammals of South America</i>, pp. 786-805. The University of Chicago Press, Chicago.",
+      "year": "2015",
+      "title": "Family Erethizontidae Bonaparte, 1845",
+      "author": "Voss, R.S",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    },
+    {
+      "citation": "Emmons, L.H. and Feer, F. 1997. Porcupines (Erethizontidae). <i>Neotropical Rainforest Mammals: A Field Guide, Second edition</i>, pp. 216-223). University of Chicago Press, Chicago, IL, USA.",
+      "year": "1997",
+      "title": "Porcupines (Erethizontidae)",
+      "author": "Emmons, L.H. and Feer, F.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

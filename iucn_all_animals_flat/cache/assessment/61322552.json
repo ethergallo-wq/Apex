@@ -1,0 +1,824 @@
+{
+  "assessment_date": "2014-11-25T00:00:00.000+00:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 178340,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/178340/61322552",
+  "citation": "Scott, N., Pelegrin, N., Montero, R., Kacoliris, F., Fitzgerald, L., Carreira, S., Cacciali, P., Moravec, J., Cisneros-Heredia, D.F., Aparicio, J. & Avila-Pires, T.C.S. 2016. Salvator merianae. The IUCN Red List of Threatened Species 2016: e.T178340A61322552. Accessed on 05 May 2026.",
+  "assessment_id": 61322552,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 178340,
+    "scientific_name": "Salvator merianae",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "TEIIDAE",
+    "genus_name": "Salvator",
+    "species_name": "merianae",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Duméril &amp; Bibron, 1839",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Argentine Black and White Tegu",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Black-and-white Tegu",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Tupinambis merianae (Duméril &amp; Bibron, 1839)",
+        "status": "ACCEPTED",
+        "genus_name": "Tupinambis",
+        "species_name": "merianae",
+        "species_author": "(Duméril &amp; Bibron, 1839)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tupinambis teguixin (Gray, 1845)",
+        "status": "ACCEPTED",
+        "genus_name": "Tupinambis",
+        "species_name": "teguixin",
+        "species_author": "(Gray, 1845)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is found in Brazil,&#160;eastern Bolivia,&#160;&#160;Paraguay, Uruguay,&#160;and in northern and central Argentina. This species has also been introduced to Fernando de Noronha Island, and Florida, USA; in the latter is considered a harmful invasive predator for birds and mammals.",
+    "population": "This species is reported as common and it is believed to have a stable population.",
+    "habitats": "It is a habitat and dietary generalist. Throughout its range it is found in primary on Cerrado vegetation, forest clearings, secondary forest, disturbed habitats including edges of roads and agricultural areas. The species feeds on a wide range of animals and fruit and may play an important role in seed dispersal (de Castro and Galetti 2004). It does not occur in dry Chaco of western Paraguay, Argentina and southeastern Bolivia (L. Fitzgerald pers. comm. 2014)",
+    "threats": "The species has withstood decades of commercial harvest. It is a habitat and dietary generalist and is widespread. There are no major threats to this species that would decrease its geographic range and distribution.&#160;This species is hunted for its skins and to a lesser degree to supply the commercial pet trade. During the 1980s on average 1.9 million <em>Tupinambis</em> lizard skins were traded annually (Mieres and Fitzgerald 2006). The trade in <em>Tupinambis</em> has decreased since that period, and in 1999 the export quotas from Argentina and Paraguay was 1,350,000 skins per year (Fitzgerald <em>et al</em> 1999). This and other species of this genus are also hunted for human consumption on a local level (L. Fitzgerald pers. comm. 2014).",
+    "measures": "Argentina and Paraguay monitor the harvest levels of this species and have implemented management plans (Mieres and Fitzgerald 2006). The management plans have been designed to achieve sustainable use of the species while benefiting local people (Fitzgerald 1994). Existing monitoring and management programs for lizards of this genus in Argentina, Paraguay, and Bolivia need to be supported and enhanced to ensure the programs become institutionalized (L. Fitzgerald pers. comm. 2014). This species is listed on CITES Appendix II. Further research is needed to estimate population size of this species. Embert (2007) reports that this species occurs in several protected areas within its range.",
+    "use_trade": "This species is hunted for its skins and to a lesser degree to supply the commercial pet trade (Mieres and&#160;Fitzgerald&#160;2006). The majority of individuals used are removed from the wild. The trade in species of this genus has decreased in recent years, and is monitored by management programmes in Argentina, Bolivia and Paraguay, and by CITES. This and other species of this genus are also hunted for human consumption on a local level (L. Fitzgerald pers. comm. 2014).",
+    "rationale": "The Black and White Tegu is listed as Least Concern in view of its wide distribution, tolerance of a broad range of habitats, large population, and because it is unlikely to be undergoing significant population declines to qualify for listing in a more threatened category. Since this species is hunted for its skins and for local consumption, it is recommended that research is undertaken to ensure that any population declines are noted, and trade and harvest management plans are put in place where needed.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial"
+      },
+      "code": "14"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland"
+      },
+      "code": "3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio Grande do Sul"
+      },
+      "code": "BZS-RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso"
+      },
+      "code": "BZC-MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maranhão"
+      },
+      "code": "BZE-MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pernambuco"
+      },
+      "code": "BZE-PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amazonas"
+      },
+      "code": "BZN-AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fernando de Noronha"
+      },
+      "code": "BZE-FN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pará"
+      },
+      "code": "BZN-PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Goiás"
+      },
+      "code": "BZC-GO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "São Paulo"
+      },
+      "code": "BZL-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santa Catarina"
+      },
+      "code": "BZS-SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rondônia"
+      },
+      "code": "BZN-RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tocantins"
+      },
+      "code": "BZN-TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sergipe"
+      },
+      "code": "BZE-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Espírito Santo"
+      },
+      "code": "BZL-ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ceará"
+      },
+      "code": "BZE-CE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brasília Distrito Federal"
+      },
+      "code": "BZC-DF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahia"
+      },
+      "code": "BZE-BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alagoas"
+      },
+      "code": "BZE-AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso do Sul"
+      },
+      "code": "BZC-MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minas Gerais"
+      },
+      "code": "BZL-MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraíba"
+      },
+      "code": "BZE-PB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraná"
+      },
+      "code": "BZS-PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Piauí"
+      },
+      "code": "BZE-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio de Janeiro"
+      },
+      "code": "BZL-RJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio Grande do Norte"
+      },
+      "code": "BZE-RN"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Scott, N., Pelegrin, N., Montero, R., Kacoliris, F., Fitzgerald, L., Carreira, S., Cacciali, P., Moravec, J., Cisneros-Heredia, D.F., Aparicio, J. & Avila-Pires, T.C.S.",
+      "value": [
+        "Nicolas Pelegrin (Universidad Nacional de Córdoba)",
+        "Jiri Moravec",
+        "Norman Scott (SRLI Reptile Assessment)",
+        "Teresa Avila-Pires (Museu Paraense Emílio Goeldi. Coordenação de Zoologia. Belém, Pará, Brazil)",
+        "Lee Fitzgerald (SRLI Reptile Assessment)",
+        "Santiago Carreira (Sección Zoología Vertebrados, Facultad de Ciencias & Museo Nacional de Historia Natural / Montevideo - Uruguay)",
+        "Diego F. Cisneros-Heredia (Universidad San Francisco de Quito USFQ)",
+        "Pier Cacciali (Instituto de Investigación Biológica del Paraguay)",
+        "Federico Kacoliris (Museo de La Plata-CONICET)",
+        "Ricardo Montero (Fundación Miguel Lillo-CONICET)",
+        "James Aparicio (Colección Boliviana de Fauna )"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "De Silva, R., Milligan, H.T., Wearn, O.R., Wren, S., Zamin, T., Sears, J., Wilson, P., Lewis, S., Lintott, P. & Powney, G.",
+      "value": [
+        "Tara Zamin (ex ZSL)",
+        "Ranmali De Silva (IOZ)",
+        "Harriet Milligan (IOZ)",
+        "Oliver Wearn (Imperial College/ Institute of Zoology, London, UK)",
+        "Jennifer Sears (SRLI Reptile Assessment)",
+        "Gary Powney (SRLI Reptile Assessment)",
+        "Paul Lintott (SRLI Reptile Assessment)",
+        "Sarah Lewis (SRLI Reptile Assessment)",
+        "Penny Wilson (SRLI Reptile Assessment)",
+        "Sally Wren (Zoological Society of London, UK)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rodríguez, J. & NatureServe",
+      "value": [
+        "Jorge Rodríguez (IUCN SSC Conservation Planning Specialist Group (CPSG))",
+        " NatureServe (Red List Partner & Red List Authority)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Avila-Pires, T.C.S. 1995. Lizards of Brazilian Amazonia (Reptilia: Squamata). <i>Zoologische Verhandelingen (Leiden)</i> 299: 1-706.",
+      "year": "1995",
+      "title": "Lizards of Brazilian Amazonia (Reptilia: Squamata)",
+      "author": "Avila-Pires, T.C.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Fitzgerald, L.A. Cook, J A. and  Luiz Aquino, A. 1999. Molecular phylogenetics and conseravtion of <i>Tupinambis</i> (Sauria: Teniidae). <i>Copeia</i> 1999(4): 894-905.",
+      "year": "1999",
+      "title": "Molecular phylogenetics and conseravtion of <i>Tupinambis</i> (Sauria: Teniidae)",
+      "author": "Fitzgerald, L.A. Cook, J A. and  Luiz Aquino, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mieres, M.M. and Fitzgerald, L.A. 2006. Monitoring and managing the harvest of Tegu lizards in Paraguay. <i>The Journal of Wildlife Management</i> 70(6): 1723-1734.",
+      "year": "2006",
+      "title": "Monitoring and managing the harvest of Tegu lizards in Paraguay",
+      "author": "Mieres, M.M. and Fitzgerald, L.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cicchi, P.J.P., de Sena, M.A. and de Freitas,  H.S. 2006. <i>Tupinambis merianae</i>. Diet. <i>Herpetological Review</i> 37(3): 347-348.",
+      "year": "2006",
+      "title": "<i>Tupinambis merianae</i>. Diet",
+      "author": "Cicchi, P.J.P., de Sena, M.A. and de Freitas,  H.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vidal, S.C. 2004. Estado de conservacion de la fauna de Sauria y Amphisbaenidae (Reptilia, Squamata) de Uruguay. <i>Cuadernos de Herpetologia</i> 18(1): 55-58.",
+      "year": "2004",
+      "title": "Estado de conservacion de la fauna de Sauria y Amphisbaenidae (Reptilia, Squamata) de Uruguay",
+      "author": "Vidal, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arias, F. and  Lobo, F. 2006. Patrones de osificacion en <i>Tupinambis merianae</i> y <i>Tupinambis rufescens</i> (Squamata: Teiidae) y patrones generales en Squamata. <i>Cuendos de herpetologica</i> 20(1): 3-23.",
+      "year": "2006",
+      "title": "Patrones de osificacion en <i>Tupinambis merianae</i> y <i>Tupinambis rufescens</i> (Squamata: Teiidae) y patrones generales en Squamata",
+      "author": "Arias, F. and  Lobo, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fitzgerald, L. 1994. Tupinambis Lizards and People: A Sustainable Use Approach to Conservation and Development. <i>Conservation Biology</i> 8(1): 12-16.",
+      "year": "1994",
+      "title": "Tupinambis Lizards and People: A Sustainable Use Approach to Conservation and Development",
+      "author": "Fitzgerald, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kiefer, M.C. and  Saima, I. 2002. Diet of juvenile tegu lizard <i>Tupinambis merianae</i> (Teiidae) in southeastern Brazil. <i>Amphibia-Reptilia</i> 23: 105-108.",
+      "year": "2002",
+      "title": "Diet of juvenile tegu lizard <i>Tupinambis merianae</i> (Teiidae) in southeastern Brazil",
+      "author": "Kiefer, M.C. and  Saima, I",
+      "citation_short": null
+    },
+    {
+      "citation": "De Castro, E.R. and Galetti, M. 2004. Frugivoria e dispersão de sementes pelo lagarto teiú <i>Tupinambis merianae</i> (Reptilia: Teiidae) [Frugivory and seed dispersal by the tegu lizard <i>Tupinambis merianae</i> Reptilia: Teiidae]. <i>Pap. Avulsos Zool. (São Paulo)</i> 44(6): DOI: 10.1590/S0031-10492004000600001.",
+      "year": "2004",
+      "title": "Frugivoria e dispersão de sementes pelo lagarto teiú <i>Tupinambis merianae</i> (Reptilia: Teiidae) [Frugivory and seed dispersal by the tegu lizard <i>Tupinambis merianae</i> Reptilia: Teiidae]",
+      "author": "De Castro, E.R. and Galetti, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meshaka Jr., W.E. 2011. A runaway train in the making: the exotic amphibians, reptiles, turtles, and crocodilians of Florida.  Monograph 1. <i>Herpetological Conservation and Biology</i> 6: 1-101.",
+      "year": "2011",
+      "title": "A runaway train in the making: the exotic amphibians, reptiles, turtles, and crocodilians of Florida.  Monograph 1",
+      "author": "Meshaka Jr., W.E.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

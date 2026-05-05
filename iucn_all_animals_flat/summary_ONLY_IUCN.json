@@ -1,0 +1,38 @@
+{
+  "source_of_habitat_data": "IUCN_ONLY",
+  "n_records": 1080,
+  "n_flat_habitat_rows": 6344,
+  "ok": 935,
+  "with_iucn_habitats": 930,
+  "with_iucn_systems": 935,
+  "with_iucn_elevation": 567,
+  "with_iucn_depth": 157,
+  "failed_or_not_found": 145,
+  "normalized_habitat_fields": {
+    "habitat_suitability": [
+      "suitable",
+      "marginal",
+      "unknown"
+    ],
+    "major_importance": [
+      "yes",
+      "no",
+      "unknown"
+    ],
+    "seasonality": [
+      "resident",
+      "breeding",
+      "non-breeding",
+      "passage",
+      "unknown"
+    ]
+  },
+  "outputs": {
+    "species_json": "iucn_all_animals_flat/iucn_habitats_ONLY_IUCN.json",
+    "flat_csv": "iucn_all_animals_flat/iucn_habitats_ONLY_IUCN_flat.csv",
+    "species_js": "iucn_all_animals_flat/iucn_habitats_ONLY_IUCN.js",
+    "flat_js": "iucn_all_animals_flat/iucn_habitat_rows_ONLY_IUCN.js",
+    "summary": "iucn_all_animals_flat/summary_ONLY_IUCN.json"
+  },
+  "important_note": "animals-data.js is used only for animal identity and optional existing IUCN assessment_id, never for habitat inference."
+}

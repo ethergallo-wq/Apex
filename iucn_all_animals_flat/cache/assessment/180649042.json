@@ -1,0 +1,851 @@
+{
+  "assessment_date": "2020-12-15T00:00:00.000+00:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 59593,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/59593/180649042",
+  "citation": "IUCN SSC Amphibian Specialist Group 2023. Siphonops annulatus. The IUCN Red List of Threatened Species 2023: e.T59593A180649042. Accessed on 05 May 2026.",
+  "assessment_id": 180649042,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 59593,
+    "scientific_name": "Siphonops annulatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "GYMNOPHIONA",
+    "family_name": "SIPHONOPIDAE",
+    "genus_name": "Siphonops",
+    "species_name": "annulatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Mikan, 1820)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Ringed Caecilia",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Ringed Caecilian",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Siphonops annulatus ssp. marmoratus Sawaya, 1937",
+        "status": "ACCEPTED",
+        "genus_name": "Siphonops",
+        "species_name": "annulatus",
+        "species_author": null,
+        "infrarank_author": "Sawaya, 1937",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "marmoratus"
+      },
+      {
+        "name": "Caecilia interrupta Cuvier, 1829",
+        "status": "A",
+        "genus_name": "Caecilia",
+        "species_name": "interrupta",
+        "species_author": "Cuvier, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dermophis crassus Cope, 1885",
+        "status": "A",
+        "genus_name": "Dermophis",
+        "species_name": "crassus",
+        "species_author": "Cope, 1885",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Caecilia annulata Mikan, 1820",
+        "status": "ACCEPTED",
+        "genus_name": "Caecilia",
+        "species_name": "annulata",
+        "species_author": "Mikan, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 800,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is widely distributed through tropical South America (Maciel <em>et al.</em> 2013), ranging from east of the Andes from northern Colombia, Ecuador, Peru, Venezuela and French Guiana, south to Amazonian Brazil and Bolivia, and then from northeastern Brazil south to southern Brazil and northern Argentina, appearing to be disjunct in the open vegetation diagonal of Brazil&#160;(Maciel&#160;<em>et al.</em>&#160;2013). In Argentina, this species is found in the southern part of Misiones (Taylor 1968). In Bolivia, it is found in Beni, La Paz, Pando and Santa Cruz (Dunn 1942, Taylor 1968, De la Riva 1990). It is presumably to be found in adjacent Uruguay and Paraguay.&#160;It is generally found below 800 m asl.",
+    "population": "It appears to be common in some parts of its range. Surveys in the region of San Martín, Peru found just two individuals after 90 and &gt;100 person/days in 2006 and 2008, respectively (von May <em>et al.</em> 2008). The overall population trend is unknown.",
+    "habitats": "It is a subterranean species and can be found in humid soils in forested and open environments (including dry Caatinga savannah). It also occurs in rural gardens, plantations and other anthropogenic habitats. It is oviparous with terrestrial eggs and direct development, and is not dependent on water for breeding. It exhibits parental care with maternal dermatophagy, where the offspring consume maternal skin for nourishment (Wilkinson <em>et al.</em> 2008). In Brazil, it has been recorded in the Caatinga, Cerrado, Atlantic Forest, and Amazonia biomes.",
+    "threats": "<p>There appear to be no major known threats to this species.</p>",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>It occurs in many protected areas.&#160;<strong><em><br/></em></strong><strong><em><br/></em></strong><strong><em>Research Needed</em></strong><br/>Further research is required into the taxonomy of this species.",
+    "use_trade": "<p>There are no reports of this species being utilized. However, studies have identified a high pharmacological potential, with antiparasitic activity of the skin secretion against Leishmania and <em>T. cruzi</em>. Thus, its skin secretion is a potential tool for the development of new drug candidates against neglected diseases (Pinto<em> et al. </em>2014).</p>",
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a broad range of habitats and presumed large population.",
+    "trend_justification": null,
+    "taxonomic_notes": "This is a poorly circumscribed species in need of taxonomic review (M. Wilkinson pers. comm. 2004). It is unclear that all biological populations within its large range are conspecific. However,&#160;these are included in&#160;the current assessment until their taxonomic identities can be clarified."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahia"
+      },
+      "code": "BZE-BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minas Gerais"
+      },
+      "code": "BZL-MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Acre"
+      },
+      "code": "BZN-AC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amazonas"
+      },
+      "code": "BZN-AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Espírito Santo"
+      },
+      "code": "BZL-ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso"
+      },
+      "code": "BZC-MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pará"
+      },
+      "code": "BZN-PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela (mainland)"
+      },
+      "code": "VEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia (mainland)"
+      },
+      "code": "CLM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pernambuco"
+      },
+      "code": "BZE-PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Misiones"
+      },
+      "code": "AGE-MI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio de Janeiro"
+      },
+      "code": "BZL-RJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio Grande do Sul"
+      },
+      "code": "BZS-RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rondônia"
+      },
+      "code": "BZN-RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santa Catarina"
+      },
+      "code": "BZS-SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "São Paulo"
+      },
+      "code": "BZL-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sergipe"
+      },
+      "code": "BZE-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Baldo, D., Borges-Martins, M., Colombo, P., Freire, M.D., Gomes do Santos, T., Hoogmoed, M.S., Iop, S., Janisch Alvares, D., Lavilla, E., Lucas Gonsales, E. M., Marin da Fonte, L.F., Measey, G.J., Moreira, L., Reichle, S., Saccol, S., Wilkinson, M. & Zank, C.",
+      "value": [
+        "John Measey (DST-NRF Centre of Excellence for Invasion Biology,  Stellenbosch University, South Africa)",
+        "Diego Baldo",
+        "Elaine Maria Lucas Gonsales (Universidade Federal de Santa Maria)",
+        "Esteban Lavilla",
+        "Mark Wilkinson",
+        "Steffen Reichle",
+        "Márcio Borges-Martins (Universidade Federal do Rio Grande do Sul)",
+        "Caroline Zank (Universidade Federal do Rio Grande do Sul)",
+        "Luis Fernando Marin da Fonte (Amphibian Specialist Group Brazil)",
+        "Marinus Hoogmoed (Museu Paraense Emilio Goeldi/CZO)",
+        "Leonardo Moreira (Universidade Federal de Mato Grosso)",
+        "Marcelo Duarte Freire (Universidade Federal do Rio Grande do Sul)",
+        "Patrick Colombo (Museu de Ciências Naturais da Secretaria do Meio Ambiente e Infraestrutura do Rio Grande do Sul (SEMA))",
+        "Samanta Iop (University of São Paulo)",
+        "Suelen Saccol (Universidade Federal de Santa Maria)",
+        "Diego Janisch Alvares (Universidade Federal do Rio Grande do Sul)",
+        "Tiago Gomes do Santos"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Abreu-Jardim, T.P.F., Angulo, A., García, N., Hobin, L., Jarvis, L., Luedtke, J., Machado, I.F., Neam, K., Ramalho, W.P. & de Andrade, S.",
+      "value": [
+        "Ariadne Angulo (GAA)",
+        "Nieves García (Former IUCN staff, affiliated through various projects)",
+        "Jennifer Luedtke (Re:wild)",
+        "Laurence Jarvis (Amphibian RLA)",
+        "Louise Hobin (SSC Amphibian RLA)",
+        "Kelsey Neam (Amphibian RLA)",
+        "Sheila Pereira de Andrade (RAN/ICMBio)",
+        "Ibere Farina Machado (Amphibian RLA)",
+        "Tatianne Abreu-Jardim (Amphibian RLA)",
+        "Werther Pereira Ramalho (Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Ruiz-Carranza, P.M., Ardila-Robayo, M.C. and Lynch, J.D. 1996. Lista actualizada de la fauna de Amphibia de Colombia. <i>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</i> 20(77): 365-415.",
+      "year": "1996",
+      "title": "Lista actualizada de la fauna de Amphibia de Colombia",
+      "author": "Ruiz-Carranza, P.M., Ardila-Robayo, M.C. and Lynch, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "von May, R., Catenazzi, A., Angulo, A., Brown, J.L., Carrillo, J., Chávez, G., Córdova, J.H., Curo, A., Delgado, A., Enciso, M.A., Guttiérez, R., Lehr, E., Martínez, J.L., Martina-Müller, M., Miranda, A., Neira, D.R., Ochoa, J.A., Quiroz, A.J., Rodríguez, D.A., Rodríguez, L.O., Salas, A.W., Seimon, T., Seimon, A., Siu-Ting, K., Suárez, J., Torres, C. and Twomey, E. 2008. Current state of conservation knowledge on threatened amphibian species in Peru. <i>Tropical Conservation Science</i> 1(4): 376-396.",
+      "year": "2008",
+      "title": "Current state of conservation knowledge on threatened amphibian species in Peru",
+      "author": "von May, R., Catenazzi, A., Angulo, A., Brown, J.L., Carrillo, J., Chávez, G., Córdova, J.H., Curo, A., Delgado, A., Enciso, M.A., Guttiérez, R., Lehr, E., Martínez, J.L., Martina-Müller, M., Miranda, A., Neira, D.R., Ochoa, J.A., Quiroz, A.J., Rodríguez, D.A., Rodríguez, L.O., Salas, A.W., Seimon, T., Seimon, A., Siu-Ting, K., Suárez, J., Torres, C. and Twomey, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "De la Riva, I., Köhler, J., Lötters, S. and Reichle, S. 2000. Ten years of research on Bolivian amphibians: updated checklist, distribution, taxonomic problems, literature and iconography. <i>Revista Espanola de Herpetologia</i> 14: 19-164.",
+      "year": "2000",
+      "title": "Ten years of research on Bolivian amphibians: updated checklist, distribution, taxonomic problems, literature and iconography",
+      "author": "De la Riva, I., Köhler, J., Lötters, S. and Reichle, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lavilla, E.O., Ponssa, M.L., Baldo, D., Basso, N., Bosso, A., Céspedez, J., Chebez, J.C., Faivovich, J., Ferrari, L., Lajmanovich, R., Langone, J.A., Peltzer, P., Úbeda, C., Vaira, M. and Vera Candioti, F. 2000. Categorización de los Anfibios de Argentina. <i>Categorización de los Anfibios y Reptiles de la República Argentina</i>: 11-34.",
+      "year": "2000",
+      "title": "Categorización de los Anfibios de Argentina",
+      "author": "Lavilla, E.O., Ponssa, M.L., Baldo, D., Basso, N., Bosso, A., Céspedez, J., Chebez, J.C., Faivovich, J., Ferrari, L., Lajmanovich, R., Langone, J.A., Peltzer, P., Úbeda, C., Vaira, M. and Vera Candioti, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barrio Amorós, C.L. 2004. Amphibians of Venezuela Systematic List, Distribution and References, An Update. <i>Review of Ecology in Latin America</i> 9(3): 1-48.",
+      "year": "2004",
+      "title": "Amphibians of Venezuela Systematic List, Distribution and References, An Update",
+      "author": "Barrio Amorós, C.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lynch, J.D. 2006. The amphibian fauna in the Villavicencio region of Eastern Colombia. <i>Caldasia</i> 28(1): 135-155.",
+      "year": "2006",
+      "title": "The amphibian fauna in the Villavicencio region of Eastern Colombia",
+      "author": "Lynch, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, E.H. 1968. <i>The Caecilians of the World.  A Taxonomic Review.</i> University of Kansas Press, Lawrence, Kansas.",
+      "year": "1968",
+      "title": "The Caecilians of the World.  A Taxonomic Review.",
+      "author": "Taylor, E.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gower, D.J. and Wilkinson, M. 2005. Conservation biology of caecilian amphibians. <i>Conservation Biology</i> 19(1): 45-55.",
+      "year": "2005",
+      "title": "Conservation biology of caecilian amphibians",
+      "author": "Gower, D.J. and Wilkinson, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lescure, J. and Marty, C. 2000. <i>Atlas des Amphibiens de Guyane</i>. Patrimoines Naturels, Paris.",
+      "year": "2000",
+      "title": "Atlas des Amphibiens de Guyane",
+      "author": "Lescure, J. and Marty, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "La Marca, E. 1997. Lista actualizada de los anfibios de Venezuela. In: E. La Marca (ed.), <i>Vertebrados Actuales y Fosiles de Venezuela</i>, pp. 103-120. Museo de Ciencias y Tecnología de Mérida, Mérida.",
+      "year": "1997",
+      "title": "Lista actualizada de los anfibios de Venezuela",
+      "author": "La Marca, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "De la Riva, I. 1990. Lista preliminar comentada de los anfibios de Bolivia con datos sobre su distribucion. <i>Museo Regionale di Scienze Naturali Bollettino</i>: 261-319.",
+      "year": "1990",
+      "title": "Lista preliminar comentada de los anfibios de Bolivia con datos sobre su distribucion",
+      "author": "De la Riva, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Almendariz, A. 1987. Contribución al conocimento de la herpetofauna centroriental Ecuatoriana. <i>Revista de Información Técnico Cientifíca, Politécnica</i>: 77-133.",
+      "year": "1987",
+      "title": "Contribución al conocimento de la herpetofauna centroriental Ecuatoriana",
+      "author": "Almendariz, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dunn, E.R. 1942. The American Caecilians. <i>Bulletin of Museum of Comparative Zoology, Harvard University</i> 91: 439-540.",
+      "year": "1942",
+      "title": "The American Caecilians",
+      "author": "Dunn, E.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nussbaum, R.A. and Hoogmoed, M.S. 1979. Surinam caecilians, with notes on <i>Rhinatrema bivittatum</i> and the description of a new species of <i>Microcaecilia</i> (Amphibia, Gymnophiona). <i>Zoologische Mededelingen</i>: 217-235.",
+      "year": "1979",
+      "title": "Surinam caecilians, with notes on <i>Rhinatrema bivittatum</i> and the description of a new species of <i>Microcaecilia</i> (Amphibia, Gymnophiona)",
+      "author": "Nussbaum, R.A. and Hoogmoed, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lynch, J.D. 1999. Una aproximación a las culebras ciegas de Colombia (Amphibia: Gymnophiona). <i>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</i> (Special Suppl.) 23: 317-337.",
+      "year": "1999",
+      "title": "Una aproximación a las culebras ciegas de Colombia (Amphibia: Gymnophiona)",
+      "author": "Lynch, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maciel, A.O., Costa , H.C., Drummond, L.O. , Gomes, J.O.  and D’Angiolella, A. 2013. Rediscovery of <i>Siphonops annulatus</i> (Mikan, 1820) (Amphibia: Gymnophiona: Siphonopidae) in the state of Pará, Brazil, with an updated geographic distribution map,  and notes on size and variation. <i>Check List</i> 9(1): 106-110.",
+      "year": "2013",
+      "title": "Rediscovery of <i>Siphonops annulatus</i> (Mikan, 1820) (Amphibia: Gymnophiona: Siphonopidae) in the state of Pará, Brazil, with an updated geographic distribution map,  and notes on size and variation",
+      "author": "Maciel, A.O., Costa , H.C., Drummond, L.O. , Gomes, J.O.  and D’Angiolella, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Maciel, A.O. and Hoogmoed, M.S. 2011. Taxonomy and distribution of caecilian amphibians (Gymnophiona) of Brazilian Amazonia, with a key to their identification. <i>Zootaxa</i> 2984: 1-53.",
+      "year": "2011",
+      "title": "Taxonomy and distribution of caecilian amphibians (Gymnophiona) of Brazilian Amazonia, with a key to their identification",
+      "author": "Maciel, A.O. and Hoogmoed, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "Pinto, E., Antoniazzi, M.M., Jared, C. and Tempone, A.G. 2014. Antileishmanial and antitrypanosomal activity of the cutaneous secretion of <i>Siphonops annulatus</i>. <i>Journal of Venomous Animals and Toxins including Tropical Diseases</i> 20: 50.",
+      "year": "2014",
+      "title": "Antileishmanial and antitrypanosomal activity of the cutaneous secretion of <i>Siphonops annulatus</i>",
+      "author": "Pinto, E., Antoniazzi, M.M., Jared, C. and Tempone, A.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilkinson, M., Kupfer, A., Marques-Porto, R., Jeffkins, H., Antoniazzi, M.M., and Jared, C. 2008. One hundred million years of skin feeding? Extended parental care in a Neotropical caecilian (Amphibia: Gymnophiona). <i>Biology Letters</i> 4: 358-361.",
+      "year": "2008",
+      "title": "One hundred million years of skin feeding? Extended parental care in a Neotropical caecilian (Amphibia: Gymnophiona)",
+      "author": "Wilkinson, M., Kupfer, A., Marques-Porto, R., Jeffkins, H., Antoniazzi, M.M., and Jared, C.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

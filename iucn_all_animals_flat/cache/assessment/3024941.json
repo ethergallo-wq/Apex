@@ -1,0 +1,858 @@
+{
+  "assessment_date": "2019-12-09T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 55174,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/55174/3024941",
+  "citation": "IUCN SSC Amphibian Specialist Group 2020. Dendrobates auratus. The IUCN Red List of Threatened Species 2020: e.T55174A3024941. Accessed on 05 May 2026.",
+  "assessment_id": 3024941,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 55174,
+    "scientific_name": "Dendrobates auratus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "DENDROBATIDAE",
+    "genus_name": "Dendrobates",
+    "species_name": "auratus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Girard, 1855)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Gold Arrow-poison Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Golden Poison-arrow Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Green and Black Poison-arrow Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Green and Black Poison-dart Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Green and Golden Poison-arrow Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Green Poison-arrow Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Green Poison Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Rana Dardo Venenosa Verde y Negra",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ranita Verdinegra",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Green And Black Poison Frog",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Dendrobates  latimaculatus Günther, 1859",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates ",
+        "species_name": "latimaculatus",
+        "species_author": "Günther, 1859",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hylaplesia aurata (Girard, 1855)",
+        "status": "ACCEPTED",
+        "genus_name": "Hylaplesia",
+        "species_name": "aurata",
+        "species_author": "(Girard, 1855)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dendrobates  amoenus Werner, 1901",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates ",
+        "species_name": "amoenus",
+        "species_author": "Werner, 1901",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Hylaplesia tinctoria ssp. latimaculata Dunn, 1941",
+        "status": "ACCEPTED",
+        "genus_name": "Hylaplesia",
+        "species_name": "tinctoria",
+        "species_author": null,
+        "infrarank_author": "Dunn, 1941",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "latimaculata"
+      },
+      {
+        "name": "Dendrobates  tinctorius ssp. auratus Laurent, 1942",
+        "status": "ACCEPTED",
+        "genus_name": "Dendrobates ",
+        "species_name": "tinctorius",
+        "species_author": null,
+        "infrarank_author": "Laurent, 1942",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "auratus"
+      },
+      {
+        "name": "Phyllobates auratus Girard, 1855",
+        "status": "ACCEPTED",
+        "genus_name": "Phyllobates",
+        "species_name": "auratus",
+        "species_author": "Girard, 1855",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "315404",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs in the humid lowlands from southeastern Nicaragua on the Atlantic slope and southeastern Costa Rica on the Pacific versant to northwestern Colombia (Golfo de Uraba on the Caribbean coast and the lower Atrato River drainage and Bahia Solano on the Pacific coast), from sea level up to 1,000 m asl. In 1932, 206 specimens of this species&#160;from Taboga or Taboguilla Islands, Panama were released in the upper Manoa Valley, Oahu, Hawaii in an attempt to control non-native insects (Silverstone 1975, McKeown 1996). A few feral subpopulations of <em>D. auratus</em> descended from these animals still persist in the mountains and valleys of Oahu.",
+    "population": "This is an abundant species that is often seen and regularly recorded throughout its range. There is great geographic variation in the appearance of this species; over 15 distinct colour morphs have been recorded in the wild (Heselhaus 1992). It is common on Mancarronicito Island, Nicaragua. In Costa Rica, it is found at La Selva and its surrounding secondary forests (Hilje and Mitchell Aide 2012), and in Guayacan (Kubicki 2008). In some places, the species has experienced declines (Crawford <em>et al</em>. 2010) and the blue morph of <em>D. auratus</em> present on the Pacific side of Panama is believed to be threatened (Heselhaus 1992).<p></p>",
+    "habitats": "It is an arboreal and terrestrial diurnal species of humid lowland and sub-montane forest. It is also found in dense secondary growth and cocoa plantations (Kitasako 1967). The adults are often associated large buttressed trees. Males are essentially non-territorial, but occasionally engage in aggressive competition (Wells 1978). The species is polygynous; females actively compete for males and attempt to guard their mate from others. The species shows a high degree of paternal care. After oviposition upon leaf-litter the male guards and cares for the clutch of three to 13 eggs (Silverstone 1975, Heselhaus 1992). On hatching (13–16 days in captivity) the tadpoles are carried by the male to a stagnant water body in a tree-hole, the leaf axil of a bromeliad (up to 30 m from the forest floor), or a small ground pool (Eaton 1941, van Wijngaarden 1990). Wild tadpoles feed on protozoans and rotifers, and metamorphose after 39–89 days; in captivity, sexual maturity is attained at between six and 15 months (Eaton 1941, Silverstone 1975, Summers 1990, Zimmermann and Zimmermann 1994). A reduction in the number of egg clutches and tadpoles maintained by the male results in a more rapid development of the eggs and higher growth rate of tadpoles (Wells 1978, Summers 1990). Longevity of at least six years has been reported in captivity (Zimmermann and Zimmerman 1994).",
+    "threats": "There is a general loss of suitably wooded areas (due to urbanization, agriculture and logging) and collection for the international pet trade. Owing to the apparently low fecundity of this species, the possibility exists that over harvesting, especially in the more rare morphs, might contribute to localized population declines. Approximately 62,000 specimens belonging to this species&#160;were reported in the pet trade between 1978 and 2008 (Carpenter <em>et al</em>. 2014). McKeown (1996) states that subpopulations on Oahu are highly sensitive to destruction of their habitat and over-collection. Museum specimens of this species have been found to have chytrid fungi. The current impact of this pathogen on this species&#160;is not known, but captive individuals have been experimentally infected with chytrid fungus and ranavirus (Miller <em>et al</em>. 2008) and chytridiomycosis-related declines have been noted in parts of Panama (Crawford <em>et al</em>. 2010).",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species is listed on Appendix II of CITES, and the species occurs within many protected areas. Within Colombia, Decree INDERENA No. 39 of 9 July, 1985, forbids the collection of Dendrobates spp. from the wild for breeding (or other) purposes. Nicaragua has established CITES export quotas for this species.<br/><br/><strong><em>Research Needed</em></strong><br/>Further research on this species' distribution, population size and trends is recommended.",
+    "use_trade": "Exported for the pet trade, this is the second most commonly traded CITES listed amphibian species, and comprises 13% of the international trade (Carpenter <em>et al</em>. 2014). It is commonly bred in captivity. Different localities and attractive colour morphs are highly sought after by collectors.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a degree of habitat modification and presumed large population.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "facilitators",
+      "full": "Wetterau, A., Hobin, L. & Neam, K.",
+      "value": [
+        "Kelsey Neam (Amphibian RLA)",
+        "Alyssa Wetterau",
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Jarvis, L.",
+      "value": [
+        "Laurence Jarvis (Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Klocke, B., Gratwicke, B., Jaramillo, C., Bolaños, F., Solís, F., Chaves, G., Kohler, G., Savage, J., Jungfer, K.-H., Ibáñez, R., Robleto, S. & Bolívar, W.",
+      "value": [
+        "Brian Gratwicke (Smithsonian Conservation Biology Institute)",
+        "Wilmar Bolívar",
+        "Karl-Heinz Jungfer",
+        "Glauco Kohler (Universidade Federal do Paraná)",
+        "Gerardo Chaves (Universidad de Costa Rica)",
+        "Federico Bolaños",
+        "César  Jaramillo (Círculo Herpetológico de Panamá/Universidad de Panamá)",
+        "Roberto Ibáñez",
+        "Frank  Solís",
+        "Jay Savage",
+        "Blake Klocke",
+        "Silvia Robleto"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Savage, J.M. 2002. <i>The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas</i>. University of Chicago Press, Chicago.",
+      "year": "2002",
+      "title": "The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas",
+      "author": "Savage, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "McKeown, S. 1996. <i>A Field Guide to Reptiles and Amphibians in the Hawaiian Islands</i>. Diamond Head Publishing, Los Osos, California.",
+      "year": "1996",
+      "title": "A Field Guide to Reptiles and Amphibians in the Hawaiian Islands",
+      "author": "McKeown, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruiz-Carranza, P.M., Ardila-Robayo, M.C. and Lynch, J.D. 1996. Lista actualizada de la fauna de Amphibia de Colombia. <i>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</i> 20(77): 365-415.",
+      "year": "1996",
+      "title": "Lista actualizada de la fauna de Amphibia de Colombia",
+      "author": "Ruiz-Carranza, P.M., Ardila-Robayo, M.C. and Lynch, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Young, B., Sedaghatkish, G., Roca, E. and Fuenmayor, Q. 1999. <i>El Estatus de la Conservación de la Herpetofauna de Panamá: Resumen del Primer Taller Internacional sobre la Herpetofauna de Panamá</i>. The Nature Conservancy, Arlington, Virginia.",
+      "year": "1999",
+      "title": "El Estatus de la Conservación de la Herpetofauna de Panamá: Resumen del Primer Taller Internacional sobre la Herpetofauna de Panamá",
+      "author": "Young, B., Sedaghatkish, G., Roca, E. and Fuenmayor, Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ibáñez, R., Solís, F., Jaramillo, C. and Rand, S. 2000. An overwiew of the herpetology of Panama. In: J.D. Johnson, R.G. Webb and O.A. Flores-Villela (eds), <i>Mesoamerican Herpetology: Systematics, Zoogeography and Conservation</i>, pp. 159-170. The University of Texas at El Paso, El Paso, Texas.",
+      "year": "2000",
+      "title": "An overwiew of the herpetology of Panama",
+      "author": "Ibáñez, R., Solís, F., Jaramillo, C. and Rand, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kitasako, J.T. 1967. <i>Observations on the biology of </i>Dendrobates pumilio<i> Schmidt and </i>Dendrobates auratus<i> Girard</i>. M.S. Thesis, University of Southern California.",
+      "year": "1967",
+      "title": "Observations on the biology of <i>Dendrobates pumilio</i> Schmidt and <i>Dendrobates auratus</i> Girard",
+      "author": "Kitasako, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zimmermann, E. and Zimmermann, H. 1994. Reproductive strategies, breeding, and conservation of tropical frogs: dart-poison frogs and Malagasy poison frogs. In: Murphy, J.B., Adler, K. and Collins, J.T. (eds), <i>Captive management and conservation of amphibians and reptiles</i>, pp. 255-266. Society for the Study of Amphibians and Reptiles, Ithaca (New York). Contributions to Herpetology volume 11.",
+      "year": "1994",
+      "title": "Reproductive strategies, breeding, and conservation of tropical frogs: dart-poison frogs and Malagasy poison frogs",
+      "author": "Zimmermann, E. and Zimmermann, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hilje, B., and T. Mitchell Aide. 2012. Recovery of amphibian species richness and composition in a chronosequence of secondary forests, northeastern Costa Rica. <i>Biological Conservation</i> 146: 170-176.",
+      "year": "2012",
+      "title": "Recovery of amphibian species richness and composition in a chronosequence of secondary forests, northeastern Costa Rica.",
+      "author": "Hilje, B., and T. Mitchell Aide",
+      "citation_short": null
+    },
+    {
+      "citation": "Kubicki, B. 2008. Amphibian diversity in Guayacan, Limon province, Costa Rica. <i>Brenesia </i> 69: 35-42.",
+      "year": "2008",
+      "title": "Amphibian diversity in Guayacan, Limon province, Costa Rica",
+      "author": "Kubicki, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carpenter, A.I., Andreone, F., Moore, R.D. and Griffiths, R.A. 2014. A review of the international trade in amphibians: the types, levels and dynamics of trade in CITES-listed species. <i>Oryx</i> 48(4): 565-574.",
+      "year": "2014",
+      "title": "A review of the international trade in amphibians: the types, levels and dynamics of trade in CITES-listed species.",
+      "author": "Carpenter, A.I., Andreone, F., Moore, R.D. and Griffiths, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heselhaus, R. 1992. <i>Poison-arrow frogs: their natural history and care in captivity</i>. Blandford, London.",
+      "year": "1992",
+      "title": "Poison-arrow frogs: their natural history and care in captivity",
+      "author": "Heselhaus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barquero, M.D., M. Salazar-Saavedra, L. Sandoval, D. Brenes, F. Martanez, and A. Figueroa. 2010. Composition and species richness of herpetofauna in two isolated regions of southern Nicaragua. <i>Herpetol. Notes</i> 3: 341-352.",
+      "year": "2010",
+      "title": "Composition and species richness of herpetofauna in two isolated regions of southern Nicaragua",
+      "author": "Barquero, M.D., M. Salazar-Saavedra, L. Sandoval, D. Brenes, F. Martanez, and A. Figueroa",
+      "citation_short": null
+    },
+    {
+      "citation": "Silverstone, P.A. 1975. A revision of the poison-arrow frogs of the genus <i>Dendrobates</i> Wagler. <i>Natural History Museum of Los Angeles County Science Bulletin</i> 21: 1-55.",
+      "year": "1975",
+      "title": "A revision of the poison-arrow frogs of the genus <i>Dendrobates</i> Wagler",
+      "author": "Silverstone, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crawford A.J., Lips K.R. and Bermingham E. 2010. Epidemic disease decimates amphibian abundance, species diversity, and evolutionary history in the highlands of central Panama.  . <i>Proceedings of the National Academy of Sciences</i> doi: 10.1073/pnas.0914115107.",
+      "year": "2010",
+      "title": "Epidemic disease decimates amphibian abundance, species diversity, and evolutionary history in the highlands of central Panama.  ",
+      "author": "Crawford A.J., Lips K.R. and Bermingham E ",
+      "citation_short": "Crawford et al 2010"
+    },
+    {
+      "citation": "Ibañez, R., Rand, A.S. and Jaramillo, C.A. 1999. <i>Los anfibios del Monumento Natural Barro Colorado, Parque Nacional Soberanía y areas adyacentes</i>. Mizrachi, E. and Pujol, S.A., Santa Fe de Bogota.",
+      "year": "1999",
+      "title": "Los anfibios del Monumento Natural Barro Colorado, Parque Nacional Soberanía y areas adyacentes",
+      "author": "Ibañez, R., Rand, A.S. and Jaramillo, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Eaton, T. 1941. Notes on the life history of Dendrobates auratus. <i>Copeia</i>: 88-93.",
+      "year": "1941",
+      "title": "Notes on the life history of Dendrobates auratus",
+      "author": "Eaton, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Summers, K. 1990. Paternal care and the cost of polygyny in the green dart-poison frog. <i>Behavioral Ecology and Sociobiology</i>: 307-313.",
+      "year": "1990",
+      "title": "Paternal care and the cost of polygyny in the green dart-poison frog",
+      "author": "Summers, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, K.D. 1978. Courtship and parental behaviour in a Panamanian poison-arrow frog (Dendrobates auratus). <i>Herpetologica</i>: 148-155.",
+      "year": "1978",
+      "title": "Courtship and parental behaviour in a Panamanian poison-arrow frog (Dendrobates auratus)",
+      "author": "Wells, K.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Wijngaarden, R. 1990. Enkele klimaatgegevens en waarnemingen in de biotoop van de gifkikkers Phyllobates vittatus en Dendrobates auratus. <i>Lacerta</i>: 147-154.",
+      "year": "1990",
+      "title": "Enkele klimaatgegevens en waarnemingen in de biotoop van de gifkikkers Phyllobates vittatus en Dendrobates auratus",
+      "author": "van Wijngaarden, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davies, R.W. and Davies, V.C. 1986. The rearing and breeding of Dendrobates auratus in captivity. <i>British Herpetological Society Bulletin</i>: 24.",
+      "year": "1986",
+      "title": "The rearing and breeding of Dendrobates auratus in captivity",
+      "author": "Davies, R.W. and Davies, V.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Voyles J, Richards-Hrdlicka K, Cashins SD, Rosenblum EB, Hyatt AD, et al. 2010.  Batrachochytrium dendrobatidis: requirement for further isolate collection and archiving. <i>Dis Aquat Organ</i> doi: 10.3354/dao02216.",
+      "year": "2010",
+      "title": " Batrachochytrium dendrobatidis: requirement for further isolate collection and archiving",
+      "author": "Voyles J, Richards-Hrdlicka K, Cashins SD, Rosenblum EB, Hyatt AD, et al.  ",
+      "citation_short": "Voyles et al. 2010"
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Robleto-Hernández, S.J., Gutiérrez Rodríguez, A.A., Otero Ortuño, C., González Guillén, E.Y., Leets Rodríguez, L., López Guevara, H. and Sunyer, J. 2019. Libro Rojo Anfibios y Reptiles de Nicaragua. Conservación de la Diversidad Biológica.In: R. Robleto–Hernández and A.Gutiérrez–Rodríguez (eds), pp. 199. Revista Nicaragüense de Biodiversidad N°40, Managua, Nicaragua.",
+      "year": "2019",
+      "title": "Libro Rojo Anfibios y Reptiles de Nicaragua. Conservación de la Diversidad Biológica",
+      "author": "Robleto-Hernández, S.J., Gutiérrez Rodríguez, A.A., Otero Ortuño, C., González Guillén, E.Y., Leets Rodríguez, L., López Guevara, H. and Sunyer, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sunyer, J. 2009. Taxonomy, zoogeography, and conservation of the herpetofauna of Nicaragua. Department of Biology, Goethe University, Frankfurt am Main.",
+      "year": "2009",
+      "title": "Taxonomy, zoogeography, and conservation of the herpetofauna of Nicaragua",
+      "author": "Sunyer, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miller, D.L., Rajeev, S.,Brookins, M., Cook, J., Whittington, L. and Baldwin, C.A. 2008. Concurrent infection with Ranavirus, Batrachochytrium dendrobatidis, and Aeromonas in a captive anuran colony. <i>Journal of Zoo and Wildlife Medicine</i> 39(3): 445-449.",
+      "year": "2008",
+      "title": "Concurrent infection with Ranavirus, Batrachochytrium dendrobatidis, and Aeromonas in a captive anuran colony",
+      "author": "Miller, D.L., Rajeev, S.,Brookins, M., Cook, J., Whittington, L. and Baldwin, C.A.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

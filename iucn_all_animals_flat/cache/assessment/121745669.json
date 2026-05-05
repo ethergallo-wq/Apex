@@ -1,0 +1,1503 @@
+{
+  "assessment_date": "2016-04-11T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 712,
+  "criteria": "C2a(i); D1",
+  "url": "https://www.iucnredlist.org/species/712/121745669",
+  "citation": "Swaisgood, R., Wang, D. & Wei, F. 2016. Ailuropoda melanoleuca (errata version published in 2017). The IUCN Red List of Threatened Species 2016: e.T712A121745669. Accessed on 05 May 2026.",
+  "assessment_id": 121745669,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 712,
+    "scientific_name": "Ailuropoda melanoleuca",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "URSIDAE",
+    "genus_name": "Ailuropoda",
+    "species_name": "melanoleuca",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(David, 1869)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bear Specialist Group",
+        "url": "http://www.bearbiology.com/index.php?id=bsgmain",
+        "description": "Co-Chairs: David L. Garshelis (email: dave.garshelis@dnr.state.mn.us) and Michael Proctor (email: mproctor@netidea.com)\nRed List Authority Coordinator: Bruce McLellan (email: bruce.mclellan@gov.bc.ca)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bambusbär",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Da xióngmāo",
+        "language": "chi"
+      },
+      {
+        "main": false,
+        "name": "Großer Panda",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Panda géant",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Panda Gigante",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Riesenpanda",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Giant Panda",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Ursus melanoleucus David, 1869",
+        "status": "ACCEPTED",
+        "genus_name": "Ursus",
+        "species_name": "melanoleucus",
+        "species_author": "David, 1869",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4100,
+    "lower_elevation_limit": 1200,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "500-1000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "400",
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Once widespread throughout southern China, and as far north as Beijing and south into Southeast Asia, the Panda’s distribution is now confined to its previous western extremity in Sichuan, Shaanxi and Gansu provinces. Pleistocene range shifts were associated with the disappearance of the Panda’s principal source of food, bamboo, due to warming climate; whereas rapid range contraction in the past several hundred years is attributed to the conversion of bamboo forests to agricultural cultivation and rapid expansion of human populations (Li <em>et al.</em> 2015). The largest populations are currently found in the Minshan, Qinling, Qionglai mountain ranges, and smaller, more isolated populations remain in the Liangshan, Daxiangling, and Xiaoxiangling mountain ranges (State Forestry Administration 2015).<br/><br/>The Giant Panda’s range is highly fragmented, resulting from centuries of human encroachment and loss of forested habitat at lower elevations. Rapidly expanding industrialization, beginning in the early 1900s and accelerating since 1949, is associated with severe contraction of the Panda’s range (Zhu <em>et al.</em> 2013, Li<em> et al. </em>2015). While they once occupied forests below 1,000 m in elevation, current populations are restricted to mountain ranges, separated by valleys and flatter landscapes that have been altered by human activities. China lost more than 30% of its forests between 1950 and 2004, coinciding with a precipitous drop in Panda populations, but forest cover has increased in the past two decades (FAO 2010).",
+    "population": "The Giant Panda is the subject of one of the largest, most intensive efforts to estimate population size for an entire species. The Chinese government has carried out four national surveys, approximately every 10 years since 1974. The most recent, the Fourth National Survey conducted from 2011 to 2014, mobilized more than 2,000 people who spent more than 60,000 person-days surveying 4.36 million ha. The population estimates derived from these surveys should be considered rough estimates due to difficulty associated with extrapolating sign survey data to determine the number of individuals. Idiosyncratic feeding styles among individual pandas produce bamboo fragments that vary somewhat distinctively in size (“bite-size”) between individuals and thus provide some information that helps distinguish faeces from different individuals, especially when combined with information about home range size. However, as a population census tool, this method has never been fully validated (Pan<em> et al. </em>2014). Evidence suggests that sign survey data may have under-estimated population size in one reserve (Zhan <em>et al.</em> 2006, Wei <em>et al. </em>2012), but it is not known to what extent these findings can be extrapolated to other reserves. Although DNA has been extracted from faeces collected during the Fourth National Survey, these data have not yet yielded a population estimate because most of the faeces collected were not sufficiently fresh to provide adequate DNA. Thus, the best available population estimate for the species relies on bite-size analysis.<br/><br/>Another limitation of the national survey data is that the methods have been altered and improved since they commenced in 1974, and the range and effort of the survey have been inconsistent. The same methods were used for the third and fourth national surveys; although survey effort increased in the fourth survey, most of this increase can be attributed to the larger area covered to capture the expanding range that Pandas now occupy. Thus, comparisons between surveys may not be completely valid, but they are still informative. The first survey (1974–1977) produced an estimate of 2,459 pandas, which decreased dramatically in the second survey (1985–1988) to 1,216 individuals. This approximately 50% drop in population size provided the impetus for the 1988 Wildlife Protection act, which banned Panda poaching, and China’s <em>National Conservation Project for the Giant Panda and its Habitat</em>, which established a reserve system for Pandas (Reid and Gong 1999). By the time of the third survey (2000–2004), the population estimate increased to 1,596, indicating that these protective measures may have been successful. However, uncertainties remained due to the inconsistencies in the methods by which the surveys were implemented (as well as a lack of confidence limits on the point estimates). Although these same limitations still apply, the recent fourth survey showed the Panda population increased further to 1,864, removing most remaining uncertainties regarding population trend. Additionally, Pandas have been documented in many areas outside their known range, including an animal shot in 2015 in Yunnan Province, where they have not been recorded for centuries. An increasing population was not surprising, given that available and occupied habitats have increased. <br/><br/>The optimism engendered by these positive trends is dampened by evidence indicating that some Panda populations are decreasing, particularly those found in the smallest and most degraded habitat patches such as Liangshan, Xiangling and Niuweihe. Approximately 223 pandas occupying 23 isolated habitat patches are considered at high risk of local extinction, and will require increased protection and management (Zhu <em>et al.</em> 2010, 2011b; State Forestry Administration 2015).",
+    "habitats": "A member of the order Carnivora, Giant Pandas have evolved to specialize on a diet of bamboo (Schaller <em>et al.</em> 1985). Bamboo is a poor food source, low in protein and high in lignin and cellulose, and wild Giant Pandas can only digest an average of 17% of dry matter and about 27% of hemi-cellulose (Dierenfeld <em>et al.</em> 1982, Schaller <em>et al</em>. 1985). Thus, to meet their daily energy requirement, Giant Pandas must consume a large amount of bamboo, up to 12.5 kg per day, and defecate more than 100 times daily (Schaller <em>et al.</em> 1985). Pandas have large, muscular jaws with skeletal features to accommodate the musculature and its famous “pseudothumb” used to hold and manipulate bamboo for processing. However, compared with other herbivores, the Panda has very low digestive efficiency because its digestive tract still resembles that of its carnivorous ancestors. The Panda’s feeding strategy emphasizes volume, requiring it to allocate much of its time to foraging (approximately 14 hours daily).<br/><br/>While morphological and behavioural adaptations provide some compensation for poor digestive efficiency, the Panda’s ability to survive on such a low-quality food source remained mysterious for decades. Even whole-genome sequencing found no specific genes responsible for the digestion of cellulose and hemi-cellulose (Li <em>et al.</em> 2010). An explanation was uncovered in a recent metagenomics study that found the Panda’s gut microbes play an important role in digesting bamboo fibers (Zhu <em>et al.</em> 2011a). Additional adaptations to poor quality diet are found in the Panda’s extreme strategy of energy conservation, with daily energy expenditure comparable to that of a sloth or reptile (Nie <em>et al.</em> 2015). Pandas demonstrate a suite of adaptations to reduce energy expenditure. The thick pelage conserves energy lost through body heat, and it has long been known that pandas are conservative in movement and physical activity. Smaller than expected organs also are indicative of energy-conservation adaptation, and down-regulation of resting metabolic rate has been achieved through a mutation in the synthesis pathway for thyroid hormones.<br/><br/>Giant Pandas also compensate for digestive inefficiency by selecting the most nutritious parts of bamboo plants and by altering diet selection seasonally commensurate with changes in nutritional profiles of bamboo species (Schaller<em> et al.</em> 1985, Pan <em>et al.</em> 2014, Wei <em>et al.</em> 1999, Nie <em>et al.</em> 2014, Wei <em>et al.</em> 2015b). They demonstrate strong preference for seasonally available new bamboo shoots, rich in nutrition and energy and low in fibre. Outside the late spring bamboo shoot season, Pandas favour leaves, although more stems are incorporated into their diet during the winter months when leaf quality and quantity diminishes. This convergence of foraging strategies across variations in climate, bamboo species, and topographic profile indicates an adaptive strategy that serves the species well. Still, as an energy-limited species that spends more than 50% of its time foraging, Panda numbers may be limited by the availability of high quality bamboo and the time required to process bamboo in the digestive system.<br/><br/>Early coarse-scale radio tracking using VHF transmitters provided foundational data on home range size and documented the solitary nature of the Panda’s existence (Schaller<em> et al</em>. 1985, Yong <em>et al. </em>1994, Pan <em>et al. </em>2014). Although Panda home ranges overlap generously, direct encounters between individuals are rare. Seasonal elevational migration has been documented in the Qionglai (Schaller <em>et al. </em>1985) and Qinling mountains (Yong <em>et al.</em> 1994, Liu <em>et al.</em> 2002, Pan <em>et al. </em>2014). At both sites, the seasonal movements track changes in resources, providing access to bamboo species that provide greater nutritional value. Research integrating behavioural, nutritional, and movement data provide new insights into these seasonal migration patterns, demonstrating that these movements facilitate consumption of higher concentrations and/or a more balanced intake of key nutrients such as Nitrogen (N), Phosphorus (P), and Calcium (Ca) (Nie <em>et al.</em> 2014). Female-biased dispersal has been demonstrated with genetic data in the Minshan and Liangshan Mountains (Zhan <em>et al.</em> 2007, Hu <em>et al.</em> 2010).<br/><br/>Fine-scale documentation of |Panda movement behaviour had to await the advent of Global Positioning System (GPS) technology. Published accounts using high-resolution GPS telemetry revised and added to previous findings (Zhang <em>et al.</em> 2014, Hull <em>et al. </em>2015). VHF-based radio tracking inevitably leads to large amounts of missing data when animals at more distant locations are not detected, thus it is unsurprising that GPS tracking substantively revised home range size upwards, and that core area overlap and opportunity for social interactions is now understood to be greater than previously believed. Other interesting phenomena were also detected, such as the documentation of female-biased dispersal (confirmed with genetic data; Zhan <em>et al.</em> 2007), and sudden, large movements that temporarily took a female far outside of her home range during the mating season. Fine-scale movement data showed that Pandas exhibited individualistic and multiphasic movement paths within seasonal core habitats and large-scale movements between habitats. Tortuous movement paths indicated when pandas searched for and found foraging resources. Pandas frequently return to the same foraging patches, indicating that they likely have well-developed spatial memory.<br/><br/>Using various measures of habitat suitability, efforts to map Panda habitat have proven valuable for guiding the establishment of the Panda reserve system (Shen <em>et al.</em> 2008, Feng <em>et al.</em> 2009, Qi <em>et al.</em> 2012). Giant Pandas typically occupy temperate montane forests at altitudes of 1,500–3,000 m (Hu and Wei 2004). Range-wide analysis of ecological covariates associated with Panda presence suggested that Giant Pandas are associated with old growth forests, a finding previously unrecognised in studies implemented on smaller spatial scales (Zhang <em>et al.</em> 2011). As an obligate bamboo specialist, the Giant Panda’s reliance on this resource is clear, yet it has usually been ignored in habitat suitability models because mapping bamboo understory using remote sensing techniques is difficult (Linderman<em> et al. </em>2005). Including understory bamboo in habitat models dramatically decreases estimates of available habitat and increases measures of fragmentation. Advances in remote sensing techniques, such as Advanced Spaceborne Thermal Emission and Reflection Radiometer (ASTER), Moderate Resolution Imaging Spectroradiometer (MODIS), Normalized Difference Vegetation Index (NDVI) and Wide Dynamic Range Vegetation Index (WDRVI), combined with new analytical techniques, such as artificial neural network analysis, have helped remove obstacles to including bamboo understory in maps of habitat suitability (Wang <em>et al</em>. 2009; Viña <em>et al</em>. 2008, 2010). Enhanced understanding of Panda habitat requirements and improvements in mapping technologies provide managers and policy makers with better tools for conservation decision-making (Loucks <em>et al.</em> 2003, Xu <em>et al.</em> 2006, Swaisgood <em>et al.</em> 2011, Qi <em>et al. </em>2012).<br/><br/>Giant Pandas are a solitary and seasonal-breeding mammal, only coming together during the breeding season, from March to May, for reproductive purposes (Schaller <em>et al. </em>1985, Pan <em>et al. </em>2014, Nie <em>et al.</em> 2012b). Male Pandas occupy large home ranges overlapping several females and are known to congregate around oestrous females. Male Pandas are able to locate females across large areas, and demonstrate fierce and injurious aggression in competition for access to females. Early in these encounters escalated aggression is common, but, in a possible strategy to conserve energy and minimize risk of injury, once dominance is established, contact aggression is largely replaced with non-contact aggression. Individual males are able to locate and mate with multiple females sequentially, so the mating system might be considered scramble competition polygyny.<br/><br/>Because Pandas live a solitary existence, they must rely heavily on chemosignals to communicate with one another without necessitating face-to-face encounters. Giant Pandas make use of a system of traditional communal scent mark stations that provide them with reliable locations they can visit to deposit signals and investigate signals left by other Pandas (Schaller<em> et al. </em>1985). Studies documenting habitat characteristics of preferred marking sites, including tree species and microhabitat (Nie <em>et al. </em>2012a), extend our understanding of habitat requirements for the species. If habitat that promotes communication is not maintained, then poor communication may hinder breeding in the wild, as has been shown for captive Pandas (Swaisgood <em>et al.</em> 2004).<br/><br/>Denning ecology is an important field of study among ursids, and other species giving birth in dens, because access to adequate dens can be important for offspring survival. Forest management practices that affect the availability of suitable dens can either significantly harm or enhance cub survival (White<em> et al. </em>2001). Ursid young, being extremely altricial, are particularly vulnerable. The Giant Panda lies at the extreme end of this continuum, with the mother weighing nearly 1,000 times the cub’s weight at birth (Gittleman 1994). Den quality may therefore be critical for Pandas. Giant Pandas do not hibernate, but females use rock caves or tree cavities to rear offspring that are produced every 2–3 years (Schaller<em> et al. </em>1985, Pan <em>et al. </em>2014, Zhu <em>et al. </em>2001). Preferred dens are characterized by a small opening to buffer against the elements and provide a warmer and drier environment for rearing offspring (Zhang<em> et al. </em>2007). Dens tend to be located close to water, presumably so the mother can leave the vulnerable cub (almost always a single cub) unattended for a shorter period of time while she drinks. It has also been proposed that tree dens, once more numerous in primary forests before logging converted many forests in Panda habitat to second growth, are a limiting resource for Giant Pandas (Zhang <em>et al.</em> 2011). The importance of this resource may explain why national survey data indicate that pandas are more often found in primary than secondary forest.<br/><br/>It was once believed, and sometimes still mis-stated, that Pandas’ biological deficiencies were responsible for their own decline. Because of early problems with captive breeding, Pandas gained a reputation for having notoriously low levels of interest in mating; however, Pandas in the wild experience no mating problems and have high reproductive rates (Wei and Hu 1994, Pan <em>et al</em>. 2014). Once a better understanding of the biology and behaviour of the species was incorporated into husbandry practices, captive Pandas began to mate naturally and experienced exponential population growth (Swaisgood <em>et al.</em> 2006, Zhang and Wei 2006, Martin-Wintle <em>et al.</em> 2016). Moreover, its well-known specialization on bamboo is not (as once thought) an evolutionary cul de sac, as it opens up a foraging niche with plentiful resources and few competitors (Wei <em>et al.</em> 2014). Dietary specialization is often seen as an extinction risk factor, but this may not be the case for the Panda, which specializes on widespread and abundant bamboo. Thus, pandas are well-adapted to their environment and have reproductive rates sufficiently high to explain the recovery of populations once bans on poaching and habitat restoration efforts commenced (Wei <em>et al.</em> 2014).",
+    "threats": "The primary threat facing Giant Panda populations is the continuing effects of previous habitat loss, resulting in highly fragmented habitat and, in many cases small, isolated populations. According to the Fourth National Survey (State Forestry Administration 2015), the Panda population is composed of as many as 33 subpopulations, 18 of which contain fewer than 10 individuals. The extent to which these are demographically separate populations remains uncertain, but this fragmentation certainly increases vulnerability to extinction through environmental and demographic stochasticity and loss of genetic diversity.<br/><br/>Although microsatellite analysis (Lü <em>et al.</em> 2001, Zhang, B. <em>et al.</em> 2007, Shan <em>et al.</em> 2014) and genomics (Li <em>et al.</em> 2010, Zhao <em>et al.</em> 2013) have now determined that the Giant Panda has substantial genetic variability, without increased migration and connectivity, many of these smaller populations will have rapidly eroding evolutionary potential. Three genetic clusters have been recognized: the Qinling Mountains population (Lü <em>et al.</em> 2001, Zhang, B. <em>et al.</em> 2007) which diverged ~0.3 million years ago; the Mishan mountains, which diverged ~2,800 years ago into the Mishan and Qionglai populations (Zhang, B. <em>et al.</em> 2007, Zhao <em>et al.</em> 2013); and the other four combined populations, including Qionglai, Daxiangling, Xiaoziangling, and Liangshan (Zhan <em>et al.</em> 2013). However, in this larger cluster, further sub-structuring is manifest (Zhang, B. <em>et al.</em> 2007, Zhu <em>et al.</em> 2011b). Population divergence is the product of several operating factors, including climate change, natural barriers, and anthropogenic habitat loss.<br/><br/>Threats associated with edge effects, human disturbance, and small population size are most severe in these small, isolated populations. Increased fragmentation from roads, hydroelectric dams, mining, and other infrastructure projects further threaten Panda populations (State Forestry Administration 2015), but these trends are partially counterbalanced through the successful implementation of ecocompensation programs that curtail some activities such as fuel wood collection (Viña <em>et al.</em> 2007) and efforts to increase habitat connectivity between some populations (Wang <em>et al.</em> 2014, Wei <em>et al.</em> 2015a). Tourism is increasing in some areas and if not managed properly, could negatively impact Panda populations (Liu <em>et al.</em> 2012). Pathogens and parasites may be an emerging problem compromising Giant Panda health and survival, particularly in areas where dogs, livestock, and other domesticated animals may introduce novel pathogens (Qin <em>et al.</em> 2010; Zhang, L. <em>et al.</em> 2011, 2015). Air- or water-borne environmental contaminants may also exert negative impacts on Panda populations, but little is known about their prevalence. Livestock grazing, inside and outside of protected areas, represents another, potentially growing threat (Hull <em>et al.</em> 2014, Wang <em>et al.</em> 2015). It should also be noted that protected status of nature reserves does not always confer protection, and some threats have continued even after Panda reserves were gazetted (Liu <em>et al.</em> 2001). These continuing human activities may have cumulative effects that further degrade Panda habitat.<br/><br/>Pandas' reliance on bamboo as a primary food source puts them at risk during this plant's characteristic mass synchronous flowering and die-off events, which occur at intervals of 15 to 100 years (Schaller <em>et al. </em>1985, Reid <em>et al.</em> 1989). Before human expansion confined Pandas to high elevations, Pandas had access to more species of bamboo adapted to different elevation zones. When one bamboo species experienced a die-off, Pandas could easily migrate up or down slope to access a different species that was not affected. Confined to its more limited elevation range today, Pandas are sometimes put at risk of starvation, especially when more than one bamboo species flowers at the same time. Although past bamboo die-off events were alarming and caused starvation and mortalities in Pandas, populations recovered (Pan <em>et al.</em> 2014) and these population bottlenecks did not compromise genetic diversity (Zhu <em>et al.</em> 2013).<br/><br/>These primary threats associated with habitat fragmentation and degradation may be exacerbated by climate change-mediated effects on Panda habitat in the future. Several models indicate significant losses to Giant Panda habitat, with estimates of loss of bamboo habitat ranging from 37% to 100% by the end of the century (Fan <em>et al.</em> 2012, Songer <em>et al.</em> 2012, Tuanmu <em>et al.</em> 2013, Li, R. <em>et al.</em> 2015). Although these models are simplifying and may not adequately account for distributional shifts of bamboo species adapted to lower elevations and southern latitudes to replace current habitat that might be lost (Wei <em>et al.</em> 2015a), managers should be concerned about large-scale environmental changes facing Panda populations in the future. In addition, climate change may alter the agricultural value of current Giant Panda habitat and bring about intensified human pressure for cultivation. For example, some models indicate that much of Panda habitat will become suitable for viticulture, a high-value crop (Hannah <em>et al.</em> 2013).<br/><br/>Although poaching impacted Pandas in the past (Li <em>et al.</em> 2003), its impact declined rapidly since the enactment of the Wildlife Protection Act, which bans poaching and carries severe punishments. However, Pandas may sometimes be caught in snares set for musk deer or other species.",
+    "measures": "The Giant Panda has been the focus of one of the most intensive, high profile efforts to recover an endangered species. In 1981, China joined the Convention on the International Trade in Endangered Species (CITES), which made trade of Panda skins illegal. Enactment of the 1988 Wildlife Protection Law banned poaching and conferred protected status to the Giant Panda (listed as Category I, the highest level of protection). The National Conservation Project for the Giant Panda and its Habitat of 1992 laid out a masterplan for Panda conservation and established a Panda reserve system, which today has grown to 67 reserves. Enlarged by more than 50% since the Third National Survey, this reserve system currently protects 67% of the Panda population and nearly 1.4 million hectares of Panda habitat (State Forestry Administration 2015). The biological diversity of these reserves is unparalleled in the temperate world and rivals that of tropical ecosystems (Mackinnon 2008), thus making the Panda an excellent example of an umbrella species conferring protection on many other sympatric species (Noss 1990).<br/><br/>These efforts to end poaching and protect Panda habitat played a significant role in Panda recovery. The Chinese government also invested in infrastructure and capacity building for reserve staff, established anti-poaching patrol, curtailed human activities inside reserves, and in some cases relocated human settlements from inside to outside of reserves. Other measures directed at broader conservation problems also benefited the Panda. The Natural Forest Conservation Program was implemented in 1997 to reduce the devastating impacts of flooding on human communities due to deforestation and erosion. The program banned logging in most forests in Panda habitat, slowing habitat degradation. Additionally, the Grain-to-Green Program incentivized farmers to plant trees on steep slopes to slow erosion. The result of these policies was the addition of 3 million hectares of forest cover in China annually, an increase of 1.6% per year from 2000 to 2010 (FAO 2010). As a consequence, Panda habitat is recovering and the total occupied habitat has increased by 11.8% between the Third and the Fourth National Surveys; an additional 6.3% increase in suitable but unoccupied habitat was also observed. In the Wolong Nature Reserve, implementation of the Grain-to-Green Program brought about measurable increases in connectivity of Panda habitat (Viña <em>et al.</em> 2007). Thus, these habitat conservation policies are associated with increasing Panda population size, increasing range, and better habitat connectivity. Efforts have also commenced to restore habitat corridors (Wang <em>et al.</em> 2014, Wei <em>et al.</em> 2015a) and to reintroduce captive-born pandas to increase genetic diversity in small, isolated populations.<br/><br/>Ecocompensation has been proposed as an important component of a conservation strategy for pandas (Yang <em>et al.</em> 2013, 2015; Liu <em>et al.</em> 2008, 2015; Tuanmu <em>et al.</em> 2015). Approximately 15% of the remaining unprotected habitat occurs in collectively-owned forests. Payment for ecosystem services, which has already been shown to benefit Panda conservation under the Grain-to-Green Program, could extend conservation measures into these unprotected areas.<br/><br/>Finally, the Giant Panda has been the beneficiary of a massive scientific effort conducted in partnerships between the Chinese government and institutions and international conservation NGOs and zoos (Swaisgood <em>et al.</em> 2010, Wei <em>et al.</em> 2015a, State Forestry Administration 2015). Once poorly understood, there has been an explosion of scientific studies across many disciplines, and this knowledge has increasingly been applied management and policy decisions. Future directions would benefit from even better coordination between science and policy, and the application of adaptive management principles in which experiments are conducted to evaluate management actions that may increase carrying capacity inside protected areas (Swaisgood <em>et al.</em> 2011, Wei <em>et al.</em> 2015a).<br/><br/>China's State Forestry Administration, while rightfully proud of its accomplishments, fully realizes that more work needs to be done to further Panda conservation and to avoid losing ground so painstakingly gained. They plant to continue investing in habitat protection, population monitoring, and protection patrols, and to further develop capacity of reserve staff (State Forestry Administration 2015). They recognize the challenges the future holds, and in particular will seek to address problems of habitat connectivity and population fragmentation.",
+    "use_trade": "Although historically the Giant Panda was sometimes hunted for its pelt, law enforcement mechanisms appear to have eliminated this trade.",
+    "rationale": "The Fourth National Survey (2011-2014) produced an estimated range-wide population of 1,864 Giant Pandas, excluding dependent young &lt;1.5 years of age (State Forestry Administration 2015). Although no formal demographic analysis is available, there are demographic data available to enable estimation of age-related population composition (Sichuan Forestry Department 2015): if the population consists of 9.6% cubs, then the total population of Pandas is approximately 2,060. Mature adults are estimated to compose 50.5% of the total population, yielding an estimate of 1,040. Although this estimate does not contain confidence intervals, clearly the lower confidence interval would fall below 1,000 mature individuals, which meets the small population size criteria (D1) for Vulnerable.<br/><br/>Additionally, the species falls under criteria C2. The Panda population is fragmented into subpopulations, each of which contains &lt;1,000 adults (given that the total population is &lt;1,000 adults); however, the size of the largest population is unknown given uncertainty in how much connectivity remains. It appears that at least one distinct populations in the Minshan mountains contains &gt;400 mature individuals (State Forestry Administration 2015), so the species does not meet the criteria for Endangered (EN). The most tentative part of listing under C2 is a continued population decline.<br/><br/>Evidence from a series of range-wide national surveys indicate that the previous population decline has been arrested, and the population has started to increase (State Forestry Administration 2015). Although inconsistencies in data collection methods, analysis, and sampling area make direct comparisons from survey results difficult, population estimates have consistently increased across survey since the Second National Survey conducted during 1985-1988. Initial uncertainties regarding whether modest population increases observed in the Third National Survey (2000-2004) were real warranted maintaining the Endangered status for the Giant Panda in the previous Red List assessment. Recent data from the Fourth National Survey (2011-2014) remove this uncertainty (State Forestry Administration 2015), and it is widely believed that the population has stabilized and has begun to increase in many parts of the range.<br/><br/>An increase in available habitat and an expanding occupied range provide further support for the contention that Panda numbers are increasing. Forest protection and reforestation measures have increased forest cover in China (FAO 2010), and have supported an 11.8% increase in occupied habitat and 6.3% increase in unoccupied but suitable habitat between the Third and Fourth National Surveys (State Forestry Administration 2015). A survey of expert opinion among Giant Panda experts in the IUCN Bear Specialist Group was consistent with the results of the national survey: all believed that the Panda population was stable or increasing and that available habitat was increasing.<br/><br/>Although the population is currently increasing, climate change is predicted to eliminate &gt;35% of the Panda's bamboo habitat in the next 80 years, and thus the Panda population is projected to decline (Fan <em>et al.</em> 2012, Songer <em>et al.</em> 2012, Tuanmu <em>et al.</em> 2013, Li, R. <em>et al.</em> 2015). Under this scenario, the species fits the criteria for VU under C2a(i).<br/><br/>Whereas the decision to downlist the Giant Panda to Vulnerable is a positive sign confirming that the Chinese government's efforts to conserve this species are effective, it is critically important that these protective measures are continued and that emerging threats are addressed. The threat of declining bamboo availability due to climate change could, in the near future, reverse the gains made during the last two decades. The Giant Panda will remain a conservation-dependent species for the foreseeable future. The Chinese government's plan to expand existing conservation policy for the species (State Forestry Administration 2015) should receive strong support to ensure its implementation.",
+    "trend_justification": null,
+    "taxonomic_notes": "The Qinling Mountains population is a distinctive genetic cluster and is significantly different from other mountain populations (Lü <em>et al.</em> 2001, Zhang, B. <em>et al.</em> 2007), diverging ~0.3 million years ago, corresponding with the onset of the Penultimate Glaciation (Zhao <em>et al.</em> 2013). Some argue that it should be considered a separate subspecies (Wan <em>et al.</em> 2003, 2005), although subspecies designation is controversial and not widely accepted. Nonetheless, there is greater consensus that this population should be managed as a conservation unit to retain genetic structure and any localized adaptation."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_5",
+      "description": {
+        "en": "Non-monetary values"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_4",
+      "description": {
+        "en": "Conservation payments"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sichuan"
+      },
+      "code": "CHC-SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Shaanxi"
+      },
+      "code": "CHN-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Hunan"
+      },
+      "code": "CHS-HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Hubei"
+      },
+      "code": "CHC-HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gansu"
+      },
+      "code": "CHN-GS"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small dams"
+      },
+      "code": "7_2_9"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Unknown",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_5_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Earthquakes/tsunamis"
+      },
+      "code": "10_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Swaisgood, R., Wang, D. & Wei, F.",
+      "value": [
+        "Da Jun Wang (SLN)",
+        "Ronald Ray Swaisgood (Institute for Conservation Research San Diego Zoo Global)",
+        "Fuwen Wei"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Garshelis, D.",
+      "value": [
+        "David Garshelis (Minnesota Department of Natural Resources)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Rong, H.",
+      "value": [
+        "Hou Rong (Chengdu Research Base of Giant Panda Breeding)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "Typo in the conservation actions section that read \"The Giant Panda has been the focus of none of the most intensive\" changed none to one.In addition to this change, a further type in the rational section which read \"they plant to continue investing\" has been changed to read \"they plan to continue investing\"."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Liu, J., Linderman, M., Ouyang, Z., An, L., Yang, J. and Zhang, H. 2001. Ecological degradation in protected areas: the case of Wolong Nature Reserve for giant pandas. <i>Science</i> 292: 98-101.",
+      "year": "2001",
+      "title": "Ecological degradation in protected areas: the case of Wolong Nature Reserve for giant pandas",
+      "author": "Liu, J., Linderman, M., Ouyang, Z., An, L., Yang, J. and Zhang, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schaller, G. B., Hu, J., Pan, W. and Zhu, J. 1985. <i>The giant pandas of Wolong</i>. University of Chicago Press, Chicago, IL, USA.",
+      "year": "1985",
+      "title": "The giant pandas of Wolong",
+      "author": "Schaller, G. B., Hu, J., Pan, W. and Zhu, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wan, Q. H., Wu, H. and Fang, S. G. 2005. A new subspecies of giant panda (<i>Ailuropoda melanoleuca</i>) from Shaanxi, China. <i>Journal of Mammalogy</i> 86: 397-402.",
+      "year": "2005",
+      "title": "A new subspecies of giant panda (<i>Ailuropoda melanoleuca</i>) from Shaanxi, China",
+      "author": "Wan, Q. H., Wu, H. and Fang, S. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhu, X., Lindburg, D. G., Pan, W., Forney, K. A. and Wang, D. 2001. The reproductive strategy of giant pandas (<i>Ailuropoda melanoleuca</i>): Infant growth and development and mother-infant relationships. <i>Journal of Zoology (London)</i> 253: 141-155.",
+      "year": "2001",
+      "title": "The reproductive strategy of giant pandas (<i>Ailuropoda melanoleuca</i>): Infant growth and development and mother-infant relationships",
+      "author": "Zhu, X., Lindburg, D. G., Pan, W., Forney, K. A. and Wang, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lü, Z., Johnson, W. E., Menotti-Raymond, M., Yuhk, I N., Martenson, J. S., Mainka, S., Shi-Qiang, H., Zhihe, Z., Li, G., Pan, W., Mao, X. and O'Brien, S.J. 2001. Patterns of genetic diversity in remaining giant panda populations. <i>Conservation Biology</i> 15: 1596-1607.",
+      "year": "2001",
+      "title": "Patterns of genetic diversity in remaining giant panda populations",
+      "author": "Lü, Z., Johnson, W. E., Menotti-Raymond, M., Yuhk, I N., Martenson, J. S., Mainka, S., Shi-Qiang, H., Zhihe, Z., Li, G., Pan, W., Mao, X. and O'Brien, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hu, J. and Wei, F. 2004. Comparative ecology of giant pandas in the five mountain ranges of their distribution. In: D. Lindburg and K. Baragona (eds), <i>Giant pandas. Biology and conservation</i>, pp. 137-148. University of California Press, Berkeley, California, USA.",
+      "year": "2004",
+      "title": "Comparative ecology of giant pandas in the five mountain ranges of their distribution",
+      "author": "Hu, J. and Wei, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Loucks, C. J., Dinerstein, E., Zhi, L., Dajun, W., Dali, F. and Hao, W. 2003. The giant pandas of the Qinling Mountains, China: A case study in designing conservation landscapes for elevational migrants. <i>Conservation Biology</i> 17: 558-565.",
+      "year": "2003",
+      "title": "The giant pandas of the Qinling Mountains, China: A case study in designing conservation landscapes for elevational migrants",
+      "author": "Loucks, C. J., Dinerstein, E., Zhi, L., Dajun, W., Dali, F. and Hao, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reid, D. and Gong, J. 1999. Giant panda conservation action plan. In: C. Servheen, S. Herrero and B. Peyton (eds), <i>Bears. Status survey and conservation action plan</i>, pp. 241-254. IUCN/SSC Bear and Polar Bear Specialist Groups, IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "Giant panda conservation action plan",
+      "author": "Reid, D. and Gong, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pan, W., Lü, Z., Zhu, X., Wang, D., Wang, H., Long, Y., Fu, D. and Zhou, X. 2001. A chance for lasting survival. Thesis, Peking University Press.",
+      "year": "2001",
+      "title": "A chance for lasting survival",
+      "author": "Pan, W., Lü, Z., Zhu, X., Wang, D., Wang, H., Long, Y., Fu, D. and Zhou, X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reid, D. G., Jinchu, H., Sai, D., Wei, W. and Yan, H. 1989. Giant panda <i>Ailuropoda melanoleuca</i> behaviour and carrying capacity following a bamboo die-off. <i>Biological Conservation</i> 49: 85-104.",
+      "year": "1989",
+      "title": "Giant panda <i>Ailuropoda melanoleuca</i> behaviour and carrying capacity following a bamboo die-off",
+      "author": "Reid, D. G., Jinchu, H., Sai, D., Wei, W. and Yan, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhan, X. J., Li, M., Zhang, Z. J., Goossens, B., Chen, Y. P., Wang, H., Bruford, M. W. and Wei, F. 2006. Molecular censusing doubles giant panda population estimate in a key nature reserve. <i>Current Biology</i> 16: 451-452.",
+      "year": "2006",
+      "title": "Molecular censusing doubles giant panda population estimate in a key nature reserve",
+      "author": "Zhan, X. J., Li, M., Zhang, Z. J., Goossens, B., Chen, Y. P., Wang, H., Bruford, M. W. and Wei, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, X., Skidmore, A. K., Wang, T., Yong, Y. and Prins, H. H. T. 2002. Giant panda movements in Foping Nature Reserve, China. <i>Journal of Wildlife Management</i> 66: 1179-1188.",
+      "year": "2002",
+      "title": "Giant panda movements in Foping Nature Reserve, China",
+      "author": "Liu, X., Skidmore, A. K., Wang, T., Yong, Y. and Prins, H. H. T.",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2010. Global Forest Resource Assessment 2010 Main Report.  FAO Forestry Paper 163. Food and Agriculture Organization of the United Nations, Rome, Italy.",
+      "year": "2010",
+      "title": "Global Forest Resource Assessment 2010 Main Report",
+      "author": "FAO",
+      "citation_short": ""
+    },
+    {
+      "citation": "Swaisgood, R.R., Zhang, G., Zhou, X. and Zhang, H. 2006. The science of behavioral management: creating biologically relevant living environments in captivity. In: Wildt, D.E., Zhang, A.J., Zhang, H., Janssen, D., and Ellis, S. (eds), <i>Giant pandas: biology, veterinary medicine and management</i>, pp. 274-298. Cambridge University Press, Cambridge University Press.",
+      "year": "2006",
+      "title": "The science of behavioral management: creating biologically relevant living environments in captivity",
+      "author": "Swaisgood, R.R., Zhang, G., Zhou, X. and Zhang, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "State Forestry Administration of China. 2015. Release of the fourth national survey report on giant panda in China. State Forestry Administration, Beijing.",
+      "year": "2015",
+      "title": "Release of the fourth national survey report on giant panda in China",
+      "author": "State Forestry Administration of China",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, Z., Swaisgood, R.R., Wu, H., Li, M., Yong, Y., Hu, J. and Wei, F. 2007. Factors predicting den use by maternal giant pandas. <i>Journal of Wildlife Management</i> 71: 2694-2698.",
+      "year": "2007",
+      "title": "Factors predicting den use by maternal giant pandas",
+      "author": "Zhang, Z., Swaisgood, R.R., Wu, H., Li, M., Yong, Y., Hu, J. and Wei, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhu, L.F., Hu, Y.B., Qi, D.W., Wu, H., Zhan, X., Zhang, Z., Bruford, M.W, Wang, J., Yang, X., Gu, X., Zhang, L., Zhang, B., Zhang, S., and Wei, F. 2013. Genetic consequences of historical anthropogenic and ecological events on giant pandas. <i>Ecology</i> 94: 2346-2357.",
+      "year": "2013",
+      "title": "Genetic consequences of historical anthropogenic and ecological events on giant pandas",
+      "author": "Zhu, L.F., Hu, Y.B., Qi, D.W., Wu, H., Zhan, X., Zhang, Z., Bruford, M.W, Wang, J., Yang, X., Gu, X., Zhang, L., Zhang, B., Zhang, S., and Wei, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhu, L.F., Zhan, X.J., Wu, H., Zhang, S.N., Meng, T., Bruford, M.W. and Wei, F.W. 2010. Drastic reduction of the smallest and most isolated giant panda population: implications for conservation. <i>Conservation Biology</i> 24: 1299-1306.",
+      "year": "2010",
+      "title": "Drastic reduction of the smallest and most isolated giant panda population: implications for conservation",
+      "author": "Zhu, L.F., Zhan, X.J., Wu, H., Zhang, S.N., Meng, T., Bruford, M.W. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, Z.J., Sheppard, J., Zhu, J., Wei, F.W., Swaisgood, R.R., Wang, G., Nie, Y.G., Wei, W. and Wei, F.W. 2014. Ecological scale and seasonal heterogeneity in the spatial behaviors of giant pandas. <i>Integrative Zoology</i> 9: 46-60.",
+      "year": "2014",
+      "title": "Ecological scale and seasonal heterogeneity in the spatial behaviors of giant pandas",
+      "author": "Zhang, Z.J., Sheppard, J., Zhu, J., Wei, F.W., Swaisgood, R.R., Wang, G., Nie, Y.G., Wei, W. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sichuan Forestry Department. 2015. The Pandas of Sichuan: The 4th Survey Report on Giant Panda in Sichuan Province. Sichuan Science and Technology Press: Chengdu.",
+      "year": "2015",
+      "title": "The Pandas of Sichuan: The 4th Survey Report on Giant Panda in Sichuan Province",
+      "author": "Sichuan Forestry Department",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, J., Li, S., Ouyang, Z., Tam, C., and Chen, X. 2008. Ecological and socioeconomic effects of China’s policies for ecosystem services. <i>Proceedings of the National Academy of Sciences of the United States of America</i> 105: 9477-0482.",
+      "year": "2008",
+      "title": "Ecological and socioeconomic effects of China’s policies for ecosystem services",
+      "author": "Liu, J., Li, S., Ouyang, Z., Tam, C., and Chen, X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhao S1, Zheng P, Dong S, Zhan, X., Wu, Q., Guo, X., Hu, Y., He, W., Zhang, S., Fan, W., Zhu, L., Li, D., Zhang, X., Chen, Q., Zhang, H., Zhang, Z,. Jin, X., Zhang, J., Yang, H., Wang, J., Wang, J., and Wei, F. 2013. Whole genome sequencing of giant pandas provides insights into demographic history and local adaptation. <i>Nature Genetics</i> 45: 67-71.",
+      "year": "2013",
+      "title": "Whole genome sequencing of giant pandas provides insights into demographic history and local adaptation",
+      "author": "Zhao S1, Zheng P, Dong S, Zhan, X., Wu, Q., Guo, X., Hu, Y., He, W., Zhang, S., Fan, W., Zhu, L., Li, D., Zhang, X., Chen, Q., Zhang, H., Zhang, Z,. Jin, X., Zhang, J., Yang, H., Wang, J., Wang, J., and Wei, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tuanmu, M.N., Viña, A., Yang, W., Chen, X., Shortridge, A.M. and Liu, J. 2016. Effects of payments for ecosystem services on wildlife habitat recovery. <i>Conservation Biology</i> 30(4): 827–835.",
+      "year": "2016",
+      "title": "Effects of payments for ecosystem services on wildlife habitat recovery",
+      "author": "Tuanmu, M.N., Viña, A., Yang, W., Chen, X., Shortridge, A.M. and Liu, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Li, X., Jiang, G., Tian, H., Xu, L., Yan, C., Wang, Z., Wei, F. and Zhang, Z. 2015. Human impact and climate cooling caused range contraction of large mammals in China over the past two millennia. <i>Ecography</i> 38: 74-82.",
+      "year": "2015",
+      "title": "Human impact and climate cooling caused range contraction of large mammals in China over the past two millennia",
+      "author": "Li, X., Jiang, G., Tian, H., Xu, L., Yan, C., Wang, Z., Wei, F. and Zhang, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, Z., and Wei, F.W. 2006. <i>Giant panda ex-situ conservation: theory and practice</i>. Science Press, Beijing.",
+      "year": "2006",
+      "title": "Giant panda ex-situ conservation: theory and practice",
+      "author": "Zhang, Z., and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nie, Y., Speakman, J. R., Wu, Q., Zhang, C., Hu, Y., Xia, M., Yan, L., Hambly, C., Wang, L., Wei, W., Zhang, J., and Wei,F. 2015. Exceptionally low daily energy expenditure in the bamboo-eating giant panda. <i>Science</i> 349: 171-174.",
+      "year": "2015",
+      "title": "Exceptionally low daily energy expenditure in the bamboo-eating giant panda",
+      "author": "Nie, Y., Speakman, J. R., Wu, Q., Zhang, C., Hu, Y., Xia, M., Yan, L., Hambly, C., Wang, L., Wei, W., Zhang, J., and Wei,F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, Z.J., Swaisgood, R.R., Zhang, S., Nordstrom, L.A., Wang, H., Gu, X., Hu, J. and Wei, F.W. 2011. Old-growth forest is what giant pandas really need. <i>Biology Letters</i> 7: 403-406.",
+      "year": "2011",
+      "title": "Old-growth forest is what giant pandas really need",
+      "author": "Zhang, Z.J., Swaisgood, R.R., Zhang, S., Nordstrom, L.A., Wang, H., Gu, X., Hu, J. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Viña, A., Bearer, S., Zhang, H., Ouyang, Z. and Liu, J. 2008. Evaluating MODIS data for mapping wildlife habitat distribution. <i>Remote Sensing of Environment</i> 112: 2160-2169.",
+      "year": "2008",
+      "title": "Evaluating MODIS data for mapping wildlife habitat distribution",
+      "author": "Viña, A., Bearer, S., Zhang, H., Ouyang, Z. and Liu, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wei, F.W., Feng, Z., Wang, Z. and Li, M. 1999. Feeding strategy and resource partitioning between giant and red pandas. <i>Mammalia</i> 63: 417-430.",
+      "year": "1999",
+      "title": "Feeding strategy and resource partitioning between giant and red pandas",
+      "author": "Wei, F.W., Feng, Z., Wang, Z. and Li, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nie, Y.G., Zhang, Z.J., Raubenheimer, D., Elser, J., Wei, W. and Wei, F.W. 2014. Obligate herbivory in an ancestrally carnivorous lineage: the giant panda and bamboo from the perspective of nutritional geometry. <i>Functional Ecology</i> 29: 26-34.",
+      "year": "2014",
+      "title": "Obligate herbivory in an ancestrally carnivorous lineage: the giant panda and bamboo from the perspective of nutritional geometry",
+      "author": "Nie, Y.G., Zhang, Z.J., Raubenheimer, D., Elser, J., Wei, W. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wei, F.W., Nie, Y.G., Zhang, Z.J., Hu, Y.B., Yan, L., Qi, D.W., Li, X.H. and Wei, F.W. 2015b. Hunting bamboo: Foraging patch selection and utilization by giant pandas and implications for conservation. <i>Biological Conservation</i> 186: 260-267.",
+      "year": "2015b",
+      "title": "Hunting bamboo: Foraging patch selection and utilization by giant pandas and implications for conservation",
+      "author": "Wei, F.W., Nie, Y.G., Zhang, Z.J., Hu, Y.B., Yan, L., Qi, D.W., Li, X.H. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Qin, Q., Li, D.S., Zhang, H.M., Hou, R., Zhang, Z.H., Zhang, C.L., Zhang, J.G. and Wei, F.W. 2010. Serosurvey of selected viruses in captive giant pandas (<i>Ailuropoda melanoleuca</i>) in China. <i>Veterinary Microbiology</i> 142: 199-204.",
+      "year": "2010",
+      "title": "Serosurvey of selected viruses in captive giant pandas (<i>Ailuropoda melanoleuca</i>) in China",
+      "author": "Qin, Q., Li, D.S., Zhang, H.M., Hou, R., Zhang, Z.H., Zhang, C.L., Zhang, J.G. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Swaisgood, R.R., Lindburg, D.G., White, A.M., Zhang, H. and Zhou, X. 2004. Chemical communication in giant pandas: experimentation and application. In: Lindburg, D., and Baragona, K. (eds), <i>Giant pandas: biology and conservation</i>, pp. 106-120. University of California Press, Berkeley, California.",
+      "year": "2004",
+      "title": "Chemical communication in giant pandas: experimentation and application",
+      "author": "Swaisgood, R.R., Lindburg, D.G., White, A.M., Zhang, H. and Zhou, X.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhu, L.F., Zhang, S.N., Gu, X.D. and Wei, F.W. 2011b. Significant genetic boundaries and spatial dynamics of giant pandas occupying fragmented habitat across southwest China. <i>Molecular Ecology</i> 20: 1122-1132.",
+      "year": "2011b",
+      "title": "Significant genetic boundaries and spatial dynamics of giant pandas occupying fragmented habitat across southwest China",
+      "author": "Zhu, L.F., Zhang, S.N., Gu, X.D. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Songer, M., Delion, M., Biggs, A., and Huang, Q. 2012. Modeling impacts of climate change on giant panda habitat. <i>International Journal of Ecology</i>.",
+      "year": "2012",
+      "title": "Modeling impacts of climate change on giant panda habitat",
+      "author": "Songer, M., Delion, M., Biggs, A., and Huang, Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wei, F.W. and Hu, J.C. 1994. Studies on the reproduction of giant panda in Wolong Nature Reserve. <i>Acta Theriologica Sinica</i> 14: 243-248.",
+      "year": "1994",
+      "title": "Studies on the reproduction of giant panda in Wolong Nature Reserve",
+      "author": "Wei, F.W. and Hu, J.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tuanmu, M.N., Viña, A., Winkler, J.A., Li, Y., Xu, W., Ouyang, Z., and Liu, J. 2013. Climate-change impacts on understorey bamboo species and giant pandas in China's Qinling Mountains. <i>Nature Climate Change</i> 3: 249-253.",
+      "year": "2013",
+      "title": "Climate-change impacts on understorey bamboo species and giant pandas in China's Qinling Mountains",
+      "author": "Tuanmu, M.N., Viña, A., Winkler, J.A., Li, Y., Xu, W., Ouyang, Z., and Liu, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang, F., McShea, W.J., Wang, D. and Li, S. 2015. Shared resources between giant panda and sympatric wild and domestic mammals. <i>Biological Conservation</i> 186: 319-325.",
+      "year": "2015",
+      "title": "Shared resources between giant panda and sympatric wild and domestic mammals",
+      "author": "Wang, F., McShea, W.J., Wang, D. and Li, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hannah, L., Roehrdanz, P.R., Ikegami, M., Shepard, A.V., Shaw, M.R., Tabor, G., Lu, Z., Marquet, P.A. and Hijmans, R.J. 2013. Climate change, wine, and conservation. <i>Proceedings of the National Academy of Sciences of the United States of America</i> 110: 6907-6912.",
+      "year": "2013",
+      "title": "Climate change, wine, and conservation",
+      "author": "Hannah, L., Roehrdanz, P.R., Ikegami, M., Shepard, A.V., Shaw, M.R., Tabor, G., Lu, Z., Marquet, P.A. and Hijmans, R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Li, R.Q., Fan, W., Tian, G., Zhu, H.M., He, L., Cai, J., Huang, Q.F., Cai, Q.L., Li, B., Bai, Y.Q., Zhang, Z., Zhang, Y., Wang, W., Li, J., Wei, F., Li, H., Jian, M., Li, J., Zhang, Z., Nielsen, R., Li, D., Gu, W., Yang, Z., Xuan, Z., Ryder, O.A., Leung, F.C., Zhou, Y., Cao, J., Sun, X., Fu, Y., Fang, X., Guo, X., Wang, B., Hou, R., Shen, F., Mu, B., Ni, P., Lin, R., Qian, W., Wang, G., Yu, C., Nie, W., Wang, J., Wu, Z., Liang, H., Min, J., Wu, Q., Cheng, S., Ruan, J., Wang, M., Shi, Z., Wen, M., Liu, B., Ren, X., Zheng, H., Dong, D., Cook, K., Shan, G., Zhang, H., Kosiol, C., Xie, X., Lu, Z., Zheng, H., Li, Y., Steiner, C.C., Lam, T.T., Lin, S., Zhang, Q., Li, G., Tian, J., Gong, T., Liu, H., Zhang, D., Fang, L., Ye, C., Zhang, J., Hu, W., Xu, A., Ren, Y., Zhang, G., Bruford, M.W., Li, Q., Ma, L., Guo, Y., An, N., Hu, Y., Zheng, Y., Shi, Y., Li, Z., Liu, Q., Chen, Y., Zhao, J., Qu, N., Zhao, S., Tian, F., Wang, X., Wang, H., Xu, L., Liu, X., Vinar, T., Wang, Y., Lam, T.W., Yiu, S.M., Liu, S., Zhang, H., Li, D., Huang, Y., Wang, X., Yang, G., Jiang, Z., Wang, J., Qin, N., Li, L., Li, J., Bolund, L., Kristiansen, K., Wong, G.K., Olson, M., Zhang, X., Li, S., Yang, H., Wang, J., and Wang, J. 2010. The sequence and <i>de novo</i> assembly of the giant panda genome. <i>Nature</i> 463: 311-317.",
+      "year": "2010",
+      "title": "The sequence and <i>de novo</i> assembly of the giant panda genome",
+      "author": "Li, R.Q., Fan, W., Tian, G., Zhu, H.M., He, L., Cai, J., Huang, Q.F., Cai, Q.L., Li, B., Bai, Y.Q., Zhang, Z., Zhang, Y., Wang, W., Li, J., Wei, F., Li, H., Jian, M., Li, J., Zhang, Z., Nielsen, R., Li, D., Gu, W., Yang, Z., Xuan, Z., Ryder, O.A., Leung, F.C., Zhou, Y., Cao, J., Sun, X., Fu, Y., Fang, X., Guo, X., Wang, B., Hou, R., Shen, F., Mu, B., Ni, P., Lin, R., Qian, W., Wang, G., Yu, C., Nie, W., Wang, J., Wu, Z., Liang, H., Min, J., Wu, Q., Cheng, S., Ruan, J., Wang, M., Shi, Z., Wen, M., Liu, B., Ren, X., Zheng, H., Dong, D., Cook, K., Shan, G., Zhang, H., Kosiol, C., Xie, X., Lu, Z., Zheng, H., Li, Y., Steiner, C.C., Lam, T.T., Lin, S., Zhang, Q., Li, G., Tian, J., Gong, T., Liu, H., Zhang, D., Fang, L., Ye, C., Zhang, J., Hu, W., Xu, A., Ren, Y., Zhang, G., Bruford, M.W., Li, Q., Ma, L., Guo, Y., An, N., Hu, Y., Zheng, Y., Shi, Y., Li, Z., Liu, Q., Chen, Y., Zhao, J., Qu, N., Zhao, S., Tian, F., Wang, X., Wang, H., Xu, L., Liu, X., Vinar, T., Wang, Y., Lam, T.W., Yiu, S.M., Liu, S., Zhang, H., Li, D., Huang, Y., Wang, X., Yang, G., Jiang, Z., Wang, J., Qin, N., Li, L., Li, J., Bolund, L., Kristiansen, K., Wong, G.K., Olson, M., Zhang, X., Li, S., Yang, H., Wang, J., and Wang, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Qin, Q., Li, D.S., Zhang, H.M., Hou, R., Zhang, Z.H., Zhang, C.L., Zhang, J.G. and Wei, F.W. 2010. Serosurvey of selected viruses in captive giant pandas (<i>Ailuropoda melanoleuca</i>) in China. <i>Veterinary Microbiology</i> 142: 199-204.",
+      "year": "2010",
+      "title": "Serosurvey of selected viruses in captive giant pandas (<i>Ailuropoda melanoleuca</i>) in China",
+      "author": "Qin, Q., Li, D.S., Zhang, H.M., Hou, R., Zhang, Z.H., Zhang, C.L., Zhang, J.G. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Li, R.Q., Xu, M., Wang, M.H.G., Qiu S., Li X., Ehrenfeld D., and Li D. 2015. Climate change threatens giant panda protection in the 21st century. <i>Biological Conservation</i> 182: 93-101.",
+      "year": "2015",
+      "title": "Climate change threatens giant panda protection in the 21st century",
+      "author": "Li, R.Q., Xu, M., Wang, M.H.G., Qiu S., Li X., Ehrenfeld D., and Li D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hull, V., Zhang, J., Zhou, S., Huang, J., Li, R., Liu, D., Xu, W., Huang, Y., Ouyang, S., Zhang, H., and Liu J. 2015. Space use by endangered giant pandas. <i>Journal of Mammalogy</i> 96: 230-236.",
+      "year": "2015",
+      "title": "Space use by endangered giant pandas",
+      "author": "Hull, V., Zhang, J., Zhou, S., Huang, J., Li, R., Liu, D., Xu, W., Huang, Y., Ouyang, S., Zhang, H., and Liu J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, W., Vogt, C.A., Luo, J., He, G., Frank, K.A., and Liu, J. 2012. Drivers and Socioeconomic Impacts of Tourism Participation in Protected Areas. <i>PLoS ONE</i> 7(4).",
+      "year": "2012",
+      "title": "Drivers and Socioeconomic Impacts of Tourism Participation in Protected Areas",
+      "author": "Liu, W., Vogt, C.A., Luo, J., He, G., Frank, K.A., and Liu, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Viña, A., Tuanmu, M.-N., Xu, W., Li, Y., Ouyang, Z., DeFries, R. and Liu, J. 2010. Range-wide analysis of wildlife habitat: implications for conservation. <i>Biological Conservation</i> 143: 1960-1969.",
+      "year": "2010",
+      "title": "Range-wide analysis of wildlife habitat: implications for conservation",
+      "author": "Viña, A., Tuanmu, M.-N., Xu, W., Li, Y., Ouyang, Z., DeFries, R. and Liu, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhu, L.F., Wu, Q., Dai, J.Y., Zhang, S.N. and Wei, F.W. 2011a. Evidence of cellulose metabolism by the giant panda gut microbiome. <i>Proceedings of the National Academy of Sciences of the United States of America</i> 108: 17714-17719.",
+      "year": "2011a",
+      "title": "Evidence of cellulose metabolism by the giant panda gut microbiome",
+      "author": "Zhu, L.F., Wu, Q., Dai, J.Y., Zhang, S.N. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gittleman, J. L. 1994. Are the pandas successful specialists or evolutionary failures? <i>BioScience</i> 44: 456-464.",
+      "year": "1994",
+      "title": "Are the pandas successful specialists or evolutionary failures?",
+      "author": "Gittleman, J. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Viña, A., Bearer, S., Chen, X., He, G., Linderman, M., An, L., Zhang, H., Ouyang, Z., and Liu, J.. 2007. Temporal changes in giant panda habitat connectivity across boundaries of Wolong Nature Reserve, China. <i>Ecological Applications</i> 17: 1019-1030.",
+      "year": "2007",
+      "title": "Temporal changes in giant panda habitat connectivity across boundaries of Wolong Nature Reserve, China",
+      "author": "Viña, A., Bearer, S., Chen, X., He, G., Linderman, M., An, L., Zhang, H., Ouyang, Z., and Liu, J..",
+      "citation_short": null
+    },
+    {
+      "citation": "Dierenfeld, E.S., Hintz, H.F., Robertson, P.J. and Oftedal, O.T. 1982. Utilization of bamboo by the Giant Panda. <i>Journal of Nutrition</i> 112: 636-641.",
+      "year": "1982",
+      "title": "Utilization of bamboo by the Giant Panda",
+      "author": "Dierenfeld, E.S., Hintz, H.F., Robertson, P.J. and Oftedal, O.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Qi, D.W., Zhang, Z.J., Hu, Y.B., Yang, X.Y., Wang, H.J. and Wei, F.W. 2012. Measures of giant panda habitat selection across multiple spatial scales for species conservation. <i>Journal of Wildlife Management</i> 76: 1092-1100.",
+      "year": "2012",
+      "title": "Measures of giant panda habitat selection across multiple spatial scales for species conservation",
+      "author": "Qi, D.W., Zhang, Z.J., Hu, Y.B., Yang, X.Y., Wang, H.J. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, T.J., Skidmore, A.K., and Toxopeus, A.G. 2009. Improved understorey bamboo cover mapping using a novel hybrid neural network and expert system. <i>International Journal of Remote Sensing</i> 30: 965-981.",
+      "year": "2009",
+      "title": "Improved understorey bamboo cover mapping using a novel hybrid neural network and expert system",
+      "author": "Wang, T.J., Skidmore, A.K., and Toxopeus, A.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, B., Li M., Zhang, Z., Goossens, B., Zhu, L., Zhang, S., Hu. J., Bruford, M.W., and Wei, F. 2007.  Genetic viability and population history of the giant panda, putting an end to the ‘‘Evolutionary Dead End’’? <i>Molecular Biology and Evolution</i> 24: 1801-1810.",
+      "year": "2007",
+      "title": " Genetic viability and population history of the giant panda, putting an end to the ‘‘Evolutionary Dead End’’?",
+      "author": "Zhang, B., Li M., Zhang, Z., Goossens, B., Zhu, L., Zhang, S., Hu. J., Bruford, M.W., and Wei, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hull, V., Zhang, J., Zhou, S., Huang, J., Viña, A., Liu, W., Tuanmu, M.N., Li, R., Liu, D., Xu, W. and Huang, Y. 2014. Impact of livestock on giant pandas and their habitat. <i>Journal for Nature Conservation</i> 22: 256-264.",
+      "year": "2014",
+      "title": "Impact of livestock on giant pandas and their habitat",
+      "author": "Hull, V., Zhang, J., Zhou, S., Huang, J., Viña, A., Liu, W., Tuanmu, M.N., Li, R., Liu, D., Xu, W. and Huang, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wei, F.W., Hu, Y.B., Zhu, L.F., Bruford, M.W., Zhan, X.J. and  Zhang, L. 2012. Black and white and read all over: the past, present and future of giant panda genetics. <i>Molecular Ecology</i> 21: 5660-5674.",
+      "year": "2012",
+      "title": "Black and white and read all over: the past, present and future of giant panda genetics",
+      "author": "Wei, F.W., Hu, Y.B., Zhu, L.F., Bruford, M.W., Zhan, X.J. and  Zhang, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, F., McShea, W.J., Wang, D., Li, S., Zhao, Q., Wang, H. and Lu, Z. 2014. Evaluating landscape options for corridor restoration between giant panda reserves. <i>PloS ONE</i> 9.",
+      "year": "2014",
+      "title": "Evaluating landscape options for corridor restoration between giant panda reserves",
+      "author": "Wang, F., McShea, W.J., Wang, D., Li, S., Zhao, Q., Wang, H. and Lu, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin-Wintle, M.S., Shepherdson, D.J., Zhang, G., Li, D., Zhou, Z., Li, R., Zhang, H. and Swaisgood, R.R. 2015. Free mate choice enhances conservation breeding in the endangered giant panda. <i>Nature Communications</i>.",
+      "year": "2015",
+      "title": "Free mate choice enhances conservation breeding in the endangered giant panda",
+      "author": "Martin-Wintle, M.S., Shepherdson, D.J., Zhang, G., Li, D., Zhou, Z., Li, R., Zhang, H. and Swaisgood, R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noss, R.F. 1990. Indicators for monitoring biodiversity: a hierarchical approach. <i>Conservation Biology</i> 4: 355-364.",
+      "year": "1990",
+      "title": "Indicators for monitoring biodiversity: a hierarchical approach",
+      "author": "Noss, R.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fan, J., Li, J., Xia, R., Hu, L., Wu, X. and Li, G. 2014. Assessing the impact of climate change on the habitat distribution of the Giant Panda in the Qinling Mountains of China. <i>Ecological Modelling</i> 274: 12-20.",
+      "year": "2014",
+      "title": "Assessing the impact of climate change on the habitat distribution of the Giant Panda in the Qinling Mountains of China",
+      "author": "Fan, J., Li, J., Xia, R., Hu, L., Wu, X. and Li, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Linderman, M., Bearer, S., An, L., Tan, Y.C., Ouyang, Z.Y., and Liu, J.G. 2005. The effects of understory bamboo on broad-scale estimates of giant panda habitat. <i>Biological Conservation</i> 121: 383-390.",
+      "year": "2005",
+      "title": "The effects of understory bamboo on broad-scale estimates of giant panda habitat",
+      "author": "Linderman, M., Bearer, S., An, L., Tan, Y.C., Ouyang, Z.Y., and Liu, J.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wei, F.W., Swaisgood, R.R., Hu, Y.B., Nie, Y.G., Yan, L., Zhang, Z.J., Qi, D.W. and Zhu, L.F. 2015a. Progress in the ecology and conservation of giant pandas. <i>Conservation Biology</i> 29: 1497-1507.",
+      "year": "2015a",
+      "title": "Progress in the ecology and conservation of giant pandas",
+      "author": "Wei, F.W., Swaisgood, R.R., Hu, Y.B., Nie, Y.G., Yan, L., Zhang, Z.J., Qi, D.W. and Zhu, L.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Swaisgood, R.R., Wei, F., Mcshea, W.J., Wildt, D.E., Kouba, A.J. and Zhang, Z. 2011. Can science save the giant panda (<i>Ailuropoda melanoleuca</i>)? Unifying science and policy in an adaptive management paradigm. <i>Integrative Zoology</i> 6: 290-296.",
+      "year": "2011",
+      "title": "Can science save the giant panda (<i>Ailuropoda melanoleuca</i>)? Unifying science and policy in an adaptive management paradigm",
+      "author": "Swaisgood, R.R., Wei, F., Mcshea, W.J., Wildt, D.E., Kouba, A.J. and Zhang, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shan, L., Hu, Y.B., Zhu, L.F., Yan, L., Wang, C.D., Li, D.S., Jin, X.L., Zhang, C.L. and Wei, F.W. 2014. Large-scale genetic survey provides insights into the captive management and reintroduction of giant pandas. <i>Molecular Biology and Evolution</i> 31(10): 2663-2671.",
+      "year": "2014",
+      "title": "Large-scale genetic survey provides insights into the captive management and reintroduction of giant pandas",
+      "author": "Shan, L., Hu, Y.B., Zhu, L.F., Yan, L., Wang, C.D., Li, D.S., Jin, X.L., Zhang, C.L. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "White, T.H., Jr., Bowman, J.L., Jacobson, H.A., Leopold, B.D. and Smith, W.P. 2001. Forest management and female black bear denning. <i>Journal of Wildlife Management</i> 65: 34-40.",
+      "year": "2001",
+      "title": "Forest management and female black bear denning",
+      "author": "White, T.H., Jr., Bowman, J.L., Jacobson, H.A., Leopold, B.D. and Smith, W.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, L., Yang, X., Wu, H., Gu, X., Hu, Y. and Wei, F.W. 2011. The parasites of giant pandas: individual-based measurement in wild animals. <i>Journal of Wildlife Diseases</i> 47: 164-171.",
+      "year": "2011",
+      "title": "The parasites of giant pandas: individual-based measurement in wild animals",
+      "author": "Zhang, L., Yang, X., Wu, H., Gu, X., Hu, Y. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Li. Y.M., Guo, Z.W., Yang, Q.S., Wang, Y.S. and Niemela, J. 2003. The implications of poaching for giant panda conservation. <i>Biological Conservation</i> 111: 125-136.",
+      "year": "2003",
+      "title": "The implications of poaching for giant panda conservation",
+      "author": "Li. Y.M., Guo, Z.W., Yang, Q.S., Wang, Y.S. and Niemela, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, L., Wu, Q., Hu, Y.B., Wu, H. and Wei, F.W. 2015. Major histocompatibility complex alleles associated with parasite susceptibility in wild giant pandas. <i>Heredity</i> 114: 85-93.",
+      "year": "2015",
+      "title": "Major histocompatibility complex alleles associated with parasite susceptibility in wild giant pandas",
+      "author": "Zhang, L., Wu, Q., Hu, Y.B., Wu, H. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hu, Y.B., Zhan, X.J., Qi, D.W., and Wei, F.W. 2010. Spatial genetic structure and dispersal of giant pandas on a mountain-range scale. <i>Conservation Genetics</i> 11: 2145-2155.",
+      "year": "2010",
+      "title": "Spatial genetic structure and dispersal of giant pandas on a mountain-range scale",
+      "author": "Hu, Y.B., Zhan, X.J., Qi, D.W., and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mackinnon, J. 2008. Species richness and adaptive capacity in animal communities: lessons from China. <i>Integrative Zoology</i> 3: 95-100.",
+      "year": "2008",
+      "title": "Species richness and adaptive capacity in animal communities: lessons from China",
+      "author": "Mackinnon, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Swaisgood, R,R,, Wei, F.W., Wildt, D.E., Kouba, A.J. and Zhang, Z.J. 2010. Giant panda conservation science: how far we have come? <i>Biology Letters</i> 6: 143-145.",
+      "year": "2010",
+      "title": "Giant panda conservation science: how far we have come?",
+      "author": "Swaisgood, R,R,, Wei, F.W., Wildt, D.E., Kouba, A.J. and Zhang, Z.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nie, Y.G., Swaisgood, R.R., Zhang, Z.J., Liu, X.B. and Wei, F.W. 2012b. Reproductive competition and fecal testosterone in wild male giant pandas (<i>Ailuropoda melanoleuca</i>). <i>Behavioral Ecology and Sociobiology</i> 66: 721-730.",
+      "year": "2012b",
+      "title": "Reproductive competition and fecal testosterone in wild male giant pandas (<i>Ailuropoda melanoleuca</i>)",
+      "author": "Nie, Y.G., Swaisgood, R.R., Zhang, Z.J., Liu, X.B. and Wei, F.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Shen, G.Z., Feng, C.Y., Xie, Z.Q., Ouyang, Z.Y., Li, J.Q., Pascal, M. 2008. Proposed conservation landscape for giant pandas in the Minshan Mountains, China. <i>Conservation Biology</i> 22: 1144-1153.",
+      "year": "2008",
+      "title": "Proposed conservation landscape for giant pandas in the Minshan Mountains, China",
+      "author": "Shen, G.Z., Feng, C.Y., Xie, Z.Q., Ouyang, Z.Y., Li, J.Q., Pascal, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wei, F.W., Hu, Y.B., Yan, L., Nie, Y.G., Wu, Q., and Zhang, Z.J. 2014. Giant pandas are not an evolutionary cul-de-sac: Evidence from multidisciplinary research. <i>Molecular Biology and Evolution</i> 32: 4-12.",
+      "year": "2014",
+      "title": "Giant pandas are not an evolutionary cul-de-sac: Evidence from multidisciplinary research",
+      "author": "Wei, F.W., Hu, Y.B., Yan, L., Nie, Y.G., Wu, Q., and Zhang, Z.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feng, T.T., Van Manen, F.T., Zhao, N.X., Li, M., and Wei, F.W. 2009. Habitat assessment for giant pandas in the Qinling mountain region of China. <i>Journal of Wildlife Management</i> 73: 852-858.",
+      "year": "2009",
+      "title": "Habitat assessment for giant pandas in the Qinling mountain region of China",
+      "author": "Feng, T.T., Van Manen, F.T., Zhao, N.X., Li, M., and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nie, Y.G., Swaisgood, R.R., Zhang, Z.J., Hu, Y.B., Ma, Y.S. and Wei, F.W. 2012a. Giant panda scent-marking strategies in the wild: role of season, sex and marking surface. <i>Animal Behaviour</i> 84: 39-44.",
+      "year": "2012a",
+      "title": "Giant panda scent-marking strategies in the wild: role of season, sex and marking surface",
+      "author": "Nie, Y.G., Swaisgood, R.R., Zhang, Z.J., Hu, Y.B., Ma, Y.S. and Wei, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

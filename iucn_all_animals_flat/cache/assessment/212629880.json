@@ -1,0 +1,3695 @@
+{
+  "assessment_date": "2018-11-07T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 3855,
+  "criteria": "A2bd",
+  "url": "https://www.iucnredlist.org/species/3855/212629880",
+  "citation": "Rigby, C.L., Barreto, R., Carlson, J., Fernando, D., Fordham, S., Francis, M.P., Herman, K., Jabado, R.W., Jones, G.C.A., Liu, K.M., Lowe, C.G, Marshall, A., Pacoureau, N., Romanov, E., Sherley, R.B. & Winker, H. 2022. Carcharodon carcharias (amended version of 2019 assessment). The IUCN Red List of Threatened Species 2022: e.T3855A212629880. Accessed on 05 May 2026.",
+  "assessment_id": 212629880,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 3855,
+    "scientific_name": "Carcharodon carcharias",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "CHONDRICHTHYES",
+    "order_name": "LAMNIFORMES",
+    "family_name": "LAMNIDAE",
+    "genus_name": "Carcharodon",
+    "species_name": "carcharias",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+        "url": "https://www.iucnssg.org",
+        "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Great White Shark",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "White Shark",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Squalus carcharias Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Squalus",
+        "species_name": "carcharias",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 1200,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "53",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The White Shark is wide-ranging throughout most temperate and tropical oceans but occurs most frequently in temperate waters (Last and Stevens 2009, Ebert <em>et al.</em> 2013).",
+    "population": "<p>There are no data available on the absolute global population size of the White Shark. Genetic data suggest one global population; however, there is some genetic structuring between ocean basins, potentially within ocean basins, and likely global male-biased dispersal and female philopatry (Pardini <em>et al</em>. 2001, Jorgensen <em>et al.</em> 2010, Gubili <em>et al</em>. 2012, O'Leary <em>et al</em>. 2015, Andreotti<em> et al. </em>2016, Bernand <em>et al</em>. 2018). White Shark total abundances have been estimated for a number of regions: 5,460 in eastern Australasia in 2017 (uncertainty range: 2,909–12,802) (Bruce <em>et al.</em> 2018, Hillary <em>et al. </em>2018); in excess of 2,000 in the Northeast Pacific in 2012 (Dewar <em>et al.</em> 2013, Burgess <em>et al</em>. 2014); and, in South Africa: 1,279 in KwaZulu-Natal in 1996 (Cliff <em>et al.</em> 1996), 908 in Gansbaai from 2007–2011 (95% CI: 808–1,008) (Towner <em>et al</em>. 2013), 723 in False Bay from 2004–2012 (95% CI: 466–980) (Hewitt 2014), 389 from 2008–2010 in Mossel Bay (95% CI: 351–428) (Ryklief 2012), and 438 for all of South Africa in 2011 (Andreotti <em>et al</em>. 2016), although there are concerns for the validity of this last estimate (Irion <em>et al.</em> 2017).<br/></p>  <p><span lang=\"EN-US\">Population trend data are available from four sources: (1) standardized relative abundance in the Northwest Atlantic (Curtis <em>et al.</em> 2014); and standardized catch-per-unit-effort (CPUE) in: (2) the Northeast Pacific (Dewar<em> et al.</em> 2013); (3) the South Pacific (Reid <em>et al</em>. 2011); and, (4) the Indian Ocean (Dudley and Simpfendorfer 2006) updated with data to 2012 (S. Wintner pers. comm. 3/10/2018). The trend data from each source were analysed over three generation lengths using a Bayesian state-space framework (a modification of Winker <em>et al</em>. 2018). This analysis yields an annual rate of change, a median change over three generation lengths, and the probability of the most likely IUCN Red List Category percent change over three generations (see the Supplementary Information).</p><span lang=\"EN-US\">    <p>First, the Curtis <em>et al.</em>&#160;(2014) relative abundance was used to represent data on catches in the Northwest Atlantic as it is the longest and most comprehensive compilation of data available for the region. It includes fishery-independent longline surveys, observer data from the shark-target bottom longline fishery, and recreational fishing tournament data. The relative abundance trend indicates historically higher abundances in the 1960s followed by a declining trend until the mid-1980s, and then an increasing trend since the 1990s, when a range of management measures were implemented (Curtis <em>et al.</em> 2014). The three generation trend analysis of the Northwest Atlantic CPUE for 1961–2010 (50 years) revealed annual rates of reduction of 1.0%, consistent with an estimated median reduction of 80.8% over three generation lengths (159 years), with the highest probability of &gt;80% reduction over three generation lengths. This probability of a high level of reduction is over a very long period of three generations; it has incorporated the reductions from historically higher abundances and projected an estimated trend based on those reductions for a considerable period beyond that of the time-series and is thus indicative of historic declines rather than the recent increasing trend since 1990.<br/></p><p>Second, in the Northeast Pacific, White Sharks have mainly been taken in inshore net fisheries. Fisheries catch data were available from the California set net fishery which accounts for the majority of White Shark bycatch in that area; this indicated declines during the 1980s followed by a gradual increase from 1990s onwards (Dewar <em>et al.</em> 2013). Based on those data, information from photo-identification studies, and other researchers, the status review of White Shark in the Northeast Pacific concluded that the White Shark abundance was stable or increasing although there was some uncertainty around this conclusion due to the limited long-term abundance data for the region (Dewar <em>et al.</em> 2013). The trend analysis of the Northeast Pacific California set net fishery CPUE for 1980–2010 (31 years) revealed annual rates of increase of 4.1%, consistent with an estimated median increase of 602.1% over three generation lengths (159 years), with the highest probability of increases over three generation lengths.<br/></p><p>Third, one of the longest datasets in the South Pacific is from the east coast of Australia shark meshing program in New South Wales (1950–2009) in which White Shark standardized CPUE markedly declined from 1950 to the 1990s after which it began to slowly increase (Reid <em>et al. 2</em>011). During this period there were modifications to net specifications and spatial and temporal effort, and since 2010, further changes have been implemented that include a reduction in net soak time (Reid <em>et al</em>. 2011, NSW DPI 2018). From 2008 to 2018, catches of White Sharks in the meshing program have fluctuated between 3 and 26 individuals annually, with increasing catches in the latter years (NSW DPI 2018). Further north along Australia's east coast, the standardized CPUE of White Sharks also declined significantly, by 92% over 54 years (1962–2015) in the Queensland Shark Control Program (Roff <em>et al.</em> 2018). The trend analysis of the NSW shark meshing program CPUE for 1950–2009 (60 years) revealed annual rates of reduction of 1.8%, consistent with an estimated  median reduction of 95.8% over three generation lengths (159 years),  with the highest probability of &gt;80% reduction over three generation lengths. Since mid-1990s protection of White Sharks in Australia, adult White Sharks abundance has been estimated to have slightly declined or remained stable with population growth rates unlikely to be greater than 3% per year (Bruce<em> et al.</em> 2018, Hillary <em>et al.</em> 2018). Based on the current <span lang=\"EN-US\">eastern Australasian abundance estimate and species demographics (assuming continued protection) there should potentially be an increase in the eastern Australasian abundance as the current juvenile cohorts enter into maturity (R. Bradford pers. comm. 07/02/2019).<br/></span></p><p>Fourth, long-term standardized CPUE in shark nets off KwaZulu-Natal, South Africa beaches in the Western Indian Ocean fluctuated considerably but was stable over time (Dudley and Simpfendorfer 2006). The trend analysis of the shark net CPUE for 1978–2012 (35 years) revealed annual rates of increase of 0.1%, consistent with an estimated  median increase of 13.1% over three generation lengths (159 years),  with the highest probability of increases over three generation lengths. In the West Australian Indian Ocean, the White Shark modeled abundance is not predicted to have increased by more than 10% since 1997 when protection was enacted (Braccini <em>et al.</em> 2017).<br/></p><span lang=\"EN-US\"><p>Further to the above data and analyses, in the Mediterranean Sea, based on anecdotal records and limited fisheries data, the White Shark is suspected to have declined by at least 80% over 69 years from 1947–2016 (Soldo <em>et al.</em> 2016). With the exception of the Mediterranean Sea, in all other regions with data, the status review and studies indicate that the White Shark has declined  during the 1980s and has begun to show signs of increasing since  protection has been implemented. </p><p>Across the regions, the White Shark is estimated to be declining from historic levels in the Northwest Atlantic and South Pacific, and increasing in the Northeast Pacific and Indian Ocean. The trends among ocean regions are highly variable and while they are mostly based on long datasets, they are extrapolated over a very long three generation length of 159 years which increases the uncertainty in the estimated regional trends. With the exception of the Northwest Atlantic, they are also based on datasets from limited areas within each region and may not accurately represent the trend in White Shark across the entire region. Despite these caveats, the trend data are the best available and were used for the estimation of a global population trend; the estimated three generation population trend for each region was weighted according to the relative size of each region.&#160;<span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\">The overall  estimated median reduction was 53.8%,  with the highest probability of a &lt;20% reduction over three  generation  lengths (159 years). With a shorter three generation length of 88.5 years (see Habitat and Ecology section), the overall estimated median reduction was 39.4%, with the highest probability of a &lt;20% reduction over three generation lengths. <span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\">However, due to uncertainty in the  estimated  trends, expert judgement&#160;elicitation&#160;resulted in an estimated global population reduction of 30–49% over the last three  generations (159 years), based on long-term abundance data  and  protections instigated in the 1990s that have since reduced catches.   Therefore, the White Shark is assessed as Vulnerable A2bd.</span></span></span></p><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><br/><p></p></span></span></span>",
+    "habitats": "The White Shark is pelagic and most commonly occurs in temperate continental shelf waters but also ranges into estuaries and the open ocean, and occurs to depths of 1,200 m (Francis <em>et al. </em>2012). Movement studies and DNA analyses have demonstrated that the White Shark undertakes long distance trans-oceanic movements, for example between South Africa and Australasia (Pardini <em>et al. </em>2001, Bonfil <em>et al.</em> 2005), and California and the Hawaiian Islands (Boustany <em>et al.</em> 2002, Domeier and Nasby-Lucas 2008, Jorgensen <em>et al</em>. 2010). Consequently, its distribution is not considered disjunct, rather that interchange between some areas may be limited. <br/><br/>The maximum size is undetermined, but estimated at 600–640 cm total length (TL) (Compagno 2001). Males mature at 310–410 cm TL (Pratt 1996, Compagno 2001, Tanaka <em>et al.</em> 2011); the majority of females mature at 400–500 cm TL (Francis 1996, Tanaka <em>et al.</em> 2011) but have been reported as immature at 472–490 cm TL (Springer 1939, Compagno 2001); and, size at birth is  120–150 cm TL (Francis 1996). Reproduction is aplacental viviparous with oophagy and histrophy, with litter sizes of 2–17 and  a suspected two to three year reproductive cycle (Francis 1996, Uchida <em>et al. </em>1996,<strong> </strong>Mollet and Cailliet 2002, Bruce 2008, Domeier 2012, Sato <em>et al</em>. 2016). In the Northwest Atlantic, Northeast Pacific, and Western Indian Oceans, female age-at-maturity of 30–33 years and maximum age of&#160; 30–73 years were reported based on bomb radiocarbon validated ages (Hamady&#160;<em>et al.</em>&#160;2014, Andrews and Kerr 2015, Natanson and Skomal 2015,&#160;Christiansen<em> et al. </em>2016). Due to the accurate method of bomb radiocarbon ageing, these are possibly more accurate than the previous lower estimates of female age-at-maturity of 7–15 years and maximum ages of 18–30 years (Cailliet <em>et al.</em> 1985, Wintner and Cliff 1999, Bruce 2008, Tanaka<em> et al.</em> 2011, Hillary <em>et al.</em> 2018). Using the precautionary approach and the validated, most conservative bomb radiocarbon ages of age-at-maturity of 33 years and maximum age of 73 years, generation length is 53 years.<strong></strong><strong> </strong>The bomb radiocarbon maximum age is accepted as being likely  &gt;30 years, minimum of 44 years, and possibly maximum of 73 years. The  female age-at-maturity is possibly more contentious and to explore the sensitivity of the global population trend analyses to the younger female age-at-maturity, estimates of female age-at-maturity of 15 years and maximum age of 44 years were also used, that led to a generation length of 29.5 years (see Population section).",
+    "threats": "<p>The White Shark is caught as bycatch mostly in inshore fisheries in a range of gears, such as longlines, setlines, gillnets, trawls, hand-held rod and reel, and fish-traps; it is rarely caught in offshore pelagic fisheries (Bruce 2008, Lowe <em>et al.</em> 2012, Dewar&#160;<em>et al</em>. 2013, Lyons <em>et al</em>. 2013, Francis 2017, Onate-Gonzalez <em>et al. </em>2017). The species has a relatively high post-release survival in net fisheries (Lyons <em>et al.</em> 2013, Benson <em>et al. </em>2018). The White Shark is targeted in beach protection programs in Australia and South Africa that use drum-lines and gillnets; however, in some instances these programs release live sharks (Dudley and Simpfendorfer 2006, Bruce 2008, Reid <em>et al.</em> 2011, Braccini&#160;<em>et al.</em>&#160;2017, Kock <em>et al.</em> 2018, Lee<em> et al. </em>2018, Roff <em>et al.</em> 2018). A shark control program in Réunion Island targets Tiger Sharks (<em>Galeocerdo cuvier</em>) and Bull Sharks (<em>Carcharhinus leucas</em>), with no captures of White Sharks reported to date (Florida Museum 2019).</p>",
+    "measures": "<p>The success of actions agreed through international wildlife and fisheries treaties depends on implementation at the domestic level; for sharks, such follow up actions have to date been seriously lacking. The White Shark was among the first shark species listed under several wildlife treaties. Many fishing nations worldwide and the European Union have domestic regulations specifically aimed at protecting White Sharks.</p>  <p>In 2002, the White Shark was listed on Appendix I and II of the Convention on Migratory Species (CMS), which respectively obligates Parties to strictly protect the species and to work regionally toward conservation, specifically through the CMS Memorandum of Understanding for Migratory Sharks. In 2004, the White Shark was added to Appendix II of the Convention on International Trade in Endangered Species (CITES), which requires Parties to ensure that exports be accompanied by permits based on findings that parts are sourced from legal and sustainable fisheries. </p>  <p>In 2012, the General Fisheries Commission for the Mediterranean (GFCM) banned retention and mandated careful release for the White Shark and 23 other elasmobranch species listed on the Barcelona Convention Annex II. Implementation by GFCM Parties, however, has been very slow. </p>  <p>To prevent overfishing and allow recovery, it is recommended that all White Shark conservation commitments under international wildlife treaties be fully implemented. For CMS Parties, this includes strict protections. In addition, initiatives to prevent lethal contact, minimize bycatch mortality, promote safe release, and improve reporting of catches (including discards) are needed. At a minimum, White Sharks should be subject to catch limits based on scientific advice and/or the precautionary approach.</p>",
+    "use_trade": "<p>The White Shark fins and jaws have a high market value with large fins used as display items (Clarke 2004). Small white shark fins are also present in the international fin trade (Shivji <em>et al.</em> 2005). Jaws may be retained domestically as curios (CITES 2004). The meat may be used fresh for either local consumption or exported internationally.&#160;&#160; <br/></p>",
+    "rationale": "The White Shark (<em>Carcharodon carcharias</em>) is a large (to 640 cm total length) coastal and pelagic shark, wide-ranging throughout most temperate and tropical oceans to depths of 1,200 m. The species is very long-lived, up to 73 years, with females not reaching maturity until 33 years, resulting in a long generation length of 53 years. It is caught globally, mostly as bycatch in inshore fisheries by a range of gears, is rarely caught in offshore pelagic fisheries, and is targeted in beach protection programs in Australia and South Africa<span>; however, in some instances these programs release live sharks. <span>Over three generation lengths (159 years), the White Shark<span><span lang=\"EN-US\"> is estimated to  be <span><span><span lang=\"EN-US\"> increasing  in abundance in the Northeast Pacific  and Indian Ocean, and <span><span><span lang=\"EN-US\">declining in abundance from historic levels in the Northwest Atlantic  and South Pacific. <span><span><span lang=\"EN-US\">In most regions, declines occurred during the 1980s followed by slow recovery since the 1990s when protection was implemented. <span><span><span lang=\"EN-US\"><span><span lang=\"EN-US\">Globally, <span><span><span lang=\"EN-US\"><span><span><span lang=\"EN-US\"><span><span lang=\"EN-US\"><span><span><span lang=\"EN-US\"><span><span><span lang=\"EN-US\"><span><span lang=\"EN-US\"><span><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\">based  on long-term abundance data  and protections instigated in  the 1990s  that have since reduced catches and allowed some recovery, the White Shark population is estimated to have reduced by <span><span><span lang=\"EN-US\"><span><span><span lang=\"EN-US\"><span><span lang=\"EN-US\"><span><span><span lang=\"EN-US\"><span><span><span lang=\"EN-US\"><span><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\"><span lang=\"EN-US\">30–49% over the last three generations (159 years), and is therefore assessed as Vulnerable A2bd.<span><span><span><span><span lang=\"EN-US\"><br/></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Bathypelagic (1000-4000m)"
+      },
+      "code": "10_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea (mainland)"
+      },
+      "code": "EQG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tristan da Cunha"
+      },
+      "code": "TDC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wake Is."
+      },
+      "code": "WAK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire"
+      },
+      "code": "NLA-BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Eustatius"
+      },
+      "code": "NLA-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombian Caribbean Is."
+      },
+      "code": "SWC-CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Selvagens"
+      },
+      "code": "SEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ascension"
+      },
+      "code": "ASC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Johnston I."
+      },
+      "code": "HAW-JI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Navassa I."
+      },
+      "code": "HAI-NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Falkland Islands (Malvinas)"
+      },
+      "code": "FK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia (mainland)"
+      },
+      "code": "CLM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Disputed Territory"
+      },
+      "code": "DT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena (main island)"
+      },
+      "code": "STH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saba"
+      },
+      "code": "NLA-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico (main island)"
+      },
+      "code": "PUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chagos Archipelago"
+      },
+      "code": "CGS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Clipperton I."
+      },
+      "code": "CPI-CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Midway Is."
+      },
+      "code": "HAW-MI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Howland-Baker Is."
+      },
+      "code": "HBI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guernsey"
+      },
+      "code": "GG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "US Line Is."
+      },
+      "code": "LIN-US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spratly Is."
+      },
+      "code": "SCS-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jersey"
+      },
+      "code": "JE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Annobón"
+      },
+      "code": "GGI-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paracel Is."
+      },
+      "code": "SCS-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Rigby, C.L., Barreto, R., Carlson, J., Fernando, D., Fordham, S., Francis, M.P., Herman, K., Jabado, R.W., Jones, G.C.A., Liu, K.M., Lowe, C.G, Marshall, A., Pacoureau, N., Romanov, E., Sherley, R.B. & Winker, H.",
+      "value": [
+        "Rima Jabado (Elasmo Project)",
+        "Malcolm Francis (IUCN SSC Shark Specialist Group)",
+        "Andrea Marshall (IUCN SSC Shark Specialist Group)",
+        "Sonja Fordham (Shark Advocates International)",
+        "John Carlson (NOAA)",
+        "Henning Winker (aSouth African National Biodiversity Institute, Kirstenbosch, Research Centre, Claremont, South Africa)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Christopher Lowe (California State University, Long Beach)",
+        "Evgeny Romanov",
+        "Daniel Fernando",
+        "Katelyn Herman (Georgia Aquarium, Atlanta, Georgia / IUCN SSC Shark Specialist Group)",
+        "Rodrigo Barreto (Centro de Pesquisa e Conservação da Biodiversidade Marinha do Sudeste e Sul (CEPSUL/ICMBio))",
+        "Kwang-Ming Liu",
+        "Richard Sherley",
+        "Nathan Pacoureau",
+        "Georgia Jones"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bradford, R., Kock, A., Dulvy, N.K. & Kyne, P.M.",
+      "value": [
+        "Peter Kyne (Charles Darwin University, Australia / IUCN SSC Shark RLA Coordinator)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "Alison Kock",
+        "Russ Bradford"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Fergusson, I. & Compagno, L.J.V.",
+      "value": [
+        "Leonard Compagno (Shark Research Centre, Iziko - South African Museum)",
+        "Ian Fergusson (IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rigby, C.L., Kyne, P.M., Pollom, R., Herman, K. & Dulvy, N.K.",
+      "value": [
+        "Peter Kyne (Charles Darwin University, Australia / IUCN SSC Shark RLA Coordinator)",
+        "Riley Pollom (Project Seahorse)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "Katelyn Herman (Georgia Aquarium, Atlanta, Georgia / IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "Georgia Aquarium",
+      "value": [
+        "Georgia Aquarium"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment corrects the countries of occurrence list (to remove Egypt, Israel and Kuwait, which were incorrectly included in the original assessment) and includes a corrected distribution map (to exclude the Red Sea and the Persian Gulf from this species' range)."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Francis, M.P. 1996. Geographic distribution of marine reef fishes in the New Zealand region. <i>N.Z. J. Mar. Freshwat. Res.</i> 30(1-2): 35-55.",
+      "year": "1996",
+      "title": "Geographic distribution of marine reef fishes in the New Zealand region",
+      "author": "Francis, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Compagno, L.J.V. 2001. <i>Sharks of the World. An annotated and illustrated catalogue of the shark species known to date. Volume 2. Bullhead, mackerel and carpet sharks (Heterodontiformes, Lamniformes and Orectolobiformes)</i>. FAO, Rome.",
+      "year": "2001",
+      "title": "Sharks of the World. An annotated and illustrated catalogue of the shark species known to date. Volume 2. Bullhead, mackerel and carpet sharks (Heterodontiformes, Lamniformes and Orectolobiformes)",
+      "author": "Compagno, L.J.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ebert, D.A., Fowler, S. and Compagno, L. 2013. <i>Sharks of the World. A Fully Illustrated Guide</i>. Wild Nature Press, Plymouth, United Kingdom.",
+      "year": "2013",
+      "title": "Sharks of the World: A Fully Illustrated Guide",
+      "author": "Ebert, D.A., Fowler, S. and Compagno, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Last, P.R. and Stevens, J.D. 2009. <i>Sharks and Rays of Australia, 2nd edition</i>. CSIRO, Melbourne, Australia.",
+      "year": "2009",
+      "title": "Sharks and Rays of Australia, 2nd edition",
+      "author": "Last, P.R. and Stevens, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mollet, H.F. and Cailliet, G.M. 2002. Comparative population demography of elasmobranchs using life history tables, Leslie matrices and stage-based matrix models. <i>Marine and Freshwater Research</i> 53(8): 503-516.",
+      "year": "2002",
+      "title": "Comparative population demography of elasmobranchs using life history tables, Leslie matrices and stage-based matrix models",
+      "author": "Mollet, H.F. and Cailliet, G.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dudley, S. and Simpfendorfer, C. 2006. Population status of 14 shark species caught in the protective gillnets off KwaZulu-Natal beaches, South Africa, 1978-2003. <i>Marine and Freshwater Research</i> 57: 225-240.",
+      "year": "2006",
+      "title": "Population status of 14 shark species caught in the protective gillnets off KwaZulu-Natal beaches, South Africa, 1978-2003",
+      "author": "Dudley, S. and Simpfendorfer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boustany, A.M., Davis, S.F., Pyle, P., Anderson, S.D. Le Boeuf, B.J. and Block, B. 2002. Expanded niche for white sharks. <i>Nature</i> 415: 35–36.",
+      "year": "2002",
+      "title": "Expanded niche for white sharks",
+      "author": "Boustany, A.M., Davis, S.F., Pyle, P., Anderson, S.D. Le Boeuf, B.J. and Block, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pratt, H.L. Jr. 1996. Reproduction in the male white shark (<i>Carcharodon carcharias</i>). In: A.P. Klimley and D.G. Ainley (eds), <i>Great white sharks: Ecology and Behaviour</i>, Academic Press, Orlando, USA.",
+      "year": "1996",
+      "title": "Reproduction in the male white shark (<i>Carcharodon carcharias</i>)",
+      "author": "Pratt, H.L. Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Uchida, S., Toda, M., Teshima, K. and Yano, K. 1996. Preliminary Report on near-term foetuses from a white shark caught in Kochi, Japan. In: A.P. Klimley and D.G. Ainley (eds), <i>Great white sharks: Ecology and Behaviour</i>, Academic Press, Orlando, USA.",
+      "year": "1996",
+      "title": "Preliminary Report on near-term foetuses from a white shark caught in Kochi, Japan",
+      "author": "Uchida, S., Toda, M., Teshima, K. and Yano, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cailliet, G.M., Natanson, L.J., Weldon, B.A. and Ebert, D.A. 1985. Preliminary studies on the age and growth of the white shark <i>Carcharodon carcharias</i>, using vertebral bands. <i>Southern California Academy of Sciences, Memoirs</i> 9: 49–60.",
+      "year": "1985",
+      "title": "Preliminary studies on the age and growth of the white shark <i>Carcharodon carcharias</i>, using vertebral bands",
+      "author": "Cailliet, G.M., Natanson, L.J., Weldon, B.A. and Ebert, D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pardini, A.T., Jones, C.S., Noble, L.R., Kreiser, B., Malcolm, H., Bruce, B.D., Stevens, J.D., Cliff, G., Scholl, M.C., Francis, M., Duffy, C. and Martin, A.P. 2001. Philopatric females and roving male great white sharks. <i>Nature</i> 412: 139–140.",
+      "year": "2001",
+      "title": "Philopatric females and roving male great white sharks",
+      "author": "Pardini, A.T., Jones, C.S., Noble, L.R., Kreiser, B., Malcolm, H., Bruce, B.D., Stevens, J.D., Cliff, G., Scholl, M.C., Francis, M., Duffy, C. and Martin, A.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hamady, L.L., Natanson, L.J., Skomal, G.B. and Thorrold, S.R. 2014. Vertebral Bomb Radiocarbon Suggests Extreme Longevity in White Sharks. <i>PLoS ONE</i> 9(1): e84006.",
+      "year": "2014",
+      "title": "Vertebral Bomb Radiocarbon Suggests Extreme Longevity in White Sharks",
+      "author": "Hamady, L.L., Natanson, L.J., Skomal, G.B. and Thorrold, S.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Winker, H., Carvalho, F. and Kapur, M. 2018. JABBA: Just Another Bayesian Biomass Assessment. <i>Fisheries Research </i> 204: 275–288.",
+      "year": "2018",
+      "title": "JABBA: Just Another Bayesian Biomass Assessment",
+      "author": "Winker, H., Carvalho, F. and Kapur, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reid, D.D., Robbins, W.D. and Peddemors, V.M. 2011. Decadal trends in shark catches and effort from the New South Wales, Australia, Shark Meshing Program 1950-2010. <i>Marine and Freshwater Research</i> 62: 676-693.",
+      "year": "2011",
+      "title": "Decadal trends in shark catches and effort from the New South Wales, Australia, Shark Meshing Program 1950-2010",
+      "author": "Reid, D.D., Robbins, W.D. and Peddemors, V.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    },
+    {
+      "citation": "Andreotti, S., Rutzen, M., van der Walt, S., Von der Heyden, S., Henriques, R., Meÿer, M., Oosthuizen, H. and Matthee, C.A. 2016. An integrated mark-recapture and genetic approach to estimate the population size of white sharks in South Africa. <i>Marine Ecology Progress Series </i> 552: 241-253.",
+      "year": "2016",
+      "title": "An integrated mark-recapture and genetic approach to estimate the population size of white sharks in South Africa",
+      "author": "Andreotti, S., Rutzen, M., van der Walt, S., Von der Heyden, S., Henriques, R., Meÿer, M., Oosthuizen, H. and Matthee, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andrews, A.H. and Kerr, L.A. 2015. Validated age estimates for large white sharks of the northeastern Pacific Ocean: altered perceptions of vertebral growth shed light on complicated bomb Δ14C results. <i>Environmental Biology of Fishes</i> 98(3): 971-978.",
+      "year": "2015",
+      "title": "Validated age estimates for large white sharks of the northeastern Pacific Ocean: altered perceptions of vertebral growth shed light on complicated bomb Δ14C results",
+      "author": "Andrews, A.H. and Kerr, L.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Benson, J.F., Jorgensen, S.J., O’Sullivan, J.B., Winkler, C., White, C.F., Garcia-Rodriguez, E., Sosa-Nishizaki, O. and Lowe, C.G. 2018. Juvenile survival, competing risks, and spatial variation in mortality risk of a marine apex predator. <i>Journal of Applied Ecology</i> 55(6): 2888-2897.",
+      "year": "2018",
+      "title": "Juvenile survival, competing risks, and spatial variation in mortality risk of a marine apex predator",
+      "author": "Benson, J.F., Jorgensen, S.J., O’Sullivan, J.B., Winkler, C., White, C.F., Garcia-Rodriguez, E., Sosa-Nishizaki, O. and Lowe, C.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bernard, A.M., Shivji, M.S., Richards, V.P. and Stanhope, M.J. 2018. Transcriptome-Derived microsatellites demonstrate strong genetic differentiation in Pacific White Sharks. <i>Journal of Heredity </i> 109(7): 771-779.",
+      "year": "2018",
+      "title": "Transcriptome-Derived microsatellites demonstrate strong genetic differentiation in Pacific White Sharks",
+      "author": "Bernard, A.M., Shivji, M.S., Richards, V.P. and Stanhope, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bonfil, R., Meyer, M., Scholl, M.C., Johnson, R., O’Brien, S., Oosthuizen, H., Swanson, S., Kotze, D. and Paterson, M. 2005. Transoceanic migration, spatial dynamics, and population linkages of white sharks. <i>Science</i> 310(5745): 100-103.",
+      "year": "2005",
+      "title": "Transoceanic migration, spatial dynamics, and population linkages of white sharks",
+      "author": "Bonfil, R., Meyer, M., Scholl, M.C., Johnson, R., O’Brien, S., Oosthuizen, H., Swanson, S., Kotze, D. and Paterson, M.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Braccini, M., Taylor, S., Bruce, B. and McAuley, R. 2017. Modelling the population trajectory of West Australian white sharks. <i>Ecological Modelling</i> 360: 363-377.",
+      "year": "2017",
+      "title": "Modelling the population trajectory of West Australian white sharks",
+      "author": "Braccini, M., Taylor, S., Bruce, B. and McAuley, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bruce, B., Bradford, R., Bravington, M., Feutry, P., Grewe, P., Gunasekera, R., Harasti, D., Hillary, R. and Patterson, T. 2018. A national assessment of the status of white sharks. National Environmental Science Programme, Marine Biodiversity Hub, CSIRO.",
+      "year": "2018",
+      "title": "A national assessment of the status of white sharks.",
+      "author": "Bruce, B., Bradford, R., Bravington, M., Feutry, P., Grewe, P., Gunasekera, R., Harasti, D., Hillary, R. and Patterson, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bruce, B.D. 2008. The biology and ecology of the white shark, <i>Carcharodon carcharias</i>. In: Camhi, M.D., Pikitch, E.K. and Babcock, E.A. (eds), <i>Sharks of the Open Ocean</i>, pp. 69-76. Blackwell Publishing Ltd, Oxford, UK.",
+      "year": "2008",
+      "title": "The biology and ecology of the white shark, <i>Carcharodon carcharias</i>",
+      "author": "Bruce, B.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burgess, G.H., Bruce, B.D., Cailliet, G.M., Goldman, K.J., Grubbs, R.D., Lowe, C.G., MacNeil, M.A., Mollet, H.F., Weng, K.C. and O'Sullivan, J.B. 2014. A re-evaluation of the size of the White Shark (<i>Carcharodon carcharias</i>) population off California, USA. <i>PLOS ONE</i> 9(6): e98078.",
+      "year": "2014",
+      "title": "A re-evaluation of the size of the White Shark (<i>Carcharodon carcharias</i>) population off California, USA",
+      "author": "Burgess, G.H., Bruce, B.D., Cailliet, G.M., Goldman, K.J., Grubbs, R.D., Lowe, C.G., MacNeil, M.A., Mollet, H.F., Weng, K.C. and O'Sullivan, J.B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Christiansen, H.M., Campana, S.E., Fisk, A.T., Cliff, G., Wintner, S.P., Dudley, S.F.J., Kerr, L.A. and Hussey, N.E. 2016.  Using bomb radiocarbon to estimate age and growth of the white shark, <i>Carcharodon carcharias</i>, from the southwestern Indian Ocean. <i>Marine Biology</i> 163: 144-157.",
+      "year": "2016",
+      "title": " Using bomb radiocarbon to estimate age and growth of the white shark, <i>Carcharodon carcharias</i>, from the southwestern Indian Ocean",
+      "author": "Christiansen, H.M., Campana, S.E., Fisk, A.T., Cliff, G., Wintner, S.P., Dudley, S.F.J., Kerr, L.A. and Hussey, N.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2004. Proposal for inclusion of <i>Carcharodon carcharias</i> in Appendix II. CoP13 Prop. 32. Rev 1. Bangkok, Thailand. Available at: <a href=\"https://www.cites.org/eng/cop/13/prop/index.php\">https://www.cites.org/eng/cop/13/prop/index.php</a>. ",
+      "year": "2004",
+      "title": "Proposal for inclusion of <i>Carcharodon carcharias</i> in Appendix II. CoP13 Prop. 32. Rev 1.",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "Clarke, S. 2004. Shark product trade in Mainland China and Hong Kong and implementation of the CITES shark listings. Hong Kong, China: TRAFFIC East Asia.",
+      "year": "2004",
+      "title": "Shark product trade in Mainland China and Hong Kong and implementation of the CITES shark listings. Hong Kong, China: TRAFFIC East Asia",
+      "author": "Clarke, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cliff, G., Dudley, S.F.J. and Jury, M.R. 1996. Catches of white sharks in KwaZulu–Natal, South Africa, and environmental influences. <i>Great white sharks: the biology of Carcharodon carcharias</i>, pp. 351-362. Academic Press, San Diego.",
+      "year": "1996",
+      "title": "Catches of white sharks in KwaZulu–Natal, South Africa, and environmental influences.",
+      "author": "Cliff, G., Dudley, S.F.J. and Jury, M.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Curtis, T.H., McCandless, C.T., Carlson, J.K., Skomal, G.B., Kohler, N.E., Natanson, L.J., Burgess, G.H., Hoey, J.J. and Pratt, H.L., Jr. 2014. Seasonal distribution and historic trends in abundance of White Sharks, <i>Carcharodon carcharias</i>, in the Western North Atlantic Ocean. <i>PLOS ONE </i> 9(6): e99240.",
+      "year": "2014",
+      "title": "Seasonal distribution and historic trends in abundance of White Sharks, <i>Carcharodon carcharias</i>, in the Western North Atlantic Ocean",
+      "author": "Curtis, T.H., McCandless, C.T., Carlson, J.K., Skomal, G.B., Kohler, N.E., Natanson, L.J., Burgess, G.H., Hoey, J.J. and Pratt, H.L., Jr.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dewar, H., Eguchi, T., Hyde, J., Kinzey, D., Kohin, S., Moore, J., Taylor, B.L. and Vetter, R. 2013. Status Review of the Northeastern Pacific Population of White Sharks (<i>Carcharodon carcharias</i>) under the Endangered Species Act. NOAA-TM-NMFS-SWFSC-523. Southwest Fisheries Science Centre, National Oceanic and Atmospheric Administration, Panama City, Florida.",
+      "year": "2013",
+      "title": "Status Review of the Northeastern Pacific Population of White Sharks (<i>Carcharodon carcharias</i>) under the Endangered Species Act. NOAA-TM-NMFS-SWFSC-523.",
+      "author": "Dewar, H., Eguchi, T., Hyde, J., Kinzey, D., Kohin, S., Moore, J., Taylor, B.L. and Vetter, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Domeier, M. and Nasby-Lucas, N. 2008. Migration patterns of white sharks <i>Carcharodon carcharias</i> tagged at Guadalupe Island, Mexico, and identification of an eastern Pacific shared offshore foraging area. <i>Marine Ecology Progress Series</i> 370: 221-237.",
+      "year": "2008",
+      "title": "Migration patterns of white sharks <i>Carcharodon carcharias</i> tagged at Guadalupe Island, Mexico, and identification of an eastern Pacific shared offshore foraging area",
+      "author": "Domeier, M. and Nasby-Lucas, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Domeier, M.L. (ed). <i>Global perspectives on the biology and life history of the White Shark</i>. CRC Press, Taylor and Francis Group, Boca Raton.",
+      "year": null,
+      "title": "Global perspectives on the biology and life history of the White Shark",
+      "author": "Domeier, M.L. (ed)",
+      "citation_short": null
+    },
+    {
+      "citation": "Florida Museum. 2019. International Shark Attack File. Available at: <a href=\"https://www.floridamuseum.ufl.edu/shark-attacks/maps\">https://www.floridamuseum.ufl.edu/shark-attacks/maps</a>. (Accessed: 8 March 2019).",
+      "year": "2019",
+      "title": "International Shark Attack File",
+      "author": "Florida Museum",
+      "citation_short": null
+    },
+    {
+      "citation": "Francis, M. 2017. Bycatch of white sharks in commercial set nets. National Institute of Water and Atmospheric Research Ltd.",
+      "year": "2017",
+      "title": "Bycatch of white sharks in commercial set nets",
+      "author": "Francis, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Francis, M.P., Duffy, C.A.J., Bonfil, R. and Manning, M.J. 2012. The third dimension – vertical habitat use by white sharks, <i>Carcharodon carcharias</i>, in New Zealand and in oceanic and tropical waters of the southwest Pacific Ocean. In: Domeier, M. L. (ed.), <i>Global Perspectives on the Biology and Life History of the Great White Shark</i>, pp. 319-342. CRC Press, Boca Raton, Florida.",
+      "year": "2012",
+      "title": "The third dimension – vertical habitat use by white sharks, <i>Carcharodon carcharias</i>, in New Zealand and in oceanic and tropical waters of the southwest Pacific Ocean",
+      "author": "Francis, M.P., Duffy, C.A.J., Bonfil, R. and Manning, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gubili, C., Duffy, C.A.J., Cliff, J., Wintner, S.P., Shivji, M., Chapman, D., Bruce, B.D., Martin, A.P. and Sims, D.W. 2012. Application of molecular genetics for conservation of the white shark, <i>Carcharodon carcharias</i>., L. 1758. In: Domeier, M.L. (ed.), <i>Global perspectives on the biology and life history of the white shark</i>, pp. 357-380. CRC Press, Boca Raton, Florida.",
+      "year": "2012",
+      "title": "Application of molecular genetics for conservation of the white shark, <i>Carcharodon carcharias</i>., L. 1758",
+      "author": "Gubili, C., Duffy, C.A.J., Cliff, J., Wintner, S.P., Shivji, M., Chapman, D., Bruce, B.D., Martin, A.P. and Sims, D.W.  ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hewitt, A.M. 2014. Demographics of a seasonal aggregation of white sharks at Seal Island, False Bay, South Africa. MSc thesis. Department of Biological Sciences, University of Cape Town.",
+      "year": "2014",
+      "title": "Demographics of a seasonal aggregation of white sharks at Seal Island, False Bay, South Africa. MSc thesis",
+      "author": "Hewitt, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hillary, R.M., Bravington, M.V., Patterson, T.A., Grewe, P., Bradford, R., Feutry, P., Gunasekera, R., Peddemors, V., Werry, J., Francis, M.P., Duffy, C.A.J. and Bruce, B.D. 2018. Genetic relatedness reveals total population size of white sharks in eastern Australia and New Zealand. <i>Science Reports</i> 8(1): 2661.",
+      "year": "2018",
+      "title": "Genetic relatedness reveals total population size of white sharks in eastern Australia and New Zealand",
+      "author": "Hillary, R.M., Bravington, M.V., Patterson, T.A., Grewe, P., Bradford, R., Feutry, P., Gunasekera, R., Peddemors, V., Werry, J., Francis, M.P., Duffy, C.A.J. and Bruce, B.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Irion, D.T., Noble, L.R., Kock, A.A., Gennari, E., Dicken, M.L., Hewitt, A.M., Towner, A.V., Booth, A.J., Smale, M.J. and Cliff, G. 2017. Pessimistic assessment of white shark population status in South Africa: Comment on Andreotti et al. (2016). <i>Marine Ecology Progress Series </i> 577: 251-255.",
+      "year": "2017",
+      "title": "Pessimistic assessment of white shark population status in South Africa: Comment on Andreotti et al. (2016).",
+      "author": "Irion, D.T., Noble, L.R., Kock, A.A., Gennari, E., Dicken, M.L., Hewitt, A.M., Towner, A.V., Booth, A.J., Smale, M.J. and Cliff, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jorgensen, S.J., Reeb, C.A., Chapple, T.K., Anderson, S.D., Perle, C., Van Sommeran, S.R., Fritz-Cope, C., Brown, A.C., Klimley, A.P and Block, B.A. 2010. Philopatry and migration of Pacifc white sharks. <i>Proceedings of the Royal Society B: Biological Sciences</i> 277: 679-688.",
+      "year": "2010",
+      "title": "Philopatry and migration of Pacifc white sharks",
+      "author": "Jorgensen, S.J., Reeb, C.A., Chapple, T.K., Anderson, S.D., Perle, C., Van Sommeran, S.R., Fritz-Cope, C., Brown, A.C., Klimley, A.P and Block, B.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kock, A.A., Photopoulou, T., Durbach, I., Mauff, K., Meÿer, M., Kotze, D., Griffiths, C.L. and O’Riain, M.J. 2018. Summer at the beach: spatio-temporal patterns of white shark occurrence along the inshore areas of False Bay, South Africa. <i>Movement Ecology</i> 6(7): 1-13.",
+      "year": "2018",
+      "title": "Summer at the beach: spatio-temporal patterns of white shark occurrence along the inshore areas of False Bay, South Africa",
+      "author": "Kock, A.A., Photopoulou, T., Durbach, I., Mauff, K., Meÿer, M., Kotze, D., Griffiths, C.L. and O’Riain, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lee, K.A., Roughan, M., Harcourt, R.G. and Peddemors, V.M. 2018. Environmental correlates of relative abundance of potentially dangerous sharks in nearshore areas, southeastern Australia. <i>Marine Ecology Progress Series</i> 599: 157-179.",
+      "year": "2018",
+      "title": "Environmental correlates of relative abundance of potentially dangerous sharks in nearshore areas, southeastern Australia",
+      "author": "Lee, K.A., Roughan, M., Harcourt, R.G. and Peddemors, V.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lowe, C. G., Blasius, M. E., Jarvis, E. T., Mason, T. J., Goodmanlowe, G. D. and O’Sullivan, J. B. 2012. Historic fishery interactions with white sharks in the Southern California Bight, In: Domeier, M.L. (ed.), <i>Global Perspectives On the Biology and Life History of the White Shark</i>, pp. 169-187. CRC Press, Boca Raton, Florida.",
+      "year": "2012",
+      "title": "Historic fishery interactions with white sharks in the Southern California Bight,",
+      "author": "Lowe, C. G., Blasius, M. E., Jarvis, E. T., Mason, T. J., Goodmanlowe, G. D. and O’Sullivan, J. B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lyons, K., Jarvis, E.T., Jorgensen, S.J., Weng, K., O'Sullivan, J., Winkler, C. and Lowe, C.G. 2013. The degree and result of gillnet fishery interactions with juvenile white sharks in southern California assessed by fishery-independent and -dependent methods. <i>Fisheries Research </i> 147: 370-380.",
+      "year": "2013",
+      "title": "The degree and result of gillnet fishery interactions with juvenile white sharks in southern California assessed by fishery-independent and -dependent methods",
+      "author": "Lyons, K., Jarvis, E.T., Jorgensen, S.J., Weng, K., O'Sullivan, J., Winkler, C. and Lowe, C.G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Natanson, L.J. and Skomal, G.B. 2015. Age and growth of the white shark, <i>Carcharodon carcharias</i>, in the western North Atlantic Ocean. <i>Marine and Freshwater Research</i> 66(5): 387-398.",
+      "year": "2015",
+      "title": "Age and growth of the white shark, <i>Carcharodon carcharias</i>, in the western North Atlantic Ocean",
+      "author": "Natanson, L.J. and Skomal, G.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "NSW DPI (Department of Primary Industries). 2018. Shark Meshing (Bather Protection) Program 2017/18 Annual Performace Report. Prepared in accordance with the Joint Management Agreement and associated Management Plan. NSW Department of Primary Industries.",
+      "year": "2018",
+      "title": "Shark Meshing (Bather Protection) Program 2017/18 Annual Performace Report. Prepared in accordance with the Joint Management Agreement and associated Management Plan",
+      "author": "NSW DPI (Department of Primary Industries)",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Leary, S.J., Feldheim, K.A., Fields, A.T., Natanson, L.J., Wintner, S., Hussey, N., Shivji, M.S. and Chapman, D.D. 2015. Genetic diversity of White Sharks, <i>Carcharodon carcharias</i>, in the Northwest Atlantic and Southern Africa. <i>Journal of Heredity</i> 106(3): 258-265.",
+      "year": "2015",
+      "title": "Genetic diversity of White Sharks, <i>Carcharodon carcharias</i>, in the Northwest Atlantic and Southern Africa",
+      "author": "O’Leary, S.J., Feldheim, K.A., Fields, A.T., Natanson, L.J., Wintner, S., Hussey, N., Shivji, M.S. and Chapman, D.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Onate-Gonzalez, E.C., Sosa-Nishizaki, O., Herzka, S.Z., Lowe, C.G., Lyons, K., Santana-Morales, O., Sepulveda, C., Guerrero-Avila, C., Garcia-Rodriguez, E. and O’Sullivan, J.B. 2017. Importance of Bahia Sebastian Vizcaino as a nursery area for white sharks (<i>Carcharodon carcharias</i>) in the northeastern Pacific: A fishery dependent analysis. <i>Fisheries Research</i> 188: 125-137.",
+      "year": "2017",
+      "title": "Importance of Bahia Sebastian Vizcaino as a nursery area for white sharks (<i>Carcharodon carcharias</i>) in the northeastern Pacific: A fishery dependent analysis",
+      "author": "Onate-Gonzalez, E.C., Sosa-Nishizaki, O., Herzka, S.Z., Lowe, C.G., Lyons, K., Santana-Morales, O., Sepulveda, C., Guerrero-Avila, C., Garcia-Rodriguez, E. and O’Sullivan, J.B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Roff, G., Brown, C.J., Priest, M.A. and Mumby, P.J. 2018. Decline of coastal apex shark populations over the past half century. <i>Communications Biology</i> 1(1): 223.",
+      "year": "2018",
+      "title": "Decline of coastal apex shark populations over the past half century",
+      "author": "Roff, G., Brown, C.J., Priest, M.A. and Mumby, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ryklief, R. 2012. Population dynamics of the white shark, <i>Carcharodon carcharias</i>, at Mossel Bay South Africa. MSc Thesis. Nelson Mandela Metropolitan University.",
+      "year": "2012",
+      "title": "Population dynamics of the white shark, <i>Carcharodon carcharias</i>, at Mossel Bay South Africa. MSc Thesis.",
+      "author": "Ryklief, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sato, K., Nakamura, M., Tomita, T., Toda, M., Miyamoto, K. and Nozu, R. 2016. How Great White Sharks nourish their embryos to a large size: evidence of lipid histotrophy in lamnoid shark reproduction. <i>Biology Open</i> 5(1211-1215).",
+      "year": "2016",
+      "title": "How Great White Sharks nourish their embryos to a large size: evidence of lipid histotrophy in lamnoid shark reproduction",
+      "author": "Sato, K., Nakamura, M., Tomita, T., Toda, M., Miyamoto, K. and Nozu, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Shivji, M.S., Chapman, D.D., Pikitch, E.K. and Raymond, P.W. 2005. Genetic profiling reveals illegal international trade in fins of the great white shark, <i>Carcharodon carcharias</i>. <i>Conservation Genetics</i> 66(6): 1035-1039.",
+      "year": "2005",
+      "title": "Genetic profiling reveals illegal international trade in fins of the great white shark, <i>Carcharodon carcharias</i>",
+      "author": "Shivji, M.S., Chapman, D.D., Pikitch, E.K. and Raymond, P.W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Soldo, A., Bradai, M.N. and Walls, R.H.L. 2016. Carcharodon carcharias. Mediterranean. The IUCN Red List of Threatened Species 2016: e.T3855A16527829. (Accessed: 4 February 2019).",
+      "year": "2016",
+      "title": "Carcharodon carcharias. Mediterranean. The IUCN Red List of Threatened Species 2016: e.T3855A16527829",
+      "author": "Soldo, A., Bradai, M.N. and Walls, R.H.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Springer, S. 1939. The great white shark, <i>Carcharodon carcharias</i> (Linnaeus), in Florida waters. <i>Copeia</i>: 114-115.",
+      "year": "1939",
+      "title": "The great white shark, <i>Carcharodon carcharias</i> (Linnaeus), in Florida waters",
+      "author": "Springer, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tanaka, S. 2011. Age, growth and genetic status of the white shark (<i>Carcharodon carcharias</i>) from Kashima-nada, Japan. <i>Marine and Freshwater Research</i> 62: 548-556.",
+      "year": "2011",
+      "title": "Age, growth and genetic status of the white shark (<i>Carcharodon carcharias</i>) from Kashima-nada, Japan",
+      "author": "Tanaka, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Towner, A.V., Wcisel, M.A., Reisinger, R.R., Edwards, D. and Jewell, O.J.D. 2013. Gauging the threat: the first population estimate for White Sharks in South Africa using photo identification and automated software. <i>PLOS ONE</i> 8(6): e66035.",
+      "year": "2013",
+      "title": "Gauging the threat: the first population estimate for White Sharks in South Africa using photo identification and automated software",
+      "author": "Towner, A.V., Wcisel, M.A., Reisinger, R.R., Edwards, D. and Jewell, O.J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wintner, S.P. and Cliff, G. 1999. Age and growth determination of the white shark, <i>Carcharodon carcharias</i>, from the east coast of South Africa. <i>Fishery Bulletin</i> 97(153-169).",
+      "year": "1999",
+      "title": "Age and growth determination of the white shark, <i>Carcharodon carcharias</i>, from the east coast of South Africa.",
+      "author": "Wintner, S.P. and Cliff, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

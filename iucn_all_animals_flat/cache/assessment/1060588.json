@@ -1,0 +1,583 @@
+{
+  "assessment_date": "2012-02-08T00:00:00.000+00:00",
+  "year_published": "2012",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 164599,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/164599/1060588",
+  "citation": "Egan, D.M., Amr, Z.S.S., Al Johany, A.M.H., Els, J., Papenfuss, T., Nilson, G., Sadek, R., Disi, A.M., Hraoui-Bloquet, S., Werner, Y.L. & Anderson, S. 2012. Cerastes gasperettii. The IUCN Red List of Threatened Species 2012: e.T164599A1060588. Accessed on 05 May 2026.",
+  "assessment_id": 1060588,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 164599,
+    "scientific_name": "Cerastes gasperettii",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 128843667,
+        "scientific_name": "Cerastes gasperettii ssp. gasperettii",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "VIPERIDAE",
+        "genus_name": "Cerastes",
+        "species_name": "gasperettii",
+        "subpopulation_name": null,
+        "infra_name": "gasperettii",
+        "authority": "Leviton &amp; Anderson, 1967",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Viper Specialist Group",
+            "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+            "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "افعى الرمال / القرناء",
+            "language": "ara"
+          },
+          {
+            "main": true,
+            "name": "Arabian Horned Viper",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Cerastes cornutus Anderson, 1896",
+            "status": "ACCEPTED",
+            "genus_name": "Cerastes",
+            "species_name": "cornutus",
+            "species_author": "Anderson, 1896",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Cerastes cerastes ssp. gasperettii Leviton & Anderson, 1967",
+            "status": "ACCEPTED",
+            "genus_name": "Cerastes",
+            "species_name": "cerastes",
+            "species_author": null,
+            "infrarank_author": "Leviton & Anderson, 1967",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "gasperettii"
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VIPERIDAE",
+    "genus_name": "Cerastes",
+    "species_name": "gasperettii",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Leviton &amp; Anderson, 1967",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Viper Specialist Group",
+        "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+        "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Arabian Sand Viper",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "افعى الرمال / القرناء",
+        "language": "ara"
+      },
+      {
+        "main": true,
+        "name": "Arabian Horned Viper",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cerastes cornutus Anderson, 1896",
+        "status": "ACCEPTED",
+        "genus_name": "Cerastes",
+        "species_name": "cornutus",
+        "species_author": "Anderson, 1896",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cerastes cerastes Linnaeus, 1758 ssp. gasperettii Leviton & Anderson, 1967",
+        "status": "ACCEPTED",
+        "genus_name": "Cerastes",
+        "species_name": "cerastes",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": "Leviton & Anderson, 1967",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "gasperettii"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is present in southeastern Israel and western and southern Jordan from where it ranges eastwards into Iraq and Iran (Kuzestan) (Steven Anderson pers. comm., September 2008), and the Arabian Peninsula where it has been recorded in Kuwait, Saudi Arabia, United Arab Emirates, Qatar, Oman and Yemen. It ranges as high as 1,500m asl.",
+    "population": "It is fairly abundant within suitable habitat.",
+    "habitats": "This species is found in loose sand dunes and gravel wadis close to the sand. It has also been recorded from dry salt marshes. In Arabia, it is found on a sand substrate over rock, or hard earth. This is an egg laying, not a viviparous species.",
+    "threats": "There are no major threats to this species in the Arabian Peninsula (T. Papenfuss pers. comm. 2008). It is threatened by overcollection for venom extraction in Saudi Arabia.",
+    "measures": "It has been recorded from the Wadi Rum Reserve in Jordan. It is protected by national legislation in Israel. There are protected areas within the range of the species in Iran, but it is not known if the species is present in these (S. Anderson pers. comm. 2008). It is within protected areas in Saudi Arabia.",
+    "use_trade": "The species is included in the international pet trade, and there is heavy collection for venom extraction in Saudi Arabia.",
+    "rationale": "Listed as Least Concern in view of its wide global distribution, presumed large population, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Egan, D.M., Amr, Z.S.S., Al Johany, A.M.H., Els, J., Papenfuss, T., Nilson, G., Sadek, R., Disi, A.M., Hraoui-Bloquet, S., Werner, Y.L. & Anderson, S.",
+      "value": [
+        "Zuhair Amr (Jordan University of Science & Technology, Jordan)",
+        "Yehudah Werner (Department of Evolution, Systematics and Ecology, The Hebrew University of Jerusalem, 91904 Jerusalem, Israel)",
+        "Riyad Sadek (Biology Department, American University of Beirut, Beirut, Lebanon)",
+        "Göran Nilson (Göteborg Natural History Museum, Box 7283, SE-402 35 Göteborg, Sweden)",
+        "Ahmad Mohammed Mousa Disi (GRA, SRLI Reptile Assessment)",
+        "Souad Hraoui-Bloquet (SRLI Reptile Assessment)",
+        "Steven Anderson (University of the Pacific, Stockton, California, USA)",
+        "Theodore Papenfuss (Museum of Vertebrate Zoology, University of California)",
+        "Johannes Els (Breeding Centre for Endangered Arabian Wildlife, Sharjah, UAE)",
+        "Awad Al Johany (King Saud University, Riyadh, Saudi Arabia)",
+        "Damien Egan (Dubai Mall Aquaruim, UAE)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N.A. & Bowles, P.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L. 2001. <i>Amphibians and reptiles of the Hashemite Kingdom of Jordan</i>. Edition Chimaira, Frankfurt.",
+      "year": "2001",
+      "title": "Amphibians and Reptiles of the Hashemite Kingdom of Jordan",
+      "author": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, Y.L. 1988. Herpetofaunal survey of Israel (1950-1985), with comments on Sinai and Jordan and on zoogeographical heterogeneity. In: Y. Yom-Tov and E. Tchernov (eds), <i>The Zoogeography of Israel</i>, Dr. W. Junk Publishers, Dordrecht, Netherlands.",
+      "year": "1988",
+      "title": "Herpetofaunal survey of Israel (1950-1985), with comments on Sinai and Jordan and on zoogeographical heterogeneity.",
+      "author": "Werner, Y.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Disi, A.M. 2002. <i>Jordan Country Study on Biological Diversity: The Herpetofauna of Jordan</i>. Amman, Jordan.",
+      "year": "2002",
+      "title": "Jordan Country Study on Biological Diversity: The Herpetofauna of Jordan",
+      "author": "Disi, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolev, A. and Perevelotsky, A. (eds). 2002. <i>Red Book of Threatened Species in Israel – Vertebrates</i>. Nature and Parks Authority and the Society for the Protection of Nature in Israel, Jerusalem.",
+      "year": "2002",
+      "title": "Red Book of Threatened Species in Israel – Vertebrates",
+      "author": "Dolev, A. and Perevelotsky, A. (eds)",
+      "citation_short": null
+    },
+    {
+      "citation": "McDiarmid, R.W., Campbell, J.A. and Touré, T.A. 1999. <i>Snake Species of the World. Vol. 1.</i> Herpetologists' League.",
+      "year": "1999",
+      "title": "Snake Species of the World. Vol. 1.",
+      "author": "McDiarmid, R.W., Campbell, J.A. and Touré, T.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stümpel, N. and Joger, U. 2009. Recent advances in phylogeny and taxonomy of Near and Middle Eastern Vipers - an update. <i>ZooKeys</i> 31: 179-191.",
+      "year": "2009",
+      "title": "Recent advances in phylogeny and taxonomy of Near and Middle Eastern Vipers - an update.",
+      "author": "Stümpel, N. and Joger, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Branch, W., Egan, D. and Edmonds, J. 2008. Proceedings of the 9th Conservation Workshop for the Fauna of Arabia: Conservation Status of the Terrestrial Snakes of the Arabian Peninsula. Breeding Centre for Endangered Arabian Wildlife.",
+      "year": "2008",
+      "title": "Proceedings of the 9th Conservation Workshop for the Fauna of Arabia: Conservation Status of the Terrestrial Snakes of the Arabian Peninsula",
+      "author": "Branch, W., Egan, D. and Edmonds, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sivan, N. 1995. Two snake species added to the herpetofaunal list of Israel. <i>Hardun</i>: 13-23;82-81.",
+      "year": "1995",
+      "title": "Two snake species added to the herpetofaunal list of Israel.",
+      "author": "Sivan, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Henkel, F.-W. 2003. Herpetological expedition through Oman. <i>Reptilia</i> 27: 50-55.",
+      "year": "2003",
+      "title": "Herpetological expedition through Oman",
+      "author": "Henkel, F.-W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 1980. The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia. <i>Journal of Oman Studies Special Report</i> 2: 273-332.",
+      "year": "1980",
+      "title": "The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia",
+      "author": "Arnold, E.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gasperetti, J. 1988. Snakes of Arabia. <i>Fauna of Saudi Arabia</i>: 169-450.",
+      "year": "1988",
+      "title": "Snakes of Arabia.",
+      "author": "Gasperetti, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joger, U. 1984. <i>The Venomous Snakes of the Near and Middle East</i>. Beihefte zum Tübinger Atlas des Vorderen Orients, A 12. Dr. Ludwig Reichert Verlag., Wiesbaden.",
+      "year": "1984",
+      "title": "The Venomous Snakes of the Near and Middle East",
+      "author": "Joger, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2012. IUCN Red List of Threatened Species (ver. 2012.2). Available at: <a href=\"http://www.iucnredlist.org\">http://www.iucnredlist.org</a>. (Accessed: 17 October 2012).",
+      "year": "2012",
+      "title": "IUCN Red List of Threatened Species (ver. 2012.2)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2012.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

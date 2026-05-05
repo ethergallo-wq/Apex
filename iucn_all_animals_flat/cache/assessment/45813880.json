@@ -1,0 +1,919 @@
+{
+  "assessment_date": "2020-01-06T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 4185,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/4185/45813880",
+  "citation": "Emslie, R. 2020. Ceratotherium simum. The IUCN Red List of Threatened Species 2020: e.T4185A45813880. Accessed on 05 May 2026.",
+  "assessment_id": 45813880,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 4185,
+    "scientific_name": "Ceratotherium simum",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 4183,
+        "scientific_name": "Ceratotherium simum ssp. cottoni",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "RHINOCEROTIDAE",
+        "genus_name": "Ceratotherium",
+        "species_name": "simum",
+        "subpopulation_name": null,
+        "infra_name": "cottoni",
+        "authority": "(Lydekker, 1908)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC African Rhino Specialist Group",
+            "url": "https://www.iucn.org/our-union/commissions/group/iucn-ssc-african-rhino-specialist-group",
+            "description": "Chair: Mike Knight (email: mknight@wwf.na)\nRed List Authority Coordinator: Sam Ferreira (email: sam.ferreira@sanparks.org)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Northern Square-lipped Rhinoceros",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Northern White Rhino",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Nördliches Breitlippennashorn",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Nördliches Breitmaulnashorn",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Nördliches Weißes Nashorn",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Rhinocéros blanc du Nord",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Rinoceronte Blanco del Norte",
+            "language": "spa"
+          },
+          {
+            "main": true,
+            "name": "Northern White Rhinoceros",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Rhinoceros simus ssp. cottoni Lydekker, 1908",
+            "status": "ACCEPTED",
+            "genus_name": "Rhinoceros",
+            "species_name": "simus",
+            "species_author": null,
+            "infrarank_author": "Lydekker, 1908",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "cottoni"
+          }
+        ]
+      },
+      {
+        "sis_id": 39317,
+        "scientific_name": "Ceratotherium simum ssp. simum",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "RHINOCEROTIDAE",
+        "genus_name": "Ceratotherium",
+        "species_name": "simum",
+        "subpopulation_name": null,
+        "infra_name": "simum",
+        "authority": "(Burchell, 1817)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC African Rhino Specialist Group",
+            "url": "https://www.iucn.org/our-union/commissions/group/iucn-ssc-african-rhino-specialist-group",
+            "description": "Chair: Mike Knight (email: mknight@wwf.na)\nRed List Authority Coordinator: Sam Ferreira (email: sam.ferreira@sanparks.org)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Southern Square-lipped Rhinoceros",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Southern White Rhino",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Rhinocéros blanc de Sud",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Südliches Breitlippennashorn",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Südliches Breitmaulnashorn",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Südliches Weißes Nashorn",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Witrenoster",
+            "language": "afr"
+          },
+          {
+            "main": true,
+            "name": "Southern White Rhinoceros",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PERISSODACTYLA",
+    "family_name": "RHINOCEROTIDAE",
+    "genus_name": "Ceratotherium",
+    "species_name": "simum",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Burchell, 1817)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC African Rhino Specialist Group",
+        "url": "https://www.iucn.org/our-union/commissions/group/iucn-ssc-african-rhino-specialist-group",
+        "description": "Chair: Mike Knight (email: mknight@wwf.na)\nRed List Authority Coordinator: Sam Ferreira (email: sam.ferreira@sanparks.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Square-lipped Rhinoceros",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "White Rhino",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Rhinocéros blanc",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Rinoceronte Blanco",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Witrenoster",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "White Rhinoceros",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Rhinoceros simus Burchell, 1817",
+        "status": "ACCEPTED",
+        "genus_name": "Rhinoceros",
+        "species_name": "simus",
+        "species_author": "Burchell, 1817",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "422",
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "10080",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "14.69",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "91-100"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "422",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "3216 ",
+    "estimated_area_of_occupancy": "85705",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>Two subspecies of White Rhino are currently recognized, the Northern (NWR) and the Southern (SWR), each having a strikingly discontinuous range in recent times. However there is fossil evidence the species used to have a continuous distribution and there is genetic evidence of probable post divergence secondary contact during the last interglacial (14,000 to 26,000 years ago) facilitated by savanna grassland expansion at that time (Moodley <em>et al.</em> 2018).<br/><br/>The Northern White Rhino (NWR) used to range over parts of northwestern Uganda, southern Chad, southwestern South Sudan, the eastern part of Central African Republic, and northeastern Democratic Republic of the Congo (Sydney 1965). The previous only confirmed population in Garamba National Park in northeastern Democratic Republic of the Congo is now considered probably extinct. Despite systematic ground surveys over probable range and additional foot patrols and aerial reconnaissance no live rhinos have been seen since 2006 and no fresh sign since 2007. There continue to be unconfirmed reports/rumours of rhino in southern Sudan but these have not been reliably confirmed and wildlife poaching in this area has reportedly increased and so it is unlikely any still survive. The last four potential breeding Northern White Rhino in captivity in Dvur Kralove Zoo in the Czech Republic were translocated to a private conservancy in Kenya in the hope this would stimulate their breeding but despite mating no offspring were produced before the two old males died, and it appears the females will not breed despite attempts at inter-crossing. These two non-breeding females form the only current confirmed living NWR but cannot be included in the Red List assessments as they haven't bred since reintroduction back into the wild.&#160;Any future conservation of adaptive NWR genes now is dependent of successfully developing new assisted reproduction techniques.&#160;Researchers have collected oocytes from the two surviving NWR females and have sperm cells from five NWR that have all since died. The later could be used in IVF efforts. Advanced cellular techniques offer the potential to boost founder genetic diversity as there are stored cells and tissues from a greater number of NWR than for natural gametes. If Induced pluripotent stem cells (iPSCs) can be used to produce primordial germ cells, then there is a possibility to create oocytes and sperm from other dead NWR. If IVF can be successfully developed with embryos implanted in surrogate SWR mothers, then it should be possible to produce NWR calves. The latter when grown up could be used to create a self-sustaining population of rhinos. IVF inter-crossing could also be attempted. In time if such assisted reproductive methods can be successfully developed then once numbers have built up sufficiently some of these animals could be reintroduced back into secure areas of former range or close to former range in East Africa. There can be no guarantee's such techniques will be successful but at this stage progress has been made in creating embryos in the lab.<br/><br/>The Southern White Rhino was on the brink of extinction by the end of the 19<sup>th</sup>&#160;century (<em>c.</em>&#160;1895) having been reduced to just one small population of approximately 20–50 animals in KwaZulu-Natal, after settlers had over-hunted them for sport and to clear land for agriculture throughout almost all of their historical range&#160;(Emslie <em>et al.</em> 2009). However, by the end of 2015, after years of protection and many translocations (Emslie and Brooks 1999), the subspecies had grown to ~20,000 animals in the wild and semi-wild (Emslie <em>et al.</em> 2019) in over 400 subpopulations. The Southern White Rhino is now the most numerous of the rhino taxa, with South Africa remaining the stronghold for this subspecies despite increased poaching.<br/><br/>Southern White Rhino numbers increased rapidly from 1992-2010, averaging +7.1%/year. However population growth then slowed as poaching increased, with numbers declining from 2012 onwards.&#160;The ~15% decline in estimated continental White Rhino numbers from 2012–2017 can largely be accounted for by a drop in estimated numbers in the largest population, in South Africa’s Kruger National Park (KNP), which has been severely affected by poaching since 2007. Despite absolute numbers of White Rhinos being reported poached declining in Kruger over the last four years, so has the number of White Rhino numbers in the park. To a much lesser extent this population (and some others) were also negatively affected by a recent very bad drought. The result is that as a % of the population, poaching in Kruger NP has remained at unsustainably high levels. This is especially the case when one considers evidence that indicates some poached carcasses in this and other very large Parks are not detected (Ferreira <em>et al.</em> 2018; N. Anderson and R. du Toit pers. comm.).&#160;Fortunately some of the Kruger Park decline has been partially cancelled out by increases elsewhere - especially on private land in South Africa as well as in some other Range States. Numbers&#160;on privately-owned wild populations in South Africa that provided estimates for both 2017 and 2018 increased by +6.9% while numbers on the largest semi-wild CBO population also increased by +6.8% over the year. Numbers of White Rhino also increased by 3.1% from 2017–18 in the rest of Africa outside of South Africa (2,442 to 2,517) with just over half of this likely to have been from exports of live animals from South Africa in 2018. 90% Confidence Levels around continental Southern White Rhino estimates (derived by bootstrapping using calculated or estimated precision around estimates) for end 2017 were estimated at 17,212–18,915 (Emslie <em>et al.</em> 2019).&#160;</p>    <p>Sizeable populations occur in the greater Kruger National Park (which incorporates additional private and state reserves) and Hluhluwe-iMfolozi Park (the original source of all surviving Southern White Rhino alive today), but also occur in numerous state protected areas and private reserves (some of which are also well protected) throughout the country. Live sales, limited sport hunting and ecotourism have historically provided incentives which has resulted in a significant expansion of range and numbers on private land - especially in the major Range State South Africa. There are now more White Rhino on private land in South Africa than there are rhino in the whole of the rest of Africa. However increased poaching since 2007, resultant significantly increased security costs and reduced and limited economic incentives for their conservation have resulted in significantly reduced demand for White Rhino. Live sale prices of surplus White Rhino have declined significantly (Emslie <em>et al.</em> 2019) and an increasing number of owners seeking to get rid of their rhino. If it expands to larger populations this trend may threaten the continued expansion of range, and has the potential to also significantly reduce conservation budgets (due to declining live sales). Lower removal rates from established populations will negatively affect metapopulation growth rates in future as well as reduce budgets for conservation. There are smaller reintroduced subpopulations within the historical range of the species in Namibia, Botswana, Zimbabwe and Eswatini (formerly Swaziland). The&#160;small number that survived in Mozambique were poached out, but some animals have crossed the border into Mozambique from Kruger Park in South Africa. While they used to have a very limited lifespan if not chased back across the border into South Africa small numbers now survive in some areas due to improved protection.&#160;Populations of Southern White Rhino have also been introduced outside of the known former range of the subspecies to Kenya, Uganda and to Zambia (Emslie and Brooks 1999, Emslie <em>et al</em>. 2007). Uganda was previously a Northern White Rhino range state and so the species has been reintroduced to this country. Moodley <em>et al</em>.'s (2018) work suggests that some form of White Rhino could have been native to Zambia and Kenya prior to recent historical times.<br/><br/>An estimated four White Rhino still live in the wild two other African countries, but these are remnants of animals introduced well outside the historical range of the species.<br/><br/>While Kenya has not been a White Rhino range state in the last two hundred years; evidence from fossils and cave paintings in Kenya and northern Tanzania suggests that the White Rhino, presumably similar to the northern race (<span style=\"font-style: italic;\">Ceratotherium simum cottoni</span>), was widespread and a part of the East African savanna fauna until 3,000 years ago or less (M. Leakey pers. comm.), when it was probably displaced by pastoralists who could easily kill such tame animals (Brett 1993). This is based on the White Rhino subfossil documented by Maeve Leakey from 3,000 year from Rift Valley (Lake Nakuru area). Thus at one stage Kenya was once a White Rhino range state (subspecies unknown) and hence the White Rhino as a species but not <em>C. s. simum</em> as a subspecies has probably been reintroduced to Kenya (with the latter being an introduction of a probable out of range subspecies). A recent report of a White Rhino hunting trophy from Kenya in an Austrian Museum still has to be confirmed but merits further investigation.<br/><br/><strong>Note:</strong> At the request of certain members and countries, the IUCN SSC African Rhino Specialist Group (AfRSG) has a policy of not releasing detailed information (including maps) showing the whereabouts and names of all rhino subpopulations for security reasons. For this reason, only whole countries of occurrence are indicated on the range maps produced by the AfRSG. However, numbers by species and subspecies are routinely summarised at a continental level. Estimated numbers by country as of the end of 2017 (Emslie <em>et al</em>. (2019) <a href=\"http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf\">http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf</a>) were South Africa 15,625, Namibia 975, Kenya 513 (with 510 <em>C. s. simum</em> and 3 <em>C. s. cottoni</em>), Botswana 452, Zimbabwe 367, Eswatini 66, Mozambique 29, Uganda 22, Zambia 14. There were an additional one and three animals respectively out of range in Cote d'Ivoire and Senegal but these are not historical Range States for the species. Bootstrapped estimates of 90% confidence levels around the total point estimate for 2017 were 17,212 to 18,915. Due to incomplete information from three South African provinces at the time of writing it is not possible to provide an updated end 2018 continental estimate. Indications are that South African 2018 numbers are likely to be similar or slightly lower than 2017. End 2018 estimates for other countries were Namibia 1,082, Kenya 664 (622 SWR, 2 NWR), Botswana 401, Zimbabwe 357, Eswatini 79, Mozambique 28, Uganda 25 and Zambia 11. The continued existence of four WR out of range in West Africa is not confirmed.</p>",
+    "population": "<p>As of 31 December 2017, there were an estimated 18,064 White Rhino in the wild. The majority (99.3% ) of White Rhino occur in just five countries (South Africa, Namibia, Kenya, Botswana and Zimbabwe (Emslie<em> et al</em>. 2019 <a href=\"http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf\">http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf</a>). As of Dec 2008 there were an estimated 750 in captivity worldwide.<br/><br/>Once widespread in the bushveld areas of southern Africa south of the Zambezi River, the Southern White Rhino was on the brink of extinction by the end of the 19th century having been reduced to just one small population of approximately 20–50 animals in KwaZulu-Natal, South Africa. However, by the end of 2012, after years of protection and many translocations, the subspecies had grown to an estimated 21,316 wild animals. Following poaching increases estimated numbers had declined about 15% to 18,064 by the end of 2017 with bootstrapped 90% confidence levels of 17,212 to 18,915. South Africa remains the stronghold for this subspecies (~86.5%) conserving an estimated 18,933 individuals by the end of&#160;2012. Smaller reintroduced subpopulations occur within former Range States in Botswana, Namibia, Eswatini, and Zimbabwe; subpopulations of free-ranging Southern White Rhino have also been established outside their historical range in Kenya, Zambia (Emslie and Brooks 1999) and more recently Uganda although Uganda is a former <span style=\"font-style: italic;\">Ceratotherium simum cottoni</span>&#160;Range State and an ~3,500 year old White Rhino subfossil indicates at one stage Kenya was also once a White Rhino Range State. Numbers of White Rhino under private ownership continue to increase.<br/><br/>In the only confirmed surviving wild subpopulation in Garamba National Park, Democratic Republic of the Congo, Northern White Rhino (<span style=\"font-style: italic;\">C. s. cottoni</span>) numbers declined rapidly from 30 in April 2003 due to an upsurge in poaching, and surveys in 2006 confirmed the presence of only four rhinos (Emslie <span style=\"font-style: italic;\">et al. </span>2006). Numbers are believed to have stood at around 2,360 in 1960 (Emslie and Brooks 1999). However based largely on extensive and systematic foot surveys which failed to sight live rhino and find any signs (spoor and dung) this subpopulation is now considered probably extinct. Reports of a few possible Northern White Rhino surviving in a remote part of Southern Sudan have yet to be confirmed. The last four potential breeding Northern White Rhino in captivity were moved to a private conservancy in Kenya in the hope that a move to more wild conditions would&#160;stimulate them to breed. While the two females came into oestrus and mated no calves have been born and the two males have subsequently died. Assisted reproductive methods are being developed in the hope of being able to conserve some Northern White Rhino genes.</p>",
+    "habitats": "The species is found in grassland in bushveld savanna habitats. It is a grazer.",
+    "threats": "<p>The main threat to the population is illegal hunting (poaching) to supply the illegal international rhino horn trade. It is estimated that currently around 95% of rhino horn sourced in Africa for end user illegal markets in SE Asia are from this source (Emslie <em>et al</em>. 2019). Rhino horn has traditionally had two main uses: use in Chinese medicine, and ornamental use. Recently rhino horn has become a highly prized material for making carved expensive high-status items such bowls and bangles. In the past it was also used to produce ornately carved handles for ceremonial daggers (jambiyas) worn in Yemen and some Middle East countries. Historically rhino horn was also used in traditional Chinese medicine (as a fever reducer). However, most recently it appears to be shavings from carvings that are illegally sold to the medicinal market at lower prices than worked items. Until recently, at the continental species level, poaching of White Rhinos has not had a serious impact on overall numbers of White Rhinos in Africa, with poaching losses in parts of the range being surpassed by encouraging growth rates in others. However following declines in the largest subpopulation (Greater Kruger) continental numbers declined by an estimated 15% from 2012 to 2015. While poaching levels increased dramatically from 2007 to 2014, numbers of White Rhinos reported poached have declined in each of the four years every year since, and half year reported poaching in 2019 in the major Range State, South Africa indicates this trend is possibly continuing. See attached Supplementary Material for graphs of reported poaching numbers by year.<br/><br/>The significantly increased poaching since 2007 has greatly increased protection costs and risks to investment and staff. This has resulted in declining live sale prices and reduced incentives. Some private owners in South Africa have got rid of their rhino. If this worrying trend continues this threatens to possibly reverse the expansion of range and has the potential to also significantly reduce conservation budgets (due to declining live sales at lower prices). However, so far there appears to be a consolidation of White Rhino into larger subpopulations. For more information on threats see the joint IUCN/TRAFFIC rhino report for CITES CoP18 (Emslie <em>et al</em>. (2019) <a href=\"http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf\">http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf</a>).<br/><br/>Poaching and civil wars in both Democratic Republic of the Congo and neighbouring South Sudan had a devastating impact on Northern White Rhino. Whilst poaching pressure initially increased during civil unrest and war in the late 1990s, good reproduction enabled the population to remain relatively stable. However, since 2003, poaching escalated and the population declined rapidly with 11 carcasses found in a three-month period between March and May 2004. Confirmed numbers of Northern White Rhino fell from 30 individuals in April 2003 to just four in August 2005. No live rhino have been seen since 2006 or signs of live rhino (spoor or dung) reported since 2007 despite intensive systematic foot surveys. It is believed that the Northern White Rhino has probably gone extinct in the Democratic Republic of the Congo. Rumours persist of possible survivors in war-torn South Sudan, but as yet there has been no conclusive evidence of this being the case.&#160;</p>",
+    "measures": "<p>Effective field protection of rhino subpopulations has been critical. Many remaining rhino are now concentrated in fenced sanctuaries, conservancies, rhino conservation areas and intensive protection zones where law enforcement effort can be concentrated at effective levels. Monitoring has also provided information to guide biological management decision-making aimed at managing rhino subpopulations for rapid population growth. This has resulted in surplus animals being translocated to set up new subpopulations both within and outside the species’ former ranger. However, increasing black market prices for rhino horn, increased poaching of rhino and involvement of criminal syndicates in recent years pose a significant threat to rhino subpopulations. Strategically, White Rhinos are now managed by a range of different stakeholders (private sector and state) in a number of countries increasing their long-term security. In Southern Africa live sale of White Rhinos on auction (and limited sport hunting of surplus males) has also created incentives for private sector conservation and generated much needed funds which can help pay the high cost of successfully monitoring, protecting and managing rhino. Almost half of the White Rhino across Africa are now managed by the private sector throughout Africa with the majority in South Africa (Emslie <em>et al</em>. 2019). However, as discussed above, incentives are declining while protection costs and risks have increased resulting in some owners getting rid of their rhino.<br/><br/>By 1977, all African rhino species were listed on CITES Appendix I, and all international commercial trade in rhinos and their products was prohibited. However, following a continued increase in numbers, the South African population of Southern White Rhino was downlisted in 1994 to Appendix II, but only for trade in live animals to “approved and acceptable destinations” and for the (continued) export of hunting trophies. Numbers have almost trebled since then. In 2004, Eswatini's (formerly Swaziland) Southern White Rhino were also downlisted to CITES Appendix II, but only for live export and for limited export of hunting trophies according to specified annual quotas. To help reduce illegal trade, and complement CITES international trade bans, domestic anti-trade measures and legislation were implemented in the 1990s by a number of the major consumer states and law enforcement effort has been stepped up in many consumer countries. Demand reduction initiatives are also underway in key implicated states such as Viet Nam.<br/><br/>In addition to local, national, international and continental initiatives, there are a number of regional African rhino conservation initiatives: the South African Development Community (SADC) Rhino Management Group , a recently revitalised East African Rhino Management Group and the Southern African Rhino and Elephant Security Group. IUCN SSC's African Rhino Specialist Group is the continental coordinating body for rhino conservation in Africa. In addition to National Rhino Plans there is a Continental African Rhino Range States Conservation Plan. IUCN SSC African Rhino Specialist Group is the continental coordinating body for rhino conservation in Africa.<br/><br/>For a more detailed summary of conservation actions see the joint IUCN/TRAFFIC rhino report for CITES CoP18 (Emslie <em>et al</em>. (2019) <a href=\"http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf\">http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf</a>).<br/><br/>Financial challenges and high-security costs continue to disincentivise private rhino owners with live sale prices of White Rhino remaining low. In some auctions in 2018 no White Rhino were sold.</p>",
+    "use_trade": "It has been estimated that around 95% of horn sourced in Africa for illegal markets in Asia in 2016 and 2017 came from poached animals in the wild (Emslie <em>et al.</em> 2019). In some cases horn for illegal markets has been stolen or illegally sold from horn stockpiles/private trophies/museum exhibits. “Pseudo-hunting” where sport hunting has been undertaken by individuals from non-traditional hunting countries with the aim of illegally providing horn to illegal markets has also been responsible for some of the illegal horn getting onto end-user markets although this has reduced considerably since South Africa implemented a number of measures in 2012. At one stage as much as 18% of the horn sourced for illegal markets came from this source (Emslie <em>et al.</em> 2012) but most recent estimates suggest this source only contributes 0.7% (Emslie <em>et al. </em>2019). Live specimens for translocation are invariably taken from natural habitat, but this forms part of routine biological management of the species to meet genetic and demographic goals. This is because many established wild subpopulations require regular removals to prevent “overstocking” and maintain rapid population growth rates. Maintaining rapid underlying population growth rates also minimises loss of genetic diversity over time due to genetic drift. Given the high price of sport-hunting, and clamp down on pseudo-hunting by South Africa in 2012, only about 75 White Rhino are currently sport hunted per year in Africa. This is less than 0.5% of the population annually. For more information see Emslie <em>et al</em>. (2019) <a href=\"http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf\">http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf</a>.",
+    "rationale": "<p>The reason for assessing this species as Near Threatened and not Least Concern continues to be the continued and high poaching threat and illegal demand for horn in SE Asia (especially Viet Nam and China), increased involvement of organised international criminal syndicates in rhino poaching (see Emslie <em>et al.</em> (2019)&#160;<a href=\"http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf\">http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf</a>&#160;for further details). Protection efforts depend on significant Range State expenditure and effort, and if these were to decline rampant poaching could seriously threaten numbers (well in excess of 30% over three generations). Declining state budgets for conservation in real terms, declining capacity in some areas and increasing arrests of Southeast Asians for rhino crimes in African Range States are all of concern. Estimated White Rhino numbers have declined 15% from 2012–17 in response to increased poaching. This decline has largely been because of a major decline in the largest subpopulation in Greater Kruger due to poaching. While absolute numbers poached in this park continue to decline, so have White Rhino numbers with the result that in relative terms poaching has remained at unsustainable levels. Fortunately, White Rhino numbers have been increasing in many other populations and since White Rhino poaching peaked in 2014 it has declined in response to considerably increased law enforcement and protection efforts. Reported poaching in the major Range State South Africa is also down in 2019. While the White Rhino is close to having less than 10,000 mature individuals, it would not meet any other of the additional criteria under C1 or C2.<br/><br/><strong>In summary the rationale for treating White Rhino as Near Threatened and not Least Concern is that in the&#160;</strong><strong>numbers could decline significantly in the&#160;</strong><strong>absence of, or significant reduction of current conservation measures.&#160;</strong><strong>Despite White Rhino point estimates declining by an estimated 15% from 2012–17, numbers are&#160;</strong><strong>nowhere near reaching critical thresholds under criteria A2 or A4 (see Figures 4 and 5 and Tables 4 and 5 in the attached S</strong><strong>upplementary Information document). Recorded White Rhino poaching has been declining since 2014.</strong></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>While some researchers have proposed species status for both Northern (<em>Ceratotherium simum</em> <em>cottoni</em>) and Southern White Rhinoceros (hereafter White Rhino;<em> Ceratotherium simum simum</em>) (Groves <em>et al</em>. 2010), subspecies status was supported following comparison of whole mitochondrial genome sequences of&#160; four Northern and three Southern White Rhino (Harley <em>et al</em>. 2016) and comparisons of nuclear and mitochondrial markers for a much larger sample size of extant and historical specimens dating back to the nineteenth century (Moodley <em>et al.</em> 2018).&#160; Harley <em>et al</em>. (2016) estimated the time of divergence of NWR and SWR was in the range of 0.5 to 1 m years with the time of lineage splitting likely to be much more recent (possibly ~200,000 years). Eric Harley also found identical 10 base pair repeats, noting that as these tend to be unstable this is more in line with NWR being a subspecies rather than a separate species. He was critical of \"species inflation\" that can sometimes be derived using a phylogenetic approach to defining species (e.g. Mountain Zebra). A comparison of downloaded Mitochondrial DNA sequences from ten different humans revealed that modern humans differed from each other by a maximum of 0,7%. This level of difference was very similar to the 0.9% average difference he recorded between NWR and SWR and in line with treating NWR as a subspecies.&#160; Moodley&#160;<em>et al</em>.'s&#160;(2018) analysis estimated time since divergence between the two WR lineages at approximately 0.97 m years with wide confidence levels of +/- 0.5m years.&#160;Both nuclear and mitochondrial markers structured the species into two distinct populations/clades (corresponding to NWR and SWR). However, Moodley <em>et al.</em> (2018)&#160; also detected post divergence secondary contact between NWR and SWR and that this possibly occurred as recently as the last glacial maximum (14,000 to 26,000 years ago). Gene flow between the two populations will have been facilitated by grassland expansions at that time. In addition it might also prove desirable to try inter-crossing the subspecies as part of assisted reproductive efforts to recover and conserve some NWR genes. The IUCN SSC African Rhino Specialist Group continues to treat the two taxa as subspecies rather than separate species.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Assisted Colonisation",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage",
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Assisted Colonisation",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Assisted Colonisation",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Assisted Colonisation",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Likely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "Chromoleana , Parthenium and Lantana are problem aliens. Clearing and treatment are expensive.  ",
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Emslie, R.",
+      "value": [
+        "Richard Emslie (IUCN SSC African Rhino Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Brett, R.A., Adcock , K. & Knight, M.H.",
+      "value": [
+        "Keryn Adcock ",
+        "Robert Brett (Fauna and Flora International / IUCN SSC African Rhino Specialist Group)",
+        "Mike Knight (IUCN SSC African Rhino Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Anderson, N., Aruho, R., Balfour, D., Beytell, P., Chomba, A., du Toit, R., Ferreira, S.M., Jones, P., Kariuki, L., Khayale, C., Pereira, C.L., Reilly, M., Reuben, M. & Zhuwau, C.",
+      "value": [
+        "Raoul du Toit (IUCN SSC African Rhino Specialist Group)",
+        "Dave Balfour (IUCN SSC African Elephant RLA)",
+        "Linus Kariuki (Kenya Wildlife Service / IUCN SSC African Rhino Specialist Group)",
+        "Cedric Khayale (Kenya Wildlife Service / IUCN SSC African Rhino Specialist Group)",
+        "Carlos Pereira (IUCN SSC African Rhino Specialist Group)",
+        "Piet Beytell (Ministry of Environment and Tourism, Namibia · Wildlife Research  / IUCN SSC African Rhino Specialist Group)",
+        "Robert Aruho (Uganda Wildlife Authority)",
+        "Andrew Chomba (Zambian Department of National Parks and Wildlife)",
+        "Colum Zhuwau (Kavango Zambezi Transfrontier Conservation Area (KAZA TFCA), Zimbabwe)",
+        "Pelham Jones (IUCN SSC African Rhino Specialist Group)",
+        "Mmadi Reuben (Botswana Wildlife and National Parks Department / IUCN SSC African Rhino Specialist Group)",
+        "Sam Ferreira (South African National Parks / IUCN SSC African Rhino Specialist Group)",
+        "Natasha Anderson (International Rhino Foundation / IUCN SSC African Rhino Specialist Group)",
+        "Mickey Reilly (Big Game Parks, Eswatini / IUCN SSC African Rhino Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Groves, C.P., Fernando, P. and Robovský, J. 2010. The Sixth Rhino: A Taxonomic Re-Assessment of the Critically Endangered Northern White Rhinoceros. <i>PLoS ONE</i> 5(4): e9703. doi:10.1371/journal.pone.0009703.",
+      "year": "2010",
+      "title": "The Sixth Rhino: A Taxonomic Re-Assessment of the Critically Endangered Northern White Rhinoceros",
+      "author": "Groves, C.P., Fernando, P. and Robovský, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R. and Brooks, M. 1999. <i>African Rhino: Status Survey and Action Plan</i>. IUCN, Gland, Switzerland.",
+      "year": "1999",
+      "title": "African Rhino: Status Survey and Action Plan",
+      "author": "Emslie, R. and Brooks, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sydney, J. 1965. The past and present distribution of some African ungulates. <i>Transactions of the Zoological Society of London</i> 3: 1–397.",
+      "year": "1965",
+      "title": "The past and present distribution of some African ungulates",
+      "author": "Sydney, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reid, C. 2006. Aerial Survey – Garamba National Park, Democratic Republic of Congo. APF/ICCN Report.",
+      "year": "2006",
+      "title": "Aerial Survey – Garamba National Park, Democratic Republic of Congo",
+      "author": "Reid, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R. H., Milledge, S., Brooks, M., Strien, N. J., van and Dublin, H. 2007. African and Asian Rhinoceroses – Status, Conservation and Trade.  A report from the IUCN Species Survival Commission (SSC) African and Asian Rhino Specialist Groups and TRAFFIC to the CITES Secretariat pursuant to Decisions 13.23-25 taken at the 13th meeting of the Conference of the Parties, and further deliberations at the 53rd and 54th meetings of the Standing Committee.",
+      "year": "2007",
+      "title": "African and Asian Rhinoceroses – Status, Conservation and Trade",
+      "author": "Emslie, R. H., Milledge, S., Brooks, M., Strien, N. J., van and Dublin, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R. H., Reid, C. and Tello, J. 2006. Report on the different target species counted and evidence of poaching activity recorded during aerial surveys undertaken in Southern Garamba national park and adjoining Domaine de Chasse Gangala na Bodio, Democratic Repulic of Congo 17th-30th March 2006. APF/ICCN Report.",
+      "year": "2006",
+      "title": "Report on the different target species counted and evidence of poaching activity recorded during aerial surveys undertaken in Southern Garamba national park and adjoining Domaine de Chasse Gangala na Bodio, Democratic Repulic of Congo 17th-30th March 2006",
+      "author": "Emslie, R. H., Reid, C. and Tello, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brett, R.A. 1993. <i>Conservation Strategy and Management Plan for the Black Rhinoceros (</i>Diceros bicornis<i>) in Kenya</i>. Kenya Wildlife Service.",
+      "year": "1993",
+      "title": "Conservation Strategy and Management Plan for the Black Rhinoceros (<i>Diceros bicornis</i>) in Kenya",
+      "author": "Brett, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R.H. 2011. Updated Rhino Numbers – Summary  in Confidential Proceedings of the Ninth Meeting of the IUCN African Rhino Specialist Group. IUCN African Rhino Specialist Group, Mokala National Park Swaziland.",
+      "year": "2011",
+      "title": "Updated Rhino Numbers – Summary  in Confidential Proceedings of the Ninth Meeting of the IUCN African Rhino Specialist Group",
+      "author": "Emslie, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R. H., Milledge, S., Brooks, M., Strien, N. J., van and Dublin, H. 2007. African and Asian Rhinoceroses – Status, Conservation and Trade.  A report from the IUCN Species Survival Commission (SSC) African and Asian Rhino Specialist Groups and TRAFFIC to the CITES Secretariat pursuant to Decisions 13.23-25 taken at the 13th meeting of the Conference of the Parties, and further deliberations at the 53rd and 54th meetings of the Standing Committee.",
+      "year": "2007",
+      "title": "African and Asian Rhinoceroses – Status, Conservation and Trade",
+      "author": "Emslie, R. H., Milledge, S., Brooks, M., Strien, N. J., van and Dublin, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 March 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-1"
+    },
+    {
+      "citation": "Moodley, Y., Russo, I.-R.M., Robovsky, J., Dalton, D., Kotzé, A., Smith, S., Stejskal, J., Ryder, O.A., Hermes, R., Walzer, C. and Bruford, M.W. 2018. Contrasting evolutionary history, anthropogenic declines and genetic contact in the northern and southern white rhinoceros (<i>Ceratotherium simum</i>). <i>Proceedings B of the Royal Society of London</i> 285: 1–9.",
+      "year": "2018",
+      "title": "Contrasting evolutionary history, anthropogenic declines and genetic contact in the northern and southern white rhinoceros (<i>Ceratotherium simum</i>)",
+      "author": "Moodley, Y., Russo, I.-R.M., Robovsky, J., Dalton, D., Kotzé, A., Smith, S., Stejskal, J., Ryder, O.A., Hermes, R., Walzer, C. and Bruford, M.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R.H., Amin, R. and Kock, R. 2009. Guidelines for the <i>in situ</i> re-introduction and translocation of African and Asian rhinoceros. Available at: <a href=\"http://www.iucn.org/dbtw-wpd/html/SSC-OP- 039/cover.html.\">http://www.iucn.org/dbtw-wpd/html/SSC-OP- 039/cover.html.</a>. ",
+      "year": "2009",
+      "title": "Guidelines for the <i>in situ</i> re-introduction and translocation of African and Asian rhinoceros",
+      "author": "Emslie, R.H., Amin, R. and Kock, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Emslie, R.H., Milliken, T. and Talukdar, B. 2012. African and Asian Rhinoceroses – Status, Conservation and Trade. CoP16, Doc. 54-2-Annexe 2. CITES Secretariat, Geneva, Switzerland.",
+      "year": "2012",
+      "title": "African and Asian Rhinoceroses – Status, Conservation and Trade. CoP16, Doc. 54-2-Annexe 2",
+      "author": "Emslie, R.H., Milliken, T. and Talukdar, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Emslie, R., Milliken, T., Talukdar, B., Burgess, G., Adcock, K., Balfour, D. and Knight. M.H. 2019. African and Asian Rhinoceroses – Status, Conservation and Trade: A report from the IUCN Species Survival Commission (IUCN/SSC) African and Asian Rhino Specialist Groups and TRAFFIC to the CITES Secretariat pursuant to Resolution Conf. 9.14 (Rev. CoP17). CoP18 Doc. 83.1 Annex 2. CITES Secretariat, Geneva, Switzerland. http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf.",
+      "year": "2019",
+      "title": "African and Asian Rhinoceroses – Status, Conservation and Trade: A report from the IUCN Species Survival Commission (IUCN/SSC) African and Asian Rhino Specialist Groups and TRAFFIC to the CITES Secretariat pursuant to Resolution Conf. 9.14 (Rev. CoP17). CoP18 Doc. 83.1 Annex 2. CITES Secretariat, Geneva, Switzerland. http://www.rhinoresourcecenter.com/pdf_files/156/1560170144.pdf",
+      "author": "Emslie, R., Milliken, T., Talukdar, B., Burgess, G., Adcock, K., Balfour, D. and Knight. M.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreira, S.M., Hass, T., Le Roex, N, Greaver, C. and Simms, C. 2018. Evaluating the protection of rhinoceroses from poaching. Unpublished SANParks report. (Corresponding author: sam.ferreira@sanparks.org).",
+      "year": "2018",
+      "title": "Evaluating the protection of rhinoceroses from poaching. Unpublished SANParks report. (Corresponding author: sam.ferreira@sanparks.org)",
+      "author": "Ferreira, S.M., Hass, T., Le Roex, N, Greaver, C. and Simms, C.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

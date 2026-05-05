@@ -1,0 +1,869 @@
+{
+  "assessment_date": "2012-07-15T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 190603,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/190603/15357215",
+  "citation": "Luiselli, L., Jallow, M., Trape, J.-F., Chirio, L., Johnny, J., Segniagbeto, G., Howell, K., Msuya, C.A. & Ngalason, W. 2021. Dispholidus typus. The IUCN Red List of Threatened Species 2021: e.T190603A15357215. Accessed on 05 May 2026.",
+  "assessment_id": 15357215,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 190603,
+    "scientific_name": "Dispholidus typus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 110133892,
+        "scientific_name": "Dispholidus typus ssp. typus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "COLUBRIDAE",
+        "genus_name": "Dispholidus",
+        "species_name": "typus",
+        "subpopulation_name": null,
+        "infra_name": "typus",
+        "authority": "(A. Smith, 1829)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Boomslang",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "COLUBRIDAE",
+    "genus_name": "Dispholidus",
+    "species_name": "typus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(A. Smith, 1828)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Boomslang",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Bucephalus typus A. Smith, 1828",
+        "status": "ACCEPTED",
+        "genus_name": "Bucephalus",
+        "species_name": "typus",
+        "species_author": "A. Smith, 1828",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2400,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This snake is very widespread in sub-Saharan Africa, ranging from Senegal in the west to East Africa (north to Eritrea, Ethiopia and Somalia - Largen 1997), and south to South Africa (Trape and Mané 2006). In West Africa it has been reported from Senegal, the Gambia, Guinea, Guinea-Bissau, Cöte d'Ivoire, Ghana, southern Mali, Burkina Faso, Nigeria and Cameroon (Trape and Mané 2006), and also ranges into northern Sierra Leone and Liberia. It is also widespread in Togo, where it occurs as far north as Aledjo but may extend to the Sudanese savannah of the country's far north (Segniagbeto <span style=\"font-style: italic;\">et al. </span>2011). It occurs from sea level to 2,400 m asl in Ethiopia (Largen and Rasmussen 1993), although in East Africa it appears to be absent above 2,200 m asl (Spawls <em>et al</em>. 2002). The paucity of records from northern Kenya, western Tanzania and much of Ethiopia is probably an artefact of under-recording of this cryptic snake (Largen and Rasmussen 1993, Spawls <em>et al.</em> 2002). A number of records exist for South Sudan (Loveridge 1955).",
+    "population": "This snake is relatively common in some areas but rare in others. Its population is thought to be stable.",
+    "habitats": "This is a diurnal, almost wholly arboreal snake of open forest and savanna (from moist savanna to semi-desert - Spawls<em> et al</em>. 2002). It is particularly associated with savanna woodland and thornbush (Largen and Rasmussen 1993) and usually absent from high grassland and dense forest (Spawls <em>et al.</em> 2002). This fast-moving snake preys on arboreal lizards, including chameleons and agamas as well as smaller lizards (Trape and Mané 2006), but will also take rodents, frogs, nestlings and bird eggs (Spawls<em> et al.</em> 2002). Females&#160;lay 8 to 25 eggs in warm, moist microhabitats such as deep holes or damp tree hollows (Spawls<em> et al.</em> 2002).&#160;Incubation&#160;time is 3–4 months in East Africa (Spawls <em>et al</em>. 2002).",
+    "threats": "There are no major threats to this very widespread snake.",
+    "measures": "It is unlikely that any specific conservation measures are required for this species. The Boomslang occurs in Yankari National Park in Nigeria and Mole National Park in Ghana; it is certain that this very wide-ranging snake occurs within more protected areas than is currently known. Taxonomic research is underway into the systematics of this likely species complex.",
+    "use_trade": "There is some trade from Tanzania, with a current export quota of 200 animals (J. Beraducci pers. comm. 2014). It is not likely that the species is exported in these numbers, as it is dangerous and difficult to keep. Jensen <em>et al</em>. (2018) found that, although the species commands high prices from private sellers, between 2013 and 2017 only 61 animals were recorded in trade from Tanzania, Uganda, Cameroon and Togo combined.",
+    "rationale": "Listed as Least Concern because the Boomslang has a very wide distribution and an apparently stable population, and is subject to no major threats.",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Dispholidus</em> is presently considered to be a monotypic genus, however the complex pattern of regional morphological variation in this very widespread snake has led to suggestions that the species is a complex (summarized by Eimermacher 2012). On the basis of molecular evidence, this author identified four clades within <em>D. typus </em>that are likely to warrant recognition at specific status. Formal descriptions based on these results and on morphological data are in preparation, and additional cryptic species may be found within the <em>D. typus</em> complex (Eimermacher 2012). Broadley and Blaylock (2013) considered populations in (mainly) the Western and Eastern Cape provinces as being referable to&#160;<em>D. t. typus</em>, while populations elsewhere in the range (where males are usually mainly green dorsally) were treated as&#160;<em>D. t. viridis</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Luiselli, L., Jallow, M., Trape, J.-F., Chirio, L., Johnny, J., Segniagbeto, G., Howell, K., Msuya, C.A. & Ngalason, W.",
+      "value": [
+        "Mawdo Jallow",
+        "Wilirk Ngalason",
+        "Johnson Johnny",
+        "Gabriel Segniagbeto",
+        "Jean-François Trape",
+        "Laurent Chirio (Grasse, Provence-Alpes-Côte d'Azur, France)",
+        "Charles Msuya (University of Dar es Salaam)",
+        "Kim Howell",
+        "Luca Luiselli (Institute for Development Ecology Conservation and Cooperation (IDECC))"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P. & Cox, N.A.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)",
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Largen, M.J. 1997. An annotated checklist of the amphibians and reptiles of Eritrea, with keys for their identification. <i>Tropical Zoology</i> 10: 63-115.",
+      "year": "1997",
+      "title": "An annotated checklist of the amphibians and reptiles of Eritrea, with keys for their identification",
+      "author": "Largen, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, Elsevier Science, San Diego, San Francisco, New York, Boston, London.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trape, J.-F. and Mané, Y. 2006. <i>Guide des serpents d'Afrique occidentale - savane et désert</i>. IRD Editions, Paris.",
+      "year": "2006",
+      "title": "Guide des serpents d'Afrique occidentale - savane et désert",
+      "author": "Trape, J.-F. and Mané, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Branch, W.R. 1998. <i>Field Guide to Snakes and other Reptiles of Southern Africa. Third Edition</i>. Struik Publishers, Cape Town.",
+      "year": "1998",
+      "title": "Field Guide to Snakes and other Reptiles of Southern Africa. Third Edition",
+      "author": "Branch, W.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Largen, M.J. and Rasmussen, J.B. 1993. Catalogue of the snakes of Ethiopia (Reptilia: Serpentes), including identification keys. <i>Tropical Zoology</i> 6(2): 313-434.",
+      "year": "1993",
+      "title": "Catalogue of the snakes of Ethiopia (Reptilia: Serpentes), including identification keys",
+      "author": "Largen, M.J. and Rasmussen, J.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luiselli, L., Akani, C.G., Rugiero, L. and Politano, E. 2005. Relationships between body size, population abundance and niche characteristics in the communities of snakes from three habitats in southern Nigeria. <i>Journal of Zoology, London</i> 265: 207–213.",
+      "year": "2005",
+      "title": "Relationships between body size, population abundance and niche characteristics in the communities of snakes from three habitats in southern Nigeria",
+      "author": "Luiselli, L., Akani, C.G., Rugiero, L. and Politano, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Loveridge, A. 1955. On snakes collected in the Anglo-Egyptian Sudan by J.S. Owen, Esq. <i>Sudan Notes and Records</i> 36(37-55).",
+      "year": "1955",
+      "title": "On snakes collected in the Anglo-Egyptian Sudan by J.S. Owen, Esq.",
+      "author": "Loveridge, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spawls, S., Howell, K., Drewes, R. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, London and San Diego.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K., Drewes, R. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marais, J. 2004. <i>A Complete Guide to the Snakes of Southern Africa</i>. Struik, Cape Town.",
+      "year": "2004",
+      "title": "A Complete Guide to the Snakes of Southern Africa",
+      "author": "Marais, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Broadley, D.G. and Blaylock, R. 2013. <i>The Snakes of Zimbabwe and Botswana</i>. Edition Chimaira, Frankfurt am Main.",
+      "year": "2013",
+      "title": "The Snakes of Zimbabwe and Botswana",
+      "author": "Broadley, D.G. and Blaylock, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jensen, T.J., Auliya, M., Burgess, N.D., Aust, P.W., Pertoldi, C. and Strand, J. 2018. Exploring the international trade in African snakes not listed on CITES: highlighting the role of the internet and social media. <i>Biodiversity and Conservation</i>: 1-19 (in press).",
+      "year": "2018",
+      "title": "Exploring the international trade in African snakes not listed on CITES: highlighting the role of the internet and social media",
+      "author": "Jensen, T.J., Auliya, M., Burgess, N.D., Aust, P.W., Pertoldi, C. and Strand, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Broadley, D.G., Doria, C.T. and Wigge, J. 2003. <i>Snakes of Zambia. An Atlas and Field Guide</i>. Edition Chimaira, Frankfurt.",
+      "year": "2003",
+      "title": "Snakes of Zambia. An Atlas and Field Guide",
+      "author": "Broadley, D.G., Doria, C.T. and Wigge, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-2"
+    },
+    {
+      "citation": "Eimermacher, T.G. 2012. Phylogenetic systematics of Dispholidine colubrids (Serpentes: Colubridae). University of Texas.",
+      "year": "2012",
+      "title": "Phylogenetic systematics of Dispholidine colubrids (Serpentes: Colubridae)",
+      "author": "Eimermacher, T.G.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

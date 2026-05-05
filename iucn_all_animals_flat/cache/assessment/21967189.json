@@ -1,0 +1,746 @@
+{
+  "assessment_date": "2015-06-15T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12650,
+  "criteria": "C1",
+  "url": "https://www.iucnredlist.org/species/12650/21967189",
+  "citation": "Burbidge, A.A. & Woinarski, J. 2016. Macrotis lagotis. The IUCN Red List of Threatened Species 2016: e.T12650A21967189. Accessed on 05 May 2026.",
+  "assessment_id": 21967189,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12650,
+    "scientific_name": "Macrotis lagotis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PERAMELEMORPHIA",
+    "family_name": "THYLACOMYIDAE",
+    "genus_name": "Macrotis",
+    "species_name": "lagotis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Reid, 1837)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Australasian Marsupial and Monotreme Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/mammals/specialist-groups-a-e/australasian-marsupial-and-monotreme",
+        "description": "Co-Chairs: John Woinarski (email: John.Woinarski@cdu.edu.au) and Diana Fisher (email: d.fisher@uq.edu.au)\nRed List Authority Coordinator: Chris Johnson (email: c.n.johnson@utas.edu.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Dalgyte",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Greater Bilby",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Greater Rabbit-eared Bandicoot",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cangurito Narigudo Grande",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Grand Bandicoot-lapin",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Grand Péramèle-lapin",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Bilby",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Perameles lagotis Reid, 1837",
+        "status": "ACCEPTED",
+        "genus_name": "Perameles",
+        "species_name": "lagotis",
+        "species_author": "Reid, 1837",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": "20",
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "9000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "4",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "11-20"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "20",
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "1900",
+    "estimated_area_of_occupancy": "2150",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "3100000",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>The Bilby formerly occurred over 70% of arid and semi-arid mainland Australia south of latitude 18°S. It appears to have become extinct in New South Wales and southern South Australia around the 1940s (Copley <em>et al</em>. 2003) or more likely, from Aboriginal knowledge, at least the 1950s (P. Copley pers. comm.). It disappeared from the Flinders Ranges in the 1920s (Tunbridge 1991) and from northern South Australia in the 1930s. The species declined dramatically in south-western Australia in the 1920s and 1930s, although it may have persisted until the 1970s or even the 1980s (Abbott 2001). It occurs patchily on the Dampier Peninsula, Western Australia.</p>    <p>The range of the Bilby has declined northwards and the decline is continuing. Wild subpopulations are now restricted predominantly to the Tanami Desert (Northern Territory), the Gibson, Little Sandy and Great Sandy Deserts (Western Australia), parts of the Pilbara (Western Australia) and an outlying series of disjunct subpopulations associated with both sides of the Diamantina River channels within the stony and clay chenopod plains approximately between Boulia and Birdsville (south-western Queensland) (Johnson 2008, Gibson <em>et al</em>. 1990). Historically, the area occupied by Bilbies in Queensland has declined by &gt;95% (McRae 2004) and there has been a recent further significant decline.</p>    <p>It was successfully introduced to Thistle Island (39 km<sup>2</sup>), South Australia in 1998. It has been reintroduced to the Arid Recovery Reserve mainland island near Roxby Downs in 2000, 2003 and 2005 (South Australia; 123 km<sup>2</sup> of which 60 km<sup>2</sup> are free of all Rabbits, Red Foxes and Cats: Moseby <em>et al</em>. 2011) and to mainland islands at Scotia Sanctuary in 2004 (c. 80 km<sup>2</sup>) in western New South Wales and Yookamurra Sanctuary in 2007 (c. 11 km<sup>2</sup>) in South Australia (M. Hayward pers. comm.). It has been reintroduced to François Peron National Park, Shark Bay in 1997 and to Lorna Glen, a former pastoral station in the eastern Murchison of Western Australia where Red Foxes and feral Cats are controlled, with 128 captive-bred Bilbies being released between 2007 and 2009 (K. Morris pers. comm.). Bilbies will be reintroduced to Mt Gibson Sanctuary in Western Australia once the fence around the mainland island (40-60 km<sup>2</sup>) is complete (S. Legge pers. comm.).</p>    <p>The southern edge of Bilby distribution in the Northern Territory has contracted north by &gt;100&#160;km per decade over the past twenty years (Paltridge and Eldridge 2009). Bilbies are now restricted to areas of the Tanami Desert where foxes are absent or at very low densities. In contrast, 2012 surveys of the southern edge of the range of the Bilby on the Ngaanyatjarra Lands in Western Australia revealed no change to the southern extent of Bilby distribution in eastern Western Australia over the past decade (R. Paltridge pers. comm.).</p>",
+    "population": "<p>Available estimates from Friend <em>et al</em>. (2008) and subsequent information, based on a variety of counts, density estimates and other methodologies, are:</p><strong>  Natural subpopulations  </strong><p>Western Australia: 5000-10&#160;000</p>  <p>Northern Territory: &lt;1000</p>  <p>Queensland: 200-500 (however, there has been a subsequent recent significant decline, largely due to Cat predation)</p>  Reintroduced subpopulations  <p>Thistle Island (South Australia): c. 500 individuals</p>  <p>Lorna Glen (Western Australia): a 2012 survey estimated between 128 and 339 bilbies (N. Burrows pers. comm.).</p>  <p><strong>Mainland island subpopulations</strong>:</p>  <p>Peron Peninsula, François Peron National Park (Western Australia): 200</p>  <p>Venus Bay (South Australia): 100</p>  <p>Arid Recovery (Roxby Downs, South Australia): 500</p>  <p>Yookamurra (South Australia): 200 (2012)</p>  <p>Scotia (New South Wales): 1900 (2012)</p>  Currawinya National Park (Queensland): estimated at 150, recently declined as a result of Cat invasion.    <p>Across natural, introduced and mainland island subpopulations, these estimates tally to c.&#160;9000-15&#160;000 individuals; the number of mature individuals would be fewer. We consider the figure for Western Australia to be high; and assume the number of mature individuals to be &lt;10&#160;000. The limited available information suggests a current decline in at least some natural subpopulations (and at least one mainland island population), with this decline not yet outweighed by increasing size and number of translocated subpopulations.</p>    <p>Captive colonies are managed as two separate units. Queensland colonies are held by Currumbin Wildlife Sanctuary, David Fleays Wildlife Park, Dreamworld, Ipswich Nature Centre, Wildlife Sydney and Taronga Zoo; Northern Territory colonies are managed via a Conservation Program involving Adelaide Zoo, Alice Springs Desert Park, Australia Walkabout Wildlife Park, Cleland Wildlife Park, Halls Gap Zoo Healesville Sanctuary, Melbourne Zoo, Monarto Zoological Park, and Perth Zoo (Ford and Hogg 2012).</p>",
+    "habitats": "<p>Bilbies are a solitary species, sheltering in burrows, which may be up to 3 m deep and often descend in a spiral. Burrows are usually isolated, but may be complex and there may be many within a relatively small area; an individual Bilby may dig more than 12 burrows within its home range. Bilbies are nocturnal and burrows are occupied during daylight and intermittently during the night. An omnivore, the Bilby eats a variety of plant and animal materials, including grass and sedge seeds, bulbs particularly from Bush Onion <em>Cyperus bulbosus</em>, and invertebrates, especially termites, but also ants, spiders, beetles and insect larvae (Southgate 1990b; Navinth <em>et al</em>. 2009). Most food is obtained by digging. Mature males range more widely than females and have been recorded occupying burrows over 5 km apart on consecutive days (Southgate and Possingham 1995; McRae 2004). Estimates of short-term home range sizes in the Northern Territory varied from 1.1 to 3 km<sup>2</sup> (Southgate and Paltridge 1998). Mean home range sizes recorded from wild populations in Queensland are 51 ha for males and 20 ha for females. Burrow ranges are considerably smaller at 15.3 ha for males and 3 ha for females (McRae 2004).</p>  <br/>Remaining subpopulations occupy three major vegetation types: open tussock grassland on uplands and hills, mulga woodland/shrubland growing on ridges and rises, and hummock grassland in plains and alluvial areas. Bilbies will move to new home ranges once food becomes scarce. At Watarrka National Park, one group moved 10.5 km from a release site during a three-year period (Southgate and Possingham 1995).",
+    "threats": "The major threat to the Bilby is predation by introduced red foxes and feral cats, exacerbated by changed fire regimes. Predation by dingoes, and habitat degradation by livestock are lesser threats.",
+    "measures": "<p>A 2006 recovery plan (Pavey 2006) included the following actions</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Control predators at key Bilby populations</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Continue husbandry and coordinated management of captive populations</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Continue to reintroduce the species to predator-free or predator-controlled sites across its former range</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Refine monitoring methodology</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Monitor trends in occurrence and abundance of the greater Bilby across its range including at reintroduction sites</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Measure impact of threatening processes on Bilby populations at reintroduction sites.</p>    <p>An updated recovery plan is in preparation. Implementation is ongoing. The national Bilby recovery team meets irregularly (every 3-4 years) as part of national arid zone threatened fauna forums. Predator control is limited to semi-captive, fenced subpopulations, except for small-scale predator control conducted by the Central Land Council utilizing fox-specific bait stations at a key Bilby subpopulation in the Tanami Desert (R. Paltridge&#160;pers. comm.). Reintroduction was attempted at Dryandra (WA), where fox control is in place; however it was not successful due to predation by remaining and immigrating foxes as well as feral Cats. An introduction to the 39 km<sup>2</sup> Thistle Island (South Australia) has been successful, as has a reintroduction to the 123 km<sup>2</sup> Arid Recovery Reserve mainland island, Roxby Downs (South Australia which is free of all Rabbits, Red Foxes and Cats (Moseby <em>et al</em>. 2011). Aerial and ground surveys have been conducted in south-west Queensland and limited surveys have been carried out in the Tanami Desert, Northern Territory. A re-introduction to Venus Bay peninsula (South Australia) appears to have been successful initially, and then failed due to the presence of feral Cats within the fenced area. The presence and occurrence of Bilby is being monitored in Western Australia’s desert rangelands through a partnership with Rangelands NRM, Department of Environment and Conservation, Kanyirninpa Jukurrpa and Central Desert Native Title Services. The track-based monitoring methodology has been applied (Southgate and Moseby 2008) across a large area, including Birriliburu, Martu, Ngurrupa and Spinifex native title determinations, and the Pilki and Yilka native title claim areas. Bilby sign has been detected in the Martu and Birriliburu determinations, and on-ground activities to protect these populations are being implemented by the traditional owners.</p><p>  </p><p>In Queensland, Bilby subpopulations are managed via control of introduced predators. Some indigenous ranger groups in the Northern Territory and Western Australia are carrying out fire and predator management. In the desert rangelands area of Western Australia, traditional owners are implementing on-ground activities in areas where Bilbies have been detected through the track-based monitoring program, the key activity being implemented being cool-season patch burning to create a diversity of food resources and habitat, and shelter from predators. Traditional hunting of predators is also encouraged in the desert rangelands, particularly close to Aboriginal communities on country, though the feasibility of maintaining low densities of predators in more remote areas through traditional hunting is very limited. In the Tanami Desert, Northern Territory, the Central Land Council is developing a discriminatory baiting program at one of the most important Bilby sites. Studies of predator diets in this area have revealed a high proportion of Cat remains in Dingo scats. In an attempt to control the fox population without affecting the resident Dingoes, fox-specific bait stations are being trialled in habitats frequented by Dingoes. Expert tracking skills also assist strategically placement of fox baits on the ground along regularly used fox trails and broad-scale baiting is being conducted in surrounding habitats where Dingoes and Bilbies only occasionally occur, to create a buffer zone of low fox density (R. Paltridge pers. comm.). In the Kiwirrkurra-Lake Mackay region of Western Australia, Bilbies are persisting at sites where Pintubi continue to conduct regular Cat hunting and frequent patch burning (R. Paltridge pers. comm.).</p>  <p></p>",
+    "use_trade": null,
+    "rationale": "The Bilby is evaluated as Vulnerable because, although it still has a large extent of occurrence (EOO), it is patchily distributed and has a small area of occupancy (AOO); the population size is estimated to be fewer than 10,000 mature individuals, and it suffers from an ongoing decline estimated to exceed 10% over the last 3 generations (12 years) that is likely to continue. Five translocations, one to an island and four to mainland islands, while providing valuable ‘insurance’ against extinction, may not yet fully offset the continuing decline in the wild. Additionally, ‘A taxon may be moved from a category of higher threat to a category of lower threat if none of the criteria of the higher category has been met for five years or more’ (IUCN 2001) and even if the growth in numbers in translocated subpopulations offsets the decline in the wild, this has not been the case for &gt;5 years for the Bilby",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>Several subspecies have been described:</p>  <p><em>M. l. lagotis </em>(Reid, 1837). South-west of Western Australia (extinct)</p>  <p><em>M. l. cambrica</em> Troughton, 1932. Eastern New South Wales (extinct)</p>  <p><em>M. l. grandis</em> Troughton, 1932. South-eastern South Australia (extinct)</p>  <p><em>M. l. interjecta</em> Troughton, 1932. Nullarbor Plain, Western Australia (extinct)</p>  <p><em>M. l. nigripes</em> (Jones, 1923). South Australia (extinct)</p>  <p><em>M. l. sagitta</em> (Thomas, 1905). Central Australia.</p>    <p>However, genetic research suggests that currently-extant subpopulations (including the isolated subpopulation in south-western Queensland) show very little genetic variation (Moritz <em>et al</em>. 1997) and the subspecies are unlikely to be valid. As the former distribution was more or less continuous, extinct subspecies are equally unlikely to be valid. No subspecies are recognised in the 2012 Action Plan.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Vulpes vulpes",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Burbidge, A.A. & Woinarski, J.",
+      "value": [
+        "John Woinarski (Natural Resources, Environment and The Arts, NT)",
+        "Andrew Burbidge (IUCN SSC Australasian Marsupial and Monotreme Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Johnson, C.N. & Hawkins, C.",
+      "value": [
+        "Christopher Johnson (University of Tasmania, Hobart, Australia)",
+        "Clare Hawkins (Department of Primary Industries, Parks, Water & Environment, Hobart, Tasmania, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Johnson, K., Legge, S., Copley, P., Gordon, G., Hayward, M., McGilvray, A., McRae, P., Morris, K., Paltridge, R. & Van Weenen, J.",
+      "value": [
+        "Peter Copley",
+        "Greg Gordon",
+        "Matt Hayward",
+        "Ken Johnson",
+        "Sarah Legge",
+        "Alison McGilvray",
+        "Peter McRae",
+        "Keith Morris",
+        "Rachel Paltridge",
+        "Jason Van Weenen"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Maxwell, S., Burbidge, A.A. and Morris, K. 1996. <i>The 1996 Action Plan for Australian Marsupials and Monotremes</i>. Australasian Marsupial and Monotreme Specialist Group, IUCN Species Survival Commission, Gland, Switzerland.",
+      "year": "1996",
+      "title": "The 1996 Action Plan for Australian Marsupials and Monotremes",
+      "author": "Maxwell, S., Burbidge, A.A. and Morris, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Southgate, R. I. 1990. Habitats and diet of the Greater Bilby <i>Macrotis lagotis</i> Reid (Marsupalia: Peramelidae). In: J. H. Seebeck, P. R. Brown, R. I. Wallis and C. M. Kemper (eds), <i>Bandicoots and Bilbies</i>, pp. 303-309. Surrey Beatty and Sons, Sydney, Australia.",
+      "year": "1990",
+      "title": "Habitats and diet of the Greater Bilby <i>Macrotis lagotis</i> Reid (Marsupalia: Peramelidae)",
+      "author": "Southgate, R. I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Southgate, R. I. 1990. Distribution and abundance of the Greater Bilby <i>Macrotis lagotis</i> Reid (Marsupalia: Peramelidae). In: J. H. Seebeck, P. R. Brown, R. I. Wallis and C. M. Kemper (eds), <i>Bandicoots and Bilbies</i>, pp. 293-302. Surrey Beatty and Sons, Sydney, Australia.",
+      "year": "1990",
+      "title": "Distribution and abundance of the Greater Bilby <i>Macrotis lagotis</i> Reid (Marsupalia: Peramelidae)",
+      "author": "Southgate, R. I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gordon, G., Hall, L. S. and Atherton, R. G. 1990. Status of bandicoots in Queensland. In: J. H. Seebeck, P. R. Brown, R. I. Wallis and C. M. Kemper (eds), <i>Bandicoots and Bilbies</i>, pp. 37-42. Surrey Beatty and Sons., Sydney, New South Wales, Australia.",
+      "year": "1990",
+      "title": "Status of bandicoots in Queensland",
+      "author": "Gordon, G., Hall, L. S. and Atherton, R. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, K. A. 2008. Bilby, <i>Macrotis lagotis</i>. In: S. Van Dyck and R. Strahan (eds), <i>The mammals of Australia. Third Edition</i>, pp. 191-193. Reed New Holland, Sydney, New South Wales, USA.",
+      "year": "2008",
+      "title": "Bilby, <i>Macrotis lagotis</i>",
+      "author": "Johnson, K. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pavey, C. 2006. National Recovery Plan for the Greater Bilby <i>Macrotis lagotis</i>. Northern Territory Department of Natural Resources, Environment and the Arts.",
+      "year": "2006",
+      "title": "National Recovery Plan for the Greater Bilby <i>Macrotis lagotis</i>",
+      "author": "Pavey, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moritz, C., Heideman, A., Geffen, E. and McRae, P. 1997. Genetic population structure of the greater bilby <i>Macrotis lagotis</i>, a marsupial in decline. <i>Molecular Ecology</i> 6: 925-936.",
+      "year": "1997",
+      "title": "Genetic population structure of the greater bilby <i>Macrotis lagotis</i>, a marsupial in decline",
+      "author": "Moritz, C., Heideman, A., Geffen, E. and McRae, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burbidge, A.A., Johnson, K.A., Fuller, P.J. and Southgate, R.I. 1988. Aboriginal knowledge of the mammals of the central deserts of Australia. <i>Australian Wildlife Research</i> 15: 9-39.",
+      "year": "1988",
+      "title": "Aboriginal knowledge of the mammals of the central deserts of Australia",
+      "author": "Burbidge, A.A., Johnson, K.A., Fuller, P.J. and Southgate, R.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jones, K.E., Bielby, J., Cardillo, M., Fritz, S.A., O'Dell, J., Orme, C.D.L., Safi, K., Sechrest, W., Boakes, E.H., Carbone, C., Connolly, C., Cutts, M.J., Foster, J.K., Grenyer, R., Habib, M., Plaster, C.A., Price, S.A., Rigby, E.A., Rist, J., Teacher, A., Bininda-Emonds, O.R.P., Gittleman, J.L., Mace, G.M. and Purvis, A. 2009. PanTHERIA: a species-level database of life history, ecology and geography of extant and recently extinct mammals. <i>Ecology</i> 90: 2648.",
+      "year": "2009",
+      "title": "PanTHERIA: a species-level database of life history, ecology and geography of extant and recently extinct mammals",
+      "author": "Jones, K.E., Bielby, J., Cardillo, M., Fritz, S.A., O'Dell, J., Orme, C.D.L., Safi, K., Sechrest, W., Boakes, E.H., Carbone, C., Connolly, C., Cutts, M.J., Foster, J.K., Grenyer, R., Habib, M., Plaster, C.A., Price, S.A., Rigby, E.A., Rist, J., Teacher, A., Bininda-Emonds, O.R.P., Gittleman, J.L., Mace, G.M. and Purvis, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ford, C., and Hogg, C. 2012. Australasian species management program: regional census and plan, 22nd Edition. Zoo and Aquarium Association, Sydney.",
+      "year": "2012",
+      "title": "Australasian species management program: regional census and plan, 22nd Edition",
+      "author": "Ford, C., and Hogg, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kinnear, J., Sumner, N.R. and Onus, M.L. 2002. The red fox in Australia—an exotic predator turned biocontrol agent. <i>Biological Conservation </i> 108: 335-359.",
+      "year": "2002",
+      "title": "The red fox in Australia—an exotic predator turned biocontrol agent",
+      "author": "Kinnear, J., Sumner, N.R. and Onus, M.L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tunbridge, D. 1991. <i>The story of the Flinders Ranges mammals</i>. Kangaroo Press, Kenthurst.",
+      "year": "1991",
+      "title": "The story of the Flinders Ranges mammals",
+      "author": "Tunbridge, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moseby, K.E., Read, J.L., Paton, D.C., Copley, P., Hill, B.M. and Crisp, H.A. 2011. Predation determines the outcome of 10 reintroduction attempts in arid South Australia. <i>Biological Conservation </i> 144: 2863–2872.",
+      "year": "2011",
+      "title": "Predation determines the outcome of 10 reintroduction attempts in arid South Australia",
+      "author": "Moseby, K.E., Read, J.L., Paton, D.C., Copley, P., Hill, B.M. and Crisp, H.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McRae, P. D. 2004. Aspects of the ecology of the Greater Bilby in Queensland. University of Sydney.",
+      "year": "2004",
+      "title": "Aspects of the ecology of the Greater Bilby in Queensland",
+      "author": "McRae, P. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Southgate, R., and Moseby, K. 2008. Track-based monitoring for the deserts and rangelands of Australia. Draft report to the Threatened Species Network and WWF-Australia.",
+      "year": "2008",
+      "title": "Track-based monitoring for the deserts and rangelands of Australia. Draft report to the Threatened Species Network and WWF-Australia",
+      "author": "Southgate, R., and Moseby, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burrows, N., Dunlop, J., and Burrows, S. 2012. Searching for signs of bilby (<i>Macrotis lagotis</i>) activity in central Western Australia using observers on horseback. <i>Journal of the Royal Society of Western Australia </i> 95: 167-170.",
+      "year": "2012",
+      "title": "Searching for signs of bilby (<i>Macrotis lagotis</i>) activity in central Western Australia using observers on horseback",
+      "author": "Burrows, N., Dunlop, J., and Burrows, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Navnith, M., Finlayson, G. R., Crowther, M. S., and Dickman, C. R. 2009. The diet of the re-introduced greater bilby <i>Macrotis lagotis</i> in the mallee woodlands of western New South Wales. <i>Australian Zoologist </i> 35: 90-95.",
+      "year": "2009",
+      "title": "The diet of the re-introduced greater bilby <i>Macrotis lagotis</i> in the mallee woodlands of western New South Wales",
+      "author": "Navnith, M., Finlayson, G. R., Crowther, M. S., and Dickman, C. R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Copley, P.B., Baker, L.M., Nesbitt, B.J. and Foulkes, J.N. 2003. Mammals. In: A.C. Robinson, P.B. Copley, P D. Canty, L.M. Baker and B.J. Nesbitt (eds), <i>A biological survey of the Anangu Pitjantjatjara Lands, South Australia, 1991 - 2001</i>, pp. 197-241. Department of Environment and Heritage, Adelaide.",
+      "year": "2003",
+      "title": "Mammals",
+      "author": "Copley, P.B., Baker, L.M., Nesbitt, B.J. and Foulkes, J.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Southgate, R. 1987. Conservation of the bilby, <i>Macrotis lagotis</i> (Reid, 1937): World Wildlife Fund (Australia), Project No. 6. Conservation Commission of the Northern Territory, Darwin.",
+      "year": "1987",
+      "title": "Conservation of the bilby, <i>Macrotis lagotis</i> (Reid, 1937): World Wildlife Fund (Australia), Project No. 6",
+      "author": "Southgate, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paltridge, R. and Eldridge, S. 2009. Implementing recovery actions for Bilbies and other threatened  species: subproject 3. Monitoring trends in occurrence and abundance of the Greater Bilby in the Northern Territory. Unpublished report to the Central Land Council, Alice Springs.",
+      "year": "2009",
+      "title": "Implementing recovery actions for Bilbies and other threatened  species: subproject 3. Monitoring trends in occurrence and abundance of the Greater Bilby in the Northern Territory. Unpublished report to the Central Land Council, Alice Springs",
+      "author": "Paltridge, R. and Eldridge, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Eldridge, S. and Paltridge, R. 2010. Implementing recovery actions for Bilbies and other threatened  species:  monitoring trends in occurrence and abundance of the Greater Bilby in the Northern Territory, 2009. Unpublished Report to the Central Land Council, Alice Springs. .",
+      "year": "2010",
+      "title": "Implementing recovery actions for Bilbies and other threatened  species:  monitoring trends in occurrence and abundance of the Greater Bilby in the Northern Territory, 2009. Unpublished Report to the Central Land Council, Alice Springs. ",
+      "author": "Eldridge, S. and Paltridge, R.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Southgate, R. I., and Possingham, H. 1995. Modelling the reintroduction of the greater bilby <i>Macrotis lagotis</i> using the metapopulation model analysis of the likelihood of extinction (ALEX). <i>Biological Conservation</i> 73: 151-160.",
+      "year": "1995",
+      "title": "Modelling the reintroduction of the greater bilby <i>Macrotis lagotis</i> using the metapopulation model analysis of the likelihood of extinction (ALEX)",
+      "author": "Southgate, R. I., and Possingham, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, T., Morris, K., and van Weenen, J. 2008. <i>Macrotis lagotis</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 August 2012).",
+      "year": "2008",
+      "title": "<i>Macrotis lagotis</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.1",
+      "author": "Friend, T., Morris, K., and van Weenen, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Christensen, P. and Burrows, N.L. 1994. Project desert dreaming: the re introduction of mammals to the Gibson Desert, Western Australia. In: M. Serena (ed.), <i>Reintroduction biology of Australian and New Zealand fauna</i>, pp. 190-207. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1994",
+      "title": "Project desert dreaming: the re introduction of mammals to the Gibson Desert, Western Australia",
+      "author": "Christensen, P. and Burrows, N.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abbott, I. 2001. The Bilby <i>Macrotis lagotis</i> (Marsupialia: Peramelidae) in south-western Australia: original range limits, subsequent decline, and presumed regional extinction. <i>Records of the Western Australian</i> 20: 271-305.",
+      "year": "2001",
+      "title": "The Bilby <i>Macrotis lagotis</i> (Marsupialia: Peramelidae) in south-western Australia: original range limits, subsequent decline, and presumed regional extinction",
+      "author": "Abbott, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Southgate, R. I., and Paltridge, R. 1998. Recovery of the Greater Bilby <i>Macrotis lagotis</i>. Final Report for Project Number 185. Biodiversity Group, Endangered Species Program and Feral Pests Program, Nature Australia.",
+      "year": "1998",
+      "title": "Recovery of the Greater Bilby <i>Macrotis lagotis</i>. Final Report for Project Number 185",
+      "author": "Southgate, R. I., and Paltridge, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Southgate, R., Paltridge, R., Masters, P., and Nano, T. 2005. An evaluation of transect, plot and aerial survey techniques to monitor the spatial pattern and status of the bilby (<i>Macrotis lagotis</i>) in the Tanami Desert. <i>Wildlife Research </i> 32: 43-52.",
+      "year": "2005",
+      "title": "An evaluation of transect, plot and aerial survey techniques to monitor the spatial pattern and status of the bilby (<i>Macrotis lagotis</i>) in the Tanami Desert",
+      "author": "Southgate, R., Paltridge, R., Masters, P., and Nano, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

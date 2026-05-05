@@ -1,0 +1,2771 @@
+{
+  "assessment_date": "2024-06-28T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 7951,
+  "criteria": "A3bcd",
+  "url": "https://www.iucnredlist.org/species/7951/238881740",
+  "citation": "Kaczensky, P., King, S.R.B., Esmaeili, S. & Moehlman, P.D. 2025. Equus hemionus. The IUCN Red List of Threatened Species 2025: e.T7951A238881740. Accessed on 05 May 2026.",
+  "assessment_id": 238881740,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 7951,
+    "scientific_name": "Equus hemionus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 7952,
+        "scientific_name": "Equus hemionus ssp. hemionus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "hemionus",
+        "subpopulation_name": null,
+        "infra_name": "hemionus",
+        "authority": "Pallas, 1775",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Dziggetai",
+            "language": "mon"
+          },
+          {
+            "main": false,
+            "name": "Khulan",
+            "language": "mon"
+          },
+          {
+            "main": false,
+            "name": "Mongolian Khulan",
+            "language": "mon"
+          },
+          {
+            "main": true,
+            "name": "Gobi Khulan",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus hemionus ssp. luteus Matschie, 1911",
+            "status": "ACCEPTED",
+            "genus_name": "Equus",
+            "species_name": "hemionus",
+            "species_author": null,
+            "infrarank_author": "Matschie, 1911",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "luteus"
+          }
+        ]
+      },
+      {
+        "sis_id": 7962,
+        "scientific_name": "Equus hemionus ssp. hemippus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "hemionus",
+        "subpopulation_name": null,
+        "infra_name": "hemippus",
+        "authority": "I. Geoffroy Saint-Hilaire, 1855",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Syrian Wild Ass",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus hemippus I. Geoffroy Saint-Hilaire, 1855",
+            "status": "ACCEPTED",
+            "genus_name": "Equus",
+            "species_name": "hemippus",
+            "species_author": "I. Geoffroy Saint-Hilaire, 1855 ",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 7963,
+        "scientific_name": "Equus hemionus ssp. khur",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "hemionus",
+        "subpopulation_name": null,
+        "infra_name": "khur",
+        "authority": "Lesson, 1827",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Khur",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Ghudkhar",
+            "language": "guj"
+          },
+          {
+            "main": false,
+            "name": "Jangli Gadha",
+            "language": "hin"
+          },
+          {
+            "main": false,
+            "name": "Khur",
+            "language": "hin"
+          },
+          {
+            "main": true,
+            "name": "Indian Wild Ass",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Equus khur Lesson, 1827",
+            "status": "ACCEPTED",
+            "genus_name": "Equus",
+            "species_name": "khur",
+            "species_author": "Lesson, 1827",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 7964,
+        "scientific_name": "Equus hemionus ssp. kulan",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "hemionus",
+        "subpopulation_name": null,
+        "infra_name": "kulan",
+        "authority": "(Groves &amp; Mazák, 1967)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Turkmenian Kulan",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Gulan",
+            "language": "tuk"
+          },
+          {
+            "main": false,
+            "name": "Kulan",
+            "language": "rus"
+          },
+          {
+            "main": true,
+            "name": "Kulan",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 7966,
+        "scientific_name": "Equus hemionus ssp. onager",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PERISSODACTYLA",
+        "family_name": "EQUIDAE",
+        "genus_name": "Equus",
+        "species_name": "hemionus",
+        "subpopulation_name": null,
+        "infra_name": "onager",
+        "authority": "Boddaert, 1785",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+            "url": "http://www.equids.org/",
+            "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Iranian Onager",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Persian Onager",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Goor",
+            "language": "per"
+          },
+          {
+            "main": false,
+            "name": "Goor-e-khar-e-asiaee",
+            "language": "per"
+          },
+          {
+            "main": true,
+            "name": "Onager",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PERISSODACTYLA",
+    "family_name": "EQUIDAE",
+    "genus_name": "Equus",
+    "species_name": "hemionus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Pallas, 1775",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Equid Specialist Group (horses, asses and zebras)",
+        "url": "http://www.equids.org/",
+        "description": "Co-Chairs: Patricia Moehlman (email: tan.guides@habari.co.tz) and Sarah King (email: king_srb@yahoo.com)\nRed List Authority Coordinator: Sarah King (email: king_srb@yahoo.com"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Asian Wild Ass",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ane sauvage d'Asie",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Asiatischer Wildesel",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Asno Salvaje Asiático",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ghudkhar",
+        "language": "guj"
+      },
+      {
+        "main": false,
+        "name": "Goor",
+        "language": "per"
+      },
+      {
+        "main": false,
+        "name": "Goor-e-khar-e-asiaee",
+        "language": "per"
+      },
+      {
+        "main": false,
+        "name": "Gulan",
+        "language": "tuk"
+      },
+      {
+        "main": false,
+        "name": "Halbesel",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Hémione",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Hemiono",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Hémippe",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Jangli gadha",
+        "language": "hin"
+      },
+      {
+        "main": false,
+        "name": "Khulan",
+        "language": "mon"
+      },
+      {
+        "main": false,
+        "name": "Khur",
+        "language": "hin"
+      },
+      {
+        "main": false,
+        "name": "Kulan",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Pere",
+        "language": "heb"
+      },
+      {
+        "main": false,
+        "name": "Yě lǘ",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Asiatic Wild Ass",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Equus castaneus Lydekker, 1904",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "castaneus",
+        "species_author": "Lydekker, 1904",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus finschi Matschie, 1911",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "finschi",
+        "species_author": "Matschie, 1911",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus ferus Erxleben, 1777 [<i>nomen oblitum</i>]",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "ferus",
+        "species_author": "Erxleben, 1777 [<i>nomen oblitum</i>]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus khur Lesson, 1827",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "khur",
+        "species_author": "Lesson, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus bedfordi Matschie, 1911",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "bedfordi",
+        "species_author": "Matschie, 1911",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus hemionos Boddaert, 1785",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "hemionos",
+        "species_author": "Boddaert, 1785",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus hamar C.H. Smith, 1841",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "hamar",
+        "species_author": "C.H. Smith, 1841",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus syriacus Milne-Edwards, 1869",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "syriacus",
+        "species_author": "Milne-Edwards, 1869",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus kulan (Groves & Mazák, 1967)",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "kulan",
+        "species_author": "(Groves & Mazák, 1967)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus indicus George, 1869",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "indicus",
+        "species_author": "George, 1869",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus typicus Sclater, 1891",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "typicus",
+        "species_author": "Sclater, 1891",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus blanfordi (Pocock, 1947)",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "blanfordi",
+        "species_author": "(Pocock, 1947)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus onager Boddaert, 1785",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "onager",
+        "species_author": "Boddaert, 1785",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus hemippus. I. Geoffroy Saint-Hilaire, 1855",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "hemippus.",
+        "species_author": "I. Geoffroy Saint-Hilaire, 1855",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus bahram (Pocock, 1947)",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "bahram",
+        "species_author": "(Pocock, 1947)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus indicus (Sclater, 1862) [<i>nomen nudum</i>]",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "indicus",
+        "species_author": "(Sclater, 1862) [<i>nomen nudum</i>]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus onager Pallas, 1777 [unavailable]",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "onager",
+        "species_author": "Pallas, 1777 [unavailable]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus dzigguetai (Wood, 1879)",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "dzigguetai",
+        "species_author": "(Wood, 1879)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Equus luteus Matschie, 1911",
+        "status": "New",
+        "genus_name": "Equus",
+        "species_name": "luteus",
+        "species_author": "Matschie, 1911",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "23",
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": -170,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "65000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "7.5",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Nomadic",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "31-40"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "23",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "35000",
+    "estimated_area_of_occupancy": "257300",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "11262103",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The historic range of the Asiatic wild ass can only be approximated. Hunting of the species is well documented from well before modern times and by 1500 the range was already reduced in Europe, the Middle East, and likely the Arabian Peninsula (Bannikov 1981,&#160;Crassard&#160;<em>et al</em>. 2022, Goldberg 2018, Harper 1945). The historic range likely covered an area in the range of 10 million square kilometres stretching throughout the steppes and desert steppes of northern China, Mongolia, northwest India, the Russian Federation, across central Asia and into the Middle East, including Iran, the Arabian Peninsula and Asia Minor (Bannikov 1981, Harper 1945, Heptner <em>et al</em>. 1988, Denzau and Denzau 1999). As of 2023, the species is found in eight countries (Mongolia, India, China, Kazakhstan, Iran, Israel, Uzbekistan, Turkmenistan). There is a possibility that there are some Asiatic Wild Asses remaining in Pakistan, although no more animals have been observed over the last ca. 8 years (U. Khan WWF Pakistan pers. comm. via Q. Qureshi 2023). The species’ stronghold is in southern Mongolia where&#160;about 84% of the global population are found (Buuveibaatar <em>et al</em>. 2017, Kaczensky <em>et al</em>. 2023). All other remaining populations are much smaller and largely isolated from each other.&#160;One subspecies, the Syrian Wild Ass (<em>E. h. hemippus</em>), became extinct in 1927.&#160;</p><p>Autochthonous populations of the species have only survived in four countries: Mongolia, China, India, and Iran. Turkmenistan recently lost its autochthonous population in Badhyz, but a small number of Asiatic Wild Asses remain in other locations in the country from past reintroductions with animals from Badhyz. Three more countries have re-established the species: Kazakhstan, Uzbekistan, and Israel, with efforts ongoing in Jordan and Saudi Arabia.&#160;Asiatic Wild Asses globally are found in 10 more or less isolated populations, some of which have several subpopulations or segments (e.g., the Gobi population). In addition, there are 14 sites of Asiatic Wild Ass occurrences (usually less than 50 individuals) or where recent reintroduction initiatives are currently trying to re-establish populations.</p><p>Khulan –&#160;<em>E. h. hemionus</em></p><p>In&#160;Mongolia, the largest global population of Asiatic Wild Ass is found in the Gobi Desert in the south of the&#160;country, with eastward range largely limited by the fenced Trans-Siberian railway and southwards by the fenced international border with China.&#160;Asiatic wild ass are present throughout the Great Gobi and Small Gobi Strictly Protected Areas (SPA; both of which have an A and B part), but may be rare or largely absent in the area between Great Gobi A SPA and Small Gobi A SPA (Adiya <em>et al</em>. 2016, Sukhchuluun <em>et al</em>. 2013). Movements of 100 Asiatic Wild Ass equipped with GPS collars in the South Gobi Region since 2013 have not documented any Asiatic Wild Ass to move to the west beyond Small Gobi A SPA, further indicating that movements between the Transaltai Gobi, where Great Gobi A SPA is located and the South Gobi Region, where Small Gobi A is located may be rare (Kaczensky <em>et al</em>. unpubl. data).</p><p>In China, the khulan range is separated into several populations in&#160;the&#160;Gobi Desert of&#160;three northern provinces of China bordering Mongolia, namely Xinjiang, Gansu, and Inner Mongolia. The largest population is in Kalamaili National Park (NP) in Xinjiang. A recent effort compiled the most recent information for a national overview (Xu <em>et al</em>. 2022).</p><p>Khur –&#160;<em>E. h. khur</em></p><p>In&#160;India, Asiatic Wild Ass are found in&#160;the Wild Ass Sanctuary in the Little Rann of Kutch in Gujarat.&#160;Over the last three decades, Asiatic Wild Asses have also expanded their range to areas outside the Wild Ass sanctuary, such as Khadir Bet in the Great Rann of Kutch, Ahmedabad, Surendranagar, and Bhavnagar and have also expanded into neighbouring Rajasthan (Rajasthan Forest Department 2019 unpublished report, S.H. Vardhan and S. Narwade pers.comm 2020) along the easternmost extension of the Rann of Kutch.&#160;</p><p>Asiatic Wild Asses were previously reported in the province of Sind in Pakistan&#160;but are now considered extinct (Ghalib <em>et al</em>. 2018). However, there may still be some animals left, as the species presence was recorded in the desert lands of Tharparkar during a small mammal survey in 2013; unfortunately, no details on what&#160;the presence was based on, nor numbers or location were provided (Khan <em>et al</em>. 2015).</p><p>Kulan –&#160;<em>E. h. kulan</em></p><p>In&#160;Kazakhstan, the largest population is found in&#160;Altyn Emel NP, with a smaller population in&#160;Barsa Kelmes State Nature Reserve (SNR). Small populations are found in Andassay and Ily Balkhash, with individuals also in Altyn&#160;Dala and Ustyurt.&#160;</p><p>In Turkmenistan,&#160;no observations and signs of Asiatic Wild Asses have been recorded in Badhyz and none have been captured on camera traps at water points since 2015 (N. Khudaykuliyev pers. comm. 2023, (Kaczensky <em>et al</em>. 2019). We therefore conclude that this last autochthonous population of Turkmen kulan went extinct. There are also no confirmed observations from the reintroduced population in Meana Chaca. No Asiatic Wild Asses have been recorded in the Kaplankyr region, other than in the “no man’s land” between the cliff that makes the actual border with Uzbekistan (accessible to kulan) and the border fence on Turkmen territory where a few kulan have been seen (A. Amanov pers. comm. 2023). A small number of kulan are also reported in Gury Howdan and the Tersakan valley (H. Hojamyradov pers. comm. 2023).</p><p>In&#160;Uzbekistan, repeated expeditions have confirmed the presence of a population of Asiatic Wild Asses in what has become the South Ustyurt National Park (Marmazinskaya <em>et al</em>. 2016), Marmazinskaya <em>et al</em>. 2022). Genetic analysis of dung samples shows a high similarity with animals from Badhyz, low inbreeding, and quite good allelic richness, supporting that this population cannot be too small and fragmented (Kaczensky and Kuehn 2022). In addition, in 2022 two transports of captive bred Asiatic Wild Asses from the Jeyran Ecocenter near Bukhara reintroduced Asiatic Wild Ass to Saigachy reserve and the Sudochye-Akpetki reserve.&#160;</p><p>Onager –&#160;<em>E. h. onager</em>&#160;and Onager x Kulan hybrids</p><p>In Iran, the only population of onagers (<em>Equus hemionus onager</em>) resides within the Bahram-e-Goor Protected Area, surrounding the Qatrouiyeh National Park. The onager population primarily lives in the Qatrouiyeh National Park, exhibiting free movement between the park itself and the adjacent protected area (Esmaeili <em>et al</em>. 2024). Occasional and seasonal movement of small groups of onagers into farmlands surrounding the protected area, extending as far as the Qarreh Tappe No-hunting area (which overlaps Bahram-e-Goor and extends up to 50 km away) in Yazd Province and Shahr-e-Babak in Kerman Province has been reported (personal comm. Iranian Department of Environment). The indigenous Asiatic Wild Ass population in the Touran Biosphere Reserve, along with the limited number of reintroduced animals in the Kalmand Protected Area in Yazd province, Siah-Kooh NP, and Kavir NP (all originating from the Touran Biosphere Reserve), are recognized as natural hybrids of&#160;<em>E. h. onager</em>&#160;and&#160;<em>E. h. kulan&#160;</em>(Kaczensky and Kuehn 2022).&#160;</p><p>In&#160;Israel, the largest numbers of Asiatic Wild Ass (onager and kulan hybrids) are seen in the Negev Highlands, but they occur in most of the Negev desert (except for the northern Negev and the Eilat Mountains in the south).&#160;</p><p>Asiatic Wild Ass have been introduced to Shaumari Wildlife Reserve in Jordan (Hatough-Bouran <em>et al</em>. 1991), from where 10 individuals were transferred to the Prince Mohamed Bin Salman Reserve in Saudi Arabia in 2023.</p><p>For further details, see subspecies Red List Assessments.</p><p></p>",
+    "population": "<p>Currently Asiatic Wild Asses are free-roaming in eight countries and estimated to number 108,300 individuals. While this population size is greater than in the last assessment, this is more likely related to better data and population surveys rather than a large population increase. Data on population composition and age specific mortality rates are unavailable and most surveys did not state if and how foals were included in the estimates. Without more robust population dynamics data we assumed that the number of mature individuals roughly equals 60% of the total population, which is in line with the typical wild equid population structure (71-78% adults; Ransom <em>et al</em>. 2016), as well as those of&#160;&#160;Przewalski’s horses sharing the range with Asiatic wild ass in the Gobi (61% adults; Kaczensky <em>et al</em>. unpubl. Data 2009 &amp; 2014) and Cape Mountain zebra populations (55-65% (S. King pers. comm. 2014, based on H. Hrabar unpubl. Data). This gives an estimate of about 65,000 mature individuals for the global population of the species.&#160;</p><p>The species stronghold is in southern Mongolia where an estimated 91,000 Asiatic Wild Ass or about 84% of the global population are found (Buuveibaatar <em>et al</em>. 2017, Kaczensky <em>et al</em>. 2020). All other remaining populations are much smaller and largely isolated from each other. Total Asiatic Wild Ass numbers in north-western India, northern China, and Kazakhstan number in the thousands, Iran has a population of 1,500, Israel 350, Uzbekistan 170, and Turkmenistan has 33 left. There is a small possibility that some Asiatic Wild Asses exist in Pakistan, but this has not been confirmed and we assume the species is extinct in Pakistan.</p><p><em>E. h. hemionus</em></p><p>In&#160;Mongolia, population estimates of Asiatic Wild Ass are scheduled every 5 years in Great Gobi B Strictly Protected Area (SPA) since 2010 (Ransom <em>et al</em>. 2012), and were done in 2010, 2015, and 2022, with the most recent survey suggesting a slightly declining population numbering 5,204 (2,121 – 12,771) Asiatic wild asses over the 13,000 km<sup>2</sup> study area (Vogler <em>et al</em>. 2023). In the South Gobi Region, the Wildlife Conservation Society (WCS) conducted large-scale ground surveys for Oyu Tolgoi’s Core Biodiversity Monitoring in 2013, 2014, 2015, 2019, 2021, and 2023 (Buuveibaatar <em>et al</em>. 2016, WCS 2021), with the most recent survey in 2023 suggesting an increasing population numbering 85,992 (59,758-123,740) Asiatic wild asses in the 116,000 km<sup>2</sup> study area. Monitoring the remainder of the range is sporadic to absent. In Great Gobi A SPA, staff has the impression that the population of Asiatic Wild Ass has declined (B. Buuveibaatar pers. comm. 2023). For the area between Great Gobi A SPA and Small Gobi A SPA in the South Gobi Region, there is concern that Asiatic Wild Ass may be largely absent (Adiya <em>et al</em>. 2016; Sukhchuluun <em>et al</em>. 2013).&#160;</p><p>In China, the largest population in Kalamaili National Park (NP) is regularly monitored using ground transects (Zhang <em>et al</em>. 2020), while&#160;Asiatic Wild Asses in other parts of the range are monitored somewhat opportunistically. A recent effort compiled the most recent information for a national overview (Xu <em>et al</em>. 2022). The total population of Asiatic Wild Ass in Kalamaili National Park stands at 3246±575 individuals in 2018 and 2019 (Zhang <em>et al</em>. 2020), accounting for ~80% of the total population in China (Xu <em>et al</em>. 2022).&#160;</p><p><em>E. h. khur</em></p><p>In&#160;India,&#160;the Wild Ass Sanctuary in the Little Rann of Kutch in Gujarat block counts for population estimation have been conducted at 5-to-7-year intervals since 1976 (Rann is divided into 20 zones with 100 sub zones). The most recent count was conducted in March 2020, obtaining a population size of 6,082 Asiatic Wild Ass in an area of 15,500 km<sup>2</sup>&#160;(Pandit <em>et al</em>. 2020). Vehicle transects, foot transects (Barman <em>et al</em>. 2021) and in recent times aerial counts using a 4-seater Cessna aircraft and drones have been used for validation (Shah&#160;and Qureshi 2018). Over the last three decades, Asiatic Wild Asses have also expanded their range to areas outside the Wild Ass Sanctuary, such as Khadir Bet in the Great Rann of Kutch, Ahmedabad, Surendranagar, and Bhavnagar and have also expanded into neighbouring Rajasthan (Rajsathan Forest Department 2019, S.H. Vardhan and S. Narwade pers.comm 2020) along the easternmost extension of the Rann of Kutch (Fig. 1). The total population in India is estimated at 6,800 individuals.</p><p><em>E. h. kulan</em></p><p>In&#160;Kazakhstan, protected areas staff in Altyn Emel NP and Barsa Kelmes State Nature Reserve (SNR) conduct counts annually using line transects to obtain total counts which are&#160;reported to the Committee of Forestry and Wildlife (CFW) of the Ministry of Ecology and Natural Resources of Kazakhstan. However, no details on the counts are available and the numbers are possibly an overestimation. In other parts of the country, Asiatic Wild Asses are recorded opportunistically by regional and national ranger teams (e.g., during the annual aerial saiga census, or patrolling). There are additional aerial censuses for Red List species (mainly ungulates), which also record Asiatic Wild Ass (e.g., Andassay Sanctuary or Ustyurt plateau). In Altyn Dala, adult re-introduced Asiatic Wild Ass are being monitored with GPS collars (Kaczensky <em>et al</em>. 2021). In 2022, an Asiatic Wild Ass captured by some local herders together with their horses was also GPS collared upon release back in the wild but died after a month (Salemgareyev <em>et al</em>. 2023). This animal provided the first data on the movement of an Asiatic Wild Ass in the Ustyurt region.</p><p>In&#160;Turkmenistan, Asiatic Wild Ass population estimates are provided by protected area staff based on opportunistic observations and signs. In addition, camera traps have been used in Badhyz since 2010 (primarily to document leopard presence), and more recently in the&#160;Kopedag reserves including the Tersakan valley in Sunt Hasardag, and the Kaplankyr reserve. In Badhyz, no observations and signs of Asiatic Wild Asses have been recorded and none have been captured on camera traps at water points since 2015 (N. Khudaykuliyev pers. comm. 2023, Kaczensky <em>et al</em>. 2019). The Asiatic Wild Ass group in Gury Howdan is still present but has shrunk to only 6 animals. In the Kaplankyr region 15 Asiatic Wild Asses have been observed recently on the Uzbek side of the “no man’s land” between the cliff that makes the actual border with Uzbekistan and the border fence on Turkmen territory (A. Amanov, pers. comm. 2023). In the Tersakan valley, rangers saw a group of 10 Asiatic Wild Asses and 3 were recorded on camera traps (H. Hojamyradov pers. comm. 2023).</p><p>In&#160;Uzbekistan, 100-150 individuals are present in&#160;Kaplankyr -South Ustyurt National Park (Marmazinskaya 2019 pers. comm., Marmazinskaya <em>et al</em>. 2022, Kaczensky <em>et al</em>. 2019). In 2022 two transports of captive bred Asiatic Wild Asses from the Jeyran Ecocenter near Bukhara reintroduced 13 Asiatic Wild Ass to Saigachy reserve and 35 to the Sudochye-Akpetki reserve. Rangers check parts of the protected areas for signs, but no systematic monitoring is conducted, so that the current numbers and fate of the released animals are not known. Further releases are planned.</p><p><em>E. h. onager</em>&#160;and onager x kulan hybrids</p><p>The largest Asiatic Wild Asses population in Iran exists within the Qatrouiyeh National Park and the surrounding Bahram-e-Goor protected area in south-central Iran, estimated at 1,131 individuals in 2022 (Iranian Department of Environment pers. comm. 2023). This population has exhibited a positive trend since 1997, notably following enhancements made to the protected area's core zone, which was designated as Qatrouiyeh National Park in 2008. The indigenous Asiatic wild ass population in the Touran Biosphere Reserve is estimated 175 in 2022. Based on the annual total count conducted by the Iranian Department of Environment, in Bahram-e-Goor Protected Area and Qatrouiyeh National Park, the intrinsic growth rate (<em>r</em>) between 1995 and 2021 was 0.08. The&#160;<em>r</em>&#160;in Touran Biosphere Reserve was -0.03 between 1992 and 2021, challenging the long-term persistence of this wild population (Esmaeili <em>et al</em>. 2023).</p><p>A population model projected an increasing population over the next 30 years, incorporating a maximum survival rate for the adult age class (Nowzari 2011). The Department of Environment’s rangers count the population each year by direct observation. Monitoring the population over 10 years (2008-2018) showed an increasing population, with a population growth rate of 0.09 and 0.14 during 1998-2008 and 2008-2018, respectively (Nowzari 2019). The intrinsic population growth rate indicates a 917% increase over a twenty-year-period (1998-2018). Comparing these estimates with those reported previously suggests an expanding population for QNP. However, the model predicted that if for any reason the survival rate of mature individuals drops then sustainability of the population will be challenged (Nowzari 2019). About a 13% decline in the extent of suitable habitats (accounting gains and losses of habitats) by the year 2050 is expected due to climate and land use change (Rezvani <em>et al</em>. in preparation).</p><p>In&#160;Israel, Wild Ass observations are continuously recorded (biogis.huji.ac.il), and the population is roughly estimated as a minimum count (e.g., in May 2023, on one day almost 200 individuals were observed in the main area in the Negev Highlands, and it is estimated there might have been another 50 in the highlands which were not seen on that day). Another two, smaller populations in the south of the Negev Highlands are estimated at about 100 individuals, so the minimum estimate is 350. Genetic studies identified a spatial genetic structure in the population, probably caused by limited connectivity between some parts of the distribution area within the Negev desert (Gueta <em>et al</em>. 2014, Zecherle <em>et al</em>. 2020). Different monitoring protocols are currently being developed for more precise estimates but will likely take another year before they can be implemented (A. Bouskila pers. comm. 2023).</p>",
+    "habitats": "<p>Asiatic Wild Asses live in open dryland habitats, such as steppes, desert steppes, semi-deserts, and deserts. They can live in mountainous regions but tend to avoid steep slopes and rugged terrain. Asiatic&#160;Wild Ass feeding strategy is similar to that observed in other equids in dry environments. When grass is plentiful, Asiatic Wild Asses are predominately grazers. During the dry season and in drier habitats, Asiatic Wild Asses will supplement their diet with shrubs and switch to become mixed feeders during certain seasons (Bannikov 1981, Burnik Šturm <em>et al</em>. 2017, Xu <em>et al</em>. 2012).</p><p>Like all equids, Asiatic Wild Asses need regular access to water. GPS studies show that Asiatic Wild Asses drink daily, especially when it is hot or the vegetation is dry, commuting between pasture and water (Giotto <em>et al</em>. 2015, Payne <em>et al</em>. 2020). Water availability is a key resource determining the presence and movements of Asiatic Wild Asses throughout its range (Bannikov 1958, Esmaeili <em>et al</em>. 2021, Nandintsetseg <em>et al</em>. 2016, WCS 2021, Zhang <em>et al</em>. 2020).&#160;Cut-off values for pasture use away from water seem to be in the range of 15-20 km (Bannikov 1981, Nandintsetseg <em>et al</em>. 2016). In Mongolia’s South Gobi Region, khulan (<em>Equus hemionus hemionus</em>) on average do not venture further than 7.2 km away from water when re-visiting the same waterpoint (Payne <em>et al</em>. 2020). Where subsurface flow exists in dry riverbeds, Asiatic Wild Ass also dig for water, creating craters up to a meter deep (Payne <em>et al</em>. 2020).</p><p>Habitat use of Asiatic Wild Asses is negatively influenced by human activity such as human settlements, tourist visits at water sources, livestock camps, and anthropogenic disturbance caused by mining and road development (Buuveibaatar <em>et al</em>. 2016, Zhuo <em>et al</em>. 2022). Evidence further suggests that disturbance negatively influences group size, requiring animals to spend more time being vigilant (Wang <em>et al</em>. 2016). Unfortunately, the impact of anthropogenic disturbance and habitat quality on population performance is difficult to assess and such analyses are currently missing.</p><p>Asiatic Wild Asses are among the most mobile ungulates globally (Joly <em>et al</em>. 2019, Tucker <em>et al</em>. 2018). Their movements exceed the better-known classical migrations of caribou in the Arctic or wildebeest and zebra in the Serengeti-Maasai Mara ecosystem. These wide-ranging, nomadic movements allow Asiatic Wild Asses to thrive in large numbers under the harsh climate and unpredictable conditions of Central Asia’s resource-poor drylands (Kauffman <em>et al</em>. 2021a, Nandintsetseg <em>et al</em>. 2019, Nandintsetseg <em>et al</em>. 2016).&#160;Nomadism in combination with a flexible fission-fusion social system (where group membership as well as group size varies; (Renan <em>et al</em>. 2018, Rubenstein <em>et al</em>. 2015)) enables Asiatic Wild Ass to make the most of the available resources in an unpredictable environment that is prone to extremes. Contrary to range resident species, Asiatic Wild Ass can buffer the effect of local or temporary resource-poor seasons or years by moving to less affected areas (Kaczensky <em>et al</em>. 2011a).&#160;Forcing migratory or nomadic species to become range resident greatly lowers the carrying capacity of the landscape by restricting the population’s ability to track resources, avoid predators, and minimize exposure to parasites (Fryxell <em>et al</em>. 1988). Reduced mobility in combination with smaller population sizes makes populations more vulnerable to localized events and reduces their resilience to climate change (Kauffman <em>et al</em>. 2021a).</p><p>Climate change is expected to bring a further increase in temperatures and a higher frequency of extreme events like droughts and severe winter storms (Hijioka 2014, IPBES 2018, Nandintsetseg and Shinoda 2013), which can result in high local or regional mortality. Hence, maintaining mobility for Asiatic Wild Ass and other migratory ungulates is probably the single most important measure to mitigate the effect of climate change.&#160;Studies in China have found that climate change is not only causing habitat loss for Asiatic Wild Ass, but also shifting its suitable habitat to higher latitudes (Ding <em>et al</em>. unpubl. data). Movement becomes more and more difficult if suitable habitat is lost (e.g., conversion to agricultural, urban, or industrial use), becomes too disturbed (e.g., resource extraction, recreation), or is made inaccessible by barriers (e.g., roads, rails, fences). Due to their wide-ranging movements, Asiatic Wild Asses are particularly vulnerable to the barrier effects of linear infrastructure (Batsaikhan <em>et al</em>. 2014, UNEP/CMS 2019).</p><p>Age at first reproduction seems to be three years for mares and five years for stallions. Mares can produce a foal annually under favourable conditions up to at least 15 years of age. Sex-ratio at birth is close to 50/50 (Bannikov 1981, Saltz and Rubenstein 1995, Volf 2010). Area specific data of Asiatic Wild Ass population dynamics parameters are largely lacking or anecdotal. For the re-introduced and intensively studied population on Barsa Kelmes Island average fertility of adult mares was estimated at 66.6%, but varied depending on pasture condition and winter severity (Bannikov 1981). Foal survival in the wild likely is in the magnitude of 50% and yearling survival is lower than adult survival (Feh&#160;<em>et al.</em>&#160;2001, Nowzari&#160;<em>et al.</em>&#160;2012, Kaczensky pers. obs.). Age determination of 350 skulls of Asiatic Wild Ass carcasses from the Mongolian Gobi documented a mean age of 9.1 years (for animals ≥3 years) and a maximum age of 29 years (Lkhagvasuren&#160;<em>et al.</em>&#160;2013). The species is polygynous and thus only a portion of the adult males contribute to reproduction. Genetic information from the population in Israel led to estimates between 10-20% of the males per generation (Greenbaum <em>et al</em>. 2018). The percentage in other populations is unknown, particularly as there is still limited understanding of the social organization of the species (Solomatin 1973, Bannikov 1981, Rubenstein 1986, Feh&#160;<em>et al.</em>&#160;1994, Klingel 1998, Shah 1993, Feh&#160;<em>et al.</em>&#160;2002, Neumann-Denzau and Denzau 2007, Rubenstein&#160;<em>et al.</em>&#160;2007, Shah and Qureshi 2007, Sundaresan&#160;<em>et al.</em>&#160;2007, Kaczensky&#160;<em>et al.</em>&#160;2008).</p>",
+    "threats": "<p>Past Asiatic Wild Ass population decreases and range contractions have been attributed to a combination of land conversion, overhunting, and displacement by, and competition with, livestock for pasture and water (Bannikov 1981, Kaczensky <em>et al</em>. 2015, Moehlman 2002, Ransom and Kaczensky 2016). This has led to the eradication of the Asiatic Wild Ass from 95% of their former range. The same threats remain in place today while the pace of infrastructure and socio-economic development has dramatically increased, and climate change compounds the situation. The understandable goal of all range countries to improve the wellbeing and livelihoods of their citizens can result in conflicts with conservation goals. The constraining impact of the desire for rapid development is magnified by generally limited capacity and investment (manpower, knowledge, money, political action) available for wildlife conservation, protected area management, and land usage planning in general.&#160;</p><p>1. Pasture degradation</p><p>Livestock numbers keep increasing throughout the region, with high densities of extensively grazed livestock, especially sheep and goats, present in many parts of the Asiatic wild ass range. In Mongolia, livestock numbers have reached a historic record, numbering over 71 million head in 2022. Increasing grazing pressure has triggered widespread concern over unsustainable pasture use, leading to pasture degradation and loss of biodiversity. Degraded pastures have a low productivity and are often dominated by low quality fodder plants.</p><p>2. Pasture competition</p><p>In the cold desert regions of Central Asia, pasture competition between different herbivores is highest during the long and cold non-growing season in winter when energy expenditure for maintaining body temperature is high and vegetation is sparse, low in energy content and once grazed does not regrow before spring.&#160;Grazing reduces the overall available plant biomass, which can lead to competition in times of pasture shortage. It is still common practice to open protected areas for livestock grazing during times of climate extremes as a disaster relief strategy for local herders. With livestock numbers still growing, competition between livestock and wild ungulates like Asiatic wild ass can be expected to increase strongly, even in protected areas during low productivity seasons and years.</p><p>Livestock grazing in Central Asian drylands is constrained by water availability. Daily commuting distances of herders and their livestock between pasture and water are shorter than those of Asiatic wild asses. This leaves more distant pastures less impacted by livestock grazing and human disturbance. Drilling new wells, as a measure to combat local overgrazing by livestock, and the use of water trailers and water tanks (to bring water to livestock herds) threaten to bring livestock into the heart of the last remaining Asiatic wild ass refuges.&#160;Asiatic wild asses avoid areas of higher livestock density and other human activity (Buuveibaatar <em>et al</em>. 2016). With increasing livestock numbers, it will be increasingly difficult for them to find undisturbed areas.&#160;Near settlements, herder camps or guarded livestock flocks, Asiatic wild asses additionally risk being attacked or chased by dogs (Kaczensky <em>et al</em>. 2020).</p><p>3. Fencing pastures</p><p>In most of central Asia and Mongolia, pastureland is publicly owned and fencing of rangeland remains rare. In northern China, on the other hand, pasture degradation due to overgrazing has led to the erection of large-scale grazing exclosures to keep livestock out. However, this measure not only protects the pasture from livestock, but also excludes wild ungulates. What is more, within the Asiatic wild ass range, these fences can block migration routes and access to water while also acting entanglement death traps.</p><p>Privatisation of rangeland is and has been discussed as a measure to combat pasture degradation and modernise the livestock production sector. If it were to happen, there is a high risk that private owners will start fencing their pastures as has happened in other parts of the world, where rangeland is primarily privately owned.</p><p>4. Commercial harvest of “wild hay”</p><p>In the steppe regions, near oases, or along rivers, hay harvest for winter fodder also limits access to high quality grazing for wild ungulates, including Asiatic wild asses. In the steppes of Mongolia and Kazakhstan, commercial scale harvest of “wild hay” seems to be increasing.</p><p>5. Disease transmission</p><p>Asiatic wild asses are subject to the same diseases and parasites as other wild and domestic equids. Free-ranging Asiatic wild asses have tested PCR-positive for various equine herpes viruses and seroconverted to a variety of influenza A viruses. To our knowledge, large disease outbreaks among Asiatic wild asses have not been documented in the past decades and are possibly very rare.&#160;However, the outbreak of African horse sickness in the 1960s in India resulted in a catastrophic collapse and the subsequent extinctions of smaller Asiatic wild ass populations in India. The Asiatic wild ass’s high mobility, large ranges, seasonal aggregations, and shared pastures with domestic equids has potential for livestock-Asiatic wild ass spill over events. The large ranges of Asiatic wild asses would potentially facilitate the subsequent disease spread over large areas.&#160;Given the combination of increasing livestock numbers, climate change, and newly emerging or re-emerging diseases globally, this issue of disease transmission certainly requires more attention in the future.</p><p>6. Habitat loss</p><p>Grasslands are globally among the least protected biomes, and the conversion of grasslands into agricultural areas, particularly the ploughing of the Eurasian steppe to grow cereals, has dramatically reduced the habitat available for large ungulates like Asiatic wild asses.&#160;The growth of urban areas, industrial, and mining developments also destroy habitat by converting pastures into built-up areas, fencing off access, potentially polluting pastures with chemicals or dust, and by creating disturbance.&#160;Increased car ownership results in an increasing network of dirt roads, reducing available pasture area. Car or motorbike ownership can also lead to the “recreational chasing” of Asiatic wild asses. The recent use of snowmobiles creates novel opportunities for chasing Asiatic wild asses in winter.</p><p>Illegal artisanal gold mining (“ninja mining”) emerged in Mongolia in the 1990s and has resulted in the localized mechanical destruction of pastures, pollution of water sources, and subsistence poaching. Legalizing small-scale gold mining and the rapid development of legal mining has reduced but not eliminated this land-conflict. In Great Gobi B Strictly Protected Area in SW Mongolia, one ranger and one local police officer must guard one particular area against illegal miners 24/7, binding already scarce resources. In Great Gobi A Strictly Protected Area, illegal mining has also been identified as a conservation concern.</p><p>When Asiatic wild asses enter cereal fields, melon plantations, vineyards or orchards, conflicts arise with farmers, which either result in the exclusion of Asiatic wild asses through fencing, farmers chasing them away, or illegally killing them (i.e., in Iran, Turkmenistan, Kazakhstan, and Israel). Consequently, conversion of drylands into agricultural plots (i.e., by irrigation) results not only in Asiatic wild ass habitat loss but is often coupled with increased conflict and mortality.</p><p>7. Invasive plants</p><p>Increased international travel and the human desire to introduce new plant species to grow as crops, ornamental plants, or for habitat modification has resulted in the spread of many invasive species, some with highly detrimental consequences for the native ecosystem. So far invasive plants have not been discussed much in the context of grassland conservation and the conservation of migratory ungulates in Central Asia. However,&#160;<em>Prosopis juliflora</em>,&#160;introduced to the&#160;Little Rann of Kutch in the 1950s and 1960s is spreading at an alarming rate, reducing pasture for livestock and wildlife including Asiatic wild ass.</p><p>8. Habitat fragmentation</p><p>Asiatic wild asses have become largely confined to semi-desert and desert areas with a high variability in water and pasture availability. To cope with this unpredictable environment and track the scarce resources available, Asiatic wild asses need to have access to large tracts of land. This is particularly true in times of weather extremes when Asiatic wild asses need to outrun summer droughts, extreme winters, or large steppe fires. Although protected areas may provide important refuges, most are too small. It is therefore crucial that long-term planning for conservation of Asiatic wild asses occurs at the landscape scale.</p><p>A key driver of habitat fragmentation is the rapid development of linear infrastructure. Although the structural presence of roads and railways&#160;per se&#160;does not seem to constitute a major obstacle to Asiatic wild ass movements, traffic volume and steep embankments reduce and hinder movements. In areas with high traffic volumes, vehicles&#160;–&#160;wild ass collisions also occur and constitute a safety risk for drivers and a mortality risk for Asiatic wild asses.&#160;Fenced linear infrastructure reduces the risk of vehicle collisions. However, without wildlife crossings, fenced highways and railways become absolute barriers. The fact that Asiatic wild asses are unwilling to jump over, or crawl under fences has been well demonstrated in Mongolia by the fence along the Trans-Mongolian railway (TMR). For decades, this fence has acted as range-restricting barrier, blocking Asiatic wild asses from former habitat in the Eastern Steppe.</p><p>Unfortunately, fencing railways is common practice in the region. In Mongolia, three new railways which cross through the heart of the Asiatic wild ass range in the South Gobi region have recently been completed. One of these railways is completely fenced, one partly fenced, and more fencing is discussed due to the risk of livestock being hit. This is a very worrying development which may well threaten connectivity goals developed for Mongolia previously (UNEP/CMS 2015).&#160;In northern India, in the Rann of Kutch, dams and canals, and livestock fences also threaten to fragment the habitat of the Asiatic wild ass. In addition, the need for renewable energy has sparked the construction of wind and solar parks, which require large tracts of land.</p><p>9. Border fences</p><p>Border fences are a particular case of fences as they tend to stretch over hundreds of kilometres of land otherwise often little impacted by human activities. Access to the border regions tends to be restricted and entry may require special permissions. All the Asiatic wild ass range countries have border fences and transboundary cooperation is particularly relevant for the Asiatic wild ass populations on the Ustyurt plateau and in the Gobi. Several protected areas which are highly relevant for Asiatic wild ass conservation are found along fenced international borders, which severely hinders or blocks population connectivity and results in mortalities due to fence entanglement. Where Asiatic wild ass populations are recovering, such as in India’s Rann of Kutch, the fenced international border prevents recolonisation of suitable habitat on the Pakistan side (N. Shah and Q. Qureshi pers. comm. 2023).</p><p>10. Reduced access to water</p><p>Asiatic wild asses need regular access to water, ideally daily, within commuting distances of no more than 15-20 km. In large parts of the Asiatic wild ass range, water points are rare and distances between them are large. Hence, if Asiatic wild asses get cut off from water sources due to habitat fragmentation or disturbance (including livestock presence), the pastures in the areas surrounding these water points also become unavailable to them. This not only reduces the overall pasture available to the population, but also forces Asiatic wild asses to concentrate at fewer waterpoints, thereby increasing the risk for parasite and disease transmission and making them more vulnerable to predation and illegal hunting.</p><p>Rising temperatures due to climate change are also likely to reduce the availability of open water in parts of the range. Several wild ass populations in the hotter, dryer part of the range are already heavily dependent on artificial water sources or water trucks which refill cisterns (e.g., Israel, Iran, Turkmenistan, Kazakhstan&#160;–&#160;Barsa Kelmes). Without there interventions, these populations would most likely decrease dramatically or even cease to exist. This makes these Asiatic wild ass populations very vulnerable to disruption of funding streams (e.g., for manpower, vehicles, technical maintenance of pumps and repair) necessary for these interventions.</p><p>11. Small and isolated populations</p><p>Forcing migratory or nomadic species like Asiatic wild ass to become range resident greatly lowers the carrying capacity of the landscape by restricting the population’s ability to track resources, avoid predators, and minimize exposure to parasites. Reduced mobility in combination with smaller population sizes makes populations more vulnerable to localized events and reduces their resilience to climate change. Small, isolated populations are also demographically and genetically more vulnerable and prone to extinction, particularly in habitats with frequent environmental extremes. Small and localised populations also have limited resilience to disease outbreaks.</p><p>12. Illegal killing</p><p>Asiatic wild asses are poached for meat, hides, and certain body parts such as bone marrow fat, liver, and lung (which are believed to have medicinal properties). Asiatic wild ass may also be killed for recreation, curiosity, or as “by-catch” while legally or illegally hunting for other wildlife.&#160;Poaching in Mongolia peaked in the early 2000s and included large scale market hunting, but currently seems to be much reduced. However, Asiatic wild ass lung has been offered on social media as a remedy for lung problems caused by COVID-19. Poaching in China also no longer seems a serious threat, due to the species strict protection status which results in severe punishment of poachers.</p><p>Poaching remains a key threat in Turkmenistan, parts of Kazakhstan, Uzbekistan, and Iran. In Turkmenistan poaching has resulted in the recent eradication of the last autochthonous population of&#160;<em>E. h. kulan</em>&#160;in Badhyz and in Kazakhstan it has negatively impacted reintroduction to the central steppe and does seem to hinder expansion beyond Altyn Emel National Park and Barsa Kelmes State Nature Reserve.</p><p>Where abundant, Asiatic wild ass are considered pasture competitors and there are occasions when herders kill Asiatic wild asses to discourage other Asiatic wild asses from using certain pastures. Retaliation killings happen where Asiatic wild ass enter agricultural plantation raiding and trampling crops and knocking down fences. Asiatic wild ass&#160;–&#160;human conflicts are particularly of concern in India, Israel, and Iran and previously in Turkmenistan.</p><p>13. Illegal trade</p><p>There is currently little indication of any trade in meat or body parts of Asiatic wild asses across international borders.</p><p>The huge demand for Chinese medicine known as “Ejiao” or “Ah-Chiao” is threatening donkey stocks in Africa and several countries have banned the export of skins. This has also sparked some concern that closely related Asiatic wild asses, could also be targeted. However, the sheer volume of the industry (nearly 4.8 million donkeys are estimated to be killed each year to manufacture Ejiao) makes it obvious that the limited populations of Asiatic wild ass cannot meet demands. Ejiao can obtain donkey skins more easily from the market and don’t need to risk penalties by using Asiatic wild ass skin. There is currently no indication for the use of Asiatic wild ass skins nationally in China nor for cross-boundary trade (W. Xu pers. comm. 2023).</p><p>However, it would generally be prudent to monitor markets and social media feeds throughout the Asiatic wild ass range for novel trends in the use of and demand for Asiatic wild ass body parts to be able to counteract these developments early. In Mongolia, such monitoring has for example revealed the novel use of Asiatic wild ass lung as a remedy against COVID-19 related lung problems (B. Buuveibaatar pers. comm. 2023).</p><p>14. Harassment &amp; disturbance</p><p>Throughout their range, Asiatic wild asses are regarded as pasture competitors when perceived as being “too numerous”. Furthermore, local herders fear that Asiatic wild asses destroy the pasture with their hooves, digging out plants and their roots, thereby causing erosion. In the Mongolian Gobi, herders are particularly concerned about Asiatic wild asses depleting their winter pastures. When large groups of Asiatic wild asses are encountered in fall or winter near these pastures, herders actively chase them away.</p><p>Chasing Asiatic wild asses by motorbike or car for “fun” seems common practise of people, including rangers, and tour guides. With increasing car ownership and better road access to the Asiatic wild ass range, this can result in frequent disturbance. These chases are energy demanding for Asiatic wild asses, can disrupt groups, and risk separating foals from mothers.</p><p>Asiatic wild asses need to drink daily, which makes them vulnerable to disturbance at water points. Evidence from the Mongolian Gobi suggest that in areas with higher human and livestock presence, Asiatic wild ass primarily drink at night. Where poaching pressure is high and animals have long flight distances, human presence at water points or activity near water points will likely result in Asiatic wild ass displacement, potentially forcing the animals to move potentially large distances to find water elsewhere or wait until human activity ceases at night.</p><p>15. Mass mortality</p><p>The current climate prediction models for Central Asia are associated with a high degree of uncertainty concerning both the timing and amount of precipitation and the interactions between temperature and precipitation on pasture and water dynamics.&#160;Of special concern is the future frequencies of droughts in summer and extreme winter storms. These can and have resulted in mass mortalities of livestock and wildlife. The severity of the impact on wild ungulates can be expected to be especially severe, where livestock numbers are high, and barriers hinder Asiatic wild ass migration to less impacted areas.&#160;If the frequency and/or severity of extreme weather events increases, Asiatic wild ass populations may not be able to recover before the next extreme event hits, resulting in declining populations which may eventually face extinction. In steppe habitats, the occurrence of large-&#160;scale fires may also result in mass mortalities if escape routes are blocked by barriers.</p><p>Of longer-term concern is the uncertainty surrounding the future northwards expansion of the desert zone and how this will impact habitat and water availability. Especially where Asiatic wild asses live in the driest and hottest habitats (Israel, Iran, Turkmenistan, and the southern parts of Kazakhstan and Uzbekistan), water already comes almost exclusively from artificial water points or is provided by water trucks. If it gets even hotter and drier, these sources may eventually dry up or it will become too expensive to drill for alternative water sources.</p><p>&#160;</p><p><strong>Summary of population specific threats by country</strong></p><p>Threats in northern&#160;China&#160;from intensified resource extraction and degazetting of parts of Kalamaili Mountain Ungulate National Nature Reserve (KNR, Xia <em>et al</em>. 2014) have been largely addressed. Kalamaili was upgraded to National Park in 2022, and habitat restoration and wildlife crossings along the central highway seem to have resulted in the recovery of the population (Xu <em>et al</em>. 2022). Furthermore, all livestock has been banned from KNR (Qing Cao pers. comm. 2022). The border fence along the international border with Mongolia is making transboundary movements extremely difficult. The situation in Inner Mongolia is unclear, although the fence along the international border with Mongolia largely inhibits population exchange; breaches seem to happen and may be the main source of khulan presence on the Inner Mongolian side. Poaching does exist, but it is sporadic and no longer a serious threat in China, likely due to the strict protection regime and severe punishments poachers face. Like Mongolia (Kaczensky <em>et al</em>. 2020), rapid infrastructure development poses the major threat to Asiatic wild ass in China, especially those related to the resource extraction industry (mining), which creates new barriers to migration/nomadic movement and results in habitat loss and degradation (Xu <em>et al</em>. 2022, Zhuo <em>et al</em>. 2022).</p><p>Threats to Asiatic wild ass in the Little Rann of Kutch in&#160;India&#160;stem from increasing human activities. Land use patterns have changed since the Mega Narmada Dam Project which resulted in the Sardar Sarovar canals all around the protected area (Goyal <em>et al</em>. 1999). Uninformed release of Sardar Sarovar canal excess waters into the Rann is having an impact on the micro-habitat, the short grasslands and is restricting the movement of Asiatic wild ass and other species across the saline desert. Exotic weeds are brought along by the Narmada water which are displacing the Rann grassland species (N. Shah 2018-2020 unpubl.). Increased agricultural practices have converted fallow lands into irrigation fields, resulting in shrinking habitat for the existing Asiatic wild ass population. Crop diversity has largely shifted from food to cash crops leading to heavy use of insecticides and pesticides which are polluting ground and surface waters. Religious activities, cattle breeding and influx of people have accelerated on the Islands or Bets of the Rann.&#160;<em>Prosopis juliflora</em>&#160;invasion is an additional threat to the habitat (Sinha et al. 2009). An estimated 30-35% of the Asiatic wild ass population lives outside the protected area and human-Asiatic wild ass conflicts are increasing, particularly crop raiding. The increased use of electric fencing is threatening to fragment remaining movement corridors for Asiatic wild asses (Shah pers. obs. 2013-2018). The uncontrolled salt “mining” and transport is causing disturbance and barriers to wildlife movements and threatens to degrade creek habitats. In recent years Asiatic wild ass have also been increasingly hit on the major express highway, especially the Viramgam Dhrangadhra National highway. The International Boundary with Pakistan has been fenced thus restricting transboundary movements for Asiatic wild asses. Although the population is on the rise, foaling rates have been on the decline in recent years (N. Shah pers. comm. 2014). Of further concern is the relatively low genetic diversity (Khaire <em>et al</em>. 2017) which may be enhanced if the population within the Wild ass sanctuary becomes separated from the animals outside. Disease remains a risk, especially given the increasing Asiatic wild ass&#160;–&#160;livestock interface. In recent years, small outbreaks of surra were observed and reported to the authorities in (N. Shah pers. obs. 2018, 2019 and 2020). With climate change dust storms, heat waves, and unseasonal rainfall are becoming increasingly frequent, while delayed seasonal rainfall is a grave concern for the biodiversity and human survival in the landscape (N. Shah unpubl. data)</p><p>In&#160;Iran&#160;climate change is likely the most important threat enhancing the threats currently caused by limited availability of water and pasture competition with livestock. Upgrading the core zone of Bahram-e-Goor protected area to Qatrouiyeh National Park and providing water supplies and occasional hay resulted in an increase of the Asiatic wild ass population. In&#160;contrast, the large adjacent Bahram-e-Goor protected area seems to provide only limited living space for Asiatic wild asses due to occupation of water sources and pastures by livestock and insufficient capacity of rangers for patrolling (Esmaeili <em>et al</em>. 2024). As a result, the Asiatic wild ass population is concentrated in Qatrouyeh National Park, where signs of high herbivory pressure from Asiatic wild asses are starting to show. An expansion into adjacent protected areas towards the north is currently observed, but also triggers concerns over conflicts with local people over crop raiding (Esmaeili <em>et al</em>. 2019) and Asiatic wild ass&#160;–&#160;vehicle collisions (Mohammadi <em>et al</em>. 2023). In Touran protected area the distribution range and abundance of Asiatic wild asses seems to have stabilised and may even increase. Occupation of suitable Asiatic wild ass habitats by livestock (sheep and goats and camels), poaching (usually by chasing the animal by motorbike) and insufficient protection are the most important threats to the species in this reserve.</p><p>The reintroduced Asiatic wild ass population in Israel lives in an extremely arid environment prone to droughts and dry summers. There are at present seven artificial, permanent water sources within the current distribution area. There are four natural springs too, but they are often visited by many people and this usually prevents the wild asses from using them. Presently the major known mortality cause is Asiatic wild Ass-vehicle collisions (Waner 2014). Although the population size has doubled since 1999, an increase in the probability of extreme events under the predicted climate change scenario may still make this population vulnerable to extinction as modelled by Saltz <em>et al</em>. (2006). Another simulation model, based on changes in allele frequencies, suggests that a strong polygynous mating system is leading to increased genetic drift (Renan <em>et al</em>. 2015) and small effective population size (Greenbaum <em>et al</em>. 2018). Researchers from Ben Gurion University of the Negev recommended to the Israel Nature and Parks Authority that they add water sources to increase the potential sites for male territories (Renan <em>et al</em>. 2018).&#160;&#160;In 2020 three new artificial water sources were opened. At the same time, one of the previous water sources was closed, due to proximity to a paved road and the risk of vehicle collisions. The impact of the water source manipulation on the social network and the number of males participating in reproduction is currently being studied. Damages to new vineyards (planted since 2007 near the wild ass range) cause conflicts with the farmers. The vineyards are only loosely fenced, and the animals can easily cross some of the fences. The farmers try to chase them away, but so far there is no indication of illegal killings. However, there is local concern that the wild ass population has \"increased too much\". Studies are currently being conducted to estimate the impact of the wild asses in the Negev Highlands on the natural vegetation and to create a reliable estimator of the population size. Israeli borders with neighbouring countries are fenced with very tall fences, and even if wild asses in Jordan will be released outside of the Shaumari Reserve where they are currently kept, it may be complicated to establish connectivity.</p><p>In&#160;Kazakhstan, Asiatic wild asses in Altyn Emel National Park are thriving but are believed to have reached carrying capacity. The population in Barsa Kelmes seems stable but remains confined to the area around Kaska kulan with its three artesian wells. Reintroduction of Asiatic wild asses from Altyn Emel National Park to Andassay Sanctuary have stopped and the status and whereabouts of the reintroduced animals is largely unknown due to a lack of post-release monitoring. Two new reintroduction projects have been initiated (Kaczensky <em>et al</em>. 2021, Salemgareyev <em>et al</em>. 2023). Limited capacity and poaching, especially outside protected areas remains a threat. Along the southern border with Uzbekistan and Turkmenistan, border fences block cross-border movements.</p><p>The main threats to Asiatic wild ass in&#160;Mongolia&#160;remain competition for water and pasture with a growing livestock population, which threatens to degrade the pastureland. The temporally high illegal offtake in Mongolia seen in the early 2000s seems to be greatly reduced but could be resumed if the economic situation becomes unstable and high inflation persists. Newly emerging threats are rapid infrastructure development particularly in connection with resource extraction industries (mining) that is resulting in new barriers to migrations/nomadic movements and habitat loss and degradation (Kaczensky <em>et al</em>. 2020). The situation is&#160;complicated by a lack of binding standards, capacity, and funding to implement landscape scale planning and conservation (Wingard <em>et al</em>. 2014). Climate change was identified as an important future threat due to its predicted impact on the scarcity of resource base (pasture and surface water) and increased frequency and severity of extreme weather events.</p><p>The situation of Kulan in&#160;Turkmenistan&#160;has deteriorated as poaching outside and inside the protected area remains a problem. The autochthonous population in the Badkhyz Strictly Protected Area is functionally extinct. The remaining group of Asiatic wild asses in Gury Howdan is very small, shows signs of inbreeding, and has little prospect for expansion. The occurrence in the Kaplankyr region seems to be restricted to within the border security zone which is connected to Uzbekistan; outside the fence signs of wild ungulates are extremely rare. Border fences dissect several protected areas which are or once were Asiatic wild ass habitat (Kaczensky and Linnell 2015, Kaczensky <em>et al</em>. 2019).</p><p>The situation of Kulan in&#160;Uzbekistan&#160;has improved due to the discovery of a kulan population in South Ustyurt near Lake Sarykamush (Marmazinskaya <em>et al</em>. 2016, Marmazinskaya 2019, Marmazinskaya <em>et al</em>. 2012). Animals were also recorded in areas of Sukhoe Ozero (Dry Lake), Uzunkui and Kulan Takyr close to the border with Turkmenistan on the plains between the Kaplankyr and Assake Audan depression, including the area along the border with Kazakhstan. Most likely animals migrated from Turkmenistan and then stayed in the Uzbek part of the area. In addition, kulan have been translocated from the captive population at the Jeyran Ecocenter to two protected areas in the Ustyurt (Saigachy reserve) and Aralkum region (Sudochie-Akpetki reserve) in 2021-2022. Small population size, border fences, climate change, disturbance by fishermen and poaching remain key threats to kulan conservation in Uzbekistan.</p>",
+    "measures": "<p>The&#160;Asiatic Wild Ass is protected with hunting prohibited in all range states.&#160;Under CITES (the Convention on International Trade in Endangered Species of Wild Fauna and Flora) the Asiatic Wild Ass has been listed since 1975, with subspecies&#160;<em>E. h. hemionus</em>,&#160;<em>E. h. khur&#160;</em>(Appendix I), and&#160;<em>E. h. kulan</em>, and&#160;<em>E. h. onager&#160;</em>(Appendix II) [1 July 1975]. Stricter national measures were implemented to restrict trade for non-commercial purposes by Israel in 2019, India in 2018, and Afghanistan in 2013.&#160;The&#160;Asiatic Wild Ass&#160;is one of the key species in the Central Asian Mammals Initiative (CAMI) of CMS (Karlstetter and Mallon 2014) and&#160;has been listed under CMS in Appendix II since 2002.&#160;The full species is listed on Annex A of the EU Wildlife Trade Regulations since 2013. The Convention on the Conservation of Migratory Species of Wild Animals (CMS) listed the species on Appendix II in 2002 (UNEP/CMS 2002b).&#160;</p><p>A major conservation threat is range fragmentation by linear infrastructure such as roads and railways, which can be mediated by allowing safe crossing passages for Asiatic Wild Ass.&#160;There is a lot of literature available on crossing structures for wildlife (Clevenger and Huijser 2011, Iuell <em>et al</em>. 2003, WII 2016). However limited information is currently available on the use of wildlife crossings by Asiatic Wild Asses. From India we know that Asiatic Wild Asses in the Little Rann of Kutch used wildlife crossing under State Highway 07 (Anonymous 2002). In recent years, more evidence for successful mitigation measures have come forward: in Mongolia, a pilot project to improve connectivity along the Trans-Mongolian Railroad was initiated in 2019 and tested up to three test openings to evaluate their use by Asiatic Wild Ass and assess safety risks (concerning livestock and wildlife collisions with the train). On 16 March 2020, the first Asiatic Wild Ass was documented to cross at the opening and at least 2 more on later occasions. In Kalamaili NP in northern China, preliminary results of recently implemented crossing structures suggest that Asiatic Wild Asses have adapted and make extensive use of these passages (W. Xu pers. comm. 2023).&#160;</p><p>China currently has no management plan for Asiatic Wild Ass.&#160;However,&#160;protection for this species was strengthened&#160;with the upgrading of Kalamaili Mountain Ungulate National Nature Reserve to Kalamaili National Park in 2022, as this region holds 80% of the Chinese Asiatic Wild Ass population. On December 20, 2023,&#160;China unveiled its inaugural inventory of key terrestrial wildlife habitats, encompassing areas that serve as vital ecosystems for 565 level-I and level-II animals within China's wildlife protection system (including Asiatic Wild Ass), supporting their habitation, reproduction, and migration (source: https://english.www.gov.cn/news/202312/20/content_WS6582db4dc6d0868f4e8e2648.html).</p><p>In India the Gujarat Forest Department has a 10-year management plan for the Wild Ass Sanctuary in Rann of Kutch. The last plan is from 2014/15 and will be renewed by&#160;the&#160;Government of Gujarat in 2024/25.&#160;In Iran a&#160;national action plan has been developed for the conservation of Asiatic Wild Ass about 2 years ago. However, the plan has not yet been implemented. In Mongolia a&#160;first draft of a management plan for Asiatic Wild Ass has been prepared by WCS Mongolia after stakeholder consultations. The draft still needs to be accepted and endorsed by the government (WCS 2023). All other range states currently have no action plan.</p><p>The reintroduction of Asiatic Wild Ass to Barsa Kelmes, a former island in the Aral Sea, in 1953-1964 was probably the first ever reintroduction project using a wild equid (Bannikov 1981, Kaczensky <em>et al</em>. 2018). Further reintroductions followed in Turkmenistan, Kazakhstan, Uzbekistan, Iran, and Israel (Kaczensky <em>et al</em>. 2016). Some have eventually failed, while others have succeeded in establishing populations in Barsa Kelmes and Altyn Emel in Kazakhstan, on the Ustyurt plateau in Uzbekistan and Turkmenistan, and in the Negev in Israel.&#160;In recent years (post 2000), new reintroductions were initiated, particularly in Iran, Jordan, Kazakhstan, and Uzbekistan.&#160;Most recently, Saudi Arabia introduced Asiatic Wild Asses in 2023. Asiatic Wild Asses are not easy to capture in larger numbers, transport, or breed in captivity and it would therefore be desirable to compile past and ongoing experiences so that losses of animals can be minimised, and procedures optimised.</p><p>Infanticide and high aggression levels in stallions are a common problem in captive facilities. Damage to transport boxes resulting in self-injury or transport related accidents are also not uncommon. Closer cooperation between people working&#160;ex situ&#160;with wild populations and&#160;those working&#160;in situ&#160;with captive populations could only be beneficial for both sides and will likely result in better animal husbandry&#160;in situ&#160;and better animal welfare&#160;ex situ&#160;(Huber <em>et al</em>. 2019, Schook <em>et al</em>. 2016).&#160;A major concern for safely handling Asiatic Wild Asses is the limited availability or outright ban of standard veterinary drugs for equids in several of the Range States. These restrictions make&#160;it&#160;de facto&#160;illegal to use the well tested etorphine based anaesthesia protocols for capture and marking of free-ranging wild equids (Walzer 2014). Alternatives may be possible, but need to be tested with wild animals under field conditions (Bohner <em>et al</em>. 2022). Due to the lack of state-&#160;of-the-art veterinary drugs, the capacity of veterinarians to work with wildlife is rather restricted and experienced wildlife veterinarians are desperately needed.</p>",
+    "use_trade": "<p>Illegal trade seems to happen primarily on a national level and stem from poaching for meat, hides and bone marrow fat, which like liver is believed by some to have medicinal properties.<br/><br/>Illegal off-take in Mongolia peaked in the early 2000s and also included large scale market hunting (Wingard and Zahler 2006, Stubbe&#160;<em>et al.</em>&#160;2007), but currently seems to be much reduced. However, illegal off-take has been identified as a key threat in parts of Turkmenistan, Kazakhstan, Iran and China and may well drive some of the small populations into extinction if not stopped (as observed in Badhyz, Turkmenistan).</p>",
+    "rationale": "<p>This species is assessed as Near Threatened (NT) A3bcd, approaching Vulnerable (VU), as a population decline of at least 20% is projected over the next three generations, based on old prevailing and newly emerging risks.&#160;</p><p>The species has been extirpated from 95% of its historic range due to land conversion, overhunting, and agriculture. These threats remain, with new threats of increasing livestock numbers leading to degraded pastures and competition with pastoralists and increasing infrastructure development preventing nomadic movements. Infrastructure development includes&#160;land conversion to mining or human-use areas and linear infrastructure. All threats will be exacerbated by effects of climate change affecting habitat. The majority of Asiatic Wild Ass live in Mongolia, where the population will be affected by existing and emerging threats. All other populations are small and isolated. The potential for rapid reduction of Asiatic Wild Ass populations in the absence of sufficient protections has been demonstrated by the extinction of the population in Badhyz, Turkmenistan.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>There are five generally recognized subspecies/ecotypes:</p><p>1.&#160;&#160;&#160;&#160;&#160;&#160;<em>Equus hemionus hemionus</em>&#160;- the Gobi khulan (<em>E. h. luteus</em>&#160;- the dziggetai in southern Mongolia and northern China, is probably a synonym of&#160;<em>E. h. hemionu</em>s (Oakenfull&#160;<em>et al.</em>&#160;2000, Grubb 2005, Kaczensky&#160;<em>et al.</em>&#160;2011a)</p><p>2.&#160;&#160;&#160;&#160;&#160;<em>E. h. khur&#160;</em>– the khur (India)</p><p>3.&#160;&#160;&#160;&#160;&#160;&#160;<em>E. h. kulan</em>&#160;– the Turkmen kulan (in Turkmenistan, re-introduced in Kazakhstan, Uzbekistan, Ukraine and mixed<em>&#160;E. h. kulan</em>&#160;x&#160;<em>E. h. onager&#160;</em>in Israel)</p><p>4.<em>&#160;</em>&#160;<em>E. h. onager&#160;</em>- the onager (southern Iran), mixed&#160;<em>E. h. kulan</em>&#160;x&#160;<em>E. h. onager</em>&#160;in northern Iran in Touran, and re-introduced and mixed&#160;<em>E. h. kulan</em>&#160;x&#160;<em>E. h. onager</em>&#160;in three reintroduced areas in north-central Iran and in Israel.</p><p>5.&#160;&#160;&#160;&#160;&#160;&#160;<em>E. h. hemippus</em>&#160;– the Syrian wild ass (Extinct, formerly from the eastern shore of the Mediterranean Sea south into the Arabian Peninsula)</p><p>Genetic analyses of archaeological, historical and modern samples suggest that there is only one species of Asiatic Wild Ass (Bennett&#160;<em>et al.</em>&#160;2012)&#160;assigning the modern&#160;<em>Equus hemionus</em>&#160;and&#160;<em>Equus kiang</em>&#160;as well as&#160;<em>Equus hydruntinus</em>&#160;which went extinct during the Holocene (Crees and Turvey 2014) to the same species, which is subdivided into regional subpopulations rather than subspecies. Comparative analysis of modern samples of&#160;<em>Equus hemionus</em>&#160;from Iran (<em>E. h. onager</em>) and China (<em>E. h. hemionus</em>) and&#160;<em>Equus kiang</em>&#160;also did not support monophyly (Rosenbom&#160;<em>et al.</em>&#160;2015). Furthermore, phylogenetic&#160;analyses based on mitochondrial DNA and microsatellites suggested a cline between&#160;<em>E. h. kulan</em>&#160;and<em>&#160;E. h. onager</em>, rather than separation as two distinct subspecies (Kaczensky&#160;<em>et al</em>. 2018).&#160;Consequently, the population in northern Iran (in Touran protected area), shows an intermediate genetic profile and the animals are considered natural hybrids of&#160;<em>E. h. kulan</em>&#160;x&#160;<em>E. h. onager</em>. In addition, a mix of&#160;<em>E. h. kulan</em>&#160;and&#160;<em>E. h. onager</em>&#160;founders were used for introduction in Israel and reintroductions in northern-central Iran.<br/><br/>This Red List assessment does not include&#160;<em>Equus kiang which is still considered a separate species.&#160;</em>Separate assessments for the subspecies are included as these populations are currently distinct conservation units.&#160;</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_5",
+      "description": {
+        "en": "Non-monetary values"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Tajikistan"
+      },
+      "code": "TJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uzbekistan"
+      },
+      "code": "UZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Kyrgyzstan"
+      },
+      "code": "KG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (unknown use)"
+      },
+      "code": "7_2_8"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Work & other activities"
+      },
+      "code": "6_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Likely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "War, civil unrest & military exercises"
+      },
+      "code": "6_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Neltuma affinis",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Strombocarpa abbreviata",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Kaczensky, P., King, S.R.B., Esmaeili, S. & Moehlman, P.D.",
+      "value": [
+        "Saeideh Esmaeili (Colorado State University)",
+        "Petra Kaczensky (Research Institute of Wildlife Ecology, University of Veterinary Medicine, Vienna, Austria)",
+        "Patricia Moehlman (Columbia University EcoHealth Alliance)",
+        "Sarah King (Colorado State University, Colorado, USA)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Tatin, L.",
+      "value": [
+        "Laurent Tatin"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Bouskila, A., Buuveibaatar, B., Bykova, E., Hemami, M., Karryeva, S., Marmazinskaya, N., Nandintsetseg, D., Prahl, A., Qureshi, Q., Shah, N., Xu, W. & Yang, W.",
+      "value": [
+        "Wenxuan Xu",
+        "Adriana Prahl",
+        "Dejid Nandintsetseg",
+        "Bayarbaatar Buuveibaatar",
+        "Shirin Karryeva (CLLC/CEPF project)",
+        "Elena Bykova",
+        "Qamar Qureshi (IUCN SSC Equid SG)",
+        "Amos Bouskila",
+        "Mahmoud-Reza Hemami",
+        "Nita Shah (Wildlife Institute of India & WWF India)",
+        "Natalia Marmazinskaya (Samarkand)",
+        "Weikang Yang (Xinjiang Institute of Ecology and Geography)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wingard, J.R. and Zahler, P. 2006. Silent Steppe: The Illegal Wildlife Trade Crisis in Mongolia. <i>Mongolia Discussion Papers, East Asia and Pacifi c Environment and Social Development Department. Washington D.C.: World Bank</i>.",
+      "year": "2006",
+      "title": "Silent Steppe: The Illegal Wildlife Trade Crisis in Mongolia",
+      "author": "Wingard, J.R. and Zahler, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rubenstein, D.I. 1986. Life history and social organization in arid adapted ungulates. In: D. I. Rubenstein and R. W. Wrangham (eds), <i>Ecological Aspects of social evolution</i>, pp. 282-302. Princeton University Press, Princeton.",
+      "year": "1986",
+      "title": "Life history and social organization in arid adapted ungulates",
+      "author": "Rubenstein, D.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grubb, P. 2005. Order Perissodactyla. In: D. E. Wilson and D. M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 629-636. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Perissodactyla",
+      "author": "Grubb, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oakenfull, E.A., Lim, H.N. and Ryder, O.A. 2000. A survey of equid mitochondrial DNA: implications for the evolution, genetic diversity and conservation of <i>Equus</i>. <i>Conservation Genetics</i> 1: 341-255.",
+      "year": "2000",
+      "title": "A survey of equid mitochondrial DNA: implications for the evolution, genetic diversity and conservation of <i>Equus</i>",
+      "author": "Oakenfull, E.A., Lim, H.N. and Ryder, O.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Klingel, H. 1998. Observations on social organization and behavior of African and Asiatic wild asses (<i>Equus africanus</i> and <i>E. hemionus</i>). <i>Applied Animal Behaviour Science</i> 60: 103-113.",
+      "year": "1998",
+      "title": "Observations on social organization and behavior of African and Asiatic wild asses (<i>Equus africanus</i> and <i>E. hemionus</i>)",
+      "author": "Klingel, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Feh, C., Munkhtuya, B., Enkhbold, S. and Sukhbaatar, T. 2001. Ecology and Social Structure of the Gobi Khulan (<i>Equus hemionus</i> subsp). in the Gobi B National Park, Mongolia. <i>Biological Conservation</i> 101: 51-61.",
+      "year": "2001",
+      "title": "Ecology and Social Structure of the Gobi Khulan (<i>Equus hemionus</i> subsp). in the Gobi B National Park, Mongolia",
+      "author": "Feh, C., Munkhtuya, B., Enkhbold, S. and Sukhbaatar, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stubbe, A., Stubbe, M. and Batsajchan. 2007. Morphology, reproduction and mortality of <i>Equus hemionus hemionus</i> in Mongolia. <i>Erforschung Biologischer Ressourcen der Mongolei (Halle/Saale)</i> 2007(10): 117-132.",
+      "year": "2007",
+      "title": "Morphology, reproduction and mortality of <i>Equus hemionus hemionus</i> in Mongolia",
+      "author": "Stubbe, A., Stubbe, M. and Batsajchan",
+      "citation_short": null
+    },
+    {
+      "citation": "Bannikov, A. G. 1981. <i>Khulan</i>. Lesnaya Promiyshlennosti, Moscow, Russia.",
+      "year": "1981",
+      "title": "Khulan",
+      "author": "Bannikov, A. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shah, N. V. 1993. Ecology of wild ass (<i>Equus hemionus khur</i>) in Little Rann of Kutch. Ph.D. Thesis, M.S. University of Baroda.",
+      "year": "1993",
+      "title": "Ecology of wild ass (<i>Equus hemionus khur</i>) in Little Rann of Kutch",
+      "author": "Shah, N. V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Saltz, D. and Rubenstein, D. I. 1995. Population dynamics of a reintroduced Asiatic wild ass (<i>Equus hemionus</i>) herd. <i>Ecological Applications</i> 5: 327-335.",
+      "year": "1995",
+      "title": "Population dynamics of a reintroduced Asiatic wild ass (<i>Equus hemionus</i>) herd",
+      "author": "Saltz, D. and Rubenstein, D. I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shah, N. V. and Qureshi, Q. 2007. Social organization and determinants of spatial distribution of khur (<i>Equus hemionus</i> khur). <i>Exploration into\nthe Biological Resources of Mongolia</i> 10: 189-200.",
+      "year": "2007",
+      "title": "Social organization and determinants of spatial distribution of khur (<i>Equus hemionus</i> khur)",
+      "author": "Shah, N. V. and Qureshi, Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "Goyal, S. P., Sinha, B., Shah, N. and Panwar, H. S. 1999. Sardar Sarovar Project – a conservation threat to the Indian wild ass (<i>Equus hemionus khur</i>). <i>Biological Conservation</i> 88: 277-284.",
+      "year": "1999",
+      "title": "Sardar Sarovar Project – a conservation threat to the Indian wild ass (<i>Equus hemionus khur</i>)",
+      "author": "Goyal, S. P., Sinha, B., Shah, N. and Panwar, H. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feh, C., Shah, N., Rowen, M., Reading, R. and Goyal, S. P. 2002. Status and action plan for the Asiatic wild ass (<i>Equus hemionus</i>). In: P. D. Moehlman (ed.), <i>Equids: Zebras, Asses and Horses. Status Survey and Conservation Action Plan</i>, pp. 62-71. IUCN, Gland, Switzerland.",
+      "year": "2002",
+      "title": "Status and action plan for the Asiatic wild ass (<i>Equus hemionus</i>)",
+      "author": "Feh, C., Shah, N., Rowen, M., Reading, R. and Goyal, S. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Solomatin, A. O. 1973. The Wild Ass. <i>Nauka, Moscow [in Russian]</i>.",
+      "year": "1973",
+      "title": "The Wild Ass",
+      "author": "Solomatin, A. O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rubenstein, D. I., Sundaresan, S., Fischhoff and Saltz, D. 2007. Social Networks in Wild Asses: Comparing Patterns and Processes among Populations. <i>Exploration into the Biological Resources of Mongolia</i> 10: 159-176.",
+      "year": "2007",
+      "title": "Social Networks in Wild Asses: Comparing Patterns and Processes among Populations",
+      "author": "Rubenstein, D. I., Sundaresan, S., Fischhoff and Saltz, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karlstetter, M., Mallon, D. 2014. Assessment of gaps and needs in migratory mammal conservation in Central Asia. <i>Report prepared for the Convention on the Conservation of Migratory Species of Wild Animals (CMS) and the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH. Financed by the Ecosystem Restoration in Central Asia (ERCA) component of the European Union Forest and Biodiversity Governance Including Environmental Monitoring Project (FLERMONECA)</i>.",
+      "year": "2014",
+      "title": "Assessment of gaps and needs in migratory mammal conservation in Central Asia",
+      "author": "Karlstetter, M., Mallon, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Xu, W., Xia, C., Yang, W., Blank, D.A., Qiao, J., Liu, W. 2012. Seasonal diet of Khulan (Equidae) in Northern Xinjiang, China. <i>Italian Journal of Zoology</i> 79: 92-99.",
+      "year": "2012",
+      "title": "Seasonal diet of Khulan (Equidae) in Northern Xinjiang, China",
+      "author": "Xu, W., Xia, C., Yang, W., Blank, D.A., Qiao, J., Liu, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P. and Linnell, J.D.C. 2015. Rapid assessment of the mammalian community of the Badhyz Ecosystem, Turkmenistan, October 2014. <i>Norwegian Institute for Nature Research, NINA Report 1148.</i>.",
+      "year": "2015",
+      "title": "Rapid assessment of the mammalian community of the Badhyz Ecosystem, Turkmenistan, October 2014",
+      "author": "Kaczensky, P. and Linnell, J.D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Volf, J. 2010. Sixty years of kulan, <i>Equus hemionus kulan</i> (Groves et Mazák, 1967) breeding at Prague Zoo. <i>Equus</i>: 30-55.",
+      "year": "2010",
+      "title": "Sixty years of kulan, <i>Equus hemionus kulan</i> (Groves et Mazák, 1967) breeding at Prague Zoo",
+      "author": "Volf, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heptner, V. G., Nasimovich, A. A., and Bannikov, A. G. 1988. Kulan: <i>Equus (Equus) hemionus</i>. <i>Pages 1011-1036 in: Mammals of the Soviet Union Volume 1 – Artiodactyla and Perissodactyla. [English translation of the original book published in 1961 by Vysshaya Shkola Publishers Moscow]. Smithsonian Institution Libraries and The National Science Foundation Washington, D.C., USA.</i>.",
+      "year": "1988",
+      "title": "Kulan: <i>Equus (Equus) hemionus</i>",
+      "author": "Heptner, V. G., Nasimovich, A. A., and Bannikov, A. G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Feh, C., Boldsukh, T. and Tourenq, C. 1994. Are family groups in equids a response to cooperative hunting by predators? The case of Mongolian kulans (<i>Equus hemionus luteus</i> Matschie). <i>Revue d'Écologie (La Terre et la Vie)</i> 49: 11-20.",
+      "year": "1994",
+      "title": "Are family groups in equids a response to cooperative hunting by predators? The case of Mongolian kulans (<i>Equus hemionus luteus</i> Matschie)",
+      "author": "Feh, C., Boldsukh, T. and Tourenq, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nowzari, H., Hemami, M.-R., Karami, M., Zarkesh, M.M.K., Riazi, B., Rubenstein, D.I. 2012. Population Parameters of Persian Wild Ass (<i>Equus hemionus onager</i>) in Qatrouyeh National Park, Iran. <i>Page 85 in: P. Kaczensky and J. Ransom (Eds). International Wild Equid Conference - Book of abstracts. Conference in Vienna, Austria from 12-22 September 2012. Research Institute of Wildlife Ecology, University of Veterinary Medicine, Austria</i>.",
+      "year": "2012",
+      "title": "Population Parameters of Persian Wild Ass (<i>Equus hemionus onager</i>) in Qatrouyeh National Park, Iran",
+      "author": "Nowzari, H., Hemami, M.-R., Karami, M., Zarkesh, M.M.K., Riazi, B., Rubenstein, D.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sundaresan, S.R., Fischhoff, I.R., Dushoff, J., Rubenstein, D.I. 2007. Network metrics reveal differences in social organization between two fission-fusion species, Grevy's zebra and onager. <i>Oecologia</i> 151: 140-149.",
+      "year": "2007",
+      "title": "Network metrics reveal differences in social organization between two fission-fusion species, Grevy's zebra and onager",
+      "author": "Sundaresan, S.R., Fischhoff, I.R., Dushoff, J., Rubenstein, D.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P., Kuehn, R., Lhagvasuren, B., Pietsch, S., Yang, W. and Walzer, C. 2011. Connectivity of the Asiatic wild ass population in the Mongolian Gobi. <i>Biological Conservation</i> 144: 920-929.",
+      "year": "2011",
+      "title": "Connectivity of the Asiatic wild ass population in the Mongolian Gobi",
+      "author": "Kaczensky, P., Kuehn, R., Lhagvasuren, B., Pietsch, S., Yang, W. and Walzer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Batsaikhan, N., Buuveibaatar, B., Chimed, B., Enkhtuya, O., Galbrakh, D., Ganbaatar, O., Lkhagvasuren, B., Nandintsetseg, D., Berger, J., Calabrese, J.M., Edwards, A.E., Fagan, W.F., Fuller, T.K., Heiner, M., Ito, T.Y., Kaczensky, P., Leimgruber, P., Lushchekina, A., Milner-Gulland, E.J., Mueller, T., Murray, M.G., Olson, K.A., Reading, R., Schaller, G.B., Stubbe, A., Stubbe, M., Walzer, C., von Wehrden, H., Whitten, T. 2014. Conserving the World's Finest Grassland Amidst Ambitious National Development. <i>Conservation Biology</i> 28(6): 1736–1739.",
+      "year": "2014",
+      "title": "Conserving the World's Finest Grassland Amidst Ambitious National Development",
+      "author": "Batsaikhan, N., Buuveibaatar, B., Chimed, B., Enkhtuya, O., Galbrakh, D., Ganbaatar, O., Lkhagvasuren, B., Nandintsetseg, D., Berger, J., Calabrese, J.M., Edwards, A.E., Fagan, W.F., Fuller, T.K., Heiner, M., Ito, T.Y., Kaczensky, P., Leimgruber, P., Lushchekina, A., Milner-Gulland, E.J., Mueller, T., Murray, M.G., Olson, K.A., Reading, R., Schaller, G.B., Stubbe, A., Stubbe, M., Walzer, C., von Wehrden, H., Whitten, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gueta, T., Templeton, A.R., Bar-David, S. 2014. Development of genetic structure in a heterogeneous landscape over a short time frame: the reintroduced Asiatic wild ass. <i>Conservation Genetics</i> 15: 1231-1242.",
+      "year": "2014",
+      "title": "Development of genetic structure in a heterogeneous landscape over a short time frame: the reintroduced Asiatic wild ass",
+      "author": "Gueta, T., Templeton, A.R., Bar-David, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bennett, E.A., Champlot, S., Pruvost, M., Gautier, M., Arbuckle, B., Balasescu, A., Eisenmann, V., Kaczensky, P., Kuehn, R., Mashkour, M., Morales Muniz, A., Peters, J., Tournepiche, J.-F., Uerpmann, H.-P., Walzer, C., Grange, T., Geigl, E.-M. 2012. The Decline of the Asiatic Wild Ass Recording 100,000 Years of Genetic Diversity of the Species. <i>Page 26 in: P. Kaczensky and J. Ransom (Eds). International Wild Equid Conference - Book of abstracts. Conference in Vienna, Austria from 12-22 September 2012. Research Institute of Wildlife Ecology, University of Veterinary Medicine, Austria</i>.",
+      "year": "2012",
+      "title": "The Decline of the Asiatic Wild Ass Recording 100,000 Years of Genetic Diversity of the Species",
+      "author": "Bennett, E.A., Champlot, S., Pruvost, M., Gautier, M., Arbuckle, B., Balasescu, A., Eisenmann, V., Kaczensky, P., Kuehn, R., Mashkour, M., Morales Muniz, A., Peters, J., Tournepiche, J.-F., Uerpmann, H.-P., Walzer, C., Grange, T., Geigl, E.-M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P., Ganbaatar, O., von Wehrden, H., Walzer, C. 2008. Resource selection by sympatric wild equids in the Mongolian Gobi. <i>Journal of Applied Ecology</i> 45: 1762–1769.",
+      "year": "2008",
+      "title": "Resource selection by sympatric wild equids in the Mongolian Gobi",
+      "author": "Kaczensky, P., Ganbaatar, O., von Wehrden, H., Walzer, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Saltz, D., Rubenstein, D.I., White, G.C. 2006. The impact of increased environmental stochasticity due to climate change on the dynamics of Asiatic wild ass. <i>Conservation Biology</i> 20: 1402-1409.",
+      "year": "2006",
+      "title": "The impact of increased environmental stochasticity due to climate change on the dynamics of Asiatic wild ass",
+      "author": "Saltz, D., Rubenstein, D.I., White, G.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Neumann-Denzau, G. and Denzau, H. 2007. Remarks on the social system of the Mongolian wild ass (<i>Equus hemionus hemionus</i>). <i>Exploration into the Biological Resources of Mongolia (Halle/Saale)</i> 10: 177-187.",
+      "year": "2007",
+      "title": "Remarks on the social system of the Mongolian wild ass (<i>Equus hemionus hemionus</i>)",
+      "author": "Neumann-Denzau, G. and Denzau, H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crees, J.J., and Turvey, S.T. 2014. Holocene extinction dynamics of <i>Equus hydruntinus</i>, a late-surviving European megafaunal mammal. <i>Quaternary Science Reviews</i> 91: 16-29.",
+      "year": "2014",
+      "title": "Holocene extinction dynamics of <i>Equus hydruntinus</i>, a late-surviving European megafaunal mammal",
+      "author": "Crees, J.J., and Turvey, S.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Denzau, G., and Denzau, H. 1999. Wildesel. <i>Jan Thorbecke Verlag, Stuttgart, Germany. [in German]</i>.",
+      "year": "1999",
+      "title": "Wildesel",
+      "author": "Denzau, G., and Denzau, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Xia, C., Cao, J., Zhang, H., Gao, X., Yang, W., Blank, D. 2014. Reintroduction of Przewalski’s horse (<i>Equus ferus przewalskii</i>) in Xinjiang, China: The status and experience. <i>Biological Conservation</i> 177: 142-147.",
+      "year": "2014",
+      "title": "Reintroduction of Przewalski’s horse (<i>Equus ferus przewalskii</i>) in Xinjiang, China: The status and experience",
+      "author": "Xia, C., Cao, J., Zhang, H., Gao, X., Yang, W., Blank, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Renan, S., Greenbaum, G., Shahar, N., Templeton, A.R., Bouskila, A., Bar-David, S. 2015. Stochastic modelling of shifts in allele frequencies reveals a strongly polygynous mating system in the re-introduced Asiatic wild ass. <i>Molecular Ecology</i> 24: 1433-1446.",
+      "year": "2015",
+      "title": "Stochastic modelling of shifts in allele frequencies reveals a strongly polygynous mating system in the re-introduced Asiatic wild ass",
+      "author": "Renan, S., Greenbaum, G., Shahar, N., Templeton, A.R., Bouskila, A., Bar-David, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Warner, S. 2014. Road-kills of Asiatic Wild Ass in the Central Negev – possible causes and means to prevent them. <i>Unpublished report, Hebrew University of Jerusalem, Israel, 11pp. [in Hebrew]</i>.",
+      "year": "2014",
+      "title": "Road-kills of Asiatic Wild Ass in the Central Negev – possible causes and means to prevent them",
+      "author": "Warner, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P., Ganbataar, O., Altansukh, N., Enkhsaikhan, N., Stauffer, C., Walzer, C. 2011. The Danger of Having All your Eggs in One Basket – Winter Crash of the Re-introduced Przewalski’s Horses in the Mongolian Gobi. <i>PloS ONE</i> 6(12): e28057, doi:10.1371/journal.pone.0028057.",
+      "year": "2011",
+      "title": "The Danger of Having All your Eggs in One Basket – Winter Crash of the Re-introduced Przewalski’s Horses in the Mongolian Gobi",
+      "author": "Kaczensky, P., Ganbataar, O., Altansukh, N., Enkhsaikhan, N., Stauffer, C., Walzer, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oakenfull, E.A. and Ryder, O.A. 2002. Genetics of equid species and subspecies. In: P.D. Moehlman (ed.), <i>Equids: Zebras, Asses and Horses</i>, pp. 108-112. IUCN Publication Services Unit, Cambridge, United Kingdom.",
+      "year": "2002",
+      "title": "Genetics of equid species and subspecies",
+      "author": "Oakenfull, E.A. and Ryder, O.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Adiya, Y., Gunin, P.D., Naranbaatar, G. and Tsogtjargal, G. 2016. The present status and problems in the preservation of ungulate animal populations in the arid zones of Mongolia. <i>Arid Ecosystems </i> 6(158-168).",
+      "year": "2016",
+      "title": "The present status and problems in the preservation of ungulate animal populations in the arid zones of Mongolia",
+      "author": "Adiya, Y., Gunin, P.D., Naranbaatar, G. and Tsogtjargal, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anonymous. 2002. Report on Wild Ass crossing on Viramgam - Halvad corridor. Gujarat State Highways Project Phase IIb. . Report E228, volume 8. N.D. Lea International Ltd. and Lea Associate South Asia Pvt. Ltd.",
+      "year": "2002",
+      "title": "Report on Wild Ass crossing on Viramgam - Halvad corridor. Gujarat State Highways Project Phase IIb. ",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Bannikov, A.G. 1958. Zur Biologie des Khulans. <i>Zeitschrift für Säugetierkunde </i> 23: 157-168.",
+      "year": "1958",
+      "title": "Zur Biologie des Khulans",
+      "author": "Bannikov, A.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barman, B.B., Shah, N., Prasad, A., Sanyal, A., Chavda, V. and Qureshi, Q. 2021. Monitoring Spatial and Seasonal Abundance of Indian Wild Ass (Equus hemionus khur) in Little Rann of Kutch Landscape, Western India. <i>Journal of Ecophysiology and Occupational Health</i> 21: 29033.",
+      "year": "2021",
+      "title": "Monitoring Spatial and Seasonal Abundance of Indian Wild Ass (Equus hemionus khur) in Little Rann of Kutch Landscape, Western India",
+      "author": "Barman, B.B., Shah, N., Prasad, A., Sanyal, A., Chavda, V. and Qureshi, Q.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bohner, J., Painer, J., Bakker, D., Haw, A.J., Rauch, H., Greunz, E.M., Egner, B. and Goeritz, F. 2022. Immobilization of Captive Kulans (Equus hemionus kulan) Without Using Ultrapotent Opioids. <i>Frontiers in Veterinary Science </i> 9.",
+      "year": "2022",
+      "title": "Immobilization of Captive Kulans (Equus hemionus kulan) Without Using Ultrapotent Opioids",
+      "author": "Bohner, J., Painer, J., Bakker, D., Haw, A.J., Rauch, H., Greunz, E.M., Egner, B. and Goeritz, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burnik Šturm, M., Ganbaatar, O., Voigt, C.C. and Kaczensky, P. 2017. Sequential stable isotope analysis reveals differences in multi-year dietary history of three sympatric equid species in SW Mongolia. <i>J Appl Ecol </i> 54(1110-1119).",
+      "year": "2017",
+      "title": "Sequential stable isotope analysis reveals differences in multi-year dietary history of three sympatric equid species in SW Mongolia",
+      "author": "Burnik Šturm, M., Ganbaatar, O., Voigt, C.C. and Kaczensky, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Buuveibaatar, B., Mueller, T., Strindberg, S., Leimgruber, P., Kaczensky, P. and Fuller, T.K. 2016. Human activities negatively impact distribution of ungulates in the Mongolian Gobi. <i>Biological Conservation </i> 203, : 168-175.",
+      "year": "2016",
+      "title": "Human activities negatively impact distribution of ungulates in the Mongolian Gobi",
+      "author": "Buuveibaatar, B., Mueller, T., Strindberg, S., Leimgruber, P., Kaczensky, P. and Fuller, T.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Buuveibaatar, B., Strindberg, S., Kaczensky, P., Payne, J., Chimeddorj, B., Naranbaatar, G., Saruul, A., Batsuuri, D., Tserendorj, M., Tsolmonjav, P., Hosack, D. and Fuller, T.K. 2017. Mongolian Gobi supports the world's largest populations of khulan Equus hemionus and goitered gazelles Gazella subgutturosa. <i>Oryx, </i> 51(4): 639-647.",
+      "year": "2017",
+      "title": "Mongolian Gobi supports the world's largest populations of khulan Equus hemionus and goitered gazelles Gazella subgutturosa",
+      "author": "Buuveibaatar, B., Strindberg, S., Kaczensky, P., Payne, J., Chimeddorj, B., Naranbaatar, G., Saruul, A., Batsuuri, D., Tserendorj, M., Tsolmonjav, P., Hosack, D. and Fuller, T.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Clevenger, A.P. and Huijser, M.P. 2011. <i>Wildlife Crossing Structures Handbook - Design and Evaluation in North America.</i> Central Federal Lands Highway Division, Publication No. FHWA-CFL/TD-11-003.",
+      "year": "2011",
+      "title": "Wildlife Crossing Structures Handbook - Design and Evaluation in North America.",
+      "author": "Clevenger, A.P. and Huijser, M.P",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crassard, R., Abu-Azizeh, W., Barge, O., Brochier, J.É., Chahoud, J. and Régagnon, E. 2022. The use of desert kites as hunting mega-traps: functional evidence and potential impacts on socioeconomic and ecological spheres. <i>Journal of World Prehistory</i> 35(1): 1-44.",
+      "year": "2022",
+      "title": "The use of desert kites as hunting mega-traps: functional evidence and potential impacts on socioeconomic and ecological spheres",
+      "author": "Crassard, R., Abu-Azizeh, W., Barge, O., Brochier, J.É., Chahoud, J. and Régagnon, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Esmaeili, S., Hemami, M.R. and Goheen, J.R. 2019. Human dimensions of wildlife conservation in Iran: Assessment of human-wildlife conflict in restoring a wide-ranging endangered species. <i>PLoS ONE </i> 14(e0220702).",
+      "year": "2019",
+      "title": "Human dimensions of wildlife conservation in Iran: Assessment of human-wildlife conflict in restoring a wide-ranging endangered species",
+      "author": "Esmaeili, S., Hemami, M.R. and Goheen, J.R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Esmaeili, S., Hemami, M.R., Kaczensky, P., Schoenecker, K.A., King, S.R., Shahriari, B., Walzer, C. and Goheen, J.R. 2024. Rainfall reduces the potential for competitive suppression of a globally endangered ungulate by livestock. <i>Biological Conservation</i> 292(110476.).",
+      "year": "2024",
+      "title": "Rainfall reduces the potential for competitive suppression of a globally endangered ungulate by livestock",
+      "author": "Esmaeili, S., Hemami, M.R., Kaczensky, P., Schoenecker, K.A., King, S.R., Shahriari, B., Walzer, C. and Goheen, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Esmaeili, S., Jesmer, B.R., Albeke, S.E., Aikens, E.O., Schoenecker, K.A., King, S.R.B., Abrahms, B., Buuveibaatar, B., Beck, J.L., Boone, R.B., Cagnacci, F., Chamaille-Jammes, S., Chimeddorj, B., Cross, P.C., Dejid, N., Enkhbyar, J., Fischhoff, I.R., Ford, A.T., Jenks, K., Hemami, M.R., Hennig, J.D., Ito, T.Y., Kaczensky, P., Kauffman, M.J., Linnell, J.D.C., Lkhagvasuren, B., McEvoy, J.F., Melzheimer, J., Merkle, J.A., Mueller, T., Muntifering, J., Mysterud, A., Olson, K.A., Panzacchi, M., Payne, J.C., Pedrotti, L., Rauset, G.R., Rubenstein, D.I., Sawyer, H., Scasta, J.D., Signer, J., Songer, M., Stabach, J.A., Stapleton, S., Strand, O., Sundaresan, S.R., Usukhjargal, D., Uuganbayar, G., Fryxell, J.M. and Goheen, J.R. 2021. Body size and digestive system shape resource selection by ungulates: A cross-taxa test of the forage maturation hypothesis. <i>Ecol Lett </i> 24: 2178–2191.",
+      "year": "2021",
+      "title": "Body size and digestive system shape resource selection by ungulates: A cross-taxa test of the forage maturation hypothesis",
+      "author": "Esmaeili, S., Jesmer, B.R., Albeke, S.E., Aikens, E.O., Schoenecker, K.A., King, S.R.B., Abrahms, B., Buuveibaatar, B., Beck, J.L., Boone, R.B., Cagnacci, F., Chamaille-Jammes, S., Chimeddorj, B., Cross, P.C., Dejid, N., Enkhbyar, J., Fischhoff, I.R., Ford, A.T., Jenks, K., Hemami, M.R., Hennig, J.D., Ito, T.Y., Kaczensky, P., Kauffman, M.J., Linnell, J.D.C., Lkhagvasuren, B., McEvoy, J.F., Melzheimer, J., Merkle, J.A., Mueller, T., Muntifering, J., Mysterud, A., Olson, K.A., Panzacchi, M., Payne, J.C., Pedrotti, L., Rauset, G.R., Rubenstein, D.I., Sawyer, H., Scasta, J.D., Signer, J., Songer, M., Stabach, J.A., Stapleton, S., Strand, O., Sundaresan, S.R., Usukhjargal, D., Uuganbayar, G., Fryxell, J.M. and Goheen, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Esmaeili, S., Schoenecker, K.A., Hemami, M.-R., King, S.R.B. and Moehlman, P. 2023. Population Dynamics and Viability of Onager (Equus hemionus onager) on the Arid Plateau of Iran. 13th International Mammalogical Congress abstract. Anchorage, AL, USA .",
+      "year": "2023",
+      "title": "Population Dynamics and Viability of Onager (Equus hemionus onager) on the Arid Plateau of Iran",
+      "author": "Esmaeili, S., Schoenecker, K.A., Hemami, M.-R., King, S.R.B. and Moehlman, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fryxell, J.M., Greever, J. and Sinclair, A.R.E., 1988. Why are Migratory Ungulates So Abundant? . <i>The American Naturalist </i> 131: 781-798.",
+      "year": "1988",
+      "title": "Why are Migratory Ungulates So Abundant? ",
+      "author": "Fryxell, J.M., Greever, J. and Sinclair, A.R.E.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ghalib, S.A., Kanwal, R., Zehra, A., Siddiqui, S., Hussain, B., Yasmeen, G., Ullah, U., Manzoor, U., Raza, N. and Begum, A. 2018. Review of the distribution, status and conservation of the wildlife of Sindh. <i>Canadian Journal of Pure and Applied Sciences</i> 12: 4519-4533.",
+      "year": "2018",
+      "title": "Review of the distribution, status and conservation of the wildlife of Sindh",
+      "author": "Ghalib, S.A., Kanwal, R., Zehra, A., Siddiqui, S., Hussain, B., Yasmeen, G., Ullah, U., Manzoor, U., Raza, N. and Begum, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Giotto, N., Gerard, J.F., Ziv, A., Bouskila, A. and Bar-David, S. 2015. Space-use patterns of the Asiatic wild ass (Equus hemionus): complementary insights from displacement, recursion movement and habitat selection analyses. . <i>PloS one</i> 10(12): e0143279.",
+      "year": "2015",
+      "title": "Space-use patterns of the Asiatic wild ass (Equus hemionus): complementary insights from displacement, recursion movement and habitat selection analyses. ",
+      "author": "Giotto, N., Gerard, J.F., Ziv, A., Bouskila, A. and Bar-David, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Goldberg, E.J. 2017. The Emperor’s Ass: Hunting for the Asiatic Onager (Equus hemionus) in the ʿAbbasid, Byzantine, and Carolingian Worlds. <i>Abbasid and Carolingian Empires </i>, pp. 71-101. Brill.",
+      "year": "2017",
+      "title": "The Emperor’s Ass: Hunting for the Asiatic Onager (Equus hemionus) in the ʿAbbasid, Byzantine, and Carolingian Worlds",
+      "author": "Goldberg, E.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Greenbaum, G., Renan, S., Templeton, A.R., Bouskila, A., Saltz, D., Rubenstein, D.I. and Bar‐David, S. 2018. Revealing life‐history traits by contrasting genetic estimations with predictions of effective population size. <i>Conservation Biology</i> 32(4): 817-827.",
+      "year": "2018",
+      "title": "Revealing life‐history traits by contrasting genetic estimations with predictions of effective population size",
+      "author": "Greenbaum, G., Renan, S., Templeton, A.R., Bouskila, A., Saltz, D., Rubenstein, D.I. and Bar‐David, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harper, F. 1945.  Extinct and vanishing Mammals of the Old World. <i>Spec. Publ. Am. Comm. Int. Wildlife Protection N.Y. Zool. Park</i> 12: 345-353.",
+      "year": "1945",
+      "title": " Extinct and vanishing Mammals of the Old World",
+      "author": "Harper, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hatough-Bouran, A. and Disi, A.M. 1991. History, distribution, and conservation, of large mammals and their habitats in Jordan. <i>Environmental Conservation</i> 18(1): 19-32.",
+      "year": "1991",
+      "title": "History, distribution, and conservation, of large mammals and their habitats in Jordan",
+      "author": "Hatough-Bouran, A. and Disi, A.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hijioka, Y., Lin, E., Pereira, J.J., Corlett, R.T., Cui, X., Insarov, G.E., Lasco, R.D., Lindgren, E. and Surjan, A. 2014. Asia. In: Barros, V.R., C.B. Field, D.J. Dokken, M.D. Mastrandrea, K.J. Mach, T.E. Bilir, M. Chatterjee, K.L. Ebi, Y.O. Estrada, R.C. Genova, B. Girma, E.S. Kissel, A.N. Levy, S. MacCracken, P.R. Mastrandrea, and L.L.White (eds), <i>Climate Change 2014: Impacts, Adaptation, and Vulnerability. Part B: Regional Aspects. Contribution of Working Group II to the Fifth Assessment Report of the Intergovernmental Panel on Climate Change</i>, pp. 1327-1370. Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA.",
+      "year": "2014",
+      "title": "Asia",
+      "author": "Hijioka, Y., Lin, E., Pereira, J.J., Corlett, R.T., Cui, X., Insarov, G.E., Lasco, R.D., Lindgren, E. and Surjan, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Huber, N., Marasco, V., Painer, J., Vetter, S.G., Göritz, F., Kaczensky, P. and Walzer, C. 2019. Leukocyte Coping Capacity: An Integrative Parameter for Wildlife Welfare Within Conservation Interventions. <i>Frontiers in Veterinary Science </i> 6: 105.",
+      "year": "2019",
+      "title": "Leukocyte Coping Capacity: An Integrative Parameter for Wildlife Welfare Within Conservation Interventions",
+      "author": "Huber, N., Marasco, V., Painer, J., Vetter, S.G., Göritz, F., Kaczensky, P. and Walzer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IPBES. 2018. The IPBES regional assessment report on biodiversity and ecosystem services for Europe and Central Asia. In: Rounsevell, M., Fischer, M., Torre-Marin Rando, A. and Mader, A. (eds), <i>Secretariat of the Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services</i>, pp. 892. Bonn, Germany.",
+      "year": "2018",
+      "title": "The IPBES regional assessment report on biodiversity and ecosystem services for Europe and Central Asia",
+      "author": "IPBES",
+      "citation_short": null
+    },
+    {
+      "citation": "Iuell, B., Bekker, H.G.J., Cuperus, R., Dufek, J., Fry, G., Hicks, C., Hlavác, V., Keller, V., Rosell, C., Sangwine, T., Tørsløv, N. and Wandall, B.l.M., 2003. <i>Wildlife and Traffic: A European Handbook for Identifying Conflicts and Designing Solutions. COST 341 Habitat Fragmentation due to Transportation Infrastructure</i>. , European Co-operation in the Field of Scientific and Technical Research.",
+      "year": "2003",
+      "title": "Wildlife and Traffic: A European Handbook for Identifying Conflicts and Designing Solutions. COST 341 Habitat Fragmentation due to Transportation Infrastructure",
+      "author": "Iuell, B., Bekker, H.G.J., Cuperus, R., Dufek, J., Fry, G., Hicks, C., Hlavác, V., Keller, V., Rosell, C., Sangwine, T., Tørsløv, N. and Wandall, B.l.M.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "Joly, K., Gurarie, E., Sorum, M.S., Kaczensky, P., Cameron, M.D., Jakes, A.F., Borg, B.L., Nandintsetseg, D., Hopcraft, J.G.C., Buuveibaatar, B., Jones, P.F., Mueller, T., Walzer, C., Olson, K.A., Payne, J.C., Yadamsuren, A., Hebblewhite, M., 2019. Longest terrestrial migrations and movements around the world. <i>Sci Rep </i> 9: 15333.",
+      "year": "2019",
+      "title": "Longest terrestrial migrations and movements around the world",
+      "author": "Joly, K., Gurarie, E., Sorum, M.S., Kaczensky, P., Cameron, M.D., Jakes, A.F., Borg, B.L., Nandintsetseg, D., Hopcraft, J.G.C., Buuveibaatar, B., Jones, P.F., Mueller, T., Walzer, C., Olson, K.A., Payne, J.C., Yadamsuren, A., Hebblewhite, M., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P. 2023. Status and Conservation of the Asiatic Wild Ass across its Range. Report prepared for CMS secretariat.",
+      "year": "2023",
+      "title": "Status and Conservation of the Asiatic Wild Ass across its Range",
+      "author": "Kaczensky, P",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P. and Kuehn, R. 2022. Genetic characterisation of the Turkmen kulan and Persian onager EEP as a basis for future in situ and ex situ conservation strategies. Project Report, Inland Norway University of Applied Sciences. .",
+      "year": "2022",
+      "title": "Genetic characterisation of the Turkmen kulan and Persian onager EEP as a basis for future in situ and ex situ conservation strategies",
+      "author": "Kaczensky, P. and Kuehn, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaczensky, P., Buuveibaatar, B., Payne, J.C., Strindberg, S., Walzer, C., Batsaikhan, N., Bolortsetseg, S., Victurine, R. and Olson, K.A. 2020. A conservation strategy for khulan in Mongolia: background and key considerations. NINA report 1889.",
+      "year": "2020",
+      "title": "A conservation strategy for khulan in Mongolia: background and key considerations",
+      "author": "Kaczensky, P., Buuveibaatar, B., Payne, J.C., Strindberg, S., Walzer, C., Batsaikhan, N., Bolortsetseg, S., Victurine, R. and Olson, K.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaczensky, P., Ganbaatar, O., Dejid, N. and Buuveibaatar, B. 2023. The Gobi Khulan: A Flagship Species for Mobility. <i>Acta Mongolica</i> 21: 147-163.",
+      "year": "2023",
+      "title": "The Gobi Khulan: A Flagship Species for Mobility",
+      "author": "Kaczensky, P., Ganbaatar, O., Dejid, N. and Buuveibaatar, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaczensky, P., Hrabar, H., Lukarevski, V., Zimmermann, W., Usukhjargal, D., Ganbaatar, O. and Bouskila, A. 2016. Reintroduction of Wild Equids. In: Ransom, J.I., and Kaczensky, P. (eds), <i>Wild Equids - Ecology, Management, and Conservation</i>, pp. 196-214.. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2016",
+      "title": "Reintroduction of Wild Equids",
+      "author": "Kaczensky, P., Hrabar, H., Lukarevski, V., Zimmermann, W., Usukhjargal, D., Ganbaatar, O. and Bouskila, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaczensky, P., Kovtun, E., Habibrakhmanov, R., Hemami, M.-R., Khaleghi, A., Linnell, J.D.C., Rustamov, E., Sklyarenko, S., Walzer, C., Zuther, S., Kuehn, R., 2018. . First population-level genetic analysis of free-ranging Asiatic Wild Ass populations in Central Asia - implications for conservation. <i>Conservation Genetics </i> 19: 1169–1184.",
+      "year": "2018",
+      "title": ". First population-level genetic analysis of free-ranging Asiatic Wild Ass populations in Central Asia - implications for conservation",
+      "author": "Kaczensky, P., Kovtun, E., Habibrakhmanov, R., Hemami, M.-R., Khaleghi, A., Linnell, J.D.C., Rustamov, E., Sklyarenko, S., Walzer, C., Zuther, S., Kuehn, R., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P., Lkhagvasuren, B., Pereladova, O., Hemami, M.-R. and Bouskila, A. 2015. Equus hemionus. The IUCN Red List of Threatened Species.",
+      "year": "2015",
+      "title": "Equus hemionus",
+      "author": "Kaczensky, P., Lkhagvasuren, B., Pereladova, O., Hemami, M.-R. and Bouskila, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaczensky, P., Rustamov, E., Karryeva, S., Iankov, P., Hudaykuliev, N., Saparmyradov, J., Veyisov, A., Shestopal, A., Mengliev, S., Hojamyradov, H., Potaeva, A., Kurbanov, A., Amanov, A., Khekimov, G., Tagiyev, C., Rosen, T. and Linnell, J.D.C. 2019. Rapid assessments of wildlife in Turkmenistan 2018. NINA report 1696, Trondheim, Norway.",
+      "year": "2019",
+      "title": "Rapid assessments of wildlife in Turkmenistan 2018",
+      "author": "Kaczensky, P., Rustamov, E., Karryeva, S., Iankov, P., Hudaykuliev, N., Saparmyradov, J., Veyisov, A., Shestopal, A., Mengliev, S., Hojamyradov, H., Potaeva, A., Kurbanov, A., Amanov, A., Khekimov, G., Tagiyev, C., Rosen, T. and Linnell, J.D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaczensky, P., Salemgareyev, A., Linnell, J.D.C., Zuther, S., Walzer, C., Huber, N. and Petit, T. 2021. Post-release Movement Behaviour and Survival of Kulan Reintroduced to the Steppes and Deserts of Central Kazakhstan. <i>Frontiers in Conservation Science </i> 2: 703358.",
+      "year": "2021",
+      "title": "Post-release Movement Behaviour and Survival of Kulan Reintroduced to the Steppes and Deserts of Central Kazakhstan",
+      "author": "Kaczensky, P., Salemgareyev, A., Linnell, J.D.C., Zuther, S., Walzer, C., Huber, N. and Petit, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kauffman, M.J., Aikens, E.O., Esmaeili, S., Kaczensky, P., Middleton, A., Monteith, K.L., Morrison, T.A., Mueller, T., Sawyer, H., Goheen, J.R. 2021a. Causes, Consequences, and Conservation of Ungulate Migration. <i>Annual Review of Ecology, Evolution, and Systematics </i> 52: 453-478.",
+      "year": "2021a",
+      "title": "Causes, Consequences, and Conservation of Ungulate Migration",
+      "author": "Kauffman, M.J., Aikens, E.O., Esmaeili, S., Kaczensky, P., Middleton, A., Monteith, K.L., Morrison, T.A., Mueller, T., Sawyer, H., Goheen, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kauffman, M.J., Cagnacci, F., Chamaillé-Jammes, S., Hebblewhite, M., Hopcraft, J.G.C., Merkle, J.A., Mueller, T., Mysterud, A., Peters, W., Roettger, C., Steingisser, A., Meacham, J.E., Abera, K., Adamczewski, J., Aikens, E.O., Vynne, C., Bartlam-Brooks, H., Bennitt, E., Berger, J., Boyd, C., Côté, S.D., Debeffe, L., Dejid, N., Donadio, E., Dziba, L., Fagan, W.F., Fischer, C., Focardi, S., Fryxell, J., Fynn, R.W.S., Geremia, C., González, B.A., Gunn, A., Gurarie, E., Heurich, M., Hilty, J., Hurley, M., Johnson, A., Joly, K., Kaczensky, P., Kendall, C.J., Kochkarev, P., Kolpaschikov, L., Kowalczyk, R., Langevelde, F.v., Li, B., Lobora, A.L., Loison, A., Madiri, T.H., Mallon, D., Marchand, P., Medellin, R.A., Meisingset, E., Merrill, E., Middleton, A.D., Monteith, K.L., Morjan, M., Morrison, T.A., Mumme, S., Naidoo, R., Novaro, A., Ogutu, J.O., Olson, K.A., Oteng-Yeboah, A., Ovejero, R.J.A., Owen-Smith, N., Paasivaara, A., Packer, C., Panchenko, D., Pedrotti, L., Plumptre, A., Rolandsen, C.M., Said, S., Salemgareyev, A., Savchenko, A., Savchenko, P., Sawyer, H., Selebatso, M., Skroch, M., Solberg, E., Stabach, J.A., Strand, O., Suitor, M.J., Tachiki, Y., Trainor, A.,Tshipa, A., Virani, M.Z., Ward, S., Wittemyer, G., Xu, W., Zuther, S., 2021b. Mapping out a future for ungulate migrations. <i>Science</i> 372: 566-569.",
+      "year": "2021b",
+      "title": "Mapping out a future for ungulate migrations",
+      "author": "Kauffman, M.J., Cagnacci, F., Chamaillé-Jammes, S., Hebblewhite, M., Hopcraft, J.G.C., Merkle, J.A., Mueller, T., Mysterud, A., Peters, W., Roettger, C., Steingisser, A., Meacham, J.E., Abera, K., Adamczewski, J., Aikens, E.O., Vynne, C., Bartlam-Brooks, H., Bennitt, E., Berger, J., Boyd, C., Côté, S.D., Debeffe, L., Dejid, N., Donadio, E., Dziba, L., Fagan, W.F., Fischer, C., Focardi, S., Fryxell, J., Fynn, R.W.S., Geremia, C., González, B.A., Gunn, A., Gurarie, E., Heurich, M., Hilty, J., Hurley, M., Johnson, A., Joly, K., Kaczensky, P., Kendall, C.J., Kochkarev, P., Kolpaschikov, L., Kowalczyk, R., Langevelde, F.v., Li, B., Lobora, A.L., Loison, A., Madiri, T.H., Mallon, D., Marchand, P., Medellin, R.A., Meisingset, E., Merrill, E., Middleton, A.D., Monteith, K.L., Morjan, M., Morrison, T.A., Mumme, S., Naidoo, R., Novaro, A., Ogutu, J.O., Olson, K.A., Oteng-Yeboah, A., Ovejero, R.J.A., Owen-Smith, N., Paasivaara, A., Packer, C., Panchenko, D., Pedrotti, L., Plumptre, A., Rolandsen, C.M., Said, S., Salemgareyev, A., Savchenko, A., Savchenko, P., Sawyer, H., Selebatso, M., Skroch, M., Solberg, E., Stabach, J.A., Strand, O., Suitor, M.J., Tachiki, Y., Trainor, A.,Tshipa, A., Virani, M.Z., Ward, S., Wittemyer, G., Xu, W., Zuther, S., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Khaire, D., Atkulwar, A., Farah, S. and Baig, M. 2017. Mitochondrial DNA analyses revealed low genetic diversity in the endangered Indian wild ass Equus hemionus khur. <i>Mitochondrial DNA A DNA Mapp Seq Anal </i> 28(681-686).",
+      "year": "2017",
+      "title": "Mitochondrial DNA analyses revealed low genetic diversity in the endangered Indian wild ass Equus hemionus khur",
+      "author": "Khaire, D., Atkulwar, A., Farah, S. and Baig, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khan, A.A., Khan, W.A. and Chaudhry, A.A. 2015. Mammalian Diversity in Thar Desert Habitat of Tharparkar District, Sindh, Pakistan. <i>Pakistan Journal of Zoology</i> 47: 1205-1211.",
+      "year": "2015",
+      "title": "Mammalian Diversity in Thar Desert Habitat of Tharparkar District, Sindh, Pakistan",
+      "author": "Khan, A.A., Khan, W.A. and Chaudhry, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lkhagvasuren, D., Ansorge, H., Samiya, R., Schafberg, R., Stubbe, A. and Stubbe, M. 2013. Age determination of the Mongolian wild ass (Equus hemionus Pallas, 1775) by the dentition patterns and annual lines in the tooth cementum. . <i>Journal of Species Research</i> 2(1): 85-90.",
+      "year": "2013",
+      "title": "Age determination of the Mongolian wild ass (Equus hemionus Pallas, 1775) by the dentition patterns and annual lines in the tooth cementum. ",
+      "author": "Lkhagvasuren, D., Ansorge, H., Samiya, R., Schafberg, R., Stubbe, A. and Stubbe, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marmazinskaya, N.V. 2019. Turkmenian kulan. Red Book of the Republic of Uzbekistan. V.II. <i>Chinor Enk</i>: 352-353.",
+      "year": "2019",
+      "title": "Turkmenian kulan. Red Book of the Republic of Uzbekistan. V.II.",
+      "author": "Marmazinskaya, N.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marmazinskaya, N.V., Gritsina, M.A., Nuridjanov, D.A., Ten, A.G., Soldatov, V.A., Wunderlich, J., Mardonova, L.B. and Abduraupov, T.V. 2022. New data on the theriofauna of South Ustyurt (Uzbekistan). Proceedings from the International Cold Winter Desert Conference Central Asian Desert Initiative : 109-119. Tashkent, Uzbekistan.",
+      "year": "2022",
+      "title": "New data on the theriofauna of South Ustyurt (Uzbekistan).",
+      "author": "Marmazinskaya, N.V., Gritsina, M.A., Nuridjanov, D.A., Ten, A.G., Soldatov, V.A., Wunderlich, J., Mardonova, L.B. and Abduraupov, T.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marmazinskaya, N.V., Gritsyna, M.A. and Mitropolsky, M.G. 2012. New data on rare mammal species of the south of Karakalpak Ustyurt and the north Sarykamysh Basin (Uzbekistan). . <i>International conferences dedicated to the memory of N. A. Zarudny</i> Tashkent, Uzbekistan. [in Russian].: 204-211.",
+      "year": "2012",
+      "title": "New data on rare mammal species of the south of Karakalpak Ustyurt and the north Sarykamysh Basin (Uzbekistan). ",
+      "author": "Marmazinskaya, N.V., Gritsyna, M.A. and Mitropolsky, M.G",
+      "citation_short": ""
+    },
+    {
+      "citation": "Marmazinskaya, N.V., Gritsyna, M.A., Mitropolsky, M.G., Murzakhanov, R. and Wunderlich, J. 2016. Rare ungulates of Central, Southern Ustyurt and Sarykamysh depression: the current state. In: Recent problems for the conservation of rare, endangered and protected animals of Uzbekistan (eds), Scientific conference, pp. 204-211. Tashkent, Uzbekistan. [in Russian]..",
+      "year": "2016",
+      "title": "Rare ungulates of Central, Southern Ustyurt and Sarykamysh depression: the current state",
+      "author": "Marmazinskaya, N.V., Gritsyna, M.A., Mitropolsky, M.G., Murzakhanov, R. and Wunderlich, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moehlman, P. 2002. <i>Equids: Zebras, Asses and Horses</i>. IUCN Publication Services Unit, Cambridge, UK.",
+      "year": "2002",
+      "title": "Equids: Zebras, Asses and Horses",
+      "author": "Moehlman, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mohammadi, A., Nayeri, D., Alambeigi, A., Glikman, J.A., 2023. Evaluation of motorists perceptions toward collision of an endangered large herbivore in Iran. <i>Global Ecology and Conservation </i> 41.",
+      "year": "2023",
+      "title": "Evaluation of motorists perceptions toward collision of an endangered large herbivore in Iran",
+      "author": "Mohammadi, A., Nayeri, D., Alambeigi, A., Glikman, J.A., ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nandintsetseg, B. and Shinoda, M., 2013. Assessment of drought frequency, duration, and severity and its impact on pasture production in Mongolia. <i>National Hazards </i> 66(995–1008).",
+      "year": "2013",
+      "title": "Assessment of drought frequency, duration, and severity and its impact on pasture production in Mongolia",
+      "author": "Nandintsetseg, B. and Shinoda, M., ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nandintsetseg, D., Bracis, C., Leimgruber, P., Kaczensky, P., Bayarbaatar, B., Badamjav, L., Buyanaa, C., Shiilegdamba, E., Horning, N., Ito, T., Olson, K., Payne, J., Walzer, C., Shinoda, M., Stabach, J., Songer, M. and Mueller, T. 2019. Variability in Nomadism: Environmental Gradients Modulate the Movement Behaviors of Dryland Ungulates. <i>Ecosphere</i> 10: e02924.",
+      "year": "2019",
+      "title": "Variability in Nomadism: Environmental Gradients Modulate the Movement Behaviors of Dryland Ungulates",
+      "author": "Nandintsetseg, D., Bracis, C., Leimgruber, P., Kaczensky, P., Bayarbaatar, B., Badamjav, L., Buyanaa, C., Shiilegdamba, E., Horning, N., Ito, T., Olson, K., Payne, J., Walzer, C., Shinoda, M., Stabach, J., Songer, M. and Mueller, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nandintsetseg, D., Kaczensky, P., Ganbaatar, O., Leimgruber, P. and Mueller, T. 2016. Spatiotemporal habitat dynamics of ungulates in unpredictable environments: The khulan (Equus hemionus) in the Mongolian Gobi desert as a case study. <i>Biological Conservation </i> 204: 313–321.",
+      "year": "2016",
+      "title": "Spatiotemporal habitat dynamics of ungulates in unpredictable environments: The khulan (Equus hemionus) in the Mongolian Gobi desert as a case study.",
+      "author": "Nandintsetseg, D., Kaczensky, P., Ganbaatar, O., Leimgruber, P. and Mueller, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nowzari, H. 2011. Population size, population structure and habitat use of the Persian onager (Equus hemionus onager) in Qatrouyeh National Park, Fars, Iran. Science and Research Branch, Islamic Azad University.",
+      "year": "2011",
+      "title": "Population size, population structure and habitat use of the Persian onager (Equus hemionus onager) in Qatrouyeh National Park, Fars, Iran",
+      "author": "Nowzari, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Pandit, S.J., Vora, U., Shah, N. and Shah, Y. 2020. 9th Wild Ass Population Estimation-2020.  Final Report. Forest Department, Gujarat, India.",
+      "year": "2020",
+      "title": "9th Wild Ass Population Estimation-2020",
+      "author": "Pandit, S.J., Vora, U., Shah, N. and Shah, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Payne, J.C., Buuveibaatar, B., Bowler, D.E., Olson, K.A., Walzer, C. and Kaczensky, P. 2020. Hidden treasure in the Gobi: understanding how water limits range use of khulan in the Mongolian Gobi. <i>Scientific Report</i> 10: 2989.",
+      "year": "2020",
+      "title": "Hidden treasure in the Gobi: understanding how water limits range use of khulan in the Mongolian Gobi",
+      "author": "Payne, J.C., Buuveibaatar, B., Bowler, D.E., Olson, K.A., Walzer, C. and Kaczensky, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ransom, J.I. and Kaczensky, P. 2016. Equus: An ancient genus surviving the modern world. . In: Ransom J., Kaczensky P., (ed.), <i>Wild Equids: Ecology, Conservation, and Management</i>, John Hopkins University Press.",
+      "year": "2016",
+      "title": "Equus: An ancient genus surviving the modern world. ",
+      "author": "Ransom, J.I. and Kaczensky, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Renan, S., Speyer, E., Ben-Nun, T., Ziv, A., Greenbaum, G., Templeton, A.R., Bar-David, S. and Bouskila, A. 2018. Fission-fusion social structure of a reintroduced ungulate: Implications for conservation. <i>Biological Conservation</i> 222: 261-267.",
+      "year": "2018",
+      "title": "Fission-fusion social structure of a reintroduced ungulate: Implications for conservation.",
+      "author": "Renan, S., Speyer, E., Ben-Nun, T., Ziv, A., Greenbaum, G., Templeton, A.R., Bar-David, S. and Bouskila, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rubenstein, D.I., Sundaresan, S., Fischhoff, I., Tantipathananandh, C. and Berger-Wolf, T.Y. 2015. Similar but Different: Dynamic Social Network Analysis Highlights Fundamental Differences between the Fission-Fusion Societies of Two Equid Species, the Onager and Grevy’s Zebra. <i>PLoS ONE </i> 10: e0138645.",
+      "year": "2015",
+      "title": "Similar but Different: Dynamic Social Network Analysis Highlights Fundamental Differences between the Fission-Fusion Societies of Two Equid Species, the Onager and Grevy’s Zebra",
+      "author": "Rubenstein, D.I., Sundaresan, S., Fischhoff, I., Tantipathananandh, C. and Berger-Wolf, T.Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Salemgareyev, A.R., Kaczensky, P., Putilin, A., Ward, S. and Dohrmann, A. 2023. Reintroduction of kulan into the central steppe of Kazakhstan. Association for the Conservation of Biodiversity of Kazakhstan .",
+      "year": "2023",
+      "title": "Reintroduction of kulan into the central steppe of Kazakhstan",
+      "author": "Salemgareyev, A.R., Kaczensky, P., Putilin, A., Ward, S. and Dohrmann, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schook, M.W., Powell, D.M. and Zimmermann, W. 2016. Wild equid captive breeding and management. In: Ransom, J.I., and Kaczensky, P. (eds), <i>Wild Equids - Ecology, Management, and Conservation</i>, Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2016",
+      "title": "Wild equid captive breeding and management",
+      "author": "Schook, M.W., Powell, D.M. and Zimmermann, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shah, N. and Qureshi, Q., 2018. Validating the techniques for Monitoring of Large Ungulates , Flamingos & Cranes in Rann landscape. Gujarat Forest Department, Gujarat, India.",
+      "year": "2018",
+      "title": "Validating the techniques for Monitoring of Large Ungulates , Flamingos & Cranes in Rann landscape",
+      "author": "Shah, N. and Qureshi, Q., ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sinha, B.C., Goyal, S.P. and Krauseman, P.R. 2009. How the Use of Mesquite Impacts Grass Availability, Wild Ass Sanctuary, India. <i>Desert Plants (University of Arizona (Tucson, AZ)</i>: 3-9.",
+      "year": "2009",
+      "title": "How the Use of Mesquite Impacts Grass Availability, Wild Ass Sanctuary, India",
+      "author": "Sinha, B.C., Goyal, S.P. and Krauseman, P.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sukhchuluun, G., Tegshjargal, N. and Tsogzolboo, T. 2013. Rare ungulates distribution, density, and affecting factors in western part of Umnugobi province. <i>Proceedings of the Institute of Biology </i> 29: 84-92.",
+      "year": "2013",
+      "title": "Rare ungulates distribution, density, and affecting factors in western part of Umnugobi province",
+      "author": "Sukhchuluun, G., Tegshjargal, N. and Tsogzolboo, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tucker, M.A., Böhning-Gaese, K., Fagan, W.F., Fryxell, J.M., Van Moorter, B., Alberts, S.C., Ali, A.H., Allen, A.M., Attias, N., Avgar, T., Bartlam-Brooks, H., Bayarbaatar, B., Belant, J.L., Bertassoni, A., Beyer, D., Bidner, L., van Beest, F.M., Blake, S., Blaum, N., Bracis, C., Brown, D., de Bruyn, P.J.N., Cagnacci, F., Calabrese, J.M., Camilo-Alves, C., Chamaillé-Jammes, S., Chiaradia, A., Davidson, S.C., Dennis, T., DeStefano, S., Diefenbach, D., Douglas-Hamilton, I., Fennessy, J., Fichtel, C., Fiedler, W., Fischer, C., Fischhoff, I., Fleming, C.H., Ford, A.T., Fritz, S.A., Gehr, B., Goheen, J.R., Gurarie, E., Hebblewhite, M., Heurich, M., Hewison, A.J.M., Hof, C., Hurme, E., Isbell, L.A., Janssen, R., Jeltsch, F., Kaczensky, P., Kane, A., Kappeler, P.M., Kauffman, M., Kays, R., Kimuyu, D., Koch, F., Kranstauber, B., LaPoint, S., Leimgruber, P., Linnell, J.D.C., López-López, P., Markham, A.C., Mattisson, J., Medici, E.P., Mellone, U., Merrill, E., de Miranda Mourão, G., Morato, R.G., Morellet, N., Morrison, T.A., Díaz-Muñoz, S.L., Mysterud, A., Nandintsetseg, D., Nathan, R., Niamir, A., Odden, J., O’Hara, R.B., Oliveira-Santos, L.G.R., Olson, K.A., Patterson, B.D., Cunha de Paula, R., Pedrotti, L., Reineking, B., Rimmler, M., Rogers, T.L., Rolandsen, C.M., Rosenberry, C.S., Rubenstein, D.I., Safi, K., Saïd, S., Sapir, N., Sawyer, H., Schmidt, N.M., Selva, N., Sergiel, A., Shiilegdamba, E., Silva, J.P., Singh, N., Solberg, E.J., Spiegel, O., Strand, O., Sundaresan, S., Ullmann, W., Voigt, U., Wall, J., Wattles, D., Wikelski, M., Wilmers, C.C., Wilson, J.W., Wittemyer, G., Zięba, F., Zwijacz-Kozica, T. and Mueller, T., 2018. Moving in the Anthropocene: Global reductions in terrestrial mammalian movements. <i>Science</i>: 359-466.",
+      "year": "2018",
+      "title": "Moving in the Anthropocene: Global reductions in terrestrial mammalian movements",
+      "author": "Tucker, M.A., Böhning-Gaese, K., Fagan, W.F., Fryxell, J.M., Van Moorter, B., Alberts, S.C., Ali, A.H., Allen, A.M., Attias, N., Avgar, T., Bartlam-Brooks, H., Bayarbaatar, B., Belant, J.L., Bertassoni, A., Beyer, D., Bidner, L., van Beest, F.M., Blake, S., Blaum, N., Bracis, C., Brown, D., de Bruyn, P.J.N., Cagnacci, F., Calabrese, J.M., Camilo-Alves, C., Chamaillé-Jammes, S., Chiaradia, A., Davidson, S.C., Dennis, T., DeStefano, S., Diefenbach, D., Douglas-Hamilton, I., Fennessy, J., Fichtel, C., Fiedler, W., Fischer, C., Fischhoff, I., Fleming, C.H., Ford, A.T., Fritz, S.A., Gehr, B., Goheen, J.R., Gurarie, E., Hebblewhite, M., Heurich, M., Hewison, A.J.M., Hof, C., Hurme, E., Isbell, L.A., Janssen, R., Jeltsch, F., Kaczensky, P., Kane, A., Kappeler, P.M., Kauffman, M., Kays, R., Kimuyu, D., Koch, F., Kranstauber, B., LaPoint, S., Leimgruber, P., Linnell, J.D.C., López-López, P., Markham, A.C., Mattisson, J., Medici, E.P., Mellone, U., Merrill, E., de Miranda Mourão, G., Morato, R.G., Morellet, N., Morrison, T.A., Díaz-Muñoz, S.L., Mysterud, A., Nandintsetseg, D., Nathan, R., Niamir, A., Odden, J., O’Hara, R.B., Oliveira-Santos, L.G.R., Olson, K.A., Patterson, B.D., Cunha de Paula, R., Pedrotti, L., Reineking, B., Rimmler, M., Rogers, T.L., Rolandsen, C.M., Rosenberry, C.S., Rubenstein, D.I., Safi, K., Saïd, S., Sapir, N., Sawyer, H., Schmidt, N.M., Selva, N., Sergiel, A., Shiilegdamba, E., Silva, J.P., Singh, N., Solberg, E.J., Spiegel, O., Strand, O., Sundaresan, S., Ullmann, W., Voigt, U., Wall, J., Wattles, D., Wikelski, M., Wilmers, C.C., Wilson, J.W., Wittemyer, G., Zięba, F., Zwijacz-Kozica, T. and Mueller, T.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "UNEP/CMS. 2002. Proposal by the Government of Mongolia: Inclusion of all subspecies of Khulan or Asiatic wild ass Equus hemionus to the Appendix II of the Convention on the Conservation of Migratory Species of Wild. COP7 II/12.  Proposal for inclusion of species on the appendices of the Convention on the Conservation of Migratory Species of Wild Animal.",
+      "year": "2002",
+      "title": "Proposal by the Government of Mongolia: Inclusion of all subspecies of Khulan or Asiatic wild ass Equus hemionus to the Appendix II of the Convention on the Conservation of Migratory Species of Wild. COP7 II/12",
+      "author": "UNEP/CMS",
+      "citation_short": null
+    },
+    {
+      "citation": "UNEP/CMS. 2015. Implementing wildlife-friendly measures in infrastructure planning and design in Mongolia.  Technical Report.",
+      "year": "2015",
+      "title": "Implementing wildlife-friendly measures in infrastructure planning and design in Mongolia",
+      "author": "UNEP/CMS",
+      "citation_short": null
+    },
+    {
+      "citation": "UNEP/CMS. 2019. Central Asian Mammals Migration and Linear Infrastructure Atlas. CMS Technical Series Publication No. 41.",
+      "year": "2019",
+      "title": "Central Asian Mammals Migration and Linear Infrastructure Atlas",
+      "author": "UNEP/CMS",
+      "citation_short": null
+    },
+    {
+      "citation": "Vogler, T., Altansukh, N., Ganbaatar, O., Sukhbaatar, D., Devineau, O. and Kaczensky, P. 2023. Steppe ungulate count in Great Gobi B Strictly Protected area 2022. INN Oppdragsrapport 3-2023.",
+      "year": "2023",
+      "title": "Steppe ungulate count in Great Gobi B Strictly Protected area 2022",
+      "author": "Vogler, T., Altansukh, N., Ganbaatar, O., Sukhbaatar, D., Devineau, O. and Kaczensky, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Walzer, C. 2014. Non-domestic Equids. In: G. West, D. Heard, N. Caulkett (ed.), <i>Zoo Animal and Wildlife Immobilization and Anesthesia, 2nd Edition</i>, pp. 719-728 . Wiley Blackwell.",
+      "year": "2014",
+      "title": "Non-domestic Equids",
+      "author": "Walzer, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang, M.Y., Ruckstuhl, K.E., Xu, W.X., Blank, D. and Yang, W.K., 2016. Human Activity Dampens the Benefits of Group Size on Vigilance in Khulan (Equus hemionus) in Western China. <i>PLoS ONE </i> 11: e0146725.",
+      "year": "2016",
+      "title": "Human Activity Dampens the Benefits of Group Size on Vigilance in Khulan (Equus hemionus) in Western China",
+      "author": "Wang, M.Y., Ruckstuhl, K.E., Xu, W.X., Blank, D. and Yang, W.K., ",
+      "citation_short": ""
+    },
+    {
+      "citation": "WCS. 2021. Population abundance and distribution of ungulates in the southern Gobi.  2021 Annual Report – Core Biodiversity Monitoring Program for Oyun Tolgoi. WCS Mongolia, Ulaanbaatar, Mongolia.",
+      "year": "2021",
+      "title": "Population abundance and distribution of ungulates in the southern Gobi",
+      "author": "WCS",
+      "citation_short": null
+    },
+    {
+      "citation": "WCS. 2023. Khulan Management Plan 2023-2030.  Unpublished draft. WCS Mongolia, Ulaanbaatar, Mongoolia.",
+      "year": "2023",
+      "title": "Khulan Management Plan 2023-2030",
+      "author": "WCS",
+      "citation_short": null
+    },
+    {
+      "citation": "WII. 2016. <i>Eco-friendly Measures to Mitigate Impacts of Linear Infrastructure on Wildlife</i>. Wildlife Institute of India, Dehradun, India.",
+      "year": "2016",
+      "title": "Eco-friendly Measures to Mitigate Impacts of Linear Infrastructure on Wildlife",
+      "author": "WII",
+      "citation_short": null
+    },
+    {
+      "citation": "Wingard, J., Zahler, P., Victurine, R., Bayasgalan, O. and Bayarbaatar, B. 2014. Guidelines for Addressing the Impact of Linear Infrastructure on Large Migratory Mammals in Central Asia.  UNEP/CMS/COP11/Doc.23.3.2: Guidelines, UNEP/CMS Secretariat. Wildlife Conservation Society.",
+      "year": "2014",
+      "title": "Guidelines for Addressing the Impact of Linear Infrastructure on Large Migratory Mammals in Central Asia",
+      "author": "Wingard, J., Zahler, P., Victurine, R., Bayasgalan, O. and Bayarbaatar, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Xu, W., Liu, W., Ma, W., Wang, M., Xu, F., Yang, W., Walzer, C. and Kaczensky, P. 2022. Current status and future challenges for khulan (Equus hemionus) conservation in China. <i>Global Ecology and Conservation </i> 37.",
+      "year": "2022",
+      "title": "Current status and future challenges for khulan (Equus hemionus) conservation in China",
+      "author": "Xu, W., Liu, W., Ma, W., Wang, M., Xu, F., Yang, W., Walzer, C. and Kaczensky, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zecherle, L.J. 2020. Conservation Genomics in Species Reintroductions: The Asiatic Wild Ass Equus Hemionus in Israel. . Liverpool John Moores University .",
+      "year": "2020",
+      "title": "Conservation Genomics in Species Reintroductions: The Asiatic Wild Ass Equus Hemionus in Israel. ",
+      "author": "Zecherle, L.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zhang, X.C., Shao, C.L., Ge, Y., Chen, C., Xu, W.X. and Yang, W.K., 2020. Suitable summer habitat of the khulan in the Mt. Kalamaili Ungulate Nature Reserve and estimation of its population. <i>Ying Yong Sheng Tai Xue Bao </i> 31: 2993-3004.",
+      "year": "2020",
+      "title": "Suitable summer habitat of the khulan in the Mt. Kalamaili Ungulate Nature Reserve and estimation of its population",
+      "author": "Zhang, X.C., Shao, C.L., Ge, Y., Chen, C., Xu, W.X. and Yang, W.K., ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zhuo, Y., Xu, W., Wang, M., Chen, C., da Silva, A.A., Yang, W., Ruckstuhl, K.E. and Alves, J. 2022. The effect of mining and road development on habitat fragmentation and connectivity of khulan (Equus hemionus) in Northwestern China. <i>Biological Conservation </i> 275: 109770.",
+      "year": "2022",
+      "title": "The effect of mining and road development on habitat fragmentation and connectivity of khulan (Equus hemionus) in Northwestern China.",
+      "author": "Zhuo, Y., Xu, W., Wang, M., Chen, C., da Silva, A.A., Yang, W., Ruckstuhl, K.E. and Alves, J.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

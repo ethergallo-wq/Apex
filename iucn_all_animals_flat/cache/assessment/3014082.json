@@ -1,0 +1,934 @@
+{
+  "assessment_date": "2020-02-02T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 5240,
+  "criteria": "A2abce; B1ab(i,ii,iii,iv,v)+2ab(i,ii,iii,iv,v); C1",
+  "url": "https://www.iucnredlist.org/species/5240/3014082",
+  "citation": "Kumar, K., Gentile, G. & Grant, T.D. 2020. Conolophus subcristatus. The IUCN Red List of Threatened Species 2020: e.T5240A3014082. Accessed on 05 May 2026.",
+  "assessment_id": 3014082,
+  "assessment_points": false,
+  "assessment_ranges": false,
+  "taxon": {
+    "sis_id": 5240,
+    "scientific_name": "Conolophus subcristatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "IGUANIDAE",
+    "genus_name": "Conolophus",
+    "species_name": "subcristatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gray, 1831)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Iguana Specialist Group",
+        "url": "http://www.iucn-isg.org/",
+        "description": "Co-Chairs: Stesha Pasachnik (email: sapasachnik@gmail.com) and Charles Knapp (email: cknapp@sheddaquarium.org)\nRed List Authority Coordinator: Tandora Grant (email: tgrant@sandiegozoo.org)\nNewsletter: http://www.iucn-isg.org/publications/archive-newsletters/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Land Iguana",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Yellow Land Iguana",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Iguana Terrestre de las Galápagos",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Iguane terrestre des Galápagos",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Galápagos Land Iguana",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Amblyrhynchus subcristatus Gray, 1831",
+        "status": "ACCEPTED",
+        "genus_name": "Amblyrhynchus",
+        "species_name": "subcristatus",
+        "species_author": "Gray, 1831",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "13",
+    "upper_elevation_limit": 1707,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "8618-18117,10216",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "22.5-23.5",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "91-100"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": "13",
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "3263",
+    "estimated_area_of_occupancy": "540",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "9524",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Galápagos Land Iguana is found on several islands in the Galápagos Archipelago, Ecuador. They are resident on the islands of Isabela, Fernandina, Santa Cruz, and Plaza Sur; extirpated from Rábida (known from historic subfossils only); introduced on Seymour Norte in the 1930s and Venecia in 1977; and extirpated by 1954 then repatriated in 1991 on Baltra (Tzika <em>et al</em>. 2008, ITWG 2016). Iguanas were noted as numerous on Santiago by Darwin (1839) but extirpated by 1906, most likely due to predation, nest destruction, and competition from feral pigs (<em>Sus domesticus</em>), dogs (<em>Canis familiaris</em>), feral goats (<em>Capra hircus</em>), or man (Snell <em>e</em><em>t al</em>. 1984, Márquez <em>e</em><em>t al</em>. 2010). Iguanas were reintroduced to Santiago in January 2019 from the Seymour Norte subpopulation (Anonymous 2019). The cause of extinction of the historical population on Rábida is unknown (Steadman <em>et al</em>. 1991).<br/><br/>Galápagos Land Iguanas have a varied distribution across the islands they occur on and are found from 0 to 1,707 m above sea level, with the highest elevation being on Wolf Volcano, Isabela (Onorati <em>et al</em>. 2017). They are generally found in arid to semi-vegetated regions of the islands (Werner 1983, Jackson 1991). Iguanas are distributed across the entirety of the small islands of Baltra, Plaza Sur, and Seymour Norte.<br/><br/>Once widespread on the large island of Isabela, they are now found in several isolated subpopulations, perhaps five, in northern Isabela. The only iguanas remaining in southern Isabela are the reintroduced subpopulation in Bahía Cartago and a very small remnant subpopulation in Cerro Ballena (Tzika<em> et al</em>. 2008, Márquez B. <em>et al</em>. 2010, G. Gentile pers. comm. 2019). On Santa Cruz, iguanas were also once widespread and are now isolated in subpopulations on the northwestern coast, including Bahía Conway, Cerro Dragón, and Venecia (Cayot 2008, Fabiani <em>et al</em>. 2011). On Fernandina, iguanas are most dense on the western flank of the island’s crater (Werner 1983).<br/><br/>Fine scale knowledge of the distribution of the species is unknown. The estimated extent of occurrence of the entire population is 9,524 km<sup>2</sup>. The area of occupancy using a 2x2 km gird cell overlay of the western clade is crudely estimated at 464 km<sup>2</sup> (Isabela 280 km<sup>2</sup> in seven subpopulations, western Fernandina 184 km<sup>2</sup>). The area of occupancy (AOO) in the central clade (Santa Cruz, Venecia, Plaza Sur, Seymour Norte, Baltra) is estimated at 76 km<sup>2</sup>. Further research on fine-scale distribution is needed to clarify an accurate occupancy status of the subpopulations.",
+    "population": "For all but four locations, the most current population estimates are known from 2002–2008 and suggested the entire population of Galápagos Land Iguanas was 11,581 (range 8,618–17,917), with the largest and most dense population found on Seymour Norte (1.9 km<sup>2</sup>; Márquez B. <em>et al</em>. 2010). This study did not include the small introduced population on Venecia (Santa Cruz), that was later estimated to be <em>ca</em> 200 adults (Fabiani <em>et al</em>. 2011). No population estimate is available for Bahía Elizabeth or Cerro Ballena (north and south Isabela, respectively). Juveniles are only found on Baltra, Seymour Norte, Plaza Sur, and Bahía Cartago (southern Isabela), strongly suggesting predation pressure by feral cats elsewhere. Assuming a conservative 10–15% composition of juveniles (including on Fernandina, which was not noted by the surveyors but does not have cats), the number of adults is estimated to be less than 10,000. Except for Plaza Sur and Fernandina, the sex ratio is biased toward males (Márquez B. <em>et al</em>. 2010). The overall population trend is not known, however, these factors indicate a decline.<br/><br/>Galápagos Land Iguanas were introduced to Seymour Norte from Baltra in 1932–1933, but by the 1980s it appeared there had been no recruitment and the population consisted of ageing adults (Snell <em>et al</em>. 1984). Several poorly documented translocations are known to have occurred in the 1970s and 1980s, and after strong rainfall during El Niño events in 1982–83, juveniles were finally seen on the island (Cayot and Menoscal 1992). Today, it is arguable the carrying capacity has been surpassed, as there are signs of degraded Galápagos Prickly Pear (<em>Opuntia</em> sp.) that is a primary food source on Seymour Norte (G. Gentile pers. comm. 2019). The most recent population estimate indicates 7,581 iguanas total (range 3,555–16,169; Kumar <em>et al</em>. 2019). This estimate also noted 28.6% of the total consisted of juveniles, indicating a recent high reproductive output that is known to fluctuate with annual rainfall or droughts. The number of mature adults on Seymour Norte was estimated to be 5,413, before 2,150 iguanas were removed for the reintroduction to Santiago. It is too soon to assess the survival or establishment of these iguanas on Santiago, and are not included in this assessment.<br/><br/>The second largest subpopulation is found at Bahía Cartago, southern Isabela, and estimated to be 2,600 iguanas total (range 1,800–3,200; Márquez B. <em>et al</em>. 2010). Galápagos Land Iguanas were once found in many locations in southern Isabela but were eliminated, primarily by feral dogs over the last three generations (<em>ca</em> 1950 to present). The last group of 37 iguanas were rescued from Bahía Cartago in 1976 and held in captivity on Santa Cruz before dogs were eradicated in 1982 and iguanas reintroduced (Werner 1984, Tzika <em>et al</em>. 2008). Juveniles are observed in this location because feral cats are controlled by trapping every two years (Márquez B. <em>et al</em>. 2010). There is also a very small adult-only population remaining at Cerro Ballena on the southeastern coast (G. Gentile pers. comm. 2019).<br/><br/>In northern Isabela, iguana subpopulations are isolated from each other by vast lava flows with no vegetation (Tzika <em>et al</em>. 2008). The number of iguanas in each of five subpopulations range from a low of 140, to the most at 1,600. The total adult estimate for northern Isabela is 2,276 iguanas (range 1,955–4,527; Márquez B. <em>et al</em>. 2010). An analysis of historical data suggests a decreasing trend, since 0% of surveyed iguanas were juveniles in the years 2004, 2006, and 2013, and only 3% in 2012 (Kumar <em>et al</em>. 2019).<br/><br/>On Fernandina, iguanas do not occur across the entire island, rather they are concentrated near the crater, crater rim, and the western flank of the volcano, where there is sparse to thick vegetation (Werner 1982, 1983). There are 751 total iguanas estimated on Fernandina (range 680–1,236; Márquez B. <em>et al</em>. 2010). This subpopulation may be stable as there are no invasive alien species present, however, reproduction and female mortality is known to fluctuate due to volcanic eruptions every 10–15 years (de Roy 1995). Genetically, the Fernandina and Isabela populations are similar, have the highest diversity, and are distinct from iguanas in the central islands (Tzika <em>et al</em>. 2008, Gentile <em>et al</em>. 2009).<br/><br/>A dense and stable population of iguanas are found on the small island of Plaza Sur (0.14 km<sup>2</sup>). There are no invasive mammals on this island since a small group of feral goats were eradicated (Phillips <em>et al</em>. 2012), and iguanas are found in all age classes. An estimate in 2002 calculated 380 total iguanas (range 230–595; Márquez B. <em>et al</em>. 2010).<br/><br/>Populations on Santa Cruz saw dramatic reductions in the 1970s due to feral dog attacks and predation by feral cats and pigs. The population of Bahía Conway and Cerro Dragón alone was reduced from <em>ca</em> 1,000 iguanas to 56 in less than a year. These survivors were moved to a captive facility in southern Santa Cruz as well as introduced to Venecia, a tiny islet offshore from this subpopulation. Juvenile iguanas from Venecia have been moved back to Cerro Dragón at least three times after dogs were eradicated (Tzika <em>et al</em>. 2008, Fabiani <em>et al</em>. 2011). The most current population estimate for this remaining mainland subpopulation is 693 total iguanas (range 657–1,138; Márquez B. <em>et al</em>. 2010). Habitat is severely limited on Venecia and the population of <em>ca</em> 200 adults is estimated to be at carrying capacity. Cats are also trapped every two years at Bahía Conway to improve juvenile recruitment, however, no juveniles have been observed at Cerro Dragón for the last two decades, likely due to the presence of feral cats (A. Llerena pers. comm. 2018).<br/><br/>The once healthy subpopulation on Baltra crashed to zero by 1954 due to the impacts of alien predators and competitors, and the construction of a large U.S. military base during World War II. Through captive breeding and translocations, iguanas were repatriated on Baltra in 1991 (Cayot and Menoscal 1992). By 2007, the population had rebounded to 781 total iguanas (range 433–1,298; Márquez B. <em>et al</em>. 2010). Genetic analysis has shown that the subpopulations on Baltra and Seymour Norte show a mixed ancestry, originating from both Isabela and Santa Cruz clades, that are most likely from the rescues at Bahía Cartago and Bahía Conway and a consequence of undocumented translocations in 1976–1977 (Hofkin <em>et al</em>. 2003, Tzika <em>et al</em>. 2008).<br/><br/>With the exception of Baltra, subpopulations of Galápagos Land Iguanas were considered healthy in the 1950s, three generations ago. Since that time, iguanas have been nearly extirpated from most of southern Isabela and Santa Cruz, declined in northern Isabela from the impact of feral goats and cats, are relatively stable on Fernandina and Plaza Sur, and have increased on Baltra and Seymour Norte due to conservation interventions. Overall, considering the expected population (current and former) sizes on the large islands, it is estimated the population has declined by at least 30% over the last three generations (<em>ca</em> 69 years). A minimum estimate of 10–15% decline of older individuals is projected for the future three generations, based on the presence of invasive alien predators in some subpopulations and impacting juvenile recruitment.",
+    "habitats": "Galápagos Land Iguanas are found in dry areas with low growing shrubs and <em>Opuntia</em> cactus. They are known to eat at least 30 different plant species (Traveset <em>et al</em>. 2016) and are generally found where these plants occur. Iguanas have extremely limited access to fresh water and acquire most of their liquid from vegetation, primarily <em>Opuntia</em> (Jackson 1991, Switak 1998). Research strongly suggests they play a major role as a seed disperser and provide essential ecosystem services for the islands they occupy (Traveset <em>et al</em>. 2016). They travel comparatively long distances among iguana species, and are known to have contributed to revegetation of both native and non-native plants on Fernandina following volcanic eruptions (Hendrix 1981). They are primarily herbivorous but opportunistically feed on insects and carrion (Jackson 1991, Harper <em>et al</em>. 2011).<br/><br/>On the older central islands (Santa Cruz, Plaza Sur, Seymour Norte, and Baltra), both arid regions and iguanas are found at low, near sea level elevations (Snell and Tracy 1985). However, western subpopulations are found at low and high elevations, including the slopes of active volcanos on Fernandina and Isabela. On Fernandina, iguanas are known to migrate approximately 10 km up to the edge of the crater at 1,500 m, then descend to nest within the caldera (de Roy 1995). Several females have been observed digging nests on the eastern and western sides, inside Isabela's Wolf Volcano caldera (G. Gentile pers. obs. 2012). It is hypothesized that fumaroles from volcanic activity help to incubate the eggs (Werner 1982, 1983). In general, iguanas build shallow burrows in soft soil, or use spaces under rocks as retreats that they defend (Carpenter 1969). Exact home ranges are unknown; however, males are reported to have larger territories than females (Jackson 1991).<br/><br/>The reproductive season for Galápagos Land Iguanas varies dramatically between islands. Breeding season for Fernandina is June to July; Baltra and Plaza Sur iguanas breed during January and February; and the Cerro Dragón and Venecia subpopulations on Santa Cruz breed from August to October. On Isabela, the Wolf Volcano subpopulation females show a peak in gravidity in June, the Bahía Cartago subpopulation breeds during January and February, and the breeding season for other subpopulations is unknown (Costantini <em>et al</em>. 2009, G. Gentile unpublished data). Egg laying typically occurs two to three months after breeding before the beginning of the rainy season, with incubation ranging from 60–90 days. Clutch sizes are known to vary from 6–22 eggs (Werner 1983, Snell <em>et al</em>. 1984). Hatchlings emerge in a period of increasing scarcity of food which lasts until the rainy season of the next year (Snell and Tracy 1985). Juveniles are preyed on by native Racer snakes (<em>Pseudalsophis</em> spp.) and Galápagos Hawk (<em>Buteo galapagoensis</em>). During emergence in the Fernandina crater, hawks are observed to gather and prey heavily on new hatchlings.<br/><br/>Male Galápagos Land Iguanas average 47–51 cm in snout-to-vent length (SVL) and weigh 4–7 kg; females are 42–47 cm SVL and 3–5 kg. The population on Plaza Sur is much smaller with an average 41 cm SVL and 3 kg for males, and 36 cm SVL and weigh 2 kg for females (Kumar <em>et al</em>. 2019). Maximums are reported at 60 cm SVL and 12 kg (Márquez <em>et al</em>. 2010). These iguanas are expected to be reproductively mature at 5–7 years and remain so throughout their lifetime until <em>ca</em> 40 years or longer (Werner 1982, Fabiani <em>et al</em>. 2011). Their estimated generation length is therefore 22.5–23.5 years.<br/><br/>The Galápagos Land Iguana is known to occasionally hybridize with the Santa Cruz Marine Iguana (<em>Amblyrhynchus cristatus</em>) on Plaza Sur, generating no introgression (Rassmann <em>et al</em>. 1997, Di Giambattista and Gentile 2014). This island has an unusual topography that allows contact between the two species, whereas their habitats normally do not overlap. A hybrid that was first marked in 1993 was recaptured in 2013, extending the previous longevity record for hybrids by 10 years (H. Snell pers. comm. 2014). Di Giambattista <em>et al</em>. (2018) investigated the level of hybridization between the Galápagos Land Iguana and the Galápagos Pink Land Iguana using a large set of microsatellite markers. Results indicated strong differentiation between the two species and, while hybridization in the past cannot be ruled out, there is no evidence of ongoing hybridization between them.",
+    "threats": "Previously widespread throughout the archipelago, anthropogenic activities since the 1700s have led to major population declines of Galápagos Land Iguanas on Isabela and Santa Cruz, and extinctions on Baltra, Rábida, and Santiago (Cayot 2008, Tzika <em>et al</em>. 2008, Fabiani <em>et al</em>. 2011). They were likely hunted by man for food in the past, but the predominant threat persisting over the last 100 years has been from invasive alien mammals including feral dogs, cats, pigs, goats, and donkeys (<em>Equus asinus</em>). Feral dogs have been the most harmful as they are capable of killing large adults and were responsible for the near extirpation of subpopulations on Santa Cruz and Isabela in the 1970s (Cayot 2008, Márquez B. <em>et. al</em>. 2010). Grazing mammals are competitors as they degrade essential vegetation, as well as trampling and destroying nests. Pigs are also known to dig up nests and consume iguana eggs. Goats, dogs, cats, and the construction of a military airbase on Baltra resulted in the complete extirpation of those iguanas by 1954 (Snell <em>et al</em>. 1984, Phillips <em>et al</em>. 2005, Cayot 2008).<br/><br/>Today, feral dogs, pigs, goats, and donkeys have been greatly reduced and completely eliminated on a number of islands (Cruz <em>et al</em>. 2005, 2009). However, feral cats remain a strong threat, are widespread on Isabela and Santa Cruz, and prey heavily on juveniles up to two years of age (Márquez B.<em> et al</em>. 2010, Gentile <em>et al</em>. 2016). Cats severely affect recruitment and population structure within seven of the 11 subpopulations. Minimal cat control is underway on both islands; however, it is not enough to protect iguanas and it is estimated that some subpopulations are ageing and currently declining as a result. Recent research on two Isabela subpopulations (Bahía Cartago and Urbina) may illustrate severe juvenile predation from feral cats, since only 0.89% of the iguanas sampled (n = 244) were juveniles (Kumar <em>et al</em>. 2019).<br/><br/>In addition, all islands apart from Fernandina, Seymour Norte, and Plaza Sur have introduced alien rats, primarily Black Rats (<em>Rattus rattus</em>) and Santa Cruz also has Norway Rats (<em>Rattus norvegicus</em>; Phillips <em>et al</em>. 2012). Rats likely pose the most significant threat to hatchling iguanas where other food sources for the rats are scarce, as on small islands and in areas of sparse vegetation (Cayot <em>et al</em>. 1994, Gentile <em>et al</em>. 2016).<br/><br/>Volcanic eruptions pose a significant stochastic threat for iguanas on Fernandina and Isabela, particularly the former where females are known to nest inside the crater and large mortality events have been documented (de Roy 1995). It is believed a subpopulation in southern Isabela was destroyed due to the eruption of Volcán Chico in 1979 (Snell <em>et al</em>. 1984). Many of the volcanoes in the Galápagos archipelago are still very active; the most recent eruption was in June 2018 on Fernandina (Vasconez <em>et al</em>. 2018).",
+    "measures": "All populations of Galápagos Land Iguanas are included in all three protected area designations: Galápagos National Park and National Marine Reserve, Galápagos Islands Man and Biosphere Reserve (UNESCO), and Galápagos Islands World Heritage Site.<br/><br/>Several eradication programmes have occurred that benefit Galápagos Land Iguanas, including feral goats from Baltra, Plaza Sur, Santiago, and northern Isabela (separated from the south by a 10+ km-long lava isthmus; Carrion <em>et al</em>. 2011). Goats have been reduced, but not eliminated (T. Grant pers. obs. 2014) from northwestern Santa Cruz to protect the subpopulations of Bahía Conway and Cerro Dragón. Feral dogs were eradicated from Bahía Conway on Santa Cruz in the early 1980s to protect iguanas, and are also controlled to very low levels in southern Isabela (Phillips <em>et al</em>. 2012). Feral cats have been eradicated from Baltra and Venecia, and Black Rats from Seymour Norte (Harper <em>et al</em>. 2011, Phillips <em>et al</em>. 2012). The impact of rats is less well understood; however, it was documented that an increased number of Marine Iguana hatchlings were observed following a nearly complete eradication of Black Rats from Pinzón in 1988 (Cayot <em>et al</em>. 1994).<br/><br/>Multiple translocations of Galápagos Land Iguanas have occurred since 1932. During the Hancock Expedition (1932–33), <em>ca</em> 70 iguanas were captured from Baltra where they appeared to be malnourished, perhaps due to competition for food with introduced goats, and introduced to Seymour Norte where neither goats nor iguanas were present (Woram 1992, Cayot 2008). This experimental translocation later benefited the Baltra iguana population as they were eliminated from Baltra by 1954. Soon after the eradication of invasive mammals on Baltra, iguanas were reintroduced in 1991 (Cayot and Menoscal 1992).<br/><br/>Following the nearly complete decimation of the subpopulations at Bahía Conway (Santa Cruz) and Bahía Cartago (Isabela) by feral dogs in the mid-1970s, an iguana captive breeding programme was initiated by the Galápagos National Park Service and the Charles Darwin Research Station (CDRS), and the surviving iguanas were transferred to the CDRS on Santa Cruz. In 1977, iguanas from the CDRS were introduced to Venecia, an islet off northwestern Santa Cruz, and since it lacked proper soil an artificial nesting site was constructed. Offspring from Venecia have subsequently been translocated to nearby Cerro Dragón (Cayot <em>et al</em>. 1994). Iguanas from the CDRS were also reintroduced back to Bahía Cartago, Isabela. The iguana breeding programme at the CDRS was discontinued in 2008 (Cayot 2008).<br/><br/>In January 2019, a group of 2,150 iguanas from Seymour Norte were reintroduced to Santiago, following the eradication of feral domestic pigs in 2001 (Anonymous 2019, Kumar <em>et al</em>. 2019). If they survive and become established, this will potentially increase the area of occupancy for Galápagos Land Iguanas.<br/><br/>Conservation and research actions recommended for this species include an improved knowledge of population size and trends, distribution and habitat trends, and the impact of invasive species management. Further research and management discussions are needed concerning the results of molecular analysis by Tzika <em>et al</em>. (2008) that determined distinctions between western, central, and Plaza Sur populations, as well as individuals in the introduced Seymour Norte and Baltra populations showing a mix of Isabela and Santa Cruz ancestry due to poorly documented translocations. Additional studies of the Plaza Sur population are needed to better understand their genetic relationship within&#160;<em>C</em><em>onolophus</em>. Analysis of Rábida as a potential reintroduction site should be considered.",
+    "use_trade": "Galápagos Land Iguanas are listed in Appendix II of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). Ecuador has never declared export of live specimens of <em>Conolophus subcristatus</em> for commercial trade (CITES trade data, UNEP-WCMC 2018), however, they are known to exist in the pet trade. Four smuggling cases with prosecutions occurred between 2010 and 2015 (Auliya <em>et al</em>. 2016). Molecular tools were used to unambiguously assign and return the four iguanas to the origin subpopulation (Gentile <em>et al</em>. 2013). While not significantly reducing the population currently, their entry into the pet trade is of concern because it becomes easier to mask illegal extraction from the wild.",
+    "rationale": "The Galápagos Land Iguana has a mostly outdated population size estimate of <em>ca</em> 10,000 mature individuals, in 13 subpopulations that are fragmented from each other by vast lava flows or are on isolated islands. With the exception of Baltra where the subpopulation had been extirpated, subpopulations were considered healthy three generations ago in the 1950s. Since that time, iguanas have been nearly extirpated from most of southern Isabela and Santa Cruz, and have declined in northern Isabela. Juveniles are rarely observed in these remaining nine locations due to continued predation by feral cats. Iguanas are small in number but relatively stable on Fernandina and Plaza Sur. They have increased again on the small islands of Baltra and Seymour Norte (likely to carrying capacity on the latter), due to conservation efforts. Overall, considering the assumed population (current and former) sizes on the larger islands, it is estimated the population has declined by at least 30% over the last three generations. A minimum estimate of 10–15% decline is projected during the future three generations, based on the presence of invasive alien predators in some subpopulations and impacting juvenile recruitment. The estimated extent of occurrence meets the Vulnerable threshold at 9,524 km<sup>2</sup> and the area of occupancy is crudely estimated to be 540 km<sup>2</sup>. Further research on fine-scale distribution is needed to clarify an accurate occupancy status of the subpopulations.",
+    "trend_justification": null,
+    "taxonomic_notes": "The western (Isabela and Fernandina) populations of <em>Conolophus subcristatus</em> appears to be sister to the Barrington Land Iguana (<em>Conolophus pallidus</em>; Gentile <em>et al</em>. 2009). Further analysis (Rassmann <em>et al</em>. 2004, Gentile <em>et al</em>. 2009) shows that these western populations and the central island populations of <em>C. subcristatus</em> form two separate clades, consistent with the pattern of morphological differentiation described in Snell <em>et al</em>. (1984). Tzika <em>et al</em>. (2008) suggest that some populations of <em>C. subcristatus</em> may deserve recognition as species, on Plaza Sur in particular, based on their genetic differentiation within the genus."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Volcanoes"
+      },
+      "code": "10_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Very Rapid Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Capra hircus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Negligible declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Equus asinus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Sus domesticus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Kumar, K., Gentile, G. & Grant, T.D.",
+      "value": [
+        "Tandora Grant (IUCN SSC Iguana Specialist Group / San Diego Zoo's Institute for Conservation Research)",
+        "Kirtana Kumar (Massey University)",
+        "Gabriele Gentile (IUCN SSC Iguana Specialist Group / Tor Vergata University, Rome, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Pasachnik, S.A.",
+      "value": [
+        "Stesha Pasachnik (IUCN SSC Iguana Specialist Group / University of Tennessee)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Ortiz-Catedral, L.",
+      "value": [
+        "Luis Ortiz-Catedral (Massey University)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Gentile, G., Fabiani, A., Marquez, C., Snell, H., Snell, H., Tapia, W. and Sbordoni, V. 2009. An overlooked pink species of land iguana in the Galápagos. <i>Proceedings of the National Academy of Sciences</i> 106(2): 507-511.",
+      "year": "2009",
+      "title": "An overlooked pink species of land iguana in the Galápagos",
+      "author": "Gentile, G., Fabiani, A., Marquez, C., Snell, H., Snell, H., Tapia, W. and Sbordoni, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tzika, A.C., Rosa, S.F.P., Fabiani, A., Snell, H.L., Snell, H.M., Marquez, C., Tapia, W., Rassmann, K., Gentile, G. and Milinkovitch, M.C. 2008. Population genetics of Galápagos land iguana (genus <i>Conolophus</i>) remnant populations. <i>Molecular Ecology</i> 17(23): 4943-4952.",
+      "year": "2008",
+      "title": "Population genetics of Galápagos land iguana (genus <i>Conolophus</i>) remnant populations",
+      "author": "Tzika, A.C., Rosa, S.F.P., Fabiani, A., Snell, H.L., Snell, H.M., Marquez, C., Tapia, W., Rassmann, K., Gentile, G. and Milinkovitch, M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Snell, H.L., Snell, H.M. and Tracy, C.R. 1984. Variation among populations of Galapagos land iguanas (<i>Conolophus</i>): contrasts of phylogeny and ecology. <i>Biological Journal of the Linnean Society</i> 21(1-2): 185-207.",
+      "year": "1984",
+      "title": "Variation among populations of Galapagos land iguanas (<i>Conolophus</i>): contrasts of phylogeny and ecology",
+      "author": "Snell, H.L., Snell, H.M. and Tracy, C.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, D.I. 1982. Social organization and ecology of land iguanas, <i>Conolophus subcristatus</i>, on Isla Fernandina, Galápagos. In: G.M. Burghardt and A.S. Rand (eds), <i>Iguanas of the World: Their Behaviour, Ecology, and Conservation</i>, pp. 342–365. Noyes Publications, Park Ridge, New Jersey.",
+      "year": "1982",
+      "title": "Social organization and ecology of land iguanas, <i>Conolophus subcristatus</i>, on Isla Fernandina, Galápagos",
+      "author": "Werner, D.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Phillips, R.B., Cooke, B.D., Campbell, K., Carrion, V., Marquez, C., Snell, H.L. 2005. Eradicating feral cats to protect Galapagos land iguanas: methods and strategies. <i>Pacific Conservation Biology</i> 11(4): 257-267.",
+      "year": "2005",
+      "title": "Eradicating feral cats to protect Galapagos land iguanas: methods and strategies",
+      "author": "Phillips, R.B., Cooke, B.D., Campbell, K., Carrion, V., Marquez, C., Snell, H.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cruz, F., Donlan, C.J., Campbell, K. and Carrion, V. 2005. Conservation action in the Galapagos: feral pig (<i>Sus scrofa</i>) eradication from Santiago Island. <i>Biological Conservation</i> 121: 473-478.",
+      "year": "2005",
+      "title": "Conservation action in the Galapagos: feral pig (<i>Sus scrofa</i>) eradication from Santiago Island",
+      "author": "Cruz, F., Donlan, C.J., Campbell, K. and Carrion, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cayot, L.J., Snell, H.L., Llerena, W. and Snell, H.M. 1994. Conservation biology of Galapagos reptiles: twenty-five years of successful research and management. In: J.B. Murphy, K. Adler and J.T. Collins (eds), <i>Captive Management and Conservation of Amphibians and Reptiles</i>, pp. 297–305. SSAR Contri. Herpetol. No. 11.",
+      "year": "1994",
+      "title": "Conservation biology of Galapagos reptiles: twenty-five years of successful research and management",
+      "author": "Cayot, L.J., Snell, H.L., Llerena, W. and Snell, H.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Auliya M., Altherr S., Ariano-Sanchez D., Baard E. H., Brown C., Cantu J-C., Gentile G., Gildenhuys P., Henningheim E., Hintzmann J., Kanari K., Krvavac M., Lttink M., Lippert J., Luiselli L., Nilson G., Nguyen T.Q., Nijman V., Parham J., Pasachnik S.A., Pedrono M., Rauhaus A., Rueda D., Sachnez M-E., Schepp U., van Schingen M., Scheeweiss N., Segniagbeto G.H., Shepherd C., Stoner S., Somaweera R., Sy E., Türkosan O., Vinke S., Vinke T., Vya R., Williamson S. and Ziegler T. 2016. Trade in live reptiles and its impact on reptile diversity: the European pet market as a case study. <i>Biological Conservation </i> 204: 103:199.",
+      "year": "2016",
+      "title": "Trade in live reptiles and its impact on reptile diversity: the European pet market as a case study",
+      "author": "Auliya M., Altherr S., Ariano-Sanchez D., Baard E. H., Brown C., Cantu J-C., Gentile G., Gildenhuys P., Henningheim E., Hintzmann J., Kanari K., Krvavac M., Lttink M., Lippert J., Luiselli L., Nilson G., Nguyen T.Q., Nijman V., Parham J., Pasachnik S.A., Pedrono M., Rauhaus A., Rueda D., Sachnez M-E., Schepp U., van Schingen M., Scheeweiss N., Segniagbeto G.H., Shepherd C., Stoner S., Somaweera R., Sy E., Türkosan O., Vinke S., Vinke T., Vya R., Williamson S. and Ziegler T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Iguana Taxonomy Working Group (ITWG). 2016. A checklist of the iguanas of the world (Iguanidae; Iguaninae). In: J.B. Iverson, T.D. Grant, C.R. Knapp and S.A. Pasachnik (eds), <i>Iguanas: Biology, Systematics, and Conservation</i>, pp. 4–46. Herpetological Conservation and Biology 11(Monograph 6).",
+      "year": "2016",
+      "title": "A checklist of the iguanas of the world (Iguanidae; Iguaninae)",
+      "author": "Iguana Taxonomy Working Group (ITWG)",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Phillips, R.B., Wiedenfeld, D.A. and Snell, H.L. 2012. Current status of alien vertebrates in the Galápagos Islands: invasion history, distribution, and potential impacts. <i>Biological Invasions</i> 14(2): 461–480.",
+      "year": "2012",
+      "title": "Current status of alien vertebrates in the Galápagos Islands: invasion history, distribution, and potential impacts",
+      "author": "Phillips, R.B., Wiedenfeld, D.A. and Snell, H.L",
+      "citation_short": null
+    },
+    {
+      "citation": "Rassmann, K., Trillmich, F. and Tautz, D. 1997. Hybridization between the Galápagos land and marine iguana (<i>Conolophus subcristatus</i> and <i>Amblyrhynchus cristatus</i>) on Plaza Sur. <i>Journal of Zoology</i> 242(2): 729–739.",
+      "year": "1997",
+      "title": "Hybridization between the Galápagos land and marine iguana (<i>Conolophus subcristatus</i> and <i>Amblyrhynchus cristatus</i>) on Plaza Sur",
+      "author": "Rassmann, K., Trillmich, F. and Tautz, D",
+      "citation_short": null
+    },
+    {
+      "citation": "Fabiani, A., Trucchi, E., Rosa, S.F.P. and Marquez B, C.M. 2011. Conservation of Galápagos land iguanas: genetic monitoring and predictions of a long‐term program on the island of Santa Cruz. <i>Animal Conservation</i> 14(4): 419–429.",
+      "year": "2011",
+      "title": "Conservation of Galápagos land iguanas: genetic monitoring and predictions of a long‐term program on the island of Santa Cruz",
+      "author": "Fabiani, A., Trucchi, E., Rosa, S.F.P. and Marquez B, C.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Márquez B., C.M., Munoz H., E.A., Gentile, G., Tapia, W., Zabala, F.J., Naranjo L., S.A. and Llerena, A.J. 2010. Estado poblacional de las iguanas terrestres (<i>Conolophus subcristatus</i>, <i>C. pallidus</i> y <i>C. marthae</i>: Squamata, Iguanidae), Islas Galápagos. <i>Boletín Técnico 9, Serie Zoológica</i> 6: 19–37.",
+      "year": "2010",
+      "title": "Estado poblacional de las iguanas terrestres (<i>Conolophus subcristatus</i>, <i>C. pallidus</i> y <i>C. marthae</i>: Squamata, Iguanidae), Islas Galápagos",
+      "author": "Márquez B., C.M., Munoz H., E.A., Gentile, G., Tapia, W., Zabala, F.J., Naranjo L., S.A. and Llerena, A.J",
+      "citation_short": ""
+    },
+    {
+      "citation": "UNEP-WCMC. 2018. CITES trade data for <i>Conolophus</i>. Available at: <a href=\"http://trade.cites.org\">http://trade.cites.org</a>. (Accessed: 1 November 2019).",
+      "year": "2018",
+      "title": "CITES trade data for <i>Conolophus</i>",
+      "author": "UNEP-WCMC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anonymous. 2019. Galápagos Island gets its first iguanas since Darwin after mass-release. Available at: <a href=\"theguardian.com/world/2019/jan/08/galapagos-island-gets-its-first-iguanas-since-darwin-after-mass-release\">theguardian.com/world/2019/jan/08/galapagos-island-gets-its-first-iguanas-since-darwin-after-mass-release</a>. (Accessed: 8 Jan 2019).",
+      "year": "2019",
+      "title": "Galápagos Island gets its first iguanas since Darwin after mass-release",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Carpenter, C.C. 1969. Behavioral and ecological notes on the Galápagos land iguanas. <i>Herpetologica</i> 25(3): 155–164.",
+      "year": "1969",
+      "title": "Behavioral and ecological notes on the Galápagos land iguanas",
+      "author": "Carpenter, C.C",
+      "citation_short": null
+    },
+    {
+      "citation": "Carrion, V., Donlan, C.J., Campbell, J.K., Lavoie, C. and Cruz, F. 2011. Archipelago-wide island restoration in the Galápagos Islands: reducing costs of invasive mammal eradication programs and reinvasion risk. <i>PLoS ONE</i> 6(5): e18835.",
+      "year": "2011",
+      "title": "Archipelago-wide island restoration in the Galápagos Islands: reducing costs of invasive mammal eradication programs and reinvasion risk",
+      "author": "Carrion, V., Donlan, C.J., Campbell, J.K., Lavoie, C. and Cruz, F",
+      "citation_short": null
+    },
+    {
+      "citation": "Cayot, J.L. and Menoscal, R. 1992. Land iguanas return to Baltra. <i>Noticias de Galápagos</i> 51: 11–13.",
+      "year": "1992",
+      "title": "Land iguanas return to Baltra",
+      "author": "Cayot, J.L. and Menoscal, R",
+      "citation_short": null
+    },
+    {
+      "citation": "Cayot, L.J. 2008. The restoration of giant tortoise and land iguana populations in Galápagos. <i>Galapagos Research</i> 65: 39–43.",
+      "year": "2008",
+      "title": "The restoration of giant tortoise and land iguana populations in Galápagos",
+      "author": "Cayot, L.J",
+      "citation_short": ""
+    },
+    {
+      "citation": "Costantini, D., Dell’Omo, G., De Filippis, S.P., Marquez, C., Snell, H.L., Snell, H.M., Tapia, W., Brambilla, G. and Gentile, G. 2009. Temporal and spatial covariation of gender and oxidative stress in the Galápagos land iguana <i>Conolophus subcristatus</i>. <i>Physiological and Biochemical Zoology</i> 82(5): 430–437.",
+      "year": "2009",
+      "title": "Temporal and spatial covariation of gender and oxidative stress in the Galápagos land iguana <i>Conolophus subcristatus</i>",
+      "author": "Costantini, D., Dell’Omo, G., De Filippis, S.P., Marquez, C., Snell, H.L., Snell, H.M., Tapia, W., Brambilla, G. and Gentile, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Cruz, F., Carrion, V., Campbell, K.J., Lavoie, C. and Donlan, C.J. 2009. Bio-economics of large-scale eradication of feral goats from Santiago Island, Galápagos. <i>The Journal of Wildlife Management</i> 73(2): 191–200.",
+      "year": "2009",
+      "title": "Bio-economics of large-scale eradication of feral goats from Santiago Island, Galápagos",
+      "author": "Cruz, F., Carrion, V., Campbell, K.J., Lavoie, C. and Donlan, C.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Darwin, C. 1839. <i>Journal and Remarks: The Voyage of the Beagle</i>. Colburn, London.",
+      "year": "1839",
+      "title": "Journal and Remarks: The Voyage of the Beagle",
+      "author": "Darwin, C",
+      "citation_short": null
+    },
+    {
+      "citation": "de Roy, T. 1995. Where Vulcan lizards prosper. <i>Natural History</i> 104(1): 28–39.",
+      "year": "1995",
+      "title": "Where Vulcan lizards prosper",
+      "author": "de Roy, T",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Giambattista, L. and Gentile, G. 2014. Does Hybridization Between <i>Amblyrhynchus cristatus</i> and <i>Conolophus subcristatus</i> Play a Role in Shaping the Evolution of Iguanas at Plaza Sur? <i>IUCN SSC Iguana Specialist Group Meeting, Santa Cruz, Galápagos</i>.",
+      "year": "2014",
+      "title": "Does Hybridization Between <i>Amblyrhynchus cristatus</i> and <i>Conolophus subcristatus</i> Play a Role in Shaping the Evolution of Iguanas at Plaza Sur?",
+      "author": "Di Giambattista, L. and Gentile, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Giambattista, L., Fulvo, A., Fabiani, A., Bonanni, J., Carrión, J.E. and Gentile, G. 2018. Molecular data exclude current hybridization between iguanas <i>Conolophus marthae</i> and <i>C. subcristatus</i> on Wolf Volcano (Galápagos Islands). <i>Conservation Genetics</i> 19(6): 1461–1469.",
+      "year": "2018",
+      "title": "Molecular data exclude current hybridization between iguanas <i>Conolophus marthae</i> and <i>C. subcristatus</i> on Wolf Volcano (Galápagos Islands)",
+      "author": "Di Giambattista, L., Fulvo, A., Fabiani, A., Bonanni, J., Carrión, J.E. and Gentile, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gentile, G., Ciambotta, M. and Tapia, W. 2013. Illegal wildlife trade in Galápagos: molecular tools help the taxonomic identification of confiscated iguanas and guide their rapid repatriation. <i>Conservation Genetics Resources</i> 5(3): 867–872.",
+      "year": "2013",
+      "title": "Illegal wildlife trade in Galápagos: molecular tools help the taxonomic identification of confiscated iguanas and guide their rapid repatriation",
+      "author": "Gentile, G., Ciambotta, M. and Tapia, W",
+      "citation_short": null
+    },
+    {
+      "citation": "Gentile, G., Marquez, C., Snell, H.L., Tapia, W. and Izurieta, A. 2016. Conservation of a new flagship species: the Galápagos Pink Land Iguana (<i>Conolophus marthae</i> Gentile and Snell, 2009). In: F.M. Angelici (ed.), <i>Problematic Wildlife: A Cross Disciplinary Approach</i>, pp. 315–336. Springer International Publishing, Switzerland.",
+      "year": "2016",
+      "title": "Conservation of a new flagship species: the Galápagos Pink Land Iguana (<i>Conolophus marthae</i> Gentile and Snell, 2009)",
+      "author": "Gentile, G., Marquez, C., Snell, H.L., Tapia, W. and Izurieta, A",
+      "citation_short": null
+    },
+    {
+      "citation": "Harper, G.A., Zabala, J. and Carrion, V. 2011. Monitoring of a population of Galápagos land iguanas (<i>Conolophus subcristatus</i>) during a rat eradication using brodifacoum. In: C.R. Veitch, M.N. Clout and D.R. Towns (eds), <i>Island Invasives: Eradication and Management</i>, pp. 309–312. IUCN, Gland, Switzerland.",
+      "year": "2011",
+      "title": "Monitoring of a population of Galápagos land iguanas (<i>Conolophus subcristatus</i>) during a rat eradication using brodifacoum",
+      "author": "Harper, G.A., Zabala, J. and Carrion, V",
+      "citation_short": null
+    },
+    {
+      "citation": "Hendrix, L.B. 1981. Post-eruption succession on Isla Fernandina, Galápagos. <i>Madroño</i> 28(4): 242–254.",
+      "year": "1981",
+      "title": "Post-eruption succession on Isla Fernandina, Galápagos",
+      "author": "Hendrix, L.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Hofkin, B.V., Wright, A., Altenbach, J., Rassmann, K., Snell, H.M., Miller, R.D., Stone, A.C. and Snell, H.L. 2003. Ancient DNA gives green light to Galápagos Land Iguana repatriation. <i>Conservation Genetics</i> 4: 105–108.",
+      "year": "2003",
+      "title": "Ancient DNA gives green light to Galápagos Land Iguana repatriation",
+      "author": "Hofkin, B.V., Wright, A., Altenbach, J., Rassmann, K., Snell, H.M., Miller, R.D., Stone, A.C. and Snell, H.L",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, M.H. 1991. <i>Galápagos: A Natural History Guide</i>. University of Calgary Press, Calgary, Alberta, Canada.",
+      "year": "1991",
+      "title": "Galápagos: A Natural History Guide",
+      "author": "Jackson, M.H",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar, K., Ortiz-Catedral, L. and Llerena, A.J. 2019. Conservation Status and Demographics of the Galápagos Land Iguana (<i>Conolophus subcristatus</i>). Conservation Biology, Massey University.",
+      "year": "2019",
+      "title": "Conservation Status and Demographics of the Galápagos Land Iguana (<i>Conolophus subcristatus</i>)",
+      "author": "Kumar, K., Ortiz-Catedral, L. and Llerena, A.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Onorati, M., Sancesario, G., Pastore, D., Bernardini, S., Cruz, M., Carrión, J.E., Carosi, M., Vignoli, L., Lauro, D. and Gentile, G. 2017. Effects of parasitic infection and reproduction on corticosterone plasma levels in Galápagos Land Iguanas, <i>Conolophus marthae</i> and <i>C. subcristatus</i>. <i>Ecology and Evolution</i> 7(15): 6046–6055.",
+      "year": "2017",
+      "title": "Effects of parasitic infection and reproduction on corticosterone plasma levels in Galápagos Land Iguanas, <i>Conolophus marthae</i> and <i>C. subcristatus</i>",
+      "author": "Onorati, M., Sancesario, G., Pastore, D., Bernardini, S., Cruz, M., Carrión, J.E., Carosi, M., Vignoli, L., Lauro, D. and Gentile, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Rassmann, K., Markmann, M., Trillmich, F. and Tautz, D. 2004. Tracing the evolution of the Galápagos iguanas: a molecular approach. In: A.C. Alberts, R.L. Carter, W.K. Hayes and E.P. Martins (eds), <i>Iguanas: Biology and Conservation</i>, pp. 71–83. University of California Press, Berkeley and Los Angeles, California.",
+      "year": "2004",
+      "title": "Tracing the evolution of the Galápagos iguanas: a molecular approach",
+      "author": "Rassmann, K., Markmann, M., Trillmich, F. and Tautz, D",
+      "citation_short": ""
+    },
+    {
+      "citation": "Snell, H.L. and Tracy, C.R. 1985. Behavioral and morphological adaptations by Galapagos land iguanas (<i>Conolophus subcristatus</i>) to water and energy requirements of eggs and neonates. <i>American Zoologist</i> 25(4): 1009–1018.",
+      "year": "1985",
+      "title": "Behavioral and morphological adaptations by Galapagos land iguanas (<i>Conolophus subcristatus</i>) to water and energy requirements of eggs and neonates",
+      "author": "Snell, H.L. and Tracy, C.R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Steadman, D.W., Stafford, T.W., Donahue, D.J. and Jull, A.J.T. 1991. Chronology of Holocene vertebrate extinction in the Galapagos Islands. <i>Quaternary Research</i> 36: 126–133.",
+      "year": "1991",
+      "title": "Chronology of Holocene vertebrate extinction in the Galapagos Islands",
+      "author": "Steadman, D.W., Stafford, T.W., Donahue, D.J. and Jull, A.J.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Switak, K.H. 1998. Galapagos land iguanas: surviving in peril. <i>Iguana Times (Journal of the International Iguana Society)</i> 7(1): 3–10.",
+      "year": "1998",
+      "title": "Galapagos land iguanas: surviving in peril",
+      "author": "Switak, K.H",
+      "citation_short": null
+    },
+    {
+      "citation": "Traveset, A., Nogales, M., Vargas, P., Rumeu, B., Olesen, J.M., Jaramillo, P. and Heleno, R. 2016. Galápagos land iguana (<i>Conolophus subcristatus</i>) as a seed disperser. <i>Integrative Zoology</i> 11(3): 207–213.",
+      "year": "2016",
+      "title": "Galápagos land iguana (<i>Conolophus subcristatus</i>) as a seed disperser",
+      "author": "Traveset, A., Nogales, M., Vargas, P., Rumeu, B., Olesen, J.M., Jaramillo, P. and Heleno, R",
+      "citation_short": null
+    },
+    {
+      "citation": "Vasconez, F.J., Ramón, P., Hernandez, S., Hidalgo, S., Bernard, B., Ruiz, M., Alvarado, A., La Femina, P. and Ruiz, G. 2018. The different characteristics of the recent eruptions of Fernandina and Sierra Negra volcanoes (Galápagos, Ecuador). <i>Volcanica</i> 1(2): 127–133.",
+      "year": "2018",
+      "title": "The different characteristics of the recent eruptions of Fernandina and Sierra Negra volcanoes (Galápagos, Ecuador)",
+      "author": "Vasconez, F.J., Ramón, P., Hernandez, S., Hidalgo, S., Bernard, B., Ruiz, M., Alvarado, A., La Femina, P. and Ruiz, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, D.I. 1983. Reproduction in the iguana <i>Conolophus subcristatus</i> on Fernandina Island, Galapagos: clutch size and migration costs. <i>The American Naturalist</i> 121(6): 757–775.",
+      "year": "1983",
+      "title": "Reproduction in the iguana <i>Conolophus subcristatus</i> on Fernandina Island, Galapagos: clutch size and migration costs",
+      "author": "Werner, D.I",
+      "citation_short": ""
+    },
+    {
+      "citation": "Werner, D.I. 1984. The Galápagos Land Iguana (<i>Conolophus</i>): natural history and conservation survey. <i>National Geographic Society Research Reports</i> 17: 81–94.",
+      "year": "1984",
+      "title": "The Galápagos Land Iguana (<i>Conolophus</i>): natural history and conservation survey",
+      "author": "Werner, D.I",
+      "citation_short": null
+    },
+    {
+      "citation": "Woram, J.M. 1992. That first iguana transfer. <i>Noticias de Galápagos</i> 51: 20–22.",
+      "year": "1992",
+      "title": "That first iguana transfer",
+      "author": "Woram, J.M",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

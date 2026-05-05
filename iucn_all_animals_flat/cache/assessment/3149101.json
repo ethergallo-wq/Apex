@@ -1,0 +1,775 @@
+{
+  "assessment_date": "2017-01-25T00:00:00.000+00:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 9023,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/9023/3149101",
+  "citation": "van Dijk, P.P., Rhodin, A.G.J., Cayot, L.J. & Caccone, A. 2017. Chelonoidis niger. The IUCN Red List of Threatened Species 2017: e.T9023A3149101. Accessed on 05 May 2026.",
+  "assessment_id": 3149101,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 9023,
+    "scientific_name": "Chelonoidis niger",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "TESTUDINES",
+    "family_name": "TESTUDINIDAE",
+    "genus_name": "Chelonoidis",
+    "species_name": "niger",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Quoy &amp; Gaimard, 1824)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tortoise and Freshwater Turtle Specialist Group",
+        "url": "http://www.iucn-tftsg.org/",
+        "description": "Chair: Craig Stanford (email: stanford@usc.edu)\nRed List Authority Coordinator: Carla Eisemberg (email:Carla.Eisemberg@cdu.edu.au)\nNewsletters: Chelonian Conservation and Biology (http://www.chelonian.org/ccb/); Turtle and Tortoise Newsletter (http://www.chelonian.org/crf-publications/turtle-and-tortoise-newsletter/); TurtleLog Online Newsletter (http://www.iucn-tftsg.org/turtlelog_online_newsletter/)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Charles Island Giant Tortoise",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Tortuga Gigante de Floreana",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Floreana Giant Tortoise",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Testudo galapagoensis Baur, 1889",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "galapagoensis",
+        "species_author": "Baur, 1889",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Geochelone nigra ssp. galapagoensis (Baur, 1889)",
+        "status": "ACCEPTED",
+        "genus_name": "Geochelone",
+        "species_name": "nigra",
+        "species_author": null,
+        "infrarank_author": "(Baur, 1889)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "galapagoensis"
+      },
+      {
+        "name": "Geochelone elephantopus ssp. galapagoensis (Baur, 1889)",
+        "status": "ACCEPTED",
+        "genus_name": "Geochelone",
+        "species_name": "elephantopus",
+        "species_author": null,
+        "infrarank_author": "(Baur, 1889)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "galapagoensis"
+      },
+      {
+        "name": "Geochelone elephantopus ssp. nigra (Quoy & Gaimard, 1824)",
+        "status": "ACCEPTED",
+        "genus_name": "Geochelone",
+        "species_name": "elephantopus",
+        "species_author": null,
+        "infrarank_author": "(Quoy & Gaimard, 1824)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "nigra"
+      },
+      {
+        "name": "Geochelone nigra ssp. nigra (Quoy & Gaimard, 1824)",
+        "status": "ACCEPTED",
+        "genus_name": "Geochelone",
+        "species_name": "nigra",
+        "species_author": null,
+        "infrarank_author": "(Quoy & Gaimard, 1824)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "nigra"
+      },
+      {
+        "name": "Chelonoidis nigra ssp. nigra (Quoy &amp; Gaimard, 1824)",
+        "status": "ACCEPTED",
+        "genus_name": "Chelonoidis",
+        "species_name": "nigra",
+        "species_author": null,
+        "infrarank_author": "(Quoy &amp; Gaimard, 1824)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "nigra"
+      },
+      {
+        "name": "Testudo californiana Quoy & Gaimard, 1824a",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "californiana",
+        "species_author": "Quoy & Gaimard, 1824a",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Testudo nigra Quoy & Gaimard, 1824b",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "nigra",
+        "species_author": "Quoy & Gaimard, 1824b",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": null,
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Extinct"
+    },
+    "code": "EX"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p><em>Chelonoidis niger</em>&#160;occurred on Floreana [formerly Santa María or Charles Island] in the&#160;Galápagos&#160;Islands of Ecuador. Floreana has a total surface area of 172.5 sq.km, of which <em>ca</em> 81 sq. km (47%) could potentially sustain tortoises (J.P. Gibbs unpubl. data).</p>",
+    "population": "<p>Based on an estimated average density of one tortoise per hectare of suitable habitat, the pre-human population size was estimated to have been about 8,000 adults (J.P. Gibbs unpubl. data). This species was exposed to intense exploitation by whalers in the early 1800s, collecting animals as provisions and to produce oil, with the last large loads of tortoises from Floreana recorded as occurring between 1831 and 1837 (Townsend 1925,&#160;Pritchard 1996).&#160;Available population information for&#160;<em>Chelonoidis niger</em>&#160;indicates that the population was not rare during the 1830s, but had collapsed by about 1850 (Pritchard 1996).&#160;Charles Darwin saw no live tortoises when he visited in 1835 and only a handful of tortoises appear to have been collected between 1840 and 1847, with final rapid extinction estimated to have occurred in about 1850 (Broom 1929, Steadman 1986). However, several individuals showing hybridization between &#160;<em>C. niger</em>&#160; and &#160;<em>C. becki</em>&#160;have recently been discovered on Wolf Volcano on northern Isabela, as well as some with partial ancestry from other islands, including Española and a few from southern Isabela, and some in captivity&#160;at the&#160;Galápagos National Park’s Tortoise Center&#160;on Santa Cruz Island, probably as a result of&#160;<em>C. niger</em>&#160;being released on Isabela by whalers or other mariners prior to the 1830s (as with&#160;<em>C.</em>&#160;<em>abingdonii</em>), suggesting that the taxon’s genome may not yet be fully extirpated (Poulakakis <em>et al</em>. 2008, Russello <em>et al</em>. 2010, Garrick <em>et al</em>. 2012, TEWG 2015). These hybrid individuals exhibit strong genetic signatures of Floreana tortoises, as established by genetic analysis of the type specimen, indicating that their ancestry involves <em>C.</em>&#160;<em>niger</em>&#160;ancestors possibly only one or two generations back.</p>",
+    "habitats": "<p>No specific information on the habitat preferences and ecology of&#160;<em>Chelonoidis niger</em>&#160;is available; in all likelihood its biology and diet would have been analogous with other saddlebacked&#160;Galápagos&#160;tortoise species, a morphological adaptation that increases the vertical range of foraging options, from grazing on herbaceous vegetation to browsing on shrubs and cactus during dry periods when low-growing vegetation &#160;is unavailable.</p>",
+    "threats": "<p>                 </p><p>The precise cause of extinction is not exactly known, but most likely involved a combination of direct exploitation by sailors and settlers, as well as the impacts of invasive species. Historically,&#160;<em>Cheloniodis niger</em>&#160;was exploited as food by sailors provisioning their ships; a settlement was established on the island by 1829 and later converted to a penal colony; pigs, dogs, cats, goats, donkeys, and cattle were introduced around 1832 with the introduction of Black Rats and house mice likely occurred around the same time.</p>  <p></p>",
+    "measures": "<p>                 </p><p>Legislation and regulations:&#160;<em>Chelonoidis niger</em>&#160;is protected under Ecuadorian national law. It has been included in Appendix I of CITES since 1975, prohibiting all forms of commercial international trade.&#160;Most of Floreana (98%), and thus the historic range of&#160;<em>niger</em>, is protected as part of the Galápagos National Park.<br/><br/>Tortoise population restoration on Floreana is currently planned via release of offspring from selectively chosen tortoises with partial Floreana ancestry derived from those identified on Wolf Volcano on Isabela and those in captivity; this complex restoration project was begun in 2015 and will require at least a decade or more for full implementation. A cat and rodent eradication campaign is currently being developed for deployment in the next few years.</p>  <p></p>",
+    "use_trade": "<p>This species was exposed to intense exploitation by whalers and other seamen in the 1700s and early 1800s, collecting animals as provisions, with the last large loads of tortoises from Floreana recorded as occurring between 1831 and 1837 (Townsend 1925,&#160;Pritchard 1996).<span class=\"MsoCommentReference\"></p>",
+    "rationale": "<p></p><p>The species collapsed from an estimated historical population in the early 19th century of about 8,000 animals on Floreana (J.P. Gibbs unpubl. data), to extinction in the wild on Floreana sometime in the mid 1800s.&#160;No genetically pure live Floreana Tortoises are known to exist, although a small number of adults held in captivity contain&#160;historical Floreana genetic material, with at least one animal at up to 80%&#160;<em>niger</em>&#160;genome (Poulakakis <em>et al</em>. 2008, Russello <em>et al</em>. 2010, Garrick <em>et al</em>. 2012). Additionally, genetic analyses have identified many tortoises on Wolf Volcano on northern Isabela that have partial Floreana ancestry. Today an estimated 100 to 200 animals with partial Floreana tortoise ancestry remain on Wolf Volcano; so far 84 individuals have been identified from genetic analyses (Garrick <em>et al</em>. 2012). Although no living pure&#160;<em>niger</em>&#160;animals are confirmed, the possibility exists that some animals on Wolf&#160;Volcano may be genetically pure Floreana Tortoises. Overall, in the absence of confirmed genetically pure animals,&#160;<em>Chelonoidis niger</em>&#160;should continue to be considered Extinct until documented otherwise. \"<em>Chelonoidis nigra&#160;</em>ssp<em>. nigra\"</em>&#160;was assessed as Extinct in the 1996 IUCN Red List.&#160;This assessment incorporates knowledge contributions from&#160;the international workshop on&#160;Galápagos tortoises&#160;convened by the Galápagos National Park Directorate&#160;in July 2012.</p>  <p></p><p>        </p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>                    </p><p><a>The previous Red List assessments for Galápagos tortoises treated the various allopatric island populations as subspecies of&#160;<em>Chelonoidis nigra</em>&#160;(now named<em>&#160;Chelonoidis niger</em>),&#160;as did several authors&#160;(Pritchard 1996, Caccone&#160;<em>et al</em>. 1999, Beheregaray&#160;<em>et al</em>. 2003, Fritz and Havas 2007,TTWG 2007, Rhodin&#160;<em>et al</em>. 2008). However, other authors have considered them as full species based on morphology (Bour 1980, Fritts 1983, Ernst and Barbour 1989) and the more recent consensus among researchers (Caccone&#160;<em>et al</em>. 2002; Russello&#160;<em>et al</em>. 2005, 2007; Poulakakis&#160;<em>et al</em>. 2008, 2012, 2015; Chiari&#160;<em>et al</em>. 2009) is to treat most as full species based on congruent patterns of mitochondrial and nuclear variation. This elevated species-level taxonomy has been largely accepted by&#160;TTWG (2009, 2014) and TEWG (2015) for most, but not all, phylogenetic lineages of Galápagos tortoises.&#160;This Red List assessment therefore now treats&#160;<em>C. niger</em>&#160;as a full species, rather than retaining its previous subspecies ranking from earlier Red List assessments.&#160;This species from Floreana has also been referred to in some recent literature as&#160;<em>C. elephantopus,&#160;</em>but that name is a<em>&#160;nomen dubium&#160;</em>(TTWG 2009) and should not be used for the this species. The spelling of the specific name was recently changed from&#160;<em>nigra</em>&#160;to&#160;<em>niger</em>&#160;as a result of the determination that the gender of the generic name&#160;<em>Chelonoidis</em>&#160;is actually masculine rather than feminine (Olson and David 2014).</a></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Other chemicals"
+      },
+      "code": "6"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "No",
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Capra hircus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Wild",
+      "virus": null,
+      "ias": "Rattus rattus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Sus scrofa",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Bos taurus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": "Wild",
+      "virus": null,
+      "ias": "Unspecified MURIDAE",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Negligible declines",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Equus asinus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "van Dijk, P.P., Rhodin, A.G.J., Cayot, L.J. & Caccone, A.",
+      "value": [
+        "Linda Cayot (Galapagos Conservancy)",
+        "Peter Paul van Dijk (N/A)",
+        "Anders Rhodin (Chelonian Research Foundation)",
+        "Adalgisa Caccone (Yale University)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Gibbs, J.P. & Tapia, W.",
+      "value": [
+        "James P. Gibbs (SUNY Syracuse, New York, USA)",
+        "Washington Tapia (Galapagos National Park Service)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "IUCN Galapagos Tortoises Red Listing Workshop & Galapagos National Park Directorate",
+      "value": [
+        "galapagos.gen.1439494663122@gen.iucnsis.org",
+        "galapagos.gen.1439633901398@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "van Dijk, P.P.",
+      "value": [
+        "Peter Paul van Dijk (N/A)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: van Dijk, P.P., Iverson, J.B., Rhodin, A.G.J., Shaffer, H.B. and Bour, R.]. 2014. Turtles of the world, 7th edition: annotated checklist of taxonomy, synonymy, distribution with maps, and conservation status. <i>Chelonian Research Monographs</i> 5(7): 000.329-479, doi:10.3854/crm.5.000.checklist.v7.2014.",
+      "year": "2014",
+      "title": "Turtles of the world, 7th edition: annotated checklist of taxonomy, synonymy, distribution with maps, and conservation status",
+      "author": "TTWG [Turtle Taxonomy Working Group: van Dijk, P.P., Iverson, J.B., Rhodin, A.G.J., Shaffer, H.B. and Bour, R.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fritz, U. and Havas, P. 2007. Checklist of chelonians of the world. <i>Vertebrate Zoology</i> 57(2): 149-368.",
+      "year": "2007",
+      "title": "Checklist of chelonians of the world",
+      "author": "Fritz, U. and Havas, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ernst, C.H. and Barbour, R.W. 1989. <i>Turtles of the World</i>. Smithsonian Institution Press, Washington D.C.",
+      "year": "1989",
+      "title": "Turtles of the World",
+      "author": "Ernst, C.H. and Barbour, R.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bour, R. 1980. Essai sur la taxinomie des Testudinidae actuels (Reptilia, Chelonii). <i>Bulletin du Muséum National d'Histoire Naturelle, Paris</i> 4(2A): 541–546.",
+      "year": "1980",
+      "title": "Essai sur la taxinomie des Testudinidae actuels (Reptilia, Chelonii)",
+      "author": "Bour, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Russello, M.A., Beheregaray, L.B., Gibbs, J.P., Fritts, T., Havill, N., Powell, J.R. and Caccone, A. 2007. Lonesome George is not alone among Galápagos tortoises. <i>Current Biology</i> 17(9): R317–R318.",
+      "year": "2007",
+      "title": "Lonesome George is not alone among Galápagos tortoises",
+      "author": "Russello, M.A., Beheregaray, L.B., Gibbs, J.P., Fritts, T., Havill, N., Powell, J.R. and Caccone, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Parham, J.F., van Dijk, P.P. and Iverson, J.B.]. 2009. Turtles of the world: annotated checklist of taxonomy and synonymy, 2009 update, with conservation status summary. <i>Chelonian Research Monographs</i> 5(2): 000.39–84.",
+      "year": "2009",
+      "title": "Turtles of the world: annotated checklist of taxonomy and synonymy, 2009 update, with conservation status summary.",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Parham, J.F., van Dijk, P.P. and Iverson, J.B.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "Poulakakis, N., Glaberman, S., Russello, M., Beheregaray, L.B., Ciofi, C., Powell, J.R. and Caccone, A. 2008. Historical DNA analysis reveals living descendants of an extinct species of Galápagos tortoise. <i>Proceedings of the National Academy of Sciences</i> 105: 15464–15469.",
+      "year": "2008",
+      "title": "Historical DNA analysis reveals living descendants of an extinct species of Galápagos tortoise",
+      "author": "Poulakakis, N., Glaberman, S., Russello, M., Beheregaray, L.B., Ciofi, C., Powell, J.R. and Caccone, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fritts, T.H. 1983. Morphometrics of Galapagos tortoises: evolutionary implications. In: R.I. Bowman and A.E. Leviton (eds), <i>Patterns of Evolution in Galapagos Organisms</i>, pp. 107–122. AAAS, San Francisco.",
+      "year": "1983",
+      "title": "Morphometrics of Galapagos tortoises: evolutionary implications",
+      "author": "Fritts, T.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Beheregaray, L.B., Ciofi, C., Caccone, A., Gibbs, J.P. and Powell, J.R. 2003. Genetic divergence, phylogeography and conservation units of giant tortoises from Santa Cruz and Pinzón, Galápagos Islands. <i>Conservation Genetics</i> 4: 31–46.",
+      "year": "2003",
+      "title": "Genetic divergence, phylogeography and conservation units of giant tortoises from Santa Cruz and Pinzón, Galápagos Islands",
+      "author": "Beheregaray, L.B., Ciofi, C., Caccone, A., Gibbs, J.P. and Powell, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Poulakakis, N., Russello, M., Geist, D. and Caccone, A. 2012. Unravelling the peculiarities of island life: vicariance, dispersal, and the diversification of the extinct and extant giant Galápagos tortoises. <i>Molecular Ecology</i> 21: 160–173.",
+      "year": "2012",
+      "title": "Unravelling the peculiarities of island life: vicariance, dispersal, and the diversification of the extinct and extant giant Galápagos tortoises",
+      "author": "Poulakakis, N., Russello, M., Geist, D. and Caccone, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pritchard, P.C.H. 1996. The Galápagos Tortoises: Nomenclatural and Survival Status. <i>Chelonian Research Monographs</i> 1: 1-85.",
+      "year": "1996",
+      "title": "The Galápagos Tortoises: Nomenclatural and Survival Status",
+      "author": "Pritchard, P.C.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Bickham, J.W., Iverson, J.B., Parham, J.F., Philippen, H.D., Rhodin, A.G.J., Shaffer, H.B., Spinks, P.Q. and van Dijk, P.P.]. 2007. An annotated list of modern turtle terminal taxa with comments on areas of taxonomic instability and recent change. In: H.B. Shaffer, N.N. FitzSimmons, A. Georges, and A.G.J. Rhodin (eds), Defining Turtle Diversity: Proceedings of a Workshop on Genetics, Ethics, and Taxonomy of Freshwater Turtles and Tortoises. <i>Chelonian Research Monographs</i> 4: 173-199.",
+      "year": "2007",
+      "title": "An annotated list of modern turtle terminal taxa with comments on areas of taxonomic instability and recent change. In: H.B. Shaffer, N.N. FitzSimmons, A. Georges, and A.G.J. Rhodin (eds), Defining Turtle Diversity: Proceedings of a Workshop on Genetics, Ethics, and Taxonomy of Freshwater Turtles and Tortoises",
+      "author": "TTWG [Turtle Taxonomy Working Group: Bickham, J.W., Iverson, J.B., Parham, J.F., Philippen, H.D., Rhodin, A.G.J., Shaffer, H.B., Spinks, P.Q. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "Caccone, A., Gibbs, J.P., Ketmaier, V., Suatoni, E. and Powell, J.R. 1999. Origin and evolutionary relationships of giant Galápagos tortoises. <i>Proceedings of the National Academy of Sciences, USA</i> 96: 13223–13228.",
+      "year": "1999",
+      "title": "Origin and evolutionary relationships of giant Galápagos tortoises",
+      "author": "Caccone, A., Gibbs, J.P., Ketmaier, V., Suatoni, E. and Powell, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chiari, Y., Hyseni, C., Fritts, T.H., Glaberman, S., Marquez, C., Gibbs, J.P., Claude, J. and Caccone, A. 2009. Morphometrics parallel genetics in a newly discovered and endangered taxon of Galápagos tortoise. <i>PLoS One</i> 4(7): e6272.",
+      "year": "2009",
+      "title": "Morphometrics parallel genetics in a newly discovered and endangered taxon of Galápagos tortoise",
+      "author": "Chiari, Y., Hyseni, C., Fritts, T.H., Glaberman, S., Marquez, C., Gibbs, J.P., Claude, J. and Caccone, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Caccone, A., Gentile, G., Gibbs, J.P., Fritts, T.H., Snell, H.L., Betts, J. and Powell, J.R. 2002. Phylogeography and history of giant Galápagos tortoises. <i>Evolution</i> 56(10): 2052–2066.",
+      "year": "2002",
+      "title": "Phylogeography and history of giant Galápagos tortoises",
+      "author": "Caccone, A., Gentile, G., Gibbs, J.P., Fritts, T.H., Snell, H.L., Betts, J. and Powell, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rhodin, A.G.J., van Dijk, P.P. and Parham, J.P. 2008. Turtles of the world: annotated checklist of taxonomy and synonymy. <i>Chelonian Research Monographs</i> 5(1): 000.1-38.",
+      "year": "2008",
+      "title": "Turtles of the world: annotated checklist of taxonomy and synonymy",
+      "author": "Rhodin, A.G.J., van Dijk, P.P. and Parham, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "TEWG [Turtle Extinctions Working Group: Rhodin, A.G.J., Thomson, S., Georgalis, G., Karl, H.-V., Danilov, I.G., Takahashi, A., de la Fuente, M.S., Bourque, J.R., Delfino, M., Bour, R., Iverson, J.B., Shaffer, H.B. and van Dijk, P.P.]. 2015. Turtles and tortoises of the world during the rise and global spread of humanity: first checklist and review of extinct Pleistocene and Holocene chelonians. <i>Chelonian Research Monographs</i> 5(8): 000e.1–66.",
+      "year": "2015",
+      "title": "Turtles and tortoises of the world during the rise and global spread of humanity: first checklist and review of extinct Pleistocene and Holocene chelonians",
+      "author": "TEWG [Turtle Extinctions Working Group: Rhodin, A.G.J., Thomson, S., Georgalis, G., Karl, H.-V., Danilov, I.G., Takahashi, A., de la Fuente, M.S., Bourque, J.R., Delfino, M., Bour, R., Iverson, J.B., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "Russello, M.A., Glaberman, S., Gibbs, J.P., Marquez, C., Powell, J.R. and Caccone, A. 2005. A cryptic taxon of Galápagos tortoise in conservation peril. <i>Biological Letters</i> 1: 287–290.",
+      "year": "2005",
+      "title": "A cryptic taxon of Galápagos tortoise in conservation peril",
+      "author": "Russello, M.A., Glaberman, S., Gibbs, J.P., Marquez, C., Powell, J.R. and Caccone, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Poulakakis, N., Edwards, D.L., Chiari, Y., Garrick, R.C., Russello, M.A., Benavides, E., Watkins-Colwell, G.J., Glaberman, S., Tapia, W., Gibbs, J.P., Cayot, L.J. and Caccone, A. 2015. Description of a new Galapagos giant tortoise species (<i>Chelonoidis</i>; Testudines: Testudinidae) from Cerro Fatal on Santa Cruz Island. <i>PLoS ONE</i> 10(10): e0138779:1–18.",
+      "year": "2015",
+      "title": "Description of a new Galapagos giant tortoise species (<i>Chelonoidis</i>; Testudines: Testudinidae) from Cerro Fatal on Santa Cruz Island",
+      "author": "Poulakakis, N., Edwards, D.L., Chiari, Y., Garrick, R.C., Russello, M.A., Benavides, E., Watkins-Colwell, G.J., Glaberman, S., Tapia, W., Gibbs, J.P., Cayot, L.J. and Caccone, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Broom, R. 1929. On the extinct Galapagos tortoise that inhabited Charles Island. <i>Zoologica (New York)</i> 9(8): 313–320.",
+      "year": "1929",
+      "title": "On the extinct Galapagos tortoise that inhabited Charles Island",
+      "author": "Broom, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Townsend, C.H. 1925. The Galapagos tortoises in their relation to the whaling industry: a study of old logbooks. <i>Zoologica</i> 4(3): 55–135.",
+      "year": "1925",
+      "title": "The Galapagos tortoises in their relation to the whaling industry: a study of old logbooks.",
+      "author": "Townsend, C.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Russello, M.A., Poulakakis, N., Gibbs, J.P., Tapia, W., Benavides, E, Powell, J.R., and Caccone, A. 2010. DNA from the past informs ex situ conservation for the future: An ‘‘Extinct’’ species of Galápagos tortoise Identified in captivity. <i>PLoS ONE</i> 5(1): e8683.",
+      "year": "2010",
+      "title": "DNA from the past informs ex situ conservation for the future: An ‘‘Extinct’’ species of Galápagos tortoise Identified in captivity",
+      "author": "Russello, M.A., Poulakakis, N., Gibbs, J.P., Tapia, W., Benavides, E, Powell, J.R., and Caccone, A",
+      "citation_short": ""
+    },
+    {
+      "citation": "Olson, S.L. and David, N. 2014. The gender of the tortoise genus <i>Chelonoidis</i> Fitzinger, 1835 (Testudines: Testudinidae). <i>Proceedings of the Biological Society of Washington</i> 126: 393–394.",
+      "year": "2014",
+      "title": "The gender of the tortoise genus <i>Chelonoidis</i> Fitzinger, 1835 (Testudines: Testudinidae)",
+      "author": "Olson, S.L. and David, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Quoy, J.R.C. and Gaimard, J.P. 1824a. Description d’une nouvelle espèce de tortue et de trois espèces nouvelles de scinques. <i>Bulletin des Sciences Naturelles et de Géologie, Paris</i> 1: 90–91.",
+      "year": "1824a",
+      "title": "Description d’une nouvelle espèce de tortue et de trois espèces nouvelles de scinques",
+      "author": "Quoy, J.R.C. and Gaimard, J.P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garrick, R.C., Benavides, E., Russello, M.A., Gibbs, J.P., Poulakakis, N., Dion, K.B., Hyseni, C. and Kajd, B. 2012. Genetic rediscovery of an 'extinct' Galápagos giant tortoise species. <i>Current Biology</i> 22(1): R10–R11.",
+      "year": "2012",
+      "title": "Genetic rediscovery of an 'extinct' Galápagos giant tortoise species.",
+      "author": "Garrick, R.C., Benavides, E., Russello, M.A., Gibbs, J.P., Poulakakis, N., Dion, K.B., Hyseni, C. and Kajd, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Steadman, D.W. 1986. Holocene vertebrate fossils from Isla Floreana, Galápagos. <i>Smithsonian Contributions to Zoology</i> 413: 1-103.",
+      "year": "1986",
+      "title": "Holocene vertebrate fossils from Isla Floreana, Galápagos",
+      "author": "Steadman, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baur, G. 1889. The gigantic land tortoises of the Galapagos Islands. <i>American Naturalist</i> 23: 1039–1057.",
+      "year": "1889",
+      "title": "The gigantic land tortoises of the Galapagos Islands",
+      "author": "Baur, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Quoy, J.R.C. and Gaimard, J.P. 1824b. Sous-genre Tortue de Terre-Testudo Brongn. Tortue Noire-<i>Testudo nigra</i> N. In: M.L. de Freycinet (ed.), <i>Voyage Autour du Monde, Entrepris par le ministére et conformément aux instructions de s. exc. M. le Vicomte du Bouchage, Secrétaire d'etat au Department de la Marine, Exécuté sur les corvettes de S.M. l'Uranie et la Physicienne, pendant les années 1817–1820. Zoologie</i>, pp. 174–175. Paris.",
+      "year": "1824b",
+      "title": "Sous-genre Tortue de Terre-Testudo Brongn. Tortue Noire-<i>Testudo nigra</i> N",
+      "author": "Quoy, J.R.C. and Gaimard, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

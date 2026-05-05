@@ -1,0 +1,2704 @@
+{
+  "assessment_date": "2022-02-02T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 18584848,
+  "criteria": "A2cd",
+  "url": "https://www.iucnredlist.org/species/18584848/249880242",
+  "citation": "Espinoza, M., Bonfil, R., Carlson, J., Charvet, P., Chevis, M., Dulvy, N.K., Everett, B., Faria, V., Ferretti, F., Fordham, S., Grant, M.I., Haque, A.B., Harry, A.V., Jabado, R.W., Jones, G.C.A., Kelez, S., Lear, K.O., Morgan, D.L., Phillips, N.M. & Wueringer, B.E. 2022. Pristis pristis (errata version published in 2025). The IUCN Red List of Threatened Species 2022: e.T18584848A249880242. Accessed on 05 May 2026.",
+  "assessment_id": 249880242,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 18584848,
+    "scientific_name": "Pristis pristis",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 43508842,
+        "scientific_name": "Pristis pristis Eastern Atlantic subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "CHONDRICHTHYES",
+        "order_name": "RHINOPRISTIFORMES",
+        "family_name": "PRISTIDAE",
+        "genus_name": "Pristis",
+        "species_name": "pristis",
+        "subpopulation_name": "Eastern Atlantic subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+            "url": "https://www.iucnssg.org",
+            "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Largetooth Sawfish",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Pristis perotteti  Müller & Henle, 1841 Eastern Atlantic",
+            "status": "ACCEPTED",
+            "genus_name": "Pristis",
+            "species_name": "perotteti ",
+            "species_author": "Müller & Henle, 1841",
+            "infrarank_author": null,
+            "subpopulation_name": "Eastern Atlantic",
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 43508949,
+        "scientific_name": "Pristis pristis Eastern Pacific subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "CHONDRICHTHYES",
+        "order_name": "RHINOPRISTIFORMES",
+        "family_name": "PRISTIDAE",
+        "genus_name": "Pristis",
+        "species_name": "pristis",
+        "subpopulation_name": "Eastern Pacific subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+            "url": "https://www.iucnssg.org",
+            "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Largetooth Sawfish",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Pristis perotteti Müller & Henle, 1841 Eastern Pacific",
+            "status": "ACCEPTED",
+            "genus_name": "Pristis",
+            "species_name": "perotteti",
+            "species_author": "Müller & Henle, 1841",
+            "infrarank_author": null,
+            "subpopulation_name": "Eastern Pacific",
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 43508905,
+        "scientific_name": "Pristis pristis Indo-West Pacific subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "CHONDRICHTHYES",
+        "order_name": "RHINOPRISTIFORMES",
+        "family_name": "PRISTIDAE",
+        "genus_name": "Pristis",
+        "species_name": "pristis",
+        "subpopulation_name": "Indo-West Pacific subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+            "url": "https://www.iucnssg.org",
+            "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Freshwater Sawfish",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Largetooth Sawfish",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Pristis microdon Latham, 1794 Indo-West Pacific",
+            "status": "ACCEPTED",
+            "genus_name": "Pristis",
+            "species_name": "microdon",
+            "species_author": "Latham, 1794",
+            "infrarank_author": null,
+            "subpopulation_name": "Indo-West Pacific",
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 43508845,
+        "scientific_name": "Pristis pristis Western Atlantic subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "CHONDRICHTHYES",
+        "order_name": "RHINOPRISTIFORMES",
+        "family_name": "PRISTIDAE",
+        "genus_name": "Pristis",
+        "species_name": "pristis",
+        "subpopulation_name": "Western Atlantic subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+            "url": "https://www.iucnssg.org",
+            "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Largetooth Sawfish",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Pristis  perotteti  Müller & Henle, 1841 Western Atlantic",
+            "status": "ACCEPTED",
+            "genus_name": "Pristis ",
+            "species_name": "perotteti ",
+            "species_author": "Müller & Henle, 1841",
+            "infrarank_author": null,
+            "subpopulation_name": "Western Atlantic",
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "CHONDRICHTHYES",
+    "order_name": "RHINOPRISTIFORMES",
+    "family_name": "PRISTIDAE",
+    "genus_name": "Pristis",
+    "species_name": "pristis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+        "url": "https://www.iucnssg.org",
+        "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Freshwater Sawfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Liara",
+        "language": "urd"
+      },
+      {
+        "main": true,
+        "name": "Largetooth Sawfish",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Pristis zephyreus Jordan & Starks, 1895",
+        "status": "ACCEPTED",
+        "genus_name": "Pristis",
+        "species_name": "zephyreus",
+        "species_author": "Jordan & Starks, 1895",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pristis perotteti Valenciennes, in Müller &amp; Henle, 1841",
+        "status": "MERGE",
+        "genus_name": "Pristis",
+        "species_name": "perotteti",
+        "species_author": "Valenciennes, in Müller &amp; Henle, 1841",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pristis microdon Latham, 1794",
+        "status": "MERGE",
+        "genus_name": "Pristis",
+        "species_name": "microdon",
+        "species_author": "Latham, 1794",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Squalus pristis Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Squalus",
+        "species_name": "pristis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 60,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "22.5",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Largetooth Sawfish has a widespread circumtropical distribution across the Western Atlantic, Eastern Pacific, Eastern Atlantic, and the Indo-West Pacific.<br/><br/><strong>Western Atlantic</strong><br/>Historically, Largetooth Sawfish were found from the Gulf of Mexico (and seasonally to the United States), through the Caribbean and Central America to Uruguay (Burgess <em>et al.</em> 2009, Faria <em>et al. </em>2013, Fernandez-Carvalho <em>et al. </em>2014). Now, the species is mainly restricted to freshwater  and estuarine habitats from Central and South America.<br/><br/>In Mexico, the last known records of the Largetooth Sawfish were in 1997–1998 (Bonfil <em>et al.</em> 2017, Bonfil <em>et al. </em>2018); although there have been unconfirmed sightings in the Usumacinta River (southeastern Mexico) since 2010 based on Local Ecological Knowledge (LEK) (R. Bonfil unpubl. data 2022). In Central America, there are scattered reports of the Largetooth Sawfish in Belize, Guatemala, Honduras, and Panamá, yet most of these are historical records from over 20 years ago (López-Angarita <em>et al.</em> 2021, A. Hacohen pers. comm. 6 January 2022). In Costa Rica, there are only a few recent confirmed records in the south Caribbean coast; most records of the species, including both juveniles and adults, are from freshwater habitats in the north Caribbean (Barra del Colorado) and San Juan River basin (Thorson 1982, Valerio-Vargas and Espinoza 2019). Throughout the Caribbean Sea, the species presence was historically uncertain and early records may have been of the Smalltooth Sawfish (<em>P. pectinata</em>). <br/><br/>The Largetooth Sawfish is still present in several countries from the northern coast of South America (Amazonian Coast), which is likely one of the last strongholds for the species (Feitosa <em>et al.</em> 2017, López-Angarita <em>et al.</em> 2021, P. Charvet pers. comm. 28 January 2022). In addition to its known presence in some of the countries, unconfirmed records of the species have also been recently reported by fishers in coastal areas of Colombia, Guyana, Suriname, French Guiana, and Brazil (López-Angarita <em>et al. </em>2021, P. Charvet unpubl. data 2022); however, these records are rare. In Brazil, the Largetooth Sawfish is known from as far south as the Parnaíba River delta, in the State of Piauí, Brazil, while further south its presence is uncertain (P. Charvet unpubl. data 2022). The Largetooth Sawfish has also been recorded up to 1,340 km from the ocean in the Amazon River (Feitosa <em>et al.</em> 2017). <br/><br/><strong>Eastern Pacific</strong><br/>Historically, the Largetooth Sawfish was considered to occur from either Topolobampo or Mazatlán, Mexico to northern Perú (Chirichigno and Cornejo 2001, Cook <em>et al.</em> 2005, Faria <em>et al</em>. 2013, Mendoza <em>et al.</em> 2017). In the Pacific coast of Mexico, there is one confirmed and three unconfirmed records of the Largetooth Sawfish in the past 19 years (Bonfil <em>et al. </em>2017, Bonfil <em>et al.</em> 2018, R. Bonfil unpubl. data 2022). In El Salvador and Guatemala, the last known reports of the species were from over 30 years ago (C. Avalos, pers. comm. 15 January 2022.). In Costa Rica, there are several confirmed records of the species between 2010–2018 along the entire Pacific coast with most of these records from the Humedal Nacional Térraba Sierpe in the south Pacific region, one of the largest and most productive wetlands in Central America (Valerio-Vargas and Espinoza 2019). Other recent records of the Largetooth Sawfish in Costa Rica were from the Gulf of Nicoya (central Pacific) in mangrove and estuarine habitats, and from 2019 to 2021, there were several records from the north Pacific coast in rocky reef habitats (M. Espinoza unpubl. data 2022). The proximity of these Costa Rican records to the border of Nicaragua suggest that the Largetooth Sawfish may also be present in the Pacific coast of Nicaragua, however its presence there is uncertain (M. Espinoza unpubl. data 2022). In Panamá, there were records throughout 2020 from Rompío, a marine inlet of the Tuira River in Darién (Lopéz-Angarita <em>et al.</em> 2021). The most recent reports of the Largetooth Sawfish in Colombia were from November 2020 in the mangroves of Coquí, northern Chocó (Lopéz-Angarita<em> et al.</em> 2021). In Ecuador, the species occurs along the entire coast, with 30 sightings reported from 2010 to 2015 based on LEK (Rosas-Luis 2021). In northern Perú, there are three confirmed records of large individuals (350–600 cm total length) that were reported between 2014 and 2017 (Mendoza <em>et al.</em> 2017, Cabanillas-Torpoco <em>et al.</em> 2020), although its occurrence may have represented seasonal migration from the species’ core range in Central America. <br/><br/><strong>Eastern Atlantic</strong><br/>In the Mediterranean Sea, Largetooth Sawfish have been historically reported to occur with 13 catch records from 1573 to prior to 1966 from mainly the western Mediterranean (Spain, France, and Italy) (Ferretti <em>et al.</em> 2016). These records included 10 juveniles which implies the species was historically resident. However, it is unknown how juveniles could survive the cold winter sea surface temperature of the northern Mediterranean Sea (Ferretti <em>et al. </em>2016). The scarcity of records, long exploitation history of the Mediterranean Sea, questions on juvenile survival together with large knowledge gaps on the ecology, biology, and baseline distribution ranges of the species globally have led to continued debate on whether this species occurred as part of the Mediterranean ichthyofauna, as a vagrant species, or as a seasonal migrant from areas off West Africa. In the scenario of Mediterranean sawfish populations, extinction analyses suggested that the Largetooth Sawfish went extinct in the Mediterranean Sea between 1975 and 1979 (Ferretti<em> et al.</em> 2016). <br/><br/>Historically, Largetooth Sawfish occurred from Mauritania to Angola and were abundant in coastal estuaries (Burgess<em> et al. </em>2009, Faria <em>et al. </em>2013).   The current distribution of Largetooth Sawfish in the eastern Atlantic   remains uncertain due to the lack of surveys and reporting in most   countries; additionally, species identification issues that have not   improved over the last decade. The lack of confirmed observations in the   past few years suggests that sawfishes are now extremely rare or   'possibly extinct' throughout most of the eastern Atlantic. Interviews   conducted in Senegal in 2004 (Robillard and Séret 2006), Liberia and The   Gambia in 2014 (Leeney 2015, Leeney and Downing 2016, respectively),   Guinea‐Bissau (Leeney and Poncelet 2015), and Mauritania (R.W. Jabado   unpubl. data 2021) indicated catches are scarce and have not occurred in   many years. The species is likely still extant in five range states  where the  last known records were in Senegal, in 2013, in The Gambia in  2010, in  Guinea Bissau in 2012, in Sierra Leone in 2006, and in Liberia  in 2014.  In two range states its presence is uncertain, with the last  known  records in Mauritania in the early  2000s and in Guinea Conarky in 1999 (M. Diop pers. comm. 10 November 2021). Most of these records did  not  allow species identification, Leeney and Poncelet (2015); however,  where there was confirmation from photographs or rostra, it was mostly  Largetooth Sawfish rather than Smalltooth Sawfish (<em>P. pectinata</em>),  which could suggest that it is Largetooth Sawfish rather than  Smalltooth Sawfish that is persisting across the region (R.W. Jabado unpubl. data 2022). There  have been no confirmed records of sawfishes  in this or other areas of  west Africa since 2019 (R. Leeney unpubl. data 2022). The  species is 'possibly extinct' in 11 out of 18  range states from this  region.<br/><br/><strong>Indo-West Pacific</strong><br/>The Largetooth Sawfish historically occurred from the Western Indian Ocean to northern Australia, but is now patchy across this range. The species is currently present in Mozambique, Madagascar, Oman, Pakistan, India, Sri Lanka, Bangladesh, Indonesia, Philippines, Papua New Guinea, and Australia (Roberts 1978, Tan and Lim 1998, Compagno<em> et al. </em>2005, Stevens <em>et al. </em>2005, Moazzam and Osmany 2014, Haque <em>et al.</em> 2020, Tanna <em>et al. </em>2021, Yan <em>et al.</em> 2021). While they likely would have been historically present, the Largetooth Sawfish presence is now uncertain in Tanzania, Kenya, Somalia, Yemen, Myanmar, Malaysia, Brunei, and Timor Leste (Yan <em>et al. </em>2021). The Largetooth Sawfish is 'possibly extinct' in South Africa, Thailand, Singapore, Cambodia, Laos, and Viet Nam (Yan <em>et al.</em> 2021). Northern Australia appears to be the most significant stronghold for the Largetooth Sawfish in this region. It is presently considered occurring throughout the northern Australian coastline from the Kimberley region (Western Australia), through to the Lakefield National Park in eastern Queensland (B. Wueringer unpubl. data 2022). There is a single temperate record of this species from the southwest tip of Western Australia (Cape Naturaliste), although this record is considered to be of a vagrant (Chidlow 2007).<span lang=\"EN-US\">",
+    "population": "The Largetooth Sawfish comprises four distinct subpopulations:  Western Atlantic, Eastern Atlantic, Eastern Pacific, and Indo-West Pacific (Faria <em>et al.</em> 2013, Fearing 2020). For all subpopulations, there is limited species-specific time series information on catch rates or abundance trends. Thus, the population status is inferred from a combination of capture records and local ecological knowledge (LEK), which are not always species-specific. Although catch data or landings are not a direct measure of abundance, these can be used to infer population reduction where they have decreased while fishing effort has remained stable or increased.<br/><br/><strong>Western Atlantic</strong><br/>The population abundance has continuously declined over the past few decades and the species presence is now uncertain in areas where it was once considered common. <br/><br/>Recent studies from Mexico, Costa Rica, Panamá, and Colombia have all reported declines over the past 20–30 years, with considerably fewer records of the species reported in the last 10–15 years (Bonfil <em>et al. </em>2017, Bonfil <em>et al.</em> 2018, Valerio-Vargas and Espinoza 2019, López-Angarita <em>et al.</em> 2021). In Mexico, Bonfil <em>et al.</em> (2018) reported a significant decline in Largetooth Sawfish sightings in the Caribbean/Atlantic coast between the 1970s and 2010s, and their analysis showed spatial differences in range contraction of the species along the coast, with individuals last recorded in Quintana Roo (southern Caribbean) in the 1990s. There are a few unconfirmed records of sawfishes in Belize and Honduras, but they are scarce and identification remains an issue (M. Chevis unpubl. data 2022). Along the Caribbean coast of Guatemala, the Largetooth Sawfish is 'possibly extinct' with the last know records from over 30 years ago (C. Avalos pers. comm. 22 January 2022). In the Costa Rican Caribbean, Valerio-Vargas and Espinoza (2019) reported a decline in the number of Largetooth Sawfish records between historic (129 records from 1961–2002) and contemporary (69 records from 2003–2018) periods based on a LEK study conducted throughout the entire country, yet most of the Caribbean records were from freshwater habitats within the San Juan-Colorado River system. Based on recent catch and environmental DNA (eDNA) data, M. Espinoza (unpubl. data 2022) estimated a 78% decline in the EOO (extent of occurrence) and 15% decline in the AOO (area of occupancy) of Largetooth Sawfish within the Costa Rica Caribbean between 1961–2021. Environmental DNA studies in the San Juan River (natural border between Costa Rica and Nicaragua) have confirmed the importance of this entire freshwater system in the connectivity of the sawfish populations occurring in this region (McDavitt 2002, M. Espinoza unpubl. data 2022), which concurs with sawfish tagging studies conducted by Thorson in the 1970s (Thorson 1982). The San Juan River continues to act as one of the last remaining strongholds for this species in Central America, yet overfishing driven by illegal trade, as well as habitat degradation from changes in land use practices and pollution are major threats affecting this population (M. Espinoza unpubl. data 2022). <br/><br/>In Panamá and Colombia, 71% of the sawfish records (n = 188) reported between 1896–2015 were from before the year 2000, while only 9% were from 2010–2015 (López-Angarita <em>et al. </em>2021). López-Angarita <em>et al.</em> (2021) also noted that sawfish records from the Caribbean of Panamá and Colombia have been particularly scarce for the last 20 years, which is consistent with a recent regional assessment that indicates the Largetooth Sawfish is likely extinct from the Colombian Caribbean (Gómez-Rodriguez <em>et al.</em> 2014). In addition, López-Angarita <em>et al.</em> (2021) reported a decline in the maximum size of captured Largetooth Sawfish over time, which is consistent with increasing fishing pressure and other threats affecting the species (Chasqui <em>et al.</em> 2017). <strong><br/><br/></strong>In Brazil, the species is likely restricted to the northern coast within  the Amazon River and tributaries, which is likely one of the last  global strongholds for the species (Feitosa <em>et al.</em> 2017, Fordham <em>et al. </em>2018, P. Charvet unpubl. data 2022). The presence of large mangrove areas with  sand and mud banks, and the high tidal variation of this system is  thought to act as a refuge for the species (P. Charvet unpubl. data 2022). However, declines in landings of up to 87% have been  reported in Belém (lower Amazon region of Brazil), from the late  1996 to early 2016 (P. Charvet unpubl. data 2022).<strong></strong><strong></strong><strong> <br/></strong><strong><br/></strong>While the species is protected in some areas of the Western Atlantic, illegal fishing, incidental catch, and habitat degradation remain a  constant threat to the population, and except for some remote localized  areas, it is inferred that the population of Largetooth Sawfish has undergone a reduction of &gt;80% over the past three generation lengths (68 years) and is still declining.<strong><br/></strong><strong></strong><strong></strong><strong><br/>Eastern Pacific</strong><br/>In Mexico, the Largetooth Sawfish was a widespread and common species  along both coasts, but now the species is exceedingly rare along the Pacific coast with only two recent sightings within the past 15 years.  Sightings of the species peaked between 1960s and 1970s, and since then it  has experienced a rapid decline with very few records reported in the  last decade (Bonfil <em>et al.</em> 2018). In Costa Rica, the number of  reported Largetooth Sawfish sightings from a LEK study  declined from 129 individuals between 1961–2002 (92 of these records were from 1961–1992) to 69 individuals between  2003–2018, with declines in sightings of 92% in the central Pacific coast, 80% in the north Pacific coast, and 25% in the south Pacific coast of the country (Valerio-Vargas and Espinoza  2019). Historically, the Golfo de Nicoya in the central Pacific of  Costa Rica was one of the areas with the highest densities of Largetooth  Sawfish in the country due to the presence of suitable mangrove and  estuarine habitats inside this large gulf; however, this area was also  heavily fished with bottom trawls and gillnets in the 1970s and 1980s  (Valerio-Vargas and Espinoza 2019). Yet, based on LEK and recent capture  records throughout the Pacific of Costa Rica, the area of occupancy  and extent of occurrence of the species has not  changed considerably (AOO = no change; EOO = 13% increase) between 1961–2009 and 2010–2021 (M. Espinoza unpubl. data 2022). Lopéz-Angarita <em>et al.</em> (2021) found that 65% and 92% of  Largetooth Sawfish records from the Pacific coast of Colombia (n = 51)  and Panamá (n = 147), respectively, were reported before the year 2000.  Only 9% of the remaining records from both countries were reported from  2010–2015. There was also a significant decline in the maximum size of  observed individuals over time (Lopéz-Angarita <em>et al.</em> 2021).  The declining frequency of sightings was also corroborated by fishers,  who reported fewer catches over the past 20 years. Based on the number  of sightings reported during the last 10 years, Lopéz-Angarita <em>et al. </em>(2021)  suggest that the Darién region in Panamá and the northern Chocó region  in Colombia are likely to be one of the last remaining areas with viable  sawfish populations in this region. Moreover, Lopéz-Angarita <em>et al.</em>  (2021) estimated reductions in the EOO ranging from 53–86% over the  last 100 years for both countries between historic (1900–2009) and  contemporary records (2010–2015).<br/><br/>In Ecuador, Largetooth Sawfish sightings peaked between 1985–1996, and  since then, the species has gradually declined (Rosas-Luis 2021).  However, recent LEK revealed a slight increase in the number of  sightings over the full range of sizes between 2010–2015, and along the  entire coastline (Rosas-Luis 2021). In 2014, a 506 cm total length (TL) female was  captured and released alive in the Santa Elena province (Rosas-Luis  2021). Moreover, 45% of the interviewees mentioned that captured  individuals were released alive, and that the species was mainly  captured as bycatch using handline, which may increase the probability  of post-release survival. In Perú, the Largetooth Sawfish was considered locally extinct for a long time, but recent studies reported landings of several large individuals (350–600 cm TL) in Tumbes and Piura (northern Perú) between 2014–2017 (Mendoza <em>et al.</em> 2017, Cabanillas-Torpoco <em>et al.</em> 2020). Only one of these individuals was released alive, the rest were released dead, which suggests that fishing continues to be a threat for the species in this area (S. Kelez unpubl. data 2022). Despite the increases in sightings in Ecuador, across the remaining eastern Pacific range, it is inferred that the population has undergone a &gt;80% reduction over the past three generation lengths (68 years).<br/><br/><strong>Eastern Atlantic</strong><br/>The population abundance has declined continuously over the past few decades and the species is now considered 'possibly extinct' in 11 of the 18 range states areas where it was once considered common (Faria 2007, Fernandez-Carvalho e<em>t al.</em> 2014, Yan <em>et al.</em> 2021). It is suspected that the Largetooth Sawfish population has undergone a &gt;80% reduction over the past three generation lengths (68 years), and given much of this remaining area has artisanal gillnet fisheries with little or no regulation, it is likely the population will continue to decline.<br/><br/><strong>Indo-West Pacific<br/></strong>The presence of the Largetooth Sawfish is either uncertain or it is 'possibly extinct' in half of its former Indo-West Pacific range (Yan <em>et al. </em>2021). Historical and current fishing pressure (‘actual levels of exploitation’) is high across most of the Indo-West Pacific range of the Largetooth Sawfish and range contractions and ongoing levels of decline are apparent over the past three generation lengths (68 years). <br/><br/>In South Africa, records from anglers in the 1950s and the shark control  program in the 1960s revealed large declines over time; the last known  record is from 1999 (Everett <em>et al. </em>2015). The St. Lucia estuary was  once an important breeding area for Largetooth Sawfish, but now the  species appears to be extinct there mainly due to overfishing and  environmental factors (a drought or change in weather patterns that  caused the closure of the St Lucia estuary since 2002 which was likely a key  habitat in the area) (Everett <em>et al.</em> 2015). Because fishing intensity  around the region is high, it is unlikely the species could re-establish  even if there were favorable environmental conditions and the estuary  remained open in the future (B. Everett unpubl. data 2022).  Moreover, an extinction probability analysis using time-series  observation data from different sources (1951–2012) suggest that  Largetooth Sawfish is no longer present in KwaZulu-Natal waters (Everett  <em>et al. </em>2015). Local ecological knowledge data from Mozambique and Tanzania suggest this species has experienced large-scale declines in both countries, with few confirmed records from the last decade (Leeney 2017, Braulik <em>et al.</em> 2020). In Mozambique, artisanal fisheries remain a major threat as the species continues to be landed in these fisheries along the coast (Leeney 2017). In Madagascar, Largetooth Sawfish were previously common in artisanal landings on the western coast of Madagascar but are now extremely rare along that coast with no records in catch surveys over the past decade; the abundance of the species was already low in the 1960s in Madagascar (Taniuchi <em>et al.</em> 2003, Manach <em>et al.</em> 2011, R. Bennett pers. comm. 15 January 2022). Regular catch surveys in Kenya in the last decade suggest the Largetooth  Sawfish is now absent (R. Bennett pers. comm. 15 January 2022). There have been no records of any sawfish species from the Seychelles since the 2000s (Kyne <em>et al.</em> 2013). <br/><br/>Largetooth Sawfish landings are now extremely rare in former range states of the western and northern Indian Ocean (Moazzam and Osmany 2014). Only occasional captures are reported from Pakistan and India; the last reported capture in Pakistan was in January 2016 with an earlier 2009 record in Gwadar, western Balochistan (Moazzam and Osmany 2014). A recent survey using LEK of ~100 fishers showed that there has been a severe decline across Pakistan; fishers suggested that the decline began in the 1950s with the change from cotton to nylon nets in 1955 (M. Khan unpubl. data 2022). In India, fisher surveys in Maharashtra state where sawfishes were commonly harvested historically, indicate a drastic decline in the sawfish fishery from 1985–1990, with only occasional catches in recent years (Kyne <em>et al.</em> 2013). The latest capture of Largetooth Sawfish off Maharashtra was reported in March 2017 (K.V. Akhilesh pers. comm. 26 March 2017). In Sri Lanka, the last verified record of a Largetooth Sawfish is from 2016 with photographic records from the Balapitiya locality in the southern region (Tanna <em>et al.</em> 2021). Sawfishes there appear to have mostly disappeared since the 1990s and have become increasingly rare in landings (Tanna <em>et al.</em> 2021). In Bangladesh, Largetooth Sawfish are still landed in relatively large numbers (over 40 individuals reported between 2016 and 2022, including a young of the year in 2022) (Haque <em>et al.</em> 2020, A. Haque unpubl. data 2022). However, extensive interviews and workshops at landing sites, artisanal fishery surveys, and an overview of historical records have all confirmed that sawfishes have been declining in Bangladesh since the 1970s (Haque <em>et al.</em> 2020). Moreover, there has been over 50% range contraction from historical records (A. Haque unpubl. data 2022). The average annual sawfish encounter rate (observations and catches) in Bangladesh declined from 3.7 individuals using lifetime recall data (~22-years), to 1.5 using 5-year recall data, and further to 0.7 using 1-year recall data (Hossain <em>et al. </em>2015). <strong><br/><br/></strong>In Myanmar, fisheries surveys in 2016–2017 in Rakhine State did not report the species, and fishers indicated they had not seen sawfishes in the past five years; further, it was not detected in targeted eDNA surveys in the Myeik Archipelago and Ayeyarwady River (M. Mizrahi pers. comm. 21 February 2022). In Peninsular Malaysia, there are historic accounts of the species in the Perak River (e.g., Smith 1931). However, subsequent riverine elasmobranch surveys conducted in 1976 did not report it (Taniuchi 1979). In Thailand, the formerly common Largetooth Sawfish had disappeared from catches by the 1980’s (Pauly 1988, Kyne <em>et al.</em> 2013). In the Mekong River (Cambodia, Laos and Vietnam), by the 1990s, the species had not been seen for several decades (Rainboth 1996, Tanaka and Ohnishi 1998). In Sabah, Malaysia, targeted surveys of elasmobranchs found Largetooth Sawfish were common in the 1970’s, declined sharply in the 1980’s, and were uncommon by the 1990’s (Manjaji-Matsumoto 2002). Subsequent surveys in Sabah in 2015–2016 did not record any Largetooth Sawfish and fishers made no reports of any sawfish captures over the past 20 years (Manjaji-Matsumoto <em>et al.</em> 2017). In Sarawak, surveys in 2017–2019 did not record any sawfishes (Booth <em>et al.</em> 2021). In the Philippines, Largetooth Sawfish were historically reported as common on Luzon and Mindoro Islands, however declines were noted in the 1950s (Herre 1953, 1958), and it was not reported during a freshwater elasmobranch survey in Lake Naujan, Mindoro in 1976 (Taniuchi 1979, Compagno <em>et al. </em>2005). It was observed in the Philippines in 2014 (M. McDavitt via R.W. Jabado pers. comm. 25 May 2017).<br/><br/>In Indonesia, there are extensive historical records of the Largetooth Sawfish. Recent elasmobranchs studies in Sumatran rivers have not reported any Largetooth Sawfish (Iqbal <em>et al. </em>2018, M. Grant unpubl. data 2022), although survey effort has been limited since observations of the species in 1976 and 1996 (Taniuchi 1979, Tan and Lim 1998). In Java, two individuals were recorded in 2002 from fisheries operating in either the Arafura or Banda Sea (D’Alberto <em>et al. </em>2022). In Sulawesi, rostra from two Largetooth Sawfish caught in 1991–2000 have been observed (B. Simeon unpubl. data 2022). In Papua Province, recent LEK surveys at Lake Setani indicate that sawfishes were present until at least 1975, and there is anecdotal evidence that they are still present in Asmat and Mamberamo Districts (S. Silalahi pers. comm. 14 June 2021). Sawfish LEK surveys conducted with local fishers in Merauke indicate that while most fishers (186 out of 245) have seen sawfishes, only 104 had reported captures since 2010, with 60 of these interviewees reporting declines in sawfishes during their lifetimes (Y. Wakhida unpubl. data 2022). In Papua New Guinea (PNG), fisheries and LEK surveys revealed that Largetooth Sawfish of a wide range of size classes are still relatively common in some areas of southern PNG and this area appears to be a stronghold for the species (Grant <em>et al</em>. 2021a, Grant <em>et al.</em> 2021b). However, the population is currently declining and at high risk from fishing pressure (Grant <em>et al.</em> 2021b). Historically, the species was widespread and common until the 1970’s–80’s with declines reported during the 1990’s and 2000’s in a range of areas including the Kikori, Fly, Sepik, and Ramu Rivers (Haines 1979, Storey <em>et al.</em> 2009, White <em>et al.</em> 2017, Leeney <em>et al.</em> 2018, Grant <em>et al.</em> 2021b). <br/><br/>Tropical northern Australia is considered one of the last viable population strongholds in the Indo-West Pacific for Largetooth Sawfish. However, this species was recently assessed as Vulnerable under Australian environmental legislation, due to ongoing population declines (Kyne <em>et al.</em> 2021a). There is evidence of large declines from the East Queensland Shark Control Program (QSCP) from 1962–2016 (Wueringer 2017). For example, standardized catch rates of sawfishes in two areas, Townsville and Rockhampton, declined by 72% and 93% from the 1970s to 1990, respectively. Although no specific data on the Largetooth Sawfish could be extracted from the QSCP data, a decline in this species in Queensland also coincided with a significant range contraction along this coast. Up until the 1960s, large specimens were caught along Queensland's east coast (e.g., Brisbane River, 1950s; Bowling Green Bay near Townsville, 1966) (B. Wueringer unpubl. data 2022). An ongoing campaign to report public sightings of sawfishes both recent and historic, failed to produce any sightings of Largetooth Sawfish on Queensland’s east coast since then, except for within Lakefield National Park (B. Wueringer unpubl. data 2022). Moreover, an analysis of sightings compiled for the entire Australian range revealed a 67% decline in EOO and 22% decline in AOO between historic (before the year 2000) and recent years (after the year 2000) (K. Lear unpubl. data 2021). Western Australia is the only region where the population is not inferred to have recently declined; monitoring of the Fitzroy River since 2002 showed stable and fluctuating recruitment linked with environmental conditions such as flow rates and temperature (Lear <em>et al.</em> 2019, Lear <em>et al.</em> 2020, Lear <em>et al.</em> 2021), indicating that the productivity of the population likely remains high. However, water resource development and climate change in the region pose major and ongoing threats to this important refuge population (e.g., Petheram <em>et al.</em> 2017). Sightings of this species also remain fairly common along the northern coast of Western Australia and in the Northern Territory, albeit in far lower numbers than the Fitzroy River. Low levels of fishing, human population density, and habitat modification suggests threats to the species are low in this region. Across its entire Australian range, it is suspected that the population has undergone a &gt;80% reduction over the past three generation lengths (68 years) (Kyne <em>et al. </em>2021a). Over its Indo-Pacific range, the population is suspected to have undergone a &gt;80% reduction over the past three generation lengths. <strong><br/></strong><strong></strong><br/>Across the entire global range of the Largetooth Sawfish, severe declines have been documented. Australia and PNG may provide the last viable populations owing to some refuge from intense fishing pressure as a result of low human population density. However, declines are also evident in those regions. Overall, it is inferred that the Largetooth Sawfish populations have undergone a &gt;80% reduction over the past three generation lengths (68 years) due to actual levels of exploitation, habitat degradation, and a decline in extent of occurrence.",
+    "habitats": "The Largetooth Sawfish is a euryhaline species that occurs at depths of 0–60 m (Weigmann 2016), with juveniles occupying freshwater and estuarine habitats, and adults occurring in both estuarine and coastal waters (Kyne <em>et al.</em> 2021b). It reaches a maximum size of 705 cm total length (TL) with both males and females mature at 300 cm TL (Thorson 1976, Devadoss <em>et al.</em> 1989, Peverell 2009). Reproduction is aplacental viviparous with litter sizes of 1–20 (mean of 7.3), an annual or biennial reproductive cycle, and size-at-birth of 72–90 cm TL (Thorson 1976, Peverell 2009). Female age-at-maturity is 9 years and maximum age is 36 years and thus, generation length is 22.5 years (Peverell 2009, Kyne <em>et al.</em> 2021b).",
+    "threats": "The Largetooth Sawfish is subject to intense fishing pressure that is poorly managed or unregulated across much of its range. The species is taken as bycatch in commercial and small-scale fisheries (including artisanal, cultural, and subsistence) with a variety of fishing gears including gillnet, trawl, and line, where it is often retained for at least its fins and meat (Dulvy <em>et al.</em> 2016, Yan <em>et al.</em> 2021). The toothed rostra of sawfishes make them highly susceptible to entanglement particularly in gillnets and trawls. Fishing effort has increased over the past decades across the species’ range with the fin and meat trade driving increasing demand and exploitation of many elasmobranchs (Okes and Sant 2019). The difficulty of removing the species from fishing gear and returning it alive combined with the exceedingly high first point of sale and final point of sale value (&gt;USD$14,000 per individual) means that there is a high likelihood of retention even though the species are captured infrequently (Chen 1996, Jabado <em>et al.</em> 2017, Yan <em>et al. </em>2021).<br/><br/>The freshwater and inshore estuarine, mangrove, and coastal habitats used by the species are threatened by habitat loss and degradation (CITES 2007). For example, in Southeast Asia, mangrove areas have been reduced by an estimated 30% since 1980 (FAO 2007, Polidoro <em>et al.</em> 2010). There is also global concern for declines of freshwater species (e.g., Tickner <em>et al.</em> 2020), with large-bodied species showing the largest declines (He <em>et al.</em> 2019). The primary threats in freshwater include fisheries (e.g., Funge-Smith 2018, Ainsworth <em>et al.</em> 2021) and habitat degradation (e.g. Ramsar Convention on Wetlands 2018, Grill <em>et al.</em> 2019, Maus <em>et al.</em> 2020). These pressures are likely to be exacerbated by climate change (Lennox <em>et al.</em> 2019), to which Largetooth Sawfish is considered to be highly exposed (Chin<em> et al.</em> 2010, Lear <em>et al. </em>2021). For example, in the Fitzroy River (Western Australia), recruitment of the Largetooth Sawfish population depends on large flood events; in years with a long dry season that result in low volumes of wet season flooding, the Largetooth Sawfish had significantly poorer body condition (Lear <em>et al.</em> 2021). The compounded exposure of Largetooth Sawfish to both marine and non-marine pressures collectively make this species highly susceptible to a range of pressures throughout its life history (Grant <em>et al. </em>2019).",
+    "measures": "Through proposals made in 2007 and 2013, all five sawfish species are now listed on Appendix I of the Convention on International Trade of Endangered Species (CITES), which essentially bans commercial international trade in sawfishes and their parts. In 2014, all sawfishes were added to Appendix I and II of the Convention on Migratory Species (CMS), which obligates Parties to act nationally and cooperate regionally to “strictly protect” the species. All sawfishes were added to Annex 1 of the CMS Memorandum of Understanding (MoU) in 2016, which aims to facilitate regional conservation of the species.<br/><br/>In 2012, the General Fisheries Commission for the Mediterranean (GFCM) banned retention and mandated careful release for the Largetooth Sawfish listed on the Barcelona Convention Annex II of the Protocol Concerning Specially Protected Areas and Biological Diversity in the Mediterranean. Implementation by GFCM Parties, however, has been very slow. Largetooth sawfish were added to Annex II of the Protocol for Specially Protected Areas and Wildlife (SPAW Protocol) of the Convention for the Protection and Development of the Marine Environment of the Wider Caribbean Region (the Cartagena Convention) in 2017 and 2019, respectively. These listings obligate Parties to grant Largetooth Sawfish strict protections, including through bans on take and trade.   <br/><br/>Despite these many binding international treaty mandates, Largetooth Sawfish remain inadequately protected in a great  number of countries where basic regulations are lacking and/or poorly  enforced. A 2018 analysis identified four priority regions for  concerted, international sawfish conservation policy action: the  Caribbean, Amazon Delta, Western Indian Ocean, and Australasia (Fordham <em>et al. </em>2018).  Yan <em>et al.</em> (2021) underscored the urgent need for domestic sawfish  protections, particularly by nations where Largetooth Sawfish presence is  uncertain, low or declining, yet extinction probability is low. Four  nations were prioritized for specialized surveys and strong legal  protections: Mexico, Panamá, Brazil, Madagascar, and Sri Lanka. Countries where Largetooth Sawfish are still regularly found  that fail to apply species-specific prohibitions on killing, retention,  sale, and trade (i.e., Papua New Guinea) are also  considered priorities for conservation action.<br/><br/>Species-specific protection of Largetooth Sawfish exists in at least 17 countries, that is, Australia, Bangladesh, Brazil, Colombia, Costa Rica, Ecuador, Guinea, India, Indonesia, Malaysia, Mexico, Nicaragua, Pakistan, Panamá, Perú, Senegal, and South Africa (Harrison and Dulvy 2014, Fordham <em>et al. </em>2018, S. Kelez unpubl. data 2022). However, enforcement of these protection laws is generally poor. Other potential Largetooth Sawfish range states that still lack national protections include Honduras, Perú, Somalia, Madagascar, and Mozambique, as well as the proponent of the CMS and CITES sawfish listing proposals – Kenya (Harrison and Dulvy 2014, Fordham <em>et al.</em> 2018, Lawson and Fordham 2018). Australia, where Largetooth Sawfish are still present and relatively well protected, is considered a “lifeboat” country, but relaxation of key safeguards would immediately threaten these populations. <br/><br/>In addition to species-specific legal protections, Largetooth Sawfish recovery requires minimization of bycatch (and associated mortality) as well as conservation of important coastal habitats (Harrison and Dulvy 2014, Fordham <em>et al. </em>2018). Effective enforcement of such safeguards requires ongoing educational initiatives, training (including in the area of species identification), and other capacity-building efforts. In these areas, there is room for improvement in every Largetooth Sawfish range state. Better monitoring of Largetooth Sawfish catches, including in artisanal fisheries, and expanded research programs are also needed to help understand population trends and inform management. The multi-lateral environmental agreements that have already listed sawfishes as species warranting strict protections can provide valuable platforms for facilitating sawfish recovery at regional and global scales, but targeted initiatives to do so have not yet been developed. This inaction demonstrates that ongoing public, political, and financial support is also integral to preventing further Largetooth Sawfish extinction.",
+    "use_trade": "Despite species-level protections in many countries across the range of the Largetooth Sawfish, the species is still used for its fins, whole rostra, rostral teeth, meat, liver, and skin (McDavitt 2005). Sawfish fins are among the most valuable in the shark fin trade and although international trade of sawfishes and their products was prohibited in 2007 and 2013 when they were listed on CITES Appendix I, illegal international trade may still exist due to the high value of their products. Sawfish (<em>Pristis</em> spp.) fins have recently been reported from Hong Kong, albeit as a small proportion of fins sampled (Cardeñosa <em>et al.</em> 2020). The meat is generally consumed locally by coastal communities and does not usually enter the international trade. The species is displayed in public aquaria.<br/><br/>The use of sawfish rostral teeth for cockfighting spurs has been historically reported from Perú and other South American countries (Cogorno Ventura 2001), but recent reports highlight that this practice still occurs in Ecuador, Panamá, and Costa Rica (Valerio-Vargas and Espinoza 2019, López-Angarita <em>et al.</em> 2021, M. Espinoza unpubl. data 2022). The rostral teeth are mostly obtained from Brazil, Ecuador, Panamá, Costa Rica, and various Caribbean countries (CITES 2007, M. Espinoza unpubl. data 2022). In the western Indian Ocean, rostra are used as fences and donated to churches and shrines (Tanna <em>et al.</em> 2021, M. Khan unpubl. data 2022). In Papua New Guinea, in addition to use of the fins and meat, the rostra are used for decorations, weapons, and rituals (Grant <em>et al.</em> 20121a, Grant <em>et al.</em> 2021b). In Australia, rostra were historically often retained, and it is likely that that this practice still occurs occasionally (Morgan <em>et al. </em>2011).",
+    "rationale": "<p>The Largetooth Sawfish (<em>Pristis pristis</em>) is a large (to 705 cm total length) euryhaline shark-like ray with a widespread circumtropical distribution comprising four subpopulations (Western Atlantic, Eastern Pacific, Eastern Atlantic, and Indo-West Pacific). The species occurs at depths of 0–60 m with juveniles occupying freshwater and estuarine habitats, and adults occurring in both estuarine and coastal waters. It is taken as bycatch (and was historically targeted) in commercial and small-scale fisheries and often retained for its meat and fins. Historically, its fins were considered among the most highly valued in the shark fin trade and this high value drove demand and increased exploitation of the species over the past decades throughout its range. <span lang=\"EN-CA\"><span lang=\"EN-CA\">Habitat loss and the morphology of  the rostrum, which makes them susceptible to capture in fishing gear,  have also driven declines independently of trade. International trade of all sawfish species was prohibited in 2007 and 2013 with their listing on Appendix I of the Convention on International Trade of Endangered Species of Wild Flora and Fauna (CITES), however, illegal trade continues (especially for their rostra in Central and South America, but in some areas also for their meat and fins). All subpopulations have undergone severe historic and ongoing steep population reductions due to overexploitation and habitat loss and degradation with significant range contractions across their distribution. The species is now 'possibly extinct' in 19 of its 60 former range states, and in 14 range states its presence is currently uncertain due to limited survey effort or recent sightings. Despite protection in at least 17 of its range states, threats are ongoing and population decline is continuing. Based on limited catch data or information on abundance trends inferred from reports of capture records and local ecological knowledge, populations have undergone high levels of decline over the past three generation lengths (68 years). Overall, it is inferred that the Largetooth Sawfish has undergone a &gt;80% population reduction over the last three generation lengths (68 years) due to overexploitation<span lang=\"EN-CA\"><span lang=\"EN-CA\"><span lang=\"EN-CA\">, habitat degradation, and reductions in extent of occurrence, and it is assessed as Critically Endangered A2cd.<br/></span></span></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<em>Pristis pristis</em> was formerly known as <em>P. perotteti </em>in the Atlantic and sometimes in the Eastern Pacific, and <em>P. microdon </em>in the Indo-West Pacific. These are both now synonyms of<em> P. pristis.</em>"
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mud Flats and Salt Flats"
+      },
+      "code": "12_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mangrove Submerged Roots"
+      },
+      "code": "12_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "Yes",
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "evaluator",
+      "full": "Simpfendorfer, C., Sherman, C.S. & Rigby, C.L.",
+      "value": [
+        "Colin Simpfendorfer (James Cook University)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Samantha Sherman (Deakin University)"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "Espinoza, M., Bonfil, R., Carlson, J., Charvet, P., Chevis, M., Dulvy, N.K., Everett, B., Faria, V., Ferretti, F., Fordham, S., Grant, M.I., Haque, A.B., Harry, A.V., Jabado, R.W., Jones, G.C.A., Kelez, S., Lear, K.O., Morgan, D.L., Phillips, N.M. & Wueringer, B.E.",
+      "value": [
+        "Patricia Charvet (SENAI-Paraná)",
+        "Francesco Ferretti (Dalhousie University)",
+        "Sonja Fordham (Shark Advocates International)",
+        "Rima Jabado (Elasmo Project)",
+        "Ramón Bonfil (IUCN SSC Shark Specialist Group)",
+        "John Carlson (NOAA)",
+        "Alastair Harry (Western Australian Fisheries, Western Australia, Australia)",
+        "David Morgan (Murdoch University, Western Australia, Australia)",
+        "Mario Espinoza (James Cook University, Queensland, Australia)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "Bernadine Everett",
+        "Vicente Faria (Universidade Federal do Ceará)",
+        "Alifa B. Haque",
+        "Georgia Jones",
+        "Megan Chevis (MarAlliance)",
+        "Karissa Lear (Murdoch University)",
+        "Nicole Phillips (University of Southern Mississippi)",
+        "Barbara Wueringer (Sharks and Rays Australia)",
+        "Shaleyla Kelez (WWF)",
+        "Michael Grant"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Al Hameli, S.M., Ho, H., Khan, M., Leeney, R.H., Mejía-Falla, P.A., Mendoza, A., Navia, A.F., Simeon, B., Soldo, A., Wakhida, Y., Morata, A.Z.A., Kyne, P.M. & Smith, K.",
+      "value": [
+        "Peter Kyne (Charles Darwin University, Australia / IUCN SSC Shark RLA Coordinator)",
+        "Alen Soldo (IUCN SSC Shark Specialist Group)",
+        "Kelcee Smith (NOAA Fisheries Service, Panama City Laboratory)",
+        "Ruth Leeney",
+        "Moazzam Khan",
+        "Andrés F. Navia (Squalus Foundation)",
+        "Paola A. Mejía-Falla (Squalus Foundation (Wildlife Conservation Society))",
+        "Hsuan-Ching Ho",
+        "Shamsa Al Hameli (Environment Agency-Abu Dhabi)",
+        "Alejandra Mendoza (ecOceanica)",
+        "Benaya Simeon (Wildlife Conservation Society)",
+        "Yunita Wakhida",
+        "Alexandra Morata (IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rigby, C.L.",
+      "value": [
+        "Cassandra Rigby (James Cook University, Queensland, Australia)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version of the 2022 assessment was created to correct the assessor name \"Bonfil-Sanders, R.\" to \"Bonfil, R.\"."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Weigmann, S. 2016. Annotated checklist of the living sharks, batoids and chimaeras (Chondrichthyes) of the world, with a focus on biogeographical diversity. <i>Journal of Fish Biology</i> 88(3): 837-1037.",
+      "year": "2016",
+      "title": "Annotated checklist of the living sharks, batoids and chimaeras (Chondrichthyes) of the world, with a focus on biogeographical diversity",
+      "author": "Weigmann, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dulvy, N. K., Davidson, L. N. K., Kyne, P. M., Simpfendorfer, C. A., Harrison, L. R., Carlson, J. K., and Fordham, S. V. 2016. Ghosts of the coast: global extinction risk and conservation of sawfishes. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 26(1): 134-153.",
+      "year": "2016",
+      "title": "Ghosts of the coast: global extinction risk and conservation of sawfishes",
+      "author": "Dulvy, N. K., Davidson, L. N. K., Kyne, P. M., Simpfendorfer, C. A., Harrison, L. R., Carlson, J. K., and Fordham, S. V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Polidoro, B.A., Carpenter, K.E., Collins, L., Duke, N.C., Ellison, A.M., Ellison, J.C., Farnsworth, E.J., Fernando, E.S., Kathiresan, K., Koedam, N.E., Livingstone, S.R., Miyago, T., Moore, G.E., Ngoc Nam, V., Eong Ong, J., Primavera, J.H., Salmo, S.G., Sanciangco, J.C., Sukardjo, S., Wang, Y. and Hong Yong, J.W. 2010. The Loss of Species: Mangrove Extinction Risk and Geographic Areas of Global Concern. <i>Public Library of Science One</i> 5(4): 10.",
+      "year": "2010",
+      "title": "The loss of species: mangrove extinction risk and geographic areas of global concern",
+      "author": "Polidoro, B.A., Carpenter, K.E., Collins, L., Duke, N.C., Ellison, A.M., Ellison, J.C., Farnsworth, E.J., Fernando, E.S., Kathiresan, K., Koedam, N.E., Livingstone, S.R., Miyago, T., Moore, G.E., Ngoc Nam, V., Eong Ong, J., Primavera, J.H., Salmo, S.G., Sanciangco, J.C., Sukardjo, S., Wang, Y. and Hong Yong, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Herre, A.W.C.T. 1953. Check list of Philippine fishes.  Research Report of the U.S. Fish and Wildlife Service.",
+      "year": "1953",
+      "title": "Check list of Philippine fishes.",
+      "author": "Herre, A.W.C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Herre, A.W.C.T. 1959. Marine fishes in Philippine rivers and lakes. <i>Philippine Journal of Science</i> 87(1): 65-88.",
+      "year": "1959",
+      "title": "Marine fishes in Philippine rivers and lakes",
+      "author": "Herre, A.W.C.T",
+      "citation_short": null
+    },
+    {
+      "citation": "Rainboth, W.J. 1996. <i>Fishes of the Cambodian Mekong. FAO Species Identification Field Guide for Fishery Purposes</i>. FAO, Rome.",
+      "year": "1996",
+      "title": "Fishes of the Cambodian Mekong. FAO Species Identification Field Guide for Fishery Purposes",
+      "author": "Rainboth, W.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cook, S.F., Compagno, L.J.V. and Oetinger, M.I. 2005. Largetooth sawfish <i>Pristis perotteti</i>. In: S.L. Fowler, M. Camhi, G.H. Burgess, G.M. Cailliet, S.V. Fordham, R.D. Cavanagh, C.A. Simpfendorfer, and J.A. Musick (eds). <i>Sharks, rays and chimaeras: the status of the chondrichthyan fishes</i>, pp. 325-327. IUCN SSC Shark Specialist Group. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2005",
+      "title": "Largetooth sawfish <i>Pristis perotteti</i>. In: Sharks, rays and chimaeras: the status of the chondrichthyan fishes",
+      "author": "Cook, S.F., Compagno, L.J.V. and Oetinger, M.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chin, A., Kyne, P.M., Walker, T.I. and McAuley, R.B. 2010. An integrated risk assessment for climate change: analysing the vulnerability of sharks and rays on Australia’s Great Barrier Reef. <i>Global Change Biology</i> 16: 1936–1953.",
+      "year": "2010",
+      "title": "An integrated risk assessment for climate change: analysing the vulnerability of sharks and rays on Australia’s Great Barrier Reef",
+      "author": "Chin, A., Kyne, P.M., Walker, T.I. and McAuley, R.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Compagno, L.J.V., Last, P.R., Stevens, J.D. and Alava, M.N.R. 2005. Checklist of Philippine Chondrichthyes. CSIRO Marine Laboratories Report 243.",
+      "year": "2005",
+      "title": "Checklist of Philippine Chondrichthyes",
+      "author": "Compagno, L.J.V., Last, P.R., Stevens, J.D. and Alava, M.N.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chen, H.K. (ed.) 1996. Shark Fisheries and the Trade in Sharks and Shark Products in Southeast Asia. TRAFFIC Southeast Asia Report, Petaling Jaya, Selangor, Malaysia",
+      "year": "1996",
+      "title": "Shark Fisheries and the Trade in Sharks and Shark Products in Southeast Asia.",
+      "author": "Chen, H.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chirichigno, N. and Cornejo, M. 2001. <i>Catalogo Comentado de los peces marinos del Perú</i>. Publicación Especial. Instituto del Mar del Perú.",
+      "year": "2001",
+      "title": "Catálogo Comentado de los Peces Marinos del Perú.",
+      "author": "Chirichigno, N. and Cornejo M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Faria, V.V., McDavitt, M.T., Charvet, P., Wiley, T.R., Simpfendorfer, C.A. and Naylor, G.J.P. 2013. Species delineation and global population structure of Critically Endangered sawfishes (Pristidae). <i>Zoological Journal of the Linnean Society</i> 167: 136-164.",
+      "year": "2013",
+      "title": "Species delineation and global population structure of Critically Endangered sawfishes (Pristidae)",
+      "author": "Faria, V.V., McDavitt, M.T., Charvet, P., Wiley, T.R., Simpfendorfer, C.A. and Naylor, G.J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Peverell, S. C. 2008. Sawfish (Pristidae) of the Gulf of Carpentaria, Queensland, Australia. School of Marine Biology, James Cook University.",
+      "year": "2008",
+      "title": "Sawfish (Pristidae) of the Gulf of Carpentaria, Queensland, Australia",
+      "author": "Peverell, S. C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Morgan, D.L., Whitty, J.M., Phillips, N.M., Thorburn, D.C., Chaplin, J.A. and McAuley, R. 2011. North-western Australia as a hotspot for endangered elasmobranchs with particular reference to sawfishes and the northern river shark. <i>Journal of the Royal Society of Western Australia</i> 94: 345-358.",
+      "year": "2011",
+      "title": "North-western Australia as a hotspot for endangered elasmobranchs with particular reference to sawfishes and the northern river shark",
+      "author": "Morgan, D.L., Whitty, J.M., Phillips, N.M., Thorburn, D.C., Chaplin, J.A. and McAuley, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). 2007. Proposal 17 Inclusion of all species of the family Pristidae in Appendix I of CITES. Fourteenth meeting of the Conference of the Parties The Hague (Netherlands), 3-15 June 2007. http://www.cites.org/eng/cop/14/prop/e14-p17.pdf.",
+      "year": "2007",
+      "title": "Proposal 17 Inclusion of all species of the family Pristidae in Appendix I of CITES. Fourteenth meeting of the Conference of the Parties The Hague (Netherlands), 3-15 June 2007. http://www.cites.org/eng/cop/14/prop/e14-p17.pdf",
+      "author": "Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevens, J.D., Pillans, R.D. and Salini, J. 2005. Conservation assessment of <i>Glyphis</i> sp. A (speartooth shark), <i>Glyphis</i> sp. C (northern river shark), <i>Pristis microdon</i> (freshwater sawfish) and <i>Pristis zijsron</i> (green sawfish). Final Report to the Department of the Environment and Heritage.",
+      "year": "2005",
+      "title": "Conservation assessment of <i>Glyphis</i> sp. A (speartooth shark), <i>Glyphis</i> sp. C (northern river shark), <i>Pristis microdon</i> (freshwater sawfish) and <i>Pristis zijsron</i> (green sawfish). Final Report to the Department of the Environment and Heritage",
+      "author": "Stevens, J.D., Pillans, R.D. and Salini, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burgess, G.H., Carvalho, J. de, and Imhoff, J.L. 2009. An evaluation of the status of the largetooth sawfish, <i>Pristis perotteti</i>, based on historic and recent distribution and qualitative observations of abundance. Internal report to NOAA.",
+      "year": "2009",
+      "title": "An evaluation of the status of the largetooth sawfish, <i>Pristis perotteti</i>, based on historic and recent distribution and qualitative observations of abundance. Internal report to NOAA.",
+      "author": "Burgess, G.H., Carvalho, J. de, and Imhoff, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tan, H.H. and Lim, K.K.P. 1998. Freshwater elasmobranchs from the Batang Hari Basin of Central Sumatra, Indonesia. <i>Raffles Bulletin of Zoology</i> 46: 425-429.",
+      "year": "1998",
+      "title": "Freshwater elasmobranchs from the Batang Hari Basin of Central Sumatra, Indonesia",
+      "author": "Tan, H.H. and Lim, K.K.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McDavitt, M.T. 2005. Summary of trade in sawfishes and sawfish parts. Unpublished Report.",
+      "year": "2005",
+      "title": "Summary of trade in sawfishes and sawfish parts. Unpublished Report",
+      "author": "McDavitt, M.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorson, T.B. 1982. Life history implications of a tagging study of largetooth sawfish, <i>Pristis perotetti</i>, in the Lake Nicaragua-Río San Juan System. <i>Environmental Biology of Fishes</i> 7: 207–228.",
+      "year": "1982",
+      "title": "Life history implications of a tagging study of largetooth sawfish, <i>Pristis perotetti</i>, in the Lake Nicaragua-Río San Juan System",
+      "author": "Thorson, T.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cogorno Ventura, C. 2001. Historia de las armas utilizadas para el combate de los gallos de pico y espuelas en el Peru. <i>Boletín de Lima </i> 123: 114-122.",
+      "year": "2001",
+      "title": "Historia de las armas utilizadas para el combate de los gallos de pico y espuelas en el Peru",
+      "author": "Cogorno Ventura, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Faria, V.V. 2007. Taxonomic review, phylogeny, and geographical population structure of the sawfishes (Chondrichthyes, Pristiformes). PhD thesis.  Iowa State University.",
+      "year": "2007",
+      "title": "Taxonomic review, phylogeny, and geographical population structure of the sawfishes (Chondrichthyes, Pristiformes). PhD thesis",
+      "author": "Faria, V.V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Manach, F.L., Gough, C., Humber, F., Harper, S. and Zeller, D. 2011. Reconstruction of total marine fisheries catches for Madagascar (1950-2008). In: Harper, S. and Zeller, D. (eds), <i>Fisheries Catch Reconstructions: Islands, Part II. Fisheries Centre Research Reports 19</i>, pp. 21-37. Fisheries Centre, University of British Columbia, Vancouver.",
+      "year": "2011",
+      "title": "Reconstruction of total marine fisheries catches for Madagascar (1950-2008)",
+      "author": "Manach, F.L., Gough, C., Humber, F., Harper, S. and Zeller, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorson, T.B. 1976. Observations on the reproduction of the sawfish, <i>Pristis perotteti</i>, in Lake Nicaragua, with recommendations for its conservation. In: T.B. Thorson (ed.) <i>Investigations of the ichthyofauna of Nicaraguan lakes</i>, pp. 641-650. University of Nebraska-Lincoln.",
+      "year": "1976",
+      "title": "Observations on the reproduction of the sawfish, <i>Pristis perotteti</i>, in Lake Nicaragua, with recommendations for its conservation.",
+      "author": "Thorson, T.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pauly, D. 1988. Fisheries research and the demersal fisheries of Southeast Asia. In: Gulland, J.A. (ed.), <i> Fish Population Dynamics. Second Edition</i>, pp. 329–348.  John Wiley & Sons Ltd, Chichester.",
+      "year": "1988",
+      "title": "Fisheries research and the demersal fisheries of Southeast Asia",
+      "author": "Pauly, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roberts, T.R. 1978. An ichthyological survey of the Fly River in Papua New Guinea with descriptions of new species. <i>Smithsonian Contributions to Zoology</i> 281: 1–72.",
+      "year": "1978",
+      "title": "An ichthyological survey of the Fly River in Papua New Guinea with descriptions of new species",
+      "author": "Roberts, T.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "FAO. 2007. The World’s Mangroves 1980-2005, FAO Forestry Paper 153. In: FAO (ed.). Rome.",
+      "year": "2007",
+      "title": "The World’s Mangroves 1980-2005, FAO Forestry Paper 153.",
+      "author": "FAO",
+      "citation_short": null
+    },
+    {
+      "citation": "Chasqui Velasco, L., Polanco, A., Acero, A., Meji-Falla, P, Navia, A., Zapata, L. and Caldas, L. 2017. Libro Rojo de Peces Marinos de Colombia (2017). <i>Instituto de Investigaciones Marinas y Costeras Invemar, Ministerio de Ambiente y Desarrollo Sostenible.</i> Serie de Publicaciones Generales de INVEMAR # 93. Santa Marta, Colombia. 552 p.",
+      "year": "2017",
+      "title": "Libro Rojo de Peces Marinos de Colombia (2017)",
+      "author": "Chasqui Velasco, L., Polanco, A., Acero, A., Meji-Falla, P, Navia, A., Zapata, L. and Caldas, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Storey AW, Yarrao M, Tenakanai C,  Figa B, and Lynas J. 2009. Use of changes in fish assemblages in the Fly River System, Papua New Guinea, to assess effects of the Ok Tedi Copper Mine. In: Bolton, B (ed.), <i>Developments in Earth & Environmental Sciences</i>, Elsevier Science, Amsterdam.",
+      "year": "2009",
+      "title": "Use of changes in fish assemblages in the Fly River System, Papua New Guinea, to assess effects of the Ok Tedi Copper Mine",
+      "author": "Storey AW, Yarrao M, Tenakanai C,  Figa B, and Lynas J",
+      "citation_short": null
+    },
+    {
+      "citation": "Lawson, J.M. and Fordham, S.V. 2018. Sharks Ahead: Realizing the Potential of the Convention on Migratory Species to Conserve Elasmobranchs. Shark Advocates International, The Ocean Foundation, Washington, DC, USA.",
+      "year": "2018",
+      "title": "Sharks Ahead: Realizing the Potential of the Convention on Migratory Species to Conserve Elasmobranchs",
+      "author": "Lawson, J.M. and Fordham, S.V. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Oakes, N. and Sant, G. 2019. An overview of major shark traders, catchers and species. TRAFFIC, Cambridge, UK.",
+      "year": "2019",
+      "title": "An overview of major shark traders, catchers and species",
+      "author": "Oakes, N. and Sant, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cardeñosa, D., Fields, A.T., Babcock, E.A., Shea, S.K.H., Feldheim, K.A., and Chapman, D.D. 2020. Species composition of the largest shark fin retail-market in mainland China. <i>Scientific Reports </i> 10(1): 12914.",
+      "year": "2020",
+      "title": "Species composition of the largest shark fin retail-market in mainland China.",
+      "author": "Cardeñosa, D., Fields, A.T., Babcock, E.A., Shea, S.K.H., Feldheim, K.A., and Chapman, D.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, M.I., Kyne, P.M., Simpfendorfer, C.A., White, W.T. and Chin, A. 2019. Categorising use patterns of non-marine environments by elasmobranchs and a review of their extinction risk. <i>Reviews in Fish Biology and Fisheries</i> 29: 689–710.",
+      "year": "2019",
+      "title": "Categorising use patterns of non-marine environments by elasmobranchs and a review of their extinction risk",
+      "author": "Grant, M.I., Kyne, P.M., Simpfendorfer, C.A., White, W.T. and Chin, A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grill, G., Lehner, B., Thieme, M., Geenen, B., Tickner, D., Antonelli, F. and Babu, S. 2019. Mapping the world’s free-flowing rivers. <i>Nature</i> 569: 215–221.",
+      "year": "2019",
+      "title": "Mapping the world’s free-flowing rivers",
+      "author": "Grill, G., Lehner, B., Thieme, M., Geenen, B., Tickner, D., Antonelli, F. and Babu, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tanaka, S. and Ohnishi, S. 1998. Some biological aspects of freshwater stingrays collected from Chao Phraya, Mekong, and Ganges River Systems. <i>In: Adaptability and conservation of freshwater elasmobranchs. Report of Research Project, Grant-in-Aid for International Scientific Research (Field Research) in the financial year of 1996 and 1997</i>, pp. 102–119.",
+      "year": "1998",
+      "title": "Some biological aspects of freshwater stingrays collected from Chao Phraya, Mekong, and Ganges River Systems",
+      "author": "Tanaka, S. and Ohnishi, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Taniuchi, T. 1979. Freshwater elasmobranchs from Lake Naujan, Perak River, and Indragiri River, southeast Asia. <i>Japanese Journal of Ichthyology</i> 25(4): 273–277.",
+      "year": "1979",
+      "title": "Freshwater elasmobranchs from Lake Naujan, Perak River, and Indragiri River, southeast Asia.",
+      "author": "Taniuchi, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ainsworth, R., Cowx, I. G. and Funge-Smith, S. J. 2021.  A review of major river basins and large lakes relevant to inland fisheries. FAO Fisheries and Aquaculture Circular No. 1170. Food and Agricultural Organization of the United Nations (FAO), Rome.",
+      "year": "2021",
+      "title": " A review of major river basins and large lakes relevant to inland fisheries. FAO Fisheries and Aquaculture Circular No. 1170",
+      "author": "Ainsworth, R., Cowx, I. G. and Funge-Smith, S. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iqbal, M., Zulkifli, H. and Yustian, I. 2018. The valid species and distribution of stingrays (Myliobatiformes: Dasyatidae) in South Sumatera waters, Indonesia. <i>BIOVALENTIA: Biological Research Journal </i> 4(1).",
+      "year": "2018",
+      "title": "The valid species and distribution of stingrays (Myliobatiformes: Dasyatidae) in South Sumatera waters, Indonesia",
+      "author": "Iqbal, M., Zulkifli, H. and Yustian, I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Manjaji-Matsumoto, M. 2002. Elasmobranchs recorded from rivers and estuaries in Sabah. In: Fowler, S.L., Reed, T.M. and Dipper, F.A. (eds), <i>Elasmobranch Biodiversity Conservation and Management</i>, pp. 194–198. IUCN SSC Shark Specialist Group. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2002",
+      "title": "Elasmobranchs recorded from rivers and estuaries in Sabah",
+      "author": "Manjaji-Matsumoto, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yan, H.F., Kyne, P.M., Jabado, R.W., Leeney, R.H., Davidson, L.N.K., Derrick, D.H., Finucci, B., Freckleton, R.P., Fordham, S.V. and Dulvy, N.K. 2021. Overfishing and habitat loss drive range contraction of iconic marine fishes to near extinction. <i>Science Advances</i> 7(7): eabb6026.",
+      "year": "2021",
+      "title": "Overfishing and habitat loss drive range contraction of iconic marine fishes to near extinction",
+      "author": "Yan, H.F., Kyne, P.M., Jabado, R.W., Leeney, R.H., Davidson, L.N.K., Derrick, D.H., Finucci, B., Freckleton, R.P., Fordham, S.V. and Dulvy, N.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "Bonfil, R., Mendoza-Vargas, O.U., Ricaño-Soriano, M., Palacios-Barreto, P.Y. and Bolaño-Martínez, N. 2017. Former widespread abundance and recent downfall of sawfishes in Mexico as evidenced by historical photographic and trophy records. <i>Fisheries</i> 42(5): 256–259.",
+      "year": "2017",
+      "title": "Former widespread abundance and recent downfall of sawfishes in Mexico as evidenced by historical photographic and trophy records.",
+      "author": "Bonfil, R., Mendoza-Vargas, O.U., Ricaño-Soriano, M., Palacios-Barreto, P.Y. and Bolaño-Martínez, N. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bonfil, R., Ricaño-Soriano M., Mendoza-Vargas, O.U., Méndez-Loeza, I., Pérez-Jiménez, J.C., Bolaño-Martínez, N. and Palacios-Barreto, P. 2018. Tapping into local ecological knowledge to assess the former importance and current status of sawfishes in Mexico. <i>Endangered Species Research</i> 36: 213–228.",
+      "year": "2018",
+      "title": "Tapping into local ecological knowledge to assess the former importance and current status of sawfishes in Mexico",
+      "author": "Bonfil, R., Ricaño-Soriano M., Mendoza-Vargas, O.U., Méndez-Loeza, I., Pérez-Jiménez, J.C., Bolaño-Martínez, N. and Palacios-Barreto, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferretti, F., Morey, G., Seret, B., Sulic Šprem, J. and Micheli, F. 2016. Falling through the cracks: the fading history of a large iconic predator. <i>Fish and Fisheries</i> 17(3): 875–889.",
+      "year": "2016",
+      "title": "Falling through the cracks: the fading history of a large iconic predator",
+      "author": "Ferretti, F., Morey, G., Seret, B., Sulic Šprem, J. and Micheli, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fordham, S.V., Jabado, R.W., Kyne, P., Charvet, P. and Dulvy, N.K. 2018. Saving Sawfish: Progress and Priorities. IUCN Shark Specialist Group, Vancouver.",
+      "year": "2018",
+      "title": "Saving Sawfish: Progress and Priorities.",
+      "author": "Fordham, S.V., Jabado, R.W., Kyne, P., Charvet, P. and Dulvy, N.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leeney, R.H. 2015. Fishers’ ecological knowledge of sawfishes in Lake Piso, Liberia. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 26(2): 381–385.",
+      "year": "2015",
+      "title": "Fishers’ ecological knowledge of sawfishes in Lake Piso, Liberia",
+      "author": "Leeney, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leeney, R.H. and Downing, N. 2016. Sawfishes in The Gambia and Senegal–shifting baselines over 40 years. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 26: 265–278.",
+      "year": "2016",
+      "title": "Sawfishes in The Gambia and Senegal–shifting baselines over 40 years",
+      "author": "Leeney, R.H. and Downing, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leeney, R.H. and Poncelet, P. 2015. Using fishers’ ecological knowledge to assess the status and cultural importance of sawfish in Guinea-Bissau. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 25(3): 411–430.",
+      "year": "2015",
+      "title": "Using fishers’ ecological knowledge to assess the status and cultural importance of sawfish in Guinea-Bissau",
+      "author": "Leeney, R.H. and Poncelet, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "López-Angarita, J., Cubillos-M, J.C. Villate-Moreno, M., Cid, A., Diaz, J., Cooke, R., Cagua, E. and Tilley, A. 2021. Bright spots for research and conservation of the Largetooth Sawfish <i>Pristis pristis</i> in Colombia and Panamá. <i>Endangered Species Research</i> 46: 147–160.",
+      "year": "2021",
+      "title": "Bright spots for research and conservation of the Largetooth Sawfish <i>Pristis pristis</i> in Colombia and Panamá",
+      "author": "López-Angarita, J., Cubillos-M, J.C. Villate-Moreno, M., Cid, A., Diaz, J., Cooke, R., Cagua, E. and Tilley, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robillard, M. and Séret, B. 2006. Cultural importance and decline of sawfish (Pristidae) populations in West Africa. <i>Cybium</i> 30: 23–30.",
+      "year": "2006",
+      "title": "Cultural importance and decline of sawfish (Pristidae) populations in West Africa",
+      "author": "Robillard, M. and Séret, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valerio-Vargas, J. and Espinoza, M. 2019. A beacon of hope: distribution and current status of the Largetooth Sawfish in Costa Rica. <i>Endangered Species Research</i> 40: 231–242.",
+      "year": "2019",
+      "title": "A beacon of hope: distribution and current status of the Largetooth Sawfish in Costa Rica",
+      "author": "Valerio-Vargas, J. and Espinoza, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Braulik, G., Kasuga, M. and Majubwa, G. 2020. Local ecological knowledge demonstrates shifting baselines and the large-scale decline of sawfishes (Pristidae) in Tanzania. <i>African Journal of Marine Science</i> 42(1): 67–79.",
+      "year": "2020",
+      "title": "Local ecological knowledge demonstrates shifting baselines and the large-scale decline of sawfishes (Pristidae) in Tanzania",
+      "author": "Braulik, G., Kasuga, M. and Majubwa, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Everett, B.I., Cliff, G., Dudley, S.F.J., Wintner, S.P. and van der Elst, R.P. 2015. Do sawfish <i>Pristis</i> spp. represent South Africa’s first local extirpation of marine elasmobranchs in the modern era? <i>African Journal of Marine Science</i> 37(2): 275–284.",
+      "year": "2015",
+      "title": "Do sawfish <i>Pristis</i> spp. represent South Africa’s first local extirpation of marine elasmobranchs in the modern era?",
+      "author": "Everett, B.I., Cliff, G., Dudley, S.F.J., Wintner, S.P. and van der Elst, R.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Haque, A.B., Leeney, R.H. and Biswas, A.R. 2020. Publish, then perish? Five years on, sawfishes are still at risk in Bangladesh. <i>Aquatic Conservation: Marine Freshwater Ecosystems</i> 30(12): 2370–2383.",
+      "year": "2020",
+      "title": "Publish, then perish? Five years on, sawfishes are still at risk in Bangladesh.",
+      "author": "Haque, A.B., Leeney, R.H. and Biswas, A.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harrison, L.R. and Dulvy, N.K. 2014. <i>Sawfish: A Global Strategy for Conservation</i>. IUCN Species Survival Commission's Shark Specialist Group, Vancouver, Canada.",
+      "year": "2014",
+      "title": "Sawfish: A Global Strategy for Conservation",
+      "author": "Harrison, L.R. and Dulvy, N.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hossain, M.A., Thompson, B.S., Chowdhury, G.W., Mohsanin, S., Fahad, Z.H., Koldewey, H.J. and Islam, M.A. 2015. Sawfish exploitation and status in Bangladesh. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 25(6): 781–799.",
+      "year": "2015",
+      "title": "Sawfish exploitation and status in Bangladesh.",
+      "author": "Hossain, M.A., Thompson, B.S., Chowdhury, G.W., Mohsanin, S., Fahad, Z.H., Koldewey, H.J. and Islam, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jabado, R.W., Al Baharna, R.A., Al Ali, S.R., Al Suwaidi, K.O., Al Blooshi, A.Y. and Al Dhaheri, S.S. 2017. Is this the last stand of the Critically Endangered green sawfish <i>Pristis zijsron</i> in the Arabian Gulf? <i>Endangered Species Research</i> 32: 265–275.",
+      "year": "2017",
+      "title": "Is this the last stand of the Critically Endangered green sawfish <i>Pristis zijsron</i> in the Arabian Gulf?",
+      "author": "Jabado, R.W., Al Baharna, R.A., Al Ali, S.R., Al Suwaidi, K.O., Al Blooshi, A.Y. and Al Dhaheri, S.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leeney, R.H. 2017. Are sawfishes still present in Mozambique? A baseline ecological study. <i>PeerJ</i> 5: 24.",
+      "year": "2017",
+      "title": "Are sawfishes still present in Mozambique? A baseline ecological study",
+      "author": "Leeney, R.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leeney, R.H., Mana, R.R. and Dulvy, N.K. 2018. Fishers ecological knowledge of sawfishes in the Sepik and Ramu rivers, northern Papua New Guinea. <i>Endangered Species Research</i> 36: 15–26.",
+      "year": "2018",
+      "title": "Fishers ecological knowledge of sawfishes in the Sepik and Ramu rivers, northern Papua New Guinea",
+      "author": "Leeney, R.H., Mana, R.R. and Dulvy, N.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Manjaji-Matsumoto, B.M., Kyne, P.M., Yee, J.C. and Dickson, A.F. 2017. Tagging and monitoring of coastal marine and freshwater elasmobranch population in Sabah.  WWF Malaysia Project Report (Shark Protection – Marine Programme; Project Number MA010311-000-GENF/ UMS Project Code GL00138). WWF-Malaysia Marine Programme, Sabah, Malaysia.",
+      "year": "2017",
+      "title": "Tagging and monitoring of coastal marine and freshwater elasmobranch population in Sabah",
+      "author": "Manjaji-Matsumoto, B.M., Kyne, P.M., Yee, J.C. and Dickson, A.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moazzam, M. and Osmany, H.B. 2014. Occurrence of sawfish (Family: Pristidae) in Pakistan. <i>International Journal of Biology and Biotechnology</i> 11(1): 97–102.",
+      "year": "2014",
+      "title": "Occurrence of sawfish (Family: Pristidae) in Pakistan",
+      "author": "Moazzam, M. and Osmany, H.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tanna, A., Fernando, D., Gobiraj, R., Pathirana, B.M., Thilakaratna, S. and Jabado, R.W. 2021. Where have all the sawfishes gone? Perspectives on declines of these Critically Endangered species in Sri Lanka. <i>Aquatic Conservation: Marine and Freshwater Ecosystems </i> 31(8): 2149–2163.",
+      "year": "2021",
+      "title": "Where have all the sawfishes gone? Perspectives on declines of these Critically Endangered species in Sri Lanka",
+      "author": "Tanna, A., Fernando, D., Gobiraj, R., Pathirana, B.M., Thilakaratna, S. and Jabado, R.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wueringer, B.E. 2017. Sawfish captures in the Queensland Shark Control Program, 1962 to 2016. <i>Endangered Species Research</i> 34: 293–300.",
+      "year": "2017",
+      "title": "Sawfish captures in the Queensland Shark Control Program, 1962 to 2016",
+      "author": "Wueringer, B.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Booth, H., Chaya, F., Ng, S., Tan, V., Rao, M., Teepol, B., Matthews, E., Lim, A. and Gumal, M. 2021. Elasmobranch fishing and trade in Sarawak, Malaysia, with implications for management. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 31(11): 3056–3071.",
+      "year": "2021",
+      "title": "Elasmobranch fishing and trade in Sarawak, Malaysia, with implications for management",
+      "author": "Booth, H., Chaya, F., Ng, S., Tan, V., Rao, M., Teepol, B., Matthews, E., Lim, A. and Gumal, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cabanillas-Torpoco, M., Castillo, D., Siccha-Ramírez, R., Forsberg, K., Purizaca, W. and Maceda, M. 2020. Occurrence of the largetooth sawfish <i>Pristis pristis</i> (Linneaus, 1758) in northern Peru. <i>Zootaxa</i> 4868(1): 147–150.",
+      "year": "2020",
+      "title": "Occurrence of the largetooth sawfish <i>Pristis pristis</i> (Linneaus, 1758) in northern Peru",
+      "author": "Cabanillas-Torpoco, M., Castillo, D., Siccha-Ramírez, R., Forsberg, K., Purizaca, W. and Maceda, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chidlow, J.A. 2007. First record of the freshwater sawfish, <i>Pristis microdon</i>, from southwestern Australian waters. <i>Records of the Western Australian Museum</i> 23: 307–308.",
+      "year": "2007",
+      "title": "First record of the freshwater sawfish, <i>Pristis microdon</i>, from southwestern Australian waters",
+      "author": "Chidlow, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "D'Alberto, B.M., White, W.T., Chin, A., Dharmadi and Simpfendorfer, C.A. 2022. Untangling the Indonesian tangle net fishery: Describing a data-poor fishery targeting large, threatened rays (Superorder Batoidea). <i>Aquatic Conservation: Marine and Freshwater Ecosystems </i> 32(2): 366–384.",
+      "year": "2022",
+      "title": "Untangling the Indonesian tangle net fishery: Describing a data-poor fishery targeting large, threatened rays (Superorder Batoidea)",
+      "author": "D'Alberto, B.M., White, W.T., Chin, A., Dharmadi and Simpfendorfer, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Devadoss, P., Gnanamuttu, J.C., Srinivasarangan, S. and Subramani, S. 1989. On the landing of a Large Sawfish at Madras. <i>Marine Fisheries Information Service</i> 98: 13.",
+      "year": "1989",
+      "title": "On the landing of a Large Sawfish at Madras",
+      "author": "Devadoss, P., Gnanamuttu, J.C., Srinivasarangan, S. and Subramani, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fearing, A.M. 2020. Assessment of genetic diversity in Largetooth Sawfish, <i>Pristis pristis</i>, populations over the 20th Century. MSc thesis. The University of Southern Mississippi.",
+      "year": "2020",
+      "title": "Assessment of genetic diversity in Largetooth Sawfish, <i>Pristis pristis</i>, populations over the 20th Century. MSc thesis",
+      "author": "Fearing, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Feitosa, L.M., Martins, A.P.B. and Nunes, J.L.S. 2017. Sawfish (Pristidae) records along the Eastern Amazon coast. <i>Endangered Species Research</i> 34: 229–234.",
+      "year": "2017",
+      "title": "Sawfish (Pristidae) records along the Eastern Amazon coast",
+      "author": "Feitosa, L.M., Martins, A.P.B. and Nunes, J.L.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernandez‐Carvalho, J., Imhoff, J.L., Faria, V.V., Carlson, J.K. and Burgess, G.H. 2014. Status and the potential for extinction of the Largetooth Sawfish <i>Pristis pristis</i> in the Atlantic Ocean. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 24(4): 47–497.",
+      "year": "2014",
+      "title": "Status and the potential for extinction of the Largetooth Sawfish <i>Pristis pristis</i> in the Atlantic Ocean",
+      "author": "Fernandez‐Carvalho, J., Imhoff, J.L., Faria, V.V., Carlson, J.K. and Burgess, G.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Funge-Smith, S.J. 2018. Review of the state of world fishery resources: inland fisheries.  FAO Fisheries and Aquaculture Circular. Food and Agricultural Organization of the United Nations (FAO), Rome.",
+      "year": "2018",
+      "title": "Review of the state of world fishery resources: inland fisheries",
+      "author": "Funge-Smith, S.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gómez-Rodríguez, S., Caldas, J.P., Acero, A., Martínez-Silva, M.A., Sáenz-Okuyama, P., Carlos, L. and Lasso-Alcalá, O.M. 2014. Geographic distribution and conservation status of sawfish <i>Pristis</i> spp (Pristiformes: Pristidae) in the southern Caribbean Sea. <i>Biota Colombiana</i> 15: 109–117.",
+      "year": "2014",
+      "title": "Geographic distribution and conservation status of sawfish <i>Pristis</i> spp (Pristiformes: Pristidae) in the southern Caribbean Sea",
+      "author": "Gómez-Rodríguez, S., Caldas, J.P., Acero, A., Martínez-Silva, M.A., Sáenz-Okuyama, P., Carlos, L. and Lasso-Alcalá, O.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, M.I., White, W.T., Amepou, Y., Appleyard, S.A., Baje, L., Devloo-Delva, F. and Chin, A. 2021b. Papua New Guinea: A Potential Refuge for Threatened Indo–Pacific River Sharks and Sawfishes. <i>Frontiers in Conservation Science</i> 2: 1–15.",
+      "year": "2021b",
+      "title": "Papua New Guinea: A Potential Refuge for Threatened Indo–Pacific River Sharks and Sawfishes",
+      "author": "Grant, M.I., White, W.T., Amepou, Y., Appleyard, S.A., Baje, L., Devloo-Delva, F. and Chin, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grant, M.I., White, W.T., Amepou, Y., Baje, L., Diedrich, A., Ibana, D. and Chin, A. 2021a. Local knowledge surveys with small-scale fishers indicate challenges to sawfish conservation in southern Papua New Guinea. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 31(10): 2883–2900.",
+      "year": "2021a",
+      "title": "Local knowledge surveys with small-scale fishers indicate challenges to sawfish conservation in southern Papua New Guinea",
+      "author": "Grant, M.I., White, W.T., Amepou, Y., Baje, L., Diedrich, A., Ibana, D. and Chin, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haines, A.K. 1979. <i>Purari River (Wabo) Hydroelectric Scheme Environmental Studies Vol. 6. An ecological survey of fish of the lower Purari RIver System, Papua New Guinea</i>. Office of Environment and Conservation, Central Government Offices and Department of Minerals and Energy, Port Moresby.",
+      "year": "1979",
+      "title": "Purari River (Wabo) Hydroelectric Scheme Environmental Studies Vol. 6. An ecological survey of fish of the lower Purari RIver System, Papua New Guinea",
+      "author": "Haines, A.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "He, F., Zarfl, C., Bremerich, V., David, J.N.W., Hogan, Z., Kalinkat, G., Tockner, K. and Jähnig, S.C. 2019. The global decline of freshwater megafauna. <i>Global Change Biology</i> 25: 3883–3892.",
+      "year": "2019",
+      "title": "The global decline of freshwater megafauna",
+      "author": "He, F., Zarfl, C., Bremerich, V., David, J.N.W., Hogan, Z., Kalinkat, G., Tockner, K. and Jähnig, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kyne, P., Carlson, J. and Smith, K. 2013. <i>Pristis pristis</i> (errata version published in 2019). The IUCN Red List of Threatened Species 2013: e.T18584848A141788242. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2013-1.RLTS.T18584848A18620395.en\">http://dx.doi.org/10.2305/IUCN.UK.2013-1.RLTS.T18584848A18620395.en</a>. ",
+      "year": "2013",
+      "title": "<i>Pristis pristis</i> (errata version published in 2019). The IUCN Red List of Threatened Species 2013: e.T18584848A141788242",
+      "author": "Kyne, P., Carlson, J. and Smith, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kyne, P.M., Heupel, M.R., White, W.T. and Simpfendorfer, C.A. 2021a. <i>The Action Plan for Australian Sharks and Rays 2021</i>. National Environmental Science Program, Marine Biodiversity Hub, Hobart.",
+      "year": "2021a",
+      "title": "The Action Plan for Australian Sharks and Rays 2021",
+      "author": "Kyne, P.M., Heupel, M.R., White, W.T. and Simpfendorfer, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kyne, P.M., Oetinger, M., Grant, M.I. and Feutry, P. 2021b. Life history of the Critically Endangered Largetooth Sawfish: a compilation of data for population assessment and demographic modelling. <i>Endangered Species Research</i> 44: 79–88.",
+      "year": "2021b",
+      "title": "Life history of the Critically Endangered Largetooth Sawfish: a compilation of data for population assessment and demographic modelling",
+      "author": "Kyne, P.M., Oetinger, M., Grant, M.I. and Feutry, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lear, K.O., Morgan, D.L., Whitty, J.M., Beatty, S. J. and Gleiss, A.C. 2021. Wet season flood magnitude drives resilience to dry season drought of a euryhaline elasmobranch in a dry-land river. <i>Science of the Total Environment</i> 750: 142234.",
+      "year": "2021",
+      "title": "Wet season flood magnitude drives resilience to dry season drought of a euryhaline elasmobranch in a dry-land river",
+      "author": "Lear, K.O., Morgan, D.L., Whitty, J.M., Beatty, S. J. and Gleiss, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lear, K.O., Morgan, D.L., Whitty, J.M., Whitney, N., Byrnes, E., Beatty, S.J. and Gleiss, A.C. 2020. Divergent field metabolic rates highlight the challenges of increasing temperatures and energy limitation in two sympatric elasmobranchs. <i>Oecologia</i> 193: 311–323.",
+      "year": "2020",
+      "title": "Divergent field metabolic rates highlight the challenges of increasing temperatures and energy limitation in two sympatric elasmobranchs",
+      "author": "Lear, K.O., Morgan, D.L., Whitty, J.M., Whitney, N., Byrnes, E., Beatty, S.J. and Gleiss, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lear, K.O., Whitty, J.M., Gleiss, A.C., Thorburn, D., Beatty, S.J., Fazeldean, T., Watson, J.T., Green, N. and Morgan, D.L. 2019. Recruitment of a critically endangered sawfish into a riverine nursery depends on natural flow regimes. <i>Scientific Reports</i> 9(1): 17071.",
+      "year": "2019",
+      "title": "Recruitment of a critically endangered sawfish into a riverine nursery depends on natural flow regimes",
+      "author": "Lear, K.O., Whitty, J.M., Gleiss, A.C., Thorburn, D., Beatty, S.J., Fazeldean, T., Watson, J.T., Green, N. and Morgan, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lennox, R.J., Crook, D.A., Moyle, P.B., Struthers, D.P. and Cooke, S.J. 2019. Toward a better understanding of freshwater fish responses to an increasingly drought-stricken world. <i>Reviews in Fish Biology and Fisheries</i> 29: 71–92.",
+      "year": "2019",
+      "title": "Toward a better understanding of freshwater fish responses to an increasingly drought-stricken world",
+      "author": "Lennox, R.J., Crook, D.A., Moyle, P.B., Struthers, D.P. and Cooke, S.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maus, V., Giljum, S., Gutschlhofer, J., da Silva, D.M., Probst, M., Gass, S.L.B., Luckeneder, S., Lieber, M. and McCallum, I. 2020. A global-scale data set of mining areas. <i>Scientific Data</i> 7: 289.",
+      "year": "2020",
+      "title": "A global-scale data set of mining areas",
+      "author": "Maus, V., Giljum, S., Gutschlhofer, J., da Silva, D.M., Probst, M., Gass, S.L.B., Luckeneder, S., Lieber, M. and McCallum, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "McDavitt, M.T. 2002. Lake Nicaragua revisited: conversations with a former sawfish fisherman. <i>Shark News</i> 14: 5.",
+      "year": "2002",
+      "title": "Lake Nicaragua revisited: conversations with a former sawfish fisherman.",
+      "author": "McDavitt, M.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mendoza, A., Kelez, S., Cherres, W.G. and Maguiño, R. 2017. The Largetooth Sawfish, <i>Pristis pristis</i> (Linnaeus, 1758), is not extirpated from Peru: new records from Tumbes. <i>Check List</i> 13(4): 261.",
+      "year": "2017",
+      "title": "The Largetooth Sawfish, <i>Pristis pristis</i> (Linnaeus, 1758), is not extirpated from Peru: new records from Tumbes",
+      "author": "Mendoza, A., Kelez, S., Cherres, W.G. and Maguiño, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petheram, C., Rogers, L., Read, A., Gallant, J., Moon, A., Yang, A., Gonzalez, D., Seo, L., Marvanek, S., Hughes, J., Ponce-Reyes, R., Wilson, P., Wang, B., Ticehurst, C. and Barber, M. 2017. Assessment of surface water storage options in the Fitzroy, Darwin and Mitchell catchments.   A technical report to the Australian Government from the CSIRO Northern Australia Water Resource Assessment, part of the National Water Infrastructure Development Fund: Water Resource Assessments. CSIRO, Australia.",
+      "year": "2017",
+      "title": "Assessment of surface water storage options in the Fitzroy, Darwin and Mitchell catchments",
+      "author": "Petheram, C., Rogers, L., Read, A., Gallant, J., Moon, A., Yang, A., Gonzalez, D., Seo, L., Marvanek, S., Hughes, J., Ponce-Reyes, R., Wilson, P., Wang, B., Ticehurst, C. and Barber, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ramsar Convention on Wetlands. 2018. Global Wetland Outlook: State of the World’s Wetlands and their Services to People. Ramsar Convention Secretariat, Gland, Switzerland.",
+      "year": "2018",
+      "title": "Global Wetland Outlook: State of the World’s Wetlands and their Services to People",
+      "author": "Ramsar Convention on Wetlands",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas-Luis, R. 2021. Pez sierra <i>Prisitis pristis</i> una historia en Ecuador. In: Jiménez-Prado, P. and Valdiviezo-Rivera, J. (eds), <i>Biodiversidad de peces en el Ecuador</i>, pp. 99–110. PUCESE-UTI-INABIO, Ecuador.",
+      "year": "2021",
+      "title": "Pez sierra <i>Prisitis pristis</i> una historia en Ecuador",
+      "author": "Rosas-Luis, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, H.W. 1931. The absorption and excretion of water and salts by the elasmobranch fishes. <i>American Journal of Physiology</i> 98: 279–295.",
+      "year": "1931",
+      "title": "The absorption and excretion of water and salts by the elasmobranch fishes",
+      "author": "Smith, H.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taniuchi, T., Ishihara, H., Tanaka, S., Hyodo, S., Murakami, M. and Seret, B. 2003. Occurrence of two species of elasmobranchs, <i>Carcharhinus leucas</i> and <i>Pristis microdon</i>, in Betsiboka River, west Madagascar. <i>Cybium: International Journal of Ichthyology</i> 27(3): 237–241.",
+      "year": "2003",
+      "title": "Occurrence of two species of elasmobranchs, <i>Carcharhinus leucas</i> and <i>Pristis microdon</i>, in Betsiboka River, west Madagascar",
+      "author": "Taniuchi, T., Ishihara, H., Tanaka, S., Hyodo, S., Murakami, M. and Seret, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tickner, D., Opperman, J.J., Abell, R., Acreman, M., Arthington, A.H., Bunn, S.E., Cooke, S.J., Dalton, J., Darwall, W., Edwards, G., Harrison, I., Hughes, K., Jones, T., Leclère, D., Lynch, A., McClain, M., Muruven, D., Olden, J., Ormerod, S. and Young, L. 2020. Bending the curve of global freshwater biodiversity loss: An emergency recovery plan. <i>BioScience</i> 70: 330–342.",
+      "year": "2020",
+      "title": "Bending the curve of global freshwater biodiversity loss: An emergency recovery plan",
+      "author": "Tickner, D., Opperman, J.J., Abell, R., Acreman, M., Arthington, A.H., Bunn, S.E., Cooke, S.J., Dalton, J., Darwall, W., Edwards, G., Harrison, I., Hughes, K., Jones, T., Leclère, D., Lynch, A., McClain, M., Muruven, D., Olden, J., Ormerod, S. and Young, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "White, W.T., Appleyard, S.A., Kyne, P.M. and Mana, R.R. 2017. Sawfishes in Papua New Guinea: a preliminary investigation into their status and level of exploitation. <i>Endangered Species Research </i> 32: 277–291.",
+      "year": "2017",
+      "title": "Sawfishes in Papua New Guinea: a preliminary investigation into their status and level of exploitation",
+      "author": "White, W.T., Appleyard, S.A., Kyne, P.M. and Mana, R.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

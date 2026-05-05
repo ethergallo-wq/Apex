@@ -1,0 +1,883 @@
+{
+  "assessment_date": "2024-07-03T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22693717,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22693717/262144636",
+  "citation": "BirdLife International 2024. Recurvirostra americana. The IUCN Red List of Threatened Species 2024: e.T22693717A262144636. Accessed on 05 May 2026.",
+  "assessment_id": 262144636,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22693717,
+    "scientific_name": "Recurvirostra americana",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "CHARADRIIFORMES",
+    "family_name": "RECURVIROSTRIDAE",
+    "genus_name": "Recurvirostra",
+    "species_name": "americana",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Gmelin, 1789",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "American Avocet",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "460000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "4.75",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": "A sizable shorebird with long legs, measuring 43–47 cm in length, including a bill of 8.2- to 9.5-cm length, and a wingspan reaching up to 91 cm, weighing between 275–350 g. Both sexes exhibit similar plumage but differ in size (males larger) and bill shape (females have a shorter, more strongly recurved bill). Plumage varies seasonally: rusty head and neck in breeding plumage (Alternate), and light grey in winter plumage (Basic). Legs are greyish-blue, with toes that are more than 50% webbed, and a small hallux (Ackerman <em>et al.</em> 2020).",
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "1",
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "Yes",
+    "no_of_individuals_in_largest_subpopulation": "460000",
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "8870000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The species inhabit western North America from March to October and migrate to wintering grounds in coastal California, southern Texas, Florida, Louisiana, and south to Guatemala.",
+    "population": "The global population is estimated to number 460,000 mature individuals (Partners in Flight 2023).",
+    "habitats": "<p>During the breeding season, American Avocets inhabit a variety of habitats including salt ponds, potholes, shallow alkaline wetlands, mudflats of inland lakes, impoundments, and evaporation ponds. These wetlands are typically characterised by common cattail (<em>Typha latifolia</em>), bulrushes (<em>Schoenoplectus spp.</em>), or sedges (<em>Carex spp.</em>). However, they spend most of their time in open areas devoid of vegetation, or areas dominated by glasswort (Salicornia spp.), salt grass (<em>Distichlis</em> <em>spp.</em>), and greasewood (<em>Sarcobatus spp.</em>) in upland regions (Ackerman <em>et al.</em> 2020).</p>",
+    "threats": "<p>Numerous threats have been identified for this species although the current uncertainty over the population trend hampers conclusions over the impact these are having. Threats identified include wetland loss and conversion, driven chiefly by agricultural and urban projects (Ackerman&#160;<em>et al.</em>&#160;2020). Although surrogate habitats like salt evaporation ponds and agricultural fields have partially offset these losses, they are not without challenges. For instance, plans to convert former salt ponds in San Francisco Bay back into tidal marsh habitat threaten the species' established breeding population there, as tidal marshes are not preferred foraging or nesting habitats for these birds (Hartman <em>et al.</em> 2021). Furthermore, habitats in the Pacific Flyway crucial for breeding, staging, and wintering, such as those in the San Francisco Bay, are already suffering from pollution from agricultural and industrial degradation of water quality (Ackerman <em>et al.</em> 2014, Harvey&#160;<em>et al.</em>&#160;1992) and rising salinity levels (Hannam <em>et al.</em> 2009).</p><p>Pesticides and other contaminants pose potential threats to <em>R. americana</em> across their habitats. DDT and its metabolites, such as DDE, have accumulated in some avocet populations. Selenium, while essential in low doses, becomes toxic at higher levels, often contaminating wetlands through agricultural practices. Selenium bioaccumulation has led to reproductive failures and developmental abnormalities in avocet embryos and chicks, particularly notable at sites like Kesterson National Wildlife Refuge in California. Additionally, methylmercury, which biomagnifies in aquatic food webs, poses a risk, affecting avocet reproduction and development in contaminated areas like San Francisco Bay and Great Salt Lake (Ackerman <em>et al.</em> 2020).&#160;</p><p>Climate change poses a possible threat to wetlands by disrupting their hydrological cycles, which are crucial for their ecological functions. Projections suggest a notable decline in the extent of inundated wetlands throughout the south-central Great Plains by the end of the century, with eastern regions expected to be particularly affected (Londe&#160;<em>et al.</em>&#160;2024)&#160;. The increased frequency of extreme weather events, such as droughts and intense precipitation, further destabilises wetland ecosystems by altering their hydrological patterns. These changes undermine the critical role of wetlands as crucial stopover sites for migratory wetland birds including as <em>R. americana</em>, potentially limiting their access to essential resources during migration (Londe <em>et al.</em> 2024).&#160;</p>",
+    "measures": "<p><br/></p>",
+    "use_trade": null,
+    "rationale": "This species has a large geographic range size (extent of occurrence&#160;&gt;8 million km<sup>2</sup> in both the breeding and non-breeding seasons), and so does not approach Criterion B thresholds. It also has a large estimated population size (460,000 mature individuals; Partners in Flight 2023), and so does not approach Criteria C or D thresholds. Considering its population trend over three generations (<em>c. </em>14 years), the data presented in Smith <em>et al.</em> (2023) indicate a slow decline of <em>c. </em>16% (with a wide confidence interval), although the underlying interannual trend data suggest a fluctuating population. There is some evidence of recent declines from the western USA and Mexico (Migratory Shorebird Project, unpublished data) and from eBird (Fink <em>et al.</em> 2023), but also consistent evidence of a modest overall recent increase in North America from both the Christmas Bird Count (Meehan <em>et al.</em> 2022) and the Breeding Bird Survey (Ziolkowski <em>et al.</em> 2022). The population trend is therefore considered unknown, but there is little evidence the species is declining at a rate that approaches Criterion A thresholds. The species is therefore listed as Least Concern.",
+    "trend_justification": "Considering its population trend over three generations (<em>c.</em> 14 years), the data presented in Smith <em>et al.</em> (2023) indicate a slow decline of <em>c. </em>16% (with a wide confidence interval), although the underlying interannual trend data suggest a fluctuating population. There is some evidence of recent declines from the western USA and Mexico (Migratory Shorebird Project, unpublished data) and from eBird (Fink <em>et al.</em> 2023), but also consistent evidence of a modest overall recent increase in North America from both the Christmas Bird Count (Meehan <em>et al</em>. 2022) and the Breeding Bird Survey (Ziolkowski <em>et al.</em> 2022). Because of the inconsistencies in the data available, the trend is considered unknown.",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Tidepools"
+      },
+      "code": "12_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Seasonally Flooded Agricultural Land"
+      },
+      "code": "15_8"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Saline, Brackish or Alkaline Marshes/Pools"
+      },
+      "code": "5_16"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mud Flats and Salt Flats"
+      },
+      "code": "12_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Salt Exploitation Sites"
+      },
+      "code": "15_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Lakes and Flats"
+      },
+      "code": "5_15"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Saline, Brackish or Alkaline Lakes"
+      },
+      "code": "5_14"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Marshes/Pools"
+      },
+      "code": "5_17"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Salt Marshes (Emergent Grasses)"
+      },
+      "code": "12_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Wastewater Treatment Areas"
+      },
+      "code": "15_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (agricultural use)"
+      },
+      "code": "7_2_7"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Seepage from mining"
+      },
+      "code": "9_2_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Berryman, A.",
+      "value": [
+        "Alex Berryman (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Butchart, S. & Ekstrom, J.",
+      "value": [
+        "Jonathan Ekstrom (BirdLife International)",
+        "Stuart Butchart (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Chad, E., Hermes, C. & Murray-Watson, R.",
+      "value": [
+        "Claudia Hermes (BirdLife International)",
+        "Rachel Murray-Watson (BirdLife International)",
+        "Euan Chad (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Partners in Flight. 2019. Avian Conservation Assessment Database, version 2019. Available at: <a href=\"http://pif.birdconservancy.org/ACAD\">http://pif.birdconservancy.org/ACAD</a>. ",
+      "year": "2019",
+      "title": "Avian Conservation Assessment Database, version 2019",
+      "author": "Partners in Flight",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wetlands International. 2020. Waterbird Population Estimates. Available at: <a href=\"wpe.wetlands.org\">wpe.wetlands.org</a>. ",
+      "year": "2020",
+      "title": "Waterbird Population Estimates",
+      "author": "Wetlands International",
+      "citation_short": null
+    },
+    {
+      "citation": "Pardieck, K. L.; Ziolkowski Jr., D. J.; Lutmerding, M.; Hudson, M. A. R. 2018. North American Breeding Bird Survey Dataset 1966 - 2019, version 2019.0.",
+      "year": "2018",
+      "title": "North American Breeding Bird Survey Dataset 1966 - 2019, version 2019.0",
+      "author": "Pardieck, K. L.; Ziolkowski Jr., D. J.; Lutmerding, M.; Hudson, M. A. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Fink, D., Auer, T., Johnston, A., Strimas-Mackey, M., Ligocki, S., Robinson, O., Hochachka, W., Jeromczyk, L., Crowley, C., Dunham, K., Stillman, A., Davies, I., Rodewald, A., Ruiz-Gutierrez, V. and Wood, C. 2023. eBird Status and Trends, Data Version: 2022. Ithaca, New York. Cornell Lab of Ornithology. Available at: <a href=\"https://doi.org/10.2173/ebirdst.2022\">https://doi.org/10.2173/ebirdst.2022</a>. (Accessed: 13/02/2024).",
+      "year": "2023",
+      "title": "eBird Status and Trends, Data Version: 2022",
+      "author": "Fink, D., Auer, T., Johnston, A., Strimas-Mackey, M., Ligocki, S., Robinson, O., Hochachka, W., Jeromczyk, L., Crowley, C., Dunham, K., Stillman, A., Davies, I., Rodewald, A., Ruiz-Gutierrez, V. and Wood, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Partners in Flight. 2023. Avian Conservation Assessment Database, version 2023-4. Partners in Flight Databases. Available at: <a href=\"https://pif.birdconservancy.org/avian-conservation-assessment-database-scores/\">https://pif.birdconservancy.org/avian-conservation-assessment-database-scores/</a>. (Accessed: 18th March, 2024).",
+      "year": "2023",
+      "title": "Avian Conservation Assessment Database, version 2023-4",
+      "author": "Partners in Flight",
+      "citation_short": null
+    },
+    {
+      "citation": "Ackerman, J. T., C. A. Hartman, M. P. Herzog, J. Y. Takekawa, J. A. Robinson, L. W. Oring, J. P. Skorupa, and R. Boettcher. 2020. American Avocet (Recurvirostra americana), version 1.0. In Birds of the World. Ithaca, NY, USA.. Cornell Lab of Ornithology. Available at: <a href=\"https://doi.org/10.2173/bow.ameavo.01\">https://doi.org/10.2173/bow.ameavo.01</a>. ",
+      "year": "2020",
+      "title": "American Avocet (Recurvirostra americana), version 1.0. In Birds of the World",
+      "author": "Ackerman, J. T., C. A. Hartman, M. P. Herzog, J. Y. Takekawa, J. A. Robinson, L. W. Oring, J. P. Skorupa, and R. Boettcher",
+      "citation_short": null
+    },
+    {
+      "citation": "Ackerman, J. T., Eagles-Smith, C. A., Heinz, G., De La Cruz, S., Takekawa, J. Y., Miles, A. K., Adelsbach, T. L., Herzog, M. P., Bluso-Demers, J. D., Demers, S. A., Herring, G., Hoffman, D. J., Hartman, C. A., Willacker, J. J., Suchanek, T. H., Schwarzbach, S. E., & Maurer, T. C. 2014. Mercury in Birds of San Francisco Bay-Delta, California—Trophic Pathways, Bioaccumulation, and Ecotoxicological Risk to Avian Reproduction.  USGS Open-File Report No. 2014–1251. U.S. Geological Survey.",
+      "year": "2014",
+      "title": "Mercury in Birds of San Francisco Bay-Delta, California—Trophic Pathways, Bioaccumulation, and Ecotoxicological Risk to Avian Reproduction",
+      "author": "Ackerman, J. T., Eagles-Smith, C. A., Heinz, G., De La Cruz, S., Takekawa, J. Y., Miles, A. K., Adelsbach, T. L., Herzog, M. P., Bluso-Demers, J. D., Demers, S. A., Herring, G., Hoffman, D. J., Hartman, C. A., Willacker, J. J., Suchanek, T. H., Schwarzbach, S. E., & Maurer, T. C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Davis, William E. Jr. 1999. About the Cover: American Avocet. <i>Bird Observer</i> 27(4): 1-3.",
+      "year": "1999",
+      "title": "About the Cover: American Avocet",
+      "author": "Davis, William E. Jr. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hannam, Kristina & Oring, Lewis & Herzog, Mark. 2009. Impacts of Salinity on Growth and Behavior of American Avocet Chicks. <i>Waterbirds</i> 26: 119-125.",
+      "year": "2009",
+      "title": "Impacts of Salinity on Growth and Behavior of American Avocet Chicks",
+      "author": "Hannam, Kristina & Oring, Lewis & Herzog, Mark",
+      "citation_short": null
+    },
+    {
+      "citation": "Hartman, C.A., Ackerman, J.T., Schacter, C.R., Herzog, M.P., Tarjan, L.M., Wang, Y., Strong, C., Tertes, R., and Warnock, N., 2021. Breeding waterbird populations have declined in South San Francisco Bay: An assessment over two decades. <i>San Francisco Estuary and Watershed Science</i> 19(3): 1-29.",
+      "year": "2021",
+      "title": "Breeding waterbird populations have declined in South San Francisco Bay: An assessment over two decades",
+      "author": "Hartman, C.A., Ackerman, J.T., Schacter, C.R., Herzog, M.P., Tarjan, L.M., Wang, Y., Strong, C., Tertes, R., and Warnock, N.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Harvey, T. E., K. J. Miller, R. L. Hothem, M. J. Rauzon, G. W. Page and R. A. Keck. 1992. Status and trends report on wildlife of the San Francisco Estuary.  San Francisco Estuary Project. San Francisco, CA.",
+      "year": "1992",
+      "title": "Status and trends report on wildlife of the San Francisco Estuary",
+      "author": "Harvey, T. E., K. J. Miller, R. L. Hothem, M. J. Rauzon, G. W. Page and R. A. Keck.",
+      "citation_short": null
+    },
+    {
+      "citation": "Laubhan, M. K. and J. H. Gammonley. 2000. Density and foraging habitat selection of waterbirds breeding in the San Luis Valley of Colorado. <i>Journal of Wildlife Management </i> 64(3): 808-819.",
+      "year": "2000",
+      "title": "Density and foraging habitat selection of waterbirds breeding in the San Luis Valley of Colorado",
+      "author": "Laubhan, M. K. and J. H. Gammonley.",
+      "citation_short": null
+    },
+    {
+      "citation": "Londe, D. W., Davis, C. A., Loss, S. R., Robertson, E. P., Haukos, D. A., & Hovick, T. J. 2024. Climate change causes declines and greater extremes in wetland inundation in a region important for wetland birds. <i>Ecological Applications</i> 34: 1-23.",
+      "year": "2024",
+      "title": "Climate change causes declines and greater extremes in wetland inundation in a region important for wetland birds",
+      "author": "Londe, D. W., Davis, C. A., Loss, S. R., Robertson, E. P., Haukos, D. A., & Hovick, T. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meehan, T.D., LeBaron, G.S., Dale, K., Krump, A., Michel, N.L., Wilsey, C.B. 2022. Trends in relative abundance for birds wintering in the continental USA and Canada: Audubon Christmas Bird Counts, 1966-2021, version 4.0. New York, USA. National Audubon Society.",
+      "year": "2022",
+      "title": "Trends in relative abundance for birds wintering in the continental USA and Canada: Audubon Christmas Bird Counts, 1966-2021, version 4.0.",
+      "author": "Meehan, T.D., LeBaron, G.S., Dale, K., Krump, A., Michel, N.L., Wilsey, C.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paton, P. W. C., C. Kneedy and E. Sorensen. 1992. Chronology of shorebird and ibis use of selected marshes at Great Salt Lake. <i>Utah Birds</i> 8: 1-19.",
+      "year": "1992",
+      "title": "Chronology of shorebird and ibis use of selected marshes at Great Salt Lake",
+      "author": "Paton, P. W. C., C. Kneedy and E. Sorensen",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, P.A., Smith, A.C., Andres, B., Francis, C.M., Harrington, B., Friis, C., Morrison, R.G., Paquet, J., Winn, B. and Brown, S., 2023. Accelerating declines of North America’s shorebirds signal the need for urgent conservation action. <i>Ornithological Applications</i> 125(2): 1-15.",
+      "year": "2023",
+      "title": "Accelerating declines of North America’s shorebirds signal the need for urgent conservation action.",
+      "author": "Smith, P.A., Smith, A.C., Andres, B., Francis, C.M., Harrington, B., Friis, C., Morrison, R.G., Paquet, J., Winn, B. and Brown, S.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Ziolkowski Jr., D.J., Lutmerding, M., Aponte, V.I., and Hudson, M-A.R., 2022. <i>North American Breeding Bird Survey Dataset 1966 - 2021</i>. U.S. Geological Survey data release.",
+      "year": "2022",
+      "title": "North American Breeding Bird Survey Dataset 1966 - 2021",
+      "author": "Ziolkowski Jr., D.J., Lutmerding, M., Aponte, V.I., and Hudson, M-A.R.,",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,1775 @@
+{
+  "assessment_date": "2020-09-28T01:00:00.000+01:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 182530066,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/182530066/730332",
+  "citation": "IUCN SSC Amphibian Specialist Group 2023. Bufotes viridis. The IUCN Red List of Threatened Species 2023: e.T182530066A730332. Accessed on 05 May 2026.",
+  "assessment_id": 730332,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 182530066,
+    "scientific_name": "Bufotes viridis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "BUFONIDAE",
+    "genus_name": "Bufotes",
+    "species_name": "viridis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Laurenti, 1768)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "European Green Toad",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Πρασινόφρυνος",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Aljoum Akhdar",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Crapaud vert",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Gece Kurbağası",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Ropucha Zielona",
+        "language": "pol"
+      },
+      {
+        "main": false,
+        "name": "Rospo Smeraldino",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Sapo Verde",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Zelenaya Zhaba",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Zöld varangy",
+        "language": "hun"
+      },
+      {
+        "main": false,
+        "name": "Зелена крастава жаба",
+        "language": "mac"
+      },
+      {
+        "main": true,
+        "name": "Green Toad",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Pseudepidalea viridis (Laurenti, 1768)",
+        "status": "ACCEPTED",
+        "genus_name": "Pseudepidalea",
+        "species_name": "viridis",
+        "species_author": "(Laurenti, 1768)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana picta Pallas, 1831",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "picta",
+        "species_author": "Pallas, 1831",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana variabilis Pallas, 1769",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "variabilis",
+        "species_author": "Pallas, 1769",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Bufo variabilis (Pallas, 1769)",
+        "status": "ACCEPTED",
+        "genus_name": "Bufo",
+        "species_name": "variabilis",
+        "species_author": "(Pallas, 1769)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana buffina Müller, 1776",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "buffina",
+        "species_author": "Müller, 1776",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Bufo roseus Merrem, 1820",
+        "status": "ACCEPTED",
+        "genus_name": "Bufo",
+        "species_name": "roseus",
+        "species_author": "Merrem, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Bufo schreberianus Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Bufo",
+        "species_name": "schreberianus",
+        "species_author": "Laurenti, 1768",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Bufo longipes Bonaparte, 1840",
+        "status": "ACCEPTED",
+        "genus_name": "Bufo",
+        "species_name": "longipes",
+        "species_author": "Bonaparte, 1840",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Bufo viridis Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Bufo",
+        "species_name": "viridis",
+        "species_author": "Laurenti, 1768",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Bufotes variabilis (Pallas, 1769)",
+        "status": "MERGE",
+        "genus_name": "Bufotes",
+        "species_name": "variabilis",
+        "species_author": "(Pallas, 1769)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "9236364",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Following the revision of the <em>Bufo viridis</em> complex by Stöck <em>et al</em>. (2006) and the further work of Dufresnes <em>et al. </em>(2019), subpopulations of Green Toads now allocated to this species are distributed through much of Europe (excluding much of Fenno-Skandia, the British Isles, almost the entirety of Italy, the Iberian Peninsula and almost all of Europe west of the Rhine River) eastwards to Kazakhstan. It exhibits a contact zone with <em>Bufotes sitibundus </em>that roughly corresponds to the Volga River and appears to represent its natural eastern range limit; an isolated subpopulation along the Ob River in Siberia is likely to represent a human introduction (Dufresnes<em> et al.</em> 2019).&#160;<br/><br/>Following genetic analysis, <em>Bufotes variabilis</em> has also been placed in synonymy with this species (Dufresnes <em>et al</em>. 2019) such that this species' range now includes subpopulations from the Eastern Mediterranean countries, and much of Central and Middle Asia (as <em>Bufotes variabilis</em>&#160;in Stöck&#160;<em>et al</em>. 2006). It is possible that subpopulations from the southern tip of Sweden, Denmark and northern Germany that were provisionally identified as <em>Bufotes</em> (<em>Bufo</em>) <em>variabilis&#160;</em>by Stöck&#160;<em>et al</em>. (2006) belong to this species. The species of Green Toad on the island of Malta is unclear, and is retained here in <em>Bufotes viridis</em> pending further research.&#160;<br/><br/>Subpopulations from North Africa are now assigned to&#160;<em>Bufotes boulengeri</em>. Subpopulations of Green Toads from the Balearic Islands (Spain), Corsica (France), Sardinia (Italy) and much of mainland Italy are now recognized as&#160;<em>Bufotes balearicus</em>. Green Toad subpopulations from Sicily, Italy, now mostly comprise the endemic <em>Bufotes siculus</em>, with some subpopulations of <em>Bufotes balearicus</em>&#160;in the northeast of this island. The status of Green Toads in Israel, Jordan, Sinai (Egypt) and the isolated, relict subpopulation in the southern Hadramaut in southwestern Saudi Arabia (where recent records are restricted to three localities in the Sodah Mountains; Al-Qahatani and Al-Johany 2018) is currently unclear, and it is possible that these subpopulations should be included in this species or&#160;<em>Bufotes boulengeri </em>pending further review. Dufresnes <em>et al.</em> (2019) refer to these latter subpopulations as&#160;<em>\"Bufotes </em>cf. <em>sitibundus</em>\" and tentatively treat them as a subspecies of this taxon pending further review.",
+    "population": "This species is still considered a relatively abundant to common species over large parts of its range, although subpopulations formally recognized as <em>Bufotes viridis</em> are rare or declining on the fringes of its range in Europe (e.g. Denmark and Sweden). It is extinct in Switzerland despite re-introduction efforts. Declines have been observed in Czechia (A. Krása pers. comm. September 2019), have occurred in Romania due to urbanisation (D.&#160;Cogălniceanu pers. comm. September 2019), and it is not as common as it was 20 years ago in Bucharest, Hungary (E. Mizsei pers. comm. September 2019). It is suspected to be decreasing in Bulgaria (Y. Kornilev, G. Popgeorgiev and B. Naumov pers. comm. October 2019). However, the species is fine in Italy (F. Ficetola and R. Manenti pers. comm. September 2019).",
+    "habitats": "This species lives in a wide range of forests, forest steppe, scrubland, grassland and alpine habitats. Animals may be present in modified areas including urban centres (<em>e.g., </em>Bucharest), city parks and gardens - and often benefit from disturbed habitats. Spawning and larval development occur in a diverse range of temporary and permanent waterbodies including swamps, ponds, lakes, pools in streams and rivers, reservoirs, ditches and puddles.",
+    "threats": "The main threat over much of its range, especially in the north, appears to be the loss of breeding habitats through wetland drainage, desiccation and aquatic pollution (industrial and agricultural). Subpopulations might be locally declining due to mortality on roads. In Czechia, an increase in fish farms and exotic fish introductions has been detrimental to the species (A. Krása pers. comm. September 2019) and, while the species is fairly adaptable, urbansiation has been a problem for its Romanian subpopulation (D.&#160;Cogălniceanu pers. comm. September 2019).&#160;Collection for the national and international pet trade may be an additional threat.",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>The species is listed on Appendix II of the Bern Convention and is listed on Annex IV of the EU Natural Habitats Directive. It is protected by national legislation in many countries; it is recorded on many national and sub-national Red Data books and lists and is present in many protected areas. In parts of this species' range, mitigation measures to reduce road kill have been established.&#160;<strong><em><br/></em></strong><strong><em><br/></em></strong><strong><em>Conservation Needed</em></strong><br/>Al Qahtani and Al-Johany (2018) recommend urgent protection for remaining wetlands in Saudi Arabia to ensure the persistence of amphibians in this country.<br/><br/><strong><em>Research Needed</em></strong><br/>Further taxonomic work is needed to clarify the identity of some subpopulations. More research is needed into the species' distribution, population trends and threats. Monitoring of subpopulations believed to be in decline is also necessary.",
+    "use_trade": "It may be collected for the national and international pet trade.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a range of habitats, and presumed large population.",
+    "trend_justification": null,
+    "taxonomic_notes": "Further revision of taxonomy of the <em>Bufotes viridis</em> complex with the use of genetic and biochemical data is needed. There was disagreement over the use of the generic name <em>Pseudepidalea</em> in place of <em>Bufo </em>and now most species have been moved to <em>Bufotes</em> because of non-monophyly of both <em>Bufo </em>and <em>Pseudepidalea.<br/></em><br/>After Dufresnes <em>et al</em>. (2019) revised the taxonomy of the <em>B. viridis</em> complex, synonymizing <em>B. balearicus</em> and <em>Bufo variabilis</em> within it and clarified range limits between this species and the former synonym <em>B. sitibundus</em>, which they elevated to specific status, encompassing most of the species' former range, Frost (\"Amphibian Species of the World\") again synonymized <em>B. sitibundus </em>with <em>B. viridis</em>.&#160;<em>Bufo perrini</em> was also elevated from sub-species to species level by Dufresnes <em>et al.</em>&#160;(2019), but is not recognised by Frost as a separate taxonomic entity."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Excavations (open)"
+      },
+      "code": "15_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "YUG-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Neam, K.",
+      "value": [
+        "Kelsey Neam (Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Krása, A., Aghasyan, A., Disi, A.M., Al Johany, A.M.H., Avci, A., Tuniyev, B., Naumov, B., Andrén, C., Corti, C., Cogălniceanu, D., Tarkhnishvili, D., Mizsei, E., Najafi-Majd, E., Ficetola, F., Andreone, F., Degani, G., Popgeorgiev, G., Ugurtas, I.H., Crnobrnja-Isailović, J., Wilkinson, J., Stöck, M., Khan, M.S., Rastegar-Pouyani, N., Ananjeva, N.B., Üzüm, N., Orlov, N.L., Lymberakis, P., Manenti, R., Podloucky, R., Tuniyev, S., Kuzmin, S., Anderson, S., Papenfuss, T., Beebee, T., Kaya, U., Kalkman, V.J., Ishchenko, V. & Kornilev, Y.",
+      "value": [
+        "Vincent Kalkman (European Invertebrate Survey)",
+        "Natalia Ananjeva (Department of Herpetology, Zoological Institute, Russian Academy of Sciences, St Petersburg, Russia)",
+        "Nikolai Orlov (Department of Herpetology, Zoological Institute, Russian Academy of Sciences)",
+        "Franco Andreone (Zoology Department, Museo Regionale di Scienze Naturali di Torino, Torino, Italy)",
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Theodore Papenfuss (Museum of Vertebrate Zoology, University of California)",
+        "Matthias Stöck",
+        "Muhammad Khan (GRA, SRLI Reptile Assessment)",
+        "Steven Anderson (University of the Pacific, Stockton, California, USA)",
+        "Sergius Kuzmin (Amphibian RLA)",
+        "Nasrullah  Rastegar-Pouyani",
+        "Aram Aghasyan (Head of Protected Areas Management Department, Bioresources Management Agency of Ministry of Nature Protection, Yerevan, Armenia)",
+        "Claes Andrén (SRLI Reptile Assessment)",
+        "Aziz  Avci (Adnan Menderes University, Faculty of Science and Arts, Department of Biology, Aydın-TURKEY)",
+        "Dan Cogălniceanu (Amphibian RLA)",
+        "Claudia Corti (Museo di Storia Naturale dell'Università di Firenze, Sezione di Zoologia \"La Specola\", Italy)",
+        "Uğur Kaya (SRLI Reptile Assessment)",
+        "Petros Lymberakis (GAA, GRA, SRLI Reptile Assessment)",
+        "Ahmad Mohammed Mousa Disi (GRA, SRLI Reptile Assessment)",
+        "Richard Podloucky (SRLI Reptile Assessment)",
+        "Boris Tuniyev (SRLI Reptile Assessment)",
+        "Sako Tuniyev (SRLI Reptile Assessment)",
+        "Ishmail Ugurtas (GRA, SRLI Reptile Assessment)",
+        "Nazan Üzüm (Amphibian RLA)",
+        "John Wilkinson (Amphibian RLA)",
+        "David Tarkhnishvili",
+        "Gad Degani",
+        "Trevor Beebee",
+        "Vladimir Ishchenko",
+        "Awad Al Johany (King Saud University, Riyadh, Saudi Arabia)",
+        "Elnaz Najafi-Majd (Amphibian RLA)",
+        "Raoul Manenti (IUCN SSC Cave Invertebrate Speialist Group, IUCN SSC Amphibian Specialist Group)",
+        "Edvárd Mizsei (University of Debrecen, Hungary)",
+        "Francesco Ficetola",
+        "Antonín Krása",
+        "Yurii Kornilev",
+        "Georgi Popgeorgiev",
+        "Borislav Naumov"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Crnobrnja-Isailović, J. & Hobin, L.",
+      "value": [
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Lymberakis, P. and Kalionzopoulou, A. 2003. Additions to the herpetofauna of Syria. <i>Zoology in the Middle East</i> 29: 33-39.",
+      "year": "2003",
+      "title": "Additions to the herpetofauna of Syria",
+      "author": "Lymberakis, P. and Kalionzopoulou, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baran, I. and Atatür, M.K. 1998. <i>Turkish herpetofauna (amphibians and reptiles)</i>. Republic of Turkey Ministry of Environment, Ankara.",
+      "year": "1998",
+      "title": "Turkish herpetofauna (amphibians and reptiles)",
+      "author": "Baran, I. and Atatür, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F. 2006. <i>Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.</i> Societas Herpetologica Italica - Edizioni Polistampa, Firenze.",
+      "year": "2006",
+      "title": "Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.",
+      "author": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Minton Jr., S.A. 1966. A contribution to the herpetology of West Pakistan. <i>Bulletin of the American Museum of Natural History</i> 134(2): 27-184.",
+      "year": "1966",
+      "title": "A contribution to the herpetology of West Pakistan",
+      "author": "Minton Jr., S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leviton, A.E., Anderson, S.C., Adler, K. and Minton, S.A. 1992. <i>Handbook to Middle East Amphibians and Reptiles</i>. Society for the Study of Amphibians and Reptiles, Oxford, Ohio.",
+      "year": "1992",
+      "title": "Handbook to Middle East Amphibians and Reptiles",
+      "author": "Leviton, A.E., Anderson, S.C., Adler, K. and Minton, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L. 2001. <i>Amphibians and Reptiles of the Hashemite Kingdom of Jordan</i>. Edition Chimaira, Frankfurt.",
+      "year": "2001",
+      "title": "Amphibians and Reptiles of the Hashemite Kingdom of Jordan",
+      "author": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anderson, S.C. 1963. Amphibians and Reptiles from Iran. <i>Proceedings of the California Academy of Sciences, Series 4</i> 31(16): 417-498.",
+      "year": "1963",
+      "title": "Amphibians and Reptiles from Iran",
+      "author": "Anderson, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ildos, A.S. and Ancona, N. 1994. Analysis of amphibian habitat preferences in a farmland area (Po plain, northern Italy). <i>Amphibia-Reptilia</i>: 307-316.",
+      "year": "1994",
+      "title": "Analysis of amphibian habitat preferences in a farmland area (Po plain, northern Italy)",
+      "author": "Ildos, A.S. and Ancona, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mlynarski, M. 1966. Plazy I Gady Polski. <i>Panstwowe Zaklady Wydawnictw Szkolnych, Warszawa</i> 75.",
+      "year": "1966",
+      "title": "Plazy I Gady Polski",
+      "author": "Mlynarski, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "1995. <i>Amphibian Populations in the Commonwealth of Independent States: Current Status and Declines</i>. Pensoft, Moscow.",
+      "year": "1995",
+      "title": "Amphibian Populations in the Commonwealth of Independent States: Current Status and Declines",
+      "author": null,
+      "citation_short": null
+    },
+    {
+      "citation": "Puky, M. 2000. A kétéltûek védelme Magyarországon (Conservation of amphibians in Hungary). In: Faragó, S. (ed.), <i>Gerinces állatfajok védelme (Conservation of vertebrate species)</i>, pp. 143-158. Nyugat-Magyarországi Egyetem Erdõmérnöki Kar, Sopron.",
+      "year": "2000",
+      "title": "A kétéltûek védelme Magyarországon (Conservation of amphibians in Hungary)",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fog, K. 1995. Amphibian conservation in Denmark. <i>FrogLog</i> 13.",
+      "year": "1995",
+      "title": "Amphibian conservation in Denmark",
+      "author": "Fog, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. et al. 2003. <i>Preliminary herpetological atlas of Hungary</i>. Varangy Akciócsoport Egyesület, Budapest.",
+      "year": "2003",
+      "title": "Preliminary herpetological atlas of Hungary",
+      "author": "Puky, M. et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kalezic, M. and Dzukic, G. 2001. Amphibian status in Serbia and Montenegro (FR Yugoslavia). <i>FrogLog</i> 45.",
+      "year": "2001",
+      "title": "Amphibian status in Serbia and Montenegro (FR Yugoslavia)",
+      "author": "Kalezic, M. and Dzukic, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. 2003. Amphibian mitigation measures in Central-Europe. In: Irwin, L.C., Garrett, P. and McDermott, K.P. (eds), <i>Proceedings of the International Conference on Ecology and Transportation, 26-31 August, 2003, Lake Placid, New York, USA</i>, pp. 413-429. Center for Transportation and the Environment, North Carolina State University, USA.",
+      "year": "2003",
+      "title": "Amphibian mitigation measures in Central-Europe",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grossenbacher, K. 1988. Verbreitungsatlas der Amphibien der Schweiz. <i>Documenta faunistica helvetiae</i>: 1-207.",
+      "year": "1988",
+      "title": "Verbreitungsatlas der Amphibien der Schweiz",
+      "author": "Grossenbacher, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grossenbacher, K. 1994. Rote Liste der gefährdeten Amphibien der Schweiz. In: BUWAL (ed.), <i>Rote Liste der gefährdeten Tierarten in der Schweiz</i>, pp. 33-34. BUWAL (Bundesamt für Umwelt, Wald und Landschaft), Bern.",
+      "year": "1994",
+      "title": "Rote Liste der gefährdeten Amphibien der Schweiz",
+      "author": "Grossenbacher, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. 1996. Threatened amphibians in the former Soviet Union: the current situation and the main threats. <i>Oryx</i> 30: 24-30.",
+      "year": "1996",
+      "title": "Threatened amphibians in the former Soviet Union: the current situation and the main threats",
+      "author": "Kuzmin, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vogrin, N. 1997. The status of amphibians in Slovenia. <i>FrogLog</i> 20.",
+      "year": "1997",
+      "title": "The status of amphibians in Slovenia",
+      "author": "Vogrin, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kuzmin, S.L. 1999. <i>The Amphibians of the Former Soviet Union</i>. Pensoft, Sofia-Moscow.",
+      "year": "1999",
+      "title": "The Amphibians of the Former Soviet Union",
+      "author": "Kuzmin, S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kovács, T. 2002. Monitoring of amphibians and reptiles along the Drava River. <i>FrogLog</i> 52.",
+      "year": "2002",
+      "title": "Monitoring of amphibians and reptiles along the Drava River",
+      "author": "Kovács, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Szczerbak, N.N. 1977. <i>Opredelitel Zemnovodnykh i Presmykayushchikhsya Fauny SSSR [Guide to Amphibians and Reptiles of the USSR Fauna]</i>. Prosvechshenie, Moscow.",
+      "year": "1977",
+      "title": "Opredelitel Zemnovodnykh i Presmykayushchikhsya Fauny SSSR [Guide to Amphibians and Reptiles of the USSR Fauna]",
+      "author": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Szczerbak, N.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 2003. <i>Reptiles and amphibians of Europe</i>. Princeton University Press.",
+      "year": "2003",
+      "title": "Reptiles and amphibians of Europe",
+      "author": "Arnold, E.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. 1995. <i>Die Amphibien Russlands und Angrenzender Gebiete</i>. Westarp – Spektrum, Magdeburg - Heidelberg.",
+      "year": "1995",
+      "title": "Die Amphibien Russlands und Angrenzender Gebiete",
+      "author": "Kuzmin, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "1997. <i>Atlas of Amphibians and Reptiles in Europe</i>. Societas Europea Herpetologica & Museum National d'Histoire Naturelle, Paris.",
+      "year": "1997",
+      "title": "Atlas of Amphibians and Reptiles in Europe",
+      "author": "",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cogălniceanu, D., Aioanei, F. and Matei, B. 2000. <i>Amfibienii din România. Determinator. [Amphibians of Romania].</i> Editura Ars Docendi.",
+      "year": "2000",
+      "title": "Amfibienii din România. Determinator. [Amphibians of Romania].",
+      "author": "Cogălniceanu, D., Aioanei, F. and Matei, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dely, G. 1967. <i>Kétéltűek-Amphibia: Magyarország Állatvilága, Faunae Hungariae</i>. Ákadémiai Kiadó, Budapest.",
+      "year": "1967",
+      "title": "Kétéltűek-Amphibia: Magyarország Állatvilága, Faunae Hungariae",
+      "author": "Dely, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Özeti, N. and Yilmaz, I. 1994. Türkiye amphibileri. <i>Ege Üniversitesi Fen Fakültesi Kitaplar Serisi</i> 151: 221.",
+      "year": "1994",
+      "title": "Türkiye amphibileri",
+      "author": "Özeti, N. and Yilmaz, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stöck, M., Sicilia, A., Belfiore, N., Buckley, D., Lo Brutto, S., Lo Valvo, M. and Arculeo, M. 2008. Post-Messinian evolutionary relationships across the Sicilian channel: Mitochondrial and nuclear markers link a new green toad from Sicily to African relatives. <i>BMC Evolutionary Biology</i> 56(8): doi:10.1186/1471-2148-8-56.",
+      "year": "2008",
+      "title": "Post-Messinian evolutionary relationships across the Sicilian channel: Mitochondrial and nuclear markers link a new green toad from Sicily to African relatives.",
+      "author": "Stöck, M., Sicilia, A., Belfiore, N., Buckley, D., Lo Brutto, S., Lo Valvo, M. and Arculeo, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stöck, M., Moritz, C., Hickerson, M., Frynta, D., Dujsebayeva, T., Eremchenko, V., Macey, J.R., Papenfuss, T.J. and Wake, D.B. 2006. Evolution of mitochondrial relationships and biogeography of Palearctic green toads (Bufo viridis subgroup) with insights in their genomic plasticity. <i>Molecular Phylogenetics and Evolution</i> 41: 663-689.",
+      "year": "2006",
+      "title": "Evolution of mitochondrial relationships and biogeography of Palearctic green toads (Bufo viridis subgroup) with insights in their genomic plasticity",
+      "author": "Stöck, M., Moritz, C., Hickerson, M., Frynta, D., Dujsebayeva, T., Eremchenko, V., Macey, J.R., Papenfuss, T.J. and Wake, D.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andrén, C. and Nilson, G. 1979. A new species of toad (Amphibia, Anura, Bufonidae) from the Kavir Desert, Iran. <i>Journal of Herpetology</i>: 93-100.",
+      "year": "1979",
+      "title": "A new species of toad (Amphibia, Anura, Bufonidae) from the Kavir Desert, Iran",
+      "author": "Andrén, C. and Nilson, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Borkin, L.J., Rosanov, J.M. and Litvinchuk, S.N. 2000. Nuclear DNA content in some green toads (Bufo viridis complex) of Turkey and Iran. <i>Russian Journal of Herpetology</i>: 171-180.",
+      "year": "2000",
+      "title": "Nuclear DNA content in some green toads (Bufo viridis complex) of Turkey and Iran",
+      "author": "Borkin, L.J., Rosanov, J.M. and Litvinchuk, S.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stöck, M., Günther, R. and Böhme, W. 2001. Progress towards a taxonomic revision of the Asian <i>Bufo viridis</i> group: Current status of nominal taxa and unsolved problems (Amphibia: Anura: Bufonidae). <i>Zoologische Abhandlungen Staatliches Museum für Tierkunde Dresden</i> 51(18): 253-319.",
+      "year": "2001",
+      "title": "Progress towards a taxonomic revision of the Asian <i>Bufo viridis</i> group: Current status of nominal taxa and unsolved problems (Amphibia: Anura: Bufonidae)",
+      "author": "Stöck, M., Günther, R. and Böhme, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pisanets, E.M. 1978. <i>Sistematika i Geograficheskaya Izmenchivost Zhab Fauny SSSR [Systematics and Geographical Variability of the Toads of USSR Fauna]</i>. PhD. Dissertation, Kiev.",
+      "year": "1978",
+      "title": "Sistematika i Geograficheskaya Izmenchivost Zhab Fauny SSSR [Systematics and Geographical Variability of the Toads of USSR Fauna]",
+      "author": "Pisanets, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stöck, M., Frynta, D., Grosse, W.-R., Steinlein, C. and Schmid, M. 2001. A review of the distribution of diploid, triploid and tetraploid Green Toads (<i>Bufo viridis</i> complex) in Asia including new data from Iran and Pakistan. <i>Asiatic Herpetological Research</i> 9: 77-100.",
+      "year": "2001",
+      "title": "A review of the distribution of diploid, triploid and tetraploid Green Toads (<i>Bufo viridis</i> complex) in Asia including new data from Iran and Pakistan",
+      "author": "Stöck, M., Frynta, D., Grosse, W.-R., Steinlein, C. and Schmid, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pisanets, E.M., Mezhzherin, S.V. and Szczerbak, N.N. 1996. Studies in hybridization and external morphology of Asian toads (Amphibia: Bufonidae), and description of the new species, Bufo shaartusiensis sp. nov. <i>Dopovidi Natsionalnoi Akademii Nauk Ukraini</i>: 147-151.",
+      "year": "1996",
+      "title": "Studies in hybridization and external morphology of Asian toads (Amphibia: Bufonidae), and description of the new species, Bufo shaartusiensis sp. nov.",
+      "author": "Pisanets, E.M., Mezhzherin, S.V. and Szczerbak, N.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brändel, M. and Rödel, M-O. 1994. Beiträge zur Kenntnis der iberischen Herpetofauna (Amphibia; Reptilia). <i>Herpetozoa</i>: 19-27.",
+      "year": "1994",
+      "title": "Beiträge zur Kenntnis der iberischen Herpetofauna (Amphibia; Reptilia)",
+      "author": "Brändel, M. and Rödel, M-O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Degani, G. 1982. Amphibian tadpole interaction in a winter pond. <i>Hydrobiologia</i> 96: 3-7.",
+      "year": "1982",
+      "title": "Amphibian tadpole interaction in a winter pond",
+      "author": "Degani, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Degani, G. 1986. Growth and behavior of six species of amphibian larvae in winter ponds in Israel. <i>Hydrobiologia</i> 140: 5-10.",
+      "year": "1986",
+      "title": "Growth and behavior of six species of amphibian larvae in winter ponds in Israel",
+      "author": "Degani, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rich, I. 1995. A field study of marked populations of the green toad, Bufo viridis. <i>Memoranda Societatis pro Fauna et Flora Fennica</i>: 118-119.",
+      "year": "1995",
+      "title": "A field study of marked populations of the green toad, Bufo viridis",
+      "author": "Rich, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasith, A. 2002. Amphibian Decline in Israel - A New Research Project. <i>FrogLog</i>.",
+      "year": "2002",
+      "title": "Amphibian Decline in Israel - A New Research Project",
+      "author": "Gasith, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Degani, G. and Kaplan, D. 1999. Distribution of amphibian larvae in Israeli habitats with changeable water availability. <i>Hydrobiologia</i> 405: 49-56.",
+      "year": "1999",
+      "title": "Distribution of amphibian larvae in Israeli habitats with changeable water availability",
+      "author": "Degani, G. and Kaplan, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pisanets, E.M. 1991. The new dates of karyology Bufo viridis-complex (Amphibia, Bufonidae) and the questions of origin of Asiatic tetraploid toads. <i>Herpetological Researches</i>: 41-50.",
+      "year": "1991",
+      "title": "The new dates of karyology Bufo viridis-complex (Amphibia, Bufonidae) and the questions of origin of Asiatic tetraploid toads",
+      "author": "Pisanets, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Balletto, E., Cherchi, M.A. and Gasperetti, J. 1985. Amphibians of the Arabian Peninsula. <i>Fauna of Saudi Arabia, Vol. 7</i>, pp. 318-392. KIngdom of Saudi Arabia.",
+      "year": "1985",
+      "title": "Amphibians of the Arabian Peninsula",
+      "author": "Balletto, E., Cherchi, M.A. and Gasperetti, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gafny, S. 2004. Threatened amphibians of Israel. In: Dolev, A. and Perevolotsky, A. (eds), <i>The Red book of Vertebrates in Israel</i>, Israel Nature and National Parks Protection Authority and Society for Protection of Nature in Israel Press, Jerusalem.",
+      "year": "2004",
+      "title": "Threatened amphibians of Israel",
+      "author": "Gafny, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Degani, G., Silanikove, N. and Shkolnik, A. 1984. Adaptation of green toad (Bufo viridis) to terrestrial life by urea accumulation. <i>Comp. Biochem. Physiol.</i>: 585-587.",
+      "year": "1984",
+      "title": "Adaptation of green toad (Bufo viridis) to terrestrial life by urea accumulation",
+      "author": "Degani, G., Silanikove, N. and Shkolnik, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schneider, H. and Egiasaryan, E.M. 1995. The mating call of the green toad, Bufo viridis viridis (Anura, Amphibia), in Kazakhstan. <i>Russian Journal of Herpetology</i>: 1-4.",
+      "year": "1995",
+      "title": "The mating call of the green toad, Bufo viridis viridis (Anura, Amphibia), in Kazakhstan",
+      "author": "Schneider, H. and Egiasaryan, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grossenbacher, K. 2003. Die Wechselkröte (Bufo viridis) in der Schweiz: historische und aktuell Situation. <i>Mertensiella</i>: 147-152.",
+      "year": "2003",
+      "title": "Die Wechselkröte (Bufo viridis) in der Schweiz: historische und aktuell Situation",
+      "author": "Grossenbacher, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Flindt, R. and Hemmer, H. 1968. Über Bufo viridis im Vorderen Orient. <i>Senckenbergiana Biologica</i>: 99-106.",
+      "year": "1968",
+      "title": "Über Bufo viridis im Vorderen Orient",
+      "author": "Flindt, R. and Hemmer, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reed, C.A. and Marx, H. 1959. A herpetological collection from northeastern Iraq. <i>Transactions of the Kansas Academy of Science</i>: 91-122.",
+      "year": "1959",
+      "title": "A herpetological collection from northeastern Iraq",
+      "author": "Reed, C.A. and Marx, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stöck, M. 1998. Mating call differences between diploid and tetraploid green toads (Bufo viridis complex) in Middle Asia. <i>Amphibia-Reptilia</i>: 29-42.",
+      "year": "1998",
+      "title": "Mating call differences between diploid and tetraploid green toads (Bufo viridis complex) in Middle Asia",
+      "author": "Stöck, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hraoui-Bloquet, S., Sadek, R.A., Sindaco, R. and Venchi, A. 2002. The herpetofauna of Lebanon: new data on distribution. <i>Zoology in the Middle East</i> 27: 35-46.",
+      "year": "2002",
+      "title": "The herpetofauna of Lebanon: new data on distribution",
+      "author": "Hraoui-Bloquet, S., Sadek, R.A., Sindaco, R. and Venchi, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. 2001. Herpetological methods: I. On the use of the road transect method in surveying amphibians with examples from different zoogeographical regions of Hungary. <i>Opuscula Zoologica, Budapest</i>: 75-81.",
+      "year": "2001",
+      "title": "Herpetological methods: I. On the use of the road transect method in surveying amphibians with examples from different zoogeographical regions of Hungary",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kubykin, R.A. 1996. The Green Toad on islands in Lake Alakol, Southeastern Kazakhstan. <i>Advances in Amphibian Research in the Former Soviet Union</i>: 217-220.",
+      "year": "1996",
+      "title": "The Green Toad on islands in Lake Alakol, Southeastern Kazakhstan",
+      "author": "Kubykin, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Böhme, W. and Wiedl, H. 1994. Status and zoogeography of the herpetofauna of Cyprus, with taxonomic and natural history notes on selected species (genera <i>Rana, Coluber, Natrix, Vipera</i>). <i>Zoology in the Middle East</i> 10: 31-52.",
+      "year": "1994",
+      "title": "Status and zoogeography of the herpetofauna of Cyprus, with taxonomic and natural history notes on selected species (genera <i>Rana, Coluber, Natrix, Vipera</i>)",
+      "author": "Böhme, W. and Wiedl, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garanin, V.I. 2000. The distribution of amphibians in the Volga-Kama region. <i>Advances in Amphibian Research in the former Soviet Union</i>, pp. 79-132.",
+      "year": "2000",
+      "title": "The distribution of amphibians in the Volga-Kama region",
+      "author": "Garanin, V.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Disi, A.M. 2002. <i>Jordan Country Study on Biological Diversity: The Herpetofauna of Jordan</i>. Amman.",
+      "year": "2002",
+      "title": "Jordan Country Study on Biological Diversity: The Herpetofauna of Jordan",
+      "author": "Disi, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rastegar-Pouyani, N. 2003. Conservation and systematics of amphibians of Kermanshah Province. <i>Abstracts of the 8th Nordic Herpetological Symposium</i>, Nordic Herpetological Society, Lund, Sweden.",
+      "year": "2003",
+      "title": "Conservation and systematics of amphibians of Kermanshah Province",
+      "author": "Rastegar-Pouyani, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noellert, A. and Noellert, C. 1992. <i>Die Aphibien Europas</i>. Franckh-Kosmos Verlags-GmbH & co, Stuttgart.",
+      "year": "1992",
+      "title": "Die Aphibien Europas",
+      "author": "Noellert, A. and Noellert, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoffman, J. and Katz, U. 1994. Urea production and accumulation in the green toad Bufo viridis. <i>Journal of Zoology</i>: 591-603.",
+      "year": "1994",
+      "title": "Urea production and accumulation in the green toad Bufo viridis",
+      "author": "Hoffman, J. and Katz, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tron, F. 2005. <i>Second </i>Discoglossus nigriventer<i> rediscovery expedition in the central Bekaa Valley, Lebanon: 17-28 April 2005 Expedition Report</i>. A Rocha.",
+      "year": "2005",
+      "title": "Second <i>Discoglossus nigriventer</i> rediscovery expedition in the central Bekaa Valley, Lebanon: 17-28 April 2005 Expedition Report",
+      "author": "Tron, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hraoui-Bloquet, S., Sadek, R. and Geze, R. 2001. Les Amphibiens du Liban: inventaire, répartition géographique et altitudinale. <i>Bulletin de la Société Herpétologique de France</i> 99: 19-28.",
+      "year": "2001",
+      "title": "Les Amphibiens du Liban: inventaire, répartition géographique et altitudinale",
+      "author": "Hraoui-Bloquet, S., Sadek, R. and Geze, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. 2000. A comprehensive three-year herpetological survey in the Gemenc Region of the Danube - Dráva National Park, Hungary. <i>Opuscula Zoologica, Budapest.</i>: 113-128.",
+      "year": "2000",
+      "title": "A comprehensive three-year herpetological survey in the Gemenc Region of the Danube - Dráva National Park, Hungary",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Puky, M. and Vogel, Z. 2000. <i>Amphibian road kill survey in Balaton - Uplands National Park and recommendations to mitigation measures</i>. Infra Eco network Europe (IENE) Project Report.",
+      "year": "2000",
+      "title": "Amphibian road kill survey in Balaton - Uplands National Park and recommendations to mitigation measures",
+      "author": "Puky, M. and Vogel, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Deagni, G. and Mendelssohn, H. 1990. <i>Plants and animals of the Land of Israel, second edition, Volume 5</i>. The Publication House Society for Protection of Nature, Israel.",
+      "year": "1990",
+      "title": "Plants and animals of the Land of Israel, second edition, Volume 5",
+      "author": "Deagni, G. and Mendelssohn, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Al-Qahtani, A.R. and Al-Johany, A.M. 2018. Amphibians distribution and habitats in the southwestern region of Saudi Arabia. <i>Saudi Journal of Biological Sciences</i> 25: 1380-1386.",
+      "year": "2018",
+      "title": "Amphibians distribution and habitats in the southwestern region of Saudi Arabia",
+      "author": "Al-Qahtani, A.R. and Al-Johany, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dufresnes, C., Mazepa, G., Jablonski, D., Oliveira, R.C., Wenseleers, T., Shabanov, D.A., Auer, M., Ernst, R., Koch, C., Ramirez-Chaves, H.E., Mulder, K.P., Simonovo, E.,  Tiutenko, A., Kryvokhyzhar, D., Wennekes, P.L., Zinenko, O.I., Korshunov, A.V., Al-Johany, A.M., Peregontsev, E.A., V.Masroor, R., Betto-Colliard, C., Denoël, M., Borkin, L.J., Skorinov, D.V., Pasynkova, R.A., Mazanaeva, L.F., Rosanov, J.M., Dubey, S. and Litvinchuk, S.N. 2019. Fifteen shades of green: The evolution of <i>Bufotes</i> toads revisited. <i>Molecular Phylogenetics and Evolution</i> 141: 1-25.",
+      "year": "2019",
+      "title": "Fifteen shades of green: The evolution of <i>Bufotes</i> toads revisited.",
+      "author": "Dufresnes, C., Mazepa, G., Jablonski, D., Oliveira, R.C., Wenseleers, T., Shabanov, D.A., Auer, M., Ernst, R., Koch, C., Ramirez-Chaves, H.E., Mulder, K.P., Simonovo, E.,  Tiutenko, A., Kryvokhyzhar, D., Wennekes, P.L., Zinenko, O.I., Korshunov, A.V., Al-Johany, A.M., Peregontsev, E.A., V.Masroor, R., Betto-Colliard, C., Denoël, M., Borkin, L.J., Skorinov, D.V., Pasynkova, R.A., Mazanaeva, L.F., Rosanov, J.M., Dubey, S. and Litvinchuk, S.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

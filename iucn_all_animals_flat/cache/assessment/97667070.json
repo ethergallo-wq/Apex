@@ -1,0 +1,3756 @@
+{
+  "assessment_date": "2011-06-07T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 190422,
+  "criteria": "A4bd",
+  "url": "https://www.iucnredlist.org/species/190422/97667070",
+  "citation": "Liu, J., Zapfe, G., Shao, K.-T., Leis, J.L., Matsuura, K., Hardy, G., Liu, M., Robertson, R. & Tyler, J. 2015. Mola mola (errata version published in 2016). The IUCN Red List of Threatened Species 2015: e.T190422A97667070. Accessed on 05 May 2026.",
+  "assessment_id": 97667070,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 190422,
+    "scientific_name": "Mola mola",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "TETRAODONTIFORMES",
+    "family_name": "MOLIDAE",
+    "genus_name": "Mola",
+    "species_name": "mola",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Headfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Mola Ocean Sunfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Moonfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Sunfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Sun-fish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "マンボウ",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Iasc Gréine",
+        "language": "gle"
+      },
+      {
+        "main": false,
+        "name": "Ikan Raksasa",
+        "language": "ind"
+      },
+      {
+        "main": false,
+        "name": "Klumpfisk",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "Klumpfisk",
+        "language": "dan"
+      },
+      {
+        "main": false,
+        "name": "Månefisk",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Mola",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Môle",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Môle Commun",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Peixe Lua",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Pez Cabeza",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Pez Luna",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Pez Sol",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Poisson-lune",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Poisson Lune",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Pysgodyn Haul",
+        "language": "wel"
+      },
+      {
+        "main": false,
+        "name": "Solfisk",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "翻車魨",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Ocean Sunfish",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Tetraodon mola Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Tetraodon",
+        "species_name": "mola",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Aledon capensis Castelnau, 1861",
+        "status": "ADD",
+        "genus_name": "Aledon",
+        "species_name": "capensis",
+        "species_author": "Castelnau, 1861",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Aledon storeri Castelnau, 1861",
+        "status": "ADD",
+        "genus_name": "Aledon",
+        "species_name": "storeri",
+        "species_author": "Castelnau, 1861",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cephalus brevis Shaw, 1804",
+        "status": "ADD",
+        "genus_name": "Cephalus",
+        "species_name": "brevis",
+        "species_author": "Shaw, 1804",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Diplanchias nasus Rafinesque, 1810",
+        "status": "ADD",
+        "genus_name": "Diplanchias",
+        "species_name": "nasus",
+        "species_author": "Rafinesque, 1810",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mola rotunda Cuvier, 1797",
+        "status": "ADD",
+        "genus_name": "Mola",
+        "species_name": "rotunda",
+        "species_author": "Cuvier, 1797",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragoriscus blochii Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Orthragoriscus",
+        "species_name": "blochii",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthagoriscus eurypterus Philippi, 1892",
+        "status": "ADD",
+        "genus_name": "Orthagoriscus",
+        "species_name": "eurypterus",
+        "species_author": "Philippi, 1892",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragoriscus fasciatus Bloch and Schneider, 1801",
+        "status": "ADD",
+        "genus_name": "Orthragoriscus",
+        "species_name": "fasciatus",
+        "species_author": "Bloch and Schneider, 1801",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragoriscus ghini Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Orthragoriscus",
+        "species_name": "ghini",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragoriscus redi Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Orthragoriscus",
+        "species_name": "redi",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragoriscus retzii Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Orthragoriscus",
+        "species_name": "retzii",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragoriscus rondeletii Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Orthragoriscus",
+        "species_name": "rondeletii",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orthragus luna Rafinesque, 1810",
+        "status": "ADD",
+        "genus_name": "Orthragus",
+        "species_name": "luna",
+        "species_author": "Rafinesque, 1810",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Ozodura orsini Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Ozodura",
+        "species_name": "orsini",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tympanomium planci Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Tympanomium",
+        "species_name": "planci",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Trematopsis willugbei Ranzani, 1839",
+        "status": "ADD",
+        "genus_name": "Trematopsis",
+        "species_name": "willugbei",
+        "species_author": "Ranzani, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pedalion capensis Castelnau, 1861",
+        "status": "ADD",
+        "genus_name": "Pedalion",
+        "species_name": "capensis",
+        "species_author": "Castelnau, 1861",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pedalion gigas Guilding in Swainson, 1838",
+        "status": "ADD",
+        "genus_name": "Pedalion",
+        "species_name": "gigas",
+        "species_author": "Guilding in Swainson, 1838",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 400,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "8-10",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Mola mola&#160;</em>is circumglobally distributed throughout warm and temperate zones of all oceans. In the eastern Pacific it is known from Canada (British Columbia), south to Peru and Chile (Chirichigno 1974,&#160;Eschmeyer&#160;<em>et al</em>. 1983). In the Indo-Pacific it is known throughout the Indian Ocean including the Red Sea, from Russia and Japan to Australia and New Zealand, and the Hawaiian Islands (Muus 1964, Smith 1965, Ayling and Cox 1982, Sims and Southall 2002, Cartamil and Lowe 2004, Houghton&#160;<em>et al</em>. 2006, Konow&#160;<em>et al.</em>&#160;2006,&#160;Todd and Grove 2010).&#160;It is considered a waif in the Persian Gulf.&#160;In the eastern Atlantic it is known from Scandinavia to South Africa (and occasionally in the western Baltic, North,&#160;and Mediterranean Seas). In the western Atlantic it is known from Canada (Newfoundland) south to Argentina including the Gulf of Mexico and Caribbean Sea (Robins and Ray 1986,&#160;Figueiredo and Menezes 2000).&#160;Its depth range is 0-400 m (Cartamil and Lowe 2004).",
+    "population": "This species is a common resident of the offshore waters of the northwestern Atlantic during the spring and summer months, with an estimated summer abundance of 18,000 (Kenney 1996 in Potter <em>et al.</em> 2011). Large aggregations of small (&lt;1 m TL)&#160;<em>Mola mola</em> have been observed in coastal waters (Pope <em>et al. </em>2010,&#160;Syväranta <em>et al.</em> 2012). In Irish and Celtic Seas, a total of 68&#160;were spotted from 2003-2005, or an overall density of 0.98 sunfish per 100 km²<sup></sup> (Houghton<em> et al.</em> 2006).&#160;According to reports from the National Marine Fisheries Service (NMFS) Southwest Region, between 1990 and 1998, 26.1% of the drift net catch consisted of <em>M. mola</em>. This translates to a catch of more than 26,000 individuals (Rand Rasmussen, NMFS Southwest Fisheries Science Center, pers. comm. in Dewar <em>et al. </em>2010). Off the coast of South Africa, <em>M. mola</em>&#160;bycatch rates from the tuna and swordfish longline fishery are estimated at 340,000 sunfish annually (Petersen 2005, Sims <em>et al.</em> 2009).<br/><br/>Although estimates of population size are generally lacking, there is evidence of local population declines over short time scales.&#160;In Namibia,&#160;<em>Mola mola&#160;</em>showed a peak of catch landings in 2006 (40 metric tonnes), then decreased with only 7 metric tonnes in 2007 (FAO 2014); while CPUE was not available, this represents a decline of 82.5%. Landings have recently been reported from Argentina and are likely to increase (FAO 2014). In Ireland, there was been a decline of about 100% (13 to 0 metric tonnes) in 2 years (2000-2002). There was also a decline in Portugal from 12 metric tonnes in 1999 to about 0 in 2009 (FAO 2014).<br/><br/>Based on localized declines that exceed 80% and the likelihood that this species is experiencing high rates of bycatch throughout most of its range, we suspect this species is declining globally by at least 30% over 3 generation lengths (24-30 years) that includes both the past and the future.",
+    "habitats": "<em>Mola mola&#160;</em>is an oceanodromous, pelagic-oceanic species that occurs in subtropical waters between depths of 30 and 480 m, but is usually between 30 and 70 m (Powell 2001, Riede 2004, Allen and Erdmann 2012). Adults are found on slopes adjacent to deep water where they come in for shelter and to seek out cleaner fishes (Kuiter and Tonozuka 2001). It&#160;is an active swimmer capable of highly directional movements and horizontal movements independent of the current (Cartamil and Lowe 2004); it&#160;uses its anal and dorsal fins as a pair of wings (Pope&#160;<span style=\"font-style: italic;\">et al.</span>&#160;2010).&#160;It feeds on fishes, molluscs, zooplankton, jellyfish, crustaceans, and brittle stars (Clemens and Wilby 1961, Scott and Scott 1988, Kuiter and Tonozuka 2001). Cartamil and Lowe (2004) observed a diel pattern in depth&#160;utilization, with fish residing in the warmer mixed layer above or within the thermocline at night and repeatedly diving beneath the thermocline into cooler water during the day (Californian waters, July-September 2001). Hays<span style=\"font-style: italic;\"> et al. </span>(2009) also noted that although individual sunfish showed a range of preferred depth that altered over time, they were still moving up and down the water column and regularly returning to close to the surface. Although its exact function has yet to be resolved, Cartamil and Lowe (2004) proposed that periodic returns to the surface in <span style=\"font-style: italic;\">M. mola</span> may imply some form of behavioural thermo-regulation i.e. prolonged time in cold waters necessitates time spent at the surface to re-warm. This may explain the frequent observations of ocean sunfish observed 'basking' or swimming on their sides at the surface during the day (Cartamil and Lowe 2004). Conversely, Sims <span style=\"font-style: italic;\">et al.</span> (2009a) argued that extensive vertical movements may simply reflect a crepuscular searching strategy when prey are descending or ascending, with sunfish attempting to locate maximum prey abundances at this time. It has been also been suggested more generally that large amplitude dives or ascents of large pelagic fish and other vertebrates during prey tracking may represent prey searching behaviour (Shepard <span style=\"font-style: italic;\">et al. </span>2006)&#160;characterized&#160;by extensive movements to new locations (Sims<span style=\"font-style: italic;\"> et al. </span>2008).&#160;It exhibits sexual dimorphism; females are larger than males (Pope<em>&#160;et al</em>. 2010).&#160;<br/>Maximum total length is 333 cm (Claro 1994); maximum published weight is 2.3 t (Roach 2003); all animals larger than 250 cm TL are female (Nakatsubo 2008).&#160;Very few studies have been conducted on the reproductive biology of ocean sunfish (Pope <span style=\"font-style: italic;\">et al.</span> 2010). In Japan,the spawning period&#160;is estimated between August and October and the same study also identified asynchronous egg development, suggesting it is a multiple spawner (Nakatsubo <span style=\"font-style: italic;\">et al. </span>2007).&#160;The lifespan or reproductive age of <span style=\"font-style: italic;\">M. mola</span> under natural conditions is unknown, although captive animals have been maintained for more than 8 years (Nakatsubo <span style=\"font-style: italic;\">et al.</span> 2007). A growth curve derived from repeated measurements of captive specimens estimated an individual with a total length of 3 m would be about 20 years old (Nakatsubo 2008). Recent work used growth band pairs in vertebrae to age the closely related sharptail mola <span style=\"font-style: italic;\">M. lanceolatus</span> caught in the eastern Taiwan fishery (Liu <span style=\"font-style: italic;\">et al.</span> 2009). The age estimates ranged between &gt;2 and &gt;23 years for females and &gt;1 and &gt;16 years for males (Liu <span style=\"font-style: italic;\">et al.</span> 2009). &#160;<span style=\"font-style: italic;\">Mola mola</span> is famously the most fecund of all vertebrates (Carwardine 1995) with a 137 cm female containing an estimated 300 million eggs (Schmidt 1921). By necessity, these eggs are very small (mean diameter 0.13 cm; Gudger 1936) and so <em>M. mola</em> growth is staggering. For the 0.25 cm larva to grow to a 3 m adult requires an increase in mass of 60 million times (Gudger 1936). A more atypical captive growth rates have been found to be between 0.02 and 0.49 kg/day in weight (M. Howard and T. Nakatsubo pers. comm. in Pope <span style=\"font-style: italic;\">et al. </span>2010) and on average 0.1 cm/day TL (Nakatsubo and Hirose 2007).<br/><br/>Longevity is estimated at between 20 and 23 years old; using a maximum age based estimator with low prediction error (M = 4.899t<sup>−0.916</sup>: Then and Hoenig 2014), the estimated adult natural mortality rate is 0.28-0.32. Age at first maturity is unknown, but inferred to be between 5 and 7 years (based on the smallest reported ripe female of 137 cm and assuming a linear growth rate to 3 m at 22 years old). Using the estimator for generation length of 1/adult mortality + age at first reproduction results in a generation length of 8-10 years, and thus a time window for calculating population declines of 24-30 years.",
+    "threats": "Ocean sunfish populations may be vulnerable to fishing activity because of the high levels of bycatch observed in many fisheries, including&#160;long lines, drift gillnets and midwater trawls&#160;(Silvani <span style=\"font-style: italic;\">et al.</span> 1999, Cartamil and Lowe 2004, Fulling <span style=\"font-style: italic;\">et al.</span> 2007, Petersen and McDonell 2007).&#160;In South Africa, mid-water trawl fishery of the Cape horse mackerel&#160; (<span style=\"font-style: italic;\">Trachurus trachurus capensis</span>)  caught predominantly large individuals and observed a significant  decline in ocean sunfish catch rates between 2000 to 2003, with other  bycatch species remaining comparatively stable (Petersen and McDonell  2007). Bycatch estimates from the Californian swordfish fishery suggest  ocean sunfish make up 29% of all bycatch; far outnumbering the target  species (Cartamil and Lowe 2004).&#160;<em>Mola mola</em> is targeted by fishers in the western Pacific and south Atlantic.&#160;<em>Mola mola</em>  is also captured in large numbers as bycatch in a number of widely  distributed fisheries.",
+    "measures": "The Moroccan government passed a law in 2007 to phase out the use of driftnets in which&#160;<span style=\"font-style: italic;\">Mola mola</span> are often caught as bycatch. Basic biological research and population monitoring of <em>M. mola</em> are recommended.<br/><br/><br/><p><br/></p>",
+    "use_trade": "<em>Mola mola</em> is not a commercially important fish (Fulling&#160;<em>et al.</em>&#160;2007, Silvani&#160;<em>et al</em>.&#160;1999), although there is some market for it in Japan (Sagara and Ozawa 2002, Watanabe and Sato 2008) and Taiwan (20.8-49.4 tonnes per annum, Liu&#160;<em>et al.</em>&#160;2009).&#160;It is targeted by fishers in the western Pacific and south Atlantic. This species<em>&#160;</em>is also captured in large numbers as bycatch in long line, drift gillnet and midwater trawl&#160;fisheries. For example, the South African longline fishery for tuna and swordfish was estimated to have annually caught between 0.08 and 0.29 sunfish for every 1,000 hooks set (1.6-2.7 million hooks per year) in the 4 years between 2000 and 2003 (Petersen 2005). Furthermore,&#160;it&#160;was by far the most common bycatch species in the Cape horse mackerel (<em>Trachurus trachurus capensis</em>) midwater trawl fishery in the same region (Petersen and McDonell 2007), representing 51% of the total bycatch between 2002 and 2005 (Petersen and McDonell 2007). Similarly,&#160;<em>M. mola</em>&#160;comprised between 70 and 93% of the total fish catch in Spanish drift gillnet fisheries within the Mediterranean between 1992 and 1994 (Silvani&#160;<em>et al.</em>&#160;1999); bycatch estimates from the Californian swordfish fishery suggest ocean sunfish make up 29% of all bycatch, far outnumbering the target species (Cartamil and Lowe 2004). A crude calculation using values from a recent study of the Moroccan fleet (Tudela&#160;<em>et al.&#160;</em>2005) suggests an annual bycatch of 36,450 ocean sunfish. Whilst the majority of&#160;<em>M. mola</em>&#160;are returned to the water alive (Silvani&#160;<em>et al.</em>&#160;1999), they often show varying levels of trauma (Cartamil and Lowe 2004) and post-catch survival data are lacking.&#160;<br/>There is little or no fishing effort likely to affect this species in the Gulf of Mexico (H. Perez-España and M. Vega-Cendejas pers. comm. 2015).",
+    "rationale": "<p>This species is widely distributed. It is targeted by fishers in the western Pacific and south Atlantic and is captured in large numbers as bycatch in fisheries using long lines, drift gillnets and midwater trawls in a number of widely distributed fisheries. In some fisheries, the catch of <em>Mola mola</em> exceeds that of the target species. Preliminary calculations from three of these fisheries (two South African longline fisheries, and the USA Southwest Region drift net fishery), indicate 300, 26,000 and 340,000 individual <em>M. mola</em> per fishery are made each year and it is likely that other fisheries using these same methods are taking large, but unreported, bycatch of <em>M. mola</em> throughout the majority of its range. In some areas, substantial declines (up to 100%) have been documented, likely driven by the high bycatch. Based on these declines and the likelihood that this species is experiencing high rates of bycatch throughout most of its range, we suspect this species is declining globally by at least 30% over three generation lengths (24-30 years) that includes both the past and the future. Therefore, this species is listed as Vulnerable under A4bd. Future monitoring and research on its basic biological variables such as age at maturity, generation time, etc. is recommended.<br/></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "Recent investigations of <span style=\"font-style: italic;\">M. mola</span> mitochondrial sequences showed  evidence that the genus <span style=\"font-style: italic;\">Mola</span> contains two species: <span style=\"font-style: italic;\">M.  mola</span> and the southern sunfish, <span style=\"font-style: italic;\">M. ramsayi </span>(Bass <span style=\"font-style: italic;\">et  al.</span> 2005). Report from <span style=\"font-style: italic;\">Yoshita et al.</span> (2009) concluded that  the genus <span style=\"font-style: italic;\">Mola</span> contained three species."
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique Channel Is."
+      },
+      "code": "MCI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Southern Territories"
+      },
+      "code": "TF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Howland-Baker Is."
+      },
+      "code": "HBI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Phoenix Is."
+      },
+      "code": "PHX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati Line Is."
+      },
+      "code": "LIN-KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jersey"
+      },
+      "code": "JE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Clipperton I."
+      },
+      "code": "CPI-CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guernsey"
+      },
+      "code": "GG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Johnston I."
+      },
+      "code": "HAW-JI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wake Is."
+      },
+      "code": "WAK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trindade"
+      },
+      "code": "BZL-TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Easter Is."
+      },
+      "code": "EAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Disputed Territory"
+      },
+      "code": "DT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paracel Is."
+      },
+      "code": "SCS-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spratly Is."
+      },
+      "code": "SCS-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andaman Is."
+      },
+      "code": "AND-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicobar Is."
+      },
+      "code": "NCB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ascension"
+      },
+      "code": "ASC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena (main island)"
+      },
+      "code": "STH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tristan da Cunha"
+      },
+      "code": "TDC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marion-Prince Edward Is."
+      },
+      "code": "MPE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Liu, J., Zapfe, G., Shao, K.-T., Leis, J.L., Matsuura, K., Hardy, G., Liu, M., Robertson, R. & Tyler, J.",
+      "value": [
+        "Glenn Zapfe",
+        "Ross Robertson (STRI)",
+        "Jim Tyler (Smithsonian Institute)",
+        "Min Liu (College of Oceanography and Environmental Science, Xiamen University)",
+        "Kwang-Tsao  Shao (Biodiversity Research Center, Academia Sinica, Nankang, Taipei, TAIWAN, R.O.C.)",
+        "Jeffrey Leis (Australian Museum)",
+        "Keiichi Matsuura (National Museum of Nature and Science)",
+        "Graham Hardy",
+        "Jing Liu"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Carpenter, K.E., Comeros-Raynal, M., Harwell, H. & Sanciango, J.",
+      "value": [
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)",
+        "Mia Comeros (Old Dominion University)",
+        "Heather Harwell (Old Dominion University)",
+        "Jonnell Sanciango (Old Dominion University)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "Correction in assessor name, Jing, L to Liu, J."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Riede, K. 2004. <i>Global register of migratory species - from global to regional scales</i>. Federal Agency for Nature Conservation, Bonn, Germany.",
+      "year": "2004",
+      "title": "Global register of migratory species - from global to regional scales",
+      "author": "Riede, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2014. FAO FishstatJ: Landings reports from 1950-2012. FAO.",
+      "year": "2014",
+      "title": "FAO FishstatJ: Landings reports from 1950-2012",
+      "author": "FAO",
+      "citation_short": ""
+    },
+    {
+      "citation": "Allen, G.R. and Erdmann, M.V. 2012. <i>Reef Fishes of the East Indies</i>. Tropical Reef Research, Perth, Australia.",
+      "year": "2012",
+      "title": "Reef Fishes of the East Indies",
+      "author": "Allen, G.R. and Erdmann, M.V",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bauchot, M.-L. 1987. Poissons osseux. In: W. Fischer, M.-L. Bauchot and M. Schneider (eds), <i>Fiches FAO d'identification pour les besoins de la pêche (rev. 1). Méditerranée et mer Noire. Zone de pêche 37</i>, pp. 891-1421. Commission des Communautés Européennes and FAO, Rome.",
+      "year": "1987",
+      "title": "Poissons osseux",
+      "author": "Bauchot, M.-L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Claro, R. 1994. <i>Características generales de la ictiofauna</i>.",
+      "year": "1994",
+      "title": "Características generales de la ictiofauna",
+      "author": "Claro, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robins, C.R. and Ray, G.C. 1986. <i>A field guide to Atlantic coast fishes of North America</i>. Houghton Mifflin Company, Boston, U.S.A.",
+      "year": "1986",
+      "title": "A field guide to Atlantic coast fishes of North America",
+      "author": "Robins, C.R. and Ray, G.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Scott, W.B. and Scott, M.G. 1988. <i>Atlantic fishes of Canada</i>. University of Toronto Press, Toronto.",
+      "year": "1988",
+      "title": "Atlantic fishes of Canada",
+      "author": "Scott, W.B. and Scott, M.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Clemens, W.A. and Wilby, G.V. 1961. Fishes of the Pacific coast of Canada. <i>Fisheries Research Board of Canada Bulletin</i> 68: 443.",
+      "year": "1961",
+      "title": "Fishes of the Pacific coast of Canada",
+      "author": "Clemens, W.A. and Wilby, G.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, K.-M., Lee, M.-L., Joung, S.-J. and Chang Y.-C. 2009. Age and growth estimates of the sharptail mola, Masturus lanceolatus, in waters of eastern Taiwan. <i>Fisheries Research</i> 95: 154-160.",
+      "year": "2009",
+      "title": "Age and growth estimates of the sharptail mola, Masturus lanceolatus, in waters of eastern Taiwan",
+      "author": "Liu, K.-M., Lee, M.-L., Joung, S.-J. and Chang Y.-C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chirichigno, N.F. 1974. Clave para identificar los peces marinos del Peru. <i>Instituto del Mar del Peru</i>: 387.",
+      "year": "1974",
+      "title": "Clave para identificar los peces marinos del Peru",
+      "author": "Chirichigno, N.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kenney, R.D. 1996. Preliminary assessment of competition for prey between leatherback sea turtles and ocean sunWsh in northeast shelf waters. In: Keinath, J.A., Bernard, D.E., Musick, J.A., Bell, B.A. (ed.), Proceedings of the 15th annual symposium on sea turtle biology and conservation, pp. 144-147. Miami, FL.",
+      "year": "1996",
+      "title": "Preliminary assessment of competition for prey between leatherback sea turtles and ocean sunWsh in northeast shelf waters",
+      "author": "Kenney, R.D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dewar, H., Thys, T., Teo, S.L.H., Farwell, C., O'Sullivan, J., Toboyama, T., Soichi, M., Nakatsubo, T., Kondo, Y., Okada, Y., Lindsay, D.J., Hays, G.C., Walli, A., Weng, K., Streelman, J.T. and Karl, S.A. 2010. Satellite tracking the world's largest jelly predator, the ocean sunfish, Mola mola, in the Western Pacific. <i>Journal of Experimental Marine Biology and Ecology</i> 393: 39-42.",
+      "year": "2010",
+      "title": "Satellite tracking the world's largest jelly predator, the ocean sunfish, Mola mola, in the Western Pacific",
+      "author": "Dewar, H., Thys, T., Teo, S.L.H., Farwell, C., O'Sullivan, J., Toboyama, T., Soichi, M., Nakatsubo, T., Kondo, Y., Okada, Y., Lindsay, D.J., Hays, G.C., Walli, A., Weng, K., Streelman, J.T. and Karl, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hooper S.N., Paradis M. and Ackman R.G. 1973. Distribution of trans-6-hexadecenoic acid, 7-methyl-7-hexadecenoic acid and common fatty acids in lipids of ocean sunfish Mola mola. <i>Lipids</i> 8: 509-516.",
+      "year": "1973",
+      "title": "Distribution of trans-6-hexadecenoic acid, 7-methyl-7-hexadecenoic acid and common fatty acids in lipids of ocean sunfish Mola mola",
+      "author": "Hooper S.N., Paradis M. and Ackman R.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petersen S. 2005. Initial bycatch assessment: South Africa?s domestic longline fishery, 2000?2003.  Domestic pelagic longline fishery: Bycatch Report 2000?2003. BirdLife, South Africa.",
+      "year": "2005",
+      "title": "Initial bycatch assessment: South Africa?s domestic longline fishery, 2000?2003",
+      "author": "Petersen S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Humann, P. and Deloach, N. 2002. Odd-Shaped Swimmers. <i>Reef Fish Identification of Florida, Caribbean, Bahamas</i>, pp. 419. New World Publicators, Inc., Jacksonville.",
+      "year": "2002",
+      "title": "Odd-Shaped Swimmers",
+      "author": "Humann, P. and Deloach, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sagara, K. and Ozawa, T. 2002. Landing statistics of molids in four prefectures of Japan. <i>Memoirs of Faculty of Fisheries, Kagoshima University</i> 51: 27-33.",
+      "year": "2002",
+      "title": "Landing statistics of molids in four prefectures of Japan",
+      "author": "Sagara, K. and Ozawa, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Todd, V.L.G. and Grove, J.S. 2010. First records of golden trevally (Gnathodon speciosus, Carangidae), sharptail mola (Masturus lanceolatus, Molidae) and evidence for white shark (Carcharodon carcharias, Lamnidae) in the Galápagos Islands, Ecuador. <i>Marine Biodiversity Records</i> 3: e104.",
+      "year": "2010",
+      "title": "First records of golden trevally (Gnathodon speciosus, Carangidae), sharptail mola (Masturus lanceolatus, Molidae) and evidence for white shark (Carcharodon carcharias, Lamnidae) in the Galápagos Islands, Ecuador",
+      "author": "Todd, V.L.G. and Grove, J.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Muus, B. 1964. <i>Collins Guide to the Sea Fishes of Britain and North-Western Europe</i>. Collins Clear-Type Press, London.",
+      "year": "1964",
+      "title": "Collins Guide to the Sea Fishes of Britain and North-Western Europe",
+      "author": "Muus, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Powell, D.C. 2001. <i>A fascination for fish: adventures of an underwater pioneer</i>. University of California Press, Berkeley.",
+      "year": "2001",
+      "title": "A fascination for fish: adventures of an underwater pioneer",
+      "author": "Powell, D.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yoshita, Y., Yamanoue, Y., Sagara, K., Nishibori, M., Kuniyoshi, H., Umino, T., Sakai, Y., Hashimoto, H. and Gushima, K. 2009. Phylogenetic relationship of two Mola sunfishes (Tetraodontiformes: Molidae) occurring around the coast of Japan, with notes on their geographical distribution and morphological characteristics. <i>Ichthyological Research</i> 56: 232-244.",
+      "year": "2009",
+      "title": "Phylogenetic relationship of two Mola sunfishes (Tetraodontiformes: Molidae) occurring around the coast of Japan, with notes on their geographical distribution and morphological characteristics",
+      "author": "Yoshita, Y., Yamanoue, Y., Sagara, K., Nishibori, M., Kuniyoshi, H., Umino, T., Sakai, Y., Hashimoto, H. and Gushima, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Frimodt, C. 1995. <i>Multilingual illustrated guide to the world's commercial coldwater fish</i>. Osney Mead, Oxford, England.",
+      "year": "1995",
+      "title": "Multilingual illustrated guide to the world's commercial coldwater fish",
+      "author": "Frimodt, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bass, A.L., Dewar, H., Thys, T., Streelman, J.T. and Karl S.A. 2005. Evolutionary divergence among lineages of the ocean sunfish family, Molidae (Tetraodontiformes). <i>Marine Biology</i> 148: 405-414.",
+      "year": "2005",
+      "title": "Evolutionary divergence among lineages of the ocean sunfish family, Molidae (Tetraodontiformes)",
+      "author": "Bass, A.L., Dewar, H., Thys, T., Streelman, J.T. and Karl S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parsons, C. 1986. <i>Dangerous marine animals of the Pacific coast</i>. Helm Publishing, San Luis Obispo, California.",
+      "year": "1986",
+      "title": "Dangerous marine animals of the Pacific coast",
+      "author": "Parsons, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pope, E.C., Hays, G.C., Thys, T.M., Doyle, T.K., Sims, D.W., Queiroz, N., Hobson, V.J., Kubicek, L. and Houghton, J.D.R. 2010. The biology and ecology of the ocean sunfish Mola mola: a review of current knowledge and future research perspectives. <i>Reviews of Fish Biology and Fisheries</i> 20: 471-487.",
+      "year": "2010",
+      "title": "The biology and ecology of the ocean sunfish Mola mola: a review of current knowledge and future research perspectives",
+      "author": "Pope, E.C., Hays, G.C., Thys, T.M., Doyle, T.K., Sims, D.W., Queiroz, N., Hobson, V.J., Kubicek, L. and Houghton, J.D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nakatsubo, T. 2008. A study on the reproductive biology of ocean sunfish Mola mola. International Marine Biological Institute, Kamagora Sea World.",
+      "year": "2008",
+      "title": "A study on the reproductive biology of ocean sunfish Mola mola",
+      "author": "Nakatsubo, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Eschmeyer, W.N., Herald, E.S. and Hammann, H. 1983. <i>A field guide to Pacific coast fishes of North America</i>. Houghton Mifflin Company, Boston, USA.",
+      "year": "1983",
+      "title": "A field guide to Pacific coast fishes of North America",
+      "author": "Eschmeyer, W.N., Herald, E.S. and Hammann, H",
+      "citation_short": null
+    },
+    {
+      "citation": "Watanabe, Y. and Sato, K. 2008. Functional dorsoventral symmetry in relation to lift-based swimming in the ocean sunfish Mola mola. <i>PLoS ONE</i> 3: e3446.",
+      "year": "2008",
+      "title": "Functional dorsoventral symmetry in relation to lift-based swimming in the ocean sunfish Mola mola",
+      "author": "Watanabe, Y. and Sato, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cartamil, D.P. and Lowe, C.G. 2004. Diel movement patterns of ocean sunfish Mola mola off southern California. <i>Marine Ecology Progress Series</i> 266: 245-253.",
+      "year": "2004",
+      "title": "Diel movement patterns of ocean sunfish Mola mola off southern California",
+      "author": "Cartamil, D.P. and Lowe, C.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Houghton, J.D.R., Doyle, T.K., Davenport, J. and Hays, G.C. 2006. The ocean sun¢sh Mola mola: insights into distribution, abundance and behaviour in the Irish and Celtic Seas. <i>Journal of the Marine Biological Association of the United Kingdom</i> 86: 1237-1243.",
+      "year": "2006",
+      "title": "The ocean sun¢sh Mola mola: insights into distribution, abundance and behaviour in the Irish and Celtic Seas",
+      "author": "Houghton, J.D.R., Doyle, T.K., Davenport, J. and Hays, G.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fulling, G.L., Dagma, F., Knight, K. and Hoggard, W. 2007. Distribution of Molidae in the northern Gulf of Mexico. <i>Gulf and Caribbean Research</i> 19: 53-67.",
+      "year": "2007",
+      "title": "Distribution of Molidae in the northern Gulf of Mexico",
+      "author": "Fulling, G.L., Dagma, F., Knight, K. and Hoggard, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sims D.W., Southall E..J, Humphries N.E., Hays G.C., Bradshaw C.J.A., Pitchford J.W., James A., Ahmed M.Z., Brierley A.S., Hindell M.A., Morritt D., Musyl M.K., Righton D., Shepard E.L.C., Wearmouth V.J., Wilson R.P., Witt M.J., Metcalfe J.D. 2008. Scaling laws of marine predator search behaviour. <i>Nature</i> 451: 1098-1102.",
+      "year": "2008",
+      "title": "Scaling laws of marine predator search behaviour",
+      "author": "Sims D.W., Southall E..J, Humphries N.E., Hays G.C., Bradshaw C.J.A., Pitchford J.W., James A., Ahmed M.Z., Brierley A.S., Hindell M.A., Morritt D., Musyl M.K., Righton D., Shepard E.L.C., Wearmouth V.J., Wilson R.P., Witt M.J., Metcalfe J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "MacGinitie G.E., MacGinitie N. 1968. <i>Natural history of marine animals</i>. McGraw-Hill Book Company, New York.",
+      "year": "1968",
+      "title": "Natural history of marine animals",
+      "author": "MacGinitie G.E., MacGinitie N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Potter, I.F., Galuardi, B., and Howell, W.H. 2011. Horizontal movement of ocean sunWsh, Mola mola,  in the northwest Atlantic. <i>Marine Biology</i> 158(3): 531-540.",
+      "year": "2011",
+      "title": "Horizontal movement of ocean sunWsh, Mola mola,  in the northwest Atlantic",
+      "author": "Potter, I.F., Galuardi, B., and Howell, W.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fraser-Brunner, A. 1951. The ocean sunfishes (Family Molidae). <i>Bulletin of the British Museum (Natural History), Zoology</i> 1: 87-121.",
+      "year": "1951",
+      "title": "The ocean sunfishes (Family Molidae)",
+      "author": "Fraser-Brunner, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silvani, L., Gazo, M. and Aguilar, A. 1999. Spanish driftnet fishing and incidental catches in the western Mediterranean. <i>Biological Conservation</i> 90: 79-85.",
+      "year": "1999",
+      "title": "Spanish driftnet fishing and incidental catches in the western Mediterranean.",
+      "author": "Silvani, L., Gazo, M. and Aguilar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nakatsubo, T., Kawachi, M., Mano, N. and Hirose, H. 2007. Spawning period of ocean sunfish Mola mola in waters of the eastern Kanto Region, Japan. <i>Suisan Zoshoku</i> 55: 613-618.",
+      "year": "2007",
+      "title": "Spawning period of ocean sunfish Mola mola in waters of the eastern Kanto Region, Japan",
+      "author": "Nakatsubo, T., Kawachi, M., Mano, N. and Hirose, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roach, J. 2003. World's heaviest bony fish discovered? <i>National Geographic</i>.",
+      "year": "2003",
+      "title": "World's heaviest bony fish discovered?",
+      "author": "Roach, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sims, D.W., Queiroz, N., Doyle, T.K., Houghton, J.D.R. and Hays, G.C., 2009. Satellite tracking of the world's largest bony fish, the ocean sunfish (Mola mola L.) in the North East Atlantic. <i>Journal of Experimental Marine Biology and Ecology</i> 370: 127-133.",
+      "year": "2009",
+      "title": "Satellite tracking of the world's largest bony fish, the ocean sunfish (Mola mola L.) in the North East Atlantic",
+      "author": "Sims, D.W., Queiroz, N., Doyle, T.K., Houghton, J.D.R. and Hays, G.C.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Figueiredo, J.L. and Menezes, N.A. 2000. <i>Manual de peixes marinhos do sudeste do Brasil. VI.Teleostei (5)</i>. Museu de Zoologia, Universidade de, São Paulo.",
+      "year": "2000",
+      "title": "Manual de peixes marinhos do sudeste do Brasil. VI.Teleostei (5)",
+      "author": "Figueiredo, J.L. and Menezes, N.A",
+      "citation_short": null
+    },
+    {
+      "citation": "Konow, N., Fitzpatrick, R., Barnett, A. 2006. Adult Emperor Angelfish (Pomecanthus imperator) clean Giant sunfishes (Mola mola) at Nusa Lembongan, Indonesia. <i>Coral Reefs</i> 25(2): 208.",
+      "year": "2006",
+      "title": "Adult Emperor Angelfish (Pomecanthus imperator) clean Giant sunfishes (Mola mola) at Nusa Lembongan, Indonesia",
+      "author": "Konow, N., Fitzpatrick, R., Barnett, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Then, A.Y., Hoenig, J.M., Hall, N.G. and Hewitt, D.A. 2015. Evaluating the predictive performance of empirical estimators of natural mortality rate using information on over 200 fish species. <i>ICES Journal of Marine Science</i> 72(1): 82-92.",
+      "year": "2015",
+      "title": "Evaluating the predictive performance of empirical estimators of natural mortality rate using information on over 200 fish species",
+      "author": "Then, A.Y., Hoenig, J.M., Hall, N.G. and Hewitt, D.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tudela, S., Kai Kai, A., Maynou, F., El Andalossi, M. and Guglielmi, P. 2005. Driftnet fishing and biodiversity conservation: the case study of the large-scale Moroccan driftnet fleet operating in the Alboran Sea (SW Mediterranean). <i>Biological Conservation</i> 121: 65-78.",
+      "year": "2005",
+      "title": "Driftnet fishing and biodiversity conservation: the case study of the large-scale Moroccan driftnet fleet operating in the Alboran Sea (SW Mediterranean)",
+      "author": "Tudela, S., Kai Kai, A., Maynou, F., El Andalossi, M. and Guglielmi, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Al-Baz, A.F., Bishop, J.M., and Hamza, B. 1999. First Arabian Gulf records of Molidae from Kuwait. <i>Kuwait Journal of Science and Technology (English)</i> 26(2): 315-318.",
+      "year": "1999",
+      "title": "First Arabian Gulf records of Molidae from Kuwait",
+      "author": "Al-Baz, A.F., Bishop, J.M., and Hamza, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hays, G.C., Farquhar, M.R., Luschi, P., Teo, S.L.H. and Thys, T.M. 2009. Vertical niche overlap by two ocean giants with similar diets: oceanic sunfish and leatherback turtle. <i>Journal of Experimental Marine Biology and Ecology</i> 370: 134-143.",
+      "year": "2009",
+      "title": "Vertical niche overlap by two ocean giants with similar diets: oceanic sunfish and leatherback turtle",
+      "author": "Hays, G.C., Farquhar, M.R., Luschi, P., Teo, S.L.H. and Thys, T.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "smith, J. 1965. <i>The Sea Fishes of Southern Africa</i>. Central News Agency, LTD, South Africa.",
+      "year": "1965",
+      "title": "The Sea Fishes of Southern Africa",
+      "author": "Smith, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ayling, T. and Cox, G.J. 1982. <i>Collins' guide to sea fishes of New Zealand</i>. Collins, Auckland, New Zealand.",
+      "year": "1982",
+      "title": "Collins' guide to sea fishes of New Zealand",
+      "author": "Ayling, T. and Cox, G.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petersen, S. and McDonnell, Z. 2007. A bycatch assessment of the Cape horse mackerel Trachurus trachurus capensis midwater trawl fishery off South Africa.  Birdlife/WWF Responsible Fisheries Programme Report 2002?2005.",
+      "year": "2007",
+      "title": "A bycatch assessment of the Cape horse mackerel Trachurus trachurus capensis midwater trawl fishery off South Africa",
+      "author": "Petersen, S. and McDonnell, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shepard E.L.C., Ahmed M.Z., Southall E.J., Witt M.J., Metcalfe J.D. and Sims D.W. 2006. Diel and tidal rhythms in diving behaviour of pelagic sharks identified by signal processing of archival tagging data. <i>Marine Ecology Progress Series</i> 328: 205-213.",
+      "year": "2006",
+      "title": "Diel and tidal rhythms in diving behaviour of pelagic sharks identified by signal processing of archival tagging data.",
+      "author": "Shepard E.L.C., Ahmed M.Z., Southall E.J., Witt M.J., Metcalfe J.D. and Sims D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sims, D. W. and Southall, E. J. 2002. Occurrence of ocean sunfish, Mola mola near fronts in the western English Channel. <i>Journal of the Marine Biological Association of the UK</i> 82(5): 927-928.",
+      "year": "2002",
+      "title": "Occurrence of ocean sunfish, Mola mola near fronts in the western English Channel",
+      "author": "Sims, D. W. and Southall, E. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Syväranta, J., Harrod, C., Kubicek, L., Cappanera, V., and Houghton, J.D.R. 2012. Stable isotopes challenge the perception of ocean sunﬁsh Mola mola as obligate jellyﬁsh predators. <i>Journal of Fish Biology</i> 80(1): 225-231.",
+      "year": "2012",
+      "title": "Stable isotopes challenge the perception of ocean sunﬁsh Mola mola as obligate jellyﬁsh predators",
+      "author": "Syväranta, J., Harrod, C., Kubicek, L., Cappanera, V., and Houghton, J.D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Heithaus, M.R., Frid, A., Wirsing, A.J. and Worm, B. 2008. Predicting ecological consequences of marine top predator declines. <i>Trends in Ecology and Evolution</i> 23: 202-210.",
+      "year": "2008",
+      "title": "Predicting ecological consequences of marine top predator declines",
+      "author": "Heithaus, M.R., Frid, A., Wirsing, A.J. and Worm, B",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

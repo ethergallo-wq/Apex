@@ -1,0 +1,1394 @@
+{
+  "assessment_date": "2023-03-16T00:00:00.000+00:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 219451656,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/219451656/219451755",
+  "citation": "Gazzard, A. 2023. Arvicola amphibius. The IUCN Red List of Threatened Species 2023: e.T219451656A219451755. Accessed on 05 May 2026.",
+  "assessment_id": 219451755,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 219451656,
+    "scientific_name": "Arvicola amphibius",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "RODENTIA",
+    "family_name": "CRICETIDAE",
+    "genus_name": "Arvicola",
+    "species_name": "amphibius",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Arvicola acquatica europea",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Campagnol terrestre",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Rata topera",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Eurasian Water Vole",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Mus amphibius Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Mus",
+        "species_name": "amphibius",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Arvicola terrestris (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Arvicola",
+        "species_name": "terrestris",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Arvicola scherman (Shaw, 1801)",
+        "status": "MERGE",
+        "genus_name": "Arvicola",
+        "species_name": "scherman",
+        "species_author": "(Shaw, 1801)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 3210,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "1-2",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "28211844",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Arvicola amphibius</em>&#160;has a large range extending from France and the United Kingdom in the west, through much of continental Europe and Russia, as far as the Lena Basin and Lake Baikal in Siberia, Russia. It may be absent from most of mainland Italy where recent genetic work has confirmed the presence of a separate species, <em>A. italicus</em> (Castiglia<em> et al.</em> 2016). Its range extends north of the Arctic circle and south into Iran and the Near East (Shenbrot and Krasnov 2005).",
+    "population": "Fossorial monotypes of this species can exhibit large fluctuations over cycles lasting six years or more (Saucy 1999) which are linked to the gradual ageing of populations (Cerqueira <em>et al</em>. 2006). At high population densities, large scale damage to rice fields has been reported in Macedonia (B. Kryštufek pers. comm. 2007). This species is thus considered a pest in some regions. However, in other areas, it has undergone clear declines. For example, it was common in the Hula swamps of Israel until the area was drained in 1957 (Qumsiyeh 1996). In the UK, surveys indicate that the 98.7% of the national population was lost between 1939 and 1998 (Strachan and Jefferies 1993, Stachan <em>et al</em>. 2000) and the remaining population further declined by 50% between 1999 and 2017 (Mathews <em>et al</em>. 2018). Local-level declines have also previously been reported in the Netherlands (Norren&#160;<em>et al</em>. 2020).",
+    "habitats": "This large vole can exhibit considerable ecological adaptation and has been reported to occur as aquatic and fossorial morphotypes (Wilson <em>et al</em>. 2017) that were previously regarded as separate species (Chevret <em>et al</em>.&#160;2020). It survives in a range of habitats around rivers, streams and marshes in the lowlands and the mountains (Harrison and Bates 1991), though can also occupy dry grasslands (Wijas <em>et al</em>. 2023) and urban habitats (Leivesley <em>et al</em>. 2021). Its presence can be influenced by habitat, proximity to colonies that act as source populations, and occupancy of American Mink (<em>Neovison vison</em>) which is known to predate on this species (Brzeziński <em>et al</em>. 2019). It is active during the day and night, but primarily at dawn and dusk (Wilson <em>et al.</em> 2017). It feeds mostly on vegetation, but also consumes some insects, crustaceans, molluscs, and small fish, and roots, bulbs and tubers in the winter (Reichstein 1982, Harrison and Bates 1991). Reproduction occurs during the warmer months of the year and may begin as early as March, with gestation lasting 20-30 days and 4-6 young produced per litter (Wilson<em> et al</em>. 2017).",
+    "threats": "Declines in aquatic populations in parts of western Europe have been attributed to predation by introduced American Mink, habitat loss and fragmentation, and water pollution<em>&#160;</em>(Rushton <em>et al</em>. 2000).&#160;Population fragmentation is more pronounced in Mediterranean populations due to increased aridity. Local population extinctions and reductions have occurred in Turkey, Georgia and other parts of this range due to drainage of swamp habitat (Qumsiyeh 1996). It is considered an agricultural pest and extensive control measures are carried out in some areas.",
+    "measures": "The species occurs in protected areas throughout its range. Recovery projects have been undertaken in the UK focusing on habitat enhancements, sympathetic site management, reintroductions and American Mink monitoring and control (e.g. Moorhouse <em>et al</em>. 2015). Further research of its complex taxonomy, population trends and threats is needed.",
+    "use_trade": null,
+    "rationale": "The Eurasian Water Vole has a wide distribution range with a very large extent of occurrence (EOO). The population size has not been quantified, but it is not believed to approach the thresholds for the population size criterion of the IUCN Red List (i.e. fewer than 10,000 mature individuals in conjunction with appropriate decline rates and subpopulation qualifiers). Although it has experienced significant reductions in some parts of its range (such as in the United Kingdom), population trends elsewhere are believed to be stable. It is therefore assessed as Least Concern, but conservation and monitoring efforts are required in regions where it is declining.",
+    "trend_justification": null,
+    "taxonomic_notes": "<span style=\"\">Linnaeus'&#160;</span><em style=\"\">amphibius</em><span style=\"\">&#160;and&#160;</span><em style=\"\">terrestris</em><span style=\"\">, both proposed in 1758 on the same page, are now considered conspecific by most researchers. As shown by Corbet (1978),&#160;<em style=\"\">a</em></span><em style=\"\">mphibius</em><span style=\"\">&#160;has a priority over&#160;</span><em style=\"\">terrestris</em><span style=\"\">, based on Blasius (1857) as the first reviser.&#160;</span><br/><br/><span style=\"\">At one point, this species was split into&#160;</span><em style=\"\">A. amphibius</em><span style=\"\">&#160;and&#160;<em style=\"\">A. scherman</em>&#160;(Panteleyev 2001).&#160;<em style=\"\">Arvicola amphibius</em>&#160;is larger, with shaggy pelage and ortodont incisors, and is associated with aquatic environments;&#160;<em style=\"\">A. scherman</em>&#160;is smaller, with softer pelage, more reduced plantar and palmar tubercles, and the upper incisors strongly projecting forwards and has fossorial habits (Panteleyev 2001).</span><br/><br/><span style=\"\">However, the taxonomy of the&#160;</span><em style=\"\">A. amphibius</em><span style=\"\">&#160;group is more complex. Considering genetic distances and other biological data, it is suggested that the Italian lineage corresponds to a separate species (</span><em style=\"\">Arvicola italicus</em><span style=\"\">; Castiglia<em style=\"\">&#160;et al</em>. 2016). The three other lineages correspond to phylogeographic variations of a single species (</span><em style=\"\">A. amphibius</em><span style=\"\">), encompassing the former&#160;</span><em style=\"\">A. amphibius, Arvicola terrestris, Arvicola scherman</em><span style=\"\">, and&#160;</span><em style=\"\">Arvicola monticola</em><span style=\"\">&#160;(Chevret </span><em style=\"\">et al</em><span style=\"\">. 2020,&#160;Krystufek and Shenbrot 2022).</span>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Ondatra zibethicus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Rattus norvegicus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Neogale vison",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Gazzard, A.",
+      "value": [
+        "Abigail Gazzard (IUCN SSC Small Mammal Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Kennerley, R.",
+      "value": [
+        "Rosalind Kennerley (Durrell Wildlife Conservation Trust)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Moorhouse, T., Amori, G., Batsaikhan, N., Henttonen, H., Meinig, H., Shenbrot, G., Bukhnikashvili, A., Hutterer, R., Kryštufek, B., Yigit, N., Mitsainas, G. & Palomo, L.J.",
+      "value": [
+        "Holger Meinig",
+        "Tom Moorhouse (WildCRU, University of Oxford)",
+        "Rainer Hutterer (IUCN SSC Insectivore Specialist Group)",
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)",
+        "Nyamsuren Batsaikhan",
+        "Boris Kryštufek",
+        "Georgy Shenbrot",
+        "H Henttonen",
+        "Alexander Bukhnikashvili",
+        "Nuri Yigit",
+        "G. Mitsainas",
+        "L.J. Palomo"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harrison, D.L. and Bates, P.J.J. 1991. <i>The Mammals of Arabia</i>. Harrison Zoological Museum, Sevenoaks, UK.",
+      "year": "1991",
+      "title": "The Mammals of Arabia",
+      "author": "Harrison, D.L. and Bates, P.J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Qumsiyeh, M.B. 1996. <i>Mammals of the Holy Land</i>. Texas Tech University Press, Lubbock.",
+      "year": "1996",
+      "title": "Mammals of the Holy Land",
+      "author": "Qumsiyeh, M.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corbet, G.B. 1978. <i>The Mammals of the Palaearctic Region: a Taxonomic Review</i>. British Museum (Natural History) and Cornell University Press, London, UK and Ithaca, NY, USA.",
+      "year": "1978",
+      "title": "The Mammals of the Palaearctic Region: a Taxonomic Review",
+      "author": "Corbet, G.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Panteleyev, P. A. 2001. <i>The water vole. Mode of the species</i>. Nauka, Moscow, Russia.",
+      "year": "2001",
+      "title": "The water vole. Mode of the species",
+      "author": "Panteleyev, P. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reichstein, H. 1982. <i>Arvicola terrestis</i> (Linnaeus, 1758) – Schermaus. In: J. Niethammer and F. Krapp (eds), <i>Handbuch der Säugetiere Europas, Band 2: Nagetiere. Rodentia II</i>, pp. 649 pp.. Akademische Verlagsgesellschaft, Wiesbaden.",
+      "year": "1982",
+      "title": "<i>Arvicola terrestis</i> (Linnaeus, 1758) – Schermaus",
+      "author": "Reichstein, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Saucy, F. 1999. <i>Arvicola terrestris</i>. In: A. J. Mitchell-Jones, G. Amori, W. Bogdanowicz, B. Kryštufek, P. J. H. Reijnders, F. Spitzenberger, M. Stubbe, J. B. M. Thissen, V. Vohralík, and J. Zima (eds), <i>The Atlas of European Mammals</i>, Academic Press, London, UK.",
+      "year": "1999",
+      "title": "<i>Arvicola terrestris</i>",
+      "author": "Saucy, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mathews, F., Kubasiewicz, L.M., Gurnell, J., Harrower, C.A., McDonald, R.A. and Shore, R.F. 2018. A Review of the Population and Conservation Status of British Mammals. A report by the Mammal Society under contract to Natural England, Natural Resources Wales and Scottish Natural Heritage. Natural England, Peterborough.",
+      "year": "2018",
+      "title": "A Review of the Population and Conservation Status of British Mammals. A report by the Mammal Society under contract to Natural England, Natural Resources Wales and Scottish Natural Heritage",
+      "author": "Mathews, F., Kubasiewicz, L.M., Gurnell, J., Harrower, C.A., McDonald, R.A. and Shore, R.F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "Brzeziński, M., Jedlikowski, J. and Komar, E. 2019. Space use, habitat selection and daily activity of water voles Arvicola amphibius co-occurring with the invasive American mink Neovison vison. <i>Folia Zoologica</i> 68: 21-28.",
+      "year": "2019",
+      "title": "Space use, habitat selection and daily activity of water voles Arvicola amphibius co-occurring with the invasive American mink Neovison vison",
+      "author": "Brzeziński, M., Jedlikowski, J. and Komar, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Castiglia, R., Aloise, G., Amori, G., Annesi, F., Bertolino, S., Capizzi , D., Mori, E., Colangelo, P. 2016. The Italian peninsula hosts a divergent mtDNA lineage of the water vole, Arvicola amphibius s.l., including fossorial and aquatic ecotypes. <i>Hystrix</i> 27: 1-5.",
+      "year": "2016",
+      "title": "The Italian peninsula hosts a divergent mtDNA lineage of the water vole, Arvicola amphibius s.l., including fossorial and aquatic ecotypes",
+      "author": "Castiglia, R., Aloise, G., Amori, G., Annesi, F., Bertolino, S., Capizzi , D., Mori, E., Colangelo, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cerqueira, D., De Sousa, B., Gabrion, C., Giraudoux, P., Quéré, J.P., and Delattre, P. 2006. Cyclic changes in the population structure and reproductive pattern of the water vole, Arvicola terrestris Linnaeus, 1758. <i>Mammalian Biology</i> 71: 193-202.",
+      "year": "2006",
+      "title": "Cyclic changes in the population structure and reproductive pattern of the water vole, Arvicola terrestris Linnaeus, 1758",
+      "author": "Cerqueira, D., De Sousa, B., Gabrion, C., Giraudoux, P., Quéré, J.P., and Delattre, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chevret, P., Renaud, S., Helvaci, Z., Ulrich, R.G., Quéré, J-P. and Michaux, J.R. 2020. Genetic structure, ecological versatility, and skull shape differentiation in Arvicola water voles (Rodentia, Cricetidae). <i>Journal of Zoological Systematics and Evolutionary Research</i> 58: 1323-1334.",
+      "year": "2020",
+      "title": "Genetic structure, ecological versatility, and skull shape differentiation in Arvicola water voles (Rodentia, Cricetidae)",
+      "author": "Chevret, P., Renaud, S., Helvaci, Z., Ulrich, R.G., Quéré, J-P. and Michaux, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Krystufek, B. and Shenbrot, G.I. 2022. <i>Voles and Lemmings (Arvicolinae) of the Palaearctic Region</i>. University Press, Maribor.",
+      "year": "2022",
+      "title": "Voles and Lemmings (Arvicolinae) of the Palaearctic Region",
+      "author": "Krystufek, B. and Shenbrot, G.I",
+      "citation_short": ""
+    },
+    {
+      "citation": "Leivesley, J.A., Stewart, R.A., Paterson, V., McCafferty, D.J. 2021. Potential importance of urban areas for water voles: Arvicola amphibius. <i>European Journal of Wildlife Research</i> 67: 15.",
+      "year": "2021",
+      "title": "Potential importance of urban areas for water voles: Arvicola amphibius",
+      "author": "Leivesley, J.A., Stewart, R.A., Paterson, V., McCafferty, D.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moorhouse, T.P., Gelling, M. and Macdonald, D.W. 2008. Effects of forage availability on growth and maturation rates in water voles. <i>Journal of Animal Ecology</i> 77: 1288-1295.",
+      "year": "2008",
+      "title": "Effects of forage availability on growth and maturation rates in water voles",
+      "author": "Moorhouse, T.P., Gelling, M. and Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moorhouse, T.P., Gelling, M. and Macdonald, D.W. 2015. Water vole restoration in the Upper Thames. In: Macdonald, D.W. and Feber, R.E. (eds), <i>Wildlife Conservation on Farmland: Managing for nature on lowland farms</i>, Oxford University Press.",
+      "year": "2015",
+      "title": "Water vole restoration in the Upper Thames",
+      "author": "Moorhouse, T.P., Gelling, M. and Macdonald, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Norren, E. van, Dekker, J. and Limpens, H. 2020. Basisrapport Rode Lijst Zoogdieren 2020 volgens Nederlandse en IUCN-criteria. Zoogdiervereniging, Nijmegen.",
+      "year": "2020",
+      "title": "Basisrapport Rode Lijst Zoogdieren 2020 volgens Nederlandse en IUCN-criteria.",
+      "author": "Norren, E. van, Dekker, J. and Limpens, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Panteleyev, P.A. 2001. <i>The water vole: mode of the species</i>. Nauka, Moscow.",
+      "year": "2001",
+      "title": "The water vole: mode of the species",
+      "author": "Panteleyev, P.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rushton, S.P., Barreto, G.W., Cormack, R.M., Macdonald, D.W. and Fuller, R. 2000. Modelling the effects of mink and habitat fragmentation on the water vole. <i>Journal of Applied Ecology</i> 37: 475-490.",
+      "year": "2000",
+      "title": "Modelling the effects of mink and habitat fragmentation on the water vole.",
+      "author": "Rushton, S.P., Barreto, G.W., Cormack, R.M., Macdonald, D.W. and Fuller, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Strachan, C., Strachan R, and Jefferies, D.J. 2000. Preliminary report on the changes in the water vole population of Britain as shown by the national surveys of 1989-1990 and 1996-1998. The Vincent Wildlife Trust, London.",
+      "year": "2000",
+      "title": "Preliminary report on the changes in the water vole population of Britain as shown by the national surveys of 1989-1990 and 1996-1998",
+      "author": "Strachan, C., Strachan R, and Jefferies, D.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Strachan, R. and Jefferies, D.J. 1993. The water vole <i>Arvicola terrestris</i> in Britain 1989-1990: its distribution and changing status. The Vincent Wildlife Trust, London.",
+      "year": "1993",
+      "title": "The water vole <i>Arvicola terrestris</i> in Britain 1989-1990: its distribution and changing status.",
+      "author": "Strachan, R. and Jefferies, D.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wijas, B., Stewart, R.A. and McCafferty, D.J. 2023. Home ranges of fossorial water voles (Arvicola amphibius) in urban grasslands. <i>Mammal Communications</i> 9: 1-6.",
+      "year": "2023",
+      "title": "Home ranges of fossorial water voles (Arvicola amphibius) in urban grasslands",
+      "author": "Wijas, B., Stewart, R.A. and McCafferty, D.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, D.E., Mittermeier, R.A. and Lacher, T.E. (eds). 2017. Cricetidae. <i>Handbook of the Mammals of the World – Volume 7 Rodents II.</i>, Lynx Edicions, Barcelona.",
+      "year": "2017",
+      "title": "Cricetidae",
+      "author": "Wilson, D.E., Mittermeier, R.A. and Lacher, T.E. (eds)",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

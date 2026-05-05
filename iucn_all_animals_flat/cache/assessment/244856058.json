@@ -1,0 +1,2331 @@
+{
+  "assessment_date": "2020-04-06T01:00:00.000+01:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 166975,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/166975/244856058",
+  "citation": "Diallo, I., Snoeks, J., Freyhof, J., Geelhand, D. & Hughes, A. 2023. Oreochromis niloticus (amended version of 2020 assessment). The IUCN Red List of Threatened Species 2023: e.T166975A244856058. Accessed on 05 May 2026.",
+  "assessment_id": 244856058,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 166975,
+    "scientific_name": "Oreochromis niloticus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 185647,
+        "scientific_name": "Oreochromis niloticus ssp. baringoensis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "CICHLIFORMES",
+        "family_name": "CICHLIDAE",
+        "genus_name": "Oreochromis",
+        "species_name": "niloticus",
+        "subpopulation_name": null,
+        "infra_name": "baringoensis",
+        "authority": "Trewavas, 1983",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 183062,
+        "scientific_name": "Oreochromis niloticus ssp. cancellatus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "CICHLIFORMES",
+        "family_name": "CICHLIDAE",
+        "genus_name": "Oreochromis",
+        "species_name": "niloticus",
+        "subpopulation_name": null,
+        "infra_name": "cancellatus",
+        "authority": "(Nichols, 1923)",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 183118,
+        "scientific_name": "Oreochromis niloticus ssp. filoa",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "CICHLIFORMES",
+        "family_name": "CICHLIDAE",
+        "genus_name": "Oreochromis",
+        "species_name": "niloticus",
+        "subpopulation_name": null,
+        "infra_name": "filoa",
+        "authority": "Trewavas, 1983",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 167013,
+        "scientific_name": "Oreochromis niloticus ssp. niloticus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "CICHLIFORMES",
+        "family_name": "CICHLIDAE",
+        "genus_name": "Oreochromis",
+        "species_name": "niloticus",
+        "subpopulation_name": null,
+        "infra_name": "niloticus",
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Baringo tilapia",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Cichlid",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Edward tilapia",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Mango fish",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Mozambique tilapia",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Nilotica",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Akpafiatsi",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Amnun yeor",
+            "language": "heb"
+          },
+          {
+            "main": false,
+            "name": "Bugu",
+            "language": "hau"
+          },
+          {
+            "main": false,
+            "name": "Bulti",
+            "language": "ara"
+          },
+          {
+            "main": false,
+            "name": "Cá Rô phi vằn",
+            "language": "vie"
+          },
+          {
+            "main": false,
+            "name": "Carpe",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Chikadai",
+            "language": "jpn"
+          },
+          {
+            "main": false,
+            "name": "Didee",
+            "language": "gaa"
+          },
+          {
+            "main": false,
+            "name": "Ekouni",
+            "language": "fan"
+          },
+          {
+            "main": false,
+            "name": "Epia",
+            "language": "yor"
+          },
+          {
+            "main": false,
+            "name": "Falga",
+            "language": "hau"
+          },
+          {
+            "main": false,
+            "name": "Garagaza",
+            "language": "hau"
+          },
+          {
+            "main": false,
+            "name": "Gargaza",
+            "language": "hau"
+          },
+          {
+            "main": false,
+            "name": "Gbolonu",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Ifunu",
+            "language": "ibo"
+          },
+          {
+            "main": false,
+            "name": "Karfasa",
+            "language": "hau"
+          },
+          {
+            "main": false,
+            "name": "Karwa",
+            "language": "kau"
+          },
+          {
+            "main": false,
+            "name": "Koroso",
+            "language": "amh"
+          },
+          {
+            "main": false,
+            "name": "Kpakaru",
+            "language": "znd"
+          },
+          {
+            "main": false,
+            "name": "Logokpa",
+            "language": "ewe"
+          },
+          {
+            "main": false,
+            "name": "Mojarra",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Mpupa",
+            "language": "ibo"
+          },
+          {
+            "main": false,
+            "name": "Munruvare",
+            "language": "swe"
+          },
+          {
+            "main": false,
+            "name": "Ngege",
+            "language": "swa"
+          },
+          {
+            "main": false,
+            "name": "Niilintilapia",
+            "language": "fin"
+          },
+          {
+            "main": false,
+            "name": "Nilbuntbarsch",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Nilcichlide",
+            "language": "dan"
+          },
+          {
+            "main": false,
+            "name": "Nil-Maulbrüter",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Nil-mundruger",
+            "language": "dan"
+          },
+          {
+            "main": false,
+            "name": "Perege",
+            "language": "swa"
+          },
+          {
+            "main": false,
+            "name": "Pla nil",
+            "language": "tha"
+          },
+          {
+            "main": false,
+            "name": "Pla pla",
+            "language": "tgl"
+          },
+          {
+            "main": false,
+            "name": "Qoroosoo",
+            "language": "orm"
+          },
+          {
+            "main": false,
+            "name": "Sato",
+            "language": "swa"
+          },
+          {
+            "main": false,
+            "name": "Tilapia",
+            "language": "tgl"
+          },
+          {
+            "main": false,
+            "name": "Tilapia",
+            "language": "tam"
+          },
+          {
+            "main": false,
+            "name": "Tilapia",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tilapia Del Nilo",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tilápia-do-Nilo",
+            "language": "por"
+          },
+          {
+            "main": false,
+            "name": "Tilapia Du Nil",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Tilapia nilótica",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Tilapia nilowa",
+            "language": "pol"
+          },
+          {
+            "main": false,
+            "name": "Tilapie",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Uganda",
+            "language": "swa"
+          },
+          {
+            "main": false,
+            "name": "Wass",
+            "language": "wol"
+          },
+          {
+            "main": false,
+            "name": "திலேப்பி",
+            "language": "tam"
+          },
+          {
+            "main": true,
+            "name": "Nile Tilapia",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Oreochromis nilotica (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Oreochromis",
+            "species_name": "nilotica",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Chromis nilotica (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Chromis",
+            "species_name": "nilotica",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Sarotherodon niloticus (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Sarotherodon",
+            "species_name": "niloticus",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Tilapia nilotica (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Tilapia",
+            "species_name": "nilotica",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Chromis niloticus (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Chromis",
+            "species_name": "niloticus",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Tilapia nilotious (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Tilapia",
+            "species_name": "nilotious",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Tilapia nilotica (Linnaeus, 1758) ssp. nilotica",
+            "status": "ADD",
+            "genus_name": "Tilapia",
+            "species_name": "nilotica",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "nilotica"
+          },
+          {
+            "name": "Oreochromis niloticus (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Oreochromis",
+            "species_name": "niloticus",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Perca nilotica Linnaeus, 1758",
+            "status": "ACCEPTED",
+            "genus_name": "Perca",
+            "species_name": "nilotica",
+            "species_author": "Linnaeus, 1758",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Tilapia calciati Gianferrari, 1924",
+            "status": "ACCEPTED",
+            "genus_name": "Tilapia",
+            "species_name": "calciati",
+            "species_author": "Gianferrari, 1924",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Chromis guentheri Steindachner, 1864",
+            "status": "ACCEPTED",
+            "genus_name": "Chromis",
+            "species_name": "guentheri",
+            "species_author": "Steindachner, 1864",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      },
+      {
+        "sis_id": 185648,
+        "scientific_name": "Oreochromis niloticus ssp. sugutae",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "CICHLIFORMES",
+        "family_name": "CICHLIDAE",
+        "genus_name": "Oreochromis",
+        "species_name": "niloticus",
+        "subpopulation_name": null,
+        "infra_name": "sugutae",
+        "authority": "Trewavas, 1983",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 185649,
+        "scientific_name": "Oreochromis niloticus ssp. vulcani",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "ACTINOPTERYGII",
+        "order_name": "CICHLIFORMES",
+        "family_name": "CICHLIDAE",
+        "genus_name": "Oreochromis",
+        "species_name": "niloticus",
+        "subpopulation_name": null,
+        "infra_name": "vulcani",
+        "authority": "(Trewavas, 1933)",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "CICHLIFORMES",
+    "family_name": "CICHLIDAE",
+    "genus_name": "Oreochromis",
+    "species_name": "niloticus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [],
+    "synonyms": [
+      {
+        "name": "Perca nilotica Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Perca",
+        "species_name": "nilotica",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tilapia nilotica (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Tilapia",
+        "species_name": "nilotica",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>This species is native to areas of northern, western and eastern Africa. This includes the coastal rivers of Israel (Trewayas and Teugels 1991) and the Nile basin from the Albert Nile (including Lakes Albert and Edward) to the delta, including the Blue Nile with Lake Tana. This species also occurs in Jebel Marra in Sudan, the lakes and rivers of the Ethiopian Rift valley (including the Awash River), in the endorheic lakes Turkana and Baringo and associated rivers, and also in Lakes Kivu and Tanganyika including the Rusizi and Lower Malagarasi systems (Trewavas 1983).</p><p>In western Africa this species is native to the Senegal, Gambia, Volta, Niger, Benue and Chad rivers. Records from other coastal rivers in West Africa refer to introduced or escaped populations (Teugels and van den Audenaerde 2003).</p><p><em>Oreochromis niloticus</em> is one of Africa’s most important fish culture species with many cultured strains and as such has been introduced in many fish culture stations from where it has regularly escaped. It has often been reported from several coastal western and western central African basins, including from the Congo system, Lakes Victoria, Kyoga, Nagunmbo, Nakivali, Kacheran and Kijanebarola in East Africa, and also throughout the world. Several countries report adverse ecological impacts after introduction.</p>",
+    "population": "There are currently no data on the overall population trend. This species appears to be widespread and abundant but may be locally declining due to intense fishing pressure.",
+    "habitats": "This species occurs in a wide variety of freshwater habitats including rivers, lakes, sewage canals and irrigation channels. It is intolerant of high salinities and has an upper lethal temperature limit  of 39–40°C. It is rarely found in deeper parts of rivers and usually favours well-vegetated canals and shores (de Moor and Bruton 1988). Although it is a freshwater species, it can also be found in brackish water such as  in the Nile Delta. The area occupied by the species extends from 8°S to  32°N and from 6,000 ft (1,830 m) to sea level. <span style=\"font-style: italic;\"></span><br/><br/>This species is mainly diurnal and is almost entirely herbivorous, feeding mainly on phytoplankton or benthic algae, although it is capable of using  a wide range of food materials up to a total length of about 5 cm. Where phytoplankton are abundant they  form the bulk of its diet (Trewavas 1983). Although macrophytes are not  its typical food they do form a significant part of its diet in certain  waters. The young fry are omnivorous and feed on copepods, aquatic and  terrestrial insect larvae, aufwuchs and detritus (de Moor and Bruton  1988). <br/><br/>With the onset of the rainy season this species enters lagoons from upstream riverine areas. It inhabits the littoral zone of lakes and is abundant in Lakes Turkana and Albert. <span style=\"font-style: italic;\">Oreochromis niloticus</span> of Lake Edward form very large schools of 100 m² or more at the lake surface when feeding.<br/><br/><em>Oreochromis niloticus&#160;</em>is a maternal mouthbrooder and males build nests in firm  sand at depths between 0.6 and 2.0 m. Schools of fertile females gather at  the surface above the nesting territories and occasionally a female will descend to spawn. The female then leaves the territory of the male with the  brood (de Moor and Bruton 1988, Trewavas 1983).",
+    "threats": "In western Africa, there are no known threats to this species. In eastern Africa, the main threats to this species are hybridisation and localised overfishing. In the Middle East this species faces no threats except for habitat loss caused by water abstraction.",
+    "measures": "No conservation actions are known to be in place for this species, but research into its harvest and use is recommended along with monitoring of its population trend.",
+    "use_trade": "This species is harvested for human consumption. It is marketed fresh and frozen (Frimodt 1995). This species represents  the most important element in fisheries catches in many lakes in  tropical Africa and is a favoured species for aquaculture.",
+    "rationale": "This is a widespread species with no known major or widespread threats, so is therefore assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "Also reported as <em>Tilapia nilotica</em> (antiquated name)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Freshwater Lakes"
+      },
+      "code": "13_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Aquaculture Ponds"
+      },
+      "code": "15_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burundi"
+      },
+      "code": "BI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (unknown use)"
+      },
+      "code": "7_2_4"
+    },
+    {
+      "scope": null,
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 1",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Diallo, I., Snoeks, J., Freyhof, J., Geelhand, D. & Hughes, A.",
+      "value": [
+        "Adrian Hughes (IUCN)",
+        "Jos Snoeks (Royal Museum for Central Africa, Belgium)",
+        "Jörg Freyhof (Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin)",
+        "Dimitri Geelhand (Royal Museum for Central Africa/ FishBase)",
+        "Ibrahima Diallo"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Sayer, C.",
+      "value": [
+        "Catherine Sayer (IUCN Red List Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Entsua-Mensah, M., Lalèyè, P., Ntakimazi, G., Getahun, A., Odhiambo, E., Hanssens, M. & Moelants, T.",
+      "value": [
+        "Gaspard Ntakimazi (Burundi University)",
+        "E.A. Odhiambo",
+        "Philipe Lalèyè (University of Abomey-Calavi)",
+        "M Hanssens (FBU Pan-Africa Freshwater Biodiversity Assessment Project)",
+        "M. Entsua-Mensah (Pan-Africa Freshwater Assessment project)",
+        "Abebe Getahun (FBU Pan-Africa freshwater Biodiversity Assessment Project)",
+        "T Moelants (FBU Pan-Africa Freshwater Biodiversity Assessment Project)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Palmer-Newton, A.",
+      "value": [
+        "Amy Palmer-Newton (IUCN Freshwater Biodiversity Unit)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "Correction to change the origin for Zambia from 'Native' to 'Introduced' in the countries of occurrence list."
+    }
+  ],
+  "references": [
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 June 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-1"
+    },
+    {
+      "citation": "Froese, R. and Pauly, D. 2006. FishBase. Available at: <a href=\"www.fishbase.org\">www.fishbase.org</a>.",
+      "year": "2006",
+      "title": "FishBase",
+      "author": "Froese, R. and Pauly, D",
+      "citation_short": null
+    },
+    {
+      "citation": "Frimodt, C. 1995. <i>Multilingual illustrated guide to the world's commercial coldwater fish</i>. Osney Mead, Oxford, England.",
+      "year": "1995",
+      "title": "Multilingual illustrated guide to the world's commercial coldwater fish",
+      "author": "Frimodt, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paugy, D., Lévêque, C. and Teugels, G.G. 2003. <i>Poissons d'eaux douces et saumâtres de l'Afrique de l'Ouest</i>. Institut de Recherche pour le Developpement, Paris, France, Muséum national d'Histoire Naturelle, Paris, France, Musée Royal de l'Afrique Centrale, Tervuren, Belgium.",
+      "year": "2003",
+      "title": "Poissons d'eaux douces et saumâtres de l'Afrique de l'Ouest",
+      "author": "Paugy, D., Lévêque, C. and Teugels, G.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trewavas, E. 1983. <i>Tilapiine fishes of the genera </i>Sarotherodon, Oreochromis <i>and </i>Danakilia. Cornell University Press, New York, United States.",
+      "year": "1983",
+      "title": "<i>Tilapiine fishes of the genera </i>Sarotherodon, Oreochromis <i>and </i>Danakilia.",
+      "author": "Trewavas, E",
+      "citation_short": null
+    },
+    {
+      "citation": "Wildlife Department, Ghana. 1998. <i>Managing Ghana's Wetlands: Policy, Strategy and Action Plan</i>. Wildlife Department, Ghana, Accra.",
+      "year": "1998",
+      "title": "Managing Ghana's Wetlands: Policy, Strategy and Action Plan",
+      "author": "Wildlife Department, Ghana",
+      "citation_short": null
+    },
+    {
+      "citation": "Holden, M. and Reed, W. 1972. West African freshwater fish. <i>West African freshwater fish</i>, pp. 68. Longman Group Ltd., London.",
+      "year": "1972",
+      "title": "West African freshwater fish",
+      "author": "Holden, M. and Reed, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Irvine, F.R., Brown, A.P., Norman, J.R. and Trewavas, E. 1947. The fish and fisheries of the Gold Coast. <i>The fish and fisheries of the Gold Coast</i>, pp. 352. Crown Agents of the Colonies, London.",
+      "year": "1947",
+      "title": "The fish and fisheries of the Gold Coast",
+      "author": "Irvine, F.R., Brown, A.P., Norman, J.R. and Trewavas, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lowe-McConnell, R.H. 1987. Ecological studies in tropical fish communities. In: Peter S. Ashton, Stephen P. Hubbell, Daniel H. Janzen, Peter H. Raven, P.B. Tomlinson (ed.), <i>Ecological studies in tropical fish communities</i>, pp. 382. Press Syndicate of the University of Cambridge, Cambridge.",
+      "year": "1987",
+      "title": "Ecological studies in tropical fish communities",
+      "author": "Lowe-McConnell, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Crul, R.C.M. and Roest, F.C. 1995. Current status of the fisheries and fish stocks of the four largest African reservoirs: Kainji, Kariba, Nasser/Nubia, and Volta. <i>Current status of the fisheries and fish stocks of the four largest African reservoirs: Kainji, Kariba, Nasser/Nubia, and Volta. CIFA Technical Paper, No. 30.</i>, pp. 134. Food and Agriculture Organization of the United Nations, Rome.",
+      "year": "1995",
+      "title": "Current status of the fisheries and fish stocks of the four largest African reservoirs: Kainji, Kariba, Nasser/Nubia, and Volta",
+      "author": "Crul, R.C.M. and Roest, F.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Directorate of Fisheries, Ministry of Fisheries, Ghana. 2005. <i>Inland Fisheries Policy</i>. Ministry of Fisheries, Ghana, Accra.",
+      "year": "2005",
+      "title": "Inland Fisheries Policy",
+      "author": "Directorate of Fisheries, Ministry of Fisheries, Ghana",
+      "citation_short": null
+    },
+    {
+      "citation": "Entsua-Mensah, M. 1996. Threats to Freshwater Fishery Resources. In: A.A. Oteng-Yeboah and L. Enu-Kwesi (eds), <i>Proceedings of Workshop on Biodiversity.</i>, pp. 74 -78. Botany Department, University of Ghana, Legon.",
+      "year": "1996",
+      "title": "Threats to Freshwater Fishery Resources.",
+      "author": "Entsua-Mensah, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Entsua-Mensah, M. 2001. International Co-operation and Watershed Management in the Volta Basin, West Africa\nManagement in the Volta Basin, West Africa. In: Management in the Volta Basin, West Africa. Paper presented at the 9th International Conference on Conservation and Management of lakes, Otsu City, Shiga Prefecture, Japan. 9th-16th November 2001. (eds), 9th International Conference on Conservation and Management of lakes.. Otsu City, Shiga Prefecture, Japan.",
+      "year": "2001",
+      "title": "International Co-operation and Watershed Management in the Volta Basin, West Africa\nManagement in the Volta Basin, West Africa.",
+      "author": "Entsua-Mensah, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dankwa, H.R. 1985. Fish monitoring in the Onchocerciasis Control Programme zone in Ghana -  An overview of the fish monitoring programme, Hydrobiological Monitoring Report, OCP (Volta Basin in Ghana). IAB 106. <i>Fish monitoring in the Onchocerciasis Control Programme zone in Ghana -  An overview of the fish monitoring programme, Hydrobiological Monitoring Report, OCP (Volta Basin in Ghana). IAB 106</i>, Institute of Aquatic Biology, Accra.",
+      "year": "1985",
+      "title": "Fish monitoring in the Onchocerciasis Control Programme zone in Ghana -  An overview of the fish monitoring programme, Hydrobiological Monitoring Report, OCP (Volta Basin in Ghana). IAB 106",
+      "author": "Dankwa, H.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Laleye, P., Chikou, A., Philippart, J.C., Teugels, G. and Vandewalle, P. 2004. Etude de la diversite ichtyologique du bassin du fleuve Oueme au Benin (Afrique de l'Ouest). <i>Cybium</i> 28(4): 329-339.",
+      "year": "2004",
+      "title": "Etude de la diversite ichtyologique du bassin du fleuve Oueme au Benin (Afrique de l'Ouest)",
+      "author": "Laleye, P., Chikou, A., Philippart, J.C., Teugels, G. and Vandewalle, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dankwa H.R., Abban E.K., Teugels G.G. 1999. Freshwater fishes of Ghana: identification, distribution, ecological and economic importance. <i>Ann. Mus. R. Afr. Centr., Sci. Zool.</i>: 53.",
+      "year": "1999",
+      "title": "Freshwater fishes of Ghana: identification, distribution, ecological and economic importance",
+      "author": "Dankwa H.R., Abban E.K., Teugels G.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trewavas, E. and Teugels, G.G. 1991. <i>Oreochromis</i>. In: J. Daget, J.-P. Gosse, G.G. Teugels & D.F.E Thys van den Audenaerde (eds). <i>Check-List of the Freshwater Fishes of Africa (CLOFFA IV)</i>. pp: 307–346. ISNB, Brussels and MRAC, Terviren, Belgium, and ORSTOM, Paris, France.",
+      "year": "1991",
+      "title": "<i>Oreochromis</i>. In: <i>Check-List of the Freshwater Fishes of Africa (CLOFFA IV)</i>.",
+      "author": "Trewavas, E. and Teugels, G.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Teugels, G.G. and Thys van den Audenaerde, D.F.E.  (eds). 2003. Cichlidae. In: D. Paugy, C. Lévêque and G.G. Teugels (eds), <i>The fresh and brackish water fishes of West Africa</i>, pp. 815; 714-779. IRD & Africa Museum, Paris & Tervuren.",
+      "year": "2003",
+      "title": "Cichlidae",
+      "author": "Teugels, G.G. and Thys van den Audenaerde, D.F.E. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "De Moor, I.J. and Bruton, M.N. 1988. Atlas of alien and translocated indigenous aquatic animals in southern Africa. . <i>South African National Scientific Programmes Report No. 144, Council for Scientific and Industrial Research, Pretoria.</i>.",
+      "year": "1988",
+      "title": "Atlas of alien and translocated indigenous aquatic animals in southern Africa. ",
+      "author": "De Moor, I.J. and Bruton, M.N",
+      "citation_short": null
+    },
+    {
+      "citation": "Teugels, G.G. and Thys van den Audenaerde, D.F.E. 2003. Cichlidae. In: D. Paugy, C. Lévêque and G.G Teugels (eds), <i>The fresh and brackish water fishes of West Africa</i>, IRD & MRAC, Paris & Tervuren.",
+      "year": "2003",
+      "title": "Cichlidae",
+      "author": "Teugels, G.G. and Thys van den Audenaerde, D.F.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

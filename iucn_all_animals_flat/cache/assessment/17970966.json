@@ -1,0 +1,914 @@
+{
+  "assessment_date": "2015-11-23T00:00:00.000+00:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 163017685,
+  "criteria": "A2acde+4acde",
+  "url": "https://www.iucnredlist.org/species/163017685/17970966",
+  "citation": "Nekaris, K.A.I., Poindexter, S. & Streicher, U. 2020. Nycticebus coucang. The IUCN Red List of Threatened Species 2020: e.T163017685A17970966. Accessed on 05 May 2026.",
+  "assessment_id": 17970966,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 163017685,
+    "scientific_name": "Nycticebus coucang",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 163029192,
+        "scientific_name": "Nycticebus coucang ssp. insularis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "PRIMATES",
+        "family_name": "LORISIDAE",
+        "genus_name": "Nycticebus",
+        "species_name": "coucang",
+        "subpopulation_name": null,
+        "infra_name": "insularis",
+        "authority": "Robinson, 1917",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Primate Specialist Group",
+            "url": "http://www.primate-sg.org/",
+            "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+          }
+        ],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Tioman Island Slow Loris",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "LORISIDAE",
+    "genus_name": "Nycticebus",
+    "species_name": "coucang",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Boddaert, 1785)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Slow Loris",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Sunda Slow Loris",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Loris lent",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Loris Lento",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Greater Slow Loris",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Nycticebus brachycephalus Sody, 1949",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "brachycephalus",
+        "species_author": "Sody, 1949",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nycticebus buku Robinson, 1917",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "buku",
+        "species_author": "Robinson, 1917",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nycticebus coucang ssp. coucang (Boddaert, 1785)",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "coucang",
+        "species_author": null,
+        "infrarank_author": "(Boddaert, 1785)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "coucang"
+      },
+      {
+        "name": "Nycticebus insularis Robinson, 1917",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "insularis",
+        "species_author": "Robinson, 1917",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nycticebus malaiana Anderson, 1881",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "malaiana",
+        "species_author": "Anderson, 1881",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nycticebus natunae Stone & Rehn, 1902",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "natunae",
+        "species_author": "Stone & Rehn, 1902",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nycticebus sumatrensis Ludeking, 1867",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "sumatrensis",
+        "species_author": "Ludeking, 1867",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nycticebus tardigradus (Raffles, 1821)",
+        "status": "ACCEPTED",
+        "genus_name": "Nycticebus",
+        "species_name": "tardigradus",
+        "species_author": "(Raffles, 1821)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tardigradus coucang Boddaert, 1784",
+        "status": "ACCEPTED",
+        "genus_name": "Tardigradus",
+        "species_name": "coucang",
+        "species_author": "Boddaert, 1784",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 100,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": null,
+    "generational_length": "7-8",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "This species’ physical appearance is characterized as brownish with brown crown and a dark dorsal stripe enclosed by darker line, a frosted nuchal region, a head fork that meets the circumocular patch to form points, a brown body colour that covers a less percentage of the body, with a lighter ventral region, a dorsal stripe continuing to the caudal region, and white or grey pre-auricular hair (Nekaris and Jaffe 2007).",
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<span class=\"apple-converted-space\">This species occurs in Indonesia (southern Sumatra south of the Batang Toru River, Batam and Galang in the Riau Archipelago, and Pulau Tebingtinggi and Bunguran in the North Natuna Islands), Malaysia (on the Peninsula and the island of Pulau Tioman), southern peninsular Thailand (suggested from the Isthmus of Kra southward, but forms as far as Tai Rom Yen National Park accord to <em>N. bengalensis</em>), and Singapore (Groves 2001; KAI. Nekaris pers. comm; M. Shekelle pers. comm.)",
+    "population": "<p><span class=\"apple-converted-space\">The species is found in the southern region of Sumatra south of the Batang Toru river. During a camera-trapping season from Oct 2010 to Oct 2012 one <em>Nycticebus coucang</em> was recorded in the Bukit Batu Area of Giam Siak Kecil-Bukit Batu Biosphere Reserve, Riau, Indonesia (Fujita <em>et al.</em> 2012). A population has been recorded in the forest around Batutegi Dam (Collins and Nekaris 2008). The species has also been recorded either from museum specimens or casual reports from researchers or local people in Bukit Barisan Seletan National Park, Kerinci Sebelat National Park, Berbak National Park, Way Kambas National Park, and Bukit Tigapuluh National Park (Thorn&#160;<em>et al.</em>&#160;2010). <br/><br/><span class=\"apple-converted-space\">Reported encounter rates vary throughout Peninsular Malaysia. Several short-term studies indicated that it usually occurs at low densities: Pasoh Forestry Research Centre, Peninsular Malaysia (0.01-0.02 animals/km); Petalang Jaya, Malaysia (0.40 animals/km); Genting Sempah, Malaysia (3 captures after 30,000 trap nights) (Barret 1981; Rudd and Stevens 1992; Nekaris <em>et al.</em> 2008). It was described as uncommon in Panang Island, where one was shot after 11 nights (Liat <em>et al</em>. 1971). At sites where long-term studies occurred greater slow lorises occur at relatively higher densities (Sungai Tekam Forestry Concession, Malaysia, 0.3-0.8 animals/km in logged primary forest, 0.5-1.2 animals/km in unlogged primary forest; Manjung District, Perak, Malaysia, 1.6-4.0 animals/km in unlogged primary forest and 0.4-1.0 animals/km in logged swamp forest and secondary savanna).&#160; Wiens (2002) conducted a study on a population in parts of Segari Melintang, Tanjung Hantu, and Batu Undan Forest Reserve, West Malaysia. The species has also been photographed or videoed in Hutan Lipur Rekreasi Tupah, Taman Negara National Park, Fraser’s Hill.<br/><br/>In Singapore the distribution of <em>N. coucang</em> is unknown due to the presence of translocated individuals of unknown origins and low sighting frequency (Lim <em>et al.</em> 2008). During a population survey in 2013 by Fam <em>et al</em>.(2014) including seven areas (Nee Soon Swamp Forest, Thomson Ridge, Rifle Range area, Kampong Trail, Bukit Timah Nature Reserve, Bukit Batok Nature Park, and the forest near Mera -lodge Condominium), individuals were only observed in Nee Soon Swamp Forest (0.12 animals/km). The encounter rate lowered to 0.017 animals/km when all seven sites were combined. The greater slow loris is also known to exist on a military training island called Pulau Tekong (0.5-0.7 animals/km<sup>-1)</sup> (Lim <em>et al.</em> 2008), it is considered one of Singapore’s most protected forested areas.<span class=\"apple-converted-space\">  <span class=\"apple-converted-space\">Their distribution in Thailand is still in need of further examination. there is a proposed hybrid zone between <em>N. bengalensis</em> and <em>N. coucang</em> in the southern peninsular of Thailand. It is not definitive which species occurs on the island of Phuket (Pliosungnoen <em>et al</em>. 2010), but it is generally believed that the wild slow lorises on this island are <em>N. coucang</em> (Meijaard 2003).</span></span></p>",
+    "habitats": "<p><span class=\"apple-converted-space\">This arboreal, nocturnal, and lunar phobic species generally occurs in primary and secondary lowland forest, gardens, plantations, as well as primary and secondary rainforest (Timm and Birney 1992). In Sumatra <em>N. coucang</em> prefers secondary tree fall areas in primary rainforest, disturbed areas, and home gardens (Collins et al. 2008). Wild sightings of <em>N. coucang</em> are rare in southern Thailand (Osterberg and Nekaris 2015). In peninsular Malaysia <em>N. coucang</em> is largely found in tropical rain forest, dipterocarp forests, isolated forest patches adjacent to plantations, swamp forest, unlogged and selectively logged primary forest (Nekaris 2014; Barrett 1984; Wiens <em>et al</em>. 2006). Habitat of <em>N. coucang</em> in Singapore is largely made up of dipterocarp primary forest, and a combination of parks, scrubland, and various stages growing secondary forest (Fam <em>et al.</em> 2014).&#160; <span class=\"apple-converted-space\"></span></p>  <p><span class=\"apple-converted-space\"><span class=\"apple-converted-space\">Home ranges of <em>N. coucang </em>in Malaysia varied from some 2 ha to 15 ha, depending on the forest type, with smaller home ranges in more primary forest. Males and females overlap in a uni-male, uni-female social system (Wiens and Zitzmann 2003). In Malaysia, social contact was rare. In captivity, however, the species can be housed socially and makes a wide array of contact calls, including a mother infant call unique to this species (Nekaris, unpublished). Exudates make up as much as 43 percent of this species’ diet; they consume animal prey, fruits, leaves, and bird eggs to make up remainder (Streicher <em>et al.</em> 2012; Weins <em>et al.</em> 2006). <em>N. coucang </em>are venomous, as are other members of the <em>Nycticebus</em> genus (Nekaris <em>et al</em>. 2013).    </span></p>",
+    "threats": "<p><span class=\"apple-converted-space\">This species is collected for use as pets, and the animals are sold throughout Southeast Asia (Nekaris and Bearder 2011; Nekaris and Nijman 2007). The teeth are often pulled, resulting in infection and/or death. If animals survive, lack of teeth makes reintroduction impossible. Well-meaning rescue centres haphazardly reintroduce lorises into local forests without knowledge of their taxonomy or social needs (Nekaris and Starr, 2015). Sumatran populations are particularly impacted by the pet trade. The species is relatively adaptable to anthropogenic habitats, and so it might less affected by forest loss than some other primate species. Nevertheless, forest loss has been so severe in the region that it is likely to have had some negative impacts. Animals are shot as crop pests and for other reasons (Bennett&#160;<em>et al.</em> 1994). <span class=\"apple-converted-space\">Lack of law enforcement further threatens slow loris species across their range (Nijman <em>et al.</em> 2014).<span class=\"apple-converted-space\"></span></p>  <p><span class=\"apple-converted-space\">Release of invasive species is a major problem for this species. In Sumatra, slow lorises rescued from the pet trade comprising both the southern <em>N. coucang </em>and the northern <em>N. hilleri </em>have been introduced in large numbers in the South of the island. Releases (and escapes of captives) on to the island of Java is also problematic. In Singapore, some argue that only released animals persist (see below). In Thailand, what seems to be the natal range of<em> N. coucang, </em>the island of Phuket, is subject to rampant releases of <em>N. bengalensis. </em>Individuals perceive that such releases are merciful to the captive individuals, but the long-term threat of invasive species is known from many other mammalian taxa and could prove to be a great threat to slow lorises.</span><span class=\"apple-converted-space\"></p>  <p><span class=\"apple-converted-space\">In Singapore inconsistent documentation of imports and exports of either <em>N. bengalensis, N. pygmaeus </em>or<em> N. coucang</em> between Laos, Japan and Singapore has contributed to the confusion surrounding which species are currently present in the wild (Fam <em>et al.</em> 2014). Listed as Critically Endangered in the Singapore Red Data Book, it is estimated that there are fewer than 50 mature individuals, OR if more than 50 mature individuals but less than 250, there is evidence of decline or fragmentation’ (Davison 2008).&#160; <span class=\"apple-converted-space\"></span></p>  <p><span class=\"apple-converted-space\">Though not as abundant as <em>N. bengalensis</em> in the Thai phot prop trade, Osterberg and Nekaris (2015) found two instances of <em>N. coucang</em> being used as photo props on Patong Beach. <em>N. coucang</em> populate rescue centres throughout their range but especially in Indonesia and Thailand; efforts to reintroduce suitable individuals are often hindered by a lack of knowledge regarding current population densities, the boundaries of the hybrid zones, and not prioritising post release monitoring (Nekaris and Starr 2015; Collins <em>et al.</em> 2008). Release of the wrong species into the range of <em>N. coucang </em>is common. </span><span class=\"apple-converted-space\"></p>  <span class=\"apple-converted-space\">The species is also subject to international trade, and appears regularly as a pet on videos on social networking sites (Nekaris <em>et al.</em>, 2013). Poor husbandry amounting to cruel animal welfare treatment of these captive individuals also impacts their conservation through public perception that such care of these wild animals is appropriate (Nekaris <em>et al</em>. 2015).</span>",
+    "measures": "<p><span class=\"apple-converted-space\">This species occurs in several protected areas throughout its range. Studies on Sumatra and Thailand are urgently needed to confirm their conservation status and population distribution. Protected in Thailand under the Wildlife Protection of 1992 law, in Indonesian under law No. 5 of 1990, in Singapore under the Endangered Species Act 2006 and in Peninsular Malaysia under the Protection of Wildlife Act 1972. All <em>Nycticebus</em> species have been transferred from Appendix II to Appendix I of CITES, prohibiting all international trade (Nekaris and Nijman 2007).<span class=\"apple-converted-space\"></span></p>  <p><span class=\"apple-converted-space\"><span class=\"apple-converted-space\">There are very few existing education programmes across this species range; an increase would be preferable to target the exploitation of the species in the illegal wildlife trade. Rescue centres for the species occur in Thailand, Sumatra, and Java. There is a need for more rescue centres with the facilities to house confiscated greater slow lorises and a concerted effort to increase available data on the species ecology, behaviour and habitat requirements. There is a particular need for translation of field guides for this and other nocturnal primate species, as they are often confused in rescue centres and elsewhere.    </span></p>",
+    "use_trade": "<span class=\"apple-converted-space\">This species is collected for use as pets and as photo props, and sold throughout Southeast Asia (Nekaris and Bearder 2011; Nekaris and Nijman 2007).",
+    "rationale": "<span class=\"apple-converted-space\">Greater Slow Loris is listed as Endangered, due to past and continuing loss of habitat and past and continued severe pressures from hunting for pet trade, the species is under severe threat from hybridization with other invasive loris species that are being introduced into its native range. Populations in Sumatra are under severe pressure from pet trade. Populations in Sumatra, Java, Singapore, Thailand are severely impacted by the release of other loris species, whose medium and long term impacts is suspected to be highly detrimental to the species.&#160;<span class=\"apple-converted-space\">Although the species can survive in plantations and home gardens, the increasing loss of primary habitats throughout the range is suspected to have a major impact on the species, which is suspected to have declined by more than 50% in population over three generations (approximately 24 years), and given the continuing threats to the habitat and populations from hybridization and hunting, it is suspected to continue to decline at the same rate in the next 20 years.</span>",
+    "trend_justification": null,
+    "taxonomic_notes": "<span class=\"apple-converted-space\">This taxon formerly included a  number of subspecies that have subsequently been identified as unique  species. A small hybridization zone is found between this species and&#160;<em>Nycticebus bengalensis</em>&#160;in southern peninsular Thailand.&#160;Further taxonomic revision may be necessary (Lim&#160;<em>et al</em>. 2007, K. A. Nekaris unpubl. data). Some authors consider the form from the Natuna islands to be a unique subspecies,&#160;<em>N. c. natunae</em>&#160;(Chasen 1935, Indrawan and Rangkuti 2001). Others consider the form from northern Sumatra to be a distinct taxon <em>N. hilleri</em>; we follow that here and exclude northern Sumatra from this assessment.<br/><br/>Nekaris and Jaffe (2007) measured 16 <em>N. coucang </em>originating from Sumatra and reported the following average morphometric parameters for these individuals<em>, </em>which<em> </em>varied from those of <em>N. hilleri:</em>  weight: 594 g; head length 62 mm; muzzle length 23.3 mm; head breath 45  mm; head body length 268 mm; hand span 54 mm; foot span 67 mm; ear  length 17 mm (Nekaris and Jaffe 2007)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peninsular Malaysia"
+      },
+      "code": "MLY-PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sumatera"
+      },
+      "code": "SUM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Nekaris, K.A.I., Poindexter, S. & Streicher, U.",
+      "value": [
+        "streicher.gen.1492863863781@gen.iucnsis.org",
+        "nekaris.gen.1492863908704@gen.iucnsis.org",
+        "poindexter.gen.1492864211633@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Molur, S. & Mittermeier, R.A.",
+      "value": [
+        "Sanjay Molur (ZOO (Eastern Himalayas))",
+        "Russell A. Mittermeier (Conservation International)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nekaris, K.A.I. and Nijman, V. 2007. CITES proposal highlights rarity of asian nocturnal primates (Lorisidae: <i>Nycticebus</i>). <i>Folia Primatologica</i> 78: 211-214.",
+      "year": "2007",
+      "title": "CITES proposal highlights rarity of asian nocturnal primates (Lorisidae: <i>Nycticebus</i>)",
+      "author": "Nekaris, K.A.I. and Nijman, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nekaris, K.A.I., Blackham, G.V. and Nijman, V. 2008. Conservation implications of low encounter rates of five nocturnal primate species (<i>Nycticebus</i> spp.) in Asia. <i>Biodversity and Conservation</i> 17(4): 733-747.",
+      "year": "2008",
+      "title": "Conservation implications of low encounter rates of five nocturnal primate species (<i>Nycticebus</i> spp.) in Asia",
+      "author": "Nekaris, K.A.I., Blackham, G.V. and Nijman, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rudd, R. and Stevens, G. 1994. A long-term capture-mark-release (CMR) and removal study of small mammals in Malaysian sub-montane rain forest. <i>Wasmann Journal of Ecology</i> 50(1-2): 96-150.",
+      "year": "1994",
+      "title": "A long-term capture-mark-release (CMR) and removal study of small mammals in Malaysian sub-montane rain forest",
+      "author": "Rudd, R. and Stevens, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Timm, R.M. and Birney, E.C. 1992. Systematic notes on the Philippine slow loris, <i>Nycticebus coucang menagensis</i> (Lydekker, 1893) (primates, Lorisidae). <i>International Journal of Primatology</i> 13(6): 679–686.",
+      "year": "1992",
+      "title": "Systematic notes on the Philippine slow loris, <i>Nycticebus coucang menagensis</i> (Lydekker, 1893) (primates, Lorisidae)",
+      "author": "Timm, R.M. and Birney, E.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bennett, E.L., Nyaoi, A.J. and Sompud, J. 1994. Primates on the menu: hunting and its effects in Malaysian Borneo. XVth Congress of the International Primatological Society, 3-8 August 1994. Kuta - Bali, Indonesia.",
+      "year": "1994",
+      "title": "Primates on the menu: hunting and its effects in Malaysian Borneo",
+      "author": "Bennett, E.L., Nyaoi, A.J. and Sompud, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Indrawan, M. and Rangkuti, F. 2001. Status des Natuna-Langurs auf den Natuna-Inseln. <i>ZGAP Mitteilungen</i> 17(2): 20-21.",
+      "year": "2001",
+      "title": "Status des Natuna-Langurs auf den Natuna-Inseln",
+      "author": "Indrawan, M. and Rangkuti, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiens, F. and Zitzmann, A. 2003. Social structure of the solitary slow loris <i>Nycticebus coucang</i> (Lorisidae). <i>Journal of Zoology (London)</i> 261: 35-46.",
+      "year": "2003",
+      "title": "Social structure of the solitary slow loris <i>Nycticebus coucang</i> (Lorisidae)",
+      "author": "Wiens, F. and Zitzmann, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liat, L., Muul, I. and Langham, N. 1971. Preliminary studies of small mammals collected from Penang Island, Malaysia. <i>Federal Museum Journal</i> 16: 61-74.",
+      "year": "1971",
+      "title": "Preliminary studies of small mammals collected from Penang Island, Malaysia",
+      "author": "Liat, L., Muul, I. and Langham, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johns, A. 1986. Effects of Selective Logging on the Behavioral Ecology of West Malaysian. <i>Primates Ecology</i> 67(3): 684-694.",
+      "year": "1986",
+      "title": "Effects of Selective Logging on the Behavioral Ecology of West Malaysian",
+      "author": "Johns, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chasen, F. 1935. On a collection of mammals from the Natuna Islands. <i>Bulletin of the Raffles Museum, Singapore</i> 10: 5-42.",
+      "year": "1935",
+      "title": "On a collection of mammals from the Natuna Islands",
+      "author": "Chasen, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barrett, E. 1981. The present distribution and status of the slow loris in peninsular Malaysia. <i>Malaysian Applied Biology</i> 10: 205-211.",
+      "year": "1981",
+      "title": "The present distribution and status of the slow loris in peninsular Malaysia",
+      "author": "Barrett, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorn, J.S., Nijman, V., Smith, D. and Nekaris, K.A.I. 2009. Ecological niche modeling as a technique for assessing threats and setting conservation priorities for Asian Slow Loris (Primates: <i>Nycticebus</i>). <i>Diversity and Distributions</i> 15: 289–298.",
+      "year": "2009",
+      "title": "Ecological niche modeling as a technique for assessing threats and setting conservation priorities for Asian Slow Loris (Primates: <i>Nycticebus</i>)",
+      "author": "Thorn, J.S., Nijman, V., Smith, D. and Nekaris, K.A.I. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nekaris, K.A.I. and Jaffe, S. 2007. Unexpected diversity of slow lorises (<i>Nycticebus</i> spp.) within the Javan pet trade: implications for slow loris taxonomy. <i>Contributions to Zoology</i> 76(3): 187-196.",
+      "year": "2007",
+      "title": "Unexpected diversity of slow lorises (<i>Nycticebus</i> spp.) within the Javan pet trade: implications for slow loris taxonomy",
+      "author": "Nekaris, K.A.I. and Jaffe, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Nekaris, K.A.I. and Starr, C.R. 2015. Conservation and ecology of the neglected slow loris: priorities and prospects. <i>Endangered Species Research</i> 28(1): 87-95.",
+      "year": "2015",
+      "title": "Conservation and ecology of the neglected slow loris: priorities and prospects",
+      "author": "Nekaris, K.A.I. and Starr, C.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nekaris, K.A.I., Campbell, N., Coggins, T.G., Rode, E.J., and Nijman, V. 2013. Tickled to death: analysing public perceptions of ‘cute’ videos of threatened species (slow lorises–<i>Nycticebus</i> spp.) on web 2.0 Sites. <i>PloS one</i> 8(7): e69215.",
+      "year": "2013",
+      "title": "Tickled to death: analysing public perceptions of ‘cute’ videos of threatened species (slow lorises–<i>Nycticebus</i> spp.) on web 2.0 Sites",
+      "author": "Nekaris, K.A.I., Campbell, N., Coggins, T.G., Rode, E.J., and Nijman, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nekaris, K.A.I., Moore, R.S., Rode, E.J. and Fry, B.G. 2013. Mad, bad and dangerous to know: the biochemistry, ecology and evolution of slow loris venom. <i>J Venom Anim Toxins incl Trop Dis</i> 19(1): 21.",
+      "year": "2013",
+      "title": "Mad, bad and dangerous to know: the biochemistry, ecology and evolution of slow loris venom",
+      "author": "Nekaris, K.A.I., Moore, R.S., Rode, E.J. and Fry, B.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nijman, V., Shepherd, C.R., and Nekaris, K.A.I. 2014. Trade in Bengal Slow Lorises in Mong La, Myanmar, on the China Border. <i>Primate Conservation</i> 28(139-142).",
+      "year": "2014",
+      "title": "Trade in Bengal Slow Lorises in Mong La, Myanmar, on the China Border",
+      "author": "Nijman, V., Shepherd, C.R., and Nekaris, K.A.I. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pliosungnoen, M., Gale, G. and Savini, T. 2010. Density and microhabitat use of Bengal slow loris in primary forest and non‐native plantation forest. <i>American Journal of Primatology</i> 72(12): 1108-1117.",
+      "year": "2010",
+      "title": "Density and microhabitat use of Bengal slow loris in primary forest and non‐native plantation forest",
+      "author": "Pliosungnoen, M., Gale, G. and Savini, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barrett, E. 1984. The ecology of some nocturnal arboreal mammals in the rain forest of Peninsular Malaysia. Unpublished PhD thesis, University of Cambridge.",
+      "year": "1984",
+      "title": "The ecology of some nocturnal arboreal mammals in the rain forest of Peninsular Malaysia",
+      "author": "Barrett, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Collins, R. and Nekaris, K.A.I. 2008. Release of greater slow lorises, confiscated from the pet trade, to Batutegi Protected Forest, Sumatra, Indonesia. Global re-introduction perspectives. IUCN Reintroduction Specialist Group, Abu Dhabi: 192-195.",
+      "year": "2008",
+      "title": "Release of greater slow lorises, confiscated from the pet trade, to Batutegi Protected Forest, Sumatra, Indonesia",
+      "author": "Collins, R. and Nekaris, K.A.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davison G.W.H. 2008. The red list categories. In: Davison G.W.H., Ng P.K.L., Ho H.C. (ed.), <i>The Singapore red data book: threatened plants and animals of Singapore, 2nd edn</i>, pp. 1-4. The Nature Society, Singapore.",
+      "year": "2008",
+      "title": "The red list categories",
+      "author": "Davison G.W.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fam S.D, Lee B.P.Y.H, Shekelle M., 2014. The conservation status of slow lorises Nycticebus spp. in Singapore. <i>Endangered Species Research </i> 25: 69-77.",
+      "year": "2014",
+      "title": "The conservation status of slow lorises Nycticebus spp. in Singapore",
+      "author": "Fam S.D, Lee B.P.Y.H, Shekelle M.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Fujita, M.S., Irham, M., Fitriana, Y.S., Samejima, H., Wijamukti, S., Haryadi, D.S. and Muhammad, A. 2012. Mammals and Birds in Bukit Batu Area of Giam Siak Kecil-Bukit Batu Biosphere Reserve, Riau, Indonesia. <i>Kyoto Working Papers on Area Studies: G-COE Series</i> 126: 1-70.",
+      "year": "2012",
+      "title": "Mammals and Birds in Bukit Batu Area of Giam Siak Kecil-Bukit Batu Biosphere Reserve, Riau, Indonesia",
+      "author": "Fujita, M.S., Irham, M., Fitriana, Y.S., Samejima, H., Wijamukti, S., Haryadi, D.S. and Muhammad, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lim K.P.K., Subaraj R., Yeo S.H., Lim N., Lane D., Lee B.Y.H. 2008. Mammals. In: Davison G.W.H., Ng P.K.L., Ho H.C. (ed.), <i>The Singapore red data book: threatened plants and animals of Singapore, 2nd en</i>, pp. 190-207. The Nature Society, Singapore.",
+      "year": "2008",
+      "title": "Mammals",
+      "author": "Lim K.P.K., Subaraj R., Yeo S.H., Lim N., Lane D., Lee B.Y.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meijaard, E. 2003. Mammals of south‐east Asian islands and their Late Pleistocene environments. <i>Journal of Biogeography</i> 30(8): 1245-1257.",
+      "year": "2003",
+      "title": "Mammals of south‐east Asian islands and their Late Pleistocene environments",
+      "author": "Meijaard, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nekaris, K.A.I. 2014. Extreme primates: slow and slender lorises as a model for primate evolution. <i>Evolutionary Anthropolog</i> 23(177-187).",
+      "year": "2014",
+      "title": "Extreme primates: slow and slender lorises as a model for primate evolution",
+      "author": "Nekaris, K.A.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nekaris, K.A.I., Musing, L., Vazquez, A.G., and Donati, G. 2015. Is tickling torture? Content and public perceptions of animal cruelty within Web 2.0 videos of slow lorises (<i>Nycticebus</i> spp.). . <i>Folia Primatologica</i> 86(6): 534-551.",
+      "year": "2015",
+      "title": "Is tickling torture? Content and public perceptions of animal cruelty within Web 2.0 videos of slow lorises (<i>Nycticebus</i> spp.). ",
+      "author": "Nekaris, K.A.I., Musing, L., Vazquez, A.G., and Donati, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Osterberg, P. and Nekaris, K.A.I. 2015. The conservation implications of the use of photo prop animals for tourists in Thailand: a slow loris case study (<i>Nycticebus</i> spp.). <i>TRAFFIC Bulletin</i> 27(1): 13-18.",
+      "year": "2015",
+      "title": "The conservation implications of the use of photo prop animals for tourists in Thailand: a slow loris case study (<i>Nycticebus</i> spp.).",
+      "author": "Osterberg, P. and Nekaris, K.A.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Streicher, U., Wilson, A., Collins, R.L. and Nekaris, K.A.I. 2012. Exudates and Animal Prey Characterize Slow Loris (<i>Nycticebus pygmaeus</i>, <i>N. coucang</i> and <i>N. javanicus</i>) Diet in Captivity and After Release into the Wild. In Leaping Ahead. <i>Springer New York</i>, pp. 165-172.",
+      "year": "2012",
+      "title": "Exudates and Animal Prey Characterize Slow Loris (<i>Nycticebus pygmaeus</i>, <i>N. coucang</i> and <i>N. javanicus</i>) Diet in Captivity and After Release into the Wild. In Leaping Ahead",
+      "author": "Streicher, U., Wilson, A., Collins, R.L. and Nekaris, K.A.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiens, F. 2002. Behavior and ecology of wild slow lorises (<i>Nycticebus coucang</i>): social organization, infant care system, and diet. Doctoral dissertation, Bayreuth University.",
+      "year": "2002",
+      "title": "Behavior and ecology of wild slow lorises (<i>Nycticebus coucang</i>): social organization, infant care system, and diet",
+      "author": "Wiens, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wiens, F., Zitzmann, A. and Hussein, N.A. 2006. Fast food for slow lorises: is low metabolism related to secondary compounds in high-energy plant diet ? <i>Journal of Mammalogy</i> 87(4): 790-798.",
+      "year": "2006",
+      "title": "Fast food for slow lorises: is low metabolism related to secondary compounds in high-energy plant diet ?",
+      "author": "Wiens, F., Zitzmann, A. and Hussein, N.A.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

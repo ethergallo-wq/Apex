@@ -1,0 +1,833 @@
+{
+  "assessment_date": "2012-05-24T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 5672,
+  "criteria": "A2cd",
+  "url": "https://www.iucnredlist.org/species/5672/3048281",
+  "citation": "van Weerd, M., C. Pomaro, C., de Leon, J., Antolin, R. & Mercado, V. 2016. Crocodylus mindorensis. The IUCN Red List of Threatened Species 2016: e.T5672A3048281. Accessed on 05 May 2026.",
+  "assessment_id": 3048281,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 5672,
+    "scientific_name": "Crocodylus mindorensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "CROCODYLIA",
+    "family_name": "CROCODYLIDAE",
+    "genus_name": "Crocodylus",
+    "species_name": "mindorensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Schmidt, 1935",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Crocodile Specialist Group (crocodiles, alligators and caimans)",
+        "url": "http://www.iucncsg.org/",
+        "description": "Chair: Grahame Webb (email: gwebb@wmi.com.au)\nRed List Authority Coordinator: Sally Isberg (email: )\nNewsletter: http://www.iucncsg.org/pages/Publications.html"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bukarot (N. Luzon)",
+        "language": "phi"
+      },
+      {
+        "main": false,
+        "name": "Buwaya",
+        "language": "tgl"
+      },
+      {
+        "main": true,
+        "name": "Philippine Crocodile",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "Yes",
+    "number_of_locations": "6",
+    "upper_elevation_limit": 850,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "92-137",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "25",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "21-30"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Unknown"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "6",
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": "74-100",
+    "estimated_area_of_occupancy": "25-2000",
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "257309",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Philippine Crocodile specimens have been collected from the islands of  Luzon, Mindoro, Masbate, Samar, Jolo, Negros, Busuanga and Mindanao  (Ross 1982, Ross and Alcala 1983) suggesting that historically  <em>C. mindorensis</em>  was widely distributed throughout the archipelago and probably occurred on all larger Philippine islands. The probable exception is the island of Palawan which is biogeographically more similar to Borneo than to the other Philippine islands. A reported nest of a palustrine crocodile on Palawan (Schultze 1914) probably refers to <em>C. porosus</em> as it contained 30 eggs that were  all considerably larger than the largest known wild <em>C. mindorensis</em>  eggs. The report of a small introduced <em>C. mindorensis</em> population on Palau is known to be in error (Messel and King 1992a).<br/><br/>Published information on the distribution of <em>C. mindorensis</em> remains rare, although much more information on the current distribution and status have become available since 1998. C.A. Ross conducted surveys in southern and central Philippines (Mindanao, Visayas and Palawan) in 1981 (Ross 1982, Ross and Alcala 1983) and published an account on crocodile observations in northern Philippines (Dalupiri Island) in 1990 (Ross 2005). Ross (1982) and Ross and Alcala (1983) has also inventoried museum specimen collection localities, which provide the best source of information on the historical distribution of crocodiles in the Philippines. Aoki (1985) observed <em>C. mindorensis</em> on Mindoro during the mid-1980s. Alcala <em>et al</em>. (1987) collected information on crocodiles on Negros. Ortega (1998) added information gathered during the 1990s, mainly from secondary sources (Ortega et al. 1993, 1994; Ortega 1998). Rebong and Sumiller (2002) reported on capture localities of the Philippine Crocodile in the wild in 1992 on Mindanao and Busuanga for the captive breeding program of the Crocodile Farm Institute (CFI). Pontillas (2000) conducted targeted surveys in areas with historical and recent accounts of crocodiles on Luzon, Mindoro, Busuanga and Mindanao in 1999 and 2000. Manalo (2008) conducted crocodile surveys in Abra Province on Luzon. Since 1999 surveys have been conducted in northeast Luzon  (van Weerd 2000, 2002; van Weerd and van der Ploeg 2003; Tarun <em>et al</em>.  2004; van Weerd <em>et al</em>. 2006). Oliveros <em>et al</em>. (2005, 2006) conducted  surveys on the Babuyan islands. Pomares <em>et al</em>. (2008) conducted surveys  in Ligawasan Marsh on Mindanao (see also Van der Ploeg <em>et al</em>. 2007).&#160; A recent report Manolo <em>et al</em>. (2013) confirms the presence of <em>C. mindoresis</em> at Lake Sebu in Southern Mindanao and 36 captive raised juveniles from Mindanao stock were released in Paghongawan marsh or Siargao island protected landscape off the north coast of Mindanao (Mercado <em>et al</em>. 2013).<br/><br/>The species survives only on Dalupiri island, Northern Luzon and Ligawasan marsh on Mindanao.",
+    "population": "<strong>Dalupiri:</strong> Crocodiles were observed in 1990 by Ross (2005) on Dalupiri Island (part of the Babuyan island group north of Luzon). In 2005 an adult female <em>C. mindorensis</em> was caught and released in Caucauayan Creek and tracks of two different sized juveniles were found (Oliveros <em>et al</em>. 2006). Subsequent surveys failed to find more crocodiles and the adult Philippine crocodile population on Dalupiri probably consists of at most one pair.<br/><br/><strong>Luzon: </strong>Cordillera Mountains. In 2002 four captive <em>C. mindorensis</em> were found in a mini-zoo in Bangued, Abra Province, Cordillera Mountains, and the source of these animals was identified as Binungan River in the municipality of Tineg, Abra (Manalo 2008). Field surveys recorded tracks of 12 juvenile and two sub-adult crocodiles in a limestone stretch of the river with caves at 850 m above sea level. No surveys have been conducted there since 2002. It is likely that a small <em>C. mindorensis</em> population continues to survive here. Reports of crocodile sightings elsewhere in the Cordillera, notably from Apayao and Abra Provinces need confirmation. Cagayan Valley, the Sierra Madre Mountains and the Pacific Ocean coast. In 1999 Van Weerd (2000) found <em>C. mindorensis</em> in Cagayan Valley in the foothills of the Sierra Madre Mountains, municipality of San Mariano, Isabela Province. This wild population has been the target of conservation action by the Mabuwaya Foundation since then (van Weerd and van der Ploeg 2004). Crocodile distribution, population size and population growth have been monitored annually (van Weerd <em>et al</em>. 2006). In 2008, 10 adults, 41 juvenile/sub-adults and 35 hatchlings were counted. Crocodiles dynamically use ponds, lakes, creeks and larger rivers in three distinct areas: 1) Dunoy Lake, Dungsog Lake, Narra Lake and Catalangan River (Catalangan River area); 2) Diwakden Creek, Diwakden Lake and Disulap River (Disulap River area); and, 3) Dinang Creek, Diamallig Creek and Ilaguen River (Ilaguen River area). Since 2007, the growing population of crocodiles has started to disperse and occupy new wetland areas in San Mariano. If the observed population recovery continues favourably, the non-hatchling Philippine crocodile population in San Mariano is expected to reach 100 individuals in 2010.<br/><br/>Philippine Crocodiles also occur on the eastern side of the Sierra Madre Mountains along the Pacific coast in the Northern Sierra Madre Natural Park, Isabela Province. The Sierra Madre physically separates these crocodiles from San Mariano. A very small population of probably only one pair of adult crocodiles and several juveniles is found in Dibukarot Creek in the municipality of Palanan. <em>Crocodylus mindorensis</em> has also been found in several littoral creeks and rivers in the municipalities of&#160; Maconacon and Divilacan. An adult was caught and released in Po River in Maconacon in 2005. A small breeding population permanently occupies Divilacan River, where two juveniles were caught and released in 2009. Fifty captive-bred, sub-adult <em>C. mindorensis</em> were released in Dicatian Lake, Divilacan, in July 2009 but the success of this attempt is uncertain (C. Banks pers. comm).<br/><br/><strong>Mindanao:</strong> North and Eastern Mindanao. No recent <em>C. mindorensis</em> observations have been reported from North and Eastern Mindanao. Prior to 1982, Philippine Crocodiles were known to occur in Surigao del Norte and in the headwaters of Agusan Marsh in the municipality of Nabunturan, Compostela Valley Province. Ross (1982) reported the killing of three juvenile <em>C. mindorensis</em> here in 1979. Although no <em>C. mindorensis</em> specimens have been collected from Agusan Marsh itself, Ortega (1998) reports a captive live adult individual on display in the provincial capital (Prosperidad) in 1994. It is not certain whether this individual originated from the marsh. Surveys in 1994, 1998 (Ortega 1998) and 1999 (Pontillas 2000) failed to locate any <em>C. mindorensis</em> but did find a small population of <em>C. porosus</em> in Agusan Marsh. Specimen have been collected prior to 1982 from the municipality of Tagum, Davao del Norte Province, and the municipality of Malita, Davao del Sur Province (dates and localities unknown; Ross 1982). In 1992, in northwest Mindanao, the CFI caught a wild sub-adult <em>C. mindorensis</em> in Lanao del Sur (locality and municipality unknown), a sub-adult in the municipality of Malabang, Lanao del Sur, an adult in Lanao del Norte (locality and municipality unknown) and a hatchling in the municipality of&#160; Bonifacio (Misamis Occidental) (Rebong and Sumiller 2002). Ross (1982) reports a sighting of <em>C. mindorensis</em> in Calarian Lake, Zamboanga City, in 1979, and a captive animal said to originate from the vicinity of Pagadian City in 1981, both Zamboanga Province. No recent crocodile surveys have been conducted in northwestern Mindanao.<br/><br/>Specimens of <em>C. mindorensis </em>have been collected from Ligawasan Marsh in the provinces of North Cotabato and Maguindanao before 1981 (Ross 1982). Ross (1982) reports examining a live juvenile from Macasendey Marsh, part of Ligawasan Marsh, in the municipality of Midsayap (North Cotabato) in 1981. In 1992 the CFI caught four wild crocodiles in Ligawasan Marsh (Rebong and Sumiller 2002): an adult in the municipality of Carmen (North Cotabato), a juvenile in the municipality of Dinaig (Maguindanao) and two hatchlings in the municipality of Lutayan (Sultan Kudarat). Pomares <em>et al</em>. (2008) report sightings of <em>C. mindorensis </em>from various localities in the municipalities of Kabacan and Carmen (North Cotabato) in 2007. <em>Crocodylus mindorensis</em> is also known from the headwaters of Ligawasan Marsh. The CFI caught a sub-adult and a hatchling <em>C. mindorensis</em> in the municipality of Kidapawan (North Cotabato) in 1992. Pontillas (2000) reports a breeding pair from Pulangui River (Bukidnon) in 1999. In October 2007 (Van der Ploeg <em>et al</em>. 2007), an adult <em>C. mindorensis</em> and a nest were found along Muleta River in the municipality of Carme (North Cotabato)). Pomares <em>et al</em>. (2008) report sightings in 2007 of <em>C. mindorensis</em> from the municipality of President Roxas (North Cotabato) and from Pulangui River (Bukidnon). Reliable <em>C. mindorensis</em> population estimates are not available from Ligawasan Marsh but is has been established beyond doubt in 2007 and 2008 that there is a breeding population with a relatively large distribution in the marsh itself and its tributaries. Thirty six juvenile individuals were released to a protected area on Siargao island in 2013 and Manaolo <em>et al</em>. 2013 estimated no more than 11 adults wild in five small upland lakes in lake Sebu, Mindanao.<br/><br/>Other islands with historical but no recent sightings are Negros, Mindoro, Samar, Masbate, Busuanga, Jolo. Before 1999, <em>C. mindorensis</em> occurred in the Pagatban River in Negros Oriental (Ross and Alacala 1983) and in Sta. Catalina and Ilog River in Negros Occidental (Alacala <em>et al</em>. 1987). It is believed that the Philippine crocodile is now extinct in the wild on Negros (Ely Alcala, pers. comm. 2007). The type specimens of <em>C. mindorensis</em> were collected from the vicinity of Naujan Lake in Mindoro Oriental. No Philippine crocodiles have been reported from the lake itself, only <em>C. porosus</em>. <em>Crocodylus mindorensis</em> has been reported from the Caituran River on Mindoro (Aoki 1985) but recent surveys failed to find it and the species is thought to be extinct on Mindoro Island (Pontillas 2000). Philippine Crocodile specimens have been collected from the islands of Masbate and Samar prior to 1981 (Ross 1982). Both islands have not recently been surveyed for crocodiles. The Philippine crocodile occurred with certainty on Busuanga Island, part of the Calamian Islands north of Palawan. Philippine crocodiles have been collected from Dimaniang (Schmidt 1956), and the Dipuyai and Busuanga Rivers (Ross and Alcala 1983, Ortega 1998) with the last certain observation in 1993. Pontillas (2000) failed to find surviving <em>C. mindorensis</em> on Busuanga and the species is now thought to be extinct there. Historically, specimen have been collected prior to 1981 from the island of Jolo, part of the Sulu archipelago in Sulu Province (Ross 1982). No recent surveys have been conducted.",
+    "habitats": "The Philippine Crocodile is a relatively small freshwater crocodile. Although much is still unknown, studies at two captive breeding facilities [Palawan Wildlife Rescue and Conservation Centre (PWRCC), Palawan Island (Ortega 1998) and&#160; Silliman University, Negros Island (Alcala <em>et al</em>. 1987)], and in the wild in northern Luzon and the University of Southern Mindanao, central Mindanao, on Ligawasan Marsh, have now yielded much more information on the ecology of this rare species. The maximum reported length of a museum specimen is 3.02 m (Hall 1989), with the largest wild male caught in Luzon being 2.7 m.<br/><br/>Both females and males become reproductively active at about 1.5 m long and body weights of about 15 kg in captivity. Females generally built mound nests of dried leaves, twigs, bamboo leaves and soil during the dry season (e.g., see Akamad and Pomares 2008), with a mean height of 55 cm, length of 2 m and width of 1.7 m (average of four nests in Luzon). Akmad and Pomares (2008) reported nest material to comprise 70% organic material (leaves, branches) and 30% inorganic material (soil, stones, mud), and moisture content of 25%. Observations from the Muleta River (Ligawasan Marsh) revealed that three nests were located on same side of the river from July to October, approximately 100 m apart close to bamboo and similar slope of terrain. After egg-laying, both male and female crocodiles take turns “watching” the nest. The female crocodile makes routine visits to the nest late in the afternoon and early in the morning (Akmad and Pomares 2008). Hole nesting has also been observed in the wild and in captivity. A study in 2008 in northern Luzon monitored six nests, of which four were mounds and two were holes. Hole nests were constructed in open areas, mound nests were partly shaded. Nests were constructed on river and pond banks at a distance of 4-21 m from the waters’ edge (Akmad and Pomares 2008). Decoy or practice nests, both holes and mounds, were made in captivity and the wild.<br/><br/>Mating was observed starting in January in the wild (Luzon) and in captivity (Palawan and Negros). Oviposition took place in April and May in the wild (Luzon) and in captivity (Negros), and during February to October in captivity (Palawan). In captivity on Negros and Palawan multiple nesting has been observed in a small number of pairs. The second clutch is laid 4-6 months after the first with similar clutch sizes. Mean clutch size in the wild in the northern Philippines was 20.1 eggs (10 nests, range 16-27), slightly lower than that reported from the Muleta River, Tambad, Carmen (Ligawasan Marsh tributary); 26.0 eggs (three nests, range 22-30) (Akmad and Pomares 2008). In captivity on Palawan, average clutch size was 26 eggs (range 18-33), and on Negros it was 15.7 eggs (range 7-25). Incubation time in the wild was 65-78 days and 77-85 days in captivity. <em>Crocodylus mindorensis</em> exhibits temperature-dependent sex determination, and under artificial incubation mainly females are produced at 30-31°C and mainly males at 33°C. It is possible that females are also produced at&#160; temperatures higher than 33°C but there are insufficient data to support this at this time. Mean nest temperatures in the wild were 29.5°C and 30.1°C for two nests monitored with hourly data loggers in 2008 (n = 827 and 601 data points&#160; respectively). Akmad and Pomares (2008) reported nest temperature measured at four points about 30 cm from the middle of the nest be be in the range 28.4 to 30.0°C, relative humidity (measured at 0700 h, 1200 h and 1700 h) to be 70.7 to 90.3% and illumination on the nest to be 30 to 287.5 foot-candles. Egg fertility rates in captivity were 56% and 57% in Palawan and Negros respectively, and hatching rates of fertile eggs were 45% and 51% respectively. In comparison, egg fertility and hatching rates were higher for wild nests (n = 10 nests, 201 eggs) on Luzon, at 75% and 70% respectively. Wild egg hatching success in the Muleta River (Ligawasan Marsh) was 45.5% in one nest examined; hatchlings were average of 27.7 cm long with 53.41 g in weight (Akmad and Pomares 2008). Egg predation and anthropogenic nest and egg losses are a considerable threat in the wild on Luzon (17% lost to natural predators and 13% to people) and Mindanao (2 of 3 nests were poached by people; Akmad and Pomares 2008).<br/><br/>The Philippine Crocodile lives in rivers, creeks, ponds and marshes from sea level up to at least 850 m above sea level in the Cordillera Mountains of Luzon (Manalo 2008). It has been observed in saline waters along the coast of Luzon where it moves between small creeks through the sea (van Weerd, pers. comm). In several areas, <em>C. mindorensis</em> and <em>C. porosus</em> appear to occur sympatrically. This is the case in Ligawasan Marsh on Mindanao (Pomares <em>et al</em>. 2008) and in the coastal wetlands of Isabela on Luzon. <em>Crocodylus mindorensis</em> seems to prefer small wetlands where it occurs in relatively low densities (Ross 2008), although historical information on natural Philippine Cocodile densities is lacking. In northern Luzon, <em>C. mindorensis</em> has been found in shallow natural ponds and marshes, man-made water reservoirs, shallow narrow creeks, littoral creeks and mangrove areas and fast-flowing larger rivers in mountain areas up to 850 m. One particular habitat occupied by <em>C. mindorensis</em> in both the Sierra Madre and Cordillera Mountains is fast flowing rivers with rapids and deep pools lined by limestone cliffs with caves that are used as hiding places by crocodiles. Philippine Crocodiles also make burrows in sandy and clay river banks.<br/><br/>Observed prey species include shrimps, dragonflies, small fish and snails in juvenile crocodiles to large fish, wild and domestic pigs, dogs, civet cats, snakes and water birds in large crocodiles. Philippine crocodiles are very aggressive towards each other in captivity. Intra-specific aggressiveness in the wild has been observed among juveniles but not among adults or between size or age classes. Field observations in northern Luzon indicate that juveniles establish individual territories through aggressive interactions in their second year. Pairs of adult crocodiles are sometimes seen basking and swimming together. Home ranges of radio-tagged crocodiles varied from just over 1 km to 6 km of river in northern Luzon. A study there showed that crocodiles use individual sites in larger rivers during the drier season when water levels and currents are low but congregate in shallow ponds and creeks during the wet season when river currents are high.",
+    "threats": "Habitat use by rural people, persecution, and entanglement in fishing nets are the main threats to this species.",
+    "measures": "The Philippine Crocodile is nationally protected by law since 2001 (Republic Act 9147: the Wildlife Act). Killing a Philippine Crocodile carries a minimum penalty of six years imprisonment and/or a fine of 100,000 Pesos (approx. $US2500). The protection of crocodiles and conservation of their habitat is the responsibility of the Protected Areas and Wildlife Bureau (PAWB) of the Department of Environment and Natural Resources (DENR). A National Philippine Crocodile Recovery Team was established in 2000 (Banks 2000a) consisting of scientists, Government representatives and representatives of two foreign captive breeding programs in Melbourne Zoo and Gladys Porter Zoo. A National Recovery Strategy was published in 2000 (Banks 2000b) and updated in 2005 (Banks 2005). A national forum on crocodiles in the Philippines was held in February 2007 (Anon 2007, Ross 2008). Government maintains the Palawan Wildlife Rescue and Conservation Centre (PWRCC), formerly the Crocodile Farm Institute (CFI), which has been breeding <em>C. mindorensis</em> in captivity since 1987. The Mabuwaya Foundation and the PWRCC have reintroduced 50 crocodiles into Dicatian Lake in Isabela in July 2009 and maintains about 750 Philippine crocodiles in 2009. Captive stocks in the Philippines are all held by Manila Zoo, Avilon Montalban Zoo, Malabon Zoo, Cebu City Zoo, Zoobic Safari, Ocean Park Manila, Davao Crocodile Park, and a number of private crocodile farmers and individual collections. Silliman University has maintained a captive breeding program and Philippine crocodile research program since 1980 (Alcala 1997). Internationally, three captive breeding programs operate under a Memorandum of Agreement with the Philippine Government. These are administered by Melbourne Zoo (Australia), Gladys Porter Zoo (USA) and the Krokodille Zoo (Denmark). A number of facilities in the USA and Europe have Philippine crocodiles on loan under these programs. In addition, illegally exported Philippine crocodiles are maintained by an unknown number of facilities and individuals outside the Philippines.<br/><br/><em>In-situ</em> conservation of Philippine Crocodiles only seriously started in 1999 after the discovery of a remnant <em>C. mindorensis</em> population in Isabela Province. Isabela State University and Leiden University of the Netherlands are implementing a Philippine Crocodile research and conservation project here and have established the Mabuwaya Foundation. The Mabuwaya Foundation has used a combination of communication, education and public awareness campaigns, community empowerment and local capacity building to implement localized protection strategies in the municipality of San Mariano (van Weerd <em>et al</em>. 2004, van Weerd and van der Ploeg 2004, van der Ploeg and van Weerd 2006, van der Ploeg <em>et al</em>. 2008). Using the decentralized law system of the Philippines, the municipality of San Mariano has declared the Philippine crocodile their flagship species and has enacted municipal ordinances that protect crocodiles. This has led to the establishment of three Philippine crocodile sanctuaries protecting Dunoy Lake, Disulap River and Dinang Creek. A local protection group consisting of farmers and fishermen has been trained to manage the sanctuaries (Miranda <em>et al</em>. 2004, van der Ploeg and van Weerd 2004). In order to increase hatchling survival rates and assist a recovery of the Philippine Crocodile population in San Mariano a head-start program successfully raises and releases juveniles (van Weerd and van der Ploeg 2008). The municipalities of Maconacon, Palanan and Divilacan, Isabela Province, have also declared Philippine Crocodile sanctuaries in the Po River, Dibukarot Creek and Dicatian Lake respectively. In July 2009, 50 PWRCC captivebred crocodiles were reintroduced back to the wild in Dicatian Lake, which is protected as a village crocodile sanctuary but is also situated in the Northern Sierra Madre Natural Park, the largest protected area of the Philippines.<br/><br/>Elsewhere, the Mabuwaya Foundation and Isla Biodiversity Conservation are implementing community-based Philippine crocodile conservation on Dalupiri Island (Oliveros <em>et al</em>. 2006). The University of Southern Mindanao (USM) is implementing a Philippine crocodile research and conservation project in Ligawasan Marsh. Philippine Crocodile releases in wetlands on private land in Mindanao took place in 2009.<br/><br/>On Mindanao, a small nucleus of captive specimens obtained originally from Silliman University and the Palawan Wildlife Conservation Center in 2006 are held in Pag-asa Farms, a private facility, under semi-natural conditions in a large enclosure where the animals feed themselves on naturally occurring prey (rats and birds) and successfully breed. Offspring from this source have been raised to 1-2 years and approx 1m length, in semi-natural large enclosures and 36 released in 2013 on a protected freshwater marsh on Saigao Island (Mercado <em>et al</em>. 2013).<br/><br/>The future of the Philippine Crocodile looks much brighter since the publication of the last status report in 1998. Still it will take years before the (sub)population(s) will recover to viable non-threatened levels. The challenge for the coming years will be to sustain conservation efforts.",
+    "use_trade": "Historical harvest of this species for international skin trade between 1945 and about 1970 has now ceased. Minor exchange of captive and captive bred individuals occurs for conservation captive breeding purposes (see the Conservation section for more details).",
+    "rationale": "The species is endemic to the Philippines where the wild population is reduced to three localities (Dalupiri Island, Northern Luzon and Ligawasan marsh and Lake Sebu on Southern Mindanao) where it occupies an area of less than 2,000 km². Fewer than 200 adults are estimated to persist in the wild and the population may be declining despite re-introduction attempts. There has been an observed decline in the overall population of 82% in the known localities and an estimated and inferred decline in the number of adults in the population by 85%-94% over the last three generations (75 years; decline estimated over the period 1937-2012 based on extirpation from former range and localities). Habitat loss, persecution and entanglement in fishing nests are the primary ongoing threats. Based upon this past decline, the Philippine Crocodile is assessed as Critically Endangered&#160; (CR A2cd)",
+    "trend_justification": null,
+    "taxonomic_notes": "The species was named by Schmidt in 1935 from specimens from Najuan Lake, Mindoro. The species has been considered a subspecies of <em>C. novaeguineae</em> but currently it is accorded full species status on the basis of unique morphology, distribution and genetic separation (see <a href=\"http://reptile-database.reptarium.cz/species?genus=Crocodylus&amp;species=mindorensis\">Uetz <em>et al</em>. 2016</a>)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "van Weerd, M., C. Pomaro, C., de Leon, J., Antolin, R. & Mercado, V.",
+      "value": [
+        "Cayetano C. Pomaro (Univ. Philippines)",
+        "Restituta Antolin (DENR-Region 2 Philippines)",
+        "Vicente P Mercado (Crocodylus porosus Philippines Inc.)",
+        "Merlijn van Weerd (mabuwaya Foundation and Leiden University)",
+        "Josie de Leon (DNR-PAWB Philippines)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Banks, C. & Manolo, R.",
+      "value": [
+        "Chris Banks (Melbourne Zoo)",
+        "Rainier Manolo (Crocodylus Porosus Philipinnes Inc.)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Webb, G.J.W., Takehara, Y., Britton, A., Manolo, R. & Aquino, T.",
+      "value": [
+        "Yoichi Takehara (Horiuchi Trading Co, Tokyo, Japan)",
+        "Rainier Manolo (Crocodylus Porosus Philipinnes Inc.)",
+        "Teri Aquino (Philippines)",
+        "Grahame Webb (IUCN SSC Crocodile Specialist Group)",
+        "Adam Britton (Big Gekko Inc. Darwin Au)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Ross, J.P.",
+      "value": [
+        "Perran Ross (IUCN SSC Crocodile Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Uetz, P. and Hošek, J. (eds). 2016. The Reptile Database. Available at: <a href=\"http://www.reptile-database.org\">http://www.reptile-database.org</a>. (Accessed: 2016).",
+      "year": "2016",
+      "title": "The Reptile Database",
+      "author": "Uetz, P. and Hošek, J. (eds)",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 1990. <i>1990 IUCN Red List of Threatened Animals</i>. Gland, Switzerland and Cambridge, UK.",
+      "year": "1990",
+      "title": "1990 IUCN Red List of Threatened Animals",
+      "author": "IUCN",
+      "citation_short": "IUCN 1990"
+    },
+    {
+      "citation": "Groombridge, B. (ed.). 1994. <i>1994 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1994",
+      "title": "1994 IUCN Red List of Threatened Animals",
+      "author": "Groombridge, B.",
+      "citation_short": "Groombridge 1994"
+    },
+    {
+      "citation": "IUCN Conservation Monitoring Centre. 1988. <i>IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1988",
+      "title": "IUCN Red List of Threatened Animals",
+      "author": "IUCN Conservation Monitoring Centre",
+      "citation_short": "IUCN Conservation Monitoring Centre 1988"
+    },
+    {
+      "citation": "IUCN Conservation Monitoring Centre. 1986. <i>1986 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1986",
+      "title": "1986 IUCN Red List of Threatened Animals",
+      "author": "IUCN Conservation Monitoring Centre",
+      "citation_short": "IUCN Conservation Monitoring Centre 1986"
+    },
+    {
+      "citation": "Crocodile Specialist Group. 2012. Specialist Group website. Available at: <a href=\"http://www.iucncsg.org/\">http://www.iucncsg.org/</a>. ",
+      "year": "2012",
+      "title": "Specialist Group website",
+      "author": "Crocodile Specialist Group",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2009. IUCN Red List of Threatened Species. (Accessed: 30 September).",
+      "year": "2009",
+      "title": "IUCN Red List of Threatened Species",
+      "author": "IUCN",
+      "citation_short": null
+    },
+    {
+      "citation": "Groombridge, B. 1982. <i>The IUCN Amphibia-Reptilia Red Data Book, Part 1: Testudines, Crocodylia, Rhynocehapalia</i>. IUCN, Gland, Switzerland.",
+      "year": "1982",
+      "title": "<i>The IUCN Amphibia-Reptilia Red Data Book, Part 1: Testudines, Crocodylia, Rhynocehapalia</i>.",
+      "author": "Groombridge, B.",
+      "citation_short": "Groombridge 1982"
+    },
+    {
+      "citation": "Ross, C.A. and Alcala, A.C. 1983. Distribution and status of the Philippine crocodile (<i>Crocodylus mindorensis</i>) Kalikasan. <i>Philippine Journal of Biology</i> 12: 169-173.",
+      "year": "1983",
+      "title": "Distribution and status of the Philippine crocodile (<i>Crocodylus mindorensis</i>) Kalikasan",
+      "author": "Ross, C.A. and Alcala, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van der Ploeg, J. and van Weerd, M. 2004. Devolution of natural resource management and Philippine crocodile conservation in San Mariano, Isabela. <i>Philippine Studies</i> 52(3): 345-382.",
+      "year": "2004",
+      "title": "Devolution of natural resource management and Philippine crocodile conservation in San Mariano, Isabela",
+      "author": "Van der Ploeg, J. and van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aoki, R. 1985. Beobachtungen an <i>Crocodylus mindorensis</i> auf Mindoro, Philippinische Inseln. <i>Herpetofauna</i> 7(3-4): 6-10.",
+      "year": "1985",
+      "title": "Beobachtungen an <i>Crocodylus mindorensis</i> auf Mindoro, Philippinische Inseln",
+      "author": "Aoki, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt, K.P. 1938. History of a paratype of <i>Crocodylus mindorensis</i>. <i>Copeia</i> 1938(2): 89.",
+      "year": "1938",
+      "title": "History of a paratype of <i>Crocodylus mindorensis</i>",
+      "author": "Schmidt, K.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M. 2000. Update on Philippine crocodile occurrence in the Northern Sierra Madre Natural Park. <i>Crocodile Specialist Group Newsletter</i> 19(4): 12-14.",
+      "year": "2000",
+      "title": "Update on Philippine crocodile occurrence in the Northern Sierra Madre Natural Park",
+      "author": "Van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miranda, J.S.Q., van Weerd, M. and van der Ploeg, J. 2004. Devolving crocodile conservation to the local level: the case of Philippine crocodile conservation in the Municipality of San Mariano, Northeast Luzon, the Philippines. The 17th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 309-316 in Crocodiles. IUCN: Gland.",
+      "year": "2004",
+      "title": "Devolving crocodile conservation to the local level: the case of Philippine crocodile conservation in the Municipality of San Mariano, Northeast Luzon, the Philippines",
+      "author": "Miranda, J.S.Q., van Weerd, M. and van der Ploeg, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, C.A. 2005. Crocodiles on Dalupiri. <i>Crocodile Specialist Group Newsletter</i> 24(1): 12.",
+      "year": "2005",
+      "title": "Crocodiles on Dalupiri",
+      "author": "Ross, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M. and van der Ploeg, J. 2004. Conservation of the Philippine crocodile <i>Crocodylus mindorensis</i> in NE Luzon, the Philippines. An update. The 17th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 277-283 in Crocodiles. IUCN: Gland.",
+      "year": "2004",
+      "title": "Conservation of the Philippine crocodile <i>Crocodylus mindorensis</i> in NE Luzon, the Philippines. An update",
+      "author": "Van Weerd, M. and van der Ploeg, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Banks, C. 2000. National Recovery Plan for the Philippine Crocodile, <i>Crocodylus mindorensis</i>, 2000-2006. DENR and Royal Melbourne Zoological Gardens, Manila and Melbourne.",
+      "year": "2000",
+      "title": "National Recovery Plan for the Philippine Crocodile, <i>Crocodylus mindorensis</i>, 2000-2006",
+      "author": "Banks, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, C.A.(ed). 2008. <i>Proceedings of the forum on crocodiles in the Philippines. National Museum Papers 14.</i> National Museum of the Philippines, Manilla.",
+      "year": "2008",
+      "title": "Proceedings of the forum on crocodiles in the Philippines. National Museum Papers 14.",
+      "author": "Ross, C.A.(ed)",
+      "citation_short": null
+    },
+    {
+      "citation": "Tarun, B., Guerrero, J., Rodriguez, D., Telan, S., van Weerd, M. and van der Ploeg, J. 2004. The current distribution and population size of the Philippine crocodile and estuarine crocodile in Northeast Luzon, the Philippines. The 17th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 166-173 in Crocodiles. IUCN: Gland.",
+      "year": "2004",
+      "title": "The current distribution and population size of the Philippine crocodile and estuarine crocodile in Northeast Luzon, the Philippines",
+      "author": "Tarun, B., Guerrero, J., Rodriguez, D., Telan, S., van Weerd, M. and van der Ploeg, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alcala, A.C., Ross, C.A. and Alcala, E.L. 1987. Observations on reproduction and behaviour of captive Philippine crocodiles (<i>Crocodylus mindorensis</i> Schmidt). <i>Silliman Journal</i> 34: 18-28.",
+      "year": "1987",
+      "title": "Observations on reproduction and behaviour of captive Philippine crocodiles (<i>Crocodylus mindorensis</i> Schmidt)",
+      "author": "Alcala, A.C., Ross, C.A. and Alcala, E.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alcala, E.L. 1997. Silliman University Captive Breeding Program: an institutional report on the status of the captive breeding project (as of 1994). <i>Sylvatrop</i> 5: 91-96.",
+      "year": "1997",
+      "title": "Silliman University Captive Breeding Program: an institutional report on the status of the captive breeding project (as of 1994)",
+      "author": "Alcala, E.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ortega, G.V., Regoniel, P.A. and Ross, C.A. 1994. Status of crocodiles in the Philippines. An update. The 12th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 151-154. IUCN:Gland.",
+      "year": "1994",
+      "title": "Status of crocodiles in the Philippines. An update.",
+      "author": "Ortega, G.V., Regoniel, P.A. and Ross, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Banks, C. 2000. Philippine crocodile recovery team formed. <i>Crocodile Specialist Group Newsletter</i> 19: 7.",
+      "year": "2000",
+      "title": "Philippine crocodile recovery team formed",
+      "author": "Banks, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anon. 2007. Forum on Crcodiles in the Philippines. <i>Crocodile Specialist Group Newsletter</i> 26(1): 12-16.",
+      "year": "2007",
+      "title": "Forum on Crcodiles in the Philippines",
+      "author": "Anon",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliveros, C., Manalo, R, Coñate Sr., E., Tarun, B., Telan, S. and van Weerd, M. 2005. Philippine crocodile recorded on Dalupiri Island. <i>Crocodile Specialist Group Newsletter</i> 24(3): 14-15.",
+      "year": "2005",
+      "title": "Philippine crocodile recorded on Dalupiri Island",
+      "author": "Oliveros, C., Manalo, R, Coñate Sr., E., Tarun, B., Telan, S. and van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M. and van der Ploeg, J. 2008. Philippine crocodile hatchling head-start and re-enforcement program in San Mariano, Isabela Province, Luzon, the Philippines. In: P.S. Soorae (ed.), <i>Global Re-introduction Perspectives: Reintroduction Case-studies from around the Globe</i>, pp. Pp. 79-83. IUCN-SCC Re-introduction Specialist Group, Abu Dhabi.",
+      "year": "2008",
+      "title": "Philippine crocodile hatchling head-start and re-enforcement program in San Mariano, Isabela Province, Luzon, the Philippines",
+      "author": "Van Weerd, M. and van der Ploeg, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pontillas, F. 2000. New breeding sites for the Philippine crocodile. <i>Crocodile Specialist Group Newsletter</i> 19: 7-12.",
+      "year": "2000",
+      "title": "New breeding sites for the Philippine crocodile",
+      "author": "Pontillas, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Banks, C. 2005. National Recovery Plan for the Philippine Crocodile, <i>Crocodylus mindorensis</i>, 2005-2008, 2nd edition. DENR and Royal Melbourne Zoological Gardens, Manila and Melbourne.",
+      "year": "2005",
+      "title": "National Recovery Plan for the Philippine Crocodile, <i>Crocodylus mindorensis</i>, 2005-2008, 2nd edition",
+      "author": "Banks, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Manolo, R., Pomares, C., Mercado, V., Belo, W. and Saljay, G. 2013. Philippine crocodile (<i>Crocodylus mindorensis</i> Schmidt 1935) population recorded in highlands of Lake Sebu, Southern Mindanao, Philippines. <i>Crocodile Specialsist Newsletter</i> 32(1): 15-17.",
+      "year": "2013",
+      "title": "Philippine crocodile (<i>Crocodylus mindorensis</i> Schmidt 1935) population recorded in highlands of Lake Sebu, Southern Mindanao, Philippines",
+      "author": "Manolo, R., Pomares, C., Mercado, V., Belo, W. and Saljay, G.",
+      "citation_short": "Manolo et al. 2013"
+    },
+    {
+      "citation": "Ortega, G.V., Regoniel, P.A. and Jamerlan, M.M. 1993. Philippine crocodiles: their conservation, management and future sustainable use. <i>The Asian International Journal of Life Sciences</i> 2: 121-139.",
+      "year": "1993",
+      "title": "Philippine crocodiles: their conservation, management and future sustainable use",
+      "author": "Ortega, G.V., Regoniel, P.A. and Jamerlan, M.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M. and van der Ploeg, J. 2003. A new future for the Philippine crocodile. <i>Sylvatrop</i> 1-2: 31-50.",
+      "year": "2003",
+      "title": "A new future for the Philippine crocodile",
+      "author": "Van Weerd, M. and van der Ploeg, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, C.A. 2008. A question of habitat -<i>Crocodylus mindorensis</i>. <i>National Museum Papers</i> 14: 116-122.",
+      "year": "2008",
+      "title": "A question of habitat -<i>Crocodylus mindorensis</i>",
+      "author": "Ross, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Messel, H. and King, F.W. 1992a. Survey of the crocodile populations of the Republic of Palau, Caroline Islands, Pacific Ocean. <i>Crocodiles. Proceedings of the 10th Working Meeting of the Crocodile Specialsit Group.</i> 1: 302-351.",
+      "year": "1992a",
+      "title": "Survey of the crocodile populations of the Republic of Palau, Caroline Islands, Pacific Ocean",
+      "author": "Messel, H. and King, F.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Akmad, M.G. and Pomares, C.C. 2008. Wild <i>Crocodylus mindorensis</i> at Tambad, Carmen, North Cotabato. Department of Animal Science, College of Agriculture, University of Southern Mindanao.",
+      "year": "2008",
+      "title": "Wild <i>Crocodylus mindorensis</i> at Tambad, Carmen, North Cotabato",
+      "author": "Akmad, M.G. and Pomares, C.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pomares, C.C., Pomares, M.P. and Escalera, C.M.R. 2008. The existence of wild crocodile populations in Ligawasan Marsh and its tributaries. <i>National Museum Papers</i> 14: 116-122.",
+      "year": "2008",
+      "title": "The existence of wild crocodile populations in Ligawasan Marsh and its tributaries",
+      "author": "Pomares, C.C., Pomares, M.P. and Escalera, C.M.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schultze, W. 1914. Notes on a nesting place of <i>Crocodilus palustris</i> Lesson. <i>Philippine Journal of Science</i> 9D: 313-317.",
+      "year": "1914",
+      "title": "Notes on a nesting place of <i>Crocodilus palustris</i> Lesson",
+      "author": "Schultze, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rebong, G. and Sumiller, R. 2002. Captive breeding of <i>C. mindorensis</i> at PWRCC. In: R.C. Lazaro (ed.), Philippine crocodile (<i>Crocodylus mindorensis</i>) conservation workshop. Cabagan, Philippines.",
+      "year": "2002",
+      "title": "Captive breeding of <i>C. mindorensis</i> at PWRCC",
+      "author": "Rebong, G. and Sumiller, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliveros, C., Telan, S. and van Weerd, M. 2006. Crocodile surveys on Dalupiri and Fuga. Isla Biodiversity Conservation Inc. and Mabuwaya Foundation Inc, Las Piñas City and Cabagan.",
+      "year": "2006",
+      "title": "Crocodile surveys on Dalupiri and Fuga",
+      "author": "Oliveros, C., Telan, S. and van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M. 2002. The status and conservation of the Philippine crocodile <i>Crocodylus mindorensis</i> in the Northern Sierra Madre, Luzon, the Philippines. The 16th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 97-107 in Crocodiles. IUCN: Gland.",
+      "year": "2002",
+      "title": "The status and conservation of the Philippine crocodile <i>Crocodylus mindorensis</i> in the Northern Sierra Madre, Luzon, the Philippines.",
+      "author": "Van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mercado, V., Alcala, A., Belo, W., Manolo, R., Diesmos, A. and de Leon, J. 2013. Soft release introduction of the Philipinne crocodile (<i>Crocodylus mindorensis</i> Schmidt 1935) in Paghongawan marsh, Siargao Island protected landscape and seascape, Southern Philippines. <i>Crocodile Specialist Group Newsletter</i> 32(1): 13-15.",
+      "year": "2013",
+      "title": "Soft release introduction of the Philipinne crocodile (<i>Crocodylus mindorensis</i> Schmidt 1935) in Paghongawan marsh, Siargao Island protected landscape and seascape, Southern Philippines",
+      "author": "Mercado, V., Alcala, A., Belo, W., Manolo, R., Diesmos, A. and de Leon, J ",
+      "citation_short": "Mercado et al. 2013"
+    },
+    {
+      "citation": "Van der Ploeg, J., Weerd, M. and Telan, S. 2007. Cross visit to Liguasan marsh. <i>Crocodile Specialist Group Newsletter</i> 26(4): 11.",
+      "year": "2007",
+      "title": "Cross visit to Liguasan marsh",
+      "author": "Van der Ploeg, J., Weerd, M. and Telan, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van der Ploeg, J., Cureg, M.C. and van Weerd, M. 2008. Mobilizing public support for in-situ conservation of the Philippine crocodile in the Northern Sierra Madre: something to be proud of! <i>National Museum Papers</i> 13(14): 68-94.",
+      "year": "2008",
+      "title": "Mobilizing public support for in-situ conservation of the Philippine crocodile in the Northern Sierra Madre: something to be proud of!",
+      "author": "Van der Ploeg, J., Cureg, M.C. and van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M, van der Ploeg, J., Rodriguez, D., Guerrero, J., Tarun, B., Telan, S. and de Jonge, J. 2006. Philippine crocodile conservation in Northeast Luzon: an update of population status and new insights into <i>Crocodylus mindorensis</i> ecology. The 17th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 306-321 in Crocodiles. IUCN: Gland.",
+      "year": "2006",
+      "title": "Philippine crocodile conservation in Northeast Luzon: an update of population status and new insights into <i>Crocodylus mindorensis</i> ecology",
+      "author": "Van Weerd, M, van der Ploeg, J., Rodriguez, D., Guerrero, J., Tarun, B., Telan, S. and de Jonge, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hall, P.M. 1989. Variation in Geographic Isolates of the New-Guinea Crocodile (<i>Crocodylus novaeguineae</i> Schmidt) compared with the similar, allopatric, Philippine Crocodile (<i>Crocodylus mindorensis</i> Schmidt). <i>Copeia</i> 1989(1): 71-80.",
+      "year": "1989",
+      "title": "Variation in Geographic Isolates of the New-Guinea Crocodile (<i>Crocodylus novaeguineae</i> Schmidt) compared with the similar, allopatric, Philippine Crocodile (<i>Crocodylus mindorensis</i> Schmidt)",
+      "author": "Hall, P.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, C.A. 1982. Philippine crocodile <i>Crocodylus mindorensis</i>. Final report to Smithsonian Institution/World Wildlife Fund Philippine crocodile project.",
+      "year": "1982",
+      "title": "Philippine crocodile <i>Crocodylus mindorensis</i>. Final report to Smithsonian Institution/World Wildlife Fund Philippine crocodile project.",
+      "author": "Ross, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ortega, G.V. 1998. Philippine crocodile conservation. The 14th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 101-134. IUCN: Gland.",
+      "year": "1998",
+      "title": "Philippine crocodile conservation",
+      "author": "Ortega, G.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt, K.P. 1956. On the status and relations of <i>Crocodylus mindorensis</i>. <i>Fieldiana Zoology</i> 33(5): 535-539.",
+      "year": "1956",
+      "title": "On the status and relations of <i>Crocodylus mindorensis</i>",
+      "author": "Schmidt, K.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt, K.P. 1935. A new crocodile from the Philippine islands. <i>Field Museum Natural History Zoology Series</i> 20: 67-70.",
+      "year": "1935",
+      "title": "A new crocodile from the Philippine islands",
+      "author": "Schmidt, K.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van der Ploeg, J. and van Weerd, M. 2006. A paradigm shift in Philippine crocodile conservation. The 18th Working Meeting of the IUCN-SSC Crocodile Specialist Group: Pp. 164-186 in Crocodiles. IUCN: Gland.",
+      "year": "2006",
+      "title": "A paradigm shift in Philippine crocodile conservation",
+      "author": "Van der Ploeg, J. and van Weerd, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Manalo, R. 2008. Occurrence of <i>Crocodylus mindorensis</i> in the Cordillera Central. Abra Province, Luzon Island. <i>National Museum Papers</i> 14: 109-115.",
+      "year": "2008",
+      "title": "Occurrence of <i>Crocodylus mindorensis</i> in the Cordillera Central. Abra Province, Luzon Island",
+      "author": "Manalo, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Weerd, M., van Boven, G. and van der Ploeg, J. 2004. Using communication to involve local communities and local governments in protected area management: two related cases from northeastern Luzon, Philippines. In: D. Hamú, E. Auchincloss and W. Goldstein (eds), <i>Communicating Protected Area</i>, pp. Pp. 139-154. IUCN, Gland.",
+      "year": "2004",
+      "title": "Using communication to involve local communities and local governments in protected area management: two related cases from northeastern Luzon, Philippines",
+      "author": "Van Weerd, M., van Boven, G. and van der Ploeg, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

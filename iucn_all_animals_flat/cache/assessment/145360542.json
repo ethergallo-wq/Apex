@@ -1,0 +1,1474 @@
+{
+  "assessment_date": "2018-07-25T01:00:00.000+01:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22956,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22956/145360542",
+  "citation": "Acebes, P., Wheeler, J., Baldo, J., Tuppia, P., Lichtenstein, G., Hoces, D. & Franklin, W.L. 2018. Vicugna vicugna (errata version published in 2019). The IUCN Red List of Threatened Species 2018: e.T22956A145360542. Accessed on 05 May 2026.",
+  "assessment_id": 145360542,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22956,
+    "scientific_name": "Vicugna vicugna",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 22957,
+        "scientific_name": "Vicugna vicugna ssp. mensalis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "CAMELIDAE",
+        "genus_name": "Vicugna",
+        "species_name": "vicugna",
+        "subpopulation_name": null,
+        "infra_name": "mensalis",
+        "authority": "(Thomas, 1917)",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 22958,
+        "scientific_name": "Vicugna vicugna ssp. vicugna",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "CAMELIDAE",
+        "genus_name": "Vicugna",
+        "species_name": "vicugna",
+        "subpopulation_name": null,
+        "infra_name": "vicugna",
+        "authority": "(Molina, 1782)",
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "CAMELIDAE",
+    "genus_name": "Vicugna",
+    "species_name": "vicugna",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Molina, 1782)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Vicugna",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Vicuña",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Huari",
+        "language": "aym"
+      },
+      {
+        "main": false,
+        "name": "Vicuña",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Vigogne",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Wik'uña",
+        "language": "que"
+      },
+      {
+        "main": true,
+        "name": "Vicuna",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Camelus vicugna Molina, 1782",
+        "status": "ACCEPTED",
+        "genus_name": "Camelus",
+        "species_name": "vicugna",
+        "species_author": "Molina, 1782",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "20-30",
+    "upper_elevation_limit": 5000,
+    "lower_elevation_limit": 3000,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "350000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "4-5",
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "11-20"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p></p><p>  Vicuñas occur in an area of approximately 300,000 km² in the Puna and High Andean biogeographic provinces of Perú, Bolivia, Chile and Argentina, in a range that extends 2,800 km from 9°50'S in the Ancash Department of Perú to the north-western region of San Juan, Argentina (29°14′S, 69°21′W), plus an isolated population in Ecuador resulting from a donation from Perú, Chile and Bolivia, which represents the northernmost distribution (1°30′S) of the species.&#160;</p><p>In <strong>Perú</strong>, Vicuñas occur in the departments of Ayacucho, Puno, Huancavelica, Junín, Cusco, Arequipa, Apurimac and Lima, representing 96% of country’s total population, while the remaining 4% occur in the departments of Ica, Moquegua, Cajamarca, Tacna, Pasco, La Libertad, Ancash and Huánuco.<br/></p><p>In <strong>Bolivia</strong>, Vicuña populations are found in five out of nine Bolivian departments: La Paz, Cochabamba, Oruro, Potosí and Tarija. The species has also been reported in the department of Chuquisaca, which has yet to be confirmed (MMAyA 2012).<br/></p><p>In <strong>Chile</strong>, Vicuña populations occur in four regions: Arica and Parinacota represent 85% of Vicuña populations in the country (2016), while the remaining 15% is distributed in the regions of Tarapacá (2%), Antofagasta (11%) and Atacama (2%). The southernmost distribution of the species in Chile is 28°35'S (Vilina <em>et al.</em> 2015).<br/></p><p>In <strong>Argentina</strong>, Vicuñas are found in the provinces of Jujuy, Catamarca, Salta, La Rioja and San Juan. The southernmost distribution of the species in South America is in the San Guillermo Biosphere Reserve, located in the department of Iglesia in the province of San Juan, Argentina.&#160;<br/></p><p>In <strong>Ecuador</strong>, the introduced population of Vcuñas is present at the Chimborazo Faunal Production Reserve (MAE 2016), located in the Bolivar, Chimborazo and Tungurahua provinces.&#160;<br/></p><p>The two-recognized subspecies occur in Chile and Bolivia, the Northern <em>V. vicugna mensalis</em><strong> </strong>and the Southern <em>V. vicugna vicugna</em>. Argentina has only <em>V. vicugna vicugna</em>, while Perú and Ecuador only <em>V. vicugna mensalis</em>.</p>",
+    "population": "<p><span class=\"MsoCommentReference\">  </p><p><strong>Perú</strong> has the highest numbers of Vicuñas with over half of the total world’s population. Although its conservation has faced difficulties, surveys carried out by different entities of the Ministry of Agriculture over 70,000 km² reported 66,559 Vicuñas in 1994, 103,161 in 1997, 118,678 in 2000 and 208,899 in 2012. A total population of 218,000 Vicuñas was estimated in 2016. Currently, Vicuñas occur is six protected areas (Pampa Galeras Bárbara D’Achille National Reserve, Huascarán National Park, Salinas y Aguada Blanca National Reserve, Nor Yauyos – Cochas and Sub Cuenca del Cotahuasi Lanscape Reserves, and Santuario Histórico de Chacamarca) totalling 1,427,754 ha and 20,122 Vicuñas (10% of total population). Pampa Galeras- Barbara d’Achille National Reserve in Ayacucho department was established in 1965 to protect the largest concentration of Vicuñas in Perú. Starting with a total of 5,000 to 10,000 Vicuñas in the 1960s, the population in Ayacucho has expanded to 62,133 animals (2012), representing the largest population in the country. The species in Perú is listed as Near Threatened (MINAGRI 2014).<br/></p><p>In <strong>Bolivia</strong>, Vicuñas are distributed throughout the Puna and high Andean region of La Paz, Oruro, Potosi, Cochabamba and Tarija departments. According to the 2009 census, a total of 112,249 Vicuñas were recorded. In 2016, total population was estimated to be to 163,331 individuals. Potosi has the largest Vicuña population (39%), followed by La Paz Department (33%) and Oruro (26%); Tarija and Cochabamba have the smallest Vicuña populations (MMAyA 2010). Both Vicuña subspecies are present in the country; the Northern Subspecies (<em>V. v. mensalis</em>) represents 65% of the Bolivian Vicuña population, and the Southern Subspecies (<em>V. v. vicugna</em>) 35%. Species density in the northern populations in semi-humid high-Andes habitats is relatively high (10.31 animals/km²); while its density in the semi-arid Puna is low (0.004 animals/km²) (MMAyA 2010). According to the Bolivian governmental report there are 17,838 Vicuñas (16% of total population) in four protected areas (Area Natural de Manejo Integrado Nacional Apolobamba, Sajama National Park, Eduardo Avaroa Fauna National Reserve and Coordillera de Sama Biological Reserve), totalling&#160;1,397,271 ha. The protected Area Natural de Manejo Integrado Nacional Apolobamba has the largest Vicuña population (11,878 Vicuñas) and highest density (10.3 animals/km²) (MMAyA 2010). The species in Bolivia is classified as Least Concern (Aguirre <em>et al.</em> 2009).<br/></p><p><strong>Chile</strong> holds populations of both subspecies: <em>V. v. mensalis</em> in the northern region with the most abundant numbers (10,215 Vicuñas; 2016) and the southern <em>V. v. vicugna</em> with 1888 Vicuñas (2016). Vicuñas occur in six protected areas (Las Vicuñas and Los Flamencos Reserves, Volcan Isluga, Lauca, Nevado de Tres Cruces National Parks and Salar de Surire Natural Monument) totalling a protected area of 2,788,532 ha. Only populations inhabiting Lauca National Park and Las Vicuñas Reserve have been monitored since the 1970s (Bonacic <em>et al.</em> 2002, Shaw <em>et al.</em> 2012). Recent surveys have revealed a decline of nearly 5000 animals from 2008 to 2017. The species in Chile is listed as Endangered (MINAGRI 1998).<br/></p><p>In <strong>Argentina</strong> Vicuñas inhabit an area of 123,001 km². The provinces with the largest Vicuña populations are Jujuy and Catamarca, while La Rioja holds the lowest numbers. Approximately 34% of country’s distribution occurs in eight conservation areas that receive different degrees of protection (San Guillermo Biosphere Reserve, Laguna Blanca and Laguna de Pozuelos Biosphere reserves, Chinchilla, Laguna Brava, Laguna de Leandro and Los Andes and Olaroz-Cauchari Provincial reserves, all totalling 2,935,154 ha). The total population size was last estimated in 2006 between 72,800 and 127,072 individuals, based upon representative sampled areas totalling 53,578 km². The species in Argentina is classified as Least Concern (Ojeda <em>et al.</em> 2012).<br/></p><p>In <strong>Ecuador</strong>, Vicuñas were introduced in Chimborazo Faunal Production Reserve (58,560 ha) thanks to donations of 200 individuals from Chile and Perú in 1988, and 77 from Bolivia in 1993. This protected area is located in Chimborazo, Bolivar and Tungurahua provinces, created specifically for Vicuña conservation. The census carried out during 2000-2016 showed an exponential annual growth rate of 11% reaching 7,185 individuals in 2016 (MAE 2016), suggesting that neither predation nor carrying capacity are currently regulating the species in the area (McLaren <em>et al.</em> 2018).&#160;<br/></p><p><strong>Total Population Size: </strong></p><p>The total South American Vicuña population is between 473,297 – 527,691, i.e. ca. 500,494 animals with 46% in Perú, 29% in Bolivia, 21% in Argentina, 3% in Chile, and 2% in Ecuador. However, there exists several uncertainties due to 1) different methodologies employed in the various countries; in some cases, the censuses are extrapolations or estimations while in others they are real counts; 2) censuses are not updated; for example, the national census in Argentina is from 2006, in Bolivia 2009, and in Perú from 2012, and 3) the total population is suspected to be larger since several censuses were performed mainly in protected areas, despite the fact that Vicuñas occur beyond those limited areas. In keeping with the Precautionary Principle and taking into account current information, the total Vicuña population is considered to be increasing.</p><p>As a general rule, it is recommended to survey Vicuña populations by the distance sampling method, either for ground or aerial surveys since it is based on more realistic assumptions rather than the fixed-width strip transect methods which tend to underestimate population numbers (Buckland <em>et al. </em>1993). However, where numbers are too low, as in relict or new populations, and in topographically feasible terrain, total direct counts are appropriate. Also, extrapolation of local densities to larger areas must be applied with caution and made according to sampling effort. Accurate estimates of local densities are not sufficient to estimate abundance for larger areas unless the sampling effort is properly applied throughout the region.&#160;In summary, an update of total population of the species using inference-based methodologies is needed.<br/></p><p>Country Vicuña population (censused/estimated):&#160;</p><p><strong>Perú</strong>: 208,899 (national census, MINAGRI 2012); 218,000 (estimated population, MINAGRI 2016)</p><p></p><p><strong>Bolivia</strong>: 112,249 (national census, 2009); 163,331 (estimated population, Vicuña Convention 2017)</p><p><strong>Chile</strong>: 12,103 (Vicuña Convention 2017)</p><p><strong>Argentina</strong>: 72,678 – 127,072 (2006 national census, Baigún <em>et al. </em>2008)&#160; </p><p><strong>Ecuador</strong>: 7,185 (Ecuador’s Ministry of Environment 2016)</p><p>The total Vicuña population is 473,297 – 527,691 (censused/estimated).</p><p></p><p></p><p></p>",
+    "habitats": "<p></p><p>  </p><p>Vicuña is a high-altitude ungulate distributed throughout the Andean Mountains from 3,000 to 5,000 masl, in the Puna and High Andean ecorregions. This vast region is characterized by cold-dry weather and dominated by xerophytic vegetation and large areas of bare ground (Franklin 2011). Within this wide region Vicuña habitats include shallow wetlands (called ‘vegas’ in Chile and Argentina, ‘bofedales’ in Bolivia and ‘bofedales or mojadales in Perú), halophytic plant communities, grassy steppes, prairies, shruby steppes, and rolling shrub steppes (tolares) supporting cacti (Pujalte and Reca 1985). Vegas or bofedales in the entire region are extremely scarce (oasis) but are intensively used by Vicuñas due to the presence of water and high-quality forage compared to the widely distributed poor-xeric habitats (Lucherini 1996). Vicuñas daily activity patterns and movements are also strongly influenced by water availability, especially during the summer, given that they are obligate drinkers (Franklin 2011), while in the night and early morning Vicuñas move to hillsides to avoid predation from pumas (Renaudeau d'Arc <em>et al.</em> 2000, Donadio and Buskirk 2016) and culpeo foxes (Franklin 1978).&#160;&#160;</p><p>  </p><p>Vicuña is a medium-sized, monomorphic (adults <em>V. v. mensalis</em> 38 kg, <em>V. v. vicugna</em> 46 kg) generalist herbivore that behaves as a facultative grazer that can also include shrubs in its diet (Borgnia <em>et al.</em> 2010, Mosca Torres and Puig 2010). However, grazing of grasses and forbs is its primary activity. Vicuña populations are sedentary; no migratory populations have been recorded to date. The Vicuña social system is based on a resource defense polygyny mating system in which females are attracted to a feeding area monopolized by a territorial male that form family groups (Franklin 1982, 2011) Females primarily remain within the male’s territory (Franklin 1974), although some populations have movement of individuals between different social units resulting in a variable social organization (Arzamendia <em>et al.</em> 2018). These territories are defended year-round. Bachelor male groups, and solo males are also found among the primary social units. Census at the Pampa Galeras-Barbara D’Achillie Vicuña Reserve showed 68% of the population in family groups, 31% male groups, 1% solo males and with most males (69%) in bachelor male groups (Informe Perú 2011). Average family group size is very stable among populations and subspecies (one male, two to four females and one to two offspring (Koford 1957; Franklin 1974, 1983; Vilá 1992; Lucherini 1996; Arzamendia and Vilá 2012; Arzamendia <em>et al.</em> 2018). Family groups tend to occupy territories in higher quality habitats compared to male groups (Franklin 1974, 1978, 1983; Arzamendia <em>et al.</em> 2006; Borgnia <em>et al.</em> 2010; Arzamendia and Vilá 2015; Arzamendia <em>et al.</em> 2018), and do not overlap (Franklin 1974, 1983; Arzamendia <em>et al.</em> 2018). Home ranges average about 18 ha (Franklin 1983, Arzamendia <em>et al.</em> 2018). Gestation lasts approximately 11.3 months (Bravo 2002), followed by 8 months of lactation. Offspring are born during late summer, the period of maximum primary productivity of the steppe ecosystem. Approximately two weeks later the females are bred again. Male and female offspring are forcefully dispersed by the territorial male from their natal family group before the next reproductive period (Franklin 1974, 1983, 2011), with the relocation of females to non-parental family groups, and males to bachelor groups (Franklin 1974, Arzamendia <em>et al.</em> 2018). Areas used by family groups contain many dust bathing locations (“revolcaderos”) and communal dung piles (“bosteaderos, estercoleros”). Males do not typically reproduce unless they hold a feeding territory.</p><p>  </p>",
+    "threats": "<p></p><p>  Poaching triggered by international illegal market demands of Vicuña fibre continues to be the major threat to the species. According to the Technical Meeting of the Vicuña Convention (2015) there has been, with the exception of Ecuador, an alarming increase in Vicuña poaching throughout its range, especially affecting isolated Chilean and relict populations whose marginal distribution increases their vulnerability. Among the factors that facilitate poaching of Vicuñas in the high Andes are (SACSG, 2014): 1) The wide geographic range of Vicuña populations and the extensive long frontier areas among the countries involved; 2) The geographic characteristics of the area, with low Vicuña population densities and a high degree of isolation; 3) Lack of human and technical resources devoted to protection of the species in the host countries; 4) High value of the fibre and Vicuña products in the international market; 5) Existence of a substantial market for illegal fibre and handcrafts at the local level; 6) Lack of effective punishment for illegal hunters; 7) Insufficient confiscation of illegal products; 8) Limited coordinated security forces within and between countries; 9) Limited benefits to local communities, and sometimes insufficient support and incentives to develop legal Vicuña use, resulting in greater benefits from illegal than from legal uses. Thus, it is considered of particular relevance that the following measures to be promoted:</p><p>A) On cooperation among Andean countries:</p><p>1. Intensification of inter-boundary cooperation among neighbouring countries, including security forces, for the control of international frontiers to optimize efforts to eliminate illegal traffic.</p><p>2. Critical revision of the compliance with previous agreements and documents, developed during Technical Meetings of the Vicuña Convention on Vicuña poaching and trafficking.</p><p>3. Standardized registry in the five countries of legally obtained fibre, its processing, imports and exports, in order to be able to monitor its commercialization.</p><p>B) At the national level:<br/></p><p>1. Information dissemination regarding legal sanctions and the updating of national, regional, and local laws to make them more effective against poaching and illegal commercialization of Vicuña fibre and products.<br/></p><p>2. Facilitation and support of local Andean communities in the development of technical and organizational capacities to harvest fibre from their Vicuñas under strict animal welfare protocols and strengthening local community organizations.<br/></p><p>3. Governmental support to local Andean communities in the commercialization and value-added processes of legal fibre, simplifying the process and strengthening the stages of the legal chain of commercialization.<br/></p><p>4. Supply of sufficient legal fibre for local artisan use at subsidized prices, to minimize use of illegal fibre and increasing value added processes in the countries of origin.<br/></p><p>5. Reinforcing and implementation at the national level of schemes of supervision, legal oversight, and tracing origins of the fibre, from shearing to its conclusion on the supply chain (shearing, storage, transformation, commercialization, and export).<br/></p><p>6. Permanent training of police, judicial and customs authorities, with respect to legislation and other subjects related to production and movement of fibre, as well as identification of camelid fibres and their sub-products.<br/></p><p>7. The intensification of seizures of illegal clothing and the implementation of sanctions to those involved in purchasing or selling them.<br/></p><p>8. Implementation of informative and awareness campaigns, especially at touristic sites and airports, alerting tourists of the requirements to be met by legal Vicuña fibre products.<br/></p><p>C) On the cooperation between exporting and importing countries:<br/></p><p>1. Strengthening of local cooperation networks and swifter communication between CITES authorities and importing and exporting countries.<br/></p><p>2. Development and collaboration in the implementation of systems to trace the origin of Vicuña products and sub-products, to be implemented internationally.<br/></p><p>3. The strengthening of controls in the importing countries regarding the processing and marketing Vicuña products and sub-products.<br/></p><p>Despite the fact that participating countries are moving forward in the development of National Management and Conservation plans since the last Vicuña assessment (2008), as well as the provision of guidelines for sustainable management and animal welfare criteria, the lack of specific budgets or poor funding hinder achievement of conservation and management actions.&#160;<br/></p><p>Recent studies have shown that capture, handling, live-shearing and releasing wild Vicuñas under strict sustainable management and welfare protocols (although showing subtle and transitory behavioural and social structure changes after being released) does not compromise the conservation or maintenance of ecologically functional wild populations (Sahley <em>et al.</em> 2007, Arzamendia and Vilá 2012, Marcoppido <em>et al.</em> 2017). Among the two widely used methods for capturing Vicuñas, the traditional ‘Chaku’ (surround-capture by people on foot) results in less stress on animals than the use of motor vehicles to chase the animals (Sarno <em>et al.</em> 2009, Arzamendia <em>et al.</em> 2010).&#160;On the other hand, captive management has proven to have&#160;no contribution to&#160;Vicuña conservation (Lichtenstein 2006). <br/></p><p>Vicuñas, domestic camelids and introduced livestock have similar foraging preferences and share Andean habitats. As a result, local people perceive Vicuñas as a competitive species, and do not tolerate their presence (Lichtenstein and Renaudeau d'Arc 2004). This is especially worrisome around wetland (bofedales) habitats which are critical for Vicuñas (Koford 1957, Renaudeau d'Arc <em>et al.</em> 2000, Mosca Torres and Puig 2012, Mosca Torres <em>et al.</em> 2015) and locally shared with domestic animals (Borgnia <em>et al.</em> 2008, Wurstten <em>et al.</em> 2014, Arzamendia and Vilá 2015, McLaren <em>et al.</em> 2018). Vicuñas are frequently displaced by livestock, from the high-quality habitats to sub-optimal low-productivity habitats (Borgnia <em>et al.</em> 2008), where they still are able to persist. Further, the presence of herders with dogs represents an important stress factor for Vicuñas (Arzamendia and Vilá 2015).&#160;<br/></p><p>Habitat loss triggered by livestock over-grazing, and habitat fragmentation due to industrial and rural sprawl, and the development of large-scale mining projects may jeopardize the viability of Vicuña populations located beyond protected areas. Mining activities directly impact Vicuña populations by occupying preferred habitats and as a result of road kills due to high traffic levels, heavy machinery employed etc., and indirectly through the extraction and pollution of water resources (Mata <em>et al.</em> 2016).<br/></p><p>Climate change will probably have a detrimental impact in the fragile ecosystems where Vicuñas occur since they are at the limits of habitable environments. Therefore, the assessment of the potential effects of climate change on Vicuña’s habitats is a priority.<br/></p><p>Epidemiological studies on Vicuña wild populations in Bolivia, Perú and Argentina that share spatial and forage resources with domestic camelids and livestock do not show prevalence levels of endo- or ectoparasites that seem to be a problem for the viability of their populations (Chávez-Velásquez <em>et al.</em> 2005, Beltrán-Saavedra <em>et al.</em> 2011, Arzamendia <em>et al.</em> 2012, Marcoppido <em>et al.</em> 2016). However, a growing concern is emerging since some Vicuña populations throughout their distribution are suffering from mange caused by the mite <em>Sarcoptes scabiei</em>. For example, two important protected areas for the species’ conservation are showing a high incidence of mange: San Guillermo National Park (San Juan, Argentina), created to preserve the two South American wild camelids in Argentina, and Pampa Galeras Bárbara D’Achille National Reserve (Ayachuco, Perú), the latter which symbolized the recovery of the species from the brick of extinction in the 60s of the past century. In San Guillermo the problem probably has to do with the introduction of domestic camelids without sanitary controls or quarantine, while in the case of other populations it is due to mismanagement practices related to the capture and shearing of animals, including incomplete preventive veterinary treatments, management without welfare, and overcrowding of animals creating stress. This situation also causes huge economic losses to the local communities because of the drop of Vicuña fibre price.&#160;&#160;<br/></p><p>A potential threat both in the Andes and worldwide, is the breeding of paco-Vicuña (an alpaca/Vicuña hybrid) mainly promoted in developed countries out of the Vicuña distribution range for commercial purposes. The alpaca was domesticated from the Vicuña approximately 6-7,000 years ago (Wheeler 2012). During domestication and subsequent selective breeding, the genome was modified away from its Vicuña origin. Additional significant changes in the alpaca genome also occurred during the Spanish conquest when large numbers were slaughtered, and subsequent massive hybridization with llamas. DNA studies have shown that alpaca and llama pertain to different genera, <em>Vicugna </em>and <em>Lama</em> respectively, and at least 80% of alpacas in the Andes carry llama genes (Kadwell <em>et al.</em> 2001). Thus, hybridization between alpacas and Vicuñas represents a real threat because of the mixing of alpaca genes into the Vicuña genome, something that has not occurred in nature.</p>",
+    "measures": "<p></p><p><span lang=\"EN-US\">  </p><p>Five decades ago, the Vicuña was one of the most threatened species in South America. The implementation of the Vicuña Convention was fundamental in the recovery of the species. In 1987, during the Sixth CITES Conference of Parties, Perú obtained for the first time, along with other countries, authorization for the sale of fabric made from live shorn Vicuña fibre. The Vicuña Convention was implemented in each country in accordance with its own National Legislation. The ownership status of the Vicuña varies somewhat; as a wild species it is the property of the State in Bolivia and Perú and of the Andean communities in which lands the species occur, while <em>res nullius</em> (without owner) in Chile and Argentina.&#160; Although all the conservation aspects of the Vicuña Convention are embodied in National Laws and Decrees in all four countries, this is not always the case as regards granting benefits to local people (McNeill <em>et al.</em> 2009).<br/></p><p>Currently various Vicuña populations are included in the Appendix II of CITES: all populations in Perú, Bolivia and Ecuador, the northern populations in Chile (I Region; <em>V.v. mensalis</em>) and the populations in Jujuy and Catamarca Provinces, and the captive populations of Jujuy, Salta, Catamarca, La Rioja and San Juan Provinces in Argentina. Appendix II allows, under strict regulations between exporting and importing countries, the trade in fibre and derived products. The remaining populations are included in Appendix I.&#160;<br/></p><p>In 1965 when no more than 10,000 Vicuñas were thought to exist, <strong>Perú</strong> established the Pampa Galeras National Vicuña Reserve in Ayacucho (later renamed Bárbara D’Achille for the Perúvian conservationist). Conservation strategy was based upon protection with the use of armed park guards and later rational utilization through controlled culling that led to an international debate and disenfranchisement of the indigenous communities. Despite these difficulties, population numbers increased, with 63,223 Vicuñas counted in Pampa Galeras and surrounding region in a survey covering 2,985,757 ha in 1997. In that same year the populations in the Departments of Ayacucho, Junín, Puno and Arequipa were transferred to CITES Appendix II status, opening international trade for fibre from live-shorn Vicuñas. Conservation policy shifted to sustainable utilization through live shearing and sale of fibre by those Andean communities with lands in the Vicuña’s range. Extensive new Vicuña reserves were established at Salinas and Aguada Blanca in Arequipa and Huascaran National Park in Ancash. The Ministry of Agriculture’s Special Project for Rational Utilization of the Vicuña (1978 -1993) was replaced by the National Council for South American Camelids – CONACS, an institution comprised of representatives from the Ministry of Agriculture, camelid research institutions, regional governments, campesino communities and the National Society of Vicuña Breeders. As a multi-sectorial entity, CONACS held responsibility for overseeing Vicuña conservation, live shearing and Vicuña fibre trade. Two major problems associated with the CONACS administration have been the increase of captive rearing (30% of all Vicuña in 2012) and the indiscriminate transfer of Vicuña between genetically distinct populations (Wheeler <em>et al.</em> 2001) which require separate management.&#160; Since the closure of CONACS in February 2007, responsibility for Vicuña conservation has been fractured. The executive functions of CONACS were transferred to 16 Regional Governments each under the leadership of the National Forest and Wildlife Service national authority. At the national level responsibility for Vicuña conservation has been subdivided. Actually, the National Forestry and Wildlife Service, an agency under the Ministry of Agriculture and Irrigation, is in charge of the politics, regulation and control of activities related to the management, conservation and use of wild camelids and is the CITES Administrative authority. The Ministry of the Environment through the National Service of Protected Natural Areas - SERNANP has the responsibility to protect the Vicuñas within the park system, national reserves and is the CITES scientific authority. This fragmentation of authority complicates and hinders conservation efforts, although the Vicuña populations continue to grow in Perú with a total of 208,899 reported in 2012.&#160;<br/></p><p>As one of the conservation policies of the species, Perú has adapted the reintroduction or repopulation of Vicuñas in areas where the species occurred in the past, or where there are small and / or vulnerable populations, and in areas where natural pastures and water guarantee survival of the species, also benefiting organized local communities.<br/></p><p>Since 1980, Vicuñas have been reported in 38 areas in the <strong>Bolivian</strong> high Andes. These areas were nominated for inclusion in the national Vicuña Protection Areas (VPA) and grouped into nine Conservation and Management Units but are no longer being considered. For the 2009 census three new categories have been defined: 1) Protected areas, 2) Areas under use, and 3) Areas without management. Presently rational utilization of Vicuñas is being conducted in 3 out of 4 protected areas. The Vicuña populations in Bolivia remains insecure, mainly due to inappropriate land use practices that contribute to habitat degradation, something exacerbated by climate change. Another important threat is poaching, whose control is complex because of the wide extent of areas where Vicuñas occur.&#160;<br/></p><p>The Vicuña population in <strong>Chile</strong> showed some recovery as a result of the implementation of conservation actions, including the creation of several protected areas, lessening the high risk of extinction in the past. However, recent surveys have revealed a decline in the total population of nearly 5000 animals from 2008 to 2017. Further, there remain small and isolated populations that require the implementation of effective conservation plans. At present, the Chilean Forest Service (Corporación Nacional Forestal, CONAF) carries out annual censuses by direct counts within the protected areas where the species occurs, supports several research projects, and runs a long-term environmental education program through various communication media. There are four conservation areas inhabited by Vicuña in Chile. Two more have been proposed and others are currently being studied. Further, under the Vicuña National Conservation Plan there exist two different strategies depending on the Vicuña sub-species and their conservations status. Thus, the populations of the Northern subspecies (<em>V.v. mensalis</em>) are included in the CITES Appendix II and being managed under sustainable use (trade of Vicuña fibre) aimed at increasing the economic incomes of local communities, while the populations of the southern Subspecies (<em>V.v. vicugna</em>) are included in the Appendix I.&#160; Management actions are oriented towards the protection of relict populations, especially in protected areas, with endorsement awaiting ratification through the National Conservation Plan for the Austral Vicuña.&#160;<br/></p><p>In <strong>Argentina</strong>, there are six Vicuña conservation areas in the northwest, most are managed by the provincial governments. The Ley Nacional de Fauna 22,421 provides a legal framework at the federal level; there are also provincial laws both for wildlife in general and specific for Vicuña.<br/></p><p><strong>Ecuador</strong> ratified in 1982 the accession to the International Convention of Vicuña Conservation and Management. Within this framework, the introduction of Vicuñas took place in the Chimborazo plateau that created the Chimborazo Faunal Production Reserve (1987). In 2004 the “Regulation for the Management and Conservation of the Vicuña in Ecuador” was approved forming the basis for the “National Action Plan for the Conservation and Management of the Vicuña” as a requisite to change the Vicuña population to the CITES Appendix II, that was formally approved in 2013.</p>",
+    "use_trade": "<p></p><p><span lang=\"EN-US\">  </p><p>The species provides an extremely interesting and enlightening case study of the political economy of wildlife management, since its conservation has shifted from policies aimed at promoting total conservation to a more complex and controversial sustainable use approach (Gordon 2009).&#160;<br/></p><p>Under the Inca Empire the Vicuña was considered to be property of the Gods and only the Inca ruler was allowed to wear clothing made of Vicuña fibre. Vicuñas were captured, sheared and released using a technique known as “chaku”, which required the organization and participation of hundreds of people. With the Spanish conquest Vicuña populations began a sharp decline due to over-exploitation of their meat, skin and fibre, and populations dropped until they faced a real threat of extinction in the 1960s. Perú led the way in protecting the species, assisted by international coordination and financial support. In 1975 all Vcuña populations were included in CITES Appendix I, prohibiting the international trade of its valuable fibre. Twenty years later, in 1995, the entire Peruvian population and the north Chilean populations were reclassified and listed under CITES Appendix II, permitting international sale of fibre and cloth from live shorn animals. All other populations were included in Appendix I. The Andean communities began harvesting fibre from live-captured animals, while fibre export and import and the trade of products derived there from were allowed under tight and strictly controlled regulations (Franklin 2011). At present Vicuñas are live-shorn under sustainable or striving towards sustainability schemes in all populations of Perú, Bolivia, the northern populations (<em>V. v. mensalis</em>) of Chile and several populations in Argentina. Ecuador has recently started to harvest Vicuñas experimentally to assess their health status and the quality of their fibre.<br/></p><p>Throughout their range, an important management strategy is the capture and release of wild-free roaming Vicuñas, although a proportion of the population is managed as captive animals.&#160;<br/></p><p>In 2016, nearly 60% of all Vicuña in <strong>Perú</strong> were under live-shearing management by 247 rural organizations; and 70% of the fibre production came from free ranging animals, while the remaining 30% came from captive populations. In 2017 55% of fibre production came from wild populations, while the remaining 45% from semi-captivity animals, and 9,815 kg of fibre were obtained from shearing 56,590 animals representing 49% of the fibre production that was exported. Italy was the main importer (4,659 kg, 96%), followed by China (199 kg, 4%) creating an annual income of 2,299,762 US$ (FOB value) (MINAGRI 2017).<br/></p><p>In <strong>Bolivia</strong> Vicuña fibre is obtained from wild populations by local Andean communities. Indeed, the Bolivian National Government placed those local communities in charge of fibre use and exploitation through organized Vicuñas management local communities (Comunidades Manejadoras de Vicuñas). The National Biodiversity and protected areas Administration authorize, supervise and monitor the species management and trading of Vicuña while provides technical and economic support to local communities involved in the Vicuña management. In 2017, Bolivia exported 2,546 kg of Vicuña fibre to Italy for 900,000 US$.<br/></p><p>In <strong>Chile</strong> 45.6 kg of Vicuña fibre was harvested in the I Region (Arica and Parinacota) from captive Vicuña populations (2015).<br/></p><p>In <strong>Argentina</strong> 245 kg of fibre were harvested from live animals by local communities in 2016 while a private international company obtained 980 kg, from a total of 2,754 Vicuñas; 143 kg of fibre were obtained from captivity Vicuñas and 1762 kg of fibre exported.<br/></p><p>New legislation recently came into effect under the CITES Appendices (2017) to improve monitoring and tracking of Vicuña fibre and the<u> </u>trade in legal products derived from Vicuña fibre. The aim is to simplify the five annotations related to populations belonging to Appendix II into only one, with a clear content, without ambiguities to effectively track the fibre exported in order to strengthen the control of international trade. Another important aim is to promote the implementation of \"Vicuña country of origin\" wording, clarifying the mark or logo adopted by the participating countries that are signatories to the Convention for the Conservation and Management of the Vicuña in order to monitor legal fibre and avoiding illegal trade.<br/></p><p>The paradox of Vicuña fibre use and trade is that while it is mainly produced by low-income Andean communities that in many cases fall within poverty limits, Vicuña garments are sold in the most exclusive fashion houses in Europe, USA, Asia and Australia reaching prices only affordable by very affluent consumers (Lichtenstein 2010).</p>",
+    "rationale": "<p>The species is classified as Least Concern given its wide range of distribution, population size, the increasing trend, and its occurrence in several protected areas, agreeing with the last assessment in 2008. However, it is important to note that improved conservation programs and tighter control at local, national and international levels are necessary for the conservation of the species, given the degree of poaching with the troubling increase of this illicit activity during the last decade. The inadequate control of this unlawful activity and prohibited commercialization of the Vicuña’s high-priced fibre in international markets are the main driving forces of concern. It is thus important to reinforce and promote political actions to control the current situation in order to avoid the risk of revisiting past circumstances that left the species near extinction during the 60s of the past century. National conservation and management plans of the species have been developed since the last assessment, but there exist uncertainties since their implementation have not always been accomplished. Approved live-shearing of Vicuñas is widespread throughout the Andes, most of which, but not all, are within the challenging framework of actual sustainable use. The needed approach requires greater commitment by local communities and the authorities in charge to protect the species and its habitat, together with stricter control of the commercialization process. In addition, the disease mange caused by the mite <em>Sarcoptes scabiei</em> is increasing at an alarming rate in several populations of Perú, Bolivia, Argentina and Chile; the identified causes include the presence of domestic animals with poor sanitary controls and other infected Vicuñas due to poor management practices. Concern about this situation has compelled the authorities to initiate \"research programs” especially in populations whose survival are at risk. The impact of climate change on the already extremely arid, high-altitude Vicuña habitats is a real concern, especially in conjunction with the deterioration of grasslands due to overgrazing by domestic livestock. In addition, a risk that should not be neglected is the hybridization of Vicuñas with alpacas, a backdoor illegal way of exporting Vicuña genes. Finally, the impact of expanding mining activities in the high Andes requires scientific monitoring to ensure the species is not negatively affected.&#160;</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p></p><p><span lang=\"EN-GB\">Two subspecies have been described, originally distinguished by morphometric characteristics (Wheeler 1995) and confirmed by mithocondrial DNA analysis afterwards (Marín <em>et al.</em> 2007): the southern subspecies <em>Vicugna vicugna vicugna</em> (Molina 1782), found between 18º and 29ºS and <em>V. vicugna mensalis </em>(Thomas 1917), the northern variant, reported between 9º30ºS and 18ºS latitude. <em>V. v. mensalis</em> is generally smaller and is characterized by the long growth of hair on the chest. The head, neck, back, sides and dorsal surface of the tail are dark cinnamon colour, with white covering the lower portion of the face, the chest, belly, interior surface of the legs, and ventral surface of the tail. In contrast, <em>V.v. vicugna</em> lacks the long chest hairs, and has a lighter, beige pelage colouration with white covering a greater proportion of the body, specially the counter-shading that is markedly higher on the posterior flank (Wheeler and Laker 2009, Franklin 2011).</p><p></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_3",
+      "description": {
+        "en": "Private sector standards & codes"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Cold"
+      },
+      "code": "8_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Alpine Wetlands (includes temporary waters from snowmelt)"
+      },
+      "code": "5_11"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Tundra Wetlands (incl. pools and temporary waters from snowmelt)"
+      },
+      "code": "5_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "Some vicuña populations along the distribution range are affected by sarcoptic mange (caused ",
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Introduced genetic material"
+      },
+      "code": "8_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (commercial use)"
+      },
+      "code": "7_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "evaluator",
+      "full": "González, B.A.",
+      "value": [
+        "Benito González (IUCN SSC South American Camelid Chair)"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "Acebes, P., Wheeler, J., Baldo, J., Tuppia, P., Lichtenstein, G., Hoces, D. & Franklin, W.L.",
+      "value": [
+        "William Franklin",
+        "Domingo Hoces",
+        "Gabriela Lichtenstein",
+        "Pablo  Acebes (IUCN SSC South American Camelid RLA)",
+        "Jane Wheeler (Instituto de Investigación y Desarrollo de Camélidos Sudamericanos (CONOPA),  Universidad Nacional Mayor de San Marcos, Perú)",
+        "Pilar Tuppia (Ministerio de Agricultura y Riego, Servicio Nacional Forestal y de Fauna Silvestre,  Perú)",
+        "Jorge Baldo (CONICET,  Grupo Vicuñas, Camélidos y Ambiente (VICAM))"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Arzamendia, Y., Baigún, R., Galvez, J., Huallata, C., Mollericona, J., Murillo, Y., Painter, L., Uhart, M., Vilá, B. & Villalba, L.",
+      "value": [
+        "Jose Mollericona (Wildlife Conservation Society)",
+        "Yovana Murillo (Wildlife Conservation Society)",
+        "Bibiana Vilá (Universidad Nacional de Luján)",
+        "Yanina Arzamendia (INECOA CONICET_ Universidad Nacional de Jujuy)",
+        "Marcela Uhart (University of California, Davis)",
+        "Román Baigún (Ministerio de Medio Ambiente y Desarrollo Sustentable,Dirección de Fauna Silvestre,  Argentina)",
+        "Jessica Galvez",
+        "Lilian Villalba (Coleccion Boliviana de Fauna)",
+        "Corsino Huallata (Ministerio de Desarrollo Rural y Tierras, Bolivia)",
+        "Lilian Painter (Wildlife Conservation Society)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version of the 2018 assessment was created to attach the most recent distribution map for this species."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Wheeler, J.C. 1995. Evolution and Present Situation of the South-American Camelidae. <i>Biological Journal of the Linnean Society</i> 52: 271–295.",
+      "year": "1995",
+      "title": "Evolution and Present Situation of the South-American Camelidae",
+      "author": "Wheeler, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koford, C. 1957. The vicuña and the puna. <i>Ecological Monographs</i> 27: 153-219.",
+      "year": "1957",
+      "title": "The vicuña and the puna",
+      "author": "Koford, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Renaudeau D' Arc, N., Cassini, M. and Vila, B. 2000. Habitat use of vicunas in Laguna Blanca Reserve (Catamarca, Argentina). <i>Journal of Arid Environments</i> 46: 107-115.",
+      "year": "2000",
+      "title": "Habitat use of vicunas in Laguna Blanca Reserve (Catamarca, Argentina)",
+      "author": "Renaudeau D' Arc, N., Cassini, M. and Vila, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lichtenstein, G. 2006. Manejo de vicuñas en cautiverio: El modelo del CEA INTA Abrapampa. In: Bibiana Vila (ed.), <i>Investigación, conservacion y manejo de vicuñas</i>, pp. 133-146. Proyecto MACS, Universidad Nacional de Lujan, Luján, Buenos Aires, Argentina.",
+      "year": "2006",
+      "title": "Manejo de vicuñas en cautiverio: El modelo del CEA INTA Abrapampa",
+      "author": "Lichtenstein, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lichtenstein, G. and Renaudeau d'Arc, N. 2004. Vicuna use by Andean communities, a risk or an opportunity? Tenth biennial conference of the International association for the study of common property (IASCP). The commons in an age of global transition: challenges, risks and opportunities.",
+      "year": "2004",
+      "title": "Vicuna use by Andean communities, a risk or an opportunity?",
+      "author": "Lichtenstein, G. and Renaudeau d'Arc, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pujalte, J.C. and Reca, A. 1985. <i>Vicuñas y guanacos, distribución y ambientes</i>. Programa Nacional de recursos renovables, Secretaria de Ciencia y Tecnología, Buenos Aires, Argentina.",
+      "year": "1985",
+      "title": "Vicuñas y guanacos, distribución y ambientes",
+      "author": "Pujalte, J.C. and Reca, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Luccherini, M. 1996. Group size, spatial segregation and activity of sympatric vicuñas <i>Vicugna vicugna</i> and guanacos <i>Lama guanicoe</i>. <i>Small Ruminant Research</i> 20: 193-198.",
+      "year": "1996",
+      "title": "Group size, spatial segregation and activity of sympatric vicuñas <i>Vicugna vicugna</i> and guanacos <i>Lama guanicoe</i>",
+      "author": "Luccherini, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McNeill, D., Lichtenstein, G. and Renaudeau d' Arc, N. 2009. International policies and national legislation concerning vicuna conservation and exploitation. In: I. Gordon (ed.), <i>The vicuña: the theory and practice of community based Wildlife management</i>, Springer Verlag.",
+      "year": "2009",
+      "title": "International policies and national legislation concerning vicuna conservation and exploitation",
+      "author": "McNeill, D., Lichtenstein, G. and Renaudeau d' Arc, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Franklin, W.L. 1983. Contrasting socioecologies of South America's wild camelids: The vicuña and the guanaco. In:  Eisemberg, J.F. and Kleiman, D.G. (eds), <i>Advances in the Study of Mammalian Behavior</i>, pp. 573-629. The American Society of Mammalogists.",
+      "year": "1983",
+      "title": "Contrasting socioecologies of South America's wild camelids: The vicuña and the guanaco",
+      "author": "Franklin, W.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ojeda, R.A Chillo, V. and Díaz, G.B. 2012. <i>Libro rojo mamíferos amenazados de la Argentina. Sociedad Argentina para el Estudio de los Mamíferos (SAREM)</i>.",
+      "year": "2012",
+      "title": "Libro rojo mamíferos amenazados de la Argentina. Sociedad Argentina para el Estudio de los Mamíferos (SAREM)",
+      "author": "Ojeda, R.A Chillo, V. and Díaz, G.B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "Franklin, W.L. 1982. Biology, ecology, and relationship of man to the South American camelids. In: Mares, M.A.and Genoways, H.H. (ed.), <i>Mammalian biology in South America</i>, pp. 457-487. Pittsburg, PA.",
+      "year": "1982",
+      "title": "Biology, ecology, and relationship of man to the South American camelids",
+      "author": "Franklin, W.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mata, C., Malo, J.E., Galaz, J.L., Cadorzo, C. and Lagunas, H. 2016. A three-step approach to minimise the impact of a mining site on vicuña (Vicugna vicugna) and to restore landscape connectivity. . <i>Environmental Science and Pollution Research </i> 23: 13626-13636.",
+      "year": "2016",
+      "title": "A three-step approach to minimise the impact of a mining site on vicuña (Vicugna vicugna) and to restore landscape connectivity. ",
+      "author": "Mata, C., Malo, J.E., Galaz, J.L., Cadorzo, C. and Lagunas, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bonacic, C., Macdonald, D.W., Galaz, J. and Sibly, R.M. 2002. Density dependence in the camelid Vicugna vicugna: the recovery of a protected population in Chile. <i>Oryx </i> 36: 118–125.",
+      "year": "2002",
+      "title": "Density dependence in the camelid Vicugna vicugna: the recovery of a protected population in Chile",
+      "author": "Bonacic, C., Macdonald, D.W., Galaz, J. and Sibly, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Arzamendia, Y. and Vila, B. 2015. Vicugna habitat use and interactions with domestic ungulates in Jujuy, Northwest Argentina. <i>Mammalia </i> 79: 267–278.",
+      "year": "2015",
+      "title": "Vicugna habitat use and interactions with domestic ungulates in Jujuy, Northwest Argentina",
+      "author": "Arzamendia, Y. and Vila, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Vilá, B. 1992. Mother-offspring relationship in the vicuña, Vicugna vicugna (Mammalia: Camelidae). <i>Ethology</i> 92: 293-300.",
+      "year": "1992",
+      "title": "Mother-offspring relationship in the vicuña, Vicugna vicugna (Mammalia: Camelidae)",
+      "author": "Vilá, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sarno, R.J., González, B.A., Bonacic, C., Zapata, B., O’Brien, S.J. and Johnson, W.E. 2009. Molecular genetic evidence for social group disruption of wild vicuñas Vicugna vicugna captured for wool harvest in Chile. <i>Small Ruminant Research </i> 84: 28-34.",
+      "year": "2009",
+      "title": "Molecular genetic evidence for social group disruption of wild vicuñas Vicugna vicugna captured for wool harvest in Chile",
+      "author": "Sarno, R.J., González, B.A., Bonacic, C., Zapata, B., O’Brien, S.J. and Johnson, W.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wurstten, A., Novaro, A.J. and Walker, R.S. 2014. Habitat use and preference by guanacos, vicuñas, and livestock in an altitudinal gradient in northwest Argentina. <i>European Journal of Wildlife Research</i> 60: 35–43.",
+      "year": "2014",
+      "title": "Habitat use and preference by guanacos, vicuñas, and livestock in an altitudinal gradient in northwest Argentina",
+      "author": "Wurstten, A., Novaro, A.J. and Walker, R.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sahley, C.T., Vargas, J.T. and Valdivia, J.S. 2007. Biological sustainability of live shearing of vicuña in Perú. <i>Conservation Biology </i> 21: 98-105.",
+      "year": "2007",
+      "title": "Biological sustainability of live shearing of vicuña in Perú",
+      "author": "Sahley, C.T., Vargas, J.T. and Valdivia, J.S",
+      "citation_short": null
+    },
+    {
+      "citation": "Borgnia, M., Vila, B.L. and Cassini, M.H. 2010. Foraging ecology of vicuña, Vicugna vicugna, in dry puna of Argentina. <i>Small Ruminant Research </i> 88: 44–53.",
+      "year": "2010",
+      "title": "Foraging ecology of vicuña, Vicugna vicugna, in dry puna of Argentina",
+      "author": "Borgnia, M., Vila, B.L. and Cassini, M.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wheeler, J.C. 2012. South American Camelids – Past, Present and Future. <i>Journal of Camelid Science</i> 5: 1-24.",
+      "year": "2012",
+      "title": "South American Camelids – Past, Present and Future",
+      "author": "Wheeler, J.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mosca Torres, M.E. and Puig, S. 2012. Habitat use and selection by the vicuña (Vicugna vicugna, Camelidae) during summer and winter in the High Andean Puna of Argentina. <i>Small Ruminant Research </i> 104: 17–27.",
+      "year": "2012",
+      "title": "Habitat use and selection by the vicuña (Vicugna vicugna, Camelidae) during summer and winter in the High Andean Puna of Argentina",
+      "author": "Mosca Torres, M.E. and Puig, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Arzamendia, Y and Vilá, B. 2012. Effects of capture, shearing and release on the ecology and behavior of wild vicuñas. <i>Journal of Wild Management </i> 76: 57-64.",
+      "year": "2012",
+      "title": "Effects of capture, shearing and release on the ecology and behavior of wild vicuñas",
+      "author": "Arzamendia, Y and Vilá, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vilina, Y.A., Cruz-Jofré, F. and Sabaj, V. 2015. Southernmost limit of the Vicugna vicugna Molina (Mammalia: Camelidae) in Chile: a review of old records and new field data. <i>Gayana</i> 79: 212-216.",
+      "year": "2015",
+      "title": "Southernmost limit of the Vicugna vicugna Molina (Mammalia: Camelidae) in Chile: a review of old records and new field data",
+      "author": "Vilina, Y.A., Cruz-Jofré, F. and Sabaj, V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaw, A.K., Galaz, J.L. and Marquet, P.A. 2012. Population dynamics of the vicuña (Vicugna vicugna): density-dependence, rainfall, and spatial distribution. <i>Journal of Mammalogy</i> 93: 658-666.",
+      "year": "2012",
+      "title": "Population dynamics of the vicuña (Vicugna vicugna): density-dependence, rainfall, and spatial distribution",
+      "author": "Shaw, A.K., Galaz, J.L. and Marquet, P.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Marcoppido, G., Schapiro, J., Morici, G., Arzamendia, Y. and Vilá, B. 2016. Coproparasitological evaluation of nematodes and coccidia in a wild vicuña (Vicugna vicugna) population in the Argentinean Andean Altiplano. <i>Journal of Camelid Science</i> 9: 23-34.",
+      "year": "2016",
+      "title": "Coproparasitological evaluation of nematodes and coccidia in a wild vicuña (Vicugna vicugna) population in the Argentinean Andean Altiplano",
+      "author": "Marcoppido, G., Schapiro, J., Morici, G., Arzamendia, Y. and Vilá, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Baigún, R.J., Bolkovic, M.L., Aued, M.B., Li Puma, M.C. and Scandalo, R.P. 2008. Manejo de fauna silvestre en la Argentina, primer censo nacional de camélidos silvestres al norte del río Colorado. Dirección de Fauna Silvestre, Secretaría de Ambiente y Desarrollo Sustentable, Buenos Aires, Argentina.",
+      "year": "2008",
+      "title": "Manejo de fauna silvestre en la Argentina, primer censo nacional de camélidos silvestres al norte del río Colorado",
+      "author": "Baigún, R.J., Bolkovic, M.L., Aued, M.B., Li Puma, M.C. and Scandalo, R.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Borgnia, M., Vila, B.L. and Cassini, M.H. 2008. Interactions between wild camelids and livestock in an Andean semi-desert. <i>Journal of Arid Environments </i> 72: 2150–2158.",
+      "year": "2008",
+      "title": "Interactions between wild camelids and livestock in an Andean semi-desert",
+      "author": "Borgnia, M., Vila, B.L. and Cassini, M.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Marín, J.C., Casey, C.S., Kadwell, M., Yaya, K., Hoces, D., Olazabal, J., Rosadio, R., Rodriguez, J,. Sportono, A., Bruford, M.W. and Wheeler, J.C. 2007. Mitochondrial Phylogeography and Demographic History of the Vicuña: Implications for Conservation. <i>Heredity </i> 99: 70-80.",
+      "year": "2007",
+      "title": "Mitochondrial Phylogeography and Demographic History of the Vicuña: Implications for Conservation",
+      "author": "Marín, J.C., Casey, C.S., Kadwell, M., Yaya, K., Hoces, D., Olazabal, J., Rosadio, R., Rodriguez, J,. Sportono, A., Bruford, M.W. and Wheeler, J.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Buckland, S. T.; Anderson, D. R.; Burnham, K. P.; Laake, J. L. 1993. <i>Distance sampling: estimating abundances of biological populations</i>. Chapman & Hall, London.",
+      "year": "1993",
+      "title": "Distance sampling: estimating abundances of biological populations",
+      "author": "Buckland, S. T.; Anderson, D. R.; Burnham, K. P.; Laake, J. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wheeler, J.C. and Laker, J. 2009. The vicuña in the Andean Altiplano. In: Gordon, I.J. (ed.), <i>The Vicuña. The theory and practice of community-based wildlife management</i>, pp. 21-34 . Springer, Boston.",
+      "year": "2009",
+      "title": "The vicuña in the Andean Altiplano",
+      "author": "Wheeler, J.C. and Laker, J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gordon, I.J. 2009. The philosophy of sustainable wildlife use. In: Gordon, I.J (ed.), <i>The Vicuña. The Theory and Practice of Community Based Wildlife Management</i>, pp. 1-5. Springer, Boston.",
+      "year": "2009",
+      "title": "The philosophy of sustainable wildlife use",
+      "author": "Gordon, I.J ",
+      "citation_short": null
+    },
+    {
+      "citation": "Arzamendia, Y., Neder, L.E., Marcoppido, G., Ortiz, F., Arce, M., Lamas, H.E. and Vilá, B. L. 2012. Effect of the prevalence of ectoparasites in the behavioral patterns of wild vicuñas (Vicugna vicugna). <i>Journal of Camelid Science </i> 5: 105-117.",
+      "year": "2012",
+      "title": "Effect of the prevalence of ectoparasites in the behavioral patterns of wild vicuñas (Vicugna vicugna)",
+      "author": "Arzamendia, Y., Neder, L.E., Marcoppido, G., Ortiz, F., Arce, M., Lamas, H.E. and Vilá, B. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Franklin, W.L. 2011. Family Camelidae (camels). In: Wilson, D.E. and Mittermeier, R.A. (eds), <i>Handbook of the mammals of the world. Vol. 2. Hoofed mammals</i>, pp. 206–246. Lynx editions, Barcelona.",
+      "year": "2011",
+      "title": "Family Camelidae (camels)",
+      "author": "Franklin, W.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Franklin, W.L. 1974. The social behavior of the vicuña. In: Geist, V. and Walther, F. (eds), <i>The behavior of ungulates and its relation to management</i>, pp. 447-487 . IUCN, Morges.",
+      "year": "1974",
+      "title": "The social behavior of the vicuña",
+      "author": "Franklin, W.L.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mosca Torres, M.E. and Puig, S. 2010. Seasonal diet of vicuñas in the Los Andes protected area (Salta, Argentina): Are they optimal foragers? <i>Journal of Arid Environments</i> 74: 450–457.",
+      "year": "2010",
+      "title": "Seasonal diet of vicuñas in the Los Andes protected area (Salta, Argentina): Are they optimal foragers?",
+      "author": "Mosca Torres, M.E. and Puig, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "South American Camelid Specialist Group - IUCN. 2014. Poaching of Vicuña and the Illegal Commercialization of its Fiber: A Persisting Problem. IUCN.",
+      "year": "2014",
+      "title": "Poaching of Vicuña and the Illegal Commercialization of its Fiber: A Persisting Problem",
+      "author": "South American Camelid Specialist Group - IUCN ",
+      "citation_short": null
+    },
+    {
+      "citation": "Franklin, W.L. 1978. The socioecology of the vicuña. PhD. Thesis. Utah State, Logan.",
+      "year": "1978",
+      "title": "The socioecology of the vicuña. PhD. Thesis",
+      "author": "Franklin, W.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aguirre, L.F., Aguayo, R., Balderrama, J., Cortez, C., and Tarifa, T. 2009. Libro Rojo de la fauna Silvestre de vertebrados de Bolivia. Ministerio de Medio Ambiente y Agua.",
+      "year": "2009",
+      "title": "Libro Rojo de la fauna Silvestre de vertebrados de Bolivia",
+      "author": "Aguirre, L.F., Aguayo, R., Balderrama, J., Cortez, C., and Tarifa, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kadwell, M., Fernández, M., Stanley, H.F., Baldi, R., Wheeler, J.C., Rosadio, R. and Bruford, M.W. 2001. Genetic analysis reveals the wild ancestors of the llama and alpaca. <i>Proceedings of the Royal Society London B </i> 268: 2575-2584.",
+      "year": "2001",
+      "title": "Genetic analysis reveals the wild ancestors of the llama and alpaca.",
+      "author": "Kadwell, M., Fernández, M., Stanley, H.F., Baldi, R., Wheeler, J.C., Rosadio, R. and Bruford, M.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Beltrán-Saavedra, L.F., Nallar-Gutiérrez, R., Ayala, G., Limachi, J.M. and Gonzales-Rojas, J.L. 2011. Estudio sanitario de vicuñas en silvestría del Área Natural de Manejo Integrado Nacional Apolobamba, Bolivia. <i>Ecología en Bolivia </i> 46: 14-27.",
+      "year": "2011",
+      "title": "Estudio sanitario de vicuñas en silvestría del Área Natural de Manejo Integrado Nacional Apolobamba, Bolivia",
+      "author": "Beltrán-Saavedra, L.F., Nallar-Gutiérrez, R., Ayala, G., Limachi, J.M. and Gonzales-Rojas, J.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Donadio, E. and Buskirk, S.W. 2016. Linking predation risk, ungulate antipredator responses, and patterns of vegetation in the high Andes. <i>Journal of Mammalogy </i> 97: 966-977.",
+      "year": "2016",
+      "title": "Linking predation risk, ungulate antipredator responses, and patterns of vegetation in the high Andes",
+      "author": "Donadio, E. and Buskirk, S.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Arzamendia, Y., Cassini, M.H. and Vilá. B. 2006. Habitat use by vicuña Vicugna vicugna in Laguna Pozuelos Reserve, Jujuy, Argentina. <i>Oryx </i> 40: 198–203.",
+      "year": "2006",
+      "title": "Habitat use by vicuña Vicugna vicugna in Laguna Pozuelos Reserve, Jujuy, Argentina",
+      "author": "Arzamendia, Y., Cassini, M.H. and Vilá. B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McLaren, B.E., MacNearney, D. and Siavichay, C.A. 2018. Livestock and the functional habitat of vicuñas in Ecuador: a new puzzle. . <i>Ecosphere</i> 9(1).",
+      "year": "2018",
+      "title": "Livestock and the functional habitat of vicuñas in Ecuador: a new puzzle. ",
+      "author": "McLaren, B.E., MacNearney, D. and Siavichay, C.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Arzamendia, Y., Bonacic, C. and Vilá, B. 2010. Behavioural and physiological consequences of capture for shearing of vicuñas in Argentina. <i>Applied animal behaviour science </i> 125: 163-170.",
+      "year": "2010",
+      "title": "Behavioural and physiological consequences of capture for shearing of vicuñas in Argentina",
+      "author": "Arzamendia, Y., Bonacic, C. and Vilá, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lichtenstein, G. 2010. Vicuña conservation and poverty alleviation? Andean communities and international fibre markets . <i>International Journal of the Commons </i> 4: 100–121.",
+      "year": "2010",
+      "title": "Vicuña conservation and poverty alleviation? Andean communities and international fibre markets ",
+      "author": "Lichtenstein, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Arzamendia, Y., Carbajo, A.E. and Vilá, B. 2018. Social group dynamics and composition of managed wild vicuñas (Vicugna vicugna vicugna) in Jujuy, Argentina. <i>Journal of Ethology</i> 36: 125-134.",
+      "year": "2018",
+      "title": "Social group dynamics and composition of managed wild vicuñas (Vicugna vicugna vicugna) in Jujuy, Argentina",
+      "author": "Arzamendia, Y., Carbajo, A.E. and Vilá, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Chávez-Velásquez, A., Alvarez-Garcia, G., Gómez-Bautista, M., Casas-Astos, E., Serrano-Martínez, E. and Ortega-Mora, L.M. 2005. Toxoplasma gondii infection in adult llamas (Lama glama) and vicuñas (Vicugna vicugna) in the Perúvian Andean region. <i>Veterinary parasitology </i> 130: 93-97.",
+      "year": "2005",
+      "title": "Toxoplasma gondii infection in adult llamas (Lama glama) and vicuñas (Vicugna vicugna) in the Perúvian Andean region",
+      "author": "Chávez-Velásquez, A., Alvarez-Garcia, G., Gómez-Bautista, M., Casas-Astos, E., Serrano-Martínez, E. and Ortega-Mora, L.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bravo, P.W. 2002. <i>The reproductive process of South American Camelids</i>. Seagull Press, Salt Lake City, Utah.",
+      "year": "2002",
+      "title": "The reproductive process of South American Camelids",
+      "author": "Bravo, P.W.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Marcoppido, G., Arzamendia, Y. and Vilá, B. 2017. Physiological and behavioral indices of short-term stress in wild vicuñas (Vicugna vicugna) in Jujuy Province, Argentina. <i>Journal of Applied Animal Welfare Science</i> 21: 244-255.",
+      "year": "2017",
+      "title": "Physiological and behavioral indices of short-term stress in wild vicuñas (Vicugna vicugna) in Jujuy Province, Argentina",
+      "author": "Marcoppido, G., Arzamendia, Y. and Vilá, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mosca Torres, M.E., Puig, S., Novillo, A. and Ovejero, R. 2015. Vigilance behavior of the year-round territorial vicuña (Vicugna vicugna) outside the breeding season: influence of group size, social factors and distance to a water source. <i>Behavioural Processes</i> 113: 163–171.",
+      "year": "2015",
+      "title": "Vigilance behavior of the year-round territorial vicuña (Vicugna vicugna) outside the breeding season: influence of group size, social factors and distance to a water source",
+      "author": "Mosca Torres, M.E., Puig, S., Novillo, A. and Ovejero, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

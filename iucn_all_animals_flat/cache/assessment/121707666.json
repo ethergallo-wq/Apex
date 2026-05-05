@@ -1,0 +1,1872 @@
+{
+  "assessment_date": "2014-04-20T01:00:00.000+01:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12519,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/12519/121707666",
+  "citation": "Breitenmoser, U., Breitenmoser-Würsten, C., Lanz, T., von Arx, M., Antonevich, A., Bao, W. & Avgan, B. 2015. Lynx lynx (errata version published in 2017). The IUCN Red List of Threatened Species 2015: e.T12519A121707666. Accessed on 05 May 2026.",
+  "assessment_id": 121707666,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12519,
+    "scientific_name": "Lynx lynx",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 68986842,
+        "scientific_name": "Lynx lynx ssp. balcanicus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "CARNIVORA",
+        "family_name": "FELIDAE",
+        "genus_name": "Lynx",
+        "species_name": "lynx",
+        "subpopulation_name": null,
+        "infra_name": "balcanicus",
+        "authority": "Buresh, 1941",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Cat Specialist Group (wild cats)",
+            "url": "http://www.catsg.org/",
+            "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Balkanluchs",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Rrëqebulli i Ballkanit",
+            "language": "alb"
+          },
+          {
+            "main": false,
+            "name": "Балкански рис",
+            "language": "mac"
+          },
+          {
+            "main": true,
+            "name": "Balkan Lynx",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "FELIDAE",
+    "genus_name": "Lynx",
+    "species_name": "lynx",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Cat Specialist Group (wild cats)",
+        "url": "http://www.catsg.org/",
+        "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Evroasiin Shiluus",
+        "language": "mon"
+      },
+      {
+        "main": false,
+        "name": "Lince",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lince Boreal",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lynx",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Lynx Boréal",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Lynx d'Europe",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Shiluus Mii",
+        "language": "mon"
+      },
+      {
+        "main": true,
+        "name": "Eurasian Lynx",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Felix lynx Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Felix",
+        "species_name": "lynx",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 5500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "42765298",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Eurasian Lynx has a very broad distribution. It occurs along forested mountain ranges in southeastern and Central Europe and from northern and eastern Europe through the Boreal forests of Russia, down into Central Asia and the Tibetan plateau (Kaczensky <em>et al.</em> 2012, Nowell and Jackson 1996,&#160;Sunquist and Sunquist 2002). The Lynx's stronghold is a broad strip of southern Siberian woodland stretching from the Ural Mountains to the Pacific (Matyushkin and Vaisfeld 2003). Subpopulations in the southeast of its range (Europe and southwest Asia) are generally small and widely separated, whereas the bulk of its historic range from Scandinavia through Russia and Central Asia is largely intact.<br/> <br/> In Europe, it was probably absent from some of the larger islands such as Ireland and Sicily and from countries with few forests. It was also absent from the Iberian Peninsula, where the smaller Iberian Lynx<span class=\"apple-converted-space\">&#160;<em>Lynx pardinus</em><span class=\"apple-converted-space\">&#160;occurs. Lynx have been extirpated from most of Western and Central Europe with the exception of the Carpathian Mountains. It survived in a small area in the Balkans (Greece, Macedonia, Albania, Kosovo and Montenegro). Larger populations persisted in Fennoscandia, the Baltic States, and European Russia. Lynx have been released in several countries of Europe in an effort to bring back this elusive predator, including in Switzerland, Slovenia, Italy, Czech Republic, Austria, Germany and France (IUCN 2007).</span></p>",
+    "population": "The European Lynx population (excluding Russia and Belarus) has been estimated at 9,000-10,000. In Europe, the Lynx is divided into ten distinct subpopulations which are: Alpine, Balkan, Baltic, Bohemian-Bavarian, Carpathian, Dinaric, Jura, Karelian, Scandinavian and Vosges Palatinian (Kaczensky<em> et al</em>. 2012).<br/><br/>Most Lynx populations in Europe are generally stable. However, status and trend varies greatly within the European range (Kaczensky<em> et al</em>. 2012, Schmidt <em>et al.</em> 2011). The Balkan and the Vosges-Palatinian subpopulations have decreased and the Jura and the Scandinavian ones have increased (Kaczensky <em>et al</em>. 2012). The autochthonous populations in north and east Europe (Scandinavian, Karelian, Baltic and Carpathian) number each around 2,000 individuals. All the re-introduced populations are of small size (less than 200 or even less than 100 animals) and are classified as Endangered (Alpine, Dinaric and Jura subpopulation) or Critically Endangered (Bohemian-Bavarian, Vosges-Palatinian subpopulation) (Kaczensky <em>et al</em>. 2012). The European population with the greatest conservation concern is the Critically Endangered Balkan Lynx subpopulation estimated at only 40-50 individuals (Kaczensky <em>et al</em>. 2013, Melovski 2012). In the Ukraine the Lynx is considered to be decreasing (Bashta and Dykyy 2013, Shkvyria and Shevchenko 2009).&#160; Its population in the Carpathian region has been estimated at 350-400 and the one in the Polysya region in the north of the country at 80-100 animals. Detailed status and trend information on European subpopulations can be found on <a href=\"http://ec.europa.eu/environment/nature/conservation/species/carnivores/conservation_status.htm\">http://ec.europa.eu/environment/nature/conservation/species/carnivores/conservation_status.htm</a>.<br/><br/>Although a large portion of the Lynx’s range is in Asia, status and trend in many countries are poorly understood due to insufficient data. The following information has been gathered through a questionnaire sent to range country representatives (see supplementary material). In Russia the Lynx is thought to be stable in some regions and to be decreasing in others (Bersenev <em>et al</em>. 2011). The Russian Lynx population has been estimated at around 22,510 individuals in 2013 (Monitoring and supervision centre for game animals and their habitats (CentrOkhotControl)). The numbers are based on different methods in different regions, but mainly on winter tracking plus expert corrections. More accurate censuses are performed in regions with lower lynx densities than in areas where they are abundant. Lynx has been estimated to number 1,940 in the Central region, 4,110 in North-western region, 680 in the Northern Caucasus, 40 in the Southern region, 2,400 in the Volga region, 1,070 in the Ural, 6,390 in the Siberian region&#160; and 5,890 in the Russian Far East for 2013 (Monitoring and supervision centre for game animals and their habitats (CentrOkhotControl) and with help of V.V. Rozhnov 2014). In Mongolia the Lynx population was estimated at around 10,000 (Matyushkin and Vaisfeld 2003). The Lynx population in China has been estimated at around 27,000 by the State Forestry Administration in 2009 and is listed as Vulnerable (Wang 1998, Bao 2010). Its population and range is thought to be increasing in Inner Mongolia.<br/><br/>In Afghanistan the presence of the Lynx has been confirmed by camera trap surveys in the Wakhan District of Badakhshan and in the Northern Plateau, Yakawlang District of Bamyan provinces, since 2006. In Armenia the lynx is thought to be a common species, especially in some protected areas but the population trend is unknown. In Azerbaijan Lynx populations are thought to be stable in the Talysh Mountains, Zangezur Ridge and the foothills of the Greater Caucasus, and in arid and semi-arid landscapes around the Mingechaur Water Reservoir. In Bhutan the lynx is thought to occur in the Jigme Dorji National Park and Sakteng Wildlife Sanctuary, however, no concrete evidence exists (Wangchuck <em>et al</em>. 2004). The Lynx is proposed as Vulnerable in Iran (Moqanaki <em>et al</em>. 2010). In Iraq, except a Lynx sighting in 2006 in Darbandikhan and the first confirmed record of Eurasian Lynx in 2011 from the Barzan area, there are no recent observations (Barzani 2013). The population in Kyrgyzstan is thought to be stable but not very high and classified as Near Threatened (Sludsky 1978). The Lynx is thought to be decreasing in Nepal and classified as Vulnarable (Jnawali <em>et al</em>. 2011), but there is no hard evidence. The only indication for its presence comes from the northwestern district of Humla, from the Dhorpatan hunting reserve and upper Mustand area in the Annapurna conservation area in 1996 (Fox 1985). Jnawali <em>et al</em>. (2011) maps the distribution of the lynx additionally in the Rara National Park and Shey-Phoksundo National Park. The Lynx might be declining in Pakistan and its long-term survival is not assured, although it is listed as Least Concern (Sheikh and Molur 2004). In 2003 the Lynx population in northern Pakistan has been estimated at 80-120 animals and the permanently occupied area in the whole country at around 25,252 km² (Sheikh and Molur 2004). In Tajikistan the Lynx is considered as rare and is mainly found in the southern part of the country in the Darvaz range, westernmost part of the Pamir Mountains, the Ghunda valley and the Wakhan valley. In Uzbekistan, the Lynx is considered Vulnerable and thought to be decreasing but seems to be stable in the Gissar Nature Reserve, with an estimated population of 130 in 2013.",
+    "habitats": "The Eurasian Lynx occurs in a wide variety of environmental and climatic conditions (Schmidt <em>et al</em>. 2011). Throughout Europe and Siberia, it is primarily associated with forested areas which have good ungulate populations and which provide enough cover fur hunting. It inhabits extended, Temperate and Boreal forests from the Atlantic in Western Europe to the Pacific coast in the Russian Far East (Breitenmoser and Breitenmoser-Würsten 2008, Schmidt <em>et al.</em> 2013).<br/><br/>In Europe it can be found in Mediterranean forests up to the transition zone of taiga to tundra and lives from sea level up to the tree line (Breitenmoser and Breitenmoser-Würsten 2008).<br/><br/>In Central Asia, Lynx occur in more open, thinly wooded areas and steppe habitats. The species probably occurs throughout the northern slopes of the Himalayas, and has been reported both from thick scrub woodland and barren, rocky areas above the tree line (Nowell and Jackson 1996, Matyushkin and Vaisfeld 2003, Breitenmoser and Breitenmoser-Würsten 2008). Lynx occur sporadically throughout the Tibetan plateau, and are found throughout the rocky hills and mountains of the Central Asian desert regions (Nowell and Jackson 1996). In Armenia Lynx are strongly associated with true forests and arid sparse forests and to a lesser extent with subalpine meadows. Lynx have been observed up to 5,500 m (Guggisberg 1975).<br/><br/>The Eurasian Lynx is the largest lynx, and the only one to primarily take ungulate prey, although they rely on smaller species where ungulates are less abundant. Lynx kill ungulates ranging in size from the 15 kg musk deer to 220 kg adult male red deer, but show a preference for the smaller ungulate species, such as Roe Deer, Chamois, Reindeer and Musk Deer. Occasionally, Lynx also hunt foxes, hares, marmots, wild pigs, beavers, birds or domestic animals such as sheep and goats, or, in Scandinavia, semi-domestic reindeer. In European Russia and western Siberia, where Roe Deer are absent, Mountain Hares and tetraonids form the basic prey base. Hares and birds are important prey also in other Central Asian regions where habitats are dryer and less forested (Breitenmoser and Breitenmoser-Würsten 2008, Matyushkin and Vaisfeld 2003).<br/><br/>Home range size varies widely from 100 to over 1,000 km² (Breitenmoser and Breitenmoser-Würsten 2008). Home ranges averaged 248 km² for males (n = 5) and 133 km² for females (n = 5) in a radio telemetry study in Poland’s Bialowieza forest (Schmidt <em>et al</em>. 1997). Average home range sizes in Switzerland were 90 km² for females and 150 km² for male Lynx. Male home ranges generally enclose 1-2 female territories (Breitenmoser and Breitenmoser-Würsten 2008). Densities are typically 1-3 adults per 100 km², although higher densities of up to 5/100 km² have been reported from Eastern Europe and parts of Russia and lower densities of 0.3/100 km² from Scandinavia (Jedrzejewski <em>et al</em>. 1996, Schmidt <em>et al</em>. 2011, Sunde <em>et al</em>. 2000). In the Saihanwula nature reserve in Inner Mongolia the density was estimated at 1.7-2.1/100 km² by camera trapping and track survey (Bao <em>et al</em>. 2014). In Turkey, a density of 4.2/100 km² has been estimated for the Ciglikara Nature Reserve, Antalya. However, this high Lynx density may be temporarily and may decline with major prey (hare) fluctuation (Avgan <em>et al</em>. 2014).<br/><p></p>",
+    "threats": "The major threats to Lynx in Europe are low acceptance due to conflicts with hunters (and in northern Europe also with livestock farmers), persecution, habitat loss and fragmentation mainly due to infrastructure development, poor management structures and accidental mortality (Kaczensky <em>et al</em>. 2012). In the Jura Mountains human related mortalities (traffic accidents, poaching) were responsible for 70 % of the known losses (Breitenmoser-Würsten <em>et al</em>. 2007). There are also concerns in regard of the low genetic diversity and small population sizes shown in some of the populations (Breitenmoser-Würsten and Obexer-Ruff 2003, Kaczensky <em>et al</em>. 2012, Schmidt <em>et al</em>. 2011, Sindicic <em>et al</em>. 2013). The Critically Endangered Balkan Lynx is mainly threatened by poaching, loss of prey base and habitat degradation (Kaczensky <em>et al</em>. 2012).<br/><br/>In Asia the major threats are habitat fragmentation and loss mainly due to livestock farming, infrastructure development, resource extraction and logging activities, and poaching, mainly as retaliatory killing due to livestock depredation or for the fur trade (Kretser <em>et al</em>. 2012, Mousavi <em>et al</em>. 2014). In areas where livestock is the primary livelihood source, the conflict is even enhanced. Other threats include accidental mortality through trapping or dogs and human disturbance (Bao 2010). In Russia the Lynx is still important for the skin market and the pelt industry. In Azerbaijan, Mongolia and Pakistan prey base depletion due to poaching is considered a major threat (Clark <em>et al</em>. 2006, Ud Din and Nawaz 2010). In Turkey and Nepal low population size is assumed to be problematic.<br/><br/>Poor management structures and insufficient law enforcement and the lack of capacity and funding facilitate poaching and lead to higher habitat fragmentation, aggravating the situation of the Lynx (Shkvyria 2012).",
+    "measures": "Included on CITES Appendix II and protected under the Bern Convention (Appendix III). The Lynx is protected and hunting prohibited in Afghanistan, Albania, Austria, Azerbaijan, Belarus, Bulgaria, China, Croatia, Czech Republic, France, Georgia, Germany, Greece, Hungary, Iran, Italy, Kazakhstan, Kyrgyzstan, Liechtenstein, Lithuania, Macedonia, Nepal, Pakistan, Poland, Serbia, Slovakia, Slovenia, Switzerland, Tajikistan, Turkey, Turkmenistan and Uzbekistan. In Sweden, Finland and Romania the lynx is protected but a limited number of Lynx can be killed under derogation. In Estonia and Norway the lynx is listed as a game species with an open hunting season and in Latvia Lynx can be exploited to a limited extent by sports hunting (Kaczensky <em>et al</em>. 2012). The Lynx is also subject to hunting in Iraq and Russia. In Russia, the Lynx is only hunted in places where it is abundant as in some areas of the Central region and the Volga region, in most areas of the North-Western region, the Ural, the Sibirian region and the Russian Far East. Hunting is not allowed in the Northern Caucasus and in the Southern region. The Lynx is not protected in Armenia.<br/><br/>Since 2006, a programme for the recovery of the Balkan Lynx is being implemented and range wide conservation strategies were developed (Kaczensky <em>et al</em>. 2012). In several European range states, prevention measures to counteract livestock depredation are in place and awareness has increased but measures for managing conflicts with hunters are still missing (Kaczensky <em>et al</em>. 2012).<br/><br/>There is a need for improved monitoring activities in the Carpathian and Dinaric Lynx populations in Europe and many parts of Asia (a.o. Ud Din and Nawaz 2010, Kaczensky <em>et al</em>. 2012). Connectivity between small isolated European lynx populations should be enhanced to allow gene flow and prevent inbreeding depression (Breitenmoser-Würsten and Obexer Ruff 2003). In Italy and Austria a reinforcement project has started to address the threat of genetic deterioration due to low population size and lacking connectivity by translocating Lynx. Detailed recommendations for the conservation of the European subpopulations are given in <a href=\"http://ec.europa.eu/environment/nature/conservation/species/carnivores/conservation_status.htm\">http://ec.europa.eu/environment/nature/conservation/species/carnivores/conservation_status.htm</a>.<br/><br/>Genetic monitoring is also needed in parts of Asia to detect the impact of habitat fragmentation on the genetic diversity of the Lynx (Bao 2010).<br/><br/>In some parts of its range awareness for the species was enhanced as for example in Iraq, where stakeholders, students and social media were engaged to stop illegal hunting or as in Afghanistan, where public awareness has been raised among local communities, particularly in Badakhsahn and Bamyan Provinces, wildlife laws have been enforced in some areas and the Border Police and Customs office in certain parts of the country have been trained to control fur trade. In China the patrolling by local police was strengthened and a nature reserve network was established to expand suitable Lynx habitat. In Iran a preliminary status assessment of the lynx was conducted from 2006-2009 and a country wide status assessment in 2010-2012 (Moqanaki <em>et al</em>. 2010, Mousavi <em>et al</em>. in press). In Pakistan measures specific for carnivore conservation have been introduced which benefit also the Lynx. In 2010 a project focusing on lynx research and conservation education has been implemented and the protected area network has been increased. In Tajikistan measures adopted to reduce conflicts with Snow Leopards are working for Lynx as well.<br/><br/>From most range states there is only sparse information on the lynx available. Data on population trend is mainly missing. There is a need for management improvement, better monitoring and more research on Lynx ecology and distribution in Asia to increase the knowledge on the population status and trend, as well as on threats and conservation needs (Moqanaki <em>et al</em>. 2010, Bao 2010).",
+    "use_trade": "For information on Use and Trade see under Threats.",
+    "rationale": "<p>Listed as Least Concern given its wide range and stable populations in the north of Europe and in large parts of its range in Asia (Bao 2010, Bersenev <em>et al. </em>2011, Kaczensky&#160;<em>et al.&#160;</em>2012, Moqanaki <em>et al</em>. 2010, Matyushkin and Vaisfeld 2003). A recent assessment of the status of Eurasian Lynx (hereafter just Lynx) in Europe shows that some isolated subpopulations remain Critically Endangered or Endangered (Kaczensky <em>et al. </em>2012).</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "Currently the following six subspecies of the Eurasian Lynx are proposed:<br/><ul><li>Northern Lynx <em>L. l. lynx</em>: northern Europe and western Siberia (Scandinavia, Finland, Belarus, Baltic states, European part of Russia, Ural, Siberia east to the Yenisei river)</li><li>Carpathian Lynx <em>L. l. carpathicus</em>: Carpathian Mountains</li><li>Balkan Lynx<em> L. l. balcanicus</em>: Balkans (Albania, Macedonia, Montenegro, Kosovo)</li><li>Caucasus Lynx <em>L. l. dinniki</em>: Caucasus Mountains south to Turkey, Iraq and Iran, formerly also in the Kopet-Dag, Turkmenistan.</li><li>Turkestan Lynx <em>L. l. isabellinus</em>: Central Asia (Turkmenistan, Afghanistan, Pakistan, Uzbekistan, Kazakhstan, Kyrgyzstan, Tajikistan, China, India, Nepal, Bhutan)</li><li>Siberian Lynx <em>L. l. wrangeli</em>: Siberia east of the Yenisei river (Russia)</li></ul><br/>Additionally, three more subspecies have been described that need further investigation and clarification:<br/><ul><li>Altai Lynx <em>L. l. wardi</em>: Altai Mountains (Russia, Kazakhstan, China, Mongolia)</li><li>Baikal Lynx <em>L. l. kozlovi</em>: Central Siberia, form the Yenisei river to Lake Baikal</li><li>Amur Lynx <em>L. l. stroganovi</em>: Russian Far East, Ussuri and Amur territories, North Korea, northeastern China (Manchuria)</li></ul><br/>(von Arx et al. 2004, Breitenmoser and Breitenmoser-Würsten 2008)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Boreal"
+      },
+      "code": "3_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Cold"
+      },
+      "code": "8_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kosovo"
+      },
+      "code": "YUG-KO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kyrgyzstan"
+      },
+      "code": "KG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tajikistan"
+      },
+      "code": "TJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uzbekistan"
+      },
+      "code": "UZ"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Canis familiaris",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder plantations"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Breitenmoser, U., Breitenmoser-Würsten, C., Lanz, T., von Arx, M., Antonevich, A., Bao, W. & Avgan, B.",
+      "value": [
+        "Tabea Lanz (KORA (Carnivore Ecology and Wildlife Management), Thunstrasse 31, Switzerland)",
+        "Anastasia Antonevich (Cat SG)",
+        "Wei Dong Bao (Cat SG)",
+        "Christine Breitenmoser-Würsten (IUCN SSC Cat Specialist Group / KORA - Carnivore Ecology and Wildlife Management)",
+        "Urs Breitenmoser (IUCN SSC Cat Specialist Group / KORA - Carnivore Ecology and Wildlife Management)",
+        "Batur Avgan (IUCN SSC Cat Specialist Group)",
+        "Manuela von Arx (Cat SG)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Nowell, K., Hunter, L. & Mallon, D.",
+      "value": [
+        "Kristin Nowell (IUCN SSC Cat Specialist Group)",
+        "David Mallon (IUCN SSC Antelope RLA)",
+        "Luke Hunter (Panthera)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Ali, H., Ali Shah, A., Anarbaev, M., Aromov, B., Askerov, E., Dykyy, I., Ghimirey, Y., Hameed, S., Ivanov, E., Kabir, M., Khan, M., Khorozyan, I., Moheb, Z., Molinari, P., Moqanaki, E., Mousavi, M., Nawaz, D., Nawaz, M.A., Protas, Y., Raza, H., Rosen Michel, T., Rozhnov, V., Shkvyria, M., Tharchen, L., Ud Din, J. & Yonunus, M.",
+      "value": [
+        "Tatjana Rosen Michel",
+        "Yadav Ghimirey (Cat SG)",
+        "Igor Khorozyan (CAt sg)",
+        "Muhammad Ali Nawaz (Quaid-i-Azam University, Pakistan)",
+        "Zalmai Moheb (Wildlife Conservation Society)",
+        "Elshad Askerov (World Wild Fund for Nature )",
+        "Lhendup Tharchen",
+        "Eshan Moqanaki",
+        "Marzieh Mousavi",
+        "Hana Raza",
+        "Paolo Molinari",
+        "Maksat Anarbaev",
+        "Jaffar Ud Din",
+        "Doost Ali Nawaz",
+        "Mayoor Khan (Wildlife Conservation Society)",
+        "Muhammad Yonunus (Snow Leopard Fundation)",
+        "Muhammad Kabir (Quaid I Azam University)",
+        "Shoaib Hameed (Snow Leopard Foundation)",
+        "Hussain Ali (Snow Leopard Foundation)",
+        "Maryna  Shkvyria",
+        "Ihor Dykyy",
+        "Bakhtiyor Aromov",
+        "Yelizaveta Protas",
+        "Altaf Ali Shah",
+        "Evgeny Ivanov",
+        "Viatcheslav Rozhnov"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "An errata version of the original assessment has been published to correct the typo \"Mmountain Hares\" which should read \"Mountain Hares\"."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Nowell, K. and Jackson, P. 1996. <i>Wild Cats. Status Survey and Conservation Action Plan</i>. IUCN/SSC Cat Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "Wild Cats. Status Survey and Conservation Action Plan",
+      "author": "Nowell, K. and Jackson, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sunquist, M. and Sunquist, F. 2002. <i>Wild Cats of the World</i>. University of Chicago Press.",
+      "year": "2002",
+      "title": "Wild Cats of the World",
+      "author": "Sunquist, M. and Sunquist, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Clark, E.L., Munkhbat, J., Dulamtseren, S., Baillie, J.E.M., Batsaikhan, N., Samiya, R. and Stubbe, M. (eds). 2006. <i>Mongolian Red List of Mammals. Regional Red List Series</i>. pp. 159. Zoological Society of London, London, UK.",
+      "year": "2006",
+      "title": "Mongolian Red List of Mammals. Regional Red List Series",
+      "author": "Clark, E.L., Munkhbat, J., Dulamtseren, S., Baillie, J.E.M., Batsaikhan, N., Samiya, R. and Stubbe, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Breitenmoser, U. and Breitenmoser-Würsten, Ch. 2008. <i>Der Luchs: Ein Grossraubtier in der Kulturlandschaft</i>. Salm Verlag, Wohlen/Bern.",
+      "year": "2008",
+      "title": "Der Luchs: Ein Grossraubtier in der Kulturlandschaft",
+      "author": "Breitenmoser, U. and Breitenmoser-Würsten, Ch.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schmidt, K., Jedrzejewski, W. and Okarma, H. 1997. Spatial organization and social relations in the Eurasian lynx population in Bialowieza Primeval Forest, Poland. <i>Acta Theriologica</i> 42: 289-312.",
+      "year": "1997",
+      "title": "Spatial organization and social relations in the Eurasian lynx population in Bialowieza Primeval Forest, Poland",
+      "author": "Schmidt, K., Jedrzejewski, W. and Okarma, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2007. <i>European Mammal Assessment</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2007",
+      "title": "European Mammal Assessment",
+      "author": "IUCN",
+      "citation_short": null
+    },
+    {
+      "citation": "Matyushkin, Y.N. and Vaisfeld, M.A. 2003. <i>The lynx – regional features of ecology, use and protection</i>. Nauka, Moscow, Russia.",
+      "year": "2003",
+      "title": "The lynx – regional features of ecology, use and protection",
+      "author": "Matyushkin, Y.N. and Vaisfeld, M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Breitenmoser, U., Breitenmoser-Würsten, C., Okarma, H., Kaphegyi, T., Kaphegyi-Wallmann, U. and Müller, U. M. 2000. Action Plan for the conservation of the Eurasian Lynx (<i>Lynx lynx</i>) in Europe. Council of Europe, Strasbourg.",
+      "year": "2000",
+      "title": "Action Plan for the conservation of the Eurasian Lynx (<i>Lynx lynx</i>) in Europe",
+      "author": "Breitenmoser, U., Breitenmoser-Würsten, C., Okarma, H., Kaphegyi, T., Kaphegyi-Wallmann, U. and Müller, U. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "von Arx, M., Breitenmoser-Würsten, Ch., Zimmermann, F. and Breitenmoser, U. (eds). 2004. Status and conservation of the Eurasian lynx (<i>Lynx lynx</i>) in Europe in 2001:  Eurasian Lynx Online Information System for Europe ELOIS.",
+      "year": "2004",
+      "title": "Status and conservation of the Eurasian lynx (<i>Lynx lynx</i>) in Europe in 2001:  Eurasian Lynx Online Information System for Europe ELOIS",
+      "author": "von Arx, M., Breitenmoser-Würsten, Ch., Zimmermann, F. and Breitenmoser, U. (eds)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sheikh, K.M. and Molur, S. (eds). 2004. <i>Status and Red List of Pakistan's Mammals. Based on the Conservation Assessment and Management Plan</i>. IUCN Pakistan.",
+      "year": "2004",
+      "title": "Status and Red List of Pakistan's Mammals. Based on the Conservation Assessment and Management Plan",
+      "author": "Sheikh, K.M. and Molur, S. (eds). ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jedrzejewski, W., Jedrzejewska, B., Okarma, H., Schmidt, K., Bunevich, A.N. and Milowski, L. 1996. Population dynamics (1896-1994), demography, and home ranges of the lynx in Bialowieza Primeval Forest (Poland and Belarus). <i>Ecography</i> 19: 122-138.",
+      "year": "1996",
+      "title": "Population dynamics (1896-1994), demography, and home ranges of the lynx in Bialowieza Primeval Forest (Poland and Belarus)",
+      "author": "Jedrzejewski, W., Jedrzejewska, B., Okarma, H., Schmidt, K., Bunevich, A.N. and Milowski, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Guggisberg, C.A.W. 1975. Lynx <i>Lynx lynx</i>. <i>Wild Cats of the World</i>, pp. 49-58. David & Charles (Holdings) Limited, U.S.A.",
+      "year": "1975",
+      "title": "Lynx <i>Lynx lynx</i>",
+      "author": "Guggisberg, C.A.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Breitenmoser-Würsten, C. and Obexer-Ruff, G. 2003. Population genetics of two reintroduced lynx (Lynx lynx) populations in Switzerland: a molecular evaluation 25 years after translocation. Progress report.  KORA Bericht. Bern.",
+      "year": "2003",
+      "title": "Population genetics of two reintroduced lynx (Lynx lynx) populations in Switzerland: a molecular evaluation 25 years after translocation. Progress report",
+      "author": "Breitenmoser-Würsten, C. and Obexer-Ruff, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Breitenmoser-Würsten, C., Vandel, J.-M., Zimmermann, F. and Breitenmoser, U. 2007. Demography of lynx Lynx lynx in the Jura Mountains. <i>Wildlife Biology</i> 13: 381-392.",
+      "year": "2007",
+      "title": "Demography of lynx Lynx lynx in the Jura Mountains",
+      "author": "Breitenmoser-Würsten, C., Vandel, J.-M., Zimmermann, F. and Breitenmoser, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt, K., Ratkiewicz, M. and Konopinski, M.K. 2011. The importance of genetic variability and population differentiation in the Eurasian lynx (<i>Lynx lynx</i>) for conservation, in the context of habitat and climate change. <i>Mammal review</i> 412: 112-124.",
+      "year": "2011",
+      "title": "The importance of genetic variability and population differentiation in the Eurasian lynx (<i>Lynx lynx</i>) for conservation, in the context of habitat and climate change",
+      "author": "Schmidt, K., Ratkiewicz, M. and Konopinski, M.K. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jnawali, S.R., Baral, H.S., Lee, S., Acharya, K.P., Upadhyay, G.P., Pandey, M., Shrestha, R., Joshi, D., Lamichhane, B.R., Griffiths, J., Khatiwada, A. and Amin R. (compilers). 2011. <i>Lynx lynx</i>. <i>The Status of Nepal Mammals: The National Red List Series</i>, pp. 82-83. Department of National Parks and Wildlife Conservation, Kathmandu, Nepal.",
+      "year": "2011",
+      "title": "<i>Lynx lynx</i>",
+      "author": "Jnawali, S.R., Baral, H.S., Lee, S., Acharya, K.P., Upadhyay, G.P., Pandey, M., Shrestha, R., Joshi, D., Lamichhane, B.R., Griffiths, J., Khatiwada, A. and Amin R. (compilers) ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sunde, P., Kvam, T., Moa, P., Negard, A. and Overskaug, K. 2000. Space use by Eurasian lynxes <i>Lynx lynx</i> in central Norway. <i>Acta theriologica</i> 45(4): 507-524.",
+      "year": "2000",
+      "title": "Space use by Eurasian lynxes <i>Lynx lynx</i> in central Norway",
+      "author": "Sunde, P., Kvam, T., Moa, P., Negard, A. and Overskaug, K. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Natural Resources and Environment of the Russian Federation. 2012. State Report \"Condition and environmental protection of the Russian Federation in the Year 2012\".",
+      "year": "2012",
+      "title": "State Report \"Condition and environmental protection of the Russian Federation in the Year 2012\"",
+      "author": "Ministry of Natural Resources and Environment of the Russian Federation",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang, S. 1998. <i>China Red Data Book of Endangered Animals: Mammals</i>. Science Press, Beijing",
+      "year": "1998",
+      "title": "China Red Data Book of Endangered Animals: Mammals",
+      "author": "Wang, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ud Din, J. and Nawaz, M.A. 2010. Status of the Himalayan Lynx in the District Chitral, NWFP, Pakistan. <i>The Journal of Animal and Plant Sciences</i> 20(1): 17-22.",
+      "year": "2010",
+      "title": "Status of the Himalayan Lynx in the District Chitral, NWFP, Pakistan",
+      "author": "Ud Din, J. and Nawaz, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sludsky, A.A. 1978. Central Asian lynx. <i>The Red Book of the Kazakh SSR - Part 1 (Центральноазиатская рысь. Манул./Красная книга Казахской ССР. -Алма-Ата)</i>, pp. 55-58.",
+      "year": "1978",
+      "title": "Central Asian lynx",
+      "author": "Sludsky, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kretser, E.H., Johnson, F.M., Hickey, M.L., Zahler, P. and Bennett, L.E. 2012. Wildlife trade products available to U.S. military personnel serving abroad. <i>Biodiversity Conservation</i> 21: 967-980.",
+      "year": "2012",
+      "title": "Wildlife trade products available to U.S. military personnel serving abroad",
+      "author": "Kretser, E.H., Johnson, F.M., Hickey, M.L., Zahler, P. and Bennett, L.E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sindicic, M., Polanc, P., Gomercic, T., Jelencic, M., Huber, D., Trontelj, P. and Skrbinsek, T. 2013. Genetic data confirm critical status of the reintroduced Dinaric population of Eurasian lynx. <i>Conservation Genetics</i>: 1-12.",
+      "year": "2013",
+      "title": "Genetic data confirm critical status of the reintroduced Dinaric population of Eurasian lynx",
+      "author": "Sindicic, M., Polanc, P., Gomercic, T., Jelencic, M., Huber, D., Trontelj, P. and Skrbinsek, T. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bao, W., Bao, Q., Wuliji, Xia, W., Zhang, S., Yang, Y. and Dalai, M. 2014. Individual identification and behavior study of Eurasian lynx based on camera trapping techniques. <i>Biodiversity Science</i> (in press).",
+      "year": "2014",
+      "title": "Individual identification and behavior study of Eurasian lynx based on camera trapping techniques",
+      "author": "Bao, W., Bao, Q., Wuliji, Xia, W., Zhang, S., Yang, Y. and Dalai, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moqanaki, E.M., Farhadinia, M.S., Mousavi, M. and Breitenmoser U. 2010. Distribution and conservation status of the Eurasian lynx in Iran. A preliminary assessment. <i>Cat News</i> 53: 32-35.",
+      "year": "2010",
+      "title": "Distribution and conservation status of the Eurasian lynx in Iran. A preliminary assessment",
+      "author": "Moqanaki, E.M., Farhadinia, M.S., Mousavi, M. and Breitenmoser U. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Avgan, B., Zimmermann, F., Güntert, M., Arikan, F. and Breitenmoser, U. 2014. The first density estimation of an isolated Eurasian lynx population in South-west Asia. <i>Wildlife Biology</i> (in press).",
+      "year": "2014",
+      "title": "The first density estimation of an isolated Eurasian lynx population in South-west Asia",
+      "author": "Avgan, B., Zimmermann, F., Güntert, M., Arikan, F. and Breitenmoser, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bao, W. 2010. Eurasian lynx in China - present status and conservation challenges. <i>Cat News Special Issue</i> 5: 22-25.",
+      "year": "2010",
+      "title": "Eurasian lynx in China - present status and conservation challenges",
+      "author": "Bao, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wangchuck, T., Thinley, P., Tshering, K., Thering, C. and Yonten, D. 2004. <i>Field Guide to the Mammals of Bhutan</i>. Department of Forestry, Ministry of Agriculture, Royal Government of Bhutan.",
+      "year": "2004",
+      "title": "Field Guide to the Mammals of Bhutan",
+      "author": "Wangchuck, T., Thinley, P., Tshering, K., Thering, C. and Yonten, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kaczensky, P., Chapron, G., von Arx, M., Huber, D., Andrén, H. and Linnell J. (eds). 2012. Status, management and distribution of large carnivores - bear, lynx, wolf & wolverine - in Europe. This document has been prepared with the assistance of Istituto di Ecologia Applicata and with the contributions of the IUCN/SSC Large Carnivore Initiative for Europe under contract N° 070307/2012/629085/SER/B3.",
+      "year": "2012",
+      "title": "Status, management and distribution of large carnivores - bear, lynx, wolf & wolverine - in Europe",
+      "author": "Kaczensky, P., Chapron, G., von Arx, M., Huber, D., Andrén, H. and Linnell J. (eds). ",
+      "citation_short": null
+    },
+    {
+      "citation": "Melovski, D. 2012. Status and distribution of the Balkan Lynx (Lynx lynx martinoi MIRIC, 1978) and its prey. Faculty of Natural Sciences, University of Montenegro.",
+      "year": "2012",
+      "title": "Status and distribution of the Balkan Lynx (Lynx lynx martinoi MIRIC, 1978) and its prey",
+      "author": "Melovski, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bashta, A.-T. and Dykyy, I.V. 2013. <i>Rare and threatened animal species of the Lviv region (Ukraine)</i>. Liga-pres, Lviv.",
+      "year": "2013",
+      "title": "Rare and threatened animal species of the Lviv region (Ukraine)",
+      "author": "Bashta, A.-T. and Dykyy, I.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mousavi, M., Moqanaki, E.M., Farhadinia, M.S., Sanei, A., Rabiee, K., Khosravi, S. and Mohammadi, H. 2014. The largest lesser cat in Iran: current status of the Eurasian lynx. <i>Cat News Special Issue</i> 9 (in press).",
+      "year": "2014",
+      "title": "The largest lesser cat in Iran: current status of the Eurasian lynx",
+      "author": "Mousavi, M., Moqanaki, E.M., Farhadinia, M.S., Sanei, A., Rabiee, K., Khosravi, S. and Mohammadi, H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Barzani, M.S. 2013. A recent record of Eurasian lynx in northern Iraq. <i>Cat News</i> 58: 24.",
+      "year": "2013",
+      "title": "A recent record of Eurasian lynx in northern Iraq",
+      "author": "Barzani, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shkvyria, M. and Shevchenko L. 2009. <i>Red Data Book of the Ukraine</i>. Publ. House \"Hlobalkonsaltynh”, Kiev.",
+      "year": "2009",
+      "title": "Red Data Book of the Ukraine",
+      "author": "Shkvyria, M. and Shevchenko L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fox, J.L. 1985. An observation of lynx in Nepal. <i>Journal of Bombay Natural History Society</i> 82: 394-395.",
+      "year": "1985",
+      "title": "An observation of lynx in Nepal",
+      "author": "Fox, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bersenev, A.E., Blohin, G.I., Vaisman, A.L., Gruzdev, A.R., Gubar, YuP., Domsky, I.A., Sipko, P., Pavlov, P.M., Okhlopkov, I.M., Pronyaev, A.B., Savelyev, A.P., Danilkin, A.A. et al. 2011. The lynx. <i>Hunting and Hunting Resources of Russian Federation, State resource management  Special. (Государственное управление ресурсами СПЕЦИАЛЬНЫЙ ВЫПУСК 2011 ОХОТА И ОХОТНИЧЬИ РЕСУРСЫ РОССИЙСКОЙ ФЕДЕРАЦИИ)</i>, pp. 59-65. Molodava gvardiya-style, Perm, Russia.",
+      "year": "2011",
+      "title": "The lynx",
+      "author": "Bersenev, A.E., Blohin, G.I., Vaisman, A.L., Gruzdev, A.R., Gubar, YuP., Domsky, I.A., Sipko, P., Pavlov, P.M., Okhlopkov, I.M., Pronyaev, A.B., Savelyev, A.P., Danilkin, A.A. et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Askerov, E.K. 2013. Lynx. <i>Red Book of Azerbaijan</i>, pp. 214-215. Baku.",
+      "year": "2013",
+      "title": "Lynx",
+      "author": "Askerov, E.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shkvyria, M. 2012. <i>Conflict \"human-predator in the Ukraine\"</i>. Print Kvik.",
+      "year": "2012",
+      "title": "Conflict \"human-predator in the Ukraine\"",
+      "author": "Shkvyria, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 23 June 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

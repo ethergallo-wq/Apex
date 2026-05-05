@@ -1,0 +1,1961 @@
+{
+  "assessment_date": "2020-08-17T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22695072,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22695072/181651010",
+  "citation": "BirdLife International 2020. Milvus milvus. The IUCN Red List of Threatened Species 2020: e.T22695072A181651010. Accessed on 05 May 2026.",
+  "assessment_id": 181651010,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22695072,
+    "scientific_name": "Milvus milvus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "ACCIPITRIFORMES",
+    "family_name": "ACCIPITRIDAE",
+    "genus_name": "Milvus",
+    "species_name": "milvus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Milano Real",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Milan Royal",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Rotmilan",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Red Kite",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Falco milvus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Falco",
+        "species_name": "milvus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1600,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "60000-70000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": "10.7",
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "2-100",
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "6250000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species is endemic to the western Palearctic, with the European population of 32,200-37,700 pairs, which equates to 64,400-75,400 mature individuals from an area encompassing more than 95% of the breeding range (A. Aebischer <em>in litt. </em>2020).&#160;It breeds from <strong style=\"\">Spain&#160;</strong>and <strong style=\"\">Portugal</strong> east through central Europe to <strong style=\"\">Ukraine</strong>, north to southern <strong style=\"\">Sweden</strong>, <strong style=\"\">Latvia</strong><strong style=\"\">&#160;</strong>and the <strong style=\"\">U.K.</strong><strong style=\"\"></strong>, and south to southern <strong style=\"\">Italy</strong>. Populations winter within the western breeding range, and formerly in isolated patches south and east to eastern <strong style=\"\">Turkey</strong>. It is now only a winter visitor in small numbers to Morocco, having recently become extinct as a breeding species (Radi <em>et al. </em>2020). Its status as a breeding and wintering species in North Africa is now uncertain. <br/><br/>The largest breeding populations are now in Germany (14,000-16,000 pairs), the U.K. (4,388 pairs), Sweden (3,100-4,100 pairs), France (3,000-3,900 pairs), Switzerland (2,800-3,400 pairs) and Spain (2,312-2,440 pairs) (BirdLife International in prep., Knaus <em>et al. </em>2018). These six countries together now hold over 90% of the global population, indicating a shift in the core abundance of the species towards central and northern Europe, with conservation reintroductions contributing to some of this shift (Stevens <em>et al. </em>2019).&#160;<br/><br/>The species previously suffered a moderate to rapid decline, and the population overall declined by almost 20%&#160;during 1990-2000 (BirdLife International 2004). In&#160;Germany, the population is now stable (Gerlach&#160;<em>et al.&#160;</em>2019), though with regional variation (increases in the south and west, but stable or declining elsewhere [Grüneberg and Karthäuser 2019])&#160;and it is estimated the population is currently still 16% lower than&#160;in the late 1980s. Eastern German populations declined by 25-30% between 1991 and 1997, but then stabilised&#160;(Mammen 2000, Mammen and Stubbe 2002)<strong></strong>, whereas in the federal state Saxony-Anhalt the decline continued until 2006 (Mammen 2007). The populations of the northern foothills of the Harz Mts (the most densely populated part of its range) suffered an estimated 50% decline from 1991-2001 (<strong></strong>Nicolai and Weihe 2001)<strong></strong>.&#160;<br/><br/>There is little consolidated data to judge the extent of declines in France during the last century, but comparing counts from 1980 and 2000 suggests a decline of up to 80% in some areas, during which time the species's range in France decreased by 15%<strong><sup>&#160;</sup></strong>(A. Mionnet&#160;<em>in litt</em><em>.</em>&#160;2005, Thiollay and Bretagnolle 2004)<strong></strong>. A national survey conducted in 2008 revealed a decline of more than 20% of the French breeding population over 6 years (David and Mionnet 2010), with the breeding population declining from 3,000-3,900 pairs in 2002<strong><sup>&#160;</sup></strong><strong></strong>(Mionnet 2007)<strong><sup>&#160;</sup></strong>to 2,335-3,022 pairs in 2008 (Pinaud&#160;<span style=\"font-style: italic;\">et al.&#160;</span>2009).&#160;The trend for the French population between 1998 and 2011 was estimated to be decreasing by 25% (BirdLife International 2015); however the trend now appears stable or even increasing locally (F. David&#160;<em>in litt.</em>&#160;2020). <br/><br/>In Spain the declining trend continued in the breeding population to the census in 2014, with the three generation population reduction using data from the 1994 and 2014 censuses being 44% (Molina 2015). Much of this decline is in the south, and the species is at risk of extirpation from Doñana National Park (Sergio <em>et al. </em>2019). The Balearic Islands population declined from 41-47 breeding pairs in 1993 to 27 in 2004<strong></strong>&#160;(Cardiel 2006); however, conservation actions have since enabled the population to recover, to 38 breeding pairs in 2007<strong>&#160;</strong>(Cardiel<em>&#160;in<em>&#160;litt</em></em><em>.</em>&#160;2007) and this trend has continued (Molina&#160;2015). A rapid decline is also thought to have occurred in Portugal, but without quantification except for a reported 50% reduction in the occupied area (H. Alonso <em>in litt. </em>2020): this was however based only on eBird records that include breeding codes, in comparison to the 1999-2005 breeding bird atlas (Equipa Atlas 2008).<br/><br/><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\">Populations elsewhere are generally stable or increasing. In Switzerland, populations increased during the 1990s to 1,200-1,500 in 2008 and continued to increase&#160;(Aebischer 2009, Knott <span style=\"font-style: italic; \">et al.</span> 2009, A. Aebischer&#160;<em>in litt.&#160;</em>2020). Successful reintroductions in northern Italy have increased populations in Tuscany and Marche (Brichetti &amp; Fracasso 2018) and the trend is an increase of 20-35% between 2007-2018 (BirdLife International in prep.), but it is almost extinct in Sicily (Ientile &amp; Massa 2008, C. Celada &amp; M. Gustin <em>in litt. </em>2020).The population in Belgium was estimated at 150 breeding pairs in 2007 (Knott <span style=\"font-style: italic; \">et al.</span> 2009), following an increase from 1-2 irregular pairs in 1967<strong> </strong>(Defourny <em style=\"\">et al</em>. 2007) and is now estimated at between 350-400 pairs (A. Aebischer <em>in litt. </em>2020). In Poland the population is estimated at 1,500-1,800 pairs with an increasing population trend of c.75% between 2007 and 2012 (BirdLife International 2015). In Sweden the species increased from 30-50 pairs in the 1970s to 1,800 pairs in 2007<span style=\"font-weight: bold;\"> </span>(L. Lindell <em style=\"\">in <em>litt</em></em><em>.</em> 2005, Å. Lindström <em style=\"\">in lit<em>t</em></em><em>.</em> 2005, Knott <span style=\"font-style: italic; \">et al.</span> 2009). The rate of increase in Sweden has been recorded as 7.1% annually during 1982-2006 or 13% annually during 1998-2006, depending on the survey method used (Å. Lindström <em style=\"\">in litt</em><em>.</em> 2007). The Swedish population is currently estimated at 3,100-4,100 pairs with an increasing trend of 50-100% between 2007 and 2018 (BirdLife International in prep.). A&#160;rough calculation suggests that Sweden could support 5,000-10,000 pairs once the species has reached carrying capacity<strong style=\"\"> </strong>(N. Kjellén <em style=\"\">in litt</em><em>.</em> 2008)<strong style=\"\"></strong><strong style=\"\"></strong>. In Denmark, the population increased from 17 known breeding pairs in 2001 to 81 breeding pairs in 2009 (Hjembæk 2010). The Danish population in 2017 was estimated at 200 pairs, with the population experiencing a 590% increase between 2006 and 2017 (BirdLife International in prep). Since an extreme low during the 20th century, the U.K. population has increased in recent decades and was estimated to number 1,600 breeding pairs in 2008 (Knott <span style=\"font-style: italic; \">et al.</span> 2009), and an estimated 4,388 pairs in 2016, extrapolated using BBS trends from the final Rare Breeding Birds Report (BirdLife International in prep, Holling &amp; the Rare Breeding Bird Panel 2012)<em>.&#160;</em>This population is still increasing rapidly and a long-term estimate for future carrying capacity is a minimum of 20,000 pairs<strong style=\"\"> </strong>(I. Carter&#160;<em style=\"\">in lit<em>t</em></em><em>.</em> 2016)<strong style=\"\"></strong>.&#160;<br/><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><br/><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\"><span lang=\"ES\">Overall, the species's previous population decline has now been reversed by the rapid increases in several countries, as demonstrated by the shifts in the location of the bulk of the breeding population. Previously the majority of the global population wintered in Spain, but increasingly birds are remaining on their northern European breeding grounds, or moving only depending on the resource availability nearby. Those populations that winter outside of Spain are generally increasing. Therefore, while serious declines are expected to continue in parts of southern Europe, these are presently being countered by increases elsewhere.<p></p></span></span></span></span></span></span></span></span></span></span></span></span>",
+    "population": "Recent data submitted to the European Commission for EU countries (which hold at least 90% of the global population) estimated a total of 29,746- 34,751 pairs breeding in 17 countries (BirdLife International in prep.), closely matching a new global estimate of <em>c.</em> 35,000 pairs (A. Aebischer <em>in litt. </em>2020). The global population is therefore estimated to be between 60,000-70,000 mature individuals. <br/><br/>This is a substantial increase from the numbers previously reported: 25,200-33,400 pairs for the European Red List of Birds (BirdLife International 2015), and 21,000-25,000 pairs in 2009.",
+    "habitats": "The species breeds in broadleaf woodlands and forests, mixed with farmland, pasture and heathland, up to 1,600 m in Switzerland (A. Aebischer <em>in litt. </em>2016) and formerly possibly to 2,500 m in Morocco<strong><sup> </sup></strong>(del Hoyo<em> e<em>t al</em></em><em>.</em> 1994). In winter it also occupies wasteland, scrub and wetlands. Formerly an urban scavenger, it still visits the edges of towns and cities and is now frequent in suburban areas where they will visit gardens (Orros &amp; Fellowes 2014). It takes a wide range of food, but feeds mainly on carrion and small to medium-sized mammals and birds. Reptiles, amphibians and invertebrates are less important prey.<br/><br/>Many birds in north-east Europe are migratory, wintering mainly in southern France and Iberia, but with some travelling as far as North Africa<strong><sup> </sup></strong>(del Hoyo<em> et <em>al</em></em><em>.</em> 1994). Migrants travel south from their breeding grounds between August and November, returning between February and April (Snow and Perrins 1998). Birds are usually seen singly or in pairs, but sometimes form small flocks when soaring on migration (Ferguson-Lees and Christie 2001) or at open waste disposal sites. The availability of high density reliable food provided by landfill managed in certain ways may influence the degree to which kites are sedentary in an area (Evans and Pienkowski 1991): high availability of roadkill may also influence movement decisions.&#160;<br/><p></p>",
+    "threats": "The most pertinent threat to this species is illegal direct poisoning  to kill predators of livestock and game animals (targetting foxes, wolves, corvids etc.) and indirect poisoning from pesticides and secondary poisoning from consumption of poisoned rodents by rodenticides spread on farmland to control vole plagues, particularly in the wintering ranges in France and Spain, where it may drive rapid population declines<strong><sup> </sup></strong>(e.g. see Villafuerte <em>et al. </em>1998, Mougeot <em>et al. </em>2011, A. Aebischer <em>in <em>litt</em></em><em>. </em>2009); there has been reported a strong correlation between rapid declines and those populations that winter in Spain<strong><sup> </sup></strong>(Carter 2007). An estimate of 430-1,800 individuals killed illegally in Spain annually indicates that this remains a significant problem for birds that do migrate and for the regional population (Brochet <em>et al. </em>2016).&#160;The Spanish government released more than 1,500 tons of rodenticide-treated baits over about 500,000 ha to fight against a common vole plague in agricultural lands between August 2007 and April 2008; records of Red Kites dying by secondary poisoning in treated areas resulted<strong><sup> </sup></strong>(J. Vi<span lang=\"ES\">ñuela <em>in lit<em>t</em></em><em>.</em> 2009). The total of recovered, confirmed poisoning cases in Spain is 1,187 individuals found dead between 1992 and 2015 (Cano&#160;<em>et al.&#160;</em>2016).&#160;In north  Scotland, 40% of birds found dead between 1989 and 2006 were found to have been  killed by poisoning (Smart <em>et al.</em> 2010).<br/><br/>In France populations disappeared at the same rate as conversion from grasslands to cereal crops<strong><sup> </sup></strong>(P. Tourret <em>in <em>litt</em></em><em>.</em> 2009). The decline of grazing livestock and farming intensification leading to  chemical pollution, homogenization of landscapes and ecological  impoverishment also threatens the species (Knott <span style=\"font-style: italic;\">et al.</span> 2009). Wind turbines are a potentially serious threat (Duchamp 2003, Mammen <span style=\"font-style: italic;\">et al.</span> 2009, Schaub<em>&#160;</em>2012, P. Tourret <em>in li<em>tt</em></em><em>.</em> 2009); 18 Red Kite were located having been killed by collisions with windfarms in 2019 (F. David <em>in litt. </em>2020). Other less significant threats include electrocution and collision with powerlines<strong><sup> </sup></strong><strong></strong>(Mionnet 2007, P. Tourret <em>in li<em>tt</em></em><em>.</em> 2009)<strong></strong>,&#160; hunting and trapping (Mionnet 2007, P. Tourret <em>in li<em>tt</em></em><em>.</em> 2009), road-kills, deforestation, egg-collection (on a local scale) (Ferguson-Lees <em>et <em>al</em></em><em>.</em> 2001, Mammen 2007, Cardiel and Viñuela 2007)<strong></strong>. Another factor implicated in the declines in France and Spain is a decrease in the number of rubbish dumps<strong></strong> (Mionnet 2007, Cardiel and Viñuela 2007)<strong></strong>.  <p></p>",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>CMS Appendix II. CITES Appendix II. Annex II Bern Convention. The species is on Annex I of the EU Birds Directive and has been the the focus of close monitoring and targeted conservation actions across most of its range, including a highily successful reintroduction to large parts of the U.K. since 1989<strong><sup> </sup></strong>(English Nature 1995, RSPB 2007, Stevens <em>et al.</em> 2019)<strong></strong>. Since 2007, further reintroduction projects are aiming to re-establish Red Kites in Tuscany and in the Marche (Italy), the Republic of Ireland and Northern Ireland - the first breeding attempt in the Republic was recorded in 2009. An EU species action plan for the Red Kite was published in 2009 (Knott <span style=\"font-style: italic;\">et al.</span> 2009). National species action plans are in place in Germany, France, the Balearic Islands and Denmark, and a draft national action plan is in place in Portugal. Ongoing research in Germany  aims to examine further the impact of windfarms on the red kite breeding  population in this country. In 2007, for the first  time, three young birds in France were fitted  with satellite  transmitters, although only one provided regular  information<strong><sup> </sup></strong>(Mionnet 2007). In Spain, radio-tracking was carried out in Segovia in 2006-2007.<br/><p></p><strong>Conservation Actions Proposed</strong><br/>Continue to monitor population trends and breeding productivity. Continue to manage reintroduction projects. Regulate the use of pesticides, especially in France and Spain. Reduce persecution through law enforcement, prosecutions and awareness campaigns. Carry out further studies into the impact of changing land-use practices. Lobby for changes in EU and national agricultural policies. Increase the area of suitable woodland and forest with protected status. Work with land-owners to protect habitat and prevent persecution. <span class=\"page_assessment_classScheme_content\">Consider extending supplementary feeding to more areas of low food availability.  Ensure national legislation on animal by-products takes into account the needs of scavengers. Promote control on feeding stations to be compliant with sanitary regulations.<br/><p></p>",
+    "use_trade": null,
+    "rationale": "This species is now listed as Least Concern, as the population has been increasing at a rate that itself has been increasing for a number of years. Previously, Red Kite was listed as Near Threatened because of a suspected moderately rapid population decline, owing mostly to poisoning from pesticides and persecution, and changes in land-use amongst other threats. However, these declines have been more than compensated by increases in the majority of countries within its range, at a rate that means that declines over the past three generations have been overcome. There are still declines in southern Spain, Portugal, and locally in Germany and perhaps France, and the species has recently been lost as a breeding species in Morocco. Poisoning (both deliberate and accidental) remains the greatest threat to continued population growth and threatens the persistence of the species regionally, especially in southern Iberia. However, overall the data indicate that the global population has increased by more than 30% over the last three generations and the species is assessed as Least Concern.<p></p> <p></p>",
+    "trend_justification": "Although this species declined globally until the 1970s owing to persecution, many populations recovered or stabilised during 1970-1990 (Mionnet 2007) and its overall numbers were probably stable in Europe from 1970 to 1990 (Tucker and Heath 1994). A decline occurred within core breeding areas&#160;- Spain, France<span style=\"background-color: white;\">&#160;and G</span>ermany - between 1990 and at the early 2000s, but these were partly offset by rapid increases in the U.K., Sweden, Poland and Switzerland. Data collated from across the range and submitted to the European Commission (EC) under Article 12 of the EU Birds Directive in late 2019 indicates that the species is now stable or increasing in the majority of countries in which it occurs, including Germany (Grüneberg &amp; Karthäuser 2019), France (David <em>et al. </em>2017) and Spain (Molina 2015: though declines continue in the south). Only in Portugal was the species determined to be decreasing (BirdLife International in prep.). In addition, in Morocco it is believed to be extinct as a breeding species: 20 pairs were known in 1987 (Bergier 1987) but numbers declined with the last known nest located in 2004 (Radi&#160;<em>et al.&#160;</em>2020). Small numbers continue to occur in winter (Radi <em>et al. </em>2020).&#160;&#160;&#160;<br/><br/><br/><br/><p></p>",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Continue to manage reintroduction projects.\n</P>",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "Reduce persecution through law enforcement, prosecutions and awareness campaigns. \n</P>",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "Ensure national legislation on animal by products takes into account the needs of scavengers.",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "Increase the area of suitable woodland and forest with protected status.\n</P>",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "Lobby for changes in EU and national agricultural policies. \n</P>",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "Regulate the use of pesticides, especially in France and Spain. \n</P>",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "Reduce persecution through law enforcement, prosecutions and awareness campaigns. \n</P>",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "Promote control on feeding stations to be compliant with sanitary regulations.",
+      "code": "5_4_4",
+      "description": {
+        "en": "Scale unspecified"
+      }
+    },
+    {
+      "note": "Consider extending supplementary feeding to more areas of low food availability. \n</P>",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "Work with land-owners to protect habitat and prevent persecution.\n</P>",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "San Marino"
+      },
+      "code": "SM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "No",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Andorra"
+      },
+      "code": "AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season",
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Continue to monitor population trends and breeding productivity.\n</P>",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Carry out further studies into the impact of changing land-use practices.\n</P>",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Utility & service lines"
+      },
+      "code": "4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Fernando, E.",
+      "value": [
+        "Eresha Fernando (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Aebischer, A., Alonso, H., Barov, B., Cardiel, I., Carter, I., Celada, C., Cross, A., David, F., Ignacio, A., Iñigo, A., Katzenberger, J., Keller, V., Kjellén, N., Knaus, P., Lindell, L., Lindström, A., López-Jiménez, N., Madroño, A., Mammen, U., Mionnet, A., Newberry, P., Selmani, J., Seyer, H., Tourret, P., Viñuela, J., Ashpole, J, Bird, J., Derhé, M., Khwaja, N., Taylor, J., Westrip, J.R.S., Staneva, A., Burfield, I. & Fernando, E.",
+      "value": [
+        "Lars Lindell (Sveriges Ornitologiska Förening)",
+        "Ian Burfield (BirdLife International)",
+        "Aymeric Mionnet (Ligue Pour La Protection des Oiseaux)",
+        "Alberto Madroño (Sociedad Española de Ornitología)",
+        "Åke Lindström (Dept. of Animal Ecology, Lund University)",
+        "Antony Cross (Welsh Kite Trust)",
+        "Verena Keller (Swiss Ornithological Institute)",
+        "Jeremy Bird (BirdLife International)",
+        "Joe Taylor (BirdLife International)",
+        "Boris Barov (BirdLife International - European Division)",
+        "Ana Iñigo (Sociedad Española de Ornitología)",
+        "Ubbo Mammen (Institut für Zoologie, Halle)",
+        "Iris Cardiel (Instituto de Investigación de Recursos Cinegéticos)",
+        "Adrian Aebischer (BirdLife International)",
+        "Ian Carter (Natural England)",
+        "Peter Newberry (Royal Society for the Protection of Birds)",
+        "Pierre Tourret (Ligue Pour La Protection des Oiseaux)",
+        "Ana Ignacio (SEO/BirdLife)",
+        "Heiko Seyer (BirdLife International)",
+        "Mia Derhé (BirdLife)",
+        "Nyil Khwaja (BirdLife)",
+        "N Kjellén",
+        "Joscelyne Ashpole (BirdLife)",
+        "James Westrip (BirdLife International)",
+        "Nicolás López-Jiménez",
+        "Javier Viñuela",
+        "Anna Staneva (BirdLIfe International)",
+        "Claudio Celada",
+        "Peter Knaus",
+        "Eresha Fernando (BirdLife International)",
+        "Jakob Katzenberger",
+        "Fabienne David",
+        "Hany Alonso",
+        "Jula Selmani"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Martin, R.",
+      "value": [
+        "Rob Martin (BirdLife)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Sibley, C.G. and Monroe, B.L. 1993. <i>A supplement to 'Distribution and Taxonomy of Birds of the World'</i>. Yale University Press, New Haven, USA.",
+      "year": "1993",
+      "title": "A supplement to 'Distribution and Taxonomy of Birds of the World'",
+      "author": "Sibley, C.G. and Monroe, B.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sibley, C.G. and Monroe, B.L. 1990. <i>Distribution and Taxonomy of Birds of the World</i>. Yale University Press, New Haven, USA.",
+      "year": "1990",
+      "title": "Distribution and Taxonomy of Birds of the World",
+      "author": "Sibley, C.G. and Monroe, B.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "del Hoyo, J.; Elliott, A.; Sargatal, J. 1994. <i>Handbook of the Birds of the World, vol. 2: New World Vultures to Guineafowl</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "1994",
+      "title": "Handbook of the Birds of the World, vol. 2: New World Vultures to Guineafowl",
+      "author": "del Hoyo, J.; Elliott, A.; Sargatal, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hazevoet, C. J. 1995. <i>The birds of the Cape Verde Islands</i>. British Ornithologists' Union, Tring, U.K.",
+      "year": "1995",
+      "title": "The birds of the Cape Verde Islands",
+      "author": "Hazevoet, C. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "BirdLife International. 2004. <i>Birds in Europe: population estimates, trends and conservation status</i>. BirdLife International, Cambridge, U.K.",
+      "year": "2004",
+      "title": "Birds in Europe: population estimates, trends and conservation status",
+      "author": "BirdLife International",
+      "citation_short": ""
+    },
+    {
+      "citation": "Snow, D.W. and Perrins, C.M. 1998. <i>The Birds of the Western Palearctic, Volume 1: Non-Passerines</i>. Oxford University Press, Oxford.",
+      "year": "1998",
+      "title": "The Birds of the Western Palearctic, Volume 1: Non-Passerines",
+      "author": "Snow, D.W. and Perrins, C.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ferguson-Lees, J. and Christie, D.A. 2001. <i>Raptors of the world</i>. Christopher Helm, London.",
+      "year": "2001",
+      "title": "Raptors of the world",
+      "author": "Ferguson-Lees, J. and Christie, D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nicolai, B.; Weihe, F. 2001. Bestand der Greifvögel (Accipitridae) im nordöstlichen Harzvorland - Situation 2001. <i>Ornithologische Jahresberichte des Museum Heineanum</i> 19: 33-47.",
+      "year": "2001",
+      "title": "Bestand der Greifvögel (Accipitridae) im nordöstlichen Harzvorland - Situation 2001",
+      "author": "Nicolai, B.; Weihe, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cardiel, I.; Viñuela, J. 2007. <i>The Red Kite in Spain: distribution, recent population trends, and current threats</i>.",
+      "year": "2007",
+      "title": "The Red Kite in Spain: distribution, recent population trends, and current threats",
+      "author": "Cardiel, I.; Viñuela, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mammen, U. 2007. <i>Der Rotmilan als prioritäre Art des Vogelschutzes in Deutschland und Mitteleuropa</i>.",
+      "year": "2007",
+      "title": "Der Rotmilan als prioritäre Art des Vogelschutzes in Deutschland und Mitteleuropa",
+      "author": "Mammen, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mammen, U. 2000. Bestandsabnahme beim Rotmilan Milvus milvus von 1994 bis 1997 in Deutschland. <i>Ornithologische Mitteilungen</i> 52: 4-13.",
+      "year": "2000",
+      "title": "Bestandsabnahme beim Rotmilan Milvus milvus von 1994 bis 1997 in Deutschland",
+      "author": "Mammen, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mammen, U.; Stubbe, M. 2002. Jahresbericht 2001 zum Monitoring Greifvögel und Eulen Europas. <i>Jahresbericht zum Monitoring. Greifvögel und Eulen Europas</i> 14: 1-111.",
+      "year": "2002",
+      "title": "Jahresbericht 2001 zum Monitoring Greifvögel und Eulen Europas",
+      "author": "Mammen, U.; Stubbe, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mionnet, A. 2007. <i>Red Kite in France: distribution, population development , threats</i>.",
+      "year": "2007",
+      "title": "Red Kite in France: distribution, population development , threats",
+      "author": "Mionnet, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Defourny, H.; Teerlynck, H.; Vangeluwe, D. 2007. Red Kite <I>Milvus milvus</I> in Belgium: review of the species status and study of breeding demographic characters. <i>Alauda</i> 75(2): 159-170.",
+      "year": "2007",
+      "title": "Red Kite <I>Milvus milvus</I> in Belgium: review of the species status and study of breeding demographic characters",
+      "author": "Defourny, H.; Teerlynck, H.; Vangeluwe, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thiollay, J.-M.; Bretagnolle, V. 2004. <i>Rapaces nicheurs de France: distribution, effectifs et conservation</i>. Delachaux et Niestlé, Paris.",
+      "year": "2004",
+      "title": "Rapaces nicheurs de France: distribution, effectifs et conservation",
+      "author": "Thiollay, J.-M.; Bretagnolle, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carter, N. 2007. Lark Rise Farm, Barton, Cambs (Plot 1571) the Countryside Restoration Trust report on breeding birds 2005. <i>BTO Research Report</i> 482: 1-17.",
+      "year": "2007",
+      "title": "Lark Rise Farm, Barton, Cambs (Plot 1571) the Countryside Restoration Trust report on breeding birds 2005",
+      "author": "Carter, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cardiel, I. E. 2006. <i>El milano real en España. II Censo Nacional (2004)</i>.",
+      "year": "2006",
+      "title": "El milano real en España. II Censo Nacional (2004)",
+      "author": "Cardiel, I. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "English Nature. 1995. <i>Return of the red kite: The red kite reintroduction project in England</i>.",
+      "year": "1995",
+      "title": "Return of the red kite: The red kite reintroduction project in England",
+      "author": "English Nature",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, J. A.; Watson, R. T.; Mindell, D. P. 2005. Prioritizing species conservation: does the Cape Verde Kite exist? <i>Proceedings of the Royal Society of London Series B</i> 272: 1365-1371.",
+      "year": "2005",
+      "title": "Prioritizing species conservation: does the Cape Verde Kite exist?",
+      "author": "Johnson, J. A.; Watson, R. T.; Mindell, D. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "BirdLife International. 2015. European Red List of Birds. Office for Official Publications of the European Communities, Luxembourg.",
+      "year": "2015",
+      "title": "European Red List of Birds",
+      "author": "BirdLife International",
+      "citation_short": null
+    },
+    {
+      "citation": "Brochet, A.-L.; van den Bossche, W.; Jbour, S.; Ndang’ang’a, P. K.; Jones, V. R.; Abdou, W. A. L. I.; Al-Hmoud, A. R.; Asswad, N. G.; Atienza, J. C.; Atrash, I.; Barbara, N.; Bensusan, K.; Bino, T.; Celada, C.; Cherkaoui, S. I.; Costa, J.; Deceuninck, B.; Etayeb, K. S.; Feltrup-Azafzaf, C.; Figelj, J.; Gustin, M.; Kmecl, P.; Kocevski, V.; Korbeti, M.; Kotrosan, D.; Laguna, J. M.; Lattuada, M.; Leitao, D.; Lopes, P.; Lopez-Jimenez, N.; Lucic, V.; Micol, T.; Moali, A.; Perlman, Y.; Piludu, N.; Portolou, D.; Putilin, K.; Quaintenne, G.; Ramadan-Jaradi, G.; Ruzic, M.; Sandor, A.; Sarajli, N.; Saveljic, D.; Sheldon, R. D.; Shialis, T.; Tsiopelas, N.; Vargas, F.; Thompson, C.; Brunner, A.; Grimmett, R.; Butchart, S. H. M. 2016. Preliminary assessment of the scope and scale of illegal killing and taking of birds in the Mediterranean. <i>Bird Conservation International</i> 26: 1-28.",
+      "year": "2016",
+      "title": "Preliminary assessment of the scope and scale of illegal killing and taking of birds in the Mediterranean",
+      "author": "Brochet, A.-L.; van den Bossche, W.; Jbour, S.; Ndang’ang’a, P. K.; Jones, V. R.; Abdou, W. A. L. I.; Al-Hmoud, A. R.; Asswad, N. G.; Atienza, J. C.; Atrash, I.; Barbara, N.; Bensusan, K.; Bino, T.; Celada, C.; Cherkaoui, S. I.; Costa, J.; Deceuninck, B.; Etayeb, K. S.; Feltrup-Azafzaf, C.; Figelj, J.; Gustin, M.; Kmecl, P.; Kocevski, V.; Korbeti, M.; Kotrosan, D.; Laguna, J. M.; Lattuada, M.; Leitao, D.; Lopes, P.; Lopez-Jimenez, N.; Lucic, V.; Micol, T.; Moali, A.; Perlman, Y.; Piludu, N.; Portolou, D.; Putilin, K.; Quaintenne, G.; Ramadan-Jaradi, G.; Ruzic, M.; Sandor, A.; Sarajli, N.; Saveljic, D.; Sheldon, R. D.; Shialis, T.; Tsiopelas, N.; Vargas, F.; Thompson, C.; Brunner, A.; Grimmett, R.; Butchart, S. H. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Molina, B. (Ed.). 2015. <i>El milano real en España. III Censo Nacional. Población invernante y reproductora en 2014 y método de censo</i>. SEO/BirdLife, Madrid.",
+      "year": "2015",
+      "title": "El milano real en España. III Censo Nacional. Población invernante y reproductora en 2014 y método de censo",
+      "author": "Molina, B. (Ed.)",
+      "citation_short": null
+    },
+    {
+      "citation": "Aebischer, A. 2009. <i>Der Rotmilan – ein faszinierender Greifvogel</i>. Haupt Verlag, Bern.",
+      "year": "2009",
+      "title": "Der Rotmilan – ein faszinierender Greifvogel",
+      "author": "Aebischer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mougeot, F.; Garcia, J. T.; Viñuela J. 2011. Breeding biology, behaviour, diet and conservation of the Red Kite (Milvus milvus), with particular emphasis on Mediterranean populations. In: Zuberogoitia, I.; Martínez, J.E. (ed.), <i>Ecology and conservation of European dwelling forest raptors and owls</i>, pp. 190-204. Editorial Diputación Foral de Vizcaya, Bilbao, Spain.",
+      "year": "2011",
+      "title": "Breeding biology, behaviour, diet and conservation of the Red Kite (Milvus milvus), with particular emphasis on Mediterranean populations",
+      "author": "Mougeot, F.; Garcia, J. T.; Viñuela J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aebischer, A. 2010. Distribution and recent population changes of the Red Kite in the Western Palaearctic - results of a recent comprehensive inquiry. Procceedings of the International Red Kite symposium 2009: 12-14. Monbéliard.",
+      "year": "2010",
+      "title": "Distribution and recent population changes of the Red Kite in the Western Palaearctic - results of a recent comprehensive inquiry",
+      "author": "Aebischer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schaub, M. 2012. Spatial distribution of wind turbines is crucial for the survival of red kite populations. <i>Biol. Conserv.</i> 155: 111-118.",
+      "year": "2012",
+      "title": "Spatial distribution of wind turbines is crucial for the survival of red kite populations",
+      "author": "Schaub, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Villafuerte, R.; Viñuela, J.; Blanco, J. C. 1998. Extensive predator persecution caused by population crash in a game species: the case of Red Kites and Rabbits in Spain. <i>Biol. Conserv.</i> 84: 181-188.",
+      "year": "1998",
+      "title": "Extensive predator persecution caused by population crash in a game species: the case of Red Kites and Rabbits in Spain",
+      "author": "Villafuerte, R.; Viñuela, J.; Blanco, J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cano, C.; de la Bodega, D.; Ayerza, P.; Minguez, E. 2016. <i>El veneno en España. Evolución del envenenamiento de fauna silvestre (1992-2013)</i>. WWF and SEO/BirdLife, Madrid.",
+      "year": "2016",
+      "title": "El veneno en España. Evolución del envenenamiento de fauna silvestre (1992-2013)",
+      "author": "Cano, C.; de la Bodega, D.; Ayerza, P.; Minguez, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aebischer, A. 2009. <i>Der Rotmilan: ein faszinierender Greifvogel</i>. Haupt, Bern.",
+      "year": "2009",
+      "title": "Der Rotmilan: ein faszinierender Greifvogel",
+      "author": "Aebischer, A",
+      "citation_short": null
+    },
+    {
+      "citation": "Bretagnolle, V. 2009. First results of the red kite national survey.  In: LPO/BirdLife (ed.), Milan info n°16, 17 & 18.",
+      "year": "2009",
+      "title": "First results of the red kite national survey",
+      "author": "Bretagnolle, V",
+      "citation_short": null
+    },
+    {
+      "citation": "Ceccolini, G and Cenerini, A. 2006. Il restocking del Nibbio reale in Toscana nell’ambito “Progetto Life Natura Biarmicus 2004 – 2008” Comunita Montana Amiata Grossetano. In: Allavena, S., Andreotti, A., Angelini, J. and Massimiliano, S. (eds), Status e conservazione del Nibbio bruno e Nibbio reale in Italia ed in Europa meridionale., pp. 17-19. Teatro 'S.Maria del Mercato',  Serra S. Quirico.",
+      "year": "2006",
+      "title": "Il restocking del Nibbio reale in Toscana nell’ambito “Progetto Life Natura Biarmicus 2004 – 2008” Comunita Montana Amiata Grossetano",
+      "author": "Ceccolini, G and Cenerini, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "David, F.; Mionnet, A. 2010. Milan royal <i>Milvus milvus</i>. <i>Rapaces de France - L'Oiseau Magazine</i> 12: 4-8.",
+      "year": "2010",
+      "title": "Milan royal <i>Milvus milvus</i>",
+      "author": "David, F.; Mionnet, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duchamp, M. 2003. <i>Birds and windfarms</i>.",
+      "year": "2003",
+      "title": "Birds and windfarms",
+      "author": "Duchamp, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hjembæk, G. 2010. Status rød glente. <i>Fugle I Felten</i>: 22-23.",
+      "year": "2010",
+      "title": "Status rød glente",
+      "author": "Hjembæk, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Knott, J, P. Newbery, and B. Barov. 2009. Action plan for the red kite <i>Milvus milvus</i> in the European Union. BirdLife International for the European Union.",
+      "year": "2009",
+      "title": "Action plan for the red kite <i>Milvus milvus</i> in the European Union",
+      "author": "Knott, J, P. Newbery, and B. Barov",
+      "citation_short": null
+    },
+    {
+      "citation": "Mammen, U.,  Mammen, K., Kratzsch, L. andr Resetaritz, A. 2009. Interactions of Red Kites and wind farms in Germany: results of radio telemetry and field observations. In: David, F. (ed.), Red Kite International symposium, pp. 100-105. Montbéliard, France.",
+      "year": "2009",
+      "title": "Interactions of Red Kites and wind farms in Germany: results of radio telemetry and field observations",
+      "author": "Mammen, U.,  Mammen, K., Kratzsch, L. andr Resetaritz, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pinaud, D., Passerault, M., Hemery, A. and Bretagnolle, V. 2009. Status of the Red Kite in France: results of the 2008 national survey. In: David, F. (ed.), Red Kite International symposium, pp. 21-22. Montbéliard, France.",
+      "year": "2009",
+      "title": "Status of the Red Kite in France: results of the 2008 national survey",
+      "author": "Pinaud, D., Passerault, M., Hemery, A. and Bretagnolle, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smart, J.; Amar, A.; Sim, I. M. W.; Etheridge, B.; Cameron, D.; Christie, G.; Wilson, J. D. 2010. Illegal killing slows population recovery of a re-introduced raptor of high conservation concern - the Red Kite <i>Milvus milvus</i>. <i>Biological Conservation</i> 143(5): 1278-1286.",
+      "year": "2010",
+      "title": "Illegal killing slows population recovery of a re-introduced raptor of high conservation concern - the Red Kite <i>Milvus milvus</i>",
+      "author": "Smart, J.; Amar, A.; Sim, I. M. W.; Etheridge, B.; Cameron, D.; Christie, G.; Wilson, J. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hille, S. M., & Collar, N. J. 2009. The taxonomic and conservation status of Milvus kites in the Cape Verde archipelago: further (and final?) reflections. <i>Bulletin of the British Ornithologists’ Club</i> 129: 217-221.",
+      "year": "2009",
+      "title": "The taxonomic and conservation status of Milvus kites in the Cape Verde archipelago: further (and final?) reflections.",
+      "author": "Hille, S. M., & Collar, N. J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bergier, P. 1987. <i>Les rapaces diurnes du Maroc: statut, répartition et ecologie. </i>[<i>The diurnal raptors of Morocco, status, distribution and ecology</i>]<i></i>. Centre d'etudes sur les ecosystemes de Provence, Aix-en-Provence.",
+      "year": "1987",
+      "title": "Les rapaces diurnes du Maroc: statut, répartition et ecologie. <i>[</i>The diurnal raptors of Morocco, status, distribution and ecology<i>]</i>",
+      "author": "Bergier, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "BirdLife International. In prep. <i>European Red List of Birds.</i> Deliverable to the European Commission (DG Environment) in 2021 under Service Contract ENV.D.3/SER/2018/0018.",
+      "year": "In prep",
+      "title": "European Red List of Birds.",
+      "author": "BirdLife International",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brichetti, P. & Fracasso, G. 2018. <i>The birds of Italy, volume 1. Anatidae-Alcidae</i>. Edizioni Belvedere, Latina.",
+      "year": "2018",
+      "title": "The birds of Italy, volume 1. Anatidae-Alcidae",
+      "author": "Brichetti, P. & Fracasso, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Equipa Atlas. 2008. <i>Atlas das aves nidificantes em Portugal (1999-2005)</i>. Instituto da Conservação da Natureza e da Biodiversividade, Lisbon.",
+      "year": "2008",
+      "title": "Atlas das aves nidificantes em Portugal (1999-2005)",
+      "author": "Equipa Atlas",
+      "citation_short": null
+    },
+    {
+      "citation": "Evans, I. M.; Pienkowski, M. W. 1991. World status of the Red Kite: a background to the experimental reintroduction to England and Scotland. <i>British Birds</i> 84: 171-187.",
+      "year": "1991",
+      "title": "World status of the Red Kite: a background to the experimental reintroduction to England and Scotland",
+      "author": "Evans, I. M.; Pienkowski, M. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gerlach, B., Dröschmeister, R.,  Langgemach, T., Borkenhagen, K., Busch, M. Hauswirth, M. Heinicke, T., Kamp, J. Karthäuser, J., König, C., Markones, N., Prior, N., Trautmann, S., Wahl, J. & C. Sudfeldt. 2019. <i>Vögel in Deutschland – Übersichten zur Bestandssituation. </i>. DDA, BfN, LAG VSW., Münster.",
+      "year": "2019",
+      "title": "Vögel in Deutschland – Übersichten zur Bestandssituation. ",
+      "author": "Gerlach, B., Dröschmeister, R.,  Langgemach, T., Borkenhagen, K., Busch, M. Hauswirth, M. Heinicke, T., Kamp, J. Karthäuser, J., König, C., Markones, N., Prior, N., Trautmann, S., Wahl, J. & C. Sudfeldt",
+      "citation_short": null
+    },
+    {
+      "citation": "Grüneberg, C. & Karthäuser, J, 2019. Verbreitung und Bestand des Rotmilans Milvus milvus in Deutschland – Ergebnisse der bundesweiten Kartierung 2010-2014. <i>Vogelwelt</i> 139: 101–116.",
+      "year": "2019",
+      "title": "Verbreitung und Bestand des Rotmilans Milvus milvus in Deutschland – Ergebnisse der bundesweiten Kartierung 2010-2014.",
+      "author": "Grüneberg, C. & Karthäuser, J, ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ientile, R. & Massa, B. Uccelli (Aves). 2008. Atlante della biodiversità della Sicilia: vertebrati terrestri. <i>Studi e Ricerche</i> 6.",
+      "year": "2008",
+      "title": "Atlante della biodiversità della Sicilia: vertebrati terrestri",
+      "author": "Ientile, R. & Massa, B. Uccelli (Aves).",
+      "citation_short": null
+    },
+    {
+      "citation": "Knaus, P., Antoniazza, S., Wechsler, S.,  Guélat, J.,  Kéry, M., Strebel, N. & Sattler, T. 2018. <i>Swiss Breeding Bird Atlas 2013–2016. Distribution and population trends of birds in Switzerland and Liechtenstein.</i> Swiss Ornithological Institute, Sempach.",
+      "year": "2018",
+      "title": "Swiss Breeding Bird Atlas 2013–2016. Distribution and population trends of birds in Switzerland and Liechtenstein.",
+      "author": "Knaus, P., Antoniazza, S., Wechsler, S.,  Guélat, J.,  Kéry, M., Strebel, N. & Sattler, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "M. Holling and the Rare Breeding Birds Panel. 2012. Rare breeding birds in the United Kingdom in 2010. <i>British Birds</i> 105: 352–416.",
+      "year": "2012",
+      "title": "Rare breeding birds in the United Kingdom in 2010",
+      "author": "M. Holling and the Rare Breeding Birds Panel",
+      "citation_short": null
+    },
+    {
+      "citation": "Orros, M. E. & Fellowes, M. D.E. 2014. Supplementary feeding of the reintroduced Red Kite Milvus milvus in UK gardens. <i>Bird Study</i> 61(2): 260-263.",
+      "year": "2014",
+      "title": "Supplementary feeding of the reintroduced Red Kite Milvus milvus in UK gardens",
+      "author": "Orros, M. E. & Fellowes, M. D.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Radi, M., Iglesias, J.J., El Khalimchi, R, Martín, J., Rousselon, R., Lorcher, F., Belamine, M.,  Torralvo, C., Fajardo, B., Fajardo, I. & Garrido,, J.R. 2020. New roosting site of Red kite Milvus milvus in the province of Ifrane (Morocco). <i>Go-South\tBulletin</i> 17: 4-7.",
+      "year": "2020",
+      "title": "New roosting site of Red kite Milvus milvus in the province of Ifrane (Morocco)",
+      "author": "Radi, M., Iglesias, J.J., El Khalimchi, R, Martín, J., Rousselon, R., Lorcher, F., Belamine, M.,  Torralvo, C., Fajardo, B., Fajardo, I. & Garrido,, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sergio, F., Tanferna, A., Chicano, J., Blas, J., Tavecchia, G., & Hiraldo, F. 2019. Protected areas under pressure: decline, redistribution, local eradication and projected extinction of a threatened predator, the red kite, in Doñana National Park, Spain. <i>Endangered Species Research</i> 38: 189-204.",
+      "year": "2019",
+      "title": "Protected areas under pressure: decline, redistribution, local eradication and projected extinction of a threatened predator, the red kite, in Doñana National Park, Spain",
+      "author": "Sergio, F., Tanferna, A., Chicano, J., Blas, J., Tavecchia, G., & Hiraldo, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevens M., Murn C. & Hennessey, R. 2019. Population change of Red Kites Milvus milvus in central southern England between 2011 and 2016 derived from line transect surveys and multiple covariate distance sampling. <i>Acta Ornithologia </i> 54: 243–253.",
+      "year": "2019",
+      "title": "Population change of Red Kites Milvus milvus in central southern England between 2011 and 2016 derived from line transect surveys and multiple covariate distance sampling.",
+      "author": "Stevens M., Murn C. & Hennessey, R.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

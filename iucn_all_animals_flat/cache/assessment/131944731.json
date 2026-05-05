@@ -1,0 +1,928 @@
+{
+  "assessment_date": "2018-08-09T01:00:00.000+01:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22705938,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22705938/131944731",
+  "citation": "BirdLife International 2018. Corvus splendens. The IUCN Red List of Threatened Species 2018: e.T22705938A131944731. Accessed on 05 May 2026.",
+  "assessment_id": 131944731,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22705938,
+    "scientific_name": "Corvus splendens",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "PASSERIFORMES",
+    "family_name": "CORVIDAE",
+    "genus_name": "Corvus",
+    "species_name": "splendens",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Vieillot, 1817",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Indian House Crow",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Corbeau d'Inde",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "House Crow",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "U",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "7.3",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "No"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "8510000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": null,
+    "population": "The global population size has not been quantified, but the species is reported to be very abundant (Madge and Burn 1993).",
+    "habitats": null,
+    "threats": null,
+    "measures": null,
+    "use_trade": null,
+    "rationale": "This species has an extremely large range, and hence does not approach the thresholds for Vulnerable under the range size criterion (Extent of Occurrence &lt;20,000 km2 combined with a declining or fluctuating range size, habitat extent/quality, or population size and a small number of locations or severe fragmentation). The population trend appears to be stable, and hence the species does not approach the thresholds for Vulnerable under the population trend criterion (&gt;30% decline over ten years or three generations). The population size has not been quantified, but it is not believed to approach the thresholds for Vulnerable under the population size criterion (&lt;10,000 mature individuals with a continuing decline estimated to be &gt;10% in ten years or three generations, or with a specified population structure). For these reasons the species is evaluated as Least Concern.",
+    "trend_justification": "The population is suspected to be stable in the absence of evidence for any declines or substantial threats.",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Introduced",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Wheatley, H.",
+      "value": [
+        "Hannah Wheatley (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Butchart, S., Ekstrom, J. & Wheatley, H.",
+      "value": [
+        "Jonathan Ekstrom (BirdLife International)",
+        "Stuart Butchart (BirdLife International)",
+        "Hannah Wheatley (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Madge, S.; Burn, H. 1993. <i>Crows and jays: a guide to the crows, jays and magpies of the world</i>. Helm Information, Robertsbridge, U.K.",
+      "year": "1993",
+      "title": "Crows and jays: a guide to the crows, jays and magpies of the world",
+      "author": "Madge, S.; Burn, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

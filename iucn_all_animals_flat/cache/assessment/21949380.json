@@ -1,0 +1,843 @@
+{
+  "assessment_date": "2015-06-15T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 14222,
+  "criteria": "C2a(i)",
+  "url": "https://www.iucnredlist.org/species/14222/21949380",
+  "citation": "Woinarski, J. & Burbidge, A.A. 2016. Myrmecobius fasciatus. The IUCN Red List of Threatened Species 2016: e.T14222A21949380. Accessed on 05 May 2026.",
+  "assessment_id": 21949380,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 14222,
+    "scientific_name": "Myrmecobius fasciatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "DASYUROMORPHIA",
+    "family_name": "MYRMECOBIIDAE",
+    "genus_name": "Myrmecobius",
+    "species_name": "fasciatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Waterhouse, 1836",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Australasian Marsupial and Monotreme Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/mammals/specialist-groups-a-e/australasian-marsupial-and-monotreme",
+        "description": "Co-Chairs: John Woinarski (email: John.Woinarski@cdu.edu.au) and Diana Fisher (email: d.fisher@uq.edu.au)\nRed List Authority Coordinator: Chris Johnson (email: c.n.johnson@utas.edu.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Banded Anteater",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Fourmilier marsupial rayé",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Hormiguero Marsupial",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Numbat",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "6",
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "800",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "2",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "91-100"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "6",
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "200",
+    "estimated_area_of_occupancy": "1200",
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "177300",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>The Numbat once occurred over much of southern semi-arid and arid Australia from the west coast of south-western Australia eastwards though the western deserts (Calaby 1960, Finlayson 1961, Burbidge and Fuller 1978, Friend <em>et al</em>. 1982, Burbidge <em>et al</em>. 1988, Peacock 2006) into southern Northern Territory (Woinarski <em>et al</em>. 2007), much of South Australia, western New South Wales and north-western Victoria (Friend 2008). It was apparently absent from the Karri <em>Eucalyptus diversicolor</em> forest of south-western Australia and from the Nullarbor Plain, although there is a late Pleistocene fossil record from Madura Cave (Lundelius and Turnbull 1978, cited in Friend 1989). Burbidge <em>et al</em>. (2009), using modern, historical and subfossil data, found that Numbats occurred in 11 of Australia’s 85 bioregions and that they became extinct in all but one.</p>    <p>By the 1970s, Numbats had disappeared from most of their range, surviving only in small areas of south-western Australia (in the northern jarrah forest, Swan coastal plain, Dryandra near Narrogin, Boyagin near Brookton, Tutanning near Pingelly, bushland south of Hyden, and Perup, east of Manjimup). By the 1980s, many subpopulations were lost (Friend 2010), leaving only the Dryandra and Perup subpopulations. In the mid-1980s, experimental fox control at Dryandra demonstrated that the near removal of foxes resulted in a rapid increase in Numbat numbers (Friend 1990). At that time, some Numbats were taken into captivity at the Department of Environment and Conservation’s Western Australian Wildlife Research Centre where they bred successfully (Friend and Whitford 1986, 1993). Some of these animals were transferred to Perth Zoo, which has maintained a captive colony since, and supplied many Numbats for reintroductions (Power <em>et al</em>. 2009).</p>    <p>Numbats have since been reintroduced to several sites in south-western Australia. They survive at Boyagin Nature Reserve (reintroduced 1985) and Batalling State Forest (1992). Initially successful reintroductions to Tutanning Nature Reserve (1989), Dragon Rocks Nature Reserve (1995), and Stirling Range National Park (1998) are currently under assessment since serious declines have been recorded. The most recent new translocation has been to Cocanarup Timber Reserve (near Ravensthorpe) commencing in 2006. Translocations to Karroun Hill Nature Reserve (1986), Dale Conservation Park (1996) and a fenced area, Karakamia Sanctuary (1994), were unsuccessful (Friend and Thomas 1994, 2003). Numbats have been translocated to two fenced mainland islands in eastern Australia from which Red Foxes and Cats have been removed: Yookamurra Sanctuary (South Australia, 1994) and Scotia Sanctuary (New South Wales, 1999, Viera <em>et al</em>. 2007).</p>    During a trial translocation of five Numbats to the ‘Arid Recovery’ mainland island (Roxby Downs, South Australia) in 2005, three were taken by raptors, with two surviving 18 months after release (Bester and Rusten 2009). A further translocation is proposed (Friend 2010).",
+    "population": "<p>Numbats occur at low density and numbers fluctuate. Numbats were fairly common in the south-west of Western Australia in the 1950s (Calaby 1960) but numbers were very low by the late 1970s, probably only c. 300 individuals in total (Friend 2010). Numbers increased in Dryandra after foxes were controlled, to an estimated 600 in 1992, but again declined to c. 50 in 2007 (Friend and Burbidge 2008). Research carried out in 2011-12 showed that feral cats are now the main predator of Numbats in Dryandra (J. Friend pers. comm.). At Perup, Numbats also declined in the 1970s (Christensen <em>et al. </em>1984, Friend 1990) but the population recovered under fox control and the distribution expanded, with a current local area of occupancy of &gt;1,000 km<sup>2</sup> (J. Friend<em> </em>pers. comm.). Translocations have met varying success, with some failing (e.g. Karroun Hill Nature Reserve, Dale Conservation Park, Karakamia Sanctuary) and others resulting in self-sustaining populations (Boyagin, Batalling, Yookamurra, Scotia). Friend (2010) estimated that there are &lt;1,000 mature Numbats in the wild and &lt;250 mature individuals in the largest subpopulation.</p>",
+    "habitats": "<p>The Numbat’s original habitat was variable ranging from Mulga (<em>Acacia aneura</em>) woodland and sand plain and sand dune areas dominated by spinifex <em>Triodia</em> spp. hummock grassland in the arid zone (Friend <em>et al</em>. 1982, Burbidge <em>et al</em>. 1988) to eucalypt woodlands and forests in south-west Western Australia (Friend 1989). Unusually for an Australian marsupial, it is diurnal and this exposes it to predation by raptors such as Wedge-tailed Eagles <em>Aquila audax</em>, Brown Falcons <em>Falco berigora</em>, Little Eagles <em>Hieraaetus morphnoides</em> and Brown Goshawks <em>Accipiter fasciatus</em>, as well as reptiles such as the monitor <em>Varanus gouldii</em> and the Carpet Python <em>Morelia spilota</em> (Calaby 1960, Friend 1986). Introduced predators, Red Fox <em>Vulpes vulpes</em> and feral cat <em>Felis catus</em>, coupled with widespread land clearing in southern parts of its range, are the major causes of its decline.</p>    <p>The Numbat’s diet is primarily termites, with some ants, apparently ingested accidentally (Friend 1989). Subsurface termite galleries are located by smell and dug out with both front feet. The long tongue is then flicked in and out gathering the exposed termites (Calaby 1960). Observations on a captive specimen by Fleay (1942) indicate that 15 000 to 20 000 termites are required by an adult animal each day.</p>    Numbats seek overnight refuge in hollow logs, tree hollows and burrows, which provide protection from predators. Cooper and Withers (2005) found that occupied night refuges were on average 5°C warmer than ambient temperature, which would result in considerable energy savings, and that burrows had higher insulation than logs or tree hollows, and had more constant night temperatures and higher minimum temperatures.",
+    "threats": "The introduction of the predatory Red Fox and feral cats has had a profound impact and continues to be a major threat today (Friend 2008). Changed fire regimes, especially in arid grasslands and habitat destruction in some areas is a concern (Maxwell <em>et al.</em> 1996). Raptors (native species whose numbers are often elevated in fragmented woodlands) are a known threat. Frequent fires can be a threat due to the reduction in the number of logs, which the species uses as shelter.",
+    "measures": "The Numbat is listed as a threatened species under Australian law. Areas where the species occurs naturally as well as the reintroduction sites are protected areas. A recovery plan was prepared and is being implemented (Friend 1994).<br/>  <p>Numbat conservation is guided by the Numbat Recovery Team. A revised recovery plan is currently being drafted. Most of the actions in the previous recovery plan (Friend 1994) have been substantially completed.&#160; </p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Management of existing populations and habitat. </p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Genetic survey of existing populations. </p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Translocations to establish at least six further self-sustaining populations</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Disease survey and health monitoring of all populations. Several research projects have examined aspects of numbat health but no all-encompassing disease survey has yet been carried out.</p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Captive breeding to provide animals for display and to supplement the translocation program if necessary. </p>  <p>·&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Establishment and support of public awareness and sponsorship programs. </p>    <p>Fox control (or exclusion of Red Foxes and cats by fencing) is in place at all known Numbat sites. Fire management to minimise widespread wildfire is also carried out, and silviculture guidelines for Numbat habitat are under development. Genetic variability within and between the Dryandra and Perup populations was studied by Fumagalli <em>et al. </em>(1994). Tissue samples are collected from all Numbats handled for comparison of subpopulations. Since the 1994 plan was written, translocations have been carried out or continued to Karroun Hill, Tutanning, Batalling, Yookamurra, Karakamia, Dragon Rocks, Dale Conservation Park, Stirling Range National Park, Scotia and Cocanarup, as well as a trial translocation to the Arid Recovery mainland island at Roxby Downs, South Australia. At least four of these translocations have resulted in self-sustaining populations, with three more yet to be thoroughly assessed. A captive colony was established at Perth Zoo in 1986 and reliable output of young commenced in 1993 (Power <em>et al</em>. 2009). Until then all translocations had sourced animals from Dryandra but in that year the subpopulation there crashed due to resource limitation, disease and possibly Cat predation. Subsequent translocations have relied significantly on captive-bred stock, with supplementation from wild populations (Boyagin, Yookamurra and Scotia). A raptor awareness program has been instituted at Perth Zoo to prepare captive-bred young for release. A community action group, Project Numbat, has been established in Perth and works with the recovery team to increase awareness of the Numbat and its plight, as well as raising significant funding to support Numbat recovery.</p><p></p><p>  </p><p>The Numbat is Western Australia’s mammal emblem and has been the subject of intensive research and management since c. 1980. The Western Australian Department of Parks and Wildlife (DPaW) and its predecessors have conducted research into Numbat ecology and the effect of introduced predators, managed sites where Numbats occur and conducted several translocations. Most areas in which Numbats occur in Western Australia are conservation estate managed by DPaW, which conducts regular fox control by aerial and ground baiting on &gt;3,000,000&#160;ha of land it manages in the south west. The Australian Wildlife Conservancy manages Yookamurra and Scotia Sanctuaries and has continued translocations into Scotia. </p>  <p></p>",
+    "use_trade": null,
+    "rationale": "<p>The Numbat is evaluated as Endangered because it has an estimated &lt;1,000 mature individuals and there is an ongoing decline, despite translocations. It also qualifies as Vulnerable under category B, because it has a highly restricted and fragmented Area of Occupancy where there are known threats.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>No Subspecies are recognised. The Numbat is the sole member of the Family Myrmecobiidae. Two subspecies have been described: <em>Myrmecobius f. fasciatus</em> from south-western Australia <em>M. f. rufus</em> from central Australia, the latter, if valid, being extinct. As the former distribution was more or less continuous the subspecies are unlikely to be valid and&#160; <em>M. f. rufus was not </em>evaluated&#160; in the 2012 Action Plan for Australian mammals.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Develop broad-scale feral cat control technology",
+      "code": "4",
+      "description": {
+        "en": "Other"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Vulpes vulpes",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Aquila audax",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Falco berigora",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Accipiter fasciatus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Hieraaetus morphnoides",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Varanus rosenbergi",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Morelia spilota",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Woinarski, J. & Burbidge, A.A.",
+      "value": [
+        "Andrew Burbidge (IUCN SSC Australasian Marsupial and Monotreme Specialist Group)",
+        "John Woinarski (Natural Resources, Environment and The Arts, NT)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Johnson, C.N. & Hawkins, C.",
+      "value": [
+        "Christopher Johnson (University of Tasmania, Hobart, Australia)",
+        "Clare Hawkins (Department of Primary Industries, Parks, Water & Environment, Hobart, Tasmania, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Friend, T.",
+      "value": [
+        "Tony Friend"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Maxwell, S., Burbidge, A.A. and Morris, K. 1996. <i>The 1996 Action Plan for Australian Marsupials and Monotremes</i>. Australasian Marsupial and Monotreme Specialist Group, IUCN Species Survival Commission, Gland, Switzerland.",
+      "year": "1996",
+      "title": "The 1996 Action Plan for Australian Marsupials and Monotremes",
+      "author": "Maxwell, S., Burbidge, A.A. and Morris, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burbidge, A.A., Johnson, K.A., Fuller, P.J. and Southgate, R.I. 1988. Aboriginal knowledge of the mammals of the central deserts of Australia. <i>Australian Wildlife Research</i> 15: 9-39.",
+      "year": "1988",
+      "title": "Aboriginal knowledge of the mammals of the central deserts of Australia",
+      "author": "Burbidge, A.A., Johnson, K.A., Fuller, P.J. and Southgate, R.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Friend, J. A. 1994. <i>Recovery Plan for the Numbat</i>. Department of Conservation and Land Management, Perth, Unpublished.",
+      "year": "1994",
+      "title": "Recovery Plan for the Numbat",
+      "author": "Friend, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A. 2008. Numbat, <i>Myrmecobius fasciatus</i>. In: S. Van Dyck and R. Strahan (eds), <i>The mammals of Australia. Third Edition</i>, pp. 163-165. Reed New Holland, Sydney, Australia.",
+      "year": "2008",
+      "title": "Numbat, <i>Myrmecobius fasciatus</i>",
+      "author": "Friend, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Finlayson, H.H. 1961. On central Australian mammals. Part IV. The distribution and status of central Australian species. <i>Records of the South Australian Museum </i> 14: 141-191.",
+      "year": "1961",
+      "title": "On central Australian mammals. Part IV. The distribution and status of central Australian species",
+      "author": "Finlayson, H.H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abbott, I. 2001. Aboriginal names of mammal species in south-west Western Australia. <i>CALMScience</i> 3: 433-486.",
+      "year": "2001",
+      "title": "Aboriginal names of mammal species in south-west Western Australia",
+      "author": "Abbott, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burbidge, A.A., McKenzie, N.L., Brennan, K.E.C., Woinarski, J. C. Z., Dickman, C. R., Baynes, A., Gordon, G., Menkhorst, P.W. and Robinson, A.C. 2009. Conservation status and biogeography of Australia’s terrestrial mammals. <i>Australian Journal of Zoology </i> 56: 411-422.",
+      "year": "2009",
+      "title": "Conservation status and biogeography of Australia’s terrestrial mammals",
+      "author": "Burbidge, A.A., McKenzie, N.L., Brennan, K.E.C., Woinarski, J. C. Z., Dickman, C. R., Baynes, A., Gordon, G., Menkhorst, P.W. and Robinson, A.C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kinnear, J., Sumner, N.R. and Onus, M.L. 2002. The red fox in Australia—an exotic predator turned biocontrol agent. <i>Biological Conservation </i> 108: 335-359.",
+      "year": "2002",
+      "title": "The red fox in Australia—an exotic predator turned biocontrol agent",
+      "author": "Kinnear, J., Sumner, N.R. and Onus, M.L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Peacock, D. E. 2006. Historical accounts of the Numbat <i>Myrmecobius fasciatus</i> from south-west Western Australia. <i>Australian Mammalogy </i> 28: 97-100.",
+      "year": "2006",
+      "title": "Historical accounts of the Numbat <i>Myrmecobius fasciatus</i> from south-west Western Australia",
+      "author": "Peacock, D. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fumagalli, l., Moritz, C., Taberlet, P., and Friend, J. A. 1994. Mitochondrial DNA sequence variation within the remnant populations of the endangered numbat (Marsupialia: Myrmecobiidae: <i>Myrmecobius fasciatus</i>). <i>Molecular Ecology </i> 8: 1545-1549.",
+      "year": "1994",
+      "title": "Mitochondrial DNA sequence variation within the remnant populations of the endangered numbat (Marsupialia: Myrmecobiidae: <i>Myrmecobius fasciatus</i>)",
+      "author": "Fumagalli, l., Moritz, C., Taberlet, P., and Friend, J. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Vieira, E. M., Finlayson G. R., and Dickman C. R. 2007. Habitat use and density of Numbats (<i>Myrmecobius fasciatus</i>) reintroduced in an area of mallee vegetation, New South Wales. <i>Australian Mammalogy</i> 29: 17-24.",
+      "year": "2007",
+      "title": "Habitat use and density of Numbats (<i>Myrmecobius fasciatus</i>) reintroduced in an area of mallee vegetation, New South Wales",
+      "author": "Vieira, E. M., Finlayson G. R., and Dickman C. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Christensen, P., Maisey, K., and Perry, D. H. 1984. Radiotracking the Numbat, <i>Myrmecobius fasciatus</i>, in the Perup Forest of Western Australia. <i>Australian Wildlife Research </i> 11: 275-288.",
+      "year": "1984",
+      "title": "Radiotracking the Numbat, <i>Myrmecobius fasciatus</i>, in the Perup Forest of Western Australia",
+      "author": "Christensen, P., Maisey, K., and Perry, D. H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Friend, J. A. 1990. The Numbat <i>Myrmecobius fasciatus</i> (Myrmecobiidae): history of decline and potential for recovery. <i>Proceedings of the Ecological Society of Australia </i> 16: 369-377.",
+      "year": "1990",
+      "title": "The Numbat <i>Myrmecobius fasciatus</i> (Myrmecobiidae): history of decline and potential for recovery",
+      "author": "Friend, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fleay, D. 1942. The Numbat in Victoria. <i>Victorian Naturalist </i> 59: 3-7.",
+      "year": "1942",
+      "title": "The Numbat in Victoria",
+      "author": "Fleay, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bester, A.J., and Rusten, K. 2009. Trial translocation of the numbat (<i>Myrmecobius fasciatus</i>) into arid Australia. <i>Australian Mammalogy</i> 31: 9-16.",
+      "year": "2009",
+      "title": "Trial translocation of the numbat (<i>Myrmecobius fasciatus</i>) into arid Australia",
+      "author": "Bester, A.J., and Rusten, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A., and Burrows, R. G. 1983. Bringing up young Numbats. <i>SWANS </i> 13: 3-9.",
+      "year": "1983",
+      "title": "Bringing up young Numbats",
+      "author": "Friend, J. A., and Burrows, R. G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A.. and Whitford D. 1993. Maintenance and breeding of the numbat (<i>Myrmecobius fasciatus</i>) in captivity. In: M. Roberts, J. Carnio, G. Crawshaw and M. Hutchins (eds), <i>Biology and management of Australasian carnivorous marsupials</i>, pp. 103-124. Metropolitan Toronto Zoo and Monotreme and Marsupial Advisory Group of AAZPA, Toronto.",
+      "year": "1993",
+      "title": "Maintenance and breeding of the numbat (<i>Myrmecobius fasciatus</i>) in captivity",
+      "author": "Friend, J. A.. and Whitford D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Christensen, P. 1975. The breeding burrow of the Banded Ant-eater or Numbat (<i>Myrmecobius fasciatus</i>). <i>Western Australian Naturalist </i> 13: 32-34.",
+      "year": "1975",
+      "title": "The breeding burrow of the Banded Ant-eater or Numbat (<i>Myrmecobius fasciatus</i>)",
+      "author": "Christensen, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calaby, J. 1960. Observations on the Banded Anteater <i>Myrmecobius f. fasciatus</i> Waterhouse (Marsupialia), with particular reference to its food habits. <i>Proceedings of the Zoological Society of London </i> 135: 183-207.",
+      "year": "1960",
+      "title": "Observations on the Banded Anteater <i>Myrmecobius f. fasciatus</i> Waterhouse (Marsupialia), with particular reference to its food habits",
+      "author": "Calaby, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cooper, C. E., and Withers, P. C. 2005. Physiological significance of the microclimate in night refuges of the numbat <i>Myrmecobius fasciatus</i>. <i>Australian Mammalogy </i> 27: 169-174.",
+      "year": "2005",
+      "title": "Physiological significance of the microclimate in night refuges of the numbat <i>Myrmecobius fasciatus</i>",
+      "author": "Cooper, C. E., and Withers, P. C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A. 1986. Diel and seasonal patterns of activity in the numbat (<i>Myrmecobius fasciatus</i>). <i>Australian Mammal Society Bulletin 1986</i>.",
+      "year": "1986",
+      "title": "Diel and seasonal patterns of activity in the numbat (<i>Myrmecobius fasciatus</i>)",
+      "author": "Friend, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Woinarski, J., Pavey, C., Kerrigan, R., Cowie, I. and Ward, S. 2007. <i>Lost from our landscape: threatened species of the Northern Territory</i>. NT Department of Natural Resources, Environment and the Arts, Darwin.",
+      "year": "2007",
+      "title": "Lost from our landscape: threatened species of the Northern Territory",
+      "author": "Woinarski, J., Pavey, C., Kerrigan, R., Cowie, I. and Ward, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Friend, J. A. 1989. Myrmecobiidae. In: D. W. Walton and B. J. Richardson (eds), <i>Fauna of Australia</i>, pp. 583-590. Australian Government Publishing Service, Canberra.",
+      "year": "1989",
+      "title": "Myrmecobiidae",
+      "author": "Friend, J. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A., Fuller, P. J., and Davis, J. A. 1982. The Numbat in central Australia. <i>SWANS </i> 12: 21-26.",
+      "year": "1982",
+      "title": "The Numbat in central Australia",
+      "author": "Friend, J. A., Fuller, P. J., and Davis, J. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Burbidge, A.A. and Fuller, P.J. 1979. Mammals of the Warburton region, Western Australia. <i>Records of the Western Australian Museum </i> 8: 57-73.",
+      "year": "1979",
+      "title": "Mammals of the Warburton region, Western Australia",
+      "author": "Burbidge, A.A. and Fuller, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Connell, G. W., and Friend, J. A. 1985. Searching for Numbats. <i>Landscope</i> 1(2): 21–26.",
+      "year": "1985",
+      "title": "Searching for Numbats",
+      "author": "Connell, G. W., and Friend, J. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A., and Whitford, R. W. 1986. Captive breeding of the Numbat (<i>Myrmecobius fasciatus</i>). <i>Australian Mammal Society Bulletin </i> 9: 54.",
+      "year": "1986",
+      "title": "Captive breeding of the Numbat (<i>Myrmecobius fasciatus</i>)",
+      "author": "Friend, J. A., and Whitford, R. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A., and Thomas N. D. 1994. Reintroduction and the numbat recovery program. In: M. Serena (ed.), <i>Reintroduction biology of Australian and New Zealand fauna</i>, pp. 189-98. Surrey Beatty and Sons, Chipping Norton.",
+      "year": "1994",
+      "title": "Reintroduction and the numbat recovery program",
+      "author": "Friend, J. A., and Thomas N. D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, T., and Burbidge, A. 2008. <i>Myrmecobius fasciatus</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 29 June 2012).",
+      "year": "2008",
+      "title": "<i>Myrmecobius fasciatus</i>. In 'The IUCN Red List of Threatened Species'. Version 2012.1",
+      "author": "Friend, T., and Burbidge, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Power, V., Lambert, C., and Matson P. 2009. Reproduction of the Numbat (<i>Myrmecobius fasciatus</i>): observations from a captive breeding program. <i>Australian Mammalogy </i> 31: 25-30.",
+      "year": "2009",
+      "title": "Reproduction of the Numbat (<i>Myrmecobius fasciatus</i>): observations from a captive breeding program",
+      "author": "Power, V., Lambert, C., and Matson P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, T. 2010. The Numbat: back by popular appeal. <i>Landscope </i> 25(3): 40-45.",
+      "year": "2010",
+      "title": "The Numbat: back by popular appeal",
+      "author": "Friend, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Friend, J. A., and Thomas, N. D. 2003. Conservation of the Numbat (<i>Myrmecobius fasciatus</i>). In: M. Jones, C. Dickman and M. Archer (eds), <i>Predators with pouches: The biology of carnivorous marsupials</i>, pp. 446-457. CSIRO Publishing, Melbourne.",
+      "year": "2003",
+      "title": "Conservation of the Numbat (<i>Myrmecobius fasciatus</i>)",
+      "author": "Friend, J. A., and Thomas, N. D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

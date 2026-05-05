@@ -1,0 +1,1730 @@
+{
+  "assessment_date": "2016-04-07T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 165594334,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/165594334/545209",
+  "citation": "Aghasyan, A., Avci, A., Tuniyev, B., Crnobrnja-Isailović, J., Lymberakis, P., Andrén, C., Cogălniceanu, D., Ananjeva, N.B., Üzüm, N., Orlov, N.L., Podloucky, R., Tuniyev, S., Kaya, U., Ajtic, R., Vogrin, M., Corti, C., Pérez Mellado, V., Sá-Sousa, P., Cheylan, M., Pleguezuelos, J.M., Sterijovski, B., Nettmann, H.K., Borczyk, B., Schmidt, B.R., Meyer, A., Lau, M., Borkin, L., Milto, K., Golynsky, E., Belouskova, A., Rustamov, A, Nuridjanov, D. & Munkhbayar, K. 2021. Natrix natrix. The IUCN Red List of Threatened Species 2021: e.T165594334A545209. Accessed on 05 May 2026.",
+  "assessment_id": 545209,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 165594334,
+    "scientific_name": "Natrix natrix",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "NATRICIDAE",
+    "genus_name": "Natrix",
+    "species_name": "natrix",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Adi Suilani",
+        "language": "aze"
+      },
+      {
+        "main": false,
+        "name": "Chveulebrivi Ankara",
+        "language": "geo"
+      },
+      {
+        "main": false,
+        "name": "Khar Mogoi",
+        "language": "mon"
+      },
+      {
+        "main": false,
+        "name": "Obyknovennyi Uzh",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Usni Mogoi",
+        "language": "mon"
+      },
+      {
+        "main": false,
+        "name": "Vízisikló",
+        "language": "hun"
+      },
+      {
+        "main": false,
+        "name": "Yarı Sucul Yılan",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Νερόφιδο",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "Белоушка",
+        "language": "mac"
+      },
+      {
+        "main": false,
+        "name": "水游蛇",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Grass Snake",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Coluber natrix Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "natrix",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Coluber persa Pallas, 1814",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "persa",
+        "species_author": "Pallas, 1814",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Coluber scutatus Pallas, 1771",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "scutatus",
+        "species_author": "Pallas, 1771",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Coluber torquatus Lacépède, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "torquatus",
+        "species_author": "Lacépède, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus ater Eichwald, 1831",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "ater",
+        "species_author": "Eichwald, 1831",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus natrix (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Natrix vulgaris Laurenti, 1768",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "vulgaris",
+        "species_author": "Laurenti, 1768",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Natrix natrix ssp. gotlandica Nilson & Andrén, 1981",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Nilson & Andrén, 1981",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "gotlandica"
+      },
+      {
+        "name": "Natrix natrix ssp. schweizeri Müller, 1932",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Müller, 1932",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "schweizeri"
+      },
+      {
+        "name": "Natrix natrix ssp. fusca Cattaneo, 1990",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Cattaneo, 1990",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "fusca"
+      },
+      {
+        "name": "Tropidonotus natrix ssp. schirvânae Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Hecht, 1930",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "schirvânae"
+      },
+      {
+        "name": "Tropidonotus natrix ssp. dystiensis Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Hecht, 1930",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "dystiensis"
+      },
+      {
+        "name": "Tropidonotus natrix ssp. bucharensis Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Hecht, 1930",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "bucharensis"
+      },
+      {
+        "name": "Tropidonotus natrix ssp. bithynus Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Hecht, 1930",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "bithynus"
+      },
+      {
+        "name": "Tropidonotus natrix var. lineata Ninni, 1880",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Ninni, 1880",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "lineata"
+      },
+      {
+        "name": "Tropidonotus natrix var. subblineata Jan, 1864",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Jan, 1864",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "subblineata"
+      },
+      {
+        "name": "Coluber natrix var. dalmatina Schinz, 1833",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Schinz, 1833",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "dalmatina"
+      },
+      {
+        "name": "Tropidonotus natrix var. murorum Fitzinger, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Fitzinger, 1832",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "murorum"
+      },
+      {
+        "name": "Coluber minutus Pallas, 1814",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "minutus",
+        "species_author": "Pallas, 1814",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus natrix ssp. cephallonicus Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Hecht, 1930",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "cephallonicus"
+      },
+      {
+        "name": "Natrix rubetaria Bonaparte, 1840",
+        "status": "ACCEPTED",
+        "genus_name": "Natrix",
+        "species_name": "rubetaria",
+        "species_author": "Bonaparte, 1840",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tropidonotus natrix ssp. syrae Hecht, 1930",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Hecht, 1930",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "syrae"
+      },
+      {
+        "name": "Tropidonotus natrix var. moreoticus Bedriaga, 1882",
+        "status": "ACCEPTED",
+        "genus_name": "Tropidonotus",
+        "species_name": "natrix",
+        "species_author": null,
+        "infrarank_author": "Bedriaga, 1882",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "moreoticus"
+      },
+      {
+        "name": "Natrix megalocephala Orlov &amp; Tuniyev, 1987",
+        "status": "MERGE",
+        "genus_name": "Natrix",
+        "species_name": "megalocephala",
+        "species_author": "Orlov &amp; Tuniyev, 1987",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 3060,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "25600000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species ranges widely through the Palearctic region, with a western range limit in eastern Germany and Switzerland where it occurs sympatrically with <em>Natrix helvetica&#160;</em>(Kindler <em>et al.</em> 2017).&#160;It is absent from northern Scandinavia and Crete (Greece). It ranges through both European and Asian parts of Russia eastwards into Kazakhstan (where it occurs through the northern half of the country south approximately to the northern boundary with the Caspian Sea. 19th century records from the east coast of the Caspian have never subsequently been confirmed - T. Dujsebayeva, pers. comm. 2017), Turkmenistan (the valley of the Atrek River, and the channel linking Maloe Delili with the Caspian Sea - Ananjeva<em> et al. </em>2006), China and northern Mongolia. It occurs in Cyprus (the Troodos Mountains), in most of Turkey, the Caucasus, and in northwestern Syria (only known from a couple of localities where it is very rare). It is known from isolated, individual records in the Crimea (Ukraine). In Iran it has been recorded from Mazandaran Province, Ghilan Province, East Azerbaijan Province and Central province (Latifi 1991). It ranges from sea level up to 3,060 m asl.",
+    "population": "It is a common species but with fragmented populations through parts of its range, especially in southern areas. In some regions it is very common (up to 120 specimens recorded per hectare in the Donetsky Range, Ukraine). It is thought to occur in low numbers in Mongolia (Terbish <em>et al.</em> 2006). The endemic subspecies from Cyprus and Milos are very localized.&#160;The global population is \"relatively stable\" (Ananjeva <em>et al.</em> 2006), but localized declines may be ongoing as a result of habitat loss. It is considered to be declining in Mongolia (Terbish<em> et al</em>. 2006) and, due to water extraction from rivers to support human populations in Iran, in its limited range in Turkmenistan.",
+    "habitats": "This snake is typically found in damp places, such as wet meadows, around standing water and along the banks of streams. It is sometimes found a long way from any standing water and can often be found in wooded localities and in heathland. It is tolerant of heavily-modified lansdcapes where suitable water sources are present, and can live in domestic gardens and urban parkland. This species swims well and typically forages on fish and amphibians. It also eats young birds and small mammals. Larger females may lay up to 100 eggs (but usually fewer) during June and July (Speybroeck <em>et al.</em> 2016). Young females of <em>Natrix helvetica</em> lay about 10 eggs, which is presumably also the case for this species (Spellerberg 2002).",
+    "threats": "It is locally threatened in parts of its range by water pollution impacting prey populations (principally amphibians), drainage of wetland habitats (in Switzerland 90% of wetland habitats have been drained [A. Meyer pers. comm.]) and general intensification of agricultural methods. Some subspecies are considered to be threatened. On Milos, the species is threatened also by mining activities (A. Westerström pers. comm.). As with many snakes this species is generally persecuted by people. Roadkill is a threat in many areas, and habitat fragmentation through development. Mining, particularly for gold, represents the major source of water pollution in the species' Mongolian range (Terbish <em>et al. </em>2006). There is no additional information for the extreme western subpopulation of this species in China.",
+    "measures": "This species is listed on Annex III of the Bern Convention. It is protected by national legislation in some range countries. It is present in many protected areas throughout its range. &#160;The construction of corridors underneath roads could aid in significantly reducing mortality on roads for some populations (Juan M Pleguezuelos pers. comm. 2008). <em>Natrix natrix natrix</em> is categorized as Endangered in Switzerland&#160;(Monney and Meyer 2005), and <em>N. n. scutata</em> is considered Near Threatened in Mongolia, at the margins of its range (Terbish <em>et al.</em> 2006).",
+    "use_trade": "There appears to be no substantiated use of this species. Terbish <em>et al</em>. (2006) report that there may be low levels of exploitation for the international pet trade in China and Russia, but provide no details.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a degree of habitat modification, presumed large population, and because it is unlikely to be declining fast enough, or widely enough across its vast range as a whole, to qualify for listing in a more threatened category at a global level.",
+    "trend_justification": null,
+    "taxonomic_notes": "The&#160;<em>Natrix natrix&#160;</em>complex has long been treated as a single widespread species throughout Europe and temperate Asia. Numerous subspecies have traditionally been recognized; recent molecular evidence indicates that most of these are not supported genetically (Speybroeck&#160;<em>et al</em>. 2016), including the formerly recognized species <em>Natrrix megalocephala</em>,&#160;but that the grass snake forms three geographically discrete clusters, each of which has recently been recognized as distinct species:&#160;<em>Natrix astreptophora&#160;</em>(Iberia) (Porkrant&#160;<em>et al</em>. 2016),&#160;<em>N. helvetica&#160;</em>(northern and central Europe) (Kindler&#160;<em>et al</em>. 2017) and&#160;<em>N. natrix</em>. The taxonomy of grass snakes east of the range of <em>N. helvetica</em>, still included within <em>N. natrix</em>, remains unresolved."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Excavations (open)"
+      },
+      "code": "15_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Xinjiang"
+      },
+      "code": "CHX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Aghasyan, A., Avci, A., Tuniyev, B., Crnobrnja-Isailović, J., Lymberakis, P., Andrén, C., Cogălniceanu, D., Ananjeva, N.B., Üzüm, N., Orlov, N.L., Podloucky, R., Tuniyev, S., Kaya, U., Ajtic, R., Vogrin, M., Corti, C., Pérez Mellado, V., Sá-Sousa, P., Cheylan, M., Pleguezuelos, J.M., Sterijovski, B., Nettmann, H.K., Borczyk, B., Schmidt, B.R., Meyer, A., Lau, M., Borkin, L., Milto, K., Golynsky, E., Belouskova, A., Rustamov, A, Nuridjanov, D. & Munkhbayar, K.",
+      "value": [
+        "Boris Tuniyev (SRLI Reptile Assessment)",
+        "Michael Lau (WWF)",
+        "Konstantin Milto",
+        "Khorloogiin Munkhbayar",
+        "Denis Nuridjanov",
+        "Leo Borkin",
+        "Anna Belouskova",
+        "Nikolai Orlov (Department of Herpetology, Zoological Institute, Russian Academy of Sciences)",
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Aram Aghasyan (Head of Protected Areas Management Department, Bioresources Management Agency of Ministry of Nature Protection, Yerevan, Armenia)",
+        "Rastko Ajtic (Institute for Nature Conservation of Serbia)",
+        "Claes Andrén (SRLI Reptile Assessment)",
+        "Aziz  Avci (Adnan Menderes University, Faculty of Science and Arts, Department of Biology, Aydın-TURKEY)",
+        "Bartosz Borczyk (SRLI Reptile Assessment)",
+        "Marc Cheylan (Centre d’Ecologie Fonctionnelle et Evolutive (UMR 5175 CNRS), 1919 route de Mende, 34293 Montpellier cedex 5, France)",
+        "Dan Cogălniceanu (Amphibian RLA)",
+        "Claudia Corti (Museo di Storia Naturale dell'Università di Firenze, Sezione di Zoologia \"La Specola\", Italy)",
+        "Uğur Kaya (SRLI Reptile Assessment)",
+        "Petros Lymberakis (GAA, GRA, SRLI Reptile Assessment)",
+        "Andreas Meyer (SRLI Reptile Assessment)",
+        "Hans Nettmann (SRLI Reptile Assessment)",
+        "Valentín Pérez Mellado (Universidad de Salamanca; European Red List of Reptiles; SRLI Reptile Assessment)",
+        "Juan Pleguezuelos (Dep Animal Biology, Fac Sciences, Granada Univer, E-18071 Granada, Spain)",
+        "Richard Podloucky (SRLI Reptile Assessment)",
+        "Paulo Sá-Sousa (SRLI Reptile Assessment)",
+        "Benedikt R. Schmidt (Amphibian RLA)",
+        "Eldar Rustamov",
+        "Bogoljub Sterijovski (SRLI Reptile Assessment)",
+        "Eugeny Golynsky (Russian Academy of Science)",
+        "Natalia Ananjeva (Department of Herpetology, Zoological Institute, Russian Academy of Sciences, St Petersburg, Russia)",
+        "Milan Vogrin (DPPVN, Rače, Slovenia)",
+        "Nazan Üzüm (Amphibian RLA)",
+        "Sako Tuniyev (SRLI Reptile Assessment)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Böhme, W. and Wiedl, H. 1994. Status and zoogeography of the herpetofauna of Cyprus, with taxonomic and natural history notes on selected species (genera <i>Rana, Coluber, Natrix, Vipera</i>). <i>Zoology in the Middle East</i> 10: 31-52.",
+      "year": "1994",
+      "title": "Status and zoogeography of the herpetofauna of Cyprus, with taxonomic and natural history notes on selected species (genera <i>Rana, Coluber, Natrix, Vipera</i>)",
+      "author": "Böhme, W. and Wiedl, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kasparek, M. 1990. Zur herpetofauna des Beckens von Köycegiz, Türkei (Dalyan-Region). <i>Salamandra</i> 26(2/3): 155-164.",
+      "year": "1990",
+      "title": "Zur herpetofauna des Beckens von Köycegiz, Türkei (Dalyan-Region)",
+      "author": "Kasparek, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L. 2001. <i>Amphibians and reptiles of the Hashemite Kingdom of Jordan</i>. Edition Chimaira, Frankfurt.",
+      "year": "2001",
+      "title": "Amphibians and Reptiles of the Hashemite Kingdom of Jordan",
+      "author": "Disi, A.M., Modrý, D., Nečas, P. and Rifai, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baran, I. and Atatür, M.K. 1998. <i>Turkish herpetofauna (amphibians and reptiles)</i>. Republic of Turkey Ministry of Environment, Ankara.",
+      "year": "1998",
+      "title": "Turkish herpetofauna (amphibians and reptiles)",
+      "author": "Baran, I. and Atatür, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pleguezuelos, J.M., Márquez, R. and Lizana, M. 2002. <i>Atlas y Libro Rojo de los Anfibios y Reptiles de España.</i> Dirección General de la Conservación de la naturaleza-Associación Herpetológica Española., Madrid.",
+      "year": "2002",
+      "title": "Atlas y Libro Rojo de los Anfibios y Reptiles de España.",
+      "author": "Pleguezuelos, J.M., Márquez, R. and Lizana, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 2003. <i>Reptiles and Amphibians of Europe</i>. Princeton University Press, Princeton and Oxford.",
+      "year": "2003",
+      "title": "Reptiles and Amphibians of Europe",
+      "author": "Arnold, E.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malkmus, R. 1982. Beitrag zur Verbreitung der Amphibien und Reptilien in Portugal. <i>Salamandra</i> 18(3-4): 218-299.",
+      "year": "1982",
+      "title": "Beitrag zur Verbreitung der Amphibien und Reptilien in Portugal",
+      "author": "Malkmus, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bons, J. and Geniez, P. 1996. <i>Amphibiens et Reptiles du Maroc (Sahara Occidental compris), Atlas biogéographique.</i> Asoc. Herpetol. Espanola., Barcelona.",
+      "year": "1996",
+      "title": "Amphibiens et Reptiles du Maroc (Sahara Occidental compris), Atlas biogéographique.",
+      "author": "Bons, J. and Geniez, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andreu, A., Bea, A., Braña, F., Galán, P., López-Jurado, L.F., Pérez-Mellado, V., Pleguezuelos, J.M. and Salvador, A. 1998. Fauna Ibérica. Reptiles. 10: 1-705.",
+      "year": "1998",
+      "title": "Fauna Ibérica. Reptiles",
+      "author": "Andreu, A., Bea, A., Braña, F., Galán, P., López-Jurado, L.F., Pérez-Mellado, V., Pleguezuelos, J.M. and Salvador, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sindaco, R., Venchi, A., Carpaneto, G.M. and Bologna, M.A. 2000. The reptiles of Anatolia: a checklist and zoogeographical analysis. <i>Biogeographia</i> 21: 441-554.",
+      "year": "2000",
+      "title": "The reptiles of Anatolia: a checklist and zoogeographical analysis",
+      "author": "Sindaco, R., Venchi, A., Carpaneto, G.M. and Bologna, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasc, J.-P., Cabela, A., Crnobrnja-Isailovic, J., Dolmen, D., Grossenbacher, K., Haffner, P., Lescure, J., Martens, H., Martínez-Rica, J.P., Maurin, H., Oliveira, M.E., Sofianidou, T.S., Veith, M. and Zuiderwijk, A. 1997. <i>Atlas of Amphibians and Reptiles in Europe.</i> Societas Europaea Herpetologica and Musée National d'Histoire Naturelle, Paris.",
+      "year": "1997",
+      "title": "Atlas of Amphibians and Reptiles in Europe.",
+      "author": "Gasc, J.-P., Cabela, A., Crnobrnja-Isailovic, J., Dolmen, D., Grossenbacher, K., Haffner, P., Lescure, J., Martens, H., Martínez-Rica, J.P., Maurin, H., Oliveira, M.E., Sofianidou, T.S., Veith, M. and Zuiderwijk, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martens, H. 1997. A review of \"Zoogeography of amphibians and reptiles of Syria, with additional new records\" (<i>Herpetozoa</i> 9 (1/2), 1996). <i>Herpetozoa</i> 10(3/4): 99-106.",
+      "year": "1997",
+      "title": "A review of \"Zoogeography of amphibians and reptiles of Syria, with additional new records\" (<i>Herpetozoa</i> 9 (1/2), 1996)",
+      "author": "Martens, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F. 2006. <i>Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.</i> Societas Herpetologica Italica - Edizioni Polistampa, Firenze.",
+      "year": "2006",
+      "title": "Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.",
+      "author": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kasapidis, P., Provatidou, S., Maragou, P. and Valakos, E.D. 1996. Neue Daten über die Herpetofauna von Lesbos (ägäische Inseln, Griechenland) und einige biogeographische Bemerkungen über die Inseln des nordöstlichen ägäischen Archipels. <i>Salamandra</i> 32(3): 171-180.",
+      "year": "1996",
+      "title": "Neue Daten über die Herpetofauna von Lesbos (ägäische Inseln, Griechenland) und einige biogeographische Bemerkungen über die Inseln des nordöstlichen ägäischen Archipels",
+      "author": "Kasapidis, P., Provatidou, S., Maragou, P. and Valakos, E.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malkmus, R. 2004. <i>Amphibians and reptiles of Portugal, Madeira and the Azores-archipelago.</i> A.R.G. Gantner Verlag K.G., Ruggell (Germany).",
+      "year": "2004",
+      "title": "Amphibians and reptiles of Portugal, Madeira and the Azores-archipelago.",
+      "author": "Malkmus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schleich, H.H., Kästle, W. and Kabisch, K. 1996. <i>Amphibians and Reptiles of North Africa</i>. Koeltz, Koenigstein.",
+      "year": "1996",
+      "title": "Amphibians and Reptiles of North Africa",
+      "author": "Schleich, H.H., Kästle, W. and Kabisch, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Muskhelishvili, T. A. 1967. Presmykajushchiesya Vostochnoi Gruzii. Tbilisi.",
+      "year": "1967",
+      "title": "Presmykajushchiesya Vostochnoi Gruzii",
+      "author": "Muskhelishvili, T. A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alekperov, A.M. 1978. <i>Zemnovodnye i presmykajuschiesya Azerbaijana</i>. Alm, Baku.",
+      "year": "1978",
+      "title": "Zemnovodnye i presmykajuschiesya Azerbaijana",
+      "author": "Alekperov, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Zczserbak, N.N. 1977. <i>Opredelitel' zemnovodnykh i presmykajushchikhsya fauni SSSR.</i> Prosveshchenye, Minsk.",
+      "year": "1977",
+      "title": "Opredelitel' zemnovodnykh i presmykajushchikhsya fauni SSSR.",
+      "author": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Zczserbak, N.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bogdanov, O.P. 1960. <i>Zemnovodnye i presmykajushchiesya.</i> Izdatelstvo Akademii Nauk Uzbekskoi SSR, Toshkent.",
+      "year": "1960",
+      "title": "Zemnovodnye i presmykajushchiesya.",
+      "author": "Bogdanov, O.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Darevsky, I.S. 1957. Fauna amphiby i presmykajushchikhsya Armenii i ego zoogeografichesky analiz. Yerevan.",
+      "year": "1957",
+      "title": "Fauna amphiby i presmykajushchikhsya Armenii i ego zoogeografichesky analiz",
+      "author": "Darevsky, I.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ananjeva, N.B., Borkin, L.Y., Darevsky, I.S. and Orlov, N.L. 1998. <i>Amphibii i presmykajushchiesya.</i> AFB, Moscow.",
+      "year": "1998",
+      "title": "Amphibii i presmykajushchiesya.",
+      "author": "Ananjeva, N.B., Borkin, L.Y., Darevsky, I.S. and Orlov, N.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Council of Europe (CoE). 2003. Convention on the Conservation of European Wildlife and Natural Habitats. Group of experts on the conservation of Amphibians and Reptiles. Mälmo (Sweden), 26-27 September 2003. <i>Report T-PVS (2003) 18</i>.",
+      "year": "2003",
+      "title": "Convention on the Conservation of European Wildlife and Natural Habitats. Group of experts on the conservation of Amphibians and Reptiles. Mälmo (Sweden), 26-27 September 2003.",
+      "author": "Council of Europe (CoE)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ananjeva, N.B., Orlov, N.L., Khalikov, R.G., Darevsky, I.S., Ryabov, I.S. and Barabanov, A.V. 2006. <i>An Atlas of the Reptiles of North Eurasia. Taxonomic Diversity, Distribution, Conservation Status</i>. Pensoft Series Faunistica.",
+      "year": "2006",
+      "title": "An Atlas of the Reptiles of North Eurasia. Taxonomic Diversity, Distribution, Conservation Status",
+      "author": "Ananjeva, N.B., Orlov, N.L., Khalikov, R.G., Darevsky, I.S., Ryabov, I.S. and Barabanov, A.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ananjeva, N.B., Orlov, N.L., Khalikov, R.G., Darevsky, I.S., Ryabov, S.A. and Barabanov, A.V. 2004. <i>Atlas presmykajushchikhsya Severnoi Eurazii</i>. Zoologichesky Institute RAN, Sanct-Petrburg.",
+      "year": "2004",
+      "title": "Atlas presmykajushchikhsya Severnoi Eurazii",
+      "author": "Ananjeva, N.B., Orlov, N.L., Khalikov, R.G., Darevsky, I.S., Ryabov, S.A. and Barabanov, A.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nöllert, A., Nöllert, C. and Ritter, A. 1986. Einige Beobachtungen zur Herpetofauna der bulgarischen Schwarzmeerküste und Südwestbulgariens (Teil 2 - Die Reptilien). <i>Herpetofauna</i> 8(44): 30-34.",
+      "year": "1986",
+      "title": "Einige Beobachtungen zur Herpetofauna der bulgarischen Schwarzmeerküste und Südwestbulgariens (Teil 2 - Die Reptilien)",
+      "author": "Nöllert, A., Nöllert, C. and Ritter, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ananjeva, N.B., Borkin, L.Y., Darevsky, I.S. and Orlov, N.L. 1988. <i>Dictionary of Animal Names in Five Languages. Amphibians and Reptiles</i>. Russky Yazyk, Moscow.",
+      "year": "1988",
+      "title": "Dictionary of Animal Names in Five Languages. Amphibians and Reptiles",
+      "author": "Ananjeva, N.B., Borkin, L.Y., Darevsky, I.S. and Orlov, N.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schlüter, U. 2003. Die herpetofauna des NSG Padurea Hagieni in Rumänien. <i>Elaphe</i> 11(1): 60-65.",
+      "year": "2003",
+      "title": "Die herpetofauna des NSG Padurea Hagieni in Rumänien",
+      "author": "Schlüter, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Broggi, M.F. 1996. Die feuchtgebiete der Insel Andros mit ihren Amphibien und hydrophilen Reptilien (Amphibia, Reptilia; Kykladen, Griechenland). <i>Herpetozoa</i> 8(3/4): 135-144.",
+      "year": "1996",
+      "title": "Die feuchtgebiete der Insel Andros mit ihren Amphibien und hydrophilen Reptilien (Amphibia, Reptilia; Kykladen, Griechenland)",
+      "author": "Broggi, M.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Özdemür, A. and Baran, U. 2002. Research on the Herpetofauna of Murat Mountain (Kütahya-Usak). <i>Turkish Journal of Zoology</i> 26: 189-195.",
+      "year": "2002",
+      "title": "Research on the Herpetofauna of Murat Mountain (Kütahya-Usak).",
+      "author": "Özdemür, A. and Baran, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Terbish, K., Munkhbayar, K., Clark, K., Clark, E.L., Munkhbat, J. and Monks, E.M. 2006. Mongolian Red List of Reptiles and Amphibians.  In: M. Munkhbaatar, J.E.M. Baillie, L. Borkin, N.  Batsaikhan, R. Samiya and D.V. Semenov (eds), Regional Red List Series, Vol. 5. Zoological Society of London, London.",
+      "year": "2006",
+      "title": "Mongolian Red List of Reptiles and Amphibians",
+      "author": "Terbish, K., Munkhbayar, K., Clark, K., Clark, E.L., Munkhbat, J. and Monks, E.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Latifi, M. 1991. <i>The Snakes of Iran - English Edition.</i> Society for the Study of Amphibians and Reptiles, Oxford, Ohio.",
+      "year": "1991",
+      "title": "The Snakes of Iran - English Edition.",
+      "author": "Latifi, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hofer, U., Monney, J.-C. and Dusej, G. 2001. <i>Die Reptilien der Schweiz: Verbreitung, Lebensräume, Schutz.</i> Birkhäuser Verlag, Basel, Switzerland.",
+      "year": "2001",
+      "title": "Die Reptilien der Schweiz: Verbreitung, Lebensräume, Schutz.",
+      "author": "Hofer, U., Monney, J.-C. and Dusej, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monney, J.-C. and Meyer, A. 2005. <i>Rote Liste der gefährdeten Reptilien der Schweiz.</i> BUWAL-Reihe: Vollzug Umwelt, 50 S., (BUWAL, Bern, Switzerland).",
+      "year": "2005",
+      "title": "Rote Liste der gefährdeten Reptilien der Schweiz.",
+      "author": "Monney, J.-C. and Meyer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Necas, P., Modry, D. and Zavadil, V. 1997. <i>Czech Recent and Fossil Amphibians and Reptiles.</i> Edition Chimaira, Frankfurt am Main.",
+      "year": "1997",
+      "title": "Czech Recent and Fossil Amphibians and Reptiles.",
+      "author": "Necas, P., Modry, D. and Zavadil, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schneider, B. 1986. Zur Herpetofauna der Insel Limnos (Hellespontische Inseln, Nordägäis, Griechenland). <i>Salamandra</i>: 276-280.",
+      "year": "1986",
+      "title": "Zur Herpetofauna der Insel Limnos (Hellespontische Inseln, Nordägäis, Griechenland).",
+      "author": "Schneider, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chernov, S.A. 1959. <i>Presmykajushchiesya.</i> Stalinabad (Dushanbe).",
+      "year": "1959",
+      "title": "Presmykajushchiesya.",
+      "author": "Chernov, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hille, A. 1997. Biochemical variation between populations of the western and eastern grass snake (Natrix Natrix) from the transition zone in Nordrhein-Westfalen, Germany. In: Böhme, W., Bischoff, W. and Ziegler, T. (eds), Herpetologia Bonnensis., pp. 177–184. Bonn.",
+      "year": "1997",
+      "title": "Biochemical variation between populations of the western and eastern grass snake (Natrix Natrix) from the transition zone in Nordrhein-Westfalen, Germany.",
+      "author": "Hille, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Guicking, D., Lawson, R., Joger, U. and Wink, M. 2006. Evolution and phylogeny of the genus Natrix (Serpentes: Colubridae). <i>Biological Journal of the Linnean Society</i> 87(1): 127-143.",
+      "year": "2006",
+      "title": "Evolution and phylogeny of the genus Natrix (Serpentes: Colubridae).",
+      "author": "Guicking, D., Lawson, R., Joger, U. and Wink, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Böhme, W. 1999. <i>Handbuch der reptilien und amphibien Europas. Band 3/IIA: Schlangen II.</i> Aula-Verlag GmbH, Wiebelsheim.",
+      "year": "1999",
+      "title": "Handbuch der reptilien und amphibien Europas. Band 3/IIA: Schlangen II.",
+      "author": "Böhme, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malkmus, R. 1990. Herpetofaunistische Daten aus Nordostportugal. <i>Salamandra</i> 26(2/3): 165-176.",
+      "year": "1990",
+      "title": "Herpetofaunistische Daten aus Nordostportugal.",
+      "author": "Malkmus, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nilson, G. and Andren, C. 1981. Morphology and taxonomic status of the grass snake, Natrix natrix (L.) (Reptilia, Squamata, Colubridae) on the island of Gotland, Sweden. <i>Zoological Journal of the Linnean Society</i>: 355-368.",
+      "year": "1981",
+      "title": "Morphology and taxonomic status of the grass snake, Natrix natrix (L.) (Reptilia, Squamata, Colubridae) on the island of Gotland, Sweden.",
+      "author": "Nilson, G. and Andren, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorpe, R.S. 1980. Microevolution and taxonomy of European reptiles with particular reference to the grass snake Natrix natrix and the wall lizards Podarcis sicula, P. melisellensls. <i>Biological Journal of Linnean Society</i>: 215-233.",
+      "year": "1980",
+      "title": "Microevolution and taxonomy of European reptiles with particular reference to the grass snake Natrix natrix and the wall lizards Podarcis sicula, P. melisellensls.",
+      "author": "Thorpe, R.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sura, P. and Zamachowski, W. 2003. Zaskroniec zwyczajny Natrix natrix (Linnaeus, 1758). In: Glowacinski Z. and Rafinski J. (eds), <i>Atlas of Amphibians and Reptiles of Poland. Status - Distribution - Conservation</i>, pp.90-93. Instytut Ochrony Przyrody PAN, Warszawa - Kraków.",
+      "year": "2003",
+      "title": "Zaskroniec zwyczajny Natrix natrix (Linnaeus, 1758).",
+      "author": "Sura, P. and Zamachowski, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Broggi, M.F. 1978. Herpetologische Beobachtungen auf der Insel Lesbos (Griechenland). <i>Salamandra</i>: 161-171.",
+      "year": "1978",
+      "title": "Herpetologische Beobachtungen auf der Insel Lesbos (Griechenland).",
+      "author": "Broggi, M.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Forman, F. and Forman, B. 1981. Herpetologische Beobachtungen auf Korsika. <i>Herpetofauna</i> 3(10): 12-16.",
+      "year": "1981",
+      "title": "Herpetologische Beobachtungen auf Korsika.",
+      "author": "Forman, F. and Forman, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Philippen, H.D. and Rogner, M. 1986. Zur Biologie und Ökologie der Schlangen Korsikas. <i>Herpetofauna</i> 8(44): 25-29.",
+      "year": "1986",
+      "title": "Zur Biologie und Ökologie der Schlangen Korsikas.",
+      "author": "Philippen, H.D. and Rogner, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alfermann, D. and Völkl, W. 2004. Zur Fortpflanzungsbiologie der Blindschleiche (Anguis fragilis L., 1758) im Lechtal. <i>Salamandra</i>: 25-36.",
+      "year": "2004",
+      "title": "Zur Fortpflanzungsbiologie der Blindschleiche (Anguis fragilis L., 1758) im Lechtal.",
+      "author": "Alfermann, D. and Völkl, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delaugerre, M. and Cheylan, M. 1992. <i>Atlas de repartition des batraciens et reptiles de Corse.</i> L'Oikéma, Pamplona.",
+      "year": "1992",
+      "title": "Atlas de repartition des batraciens et reptiles de Corse.",
+      "author": "Delaugerre, M. and Cheylan, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gruber, U. and Fuchs, D. 1977. Die Herpetofauna des Paros-Archipels (Zentral-Ägäis). <i>Salamandra</i>: 60-77.",
+      "year": "1977",
+      "title": "Die Herpetofauna des Paros-Archipels (Zentral-Ägäis).",
+      "author": "Gruber, U. and Fuchs, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Henle, K. 1985. Ökologische, zoogeographische und systematische Bemerkungen zur Herpetofauna Jugoslawiens. <i>Salamandra</i>: 229-251.",
+      "year": "1985",
+      "title": "Ökologische, zoogeographische und systematische Bemerkungen zur Herpetofauna Jugoslawiens.",
+      "author": "Henle, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schätti, B., Stimson, A.F. and Henle, K. 1991. Natrix gemonensis Laurenti, 1768 (currently Coluber gemonesis), Coluber viridiflavus Lacepede, 1789 and Coluber helveticus Lacepede, 1789 (currently Natrix natrix helvetica). <i>Bulletin of Zoological Nomenclature</i> 48(1): 50.",
+      "year": "1991",
+      "title": "Natrix gemonensis Laurenti, 1768 (currently Coluber gemonesis), Coluber viridiflavus Lacepede, 1789 and Coluber helveticus Lacepede, 1789 (currently Natrix natrix helvetica).",
+      "author": "Schätti, B., Stimson, A.F. and Henle, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "China Wildlife Conservation Association, WildAid. 2006. Survey report on situation of eating wildlife and public altitude to wildlife consumption. China Wildlife Conservation Association, Beijing.",
+      "year": "2006",
+      "title": "Survey report on situation of eating wildlife and public altitude to wildlife consumption.",
+      "author": "China Wildlife Conservation Association, WildAid",
+      "citation_short": null
+    },
+    {
+      "citation": "Speybroeck, J. Beuckema, W., Bok, B. and Voort, J.V.D. 2016. <i>Field Guide to the Amphibians and Reptiles</i>. Bloomsbury Publishing Plc, London.",
+      "year": "2016",
+      "title": "Field Guide to the Amphibians and Reptiles",
+      "author": "Speybroeck, J. Beuckema, W., Bok, B. and Voort, J.V.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reading C.J., Luiselli L.M., Akani G.C., Bonnet, X., Amori, G., Ballouard, J.M., Filippi, E., Naulleau, G., Perason, D. and Rugiero, L. 2010. Are snake populations in widespread decline? <i>Biology Letters</i> 6(6): 777-780.",
+      "year": "2010",
+      "title": "Are snake populations in widespread decline?",
+      "author": "Reading C.J., Luiselli L.M., Akani G.C., Bonnet, X., Amori, G., Ballouard, J.M., Filippi, E., Naulleau, G., Perason, D. and Rugiero, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Kindler, C., Chèvre, M., Ursenbacher, S., Böhme, W., Hille, A., Jablonski, D., Vamberger, M. and Fritz, U. 2017. Hybridization patterns in two contact zones of grass snakes reveal a new Central European snake species. <i>Scientific Reports</i> 7: 7378.",
+      "year": "2017",
+      "title": "Hybridization patterns in two contact zones of grass snakes reveal a new Central European snake species",
+      "author": "Kindler, C., Chèvre, M., Ursenbacher, S., Böhme, W., Hille, A., Jablonski, D., Vamberger, M. and Fritz, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Porkrant, F., KIndler, C., Ivanov, M., Cheylan, M., Geniez, P., Böhme, W. and Fritz. U. 2016. Integrative taxonomy provides evidence for the species status of the Ibero-Mahgrebian grass snake <i>Natrix natrix</i>. <i>Biological Journal of the Linnean Society</i> 118(4): 873-888.",
+      "year": "2016",
+      "title": "Integrative taxonomy provides evidence for the species status of the Ibero-Mahgrebian grass snake <i>Natrix natrix</i>",
+      "author": "Porkrant, F., KIndler, C., Ivanov, M., Cheylan, M., Geniez, P., Böhme, W. and Fritz. U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spellerberg I. F. 2002. <i>Amphibians and Reptiles of North-west Europe, their Natural History, Ecology and Conservation</i>. Science Publishers, Inc., NH, USA.",
+      "year": "2002",
+      "title": "Amphibians and Reptiles of North-west Europe, their Natural History, Ecology and Conservation",
+      "author": "Spellerberg I. F.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

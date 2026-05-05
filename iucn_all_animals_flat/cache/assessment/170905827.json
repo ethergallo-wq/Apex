@@ -1,0 +1,729 @@
+{
+  "assessment_date": "2016-03-31T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 42191,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/42191/170905827",
+  "citation": "Timmins, J & Chan, B. 2016. Muntiacus reevesi (errata version published in 2020). The IUCN Red List of Threatened Species 2016: e.T42191A170905827. Accessed on 05 May 2026.",
+  "assessment_id": 170905827,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 42191,
+    "scientific_name": "Muntiacus reevesi",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "CERVIDAE",
+    "genus_name": "Muntiacus",
+    "species_name": "reevesi",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Ogilby, 1839)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Chinese Muntjak",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Formosan Reeves' Muntjac",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Reeve’s Muntjac",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Reeves's Muntjac",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Huang-ji",
+        "language": "chi"
+      },
+      {
+        "main": false,
+        "name": "Xiao-ji",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Reeves' Muntjac",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cervulus sinensis Hilzheimer, 1905",
+        "status": "ACCEPTED",
+        "genus_name": "Cervulus",
+        "species_name": "sinensis",
+        "species_author": "Hilzheimer, 1905",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cervus lachrymans Milne-Edwards, 1871",
+        "status": "ACCEPTED",
+        "genus_name": "Cervus",
+        "species_name": "lachrymans",
+        "species_author": "Milne-Edwards, 1871",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cervulus micrurus Sclater, 1875",
+        "status": "ACCEPTED",
+        "genus_name": "Cervulus",
+        "species_name": "micrurus",
+        "species_author": "Sclater, 1875",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cervulus bridgemani Lydekker, 1910",
+        "status": "ACCEPTED",
+        "genus_name": "Cervulus",
+        "species_name": "bridgemani",
+        "species_author": "Lydekker, 1910",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Muntiacus lachrymans ssp. teesdalei Wroughton, 1914",
+        "status": "ACCEPTED",
+        "genus_name": "Muntiacus",
+        "species_name": "lachrymans",
+        "species_author": null,
+        "infrarank_author": "Wroughton, 1914",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "teesdalei"
+      },
+      {
+        "name": "Cervulus sclateri Swinhoe, 1872",
+        "status": "ACCEPTED",
+        "genus_name": "Cervulus",
+        "species_name": "sclateri",
+        "species_author": "Swinhoe, 1872",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cervulus reevesi ssp. pingshiangicus Hilzheimer, 1906",
+        "status": "ACCEPTED",
+        "genus_name": "Cervulus",
+        "species_name": "reevesi",
+        "species_author": null,
+        "infrarank_author": "Hilzheimer, 1906",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "pingshiangicus"
+      },
+      {
+        "name": "Cervus reevesi Ogilby, 1839",
+        "status": "ACCEPTED",
+        "genus_name": "Cervus",
+        "species_name": "reevesi",
+        "species_author": "Ogilby, 1839",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3500,
+    "lower_elevation_limit": 50,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species in endemic to China including Taiwan Island. In mainland China, this species ranges from Guangdong and Guangxi up to Gansu and Shaanxi, covering the vast subtropical region of the Zhujiang (Pearl) and Yangtze River catchment basins. The exact southern limit of this species is not clear, as old records from tropical Guangdong and Guangxi may be a result of misidentification of <em>Muntiacus muntjak</em>, as in the case of Hong Kong (Hill and Phillipps 1981, Shek 2006). Extensive camera trapping throughout South China in recent years put the southern species limit at north of 25°00’ at northern Guangxi (Chan, B. pers. comm.). The species has been introduced to England (where it is still present) and France (where it is no longer present) (Grubb 2005).",
+    "population": "In China, no recent population estimates or estimates of population trend are available. Sheng (1992) estimated over two million animals in the 1980s. It is generally not considered to be highly threatened although the latest China red list categorizes the species as Vulnerable (Jiang <em><em><em>et al.</em></em></em> 2015). There is relatively little published information on the species in China, but camera trapping surveys have confirmed the species’ presence in most protected areas within its known range, where it was one of the most frequently detected species (B. Chan pers. comm. 2016). In Taiwan, where it is heavily exploited, the density was estimated at 9.3 animals/km² at elevations around, 2,000 m asl (McCullough <em><em><em>et al.</em></em></em> 2000), however, in areas without hunting and at lower elevations, the population density could be much higher (Chiang 2007).",
+    "habitats": "The species is adaptable and occurs in temperate forests with occasional snowfall as well as in dense forests in the warm subtropical zone. In China, Reeves’s Muntjac has been reported to occupy rocky places and open woodlands of pine and oak. It seeks cover in steep ravines, and usually has well defined areas to which it retreats (Smith and Xie 2008). It has also been reported to reach the highest densities in low mountains and hilly areas, at forest edges and in shrubby habitats (Sheng 1992). However, in Taiwan, it is found mostly in forested areas (Pei and Chiang 2004), typically in primary forest with dense canopy cover and it tends to avoid steep terrain (Chiang 2007). It is distributed over a wide elevation range, from near sea level to 3,500 m asl in habitats ranging from subtropical lowlands to coniferous forests/alpine grassland at the highest altitudes. However, there is a decreasing trend in abundance with increasing altitude (Chiang 2007). The species is basically solitary, although sometimes found in pairs or small family groups. Home ranges average about 100 ha, overlap considerably, and do not vary in size by gender. Females mature within the first year, with the majority of females reaching sexually maturity at eight months (Sheng 1992). It appears to lack strong seasonality in reproduction (Sheng 1992, Hayssen<em><em> et al.</em></em> 1993, Smith and Xie 2008). Gestation is 209-220 days. It grows new antlers in summer (peaking in June and July) (Pei and Liu 1994) (Sheng 1992, Pei and Chiang 2004) although velvet antlers were sporadically found throughout the year (Pei and Chiang 2004). In Taiwan, camera trapping data in remote areas with least human activities showed that Reeves’s Muntjac in Taiwan is crepuscular with significantly more diurnal than nocturnal activities (68% vs. 32%, Pei and Chiang 2004), which agreed with radio-telemetry results (McCullough <em><em>et al.</em></em> 2000), as well as those from mainland China (Chan unpublished data). It is most active during the 2 hours after sunrise and before sunset and seasonal variations of activity levels were more pronounced in the afternoon (Pei and Chiang 2004).",
+    "threats": "The major threats to this species include habitat destruction and hunting. It is hunted for food and, before hunting was banned, for hides which were used in the fur market. It remains one of the most heavily hunted large mammals based on news reports of seizures, although one could argue that this indicates the species’ resilience to hunting and habitat degradation (B. Chan pers. comm. 2016). Forest habitat is being lost in many parts of its range, in particular because of agriculture, logging and urbanization. However, there is no information on the overall rate of decline of this very widespread species.",
+    "measures": "The species seems to be relatively secure in appropriate habitat, but its range is in an area where there is a high human population density and very heavy exploitation of wildlife. There is a need to monitor this species' habitat and population levels. In China, the species is not protected by national laws, but is protected under provincial regulations in some provinces. It occurs in most protected areas within its wide range.",
+    "use_trade": null,
+    "rationale": "The species has been considered Least Concern by previous assessments however the supporting justification for this is rather weak. For the 2016 reassessment Least Concern is again used, however with reservations; the species might well be better considered either Near Threatened or less likely Vulnerable on the basis of presumed declines that are likely to have taken place. Status assessment is complicated, the species has a relatively wide range in China, and threats faced by the species there vary very significantly between regions. In Taiwan and some better-managed reserves in mainland China for instance the populations appears to be stable, but in other parts of mainland China declines have probably been severe mainly due to hunting pressure; habitat loss potentially could be a more serious threat in some regions. The assessment of status is further complicated by presumed wide overlap with the Northern Red Muntjac <em>M. vaginalis </em>and quite possibly also animals in the <em>M. rooseveltorum</em> species complex. <br/><br/>In addition, it should be noted that some of the reason for the relative lack of concern for this species may stem from its abundance in the UK rather than from its status in its native range in China and Taiwan. This species should be re-assessed should additional information on its status become available.",
+    "trend_justification": null,
+    "taxonomic_notes": "Four subspecies are known:<br/><em>Muntiacus reevesi jiangkouensis</em> (mainland China); <br/><em>Muntiacus reevesi reevesi</em> (mainland China); <br/><em>Muntiacus reevesi micrurus</em> (Taiwan);<br/><em>Muntiacus reevesi sinensis</em> (Anhui and Zhejiang).<br/><br/>Wang (2003) also listed two undescribed subspecies, as “Yunnan form” (eastern Yunnan) and “Shaanxi/Gansu form” (southern Shaanxi and southern Gansu) but scientific names were not provided."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Timmins, J & Chan, B.",
+      "value": [
+        "Bosco Pui Lok Chan",
+        "Rob Timmins"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Brook, S.M. & McShea, W.J.",
+      "value": [
+        "Sarah Brook (IUCN SSC Deer RLA - Old World Deer)",
+        "William McShea (Smithsonian Conservation Biology Institute, Virginia, USA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Leasor, H., Chiang, P. & Pei, K.",
+      "value": [
+        "K J-C Pei",
+        "H Leasor",
+        "P J Chiang"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The origin of the distribution within the UK was corrected from 'Reintroduced' to 'Introduced'."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Grubb, P. 2005. Artiodactyla. In: D.E. Wilson & D.M. Reeder (ed.), <i>Mammal Species of the World. A Taxonomic and Geographic Reference (3rd ed)</i>, pp. 637-722. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2005",
+      "title": "Artiodactyla",
+      "author": "Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smith, A.T. and Xie, Y. 2008. <i>A Guide to the Mammals of China</i>. Princeton University Press, Princeton, New Jersey.",
+      "year": "2008",
+      "title": "A Guide to the Mammals of China",
+      "author": "Smith, A.T. and Xie, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wang, Y.X. 2003. <i>A Complete Checklist of Mammal Species and Subspecies in China (A Taxonomic and Geographic Reference)</i>. China Forestry Publishing House, Beijing, China.",
+      "year": "2003",
+      "title": "A Complete Checklist of Mammal Species and Subspecies in China (A Taxonomic and Geographic Reference)",
+      "author": "Wang, Y.X.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hayssen, V., van Tienhoven, A. and van Tienhoven, A. 1993. <i>Asdell's Patterns of Mammalian Reproduction: A Compendium of Species-specific Data</i>. Cornell University Press, Ithaca, New York, USA.",
+      "year": "1993",
+      "title": "Asdell's Patterns of Mammalian Reproduction: A Compendium of Species-specific Data",
+      "author": "Hayssen, V., van Tienhoven, A. and van Tienhoven, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiang, P. J. 2007. Ecology and conservation of Formosan clouded leopard, its prey, and other sympatric carnivores in southern Taiwan. Thesis, Virginia Tech.",
+      "year": "2007",
+      "title": "Ecology and conservation of Formosan clouded leopard, its prey, and other sympatric carnivores in southern Taiwan",
+      "author": "Chiang, P. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pei, K. J.-C. and Chiang, P. J. 2004. Present status and conservation of Formosan clouded leopard and other medium-to-large mammals at Tawu Nature Reserve and vicinities (3).  Report Conservation Research Series No.92-02. Council of Agriculture, Taiwan Forestry Bureau.",
+      "year": "2004",
+      "title": "Present status and conservation of Formosan clouded leopard and other medium-to-large mammals at Tawu Nature Reserve and vicinities (3)",
+      "author": "Pei, K. J.-C. and Chiang, P. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "McCullough, D. R., Pei, K. C. J. and Wang, Y. 2000. Home range, activity patterns, and habitat relations of Reeves' muntjacs in Taiwan. <i>Journal of Wildlife Management</i> 64: 430-441.",
+      "year": "2000",
+      "title": "Home range, activity patterns, and habitat relations of Reeves' muntjacs in Taiwan",
+      "author": "McCullough, D. R., Pei, K. C. J. and Wang, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pei, K. and Liu, H. W. 1994. Reproductive biology of male Formosan Reeves' muntjac (<i>Muntiacus reevesi micrurus</i>). <i>Journal of Zoology (London)</i> 233: 293-306.",
+      "year": "1994",
+      "title": "Reproductive biology of male Formosan Reeves' muntjac (<i>Muntiacus reevesi micrurus</i>)",
+      "author": "Pei, K. and Liu, H. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sheng, H.L. (ed.). 1992. <i>The Deer in China</i>. East China Normal University Press.",
+      "year": "1992",
+      "title": "The Deer in China",
+      "author": "Sheng, H.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hill, D.S. and Philipps, K. 1981. <i>A Colour Guide to Hong Kong Animals</i>. Government Printer, Hong Kong.",
+      "year": "1981",
+      "title": "A Colour Guide to Hong Kong Animals",
+      "author": "Hill, D.S. and Philipps, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jiang, Z.G., Ma, Y., Wu, Y., Wang, YX, Zhou, K.Y., Liu, S.Y. and Feng, Z.J. 2015. <i>China’s Mammal Diversity and Geographic Distribution</i>. Science Press, Beijing.",
+      "year": "2015",
+      "title": "China’s Mammal Diversity and Geographic Distribution",
+      "author": "Jiang, Z.G., Ma, Y., Wu, Y., Wang, YX, Zhou, K.Y., Liu, S.Y. and Feng, Z.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shek, C.T. 2006. <i>A Field Guide to the Terrestrial Mammals of Hong Kong</i>. Agriculture, Fisheries and Conservation Department, Hong Kong.",
+      "year": "2006",
+      "title": "A Field Guide to the Terrestrial Mammals of Hong Kong",
+      "author": "Shek, C.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-2"
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

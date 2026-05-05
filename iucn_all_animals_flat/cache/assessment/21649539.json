@@ -1,0 +1,968 @@
+{
+  "assessment_date": "2017-06-15T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 62232,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/62232/21649539",
+  "citation": "Tallowin, O., Parker, F., O'Shea, M., Vanderduys, E., Wilson, S., Shea, G. & Hobson, R. 2017. Morelia spilota. The IUCN Red List of Threatened Species 2017: e.T62232A21649539. Accessed on 05 May 2026.",
+  "assessment_id": 21649539,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 62232,
+    "scientific_name": "Morelia spilota",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 13868,
+        "scientific_name": "Morelia spilota ssp. imbricata",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "PYTHONIDAE",
+        "genus_name": "Morelia",
+        "species_name": "spilota",
+        "subpopulation_name": null,
+        "infra_name": "imbricata",
+        "authority": "(Smith, 1981)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Boa and Python Specialist Group",
+            "url": "https://www.facebook.com/IUCN-Boa-Python-Specialist-Group-128747243921848/",
+            "description": "Chair: Daniel Natusch (email: d_natusch_14@hotmail.com)\nRed List Authority Coordinator: Under discussion \nBPSG brochure: https://www.iucn.org/sites/dev/files/boapythonsg_brochure_1.pdf"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Western Australian Carpet Python",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "PYTHONIDAE",
+    "genus_name": "Morelia",
+    "species_name": "spilota",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Lacépède, 1804)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Boa and Python Specialist Group",
+        "url": "https://www.facebook.com/IUCN-Boa-Python-Specialist-Group-128747243921848/",
+        "description": "Chair: Daniel Natusch (email: d_natusch_14@hotmail.com)\nRed List Authority Coordinator: Under discussion \nBPSG brochure: https://www.iucn.org/sites/dev/files/boapythonsg_brochure_1.pdf"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Diamond Python",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Western Australian Carpet Python",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Carpet Python",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Python perronii Wagler, 1828",
+        "status": "ACCEPTED",
+        "genus_name": "Python",
+        "species_name": "perronii",
+        "species_author": "Wagler, 1828",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Morelia metcalfei Wells & Wellington, 1985",
+        "status": "ACCEPTED",
+        "genus_name": "Morelia",
+        "species_name": "metcalfei",
+        "species_author": "Wells & Wellington, 1985",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Morelia variegata Gray, 1842",
+        "status": "ACCEPTED",
+        "genus_name": "Morelia",
+        "species_name": "variegata",
+        "species_author": "Gray, 1842",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Python punctatus Merrem, 1820",
+        "status": "ACCEPTED",
+        "genus_name": "Python",
+        "species_name": "punctatus",
+        "species_author": "Merrem, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Python spilotes (Lacépède, 1804)",
+        "status": "ACCEPTED",
+        "genus_name": "Python",
+        "species_name": "spilotes",
+        "species_author": "(Lacépède, 1804)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Morelia argus Duméril & Bibron, 1844",
+        "status": "ACCEPTED",
+        "genus_name": "Morelia",
+        "species_name": "argus",
+        "species_author": "Duméril & Bibron, 1844",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Coluber spilotus Lacépède, 1804",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "spilotus",
+        "species_author": "Lacépède, 1804",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 50,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is one of the most widespread Australian python species (Torr 2000). It occurs over much of the mainland (except southern Victoria and the central and western desert regions) and many offshore islands. It is known&#160;from the Torres  Strait islands of Waiben, and Kirriri (Lavery <em>et al.</em> 2012).&#160;In Papua  New Guinea this species occurs throughout the southern Trans-Fly region in Western Province, the National Capital District and adjacent Central Province (Yule island south to Kwikila). In Indonesian New Guinea <em>Morelia spilota variegata&#160;</em>occurs in south-east Papua  Province as far as Merauke (probably contiguous with the South Fly population). There is a isolated record from Mamberamo River in the north of Papua Province. It has been recorded at elevations of sea level to &lt;50 m asl&#160;(O’Shea 1996).<br/><p></p>",
+    "population": "This python is known to be common and widespread in many areas, but there have been localized declines, particularly in inland arid and semi-arid regions (Shine 1994, Shine and Fitzgerald 1996, Bush <em>et al.</em> 1995).&#160;The numbers of the putative subspecies&#160;<em>Morelia spilota</em>&#160;<em>imbricata</em> have declined across most of south-western Australia presumably due to habitat degradation and clearance (Pearson <em>et al</em>. 2005).",
+    "habitats": "<p>In Australia this python's habitats include rainforest, coastal woodland, along water courses, riverine gorges, savannas and modified environments. In Australia it is often found in suburban environments. Pearson <em>et al.</em> (2005) report that despite of the generalist nature of the species, certain habitat elements (shrubs, hollow logs) appear critical for the persistence of viable subpopulations. It is predominantly arboreal but also lives in burrows made by other animals. New Guinea subpopulations are found only in coastal savanna, woodland and grassland. Similarly to many other pythons, this species is nocturnal. Mating occurs from October to mid-December, eggs are deposited in December or early January and the female incubates the eggs (between 9 - 52 with an average number of 17) until hatching in March. Females only breed every second year or less while males are presumed to be active every year. Its diet consists almost primarily of small mammals (mice, rats and bandicoots), however, they have been recorded to take ground-nesting birds and lizards (agamas) (O’Shea 1996, 2007, Wilson and Swan 2003, Natusch and Lyons 2011, Natusch and Lyons 2012, Leseberg and Campbell 2015)</p>",
+    "threats": "<span style=\"\">It is unlikely that any major threats are impacting this species.&#160;</span>Habitat loss has caused a localized decline in some subpopulations of this species; although this cannot be considered a major threat across the range as a whole it is recognized as a state-level threat to both <em>Morelia spilota spilota </em>(as a result of logging and other land clearance) and <em>M. s. metcalfei </em>(driven by agriculture) in Victoria, and has resulted in \"clear decline\" at the southern end of <em>M. s. metcalfei</em>'s range (P. Robertson and N. Clemann pers. comm. 2017). Habitat loss prevents this species from finding suitable hiding places to ambush prey and suitable shelter to brood their eggs (Pearson <em>et al.</em> 2005). A recent study in disturbed and undisturbed sites in New South Wales found that, while the snake can make use of buildings in anthropogenic habitats, the species favours larger trees with hollows in natural woodland in areas with a high coverage of leaf litter, good understorey and fallen debris (Corey <em>et al.</em> 2016). While these authors caution that this study lacks replication and so should be treated as preliminary, it provides a mechanism to explain declines in arid areas of inland Australia, as much of the suitable habitat in this region has been reduced to patches smaller than the average home range of this species (Corey <em>et al</em>. 2016). Predation by foxes has been documented (Robertson and Hurley 2001).<br/><br/>Roads and development have caused a substantial decline in the subpopulation around Port Moresby, Papua New Guinea. Possible drivers of habitat loss include overgrazing by livestock and agricultural expansion (Cogger <em>et al.</em> 1993). This species is considered to \"thrive\" in areas modified for agriculture at least in temperate eastern Australia, but may be vulnerable to more intensive agricultural and pastoral development (Corey <em>et al. </em>2016). This species is also part of the pet trade, but the impact of collection from the wild is not well documented. &#160;Due to this species' large distribution, relatively high fecundity and adaptability, Natusch and Lyons (2011) suggest that the current harvest quota in Indonesia is most likely sustainable: however, these authors point out that their data is inadequate to assess sustainable harvest levels and that more data needs to be collected to enable a more thorough sustainability assessment. Native snake species have been documented to be susceptible to the cane toad  toxins and as these species ranges' overlap, <em>M. spilota</em> will potentially be affected by the invasion of the cane toad (Phillips <em>et al</em>. 2003, Pearson<em> et al</em>. 2014). Nevertheless the species survives in areas where cane toads have been established for decades. Some degree of captive breeding and release of individuals outside of their area of origin is thought to be affecting the genetic purity of some subpopulations.",
+    "measures": "This species is listed under Appendix II&#160;of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). <span lang=\"EN-GB\">This species has protected status in Australia and Papua New Guinea but not in Indonesian New Guinea (Natusch and Lyons 2012). <span lang=\"EN-GB\">This species occurs in many protected areas in Australia, and Tonda protected area in Western Province, Papua New Guinea. Further research on this species' harvest and trade levels is recommended to ensure that exploitation is sustainable in Indonesia. While the species is not at significant risk globally, management restoring or maintaining appropriate structural features is recommended in areas where the snake has declined (Corey <em>et al. </em>2016). &#160;This species is well established in captivity, reducing the need to collect snakes in the wild (Leseberg and Campbell 2015). It is considered to be Rare in South Australia and Least Concern in the Northern Territory (Atlas of Living Australia 2015). Both subspecies found in Victoria - <em>Morelia spilota spilota</em> and <em>M. s. metcalfei </em>- are listed as Endangered in this state. Subpopulations are present in several protected areas.</span>",
+    "use_trade": "<p><span lang=\"EN-GB\">Yuwono (1998) recorded trade in this species from Indonesian New Guinea and reported that it was always available in adequate numbers.<br/><br/>The Carpet Python is, however, popular in the international pet trade and has been collected from the wild in Indonesia and traded for this purpose since at least 1992. <span lang=\"EN-GB\">Indonesia<span lang=\"EN-GB\"> is currently the only country that allows the legal harvest and export of wild Carpet Pythons, which are listed in Appendix II of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) (Natusch and Lyons 2012). The CITES Trade Database suggests that Indonesia exceeded their quota for this species in several years. As the cost of producing large number of snakes in captivity is greater than collecting similar numbers from the wild, it is likely that many Carpet Pythons sold as farm-bred are, in fact, wild-caught&#160;<span lang=\"EN-GB\"><span lang=\"EN-GB\"><span lang=\"EN-GB\">(Nijman and Shepherd 2009, Natusch and Lyons 2011).<br/></span></span></span><br/>In Australia, Aboriginal people have been documented to collect this species for food (Russell-Smith <em>et al</em>. 1997).<br/><br/>In Australia, it is commonly kept in the domestic pet trade; there is no export from Australia. The species is well-established in captivity in the Australian pet trade (Leseberg and Campbell 2015).</p>",
+    "rationale": "This species is listed&#160;Least Concern, as it is the most widespread python species in Australia and is also found in southern New Guinea, and it is often common, occurs in a wide range of habitats including modified areas, and is unlikely to be affected by any significant threats",
+    "trend_justification": null,
+    "taxonomic_notes": "Six different subspecies have been recognized in Australia (Barker and Barker 1994), largely based on colour pattern, although the boundaries between many of these are fluid and poorly defined (Cogger 2014). Of there only <em>Morelia spilota&#160;</em><em>imbricata</em> is supported by genetic data and geographic isolation.<br/><br/>This status of populations assigned to this species in New Guinea is unclear (O'Shea 2007). Seven subspecies are typically recognized; the elevation of several to species level by Hoser (2000) was made without comment and has been rejected by subsequent workers (Schleip and O'Shea 2010). Hoser's proposed subspecies&#160;<em>Morelia spilota harrisoni</em> is poorly-defined, being based on a small sample with variable characters that overlap with previously recognized <em>M. spilota</em> subspecies, and is considered invalid by Schleip and O'Shea (2010). Additionally, it has been argued that the name <em>Morelia harrisoni </em>was not validly published (Kaiser<em> et al</em>. 2013). Pending resolution of taxonomic issues within New Guinea carpet pythons, it has recently been proposed that all New Guinea representatives of this species should be regarded as <em>M. s. variegata </em>sensu lato (<span style=\"\">forthcoming New Guinea python book</span>)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua"
+      },
+      "code": "NWG-IJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea (main island group)"
+      },
+      "code": "NWG-PN"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Tallowin, O., Parker, F., O'Shea, M., Vanderduys, E., Wilson, S., Shea, G. & Hobson, R.",
+      "value": [
+        "Mark O'Shea",
+        "Eric Vanderduys",
+        "Steve Wilson",
+        "Rod Hobson",
+        "Fred Parker (IUCN SSC Amphibian Specialist Group - Melanesia group)",
+        "Glenn Shea (Faculty of Veterinary Science, University of Sydney, NSW 2006, Australia)",
+        "Oliver Tallowin (IUCN)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Auliya, M.",
+      "value": [
+        "Mark Auliya (Helmholtz-Zentrum für Umweltforschung (UFZ), Germany)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Cox, N.A., De Silva, R., Milligan, H.T., Wearn, O.R., Wren, S., Zamin, T., Sears, J., Wilson, P., Lewis, S., Lintott, P. & Powney, G.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Ranmali De Silva (IOZ)",
+        "Harriet Milligan (IOZ)",
+        "Oliver Wearn (Imperial College/ Institute of Zoology, London, UK)",
+        "Sally Wren (Zoological Society of London, UK)",
+        "Tara Zamin (ex ZSL)",
+        "Jennifer Sears (SRLI Reptile Assessment)",
+        "Penny Wilson (SRLI Reptile Assessment)",
+        "Sarah Lewis (SRLI Reptile Assessment)",
+        "Paul Lintott (SRLI Reptile Assessment)",
+        "Gary Powney (SRLI Reptile Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Kaiser, H., Crother, B.I., Kelly, C.M.R., Luiselli, L., O'Shea, M., Ota, H., Passos, P., Schleip, W.D. and Wüster, W. 2013. Best practices: in the 21st Century, Taxonomic Decisions in Herpetology are Acceptable Only When Supported by a Body of Evidence and Published via Peer-Review. <i>Herpetological Review</i> 44(1): 8-23.",
+      "year": "2013",
+      "title": "Best practices: in the 21st Century, Taxonomic Decisions in Herpetology are Acceptable Only When Supported by a Body of Evidence and Published via Peer-Review",
+      "author": "Kaiser, H., Crother, B.I., Kelly, C.M.R., Luiselli, L., O'Shea, M., Ota, H., Passos, P., Schleip, W.D. and Wüster, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cogger, H.G. 2014. <i>Reptiles and Amphibians of Australia: Seventh Edition</i>. CSIRO Publishing, Collingwood, Victoria.",
+      "year": "2014",
+      "title": "Reptiles and Amphibians of Australia: Seventh Edition",
+      "author": "Cogger, H.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "O'Shea, M. 1996. <i>A Guide to the Snakes of Papua New Guinea</i>. Independent Publishing, Independent Group Ltd., Port Moresby, PNG.",
+      "year": "1996",
+      "title": "A Guide to the Snakes of Papua New Guinea",
+      "author": "O'Shea, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lavery, T.H., Watson, J.J. and Leung, L.K.-P. 2012. Terrestrial vertebrate richness of the inhabited Torres Strait Islands, Australia. <i>Australian Journal of Zoology</i> 600(3): 180-191.",
+      "year": "2012",
+      "title": "Terrestrial vertebrate richness of the inhabited Torres Strait Islands, Australia.",
+      "author": "Lavery, T.H., Watson, J.J. and Leung, L.K.-P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yuwono, F.B. 1998. The trade of live reptiles & amphibians in Indonesia. In W. Erdelen (ed.) Conservation, Trade & Sustainable Use of Lizards & Snakes in Indonesia. <i>Mertensiella</i> 9: 9-16.",
+      "year": "1998",
+      "title": "The trade of live reptiles & amphibians in Indonesia. In W. Erdelen (ed.) Conservation, Trade & Sustainable Use of Lizards & Snakes in Indonesia.",
+      "author": "Yuwono, F.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grigg, G., Shine, R. and Ehmann, H. 1985. <i>Biology of Australian Frogs and Reptiles</i>. Surrey Beatty & Sons, New South Wales.",
+      "year": "1985",
+      "title": "Biology of Australian Frogs and Reptiles",
+      "author": "Grigg, G., Shine, R. and Ehmann, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Shea, M. 2007. <i>Boas and Pythons of the World</i>. New Holland, London.",
+      "year": "2007",
+      "title": "Boas and Pythons of the World",
+      "author": "O'Shea, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barker, D.G. and Barker, T.M. 1994. <i>Pythons of the World: Australia</i>. The Herpetocultural Library.",
+      "year": "1994",
+      "title": "Pythons of the World: Australia",
+      "author": "Barker, D.G. and Barker, T.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Torr, G. 2000. <i>Pythons of Australia: A Natural History</i>. Krieger Publishing Class, Florida.",
+      "year": "2000",
+      "title": "Pythons of Australia: A Natural History",
+      "author": "Torr, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Natusch, D.J.D. and Lyons, J.A. 2012. Exploited for pets. The harvest and trade of amphibians and reptiles from Indonesia New Guinea. <i>Biodiversity Conservation</i> 21: 2899-2911.",
+      "year": "2012",
+      "title": "Exploited for pets. The harvest and trade of amphibians and reptiles from Indonesia New Guinea",
+      "author": "Natusch, D.J.D. and Lyons, J.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Russell-Smith, J., Lucas, D., Gapindi, M., Gunbunuka, B., Kapirigi, N., Namingum, G., Lucas, K., Giuliani, P.  and Chaloupka, G. 1997. Aboriginal resource utilization and fire management practice in Western Arnherm Land,  Monsoonal Northern Australia: notes for prehistory, lessons for the future. <i>Human Ecology</i> 25(2): 159-195.",
+      "year": "1997",
+      "title": "Aboriginal resource utilization and fire management practice in Western Arnherm Land,  Monsoonal Northern Australia: notes for prehistory, lessons for the future",
+      "author": "Russell-Smith, J., Lucas, D., Gapindi, M., Gunbunuka, B., Kapirigi, N., Namingum, G., Lucas, K., Giuliani, P.  and Chaloupka, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cogger, H.G., Cameron, E.E., Sadlier, R.A. and Eggler, P. 1993. The Action Plan for Australian Reptiles. Australian Nature Conservation Agency, Endangered Species Program, Sydney.",
+      "year": "1993",
+      "title": "The Action Plan for Australian Reptiles",
+      "author": "Cogger, H.G., Cameron, E.E., Sadlier, R.A. and Eggler, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bush, B., Maryan, B., Browne-Cooper, R. and Robinson, D. 1995. <i>Guide to the Reptiles and Frogs of the Perth Region</i>. University of Western Australia Press, Nedlands.",
+      "year": "1995",
+      "title": "Guide to the Reptiles and Frogs of the Perth Region",
+      "author": "Bush, B., Maryan, B., Browne-Cooper, R. and Robinson, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Charles, N., Field, R. and Shine, R. 1985. Notes on the Reproductive Biology of Australian Pythons, Genera <i>Aspidites, Liasis</i> and <i>Morelia</i>. <i>Herpetological Review</i> 16(2): 45-48.",
+      "year": "1985",
+      "title": "Notes on the Reproductive Biology of Australian Pythons, Genera <i>Aspidites, Liasis</i> and <i>Morelia</i>",
+      "author": "Charles, N., Field, R. and Shine, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Heard, G.W., Black, D. and Robertson, P. 2004. Habitat use by the inland carpet python (<i>Morelia spilota metcalfei</i>: Pythonidae): Seasonal relationships with structure and prey distribution in a rural landscape. <i>Austral Ecology</i> 29: 446-460.",
+      "year": "2004",
+      "title": "Habitat use by the inland carpet python (<i>Morelia spilota metcalfei</i>: Pythonidae): Seasonal relationships with structure and prey distribution in a rural landscape",
+      "author": "Heard, G.W., Black, D. and Robertson, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pearson, D., Shine, R. and Williams, A. 2005. Spatial ecology of a threatened python (<i>Morelia spilota imbricata</i>) and the effects of anthropogenic habitat change. <i>Austral Ecology</i> 30: 261-274.",
+      "year": "2005",
+      "title": "Spatial ecology of a threatened python (<i>Morelia spilota imbricata</i>) and the effects of anthropogenic habitat change",
+      "author": "Pearson, D., Shine, R. and Williams, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fearn, S., Robinson, B., Sambono, J. and Shine, R. 2001. Pythons in the pergola: the ecology of 'nuisance' carpet pythons (<i>Morelia spilota</i>) from suburban habitats in south-eastern Queensland. <i>Wildlife Research</i> 28: 573-579.",
+      "year": "2001",
+      "title": "Pythons in the pergola: the ecology of 'nuisance' carpet pythons (<i>Morelia spilota</i>) from suburban habitats in south-eastern Queensland",
+      "author": "Fearn, S., Robinson, B., Sambono, J. and Shine, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Phillips, B.L., Brown, G.P. and Shine, R. 2003. Assessing the potential impact of Cane Toads on Australian snakes. <i>Conservation Biology</i> 17(6): 1738–1747.",
+      "year": "2003",
+      "title": "Assessing the potential impact of Cane Toads on Australian snakes",
+      "author": "Phillips, B.L., Brown, G.P. and Shine, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schleip, W.D. and O'Shea, M. 2010. Annotated checklist of the recent and extinct pythons (Serpentes, Pythonidae), with notes on nomenclature, taxonomy, and distribution. <i>Zookeys</i> 66: 29-79.",
+      "year": "2010",
+      "title": "Annotated checklist of the recent and extinct pythons (Serpentes, Pythonidae), with notes on nomenclature, taxonomy, and distribution",
+      "author": "Schleip, W.D. and O'Shea, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nijman, V. and Shepherd, C.R. 2009. Wildlife trade from ASEAN to the EU: issues with the trade in captive-bred reptiles from Indonesia.  TRAFFIC Report. European Commission, Brussels.",
+      "year": "2009",
+      "title": "Wildlife trade from ASEAN to the EU: issues with the trade in captive-bred reptiles from Indonesia",
+      "author": "Nijman, V. and Shepherd, C.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Atlas of Living Australia. 2015. <i>Morelia spilota</i>. Available at: <a href=\"http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:afd.taxon:30176060-8809-43ce-81a5-c7cbafb4dab7\">http://bie.ala.org.au/species/urn:lsid:biodiversity.org.au:afd.taxon:30176060-8809-43ce-81a5-c7cbafb4dab7</a>. (Accessed: 16 October 2015).",
+      "year": "2015",
+      "title": "<i>Morelia spilota</i>",
+      "author": "Atlas of Living Australia",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pearson, D., Webb, J., Greenlees, M., Phillips, B., Bedford, G., Brown, G., Thomas, J. and Shine, R. 2014. Behavioural responses of reptile predators to invasive cane toads in tropical Australia. <i>Austral Ecology</i> 39(4): 448-454.",
+      "year": "2014",
+      "title": "Behavioural responses of reptile predators to invasive cane toads in tropical Australia",
+      "author": " Pearson, D., Webb, J., Greenlees, M., Phillips, B., Bedford, G., Brown, G., Thomas, J. and Shine, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Natusch, D.J.D. and Lyons, J.A. 2011. Distribution, ecological attributes and trade of the New Guinea carpet python (<i>Morelia spilota</i>) in Indonesia . <i>Australian Journal of Zoology</i> 59: 236-241.",
+      "year": "2011",
+      "title": "Distribution, ecological attributes and trade of the New Guinea carpet python (<i>Morelia spilota</i>) in Indonesia ",
+      "author": "Natusch, D.J.D. and Lyons, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shine, R. and Fitzgerald, M. 1996. Large snakes in a mosaic rural landscape: the ecology of carpet pythons <i>Morelia spilota</i> (Serpentes: Pythonidae) in coastal eastern Australia. <i>Biological Conservation</i> 76: 113-122.",
+      "year": "1996",
+      "title": "Large snakes in a mosaic rural landscape: the ecology of carpet pythons <i>Morelia spilota</i> (Serpentes: Pythonidae) in coastal eastern Australia",
+      "author": "Shine, R. and Fitzgerald, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shine, R. 1994. The Biology and Management of the Diamond Python (<i>Morelia spilota spilota</i>) and Carpet Python (<i>M. s. variegata</i>) in New South Wales.  Species Management Report No. 15. New South Wales National Parks and Wildlife Service, Sydney.",
+      "year": "1994",
+      "title": "The Biology and Management of the Diamond Python (<i>Morelia spilota spilota</i>) and Carpet Python (<i>M. s. variegata</i>) in New South Wales",
+      "author": "Shine, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Robertson, P. and Hurley, V. 2001. Habitat of the Inland Carpet Python (<i>Morelia spilota metcalfei</i>) in the Mildura Forest Management Area. Unpublished report to DNRE. Wildlife Profiles Pty Ltd.",
+      "year": "2001",
+      "title": "Habitat of the Inland Carpet Python (<i>Morelia spilota metcalfei</i>) in the Mildura Forest Management Area. Unpublished report to DNRE",
+      "author": "Robertson, P. and Hurley, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Corey, B. and Doody, J.S. 2016. Black box and attics: Habitat selection and resource use by large threatened pythons in landscapes with contrasting human modification. <i>Austral Zoology</i> 41: 6-15.",
+      "year": "2016",
+      "title": "Black box and attics: Habitat selection and resource use by large threatened pythons in landscapes with contrasting human modification",
+      "author": "Corey, B. and Doody, J.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leseberg, N. and  Campbell, I. 2015. <i>Birds and Animals of Australia's Top End: Darwin, Kakadu, Katherine, and Kununurra</i>. Princeton University Press, Princeton, New Jersey.",
+      "year": "2015",
+      "title": "Birds and Animals of Australia's Top End: Darwin, Kakadu, Katherine, and Kununurra",
+      "author": "Leseberg, N. and  Campbell, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    },
+    {
+      "citation": "Hoser, R.T. 2000. A revision of the Australasian pythons. <i>Ophidia Review</i> 1(1): 7-27.",
+      "year": "2000",
+      "title": "A revision of the Australasian pythons",
+      "author": "Hoser, R.T.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

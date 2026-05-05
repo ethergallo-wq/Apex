@@ -1,0 +1,727 @@
+{
+  "assessment_date": "2009-12-03T00:00:00.000+00:00",
+  "year_published": "2011",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 170009,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/170009/6705155",
+  "citation": "Wahle, R., Butler, M., Cockcroft, A. & MacDiarmid, A. 2011. Homarus americanus. The IUCN Red List of Threatened Species 2011: e.T170009A6705155. Accessed on 05 May 2026.",
+  "assessment_id": 6705155,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 170009,
+    "scientific_name": "Homarus americanus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "ARTHROPODA",
+    "class_name": "MALACOSTRACA",
+    "order_name": "DECAPODA",
+    "family_name": "NEPHROPIDAE",
+    "genus_name": "Homarus",
+    "species_name": "americanus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "H. Milne Edwards, 1837",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Atlantic Lobster",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "True Lobster",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "American Lobster",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Astacus  marinus   Fabricius, 1775",
+        "status": "ADD",
+        "genus_name": "Astacus ",
+        "species_name": "marinus  ",
+        "species_author": "Fabricius, 1775",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Astacus  americanus Stebbing, 1893",
+        "status": "ADD",
+        "genus_name": "Astacus ",
+        "species_name": "americanus",
+        "species_author": "Stebbing, 1893",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Homarus  mainensis   Berrill, 1956",
+        "status": "ADD",
+        "genus_name": "Homarus ",
+        "species_name": "mainensis  ",
+        "species_author": "Berrill, 1956",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 700,
+    "upper_depth_limit": 1,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "9-10",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species range extends from Labrador, Canada to North Carolina, USA (Cobb and Castro 2006). Van der Meeren <em>et al.</em> (2006) also note that it has been found in Iceland during the 1960s and more recently in Norway (2005). The Icelandic presence was not genetically&#160;verified, and it is believed that the waters are too limnic for this species to survive (van der Meeren <em>et al.</em> 2006). The&#160;Norwegian&#160;specimens are thought to have been introduced by imports of the species (van der Meeren <em>et al.</em> 2006).",
+    "population": "<p></p><p>Due to widespread exploitation of this species, accurate assessments of abundance are hard to produce (Forgarty 1995). This said, it is believed this species’ population has been “relatively robust under exploitation” (Forgarty 1995:132). Causes for this resilience are unknown, although Anthony and Caddy (1980) suggest the “role of refugia of lightly exploited groups that provide a larval subsidy to more heavily exploited groups.” (Fogarty 1995:132). </p>  <p>A more detailed picture of the population dynamics can be ascertained by sectioning the population by fisheries. In the United States of America there are three recognised fisheries: Gulf of Maine, Georges Bank, and Southern  New England. These fisheries are managed by the Atlantic States Marine Fisheries Commission (ASMFC), under amendment 3 to the Interstate Fishery Management Plan. Comparatively, the Canadian fishery is managed through a network of 28 inshore Lobster Fishing Areas (LFA) and on offshore LFA (Fisheries Resource Conservation Council 2007).</p>  <p>&#160;<strong>United States</strong><strong> Fisheries</strong></p>  <p><em>Gulf</em><em> of Maine</em><em> Population </em></p>  <p>The commercial landings of this species have generally shown an upward trend since 1981; from around 15,000 mt to a peak of 36,500 mt in 2004 (Idoine 2006). Abundance indices indicate a large degree of inter-annual variation in both male and female abundance; however there is a general upward trend until 2005 when there is a sharp decline from around 2.0- 2.5 down to 0.5-1.0 (stratified mean number per tow, Idoine 2006). However, the 2006 data shows an increase again to between 1.0-1.5 stratified mean number per tow (Idoine 2006). </p>  <p>Abundance estimates are currently well above the target of 69.62 million lobsters (Idoine 2006). In 2003, the abundance was estimated at around 100 million individuals (Idoine 2006).</p>  <p><em>Georges Bank</em><em> Fishery</em></p>  <p>Between 1982 and 2000, landings in this fishery were relatively stable and fluctuated between 1,000 mt and 1,700 mt. In 2000 they then increased up to a peak of 2,300 mt in 2005.</p>  <p>Abundance indices for males and females have shown similar trends since 1981 with female index increasing from around 0.72 to 1.51 stratified mean number per tow in 2002, and the male index increasing from around 0.62 to 0.98 stratified mean number per tow (Idoine 2006). However, both indices have since declined to around 1.04 and 0.23 (stratified mean number per tow) for females and males respectively in 2006. Abundance of lobsters has also shown considerable fluctuations since 1982 between 6 million and 9.5 million lobsters (Target = 8.61 million, threshold = 7.95 million, Idoine 2006). Since 2001 abundance has been above the target at about 9 million lobsters (Idoine 2006).</p>  <p><em>Southern New England</em><em> Fishery</em></p>  <p>Landings from this fishery started at around 2,500 mt in 1982, and peaked at 10,100 mt in 1997. They have since declined to around their 3,000 mt in 2005, which is around the 1982 level.</p>  <p>Survey indices conducted by Connecticut show a greater number of males than females in the tows, with both peaking at 25 and 12 respectively in 1997. Subsequently there has since been a decline to 1.31 for females and 2.88 for males (stratified mean number per tow, Idoine 2006).</p>  <p>Abundance estimates for this species were low in the 1980s and below the threshold of 22.31 million lobsters, but peaked at 45 million lobsters in 1997 (above the target of 23.9 million lobsters, Idoine 2006). They have subsequently declined again to a record low of 12.3 million in 2003 and are currently estimated at around 14 million (Idoine 2006).</p>  <p><strong>Canadian Fisheries <br/></strong></p>  <p><strong>&#160;<em>Gulf of St. Lawrence - LFAs 23, 24, 25, 26a, 26b</em></strong></p>  <p>Landings in this fishery were at around 8,000 tonnes in the 1950s and peaked in the 1990s at around 18,731 tonnes. There has since been a decline in the landings to ~17,012 tonnes in 2001. Landings per unit area (LPUA) are considered an index of productivity within a given fishing area. From the 1970s through to the 1990s all fishing areas showed an increase in LPUA. There was a decline in landings in 2000; apart from LFA 24, which showed a further increase. Information on fishing effort from each of the separate fishing grounds indicates that fishing effort in all regions has remained relatively constant between 1984 and 2001. Exploitation rates are high in all fishing areas at around 70% (Fisheries and Oceans Canada 2002).</p>  <p><em>Quebec <br/></em></p>  <p>Lobster landings is Quebec have shown an upward trend since the 1970s and rose to 3,135 tonnes in 2003. Sixty six percent of these landings came from: Magdalen Island (28.5%), Gaspé Peninsula (3.6%), Anticosti Island, and the North Shore (1.3%). Exploitation rates are high at: 75% in the Magdalen Islands, 85% in the Gaspé Peninsula, and 20% at Anticosti Island.</p>  <p>Magdalen Islands</p>  <p>Catch per Unit Effort (CPUE) data for the Magdalen Islands indicates a peak in 1992 at around 1.1 numbers/trap or 0.55 kg/trap with a subsequent decline. However, CPUE has remained relatively stable since 1994/1995. This trend is said to generally reflect the trend in the southern archipelago. &#160;</p>  <p>Gaspé Peninsula</p>  <p>CPUE data for this region shows an increase from around 0.5 numbers/trap in 1988 to ~0.85 numbers/trap in 1996. There has since been a decline to around 0.45 numbers per trap in 2004 which is below the average for 1986-2002.</p>  <p>North Shore</p>  <p>CPUE ranged between 0.2 and 0.4 numbers/ trap between 1993 and 2003; with the lowest value being recorded in 2002. In 2003 it rose again, but is still below the average. </p>  <p><em>Eastern Cape Breton - LFAs 27-30</em></p>  <p>Landings of this species have fluctuated greatly over time. They peaked at around 4000 tonnes in 1990 and subsequently declined to between 1,480 tonnes in the late 1990s. They have since shown an increase in 2001 to 1,987 tonnes. Mean catch rates (expressed as kg per trap haul) have generally remained stable in all fishing areas other than a noted decline in LFA 27 and LFA 30 in 1997, however these have since stabilized (Fisheries and Oceans Canada 2004a).</p>  <p>Eastern Shore Fishery - LFAs 31A, 31B, 32</p>  <p>Landings data shows an upward trend in all areas between 1993 and 2000 with a very slight decline in 2001. The catch rate (expressed as kg/trap haul) has also shown an increase in all areas between 1996 and 2002. There was no overall increase in the median size of individuals in each area and no overall increase in the number of observed berried females despite put-backs (Fisheries and Oceans Canada 2004b).</p>  <p>Nova Scotia - LFA 33</p>  <p>Since 1989 the landings of this species have increased to around 2,753 mt in 2001/2002. Indicators of pre recruit numbers/trap haul showed no overall change or a negative trend between 2000 and 2003. The number of observed berried females however, has increased from 2000. Exploitation levels also declined during the period 1999-2003 (Fisheries and Oceans Canada 2004c).</p><p></p>",
+    "habitats": "This species lives in a wide variety of habitats, but is reliant on shelter. It is most commonly found on rocky reefs, but at depths of 700 m it can be found inhabiting burrows in the walls of submarine canyons (Cobb and Castro 2006); however, it is most commonly found between depths of 0-50m. Post larvae settle in shallow water&#160; (less than 30m) and are associated with cobble/boulder habitats. As they grow that asscoation relaxes, and they undergo short distance movements with expansion into longer distance movements. Deep water populations are derived from shallow water recruitement. Deeper water individuals are typically found on mud habitats, peat reefs, seagrass beds, and sandy depressions (Lawton and Lavalli 1995). Deep water individuals are typically found on similar substrates as well as clay substrates. They are found at temperatures ranging from 5º C to 20º C; but can tolerate a temperature range of 1º C to 30.5º C (van der Meeren <em>et al.&#160;</em>2009).",
+    "threats": "In the nearshore Southern New England stock there have been prevalence rates of shell disease of about 30%. This threat is localized to warmer water regions.<br/><br/>This is the largest commercial fishery of any lobster fishery in the world (R. Wahle pers. comm. 2009).",
+    "measures": "There are a number of management restrictions in place for this species though these vary according to fishing area. Restrictions include: closed fishing seasons and areas, prohibition of removal of berried females, minimum legal size limits, restrictions on gear type and number of fishing vessels, and annual quotas.",
+    "use_trade": "This species is harvested as a human food source.",
+    "rationale": "<em>Homarus americanus </em>has been assessed as Least Concern.&#160;This species has a broad geographic range and is found in a range of habitat types. There appears to have been no significant overall declines in the population of this species. The slight observed declines appear to be related to warm temperatures, low oxygen and shell disease near shore, in Southern <st1:place w:st=\"on\">New England</st1:place>. These changes in environmental conditions may be related to climate change.&#160;<st1:country-region w:st=\"on\"><st1:place w:st=\"on\"><br/></st1:place></st1:country-region><st1:country-region w:st=\"on\"><st1:place w:st=\"on\"><br/></st1:place></st1:country-region>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Hampshire"
+      },
+      "code": "NWH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Delaware"
+      },
+      "code": "DEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Brunswick"
+      },
+      "code": "NBR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nova Scotia"
+      },
+      "code": "NSC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rhode Island"
+      },
+      "code": "RHO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Labrador"
+      },
+      "code": "LAB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Connecticut"
+      },
+      "code": "CNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maine"
+      },
+      "code": "MAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Prince Edward I."
+      },
+      "code": "PEI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Newfoundland I"
+      },
+      "code": "NFL-NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "District of Columbia"
+      },
+      "code": "WDC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oregon"
+      },
+      "code": "ORE-OO"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": null,
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 0",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other threat"
+      },
+      "code": "12_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wahle, R., Butler, M., Cockcroft, A. & MacDiarmid, A.",
+      "value": [
+        "Alison MacDiarmid",
+        "Richard Wahle",
+        "Mark  Butler",
+        "Andrew  Cockcroft"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Collen, B., Livingstone, S. & Richman, N.",
+      "value": [
+        "Nadia Richman (Sampled Red List Index project)",
+        "Suzanne Livingstone (GMSA)",
+        "Ben Collen (SRLI)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Batchelor, A., De Silva, R., Dyer, E., Kasthala, G., Lutz, M.L., McGuinness, S., Milligan, H.T., Soulsby, A.-M. & Whitton, F.",
+      "value": [
+        "Ellen Dyer (Zoological Society of London)",
+        "Alison Batchelor (SRLI)",
+        "Ranmali De Silva (IOZ)",
+        "Gita  Kasthala",
+        "Maiko Lutz (IUCN Red List Unit)",
+        "Shane McGuinness",
+        "Harriet Milligan (IOZ)",
+        "Anne-Marie Soulsby (Institute of Zoology, Zoological Society of London)",
+        "Felix Whitton (Institute of Zoology, Zoological Society of London)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2011. IUCN Red List of Threatened Species (ver. 2011.1). Available at: <a href=\"http://www.iucnredlist.org\">http://www.iucnredlist.org</a>. (Accessed: 30 June 2017).",
+      "year": "2011",
+      "title": "IUCN Red List of Threatened Species (ver. 2011.1)",
+      "author": "IUCN",
+      "citation_short": "IUCN 2011.1"
+    },
+    {
+      "citation": "NOBANIS. 2009. NOBANIS - Invasive Alien Species Fact Sheet Homarus americanus. Available at: <a href=\"http://www.nobanis.org/files/factsheets/homarus_americanus.pdf\">http://www.nobanis.org/files/factsheets/homarus_americanus.pdf</a>. (Accessed: 3rd November).",
+      "year": "2009",
+      "title": "NOBANIS - Invasive Alien Species Fact Sheet Homarus americanus",
+      "author": "NOBANIS",
+      "citation_short": null
+    },
+    {
+      "citation": "Cobb, J.S. and Castro, K.M. 2006. Homarus species. In: Phillips, B. (ed.), <i>Lobsters. Biology, Management, Aquaculture and Fisheries</i>, pp. 506. Blackwell Publishing Limited.",
+      "year": "2006",
+      "title": "Homarus species",
+      "author": "Cobb, J.S. and Castro, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2009. Species Fact Sheets - Homarus americanus. Available at: <a href=\"http://www.fao.org/fishery/species/3482/en\">http://www.fao.org/fishery/species/3482/en</a>. (Accessed: 3rd November).",
+      "year": "2009",
+      "title": "Species Fact Sheets - Homarus americanus",
+      "author": "FAO",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

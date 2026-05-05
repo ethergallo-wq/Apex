@@ -1,0 +1,2600 @@
+{
+  "assessment_date": "2023-12-26T00:00:00.000+00:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 163451,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/163451/161722123",
+  "citation": "Doody, J.S., Gillingwater, S.D., Mali, I., Forstner, M.R.J., van Dijk, P.P. & Rhodin, A.G.J. 2024. Apalone spinifera. The IUCN Red List of Threatened Species 2024: e.T163451A161722123. Accessed on 05 May 2026.",
+  "assessment_id": 161722123,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 163451,
+    "scientific_name": "Apalone spinifera",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 1820,
+        "scientific_name": "Apalone spinifera ssp. atra",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "TESTUDINES",
+        "family_name": "TRIONYCHIDAE",
+        "genus_name": "Apalone",
+        "species_name": "spinifera",
+        "subpopulation_name": null,
+        "infra_name": "atra",
+        "authority": "(Webb &amp; Legler, 1960)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Tortoise and Freshwater Turtle Specialist Group",
+            "url": "http://www.iucn-tftsg.org/",
+            "description": "Chair: Craig Stanford (email: stanford@usc.edu)\nRed List Authority Coordinator: Carla Eisemberg (email:Carla.Eisemberg@cdu.edu.au)\nNewsletters: Chelonian Conservation and Biology (http://www.chelonian.org/ccb/); Turtle and Tortoise Newsletter (http://www.chelonian.org/crf-publications/turtle-and-tortoise-newsletter/); TurtleLog Online Newsletter (http://www.iucn-tftsg.org/turtlelog_online_newsletter/)"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Black Softshell",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Cuatro Cienegas Softshell",
+            "language": "eng"
+          },
+          {
+            "main": true,
+            "name": "Black Spiny Softshell Turtle",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Apalone atra (Webb & Legler, 1960)",
+            "status": "ACCEPTED",
+            "genus_name": "Apalone",
+            "species_name": "atra",
+            "species_author": "(Webb & Legler, 1960)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Apalone spinifera ssp. ater (Webb & Legler, 1960) [orth. error]",
+            "status": "ACCEPTED",
+            "genus_name": "Apalone",
+            "species_name": "spinifera",
+            "species_author": null,
+            "infrarank_author": "(Webb & Legler, 1960) [orth. error]",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "ater"
+          },
+          {
+            "name": "Trionyx spiniferus ssp. ater Webb & Legler, 1960",
+            "status": "ACCEPTED",
+            "genus_name": "Trionyx",
+            "species_name": "spiniferus",
+            "species_author": null,
+            "infrarank_author": "Webb & Legler, 1960",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "ater"
+          },
+          {
+            "name": "Trionyx ater Webb & Legler, 1960",
+            "status": "ACCEPTED",
+            "genus_name": "Trionyx",
+            "species_name": "ater",
+            "species_author": "Webb & Legler, 1960",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "TESTUDINES",
+    "family_name": "TRIONYCHIDAE",
+    "genus_name": "Apalone",
+    "species_name": "spinifera",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(LeSueur, 1827)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tortoise and Freshwater Turtle Specialist Group",
+        "url": "http://www.iucn-tftsg.org/",
+        "description": "Chair: Craig Stanford (email: stanford@usc.edu)\nRed List Authority Coordinator: Carla Eisemberg (email:Carla.Eisemberg@cdu.edu.au)\nNewsletters: Chelonian Conservation and Biology (http://www.chelonian.org/ccb/); Turtle and Tortoise Newsletter (http://www.chelonian.org/crf-publications/turtle-and-tortoise-newsletter/); TurtleLog Online Newsletter (http://www.iucn-tftsg.org/turtlelog_online_newsletter/)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Black Spiny Softshell Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Cuatro Cienegas Softshell",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Guadalupe Spiny Softshell Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Gulf Coast Spiny Softshell Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Northern Spiny Softshell Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Pallid Spiny Softshell Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Texas Spiny Softshell Turtle",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Spiny Softshell Turtle",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Apalone hudsonica Rafinesque, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone",
+        "species_name": "hudsonica",
+        "species_author": "Rafinesque, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Amyda spinifera ssp. hartwegi Conant & Goin, 1948",
+        "status": "ACCEPTED",
+        "genus_name": "Amyda",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "Conant & Goin, 1948",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "hartwegi"
+      },
+      {
+        "name": "Aspidonectes asper Agassiz, 1857",
+        "status": "ACCEPTED",
+        "genus_name": "Aspidonectes",
+        "species_name": "asper",
+        "species_author": "Agassiz, 1857",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Platypeltis agassizii Baur, 1888",
+        "status": "ACCEPTED",
+        "genus_name": "Platypeltis",
+        "species_name": "agassizii",
+        "species_author": "Baur, 1888",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Aspidonectes emoryi Agassiz, 1857",
+        "status": "ACCEPTED",
+        "genus_name": "Aspidonectes",
+        "species_name": "emoryi",
+        "species_author": "Agassiz, 1857",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Trionyx ater Webb & Legler, 1960",
+        "status": "ACCEPTED",
+        "genus_name": "Trionyx",
+        "species_name": "ater",
+        "species_author": "Webb & Legler, 1960",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Trionyx spinifer ssp. guadalupensis Webb, 1962",
+        "status": "ACCEPTED",
+        "genus_name": "Trionyx",
+        "species_name": "spinifer",
+        "species_author": null,
+        "infrarank_author": "Webb, 1962",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "guadalupensis"
+      },
+      {
+        "name": "Trionyx spiniferus LeSueur, 1827",
+        "status": "ACCEPTED",
+        "genus_name": "Trionyx",
+        "species_name": "spiniferus",
+        "species_author": "LeSueur, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Apalone  spinifera ssp. guadalupensis (Webb, 1962)",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone ",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "(Webb, 1962)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "guadalupensis"
+      },
+      {
+        "name": "Apalone  spinifera ssp. emoryi (Agassiz, 1857)",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone ",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "(Agassiz, 1857)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "emoryi"
+      },
+      {
+        "name": "Apalone spinifera ssp. spinifera (LeSueur, 1827)",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "(LeSueur, 1827)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "spinifera"
+      },
+      {
+        "name": "Apalone  spinifera ssp. pallida (Webb, 1962)",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone ",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "(Webb, 1962)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "pallida"
+      },
+      {
+        "name": "Apalone  spinifera ssp. aspera (Agassiz, 1857)",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone ",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "(Agassiz, 1857)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "aspera"
+      },
+      {
+        "name": "Apalone  spinifera ssp. atra (Webb and Legler, 1960)",
+        "status": "ACCEPTED",
+        "genus_name": "Apalone ",
+        "species_name": "spinifera",
+        "species_author": null,
+        "infrarank_author": "(Webb and Legler, 1960)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "atra"
+      },
+      {
+        "name": "Trionyx spinifer ssp. pallidus Webb, 1962",
+        "status": "ACCEPTED",
+        "genus_name": "Trionyx",
+        "species_name": "spinifer",
+        "species_author": null,
+        "infrarank_author": "Webb, 1962",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "pallidus"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1320,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "25",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Unknown"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "1601157",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "6550365",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Apalone </em><em>spinifera</em> is native to southernmost Ontario and Quebec in Canada, northern Mexico from Chihuahua to Tamaulipas, and most of the United States east of the Rocky Mountains. It occurs nearly completely throughout the Mississippi-Missouri-Ohio river systems, as far upstream as Montana and Wyoming, the Great Lakes region, Ottawa, southern St. Lawrence and Hudson systems, the Colorado system, the Rio Grande system, Atlantic drainages from Cape Fear to the Saint Marys River, and Gulf drainages from the Apalachicola to the Rio Soto de Marina (Iverson 1992, Ernst <em>et al</em>. 1994, Ernst and Lovich 2009, Powell <em>et al</em>. 2016, TTWG 2021). The species has been recorded up to an altitude of 1,320 m in the Bighorn River drainage at Thermopolis, Wyoming (W.A. Estes-Zumpf, unpubl. data).<br/><br/>The species has been introduced into Arizona, California, western Colorado, Massachusetts, Nevada, New Jersey, western New Mexico, eastern Pennsylvania, Utah, Virginia, and Washington in the USA, as well as Baja California, western Coahuila, and Sonora in Mexico (TTWG 2021, Meshaka <em>et al</em>. 2022). The introduced populations in eastern Pennsylvania appear to be expanding their geographic range (K. Gipe, unpubl. data).<br/><br/><em>Apalone spinifera spinifera</em>: Most of the Mississippi-Missouri-Ohio and Great Lakes systems, with several isolated populations scattered around the various Great Lakes and in the Hudson Valley and Lake Champlain.<br/><em>Apalone spinifera aspera</em>: from southern North Carolina to Mississippi (see Moler 2006 for distribution in Florida).<br/><em>Apalone spinifera atra</em>: endemic to the Cuatro Ciénegas basin of Coahuila, Mexico (see Cerdá-Ardura <em>et al</em>. 2008).<br/><em>Apalone spinifera  emoryi</em>: Rio Grande – Pecos basin of Texas and New Mexico, USA, and Chihuahua to the Rio Soto de Marina in Tamaulipas, Mexico. Also inhabits the Colorado system of Arizona and California (and adjoining Utah, Nevada, and New Mexico), documented to be introduced (Miller 1946, Iverson 1992, Ernst <em>et al</em>. 1994). Co-occurs with <em>Apalone s. atra</em> in the Cuatro Cienegas basin, where it prefers riverine sections (McGaugh and Janzen 2008; Cerdá-Ardura <em>et al</em>. 2008). <br/> <em>Apalone spinifera guadalupensis</em>: South-central Texas. <br/><em>Apalone spinifera pallida</em>: Louisiana, northeastern Texas and southern Oklahoma.<br/><br/>The estimated historical indigenous range (area of occupancy, AOO) of the whole species&#160;<em>A. spinifera</em> was 1,614,565 km<sup>2</sup>, and the estimated historical indigenous extent of occurrence (EOO) was 6,550,365 km<sup>2</sup> (TTWG in press). The estimated historical indigenous range (AOO) of the subspecies&#160;<em>A. s. spinifera</em>&#160;was 1,017,323 km<sup>2</sup> (63.0% of the species' range), and the estimated historical indigenous range (EOO) was 4,377,847 km<sup>2</sup> (TTWG in press). For the subspecies&#160;<em>A. s. aspera, </em>the<em>&#160;</em>AOO&#160;was 250,732 km<sup>2</sup> (15.5% of the species' range), and the EOO was 696,348 km<sup>2</sup> (TTWG in press). For the subspecies&#160;<em>A. s. atra,&#160;</em>the historical AOO was 535 km<sup>2</sup> (only 0.03% of the species' range), and the EOO&#160;was 2,116 km<sup>2</sup> (TTWG in press). For the subspecies&#160;<em>A. s. emoryi</em>, the AOO was 145,362 km<sup>2</sup> (9.0% of the species' range), and the EOO&#160;was 645,870 km<sup>2</sup> (TTWG in press). For the subspecies&#160;<em>A. s. guadalupensis</em>, the AOO was 60,777 km<sup>2</sup> (3.8% of the species' range), and the EOO&#160;was 177,656 km<sup>2</sup> (TTWG in press). For the subspecies&#160;<em>A. s. pallida</em>, the AOO was 228,232 km<sup>2</sup> (14.1% of the species' range), and the EOO&#160;was 646,121 km<sup>2</sup> (TTWG in press). The current AOOs for all these subspecies and of the species as a whole are clearly less than the historical indigenous estimations noted here.",
+    "population": "<em>Apalone spinifera</em> is a widespread and generally common species in the core of its range; however, some peripheral and marginal populations are sparse and appear to be declining. Depending on site and habitat type, the species constitutes between &lt;1% to 67% numerically of all turtles encountered in turtle community surveys (reviews in Ernst <span style=\"font-style: italic;\">et al. </span>1994, Ernst and Lovich 2009).<br/><br/>Detailed population monitoring data are scarce for <em>A. spinifera</em>, perhaps because of the perception that the species is resilient to habitat loss and modification. Rizkalla and Swihart (2006) found a positive correlation between&#160;<em>A. spinifera</em> occupancy and proximity to agricultural and urban areas. However, long-distance movements of <em>A. spinifera</em> have been attributed to habitat fragmentation (Galois <em>et al</em>. 2002), and significantly fewer <em>A. s. emoryi</em>&#160;were detected in two Texas counties in 2009 as compared to 1977, which may have been attributable to commercial harvest, urbanization at unprotected sites and land-use changes at protected sites (Grosmaire 1977, Brown <em>et al</em>. 2012, Mali e<em>t al</em>. 2015). However, Plummer <em>et al</em>. (2008) found evidence of resilience in <em>A. spinifera</em> across 10 years in a small urban stream in Arkansas after a channelization event appeared to cause a moderate population decline (Plummer and Mills 2008).&#160;In contrast, a population of <em>A. spinifera</em> within a large urban centre in Ontario, Canada, over a 30-year study, was increasingly relegated to the shrinking natural areas remaining along the river, with oviposition, thermoregulation, foraging and nursery habitat consistently disturbed, damaged or lost, and multiple turtles found injured or killed due to fish hooks (S.D. Gillingwater, unpubl. data).&#160;The number of <em>A. spinifera</em> nests detected in 2015–2016 along a protected river in Louisiana was about half of those detected in 1993–1994, and may have been due to the heavy losses of nests in the latter period due to ATV traffic on nesting sandbars (Doody 1995, Godwin <em>et al</em>. 2021). The latter study prompted legislation designed to deter ATV traffic at the site.&#160;Population size and structure data (and analyses) are available for potential future monitoring in Arkansas (Plummer and Mills 2008), Montana (Tornabene <em>et al</em>. 2018, Ostovar <em>et al</em>. 2021), Pennsylvania (Mahoney and Lindeman, 2016), Texas (Brown <em>et al</em>. 2012), and Vermont (Parren <em>et al</em>. 2021).<br/><br/>Impoundments on the Missouri River system in North Dakota and South Dakota and Montana have led to local extirpations of <em>A. spinifera</em>&#160;and left populations in the upper Missouri River, Yellowstone River, and Bighorn River systems genetically and demographically isolated.&#160;In north-central Wyoming, the Bighorn River drainage has a peripheral population that was isolated from populations in Montana when the Yellowtail Dam was constructed in the 1960s. The Bighorn River population is currently of concern in Wyoming because the species is becoming rare. Although long-term monitoring data are not available, anecdotal evidence from the public and from biologists in the region suggests the population has declined. A recent concerted survey effort was conducted in 2021 by the Wyoming Game and Fish Department that resulted in extremely low catch-per-unit-effort (CPUE = 0.013 softshell turtles/trap night) across <em>c</em>. 140 km in the Bighorn River (Autz <em>et al</em>. 2024).<br/><br/>In Ontario, populations of <em>A. s. spinifera</em> have declined by up to 45% over the last 20 years due to a long list of threats, including habitat modification, water level management, ATV traffic, invasive species, livestock farming, illegal collection, boat collisions, and subsidized mesopredators (COSEWIC 2016, Ministry of the Environment, Conservation and Parks 2019). There are approximately 1,000 mature individuals; these currently occur in only 14 extant populations as compared to 35 historically recorded populations (COSEWIC 2016, Ministry of the Environment, Conservation and Parks 2019).&#160;In Quebec, <em>A. s. spinifera</em> is found only in Lake Champlain and its tributaries (Daigle <em>et al</em>. 2002, Galois <em>et al</em>. 2002). Historical or rare observations exist for two other rivers in southern Québec, from which they are considered extirpated (COSEWIC 2016). The disjunct Lake Champlain population of <em>A. s. spinifera</em> is shared with two U.S. states, Vermont and New York, and is separated by more than 200 km from the nearest population located in Lake Ontario.&#160;Studies in Canada span over 30 years, and may provide an indication of threats and impacts to the species over a larger extent of its range, though further long-term research in the USA and Mexico is necessary in order to better understand potentially similar threats across more of the species’ range. However, populations at northern range margins are impacted by a combination of a colder climate, which limits the species’ abundance, and anthropogenic threats, thereby possibly inflating those threats. In core distribution areas in warmer climates,&#160;<em>A. spinifera</em> has apparently been more resistant to anthropogenic threats such as habitat modification, fishing, and trapping.<br/><br/>In Texas, the status of the&#160;<em>A. s. guadalupensis</em>&#160;population has not been explicitly examined as a focal project species. It does, however, have a good amount of incidental data from work examining the turtle fauna and other reptiles of the region. Early characterizations of the species are found in works by Strecker (1922, 1926) and Strecker and Williams (1927). While those early authors did not report on any significant quantity of specimens, they did report the species as being considered abundant in local streams and rivers. Swanson (2009) surveyed historic wetlands of the San Marcos River and detected one individual among 119 turtles detected. M.R.J. Forstner and I. Mali (unpubl. data) have conducted turtle research in the Guadalupe River basin since 2000 and 2009–2016, respectively; they have captured, measured and released <em>c</em>. 3,500 turtles. Of that number, 396 were from within the distribution of <em>A. s. guadalupensis</em> within the Guadalupe River basin, and within that subset, only 26 (6.6%) were <em>A. s. guadalupensis</em>. Analogously, in recent surveys for <em>Graptemys caglei</em> by M.R.J. Forstner (unpubl. data, 2017–2024) within the Guadalupe River below Seguin, Texas, <em>A. s. guadalupensis</em> was observed at about 10% of the corresponding number of the generally scarce <em>G. caglei</em>, and comprised less than 1% of all the turtles detected. In the San Marcos River, <em>A. s. guadalupensis</em> made up fewer than 2% of all freshwater turtle detections across surveys from 2000–2010 (M.R.J. Forstner, unpubl. data; non-<em>Apalone</em> survey data from this work published in Bailey <em>et al</em>. 2014). Finally, in a recent turtle survey within the Guadalupe River system, Beverly (2023) reported 65 <em>A. s. guadalupensis</em> (1.3%) out of 5,192 total turtle detections. Thus, <em>A. s. guadalupensis</em> was historically reported as widespread and abundant, but currently available data do not support such abundance at present.<br/><br/>Also in Texas, the status of the&#160;<em>A. s. emoryi</em> population has been only minimally examined. In recent surveys of 17 sites in the lower Pecos River from the Red Bluff Reservoir to the river's confluence with the Rio Grande, Mahan (2022) did not detect the species at six localities. One obvious gap is located between the town of Grandfalls to the town of Iraan (<em>c</em>. 80 km straight line distance). In the Pecos River above Red Bluff Reservoir to Brantley Reservoir and at wetlands of Bitter Lake National Wildlife Refuge, New Mexico, <em>A. s. emoryi</em> is one of the most commonly encountered freshwater turtle species (Mahan 2022; I. Mali, unpubl. data). It is, however, exceptionally rare in the Black River (&lt;1% of all turtle captures over eight years of intensive surveys), New Mexico tributary of the Pecos River, despite this river having higher overall quality of habitat. <em>Apalone s. emoryi</em> is one of the most common species of turtles in the Delaware River in New Mexico, also a tributary of the Pecos River, and is commonly encountered in hoop traps in the Rio Grande River (e.g., Big Bend National Park, Black Gap Wildlife Management Area) and wetlands of the Rio Grande Valley in southern Texas (Mali <em>et al</em>. 2013, 2015, but see Brown <em>et al</em>. 2011, 2012, for comparison with historical data). Population genetic work based on microsatellite loci indicates statistically significant differentiation between west Texas and south Texas populations (Mali <em>et al</em>. 2015). Dams on the Rio Grande (e.g., Amistad, Falcon) and Pecos River (Red Bluff, Brantley, Santa Rosa) likely represent a significant barrier to movement (Bárcenas-García <em>et al</em>. 2022) in addition to contributing negatively to overall water quality and habitat availability.<br/><br/>In Cuatro Ciénegas, Mexico, populations of <em>A. s. atra</em>&#160;are more abundant in deep wetlands such as the Mezquite River, but less abundant in shallow flooded areas such as lagoons and pozas (Cerdá-Ardura <em>et al</em>. 2008; G. Castañeda Gaytán pers. obs.).",
+    "habitats": "In the southern portion of its range, <em>Apalone spinifera</em> occurs in most types of lotic and lentic wetlands, including rivers, streams, brooks, lakes, ox-bows, ponds, sloughs, bayous, ditches, canals, impoundments, borrow pits, desert springs, flooded gravel pits, swamps and freshwater marshes (reviewed in Webb 1962; Ernst <em>et al</em>. 1994; Anderson <em>et al</em>. 2002; Barko and Briggler 2006; Moler 2006; Tornabene <em>et al</em>. 2017, 2019). In the northern extent of the range, the species is less generalized in its habitat preferences, and is limited to rivers, appropriately-sized streams, lakes and rarely, glacial kettle ponds. This reduced habitat preference is likely due to dissolved oxygen requirements during long winter brumation periods in northern latitudes. Smaller lentic waterbodies directly adjacent to these larger systems may be used seasonally, outside of winter. A soft bottom with some aquatic vegetation appears required, as are sand bars or mudbanks for basking, and sand or sand and gravel bars directly adjacent to the waterbody for egg laying, while accumulations of underwater debris are preferred microhabitats. The species has been associated with highly modified environments; for example shorelines with reduced vegetation or channelization (Moll and Moll 2004, Plummer and Mills 2008, Hill and Vodopich 2013), though similarly modified environments have been shown to deter the species from use in Canada (S.D. Gillingwater, unpubl. data). The species also occurs in brackish water (Neill 1958, Webb 1962; J.S. Doody pers. obs.), and is reported from a salinity of 238 meq/litre (Seidel 1975), though such conditions are not common in the species’ range. When <em>A. spinifera</em> inhabits temporary wetlands it can readily move overland short distances when those habitats become dry, or move overland between wetlands (reviewed in Webb 1962, Williams and Christiansen 1981), though extensive overland movements have not been documented.<br/><br/>Adults preferred pools over riffles in a small stream in Arkansas (Plummer <em>et al.</em> 1997). Males and females can use different microhabitats in some systems (e.g., Williams and Christiansen 1981); however, they used the same microhabitats in a small creek in Arkansas (Plummer <em>et al</em>. 1997, Plummer and Mills 2008). The species shares habitats and microhabitats with <em>A. mutica</em>, but <em>A. spinifera</em> occupies more habitats (e.g., rivers, impoundments, temporary ponds) and microhabitats (i.e., with more submerged brush, fallen trees and other debris) than <em>A. mutica</em>, which is more often found in open water (Webb 1962, Doody 1996, Godwin <em>et al</em>. 2021, Williams and Christiansen 1981). In Ontario, Canada, it has been observed that adult females are less commonly located in shallow muddy bays and sandbars, compared with juveniles of both sexes and adult males, which extensively use these habitat types. Additionally, females have been found to make long-distance movements between habitat types (sometimes exceeding 35 km), whereas adult males made only small, local movements (S.D. Gillingwater, unpubl. data).&#160;Finally, the species shares basking microhabitats with <em>A. mutica</em>, but the latter are less likely to bask on logs, branches or other discrete objects (Williams and Christiansen 1981).<br/><em><br/></em><em>Apalone spinifera</em> is omnivorous, but tends towards carnivory (Carr 1952, Webb 1962, Williams and Christiansen 1981). A dietary study of 52 stomachs from Iowa contained, in order of importance, by volume: crayfish, large fish, small fish, plant material, and aquatic insect larvae (Williams and Christiansen 1981); the plant material included acorns and leaves. Acorns and pecans have been found in the diet in Louisiana (Platt <em>et al</em>. 2008). Analysis of 29 stomachs from Minnesota contained insects and insect larvae, crayfish, sowbugs, snails, bivalves, earthworms, fish and vegetation (Cochran and McConville 1983). Analyses of smaller samples of turtles found, in general order of importance: crayfish, insects and fish (Newman 1906, Evermann and Clark 1920, Lagler 1943, Breckenridge 1944, Penn 1950, James 1966, Hopwood 1974, Minckley 1982). An analysis of faecal samples from Pennsylvania found that males ingested mainly insects and algal stalks while females consumed mainly algal stalks, crayfish and fish (Mahoney and Lindeman 2016). Lindeman (2000) predicted that the large-headed females of <em>A. s. aspera</em> in southeastern rivers would feed on bivalves, partly based on observations of captive females crushing the shells of <em>Corbicula</em> (J.S. Doody pers. obs.). Franklin (2014) reported an adult female feeding on a hatchling red-eared slider (<em>Trachemys scripta</em>) in Texas. Newly hatched neonates typically sample most items small enough to fit in their mouths, with sand and woody debris generally being spit out, but algae, plant matter and small invertebrates being consumed (S.D. Gillingwater, unpubl. data).&#160;Despite their generalist diet, turtles showed some evidence of selectivity compared to available prey in a study comparing stomach contents to dredge samples (Cochran and McConville 1983).<br/><br/>Carrion is taken; large fish in the stomachs probably were dead before consumption (Williams and Christiansen 1981); turtles in a fyke net fed upon dead fish (Cochran and McConville 1983), and an adult female was observed eating exposed flesh from the hind quarters of a dead white-tailed deer, <em>Odocoileus virginianus</em>, that was floating in a creek (Franklin <em>et al</em>. 2020).&#160;During an Ontario study along Lake Erie, <em>A. spinifera</em>, <em>Chelydra serpentina,</em> and <em>Chrysemys picta marginata</em> were all observed consuming a dead Freshwater Drum (<em>Aplodinotus grunniens</em>) at the same time (S.D. Gillingwater pers. obs.).<br/><br/>The occurrence of plant material in the diet, although typically less important in volume than invertebrates, appears to be deliberate (Mahoney and Lindeman 2016) rather than incidental (Cochran and McConville 1983). For example, stomach contents of three adults from an introduced population in Nevada revealed multiple fragments of Screwbean Mesquite fruits (<em>Prosopis pubescens</em>) and fruits and seeds of Desert Fan Palm, <em>Washingtonia filifera</em> (Heyborne and Sigg 2017). Surface (1908) reported corn as a usual food item in Ohio. J.S. Doody (unpubl. data) observed one adult male <em>A. spinifera</em> leave the water onto wet sand to retrieve Muscadine fruits (<em>Vitis rotundifolia</em>) that had fallen from an overhanging vine.&#160;&#160;<br/><br/>Foraging can involve ambush predation with a gape and suck behaviour (Hudson 1942, Breckenridge 1944, Conant 1951) or active pursuit including thrusting the snout into vegetation or under rocks (Newman 1906). Larger prey can be held by the forefeet while torn into smaller pieces (Newman 1906). In Louisiana, J.S. Doody (pers. obs.) has regularly observed males foraging with male <em>A. mutica</em> in groups of 2–10, on the bottom in shallow, still-water areas at the ends of sandbars, especially in the evening. Compared to <em>A. mutica</em>, <em>A. spinifera</em> is primarily a bottom-feeder, based on its affinity for crayfish and carrion (Williams and Christiansen 1981). However, some terrestrial items (e.g., caterpillars, Muscadine fruits) found in some stomachs suggest surface and terrestrial feeding (Cochran and McConville 1983; J.S. Doody pers. obs.; see also Surface 1908).&#160;<br/><br/>Males of <em>A. spinifera</em> mature at a relatively small size (8–10 cm plastron length (PL), about 11–14 cm carapace length (CL), 130 grams or more), while females mature at 18–20 cm PL, CL over 28 cm, and 15 kg (Webb 1962, Robinson and Murphy 1978). Maximum CL size of females is 54 cm CL, males maximum 27.5 cm. Maximum longevity is probably well over 30 years (Breckenridge 1955 in Ernst <span style=\"font-style: italic;\">et al.</span> 1994), and based on estimated age of maturity (12–13 years), longevity is estimated at about 60–70 years (Iverson 2024). Females normally produce two clutches per year, nesting mainly in June and July. Clutches usually comprise 12–18 eggs, but extremes of clutch size have been noted as 4–42 eggs (Ernst <em>et al</em>. 1994, Tamplin 2010) and clutches with as few as a single egg (S.D. Gillingwater, unpubl. data) and up to 43 eggs have been confirmed in Ontario, Canada (Gillingwater and Mackenzie 2015). According to growth models, males mature in their 4th or 5th year, whereas females mature in their 12th or 13th year, in Arkansas (Plummer and Mills 2015), and as such, generation time is estimated to be about 25 years (Iverson, 2024).&#160;<br/><br/>In Louisiana, nesting is strongly bimodal, indicating that most females produced two clutches there (Doody 1995). At higher latitudes turtles may produce only one clutch, but some females from Quebec produced two clutches (Lazure <em>et al</em>. 2019), and in Ontario multiple females consistently produce two clutches a year, with second clutches notably smaller than the first (S.D. Gillingwater, unpubl. data). The estimation that the species produces 4–5 clutches annually in Iowa (Moll 1979, repeated in Iverson and Moler 1997) is probably in error, given that two clutches are produced annually in Louisiana (Doody 1995, Godwin <em>et al</em>. 2021). The narrow window of nesting in Montana suggests the production of one clutch annually there (Tornabene <em>et al</em>. 2018).&#160;<br/><br/>Doody (1995) summarized the seasonal timing of nesting for <em>A. spinifera</em> across the range; most nesting occurred in May–July, with earliest record on 11 May and the latest on 28 July (see also Godwin <em>et al</em>. 2021). The nesting season may be more contracted at higher latitudes (e.g., Lazure <em>et al</em>. 2019), though in Ontario, Canada, oviposition has been confirmed as early as 26 May and as late as 23 July, depending on seasonal temperatures (S.D. Gillingwater, unpubl. data). The inclusion of August by Ernst <em>et al</em>. (1994) may be in error. Doody (1995) found no association between nesting date and body size (crawl width). The onset of nesting appears to be earlier in more southern (warmer) latitudes leading to a more prolonged nesting season (Doody 1995). In Quebec, nesting was more likely to occur when the difference between air and water temperatures was smaller (Lazure <em>et al</em>. 2019). Nesting typically ceases during flooding or discharge in riverine populations, possibly because all of the nesting grounds are underwater (Doody 1995, Tornabene <em>et al</em>. 2018, Lazure <em>et al</em>. 2019); similarly, in Ontario, nesting temporarily ceases during large flood events, during significant temperature drops, or during times of increased human presence near nesting areas, but generally resumes shortly after flood waters recede, temperatures rise, or humans leave the area. If flood waters remain high for multiple days, female turtles have been found to move to remaining higher elevation sites to deposit eggs, or nest in inappropriate areas where the eggs are likely to fail. In extreme cases, eggs have been found deposited in the water at the edge of flooded nest sites (S.D. Gillingwater, unpubl. data).&#160;The onset of nesting was delayed by discharge that flooded many island nesting areas in Montana (Tornabene <em>et al</em>. 2018).&#160;Flooding frequency changes due to climate change and dams can cause nest failure and the loss of sandbar nesting habitat (Dickerson <em>et al</em>. 1999).&#160;<br/><br/>This species typically nests in open (canopy) areas free of shading vegetation, little or no ground cover, and that receive abundant solar radiation (Doody 1995, Dixon 2009, Dieter <em>et al</em>. 2014, Tornabene <em>et al</em>. 2018). Occasionally, nests are found in sparse vegetation (Doody 1995, Dixon 2009, Dieter <em>et al</em>. 2014, Tornabene <em>et al</em>. 2018). Nesting substrate is typically sandy, but nests can be found in gravel, gravelly sand, loamy sand, and other soils (Eigenman 1896, Newman 1906; Webb 1962; Doody 1995; Graham and Graham 1997; Tornabene <em>et al</em>. 2018, Parren <em>et al</em>. 2021).&#160;In Ontario, nests laid in clay or organic soils failed, with the eggs rotting, whereas those laid in sand or sand-gravel substrates completed incubation and young emerged. In multiple instances, plant roots invading the nest chamber also resulted in egg failure (S.D. Gillingwater, unpubl. data).<br/><br/>In a Louisiana river, crawl length for nesting averaged 57 m, including 35 m from the water to the nest (Doody 1995). Nests averaged 2.7 m above water in Louisiana (Doody 1995). Nests averaged 7 m from the Mississippi River in Minnesota (Pappas <em>et al</em>. 2017), 4–20 m from water in Winona, Minnesota (Vose 1964), 26 m from water in Louisiana (Doody 1995; includes <em>A. mutica</em>), and 61 m from water in Nebraska-South Dakota on natural sandbars (Dieter <em>et al</em>. 2014). In a small creek in Arkansas, four females nested within 3 m of the water (Plummer <em>et al</em>. 1997), whereas the species nested 1–15 m from water in Vermont (Graham and Graham 1997). However, on man-made sandbars, female <em>Apalone</em> spp. have been documented traveling up to 175 m from the water, likely due to man-made slopes having a lower average slope (2.8°; Dixon 2009). Nests close to the water on steep banks and sandbars revealed that height is the variable chosen by females and that distance is simply a function of height above water (Doody 1995). Nests were constructed in slopes averaging 17°, and tended to be in more south-facing aspects in Louisiana; however, this was an artefact of females choosing higher areas of sandbars which tended to be at the downstream ends of sandbars, rather than females choosing warmer aspects (Doody 1995).&#160;Over a 30-year study in Ontario, nests were located between approximately 1–20 m from water, along sand or gravel-sand banks, though at one site, a gravel road, over 20 m from the river, was used for nesting out of necessity. During flood events, the nests nearest the water would remain submerged longer, often leading to death of the eggs, whereas nests at higher elevations would often have higher survivorship if flood waters retreated within 24 hours. Alternately, nests at higher elevations often failed during drought conditions, with nests near water surviving. Survival was based on the given circumstances of the year, which varied considerably from year to year. Similarly, the choice of nesting location would sometimes be dictated by temperature and number of days between rain events, with turtles often nesting closer to water during drought conditions, and higher up the bank after a rain (S.D. Gillingwater, unpubl. data). &#160;<br/><br/>Communal nesting is common in the species (Newman 1906; Evermann and Clark 1920; Minton 1972; Doody 1995; Graham and Graham 1997; Dieter <em>et al</em>. 2014; Godwin 2017; Tornabene <em>et al</em>. 2018, 2019; Parren <em>et al</em>. 2021). Traditional nesting, whereby females use the same nesting areas or nest sites across years, is probably common, but requires following individual nesting females across years to confirm. In Ontario, Canada, multiple communal nesting beaches have been confirmed, some with over 100 nests being laid on a single sand/gravel bar (S.D. Gillingwater, unpubl. data).&#160;<em>Apalone</em> spp. have a shorter incubation period than other turtle species (Janzen 1993) and hatching occurs from August through September. A South Dakota study found that on average there were 14 eggs in a clutch with an average depth of the top egg being 9 cm (Dixon 2009).&#160;<br/><br/><em>Apalone spinifera atra</em> is restricted to the Cuatro Ciénegas basin in Coahuila, Mexico, an hourglass-shaped intermontane basin of about 50 km long and 8–24 km wide (about 600 km<sup>2</sup>), its floor being at 720 m altitude (Cerdá-Ardura <em>et al</em>. 2008). Much of the central part of the basin is marshy, with dry sandy slopes leading up the rocky valley slopes. Several deep ponds (up to several metres) occur within the marshy area and retain crystal-clear water throughout the year. About half the bottom is covered by dense submerged aquatic vegetation (mainly <em>Chara</em>) and the other half is bare sediment. Waterlilies grow in the shallow parts, and thick stands of cattails (<em>Typha</em>) and <em>Eleocharis</em> fringe the ponds. The water temperature is about 27–29ºC. Ponds may be separated from dry nesting areas on the slopes by substantial distances (several 100 m) of flat marshy grassland (Webb and Legler 1960). Within the basin, <em>A. s. atra</em> has been recorded only within the deep ponds, and not in riverine situations (Webb and Legler 1960, Webb 1962, McGaugh and Janzen 2008, Cerdá-Ardura <em>et al</em>. 2008). Limited information of food indicates that the animals feed selectively on aquatic insect larvae (Webb and Legler 1960). Reproductive data on dissected type series (limited to smaller individuals) suggest that <em>A. s. atra</em> matures at similar sizes as other <em>A. spinifera</em> subspecies (Webb and Legler 1960), i.e., males mature at CL over 15 cm, and females at CL over 28 cm. No information is available on clutch size or frequency, on age at maturity, or longevity of <em>A. s. atra</em>. Field observations suggest nesting occurs in June and a dead hatchling with a CL of <em>c</em>. 40 mm was observed in August (G. Castañeda Gaytán pers. obs.).",
+    "threats": "Habitat loss, modification and fragmentation are collectively, likely the primary anthropogenic threats to <em>Apalone spinifera</em>. However, subsidized nest mesopredators (primarily raccoons) may be a more serious threat. Evaluating the impacts of these threats requires studies to determine the effects of predation rates on the population size and structure of populations. Turtle fraservirus 1 (TFV1) has not been detected or reported in <em>A. spinifera</em>, but has been implicated in <em>A. ferox</em> mortality events (Waltzek <em>et al</em>. 2023). Climate change effects, including rising nest temperatures and nest flooding, could decrease nest survival (Doody 1995, Godwin 2017, COSEWIC 2016). Water released from dams can cause nest failure and the loss of sandbar nesting habitat which could lead to lower recruitment and an overall population decline (Dickerson <em>et al</em>. 1999). In one study, all-terrain vehicles caused 34% nest mortality (Godwin <em>et al</em>. 2021, COSEWIC 2016). Like most aquatic species, <em>A. spinifera</em> can be affected by water pollution of waterways as it causes degradation of its aquatic habitat. Human harvest for both domestic and international markets occurs in the species (Ceballos and Fitzgerald 2004) and needs continued monitoring. At the individual and possibly population levels, drowning in nets (bycatch), fishhook ingestion, and boat strikes remain a problem (Barko <em>et al</em>. 2004, Galois and Ouellet, 2007, Fratto <em>et al</em>. 2008, Bury 2011, Steen <em>et al</em>. 2014, COSEWIC 2016, Lindeman 2018, Mahan <em>et al</em>. 2020, Ostovar <em>et al</em>. 2021).<br/><br/><em>Apalone spinifera</em> has long been exploited for local consumption (Webb 1962) and more recently for the export of adults for food and of hatchlings as pets and for mainly Asian aquaculture operations (Mali <em>et al</em>. 2014). Some individuals are destroyed as nuisance by-catch by recreational fishermen or have long-term injuries such as fish hook ingestion (Steen <em>et al</em>. 2014), are run over when crossing roads, and populations are affected by pollution, water diversion, and water infrastructure development. The species as a whole does not appear threatened in its existence by present processes. However, certain subspecies and populations are considered to be less secure.&#160;For example, in Canada, <em>A. s. spinfera</em> is designated as Endangered both federally and provincially, owing to a range of threats that continue to impact populations across multiple river watersheds and lake ecosystems (COSEWIC 2016).<br/><br/><em>Apalone spinifera atra</em>: The survival of&#160;this subspecies&#160;is dependent on the ecological and hydrological integrity of the relatively small Cuatro Ciénegas ecosystem. The Cuatro Ciénegas basin has been extensively altered in its hydrology by digging canals to supply water to a steel mill in Monclova, and for local agricultural irrigation. Roads, railroads, pipelines and other infrastructure for industrial, logistic and tourism and recreational purposes have impacted the ecosystem, and many of these environmental impacts continue.&#160;Another recorded threat is hybridization or intergradation with <em>A. s. emoryi</em>, which entered the Cuatro Ciénegas basin from the Rio Grande through the Rio Nadadores and Rio Salado. Several previously isolated ponds and wetlands had been drained and interconnected by a network of canals before 1960 (probably before 1920) for agricultural purposes (Webb and Legler 1960, Smith and Smith 1979), but apparently not connected to the Rio Chiquito. How <em>A. s. emoryi</em> transferred from the Rio Nadadores to the isolated ponds is unclear; Webb (1962) considered overland dispersal during rain, subterranean connections, and human transport as possibilities. <em>Apalone spinifera emoryi</em> was present in the Cuatro Ciénegas basin as early as 1938–1939 (Schmidt and Owens 1944); specimens of both forms collected in 1958 were clearly separable (Webb and Legler 1960) and showed no indication of hybridization at least 20 years after first contact. However, Webb (1962) subsequently noted that not all <em>atra</em> showed all diagnostic characteristics, and that some approached the condition shown in <em>emoryi</em>. Within the basin, <em>emoryi</em> shows a preference for riverine situations, with only few individuals recorded from ponds (Webb and Legler 1960, Webb 1962, McGaugh and Janzen 2008, Cerdá-Ardura <em>et al</em>. 2008). Some trade and consumption of softshell turtles has occurred in the Cuatro Ciénegas basin at least in the 1950s (Webb 1962).<em><br/></em><em><br/></em><em>Apalone spinifera emoryi</em>: Populations in Mexico are impacted by water diversion and reduced groundwater levels from irrigation and groundwater pumping. Populations in Texas and New Mexico have been impacted to varying degrees by urbanization, river flow alteration, and direct harvest (Ceballos and Fitzgerald 2004, Brown <em>et al</em>. 2012, Mali <em>et al</em>. 2015). Dam construction and the oil and gas industry have contributed to diminished flows and increased salinization of the lower Pecos River below Red Bluff Reservoir. Recent surveys of 17 sites in the lower Pecos River from the Red Bluff Reservoir to the river's confluence with the Rio Grande (Mahan 2022) did not detect species at six localities, with an obvious gap between Grandfalls and Iraan (<em>c</em>. 80 km straight line distance). These areas have conductivity of over 20,000 µS/cm, exemplifying that some taxa cannot tolerate extremely saline segments of the Pecos River. In addition, several of the 17 sites sampled had obvious crude oil residues, pointing to pollution issues. There is a lack of systematic surveys that are explicitly targeted to study population trends other than more than a decade old studies in the Rio Grande Valley of South Texas by Brown <em>et al</em>. (2011, 2012) that examined the effects of unregulated harvest and its extreme pressures on wild <em>A. s. emoryi</em> in this region (Ceballos and Fitzgerald 2004). Based on this work, it is clear that unregulated harvest has had a significant negative impact on the taxon.<br/><br/><em>Apalone spinifera guadalupensis</em>: The threats to this central Texas endemic subspecies are similar to those affecting <em>A. s. emoryi</em> in southern Texas.",
+    "measures": "<em>Apalone spinifera</em> is managed as a non-game resource in much of the USA and occurs in a wide variety of sites and habitats under various degrees of protective measures (Nanjappa and Conrad, 2011). The species was listed in CITES Appendix II as <em>Apalone</em> spp. in 2023, which should allow for better population monitoring and understanding of harvest levels and population dynamics. The species was previously listed in CITES Appendix III (USA) from 2016 to 2022. In Minnesota, <em>A. spinifera</em> was banned from harvest in 2022 partly due to concern about potential overharvest, but also due to the likelihood that <em>A. mutica</em> was being illegally taken due to improper identification of the species (C.D. Hall pers. comm.). In Vermont, legislation has been passed to designate and protect “critical habitat” for threatened and endangered species, and four nesting beaches for <em>A. spinifera</em>&#160;have been designated and protected (L. Groff pers. comm.). Texas has banned commercial harvest of the species, effective 2018.<br/><br/>According to NatureServe (2024), this species is ranked as Secure (G5) because of its large range with many occurrences and no evidence of drastic declines. However, Minnesota, South Dakota, Georgia, Florida, and North Carolina have it ranked as Vulnerable (S3); Virginia, New York, and Ontario consider it Imperiled (S2), whereas it is listed as Critically Imperiled (S1) in Maryland, Vermont, and Quebec. Based on the data available to them, NatureServe (2024) has suggested a decline of &lt;30% to an increase of 25% in long-term population trends of this species.&#160;<br/><br/>The subspecies <em>Apalone spinifera atra</em> has been included in Appendix I of CITES since 1975, prohibiting any form of commercial international trade, and is protected from exploitation under Mexican wildlife and natural resource legislation. Its entire range falls within the 843 sq. km&#160;Cuatro Ciénegas Flora and Fauna Protection Area (IUCN Category VI), established in 1994, and its current AOO is estimated at significantly less than 500 km<sup>2</sup>. Much more information on the species’ natural history is urgently needed, and an investigation of the ecological and genetic effects of the presence of invasive <em>A. spinifera emoryi</em> in Cuatro Ciénegas is a top priority, with work by McGaugh and Janzen (2008) demonstrating hybridization between the two taxa.<br/><br/>In Canada, <em>A. spinifera</em> is listed as Endangered under the federal Species at Risk Act, as Endangered under the Ontario Species at Risk Act (2007), and Threatened in Quebec under the Act respecting threatened and vulnerable species (R.S.Q., c. E-12.01). Additionally, it is designated as a specially protected reptile under the Ontario Fish and Wildlife Conservation Act. Protections from the various legislations in Canada make it illegal to damage habitat, or to take, harm, harass, keep, or sell the species. Though threats persist, such sweeping protections reduce overall impacts on the species, and provide legal options when necessary. The disjunct populations of <em>A. s. spinifera</em>&#160;in Lake Champlain and the Hudson River Valley<span style=\"font-style: italic;\">&#160;</span>are considered to warrant focused conservation attention, with the populations&#160;in Vermont rigorously protected.",
+    "use_trade": "Large numbers of adults (mainly females) were exported from the USA to East Asia from the late 1990s until the 2010s, as well as large quantities of hatchlings (from farms/ranches and wild-harvested eggs); this trade has fluctuated as East Asian jurisdictions reduced imports in response to veterinary concerns and the maturation of domestic turtle aquaculture operations.&#160;Ceballos and Fitzgerald (2004) reported values of $3.00 to $10.89 USD per kg for turtle meat sold in Texas (turtle species unknown, but presumably <em>Clemmys serpentina</em> and/or <em>Apalone</em> spp.).<br/><br/>Declared exports of <em>Apalone spinifera </em>are recorded in the USFWS Law Enforcement Management Information System (LEMIS) database, but available numbers do not reliably allow separating the data by subspecies, area of origin, or whether collected from the wild or produced in captive conditions. Numbers of live specimens exported from the USA were under 10,000 per year during 1999–2002, rising steadily to a peak of nearly 130,000 in 2007, after which trade volumes declined to between 47,006 and 75,728 for the years 2009–2013, and further declined to under 1000 animals per year from 2016 onwards. In total, 715,499 live specimens were declared to have been exported during 2000–2019 (see attached Supplementary Information for annual declared numbers of <em>A. spinifera</em>, <em>A. ferox</em>, and <em>A. mutica</em>), in addition to some quantities of meat and eggs that were also recorded as exported.",
+    "rationale": "With the exception of Canada and smaller marginal and disjunct populations in the USA, <em>Apalone spinifera</em> appears to be a widespread and generally abundant species in its core range. Moreover, the species’ nesting requirements appear to be met in most systems, although somewhat restricted in northern marginal populations.&#160;The few studies comparing numbers over time have found mainly resilient populations in the face of anthropogenic disturbances, notably in some urban or suburban habitats, although some northern marginal and disjunct populations are more sparse and appear to be declining. Several peripheral populations have become genetically and demographically isolated due to large-scale impoundments, especially in the Missouri River system. Overall, we assess the species&#160;<em>A. spinifera</em> as being Least Concern (LC) at present; it was also previously assessed in 2011 as Least Concern (van Dijk 2011). <br/><br/>The subspecies <em>A. s. atra</em> was previously assessed in 1996 as Critically Endangered (CR A1ace+2c; criteria 2.3) (TFTSG 1996), and we maintain the CR assessment at this time, but now as A4ce under criteria 3.1 (in prep.), indicating a <em>c</em>. 80% population decline based on decreased area of occupancy (AOO) and habitat quality and the potential effects of hybridization with <em>A. s. emoryi</em> on an ongoing basis over three generations (<em>c</em>. 75 years) extending from two generations in the past and projected for one generation into the future. The taxon also qualifies as Endangered (EN) under criteria B2ab(ii,iii,iv) for a small AOO with few locations and continued decreases in AOO, habitat quality, and number of locations. The other subspecies of <em>A. spinifera</em> have not previously been separately assessed; we assess them at present as follows: <em>A. s. spinifera, A. s. aspera, </em>and<em> A. s. pallida</em> as Least Concern (LC), and <em>A. s. emoryi</em> and <em>A. s. guadalupensis</em> as Data Deficient (DD). <br/><br/>Although there are threats such as human collection, habitat modification, and subsidized predation, the species appears secure throughout most of its USA range. For the species as a whole, there remain concerns that high nest depredation from subsidized mesopredators (primarily Raccoons) and ongoing harvest could result in declining turtle populations.&#160;Peripheral populations, such as those in Canada and Mexico, however, warrant focused attention, particularly in the face of climate change and potential barriers to dispersal between river drainages (e.g., highways and other unsuitable habitats). Disjunct populations, such as the ones of <em>A. s. spinifera</em> in Lake Champlain and the upper Hudson Valley, and isolated populations such as those in Montana and Wyoming, are also in need of ongoing conservation efforts. Specific status evaluations for the subspecies <em>A. s. emoryi</em> and <em>A. s. guadalupensis</em> are highly desirable. As always, long-term monitoring is necessary to guard against the species becoming significantly threatened.",
+    "trend_justification": null,
+    "taxonomic_notes": "Includes seven recognized subspecies:&#160;<span style=\"font-style: italic;\">Apalone spinifera spinifera</span> (LeSueur, 1827), <span style=\"font-style: italic;\">A. s. aspera</span> (Agassiz, 1857),&#160;<span style=\"font-style: italic;\">A. s. </span><em>atra</em> (Webb &amp; Legler, 1960)&#160;<span style=\"font-style: italic;\">A. s. emoryi</span> (Agassiz, 1857), <span style=\"font-style: italic;\">A. s. guadalupensis</span> (Webb, 1962), and <span style=\"font-style: italic;\">A. s. pallida</span> (Webb, 1962).&#160;<span style=\"font-style: italic;\">Apalone spinifera </span><em>atra</em> has at times in the past been treated as a full species, but is currently considered a subspecies of <em>A. spinifera</em> based on genetic and morphological studies (McGaugh 2008, McGaugh and Janzen 2008, McGaugh <span style=\"font-style: italic;\">et al. </span>2008, TTWG 2021). The previously recognized subspecies <span style=\"font-style: italic;\">Apalone spinifera hartwegi</span> (Conant &amp; Goin, 1948) is currently considered a synonym of <span style=\"font-style: italic;\">A. s. spinifera</span>, based on its limited morphological and molecular distinctiveness (McGaugh <span style=\"font-style: italic;\">et al. </span>2008, TTWG 2021)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nevada"
+      },
+      "code": "NEV-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "California"
+      },
+      "code": "CAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arizona"
+      },
+      "code": "ARI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Michigan"
+      },
+      "code": "MIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Utah"
+      },
+      "code": "UTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Mexico"
+      },
+      "code": "NWM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colorado"
+      },
+      "code": "COL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minnesota"
+      },
+      "code": "MIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vermont"
+      },
+      "code": "VER-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Québec"
+      },
+      "code": "QUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Dakota"
+      },
+      "code": "NDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nuevo León"
+      },
+      "code": "MXE-NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Coahuila"
+      },
+      "code": "MXE-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montana"
+      },
+      "code": "MNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nebraska"
+      },
+      "code": "NEB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Dakota"
+      },
+      "code": "SDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chihuahua"
+      },
+      "code": "MXE-CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wisconsin"
+      },
+      "code": "WIS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wyoming"
+      },
+      "code": "WYO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indiana"
+      },
+      "code": "INI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tamaulipas"
+      },
+      "code": "MXE-TA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ohio"
+      },
+      "code": "OHI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Baja California"
+      },
+      "code": "MXN-BC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sonora"
+      },
+      "code": "MXN-SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Washington"
+      },
+      "code": "WAS-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (domestic use)"
+      },
+      "code": "7_2_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of ground water (agricultural use)"
+      },
+      "code": "7_2_7"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Doody, J.S., Gillingwater, S.D., Mali, I., Forstner, M.R.J., van Dijk, P.P. & Rhodin, A.G.J.",
+      "value": [
+        "J.S. Doody",
+        "Ivana Mali (Eastern New Mexico University, Portales NM, USA or North Carolina State University, Raleigh NC, USA)",
+        "S.D. Gillingwater",
+        "rhodin.gen.1701537143623@gen.iucnsis.org",
+        "Michael R.J. Forstner",
+        "Peter Paul van Dijk (N/A)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Stanford, C.B., Páez, V.P. & Franklin, C.J.",
+      "value": [
+        "stanford.gen.1701537184669@gen.iucnsis.org",
+        "V.P. Páez",
+        "franklin.gen.1703777988274@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Buchanan, J.L., Castañeda Gaytán, G., Estes-Zumpf, W.A., Gipe, K., Godwin, J.C., Groff, L., Hall, C.D., Howery, M., Isakson, P.T., Iverson, J.B. & Maxell, B.",
+      "value": [
+        "iverson.gen.1701785183426@gen.iucnsis.org",
+        "b.maxell.gen.1706702895860@gen.iucnsis.org",
+        "estes-zumpf.gen.1707086875137@gen.iucnsis.org",
+        "K. Gipe",
+        "howery.gen.1707843082644@gen.iucnsis.org",
+        "J.C. Godwin",
+        "L. Groff",
+        "isakson.gen.1708790695439@gen.iucnsis.org",
+        "buchanan.gen.1708981615807@gen.iucnsis.org",
+        "castaneda-gaytan.gen.1709827903399@gen.iucnsis.org",
+        "C.D. Hall"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rhodin, A.G.J.",
+      "value": [
+        "rhodin.gen.1701537143623@gen.iucnsis.org"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Iverson, J.B. 1992. <i>A Revised Checklist with Distribution Maps of the Turtles of the World</i>. Privately published, Richmond, Indiana.",
+      "year": "1992",
+      "title": "A Revised Checklist with Distribution Maps of the Turtles of the World",
+      "author": "Iverson, J.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ernst, C.H., Lovich, J.E. and Barbour, R.W. 1994. <i>Turtles of the United States and Canada.</i> Smithsonian, Washington, DC. 578 pp.",
+      "year": "1994",
+      "title": "<i>Turtles of the United States and Canada.</i>",
+      "author": "Ernst, C.H., Lovich, J.E. and Barbour, R.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ernst, C.H. and  Lovich, J.E. 2009. <i>Turtles of the United States and Canada. Second edition</i>. Johns Hopkins University Press, Baltimore.",
+      "year": "2009",
+      "title": "Turtles of the United States and Canada. Second edition",
+      "author": "Ernst, C.H. and  Lovich, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smith, H.M. and Smith, R.B. 1979. <i>Synopsis of the Herpetofauna of Mexico (Vol. VI - Guide to Mexican Turtles )</i>. John Johnson, North Bennington, VT. xvii + 1044 pp.",
+      "year": "1979",
+      "title": "<i>Synopsis of the Herpetofauna of Mexico (Vol. VI - Mexican Turtles …).</i>",
+      "author": "Smith, H.M. and Smith, R.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "McGaugh, S.E., Eckerman, C.M. and Janzen, F.J. 2008. Molecular phylogeography of <i>Apalone spinifera</i> (Reptilia, Trionychidae). <i>Zoologica Scripta</i> 37(3): 289-304.",
+      "year": "2008",
+      "title": "Molecular phylogeography of <i>Apalone spinifera</i> (Reptilia, Trionychidae)",
+      "author": "McGaugh, S.E., Eckerman, C.M. and Janzen, F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moler, P.E. 2006. <i>Apalone spinifera aspera</i> - Gulf Coast Spiny Softshell Turtle. In: P.A. Meylan (ed.), <i>Biology and Conservation of Florida Turtles</i>, pp. 173-177. Chelonian Research Foundation, Lunenburg, MA.",
+      "year": "2006",
+      "title": "<i>Apalone spinifera aspera</i> - Gulf Coast Spiny Softshell Turtle",
+      "author": "Moler, P.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "McGaugh, S.E. and Janzen, F.J. 2008. The Status of <i>Apalone atra</i> Populations in Cuatro Cienegas, Coahuila, Mexico: Preliminary Data. <i>Chelonian Conservation and Biology</i> 7(1): 88-95.",
+      "year": "2008",
+      "title": "The Status of <i>Apalone atra</i> Populations in Cuatro Cienegas, Coahuila, Mexico: Preliminary Data",
+      "author": "McGaugh, S.E. and Janzen, F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, R.G. and Legler, J.M. 1960. A new softshell turtle (Genus <i>Trionyx</i>) from Coahuila, Mexico. <i>University of Kansas Science Bulletin</i> 40(2): 21-30.",
+      "year": "1960",
+      "title": "A new softshell turtle (Genus <i>Trionyx</i>) from Coahuila, Mexico.",
+      "author": "Webb, R.G. and Legler, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miller, R.R. 1946. The probable origin of the Soft-Shelled Turtle in the Colorado River Basin. <i>Copeia</i> 1946(1): 46.",
+      "year": "1946",
+      "title": "The probable origin of the Soft-Shelled Turtle in the Colorado River Basin",
+      "author": "Miller, R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "McGaugh, S.E. 2008. Color Variation among Habitat Types in the Spiny Softshell Turtles (Trionychidae: <i>Apalone</i>) of Cuatrociénegas, Coahuila, Mexico. <i>Journal of Herpetology</i> 42(2): 347-353.",
+      "year": "2008",
+      "title": "Color Variation among Habitat Types in the Spiny Softshell Turtles (Trionychidae: <i>Apalone</i>) of Cuatrociénegas, Coahuila, Mexico",
+      "author": "McGaugh, S.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R., Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.]. 2021. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (9th Ed.). Turtle Taxonomy Working Group (TTWG). In: A.G.J. Rhodin, J.B. Iverson, P.P. van Dijk, C.B. Stanford, E.V. Goode, K.A. Buhlmann and R.A. Mittermeier (eds), <i>Conservation Biology of Freshwater Turtles and Tortoises: A Compilation Project of the IUCN/SSC Tortoise and Freshwater Turtle Specialist Group. Chelonian Research Monographs, Volume  8</i>, pp. 1–472: DOI: 10.3854/crm.8.checklist.atlas.v9.2021.",
+      "year": "2021",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (9th Ed.). Turtle Taxonomy Working Group (TTWG)",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R., Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 June 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-1"
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Fritz, U., Gallego-García, N., Georges, A., Ihlow, F., Shaffer, H.B. and van Dijk, P.P.]. In Press. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (10th Ed.). <i>Chelonian Research Monographs</i> 9.",
+      "year": "In Press",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (10th Ed.)",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Fritz, U., Gallego-García, N., Georges, A., Ihlow, F., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "Agassiz, L. 1857. <i>Contributions to the Natural History of the United States of America. First Monograph. Volume I. Part I. Essay on Classification. Part II. North American Testudinata</i>. Little, Brown and Co., Boston.",
+      "year": "1857",
+      "title": "Contributions to the Natural History of the United States of America. First Monograph. Volume I. Part I. Essay on Classification. Part II. North American Testudinata",
+      "author": "Agassiz, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anderson, R.V., Gutierrez, M.L. and Romano, M.A. 2002. Turtle habitat use in a reach of the upper Mississippi River. <i>Journal of Freshwater Ecology</i> 17: 171–177.",
+      "year": "2002",
+      "title": "Turtle habitat use in a reach of the upper Mississippi River",
+      "author": "Anderson, R.V., Gutierrez, M.L. and Romano, M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Autz, J., Estes-Zumpf, W., Hochhalter, S. and Burckhardt, J. 2024. Spiny Softshell Turtles in the Bighorn River. Cheyenne, WY: Administrative Report. Wyoming Game and Fish Department, Fish Division.",
+      "year": "2024",
+      "title": "Spiny Softshell Turtles in the Bighorn River. Cheyenne, WY: Administrative Report",
+      "author": "Autz, J., Estes-Zumpf, W., Hochhalter, S. and Burckhardt, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bailey, L.A., Forstner, M.R.J., Dixon, J.R. and Hudson, R. 2014. Contemporary status of <i>Pseudemys gorzugi</i> (The Rio Grande river cooter) in Texas: phylogenetic, ecological, and conservation considerations. In: C.A. Hoyt and J. Karges (eds), Proceedings of the Sixth Symposium on the Natural Resources of the Chihuahuan Desert Region, pp. 367–392.",
+      "year": "2014",
+      "title": "Contemporary status of <i>Pseudemys gorzugi</i> (The Rio Grande river cooter) in Texas: phylogenetic, ecological, and conservation considerations",
+      "author": "Bailey, L.A., Forstner, M.R.J., Dixon, J.R. and Hudson, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bárcenas-García, A., Michalski, F., Morgan, W.H., Smith, R.K., Sutherland, W.J., Gibbs, J.P. and Norris, D. 2022. Impacts of dams on freshwater turtles: a global review to identify conservation solutions. <i>Tropical Conservation Science</i> 15: DOI: 10.1177/194008292211037.",
+      "year": "2022",
+      "title": "Impacts of dams on freshwater turtles: a global review to identify conservation solutions",
+      "author": "Bárcenas-García, A., Michalski, F., Morgan, W.H., Smith, R.K., Sutherland, W.J., Gibbs, J.P. and Norris, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barko, V.A. and Briggler, J.T. 2006. Midland smooth softshell (<i>Apalone mutica</i>) and spiny softshell (<i>Apalone spinifera</i>) turtles in the middle Mississippi River: habitat associations, population structure, and implications for conservation. <i>Chelonian Conservation and Biology</i> 5(2): 225–231.",
+      "year": "2006",
+      "title": "Midland smooth softshell (<i>Apalone mutica</i>) and spiny softshell (<i>Apalone spinifera</i>) turtles in the middle Mississippi River: habitat associations, population structure, and implications for conservation",
+      "author": "Barko, V.A. and Briggler, J.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barko, V.A., Briggler, J.T. and Ostendorf, D.E. 2004. Passive fishing techniques: a cause of turtle mortality in the Mississippi River. <i>The Journal of Wildlife Management</i> 68(4): 1145–1150.",
+      "year": "2004",
+      "title": "Passive fishing techniques: a cause of turtle mortality in the Mississippi River",
+      "author": "Barko, V.A., Briggler, J.T. and Ostendorf, D.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baur, G. 1888. Notes on the American Trionychidae. <i>American Naturalist</i> 22: 1121–1122.",
+      "year": "1888",
+      "title": "Notes on the American Trionychidae",
+      "author": "Baur, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Beverly, B. 2023. Abundance and Status of Cagle’s Map Turtle (<i>Graptemys caglei</i>), an Assessment Using N-Mixture Modeling. Tarleton State University, Stephenville, TX, USA.",
+      "year": "2023",
+      "title": "Abundance and Status of Cagle’s Map Turtle (<i>Graptemys caglei</i>), an Assessment Using N-Mixture Modeling",
+      "author": "Beverly, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Breckenridge, W.J. 1944. <i>Reptiles and amphibians of Minnesota</i>. University of Minnesota Press, Minneapolis, Minnesota, United States.",
+      "year": "1944",
+      "title": "Reptiles and amphibians of Minnesota",
+      "author": "Breckenridge, W.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Breckenridge, W.J. 1955. Observations on the life history of the soft-shelled turtle <i>Trionyx ferox</i>, with especial reference to growth. <i>Copeia</i> 1955(1): 5–9.",
+      "year": "1955",
+      "title": "Observations on the life history of the soft-shelled turtle <i>Trionyx ferox</i>, with especial reference to growth",
+      "author": "Breckenridge, W.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brown, D.J., Farallo, V.R., Dixon, J.R., Baccus, J.T., Simpson, T.R. and Forstner., M.R.J. 2011. Freshwater turtle conservation in Texas: harvest effects and efficacy of the current management regime. <i>The Journal of Wildlife Management</i> 75(3): 486–494.",
+      "year": "2011",
+      "title": "Freshwater turtle conservation in Texas: harvest effects and efficacy of the current management regime",
+      "author": "Brown, D.J., Farallo, V.R., Dixon, J.R., Baccus, J.T., Simpson, T.R. and Forstner., M.R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brown, D.J., Schultz, A.D., Dixon, J.R., Dickerson, B.E. and Forstner, M.R.J. 2012. Decline of red-eared sliders (<i>Trachemys scripta elegans</i>) and Texas spiny softshells (<i>Apalone spinifera emoryi</i>) in the Lower Rio Grande Valley of Texas. <i>Chelonian Conservation and Biology</i> 11: 138–143.",
+      "year": "2012",
+      "title": "Decline of red-eared sliders (<i>Trachemys scripta elegans</i>) and Texas spiny softshells (<i>Apalone spinifera emoryi</i>) in the Lower Rio Grande Valley of Texas",
+      "author": "Brown, D.J., Schultz, A.D., Dixon, J.R., Dickerson, B.E. and Forstner, M.R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bury, R.B. 2011. Modifications of traps to reduce bycatch of freshwater turtles. <i>Journal of Wildlife Management</i> 75: 3–5.",
+      "year": "2011",
+      "title": "Modifications of traps to reduce bycatch of freshwater turtles",
+      "author": "Bury, R.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carr, A.F. 1952. <i>Handbook of Turtles</i>. Comstock Publisher Associates,  Ithaca, New York, United States.",
+      "year": "1952",
+      "title": "Handbook of Turtles",
+      "author": "Carr, A.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ceballos, C.P. and Fitzgerald, L.A. 2004. The trade in native and exotic turtles in Texas. <i>Wildlife Society Bulletin.</i> 32: 881–891.",
+      "year": "2004",
+      "title": "The trade in native and exotic turtles in Texas",
+      "author": "Ceballos, C.P. and Fitzgerald, L.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cerdá-Ardura, A., Soberón-Mobarak, F., Mcgaugh, S.E. and Vogt, R.C. 2008. <i>Apalone spinifera atra</i> (Webb and Legler 1960) – black spiny softshell turtle, Cuatrociénegas softshell, tortuga concha blanda, tortuga negra de Cuatrociénegas. In: A.G.J. Rhodin, P.C.H. Pritchard, P.P. van Dijk, R.A. Saumure,  K.A. Buhlmann and J.B. Iverson (eds), <i>Conservation Biology of Freshwater Turtles and Tortoises: A Compilation Project of the IUCN/SSC Tortoise and Freshwater Turtle Specialist Group. Chelonian Research Monographs Vol. 5:021</i>, pp. 1–4. Chelonian Research Foundation, Lunenburg, MA, USA.",
+      "year": "2008",
+      "title": "<i>Apalone spinifera atra</i> (Webb and Legler 1960) – black spiny softshell turtle, Cuatrociénegas softshell, tortuga concha blanda, tortuga negra de Cuatrociénegas",
+      "author": "Cerdá-Ardura, A., Soberón-Mobarak, F., Mcgaugh, S.E. and Vogt, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cochran, P.A. and McConville, D.R. 1983. Feeding by <i>Trionyx spiniferus</i> in backwaters of the upper Mississippi River. <i>Journal of Herpetology</i> 17(1): 82-86.",
+      "year": "1983",
+      "title": "Feeding by <i>Trionyx spiniferus</i> in backwaters of the upper Mississippi River",
+      "author": "Cochran, P.A. and McConville, D.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Conant, R. 1951. <i>The Reptiles of Ohio</i>. University of Notre Dame Press, Notre Dame, Indiana, United States.",
+      "year": "1951",
+      "title": "The Reptiles of Ohio",
+      "author": "Conant, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Conant, R. and Goin, C.J. 1948. A new subspecies of soft-shelled turtle from the central United States, with comments on the application of the name <i>Amyda</i>. <i>Occasional Papers of the Museum of Zoology University of Michigan</i> 510: 1–19.",
+      "year": "1948",
+      "title": "A new subspecies of soft-shelled turtle from the central United States, with comments on the application of the name <i>Amyda</i>",
+      "author": "Conant, R. and Goin, C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "COSEWIC. 2016. COSEWIC assessment and status report on the Spiny Softshell <i>Apalone spinifera</i> in Canada. Committee on the Status of Endangered Wildlife in Canada, Ottawa.",
+      "year": "2016",
+      "title": "COSEWIC assessment and status report on the Spiny Softshell <i>Apalone spinifera</i> in Canada",
+      "author": "COSEWIC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Daigle, C., Galois, P. and Chagnon, Y. 2002. Nesting activities of an eastern spiny softshell turtle, <i>Apalone spinifera</i>. <i>Canadian Field Naturalist</i> 116(1): 104-107.",
+      "year": "2002",
+      "title": "Nesting activities of an eastern spiny softshell turtle, <i>Apalone spinifera</i>",
+      "author": "Daigle, C., Galois, P. and Chagnon, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dickerson, D.D., Reine, K.J. and Hermann, K. L. 1999. Softshell Turtle habitats potentially impacted. Army Engineer Waterways Experiment Station, Vicksburg MS.",
+      "year": "1999",
+      "title": "Softshell Turtle habitats potentially impacted",
+      "author": "Dickerson, D.D., Reine, K.J. and Hermann, K. L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dieter, C.D., Dixon, L.A., Ronningen, S.L. and Ronningen, T. 2014. Survey of turtles nesting on the Missouri River on the South Dakota-Nebraska border. <i>Great Plains Research</i> 24(2): 111–118.",
+      "year": "2014",
+      "title": "Survey of turtles nesting on the Missouri River on the South Dakota-Nebraska border",
+      "author": "Dieter, C.D., Dixon, L.A., Ronningen, S.L. and Ronningen, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dixon, L.A. 2009. False map, spiny softshell and smooth softshell turtle nest and nest-site habitat characteristics along the lower stretch of the Missouri National Recreation River in South Dakota. Master’s thesis, South Dakota State University, Brookings, South Dakota.",
+      "year": "2009",
+      "title": "False map, spiny softshell and smooth softshell turtle nest and nest-site habitat characteristics along the lower stretch of the Missouri National Recreation River in South Dakota",
+      "author": "Dixon, L.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Doody, J.S. 1995. A comparative nesting study of two syntopic species of softshell turtles (<i>Apalone mutica</i> and <i>A. spinifera</i>) in southcentral Louisiana. Master’s thesis, Southeastern Louisiana University, Hammond, Louisiana.",
+      "year": "1995",
+      "title": "A comparative nesting study of two syntopic species of softshell turtles (<i>Apalone mutica</i> and <i>A. spinifera</i>) in southcentral Louisiana",
+      "author": "Doody, J.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Doody, J.S. 1996. Summers with softshells. <i>Bulletin of the Chicago Herpetological Society</i> 31(7): 132–133.",
+      "year": "1996",
+      "title": "Summers with softshells",
+      "author": "Doody, J.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eigenman, C.H. 1896. Testudinae of Turkey Lake, Indiana. <i>Proceedings of the Indiana Academy of Science</i> 5: 262–264.",
+      "year": "1896",
+      "title": "Testudinae of Turkey Lake, Indiana",
+      "author": "Eigenman, C.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Evermann, B.W. and Clark, H.W. 1920. <i>Lake Maxinkuckee: A Physical and Biological Survey</i>. William B. Burford Printing Company, Indianapolis, Indiana.",
+      "year": "1920",
+      "title": "Lake Maxinkuckee: A Physical and Biological Survey",
+      "author": "Evermann, B.W. and Clark, H.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Franklin, C.J. 2014. <i>Apalone spinifera</i>. (Spiny soft-shell turtle). Cheloniophagy. <i>Herpetological Review</i> 45(2): 309.",
+      "year": "2014",
+      "title": "<i>Apalone spinifera</i>. (Spiny soft-shell turtle). Cheloniophagy",
+      "author": "Franklin, C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Franklin, C.J., Ricardez, V. and Scibetta, S. 2020. <i>Apalone spinifera pallida</i> (pallid spiny softshell turtle). Diet and scavenging. <i>Herpetological Review</i> 51: 385.",
+      "year": "2020",
+      "title": "<i>Apalone spinifera pallida</i> (pallid spiny softshell turtle). Diet and scavenging",
+      "author": "Franklin, C.J., Ricardez, V. and Scibetta, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fratto, Z.W., Barko, V.A., Pitts, P.R., Sheriff, S.L., Briggler, J.T., Sullivan, K.P., McKeage, B.L. and Johnson, T.R. 2008. Evaluation of turtle exclusion and escapement devices for hoop-nets. <i>Journal of Wildlife Management</i> 72: 1628–1633.",
+      "year": "2008",
+      "title": "Evaluation of turtle exclusion and escapement devices for hoop-nets",
+      "author": "Fratto, Z.W., Barko, V.A., Pitts, P.R., Sheriff, S.L., Briggler, J.T., Sullivan, K.P., McKeage, B.L. and Johnson, T.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Galois, P. and Ouellet, M. 2007. Traumatic Injuries in eastern spiny softshell turtles (<i>Apalone spinifera</i>) due to recreational activities in the northern Lake Champlain Basin. <i>Chelonian Conservation and Biology</i> 6(2): 288–293.",
+      "year": "2007",
+      "title": "Traumatic Injuries in eastern spiny softshell turtles (<i>Apalone spinifera</i>) due to recreational activities in the northern Lake Champlain Basin",
+      "author": "Galois, P. and Ouellet, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Galois, P., Bouthillier, L., Daigle, C. and Parren, S. 2002. Movement patterns, activity, and home range of the eastern spiny softshell turtle (<i>Apalone spinifera</i>) in northern Lake Champlain, Québec, Vermont. <i>Journal of Herpetology</i> 36(3): 402–411.",
+      "year": "2002",
+      "title": "Movement patterns, activity, and home range of the eastern spiny softshell turtle (<i>Apalone spinifera</i>) in northern Lake Champlain, Québec, Vermont",
+      "author": "Galois, P., Bouthillier, L., Daigle, C. and Parren, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gillingwater, S.D. and MacKenzie, A.S. 2015. <i>Photo Field Guide to the Reptiles and Amphibians of Ontario</i>. St. Thomas Field Naturalist Club.",
+      "year": "2015",
+      "title": "Photo Field Guide to the Reptiles and Amphibians of Ontario",
+      "author": "Gillingwater, S.D. and MacKenzie, A.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Godwin, C.D. 2017. Softshell Turtle Nesting Ecology with Emphasis on ORV Impacts and Flooding. Master’s thesis, Southeastern Louisiana University, Hammond, Louisiana.",
+      "year": "2017",
+      "title": "Softshell Turtle Nesting Ecology with Emphasis on ORV Impacts and Flooding",
+      "author": "Godwin, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Godwin, C.D., Doody, J.S. and Crother, B.I. 2021. The impact of ATVs on softshell turtle  (<i>Apalone</i> spp.) nests. <i>Journal of Herpetology.</i> 55: 201–207.",
+      "year": "2021",
+      "title": "The impact of ATVs on softshell turtle  (<i>Apalone</i> spp.) nests",
+      "author": "Godwin, C.D., Doody, J.S. and Crother, B.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Graham, T.E. and Graham, A.A. 1997. Ecology of the eastern spiny softshell, <i>Apalone spinifera spinifera</i>, in the Lamoille River, Vermont. <i>Chelonian Conservation and Biology</i> 2(3): 363–369.",
+      "year": "1997",
+      "title": "Ecology of the eastern spiny softshell, <i>Apalone spinifera spinifera</i>, in the Lamoille River, Vermont",
+      "author": "Graham, T.E. and Graham, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grosmaire, E.K. 1977. Aspects of the natural history of freshwater turtles within the lower Rio Grande Valley of Texas. M.S. Thesis, Texas A&M University, College Station, Texas.",
+      "year": "1977",
+      "title": "Aspects of the natural history of freshwater turtles within the lower Rio Grande Valley of Texas",
+      "author": "Grosmaire, E.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heyborne, W. and Sigg, J. 2017. <i>Apalone spinifera emoryi</i> (Texas Spiny Softshell). Diet. <i>Herpetological Review</i> 48(2): 419.",
+      "year": "2017",
+      "title": "<i>Apalone spinifera emoryi</i> (Texas Spiny Softshell). Diet",
+      "author": "Heyborne, W. and Sigg, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hill, S.K. and Vodopich, D.S. 2013. Habitat use and basking behavior of a freshwater turtle community along an urban gradient. <i>Chelonian Conservation and Biology</i> 12(2): 275–282.",
+      "year": "2013",
+      "title": "Habitat use and basking behavior of a freshwater turtle community along an urban gradient",
+      "author": "Hill, S.K. and Vodopich, D.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hopwood, A.J. 1974. Thermal effects of a nuclear power plant on the Mississippi River at Monticello, Minnesota. <i>University of Minnesota, Water Resources Research Center Bulletin</i> 69: 1–134.",
+      "year": "1974",
+      "title": "Thermal effects of a nuclear power plant on the Mississippi River at Monticello, Minnesota",
+      "author": "Hopwood, A.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Iverson, J.B.  2024 [2023]. Estimating generation time in freshwater and terrestrial turtles. <i>Herpetological Review</i> 54(4): 546–549.",
+      "year": " 2024 [2023]",
+      "title": "Estimating generation time in freshwater and terrestrial turtles",
+      "author": "Iverson, J.B",
+      "citation_short": ""
+    },
+    {
+      "citation": "Iverson, J.B. and Moler, P.E. 1997. The female reproductive cycle of the Florida softshell turtle (<i>Apalone ferox</i>). <i>Journal of Herpetology</i> 31(3): 399–409.",
+      "year": "1997",
+      "title": "The female reproductive cycle of the Florida softshell turtle (<i>Apalone ferox</i>)",
+      "author": "Iverson, J.B. and Moler, P.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "James, J.E. 1966. Biology of the soft-shelled turtle, <i>Trionyx</i> sp., of the Upper Mississippi River. Ph.D. Dissertation, Winona State College, Winona, Minnesota.",
+      "year": "1966",
+      "title": "Biology of the soft-shelled turtle, <i>Trionyx</i> sp., of the Upper Mississippi River",
+      "author": "James, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lagler, K.F. 1943. Food habits and economic relations of the turtles of Michigan with special reference to fish management. <i>American Midland Naturalist.</i> 29(2): 257–312.",
+      "year": "1943",
+      "title": "Food habits and economic relations of the turtles of Michigan with special reference to fish management",
+      "author": "Lagler, K.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lazure, L., Pare, P., Bouthillier, L. and Galois, P. 2019. Nesting biology and conservation of a northern population of spiny softshell turtles (<i>Apalone spinifera</i>). <i>Herpetological Conservation and Biology</i> 14(3): 659-667.",
+      "year": "2019",
+      "title": "Nesting biology and conservation of a northern population of spiny softshell turtles (<i>Apalone spinifera</i>)",
+      "author": "Lazure, L., Pare, P., Bouthillier, L. and Galois, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "LeSueur, C.A. 1827. Note sur deux espèces de tortues, du genre <i>Trionyx</i> de M. Geoffroy-Saint-Hilaire. <i>Mémoires du Muséum d’Histoire Naturelle, Paris</i> 15: 257–268.",
+      "year": "1827",
+      "title": "Note sur deux espèces de tortues, du genre <i>Trionyx</i> de M. Geoffroy-Saint-Hilaire",
+      "author": "LeSueur, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lindeman, P.V. 2000. Resource use of five sympatric turtle species: effects of competition, phylogeny, and morphology. <i>Canadian Journal of Zoology</i> 78(6): 992–1008.",
+      "year": "2000",
+      "title": "Resource use of five sympatric turtle species: effects of competition, phylogeny, and morphology",
+      "author": "Lindeman, P.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lindeman, P.V. 2018. <i>Apalone spinifera</i> (spiny softshell). Healed injury. <i>Herpetological Review</i> 49(1): 103–104.",
+      "year": "2018",
+      "title": "<i>Apalone spinifera</i> (spiny softshell). Healed injury",
+      "author": "Lindeman, P.V. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mahan, L.B. 2022. Estimating the current distribution and detectability of Rio Grande cooter (Pseudemys gorzugi) on the lower Pecos River. Master’s Thesis, Eastern New Mexico University, Portales, New Mexico, USA.",
+      "year": "2022",
+      "title": "Estimating the current distribution and detectability of Rio Grande cooter (Pseudemys gorzugi) on the lower Pecos River",
+      "author": "Mahan, L.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mahan, L.B., Ortega-Berno, V., Suriyamongkol, T. and Mali, I. 2020. Chelydra serpentina (snapping turtle), <i>Trachemys scripta</i> (pond slider), and <i>Apalone spinifera</i> (spiny softshell turtle). Anthropogenic damage. <i>Herpetological Review</i> 51(4): 827–828.",
+      "year": "2020",
+      "title": "Chelydra serpentina (snapping turtle), <i>Trachemys scripta</i> (pond slider), and <i>Apalone spinifera</i> (spiny softshell turtle). Anthropogenic damage",
+      "author": "Mahan, L.B., Ortega-Berno, V., Suriyamongkol, T. and Mali, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mahoney, S.M. and Lindeman, P.V. 2016. Relative abundance and diet of spiny softshells (<i>Apalone spinifera</i>) in a Lake Erie population. <i>The Canadian Field Naturalist</i> 130(4): 275–280.",
+      "year": "2016",
+      "title": "Relative abundance and diet of spiny softshells (<i>Apalone spinifera</i>) in a Lake Erie population",
+      "author": "Mahoney, S.M. and Lindeman, P.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mali, I., Brown, D.J., Jones, M.C. and Forstner, M.R.J. 2013. Hoop net escapes and influence of traps containing turtles on Texas spiny softshell (<i>Apalone spinifera</i> emoryi) captures. <i>Herpetological Review</i> 44(1): 40–42.",
+      "year": "2013",
+      "title": "Hoop net escapes and influence of traps containing turtles on Texas spiny softshell (<i>Apalone spinifera</i> emoryi) captures",
+      "author": "Mali, I., Brown, D.J., Jones, M.C. and Forstner, M.R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mali, I., Vandewege, M.W., Davis, S.K. and Forstner, M.R.J. 2014. Magnitude of the freshwater turtle exports from the US: Long term trends and early effects of newly implemented harvest management regime. <i>PLoS ONE</i> 9(9): e86478. DOI: 10.1371/journal.pone.0086478.",
+      "year": "2014",
+      "title": "Magnitude of the freshwater turtle exports from the US: Long term trends and early effects of newly implemented harvest management regime",
+      "author": "Mali, I., Vandewege, M.W., Davis, S.K. and Forstner, M.R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mali, I., Villamizar-Gomez, A., Guerra, T.M., Vandewege, M.W. and Forstner, M.R.J. 2015. Population genetics of Texas Spiny Softshell Turtles (>i>Apalone spinifera emoryi</i>) under various anthropogenic pressures in two distinct regions of their range in Texas. <i>Chelonian Conservation and Biology</i> 14(2): 148–156.",
+      "year": "2015",
+      "title": "Population genetics of Texas Spiny Softshell Turtles (>i>Apalone spinifera emoryi</i>) under various anthropogenic pressures in two distinct regions of their range in Texas",
+      "author": "Mali, I., Villamizar-Gomez, A., Guerra, T.M., Vandewege, M.W. and Forstner, M.R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Meshaka Jr, W.E., Collins, S.L., Bury, R.B. and McCallum, M.L. 2022. <i>Exotic Amphibians and Reptiles of the United States</i>. University Press of Florida, Gainesville, Florida.",
+      "year": "2022",
+      "title": "Exotic Amphibians and Reptiles of the United States",
+      "author": "Meshaka Jr, W.E., Collins, S.L., Bury, R.B. and McCallum, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Minckley, W.L. 1982. Trophic interrelations among introduced fishes in the lower Colorado River, southwestern United States. <i>California Fish and Game</i> 68: 78–89.",
+      "year": "1982",
+      "title": "Trophic interrelations among introduced fishes in the lower Colorado River, southwestern United States",
+      "author": "Minckley, W.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of the Environment, Conservation and Parks. 2019. Recovery Strategy for the Spiny Softshell (<i>Apalone spinifera</i>) in Ontario.  Ontario Recovery Strategy Series. Peterborough, Ontario.",
+      "year": "2019",
+      "title": "Recovery Strategy for the Spiny Softshell (<i>Apalone spinifera</i>) in Ontario",
+      "author": "Ministry of the Environment, Conservation and Parks",
+      "citation_short": ""
+    },
+    {
+      "citation": "Minton, S.A. 1972. <i>Amphibians and Reptiles of Indiana</i>. Indiana Academy of Science, Indianapolis, Indiana.",
+      "year": "1972",
+      "title": "Amphibians and Reptiles of Indiana",
+      "author": "Minton, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moll, D. and Moll, E.O. 2004. <i>The Ecology, Exploitation and Conservation of River Turtles</i>. Oxford University Press, Oxford.",
+      "year": "2004",
+      "title": "The Ecology, Exploitation and Conservation of River Turtles",
+      "author": "Moll, D. and Moll, E.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moll, E.O. 1979. Reproductive cycles and adaptations. In:  M. Harless and H. Morlock (eds), <i>Turtles: Perspectives and Research</i>, pp. 305–332. John Wiley and Sons, Toronto.",
+      "year": "1979",
+      "title": "Reproductive cycles and adaptations",
+      "author": "Moll, E.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nanjappa, P. and Conrad, P.M. (eds). 2011. <i>State of the Union: Legal Authority Over the Use of Native Amphibians and Reptiles in the United States. Version 1.03</i>. Association of Fish and Wildlife Agencies, Washington, D.C.",
+      "year": "2011",
+      "title": "State of the Union: Legal Authority Over the Use of Native Amphibians and Reptiles in the United States. Version 1.03",
+      "author": "Nanjappa, P. and Conrad, P.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "NatureServe. 2024. NatureServe Network Biodiversity Location Data accessed through NatureServe Explorer [web application]. Arlington, Virginia. NatureServe. Available at: <a href=\"https://explorer.natureserve.org/\">https://explorer.natureserve.org/</a>. ",
+      "year": "2024",
+      "title": "NatureServe Network Biodiversity Location Data accessed through NatureServe Explorer [web application]",
+      "author": "NatureServe",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neill, W.T. 1958. The occurrence of amphibians and reptiles in saltwater areas, and a bibliography. <i>Bulletin of Marine Science</i> 8(1): 1–97.",
+      "year": "1958",
+      "title": "The occurrence of amphibians and reptiles in saltwater areas, and a bibliography",
+      "author": "Neill, W.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Newman, H.H. 1906. The habits of certain tortoises. <i>Journal of Comparative Neurology and Psychology</i> 16: 126–152.",
+      "year": "1906",
+      "title": "The habits of certain tortoises",
+      "author": "Newman, H.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ostovar, K., Wolff, G., Dockery, D., Hoensch, U., Ruggles, M., Massey, A., Robinett, R. and Radonski, E. 2021. Population structure of the spiny softshell turtle (<i>Apalone spinifera</i>) in five Montana Rivers. <i>Chelonian Conservation and Biology</i> 20(2): 242–253.",
+      "year": "2021",
+      "title": "Population structure of the spiny softshell turtle (<i>Apalone spinifera</i>) in five Montana Rivers",
+      "author": "Ostovar, K., Wolff, G., Dockery, D., Hoensch, U., Ruggles, M., Massey, A., Robinett, R. and Radonski, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pappas, M.J., Congdon, J.D. and Brecke, B.J. 2017. Orientation in five species of hatchling river turtles dispersing from experimental nests. <i>Chelonian Conservation and Biology</i> 16(1): 3–11.",
+      "year": "2017",
+      "title": "Orientation in five species of hatchling river turtles dispersing from experimental nests",
+      "author": "Pappas, M.J., Congdon, J.D. and Brecke, B.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Parren, S., Parren, M. and Gieder, K. 2021. Nest counts and hatchling emergence timing for the spiny softshell (<i>Apalone spinifera</i>) and associated turtle species at managed sites in Vermont, USA. <i>Herpetological Conservation and Biology</i> 16(1): 194–202.",
+      "year": "2021",
+      "title": "Nest counts and hatchling emergence timing for the spiny softshell (<i>Apalone spinifera</i>) and associated turtle species at managed sites in Vermont, USA",
+      "author": "Parren, S., Parren, M. and Gieder, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Penn, G.H. 1950. Utilization of crawfishes by cold-blooded vertebrates in the eastern United States. <i>American Midland Naturalist</i> 44(3): 643-658.",
+      "year": "1950",
+      "title": "Utilization of crawfishes by cold-blooded vertebrates in the eastern United States",
+      "author": "Penn, G.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Platt, S.G., McVay, J.D. and Rainwater, T.R. 2008. <i>Apalone spinifera</i> (Spiny Softshell Turtle). Diet. <i>Herpetological Review</i> 39(2): 212.",
+      "year": "2008",
+      "title": "<i>Apalone spinifera</i> (Spiny Softshell Turtle). Diet",
+      "author": "Platt, S.G., McVay, J.D. and Rainwater, T.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Plummer, M.V. and Mills, N.E. 2008. Structure of an urban population of softshell turtles (<i>Apalone spinifera</i>) before and after severe stream alteration. <i>Herpetological Conservation</i> 3: 95–105.",
+      "year": "2008",
+      "title": "Structure of an urban population of softshell turtles (<i>Apalone spinifera</i>) before and after severe stream alteration",
+      "author": "Plummer, M.V. and Mills, N.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Plummer, M.V., Krementz, D.G., Powell, L.A. and Mills, N.E. 2008. Effects of habitat disturbance on survival rates of softshell turtles (<i>Apalone spinifera</i>) in an urban stream. <i>Journal of Herpetology</i> 42(3): 555–563.",
+      "year": "2008",
+      "title": "Effects of habitat disturbance on survival rates of softshell turtles (<i>Apalone spinifera</i>) in an urban stream",
+      "author": "Plummer, M.V., Krementz, D.G., Powell, L.A. and Mills, N.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Plummer, M.V., Mills, N.E. and Allen, S.L. 1997. Activity, habitat, and movement patterns of softshell turtles (<i>Trionyx spiniferus</i>) in a small stream. <i>Chelonian Conservation and Biology</i> 2: 514–520.",
+      "year": "1997",
+      "title": "Activity, habitat, and movement patterns of softshell turtles (<i>Trionyx spiniferus</i>) in a small stream",
+      "author": "Plummer, M.V., Mills, N.E. and Allen, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Powell, R., Collins, J.T. and Conant, R. 2016. <i>Peterson Field Guide to Reptiles and Amphibians of Eastern and Central North America</i>. Houghton Mifflin Harcourt, Boston, Massachusetts.",
+      "year": "2016",
+      "title": "Peterson Field Guide to Reptiles and Amphibians of Eastern and Central North America",
+      "author": "Powell, R., Collins, J.T. and Conant, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rafinesque, C.S. 1832. Description of two new genera of soft shell turtles of North America. <i>Atlantic Journal and Friend of Knowledge</i> 1: 64–65.",
+      "year": "1832",
+      "title": "Description of two new genera of soft shell turtles of North America",
+      "author": "Rafinesque, C.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rizkalla, C.E. and Swihart, R.K. 2006. Community structure and differential responses of aquatic turtles to agriculturally induced habitat fragmentation. <i>Landscape Ecology</i> 21(8): 1361–1375.",
+      "year": "2006",
+      "title": "Community structure and differential responses of aquatic turtles to agriculturally induced habitat fragmentation",
+      "author": "Rizkalla, C.E. and Swihart, R.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robinson, K.M. and Murphy, G.G. 1978. The reproductive cycle of the eastern spiny softshell turtle (<i>Trionyx spiniferus spiniferus</i>). <i>Herpetologica.</i> 34(2): 137–140.",
+      "year": "1978",
+      "title": "The reproductive cycle of the eastern spiny softshell turtle (<i>Trionyx spiniferus spiniferus</i>)",
+      "author": "Robinson, K.M. and Murphy, G.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schmidt, K.P. and Owens, D.W. 1944. Amphibians and reptiles of northern Coahuila, Mexico. <i>Field Museum of Natural History Zoology</i> 29: 97–115.",
+      "year": "1944",
+      "title": "Amphibians and reptiles of northern Coahuila, Mexico",
+      "author": "Schmidt, K.P. and Owens, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Seidel, M.E. 1975. Osmoregulation in the turtle <i>Trionyx spiniferus</i> from brackish and fresh water. <i>Copeia</i> 1975: 124–128.",
+      "year": "1975",
+      "title": "Osmoregulation in the turtle <i>Trionyx spiniferus</i> from brackish and fresh water",
+      "author": "Seidel, M.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Steen, D.A., Hopkins, B.C., Van Dyke, J.U. and Hopkins, W.A. 2014. Prevalence of ingested fish hooks in freshwater turtles from five Rivers in the Southeastern United States. <i>PLoS ONE</i> 9(3): e91368.",
+      "year": "2014",
+      "title": "Prevalence of ingested fish hooks in freshwater turtles from five Rivers in the Southeastern United States",
+      "author": "Steen, D.A., Hopkins, B.C., Van Dyke, J.U. and Hopkins, W.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Strecker, J.K. 1922. An annotated catalogue of the amphibians and reptiles of Bexar County, Texas. <i>Bulletin of the Scientific Society of San Antonio</i> 4: 1–31.",
+      "year": "1922",
+      "title": "An annotated catalogue of the amphibians and reptiles of Bexar County, Texas",
+      "author": "Strecker, J.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Strecker, J.K. 1926. A list of reptiles and amphibians collected by Louis Garni in the vicinity of Boerne, Texas. <i>Contributions of the Baylor University Museum</i> 6: 1–9.",
+      "year": "1926",
+      "title": "A list of reptiles and amphibians collected by Louis Garni in the vicinity of Boerne, Texas",
+      "author": "Strecker, J.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Strecker, J.K. and Williams, W.J. 1927. Herpetological records from the vicinity of San Marcos, Texas, with distributional data on the amphibians and reptiles of the Edwards Plateau Region and central Texas. <i>Contributions of the Baylor University Museum</i> 12: 1–16.",
+      "year": "1927",
+      "title": "Herpetological records from the vicinity of San Marcos, Texas, with distributional data on the amphibians and reptiles of the Edwards Plateau Region and central Texas",
+      "author": "Strecker, J.K. and Williams, W.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Surface, H.A. 1908. <i> First Report on the Economic Features of Turtles of Pennsylvania (Vol. 6. No. 4-5)</i>. Harrisburg Publishing Company, Harrisburg, Pennsylvania.",
+      "year": "1908",
+      "title": " First Report on the Economic Features of Turtles of Pennsylvania (Vol. 6. No. 4-5)",
+      "author": "Surface, H.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Swanson, R. 2009. Temporal and spatial trends of the amphibians, reptiles, and mammals, of the relict Ottine wetlands. M.Sc. Thesis, Texas State University, San Marcos, TX, USA.",
+      "year": "2009",
+      "title": "Temporal and spatial trends of the amphibians, reptiles, and mammals, of the relict Ottine wetlands",
+      "author": "Swanson, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tamplin, J.W. 2010. <i>Apalone spinifera</i> (Spiny Softshell Turtle). Maximum clutch size. <i>Herpetological Review</i> 41(3): 344–345.",
+      "year": "2010",
+      "title": "<i>Apalone spinifera</i> (Spiny Softshell Turtle). Maximum clutch size",
+      "author": "Tamplin, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tornabene, B.J., Bramblett, R.G., Zale, A.V. and Leathe, S.A. 2017. Spatiotemporal ecology of <i>Apalone spinifera</i> in a large, Great Plains river ecosystem. <i>Herpetological Conservation and Biology</i> 12(1): 252–271.",
+      "year": "2017",
+      "title": "Spatiotemporal ecology of <i>Apalone spinifera</i> in a large, Great Plains river ecosystem",
+      "author": "Tornabene, B.J., Bramblett, R.G., Zale, A.V. and Leathe, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tornabene, B.J., Bramblett, R.G., Zale, A.V. and Leathe, S.A. 2018. Factors affecting nesting ecology of <i>Apalone spinifera</i> in a northwestern Great Plains river of the United States. <i>Chelonian Conservation and Biology</i> 17(1): 63–77.",
+      "year": "2018",
+      "title": "Factors affecting nesting ecology of <i>Apalone spinifera</i> in a northwestern Great Plains river of the United States",
+      "author": "Tornabene, B.J., Bramblett, R.G., Zale, A.V. and Leathe, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tornabene, B.J., Jaeger, M.E., Bramblett, R.G., Nelson, M., McClenning, N., Watson, T., Ankrum, A., Frazer, K., Reinhold, A.M. and Zale, A.V. 2019. Riverine turtles select habitats maintained by natural discharge regimes in an unimpounded large river. <i>River Research and Applications, 35(9): </i> 35(9): 1489–1498.",
+      "year": "2019",
+      "title": "Riverine turtles select habitats maintained by natural discharge regimes in an unimpounded large river",
+      "author": "Tornabene, B.J., Jaeger, M.E., Bramblett, R.G., Nelson, M., McClenning, N., Watson, T., Ankrum, A., Frazer, K., Reinhold, A.M. and Zale, A.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tortoise and Freshwater Turtle Specialist Group [TFTSG]. 1996. <i>Apalone spinifera</i> ssp. <i>atra</i>. <i>The IUCN Red List of Threatened Species</i> 1996: e.T1820A7781928.",
+      "year": "1996",
+      "title": "<i>Apalone spinifera</i> ssp. <i>atra</i>",
+      "author": "Tortoise and Freshwater Turtle Specialist Group [TFTSG]",
+      "citation_short": ""
+    },
+    {
+      "citation": "van Dijk, P.P. 2011. <i>Apalone spinifera</i>. <i>The IUCN Red List of Threatened Species</i> 2011(1): e.T163451A5607536. DOI: 10.2305/IUCN.UK.2011-1.RLTS.T163451A5607536.en.",
+      "year": "2011",
+      "title": "<i>Apalone spinifera</i>",
+      "author": "van Dijk, P.P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vose, R.N. 1964. Nesting habits of the soft-shelled turtles (<i>Trionyx</i> sp.). <i>Journal of the Minnesota Academy of Science</i> 31(2): 122-124.",
+      "year": "1964",
+      "title": "Nesting habits of the soft-shelled turtles (<i>Trionyx</i> sp.)",
+      "author": "Vose, R.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Waltzek, T.B., Stacy, B.A., Ossiboff, R.J., Stacy, N.I., Fraser, W.A., Yan, A., Mohan, S., Koonin, E.V., Wolf, Y.I., Rodrigues, T.C.S., Viadanna, P.H.O., Subramaniam, K., Popov, V.L., Guzman-Vargas, V., and Shender, L.A. 2022. A novel group of negative-sense RNA viruses associated with epizootics in managed and free-ranging freshwater turtles in Florida, USA. <i>PLoS Pathogens</i> 18(3): e1010258.",
+      "year": "2022",
+      "title": "A novel group of negative-sense RNA viruses associated with epizootics in managed and free-ranging freshwater turtles in Florida, USA",
+      "author": "Waltzek, T.B., Stacy, B.A., Ossiboff, R.J., Stacy, N.I., Fraser, W.A., Yan, A., Mohan, S., Koonin, E.V., Wolf, Y.I., Rodrigues, T.C.S., Viadanna, P.H.O., Subramaniam, K., Popov, V.L., Guzman-Vargas, V., and Shender, L.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Webb, R.G. 1962. North American Recent soft-shelled turtles (family Trionychidae). <i>University of Kansas Publications, Museum of Natural History</i> 13: 429–611.",
+      "year": "1962",
+      "title": "North American Recent soft-shelled turtles (family Trionychidae)",
+      "author": "Webb, R.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Webb, R.G. and Legler, J.M. 1960. A new softshell turtle (Genus <i>Trionyx</i>) from Coahuila, Mexico. <i>University of Kansas Science Bulletin</i> 40(2): 21–30.",
+      "year": "1960",
+      "title": "A new softshell turtle (Genus <i>Trionyx</i>) from Coahuila, Mexico",
+      "author": "Webb, R.G. and Legler, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Williams, T.A. and Christiansen, J.L. 1981. The niches of two sympatric softshell turtles, <i>Trionyx muticus</i> and <i>Trionyx spiniferus</i>, in Iowa. <i>Journal of Herpetology</i> 15(3): 303–308.",
+      "year": "1981",
+      "title": "The niches of two sympatric softshell turtles, <i>Trionyx muticus</i> and <i>Trionyx spiniferus</i>, in Iowa",
+      "author": "Williams, T.A. and Christiansen, J.L.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

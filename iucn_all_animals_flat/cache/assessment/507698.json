@@ -1,0 +1,2329 @@
+{
+  "assessment_date": "2018-06-03T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12695,
+  "criteria": "A4acde",
+  "url": "https://www.iucnredlist.org/species/12695/507698",
+  "citation": "Roosenburg, W.M., Baker, P.J., Burke, R., Dorcas, M.E. & Wood, R.C. 2019. Malaclemys terrapin. The IUCN Red List of Threatened Species 2019: e.T12695A507698. Accessed on 05 May 2026.",
+  "assessment_id": 507698,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12695,
+    "scientific_name": "Malaclemys terrapin",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "TESTUDINES",
+    "family_name": "EMYDIDAE",
+    "genus_name": "Malaclemys",
+    "species_name": "terrapin",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Schoepff, 1793)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tortoise and Freshwater Turtle Specialist Group",
+        "url": "http://www.iucn-tftsg.org/",
+        "description": "Chair: Craig Stanford (email: stanford@usc.edu)\nRed List Authority Coordinator: Carla Eisemberg (email:Carla.Eisemberg@cdu.edu.au)\nNewsletters: Chelonian Conservation and Biology (http://www.chelonian.org/ccb/); Turtle and Tortoise Newsletter (http://www.chelonian.org/crf-publications/turtle-and-tortoise-newsletter/); TurtleLog Online Newsletter (http://www.iucn-tftsg.org/turtlelog_online_newsletter/)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Diamond-backed Terrapin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Terrapin",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Diamondback Terrapin",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Testudo concentrica Shaw, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "concentrica",
+        "species_author": "Shaw, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Testudo ocellata Link, 1807",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "ocellata",
+        "species_author": "Link, 1807",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Emys pileata Wied, 1865",
+        "status": "ACCEPTED",
+        "genus_name": "Emys",
+        "species_name": "pileata",
+        "species_author": "Wied, 1865",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Malaclemmys littoralis ssp. rhizophorarum Fowler, 1906",
+        "status": "ACCEPTED",
+        "genus_name": "Malaclemmys",
+        "species_name": "littoralis",
+        "species_author": null,
+        "infrarank_author": "Fowler, 1906",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "rhizophorarum"
+      },
+      {
+        "name": "Malaclemys terrapin ssp. tequesta Schwartz, 1955",
+        "status": "ACCEPTED",
+        "genus_name": "Malaclemys",
+        "species_name": "terrapin",
+        "species_author": null,
+        "infrarank_author": "Schwartz, 1955",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "tequesta"
+      },
+      {
+        "name": "Malacoclemmys terrapin (Schoepff, 1793)",
+        "status": "ACCEPTED",
+        "genus_name": "Malacoclemmys",
+        "species_name": "terrapin",
+        "species_author": "(Schoepff, 1793)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Emys macrocephalus Gray, 1844 [junior homonym]",
+        "status": "ACCEPTED",
+        "genus_name": "Emys",
+        "species_name": "macrocephalus",
+        "species_author": "Gray, 1844 [junior homonym]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Malaclemys tuberculifera Gray, 1844 [<i>nomen oblitum</i>]",
+        "status": "ACCEPTED",
+        "genus_name": "Malaclemys",
+        "species_name": "tuberculifera",
+        "species_author": "Gray, 1844 [<i>nomen oblitum</i>]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Malaclemmys littoralis Hay, 1905",
+        "status": "ACCEPTED",
+        "genus_name": "Malaclemmys",
+        "species_name": "littoralis",
+        "species_author": "Hay, 1905",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Malaclemmys macrospilota Hay, 1905",
+        "status": "ACCEPTED",
+        "genus_name": "Malaclemmys",
+        "species_name": "macrospilota",
+        "species_author": "Hay, 1905",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Testudo terrapin Schoepff, 1793",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "terrapin",
+        "species_author": "Schoepff, 1793",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Emys centrata Latreille, in Sonnini & Latreille, 1801",
+        "status": "ACCEPTED",
+        "genus_name": "Emys",
+        "species_name": "centrata",
+        "species_author": "Latreille, in Sonnini & Latreille, 1801",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 5,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": 10,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "13-20,15",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "5000-25000,10000",
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "209000",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p><em>Malaclemys terrapin </em>inhabits the estuarine coastal waters of the United States along the Atlantic Ocean and the Gulf of Mexico, from Cape Cod, Massachusetts to Corpus Christi, Texas (Iverson 1992; TTWG 2017). A breeding subpopulation also is found in the Bermuda Islands (Davenport et al. 2005), which was considered native by Parham <em>et al</em>. (2008) and genetically attributed to subspecies <em>M. t. centrata</em>. The human role in the origin of the Bermuda subpopulation remains under consideration (Lovich and Hart 2018), but it currently is an established and protected population (Outerbridge 2014).<br/><br/>Subspecific distributional information for the morphologically-defined historically recognized subspecies is as follows (noting, however, that molecular phylogeography does not agree with this pattern, but that a revised taxonomy has not yet been formulated; see Taxonomy section):<br/><br/><em>M. terrapin terrapin</em>: from Cape Cod, Massachusetts southward to the vicinity of Cape Hatteras, North Carolina, where it intergrades with <em>M. terrapin centrata</em>.<br/><br/><em>M. terrapin centrata</em>: from the vicinity of Cape Hatteras, North Carolina southward to northern peninsular Florida, where it meets and intergrades with <em>M. terrapin tequesta</em>; also on Bermuda.<br/><br/><em>M. terrapin tequesta</em>: Atlantic east coast of peninsular Florida to Biscayne Bay, where it intergrades with <em>M. terrapin rhizophorarum</em>.</p>  <p><em>M. terrapin rhizophorarum</em>: Florida Keys westward to the Marquesas Keys.<br/><br/><em>M. terrapin macrospilota</em>: Gulf coast of peninsular Florida, intergrading with <em>M. terrapin pileata</em> in the panhandle and with <em>M. terrapin rhizophorarum</em> in Florida Bay.<br/><br/><em>M. terrapin pileata</em>: from the Florida panhandle, where it intergrades with <em>M. terrapin macrospilota, </em>to<em> </em>Louisiana, where it intergrades with <em>M. terrapin littoralis</em>.<br/><br/><em>M. terrapin littoralis</em>: western Louisiana and the coast of Texas, at least as far south as Corpus Christi Bay.<br/><br/>Anecdotal reports that this species is found in Mexican waters (e.g., Carr 1952) have been disputed (Smith and Smith 1979); there is no credible information indicating occurrence in Mexico (Iverson 1992; Mexican Red List Workshop participants, Sept. 2005).<br/><br/><strong>Range Size:</strong>&#160;The presence of a coastal species like <em>M. terrapin</em> is difficult to determine because of their cryptic nature and the inaccessibility of much of their habitat. Its distribution is discontinuous along the ~5,000 km of coastline between Cape Cod, Massachusetts, and Corpus Christi, Texas. However, it is unknown if the discontinuity can be attributed to natural biological boundaries or to barriers created by extensive urbanization and industrial development in portions of its coastal habitat. Terrapins inhabit salt marshes that form on the bay side of barrier islands, and the extent to which they move inland via estuaries varies considerably, but seems to be bounded by waters that are brackish for most of the year.&#160; Nonetheless, terrapin habitat, salt marsh juvenile habitat, and nesting areas, have all diminished greatly because of salt marsh loss and the development of coastal and estuarine waterfront (Kennish 2001; Ner and Burke 2008). No range-wide population estimate is available, but data are consistent in that subpopulations are local, sensitive to anthropogenic perturbation, and many individually studied subpopulations are small, while others are more robust (summarized in Roosenburg and Kennedy 2018).</p>",
+    "population": "<p>In the early 1900s, populations of <em>Malaclemys terrapin</em> were in danger of extinction due to intense commercial harvest for human consumption (Hay 1917). Although pre-harvest population data are lacking, many populations had recovered to some extent by the late 20th century and <em>M. terrapin</em> was listed as Lower Risk/Near Threatened by the IUCN Red List in 1996 (Kennedy 2018b). However, data from long-term studies (Avissar 2006; Dorcas <em>et al</em>. 2007; Roosenburg 2004; Wood and Herlands 1997) suggest that many terrapin populations are again in decline. Effects that contribute to observed declines in well-studied subpopulations (ongoing habitat loss/degradation, crab pot mortality, subsidized nest predation, and road mortality) are ubiquitous and likely to have a similar effect throughout the terrapin’s range (Seigel and Gibbons 1995). Low recruitment due to high nest predation, juvenile and adult male mortality in crab pots and high adult female mortality from vehicle collisions and crab pots in southern populations are cause for alarm because population models suggest a stable population requires both modest recruitment and, most importantly, high adult survival (Roosenburg 2004; Mitro 2003).<br/><br/>In Kiawah, South Carolina, population estimates from a mark-recapture study of <em>M. terrapin</em><span class=\"datalabel1\"> suggest a decline of 75% over the last two decades (Gibbons <em>et al</em>. 2001; Dorcas <em>et al</em>. 2007). High male and juvenile mortality rates in this population, likely due to incidental drowning in crab pots, result in an increase in the proportion of large females in the population (Dorcas <em>et al</em>. 2007). Similarly, crab pots have been suggested to cause female biased sex ratios (Roosenburg <em>et al</em>. 1997) and potentially driving the evolution of male body size (Wolak <em>et al</em>. 2010) in Chesapeake Bay. Similar levels of decline have been observed in the adult female population during a 20 year population study in the Patuxent River of Chesapeake Bay. Factors contributing to the decline in the Patuxent population include commercial harvest, bycatch mortality in commercial fisheries, an oil spill, and nesting habitat loss (W.M. Roosenburg, <span class=\"datalabel1\">unpubl<span class=\"datalabel1\">.<span class=\"datalabel1\"> data<span class=\"datalabel1\">).<br/><br/>Commercial and recreational use of crab pots continues to be the major contributing factor to the population declines from New Jersey to Texas (Bishop 1983; Wood 1997; Roosenburg 2004; Dorcas <em>et al</em>. 2007; Seigel and Gibbons 1994; Chambers and Maerz 2018). Populations in Chesapeake Bay have female biased sex ratios due to the impact of crab pots (Wolak <em>et al</em>. 2010; Roosenburg <em>et al</em>. 1997) in addition to compensatory growth and changed size structure as a consequence of continued crab pot mortality (Wolak <em>et al</em>. 2010). Recent work has suggested that even a single crab pot in a tidal creek or local area can drive population declines (Lovich <em>et al</em>. 2018).<br/><br/>In estuaries near Tuckerton,&#160;New Jersey, road mortality contributed to a significant decline in the number of adult females over 13 years (Avissar 2006). This demographic shift was not attributed to crab pot mortality because the site is closed to crabbing; however, a decline in large females is consistent with the observation that road mortality of nesting females had increased (Avissar 2006; Szerlag and McRobert 2006). A long-term study on the Cape May Peninsula of southernmost New Jersey documented 4,020 road kills during a 7-year period (Wood and Herlands 1997). As of 2011, the total number of roadkills at this study site has surpassed 10,000 adult females (R.C. Wood, unpubl. data). The terrapin population decline during this time is unknown, but is likely substantial because the area also has a significant commercial and recreational crab fishery (Wood 1997). Similarly in Georgia, small tidal creeks impacted by commercial crabbing and nearby roads had reduced terrapin populations relative to creeks more isolated from these threats (Grosse <em>et al</em>. 2011).<br/><br/>New York’s largest terrapin populations inhabit the heavily-urbanized Jamaica Bay. Researchers observed over 2,000 nests on one island in this study area in 1998 (Feinberg and Burke 2003). Recruitment is low because annual nest predation rates, primarily by raccoons, vary from 92-100%. The number of nests laid per year declined 43% from 1999-2011 (Feinberg and Burke 2003; R.L. Burke, unpubl. data) and the nesting terrapin population has experienced a 55% decline from 1998 to 2017 (R.L. Burke and Roe, unpubl. data).<br/><br/>Little is known about terrapin populations along the Gulf Coast. Historical accounts suggest large populations once existed in this part of the range, but overexploitation has reduced populations which are slow to recover in the face of heavy crabbing pressure (Coleman <em>et al</em>. 2011, 2014). Dauphine Island, Alabama, formerly supported a significant terrapin fishery which currently remains as a relic population (Coleman <em>et al</em>. 2014). Recent studies in Louisiana have discovered subpopulations in the Rockefeller National Wildlife Refuge and its adjoining bayous and in Barataria Bay, but detailed population and life history data are lacking from this area (Selman <em>et al</em>. 2014, Pearson and Wiebe 2018). Small populations are also known from Galveston Bay, Texas, but the combination of development and pollution has reduced the available habitat to a few small islands within the bay (V. Guillory, pers. comm.).<br/><br/>Bermuda’s terrapin population is estimated at about 100 individuals and recruitment is low, caused by low nest success (Outerbridge 2014). The reasons for developmental failure are not known, but could be due to insecticides and herbicides used around the only wetland where terrapins are found (M.E. Outerbridge, pers. comm.).</span></span></p>",
+    "habitats": "<p>                      </p><p><em>Malaclemys terrapin</em> is found in brackish coastal waters (salinity range = 0 to 35). Typical habitats include coastal regions, estuaries, lagoons, tidal creeks, mangrove swamps, and salt marshes. In coastal estuaries supporting large watersheds, terrapins can occur far inland up to the terminal end of the salt wedge (e.g., Chesapeake Bay, Hudson River, and Pamlico Sound). Although <em>M. terrapin</em> is found in brackish water, periodic access to freshwater is necessary for long-term health, and populations in high salinity habitats actively seek and drink freshwater which is essential for neonate survival and growth (Dunson 1985; Holliday <em>et al</em>. 2009) and may be a contributing factor to the semi-terrestrial behavior of neonates to 3-year-olds.&#160;Hatchlings are exceptionally desiccation tolerant (Figueras <em>et al</em>. 2018).<br/><br/>The diet of <em>M. terrapin</em> consists largely of invertebrates, crustaceans, and mollusks (Tucker <em>et al</em>. 1995, 2018) and a variety of plant materials and algae (Tulipani 2015; Erazmus <em>et al</em>. 2018). In some populations terrapins are predators of the Salt Marsh Periwinkle (<em>Littoraria irrorata</em>), a snail that grazes on epiphytes that grow on Salt Marsh Cord Grass (<em>Spartina alterniflora</em>). Silliman and Bertness (2002) demonstrated through a series of experiments that when periwinkle predators were removed, periwinkles damage and kill cord grass, leaving a barren mudflat and increasing marsh erosion rates. Although terrapins were not removed or tested in this experiment, as a periwinkle predator they are frequently identified as a potential saltmarsh keystone species. This extrapolation suggests that healthy terrapin populations play a role in maintaining primary production in salt marsh ecosystems and stabilizing shoreline vegetation, thus reducing local erosion.<br/><br/><em>Malaclemys terrapin</em> exhibits considerable variation in size, sexual size dimorphism, and reproductive output throughout its range. In general, along the Atlantic sea board there is a gradient of increasing body size, greater sexual dimorphism, later ages of maturity, and higher reproductive output with increasing latitude (Lovich <em>et al</em>. 2018). Gulf Coast populations do not conform to this latitudinal variation and are larger than their counterparts on the Atlantic Coast at the same latitude. Most comprehensive life history data come from long-term studies of populations in South Carolina, Maryland, and New York, with limited data from other parts of the range focused mostly on reproductive output and females. Nonetheless, the differences in morphological and life history traits contribute to different environmental stressors and management strategies relevant to terrapin populations throughout the range. Careful modeling is needed to compare reproductive traits among populations to assess how total annual reproductive output per individual varies along the latitudinal gradient.<br/><br/>Diamondback Terrapins under natural conditions exhibit high adult survivorship, low reproductive rates, and high egg/juvenile mortality characteristic of most temperate turtles (Mitro 2003). As a consequence of this suite of life history traits, increases in adult mortality result in declining populations (Congdon <em>et al</em>. 1993, 1994). Marked variation in life history traits can be attributed to a broad latitudinal distribution (Lovich <em>et al</em>. 2018). Females from northern populations mature later and at a relatively larger size than those from southern populations. Clutch size and body size appear to be somewhat correlated over the range; females from New York average 12.8 eggs per clutch (Burke <em>et al</em>. 2018), Maryland females may produce as many as 26 eggs per clutch (W.M. Roosenburg, unpubl. data), and smaller females from more southern populations produce only 4–6 eggs per clutch (Seigel 1984). Average annual reproductive output depends on the number of clutches produced per season. In Chesapeake Bay populations, the average female may produce 1–3 clutches of about 13 eggs in a single nesting season (13–40 eggs/year) and detailed nesting data suggest that terrapins rarely forgo nesting annually, but the number of clutches per year may vary (Roosenburg and Dunham 1997). For detailed reviews of reproductive data, see Roosenburg (1994), Butler <em>et al</em>. (2006a, 2006b), Brennessel (2006), Ernst and Lovich (2009), and Lovich <em>et al</em>. (2018).<br/><br/><em>Malaclemys terrapin</em> demonstrates marked sexual dimorphism, most likely as a fecundity advantage (Carr 1952), with females being considerably larger, with maximum reported population mean female carapace length of 20.1 cm and male carapace length of 13.3 cm (reviewed in Lovich <em>et al</em>. 2018). Female terrapins can reach weights over 2.5 kg in northern populations, but males rarely exceed 0.5 kg throughout the range (W.M. Roosenburg, unpubl. data). The maximum recorded size for an adult female, 32 cm carapace length, is much greater than that of males, 16 cm, from the same population, and the discrepancy between male and female size increases with latitude (W.M. Roosenburg, unpubl. data). Female terrapins mature later and at a larger size than males. The resulting difference in body size is more pronounced in more northern populations. Size differences result in differences in jaw morphology and bite forces that likely contribute to resource partitioning (diet, habitat) between the sexes (Tucker <em>et al</em>. 1995; Roosenburg <em>et al</em>. 1999; Herrel <em>et al</em>. 2018). Throughout their geographic range, population means for hatchlings range from 25–38 mm in carapace length and 6.3–8.8 g in mass (reviewed in Lovich <em>et al</em>. 2018). Maturity is reached at 4–13 years of age in females, and 2–7 years in males, depending on location (see summary in Brennessel 2006). Longevity may be greater than 40 years for some individuals; marked adult females have been recaptured 30 years after their initial capture as adults (R.C. Wood, unpubl. data; W.M. Roosenburg, unpubl. data). Generation time has not been reported in the published literature; available information indicates that it ranges from 13 to 20 years and also increases with increasing latitude (Mitro 2003; W.M. Roosenburg, unpubl. data). Generation times in more southern populations are shorter, as maturity at lower latitudes is attained several years earlier (Lovich <em>et al</em>. 2018).<br/><br/>Nesting requirements vary among subpopulations (Roosenburg 1994, Butler <em>et al</em>. 2018). <em>Malaclemys terrapin</em> embryos have temperature-dependent sex determination (TSD), with females produced at higher incubation temperatures, generating&#160;important differences between populations (Jeyasuria <em>et al</em>. 1994; Burke and Calichio 2014). The challenges of climate change, combined with sea level rise and nesting habitat loss (Michener <em>et al</em>. 1997, Woodland <em>et al</em>. 2017) could potentially affect sex ratios in populations. The conservation challenges associated with climate change and TSD as it affects sex ratios generates new concerns for the effective management of terrapin populations throughout their range, particularly when integrated with the nesting habitat loss due to development (Seigel and Gibbons 1995).<br/><br/>Terrapin hatchlings in northern parts of the range also facultatively overwinter in the nest, suggesting that the nesting environment is critical habitat throughout the entire year (Baker <em>et al</em>. 2006, 2018; Graham 2009; Kitson 2016). Post-emergence neonate habitat is poorly known, but after emergence, some hatchlings move to shallow, self-excavated hibernacula in upland areas (Draud <em>et al</em>. 2004, Duncan and Burke 2016) before moving into intertidal marshes where they may remain semi-terrestrial well into their second growing season (Muldoon and Burke 2012). Adult terrapins hibernate communally in depressions in the mud at the bottom of tidal creeks and embayments protected from prevailing weather (Haramis <em>et al</em>. 2011), in undercut banks within the tidal zone, or burrow into creek banks (Yearicks <em>et al</em>. 1981). Southern subspecies (e.g., <em>M. t. rhizophorarum</em>) may be active throughout the winter.</p><br/><p></p>",
+    "threats": "<p>                      </p><p>                     </p><p>Four main factors pose the most significant threats to <em>Malaclemys terrapin</em> populations: 1) mortality of juveniles and adults in crab pots and mostly nesting females on roads, 2) loss of nesting and juvenile habitat to development and sea level rise, 3) the effect of subsidized predators at nesting beaches (Roosenburg 1991; Siegel and Gibbons 1995; Feinberg and Burke 2003; Woodland et al. 2017), and 4) loss of estuarine saltmarsh and mangrove habitats throughout their range (Kennish 2001; Ner and Burke 2008; Gedan <em>et al</em>. 2009).<br/><br/>In states with a commercial Blue Crab (<em>Callinectes sapidus</em>) fishery, which includes almost the terrapin’s entire range, incidental drowning in crab pots is considered to be the major threat to <em>M. terrapin</em> (Butler <em>et al</em>. 2006; Chambers and Maerz 2018). Terrapins, attracted to the bait, enter through an underwater opening, become trapped, and drown within a few hours (Wood 1997; Roosenburg 2004; Baker <em>et al</em>. 2013; Chambers and Maerz 2018). Small males and juveniles are caught more frequently than adult females due to the limitations on the size of the trap entrance. Wolak <em>et al</em>. (2010) suggested that high mortality in crab traps has led to selection on body size traits in a Chesapeake Bay population. Most studied populations where terrapins occurred with crab pots have skewed sex ratio biased toward females that have lower catch rates because of their larger size (Chambers and Maerz 2018).&#160;Crab pots remain the most prominent threat to terrapin populations and their ubiquitous use throughout the terrapin’s range and habitat hamper other conservation restoration efforts because the mortality caused by crab pots is so high.<br/><br/>Adult female terrapins are frequently struck and killed by motor vehicles while attempting to cross roads and motorways in search of nesting sites (Wood and Herlands 1997; Szerlag and McRobert 2006; Grosse <em>et al</em>. 2011; Crawford <em>et al</em>. 2013a,b; Maerz <em>et al</em>. 2018). Hatchling terrapins migrate to water after emerging from the nest and can get trapped in vehicular tire tracks left in the sand on nesting beaches. If the hatchlings are unable to escape, they may die of dehydration or be crushed by the next vehicle. Large female terrapins often bear scars from the propellers of motor boats; in the Chesapeake Bay region and in Jamaica Bay, New York, boat impacts are a significant source of mortality for this age class in areas with moderate to high boat traffic (Roosenburg 1991; R.L. Burke and Roe, unpubl. data).<br/><br/>Although most states now have legislation that regulates the collection of <em>M. terrapin</em> (Hackney 2010; Nanjappa and Conrad 2011; Kennedy 2018a), this species is still taken commercially in parts of Louisiana. Commercial interest in terrapins remains high, primarily for trade and consumption in Asia or to Asian communities in North America. Hatchlings sell in pet markets of Hong Kong for $50-500 each depending on colouration (T. Leuteritz, pers. comm.). In 2006, the last year in which terrapins were legally harvested in Maryland, watermen reported a catch of 10,500 pounds of terrapins. Additionally, harvest of terrapins for turtle farms in the US and Asia is taxing wild populations and contributing to potential illegal harvest in states where they are currently protected. One such event resulted in the offtake of more than 3,000 females from a single population in New Jersey. Serendipitously, this event resulted in the closure of the commercial terrapin harvest in New Jersey.<br/><br/>One of the terrapin subspecies, <em>M. t. rhizophorarum</em>, is considered endemic and endangered in its restricted range in southern Florida. Unless examined by expert terrapin biologists familiar with all the subspecies, <em>M. t. rhizophorarum</em> could easily be traded unnoticed because of its similarity to the other subspecies. Similar to endangered map turtles, genus <em>Graptemys</em>, some of which also can only be recognized by experts, the trade of endangered terrapin subspecies is facilitated by the trade of the species in general. Furthermore, several states throughout the range have provided protected status to terrapins or restricted trade and harvest. These terrapins cannot be distinguished from terrapins that were collected from areas where they were legally harvested or from farm-produced individuals.<br/><br/>Habitat destruction poses a serious and ongoing threat to the species. The Diamondback Terrapin’s range is coincident with areas of dense human population (Ner and Burke 2008), and &gt;50% of original estuarine saltmarsh habitat in terrapin range has been lost over the last century (Kennish 2001). Coastal development, particularly salt marsh draining and shoreline armoring for residential or agricultural purposes, increased use of coastal waterways for commercial and recreational purposes, and loss of sand dunes (important nesting habitat) contribute to habitat loss and degradation which negatively affects terrapins (Isdell <em>et al</em>. 2015). Coastal development is particularly problematic because it frequently destroys nesting beaches (Roosenburg 1991; Roosenburg and Place 1995). Three consequences of development for terrapins are: 1) higher concentration of nesting habitat in remaining areas resulting in greater predation rates of nests, 2) alteration of incubation conditions potentially affecting survivorship and gender because of temperature-dependent sex determination, and 3) increased predation on adult females. Additionally, sea level rise due to climate change may have a severe impact on diamondback terrapin habitat including loss of nesting habitat, but more seriously the elimination of critical juvenile salt marsh habitat. Recent GIS modeling based on predicted sea level rise suggests substantial habitat loss during the next 50-100 years in Chesapeake Bay (Woodland <em>et al</em>. 2017).<br/><br/>Human-subsidized predators (i.e., native or introduced animals whose populations prosper as a result of association with humans and human-altered habitats) are another threat to turtle populations (Boarman 1997). Studies across the range have identified (locally introduced) Raccoons (<em>Procyon lotor</em>), Skunks (<em>Mephitis mephitis</em>), Coyotes (<em>Canis latrans</em>), feral Hogs (<em>Sus scrofa</em>), and non-native Norway Rats (<em>Rattus norvegicus</em>) as major predators on the adults, juveniles, and eggs of <em>M. terrapin</em>, accounting for a nest predation rate of 92%, and emerging hatchling predation rate of up to 20% (Feinberg and Burke 2003; Draud <em>et al</em>. 2004; Muldoon and Burke 2012; Buzuleciu <em>et al</em>. 2016).<br/><br/>Finally, the impacts of various pollutants in heavily urbanized estuarine environments jeopardize terrapin populations. Polycyclic aromatic hydrocarbons (PAHs), polychlorinated biphenyls (PCBs), heavy metals and various insecticides and herbicides all potentially affect terrapins (Holliday <em>et al</em>. 2018). Many of these compounds have been discovered in terrapins and have been demonstrated to have deleterious effects on development, growth, and survival (Holliday <em>et al</em>. 2009; Holliday and Holliday 2011; Holliday <em>et al</em>. 2018).&#160;Microplastics, which are both pollutants themselves and synergists with other pollutants, were found in the feces of eight of eight terrapins tested in Jamaica Bay, New York (R.L. Burke, unpubl. data).</p><p></p>",
+    "measures": "<p>Diamondback Terrapins are protected from commercial exploitation in most states where they occur, but as of early 2018 commercial harvests remain permitted under regulations in Louisiana (Kennedy, 2018a). Personal possession is permitted under certain conditions in most states (Nanjappa and Conrad 2011; Kennedy, 2018a) but restricted in most cases to no more than two individuals and permits required for possession as pets. <em>Malaclemys terrapin</em> was included in CITES Appendix II in 2013, making its international trade subject to determinations and evaluation that traded volumes are not detrimental to the survival of wild populations.<br/><br/>Hackney (2010) used the standardized Natural Heritage Program to compare the conservation status of terrapins among range states. Of the 16 range states, one (Rhode Island) lists the species as S1, or critically imperiled. Four states list the species as S2, imperiled, while six states list it as S3, vulnerable. Four states consider the diamondback terrapin to be S4, apparently secure. South Carolina has not ranked terrapins according to this scale. State protective listing or harvest regulation in all range states is recommended. In Bermuda, diamondback terrapins have level 2 protection under the Protected Species Order 2012.<br/><br/>Diamondback Terrapins reside in coastal habitats that are intensively used and modified by humans (Kennish 2001, Ner and Burke 2008, Gedan <em>et al</em>. 2009). Safeguarding areas of optimal habitat, particularly foraging, nesting and hibernation sites, from development and other modification is essential for the long-term survival of this species. Terrapins occur in a substantial number of protected areas and their movement is limited (Converse <em>et al</em>. 2015). Mortality in crab pots and habitat fragmentation are suggested to reduce gene flow while signatures of the past commercial trade and movement of terrapins are still detectable in some populations (Converse <em>et al</em>. 2017, Converse and Kuchta, 2018). Terrapins use a variety of estuarine habitats throughout their range and local populations effectively exploit their native habitat. Populations can grow and respond quickly when provided with predator-free nesting areas, high quality juvenile habitat, and protection of adults, in particular reproductive females (Roosenburg <em>et al</em>. 2014, R.L. Burke, unpubl. data), suggesting that estuarine or marine preserves combined with nest predator control can provide an effective tool to restore terrapin populations in areas where numbers are reduced (Roosenburg 2018).<br/><br/>Bycatch reduction devices (BRD) can greatly reduce the number of terrapins that drown in crab traps (Wood 1997; Hoyle and Gibbons 2000; Roosenburg and Green 2000; Butler and Heinrich 2007). By installing BRDs in crab pots, most adult female terrapins are excluded, particular in mid-Atlantic, Northeast Atlantic, and the Gulf coast regions where body sizes are larger. BRDs are also effective in southern Atlantic regions and Florida and perhaps more important because adult females never outgrow the vulnerability to crab pots without BRDs (Grosse <em>et al</em>. 2011). Several states now require BRDs; however, regulations vary considerably across the terrapin’s range (Hackney 2010), as does the intensity of enforcement of regulations. Broad adoption of BRDs will significantly assist the species' prospects (Guillory and Prejean 1998; Rook <em>et al</em>. 2010; Radzio <em>et al</em>. 2013).&#160;Perhaps the greatest concern for terrapins is entrapment in derelict or ghost crab pots that are not regularly checked. Several cases have been recorded where &gt;20 individuals have been recovered dead from crab pots that were abandoned, one with more than 100 individuals (Bishop 1983; Roosenburg 1991; Grosse <em>et al</em>. 2011).</p>  <p>                     </p><p>Since 2003, research scientists and summer interns at The Wetlands Institute in New Jersey have deployed barrier fencing to reduce road mortality in their study area. Results to date suggest that barrier fencing can be an effective terrapin conservation tool (McLaughlin <em>et al</em>. 2012). Similarly, at JFK Airport in New York, personnel successfully use barrier fencing to keep terrapins off runways (Burke and Francoeur 2014). Combined with nesting habitat improvement adjacent to roadways, fencing can dramatically reduce roadway mortality and help direct terrapins to protected nesting sites (Crawford <em>et al</em>. 2013a,b; Maerz <em>et al</em>. 2018). Finally, roadway warning signals activated at times of peak nesting in high use areas can dramatically reduce nesting female road mortality. Impacts by watercraft also present a problem for terrapins in areas with high boat traffic (Roosenburg 1991; Lester <em>et al</em>. 2013). Furthermore, terrapins appear not to respond to the noise of approaching vessels, increasing the risk of boat impact; thus suggesting that marine speed limits near areas of terrapin congregation (e.g., nesting beaches) would be the only effective mechanism to reduce boat strikes (Lester <em>et al</em>. 2014, 2018).<br/><br/>Nest protection and head-starting programs exist at a variety of locations, and are subject to active research on their effective contribution to population dynamics and establishment success (Herlands <em>et al</em>. 2004; Smeenk 2010; Petrov 2014; Roosenburg 2018). High nest predation remains a key conservation problem for terrapins and control of mammalian nest predators increases nest success (Munscher <em>et al</em>. 2012) and the complete absence of nest predators can contribute to population recovery (Roosenburg <em>et al</em>. 2014). Head-starting can supplement population growth and head-started individuals can establish within native populations. Furthermore, head-started females can become reproductive and some remain in the local population where they were released (Roosenburg 2018). However, the low level of gene flow among populations (Converse <em>et al</em>. 2015) suggests that source animals should only come from the same population they will supplement or from the nearest population for extirpated areas.<br/><br/>One example of effective terrapin conservation and restoration is the Paul S. Sarbanes Environmental Restoration Project at Poplar Island, Chesapeake Bay, Maryland (Roosenburg et al. 2014, Roosenburg 2018). Poplar Island’s restoration has established predator-free nesting habitat and extensive salt marsh habitat for juveniles. There also is an active head-starting program on Poplar Island. The terrapin population on Poplar Island is growing rapidly due primarily to the high nest survival (Roosenburg <em>et al</em>. 2014) and high quality juvenile habitat that ensures high post-hatching juvenile survivorship (Roosenburg 2018). Although head-starting does contribute to population growth, its impacts are secondary to that of the habitat creation and protection (W.M. Roosenburg, unpubl. data). The Poplar Island example illustrates the basic requirements for population recovery which suggests that estuarine reserves or sanctuaries that include both nesting and juvenile habitat, combined with nest predator control, offer an excellent strategy for terrapin population recovery.<br/><br/>Further research on terrapin conservation is needed, particularly towards understanding individual and seasonal movement patterns, habitat use at different life stages, and refinement of the taxonomy. Although some populations and areas are well studied, other parts of the range have less data, particularly the Gulf Coast and the populations within Pamlico Sound and the estuarine waters of North Carolina, and southern New England. Most states have some form of ongoing terrapin research, but the expansive range and the need for boats to access key habitats limits both surveys and detailed population studies. Recent work also has suggested that climate change will dramatically affect habitat availability for terrapins, particularly the juvenile dependence on saltmarsh habitat, which is predicted to decline dramatically due to sea level rise (Woodland <em>et al</em>. 2017). Further study of the effects of sea level rise is needed to evaluate how habitat and resources will be affected.<br/><br/>Although these conservation targets have been known for years, declines in terrapin populations have not been fully addressed for a variety of issues. Conservation measures, such as establishing requirements for bycatch reduction devices in crab pots, have often been effectively resisted by commercial fishermen through political lobbying efforts. Furthermore, even with regulations in place, lack of compliance and enforcement results in ineffective use rates (Radzio <em>et al</em>. 2014). Finally, conflicts between the preservation of nesting habitat shoreline and the development and protection of high-value coastal real estate seem to preempt terrapin conservation measures. Despite the slow pace of terrapin conservation, some progress has been made to reduce road mortality in some areas (Crawford <em>et al</em>. 2013a,b) and population recovery and growth have been observed in at least one population (Roosenburg <em>et al</em>. 2014). Additionally, the technology to reduce terrapin capture in crab pots has made substantial progress (Roosenburg 2004, Chambers and Maerz 2018) as range-wide fine-tuning of bycatch reduction devices (BRDs) continues (Schwenter and Arndt, unpubl. data).</p>",
+    "use_trade": "<p><em>Malaclemys terrapin</em>&#160;was utilized for food prior to European settlement in North America; however, as human populations increased throughout the terrapin’s range and terrapin consumption became fashionable, the exploitation reached unsustainable levels. By the late 19th century native populations were in dramatic decline, warranting the first federal attempts to farm terrapins (Kennedy 2018a). Captive propagation for commercial purposes was initiated in the early 20th century because of range-wide population declines and danger of extinction, indicating that fisheries of wild populations were not sustainable (Hay 1917). Extensive data are available for artificial propagation of terrapins for commercial purposes (Hay 1917; Coker 1920; Hildebrand and Hatsel 1926; Hildebrand 1932) but the general consensus of these studies was that it is not economically feasible to farm terrapins as a food source because of slow growth rates. The demand for terrapin meat eventually decreased and the depleted populations began to slowly recover after 1930 (Carr 1952). In the early 2000s increases in the commercial capture and trade of terrapins were identified (USDA 2011). Most of the captured turtles were shipped to Asian communities in major metropolitan areas in the US and also exported to Asia. This increase in demand alarmed turtle biologists and prompted many states to increase regulations, protection, and monitoring of terrapin populations (Kennedy 2018a). The primary concern with the resurgence of the commercial terrapin fishery is that, combined with habitat degradation, recovery will be slower, if not impossible. Export data for terrapins in 1999-2010 indicate an increase in the number of individuals and shipments, primarily as exports to Asia (USDA 2011). Concern about the increases in terrapin export has resulted in the closure of the remaining commercial wild harvest in all states except Louisiana. Maryland closed their commercial fishery, based primarily on the export to China and declining populations in Chesapeake Bay (Roosenburg <em>et al.</em> 2008). Following the closure of the Maryland fishery exports dropped by approximately 25% from their peak and most exports at this time are believed to originate from farms, although this has not been confirmed. Today, Louisiana remains the only state where terrapins can be harvested from the wild for commercial sale. Many states maintain a subsistence harvest of two per day for either consumption or pets.<br/><br/>Terrapins are currently bred in captivity (turtle farms) on a small scale in the United States and the hatchlings are sold commercially for the pet trade and to supply aquaculture rearing facilities in Asia that eventually supply the consumption trade and maintain reproductive colonies for the pet trade. Recent exports of high numbers of terrapin hatchlings originating from the single commercial turtle farm in Maryland revealed that successful terrapin farming requires a constant infusion of wild brood stock. The adults that produced most of the hatchlings sold were obtained from New Jersey in a manner that was disputably legal or illegal; New Jersey subsequently closed its commercial terrapin fishery (T. Leuteritz, pers. comm.).</p>",
+    "rationale": "<p>                 <em>Malaclemys terrapin</em>&#160;is assessed as Vulnerable due to observed threats documented in the past and projected into the future with ≥35% population declines of monitored populations resulting from overexploitation, accidental mortality as bycatch in commercial Blue Crab fisheries, coastal habitat loss due to development, principally the loss of limited nesting habitat, in addition to extensive estuarine saltmarsh loss, and ongoing subsidized nest predation by mesopredators (threats reviewed in Roosenburg 2004; Butler <em>et al</em>. 2018; Chambers and Maerz 2018; Roosenburg and Kennedy 2018). Overall, it is our assessment that <em>M. terrapin</em> has sustained range-wide population declines over the last 30 years (two generations) of 25-30% and that the rate of decline is predicted to continue at the same rate for another 15 years (one generation), or about a 10-15% further decline, for a total decline over three generations (45 years) of 35-45%. The species therefore meets the criteria for Vulnerable designation under criteria A4acde. <em>Malaclemys terrapin</em> was last assessed in 1996, when it was evaluated as Near Threatened.<br/><br/>Documenting population declines for a long-lived species like <em>M. terrapin</em> is challenging and requires intensive, long-term sampling (Tucker <em>et al</em>. 2001). Female terrapins become sexually mature at 4-13 years and longevity may exceed 50 years. Using an average estimated generation time of 15 years, it is reasonable to examine trends in the terrapin population for the past 30 years (two generations) and project 15 years (one generation) into the future. Subpopulations for which long-term data are available show significant declines, upwards to 75% decrease in population size over 20 years in the two populations with long term data in South Carolina (Gibbons <em>et al</em>. 2001; Dorcas <em>et al</em>. 2007), Maryland (W.M. Roosenburg, unpubl. data), and 55% decline in a New York population over 20 years (R.L. Burke, unpubl. data). Other populations have high mortality rates due to anthropogenic causes (Wood and Herlands 1997; Avissar 2006; Szerlag and McRobert 2006; Crawford <em>et al</em>. 2013a,b; Maerz <em>et al</em>. 2018) and, in some cases, a change in population structure has been observed (Roosenburg <em>et al.</em> 1997; Wolak <em>et al</em>. 2010). It is not possible to determine range-wide population declines over specific time periods other than to rely on anecdotal evidence suggesting that terrapins are now rarely encountered in areas where they were once relatively common (Kennedy 2018a,b).</p><br/><span class=\"MsoCommentReference\"><span class=\"MsoCommentReference\"><span class=\"MsoCommentReference\"><p></p></span>",
+    "trend_justification": null,
+    "taxonomic_notes": "Seven subspecies are generally accepted (TTWG 2017): <br/> <em><br/></em><em>Malaclemys terrapin terrapin</em>&#160;(Schoepff, 1793) - Northern Diamondback Terrapin<em><br/>Malaclemys terrapin centrata</em> (Latreille in Sonnini and Latreille, 1801) - Carolina Diamondback Terrapin <br/><em>Malaclemys terrapin littoralis</em>&#160;Hay, 1905 - Texas Diamondback Terrapin<br/> <em>Malaclemys terrapin macrospilota</em>&#160;Hay, 1905 - Ornate Diamondback Terrapin <br/> <em>Malaclemys terrapin pileata</em> (Wied, 1865) - Mississippi Diamondback Terrapin<br/> <em>Malaclemys terrapin rhizophorarum</em> Fowler, 1906 - Mangrove Diamondback Terrapin<br/> <em>Malaclemys terrapin tequesta</em> Schwartz, 1955 - Eastern Florida Diamondback Terrapin<br/><br/>These subspecific designations of terrapins were based on morphological characteristics (Carr 1952). However, molecular studies indicate that the morphological subspecific designations do not match well with the range-wide genetic differentiation, suggesting fewer independent lineages. Lamb and Avise (1992) first suggested two subpopulations that diverged near Jacksonville, Florida. More recent work using microsatellites suggested that five genetically distinct terrapin management units exist throughout the range (Hart <em>et al</em>. 2014). One unfortunate consequence of the previous heavy trade and farming of terrapins was the transport of individuals among populations, and the genetic signature of those translocations can still be detected today (Hauswaldt and Glen 2005; Converse <em>et al</em>. 2017; Converse and Kuchta 2018). A more thorough range-wide molecular study using more populations and loci is sorely needed to resolve the phylogenetic relationships and update the taxonomy of <em>Malaclemys</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Seasonal Occurrence Unknown",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mud Flats and Salt Flats"
+      },
+      "code": "12_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Salt Marshes (Emergent Grasses)"
+      },
+      "code": "12_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mangrove Submerged Roots"
+      },
+      "code": "12_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Sand Dunes"
+      },
+      "code": "13_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Delaware"
+      },
+      "code": "DEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Connecticut"
+      },
+      "code": "CNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rhode Island"
+      },
+      "code": "RHO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": "Yes",
+      "score": "Past Impact",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Unknown",
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Unspecified Rattus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Roosenburg, W.M., Baker, P.J., Burke, R., Dorcas, M.E. & Wood, R.C.",
+      "value": [
+        "Willem Roosenburg (Ohio Center for Ecology and Evolutionary Studies, Ohio University, USA)",
+        "Michael Dorcas (Department of Biology, Davidson College, Davidson, NC 28035-7118, USA)",
+        "Patrick Baker (SRLI REptile Assessment)",
+        "Russell L. Burke",
+        "Roger C.  Wood"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "van Dijk, P.P. & Rhodin, A.G.J.",
+      "value": [
+        "Peter Paul van Dijk (N/A)",
+        "Anders Rhodin (Chelonian Research Foundation)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rhodin, A.G.J. & van Dijk, P.P.",
+      "value": [
+        "Anders Rhodin (Chelonian Research Foundation)",
+        "Peter Paul van Dijk (N/A)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "TTWG (Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R. Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.). 2017. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (8th Ed.). In: Rhodin, A.G.J., Iverson, J.B., van Dijk, P.P., Saumure, R.A., Buhlmann, K.A., Pritchard, P.C.H., and Mittermeier, R.A. (eds), <i>Conservation Biology of Freshwater Turtles and Tortoises: A Compilation Project of the IUCN/SSC Tortoise and Freshwater Turtle Specialist Group</i>, pp. 1-292. Chelonian Research Monographs.",
+      "year": "2017",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (8th Ed.)",
+      "author": "TTWG (Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R. Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Iverson, J.B. 1992. <i>A Revised Checklist with Distribution Maps of the Turtles of the World</i>. Privately published, Richmond, Indiana.",
+      "year": "1992",
+      "title": "A Revised Checklist with Distribution Maps of the Turtles of the World",
+      "author": "Iverson, J.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ernst, C.H. and  Lovich, J.E. 2009. <i>Turtles of the United States and Canada. Second edition</i>. Johns Hopkins University Press, Baltimore.",
+      "year": "2009",
+      "title": "Turtles of the United States and Canada. Second edition",
+      "author": "Ernst, C.H. and  Lovich, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smith, H.M. and Smith, R.B. 1979. <i>Synopsis of the Herpetofauna of Mexico (Vol. VI - Guide to Mexican Turtles )</i>. John Johnson, North Bennington, VT. xvii + 1044 pp.",
+      "year": "1979",
+      "title": "<i>Synopsis of the Herpetofauna of Mexico (Vol. VI - Mexican Turtles …).</i>",
+      "author": "Smith, H.M. and Smith, R.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bonin, F., Devaux, B. and Dupre, A. 2006. <i>Turtles of the World</i>. John Hopkins University Press, Baltimore.",
+      "year": "2006",
+      "title": "Turtles of the World",
+      "author": "Bonin, F., Devaux, B. and Dupre, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carr, A. 1952. <i>Handbook of Turtles: The Turtles of the United States, Canada, and Baja California</i>. Cornell University Press, Ithaca.",
+      "year": "1952",
+      "title": "Handbook of Turtles: The Turtles of the United States, Canada, and Baja California",
+      "author": "Carr, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    },
+    {
+      "citation": "Avissar, N.G. 2006. Changes in population structure of diamondback terrapins (<i>Malaclemys terrapin terrapin</i>) in a previously surveyed creek in southern New Jersey. <i>Chelonian Conservation and Biology</i> 5: 154-159.",
+      "year": "2006",
+      "title": "Changes in population structure of diamondback terrapins (<i>Malaclemys terrapin terrapin</i>) in a previously surveyed creek in southern New Jersey",
+      "author": "Avissar, N.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baker, P.J., Boerner, R.E.J. and Wood, R.C. 2018. Hatchling behavior and overwintering. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Hatchling behavior and overwintering",
+      "author": "Baker, P.J., Boerner, R.E.J. and Wood, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baker, P.J., Costanzo, J.P., Herlands, R., Wood, R.C. and Lee, R.E. 2006. Inoculative freezing promotes winter survival in the diamondback terrapin, <i>Malaclemys</i> terrapin. <i>Canadian Journal of Zoology</i> 84(1): 116-124. DOI: 10.1139/z05-183.",
+      "year": "2006",
+      "title": "Inoculative freezing promotes winter survival in the diamondback terrapin, <i>Malaclemys</i> terrapin",
+      "author": "Baker, P.J., Costanzo, J.P., Herlands, R., Wood, R.C. and Lee, R.E",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baker, P.J., Thomson, A., Vatnick, I. and Wood, R.C. 2013. Estimating survival times for northern diamondback terrapins, <i>Malaclemys terrapin terrapin</i>, in submerged crab pots. <i>Herpetological Conservation and Biology</i> 8: 667-680.",
+      "year": "2013",
+      "title": "Estimating survival times for northern diamondback terrapins, <i>Malaclemys terrapin terrapin</i>, in submerged crab pots",
+      "author": "Baker, P.J., Thomson, A., Vatnick, I. and Wood, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bishop, J.M. 1983. Incidental capture of diamondback terrapin by crab pots. <i>Estuaries</i> 6: 426-430.",
+      "year": "1983",
+      "title": "Incidental capture of diamondback terrapin by crab pots",
+      "author": "Bishop, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boarman, W.I. 1997. Predation on turtles and tortoises by a \"subsidized predator\". In: J. Van Abbema (ed.), <i>Proceedings: Conservation, Restoration, and Management of Tortoises and Turtles – An International Conference</i>, pp. 103–104. New York Turtle and Tortoise Society, Purchase, NY.",
+      "year": "1997",
+      "title": "Predation on turtles and tortoises by a \"subsidized predator\"",
+      "author": "Boarman, W.I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brennessel, B. 2006. <i>Diamonds in the Marsh – A Natural History of the Diamondback Terrapin</i>. University Press of New England, Hanover, NH, USA.",
+      "year": "2006",
+      "title": "Diamonds in the Marsh – A Natural History of the Diamondback Terrapin",
+      "author": "Brennessel, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burke, R.L. and Calichio, A.M. 2014. Temperature sex determination in the Diamond-backed Terrapin, <i>Malaclemys terrapin</i>. <i>Journal of Herpetology</i> 48: 466-470.",
+      "year": "2014",
+      "title": "Temperature sex determination in the Diamond-backed Terrapin, <i>Malaclemys terrapin</i>",
+      "author": "Burke, R.L. and Calichio, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burke, R.L. and Francoeur, L. 2014. Cleared for takeoff. <i>The Tortoise</i> 1: 111-117.",
+      "year": "2014",
+      "title": "Cleared for takeoff",
+      "author": "Burke, R.L. and Francoeur, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burke, R.L., Clendening B. and Kanonik, A. 2018. Long term increases in clutch size in Common Snapping Turtles (<i>Chelydra serpentina</i>) and Diamondback Terrapins (<i>Malaclemys terrapin</i>). <i>Journal of Natural History</i> 52: 1723–1732.",
+      "year": "2018",
+      "title": "Long term increases in clutch size in Common Snapping Turtles (<i>Chelydra serpentina</i>) and Diamondback Terrapins (<i>Malaclemys terrapin</i>)",
+      "author": "Burke, R.L., Clendening B. and Kanonik, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butler, J.A. and Heinrich, G.L. 2007. The effectiveness of bycatch reduction devices on crab pots at reducing capture and mortality of diamondback terrapins (<i>Malaclemys terrapin</i>) in Florida. <i>Estuaries and Coasts</i> 30(179-185).",
+      "year": "2007",
+      "title": "The effectiveness of bycatch reduction devices on crab pots at reducing capture and mortality of diamondback terrapins (<i>Malaclemys terrapin</i>) in Florida",
+      "author": "Butler, J.A. and Heinrich, G.L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butler, J.A., Burke, R.L. and Roosenburg, W.M. 2018. Nesting ecology. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Nesting ecology",
+      "author": "Butler, J.A., Burke, R.L. and Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butler, J.A., Heinrich, G.L. and Seigel, R.L. 2006. Third workshop on the ecology, status and conservation of diamondback terrapins (<i>Malaclemys terrapin</i>): results and recommendations. <i>Chelonian Conservation and Biology</i> 5(2): 331-334.",
+      "year": "2006",
+      "title": "Third workshop on the ecology, status and conservation of diamondback terrapins (<i>Malaclemys terrapin</i>): results and recommendations",
+      "author": "Butler, J.A., Heinrich, G.L. and Seigel, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butler, J.A., Seigel, R.A. and Mealey, B.K. 2006. <i>Malaclemys terrapin</i> – diamondback terrapin. In: P.A. Meylan (ed.), <i>Biology and Conservation of Florida Turtles. Chelonian Research Monographs No. 3</i>, pp. 279–295. Chelonian Research Foundation, Lunenburg, MA, USA.",
+      "year": "2006",
+      "title": "<i>Malaclemys terrapin</i> – diamondback terrapin",
+      "author": "Butler, J.A., Seigel, R.A. and Mealey, B.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Buzuleciu, S.A. Crane, D.P. and Parker, S.L. 2016. Scent of disinterred soil as an olfactory cue used by raccoons to locate nests of diamond-backed terrapins (<i>Malaclemys terrapin</i>). <i>Herpetological Conservation and Biology</i> 11: 539–551.",
+      "year": "2016",
+      "title": "Scent of disinterred soil as an olfactory cue used by raccoons to locate nests of diamond-backed terrapins (<i>Malaclemys terrapin</i>)",
+      "author": "Buzuleciu, S.A. Crane, D.P. and Parker, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chambers, R.M. and Maerz, J.C. 2018. Terrapin by-catch in the blue crab fishery. In: W.M. Roosenburg and  V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Terrapin by-catch in the blue crab fishery",
+      "author": "Chambers, R.M. and Maerz, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coker, R.E. 1920. The diamond-back terrapin: past, present, and future. <i>Scientific Monthly</i> 11: 171-186.",
+      "year": "1920",
+      "title": "The diamond-back terrapin: past, present, and future",
+      "author": "Coker, R.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coleman, A.T., Wibbels, T., Marion, K., Nelson, D. and Dindo, J. 2011. Effect of by-catch reduction devices (BRDS) on the capture of diamondback terrapins (<i>Malaclemys terrapin</i>) in crab pots in an Alabama salt marsh. <i>Journal of the Alabama Academy of Sciences</i> 82: 145-157.",
+      "year": "2011",
+      "title": "Effect of by-catch reduction devices (BRDS) on the capture of diamondback terrapins (<i>Malaclemys terrapin</i>) in crab pots in an Alabama salt marsh",
+      "author": "Coleman, A.T., Wibbels, T., Marion, K., Nelson, D. and Dindo, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coleman, A.T., Wibbels, T., Marion, K., Roberge, T., Nelson, D. and Dindo, J. 2014. Dispersal behavior of diamond-backed terrapin post-hatchlings. <i>Southeastern Naturalist</i> 13: 572-586.",
+      "year": "2014",
+      "title": "Dispersal behavior of diamond-backed terrapin post-hatchlings",
+      "author": "Coleman, A.T., Wibbels, T., Marion, K., Roberge, T., Nelson, D. and Dindo, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Congdon, J.D., Dunham, A.E. and van Loben Sels, R.C. 1993. Delayed sexual maturity and demographics of Blanding’s turtle (<i>Emydoidea blandingii</i>): implications for conservation and management of long-lived organisms. <i>Conservation Biology</i> 7: 826-833.",
+      "year": "1993",
+      "title": "Delayed sexual maturity and demographics of Blanding’s turtle (<i>Emydoidea blandingii</i>): implications for conservation and management of long-lived organisms",
+      "author": "Congdon, J.D., Dunham, A.E. and van Loben Sels, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Congdon, J.D., Dunham, A.E. and van Loben Sels, R.C. 1994. Demographics of common snapping turtles (<i>Chelydra serpentina</i>): implications for conservation of long-lived organisms. <i>American Zoologist</i> 34: 397-408.",
+      "year": "1994",
+      "title": "Demographics of common snapping turtles (<i>Chelydra serpentina</i>): implications for conservation of long-lived organisms",
+      "author": "Congdon, J.D., Dunham, A.E. and van Loben Sels, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Converse, P.E. and Kuchta, S.R. 2018. Molecular ecology and phylogeography of the diamond-backed terrapin. In: W.M. Roosenburg andV.S.  Kennedy (ed.), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD. USA.",
+      "year": "2018",
+      "title": "Molecular ecology and phylogeography of the diamond-backed terrapin",
+      "author": "Converse, P.E. and Kuchta, S.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Converse P.E., Kuchta, S.R., Hauswaldt, J.S. and Roosenburg, W.M. 2017. Turtle soup, prohibition, and the population genetic structure of Diamondback Terrapins (<i>Malaclemys terrapin</i>). <i>PLoS ONE</i> 12(8): e0181898.",
+      "year": "2017",
+      "title": "Turtle soup, prohibition, and the population genetic structure of Diamondback Terrapins (<i>Malaclemys terrapin</i>)",
+      "author": "Converse P.E., Kuchta, S.R., Hauswaldt, J.S. and Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Converse, P.E., Kuchta, S.R., Roosenburg, W.M., Henry, P.F.P. and King, T.L. 2015. Spatiotemporal analysis of gene flow in Chesapeake Bay diamondback terrapins (<i>Malaclemys terrapin</i>). <i>Molecular Ecology</i> 24: 5864-5876.",
+      "year": "2015",
+      "title": "Spatiotemporal analysis of gene flow in Chesapeake Bay diamondback terrapins (<i>Malaclemys terrapin</i>)",
+      "author": "Converse, P.E., Kuchta, S.R., Roosenburg, W.M., Henry, P.F.P. and King, T.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crawford, B.A., Maerz, J.C., Nibblelink, N.P., Buhlmann, K.A. and Norton, T.M. 2013b. Estimating the consequences of multiple threats and management strategies for semi-aquatic turtles. <i>Journal of Applied Ecology</i> 51: 359-366.",
+      "year": "2013b",
+      "title": "Estimating the consequences of multiple threats and management strategies for semi-aquatic turtles",
+      "author": "Crawford, B.A., Maerz, J.C., Nibblelink, N.P., Buhlmann, K.A. and Norton, T.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crawford, B.A., Maerz, J.C., Nibblelink, N.P., Buhlmann, K.A., Norton T.M. and Albeke, S.E. 2013a. Hot spots and hot moments of diamondback terrapin road-crossing activity. <i>Journal of Applied Ecology</i> 51: 367-375.",
+      "year": "2013a",
+      "title": "Hot spots and hot moments of diamondback terrapin road-crossing activity",
+      "author": "Crawford, B.A., Maerz, J.C., Nibblelink, N.P., Buhlmann, K.A., Norton T.M. and Albeke, S.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Davenport, J., Glasspool, A.F. and Kitson, L. 2005. Occurrence of Diamondback Terrapins, <i>Malaclemys terrapin</i>, on Bermuda: native or introduced? <i>Chelonian Conservation and Biology</i> 4(4): 956-959.",
+      "year": "2005",
+      "title": "Occurrence of Diamondback Terrapins, <i>Malaclemys terrapin</i>, on Bermuda: native or introduced?",
+      "author": "Davenport, J., Glasspool, A.F. and Kitson, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dorcas, M.E., Wilson, J.D., and Gibbons, J.W. 2007. Crab trapping causes population decline and demographic changes in diamondback terrapin over two decades. <i>Biological Conservation</i> 137: 334-340.",
+      "year": "2007",
+      "title": "Crab trapping causes population decline and demographic changes in diamondback terrapin over two decades",
+      "author": "Dorcas, M.E., Wilson, J.D., and Gibbons, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Draud, M., Bossert, M. and Zimnavoda, S. 2004. Predation on Hatchling and Juvenile Diamondback Terrapins (<i>Malaclemys terrapin</i>) by the Norway Rat (<i>Rattus norvegicus</i>). <i>Journal of Herpetology</i> 38(3): 467-470.",
+      "year": "2004",
+      "title": "Predation on hatchling and juvenile Diamondback Terrapins (<i>Malaclemys terrapin</i>) by the Norway Rat (<i>Rattus norvegicus</i>)",
+      "author": "Draud, M., Bossert, M. and Zimnavoda, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duncan, N.P. and Burke, R.L. 2016. Dispersal of newly-emerged diamond-backed terrapin (<i>Malaclemys terrapin</i>) hatchlings at Jamaica Bay, NY. <i>Chelonian Conservation and Biology</i> 15: 249-256.",
+      "year": "2016",
+      "title": "Dispersal of newly-emerged diamond-backed terrapin (<i>Malaclemys terrapin</i>) hatchlings at Jamaica Bay, NY",
+      "author": "Duncan, N.P. and Burke, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dunson, W.A. 1985. Effect of water salinity and food salt content on growth and sodium efflux of hatchling diamondback terrapins (<i>Malaclemys</i>). <i>Physiological Zoology</i> 58: 736-747.",
+      "year": "1985",
+      "title": "Effect of water salinity and food salt content on growth and sodium efflux of hatchling diamondback terrapins (<i>Malaclemys</i>)",
+      "author": "Dunson, W.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Erazmus, K.R., Figueras, M., Luiselli, L. and Burke, R.L. 2018. Do diets vary over large spatial or temporal ranges? A test using inter-annual and inter-population data on Diamondback Terrapin (<i>Malaclemys terrapin</i>) diets. <i>Canadian Journal of Zoology</i> In press.",
+      "year": "2018",
+      "title": "Do diets vary over large spatial or temporal ranges? A test using inter-annual and inter-population data on Diamondback Terrapin (<i>Malaclemys terrapin</i>) diets",
+      "author": "Erazmus, K.R., Figueras, M., Luiselli, L. and Burke, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Feinberg, J.A. and Burke, R.L. 2003. Nesting ecology and predation of Diamondback Terrapins, <i>Malaclemys terrapin</i>, at Gateway National Recreation Area, New York. <i>Journal of Herpetology</i> 37(3): 517-526.",
+      "year": "2003",
+      "title": "Nesting ecology and predation of Diamondback Terrapins, <i>Malaclemys terrapin</i>, at Gateway National Recreation Area, New York",
+      "author": "Feinberg, J.A. and Burke, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Figueras, M.P., Bastarache, B.A. and Burke, R.L. 2018. Water exchange relationships predict overwintering behavior in hatchling turtles. <i>Canadian Journal of Zoology</i> 96(8): 928-932. DOI: 10.1139/cjz-2017-0132.",
+      "year": "2018",
+      "title": "Water exchange relationships predict overwintering behavior in hatchling turtles",
+      "author": "Figueras, M.P., Bastarache, B.A. and Burke, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fowler, H.W. 1906. Some cold blooded vertebrates from the Florida Keys. <i>Proceedings of the Academy of Natural Sciences</i> 58: 85-87.",
+      "year": "1906",
+      "title": "Some cold blooded vertebrates from the Florida Keys",
+      "author": "Fowler, H.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gedan, K.B., Silliman, B.R. and Bertness, M.D. 2009. Centuries of human-driven change in salt marsh ecosystems. <i>Annual Review of Marine Science</i> 1: 117-141.",
+      "year": "2009",
+      "title": "Centuries of human-driven change in salt marsh ecosystems",
+      "author": "Gedan, K.B., Silliman, B.R. and Bertness, M.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gibbons, J.W., Lovich, J.E., Tucker, A.D., FitzSimmons, N.N. and Greene, J.L. 2001. Demographic and ecological factors affecting conservation and management of the diamondback terrapin (<i>Malaclemys terrapin</i>) is South Carolina. <i>Chelonian Conservation and Biology</i> 4(1): 66-74.",
+      "year": "2001",
+      "title": "Demographic and ecological factors affecting conservation and management of the diamondback terrapin (<i>Malaclemys terrapin</i>) is South Carolina",
+      "author": "Gibbons, J.W., Lovich, J.E., Tucker, A.D., FitzSimmons, N.N. and Greene, J.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Graham, L.J. 2009. Diamondback Terrapin, <i>Malaclemys terrapin</i>, Nesting and Over-wintering Ecology. Thesis, Ohio University, Athens.",
+      "year": "2009",
+      "title": "Diamondback Terrapin, <i>Malaclemys terrapin</i>, Nesting and Over-wintering Ecology",
+      "author": "Graham, L.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, J.E. 1844. <i>Catalogue of the Tortoises, Crocodiles, and Amphisbaenians in the Collection of the British Museum, London</i>.",
+      "year": "1844",
+      "title": "Catalogue of the Tortoises, Crocodiles, and Amphisbaenians in the Collection of the British Museum, London",
+      "author": "Gray, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grosse, A.M., Maerz, J.C., Hepinstall-Cymerman, J.A. and Dorcas, M.E. 2011. Effects of roads and crabbing pressures on diamondback terrapin populations in coastal Georgia. <i>Journal of Wildlife Management</i> 75: 762-770.",
+      "year": "2011",
+      "title": "Effects of roads and crabbing pressures on diamondback terrapin populations in coastal Georgia",
+      "author": "Grosse, A.M., Maerz, J.C., Hepinstall-Cymerman, J.A. and Dorcas, M.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Guillory, V. and Prejean, P. 1998. Effect of a terrapin excluder device on blue crab, <i>Callinectes sapidus</i>, trap catches. <i>Marine Fisheries</i> 60: 38-40.",
+      "year": "1998",
+      "title": "Effect of a terrapin excluder device on blue crab, <i>Callinectes sapidus</i>, trap catches",
+      "author": "Guillory, V. and Prejean, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hackney, A.D. 2010. Conservation biology of the Diamondback Terrapin in North America: policy status, nest predation, and managing island populations. M.S. Thesis, Clemson University, Columbia, South Carolina, USA.",
+      "year": "2010",
+      "title": "Conservation biology of the Diamondback Terrapin in North America: policy status, nest predation, and managing island populations",
+      "author": "Hackney, A.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Haramis, G.M., Henry, P.F. and Day, D.D. 2011. Using scrape fishing to document terrapins in hibernacula in Chesapeake Bay. <i>Herpetological Review</i> 42: 170-177.",
+      "year": "2011",
+      "title": "Using scrape fishing to document terrapins in hibernacula in Chesapeake Bay",
+      "author": "Haramis, G.M., Henry, P.F. and Day, D.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hart, K.M. 2005. Population Biology of Diamondback Terrapins (<i>Malaclemys terrapin</i>): Defining and Reducing Threats Across their Range. Duke University.",
+      "year": "2005",
+      "title": "Population Biology of Diamondback Terrapins (<i>Malaclemys terrapin</i>): Defining and Reducing Threats Across their Range",
+      "author": "Hart, K.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hart, K.M., Hunter, M.E. and King, T.L. 2014. Regional differentiation among populations of the Diamondback terrapin (<i>Malaclemys terrapin</i>). <i>Conservation Genetics</i> 15(3): 593-603. DOI 10.1007/s10592-014-0563-6.",
+      "year": "2014",
+      "title": "Regional differentiation among populations of the Diamondback terrapin (<i>Malaclemys terrapin</i>)",
+      "author": "Hart, K.M., Hunter, M.E. and King, T.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hart, K.M., Hunter, M.E. and King, T.L. 2014. Regional differentiation among populations of the Diamondback terrapin (<i>Malaclemys terrapin</i>). <i>Conservation Genetics</i> 15: 593-603.",
+      "year": "2014",
+      "title": "Regional differentiation among populations of the Diamondback terrapin (<i>Malaclemys terrapin</i>)",
+      "author": "Hart, K.M., Hunter, M.E. and King, T.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hauswaldt, J.S. and Glen, T.C. 2005. Population genetics of the diamondback terrapin (<i>Malaclemys terrapin</i>). <i>Molecular Ecology</i> 14: 723-732.",
+      "year": "2005",
+      "title": "Population genetics of the diamondback terrapin (<i>Malaclemys terrapin</i>)",
+      "author": "Hauswaldt, J.S. and Glen, T.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hay, W.P. 1905 [1904]. A revision of <i>Malaclemmys</i>, a genus of turtles. <i>Bulletin of the U.S. Bureau of Fisheries</i> 24: 1–19.",
+      "year": "1905 [1904]",
+      "title": "A revision of <i>Malaclemmys</i>, a genus of turtles",
+      "author": "Hay, W.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hay, W.P. 1917. Artificial propagation of the diamond-back terrapin. <i>Bulletin of the U.S. Bureau of Fisheries</i> 24: 1-20.",
+      "year": "1917",
+      "title": "Artificial propagation of the diamond-back terrapin",
+      "author": "Hay, W.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Herlands, R., Wood, R.C., Pritchard, J., Clapp, H. and Le Furge, N. 2004. Diamondback terrapin, (<i>Malaclemys terrapin</i>) headstarting project in southern New Jersey. In: C. Swarth, W.E. Roosenburg and E. Kiviat (eds), <i>Conservation and Ecology of Turtles of the Mid-Atlantic Region: A Symposium</i>, Bibliomania, Salt Lake City, UT.",
+      "year": "2004",
+      "title": "Diamondback terrapin, (<i>Malaclemys terrapin</i>) headstarting project in southern New Jersey",
+      "author": "Herlands, R., Wood, R.C., Pritchard, J., Clapp, H. and Le Furge, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Herrel, A., Petrochic, S. and Draud, M. 2018. Sexual dimorphism, bite force and diet in the diamondback terrapin. <i>Journal of  Zoology</i> 304: 217-224.",
+      "year": "2018",
+      "title": "Sexual dimorphism, bite force and diet in the diamondback terrapin",
+      "author": "Herrel, A., Petrochic, S. and Draud, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hildebrand, S.F. 1928. Review of the experiments on artificial culture of the diamond-back terrapin. <i>Bulletin of the United States Bureau of Fisheries</i> 45: 25-70.",
+      "year": "1928",
+      "title": "Review of the experiments on artificial culture of the diamond-back terrapin",
+      "author": "Hildebrand, S.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hildebrand, S.F. 1932. Growth of diamond-back terrapins: size attained, sex ratio and longevity. <i>Zoologica</i> 9: 231-238.",
+      "year": "1932",
+      "title": "Growth of diamond-back terrapins: size attained, sex ratio and longevity",
+      "author": "Hildebrand, S.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hildebrand, S.F. and Hatsel, C. 1926. Diamondback terrapin culture at Beaufort North Carolina.  Economic Circular No. 60. US Bureau of Fisheries.",
+      "year": "1926",
+      "title": "Diamondback terrapin culture at Beaufort North Carolina",
+      "author": "Hildebrand, S.F. and Hatsel, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Holliday, D.K. and Holliday, C.M. 2011. The effects of the organopollutant PCB 126 on bone density in juvenile diamondback terrapins (<i>Malaclemys terrapin</i>). <i>Aquatic Toxicology</i> 109: 228-233.",
+      "year": "2011",
+      "title": "The effects of the organopollutant PCB 126 on bone density in juvenile diamondback terrapins (<i>Malaclemys terrapin</i>)",
+      "author": "Holliday, D.K. and Holliday, C.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Holliday, D.K., Day, R.D. and Owens, D. 2018. Environmental ecotoxicology of the diamond-backed terrapin. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Environmental ecotoxicology of the diamond-backed terrapin",
+      "author": "Holliday, D.K., Day, R.D. and Owens, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Holliday, D.K, Elskus, A.A. and Roosenburg, W.M. 2009. Impacts of multiple stressors on growth and metabolic rate of <i>Malaclemys terrapin</i>. <i>Environmental Toxicology and Chemistry</i> 28: 338-345.",
+      "year": "2009",
+      "title": "Impacts of multiple stressors on growth and metabolic rate of <i>Malaclemys terrapin</i>",
+      "author": "Holliday, D.K, Elskus, A.A. and Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoyle, M. and Gibbons, J.W. 2000. Use of a marked population of Diamondback Terrapins (<i>Malaclemys terrapin</i>) to determine impacts of recreational crab pots. <i>Chelonian Conservation and Biology</i> 3(4): 735-737.",
+      "year": "2000",
+      "title": "Use of a marked population of Diamondback Terrapins (<i>Malaclemys terrapin</i>) to determine impacts of recreational crab pots",
+      "author": "Hoyle, M. and Gibbons, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Isdell, R.E., Chambers, R.M., Bilkovic, D.M. and Leu, M. 2015. Effects of terrestrial-aquatic connectivity on an estuarine turtle. <i>Diversity and Distributions</i> 21: 643–653.",
+      "year": "2015",
+      "title": "Effects of terrestrial-aquatic connectivity on an estuarine turtle",
+      "author": "Isdell, R.E., Chambers, R.M., Bilkovic, D.M. and Leu, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jeyasuria, P., Roosenburg, W.M. and Place, A.R. 1994. Role of P450 aromatase in sex determination of the diamondback terrapin, <i>Malaclemys terrapin</i>. <i>Journal of Experimental Zoology</i> 270: 95-111.",
+      "year": "1994",
+      "title": "Role of P450 aromatase in sex determination of the diamondback terrapin, <i>Malaclemys terrapin</i>",
+      "author": "Jeyasuria, P., Roosenburg, W.M. and Place, A.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kennedy, V.S. 2018a. History of commercial fisheries and artificial propagation of Diamond-backed Terrapins. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018a",
+      "title": "History of commercial fisheries and artificial propagation of Diamond-backed Terrapins",
+      "author": "Kennedy, V.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kennedy, V.S. 2018b. <i>Shifting Baselines in Chesapeake Bay</i>. Johns Hopkins University Press, Baltimore.",
+      "year": "2018b",
+      "title": "Shifting Baselines in Chesapeake Bay",
+      "author": "Kennedy, V.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kennish, M.J. 2001. Coastal salt marsh systems in the US: a review of anthropogenic impacts. <i>Journal of Coastal Research</i> 17: 731-748.",
+      "year": "2001",
+      "title": "Coastal salt marsh systems in the US: a review of anthropogenic impacts",
+      "author": "Kennish, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kennish, M.J. 2001. Coastal salt marsh systems in the US: a review of anthropogenic impacts. <i>Journal of Coastal Research</i> 17: 731-748.",
+      "year": "2001",
+      "title": "Coastal salt marsh systems in the US: a review of anthropogenic impacts",
+      "author": "Kennish, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kitson, S.R. 2016. <i>Malaclemys terrapin</i> hatchlings: Variation in Seasonal Emergence. M.S. Thesis, Ohio University, Athens.",
+      "year": "2016",
+      "title": "<i>Malaclemys terrapin</i> hatchlings: Variation in Seasonal Emergence",
+      "author": "Kitson, S.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lamb, T. and Avise, J.C. 1992. Molecular and population genetic aspects of mitochondrial DNA variability in the diamondback terrapin, <i>Malaclemys terrapin</i>. <i>Journal of Heredity</i> 83: 262-269.",
+      "year": "1992",
+      "title": "Molecular and population genetic aspects of mitochondrial DNA variability in the diamondback terrapin, <i>Malaclemys terrapin</i>",
+      "author": "Lamb, T. and Avise, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lester , L.A., Avery, H.W., Harrison, A.S. and Standora, E.A. 2013. Recreational boats and turtles: behavioral mismatches results in high injury rates. <i>PLoS ONE</i> 8(12): e82370.",
+      "year": "2013",
+      "title": "Recreational boats and turtles: behavioral mismatches results in high injury rates",
+      "author": "Lester , L.A., Avery, H.W., Harrison, A.S. and Standora, E.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lester , L.A., Avery, H.W., Harrison, A.S. and Standora, E.A. 2018. Interactions between diamond-backed terrapins and motorized boats. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Interactions between diamond-backed terrapins and motorized boats",
+      "author": "Lester , L.A., Avery, H.W., Harrison, A.S. and Standora, E.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Link, H.F. 1807. <i>Beschreibung der Naturalien-Sammlung der Universität zu Rostock, Volume 2</i>. Adlers Erben, Rostock.",
+      "year": "1807",
+      "title": "Beschreibung der Naturalien-Sammlung der Universität zu Rostock, Volume 2",
+      "author": "Link, H.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lovich, J.E. and Hart, K.E. 2018. Diamond-backed terrapin: a history of controversy and uncertainty. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Diamond-backed terrapin: a history of controversy and uncertainty",
+      "author": "Lovich, J.E. and Hart, K.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lovich, J.E., Gibbons, J.W. and Greene, K. 2018. Life history of the Diamond-backed terrapin with emphasis on geographic variation. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Life history of the Diamond-backed terrapin with emphasis on geographic variation",
+      "author": "Lovich, J.E., Gibbons, J.W. and Greene, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lovich, J.E., Thomas, M., Ironside, K., Yackulic, C. and Puffer, S.R. 2018. Spatial distribution of estuarine diamond-backed terrapins (<i>Malaclemys terrapin</i>) and risk analysis from commercial blue crab (<i>Callinectes sapidus</i>) trapping at the Savannah Coastal Refuges Complex, USA. <i>Oceans and Coastal Management</i> 157: 160-167.",
+      "year": "2018",
+      "title": "Spatial distribution of estuarine diamond-backed terrapins (<i>Malaclemys terrapin</i>) and risk analysis from commercial blue crab (<i>Callinectes sapidus</i>) trapping at the Savannah Coastal Refuges Complex, USA",
+      "author": "Lovich, J.E., Thomas, M., Ironside, K., Yackulic, C. and Puffer, S.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maerz, J.C., Seigel, R.A. and Crawford, B.A. 2018. Terrapin conservation in terrestrial habitats: mitigating habitat loss, road mortality, and subsidized predators. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Terrapin conservation in terrestrial habitats: mitigating habitat loss, road mortality, and subsidized predators",
+      "author": "Maerz, J.C., Seigel, R.A. and Crawford, B.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McLaughlin, D.J., Baker, P.J., Cuthbert, J. and Wood, R.C. 2012. Barrier fences reduce diamondback terrapin (<i>Malaclemys terrapin</i>) road mortalities. <i>Atlantic Estuarine Research Society, Spring Meeting, Cape May, NJ</i>.",
+      "year": "2012",
+      "title": "Barrier fences reduce diamondback terrapin (<i>Malaclemys terrapin</i>) road mortalities",
+      "author": "McLaughlin, D.J., Baker, P.J., Cuthbert, J. and Wood, R.C",
+      "citation_short": ""
+    },
+    {
+      "citation": "Michener, W.K., Blood, E.R., Bildstein, K.L., Brinson, M.M., and Gardner, L.R. 1997. Climate change, hurricanes and tropical storms, and rising sea levels in coastal wetlands. <i>Ecological Applications</i> 7: 770-801.",
+      "year": "1997",
+      "title": "Climate change, hurricanes and tropical storms, and rising sea levels in coastal wetlands",
+      "author": "Michener, W.K., Blood, E.R., Bildstein, K.L., Brinson, M.M., and Gardner, L.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mitro, M.G. 2003. Demography and viability analysis of a diamondback terrapin population. <i>Canadian Journal of Zoology</i> 81: 716-726.",
+      "year": "2003",
+      "title": "Demography and viability analysis of a diamondback terrapin population",
+      "author": "Mitro, M.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Muldoon, K.A. 2010. Post-emergence Movement and Overwintering Strategies of Diamondback Terrapin (<i>Malaclemys terrapin</i>) Hatchlings. Hofstra University, Hempstead, NY, USA.",
+      "year": "2010",
+      "title": "Post-emergence Movement and Overwintering Strategies of Diamondback Terrapin (<i>Malaclemys terrapin</i>) Hatchlings",
+      "author": "Muldoon, K.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Muldoon, K.A. and Burke, R.A. 2012. Movements, overwintering, and mortality of hatchling diamond-backed terrapins (<i>Malaclemys terrapin</i>) at Jamaica Bay, New York. <i>Canadian Journal of Zoology</i> 90: 651-662.",
+      "year": "2012",
+      "title": "Movements, overwintering, and mortality of hatchling diamond-backed terrapins (<i>Malaclemys terrapin</i>) at Jamaica Bay, New York",
+      "author": "Muldoon, K.A. and Burke, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Munscher, E.C., Kuhns, E.H., Cox, C.C. and Butler, J.A. 2012. Decreased nest mortality for the Carolina Diamondback Terrapin (<i>Malaclemys terrapin centrata</i>) following the removal of raccoons (<i>Procyon lotor</i>) from a nesting beach in northeastern Florida. <i>Herpetological Conservation and Biology</i> 7: 167-184.",
+      "year": "2012",
+      "title": "Decreased nest mortality for the Carolina Diamondback Terrapin (<i>Malaclemys terrapin centrata</i>) following the removal of raccoons (<i>Procyon lotor</i>) from a nesting beach in northeastern Florida",
+      "author": "Munscher, E.C., Kuhns, E.H., Cox, C.C. and Butler, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nanjappa, P. and Conrad, P.M. (eds). 2011. <i>State of the Union: Legal Authority over the Use of Native Amphibians and Reptiles in the United States. Version 1.03</i>. pp. 225. Association of Fish and Wildlife Agencies, Washington DC.",
+      "year": "2011",
+      "title": "State of the Union: Legal Authority over the Use of Native Amphibians and Reptiles in the United States. Version 1.03",
+      "author": "Nanjappa, P. and Conrad, P.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ner, S. and Burke, R.L. 2008. Direct and indirect effects of urbanization on Diamondback terrapins of New York City: Distribution and predation of terrapin nests in a human-modified estuary. In: J.C. Mitchell, R.E. Jung and B. Bartholomew (eds), <i>Urban Herpetology</i>, pp. 110-117. Herpetological Conservation Vol. 3. Society for the Study of Amphibians and Reptiles.",
+      "year": "2008",
+      "title": "Direct and indirect effects of urbanization on Diamondback terrapins of New York City: Distribution and predation of terrapin nests in a human-modified estuary",
+      "author": "Ner, S. and Burke, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Outerbridge, M.E. 2014. Life History of a Native Emydid Turtle (<i>Malaclemys terrapin centrata</i>) on the Remote Oceanic Island of Bermuda. Dissertation, University College, Cork, Ireland.",
+      "year": "2014",
+      "title": "Life History of a Native Emydid Turtle (<i>Malaclemys terrapin centrata</i>) on the Remote Oceanic Island of Bermuda",
+      "author": "Outerbridge, M.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Parham, J.F., Outerbridge, M.E., Stuart, B.L., Wingate, D.B., Erlenkeuser, H. and Papenfuss, T.J. 2008. Introduced delicacy or native species? A natural origin of Bermudian terrapins supported by fossil and genetic data. <i>Biology Letters</i> 4(216-219. DOI: 10.1111/j.1095-8312.2011.01805.x).",
+      "year": "2008",
+      "title": "Introduced delicacy or native species? A natural origin of Bermudian terrapins supported by fossil and genetic data",
+      "author": "Parham, J.F., Outerbridge, M.E., Stuart, B.L., Wingate, D.B., Erlenkeuser, H. and Papenfuss, T.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pearson, S.H. and Wiebe, J.J. 2018. Considering diamond-backed terrapin (<i>Malaclemys terrapin</i>) nesting habitat and reproductive productivity in the restoration of Gulf of Mexico coastal ecosystems. <i>Oceans and Coastal Management</i> 155: 8-14.",
+      "year": "2018",
+      "title": "Considering diamond-backed terrapin (<i>Malaclemys terrapin</i>) nesting habitat and reproductive productivity in the restoration of Gulf of Mexico coastal ecosystems",
+      "author": "Pearson, S.H. and Wiebe, J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Petrov, T.L.D. 2011. Biology, Ecology, and Conservation of Hatchling and Post-hatchling Diamondback Terrapin (<i>Malaclemys terrapin pileata</i>). Doctoral Dissertation, The University of Alabama at Birmingham.",
+      "year": "2011",
+      "title": "Biology, Ecology, and Conservation of Hatchling and Post-hatchling Diamondback Terrapin (<i>Malaclemys terrapin pileata</i>)",
+      "author": "Petrov, T.L.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Radzio, T.A., Smolinsky J.A. and Roosenburg, W.M. 2013. Low use of required terrapin bycatch reduction devices in a recreational crab pot fishery. <i>Herpetological Conservation and Biology</i> 8: 222-227.",
+      "year": "2013",
+      "title": "Low use of required terrapin bycatch reduction devices in a recreational crab pot fishery",
+      "author": "Radzio, T.A., Smolinsky J.A. and Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rook, M.A., Lipcius, R.N., Bronner, B.M. and Chambers, R.M. 2010. Bycatch reduction devices conserve diamondback terrapins without affecting catch of blue crab. <i>Marine Ecology Progress Series</i> 409: 171-179.",
+      "year": "2010",
+      "title": "Bycatch reduction devices conserve diamondback terrapins without affecting catch of blue crab",
+      "author": "Rook, M.A., Lipcius, R.N., Bronner, B.M. and Chambers, R.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. 1991. The diamondback terrapin: habitat requirements, population dynamics, and opportunities for conservation. <i>New Perspectives in the Chesapeake System: A Research and Management Partnership: Proceedings of a Conference</i>, pp. 234-237. Chesapeake Research Consortium, Solomons, MD.",
+      "year": "1991",
+      "title": "The diamondback terrapin: habitat requirements, population dynamics, and opportunities for conservation",
+      "author": "Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. 1994. Nesting habitat requirements of the diamondback terrapin: a geographic comparison. <i>Wetlands Journal</i> 6(2): 9-12.",
+      "year": "1994",
+      "title": "Nesting habitat requirements of the diamondback terrapin: a geographic comparison.",
+      "author": "Roosenburg, W.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roosenburg, W.M. 2004. The impact of crab pot fisheries on terrapin (<i>Malaclemys terrapin</i>) populations: where are we and where do we need to go? In: C. Swarth, W.M. Roosenburg and E. Kiviat (eds), <i>Conservation and Ecology of Turtles of the Mid-Atlantic Region: A Symposium.</i>, pp. 23-30. Bibliomania!, Salt lake City, Utah.",
+      "year": "2004",
+      "title": "The impact of crab pot fisheries on terrapin (<i>Malaclemys terrapin</i>) populations: where are we and where do we need to go?",
+      "author": "Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. 2018. Restoration and head-starting. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Restoration and head-starting",
+      "author": "Roosenburg, W.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. and Dunham, A.E. 1997. Allocation of reproductive output: egg and clutch-size variation in the diamondback terrapin. <i>Copeia</i> 1997: 290-297.",
+      "year": "1997",
+      "title": "Allocation of reproductive output: egg and clutch-size variation in the diamondback terrapin",
+      "author": "Roosenburg, W.M. and Dunham, A.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. and Green, J.P. 2000. Impact of a bycatch reduction device on diamondback terrapin and blue crab capture in crab pots. <i>Ecological Applications</i> 10: 882-889.",
+      "year": "2000",
+      "title": "Impact of a bycatch reduction device on diamondback terrapin and blue crab capture in crab pots",
+      "author": "Roosenburg, W.M. and Green, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. and Kennedy, V.S. (eds). 2018. <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>. Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "The Ecology and Conservation of the Diamond-backed Terrapin",
+      "author": "Roosenburg, W.M. and Kennedy, V.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M. and Place, A.R. 1995. Nest predation and hatchling sex ratio in the diamondback terrapin: Implications for management and conservation. <i>Towards a Sustainable Coastal Watershed: The Chesapeake Experiment, Proceedings of a Conference</i>, pp. 65-70. Chesapeake Research Consortium, Solomons, MD.",
+      "year": "1995",
+      "title": "Nest predation and hatchling sex ratio in the diamondback terrapin: Implications for management and conservation",
+      "author": "Roosenburg, W.M. and Place, A.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M., Cover, J. and van Dijk, P.P. 2008. Legal Issues: legislative closure of the Maryland terrapin fishery: perspecitives on a historical accomplishment. <i>Turtle and Tortoise Newsletter</i> 12: 27-30.",
+      "year": "2008",
+      "title": "Legal Issues: legislative closure of the Maryland terrapin fishery: perspecitives on a historical accomplishment",
+      "author": "Roosenburg, W.M., Cover, J. and van Dijk, P.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M., Cresko, W., Modesitte, M. and Robbins, M.B. 1997. Diamondback terrapin (<i>Malaclemys terrapin</i>) mortality in crab pots. <i>Conservation Biology</i> 5: 1166-1172.",
+      "year": "1997",
+      "title": "Diamondback terrapin (<i>Malaclemys terrapin</i>) mortality in crab pots",
+      "author": "Roosenburg, W.M., Cresko, W., Modesitte, M. and Robbins, M.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M., Haley, K.L. and McGuire, S. 1999. Habitat selection and movements of diamondback terrapins, <i>Malaclemys terrapin</i> in a Maryland estuary. <i>Chelonian Conservation and Biology</i> 3: 425-429.",
+      "year": "1999",
+      "title": "Habitat selection and movements of diamondback terrapins, <i>Malaclemys terrapin</i> in a Maryland estuary",
+      "author": "Roosenburg, W.M., Haley, K.L. and McGuire, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Roosenburg, W.M., Spontak, D.M., Sullivan, S.P., Matthews, E.L., Heckman, M.L., Trimbath, R.J., Dunn, R.P., Dustman, E.A., Smith, L. and Graham, L.J. 2014. Nesting habitat creation enhances recruitment in a predator-free environment: <i>Malaclemys</i> nesting at the Paul S. Sarbanes ecosystem restoration project. <i>Restoration Ecology</i> 22: 815-823.",
+      "year": "2014",
+      "title": "Nesting habitat creation enhances recruitment in a predator-free environment: <i>Malaclemys</i> nesting at the Paul S. Sarbanes ecosystem restoration project",
+      "author": "Roosenburg, W.M., Spontak, D.M., Sullivan, S.P., Matthews, E.L., Heckman, M.L., Trimbath, R.J., Dunn, R.P., Dustman, E.A., Smith, L. and Graham, L.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schlacher, T.A., Dugan, J., Schoeman, D.S., Lastra, M., Jones, A., Scapini, F., McLachlan, A. and Defeo, O. 2007. Sandy beaches at the brink. <i>Diversity and Distributions</i> 13(5): 556-560.",
+      "year": "2007",
+      "title": "Sandy beaches at the brink",
+      "author": "Schlacher, T.A., Dugan, J., Schoeman, D.S., Lastra, M., Jones, A., Scapini, F., McLachlan, A. and Defeo, O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schoepff, J.D. 1793. <i> Historia Testudinum Iconibus Illustrata</i>. Ioannis Iacobi Palm, 136 pp. [Fascicles III and IV], Erlangae.",
+      "year": "1793",
+      "title": " Historia Testudinum Iconibus Illustrata",
+      "author": "Schoepff, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Scholtz, A.L. 2006. Impacts of Nest Site Choice and Nest Characteristics on Hatching Success in the Diamondback Terrapins of Jamica Bay, New York. Hofstra University, Hempstead, NY, USA.",
+      "year": "2006",
+      "title": "Impacts of Nest Site Choice and Nest Characteristics on Hatching Success in the Diamondback Terrapins of Jamica Bay, New York",
+      "author": "Scholtz, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schwartz, A. 1955. The diamondback terrapins (<i>Malaclemys terrapin</i>) of peninsular Florida. <i>Proceedings of the Biological Society of Washington</i> 68: 157-164.",
+      "year": "1955",
+      "title": "The diamondback terrapins (<i>Malaclemys terrapin</i>) of peninsular Florida",
+      "author": "Schwartz, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Seigel, R.A. 1984. Parameters of two populations of the diamondback terrapin (<i>Malaclemys terrapin</i>) on the Atlantic coast of Florida. In: R.A. Seigel, L.E. Hunt, J.L. Knight, M. Malaret and N.L. Zushlag (eds), <i>Vertebrate Ecology and Systematics - A Tribute to Henry S. Fitch</i>, pp. 77-87. Museum of Natural History, University of Kansas, Lawrence, Kansas, USA.",
+      "year": "1984",
+      "title": "Parameters of two populations of the diamondback terrapin (<i>Malaclemys terrapin</i>) on the Atlantic coast of Florida",
+      "author": "Seigel, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Seigel, R.A. and Gibbons, J.W. 1995. Workshop on the ecology, status, and management of the diamondback terrapin (<i>Malaclemys terrapin</i>) Savannah River Ecology Laboratory, 2 August 1994: final results and recommendations. <i>Chelonian Conservation and Biology</i> 1: 241-243.",
+      "year": "1995",
+      "title": "Workshop on the ecology, status, and management of the diamondback terrapin (<i>Malaclemys terrapin</i>) Savannah River Ecology Laboratory, 2 August 1994: final results and recommendations",
+      "author": "Seigel, R.A. and Gibbons, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Selman, W., Baccigalopi, B. and Baccigalopi, C. 2014. Distribution and abundance of diamondback terrapins (<i>Malaclemys terrapin</i>) in southwestern Louisiana. <i>Chelonian Conservation and Biology</i> 13: 131-139.",
+      "year": "2014",
+      "title": "Distribution and abundance of diamondback terrapins (<i>Malaclemys terrapin</i>) in southwestern Louisiana",
+      "author": "Selman, W., Baccigalopi, B. and Baccigalopi, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shaw, G. 1802. <i>General Zoology, or Systematic Natural History. Volume III, Part I, Amphibia</i>. G. Kearsley,  London.",
+      "year": "1802",
+      "title": "General Zoology, or Systematic Natural History. Volume III, Part I, Amphibia",
+      "author": "Shaw, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Silliman, B.R. and Bertness, M.D. 2002. A trophic cascade regulates salt marsh primary production. <i>Proceedings of the National Academy of Science of the United States</i> 99(16): 10500-10505. DOI: 10.1073/pnas.162366599.",
+      "year": "2002",
+      "title": "A trophic cascade regulates salt marsh primary production",
+      "author": "Silliman, B.R. and Bertness, M.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smeenk, N.A. 2010. The population Ecology of a Headstart Supplemented Population of Diamondback Terrapins (<i>Malaclemys terrapin</i>) at the Poplar Island Environmental Restoration Project in the Middle Chesapeake Bay. M.S. Thesis, Ohio University.",
+      "year": "2010",
+      "title": "The population Ecology of a Headstart Supplemented Population of Diamondback Terrapins (<i>Malaclemys terrapin</i>) at the Poplar Island Environmental Restoration Project in the Middle Chesapeake Bay",
+      "author": "Smeenk, N.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sonnini, C.S. and Latreille, P.A. 1801. <i>Histoire Naturelle des Reptiles, avec figures dessinées d’après nature. Tome Premier. Première Partie. Quadrupèdes et Bipèdes Ovipares</i>. Deterville, Paris.",
+      "year": "1801",
+      "title": "Histoire Naturelle des Reptiles, avec figures dessinées d’après nature. Tome Premier. Première Partie. Quadrupèdes et Bipèdes Ovipares",
+      "author": "Sonnini, C.S. and Latreille, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Szerlag, S. and McRobert, S.P. 2006. Road occurrence and mortality of the northern diamondback terrapin. <i>Applied Herpetology</i> 3: 27-37.",
+      "year": "2006",
+      "title": "Road occurrence and mortality of the northern diamondback terrapin",
+      "author": "Szerlag, S. and McRobert, S.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tucker, A.D., Burke, R.L. and Tulipani, D.C. 2018. Foraging ecology and habitat choice. In: W.M. Roosenburg and V.S. Kennedy (eds), <i>The Ecology and Conservation of the Diamond-backed Terrapin</i>, Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2018",
+      "title": "Foraging ecology and habitat choice",
+      "author": "Tucker, A.D., Burke, R.L. and Tulipani, D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tucker, A.D., FitzSimmons, N.N. and Gibbons, J.W. 1995. Resource partitioning by the estuarine turtle, <i>Malaclemys terrapin</i>: trophic, spatial, and temporal foraging constraints. <i>Herpetologica</i> 51(2): 167-181.",
+      "year": "1995",
+      "title": "Resource partitioning by the estuarine turtle, <i>Malaclemys terrapin</i>: trophic, spatial, and temporal foraging constraints",
+      "author": "Tucker, A.D., FitzSimmons, N.N. and Gibbons, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tucker, A.D., Gibbons, J.W. and Greene, J.L. 2001. Estimates of adult survival and migration for diamondback terrapins: conservation insight from local extirpation within a metapopulation. <i>Canadian Journal of Zoology</i> 79: 2199-2209.",
+      "year": "2001",
+      "title": "Estimates of adult survival and migration for diamondback terrapins: conservation insight from local extirpation within a metapopulation",
+      "author": "Tucker, A.D., Gibbons, J.W. and Greene, J.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tulipani, D. 2013. Foraging Ecology and Habitat Use of the Northern Diamondback Terrapin (<i>Malaclemys terrapin terrapin</i>) in Southern Chesapeake Bay. Dissertation, College of William and Mary, Williamsburg, Virginia.",
+      "year": "2013",
+      "title": "Foraging Ecology and Habitat Use of the Northern Diamondback Terrapin (<i>Malaclemys terrapin terrapin</i>) in Southern Chesapeake Bay",
+      "author": "Tulipani, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "USDA. 2011. Descriptive analysis report of wild reptile imports to the United States (2004–2009). Fort Collins, CO: USDA: APHIS: VS: CEAH: Center for Animal Health Information and Analysis, August 2011.",
+      "year": "2011",
+      "title": "Descriptive analysis report of wild reptile imports to the United States (2004–2009). Fort Collins, CO: USDA: APHIS: VS: CEAH: Center for Animal Health Information and Analysis, August 2011",
+      "author": "USDA",
+      "citation_short": ""
+    },
+    {
+      "citation": "Watters, C.F. 2004. A Review of the range-wide regulations pertaining to diamondback terrapins (Malaclemys terrapin). Wetlands Institute, Stone Harbor, NJ.",
+      "year": "2004",
+      "title": "A Review of the range-wide regulations pertaining to diamondback terrapins (Malaclemys terrapin).",
+      "author": "Watters, C.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wied, M. zu. 1865. Verzeichniss der Reptilien, welche auf einer Reise im nördlichen America beobachtet wurden. <i>Nova Acta Physico-Medica Academiae Caesareae Leopoldino-Carolinae Naturae Curiosorum</i> 32: 1–143.",
+      "year": "1865",
+      "title": "Verzeichniss der Reptilien, welche auf einer Reise im nördlichen America beobachtet wurden",
+      "author": "Wied, M. zu.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wolak, M.E., Gilchrist, G.W., Ruzicka, V.A , Nally, D.M. and Chambers, R.M. 2010. A contemporary, sex-limited change in body size of an estuarine turtle in response to commercial fishing. <i>Conservation Biology</i> 24: 1268-1277.",
+      "year": "2010",
+      "title": "A contemporary, sex-limited change in body size of an estuarine turtle in response to commercial fishing",
+      "author": "Wolak, M.E., Gilchrist, G.W., Ruzicka, V.A , Nally, D.M. and Chambers, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Woodland, R.J., Rowe, C.L. and Henry, P.F.P. 2017. Changes in habitat availability for multiple life stages of the diamondback terrapin in response to sea level rise. <i>Estuaries and Coasts</i> 40: 1502-1515.",
+      "year": "2017",
+      "title": "Changes in habitat availability for multiple life stages of the diamondback terrapin in response to sea level rise",
+      "author": "Woodland, R.J., Rowe, C.L. and Henry, P.F.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wood, R.C. 1997 [1993]. The impact of commercial crab traps on northern diamondback terrapins, <i>Malaclemys terrapin terrapin</i>. In: J. van Abbema (ed.), <i>Conservation, Restoration, and Management of Tortoises and Turtles-An International Conference</i>, pp. 21-27. New York Turtle and Tortoise Society, Purchase, NY.",
+      "year": "1997 [1993]",
+      "title": "The impact of commercial crab traps on northern diamondback terrapins, <i>Malaclemys terrapin terrapin</i>",
+      "author": "Wood, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wood, R.C. and Herlands, R. 1997 [1993]. Turtles and tires: the impact of road kills on northern diamondback terrapin, <i>Malaclemys terrapin terrapin</i>, populations on the Cape May peninsula, southern New Jersey. In: J. van Abbema (ed.), Conservation, Restoration, and Management of Tortoises and Turtles-An International Conference, pp. 46-53. Purchase, NY.",
+      "year": "1997 [1993]",
+      "title": "Turtles and tires: the impact of road kills on northern diamondback terrapin, <i>Malaclemys terrapin terrapin</i>, populations on the Cape May peninsula, southern New Jersey",
+      "author": "Wood, R.C. and Herlands, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yearicks, E.F., Wood, R.C. and Johnson, W.S. 1981. Hibernation of the northern diamondback terrapin, <i>Malaclemys terrapin</i> terrapin. <i>Estuaries</i> 4: 78-80.",
+      "year": "1981",
+      "title": "Hibernation of the northern diamondback terrapin, <i>Malaclemys terrapin</i> terrapin",
+      "author": "Yearicks, E.F., Wood, R.C. and Johnson, W.S",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

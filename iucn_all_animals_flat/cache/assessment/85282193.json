@@ -1,0 +1,910 @@
+{
+  "assessment_date": "2020-11-04T00:00:00.000+00:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 49830060,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/49830060/85282193",
+  "citation": "Salvador, G.N. 2023. Osteoglossum bicirrhosum. The IUCN Red List of Threatened Species 2023: e.T49830060A85282193. Accessed on 05 May 2026.",
+  "assessment_id": 85282193,
+  "assessment_points": true,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 49830060,
+    "scientific_name": "Osteoglossum bicirrhosum",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "OSTEOGLOSSIFORMES",
+    "family_name": "OSTEOGLOSSIDAE",
+    "genus_name": "Osteoglossum",
+    "species_name": "bicirrhosum",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Cuvier, 1829)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Dragonfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Arawana",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Aruanã branco",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Macaco d’água",
+        "language": "por"
+      },
+      {
+        "main": true,
+        "name": "Silver Arawana",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Ischnosoma bicirrhosum Cuvier, 1829",
+        "status": "ACCEPTED",
+        "genus_name": "Ischnosoma",
+        "species_name": "bicirrhosum",
+        "species_author": "Cuvier, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Osteoglossum  vandellii Cuvier, 1829",
+        "status": "ACCEPTED",
+        "genus_name": "Osteoglossum ",
+        "species_name": "vandellii",
+        "species_author": "Cuvier, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Osteoglossum  bicirrhosum Spix & Agassiz, 1829",
+        "status": "ACCEPTED",
+        "genus_name": "Osteoglossum ",
+        "species_name": "bicirrhosum",
+        "species_author": "Spix & Agassiz, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Osteoglossum  arowana Jardine, 1841",
+        "status": "ACCEPTED",
+        "genus_name": "Osteoglossum ",
+        "species_name": "arowana",
+        "species_author": "Jardine, 1841",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "6248755",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Osteoglossum bicirrhosum</em> is widely distributed in the Amazon region. The species is native to the Amazon, Rupununi, western Orinoco, and Essequibo river basins, with records from Bolivia, Brazil, Colombia, Ecuador, French Guiana, Guyana, Peru, and Venezuela. Non-native individuals have been identified in the United States including the Florida Keys (Ferriter<em> et al. </em>2008), in the Powsinkowskie Lake, an urban water reservoir located in Poland (Maciaszek and Sosnowski 2019), in Singapore (Ng and Lim 1997) and China (Xiong <em>et al.</em> 2015), where it is believed to have been introduced as a result of the ornamental pet trade (Crossman and Cudmore 1999).<span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle1\"><span class=\"fontstyle0\"></span></span>",
+    "population": "This migratory fish species exhibits declines in its population linked to the fishery. Studies in the Amazonian floodplains have also demonstrated a significant negative impact on Silver Arawana populations (Freitas <em>et al.</em> 2013), especially in Peru and Colombia (Garcia <em>et al.</em> 2008, Mojica<em> et al. </em>2012). The fishery has increased in the last years in Brazil, but, despite this trend, its population is believed to be stable there (ICMBio 2018).<span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"VIiyi\" lang=\"en\"><span class=\"JLqJ4b ChMk0b\" data-language-for-alternatives=\"en\" data-language-to-translate-into=\"pt\" data-phrase-index=\"0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"VIiyi\" lang=\"en\"><span class=\"JLqJ4b ChMk0b\" data-language-for-alternatives=\"en\" data-language-to-translate-into=\"pt\" data-phrase-index=\"0\"><span class=\"fontstyle0\"></span></span></span></span></span></span>",
+    "habitats": "<em>Osteoglossum bicirrhosum </em>is described as a relict species, and one of its distinguishing traits is the presence of a surface mouth breather. Reaching lengths of up to one metre and weight of up to five kilograms, this fish is omnivorous with a tendency to carnivory (Rodrigues<em> et al.</em> 2015). To supplement its limited consumption of aquatic vertebrates, it hunts terrestrial and arboreal prey in the shorelines and flooded forests (Lowry<em> et al.</em> 2005). Juveniles preferentially consume phytoplankton, zooplankton, and seeds (Rodrigues<em> et al.</em> 2015). The species is benthopelagic and is described to be sedentary in behaviour. Its migratory movements are dictated by the flood pulse; during high waters, the population is found primarily in flooded forests, and in the dry season the population returns to the rivers and marginal lakes (Tavares-Dias<em> et al.</em> 2014). The breeding season varies along the basin, occurring during the dry season and early rising waters in the Amazonas and Ucayali, and being restricted to the dry season in the Napo and Putumayo (Duponchelle<em> et al.</em> 2016). The size of maturation also varies, ranging from 43 to 75 cm for males and 46 to 72 cm SL for females (Ayala 2001, Duponchelle<em> et al.</em> 2016). The fecundity ranged from 93 to 360 oocytes for females of 1,300 and 2,980 g, respectively. This parameter varies along basins, although the mean of the oocytes' diameter and mass did not vary significantly (Duponchelle<em> et al.</em> 2016). An important behaviour of this species to consider in its management is the parental care of juveniles.",
+    "threats": "One of the greatest threats to this species is the capture of juveniles from the wild and the incidental killing of adults for the pet trade. This species is particularly vulnerable to this impact because of its low fecundity, large size of maturation, and parental care (Moreau and Coomes 2006). The species is also threatened by the predatory fishery, which helped to reduce the stocks in Colombia and Peru (Garcia<em> et al.</em> 2008). Additionally, as a migratory species, its large range is threatened by oil and gas exploration, deforestation, and subsequent siltation of rivers and land conversion of floodplains via drainage (Costa and Carvalho Freitas 2015). Studies in Amazonian floodplains have also demonstrated a marked negative impact of drought on this species (Freitas<em> et al.</em> 2013).",
+    "measures": "The species is assessed nationally as Vulnerable in Colombia (Mojica<em> et al. </em>2012). There are currently some measures protecting this species, including a ban on commercial sale and transport of the species between September 1st and November 15th in Colombia. However, better reproductive protection is recommended, alongside regulation of the fishing and capture for the fish trade. The sale of this species for the pet trade is economically important to Peru where education of local communities to improve fishing practices would help reduce the negative impacts. Local communities in the lower Chaqueta river have altered their capture techniques to reduce impacts on the adult populations. The species is fairly well documented but would benefit from enhanced research into population, harvest, trade and habitat trends in order to manage the species more effectively in the future.",
+    "use_trade": "This species is highly commercialized in the international pet trade of juveniles. Adults are consumed through local subsistence fishing. The method of collection from the wild can destabilize the populations because, in order to collect young individuals for the pet trade, the adults usually are killed (Moreau and Coomes 2007). The collection of<em> Osteoglossum bicirrhosum </em>for the international pet trade provides a significant income to rural communities in Peru, where over a million individuals have exported annually (Moreau and Coomes 2006). Of the individuals taken from Colombia for the international pet trade, 93% are less than 10 cm and 7% are between 10-20 cm (Agudelo-Zamora <em> et al. </em>2007). The main importer is China, where this species is highly regarded as a symbol of status, believed to bring luck, and referred to as Dragonfish. The exploitation of the species in Colombia and Peru for the pet trade has been considered controversial since it impacts this fishery resource in the Brazilian communities located downstream.<br/><br/><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\">Despite the aquaculture potential (Costa <em>et al.</em><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"> 2009), this species is harvested in the wild to supply local fish markets and for exportation (Lima and Prang 2008, Maldonado<em> et al.</em><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"> 2017). In trying to regulate the exploitation, some countries have adopted policies to regulate their fishery at national levels (Maldonado<em> et al.</em><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"> 2017), which declined the landings of the species in Peru and Colombia (Garcia<em> et al.</em><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"> 2008). On the other hand, the fish landings increased in Brazil, despite its population being stable (IMCBio 2018).<span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"VIiyi\" lang=\"en\"><span class=\"JLqJ4b ChMk0b\" data-language-for-alternatives=\"en\" data-language-to-translate-into=\"pt\" data-phrase-index=\"0\"><span><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"VIiyi\" lang=\"en\"><span class=\"JLqJ4b ChMk0b\" data-language-for-alternatives=\"en\" data-language-to-translate-into=\"pt\" data-phrase-index=\"0\"><span><span class=\"fontstyle0\"><span class=\"fontstyle0\"><span class=\"VIiyi\" lang=\"en\"><span class=\"JLqJ4b ChMk0b\" data-language-for-alternatives=\"en\" data-language-to-translate-into=\"pt\" data-phrase-index=\"0\"><span><span class=\"fontstyle0\"><br/><span class=\"fontstyle0\"><span class=\"fontstyle0\"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>",
+    "rationale": "The population of <em>Osteoglossum bicirrhosum</em> has declined in some areas of its distribution, such as Colombia and Peru, in particular due to the capture of juveniles for pet trade and the fishery for food consumption. As a results, the species is assessed nationally as Vulnerable in Colombia. However, the species seems to have a stable population trend in other countries, which represents the major distribution area of the species. Even in Brazil, where the fish landing of the species increased, this population is stable. Therefore, the species is assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>There are no taxonomic limitations relevant to taxon validation.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Passage",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Acre"
+      },
+      "code": "BZN-AC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amapá"
+      },
+      "code": "BZN-AP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amazonas"
+      },
+      "code": "BZN-AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pará"
+      },
+      "code": "BZN-PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rondônia"
+      },
+      "code": "BZN-RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Roraima"
+      },
+      "code": "BZN-RM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tocantins"
+      },
+      "code": "BZN-TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Goiás"
+      },
+      "code": "BZC-GO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso"
+      },
+      "code": "BZC-MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maranhão"
+      },
+      "code": "BZE-MA"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (unknown use)"
+      },
+      "code": "7_2_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Salvador, G.N.",
+      "value": [
+        "Gilberto Nepomuceno Salvador"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Lyons, T.J.",
+      "value": [
+        "Tim Lyons (Albuquerque Biopark, New Mexico)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "ABQ BioPark",
+      "value": [
+        "ABQ BioPark"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "ICMBio. 2018. <i>Livro Vermelho da Fauna Brasileira Ameaçada de Extinção</i>. Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio), Brasília.",
+      "year": "2018",
+      "title": "Livro Vermelho da Fauna Brasileira Ameaçada de Extinção",
+      "author": "ICMBio",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "Freitas, C.E., Siqueira-Souza, F.K., Humston, R. and Hurd, L.E. 2013. An initial assessment of drought sensitivity in Amazonian fish communities. <i>Hydrobiologia</i> 705(1): 159-171.",
+      "year": "2013",
+      "title": "An initial assessment of drought sensitivity in Amazonian fish communities",
+      "author": "Freitas, C.E., Siqueira-Souza, F.K., Humston, R. and Hurd, L.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ayala, I. 2001. Ecologia reproductiva de <i>Osteoglossum bicirrhosum</i> Vandelli, 1829 ‘arawana’ en la cuenca del rio Ucayali, Ciencias en Conservacion de Recursos Forestales.  Universidad Nacional Agraria La Molina.",
+      "year": "2001",
+      "title": "Ecologia reproductiva de <i>Osteoglossum bicirrhosum</i> Vandelli, 1829 ‘arawana’ en la cuenca del rio Ucayali, Ciencias en Conservacion de Recursos Forestales",
+      "author": "Ayala, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Costa, I.D. and Carvalho Freitas, C.D. 2015. Factors determining the structure of fish assemblages in an Amazonian river near to oil and gas exploration areas in the Amazon basin (Brazil): establishing the baseline for environmental evaluation. <i>Zoologia (Curitiba)</i> 32(5): 351-359.",
+      "year": "2015",
+      "title": "Factors determining the structure of fish assemblages in an Amazonian river near to oil and gas exploration areas in the Amazon basin (Brazil): establishing the baseline for environmental evaluation",
+      "author": "Costa, I.D. and Carvalho Freitas, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crossman, E.J and Cudmore, B.C. 1999. Summary of North American fish introductions through the aquarium/horticulture trade. In: Claudi R and Leach JH (eds), <i>Nonindigenous freshwater organisms</i>, pp. Lewis Publishers. 129-133, Boca Raton, FL.",
+      "year": "1999",
+      "title": "Summary of North American fish introductions through the aquarium/horticulture trade",
+      "author": "Crossman, E.J and Cudmore, B.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Duponchelle, F., Ruiz Arce, A., Waty, A., Garcia-Vasquez, A., Renno, J.F., Chu-Koo, F., Garcia-Davila, C., Vargas, G., Tello, S., Ortiz, A., Pinedo, R., Manzanares Vásquez, R. and Nuñez Rodriguez, J. 2015. Variations in reproductive strategy of the silver Arowana, <i>Osteoglossum bicirrhosum</i> Cuvier, 1829 from four sub-basins of the Peruvian Amazon. <i>Journal of Applied Ichthyology</i> 31(4): 19-30.",
+      "year": "2015",
+      "title": "Variations in reproductive strategy of the silver Arowana, <i>Osteoglossum bicirrhosum</i> Cuvier, 1829 from four sub-basins of the Peruvian Amazon",
+      "author": "Duponchelle, F., Ruiz Arce, A., Waty, A., Garcia-Vasquez, A., Renno, J.F., Chu-Koo, F., Garcia-Davila, C., Vargas, G., Tello, S., Ortiz, A., Pinedo, R., Manzanares Vásquez, R. and Nuñez Rodriguez, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ferriter, A., Doren, D., Winston, R., Thayer, D., Miller, B., Thomas, B., Barrett, M., Pernas, T., Hardin, S., Lane, J., Kobza, M., Schmitz, D., Bodle, M., Toth, L., Rodgers, L., Pratt, P., Snow, S. and Goodyear, C. 2008. The status of nonindigenous species in the south Florida enviroment.   South Florida Environmental Report. South Florida Water Management District, West Palm Beach.",
+      "year": "2008",
+      "title": "The status of nonindigenous species in the south Florida enviroment.",
+      "author": "Ferriter, A., Doren, D., Winston, R., Thayer, D., Miller, B., Thomas, B., Barrett, M., Pernas, T., Hardin, S., Lane, J., Kobza, M., Schmitz, D., Bodle, M., Toth, L., Rodgers, L., Pratt, P., Snow, S. and Goodyear, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garcia, A., Tello, S., Vargas, G. and Duponchelle F. 2008. Patterns of commercial fish landings in the Loreto region (Peruvian Amazon) between 1984 and 2006. <i>Fish Physiol. Biochem. </i> 35: 53-67.",
+      "year": "2008",
+      "title": "Patterns of commercial fish landings in the Loreto region (Peruvian Amazon) between 1984 and 2006",
+      "author": "Garcia, A., Tello, S., Vargas, G. and Duponchelle F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lima, A.C. and Prang, G. 2008. Demandas para o Manejo e Conservação do Aruanã Branco, Osteoglossum bicirrhosum, (Cuvier, 1829), na Região do Médio Rio Solimões. In: H.L. Queiroz and M Camargo (eds), <i>Biologia, conservação e manejo dos Aruanãs na Amazônia Brasileira</i>, Instituto de Desenvolvimento Sustentável Mamirauá, Tefé.",
+      "year": "2008",
+      "title": "Demandas para o Manejo e Conservação do Aruanã Branco, Osteoglossum bicirrhosum, (Cuvier, 1829), na Região do Médio Rio Solimões",
+      "author": "Lima, A.C. and Prang, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maciaszek, R. and Sosnowski, W. 2019. First record of silver arowana <i>Osteoglossum bicirrhosum</i> Cuvier, 1928 (Osteoglossidae) from Central Poland. <i>World Scientific News</i> 117(1): 189–195.",
+      "year": "2019",
+      "title": "First record of silver arowana <i>Osteoglossum bicirrhosum</i> Cuvier, 1928 (Osteoglossidae) from Central Poland",
+      "author": "Maciaszek, R. and Sosnowski, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mojica, J.I., Usma, J.S., Álvarez-León, R. and Lasso, C.A. 2012. <i>Libro rojo de peces dulceacuícolas de Colombia 2012</i>. Instituto de Investigación de Recursos Bioló- gicos Alexander von Humboldt, Instituto de Ciencias Naturales de la Universidad Nacional de Colombia, WWF Colombia y Universidad de Manizales, Bogotá.",
+      "year": "2012",
+      "title": "Libro rojo de peces dulceacuícolas de Colombia 2012",
+      "author": "Mojica, J.I., Usma, J.S., Álvarez-León, R. and Lasso, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moreau, M.A. and Coomes, O.T. 2006. Potential threat of the international aquarium fish trade to silver arawana <i>Osteoglossum bicirrhosum</i> in the Peruvian Amazon. <i>Oryx</i> 40(2): 152-160.",
+      "year": "2006",
+      "title": "Potential threat of the international aquarium fish trade to silver arawana <i>Osteoglossum bicirrhosum</i> in the Peruvian Amazon.",
+      "author": "Moreau, M.A. and Coomes, O.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moreau, M.A. and Coomes, O.T. 2007. Aquarium fish exploitation in western Amazonia: conservation issues in Peru. <i>Environmental Conservation</i> 37: 12-22.",
+      "year": "2007",
+      "title": "Aquarium fish exploitation in western Amazonia: conservation issues in Peru",
+      "author": "Moreau, M.A. and Coomes, O.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ng, P.K.L. and Lim, K.K.P. 1997. The diversity and conservation status of fishes in the Nature Reserves of Singapore. <i>Proceedings of the Nature Reserves</i> 49(2): 245–265.",
+      "year": "1997",
+      "title": "The diversity and conservation status of fishes in the Nature Reserves of Singapore",
+      "author": "Ng, P.K.L. and Lim, K.K.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rodrigues, M., Dias, M., Marinho, R. and Tavares-Dias, M. 2015. Parasite diversity of <i>Osteoglossum bicirrhosum</i>, an Osteoglossidae fish from Amazon. <i>Neotropical Helminthology</i> 8(2): 383-391.",
+      "year": "2015",
+      "title": "Parasite diversity of <i>Osteoglossum bicirrhosum</i>, an Osteoglossidae fish from Amazon",
+      "author": "Rodrigues, M., Dias, M., Marinho, R. and Tavares-Dias, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tavares-Dias, M., Sousa, T.J.S.M. and Neves, L.R. 2014. Parasitic infections in two benthopelagic fish from amazon: the arowana <i>Osteoglossum bicirrhosum</i> (Osteoglossidae) and oscar <i>Astronotus ocellatus</i> (Cichlidae). <i>Bioscience Journal</i> 30: 546-555.",
+      "year": "2014",
+      "title": "Parasitic infections in two benthopelagic fish from amazon: the arowana <i>Osteoglossum bicirrhosum</i> (Osteoglossidae) and oscar <i>Astronotus ocellatus</i> (Cichlidae)",
+      "author": "Tavares-Dias, M., Sousa, T.J.S.M. and Neves, L.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Xiong, W., Sui, X., Liang, S.H. and Chen, Y. 2015. Non-native freshwater fish species in China. <i>Rev. fish Biol. Fish. </i> 25: 651–687.",
+      "year": "2015",
+      "title": "Non-native freshwater fish species in China",
+      "author": "Xiong, W., Sui, X., Liang, S.H. and Chen, Y.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

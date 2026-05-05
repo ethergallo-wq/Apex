@@ -1,0 +1,672 @@
+{
+  "assessment_date": "2019-03-23T00:00:00.000+00:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 197465,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/197465/2486896",
+  "citation": "Wagner, P., Wilms, T., Niagate, B., Joger, U., Geniez, P., Mateo, J.A., El Mouden, E.H., Slimani, T., Nouira, M.S., Baha El Din, S., Busais, S.M.S. & Al Jumaily, M.M. 2021. Cerastes cerastes. The IUCN Red List of Threatened Species 2021: e.T197465A2486896. Accessed on 05 May 2026.",
+  "assessment_id": 2486896,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 197465,
+    "scientific_name": "Cerastes cerastes",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 274508564,
+        "scientific_name": "Cerastes cerastes ssp. hoofieni",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "VIPERIDAE",
+        "genus_name": "Cerastes",
+        "species_name": "cerastes",
+        "subpopulation_name": null,
+        "infra_name": "hoofieni",
+        "authority": "Werner &amp; Sivan, 1999",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Viper Specialist Group",
+            "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+            "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+          }
+        ],
+        "common_names": [],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VIPERIDAE",
+    "genus_name": "Cerastes",
+    "species_name": "cerastes",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Viper Specialist Group",
+        "url": "http://www.oriannesociety.org/iucn-viper-specialist-group",
+        "description": "Co-Chairs: Jesús Sigala-Rodríguez (email: jjsigala@gmail.com) and Stephen Spear (email: sspear@thewilds.org)\nRed List Authority Coordinator: Johannes Penner (email: johannes.penner@web.de)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Hornviper",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Desert Horned Viper",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Coluber cerastes Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "cerastes",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species ranges from southern Morocco, Western Sahara and Mauritania in northwestern Africa, through northern Africa (with a southern range limit in Sudan - Wagner and Wilms 2010) and the Sahara Desert to southwestern Israel (McDiarmid <span style=\"font-style: italic;\">et al.</span> 1999, Egan 2007). it is widespread in the Saharan region as far south as the edge of the Sahel, with records from West Africa from Mauritania, northern Mali and Niger&#160;(Trape and Mané 2006). Records also exist for Algeria and Libya&#160;(Trape and Mané 2006). On the Arabian Peninsula, it has been reported from Tihama (the coastal area of western Yemen and extreme southwestern Saudi Arabia), where it is represented by the endemic subspecies <em>Cerastes cerastes hoofieni </em>(Werner <em>et al. </em>1991).<em>&#160;</em>Unconfirmed reports from Jordan might refer to <em>C. gasperetti</em>. It can be found sea level up to 1,500 m asl.",
+    "population": "It is a common and widespread species, and can be locally abundant in certain areas (e.g., the shores of Lake Nasser, Egypt). In Yemen, only two recent records are known from Hodeida (S. Busais pers. comm. February 2012), with a video record from Aden that is likely to represent this species (M.M. al Jamaily pers. comm. February 2012)",
+    "habitats": "This viper is found in most desert habitat types with some rock formations, but not in large dune formations (Trape and Mané 2006). In Arabia animals are found in sandy patches from scrubland to low-altitude rocky barrens and foothills (Egan 2007). The species can tolerate extreme hyperarid habitats. In Africa it generally avoids the Atlantic coastal area. This crepuscular viper spends the day in burrows or beneath scree (Trape and Mané 2006). It feeds on reptiles, birds, rodents and large insects (Trape and Mané 2006). In West Africa, animals do not feed between December and February and leaves its shelter only to bask (Trape and Mané 2006). The female lays a clutch of between 10 and 20 eggs. Maximum size is 80 cm.",
+    "threats": "There appear to be no major threats to this widespread species.  Animals are locally collected for exhibition by snake charmers. Large numbers are collected in Egypt and Saudi Arabia for venom extraction, and these animals are generally not released. There is no other use of this species in Arabia, although in common with other snakes it is persecuted when encountered.",
+    "measures": "Its range includes several protected areas. There is a need to research the sustainability of harvests for venom extraction in parts of its range. The subspecies <em>Cerastes cerastes hoofieni</em> from Arabia requires genetic study to better determine its taxonomic status.",
+    "use_trade": "There is localized use of this species by snake-charmers, and for venom extraction. Small numbers have been reported in the international pet trade: Jensen <em>et al.</em> (2019) recorded 49 animals advertised for export from Egypt and Morocco between 2013 and 2017.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, presumed large population, and because it is subject to no major threats.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wagner, P., Wilms, T., Niagate, B., Joger, U., Geniez, P., Mateo, J.A., El Mouden, E.H., Slimani, T., Nouira, M.S., Baha El Din, S., Busais, S.M.S. & Al Jumaily, M.M.",
+      "value": [
+        "Sherif Baha El Din (SRLI & Global Reptile Assessment)",
+        "El Hassan El Mouden (Université Cadi Ayyad, Département de Biologie, BP: 2390, Marrakech - MAROC)",
+        "Philippe Geniez (EPHE-UMR 5175, CEFE-CNRS, 1919 Route de Mende, F-34293 Montpellier cedex 5, France)",
+        "Ulrich Joger (State Natural History Museum, Braunschweig, Germany)",
+        "Saïd Nouira (SRLI Reptile Assessment)",
+        "Tahar Slimani (Cadi Ayyad University, Faculty of Science, Marrakesh, Morocco)",
+        "José Mateo (Universitat d'Alacant, Spain)",
+        "Thomas Wilms (Frankfurt Zoological Society, Germany)",
+        "Salim Busais (Hail University, Saudi Arabia)",
+        "Masa'a Al Jumaily (Sana'a University, Yemen)",
+        "Bourama Niagate",
+        "Philipp Wagner"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Sigala Rodriguez, J.",
+      "value": [
+        "Jesus Sigala Rodriguez"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Stümpel, N. and Joger, U. 2009. Recent advances in phylogeny and taxonomy of Near and Middle Eastern Vipers - an update. <i>ZooKeys</i> 31: 179-191.",
+      "year": "2009",
+      "title": "Recent advances in phylogeny and taxonomy of Near and Middle Eastern Vipers - an update.",
+      "author": "Stümpel, N. and Joger, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Egan, D. 2007. <i>Snakes of Arabia: A field guide to the snakes of the Arabian Peninsula and its shores.</i> Motivate Publishing, Dubai.",
+      "year": "2007",
+      "title": "Snakes of Arabia: A field guide to the snakes of the Arabian Peninsula and its shores.",
+      "author": "Egan, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, W., Egan, D. and Edmonds, J. 2008. Proceedings of the 9th Conservation Workshop for the Fauna of Arabia: Conservation Status of the Terrestrial Snakes of the Arabian Peninsula. Breeding Centre for Endangered Arabian Wildlife.",
+      "year": "2008",
+      "title": "Proceedings of the 9th Conservation Workshop for the Fauna of Arabia: Conservation Status of the Terrestrial Snakes of the Arabian Peninsula",
+      "author": "Branch, W., Egan, D. and Edmonds, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trape, J.-F. and Mané, Y. 2006. <i>Guide des serpents d'Afrique occidentale - savane et désert</i>. IRD Editions, Paris.",
+      "year": "2006",
+      "title": "Guide des serpents d'Afrique occidentale - savane et désert",
+      "author": "Trape, J.-F. and Mané, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Disi, A.M., Amr, Z.S. and Defosse, D. 1988. Contribution to the herpetofauna of Jordan III. Snakes of Jordan. <i>The Snake</i> 20: 40-51.",
+      "year": "1988",
+      "title": "Contribution to the herpetofauna of Jordan III. Snakes of Jordan",
+      "author": "Disi, A.M., Amr, Z.S. and Defosse, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Saleh, M.A. 1997. <i>Amphibians and Reptiles of Egypt</i>. Publication of the National Biodiversity Unit, Cairo.",
+      "year": "1997",
+      "title": "Amphibians and Reptiles of Egypt",
+      "author": "Saleh, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baha El Din, S. 2001. The herpetofauna of Egypt: species, communities and assemblages. Phd unpublished, University of Nottingham School of Biological Sciences.",
+      "year": "2001",
+      "title": "The herpetofauna of Egypt: species, communities and assemblages",
+      "author": "Baha El Din, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 1980. The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia. <i>Journal of Oman Studies Special Report</i> 1980(2): 273-332.",
+      "year": "1980",
+      "title": "The scientific results of the Oman flora and fauna survey 1977 (Dhofar). The reptiles and amphibians of Dhofar, southern Arabia",
+      "author": "Arnold, E.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, Y.L. 1988. Herpetofaunal survey of Israel (1950-1985), with comments on Sinai and Jordan and on zoogeographical heterogeneity. In: Y. Yom-Tov and E. Tchernov (eds), <i>The zoogeography of Israel.</i>, Dr. W. Junk Publishers, Dordrecht, Netherlands.",
+      "year": "1988",
+      "title": "Herpetofaunal survey of Israel (1950-1985), with comments on Sinai and Jordan and on zoogeographical heterogeneity",
+      "author": "Werner, Y.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Joger, U. 1984. <i>The venomous snakes of the Near and Middle East</i>. Beihefte zum Tübinger Atlas des Vorderen Orients, A 12. Dr. Ludwig Reichert Verlag, Wiesbaden.",
+      "year": "1984",
+      "title": "The venomous snakes of the Near and Middle East",
+      "author": "Joger, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bons, J. and Geniez, P. 1996. <i>Amphibiens et Reptiles du Maroc (Sahara Occidental compris), Atlas biogéographique</i>. Asociación Herpetológica Española, Barcelona.",
+      "year": "1996",
+      "title": "Amphibiens et Reptiles du Maroc (Sahara Occidental compris), Atlas biogéographique",
+      "author": "Bons, J. and Geniez, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geniez, P., Mateo, J.-A. and Bons, J. 2000. A checklist of the amphibians and reptiles of Western Sahara (Amphibia, Reptilia). <i>Herpetozoa</i> 13(3/4): 149-163.",
+      "year": "2000",
+      "title": "A checklist of the amphibians and reptiles of Western Sahara (Amphibia, Reptilia)",
+      "author": "Geniez, P., Mateo, J.-A. and Bons, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schleich, H.H., Kästle, W. and Kabisch, K. 1996. <i>Amphibians and Reptiles of North Africa</i>. Koeltz, Koenigstein.",
+      "year": "1996",
+      "title": "Amphibians and Reptiles of North Africa",
+      "author": "Schleich, H.H., Kästle, W. and Kabisch, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Amr, Z.S., Al-Oran, R. and Disi, A. 1994. Reptiles of southern Jordan. <i>The Snake</i> 26: 41-49.",
+      "year": "1994",
+      "title": "Reptiles of southern Jordan",
+      "author": "Amr, Z.S., Al-Oran, R. and Disi, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johann, H. 1981. Herpetologische eindrücke auf einer reise durch die Sahara. <i>Herpetofauna</i> 3(13): 17-21.",
+      "year": "1981",
+      "title": "Herpetologische eindrücke auf einer reise durch die Sahara",
+      "author": "Johann, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McDiarmid, R.W., Campbell, J.A. and Touré, T.A. 1999. <i>Snake Species of the World. Vol. 1</i>. Herpetologists' League, Washington, DC.",
+      "year": "1999",
+      "title": "Snake Species of the World. Vol. 1",
+      "author": "McDiarmid, R.W., Campbell, J.A. and Touré, T.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Flower, S. 1933. Notes on the recent reptiles and amphibians of Egypt, with a list of the species recorded from that kingdom. <i>Proceedings of the Zoological Society of London</i> 1933: 735-851.",
+      "year": "1933",
+      "title": "Notes on the recent reptiles and amphibians of Egypt, with a list of the species recorded from that kingdom.",
+      "author": "Flower, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martens, H. 1997. A review of \"Zoogeography of amphibians and reptiles of Syria, with additional new records\" (Herpetozoa 9 (1/2), 1996). <i>Herpetozoa</i> 10(3/4): 99-106.",
+      "year": "1997",
+      "title": "A review of \"Zoogeography of amphibians and reptiles of Syria, with additional new records\" (Herpetozoa 9 (1/2), 1996)",
+      "author": "Martens, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jensen, T.J., Auliya, M., Burgess, N.D., Aust, P.W., Pertoldi, C. and Strand, J. 2018. Exploring the international trade in African snakes not listed on CITES: highlighting the role of the internet and social media. <i>Biodiversity and Conservation</i>: 1-19 (in press).",
+      "year": "2018",
+      "title": "Exploring the international trade in African snakes not listed on CITES: highlighting the role of the internet and social media",
+      "author": "Jensen, T.J., Auliya, M., Burgess, N.D., Aust, P.W., Pertoldi, C. and Strand, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Disi, A.M. and Böhme, W. 1996. Zoogeography of the amphibians and reptiles of Syria, with additional new records. <i>Herpetozoa</i> 9(1/2): 63-70.",
+      "year": "1996",
+      "title": "Zoogeography of the amphibians and reptiles of Syria, with additional new records",
+      "author": "Disi, A.M. and Böhme, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Joger, U. and Courage, K. 1999. Are palearctic 'rattlesnakes' (<i>Echis</i> and <i>Cerastes</i>) monophyletic? <i>Kaupia (Darmstadt)</i> 8: 65-81.",
+      "year": "1999",
+      "title": "Are palearctic 'rattlesnakes' (<i>Echis</i> and <i>Cerastes</i>) monophyletic?",
+      "author": "Joger, U. and Courage, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trutnau, L. 1981. Beobachtungen an der Hornviper <i>Cerastes cerastes</i> (L. 1758). <i>Herpetofauna</i> 3(13): 11-16.",
+      "year": "1981",
+      "title": "Beobachtungen an der Hornviper <i>Cerastes cerastes</i> (L. 1758)",
+      "author": "Trutnau, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wagner, P. and Wilms, T.M. 2010. A crowned devil: new species of <i>Cerastes</i> Laurenti, 1768 (Ophidia, Viperidae) from Tunisia, with two nomenclatural comments. <i>Bonn zoological Bulletin</i> 57(2): 297-306.",
+      "year": "2010",
+      "title": "A crowned devil: new species of <i>Cerastes</i> Laurenti, 1768 (Ophidia, Viperidae) from Tunisia, with two nomenclatural comments",
+      "author": "Wagner, P. and Wilms, T.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, Y.L. and Sivan, N. 1992. Systematics and zoogeography of <i>Cerastes</i> (Ophidia: Voperidae) in the Levant: 2. Taxonomy, ecology, and zoogeography. <i>The Snake</i> 24: 34-49.",
+      "year": "1992",
+      "title": "Systematics and zoogeography of <i>Cerastes</i> (Ophidia: Voperidae) in the Levant: 2. Taxonomy, ecology, and zoogeography",
+      "author": "Werner, Y.L. and Sivan, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Werner, Y.L., Le Verdier, A., Rosenman, D. and Sivan, N. 1991. Systematics and zoogeography of <i>Cerastes</i> (Ophidia: Viperidae) in the Levant: I. Distinguishing Arabian from African <i>Cerastes cerastes</i>. <i>The Snake</i> 23: 90-100.",
+      "year": "1991",
+      "title": "Systematics and zoogeography of <i>Cerastes</i> (Ophidia: Viperidae) in the Levant: I. Distinguishing Arabian from African <i>Cerastes cerastes</i>",
+      "author": "Werner, Y.L., Le Verdier, A., Rosenman, D. and Sivan, N.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

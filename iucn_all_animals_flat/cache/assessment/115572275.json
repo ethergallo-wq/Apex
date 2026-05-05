@@ -1,0 +1,633 @@
+{
+  "assessment_date": "2018-05-07T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 18355,
+  "criteria": "A2cd+3cd+4cd",
+  "url": "https://www.iucnredlist.org/species/18355/115572275",
+  "citation": "Louis Jr, E.E., Bailey, C.A., Sefczek, T.M., King, T., Radespiel, U. & Frasier, C.L. 2020. Propithecus coquereli. The IUCN Red List of Threatened Species 2020: e.T18355A115572275. Accessed on 05 May 2026.",
+  "assessment_id": 115572275,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 18355,
+    "scientific_name": "Propithecus coquereli",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "INDRIIDAE",
+    "genus_name": "Propithecus",
+    "species_name": "coquereli",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(A. Grandidier, 1867)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Crowned Sifaka",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Coquerel's Sifaka",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Propithecus verreauxi ssp. coquereli (A. Grandidier, 1867)",
+        "status": "ACCEPTED",
+        "genus_name": "Propithecus",
+        "species_name": "verreauxi",
+        "species_author": null,
+        "infrarank_author": "(A. Grandidier, 1867)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "coquereli"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 380,
+    "lower_elevation_limit": 7,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": null,
+    "generational_length": "10",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "27662",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>                     </p><p>This species is reported to be distributed throughout the forested areas of north-western Madagascar from north and east of the Betsiboka River with its most southerly occurrence reportedly to the south-east of Maevatanana along the east bank of the Betsiboka (Rakotonirina <em>et al.</em> 2013); its western boundary coastal forest of Mariarano (north of Mahajanga); its northern limit is reported to be near Bealanana; and its eastern boundary is near Antetemasy, (just west of Befandriana Nord (Mittermeier <em>et al.</em> 2010). A recent field survey confirmed the presence of the species in many of the remaining forest fragments within the species range (Salmona <em>et al. </em>2014). The extent of occurrence (EOO) is estimated to be&#160;27,662 km<sup>2</sup>,&#160;occurring from 7 metres to c. 380 m above sea-level (avg. c. 100 metres). Furthermore, this species has lost significant portions of its EOO due to habitat loss, including Bora Special Reserve where this lemur species is suspected to have been completely extirpated as Bora is no longer listed as part of the protection network due to severe slash and burn practices and agricultural shifts. Even Anjiamangirana Protected Area, located south of Antsohihy, has lost ≥50% over its forest habitat in the past 15 years due to uncontrolled burns.</p><p>This species is likely affected by national trends in forest habitat loss: Madagascar lost 37% of its forest cover from 1973 to 2014, with an annual deforestation rate of 1.1%/year from 2010 to 2014. Almost half of Madagascar's forest (46%) is now located within less than 100 metres from the forest edge (Vieilledent<em> et al. </em>2018).</p>      <p></p>",
+    "population": "Population figures are suspected to be in steep decline due to severe habitat loss due to slash and burn activities and agricultural shifts and hunting. It is suspected that, in the past, the population declined by 80% (over a three generation period of 30 years) due to habitat loss and degradation and human population growth. An estimated 200,000 individuals were thought to remain as of Mittermeier&#160;<em>et al.&#160;</em>2010; however, severe fragmentation and loss of habitat in the protected areas of Ankarafantsika National Park, Anjiamangirana and Bora represents a significant shift over the past thirty years. In Ankarafantsika, the population (considered to be the largest remaining across its range) was recently estimated to have declined to around 47,000 individuals (Kun-Rodrigues <em>et al.</em> 2014), with this decline likely have continued since then.&#160;Habitat loss documented in Région Sofia from 1990 to 2000 was 10% or 75,000 ha which decreased from 2000 to 2010 to 3% or 20,000 ha. Unfortunately, habitat loss increased again since 2009 due to political crisis and lack of law enforcement.&#160;Future declines are likely to accelerate due to increased human population pressure, with a population growth of 2.7% annually, growing from an overall population of 9 million in 1999 to over 26 million in 2019. As such, it is suspected that the rate of future population reduction will increase to over 90%&#160;due to continued loss of habitat due to slash and burn, annual uncontrolled burns of grasslands for cattle, and the demands of unchecked human population growth.&#160;This species is shown to be negatively impacted by habitat fragmentation (Eppley <em>et al.</em> 2020).",
+    "habitats": "<p>                    </p><p>Coquerel’s Sifaka, <em>Propithecus coquereli</em>, is a diurnal vertical clinger and leaper, which is most commonly found in mixed deciduous and evergreen forests, and often in brush-and-scrub and secondary formations as well (e.g. Salmona <em>et al.</em> 2014); also sighted in coastal mangroves on Baie de Mahajamba. They occasionally descend to the ground. In the forests of Ankarafantsika, this species is seen in groups of three to 10 with home ranges of 4-9 ha (Petter 1962, Albignac 1981). Sexual maturity is reached at roughly 2.5 years of age for both genders<strong>. </strong>Births are clustered in the months of June and July. A gestation period of 162 days normally leads to a single offspring born (Richard 1978, 1987). Infants become completely independent by about six months of age and reach adult size by one year (Mittermeier <em>et al.</em> 2010, and references therein).</p>",
+    "threats": "<p><span lang=\"EN-CA\">                  </p><p><em>Propithecus coquereli</em> is severely threatened by habitat destruction and hunting (Salmona <em>et al. </em>2014). Its restricted distribution makes it particularly susceptible since the threats are ongoing regardless of the protective status of the habitat. Slash-and-burn agriculture and annual burning to generate new pasture for livestock are the principle causes of forest loss, but charcoal enterprises are also occurring in this part of Madagascar. Hunting for food is increasing has the burgeoning population struggle to exist in western Madagascar. Even though local traditions also place taboos on hunting; however, immigration to the region in search of income is changing these beliefs.</p><p></p>",
+    "measures": "<p>This species is listed on Appendix I of CITES. The three protected areas in which it is known to occur are the Ankarafantsika National Park, Anjiamangirana Protected Area, and Anjajavy Reserve; however, habitat loss and hunting pressure on sifakas are significant in Ankarafantsika (Garcia and Goodman 2003) and Anjiamangirana (E. Louis, <em>pers. obs</em>.). Once found in Bora Special Reserve, Omaha’s Henry Doorly Zoo and Aquarium and the Madagascar Biodiversity Partnership, NGO collected molecular genetic samples from 23 individuals during sedations in 2002 within the only remaining habitat which were primarily mango trees; extensive fires were also documented and reported during this expedition (E. Louis, <em>pers. obs</em>.). Due to the continued pressure over the next five years, the Bora Special Reserve became so seriously degraded that the Malagasy government delisted the site as a protected area. Most if not all lemur species have been considered extirpated from what remains of this forest. Populations of <em>Propithecus coquereli</em> have also been reported from the forests of, the Narinda Peninsula, and Mariarano (Mittermeier <em>et al.</em> 2010). An initial prioritisation of sites suitable for conserving the species has been presented by Salmona <em>et al.</em> (2014). As of 2019, 61 individuals of this species are represented in a small number of zoos in the United States (ZIMS 2019). There are over 50 held in registered captive facilities in Madagascar (E. Robsomanitrandrasana, <em>in. litt.</em> 2016), and the species is regularly held in illegal captivity in Madagascar (T. King, <em>pers. obs</em>.).</p>  <strong></strong>",
+    "use_trade": "<p>                  </p><p>Hunting for subsistence food has increasingly become a problem. The species is commonly held in captivity in Madagascar, legally and illegally (Reuter and Schaefer 2017).</p><p></p>",
+    "rationale": "<p>Listed formerly as Endangered A2acd (circa 2012), this species is suspected to have undergone a population decline of ≥80% over a period of 30 years (three generations), due primarily to observed continuing decline in area, extent and quality of habitat due to slash-and-burn for agriculture, annual burning to generate new pasture for livestock, and forests cut to produce charcoal, in addition to exploitation through unsustainable hunting pressure.<span class=\"apple-converted-space\"> These causes have not ceased and will to a large extent not be easily reversible. Inferring population reductions to continue due to habitat loss, <em>Propithecus coquereli</em> has been uplisted to Critically Endangered.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "Formerly considered a subspecies of <em>Propithecus verreauxi</em> (e.g. Groves 1993), but elevated to full species status by Groves (2001) and Mayor <em>et al.</em> (2004)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Trend Unknown/Unrecorded"
+      },
+      "code": "7_1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Louis Jr, E.E., Bailey, C.A., Sefczek, T.M., King, T., Radespiel, U. & Frasier, C.L.",
+      "value": [
+        "Edward E. Jr. Louis Jr (Madagascar Biodiversity Partnership, Henry Doorly Zoo, Omaha, USA)",
+        "Tony King (The Aspinall Foundation, Madagascar)",
+        "Ute Radespiel (Stiftung Tierärztliche Hochschule Hannover, Germany)",
+        "Cynthia Frasier (Omaha’s Henry Doorly Zoo and Aquarium, Center for Conservation Research, Department of Conservation Genetics, 3701 South 10th Street, Omaha, NE, 68107, USA)",
+        "Timothy Sefczek (Center for Conservation and Research, Omaha's Henry Doorly Zoo and Aquarium, Omaha, Nebraska, USA)",
+        "Carolyn Bailey (Omaha's Henry Doorly Zoo and Aquarium, Omaha, Nebraska, USA)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Reuter, K.E.",
+      "value": [
+        "Kim Reuter (IUCN SSC Primate SG)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Andriaholinirina, N., Baden, A., Blanco, M., Chikhi, L., Cooke, A., Dolch, R., Donati, G., Ganzhorn, J., Golden, C., Groeneveld, L.F., Hapke, A., Irwin, M., Johnson, S., Kappeler, P., King, T., Rakotondratsimba, M., Rakotondrainibe, H., Rakotoarisoa, G., Raharivololona, B., Patel, E., Mittermeier, R.A., Markolf, M., Lewis, R., Louis Jr, E.E., Mass, V., Nichols, R., Rabarivola, C.J., Rajaobelina, S., Rakotomanga, B., Rakotondratsimba, G., Ratsimbazafy, J., Rasoloharijaona, S., Rasamimananana, H., Randrianasolo, H., Randrianambinina, B., Ranaivoarisoa, J.F., Ralison, J., Rakotonirina, L., Ralainasolo, F.B., Ramahaleo, T., Randrianahaleo, S.I., Randrianarimanana, L., Randriatahina, G., Rasolofoharivelo, T., Ratelolahy, F., Zaramody, A., Youssouf, J., Volampeno, S., Salmona, J., Razafindramanana, J., Ratsimbazafy, N., Razafindraibe, H., Rowe, N., Seiler, M., Wright, P. & Zaonarivelo, J.",
+      "value": [
+        "Russell A. Mittermeier (Conservation International)",
+        "Harison Randrianasolo (Madagascar Reptile Assessment / Conservation International, Madagascar)",
+        "R. Nichols (Queen Mary University of London)",
+        "R. Lewis (Durrell Wildlife Conservation Trust)",
+        "Nicole Andriaholinirina (Mahajanga University, Madagascar)",
+        "Andrea Baden (Yale University, USA)",
+        "Marina Blanco (Duke University Lemur Center, USA)",
+        "Lounes Chikhi (Instituto Gulbenkian de Ci�ncia, Portugal)",
+        "Andrew Cooke (Ambatovy Minerals S.A.)",
+        "Rainer Dolch (Association Mitsinjo, Madagascar)",
+        "Giuseppe Donati (Nocturnal Primate Research Group, Oxford Brookes University, UK)",
+        "Jörg Ganzhorn (Institute of Zoology, Ecology and Conservation, University of Hamburg, Germany)",
+        "Christopher Golden (Harvard University Center for the Environment, USA)",
+        "Linn Fenna Groeneveld (Courant Research Centre Geobiology, G�ttingen University, Germany)",
+        "Andreas Hapke (Institute of Anthropology, Johannes Gutenberg University of Mainz, Germany)",
+        "Mitch Irwin (Department of Anthropology, Northern Illinois University, USA)",
+        "Steig Johnson (Department of Anthropology, Calgary University, Canada)",
+        "Peter Kappeler (German Primate Center, Goettingen, Germany)",
+        "Tony King (The Aspinall Foundation, Madagascar)",
+        "Edward E. Jr. Louis Jr (Madagascar Biodiversity Partnership, Henry Doorly Zoo, Omaha, USA)",
+        "Matthias Markolf (IUCN SSC  Center for Species Survival Cologne Zoo - Wild Pigs and Asian Songbirds)",
+        "Vanessa Mass (Ambatovy Minerals S.A.)",
+        "Erik Patel (SAVA Conservation Project, Duke University Lemur Center, USA)",
+        "Clément Joseph Rabarivola (Mahajanga University, Madagascar)",
+        "Brigitte Raharivololona (University of Antananarivo, Madagascar)",
+        "Serge Rajaobelina (Fanamby, Madagascar)",
+        "Gilbert Rakotoarisoa (Parc Botanique et Zoologique de Tsimbazaza, Madagascar)",
+        "Barson Rakotomanga (Ambatovy Minerals S.A.,)",
+        "Hajanirina Rakotondrainibe (Ambatovy Minerals S.A.,)",
+        "Gilbert Rakotondratsimba (Ambatovy Minerals S.A.,)",
+        "Marius Rakotondratsimba (The Peregrine Fund, Madagascar)",
+        "Laingoniaina Rakotonirina (The Aspinall Foundation, Madagascar)",
+        "Fidimalala Bruno Ralainasolo (Durrell Wildlife Conservation Trust - Madagascar Programme, Madagascar)",
+        "Jos� Ralison (G.E.R.P. (Groupe d'Etude et de Recherche sur les Primates de Madagascar))",
+        "Tiana Ramahaleo (WWF, Madagascar)",
+        "Jean Freddy Ranaivoarisoa (Madagascar Biodiversity Partnership, Antsiranana University, Madagascar)",
+        "Sahoby Ivy Randrianahaleo (D.G.F (Direction G�n�rale des For�ts), Madagascar)",
+        "Blanchard Randrianambinina (Mahajanga University, Madagascar)",
+        "Lucien Randrianarimanana (The Aspinall Foundation, Madagascar)",
+        "Guy Randriatahina (AEECL (Association Europ�enne pour l�Etude et la Conservation des L�muriens), Madagascar)",
+        "Hanta Rasamimananana (Ecole Normale Sup�rieure, University of Antananarivo, Madagascar )",
+        "Tovonanahary Rasolofoharivelo (The Aspinall Foundation, Madagascar)",
+        "Solofonirina Rasoloharijaona (Mahajanga University, Madagascar)",
+        "Felix Ratelolahy (Wildlife Conservation Society, Madagascar)",
+        "Jonah Ratsimbazafy (Durrell Wildlife Conservation Trust - Madagascar Programme)",
+        "Noro Ratsimbazafy (Ambatovy Minerals S.A.,)",
+        "Hanta Razafindraibe (Department of Animal Biology, University of Antananarivo, Madagascar)",
+        "Josia Razafindramanana (G.E.R.P. (Groupe d�Etude et de Recherche sur les Primates de Madagascar), Madagascar)",
+        "Noel Rowe (Primate Conservation Inc.)",
+        "Jordi Salmona (Population and Conservation Genetics Group, Instituto Gulbenkian de Ciencia, Portugal)",
+        "Melanie Seiler (Bristol Conservation and Science Foundation; School of Biological Sciences, University of Bristol, UK)",
+        "Sylviane Volampeno (AEECL (Association Europ�enne pour l�Etude et la Conservation des L�muriens), Madagascar)",
+        "Patricia Wright (Stony Brook University, Institute for the Conservation of Tropical Environments (ICTE), USA)",
+        "Jacky Youssouf (University of Toliara, Madagascar)",
+        "John Zaonarivelo (University of Antsiranana, Madagascar)",
+        "Alphonse Zaramody (Mahajanga University, Madagascar)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Chiozza, F., Pacifici, M. & Schwitzer, C.",
+      "value": [
+        "Federica Chiozza (Global Mammal Assessment)",
+        "Christoph Schwitzer (IUCN SSC Primate RLA / Bristol Conservation and Science Foundation , Bristol Zoo Gardens, Clifton, Bristol)",
+        "Michela Pacifici (Global Mammal Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mittermeier, R.A., Louis Jr., E.E., Richardson, M., Schwitzer, C., Langrand, O., Rylands, A.B., Hawkins, F., Rajaobelina, S., Ratsimbazafy, J., Rasoloarison, R., Roos, C., Kappeler, P.M. and MacKinnon, J. 2010. <i>Lemurs of Madagascar. 3rd edition</i>. Conservation International, Arlington, VA.",
+      "year": "2010",
+      "title": "Lemurs of Madagascar. 3rd edition",
+      "author": "Mittermeier, R.A., Louis Jr., E.E., Richardson, M., Schwitzer, C., Langrand, O., Rylands, A.B., Hawkins, F., Rajaobelina, S., Ratsimbazafy, J., Rasoloarison, R., Roos, C., Kappeler, P.M. and MacKinnon, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mayor, M. I., Sommer, J. A., Houck, M. L., Zaonarivelo, J. R., Wright, P. C., Ingram, C., Engel, S. R. and Louis, E. E. 2004. Specific status of <i>Propithecus</i> spp. <i>International Journal of Primatology</i> 25: 875-900.",
+      "year": "2004",
+      "title": "Specific status of <i>Propithecus</i> spp.",
+      "author": "Mayor, M. I., Sommer, J. A., Houck, M. L., Zaonarivelo, J. R., Wright, P. C., Ingram, C., Engel, S. R. and Louis, E. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Garcia, G. and Goodman, S. M. 2003. Hunting of protected animals in the Parc National d’Ankarafantsika, north-western Madagascar. <i>Oryx</i> 37: 115–118.",
+      "year": "2003",
+      "title": "Hunting of protected animals in the Parc National d’Ankarafantsika, north-western Madagascar",
+      "author": "Garcia, G. and Goodman, S. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groves, C.P. 1993. Primates. In: D.E. Wilson and D.A. Reeder (eds), <i>Mammal Species of The World</i>, Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1993",
+      "title": "Primates",
+      "author": "Groves, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Richard, A.F. 1978. <i> Behavioral variation: case study of Malagasy lemur</i>. Associated University Presses, New York.",
+      "year": "1978",
+      "title": " Behavioral variation: case study of Malagasy lemur",
+      "author": "Richard, A.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petter, J.J. 1962. Ecological and behavioral studies of Madagascar lemurs in the field. <i>Annals of the New York Academy of Sciences</i> 102: 267-281.",
+      "year": "1962",
+      "title": "Ecological and behavioral studies of Madagascar lemurs in the field",
+      "author": "Petter, J.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richard, A.F. 1987. Malagasy prosimians: female dominance. In: Smuts B., Cheney D., Seyfarth R.,Wrangham R. and Struhsaker T. (eds), <i>Primate Societies</i>, pp. 25-33. University of Cambridge Press, Camrbridge.",
+      "year": "1987",
+      "title": "Malagasy prosimians: female dominance",
+      "author": "Richard, A.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Albignac, R. 1981. <i>Notes made from seminar given by Roland Albignac, Cambridge 1981</i>.",
+      "year": "1981",
+      "title": "Notes made from seminar given by Roland Albignac, Cambridge 1981",
+      "author": "Albignac, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rakotonirina, L. H. F., Randriatsara, F., Rakotoarisoa, A.H., Rakotondrabe, A.R., Razafindramanana, J., Ratsimbazafy, J., King, T. In press. A preliminary assessment of sifaka (Propithecus spp.) distribution, chromatic variation and conservation in central Madagascar. <i>Primate Conservation</i>.",
+      "year": "In press",
+      "title": "A preliminary assessment of sifaka (Propithecus spp.) distribution, chromatic variation and conservation in central Madagascar.",
+      "author": "Rakotonirina, L. H. F., Randriatsara, F., Rakotoarisoa, A.H., Rakotondrabe, A.R., Razafindramanana, J., Ratsimbazafy, J., King, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    },
+    {
+      "citation": "Rylands, A. B., Goodman, S. M., and Louis Jr., E. E. 2018. Species’ lists for lemurs in protected areas. In: S. M. Goodman, M. J. Raherilalao and S. Wohlauser (eds), <i>Les Aires Protegees Terrestres de Madagascar: Leur Histoire, Description et Biote / The Terrestrial Protected Areas of Madagascar: Their History, Description, and Biota. Volume I: Introduction. Volume II: Northern and Eastern Madagascar / Le Nord et l’Est de Madagascar. Volume III: Western and Southwestern Madagascar – Synthesis / L’Ouest et le Sud de Madagascar – Synthesis</i>, pp. 1716. Association Vahatra, Antananarivo, Madagascar.",
+      "year": "2018",
+      "title": "Species’ lists for lemurs in protected areas",
+      "author": "Rylands, A. B., Goodman, S. M., and Louis Jr., E. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vieilledent, G., Grinandc, C., Rakotomalalac, F.A., Ranaivosoad, R., Rakotoarijaonad, R.-J., Allnutte, T.F. and Acharda, F. 2018. Combining global tree cover loss data with historical national forest cover maps to look at six decades of deforestation and forest fragmentation in Madagascar. <i>Biological Conservation</i> 222: 189-197.",
+      "year": "2018",
+      "title": "Combining global tree cover loss data with historical national forest cover maps to look at six decades of deforestation and forest fragmentation in Madagascar",
+      "author": "Vieilledent, G., Grinandc, C., Rakotomalalac, F.A., Ranaivosoad, R., Rakotoarijaonad, R.-J., Allnutte, T.F. and Acharda, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "ZIMS. 2019. Species360 Zoological Information Management System (ZIMS). Available at: <a href=\"http://zims.Species360.org\">http://zims.Species360.org</a>. (Accessed: 21 December).",
+      "year": "2019",
+      "title": "Species360 Zoological Information Management System (ZIMS)",
+      "author": "ZIMS",
+      "citation_short": null
+    },
+    {
+      "citation": "Eppley, T.M., Santini, L., Tinsman, J.C. and Donati, G. 2020. Do functional traits offset the effects of fragmentation? The case of large-bodied diurnal large species. <i>American Journal of Primatology</i>: 10.1002/ajp.23104.",
+      "year": "2020",
+      "title": "Do functional traits offset the effects of fragmentation? The case of large-bodied diurnal large species",
+      "author": "Eppley, T.M., Santini, L., Tinsman, J.C. and Donati, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reuter, K.E. and Schaefer, M.S. 2017. Illegal captive lemurs in Madagascar: Comparing the use of online and in-person data collection methods. <i>American Journal of Primatology</i> 79: e22541.",
+      "year": "2017",
+      "title": "Illegal captive lemurs in Madagascar: Comparing the use of online and in-person data collection methods",
+      "author": "Reuter, K.E. and Schaefer, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kun‐Rodrigues, C., Salmona, J., Besolo, A., Rasolondraibe, E., Rabarivola, C., Marques, T. A., and Chikhi, L. 2014. New density estimates of a threatened sifaka species (Propithecus coquereli) in Ankarafantsika National Park. <i>American Journal of Primatology</i> 76(6): 515-528.",
+      "year": "2014",
+      "title": "New density estimates of a threatened sifaka species (Propithecus coquereli) in Ankarafantsika National Park",
+      "author": "Kun‐Rodrigues, C., Salmona, J., Besolo, A., Rasolondraibe, E., Rabarivola, C., Marques, T. A., and Chikhi, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Salmona, J., Jan, F., Rasolondraibe, E., Besolo, A., Ousseni, D.S., Beck, A., Zaranaina, R., Rakotoarisoa, H., Rabarivola, C.J. and Chikhi, L. 2014. Extensive survey of the Endangered Coquerel’s sifaka Propithecus coquereli. <i>Endangered Species Research</i> 25(2): 175-183.",
+      "year": "2014",
+      "title": "Extensive survey of the Endangered Coquerel’s sifaka Propithecus coquereli",
+      "author": "Salmona, J., Jan, F., Rasolondraibe, E., Besolo, A., Ousseni, D.S., Beck, A., Zaranaina, R., Rakotoarisoa, H., Rabarivola, C.J. and Chikhi, L.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,735 @@
+{
+  "assessment_date": "2022-08-12T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22678073,
+  "criteria": "A2cd+3cd+4cd",
+  "url": "https://www.iucnredlist.org/species/22678073/219615764",
+  "citation": "BirdLife International 2022. Rhea americana. The IUCN Red List of Threatened Species 2022: e.T22678073A219615764. Accessed on 05 May 2026.",
+  "assessment_id": 219615764,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22678073,
+    "scientific_name": "Rhea americana",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "STRUTHIONIFORMES",
+    "family_name": "RHEIDAE",
+    "genus_name": "Rhea",
+    "species_name": "americana",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Rhea",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Lesser Rhea",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Avestruz",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ñandú",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ñandú Común",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Greater Rhea",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1650,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "U",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "11.08",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "8740000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<em>Rhea americana</em> has a large range in eastern and southern South America, ranging from northeast <strong>Brazil</strong>, east and northeast <strong>Bolivia</strong>, <strong>Paraguay</strong>, <strong>Uruguay</strong> to north-east and east <strong>Argentina</strong> south to the Río Negro<strong> </strong>(Folch 1992, Kirwan <em>et al</em>. 2021). It has declined markedly and the healthiest populations are now believed to be in parts of the Chaco region<strong> </strong>(Folch 1992).<br/><em> <p></p></em>",
+    "population": "The global population size has not been quantified, but this species is described as 'uncommon to fairly common' (Stotz <em>et al</em>. 1996).",
+    "habitats": "It prefers open landscapes with a simple structure and low vegetation, such as pampas, campo cerrado and open chaco woodland, but is also found in cultivated fields <strong></strong><strong></strong>(Canevari <em> et al.</em> 1991, Folch 1992, Sick 1993, Parker <em>et al.</em> 1996, García-Eriza and Gómez-Villafañe 2016). Population densities in grassland are several times that in agricultural areas, and birds were found to occupy 51% of a grassland area, but less than 5% of an agricultural locality (Giordano <span style=\"font-style: italic;\">et al.</span> 2008). It breeds in areas with dense vegetation cover of tall grasses (García-Eriza and Gómez-Villafañe 2016, G. J. Fernández <em>in litt</em>. 2020). Eggs are laid on the ground in an area of trampled grass; the male incubates the eggs alone and raises the young (Kirwan <em>et al</em>. 2021). Food items include insects and grasses (Kirwan <em>et al.</em> 2021).<p></p>",
+    "threats": "Its status is obfuscated by the presence of feral birds<strong> </strong> (Lowen <em>et al.</em> 1996), but the population has declined markedly mainly owing to hunting for meat and eggs, and the colossal export of skins and, to a lesser extent, plumes. Over 50,000 skins were traded in 1980, most apparently originating in Paraguay, with Japan and USA leading consumers<strong> </strong>(Folch 1992). Hunting has reportedly contributed to local declines and extinctions (Kirwan <em>et al</em>. 2021).<br/>In recent years, the large-scale conversion of central South American grasslands for agriculture and cattle-ranching has considerably reduced and fragmented its available habitat, particularly in the pampas and cerrado strongholds; this is causing declines and increasing isolation of the remaining population (da Silva 1995, Bazzano <em>et al.</em> 2014, Kirwan <em>et al</em>. 2021). <p></p>",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>CITES Appendix II. Captive-bred individuals are being reintroduced in parts of their native range (Vera-Cortez <em>et al</em>. 2018).&#160; <p></p><strong>Conservation Actions Proposed</strong><br/>Survey to quantify the population size. Research threats to the species and quantify the impact of habitat conversion and degradation on the population size. Monitor the population trend. Monitor levels of illegal domestic and international trade. <br/>Preserve remaining natural habitat (Giordano <span style=\"font-style: italic;\">et al.</span> 2010). Include pastures and grasslands in agricultural ecosystems (Bellis <span style=\"font-style: italic;\">et al</span>. 2004). Consider managing grassland areas to keep them free of shrubs. Establish dispersal corridors to connect fragmented patches of open grassland (García-Eriza and Gómez-Villafañe 2016, Pedrana <em>et al</em>. 2018). Effectively enforce restrictions on hunting and trade (Bellis <span style=\"font-style: italic;\">et al</span>. 2004). <br/><br/><p></p>",
+    "use_trade": "The species is hunted for meat, and its eggs are collected for food (Kirwan <em>et al</em>. 2021). Moreover, the plumes are used for ornamental purposes and dusters, the fat is used as medicine, and the claws for knives (Kirwan <em>et al</em>. 2021). Skins and plumes are exported in large  quantities; these originate partly from captive populations and partly  from wild populations (Folch 1992, Kirwan <em>et al</em>. 2021)",
+    "rationale": "This species qualifies as Near Threatened as its population is suspected to be declining at a rate approaching the threshold for classification as Vulnerable, mainly as a consequence of the loss and fragmentation of its habitat and hunting. <p></p>",
+    "trend_justification": "The population is reportedly declining, mainly as a consequence of habitat loss and fragmentation, as well as hunting (Giordano <em>et al</em>. 2010, Bazzano <em>et al</em>. 2014, Kirwan <em>et al</em>. 2021). It has become extinct in Ceará and Rio Grando do Norte in northern Brazil, though parts have now been recolonised by reintroduced individuals (Kirwan <em>et al</em>. 2021).The rate of decline has not been quantified, but it is suspected to be moderately rapid over three generations (33.2 years; Bird <em>et al</em>. 2020) as a consequence of continuing pressures from habitat loss and hunting.",
+    "taxonomic_notes": "Other rheas were previously separated in genus<em> Pterocnemia</em>, on basis mainly of tarsal scutellation and feathered upper tarsus, but genetic studies show them to be closely related to present species, and probably more aptly considered congeneric (Delsuc<em> et al.</em> 2007, SACC 2008); present species has hybridized with <em>R. pennata</em> in captivity. Several subspecies poorly known, and listed ranges remain provisional; birds of E Bolivia and Mato Grosso do Sul (WC Brazil), currently listed for subspecies <em>araneipes</em>, may instead be referable to <em>albescens</em>. Five subspecies recognized."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Effectively enforce restrictions on hunting and trade.",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "Preserve remaining natural habitat.",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "Include pastures and grasslands in agricultural ecosystems. Consider managing grassland areas to keep them free of shrubs.",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "Establish dispersal corridors to connect fragmented patches of open grassland.",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Monitor levels of illegal domestic and international trade.",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "Monitor the population trend.",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Survey to quantify the population size.",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "Research threats to the species and quantify the impact of habitat conversion and degradation on the population size.",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Other household goods"
+      },
+      "code": "11"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Berryman, A.",
+      "value": [
+        "Alex Berryman (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Benstead, P., Capper, D., Fernández, G., Sharpe, C.J. & Symes, A.",
+      "value": [
+        "Phil Benstead (BirdLife International)",
+        "David Capper (BirdLife International)",
+        "Andy Symes (BirdLife International)",
+        "Gustavo J. Fernández",
+        "Chris Sharpe (BirdLife)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hermes, C.",
+      "value": [
+        "Claudia Hermes (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Parker, T.A., Stotz, D.F. and Fitzpatrick, J.W. 1996. Ecological and distributional databases. In: Stotz, D.F., Fitzpatrick, J.W., Parker, T.A. and Moskovits, D.K. (eds), <i>Neotropical bird ecology and conservation</i>, pp. 113-436. University of Chicago Press, Chicago.",
+      "year": "1996",
+      "title": "Ecological and distributional databases",
+      "author": "Parker, T.A., Stotz, D.F. and Fitzpatrick, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stotz, D.F., Fitzpatrick, J.W., Parker, T.A. and Moskovits, D.K. 1996. <i>Neotropical Birds: Ecology and Conservation</i>. University of Chicago Press, Chicago.",
+      "year": "1996",
+      "title": "Neotropical Birds: Ecology and Conservation",
+      "author": "Stotz, D.F., Fitzpatrick, J.W., Parker, T.A. and Moskovits, D.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lowen, J. C.; Bartrina, L.; Clay, R. P.; Tobias, J. A. 1996. <i>Biological surveys and conservation priorities in eastern Paraguay (the final reports of Projects Canopy '92 and Yacutinga '95)</i>. CSB Conservation, Cambridge, U.K.",
+      "year": "1996",
+      "title": "Biological surveys and conservation priorities in eastern Paraguay (the final reports of Projects Canopy '92 and Yacutinga '95)",
+      "author": "Lowen, J. C.; Bartrina, L.; Clay, R. P.; Tobias, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "del Hoyo, J., Elliot, A. and Sargatal, J. 1992. <i>Handbook of the Birds of the World, Vol. 1: Ostrich to Ducks</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "1992",
+      "title": "Handbook of the Birds of the World, Vol. 1: Ostrich to Ducks",
+      "author": "del Hoyo, J., Elliot, A. and Sargatal, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sick, H. 1993. <i>Birds in Brazil: a natural history</i>. Princeton University Press, Princeton.",
+      "year": "1993",
+      "title": "Birds in Brazil: a natural history",
+      "author": "Sick, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Canevari, M. 1991. <i>Nueva guia de las aves Argentinas</i>. Fundación Acindar, Buenos Aires.",
+      "year": "1991",
+      "title": "Nueva guia de las aves Argentinas",
+      "author": "Canevari, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "da Silva, J. M. C. 1995. Birds of the Cerrado Region, South America. <i>Steenstrupia</i> 21: 69-92.",
+      "year": "1995",
+      "title": "Birds of the Cerrado Region, South America",
+      "author": "da Silva, J. M. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Folch, A. 1992. Rheidai (Rheas). In: del Hoyo, J.; Elliott, A.; Sargatal, J. (ed.), <i>Handbook of the birds of the world</i>, pp. 84-89. Lynx Edicions, Barcelona, Spain.",
+      "year": "1992",
+      "title": "Rheidai (Rheas)",
+      "author": "Folch, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Giordano, P. F.; Bellis, L. M.; Navarro, J. L.; Martella, M. B. 2008. Abundance and spatial distribution of Greater Rhea <i>Rhea americana</i> in two sites on the pampas grasslands with different land use. <i>Bird Conservation International</i> 18(1): 63-70.",
+      "year": "2008",
+      "title": "Abundance and spatial distribution of Greater Rhea <i>Rhea americana</i> in two sites on the pampas grasslands with different land use",
+      "author": "Giordano, P. F.; Bellis, L. M.; Navarro, J. L.; Martella, M. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bellis, L, Martella M. B. and Navarro J. L. 2004. Habitat use by wild and captive-reared greater rheas Rhea americana in agricultural landscapes in Argentina. <i>Oryx</i> 38(3): 304-310.",
+      "year": "2004",
+      "title": "Habitat use by wild and captive-reared greater rheas Rhea americana in agricultural landscapes in Argentina",
+      "author": "Bellis, L, Martella M. B. and Navarro J. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Giordano, P. F.; Navarro, J. L.; Martella, M. B. 2010. Building large-scale spatially explicit models to predict the distribution of suitable habitat patches for the Greater Rhea (<i>Rhea americana</i>), a Near-threatened species. <i>Biological Conservation</i> 143: 357-365.",
+      "year": "2010",
+      "title": "Building large-scale spatially explicit models to predict the distribution of suitable habitat patches for the Greater Rhea (<i>Rhea americana</i>), a Near-threatened species",
+      "author": "Giordano, P. F.; Navarro, J. L.; Martella, M. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    },
+    {
+      "citation": "Delsuc, F., Superina, M., Ferraris, G., Tilak, M.K. and Douzery, E.J.P. 2007. Molecular evidence for hybridisation between the two living species of South American ratites: potential conservation implications. <i>Conserv. Genet.</i> 8(2): 503–507.",
+      "year": "2007",
+      "title": "Molecular evidence for hybridisation between the two living species of South American ratites: potential conservation implications",
+      "author": "Delsuc, F., Superina, M., Ferraris, G., Tilak, M.K. and Douzery, E.J.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "SACC. 2008. Proposal (#348) to South American Classification Committee: Incluir Pterocnemia dentro de Rhea. Available at: <a href=\"https://www.museum.lsu.edu/~Remsen/SACCprop348.htm\">https://www.museum.lsu.edu/~Remsen/SACCprop348.htm</a>. ",
+      "year": "2008",
+      "title": "Proposal (#348) to South American Classification Committee: Incluir Pterocnemia dentro de Rhea.",
+      "author": "SACC",
+      "citation_short": null
+    },
+    {
+      "citation": "Bazzano, G., Giordano, P. F., Navarro, J. L., Martella, M. B. 2014. Linking landscape data with population viability analysis for evaluating translocation as a conservation strategy for Greater Rhea (<i>Rhea americana</i>) in central Argentina. <i>Ornitología Neotropical</i> 25: 25-35.",
+      "year": "2014",
+      "title": "Linking landscape data with population viability analysis for evaluating translocation as a conservation strategy for Greater Rhea (<i>Rhea americana</i>) in central Argentina",
+      "author": "Bazzano, G., Giordano, P. F., Navarro, J. L., Martella, M. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-Erize, F., Gómez- Villafañe, I. E. 2016. Habitats selected by the endangered Greater Rhea (<i>Rhea americana</i>) - implications for conservation. <i>Emu - Austral Ornithology</i> 116(4): 379-386.",
+      "year": "2016",
+      "title": "Habitats selected by the endangered Greater Rhea (<i>Rhea americana</i>) - implications for conservation",
+      "author": "García-Erize, F., Gómez- Villafañe, I. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "GBIF.org. 2022. GBIF Occurrence Download (12 August 2022): <i>Rhea americana</i>. Available at: <a href=\"https://doi.org/10.15468/dl.5rrdkp\">https://doi.org/10.15468/dl.5rrdkp</a>. ",
+      "year": "2022",
+      "title": "GBIF Occurrence Download (12 August 2022): <i>Rhea americana</i>",
+      "author": "GBIF.org",
+      "citation_short": null
+    },
+    {
+      "citation": "Kirwan, G. M., Korthals, A., Hodes, C. E. 2021. Greater Rhea (<i>Rhea americana</i>), version 2.0. Ithaca, NY, USA. Cornell Lab of Ornithology. Available at: <a href=\"https://doi.org/10.2173/bow.grerhe1.02\">https://doi.org/10.2173/bow.grerhe1.02</a>. ",
+      "year": "2021",
+      "title": "Greater Rhea (<i>Rhea americana</i>), version 2.0",
+      "author": "Kirwan, G. M., Korthals, A., Hodes, C. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pedrana, J., Bernad, L., Maceira, N. O., Isacch, J. P. 2018. Niche overlap determination through habitat suitability models: A management tool for native birds of the Argentinean Pampas. <i>Ardeola</i> 65(1): 25-40.",
+      "year": "2018",
+      "title": "Niche overlap determination through habitat suitability models: A management tool for native birds of the Argentinean Pampas",
+      "author": "Pedrana, J., Bernad, L., Maceira, N. O., Isacch, J. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vera-Cortez, M., Navarro, J. L., Martella, M. B. 2018. Effect of antipredator training on spatial behaviour of male and female Greater Rhea <i>Rhea americana</i> reintroduced into the wild. <i>Acta Ornitologica</i> 53(1): 81-90.",
+      "year": "2018",
+      "title": "Effect of antipredator training on spatial behaviour of male and female Greater Rhea <i>Rhea americana</i> reintroduced into the wild",
+      "author": "Vera-Cortez, M., Navarro, J. L., Martella, M. B.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "assessment_date": "2016-06-13T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 6937,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/6937/84159360",
+  "citation": "IUCN SSC Amphibian Specialist Group 2017. Dyscophus antongilii. The IUCN Red List of Threatened Species 2017: e.T6937A84159360. Accessed on 05 May 2026.",
+  "assessment_id": 84159360,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 6937,
+    "scientific_name": "Dyscophus antongilii",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "MICROHYLIDAE",
+    "genus_name": "Dyscophus",
+    "species_name": "antongilii",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Grandidier, 1877",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Tomato Frog",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Dyscophus insularis  var. antongilii  Grandidier, 1877",
+        "status": "ACCEPTED",
+        "genus_name": "Dyscophus",
+        "species_name": "insularis ",
+        "species_author": null,
+        "infrarank_author": "Grandidier, 1877",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "antongilii "
+      },
+      {
+        "name": "Dyscophus  insularis  var. pallidus  Grandidier, 1877",
+        "status": "ACCEPTED",
+        "genus_name": "Dyscophus ",
+        "species_name": "insularis ",
+        "species_author": null,
+        "infrarank_author": "Grandidier, 1877",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "pallidus "
+      },
+      {
+        "name": "Dyscophus  sanguineus  Boettger, 1880",
+        "status": "ACCEPTED",
+        "genus_name": "Dyscophus ",
+        "species_name": "sanguineus ",
+        "species_author": "Boettger, 1880",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 600,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "53826.38",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs in northeastern Madagascar, where it has a relatively wide, but poorly understood, distribution. Specific records come from Andevoranto (a historical record), around Antongil Bay, Fizoana, Iaraka, Maroantsetra, Rantabe and Voloina (Glaw and Vences 2007). More recently, several additional localities around Maroantsetra in the north of its range (Chiari <em>et al</em>. 2006) and along the east coast (Tessa <em>et al</em>. 2007, Orozco-Terwengel <em>et al</em>. 2013) have been recorded. Other reported localities for this species, especially the southernmost ones, might in fact refer to <em>Dyscophus guineti</em>. It occurs from sea level up to 600 m Asl.",
+    "population": "It is locally abundant, especially in and around Maroantsetra (the best known locality for this species). Surveys undertaken around Maroantsetra in 2006 suggested that the population there seemed to be declining (Andreone <span style=\"font-style: italic;\">et al</span>. 2006). In Ambatovaky, its population is stable and abundant.",
+    "habitats": "This species lives in primary rainforest, coastal forest, secondary vegetation, degraded scrub, and highly disturbed urban areas. It is a very adaptable species, but possible declines in Maroansetra indicate that there might be a limit to the extent that it can persist in urbanized habitats. It appears to be localized to sandy ground near the coast, and breeds in ditches, flooded areas, swamps, and temporary and permanent still or very slowly flowing water.&#160;<span id=\"docs-internal-guid-867f457d-4a3e-2d22-c5ad-bfec6206c20e\">The reproductive phenology in an urban pond has been studied by Segev <em>et al</em>. (2012). The colour of this species&#160;is influenced by their diet (Brenes-Soto and Dierenfeld 2014).<span><span><span id=\"docs-internal-guid-49696a46-4a4a-e92c-dbce-49de10edb335\"><br/></span></span>",
+    "threats": "Pollution of waterbodies is a potential threat, and in the past this species was subject to collection for international trade, although this is now largely under control and restricted.",
+    "measures": "<strong><em>Conservation Actions</em></strong><br/>This species occurs at the boundary of the Ambatovaky Special Reserve (but yet confirmed to be within this protected areas [Andreone <span style=\"font-style: italic;\">et al</span>. 2006]) and probably in Masoala National Park (the locality of Maroantsetra is located here [Andreone <span style=\"font-style: italic;\">et al</span>. 2006]).&#160;<br/><br/>The species is sometimes bred for commercial purposes outside Madagascar, and many specimens exchanged in the pet trade are captive bred. Captive breeding programmes and the CITES Appendix I status of this species have effectively halted commercial exploitation of it in Madagascar (if indeed this was ever a major threat). However, the species was moved to CITES Appendix II in 2016 and legal trade may be used as a conservation measure for the species.&#160;There is a well-managed captive breeding programme involving many US zoos, and it is now also kept in a zoo in Madagascar.<br/><br/><strong><em>Conservation Needed</em></strong><br/>Habitat protection is required, and Andreone <span style=\"font-style: italic;\">et al</span>. (2006) recommends that some known \"urban\" subpopulations (such as the subpopulation within Maroantsetra) should be managed and protected. Any future trade needs to be well regulated.<br/><br/><strong><em>Research Needed</em></strong><br/>Additionally survey work is needed over much of the species range. Further taxonomic work is also required to resolve confusion between this species and <em>D. guineti</em>.",
+    "use_trade": "<p>This colourful species is much in demand by herpetological hobbyists (Mattioli <em>et al</em>. 2006) and locals are known to locate them as required for a tourist attraction (Glaw and Vences 2007). Captive breeding, in addition to CITES listing, has effectively halted the trade in wild-caught specimens.<br/></p>",
+    "rationale": "Listed as Least Concern in view of its wide distribution, tolerance of a degree of habitat modification and its presumed large population.",
+    "trend_justification": null,
+    "taxonomic_notes": "The differences between this species and <em>Dyscophus guineti</em> are not clear. Studies suggest the possibility that this species&#160;may be a colour variant of the more widespread <span style=\"font-style: italic;\">D. guineti</span> (Andreone <span style=\"font-style: italic;\">et al</span>. 2006, Glaw and Vences 2007) or support the definition of these two taxa as different evolutionary significant units under the adaptive evolutionary conservation concept (Chiari <em>et al. </em>2006). The most recent study by Orozco-ter Wengel <em>et al</em>. (2013) suggests a process of introgressive hybridization as the most likely explanation for the genetic pattern observed."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Luedtke, J.",
+      "value": [
+        "Jennifer Luedtke (Re:wild)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Raxworthy, C.J., Andreone, F., Glaw, F., Scherz, M.D., Vences, M. & Nussbaum, R.",
+      "value": [
+        "Ronald Nussbaum",
+        "Franco Andreone (Zoology Department, Museo Regionale di Scienze Naturali di Torino, Torino, Italy)",
+        "Christopher Raxworthy (American Museum of Natural History, Centrap Park West at 79th St., New York, NY 10024, USA)",
+        "Miguel Vences (Zoological Institute, Technical University of Braunschweig, Germany)",
+        "Frank Glaw (Zoologische Staatssammlung München, Germany)",
+        "Mark Scherz (Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hobin, L.",
+      "value": [
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Glaw, F. and Vences, M. 2007. <i>A Fieldguide to the Amphibians and Reptiles of Madagascar. Third Edition</i>. Vences & Glaw Verlag, Cologne.",
+      "year": "2007",
+      "title": "A Fieldguide to the Amphibians and Reptiles of Madagascar. Third Edition",
+      "author": "Glaw, F. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Glaw, F. and Vences, M. 1994. <i>A Fieldguide to the Amphibians and Reptiles of Madagascar. Second Edition</i>. Zoologisches Forschungsinstitut und Museum Alexander Koenig, Bonn.",
+      "year": "1994",
+      "title": "A Fieldguide to the Amphibians and Reptiles of Madagascar. Second Edition",
+      "author": "Glaw, F. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blommers-Schlösser, R.M.A. and Blanc, C.P. 1991. Amphibiens (première partie). <i>Fauna de Madagascar</i> 75: 1-379.",
+      "year": "1991",
+      "title": "Amphibiens (première partie)",
+      "author": "Blommers-Schlösser, R.M.A. and Blanc, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Guibé, J. 1978. Les batraciens de Madagascar. <i>Bonner Zoologische Monographien</i> 11: 1-140.",
+      "year": "1978",
+      "title": "Les batraciens de Madagascar",
+      "author": "Guibé, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Raxworthy, C.J. and Nussbaum, R.A. 2000. Extinction and extinction vulnerability of amphibians and reptiles in Madagascar. <i>Amphibian and Reptile Conservation</i> 2: 15-23.",
+      "year": "2000",
+      "title": "Extinction and extinction vulnerability of amphibians and reptiles in Madagascar",
+      "author": "Raxworthy, C.J. and Nussbaum, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mattioli F., Gili C. and Andreone F. 2006. Economics of captive breeding applied to the conservation of selected amphibian and reptile species from Madagascar. In: F. Andreone (ed.), <i>Dalla tutela ambientale e faunistica allo sviluppo sostenibile: esperienze di ricerca e gestione participative in Africa e in Madagascar. Atti della giornata di studio Milano 29 giugno 2005</i>, pp. 67-80. Natura - Società italiana di scienze naturali e del Museo civico di storia naturale di Milano.",
+      "year": "2006",
+      "title": "Economics of captive breeding applied to the conservation of selected amphibian and reptile species from Madagascar",
+      "author": "Mattioli F., Gili C. and Andreone F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F. and Luiselli, L.M. 2003. Conservation priorities and potential threats influencing the hyper-diverse amphibians amphibians of Madagascar. <i>Italian Journal of Zoology</i> 70: 53-63.",
+      "year": "2003",
+      "title": "Conservation priorities and potential threats influencing the hyper-diverse amphibians amphibians of Madagascar",
+      "author": "Andreone, F. and Luiselli, L.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F., Mercurio, V. and Mattioli, F. 2006. Between environmental degradation and international pet trade: conservation strategies for the threatened amphibians of Madagascar. <i>Natura – Società italiana di scienze naturali e del Museo civico di storia naturale di Milano (Milano, Italy)</i> 95(2): 81-96.",
+      "year": "2006",
+      "title": "Between environmental degradation and international pet trade: conservation strategies for the threatened amphibians of Madagascar.",
+      "author": "Andreone, F., Mercurio, V. and Mattioli, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tessa, G., Guarino, F.M., Giacoma, C., Mattioli, F. and Andreone, F. 2007. Longevity and body size in three populations of Dyscophus antongilii (Microhylidae, Dyscophinae), the tomato frog from north-eastern Madagascar. <i>Acta Herpetologica</i> 2: 139-146.",
+      "year": "2007",
+      "title": "Longevity and body size in three populations of Dyscophus antongilii (Microhylidae, Dyscophinae), the tomato frog from north-eastern Madagascar",
+      "author": "Tessa, G., Guarino, F.M., Giacoma, C., Mattioli, F. and Andreone, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pintak, T. 1987. Zur Kenntnis des Tomatenfrosches <i>Dyscophus antongilii</i> (Grandidier 1877). <i>Salamandra</i> 23: 106-121.",
+      "year": "1987",
+      "title": "Zur Kenntnis des Tomatenfrosches <i>Dyscophus antongilii</i> (Grandidier 1877)",
+      "author": "Pintak, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schmid, A.A. 1970. Ein erfreulicher Import <i>Dyscophus antongilii</i> Grandidier. <i>DATZ</i> 23: 254-256.",
+      "year": "1970",
+      "title": "Ein erfreulicher Import <i>Dyscophus antongilii</i> Grandidier",
+      "author": "Schmid, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Segev, O., Andreone, F., Pala, R., Tessa, G. and Vences, M. 2012. Reproductive phenology of the tomato frog, <i>Dyscophus antongili</i>, in an urban pond of Madagascar’s east coast. <i>Acta Herpetologica</i> 7(2): 331-340.",
+      "year": "2012",
+      "title": "Reproductive phenology of the tomato frog, <i>Dyscophus antongili</i>, in an urban pond of Madagascar’s east coast.",
+      "author": "Segev, O., Andreone, F., Pala, R., Tessa, G. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brenes-Soto, A. and Dierenfeld, E.S. 2014. Effect of Dietary Carotenoids on Vitamin A Status and Skin Pigmentation in False Tomato Frogs (<i>Dyscophus guineti</i>). <i>Zoo Biology</i> 9999: 1-9.",
+      "year": "2014",
+      "title": "Effect of Dietary Carotenoids on Vitamin A Status and Skin Pigmentation in False Tomato Frogs (<i>Dyscophus guineti</i>).",
+      "author": "Brenes-Soto, A. and Dierenfeld, E.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chiari, Y., Orozco-ter Wengel, P., Vences, M., Vieites, D.R., Sarovy, A., Randrianirina, J.E., Meyer, A. and Louis Jr., E. 2006. Genetic identification of units for conservation in tomato frogs, genus <i>Dyscophus</i>. <i>Conservation Genetics</i> 7: 473-482.",
+      "year": "2006",
+      "title": "Genetic identification of units for conservation in tomato frogs, genus <i>Dyscophus</i>.",
+      "author": "Chiari, Y., Orozco-ter Wengel, P., Vences, M., Vieites, D.R., Sarovy, A., Randrianirina, J.E., Meyer, A. and Louis Jr., E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Orozco-ter Wengel, P., Andreone, F., Louis Jr., E. and Vences, M. 2013. Mitochondrial introgressive hybridization following a demographic expansion in the tomato frogs of Madagascar, genus <i>Dyscophus</i>. <i>Molecular Ecology</i> 22(24): 6074-6090.",
+      "year": "2013",
+      "title": "Mitochondrial introgressive hybridization following a demographic expansion in the tomato frogs of Madagascar, genus <i>Dyscophus</i>.",
+      "author": "Orozco-ter Wengel, P., Andreone, F., Louis Jr., E. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 14 September 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

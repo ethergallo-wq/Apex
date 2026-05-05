@@ -1,0 +1,724 @@
+{
+  "assessment_date": "2017-11-20T00:00:00.000+00:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 30208,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/30208/50197331",
+  "citation": "Dalton, D., Birss, C., Cowell, C., Gaylard, A., Kotze, A., Parrini, F., Peinke, D., Radloff, F. & Viljoen, P. 2019. Damaliscus pygargus. The IUCN Red List of Threatened Species 2019: e.T30208A50197331. Accessed on 05 May 2026.",
+  "assessment_id": 50197331,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 30208,
+    "scientific_name": "Damaliscus pygargus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 30209,
+        "scientific_name": "Damaliscus pygargus ssp. phillipsi",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Damaliscus",
+        "species_name": "pygargus",
+        "subpopulation_name": null,
+        "infra_name": "phillipsi",
+        "authority": "Harper, 1939",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Blesbok",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Damaliscus dorcas ssp. phillipsi Harper, 1939",
+            "status": "S",
+            "genus_name": "Damaliscus",
+            "species_name": "dorcas",
+            "species_author": null,
+            "infrarank_author": "Harper, 1939",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "phillipsi"
+          }
+        ]
+      },
+      {
+        "sis_id": 6236,
+        "scientific_name": "Damaliscus pygargus ssp. pygargus",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "BOVIDAE",
+        "genus_name": "Damaliscus",
+        "species_name": "pygargus",
+        "subpopulation_name": null,
+        "infra_name": "pygargus",
+        "authority": "(Pallas, 1767)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Bontebok",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Damaliscus dorcas ssp. dorcas Pallas, 1766",
+            "status": "S",
+            "genus_name": "Damaliscus",
+            "species_name": "dorcas",
+            "species_author": null,
+            "infrarank_author": "Pallas, 1766",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "dorcas"
+          },
+          {
+            "name": "Antilope pygargus Pallas, 1767",
+            "status": "ACCEPTED",
+            "genus_name": "Antilope",
+            "species_name": "pygargus",
+            "species_author": "Pallas, 1767",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Damaliscus",
+    "species_name": "pygargus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Pallas, 1767)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Blesbok",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Blesbok",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Bontebok",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "Bontebok",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Damaliscus dorcas ssp. dorcas Pallas, 1766",
+        "status": "S",
+        "genus_name": "Damaliscus",
+        "species_name": "dorcas",
+        "species_author": null,
+        "infrarank_author": "Pallas, 1766",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "dorcas"
+      },
+      {
+        "name": "Damaliscus dorcas Pallas, 1766",
+        "status": "ACCEPTED",
+        "genus_name": "Damaliscus",
+        "species_name": "dorcas",
+        "species_author": "Pallas, 1766",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Antilope pygargus Pallas, 1767",
+        "status": "ACCEPTED",
+        "genus_name": "Antilope",
+        "species_name": "pygargus",
+        "species_author": "Pallas, 1767",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "55000",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "No",
+    "generational_length": "7.1",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "92-109",
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Blesbok is endemic to southern Africa. Historically, <em>Damaliscus pygargus pygargus</em> ranged across the Highveld grasslands of South Africa in the Free State and Gauteng provinces, extending into northwestern KwaZulu-Natal, and through parts of the Karoo in the Eastern and Northern Cape. <em>Damaliscus p. phillipsi</em> is endemic to the Western Cape, the ranges of the two forms separated by over 300 km (Skinner and Chimimba 2005).<br/><br/>Range and population were reduced by hunting in the 19th century but populations of <em>D. p. phillipsi</em> have recovered remarkably, especially on private land, and have been relocated across South Africa to regions both within and outside its indigenous range (for example, Power 2014). Formerly present in western Lesotho, but hunted to extinction before 1900 (Lynch 1994). Swaziland is outside the historical range, but extralimital introductions have occurred in Malolotja Nature Reserve and Mlilwane Wildlife Sanctuary (Monadjem 1998). The species has also been introduced to private game farms outside its indigenous range in Zimbabwe, Botswana and Namibia (East 1999).<br/><br/><em>Damaliscus p. pygargus</em> are endemic to the Western Cape, South Africa, although introductions have been made in most provinces. Historically, they were confined to the coastal plain east of the Kogelberg in the Western Cape where they are believed to have concentrated on the renosterveld areas (Boshoff and Kerley 2001, Skead 2011). Extra-limital subpopulations have been established on private farms or ranches in at least the Eastern Cape, Northern Cape, Free State and North West provinces, and there is pressure to increase the extent of introduction (Power 2014).",
+    "population": "East (1999) estimated there to be at least 235,000-240,000 Blesbok (stable or increasing), of which 97% occur on private farms and 3% in protected areas, and at least 2,300 Bontebok (increasing). <br/><br/>Currently, the total population of <em>D. p. phillipsi</em> is estimated to be at least 77,751 animals (2010–2016 counts) on 678 protected areas and wildlife ranches, equating to 54,426 mature individuals using a 70% mature population structure. On formally protected areas, there were at least 17,235 animals counted between 2013 and 2016 (EWT unpubl. data). <br/><br/>For <em>D. p. pygargus</em> the population in all formally protected areas and private ranches within both the natural and benign introduction range is estimated at 752–1,618 mature individuals. However, this estimate does not account for hybridisation which might reduce the number of eligible private subpopulations dramatically. Outside the natural and benign introduction range, there are an observed 4,857 individuals which are not included in this assessment as they are not considered free-ranging (IUCN Standards and Petitions Subcommittee 2014).",
+    "habitats": "<em>Damaliscus p. phillipsi </em>occur primarily on grasslands, especially open  plateau grasslands, characteristic of the South African Highveld,  extending to altitudes of up to 2,000 m asl (East 1999). They prefer  short grass and depend largely on the availability of drinking water  (David and Lloyd 2013). <em>Damaliscus p. pygargus</em> is very closely associated with  the East Coast Renosterveld bioregion. They are almost exclusively  grazers with a preference for short grass and recently burnt veld  (Beukes 1984, 1987; Novellie 1987; Kraaij and Novellie 2010). Water is  an essential requirement and they stay within 1.5 km of surface water  during the dry season.<br/><br/><em>Damaliscus p. pygargus</em> are adapted to unique  habitat and climatic conditions: the East Coast Renosterveld bioregion  receives some rain throughout the year but has a distinct peak during  winter with about 65% of rain falling between April and October. This  subspecies has thus adapted over at least 20,000 years to a climate of  wet and cold winters and warm and dry summers, the opposite to the  conditions experienced by <em>D. p. phillipsi</em> with warm and wet  summers and very cold but dry winters.<br/><br/>For further detail see the subspecies accounts.",
+    "threats": "The translocation of both Blesbok and Bontebok outside their natural range is a significant threat to the continued existence of the two subspecies, as hybridisation takes place and becomes increasingly likely. <br/><br/>The major threats for <em>D. p. pygargus</em> are hybridisation with <em>D. p. phillipsi,</em> the lack of available habitat within the natural range, low genetic diversity (probably the result of two bottlenecks caused by overhunting and disease; van der Walt <em>et al</em>. 2001) and poor gene flow between subpopulations. The overall management concern is the lack of a metapopulation management strategy for this subspecies.<br/><br/>Hybridisation is currently a priority issue in <em>D. p. pygargus</em>, but the extent of hybridisation in the <em>D. p. phillipsi</em> population is currently unknown and further research is required. Breeding of colour variants that may be associated with deleterious mutations may, if released in large numbers, reduce effective population size and can affect wild populations if carriers are released into formally protected areas.",
+    "measures": "The Bontebok <em>D. p. pygargus</em> is listed in CITES Appendix II. <br/><br/>This species occurs within a number of formally and privately protected areas across a number of provinces in South Africa. The economic value and popularity of<em> D. p. phillipsi</em> on private farms has enabled this subspecies to re-occupy large areas of its original range and substantial extra-limital subpopulations have also been established on private land outside its natural range in South Africa and elsewhere. Identification of hybrid populations and the restrictions on movement of hybrids are recommended as key actions to conserve the subspecies.<br/><br/>For <em>D. p. pygargus</em>, key protected areas include Bontebok National Park (genetically certified pure subpopulation within the natural range); Table Mountain National Park (genetically certified pure subpopulation within the benign introduction range); De Hoop Nature Reserve and Denel Overberg Test Range (largest subpopulation within the natural range); and Agulhas National Park (potential for significant subpopulation growth within the natural range). A metapopulation management plan covering all the fragmented subpopulations is urgently needed. &#160; <br/><br/>See the subspecies accounts for detailed recommendations.",
+    "use_trade": "Used for commercial trophy hunting on a national and international scale, and by subsistence hunters for meat. They are also sold as live animals at game auctions. <em>Damaliscus p. phillipsi</em> are culled for management purposes and commercially for meat. They have also recently been bred intensively for colour variants. <em>D. p. phillipsi</em> are a flagship, endemic species for South Africa’s Highveld grasslands, and are a valuable component of South Africa’s commercial hunting industry. <em>Damaliscus p. pygargus </em>are a flagship subspecies of the Cape Floristic Region, particularly renosterveld, and can be used in ecotourism ventures.",
+    "rationale": "Blesbok is listed as Least Concern. The subspecies <em>D. p. phillipsi</em> is abundant on both formally and privately protected land. A minimum population size of 54,426 mature individuals of <em>D. p. phillipsi </em>is estimated (using a 70% mature population structure) across 678 protected areas and wildlife ranches (counts between 2010 and 2016). There are at least an estimated 17,235 animals (counts between 2013 and 2016) on formally protected areas across the country. The population has increased significantly over three generations (1990-2015) in formally protected areas across its range and it is suspected to have also increased on private lands. Apart from hybridisation there are currently no major threats to long-term survival. The number of mature individuals of<em> D. p. pygargrus</em> is estimated at 752–1,618 individuals, but the number of pure Bontebok is unknown and the area of occupancy is limited and available habitat is decreasing.",
+    "trend_justification": null,
+    "taxonomic_notes": "The valid name of this species is <em>Damaliscus pygargus</em>, not <em>Damaliscus dorcas</em> which appears more commonly in the literature (see Rookmaaker 1991; Grubb 1999, 2005; David and Lloyd 2013). Two well-differentiated subspecies are recognized: the Bontebok <em>D. p. pygargus</em> and the Blesbok <em>D. p. phillipsi</em>. The two have been considered as separate species by some (e.g., Allen 1939, and see Essop <em>et al</em>. 1991), but are here regarded as conspecific."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "Lesotho"
+      },
+      "code": "LS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Dalton, D., Birss, C., Cowell, C., Gaylard, A., Kotze, A., Parrini, F., Peinke, D., Radloff, F. & Viljoen, P.",
+      "value": [
+        "Desire Dalton (National Zoological Gardens of South Africa  )",
+        "Antoinette Kotze (National Zoological Gardens of South Africa and Associate Professor University of the Free State)",
+        "Francesca Parrini",
+        "Petri Viljoen",
+        "Angela Gaylard",
+        "Coral Birss (Western Cape Nature Conservation Board)",
+        "Dean Peinke (Eastern Cape Parks & Tourism Agency, )",
+        "Carly Cowell (South African National Parks)",
+        "Frans Radloff (Department of Biodiversity and Conservation, Cape Peninsula University of Technology)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Mallon, D.P. & Child, M.F.",
+      "value": [
+        "David Mallon (IUCN SSC Antelope RLA)",
+        "Matthew Child (South African National Biodiversity Institute (SANBI))"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Page-Nicholson, S., Relton, C. & Selier, J.",
+      "value": [
+        "Claire Relton (Endangered Wildlife Trust)",
+        "Samantha Page-Nicholson",
+        "Jeanetta Selier (South African National Biodiversity Institute)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Grubb, P. 2005. Artiodactyla. In: D.E. Wilson & D.M. Reeder (ed.), <i>Mammal Species of the World. A Taxonomic and Geographic Reference (3rd ed)</i>, pp. 637-722. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2005",
+      "title": "Artiodactyla",
+      "author": "Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "East, R. (compiler). 1999. <i>African Antelope Database 1998</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1999",
+      "title": "African Antelope Database 1998",
+      "author": "East, R. (compiler)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Skinner, J.D. and Chimimba, C.T. (eds). 2005. <i>The Mammals of the Southern African Subregion</i>. Cambridge University Press, United Kingdom, Cambridge.",
+      "year": "2005",
+      "title": "The Mammals of the Southern African Subregion",
+      "author": "Skinner, J.D. and Chimimba, C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lynch, C.D. 1994. The mammals of Lesotho. <i>Navorsinge van die Nasionale Museum Bloemfontein</i> 10(4): 177-241.",
+      "year": "1994",
+      "title": "The mammals of Lesotho",
+      "author": "Lynch, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Monadjem, A. 1998. <i>Mammals of Swaziland</i>. The Conservation Trust of Swaziland and Big Game Parks.",
+      "year": "1998",
+      "title": "Mammals of Swaziland",
+      "author": "Monadjem, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Allen, G.M. 1939. A checklist of African mammals. <i>Bulletin of the Museum of Comparative Zoology</i> 83: 1-763.",
+      "year": "1939",
+      "title": "A checklist of African mammals",
+      "author": "Allen, G.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grubb, P. 1999. Types and type localities of ungulates named from southern Africa. <i>Koedoe</i> 42: 13-45.",
+      "year": "1999",
+      "title": "Types and type localities of ungulates named from southern Africa",
+      "author": "Grubb, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rookmaaker, L. C. 1991. The scientific name of the Bontebok. <i>Zeitschrift für Säugetierkunde</i> 56: 190-191.",
+      "year": "1991",
+      "title": "The scientific name of the Bontebok",
+      "author": "Rookmaaker, L. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Essop, M. F., Harley, E. H., Lloyd, P. H. and van Hensbergen, H. J. 1991. Estimation of the genetic distance between bontebok and blesbok using mitochondrial DNA. <i>South African Journal of Science</i> 87: 271-273.",
+      "year": "1991",
+      "title": "Estimation of the genetic distance between bontebok and blesbok using mitochondrial DNA",
+      "author": "Essop, M. F., Harley, E. H., Lloyd, P. H. and van Hensbergen, H. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN Standards and Petitions Subcommittee. 2014. <i>Guidelines for Using the IUCN Red List Categories and Criteria. Version 11</i>.",
+      "year": "2014",
+      "title": "Guidelines for Using the IUCN Red List Categories and Criteria. Version 11",
+      "author": "IUCN Standards and Petitions Subcommittee",
+      "citation_short": null
+    },
+    {
+      "citation": "Skead, C.J. 2011. Historical incidence of the larger land mammals in the broader Western and Northern Cape provinces.In: Boshoff A.F., Kerley G.I.H, Lloyd P. (ed.), Centre for African Conservation Ecology, Nelson Mandela Metropolitan University, Port Elizabeth.",
+      "year": "2011",
+      "title": "Historical incidence of the larger land mammals in the broader Western and Northern Cape provinces",
+      "author": "Skead, C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Power, R.J. 2014. The distribution and status of mammals in the North West Province. Department of Economic Development, Environment, Conservation & Tourism, North West Provincial Government, Mahikeng.",
+      "year": "2014",
+      "title": "The distribution and status of mammals in the North West Province",
+      "author": "Power, R.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boshoff, A.F. and Kerley, G.I.H. 2001. Potential distributions of the medium-to large-sized mammals in the Cape Floristic Region, based on historical accounts and habitat requirements. <i>African Zoology</i> 36: 245-273.",
+      "year": "2001",
+      "title": "Potential distributions of the medium-to large-sized mammals in the Cape Floristic Region, based on historical accounts and habitat requirements",
+      "author": "Boshoff, A.F. and Kerley, G.I.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "David, J. and Lloyd, P. 2013. <i>Damaliscus pygargus</i>. In: J. S. Kingdon and M. Hoffmann (eds), <i>The Mammals of Africa</i>, Academic Press, Amsterdam, The Netherlands.",
+      "year": "2013",
+      "title": "<i>Damaliscus pygargus</i>",
+      "author": "David, J. and Lloyd, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "van der Walt, J.M., Nel, L.H. and Hoelzel, A.R. 2001.  Characterization of major histocompatibility complex DRB diversity in the endemic South African antelope <i>Damaliscus pygargus</i>: a comparison in two subspecies with different demographic histories. <i>Molecular Ecology</i> 10: 1679-1688.",
+      "year": "2001",
+      "title": " Characterization of major histocompatibility complex DRB diversity in the endemic South African antelope <i>Damaliscus pygargus</i>: a comparison in two subspecies with different demographic histories",
+      "author": "van der Walt, J.M., Nel, L.H. and Hoelzel, A.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Beukes, P.C. 1984. Sommige aspekte van die ekologie van die Vaalribbok (<i>Pelea Capreolus</i>, Forster 1790) in die Bontebok Nasionale Park. University of Stellenbosch.",
+      "year": "1984",
+      "title": "Sommige aspekte van die ekologie van die Vaalribbok (<i>Pelea Capreolus</i>, Forster 1790) in die Bontebok Nasionale Park",
+      "author": "Beukes, P.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Beukes, P.C. 1987. Responses of grey rhebuck and bontebok to controlled fires in coastal renosterveld. <i>South African Journal of Wildlife Research</i> 17: 103-108.",
+      "year": "1987",
+      "title": "Responses of grey rhebuck and bontebok to controlled fires in coastal renosterveld",
+      "author": "Beukes, P.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kraaij, T. and Novellie, P.A. 2010. Habitat selection by large herbivores in relation to fire at the Bontebok National Park (1974–2009): the effects of management changes. <i>African Journal of Range & Forage Science</i> 27: 21-27.",
+      "year": "2010",
+      "title": "Habitat selection by large herbivores in relation to fire at the Bontebok National Park (1974–2009): the effects of management changes",
+      "author": "Kraaij, T. and Novellie, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Novellie, P. 1987. Interrelationships between fire, grazing and grass cover at the Bontebok National Park. <i>Koedoe</i> 30: 1-17.",
+      "year": "1987",
+      "title": "Interrelationships between fire, grazing and grass cover at the Bontebok National Park",
+      "author": "Novellie, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,837 @@
+{
+  "assessment_date": "2021-07-07T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 45478181,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/45478181/197834257",
+  "citation": "BirdLife International 2021. Psophia crepitans. The IUCN Red List of Threatened Species 2021: e.T45478181A197834257. Accessed on 05 May 2026.",
+  "assessment_id": 197834257,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 45478181,
+    "scientific_name": "Psophia crepitans",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "GRUIFORMES",
+    "family_name": "PSOPHIIDAE",
+    "genus_name": "Psophia",
+    "species_name": "crepitans",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Gray-winged Trumpeter",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Grey-winged Trumpeter",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 750,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "U",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "7.68",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": "45–52 cm. Sturdy, upright, ovoid, noisy, largely terrestrial birds of northwest and north Amazonian and Guianan shield forests. Predominantly black with green iridescence on the neck, pale grey secondaries and ochre across the lower mantle creating a large pale area on the hindquarters.&#160;<em>P. c. napensis </em>differs only in having largely purple iridescence on the neck. The bill and legs are dark.&#160;<strong>Similar species.</strong>&#160;Ochre-winged Trumpeter&#160;<em>P. ochroptera&#160;</em>has ochre secondaries,&#160;White-winged Trumpeter <em>P. leucoptera </em>has pure white secondaries and a pale yellow bill.",
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "Unknown",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "3370000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "The nominate occurs from extreme SE&#160;<strong>Colombia </strong>east through southern and eastern&#160;<strong>Venezuela</strong>, south into <strong>Brazil</strong> east of the Rio Negro, and east into&#160;<strong>Guyana</strong>, <strong>French Guiana</strong> and <strong>Suriname</strong>.&#160;<em>P. c. napensis </em>occurs from southeastern Colombia, south through eastern <strong>Ecuador</strong> and northeastern <strong>Peru</strong>,&#160;north of the Río Marañón and Amazon, and east into&#160;northwestern Brazil, north of the&#160;Río&#160;Solimões. It is typically found well away from human settlement.",
+    "population": "The global population size has not been quantified, but this species is described&#160;&#160;as 'uncommon' (Stotz <em>et al.</em> 1996). It appears to be more common in undisturbed and unhunted areas (Thiollay 1989, 1992, 2005, G. Leite <em>in litt. </em>2020, R. H. Cecile <em>in litt.</em>&#160;2021). In Suriname, it is common in primary forest, probably much rarer or absent in logged forests, and rare elsewhere (O. Ottema&#160;<em>in litt.&#160;</em>2020).<br/><br/>Estimated population densities include 14.2 and 15 individuals per km<sup>2</sup> in&#160;lowland rainforest in southern French Guiana (Thiollay 1986); 13.87 (+/- 5.28) individuals per km<sup>2</sup>&#160;at sites without hunting and 0.64 (+/- 0.60) individuals per km<sup>2</sup>&#160;at regularly hunted sites in primary forest in French Guiana (Thiollay 1989); 17.08 (90% C. I. 6.88–37.58) individuals per km<sup>2</sup>&#160;at undisturbed sites in French Guiana (Denis&#160;<em>et al.&#160;</em>2018); c.2 individuals per km<sup>2</sup>&#160;at hunted sites in French Guiana (Vaessen <em>et al.</em> in prep. 2021); 15.3 (7.9–30.1) individuals per km<sup>2</sup>&#160;in unlogged forest and&#160;24.4 (14.5–40.1) individuals per km<sup>2&#160;</sup>in forest subject to reduced-impact logging in central Guyana (Bicknell and Peres 2010); and 2.2 (0.6–8.1) individuals per km<sup>2</sup>&#160;in undisturbed primary forest, 1.8 (0.4–9.2) individuals per km<sup>2</sup>&#160;near an oil extraction road, and 5 (1.7–15.3) individuals per km<sup>2</sup>&#160;near an oil extraction road with controlled access in Ecuador (Suárez&#160;<em>et al.</em>&#160;2013).<br/>The subpopulation struture is not known. There are two subspecies, indicating at least two subpopulations.",
+    "habitats": "Found in dense, lowland, moist forest away from human settlement. It appears to prefer mature primary forest (Parry <em>et al.</em>&#160;2007) with a closed canopy (Michalski <em>et al.</em>&#160;2015). Surveys in Guyana found higher densities in forest subject to reduced-impact logging than in unlogged forest (Bicknell and Peres 2010), whilst other survey have found that the species is sensitive to logging and associated forest degradation (Thiollay 1992, Laufer <em>et al.&#160;</em>2015). Occurs in polyandrous groups that feed predominantly on ripe fruit on the forest floor, but will also take arthropods and small vertebrates such as snakes.&#160;Breeds during December-June in the Guianas, presumed to breed during the wet season throughout range. Nest is placed at height in an elevated unroofed cavity.",
+    "threats": "The species is a popular hunting target in populated areas across much of its range. Five villages in northern Brazil took 162 birds in a year, making it one of the most frequently hunted bird species (De Souza-Mazurek&#160;<em>et al.</em>&#160;2000). Surveys in primary forest in French Guiana found severely depleted population densities in regularly hunted areas, with very low densities remaining (Thiollay 1989, 2005, Denis <em>et al.</em>&#160;2018, Vaessen <em>et al.</em>, in prep. 2021). Hunting in the Jari region was found to be unsustainable, although no significant effect on the species's population density was detected (Parry&#160;<em>et al.</em>&#160;2009). The species is also captured to be kept as a pet, or to guard flocks of poultry.<br/><br/>Accelerating deforestation is also a threat, as land is cleared for mainly for wood extraction, cattle ranching and small-scale agriculture (P. Boesman <em>in litt.&#160;</em>2020). Escaped agricultural fires and gold mining are also increasingly leading to forest loss and degradation (O. Ottema&#160;<em>in litt.</em>&#160;2020, P. Boesman&#160;<em>in litt.</em>&#160;2020, G. Leite&#160;<em>in litt.</em>&#160;2020). Approximately 20-30% of inland forest in Suriname is designated as gold mining concessions (O. Ottema&#160;<em>in litt.</em>&#160;2020, GONINI 2020). Gold mining also exacerbates the threat of hunting, as miners often hunt whilst camping at gold mines (P. Boesman&#160;<em>in litt.&#160;</em>2020). The species is likely to be sensitive to forest degradation caused by selective logging (Thiollay 1992,&#160;Laufer<em> et al.</em> 2015). Approximately 10-20% of the inland forest in Suriname is designated as timber concessions, and logging in the country is increasing rapidly (O. Ottema <em>in litt.&#160;</em>2020, GONINI 2020).",
+    "measures": "<strong>Conservation and research actions underway</strong><br/>Individuals are held in captivity. The species is listed as nationally Near Threatened in Ecuador (Freile <em>et al.</em>&#160;2018). It occurs in protected areas throughout its range.<br/><br/><strong>Conservation and research actions proposed<br/></strong>Research the species's population size and trends. Monitor trends in hunting of the species. Monitor habitat loss and degradation across the range.<br/><strong><br/></strong>Expand the protected area network.  Effectively resource and manage existing and new protected areas to prevent logging and hunting. Conservation on private lands, through  expanding market pressures for sound land management and preventing  forest clearance on lands unsuitable for agriculture, is also essential  (Soares-Filho <em>et al.</em> 2006).&#160;Ensure that hunting does not exceed sustainable levels.",
+    "use_trade": "The species is a popular hunting target in populated areas across much of its range. Five villages in northern Brazil took 162 birds in a year, making it one of the most frequently hunted bird species (De Souza-Mazurek&#160;<em>et al.</em>&#160;2000). The species is also captured to be kept as a pet, or to guard flocks of poultry.",
+    "rationale": "This species has an extremely large range, and hence does not approach the thresholds for Vulnerable under the range size criterion (Extent of Occurrence &lt;20,000 km² or Area of Occupancy &lt; 2,000 km² combined with a declining or fluctuating range size, habitat extent/quality, or population size and a small number of locations or severe fragmentation). The population size has not been quantified, but it is not believed to approach the thresholds for Vulnerable under the population size criterion (&lt;10,000 mature individuals with a continuing decline estimated to be &gt;10% in ten years or three generations, or with a specified population structure). Despite the fact that the population trend appears to be decreasing, the decline is not believed to be sufficiently rapid to approach the thresholds for Vulnerable under the population trend criterion (&gt;30% decline over ten years or three generations). For these reasons the species is evaluated as Least Concern.",
+    "trend_justification": "Remote sensing data on tree cover loss within the species's range indicates that approximately 2.5% of tree cover with at least 50% canopy cover was lost over 2001-2020 (Global Forest Watch 2021). Extrapolating over the period 1997-2020, it is estimated that approximately 3% of tree cover was lost from the species's range over the past three generations. Extrapolating forwards, it is estimated that approximately 3-6% of tree cover may be lost from the species's range over the next three generations.<br/><br/>The species appears to prefer mature primary forest (Parry&#160;<em>et al.</em>&#160;2007). Surveys in Guyana found higher densities in forest subject to reduced-impact logging than in unlogged forest (Bicknell and Peres 2010), whilst other survey have found that the species is sensitive to logging and associated forest degradation (Thiollay 1992, Laufer&#160;<em>et al.&#160;</em>2015).&#160;The species may therefore experience faster population declines than may be suggested by the rate of tree cover loss.<br/><br/>The species is also known to be susceptible to hunting, and population densities have been found to be severely depleted in heavily hunted areas (Thiollay 1989, 1992, 2005, G. Leite&#160;<em>in litt.&#160;</em>2020, R. H. Cecile&#160;<em>in litt.</em>&#160;2021; Vaessen&#160;<em>et al.</em>&#160;in prep. 2021). Therefore, it is likely that hunting is causing population declines in at least some parts of its range. In French Guiana, surveys have recorded mean population densities of 3.87 (+/- 5.28) individuals per km<sup>2</sup>&#160;and 17.08 (90% C. I. 6.88–37.58) individuals per km<sup>2&#160;</sup>at sites without hunting (Thiollay 1989, Denis&#160;<em>et al.&#160;</em>2018), and 0.64 (+/- 0.60) individuals per km<sup>2&#160;</sup>and c.2 individuals per km<sup>2</sup>&#160;at hunted sites (Thiollay 1989, Vaessen&#160;<em>et al.</em>&#160;in prep. 2021), representing &gt;80% reductions in abundance in hunted sites.<br/><br/>Assuming that hunting may double the rate of decline, and that disturbance may contribute an additional decline at around half of the rate of deforestation (Barlow <em>et al.&#160;</em>2016), the population size is suspected to have undergone a reduction of 3-8% over the past three generations, and to undergo a reduction of 3-14% over the next three generations.",
+    "taxonomic_notes": "<em>Psophia crepitans</em> and <em>P. ochroptera </em>(del Hoyo and Collar 2014) were previously lumped as <em>P. crepitans</em> following Sibley and Monroe (1990, 1993)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Ensure that hunting does not exceed sustainable levels.",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "Expand the protected area network.",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "Expand the protected area network.",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "Conservation on private lands, through expanding market pressures for sound land management and preventing forest clearance on lands unsuitable for agriculture, is also essential (Soares-Filho <i>et al.</i> 2006).",
+      "code": "6_3",
+      "description": {
+        "en": "Market forces"
+      }
+    },
+    {
+      "note": "Effectively resource and manage existing and new protected areas to prevent logging and hunting.",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "Effectively resource and manage existing and new protected areas to prevent logging and hunting.",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Monitor population trends.",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Monitor trends in hunting of the species.",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "Monitor habitat loss and degradation across the range.",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "Research the species's population size and trends.",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": "To guard flocks of poultry",
+      "subsistence": true,
+      "description": {
+        "en": "Other (free text)"
+      },
+      "code": "17"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Murray-Watson, R.",
+      "value": [
+        "Rachel Murray-Watson (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Butchart, S., Symes, A., Ekstrom, J., Taylor, J., Claessens, O., Pelletier, V., Ottema, O., Boesman, P., Leite, G., Richard-Hansen, C. & Brooks, D.",
+      "value": [
+        "Andy Symes (BirdLife International)",
+        "Jonathan Ekstrom (BirdLife International)",
+        "Stuart Butchart (BirdLife International)",
+        "Dan Brooks (Houston Museum of Natural Science)",
+        "Peter Boesman (BirdLife International)",
+        "Otte Ottema (BirdLife International)",
+        "Joe Taylor (University of Reading, UK)",
+        "Cécile Richard-Hansen (ONCFS (Office National de la Chasse et de la Faune Sauvage))",
+        "Olivier Claessens",
+        "Vincent Pelletier",
+        "Gabriel Leite"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Wheatley, H.",
+      "value": [
+        "Hannah Wheatley (BirdLife International)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Soares-Filho, B.S., Nepstad, D.C., Curran, L.M., Cerqueira, G.C., Garcia, R.A., Ramos, C.A., Voll, E., McDonald, A., Lefebvre, P. and Schlesinger, P. 2006. Modelling conservation in the Amazon basin. <i>Nature</i> 440(7083): 520-523.",
+      "year": "2006",
+      "title": "Modelling conservation in the Amazon basin",
+      "author": "Soares-Filho, B.S., Nepstad, D.C., Curran, L.M., Cerqueira, G.C., Garcia, R.A., Ramos, C.A., Voll, E., McDonald, A., Lefebvre, P. and Schlesinger, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "del Hoyo, J., Elliott, A., and Sargatal, J. 1996. <i>Handbook of the Birds of the World, vol. 3: Hoatzin to Auks</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "1996",
+      "title": "Handbook of the Birds of the World, vol. 3: Hoatzin to Auks",
+      "author": "del Hoyo, J., Elliott, A., and Sargatal, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stotz, D.F., Fitzpatrick, J.W., Parker, T.A. and Moskovits, D.K. 1996. <i>Neotropical Birds: Ecology and Conservation</i>. University of Chicago Press, Chicago.",
+      "year": "1996",
+      "title": "Neotropical Birds: Ecology and Conservation",
+      "author": "Stotz, D.F., Fitzpatrick, J.W., Parker, T.A. and Moskovits, D.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bird, J. P.; Buchanan, J. M.; Lees, A. C.; Clay, R. P.; Develey, P. F.; Yépez, I.; Butchart, S. H. M. 2011. Integrating spatially explicit habitat projections into extinction risk assessments: a reassessment of Amazonian avifauna incorporating projected deforestation. <i>Diversity and Distributions</i>: doi: 10.1111/j.1472-4642.2011.00843.x.",
+      "year": "2011",
+      "title": "Integrating spatially explicit habitat projections into extinction risk assessments: a reassessment of Amazonian avifauna incorporating projected deforestation",
+      "author": "Bird, J. P.; Buchanan, J. M.; Lees, A. C.; Clay, R. P.; Develey, P. F.; Yépez, I.; Butchart, S. H. M. ",
+      "citation_short": "Bird et al. 2011"
+    },
+    {
+      "citation": "Thiollay, J.-M. 1992. Influence of selective logging on bird species diversity in a Guianan rain forest. <i>Conservation Biology</i> 6: 47-63.",
+      "year": "1992",
+      "title": "Influence of selective logging on bird species diversity in a Guianan rain forest",
+      "author": "Thiollay, J.-M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thiollay, J. M. 1986. Structure comparee du peuplement avien dans trois sites de foret primaire en Guyane. <i>Revue d'Ecologie (La Terre et la Vie)</i> 41: 59-105.",
+      "year": "1986",
+      "title": "Structure comparee du peuplement avien dans trois sites de foret primaire en Guyane",
+      "author": "Thiollay, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Freile, J. F.; Santander, T.; Carrasco, L.; Cisneros-Heredia, D. F.; Guevara, E. A.; Sánchez-Nivicela, M.; Tinoco, B. A. 2018. Lista roja de las aves del Ecuador continental. Ministerio del Ambiente, Aves y Conservación, Comité Ecuatoriano de Rigistros Ornitológicos, Universidad del Azuay, Red Aves Ecuador, Universidad San Francicsco de Quito, Quito, Ecuador.",
+      "year": "2018",
+      "title": "Lista roja de las aves del Ecuador continental",
+      "author": "Freile, J. F.; Santander, T.; Carrasco, L.; Cisneros-Heredia, D. F.; Guevara, E. A.; Sánchez-Nivicela, M.; Tinoco, B. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parry, L., Barlow, J. and Peres, C. A. 2007.  Parry, L., Barlow, J. and Peres, C. A. 2007. Large-vertebrate assemblages of primary and secondary forests in the Brazilian Amazon. <i>Journal of Tropical Ecology </i> 23: 653-662.",
+      "year": "2007",
+      "title": " Parry, L., Barlow, J. and Peres, C. A. 2007. Large-vertebrate assemblages of primary and secondary forests in the Brazilian Amazon.",
+      "author": "Parry, L., Barlow, J. and Peres, C. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barlow, J., Lennox, G. D., Ferreira, J., Berenguer, E., Lees, A. C., Mac Nally, R., Thomson, J. R., de Barros Ferraz, S. F., Louzada, J., Oliveira, V. H. F. and Parry, L. 2016. Anthropogenic disturbance in tropical forests can double biodiversity loss from deforestation. <i>Nature</i> 535(7610): 144-147.",
+      "year": "2016",
+      "title": "Anthropogenic disturbance in tropical forests can double biodiversity loss from deforestation",
+      "author": "Barlow, J., Lennox, G. D., Ferreira, J., Berenguer, E., Lees, A. C., Mac Nally, R., Thomson, J. R., de Barros Ferraz, S. F., Louzada, J., Oliveira, V. H. F. and Parry, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "GONINI. 2020. National Land Monitoring System of Suriname. Available at: <a href=\"https://www.gonini.org/\">https://www.gonini.org/</a>. (Accessed: 28 April 2020).",
+      "year": "2020",
+      "title": "National Land Monitoring System of Suriname",
+      "author": "GONINI",
+      "citation_short": null
+    },
+    {
+      "citation": "Global Forest Watch. 2021. Interactive Forest Change Mapping Tool. Available at: <a href=\"http://www.globalforestwatch.org/\">http://www.globalforestwatch.org/</a>. ",
+      "year": "2021",
+      "title": "Interactive Forest Change Mapping Tool",
+      "author": "Global Forest Watch",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Thiollay, J. M. 1994. Structure, density and rarity in an Amazonian rainforest bird community. <i>Journal of Tropical Ecology</i> 10: 449-481.",
+      "year": "1994",
+      "title": "Structure, density and rarity in an Amazonian rainforest bird community",
+      "author": "Thiollay, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Denis, T., Hérault, B., Brunaux, O., Guitet, S., & Richard‐Hansen, C. 2018. Weak environmental controls on the composition and diversity of medium and large-sized vertebrate assemblages in neotropical rain forests of the Guiana Shield. <i>The Condor</i> 24(11): 1545-1559.",
+      "year": "2018",
+      "title": "Weak environmental controls on the composition and diversity of medium and large-sized vertebrate assemblages in neotropical rain forests of the Guiana Shield",
+      "author": "Denis, T., Hérault, B., Brunaux, O., Guitet, S., & Richard‐Hansen, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "De Souza-Mazurek, R. R., Pedrinho, T., Feliciano, X., Hilário, W., Gerôncio, S., & Marcelo, E. 2000. Subsistence hunting among the Waimiri Atroari indians in central Amazonia, Brazil. <i>Biodiversity & Conservation</i> 9(5): 579–596.",
+      "year": "2000",
+      "title": "Subsistence hunting among the Waimiri Atroari indians in central Amazonia, Brazil",
+      "author": "De Souza-Mazurek, R. R., Pedrinho, T., Feliciano, X., Hilário, W., Gerôncio, S., & Marcelo, E",
+      "citation_short": null
+    },
+    {
+      "citation": "Parry, L., Barlow, J., & Peres, C. A. 2009. Hunting for sustainability in tropical secondary forests. <i>Conservation Biology</i> 23(5): 1270–1280.",
+      "year": "2009",
+      "title": "Hunting for sustainability in tropical secondary forests",
+      "author": "Parry, L., Barlow, J., & Peres, C. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thiollay, J.-M. 2005. Effects of hunting on guianan forest game birds. <i>Biodiversity and Conservation</i> 14: 1121-1135.",
+      "year": "2005",
+      "title": "Effects of hunting on guianan forest game birds",
+      "author": "Thiollay, J.-M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bicknell, J., & Peres, C. A. 2010. Vertebrate population responses to reduced-impact logging in a neotropical forest. <i>Forest Ecology and Management</i> 259: 2267-2275.",
+      "year": "2010",
+      "title": "Vertebrate population responses to reduced-impact logging in a neotropical forest",
+      "author": "Bicknell, J., & Peres, C. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "GBIF.org. 2021. GBIF Occurence Download. Available at: <a href=\"https://doi.org/10.15468/dl.pvbp67 \">https://doi.org/10.15468/dl.pvbp67 </a>. (Accessed: 2 March 2021).",
+      "year": "2021",
+      "title": "GBIF Occurence Download",
+      "author": "GBIF.org",
+      "citation_short": null
+    },
+    {
+      "citation": "Laufer, J., Michalski, F., & Peres, C. A. 2015. Effects of reduced-impact logging on medium and large-bodied forest vertebrates in eastern Amazonia. <i>Biota Neotropica</i> 15(2): e20140131.",
+      "year": "2015",
+      "title": "Effects of reduced-impact logging on medium and large-bodied forest vertebrates in eastern Amazonia",
+      "author": "Laufer, J., Michalski, F., & Peres, C. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Michalski, L. J., Norris, D., de Oliveira, T. G., & Michalski, F. 2015. Ecological relationships of meso-scale distribution in 25 neotropical vertebrate species. <i>PLoS One</i> 10(5): e0126114.",
+      "year": "2015",
+      "title": "Ecological relationships of meso-scale distribution in 25 neotropical vertebrate species",
+      "author": "Michalski, L. J., Norris, D., de Oliveira, T. G., & Michalski, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ribas, C. C., Aleixo, A., Nogueira, A. C., Miyaki, C. Y., & Cracraft, J. 2012. A palaeobiogeographic model for biotic diversification within Amazonia over the past three million years. <i>Proceedings of the Royal Society B: Biological Sciences</i> 279(1729): 681-689.",
+      "year": "2012",
+      "title": "A palaeobiogeographic model for biotic diversification within Amazonia over the past three million years",
+      "author": "Ribas, C. C., Aleixo, A., Nogueira, A. C., Miyaki, C. Y., & Cracraft, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suárez, E., Zapata‐Ríos, G., Utreras, V., Strindberg, S., & Vargas, J. 2012. Controlling access to oil roads protects forest cover, but not wildlife communities: a case study from the rainforest of Yasuní Biosphere Reserve (Ecuador). <i>Animal Conservation</i> 16(3): 265-274.",
+      "year": "2012",
+      "title": "Controlling access to oil roads protects forest cover, but not wildlife communities: a case study from the rainforest of Yasuní Biosphere Reserve (Ecuador)",
+      "author": "Suárez, E., Zapata‐Ríos, G., Utreras, V., Strindberg, S., & Vargas, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thiollay, J. M. 1989. Area requirements for the conservation of rain forest raptors and game birds in French Guiana. <i>Conservation Biology</i>: 128-137.",
+      "year": "1989",
+      "title": "Area requirements for the conservation of rain forest raptors and game birds in French Guiana",
+      "author": "Thiollay, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vaessen, R. W. T., Denis, T., Van Kuijk Jansen, M. P. A., & Richard-Hansen, C. 2021. Hunting affects the functional composition of vertebrate communities in a Neotropical rainforest.: In prep.",
+      "year": "2021",
+      "title": "Hunting affects the functional composition of vertebrate communities in a Neotropical rainforest",
+      "author": "Vaessen, R. W. T., Denis, T., Van Kuijk Jansen, M. P. A., & Richard-Hansen, C.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

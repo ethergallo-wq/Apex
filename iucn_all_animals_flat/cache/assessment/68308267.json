@@ -1,0 +1,457 @@
+{
+  "assessment_date": "2007-03-03T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 62240,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/62240/68308267",
+  "citation": "Frost, D.R., Hammerson, G.A. & Santos-Barrera, G. 2015. Thamnophis sirtalis. The IUCN Red List of Threatened Species 2015: e.T62240A68308267. Accessed on 05 May 2026.",
+  "assessment_id": 68308267,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 62240,
+    "scientific_name": "Thamnophis sirtalis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 21708,
+        "scientific_name": "Thamnophis sirtalis ssp. tetrataenia",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "NATRICIDAE",
+        "genus_name": "Thamnophis",
+        "species_name": "sirtalis",
+        "subpopulation_name": null,
+        "infra_name": "tetrataenia",
+        "authority": "(Cope in Yarrow, 1875)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "San Francisco Garter Snake",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "NATRICIDAE",
+    "genus_name": "Thamnophis",
+    "species_name": "sirtalis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Gartersnake",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The species' wide range includes much of North America, from southeastern Alaska, British Columbia, southern Northwest Territories, northern Saskatchewan, central Manitoba, Ontario, central Quebec, and the Maritime Provinces of Canada, to southern California, central Utah, northeastern Colorado, New Mexico, and Chihuahua (Mexico) (disjunct), Texas, Gulf Coast, and southern Florida (Conant and Collins 1991, Ernst and Ernst 2003, Stebbins 2003). There is a very small population in northwestern Chihuaha, Mexico.",
+    "population": "This species is represented by a very large number of occurrences (subpopulations) (Fitch 1980). Many occurrences have good viability. The total adult population size is unknown but probably exceeds 1,000,000. Long-term extent of occurrence, area of occupancy, number of subpopulations, and population size have probably been relatively stable. Currently, extent of occurrence, area of occupancy, number of subpopulations, and population size are probably relatively stable or declining at a low rate.",
+    "habitats": "Throughout the range, this species inhabits a very wide range of aquatic, wetland, and upland habitats; habitat preference exhibits rather pronounced regional differences (e.g., east vs. west). When inactive, it occurs underground, in or under surface cover, or in other secluded sites.",
+    "threats": "No major threats have been identified. The Mexican population is vulnerable to changes in hydrology.",
+    "measures": "Many occurrences of this species are in areas that afford adequate protection.",
+    "use_trade": null,
+    "rationale": "Listed as Least Concern in view of its extremely wide distribution, presumed large population, and because populations are unlikely to be declining.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Aquaculture Ponds"
+      },
+      "code": "15_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Seasonally Flooded Agricultural Land"
+      },
+      "code": "15_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Frost, D.R., Hammerson, G.A. & Santos-Barrera, G.",
+      "value": null
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N.A., Chanson, J.S. & Stuart, S.N.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)",
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Simon Stuart (A Rocha International, Synchronicity Earth, IUCN SSC)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Stebbins, R.C. 2003. <i>A Field Guide to Western Reptiles and Amphibians</i>. Third Edition. Houghton Mifflin Company, Boston, Massachusetts.",
+      "year": "2003",
+      "title": "A Field Guide to Western Reptiles and Amphibians, Third Edition",
+      "author": "Stebbins, R.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ernst, C.H. and Ernst, E.M. 2003. <i>Snakes of the United States and Canada</i>. Smithsonian Books, Washington, D.C.",
+      "year": "2003",
+      "title": "Snakes of the United States and Canada.",
+      "author": "Ernst, C.H. and Ernst, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Conant, R. and Collins, J.T. 1991. <i>A Field Guide to Reptiles and Amphibians: Eastern and Central North America</i>. Third Edition. Houghton Mifflin Company, Boston, Massachusetts.",
+      "year": "1991",
+      "title": "A Field Guide to Reptiles and Amphibians: Eastern and Central North America. Third Edition",
+      "author": "Conant, R. and Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rossman, D.A., Ford, N.B. and Seigel, R.A. 1996. <i>The Garter Snakes</i>. University of Oklahoma Press, Norman, Oklahoma and London, UK.",
+      "year": "1996",
+      "title": "The Garter Snakes.",
+      "author": "Rossman, D.A., Ford, N.B. and Seigel, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fitch, H.S. 1980. <i>Thamnophis sirtalis</i>. <i>Catalogue of American Amphibians and Reptiles</i> 270: 1-4.",
+      "year": "1980",
+      "title": "<i>Thamnophis sirtalis</i>.",
+      "author": "Fitch, H.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 23 June 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

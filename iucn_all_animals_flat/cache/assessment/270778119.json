@@ -1,0 +1,1093 @@
+{
+  "assessment_date": "2022-07-26T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 59477,
+  "criteria": "A3ce",
+  "url": "https://www.iucnredlist.org/species/59477/270778119",
+  "citation": "Arntzen, J., Bosch, J., García París, M., Jehle, R., Lizana, M., Marquez, R., Martel, A., Martinez Solano, I., Miaud, C., Pasmans, F., Recuero Gil, E., Salvador, A., Sá-Sousa, P. & Tejedo, M. 2025. Triturus marmoratus (amended version of 2023 assessment). The IUCN Red List of Threatened Species 2025: e.T59477A270778119. Accessed on 05 May 2026.",
+  "assessment_id": 270778119,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 59477,
+    "scientific_name": "Triturus marmoratus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "SALAMANDRIDAE",
+    "genus_name": "Triturus",
+    "species_name": "marmoratus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Latreille, 1800)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Tritón Jaspeado",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Marbled Newt",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Salamandra marmorata Latreille, 1800",
+        "status": "ACCEPTED",
+        "genus_name": "Salamandra",
+        "species_name": "marmorata",
+        "species_author": "Latreille, 1800",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Triton gesneri Laurenti, 1768 [<i>nomen dubium</i>]",
+        "status": "ACCEPTED",
+        "genus_name": "Triton",
+        "species_name": "gesneri",
+        "species_author": "Laurenti, 1768 [<i>nomen dubium</i>]",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2100,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "5-10",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "This European endemic species is found in much of northern Iberia (mainland Spain and Portugal), and central, southern and western France. This species was introduced to the area of Turin, Italy, but is now presumed to be extinct there (J.W. Arntzen pers. comm.). It occurs from sea level to elevations approaching 2,100 m asl.",
+    "population": "It is locally abundant in suitable habitats. It is locally endangered in central France, less threatened in southern France, and not particularly threatened in Portugal. In the 2008 assessment, it was reported to not be threatened in Spain. Since then declines caused by disease (<em>Batrachochytrium salamandrivorans</em> (<em>Bsal</em>)) have been recorded in Catalonia (Martel <em>et al.</em> 2020). Due to the ongoing decline in the extent and quality of its habitat and the effects of disease, the population is inferred to be decreasing. Extinction risk modelling for <em>Bsal</em> using subcriterion A3 predicts that at least 30% or more of the population will be lost within three generation lengths [15–30 years] (see the model in the attached Supplementary Information).<br/><br/>The generation length of this species is estimated to be between 5–10 years, and hence three generations is 15–30 years. It is conservatively estimated that <em>Bsal</em> will naturally advance at a rate of between 10–20 km per year. Therefore, a worst-case scenario of the impact of <em>Bsal </em>would be an outward spread of the disease from each current epicentre of 600 km (30 years at 20 km year), and the best case scenario would be an outward spread of 150 km (15 years at 10 km year). In the attached map (see Figure 5 in Supplementary Information), the inner circle around each epicentre has a radius of 150 km, and the outer circle has a radius of 600 km and shows the modelled spread of the disease. When overlaid on the current range of the species, the best case scenario has 10% of the range impacted, whereas the worst case scenario has 55% of the range impacted (see calculations in Supplementary Information). A good estimate of the projected decline due to <em>Bsal </em>in the next three generations for this species is the midpoint of these two scenarios which is 32.5%. Habitat loss and degradation are also likely to contribute to this decline hence a conservation estimate is that the species will decline by between 30–49% in the next three generations which qualifies it for Vulnerable status.",
+    "habitats": "Aquatic habitats include well-vegetated ponds, pools, ditches and streams generally within dry woodlands, heathland, fields and rough grassland. It can occur in slightly modified habitats such as traditional farmland. Breeding and larval development take place in many different types of permanent and temporary water sources, usually with aquatic vegetation for reproduction.<br/><br/>Generation length is estimated to be 5–10 years (F. Pasmans pers. comm. July 2021).",
+    "threats": "Major threats are agricultural intensification, drainage, pollution, and eutrophication of aquatic habitats through intensive agriculture. Mass mortality of the species through disease (iridovirus) has been recorded in Carris Lake, Peneda-Gerês National Park, Portugal. The disease might be non-native and have been transferred to the lake by an introduced predatory fish (<em>Lepomis gibbosus</em>). Predation by <em>L. gibbosus </em>and other introduced predatory fish and crayfish (<em>Procambarus clarkii</em>) species are also a threat to <em>Batrachochytrium salamandrivorans</em> (<em>Bsal</em>) is an emerging fungal pathogen affecting amphibians and is closely related to <em>B. dendrobatidis</em> (<em>Bd</em>), which has had a devastating impact on amphibian populations around the world. Both pathogens cause the infectious disease chytridiomycosis, and both are believed to have originated in Asia (for <em>Bsal</em>: Martel <em>et al.</em> 2014, for <em>Bd</em>: O'Hanlon <em>et al.</em> 2018). While <em>Bd</em> can cause disease in frogs, salamanders and caecilians, <em>Bsal</em> has only been reported to cause disease in salamanders and newts, although the pathogen has been detected in some frog species(Martel <em>et al.</em> 2013). <em>Bd</em> has spread globally, but at present <em>Bsal</em> is only known in Asia and has been introduced to Europe, most likely through the pet trade in salamanders (Martel <em>et al.</em> 2014, Nguyen <em>et al.</em> 2017).<br/><br/>Currently in Europe, <em>Bsal</em> has been detected in the wild in the Netherlands, Belgium, Germany (e.g. Thein<em> et al</em>. 2020) and Spain (Martel <em>et al</em>. 2020), and has been shown to be highly pathogenic to most urodelan taxa in Europe (Martel <em>et al.</em> 2014). In March 2018, <em>Bsal</em> was detected in a reservoir in Montnegre i el Corredor Natural Park in Catalonia in northeast Spain, <em>ca</em> 1,000 km from the nearest known occurrence in Europe, and a mass mortality event was recorded in May 2018 of this species at that site (Martel <em>et al</em>. 2020). <em>Bsal</em> is considered to be a threat to this species, and this has been further confirmed in laboratory trials for susceptibility to <em>Bsal</em> which have also recorded a 100% mortality rate (F. Pasmans and A. Martel pers. comm. June 2021). The site in Catalonia was believed to be caused by the introduction of exotic newt species (<em>Triturus anatolicus</em> and <em>Ichthyosaura alpestris</em>) and is thought to be contained but not eradicated at present (Martel <em>et al.</em> 2020). Modelling (see Supplementary Information) has found this species to be at significant risk from <em>Bsal</em> in the next 15–30 years (which represents three generations).",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species occurs in many protected areas. In Portugal, it is present in Peneda-Gerês National Park where the population of Carris Lake has been severely impacted by disease. It is also protected by national legislation throughout its range (Gasc <em>et al.</em> 1997), and is listed on Annex IV of the EU Natural Habitats Directive and Annex III of the Bern Convention. Re-introductions and/or translocations of this species have been made in the area of Madrid, Spain.<br/><br/><strong><em>Conservation Needed<br/></em></strong>There is also an urgent need for a EU (European Union) wide coordinated approach and implementation of the <em>Bsal </em>Action Plan by Gilbert<em> et al.</em> (2020), which was commissioned by the European Commission.<br/><br/><em><strong>Research Needed</strong></em><br/>Further research into the impacts of disease on this species is needed. In light of the threat of <em>Bsal</em>, the population should also be monitored especially if other outbreaks occur within its range.",
+    "use_trade": "This species is found in the national and international pet trade.",
+    "rationale": "This European endemic species is assessed as Vulnerable (VU A3ce) due to a projected population decline estimated to be more than 30% over the next 15–30 years (which represents three generation lengths), from the potential impact of <em>Batrachochytrium salamandrivorans</em> (<em>Bsal</em>) on this species, and ongoing habitat loss and degradation that is occurring throughout its range.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Abstraction of surface water (agricultural use)"
+      },
+      "code": "7_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Lepomis gibbosus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Procambarus clarkii",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Batrachochytrium salamandrivorans",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": "Iridovirus",
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_5_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Arntzen, J., Bosch, J., García París, M., Jehle, R., Lizana, M., Marquez, R., Martel, A., Martinez Solano, I., Miaud, C., Pasmans, F., Recuero Gil, E., Salvador, A., Sá-Sousa, P. & Tejedo, M.",
+      "value": [
+        "Paulo Sá-Sousa (SRLI Reptile Assessment)",
+        "Alfredo Salvador",
+        "Iñigo Martinez Solano (Amphibian RLA)",
+        "Claude Miaud (Amphibian RLA)",
+        "Jan Willem Arntzen",
+        "Mario García París (Museo de Ciencias Naturales de Madrid)",
+        "Jaime Bosch",
+        "Miguel Tejedo",
+        "Miguel Lizana",
+        "Ernesto Recuero Gil",
+        "Robert Jehle",
+        "Frank Pasmans",
+        "An Martel",
+        "Rafael Marquez"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hobin, L.",
+      "value": [
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "An amended assessment was created in order to revise the assessment credits, with the individual experts involved in the assessment being credited as Assessors in alphabetical order."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Martel, A., Spitzen-van der Sluijs, A., Blooi, M., Bert, M., Ducatelle, R., Fisher, M.C., Woeltjes, A., Bosman, W., Chiers, K., Bossuyt, F. and Pasmans, F. 2013. <i>Batrachochytrium salamandrivorans</i> sp. nov. causes lethal chytridiomycosis in amphibians. <i>Proceedings of the National Academy of Sciences of the United States of America</i> Early Edition: doi: 10.1073/pnas.1307356110.",
+      "year": "2013",
+      "title": "<i>Batrachochytrium salamandrivorans</i> sp. nov. causes lethal chytridiomycosis in amphibians",
+      "author": "Martel, A., Spitzen-van der Sluijs, A., Blooi, M., Bert, M., Ducatelle, R., Fisher, M.C., Woeltjes, A., Bosman, W., Chiers, K., Bossuyt, F. and Pasmans, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasc, J.-P. <i>et al.</i> (ed.). 1997. <i>Atlas of Amphibians and Reptiles in Europe</i>. pp. 494. Societas Europea Herpetologica & Museum National d’Histoire Naturelle, Paris.",
+      "year": "1997",
+      "title": "Atlas of Amphibians and Reptiles in Europe",
+      "author": "Gasc, J.-P. <i>et al.</i>",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lizana, M. and Marco, A. 2001. Ultraviolet (UV) radiation and the decline of amphibian populations in Central Spain. <i>FrogLog</i> 44.",
+      "year": "2001",
+      "title": "Ultraviolet (UV) radiation and the decline of amphibian populations in Central Spain",
+      "author": "Lizana, M. and Marco, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lizana, M., Pérez-Mellado, V. and Ciudad, M.J. 1990. Analysis of the structure of an amphibian community in the Central System of Spain. <i>Herpetological Journal</i> 1: 435-446.",
+      "year": "1990",
+      "title": "Analysis of the structure of an amphibian community in the Central System of Spain",
+      "author": "Lizana, M., Pérez-Mellado, V. and Ciudad, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pleguezuelos, J.M., Márquez, R. and Lizana, M. 2002. <i>Atlas y Libro Rojo de los Anfibios y Reptiles de España</i>. Dirección General de la Conservación de la naturaleza-Associación Herpetológica Española, Madrid.",
+      "year": "2002",
+      "title": "Atlas y Libro Rojo de los Anfibios y Reptiles de España",
+      "author": "Pleguezuelos, J.M., Márquez, R. and Lizana, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pleguezuelos, J.M. and Villafranca, C. 1997. Distribución altitudinal de la herpetofauna ibérica. In: J.M. Pleguezuelos (ed.), <i>Distribucion y Biogeografia de los Anfibios y Reptiles en España y Portugal</i>, pp. 321-334. Monografías de Herpetología 3. Universidad de Granada-Asociación Herpetológica Española, Granada.",
+      "year": "1997",
+      "title": "Distribución altitudinal de la herpetofauna ibérica",
+      "author": "Pleguezuelos, J.M. and Villafranca, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Godinho, R., Teixeira, J., Rebelo, R., Segurado, P., Loureiro, A., Álvares, F., Gomes, N., Cardoso, P., Camilo-Alves, C. and Brito, J.C. 1999. Atlas of the continental Portuguese herpetofauna: an assemblage of published and new data. <i>Revista Española de Herpetología</i> 13: 61-81.",
+      "year": "1999",
+      "title": "Atlas of the continental Portuguese herpetofauna: an assemblage of published and new data",
+      "author": "Godinho, R., Teixeira, J., Rebelo, R., Segurado, P., Loureiro, A., Álvares, F., Gomes, N., Cardoso, P., Camilo-Alves, C. and Brito, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pleguezuelos, J.M. 1997. <i>Distribucion y Biogeografia de los Anfibios y Reptiles en España y Portugal</i>. Asociacion Herpetologica Española, Las Palmas de Gran Canarias.",
+      "year": "1997",
+      "title": "Distribucion y Biogeografia de los Anfibios y Reptiles en España y Portugal",
+      "author": "Pleguezuelos, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Malkmus, R. 2004. <i>Amphibians and reptiles of Portugal, Madeira and the Azores-Archipelago</i>. A.R.G. Gantner Verlag K.G., Ruggel (Germany).",
+      "year": "2004",
+      "title": "Amphibians and reptiles of Portugal, Madeira and the Azores-Archipelago",
+      "author": "Malkmus, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, E.N. 2003. <i>Reptiles and amphibians of Europe</i>. Princeton University Press.",
+      "year": "2003",
+      "title": "Reptiles and amphibians of Europe",
+      "author": "Arnold, E.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorn, R. 1968. <i>Les salamandres d’Europe, d’Asia, et d’Afrique du Nord</i>. Éditions Paul Lechevalier, Paris.",
+      "year": "1968",
+      "title": "Les salamandres d’Europe, d’Asia, et d’Afrique du Nord",
+      "author": "Thorn, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Griffiths, R.A. 1996. <i>Newts and Salamanders of Europe</i>. Poyser Natural History, London.",
+      "year": "1996",
+      "title": "Newts and Salamanders of Europe",
+      "author": "Griffiths, R.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Böhme, W, Grossenbacher, K. and Thiesmeier, B. 1999. <i>Handbuch der Reptilien und Amphibien Europas, band 4/I:Schwanzlurche (</i>Urodela<i>)</i>.",
+      "year": "1999",
+      "title": "",
+      "author": "Böhme, W, Grossenbacher, K. and Thiesmeier, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jehle, R. 2000. The terrestrial summer habitat of radio-tracked Great Crested Newts (Triturus cristatus) and Marbled Newts (T. marmoratus). <i>Herpetological Journal</i>: 137-142.",
+      "year": "2000",
+      "title": "The terrestrial summer habitat of radio-tracked Great Crested Newts (Triturus cristatus) and Marbled Newts (T. marmoratus)",
+      "author": "Jehle, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arntzen, J.W. and Wallis, G.P. 1999. Geographic variation and taxonomy of crested newts (<i>Triturus cristatus</i> superspecies): morphological and mitochondrial DNA data. <i>Contributions to Zoology</i> 68: 181-203.",
+      "year": "1999",
+      "title": "Geographic variation and taxonomy of crested newts (<i>Triturus cristatus</i> superspecies): morphological and mitochondrial DNA data",
+      "author": "Arntzen, J.W. and Wallis, G.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martínez-Solano, I., Bosch, J. and García-París, M. 2003. Demographic trends and community stability in a montane amphibian assemblage. <i>Conservation Biology</i> 17(1): 238-244.",
+      "year": "2003",
+      "title": "Demographic trends and community stability in a montane amphibian assemblage",
+      "author": "Martínez-Solano, I., Bosch, J. and García-París, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Soares, C., Alves de Matos, A., Arntzen, J.W., Carretero, M. and Loureiro, A. 2003. Amphibian mortality in a national park in the north of Portugal. <i>FrogLog</i>.",
+      "year": "2003",
+      "title": "Amphibian mortality in a national park in the north of Portugal",
+      "author": "Soares, C., Alves de Matos, A., Arntzen, J.W., Carretero, M. and Loureiro, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-París, M., Arano, B. and Herrero, P. 2001. Molecular characterisation of the contact zone between <i>Triturus pygmaeus</i> and <i>T. marmoratus</i> (Caudata: Salamandridae) in central Spain and their taxonomic assessment. <i>Revista Espanola de Herpetologia</i> 15: 115-126.",
+      "year": "2001",
+      "title": "Molecular characterisation of the contact zone between <i>Triturus pygmaeus</i> and <i>T. marmoratus</i> (Caudata: Salamandridae) in central Spain and their taxonomic assessment",
+      "author": "García-París, M., Arano, B. and Herrero, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "García-París, M., Herrero, P., Martín, C., Dorda, J., Esteban, M. and Arano, B. 1993. Morphological characterization, cytogenetic analysis, and geographical distribution of the Pygmy Marbled Newt <i>Triturus marmoratus pygmaeus</i> (Wolterstorff, 1905) (Caudata: Salamandridae). <i>Bijgragen tot de Dierkunde</i> 63(1): 3-14.",
+      "year": "1993",
+      "title": "Morphological characterization, cytogenetic analysis, and geographical distribution of the Pygmy Marbled Newt <i>Triturus marmoratus pygmaeus</i> (Wolterstorff, 1905) (Caudata: Salamandridae)",
+      "author": "García-París, M., Herrero, P., Martín, C., Dorda, J., Esteban, M. and Arano, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Froufe, E., Arntzen, J.W. and Loureiro, A. 1999. Dead newts in Peneda-Gerês, Portugal. <i>FrogLog</i>.",
+      "year": "1999",
+      "title": "Dead newts in Peneda-Gerês, Portugal",
+      "author": "Froufe, E., Arntzen, J.W. and Loureiro, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Caetano, M.H. and Castanet, J. 1993. Variability and microevolutionary patterns in Triturus marmoratus from Portugal: age, size, longevity and individual growth. <i>Amphibia-Reptilia</i>: 117-130.",
+      "year": "1993",
+      "title": "Variability and microevolutionary patterns in Triturus marmoratus from Portugal: age, size, longevity and individual growth",
+      "author": "Caetano, M.H. and Castanet, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jakob, C., Seitz, A., Crivelli, A.J. and Miaud, C. 2002. Growth cycle of the marbled newt (Triturus marmoratus) in the Mediterranean region assessed by skeletochronology. <i>Amphibia-Reptilia</i>: 407-418.",
+      "year": "2002",
+      "title": "Growth cycle of the marbled newt (Triturus marmoratus) in the Mediterranean region assessed by skeletochronology",
+      "author": "Jakob, C., Seitz, A., Crivelli, A.J. and Miaud, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jehle, R. and Arntzen, J.W. 2000. Post-breeding migrations of newts (<i>Triturus cristatus</i> and <i>T. marmoratus</i>) with contrasting ecological requirements. <i>Journal of Zoology</i>: 297-306.",
+      "year": "2000",
+      "title": "Post-breeding migrations of newts (<i>Triturus cristatus</i> and <i>T. marmoratus</i>) with contrasting ecological requirements",
+      "author": "Jehle, R. and Arntzen, J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "O'Hanlon, S., Rieux, A., Farrer, R., Rosa, G.M., Waldman, B., Bataille, A., Kosch, T., Murray, K., Brookes, L., Brankovics, B., Martel, A., Pasmans, F., Sanchez, A., Cunningham, A., Schmidt, B., Miaud, C., Soto-Azat, C., Gower, D.J., Schmeller, D., Loyau, A., Courtois, E., Wombwell, E., Toledo, L.F., Clare, F., Spagnoletti, M., Smith, F., Höglund, J., Vörös, J., Zamudio, K.R., Berger, L., Skerratt, L., Fumagalli, M., Böll, S., Martin, M., Wales, N., Ghosh, P., Verster, R., Meurling, S., Minting, P., Doherty-Bone, T.M., Jenkinson, T., James, T.J., Gilbert, T., Shelton, J., Wierzbicki, C., Hintz, W., Tessa, G., Aanensen, D., Weldon, C., Bosch, J., Balloux, F., Garner, T.W.J. and Fisher, M.C. 2018. Recent Asian origin of chytrid fungi causing global amphibian declines. <i>Science</i> 6389: 621-627.",
+      "year": "2018",
+      "title": "Recent Asian origin of chytrid fungi causing global amphibian declines.",
+      "author": "O'Hanlon, S., Rieux, A., Farrer, R., Rosa, G.M., Waldman, B., Bataille, A., Kosch, T., Murray, K., Brookes, L., Brankovics, B., Martel, A., Pasmans, F., Sanchez, A., Cunningham, A., Schmidt, B., Miaud, C., Soto-Azat, C., Gower, D.J., Schmeller, D., Loyau, A., Courtois, E., Wombwell, E., Toledo, L.F., Clare, F., Spagnoletti, M., Smith, F., Höglund, J., Vörös, J., Zamudio, K.R., Berger, L., Skerratt, L., Fumagalli, M., Böll, S., Martin, M., Wales, N., Ghosh, P., Verster, R., Meurling, S., Minting, P., Doherty-Bone, T.M., Jenkinson, T., James, T.J., Gilbert, T., Shelton, J., Wierzbicki, C., Hintz, W., Tessa, G., Aanensen, D., Weldon, C., Bosch, J., Balloux, F., Garner, T.W.J. and Fisher, M.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gilbert, M.J., Spitzen-van der Sluij, A.M., Canessa, S., Bosch, J., Cunningham, A.A., Grasselli, E., Laudelout, A., Lötters, S., Miaud, C., Salvidio, S., Veith, M., Martel, A. and\tPasmans, F. 2020. Mitigating\t<i>Batrachochytrium salamandrivorans</i> in Europe. <i>Batrachochytrium salamandrivorans</i> Action Plan for European urodeles. EU Commission, Nijmegen, the Netherlands.",
+      "year": "2020",
+      "title": "Mitigating\t<i>Batrachochytrium salamandrivorans</i> in Europe. <i>Batrachochytrium salamandrivorans</i> Action Plan for European urodeles.",
+      "author": "Gilbert, M.J., Spitzen-van der Sluij, A.M., Canessa, S., Bosch, J., Cunningham, A.A., Grasselli, E., Laudelout, A., Lötters, S., Miaud, C., Salvidio, S., Veith, M., Martel, A. and\tPasmans, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martel, A., Blooi, M., Adriaensen, C., Van Rooij, P., Beukema, W., Fisher, M.C., Farrer, R.A., Schmidt, B.R., Tobler, U., Goka, K. and Lips, K.R. 2014. Recent introduction of a chytrid fungus endangers Western Palearctic salamanders. <i>Science</i> 346: 630-631.",
+      "year": "2014",
+      "title": "Recent introduction of a chytrid fungus endangers Western Palearctic salamanders",
+      "author": "Martel, A., Blooi, M., Adriaensen, C., Van Rooij, P., Beukema, W., Fisher, M.C., Farrer, R.A., Schmidt, B.R., Tobler, U., Goka, K. and Lips, K.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martel, A., Vila‐Escale, M., Fernández‐Giberteau, D., Martinez‐Silvestre, A., Canessa, S., Van Praet, S., Pannon, P., Chiers, K., Ferran, A., Kelly, M. and Picart, M. 2020. Integral chain management of wildlife diseases. <i>Conservation Letters</i> 13(2): p.e12707.",
+      "year": "2020",
+      "title": "Integral chain management of wildlife diseases",
+      "author": "Martel, A., Vila‐Escale, M., Fernández‐Giberteau, D., Martinez‐Silvestre, A., Canessa, S., Van Praet, S., Pannon, P., Chiers, K., Ferran, A., Kelly, M. and Picart, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nguyen, T.T., Nguyen, T.V., Ziegler, T., Pasmans, F. and Martel, A. 2017. Trade in wild anurans vectors the urodelan pathogen <i>Batrachochytrium salamandrivorans</i> into Europe. <i>Amphibia-Reptilia</i> 38: 554-556.",
+      "year": "2017",
+      "title": "Trade in wild anurans vectors the urodelan pathogen <i>Batrachochytrium salamandrivorans</i> into Europe",
+      "author": "Nguyen, T.T., Nguyen, T.V., Ziegler, T., Pasmans, F. and Martel, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Thein, J., Reck, U., Dittrich, C., Martel, A., Schulz, V. and Hansbauer, G. 2020. Preliminary report on the occurrence of <i>Batrachochytrium salamandrivorans</i> in the Steigerwald, Bavaria, Germany. <i>Salamandra</i> 56(3): 227-229.",
+      "year": "2020",
+      "title": "Preliminary report on the occurrence of <i>Batrachochytrium salamandrivorans</i> in the Steigerwald, Bavaria, Germany.",
+      "author": "Thein, J., Reck, U., Dittrich, C., Martel, A., Schulz, V. and Hansbauer, G",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Europe"
+      },
+      "code": "2"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

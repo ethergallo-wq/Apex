@@ -1,0 +1,1439 @@
+{
+  "assessment_date": "2018-08-15T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41291,
+  "criteria": "A2abce",
+  "url": "https://www.iucnredlist.org/species/41291/170619657",
+  "citation": "Villafuerte, R. & Delibes-Mateos, M. 2019. Oryctolagus cuniculus (errata version published in 2020). The IUCN Red List of Threatened Species 2019: e.T41291A170619657. Accessed on 05 May 2026.",
+  "assessment_id": 170619657,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41291,
+    "scientific_name": "Oryctolagus cuniculus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "LAGOMORPHA",
+    "family_name": "LEPORIDAE",
+    "genus_name": "Oryctolagus",
+    "species_name": "cuniculus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Lagomorph Specialist Group (rabbits, pikas and hares)",
+        "url": "https://www.lagomorphspecialistgroup.org/",
+        "description": "Co-Chaisr: Andrew T. Smith (email: a.smith@asu.edu) and Hayley Lanier (email: hclanier@ou.edu)\nRed List Authority Coordinator: Charlotte Johnston (email: Charlotte.Johnston@asu.edu)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Coney",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Coelho",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Conejo común",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Conejo de monte",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Conejo europeo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Coniglio selvatico europeo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Lapin commun",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Lapin de garenne",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Wildkaninchen",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Αγριοκούνελο",
+        "language": "gre"
+      },
+      {
+        "main": true,
+        "name": "European Rabbit",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Lepus cuniculus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Lepus",
+        "species_name": "cuniculus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "4.15",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "756308",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Original distribution of the European Rabbit after last ice age included Iberian Peninsula (Spain and Portugal) to south-western France and perhaps northern Africa, and the introduction throughout western Europe is thought to have occurred as early as the Roman period (Gibb 1990, Mitchell-Jones <em>et al</em>. 1999). Currently the species ranges through all Western European countries, Ireland and the UK (including islands), Austria, parts of Sweden, Poland, the Czech Republic, Hungary, Romania, Ukraine, and Mediterranean islands Sicily, Corsica, Sardinia, Crete, the Balearics (Thompson and King 1994), Croatia, and Slovakia (Mitchell-Jones <em>et al</em>. 1999). It was introduced to Australia and New Zealand, where it is now widespread (Thompson and King 1994, Cooke 2014, Cooke <em>et al. </em>2018). European Rabbits have been introduced to South America multiple times since the fifteenth century, but the species maintains a limited range in Argentina and Chile (Delibes and Delibes-Mateos 2015). European Rabbits have similarly been introduced on over 800 islands throughout the world, giving evidence to the plasticity of the species (Flux and Fullagar 1992, Thompson and King 1994). The European Rabbit occurs in a wide variety of habitats, and it is usually found below 1,500 m in elevation in its native range (Fa <em>et al</em>. 1999), although in Tenerife (Canary Islands) it is extremely abundant over 3,000 m (&gt;7.5 rabbits/ha; Cubas <em>et al.</em> 2018).",
+    "population": "The European Rabbit decline has escalated in recent years. As of 2005,  rabbit populations in the Iberian Peninsula had declined to as little as  5-10% of the number from 1950, based on the decrease in Doñana National  Park, a protected area (Delibes <em><em><em>et al.</em></em></em> 2000, Moreno <em><em><em>et al.</em></em></em>  2007). Density of rabbits has been recorded at a maximum of 40 per  hectare in prime habitat, though the abundance has declined  significantly since the arrival of new threats, primarily the spread of  viral diseases (myxomatosis and RHD), in the mid-20th century  (Delibes-Mateos <em><em><em>et al.</em></em></em> 2009a, Villafuerte <em><em><em>et al.</em></em></em>  2017). In Portugal, a population reduction of 24% was recorded between  1995 and 2002 (Alves and Ferreira 2002), but this decline was much more  pronounced previously as a consequence of myxomatosis and RHD outbreaks  in the 1950s and late 1980s, respectively. Decline has been uneven  across the range, due to varying degrees of threat (Ward 2005,  Delibes-Mateos <em><em><em>et al.</em></em></em> 2009a).<br/><br/>Most recently,  beginning in 2011-2012, a new wave of disease (a new variant of Rabbit  Hemorrhagic Disease virus – GI.2/RHDV2/b) has swept through many rabbit  populations causing massive declines. This variant has completely  replaced the traditional RHDv strain across Iberia (Calvete <em><em><em>et al.</em></em></em> 2014, Lopes <em><em><em>et al.</em></em></em>  2015), and its drastic effects are evident. In an area that  traditionally held the highest rabbit densities within Doñana National  Park (i.e. Coto del Rey) – which thus held a core population of Iberian  Lynx – there was a decline of greater than 80% during 2012-2014. In  low-density rabbit areas within the park similar declines have been  reported (Delibes-Mateos <em><em><em>et al.</em></em></em> 2014b). Rabbit  density in the proximity to Yeguas River in Andújar and Cardeña National  parks in southern Spain, where the largest Iberian Lynx population  lives, the rabbit density declined from more than 3.5 rabbits/ha in 2010  to less than 1 rabbit/ha in 2013 (a decline of approximately 75%).  Hunters have similarly noted the decreased abundance of rabbits based on  declines of 70-80% in the hunter bags in some estates compared with  recent years (Delibes-Mateos <em><em><em>et al.</em></em></em> 2014b). Also,  rabbit abundance decreased by 57% between 2010 and 2014 in 26 localities  surveyed in the Córdoba province (southern Spain), only 11% of these  populations experienced a positive trend during the study period  (Guerrero-Casado <em><em><em>et al.</em></em></em> 2016). The recent overall  estimated 60-70% decline in populations of European Rabbits has been  followed by decreases of 65.7% in Iberian Lynx and 45.5% in Spanish  Imperial Eagle fecundities (Monterroso <em><em><em>et al.</em></em></em> 2016).",
+    "habitats": "The European Rabbit prefers a mixed habitat of Mediterranean oak savanna  or scrub-forest, or areas with around 40% cover for shelter from  predators and open areas that support their diet of grasses and cereals  (Moreno and Villafuerte 1995, Calvete <em><em>et al.</em></em> 2004).  Nevertheless, in the Iberian Peninsula, rabbits are increasingly found  at high densities in intensively-managed farmland areas (Barrio <em><em>et al.</em></em> 2010). The European Rabbit builds warrens in soft soil (Calvete <em><em>et al.</em></em>  2004), but finds shelter in scrub in rocky areas, though predation risk  is higher in above ground dwellings (Villafuerte and Moreno 1997). The  natural range of the European Rabbit on the Iberian Peninsula is warm  and dry, rarely occurring above 1,500 m (Fa <em><em>et al.</em></em> 1999). The rabbits are territorial and tend to live and forage in colony groups of up to 20 adults (Mitchell-Jones <em><em>et al.</em></em> 1999), and are crepuscular (Lombardi <em><em>et al.</em></em> 2003).<br/><br/>The  European Rabbit can breed throughout the year (uncommon in lagomorphs),  though this is limited by climate and resource availability (Bell and  Webb 1991, Villafuerte <em><em>et al.</em></em> 1997). They raise altricial  young between three and six at a time, which leave the warren in under a  month (Gibb 1990). Females reach sexual maturity on average in 3.5  months, males in 4 months, and can live up to 9 years (Macdonald and  Barrett 2001), though many succumb to predation and other perils much  earlier. Up to 75% of young rabbits are killed by predators before they  establish a territory (Gibb 1990). Annual mortality is usually higher  than 50% (e.g. Cowan 1983, Webb 1991), but it can be highly variable  among years, seasons, and habitats (Lombardi <em><em>et al.</em></em> 2003, Moreno <em><em>et al.</em></em> 2004). The head-body length is 34-50 mm (Macdonald and Barrett 2001).<br/><br/>The European Rabbit is an ecosystem engineer and a keystone species (Delibes-Mateos <em><em>et al.</em></em> 2007, Galvez-Bravo <em><em>et al.</em></em> 2009). The diet of the Iberian Lynx consists of 80-100% rabbits (Delibes <em><em>et al.</em></em> 2000), the Imperial Eagle consumes 40-80% of its diet in rabbits (Delibes-Mateos <em><em>et al.</em></em>  2008), and the decline of the European Rabbit has been linked to the  near extinction of these two predators (Ferrer and Negro 2004).<br/><br/>The  European Rabbit is responsible for landscape modelling that supports  vegetation growth typical to Spain and Portugal and creates habitat for  wildlife species (e.g. Galvez-Bravo <em><em>et al.</em></em> 2009). Its presence increases species richness (Delibes-Mateos <em><em>et al.</em></em> 2008) and increases soil fertility (Willott <em><em>et al.</em></em> 2000).",
+    "threats": "The greatest force behind the decline of the European Rabbit has been  two diseases that appeared in the 20th century. Myxomatosis is a South  American virus, primarily spread by insect (mosquito and flea) vectors,  that was intentionally introduced by a farmer in the mid-1950s in France  to control the rabbit population (Lavazza and Cooke 2018). An estimated  90% of European Rabbits perished due to myxomatosis after the first  outbreaks in the 1950s (Muñoz 1960), after that, the disease became  endemic to Iberia, where it currently affects most rabbit populations  (Villafuerte <em><em>et al.</em></em> 2017). After symptom onset, death  results in an average of 13 days. Rabbits with the virus are made more  vulnerable to predators (Villafuerte <em><em>et al.</em></em> 1995) and more susceptible to Rabbit Haemorrhagic Disease (RHD; Barnett <em><em>et al.</em></em> 2018). Juveniles are more susceptible to myxomatosis than adults (Villafuerte <em><em>et al.</em></em> 2017). Myxomatosis cases peak during early summer to fall (Villafuerte <em><em>et al.</em></em> 2017).<br/><br/>Rabbit  Haemorrhagic Disease is caused by a lagovirus that appeared in Europe  in the late 1980’s, initially causing the death of 55-75% of rabbits in  the Iberian Peninsula (Villafuerte <em><em>et al.</em></em> 1995). RHD is  primarily spread by direct contact. Death typically results within 24  hours of symptom onset, with a short incubation time of under 48 hours  (Villafuerte <em><em>et al.</em></em> 1995). Adult rabbits are more  susceptible to RHD than juveniles (unlike myxomatosis), and RHD is more  prevalent in late winter and spring. Global warming may increase disease  incidence by creating a warmer, drier climate in Spain and Portugal  (Ward 2005).<br/><br/>The new variant of RHD (GI.2/RHD2/b) was originally  described in France in 2010, and since 2011-2012 it has caused  wide-spread mortality among European Rabbits in Spain (Delibes-Mateos <em><em>et al.</em></em> 2014b) and Portugal (Monterroso <em><em>et al.</em></em>  2016). Declines of from 75% - 80% within two years have decimated many  populations of European Rabbits – particularly in their native habitat,  which coincides with core habitat occupied by Iberian Lynx  (Delibes-Mateos <em><em>et al.</em></em> 20014b, Monterroso <em><em>et al.</em></em> 2016). The new variant has fully replaced classic RHD strains in Spain and Portugal (Calvete <em><em>et al.</em></em> 2014, Lopes <em><em>et al.</em></em> 2015). Unlike classic RHD, the new variant kills young rabbits (Dalton <em><em>et al.</em></em> 2012, Abrantes <em><em>et al.</em></em> 2013), compromising population recruitment.<br/><br/>Habitat loss and fragmentation are continuing to cause declines in European Rabbits (Delibes-Mateos <em><em>et al.</em></em>  2010), which require pastures-crops and scrub- forest vegetation for  food and shelter, respectively (Moreno and Villafuerte 1995). Modern  intensive agriculture negatively impacts rabbits more than small scale  mixed farming, which may have initially increased suitable habitat  within the rabbit’s natural range (Delibes-Mateos <em><em>et al.</em></em>  2010). High intensity livestock production and high ungulate numbers  contributes to habitat degradation and resource competition (Carpio <em><em>et al.</em></em>  2014). Fallow farm land often returns to closed forest rather than open  scrub, which is not a suitable habitat (Moreno and Villafuerte 1995,  Calvete <em><em>et al.</em></em> 2004). Tree plantations planted in Spain  and Portugal have replaced habitat for both rabbits and their predators  and urbanization presents a threat as does increased fire danger in  existing habitat, and climate change (Ward 2005, Tablado and Revilla  2012).<br/><br/>Exploitation of European Rabbis by humans may have become a  threat in some places, especially in the case of populations that are  already declining due to other causes, so rabbits cannot sustain hunting  and control measures as well as in the past. As an example, in Aragón  (northeastern Spain) the strongest negative rabbit population trends  were found in areas with high hunting pressure (Williams <em><em>et al.</em></em> 2007). Farmers and hunters control rabbit populations in farmland areas directly by shooting and trapping (Ríos-Saldaña <em><em>et al.</em></em>  2010). Farming indirectly causes decline through habitat conversion and  excessive pesticide and fertilizer use. Over 70% of Spain is designated  as hunting area, and in recent years some hunters have reported a 70% -  80% decline in hunting success due to lower rabbit populations  resulting from the new variant of RHDv (Delibes-Mateos <em><em>et al.</em></em> 2014b).<br/><br/>Future  threats to the European Rabbit may include genetically modified  versions of the rabbit viruses being developed in Australia to reduce  rabbit numbers where the species is a major pest. Unlicensed release of  modified viruses to the native range could devastate the remaining  populations (Angulo 2001). Finally. the mixture of both subspecies due  the restocking of rabbits for hunting or predator conservation purposes,  may also become a threat by losing the natural genetic diversity  compromising the survival and reproduction in the wild (Piorno <em><em>et al.</em></em> 2015).",
+    "measures": "Important Conservation Actions Needed:<br/><br/>Conservation for the  European Rabbit was delayed for several decades after their decline  became apparent. Efforts began to take shape in the late 1980's due to  previous political isolation of its native range and the lack of  information on the species as a keystone to Iberian ecosystems. The  issue of eradication of European Rabbits from introduced areas (e.g.  Australia, New Zealand, and many islands) may have diminished the  appearance of rabbit decline in its native range. Increased interest in  the specialist predators that depend upon the rabbits and the issue of  the sustainability of hunting populations brought the species into the  public eye, but failed to address some issues of rabbit conservation,  such as its role as an ecosystem modeler and the effects of habitat loss  on populations (Gibb 1990, Ward 2005).<br/><br/>Ward's (2005) report was  key to highlighting the threats associated with the European Rabbit, and  outlined specific goals needed to achieve rabbit recovery:<br/><ul><li>Establish rabbit monitoring programs to accurately describe decline directly.</li></ul><ul><li>Create and implement a management plan for rabbit recovery that  prioritizes critical ranges and populations. Rabbit management plans  started long ago, although they were embedded in the recovery plans of  other species, such as the Imperial Eagle or Iberian Lynx. This  situation continues in many areas, and this goal attempts to ensure  dedicated plans to conserve European Rabbits.</li></ul><ul><li>Programs to limit  the incidence and impact of new and existing diseases may be difficult  in the wild, though some success has been observed in captive  populations. Current vaccines do not confer total immunity to RHD or  myxomatosis, have side effects such as increasing rabbit stress and  vulnerability to predators, and have short-lived effectiveness. In  addition, the need to vaccinate rabbits individually in the field is  unmanageable. Any genetically modified live virus vaccine is  controversial because of the possibility of unpredictable evolution of  the virus, and its potential spread to rabbit populations outside the  natural range of European Rabbits where eradication, not conservation,  is the objective. Increasing habitat quality may indirectly help rabbit  disease resistance given that it is known that high density populations  respond better to disease outbreak (Calvete 2006, Cotilla <em><em>et al.</em></em> 2010, Guerrero-Casado <em><em>et al.</em></em>  2016). Controlling disease vectors for myxomatosis has not been found  to be effective. Preventing the spread of modified immune-contraceptive  viruses engineered in Australia to control rabbit fertility may become  an issue.</li></ul><ul><li>Reducing hunting impact is not guaranteed to reduce  decline because disease effects often outweigh hunting as a threat, and  because implementation of restrictions would likely not be realistic  given the prevalence of hunting in Iberia, where in many areas their  management strategies are even more effective than the ones carried out  in some protected areas to enhance rabbit populations (Delibes-Mateos <em><em>et al.</em></em>  2009b). Revisions to existing hunting seasons have been proposed, but  only some small changes have been tested. Probably, a greater  distinction between hunting regulations should exist between areas where  rabbits are in decline and agricultural areas where the species is  damaging crops, in spite that there are more legal facilities to hunt  rabbits in the latter. A growing recognition among hunters of the issue  of rabbit decline has led to frequent self-restraint (Angulo and  Villafuerte 2003). As a very large demographic, hunters could represent a  powerful force in maintaining sustainable hunting populations.</li></ul><ul><li>Rabbit populations affected by agriculture represent a sensitive issue,  as rabbits are typically seen as a pest and an economic liability for  farmers. Despite pressures from environmental groups, many farmers and  hunters continue to take measures to reduce rabbit numbers even in  agro-forestry areas where the species plays key ecological roles.  Awareness among farmers and hunters of rabbit conservation issues is  generally low. Government policy allows hunters to control rabbits in  farmland areas with permits (Ríos-Saldaña <em><em>et al.</em></em> 2010),  and though crop loss due to rabbit damage in some cases is economically  payed through insurance, no requirement of those compensated is made for  conservation.</li></ul><ul><li>Halting and reversing habitat loss and  fragmentation was aided in the past decades by the establishment of  national parks in Spain, but most optimal rabbit habitat is on private  land (Delibes-Mateos <em><em>et al.</em></em> 2009b). A shift from  high-intensity farming and monoculture forestry back to mixed  agro-forestry and small scale farming would help sustain rabbit  populations (Calvete <em><em>et al.</em></em> 2006, Delibes-Mateos <em><em>et al.</em></em>  2010). Natura 2000 promotion of sustainable development and EU  subsidies supporting environmentally friendly agriculture are promising  but underfunded and too new to demonstrate a significant impact.  Importantly, land abandonment in mountain regions has resulted in the  encroachment of forests and scrubland, which is detrimental for rabbits  (Delibes-Mateos <em><em>et al.</em></em> 2010). In these places, promoting  open areas (i.e. pastures or small scale farming) through scrub  clearance is essential to increase food availability for rabbits (Moreno  and Villafuerte 1995).</li></ul><ul><li>Reintroductions have been a key focus  of conservation efforts, with up to 500,000 released annually in Spain  and France. The efforts so far have not increased rabbit populations in  most cases, due to the unappropriated selection of the animals to be  released and increased mortality from predation and inadvertent spread  of disease, which may actually have a net negative impact. The flaws in  reintroduction practices do not completely negate the importance of the  efforts, which have been shown to help sustain predators and hunting  populations at least locally (e.g. Rouco <em><em>et al.</em></em> 2008, Guerrero-Casado <em><em>et al.</em></em>  2013). The success of reintroductions may be increased by fencing from  predators and competitors and preventing short-term dispersal in  addition to providing feeding resources (Rouco <em><em>et al.</em></em> 2008).</li></ul><ul><li>Though rabbit predators have not directly caused rabbit decline,  factors that have caused initial decline (e.g. disease, habitat loss)  may be exacerbated by some opportunistic predators (Fernández de Simón <em><em>et al.</em></em>  2015). Game keeping efforts to increase rabbit populations often focus  on predator reduction, and sometimes predators of conservation concern  are affected because non-selective practices are used (e.g.  cage-trapping or poisoning). Efforts could be more productively focused  on increasing habitat protection (e.g. building artificial rabbit  warrens), reduction of rabbit mortality by humans (hunting,  inappropriate management practices) and reducing disease impacts.</li></ul><br/>The  importance of the European Rabbit within its natural range requires  that it be considered for listing in spite of its global abundance. In  its original range it is a keystone to the Mediterranean ecosystem, as  prey for specialist predators (Virgos <em><em>et al.</em></em> 2005, Delibes-Mateos <em><em>et al.</em></em> 2008) and as a landscape modeler (Galvez-Bravo <em><em>et al.</em></em> 2009, Delibes-Mateos <em><em>et al.</em></em> 2008). It is an important game species in Spain and Portugal (Delibes-Mateos <em><em>et al.</em></em> 2014a).",
+    "use_trade": "This is an important game species.&#160;Domesticated forms are important pet animals and are also used in labs for experiments.",
+    "rationale": "The European Rabbit is a widespread colonizer and is considered a pest  outside its natural range, where eradication of the rabbit is priority  for conservation (Cooke 2014, Cooke, Flux and Bonino 2018). However,  only the natural range of Spain, Portugal, and southern France are  considered in this global assessment. Assessment of the European Rabbit  is filled with contradictions (Lees and Bell 2008, Delibes-Mateos <em>et al.</em>  2011). The European Rabbit is an important game species in Spain,  Portugal and France, and the agriculture sector considers the species a  pest (not a typical situation for a putatively Threatened species). On  the other hand, it is an important ecosystem engineer (Galvez-Bravo <em>et al.</em> 2009) and a keystone species within its native range (Delibes-Mateos <em>et al.</em>  2008), serving as the dominant prey item for the highly endangered  Iberian Lynx (<em>Lynx pardinus</em>) and the Spanish Imperial Eagle (<em>Aquila  adalberti</em>) (Ferrer and Negro 2004). However, from 1950 onwards, the  European Rabbit declined dramatically throughout its native range to  densities less than 10% of those found earlier in the 20th century  mainly due to the irruption of viral diseases (Myxomatosis in the  fifties and Rabbit Hemorrhagic disease, RHD, in the nineties), and  habitat loss (Moreno <em>et al.</em> 2007, Delibes-Mateos <em>et al.</em> 2009a, Villafuerte <em>et al.</em>  2017). Other factors such as human induced mortality or predation may  have played a role in rabbit decline, at least locally. On balance this  situation led more than one decade ago to a classification of the  European Rabbit as Vulnerable in Spain and Near Threatened in Portugal  (Cabral <em>et al.</em> 2005, Villafuerte and Delibes-Mateos 2008). In  recent years many rabbit populations, particularly in natural habitats,  have continued declining (some have even become extirpated), while  others, mostly in human-modified landscapes, have increased in numbers  leading to an increase in complaints by farmers concerning crop damage  caused by rabbits (Delibes-Mateos <em>et al.</em> 2014a).<br/><br/>Most  recently, beginning after 2010, a new wave of disease (a new variant of  RHD virus – GI.2/RHDV2/b) has swept through many rabbit populations  causing massive declines. In an area that traditionally held the highest  rabbit densities within Doñana National Park (i.e. Coto del Rey) –  which thus held a core population of Iberian Lynx – there was a decline  of greater than 80% during 2012-2014. In low-density rabbit areas within  the park similar declines have been reported (Delibes-Mateos <em>et al.</em>  2014b). Rabbit density in the proximity to Yeguas River in Andújar and  Cardeña Natural park in southern Spain, where the largest Iberian Lynx  population lives, the rabbit density declined from more than 3.5  rabbits/ha in 2010 to less than 1 rabbit/ha in 2013 (a decline of  approximately 75%). Also, rabbit abundance decreased by 57% between 2010  and 2014 in 26 localities surveyed in the Córdoba province (southern  Spain), only 11% of these populations experienced a positive trend in  the study period (Guerrero-Casado <em>et al.</em> 2016). The Andalusian  government through censuses that started in 2004, has shown that rabbit  density has decreased on average by more than 50% in 2016, despite the  increase in abundance detected in some agricultural areas, where rabbits  have to be controlled to avoid crop damage (www.juntadeandalucia.es).  Hunters have similarly noted the decreased abundance of rabbits based on  declines of 70-80% in the hunter bags in some estates compared with  recent years (Delibes-Mateos <em>et al.</em> 2014b). In summary, the  recent overall estimated 60-70% decline in populations of European  Rabbits over the past decade has been followed by decreases of 65.7% in  Iberian Lynx and 45.5% in Spanish Imperial Eagle fecundities (Monterroso  <em>et al.</em> 2016). These new data lead to a re-evaluation of the  previous assessment of the European Rabbit as NT, to EN – Endangered A2abce reflecting that populations have experienced or are  experiencing declines mainly due to the recent impact of GI.2/RHDV2/b.  The A3 criteria has not been applied because European Rabbits have been  known to develop immunity to epizootics of prior viral diseases, it is  hoped that a similar recovery will occur following this epizootic.",
+    "trend_justification": null,
+    "taxonomic_notes": "The genus <em>Oryctolagus </em>appeared in the fossil record (Middle Pliocene)  before any other modern leporid genus. <em>Oryctolgus cuniculus </em>was  widespread across much of the Mediterranean area and central Europe in  the Late Pleistocene, but following the maximum glacial period and Early  Holocene it became confined to its current range in the Iberian  Peninsula and adjoining areas in France (López-Martínez 2008). Two  subspecies are recognized: <em>O. c. cuniculus</em> and <em>O. c. algirus.</em> The latter  is only present in the Iberian Peninsula and some islands, while the  former occurs in most of the species’ introduced range. Based on genetic  evidence they have apparently evolved independently beginning  approximately 2 mya during the Quaternary glaciations (Ferrand 2008).  The independence of these two subspecies has been reinforced by data on  parasitology, behavior, reproduction, and morphology (e.g. Gonçalves <em><em>et al.</em></em> 2002, Ferreira <em><em>et al.</em></em>  2015). Due to their genetic incompatibilities and reproductive  isolation in their zone of contact in the middle of the Iberian  Peninsula (e.g. Carneiro <em><em>et al.</em></em> 2010), some feel that they should be considered separate species (Delibes-Mateos <em><em>et al.</em></em> 2018). The domesticated rabbit originates from <em>O. c. cuniculus</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Diseases of unknown cause"
+      },
+      "code": "8_6"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Trend Unknown/Unrecorded"
+      },
+      "code": "7_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Villafuerte, R. & Delibes-Mateos, M.",
+      "value": [
+        "Rafael Villafuerte (Instituto de Estudios Sociales Avanzados)",
+        "Miguel Delibes-Mateos (Universidad de Sevilla)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Smith, A.T.",
+      "value": [
+        "Andrew Smith (IUCN SSC Lagomorph Specialist Group; Arizona State University)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "An errata assessment was produced in order to remove the 'Mediterranean' regional scope of the assessment whilst retaining the 'Global' scope; the species is not a native endemic of the Mediterranean region."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gibb, J. A. 1990. The European Rabbit <i>Oryctolagus cuniculus</i>. In: J. A. Chapman and J. E. C. Flux (eds), <i>Rabbits, hares and pikas: Status survey and conservation action plan</i>, pp. 116-120. IUCN, Oxford, UK.",
+      "year": "1990",
+      "title": "The European Rabbit <i>Oryctolagus cuniculus</i>",
+      "author": "Gibb, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    },
+    {
+      "citation": "Abrantes, J., Lopes, A.M., Dalton, K.P., Melo, P., Correia, J.J., Ramada, M., Alves, P.C. and Esteves, P.J. 2013. New variant of rabbit hemorrhagic disease virus, Portugal, 2012-2013. <i>Emerging Infectious Diseases </i> 19: 1900-1992.",
+      "year": "2013",
+      "title": "New variant of rabbit hemorrhagic disease virus, Portugal, 2012-2013",
+      "author": "Abrantes, J., Lopes, A.M., Dalton, K.P., Melo, P., Correia, J.J., Ramada, M., Alves, P.C. and Esteves, P.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Angulo, E. 2001. When DNA research menaces diversity. <i>Nature</i> 410: 739.",
+      "year": "2001",
+      "title": "When DNA research menaces diversity",
+      "author": "Angulo, E",
+      "citation_short": null
+    },
+    {
+      "citation": "Angulo, E. and Villafuerte, R. 2003. Modelling hunting strategies for the conservation of wild rabbit populations. <i>Biological Conservation </i> 115: 291-301.",
+      "year": "2003",
+      "title": "Modelling hunting strategies for the conservation of wild rabbit populations",
+      "author": "Angulo, E. and Villafuerte, R",
+      "citation_short": null
+    },
+    {
+      "citation": "Barnett, L.K., Prowse, T.A.A., Peacock, D.E., Mutze, G.J., Sinclair, R.G., Kovaliski, J., Cooke, B.D. and Bradshaw, C.J.A. 2018. Previous exposure to myxoma virus reduces survival of European rabbits during outbreaks of rabbit haemorrhagic disease. . <i>Journal of Applied Ecology </i> in press.",
+      "year": "2018",
+      "title": "Previous exposure to myxoma virus reduces survival of European rabbits during outbreaks of rabbit haemorrhagic disease. ",
+      "author": "Barnett, L.K., Prowse, T.A.A., Peacock, D.E., Mutze, G.J., Sinclair, R.G., Kovaliski, J., Cooke, B.D. and Bradshaw, C.J.A",
+      "citation_short": null
+    },
+    {
+      "citation": "Barnett, L.K., Prowse, T.A.A., Peacock, D.E., Mutze, G.J., Sinclair, R.G., Kovaliski, J., Cooke, B.D. and Bradshaw, C.J.A. 2018. Previous exposure to myxoma virus reduces survival of European rabbits during outbreaks of rabbit haemorrhagic disease. . <i>Journal of Applied Ecology </i> in press.",
+      "year": "2018",
+      "title": "Previous exposure to myxoma virus reduces survival of European rabbits during outbreaks of rabbit haemorrhagic disease. ",
+      "author": "Barnett, L.K., Prowse, T.A.A., Peacock, D.E., Mutze, G.J., Sinclair, R.G., Kovaliski, J., Cooke, B.D. and Bradshaw, C.J.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Barrio, I.C., Acevedo, P. and Tortosa, F.S. 2010. Assessment of methods for estimating wild rabbit population abundance in agricultural landscape. <i>European Journal of Wildlife Research </i> 56: 335-340.",
+      "year": "2010",
+      "title": "Assessment of methods for estimating wild rabbit population abundance in agricultural landscape",
+      "author": "Barrio, I.C., Acevedo, P. and Tortosa, F.S",
+      "citation_short": null
+    },
+    {
+      "citation": "Bell, D.J. and Webb, N.J. 1991. Effects of climate on the reproduction in the European wild rabbit (<i>Oryctolagus cuniculus</i>). <i>Journal of Zoology </i> 224: 639-648.",
+      "year": "1991",
+      "title": "Effects of climate on the reproduction in the European wild rabbit (<i>Oryctolagus cuniculus</i>)",
+      "author": "Bell, D.J. and Webb, N.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cabral, M., Almeida, J., Almeida, P.R., Palmeirim, J.M., Queiroz, A.I., Rogado, L. and Santos-Reis, M. 2005. <i> Livro vermelho dos vertebrados de Portugal</i>. ICN, Lisbon, Portugal.",
+      "year": "2005",
+      "title": " Livro vermelho dos vertebrados de Portugal",
+      "author": "Cabral, M., Almeida, J., Almeida, P.R., Palmeirim, J.M., Queiroz, A.I., Rogado, L. and Santos-Reis, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calvete, C. 2006. Modeling the effect of population dynamics on the impact of rabbit hemorrhagic disease. <i>Conservation Biology </i> 20: 1232-1241.",
+      "year": "2006",
+      "title": "Modeling the effect of population dynamics on the impact of rabbit hemorrhagic disease",
+      "author": "Calvete, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calvete, C., Estrada, R., Angulo, E. and Cabezas-Ruiz, S. 2004. Habitat factors related to wild rabbit conservation in an agricultural landscape. <i>Landscape Ecology </i> 19: 531-542.",
+      "year": "2004",
+      "title": "Habitat factors related to wild rabbit conservation in an agricultural landscape",
+      "author": "Calvete, C., Estrada, R., Angulo, E. and Cabezas-Ruiz, S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Calvete, C., Pelayo, E. and Sampietro, J. 2006. Habitat factors related to wild rabbit population trends after the initial impact of rabbit haemorrhagic disease. <i>Wildlife Research</i> 33: 467-474.",
+      "year": "2006",
+      "title": "Habitat factors related to wild rabbit population trends after the initial impact of rabbit haemorrhagic disease",
+      "author": "Calvete, C., Pelayo, E. and Sampietro, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calvete, C., Sarto, P., Calvo, A.J., Monroy, F. and Calvo, J.H. 2014. Could the new rabbit haemorrhagic disease variant (RHDVb) be fully replacing classical RHD strains in the Iberian Peninsula? . <i>World Rabbit Science </i> 22: 91.",
+      "year": "2014",
+      "title": "Could the new rabbit haemorrhagic disease variant (RHDVb) be fully replacing classical RHD strains in the Iberian Peninsula? ",
+      "author": "Calvete, C., Sarto, P., Calvo, A.J., Monroy, F. and Calvo, J.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carneiro, M., Blanco-Aguiar, J.A., Villafuerte, R., Ferrand, N. and Nachman, M.W. 2010. Speciation in the European rabbit (<i>Oryctolagus cuniculus</i>): islands of differentiation on the X chromosome and autosomes. <i>Evolution</i> 64: 3443-3460.",
+      "year": "2010",
+      "title": "Speciation in the European rabbit (<i>Oryctolagus cuniculus</i>): islands of differentiation on the X chromosome and autosomes",
+      "author": "Carneiro, M., Blanco-Aguiar, J.A., Villafuerte, R., Ferrand, N. and Nachman, M.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carpio, A.J., Guerrero-Casado, J., Ruiz-Aizpurua, L., Vicente, J. and Tortosa, F.S. 2014. The high abundance of wild ungulates in a Mediterranean region: is this compatible with the European rabbit? . <i>Wildlife Biology </i> 20: 161-166.",
+      "year": "2014",
+      "title": "The high abundance of wild ungulates in a Mediterranean region: is this compatible with the European rabbit? ",
+      "author": "Carpio, A.J., Guerrero-Casado, J., Ruiz-Aizpurua, L., Vicente, J. and Tortosa, F.S",
+      "citation_short": null
+    },
+    {
+      "citation": "Cooke, B.D., Flux, J.F.C. and Bonino, N. 2018. Introduced lagomorphs. In: A.T. Smith, C.H. Johnston, P. Alves, and K. Hackländer, K. (eds), <i>Lagomorphs: Pikas, Rabbits, and Hares of the World</i>, pp. 13-17. Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2018",
+      "title": "Introduced lagomorphs",
+      "author": "Cooke, B.D., Flux, J.F.C. and Bonino, N. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cotilla, I., Delibes-Mateos, M., Ramirez, E., Castro, F., Cooke, B.D., and Villafuerte, R. 2010. Establishing a serological surveillance protocol for rabbit hemorrhagic disease by combining mathematical models and field data: implication for rabbit conservation. <i>European Journal of Wildlife Research 56: 725-733. Cooke, B.D. 2014. Australia’s War Against Rabbits: The Story of Rabbit Haemorrhagic Disease</i> CSIRO, Canberra, Australia.",
+      "year": "2010",
+      "title": "Establishing a serological surveillance protocol for rabbit hemorrhagic disease by combining mathematical models and field data: implication for rabbit conservation",
+      "author": "Cotilla, I., Delibes-Mateos, M., Ramirez, E., Castro, F., Cooke, B.D., and Villafuerte, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cowan, D.P. 1983. Aspects of the behavioural ecology of a free-living population of the European wild rabbit, <i>Oryctolagus cuniculus L.</i> in southern Europe . PhD Thesis, Royal Holloway College, UK.",
+      "year": "1983",
+      "title": "Aspects of the behavioural ecology of a free-living population of the European wild rabbit, <i>Oryctolagus cuniculus L.</i> in southern Europe ",
+      "author": "Cowan, D.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cubas, J., Martín-Esquivel, J.L., Nogales, M., Irl, S.D., Hernández-Hernández, R., López-Darias, M., Marrero-Gómez, M., del Arco, M. and González-Mancebo, J.M. 2018. Contrasting effects of invasive rabbits on endemic plants driving vegetation change in a subtropical alpine insular environment. <i>Biological Invasions </i> 20(3): 793-807.",
+      "year": "2018",
+      "title": "Contrasting effects of invasive rabbits on endemic plants driving vegetation change in a subtropical alpine insular environment",
+      "author": "Cubas, J., Martín-Esquivel, J.L., Nogales, M., Irl, S.D., Hernández-Hernández, R., López-Darias, M., Marrero-Gómez, M., del Arco, M. and González-Mancebo, J.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dalton, K.P., Nicieza, I., Balseiro, A., Muguerza, M.A., Rosell, J.M., Casais, R. et al. 2012. Variant rabbit hemorrhagic disease virus in young rabbits, Spain . <i>Emerging Infection Diseases </i> 18: 2009-2012.",
+      "year": "2012",
+      "title": "Variant rabbit hemorrhagic disease virus in young rabbits, Spain ",
+      "author": "Dalton, K.P., Nicieza, I., Balseiro, A., Muguerza, M.A., Rosell, J.M., Casais, R. et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes, M. and Delibes-Mateos, M. 2015. Linking historical ecology and invasion biology: some lessons from European rabbit introductions into the new world before the nineteenth century . <i>Biological Invasions</i> 17: 2505-2515.",
+      "year": "2015",
+      "title": "Linking historical ecology and invasion biology: some lessons from European rabbit introductions into the new world before the nineteenth century ",
+      "author": "Delibes, M. and Delibes-Mateos, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Delibes, M., Ferreras, P. and Villafuerte, R. 2008.  Key role of European rabbits in the conservation of the Western Mediterranean Basin Hotspot. <i>Conservation Biology </i> 17: 559-574.",
+      "year": "2008",
+      "title": " Key role of European rabbits in the conservation of the Western Mediterranean Basin Hotspot",
+      "author": "Delibes-Mateos, M., Delibes, M., Ferreras, P. and Villafuerte, R",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Farfán, M.A., Oliveros, J. and Vargas, J.M. 2010. Land-use changes as a critical factor for long-term wild rabbit conservation in the Iberian Peninsula . <i>Environmental Conservation</i> 37: 169-176.",
+      "year": "2010",
+      "title": "Land-use changes as a critical factor for long-term wild rabbit conservation in the Iberian Peninsula ",
+      "author": "Delibes-Mateos, M., Farfán, M.A., Oliveros, J. and Vargas, J.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Ferreira, C., Carro, F., Escudero, M.A and Gortázar, C. 2014b. Ecosystem effects of variant Rabbit Hemorrhagic Disease virus, Iberian Peninsula. <i>Emerging Infectious Diseases </i> 20: 2166-2168.",
+      "year": "2014b",
+      "title": "Ecosystem effects of variant Rabbit Hemorrhagic Disease virus, Iberian Peninsula",
+      "author": "Delibes-Mateos, M., Ferreira, C., Carro, F., Escudero, M.A and Gortázar, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Ferreira, C., Rouco, C., Villafuerte, R. and Barrio, I.C. 2014a. Conservationists, hunters and farmers: the European rabbit <i>Oryctolagus cuniculus</i> management conflict in the Iberian Peninsula. . <i>Mammal Review </i> 40: 190-203.",
+      "year": "2014a",
+      "title": "Conservationists, hunters and farmers: the European rabbit <i>Oryctolagus cuniculus</i> management conflict in the Iberian Peninsula. ",
+      "author": "Delibes-Mateos, M., Ferreira, C., Rouco, C., Villafuerte, R. and Barrio, I.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Ferreras, F. and Villafuerte, R. 2009b.  Rabbit (<i>Oryctolagus cuniculus</i>) abundance and protected areas in central-southern Spain: why don’t they match? . <i>European Journal of Wildlife Research </i> 55: 169-176.",
+      "year": "2009b",
+      "title": " Rabbit (<i>Oryctolagus cuniculus</i>) abundance and protected areas in central-southern Spain: why don’t they match? ",
+      "author": "Delibes-Mateos, M., Ferreras, F. and Villafuerte, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Ferreras, P. and Villafuerte, R. 2009a. European rabbit population trends and associated factors: a review of the situation in the Iberian Peninsula. <i>Mammal Review</i> 39: 124-140.",
+      "year": "2009a",
+      "title": "European rabbit population trends and associated factors: a review of the situation in the Iberian Peninsula",
+      "author": "Delibes-Mateos, M., Ferreras, P. and Villafuerte, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Redpath, S.E., Angulo, E., Ferreras, P. and Villafuerte, R. 2007. Rabbits as a keystone species in southern Europe. <i>Biological Conservation </i> 137: 149-156.",
+      "year": "2007",
+      "title": "Rabbits as a keystone species in southern Europe",
+      "author": "Delibes-Mateos, M., Redpath, S.E., Angulo, E., Ferreras, P. and Villafuerte, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Smith, A.T., Slobodchikoff, C.N. and Swenson, J.E. 2011. The paradox of keystone species persecuted as pests:  a call for the conservation of abundant small mammals in their native range. <i>Biological Conservation</i> 144: 1335-1346.",
+      "year": "2011",
+      "title": "The paradox of keystone species persecuted as pests:  a call for the conservation of abundant small mammals in their native range",
+      "author": "Delibes-Mateos, M., Smith, A.T., Slobodchikoff, C.N. and Swenson, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes-Mateos, M., Villafuerte, R., Cooke, B.D. and Alves, P.C. 2018. <i>Oryctolagus cuniculus</i>  (Linnaeus, 1758); . In: A.T. Smith, C.H. Johnston, P. Alves, and K. Hackländer (eds), <i>Lagomorphs: Pikas, Rabbits, and Hares of the World</i>, Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2018",
+      "title": "<i>Oryctolagus cuniculus</i>  (Linnaeus, 1758); ",
+      "author": "Delibes-Mateos, M., Villafuerte, R., Cooke, B.D. and Alves, P.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Delibes, M., Rodríguez, A. and Ferreras, P. 2000. Action Plan for the Conservation of the Iberian Lynx (<i>Lynx pardinus</i> in  Europe.  Convention on the conservation of European wildlife and natural habitats. Oslo, Norway.",
+      "year": "2000",
+      "title": "Action Plan for the Conservation of the Iberian Lynx (<i>Lynx pardinus</i> in  Europe",
+      "author": "Delibes, M., Rodríguez, A. and Ferreras, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fa, J.E., Sharples, C.E. and Bell, D J. 1999. Habitat correlates of European rabbit distribution in southern Spain. <i>Journal of Zoology (London) </i> 249: 83-96.",
+      "year": "1999",
+      "title": "Habitat correlates of European rabbit distribution in southern Spain",
+      "author": "Fa, J.E., Sharples, C.E. and Bell, D J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernández de Simón, J., Díaz-Ruíz, F., Rodríguez de la Cruz, M., Delibes-Mateos, M., Villafuerte R. and Ferreras, P. 2015. Can widespread generalist predators affect keystone prey? A case study with red foxes and European rabbits in their native range. <i>Population Ecology </i> 57: 591-599.",
+      "year": "2015",
+      "title": "Can widespread generalist predators affect keystone prey? A case study with red foxes and European rabbits in their native range",
+      "author": "Fernández de Simón, J., Díaz-Ruíz, F., Rodríguez de la Cruz, M., Delibes-Mateos, M., Villafuerte R. and Ferreras, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferrand, N. 2008. Inferring the evolutionary history of the European rabbit (<i>Oryctolagus cuniculus</i>) from molecular markers. In: P.C. Alves, N. Ferrand,and K. Hackländer (ed.), <i>Lagomorph Biology: Evolution, Ecology and Conservation</i>, pp. 47-63. Springer, Berlin, Germany.",
+      "year": "2008",
+      "title": "Inferring the evolutionary history of the European rabbit (<i>Oryctolagus cuniculus</i>) from molecular markers",
+      "author": "Ferrand, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreira, C., Castro, F., Piorno, V., Barrio, I., Delibes-Mateos, M., Rouco, C. et al. 2015. Biometrics reveal major differences between the two European rabbit subspecies. <i>Biological Journal of the Linnean Society</i> 116: 106-116.",
+      "year": "2015",
+      "title": "Biometrics reveal major differences between the two European rabbit subspecies",
+      "author": "Ferreira, C., Castro, F., Piorno, V., Barrio, I., Delibes-Mateos, M., Rouco, C. et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferrer, M. and Negro, J.J. 2004. The near extinction of two large European predators: Super specialists pay a price. <i>Conservation Biology </i> 18: 344-349.",
+      "year": "2004",
+      "title": "The near extinction of two large European predators: Super specialists pay a price",
+      "author": "Ferrer, M. and Negro, J.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Flux, J.E.C. and Fullagar, P. 1992. World distribution of the rabbit <i>Oryctolagus cuniculus</i> on islands. <i>Mammal Review </i> 22: 151-205.",
+      "year": "1992",
+      "title": "World distribution of the rabbit <i>Oryctolagus cuniculus</i> on islands",
+      "author": "Flux, J.E.C. and Fullagar, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Galvez-Bravo, L., Belliure, J. and Rebollo, S. 2009. European rabbits as ecosystem engineers: warrens increase lizard density and diversity. <i>Biodiversity and Conservation </i> 18: 869-885.",
+      "year": "2009",
+      "title": "European rabbits as ecosystem engineers: warrens increase lizard density and diversity",
+      "author": "Galvez-Bravo, L., Belliure, J. and Rebollo, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gonçalves, H., Alves, P.C. and Rocha, A. 2002. Seasonal variation in the reproductive activity of the wild rabbits (<i>Oryctolagus cuniculus algirus</i>) in a Mediterranean ecosystem. <i>Wildlife Research </i> 29: 165-173.",
+      "year": "2002",
+      "title": "Seasonal variation in the reproductive activity of the wild rabbits (<i>Oryctolagus cuniculus algirus</i>) in a Mediterranean ecosystem",
+      "author": "Gonçalves, H., Alves, P.C. and Rocha, A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Guerrero-Casado, J., Carpio, A.J. and Tortosa, F.S. 2016. Recent negative trends of wild rabbit populations in southern Spain after the arrival of the new variant of the rabbit hemorrhagic disease virus RHDV2 . <i>Mammalian Biology </i> 81: 361-364.",
+      "year": "2016",
+      "title": "Recent negative trends of wild rabbit populations in southern Spain after the arrival of the new variant of the rabbit hemorrhagic disease virus RHDV2 ",
+      "author": "Guerrero-Casado, J., Carpio, A.J. and Tortosa, F.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Guerrero-Casado, J., Carpio, A.J., Ruiz-Aizpurua, L. and Tortosa, F.S. 2013.  Restocking a keystone species in a biodiversity hotspot: Recovering the European rabbit on a landscape scale . <i>Journal for Nature Conservation </i> 21: 444-448.",
+      "year": "2013",
+      "title": " Restocking a keystone species in a biodiversity hotspot: Recovering the European rabbit on a landscape scale ",
+      "author": "Guerrero-Casado, J., Carpio, A.J., Ruiz-Aizpurua, L. and Tortosa, F.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lavazza, A. and Cooke, B.D. 2018. Diseases of lagomorphs. In: A.T. Smith, C.H. Johnston, P. Alves, and K. Hackländer (eds), <i>Lagomorphs: Pikas, Rabbits, and Hares of the World</i>, Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2018",
+      "title": "Diseases of lagomorphs",
+      "author": "Lavazza, A. and Cooke, B.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lees, A.C. and Bell, D.J. 2008. A conservation paradox for the 21st century: the European wild rabbit Oryctolagus cuniculus, an invasive alien and an endangered native species. <i>Mammal Review </i> 30: 304-320.",
+      "year": "2008",
+      "title": "A conservation paradox for the 21st century: the European wild rabbit Oryctolagus cuniculus, an invasive alien and an endangered native species",
+      "author": "Lees, A.C. and Bell, D.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Lombardi, L., Fernández, N., Moreno, S. and Villafuerte, R. 2003. Habitat-related differences in rabbit (<i>Oryctolagus cuniculus</i>) abundance, distribution and activity. . <i>Journal of Mammalogy </i> 84: 26-36.",
+      "year": "2003",
+      "title": "Habitat-related differences in rabbit (<i>Oryctolagus cuniculus</i>) abundance, distribution and activity. ",
+      "author": "Lombardi, L., Fernández, N., Moreno, S. and Villafuerte, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lopes, A., Correia, J., Abrantes, J., Melo, P., Ramada, M., Magalhaes, M.J., Alves, P.C. and Esteves, P.J. 2015. Is the new variant RHDV replacing Genogroup 1 in Portuguese wild rabbit populations? . <i>Viruses</i> 7: 27-36.",
+      "year": "2015",
+      "title": "Is the new variant RHDV replacing Genogroup 1 in Portuguese wild rabbit populations? ",
+      "author": "Lopes, A., Correia, J., Abrantes, J., Melo, P., Ramada, M., Magalhaes, M.J., Alves, P.C. and Esteves, P.J",
+      "citation_short": null
+    },
+    {
+      "citation": "Lopez-Martinez, N. 2008. The lagomorph fossil record and the origin of the European rabbit. In:  P.C. Alves, N. Ferrand and K. Hackländer (eds), <i>Lagomorph Biology: Evolution, Ecology and Conservation</i>, pp. 27-46. Springer, Berlin, Germany.",
+      "year": "2008",
+      "title": "The lagomorph fossil record and the origin of the European rabbit",
+      "author": "Lopez-Martinez, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Macdonald, D.W. and Barrett, P. 2001. <i>Mammals of Europe</i>. Princeton University Press, Princeton, New Jersey, USA.",
+      "year": "2001",
+      "title": "Mammals of Europe",
+      "author": "Macdonald, D.W. and Barrett, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mitchell-Jones, A.J., Amori, G., Bogdanowicz, W., Kryštufek, B., Reijnders, P.J.H., Spitzenberger, F., Stubbe, M., Thissen, J.B.M., Vohralik, V. and Zima, J. 1999. <i>The Atlas of European Mammals</i>. Academic Press, London, UK.",
+      "year": "1999",
+      "title": "The Atlas of European Mammals",
+      "author": "Mitchell-Jones, A.J., Amori, G., Bogdanowicz, W., Kryštufek, B., Reijnders, P.J.H., Spitzenberger, F., Stubbe, M., Thissen, J.B.M., Vohralik, V. and Zima, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Monterroso, P., Garrote, G., Serronha, A., Santos, E., Delibes-Mateos, M., Abrantes, J. et al. 2016. Disease-mediated bottom-up regulation: an emergent virus affects a keystone prey, and alters the dynamics of trophic webs. <i>Scientific Reports </i> 6: 36072.",
+      "year": "2016",
+      "title": "Disease-mediated bottom-up regulation: an emergent virus affects a keystone prey, and alters the dynamics of trophic webs",
+      "author": "Monterroso, P., Garrote, G., Serronha, A., Santos, E., Delibes-Mateos, M., Abrantes, J. et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Moreno, S. and Villafuerte, R. 1995. Traditional management of scrubland for the conservation of rabbits Oryctolagus cuniculus and their predators in Doñana National Park . <i>Biological Conservation </i> 73: 81-85.",
+      "year": "1995",
+      "title": "Traditional management of scrubland for the conservation of rabbits Oryctolagus cuniculus and their predators in Doñana National Park ",
+      "author": "Moreno, S. and Villafuerte, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Moreno S., Beltrán, J.F., Cotilla, I., Kuffner, B., Laffite, R., Jordán, G., Ayala, A, Quintero, C., Jiménez, A., Castro, F., Cabezas, S. and Villafuerte, R. 2007. Long-term decline of the European wild rabbit (<i>Oryctolagus cuniculus</i>) in south-western Spain. <i>Wildlife Research </i> 34: 652-658.",
+      "year": "2007",
+      "title": "Long-term decline of the European wild rabbit (<i>Oryctolagus cuniculus</i>) in south-western Spain",
+      "author": "Moreno S., Beltrán, J.F., Cotilla, I., Kuffner, B., Laffite, R., Jordán, G., Ayala, A, Quintero, C., Jiménez, A., Castro, F., Cabezas, S. and Villafuerte, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Muñoz, G. 1960. <i>Anverso y Reverso de la Mixomatosis</i>. Dirección General de Montes, Caza y Pesca Fluvial, Madrid, Spain.",
+      "year": "1960",
+      "title": "Anverso y Reverso de la Mixomatosis",
+      "author": "Muñoz, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Piorno, V., Villafuerte, R, Branco, M, Carneiro, M., Ferrand, N. and Alves, P.C. 2015. Low persistence in nature of captive reared rabbits after restocking operations. <i>European Journal of Wildlife Research </i> 59: 573-580.",
+      "year": "2015",
+      "title": "Low persistence in nature of captive reared rabbits after restocking operations",
+      "author": "Piorno, V., Villafuerte, R, Branco, M, Carneiro, M., Ferrand, N. and Alves, P.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rouco, C., Ferreras, P., Castro, F. and Villafuerte, R. 2008. The effect of exclusion of terrestrial predators on short-term survival of translocated European wild rabbits . <i>Wildlife Research </i> 3: 625-632.",
+      "year": "2008",
+      "title": "The effect of exclusion of terrestrial predators on short-term survival of translocated European wild rabbits ",
+      "author": "Rouco, C., Ferreras, P., Castro, F. and Villafuerte, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tablado, Z. and Revilla, E. 2012. Contrasting effects of climate change on rabbit populations through reproduction. <i>PLOS One </i> 7: e48988.",
+      "year": "2012",
+      "title": "Contrasting effects of climate change on rabbit populations through reproduction",
+      "author": "Tablado, Z. and Revilla, E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thompson, H.V. and King, C.M. 1994. <i>The European Rabbit: The History of a Successful Colonizer</i>. Oxford University Press, Oxford, U.K.",
+      "year": "1994",
+      "title": "The European Rabbit: The History of a Successful Colonizer",
+      "author": "Thompson, H.V. and King, C.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Villafuerte, R. and Delibes-Mateos, M. 2008. El conejo. In: l.J. Palomo, J. Gisbert and J.C. Blanco (eds), <i>Atlas y libro rojo de los mamíferos terrestres de España</i>, pp. 490-491. Dirección General para la Biodiversidad-SECEM-SECEMU, Madrid, Spain.",
+      "year": "2008",
+      "title": "El conejo",
+      "author": "Villafuerte, R. and Delibes-Mateos, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Villafuerte, R. and Moreno, S. 1997. Predation risk, cover type, and group size in European rabbits in Doñana (SW Spain). <i>Acta Theriologica </i> 42: 225-230.",
+      "year": "1997",
+      "title": "Predation risk, cover type, and group size in European rabbits in Doñana (SW Spain)",
+      "author": "Villafuerte, R. and Moreno, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Villafuerte, R., Calvete, C., Blanco, J.C. and Lucientes, J. 1995. Incidence of viral hemorrhagic disease in wild rabbit populations in Spain . <i>Mammalia</i> 59: 651-659.",
+      "year": "1995",
+      "title": "Incidence of viral hemorrhagic disease in wild rabbit populations in Spain ",
+      "author": "Villafuerte, R., Calvete, C., Blanco, J.C. and Lucientes, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Villafuerte, R., Castro, F., Ramírez, E., Cotilla, I., Parra, F., Delibes-Mateos, M., Recuerda, P. and Rouco, C. 2017. Large-scale assessment of myxomatosis prevalence in European wild rabbits (<i>Oryctolagus cuniculus</i>) 60 years after first outbreak in Spain. <i>Research in Veterinary Science </i> 114: 281-286.",
+      "year": "2017",
+      "title": "Large-scale assessment of myxomatosis prevalence in European wild rabbits (<i>Oryctolagus cuniculus</i>) 60 years after first outbreak in Spain",
+      "author": "Villafuerte, R., Castro, F., Ramírez, E., Cotilla, I., Parra, F., Delibes-Mateos, M., Recuerda, P. and Rouco, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Villafuerte, R., Lazo, A. and Moreno, S. 1997. Influence of food abundance and quality on rabbit fluctuations: conservation and management implications in Doñana National Park (SW Spain). <i>Rev d’écologie</i> 52: 345-356.",
+      "year": "1997",
+      "title": "Influence of food abundance and quality on rabbit fluctuations: conservation and management implications in Doñana National Park (SW Spain)",
+      "author": "Villafuerte, R., Lazo, A. and Moreno, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ward, D. 2005. <i>Reversing Rabbit Decline: One of the Biggest Challenges for nature conservation in Spain and Portugal</i>. SOS Lynx.",
+      "year": "2005",
+      "title": "Reversing Rabbit Decline: One of the Biggest Challenges for nature conservation in Spain and Portugal",
+      "author": "Ward, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, N.J. 1993. Growth and mortality in juvenile European wild rabbits (<i>Oryctolagus cuniculus</i>). <i>Journal of Zoology</i> 230: 665-677.",
+      "year": "1993",
+      "title": "Growth and mortality in juvenile European wild rabbits (<i>Oryctolagus cuniculus</i>)",
+      "author": "Webb, N.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Willot, S.J., Miller, A.J., Incoll, L.D. and Compton, S.G. 2000. The contribution of rabbits (<i>Oryctolagus cuniculus L</i>.) to soil fertility in semi-arid Spain. <i>Biology and Fertility of Soils </i> 31(379-384).",
+      "year": "2000",
+      "title": "The contribution of rabbits (<i>Oryctolagus cuniculus L</i>.) to soil fertility in semi-arid Spain",
+      "author": "Willot, S.J., Miller, A.J., Incoll, L.D. and Compton, S.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 13 June 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

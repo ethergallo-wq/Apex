@@ -1,0 +1,580 @@
+{
+  "assessment_date": "2013-11-27T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 45369602,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/45369602/45435551",
+  "citation": "Rathbun, G.B. & Smit-Robinson, H. 2015. Macroscelides proboscideus. The IUCN Red List of Threatened Species 2015: e.T45369602A45435551. Accessed on 05 May 2026.",
+  "assessment_id": 45435551,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 45369602,
+    "scientific_name": "Macroscelides proboscideus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "MACROSCELIDEA",
+    "family_name": "MACROSCELIDIDAE",
+    "genus_name": "Macroscelides",
+    "species_name": "proboscideus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(G.K. Shaw, 1800)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Afrotheria Specialist Group (including aardvarks, hyrax, golden-moles, tenrecs and elephant-shrews or sengis)",
+        "url": "http://www.afrotheria.net/",
+        "description": "Co-Chairs: Andrew Taylor (email: taylor.wa@gmail.com) and not designated\nRed List Authority Coordinator: Was Matthew Child (m.child@sanbi.org.za), currently not designated.\nNewsletter: http://www.afrotheria.net/newsletter.html\n\nSee also: https://www.iucn.org/our-union/commissions/group/iucn-ssc-afrotheria-specialist-group"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Karoo Round-eared Elephant-shrew",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Round-eared Elephant-shrew",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Short-eared Elephant-shrew",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Short-eared Sengi",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ronde-oorklaasneus",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "Karoo Round-eared Sengi",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Sorex proboscideus G.K. Shaw, 1800",
+        "status": "ACCEPTED",
+        "genus_name": "Sorex",
+        "species_name": "proboscideus",
+        "species_author": "G.K. Shaw, 1800",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Macroscelides proboscideus ssp. proboscideus (G.K. Shaw, 1800)",
+        "status": "ACCEPTED",
+        "genus_name": "Macroscelides",
+        "species_name": "proboscideus",
+        "species_author": null,
+        "infrarank_author": "(G.K. Shaw, 1800)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "proboscideus"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1400,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "491000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>A widespread species occurring in southern Namibia, extreme southwestern Botswana, and western South Africa, particularly the Northern, Western, and Eastern Cape (Rathbun 2009, Dumbacher <em>et al.</em> 2012).</p>",
+    "population": "It is believed that over much of its range its numbers are relatively low (Corbet and Hanks 1968, Rathbun 2005, Smit <em>et al.</em> 2009, Schubert 2011, Dumbacher <em>et al.</em> 2012, Perrin and Rathbun 2013). There are no data on population dynamics of this species, but it is expected that populations will vary greatly in the arid habitats that it occupies, which is possibly correlated to climate regimes and climatic variability, and there are no reasons to believe that these variations, if they indeed occur, are abnormal.",
+    "habitats": "The Karoo Round-eared Sengi is a habitat specialist, which occupies gravel plains associated with alluvial plains and relatively flat areas between higher elevation areas such as outcrops, scarps, hills, and mountains (Corbet and Hanks 1968; Rathbun 2005, 2009). These areas, which can vary from hard gravel to looser sandy soils, are sparsely vegetated with bunch grasses and widely spaced small bushes (Kerley 1992, Dumbacher <em>et al.</em> 2012, Perrin and Rathbun 2013). Densities range between 0.4 and 1.6 individuals per hectare, and home range areas tend to be overlapping by a male and female, with male home ranges tending to be larger than those of females (Schubert 2011). Unlike <em>M. flavicaudatus</em>, this species does not seem to use or maintain long, straight trails composed of small oval bare spots like reported for <em>M</em>. <em>flavicaudatus&#160;</em>(Sauer and Sauer 1972, Dumbacher <em>et al. </em>2012). Smit <em>et al.</em> (2009) indicate that the genetic structure within the species is mostly a pattern of isolation-by-distance, typical of a species with a continuous rather than clustered distribution. &#160;For a comprehensive list of research publications, see the searchable bibliography at <a href=\"http://www.sengis.org\">www.sengis.org</a>.",
+    "threats": "There are no known major threats to the species. Habitat modification to relatively small areas may occur near rivers and human population centres due to small-holder and industrial agriculture, mineral extraction, and urban development. Changes in habitats due to desertification and bush encroachment and proposed wind and solar energy facilities may adversely alter habitats for sengis and displace them from such areas, but at present these changes do not appear widespread or serious, especially since the species is associated with arid habitats to begin with.",
+    "measures": "Because this species is widespread, it is not in conflict with most human activities; captive husbandry and breeding methods are well-established; and it likely occurs in many protected areas (i.e., Goegap Nature Reserve, Gamkaberg Nature Reserve, Skilpad Nature Reserve, Tankwa Karoo National Park, Mokala National Park, Ricthersveld National Park, Augrabies Falls National Park, Namagua National Park, and Karoo National Park), therefore there are no conservation actions recommended at present or in the foreseeable future. Research topics of conservation relevance include determining the impacts of habitat shifts, including livestock grazing, on local populations, determining the proportion of the total distribution range that occurs in protected areas, and continue to accumulate information on occurrence points (see <a href=\"http://www.sengis.org\">www.sengis.org</a>).",
+    "use_trade": "There is no indication that this species has ever been used by people for any purposes. It rarely has been exported to various zoological gardens over the last few decades, where husbandry techniques have been developed, breeding has been achieved, and research results have been published (Olbricht 2009).",
+    "rationale": "Although this species is not locally abundant, it is widespread in suitable habitats over an area approaching, if not over, 500,000 km<sup>2</sup>. Because it occupies habitats that are very arid that will not support most development without the availability of water, there are no known threats to the vast majority of the habitats occupied by the Karoo Round-eared Sengi. Areas close to rivers or reliable sources of water may have been developed, or may be developed in the future, as agricultural and urban areas. For example, a narrow area adjacent to and along the Orange River between Namibia and South Africa has been developed, but this is a relatively small area compared to the overall distribution of the Karoo Round-eared Sengi. Relatively small areas also may be impacted by mineral extraction activities, such as around the town of Springbok in South Africa and north along the coast towards the border. Again, this disturbance is confined to a relatively small area compared to the overall distribution of the species. Past, current, and future development in this region of Africa is not expected to have a significant impact on this sengi or its habitats. However, a number of wind and solar farms are proposed throughout the distribution of the species in South Africa and the potential displacement impacts of these renewable energy facilities should be monitored. On the other hand, bush encroachment and desertification, especially related to localized intensive goat and sheep grazing, might adversely alter habitats that these sengis occupy, and these processes should be monitored for possible negative impacts on sengi populations. The species is therefore listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "In the past the single family was included in the order Insectivora, but now the family is in the monophyletic order Macroscelidea and the newly created super-cohort Afrotheria. Currently, there are 19 living species recognized in four genera. The soft-furred sengis or elephant-shrews include three genera: <em>Petrodromus</em>&#160;is monospecific,<em>&#160;Macroscelides&#160;</em>contains three species. while <em>Elephantulus </em>contains 11 species. The four species of giant sengis belong to the genus <em>Rhynchocyon&#160;</em>(Rathbun 2009). The common name \"sengi\" is being used in place of elephant-shrew (with a hyphen) by many biologists to try and disassociate the Macroscelidea from the true shrews (family Soricidae) in the order Soricomorpha (Rathbun and Kingdon 2006).&#160;<br/><br/>In their revision of the genus <em>Macroscelides</em>, Dumbacher <em>et al. </em>(2012) elevated the two generally accepted subspecies in the genus (Corbet and Hanks 1968) to full species: <em>M</em>. <em>proboscideus </em>and <em>M</em>. <em>flavicaudatus</em>. A brand new species, which results in three for the genus, has been described from northwestern Namibia (Dumbacker <em>et al. </em>2014). Data found in Perrin and Rathbun (2013) is out-of-date because of the recent changes in taxonomy of this genus.<br/><br/>See <a href=\"http://www.sengis.org\">www.sengis.org</a> and also <a href=\"http://www.afrotheria.net\">www.afrotheria.net</a>&#160;for additional information and literature citations."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eastern Cape Province"
+      },
+      "code": "CPP-EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Cape Province"
+      },
+      "code": "CPP-NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Cape"
+      },
+      "code": "CPP-WC"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Rathbun, G.B. & Smit-Robinson, H.",
+      "value": [
+        "Hanneline Smit-Robinson (BirdLife South Africa, South Africa)",
+        "Galen Rathbun (Deceased April 2019. Formerly at California Academy of Sciences (San Francisco))"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Taylor, A.",
+      "value": [
+        "Andrew Taylor (IUCN SSC Afrotheria Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Stuart, C., Perrin, M. & FitzGibbon, C.",
+      "value": [
+        "Clare FitzGibbon (Welltown, Boscastle, Cornwall, UK)",
+        "Mike Perrin (School of Biological & Conservation Science, University of Natal, KwaZulu-Natal, South Africa)",
+        "Christopher Stuart (African-Arabian Wildlife Research Centre, Loxton, Northern Cape, South Africa)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Corbet, G.B. and Hanks, J. 1968. A revision of the elephant-shrews, family Macroscelididae. <i>Bulletin of the British Museum of Natural History (Zoology)</i> 16: 1-111.",
+      "year": "1968",
+      "title": "A revision of the elephant-shrews, family Macroscelididae",
+      "author": "Corbet, G.B. and Hanks, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corbet, G.B. and Hanks, J. 1968. A revision of the elephant-shrews, family Macroscelididae. <i>Bulletin of the British Museum of Natural History (Zoology)</i> 16: 1-111.",
+      "year": "1968",
+      "title": "A revision of the elephant-shrews, family Macroscelididae",
+      "author": "Corbet, G.B. and Hanks, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dumbacher, J.P., Rathbun, G.B., Smit, H.A. and Eiseb, S.J. 2012. Phylogeny and taxonomy of the round-eared sengis or elephant-shrews, genus <i>Macroscelides</i> (Mammalia, Afrotheria, Macroscelidea). <i>PLOS One</i> 7(3): e32410. doi:10.1371/journal.pone.0032410 (12 pp + 4 suppl).",
+      "year": "2012",
+      "title": "Phylogeny and taxonomy of the round-eared sengis or elephant-shrews, genus <i>Macroscelides</i> (Mammalia, Afrotheria, Macroscelidea)",
+      "author": "Dumbacher, J.P., Rathbun, G.B., Smit, H.A. and Eiseb, S.J. ",
+      "citation_short": "Dumbacher et al. 2012"
+    },
+    {
+      "citation": "Rathbun, G.B. 2009. Why is there discordant diversity in sengi (Mammalia; Afrotheria; Macroscelidea) taxonomy and ecology? <i>African Journal of Ecology</i> 7(3): 1-13.",
+      "year": "2009",
+      "title": "Why is there discordant diversity in sengi (Mammalia; Afrotheria; Macroscelidea) taxonomy and ecology?",
+      "author": "Rathbun, G.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rathbun, G.B. and Kingdon, J. 2006. The etymology of \"sengi\". <i>Afrotherian Conservation, Newsletter of the IUCN-SSC Afrotheria Specialist Group</i> 4: 14-15.",
+      "year": "2006",
+      "title": "The etymology of \"sengi\"",
+      "author": "Rathbun, G.B. and Kingdon, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dumbacher, J.P., Rathbun, G.B., Osborne, T.O., Griffin, M. and Eiseb, S. 2014. A new species of round-eared sengi (genus <i>Macroscelides</i>) from Namibia. <i>Journal of Mammalogy</i> 95(3): 443-454.",
+      "year": "2014",
+      "title": "A new species of round-eared sengi (genus <i>Macroscelides</i>) from Namibia",
+      "author": "Dumbacher, J.P., Rathbun, G.B., Osborne, T.O., Griffin, M. and Eiseb, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rathbun, G.B. (subeditor). 2005. Order Macroscelidea. In: J.D. Skinner and C.T. Chimimba (eds), <i>The Mammals of the Southern African Subregion, 3rd edition</i>, pp. 22-34. Cambridge University Press, Cape Town, South Africa.",
+      "year": "2005",
+      "title": "Order Macroscelidea",
+      "author": "Rathbun, G.B. (subeditor)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smit, H.A., Watson, J, and Jansen van Vuuren, B. 2009. Relative importance of habitat connectivity in shaping the genetic profiles of two southern African elephant-shrews. <i>Journal of Biogeography</i> 37: 857-864.",
+      "year": "2009",
+      "title": "Relative importance of habitat connectivity in shaping the genetic profiles of two southern African elephant-shrews",
+      "author": "Smit, H.A., Watson, J, and Jansen van Vuuren, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perrin, M. and Rathbun, G.B. 2013. Species accounts: Order Macroscelidea, Family Macroscelididae, Genus <i>Elephantulus</i>, <i>E. edwardii, E. intufi, E. myurus, E. rozeti, E. rufescens</i>; Genus <i>Macroscelides</i>; species account <i>M. proboscideus</i>. In: J.S Kingdon,  D.C.D. Happold, M. Hoffmann, T.M. Butynski, M. Happold and J. Kalina (eds), <i>Mammals of Africa, Volume I: Introductory Chapters and Afrotheria</i>, pp. 261-278. Bloomsbury Publihing, London.",
+      "year": "2013",
+      "title": "Species accounts: Order Macroscelidea, Family Macroscelididae, Genus <i>Elephantulus</i>, <i>E. edwardii, E. intufi, E. myurus, E. rozeti, E. rufescens</i>; Genus <i>Macroscelides</i>; species account <i>M. proboscideus</i>",
+      "author": "Perrin, M. and Rathbun, G.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 23 June 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015.2"
+    },
+    {
+      "citation": "Kerley, G.I.H. 1992. Ecological correlates of small mammal community structure in the semi-arid Karoo, South Africa. <i>Journal of Zoology</i> 227: 17-27.",
+      "year": "1992",
+      "title": "Ecological correlates of small mammal community structure in the semi-arid Karoo, South Africa",
+      "author": "Kerley, G.I.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Olbricht, G. 2009. <i>Reproduction and growth of elephant shrews or sengis (Macroscelidea)</i>. Sudwestdeutscher Verlag fur Hochschulschriften, Saarbruchken, Germany.",
+      "year": "2009",
+      "title": "Reproduction and growth of elephant shrews or sengis (Macroscelidea)",
+      "author": "Olbricht, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Sauer, E.G.F. and Sauer, E.M. 1972. Sur biologie de kurzohrigen elefantenspitzmaus. <i>Zeitschrift des Kolner Zoo</i> 4: 119–139.",
+      "year": "1972",
+      "title": "Sur biologie de kurzohrigen elefantenspitzmaus.",
+      "author": "Sauer, E.G.F. and Sauer, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schubert, M. 2011. A summary of the social system of the rounded-eared sengi. <i>Afrotherian Conservation, Newsletter of the IUCN/SSC Afrotheria Specialist Group</i>: 12-13.",
+      "year": "2011",
+      "title": "A summary of the social system of the rounded-eared sengi",
+      "author": "Schubert, M.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

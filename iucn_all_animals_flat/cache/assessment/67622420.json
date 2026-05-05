@@ -1,0 +1,795 @@
+{
+  "assessment_date": "2016-05-12T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 17096,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/17096/67622420",
+  "citation": "Pollom, R. 2017. Phycodurus eques. The IUCN Red List of Threatened Species 2017: e.T17096A67622420. Accessed on 05 May 2026.",
+  "assessment_id": 67622420,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 17096,
+    "scientific_name": "Phycodurus eques",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "SYNGNATHIFORMES",
+    "family_name": "SYNGNATHIDAE",
+    "genus_name": "Phycodurus",
+    "species_name": "eques",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Günther, 1865)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Seahorse, Pipefish & Seadragon Specialist Group",
+        "url": "https://iucn-seahorse.org/",
+        "description": "Chair: Amanda Vincent (email: a.vincent@oceans.ubc.ca)\nRed List Authority Coordinator: Riley Pollom (email: r.pollom@fisheries.ubc.ca)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Glauerts Seadragon",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Austraalia narmaskala",
+        "language": "est"
+      },
+      {
+        "main": false,
+        "name": "Flikfisk",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "Levämerihevonen",
+        "language": "fin"
+      },
+      {
+        "main": false,
+        "name": "Raitalehvähevonen",
+        "language": "fin"
+      },
+      {
+        "main": false,
+        "name": "枝叶海马",
+        "language": "chi"
+      },
+      {
+        "main": false,
+        "name": "枝葉海馬",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Leafy Seadragon",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Phyllopteryx eques Günther, 1865",
+        "status": "ADD",
+        "genus_name": "Phyllopteryx",
+        "species_name": "eques",
+        "species_author": "Günther, 1865",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Phycodurus glauerti Whitley, 1939",
+        "status": "ADD",
+        "genus_name": "Phycodurus",
+        "species_name": "glauerti",
+        "species_author": "Whitley, 1939",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 30,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "Unknown",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Unknown"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "Unknown",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "112355",
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": "400000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "<em>Phycodurus eques </em>is a coastal species that occurs from Western Australia (Abrolhos Islands) to western Victoria (Kuiter 2000a, Baker 2002, Stiller <em>et al.</em> 2015). Unconfirmed reports of sightings come from the Bass Strait Islands (King  Island, Kent Group) of northwestern Tasmania (K. Martin-Smith, pers.  comm. 2006).<br/><br/>This species been recorded down to 30 m (Kuiter 2000b).",
+    "population": "To date there have been few dedicated surveys and no population estimates for <em>Phycodurus eques</em>. &#160;Just one estimate of density exists for this species, from a single location at one time. Connolly <em>et al</em>. (2002a) estimated the density of Leafy Seadragons around West Island, in Encounter Bay, to be 57 fish per ha (small juveniles (less than 100 mm) were not included in the study). &#160;Further research is needed in order to determine population size across the species' range, and monitoring should be undertaken to determine trends in abundance. The species is likely declining as a result of ongoing coastal development and pollution in the region, but this has not been quantified.",
+    "habitats": "<em>Phycodurus eques</em> occurs near rocky reefs supporting stands of kelp or other macroalgae, where they have been observed feeding on mysids and other crustaceans (Kuiter 2000a). Telemetry using ultrasonic transmitters has shown, however, that this species is just as prevalent over shallow (5–15 m depth) <em>Posidonia</em> seagrass meadows and patches of sand amongst seagrass (Connolly <em>et al</em>. 2002b). <br/> <br/>Leafy Seadragons tracked over periods of up to 10 days typically remained within well-defined home ranges of up to 5 ha (Connolly <em>et al</em>. 2002b).  Patterns of movement are characterized by short bursts (at average velocities of 2–17 m/h) punctuating long periods (up to 68 h) without movement. No diel pattern of movement is apparent (Connolly <em>et al</em>. 2002b). <br/> <br/>This species can survive for at least two to three years in aquaria if supplied with its specific live food requirements (P. Quong, pers. comm. in Pogonoski <em>et al</em>. 2002). Longevity <em>in situ</em> is not known. <em>Phycodurus eques</em> attains a maximum length of about 35 cm (Kuiter 1993).Mating occurs during summer months (Kuiter 2000b). As with other syngnathids, male seadragons carry the fertilized embryos.  For Leafy Seadragons, the male broods about 200 embryos on the exposed  surface of the underside of its tail (there is no pouch).  <br/><br/><em>Phycodurus eques</em> is particularly well camouflaged, with a number of frond-like appendages that resemble kelp. The species also rocks back and forth with wave action, increasing its resemblance to algae swept by coastal surge (Gomon <em>et al</em>. 1994).<br/><br/>Leafy Seadragons lack a caudal fin and are weak swimmers; in conjunction  with a lack of a dispersive egg phase, this potentially makes them  vulnerable to habitat loss and degradation as well as to incidental  harvesting during commercial fishing (Connolly <em>et al</em>. 2002b).<br/><br/>Populations in South Australia and Western Austalia show molecular evidence of demographic independence (Stiller<em> et al.</em> 2016).",
+    "threats": "<em>Phycodurus eques </em>is threatened by coastal habitat loss and degradation and by being caught as bycatch in fisheries. <br/> <br/>Leafy Seadragons are associated with seagrass beds and reefs supporting macroalgae (Connolly <em>et al</em>. 2002b). These habitats have been adversely affected by human activities and loss in quality and quantity has been documented and is ongoing (Baker 2003, Marzinelli <em>et al.</em> 2015). The loss of habitat is most severe near major urban centres (e.g., Perth, Adelaide, Melbourne), where discharge of storm water and treated sewage leads to eutrophication and increased sedimentation. Losses of seagrass have been particularly severe along the metropolitan coasts and are well documented (Short and Wyllie-Echeverria 1996). <br/> <br/>Connolly <em>et al</em>. (2002b) report anecdotal evidence that Leafy Seadragons are killed as incidental bycatch in the trawling industry in South Australia. Fishers have indicated that on occasions they catch “large numbers” of Leafy Seadragons. This information remains at the level of anecdote however, and neither the rate nor distribution of incidental catch have been substantiated. <br/> The species is collected for the aquarium trade but levels of offtake are thought to be low (Martin-Smith and Vincent 2006). <br/> <br/>This species is a major attraction for the dive industry in southern Australia, and it has been made the official fish emblem in the state of South Australia. Recreational divers often harass or disturb individuals (Kuiter 2000a). Suitable protocols for divers should be encouraged to protect local populations, but the disturbance probably does not harm the long-term prospects for regional populations.",
+    "measures": "<em>Phycodurus eques</em> occurs in several protected areas throughout its range, and is fully protected along with all other syngnathids by the Australian&#160;Environment&#160;Protection and Biodiversity Conservation Act (1999). There are no species-specific conservation measures in place, and this species is not mentioned in any international legislation or trade regulations.",
+    "use_trade": "<em>Phycodurus eques</em> is not traded for use in traditional medicines as other syngnathid fishes are. The species has been noted in the aquarium trade, but levels of offtake are thought to be low (Martin-Smith and Vincent 2006).",
+    "rationale": "<em>Phycodurus eques</em> is a coastal marine seadragon that inhabits macroalgae and seagrass to depths of 30 m. The species is threatened by habitat degradation and loss that is resulting from coastal development and pollution, especially around urban centers.&#160;However, these reductions have not been measured and probably represent a small proportion of totals of fish abundances and habitat extent. Threats from bycatch and aquarium collection are present but are not thought to be causing substantial declines. There are no other known threats. Therefore this species is listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "Synonym = <i>Phycodurus glauerti</i> Whitley, 1939."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "None",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "None",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [
+    {
+      "note": "None",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_4_6"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 1",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Pollom, R.",
+      "value": [
+        "Riley Pollom (Project Seahorse)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Ralph, G.",
+      "value": [
+        "Gina Ralph (Marine Biodiversity Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Connolly, R.",
+      "value": [
+        "R. Connolly"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Pogonoski, J.J., Pollard, D.A. and Paxton, J.R. 2002. <i>Conservation overview and action plan for Australian threatened and potentially threatened marine and estuarine fishes</i>. Environment Australia, Canberra, ACT, Australia.",
+      "year": "2002",
+      "title": "Conservation overview and action plan for Australian threatened and potentially threatened marine and estuarine fishes",
+      "author": "Pogonoski, J.J., Pollard, D.A. and Paxton, J.R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gomon, M.F., Glover, C.J.M. and Kuiter, R.H. 1994. <i>The fishes of Australia's south coast</i>. State Print, Adelaide, Australia.",
+      "year": "1994",
+      "title": "The fishes of Australia's south coast",
+      "author": "Gomon, M.F., Glover, C.J.M. and Kuiter, R.H",
+      "citation_short": null
+    },
+    {
+      "citation": "Short, F.T. and Wyllie-Echeverria, S. 1996. Natural and human-induced disturbances of seagrasses. <i>Environmental Conservation</i> 23: 17-27.",
+      "year": "1996",
+      "title": "Natural and human-induced disturbances of seagrasses",
+      "author": "Short, F.T. and Wyllie-Echeverria, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baillie, J. and Groombridge, B. (eds). 1996. <i>1996 IUCN Red List of Threatened Animals</i>. pp. 378. International Union for Conservation of Nature, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "1996 IUCN Red List of Threatened Animals",
+      "author": "Baillie, J. and Groombridge, B.",
+      "citation_short": "Baillie and Groombridge 1996"
+    },
+    {
+      "citation": "Martin-Smith, K.M. and Vincent, A.C.J. 2006. Exploitation and trade of Australian seahorses and their relatives (syngnathids). <i>Oryx</i> 40(2): 141-151.",
+      "year": "2006",
+      "title": "Exploitation and trade of Australian seahorses and their relatives (syngnathids)",
+      "author": "Martin-Smith, K.M. and Vincent, A.C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kuiter, R.H. 2000a. <i>Seahorses, Pipefishes and their Relatives. A Comprehensive Guide to Syngnathiformes.</i> TMC Publishing, Chorleywood, UK.",
+      "year": "2000",
+      "title": "Seahorses, Pipefishes and their Relatives. A Comprehensive Guide to Syngnathiformes.",
+      "author": "Kuiter, R.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neira, F.J., Miskiewicz, A.G. and Trnski, T. 1998. <i>Larvae of temperate Australian fishes: laboratory guide for larval fish identification</i>. University of Western Australia Press.",
+      "year": "1998",
+      "title": "Larvae of temperate Australian fishes: laboratory guide for larval fish identification",
+      "author": "Neira, F.J., Miskiewicz, A.G. and Trnski, T",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuiter, R.H. 1993. <i>Coastal fishes of south-eastern Australia</i>. Crawford House Press Pty Ltd., Australia.",
+      "year": "1993",
+      "title": "Coastal fishes of south-eastern Australia",
+      "author": "Kuiter, R.H",
+      "citation_short": null
+    },
+    {
+      "citation": "McGlone, P. 1994. Export ban needed to protect seadragons, seahorses and pipefishes. <i>Wildlife News No. 68</i>, World Wide Fund for Nature.",
+      "year": "1994",
+      "title": "Export ban needed to protect seadragons, seahorses and pipefishes",
+      "author": "McGlone, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuiter, R.H. 2000b. <i>Coastal Fishes of Southeastern Australia</i>. Gary Allen, Sydney, Australia.",
+      "year": "2000",
+      "title": "Coastal Fishes of Southeastern Australia",
+      "author": "Kuiter, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baker, J.L. 2003. Dragon Search South Australia – Summary of South Australian Sighting Data to January 2003. Internal Report – Dragon Search Community-Based Monitoring Project.",
+      "year": "2003",
+      "title": "Dragon Search South Australia – Summary of South Australian Sighting Data to January 2003.",
+      "author": "Baker, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baker, J.L. 2002. Dragon Search Western Australia – Summary of Western Australia Sighting Data to September 2002. Internal Report – Dragon Search Community-Based Monitoring Project.",
+      "year": "2002",
+      "title": "Dragon Search Western Australia – Summary of Western Australia Sighting Data to September 2002",
+      "author": "Baker, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Connolly, R.M., Melville, A.J. and Preston, K.M. 2002b. Patterns of movement and habitat use by leafy seadragons tracked ultrasonically. <i>Journal of Fish Biology</i>.  61:684–695.",
+      "year": "2002",
+      "title": "Patterns of movement and habitat use by leafy seadragons tracked ultrasonically",
+      "author": "Connolly, R.M., Melville, A.J. and Preston, K.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Connolly, R.M., Melville, A.J. and Keesing, J.K. 2002a. Abundance, movement and identification of individual leafy sea dragons, <i>Phycodurus eques</i> (Pisces: Syngnathidae). <i>Marine and Freshwater Research</i> 53: 777–780.",
+      "year": "2002",
+      "title": "Abundance, movement and identification of individual leafy sea dragons, <i>Phycodurus eques</i> (Pisces: Syngnathidae)",
+      "author": "Connolly, R.M., Melville, A.J. and Keesing, J.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gillanders, B. M., Tulloch, A. I. T., and Divecha, S. 2015. <i>Regional Biodiversity Management Plan</i>. Spencer Gulf Regional Sustainability Planning.  Report prepared for the Upper Spencer Gulf Common Purpose Group. 57 pp.",
+      "year": "2015",
+      "title": "Regional Biodiversity Management Plan",
+      "author": "Gillanders, B. M., Tulloch, A. I. T., and Divecha, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stiller, J., Wilson, N. G., Donnellan, S., and Rouse, G. W. 2016. The leafy seadragon, <i>Phycodurus eques</i>, a flagship species with low but structured genetic variability . <i>Journal of Heredity</i> Advance Access. Available at http://jhered.oxfordjournals.org/content/early/2016/10/25/jhered.esw075.abstract.",
+      "year": "2016",
+      "title": "The leafy seadragon, <i>Phycodurus eques</i>, a flagship species with low but structured genetic variability ",
+      "author": "Stiller, J., Wilson, N. G., Donnellan, S., and Rouse, G. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marzinelli, E. M., Williams, S. B., Babcock, R. C., Barrett, N. S., Johnson, C. R., Jordan, A., Kendrick, G. A., Pizarro, O. R., Smale, D. A., and Steinberg, P. D. 2015. Large-scale geographic variation in distribution and abundance of Australian deep-water kelp forests. <i>PLOS One</i> 10(2): e0118390.",
+      "year": "2015",
+      "title": "Large-scale geographic variation in distribution and abundance of Australian deep-water kelp forests",
+      "author": "Marzinelli, E. M., Williams, S. B., Babcock, R. C., Barrett, N. S., Johnson, C. R., Jordan, A., Kendrick, G. A., Pizarro, O. R., Smale, D. A., and Steinberg, P. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 14 September 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Southwest Australian Shelf"
+      },
+      "code": "4_4_7"
+    },
+    {
+      "description": {
+        "en": "Southeast Australian Shelf"
+      },
+      "code": "4_4_6"
+    },
+    {
+      "description": {
+        "en": "West-Central Australian Shelf"
+      },
+      "code": "4_4_1"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

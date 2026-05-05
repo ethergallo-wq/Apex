@@ -1,0 +1,1870 @@
+{
+  "assessment_date": "2017-12-30T00:00:00.000+00:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 8966,
+  "criteria": "A2bce",
+  "url": "https://www.iucnredlist.org/species/8966/149227430",
+  "citation": "Lang, J, Chowfin, S. & Ross, J.P. 2019. Gavialis gangeticus (errata version published in 2019). The IUCN Red List of Threatened Species 2019: e.T8966A149227430. Accessed on 05 May 2026.",
+  "assessment_id": 149227430,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 8966,
+    "scientific_name": "Gavialis gangeticus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "CROCODYLIA",
+    "family_name": "GAVIALIDAE",
+    "genus_name": "Gavialis",
+    "species_name": "gangeticus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gmelin in Linnaeus, 1789)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Crocodile Specialist Group (crocodiles, alligators and caimans)",
+        "url": "http://www.iucncsg.org/",
+        "description": "Chair: Grahame Webb (email: gwebb@wmi.com.au)\nRed List Authority Coordinator: Sally Isberg (email: )\nNewsletter: http://www.iucncsg.org/pages/Publications.html"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Fish-eating Crocodile",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Gavial",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Indian Gavial",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Indian Gharial",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Long-nosed Crocodile",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Gavial del Ganges",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Gavial du Gange",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Gharial",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Lacerta gangetica Gmelin in Linnaeus, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Lacerta",
+        "species_name": "gangetica",
+        "species_author": "Gmelin in Linnaeus, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "14",
+    "upper_elevation_limit": 750,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "300-900, 650",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "No",
+    "generational_length": "25",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "81-90"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "14",
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "500",
+    "estimated_area_of_occupancy": "4400",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "3000",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "Yes",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>Historically, prior to 1943, Gharial were common and abundant in the main rivers and tributaries of the Indus, Gangetic and Brahmaputra drainages, and also inhabited the Mahanadi-Brahmini system in north central India. The species may have occurred in other rivers in peninsular India, such as the Godavari-Indravati rivers, as well as in the rivers and tributaries of the Irrawaddy in Myanmar, but supporting data are scant, equivocal or lacking (Singh 1991, Ranjitsinh and Singh 2002, Thorbjarnarson <em>et al.</em> 2006, KoKo and Platt 2012).<br/><br/>The species is now limited to only 14 widely spaced, restricted localities in north India and lowland Nepal. Five subpopulations [Chambal River, Katerniaghat Reservoir (on Girwa River), Chitwan National Park (Nepal), Corbett National Park and Gandak River] exhibit recent reproduction/recruitment (Table 1 in the Supporting Information). Levels of nesting are commensurate with the estimated number of mature females occurring at Chambal River and at Katerniaghat Reservoir. Limited nesting, relative to the number of adult females, occurs at Chitwan, Corbett and on the Gandak River. Reproduction is not evident currently in the Babai subpopulation at Bardia NP, despite an apparently, a small number of mature females (~5-10+) inhabiting this protected stretch of river, where nesting may occur in future years. Taken together, these five locations (excluding Chambal) account for &lt;15% of the global population, and &lt; 14% of the known nesting abundance. Eight minor sites with no breeding evident account for less than 25 mature adults, or the remaining &lt;5% of the gharial metapopulation.<br/><br/>Only one locality—National Chambal Sanctuary—is an open, protected riverine habitat, with strong water flow, normal seasonal migration and natural unobstructed movements 625 km river km (A; Table 1 in the Supporting Information). The Katerniaghat locality (B; Table 1 in the Supporting Information) is very small in comparison (&lt;20 km) and is utilised by gharial living in a reservoir behind a barrage on the Girwa River. The other four potential breeding river locations are either limited in size, unprotected or subject to disturbances from variable water flow, fishing, sand mining, cultivation: they exhibit limited or no natural recruitment.&#160; Remnant subpopulations are known at eight minor localities (G-M; Table 2 in the Supporting Information), characterized by low numbers of adults, and unfavourable, mostly unprotected habitats. Currently, in 2018, gharial are extirpated in Pakistan, Bhutan, Myanmar, and possibly Bangladesh where only few, vagrant individuals may persist.</p>",
+    "population": "Historically, gharials were the most common river crocodylian within the species’ range, and were frequently mentioned in British India narratives describing river conditions in those areas, from the early 1800s into the 20th century (24 accounts 1834-1998 presented and discussed in Lang 2018c in press).<br/><br/>The species survives at 14 locations (Tables 1 and 2 in the Supplementary Information), supplemented by releases of captive-reared juveniles, and an additional location where gharial appear to be successfully re-establishing themselves along a formerly occupied stretch of the Upper Ganges (Hastinapur; location O in Table 2 in the Supplementary Information).<br/><br/>Surveys for gharial are daytime counts, conducted at seasonally favourable times of year, either by boat or from riverside observation points (=stationary counts). Boat surveys result in counts 25-40% lower than stationary counts, which provides correction factors for adjusting boat counts and compensating for the two different survey methodologies (Nair <em>et al</em>. 2012, Chowfin and Leslie 2014, GEP 2017). Nest counts are made by observing the number of hatched nests at the end of the hatching period (mid-June), and adding these counts to direct observations of predated nests. Sighting counts of “adult female” (3-4 m in total length; no ghara visible) are potentially biased by sub-adult males (no ghara), and nest counts although biased by uncertainty about the proportion of adult females that nest annually, are a more conservative estimate within a subpopulation. With experienced observers, the variation in estimates is not great: on the Chambal River in the NCS, 442 adult females were estimated in early 2017 and in June 2017, ~420 nests were documented (GEP 2017, Khandal <em>et al</em>. 2017).<br/><br/><strong>Major sites </strong>(six subpopulations; 1,100 km; ~600 mature adults in total): Five locations exhibit recent reproduction/recruitment and reproduction is likely at a sixth location (Babai River) in the future.<br/><br/><strong>Chambal subpopulation </strong>(A on Table 1 in the Supplementary Information): The single largest and most populous location, the protected National Chambal Sanctuary (NCS) in north India, spans 625 river km, and contains about 500 mature adults, based on recent, conservative survey estimates.&#160; This population comprises 77% (500/650) of the total global gharial population, with &gt;410 nests in 2017, or ~86% of the global nest total (&gt;410/475 nests).&#160; The Chambal subpopulation has been regularly surveyed since the 1980s, by boat counts on the stretches of river where gharial appear to live and nest year-round. Detailed nesting tallies on the lower Chambal are included in the Chambal Field Report (GEP 2017). The resident gharial in this population utilize the entire length of the 414 km of mainstream, from Pali (upstream) to Pachnada (downstream) throughout the year. In 2017, additional nests were located within the NCS protected Parvati River, an upstream tributary, joining the Chambal near Pali (Khandal <em>et al</em>. 2017).&#160; Nesting occurs at widely spaced sites up and down this length of protected river, changing locally every year with sandbank changes.<br/><br/>Despite the mass die-off in the winter of 2007-2008 of ~110 gharial, 2-4 m in total length, annual counts of basking gharial and nest counts have been stable and indicate an overall moderate increase in recent years in both indices.&#160; No comparable mass mortality has occurred subsequently (Nawab <em>et al</em>. 2013) and die-off details are discussed in Stevenson (2015). Releases of juveniles from a conservation ranching program are still occurring and typically result in 100-200 captive-reared animals per year being released. These programmed releases are largely unstructured, unstudied and the results are not monitored. The efficacy of such releases remains unknown, and the utility of continuing the Chambal release program has been questioned.&#160;&#160; In February 2018, juvenile gharial in the MPFD release program in the NCS, which were head-started at the Deori Eco-centre, were radio tracked upon release in the lower Chambal (Lang 2018a).<br/><br/>In comparison with other locations where gharial are still extant, the Chambal subpopulation has been relatively well-studied since the establishment of the National Chambal Sanctuary (NCS) in 1979.&#160; For decades, the Chambal River system has contained the largest, self-sustaining gharial population (Rao <em>et al</em>. 1995) and this region has been the focus of numerous ecological studies (Singh 1978, 1985; Whitaker and Basu 1983; Rao 1988; Hussain 1999, 2009; Katdare <em>et al</em>. 2011) and conservation landscape analyses (Hussain and Badola 2001). Annual surveys have been conducted (Sharma 1999, Sharma and Basu 2004, Rao <em>et al</em>. 2013, Sharma and Dasgupta 2013), augmented by additional surveys (Katdare <em>et al</em>. 2011; Nair <em>et al</em>. 2012a, 2012b).&#160; Interactions between Mugger Crocodiles (<em>Crocodylus palustris) </em>and Gharial in the NCS, over a thirty year period (1984-2014), were reported by Sharma and Singh (2014). The Gharial Ecology Project, initiated in 2008 in response to the mass die-off on the lower Chambal, has documented long-distance seasonal migrations of 100-200+ km by adults, primarily nesting females, as well as complex social behaviours of adults and young, during the pre-monsoon hatch and post-hatch period (Lang and Kumar 2013, 2016; Khandal <em>et al</em>. 2017; Jailabdeen 2018; Singh <em>et al</em>. 2018).<br/><br/><strong>Katerniaghat subpopulation </strong>(B on Table 1): The Katerniaghat subpopulation occupies a relatively small area, comprising about 20 km of river and reservoir shoreline, within a protected wildlife sanctuary that is part of Dudhwa National Park on the Indo-Nepal border in north central Uttar Pradesh.&#160; The Girwa River segment within it is inhabited by gharial, and is bounded downstream by the Kailashpuri Dam, a major barrage on the Ghaghara River into which the Girwa flows, and upstream by the international border with Nepal (=Geruwa River, in Nepal; eastern branch of the Karnali River). It flows from Nepal in the north into India.&#160; This location is currently estimated to contain approximately 50 mature adult gharial, 6-10 males and about 35 females.&#160; Nesting at Katerniaghat has been estimated at 24-35 nests per year, at four sites, of which the majority 22-25 are laid at one site where it is impacted by vegetation growth, and where hatchling mortality has been high in recent years.The Katerniaghat subpopulation has been studied in detail since the 1970s (Singh 1979, Srivastava 1981, Choudhary <em>et al</em>. 2017). This population has remained relatively constant since the last assessment (Choudhury <em>et al</em>. 2007), and is characterized by an annual reproductive output, in terms of number of nests, proportionate to the estimated number of mature females (30-35 females; 24-35 nests per year). Juvenile releases at this location apparently ceased after 2009, so the juveniles now in the population are presumably resulting from natural recruitment of successful <em>in situ</em> reproduction in this lotic reservoir habitat.<br/><br/>At the other major locations (C-F), extant gharial sub-populations vary in the number of mature adults estimated to inhabit each area, but the level of nesting does not appear to be commensurate with the number of mature females.&#160; Rather, in contrast to Chambal and Katerniaghat, annual reproduction appears to be limited at Chitwan in Nepal, on the Gandak River in Bihar, and at Corbett on the Ramganga River in north India. Recent nesting has not yet been documented at Babai River in Bardia National Park, but did apparently occur in the 1980s (DNPWC 2018). There is potential for nesting in this protected river segment, totally within park boundaries.<br/><br/><strong>Chitwan subpopulation</strong> (C on Table 1): The Chitwan subpopulation is estimated to be 40-60 mature adults, with few adult males (&lt;5 or less). At Chitwan, mature adults inhabit the Narayani and the East Rapti Rivers adjacent to the protected area, and have been recorded nesting along suitable stretches of both rivers within the last decade (Table 1 in the Supplementary Information). The number of nests found each year is relatively low, only 4 to 14 over the past decade. In most years, a majority of these nests have been removed for artificial incubation, and any resultant young were head-started by rearing in captivity for 5 to 10+ years (Archarya <em>et al</em>. 2017, Lang 2017b). Lower levels of nesting at Chitwan are enigmatic, but may be related to a lower reproductive frequency, e.g., biannual rather than annual nesting by females, or a recent scarcity of breeding males.<br/><br/><strong>Gandak subpopulation </strong>(D on Table 1): On the Gandak River (south of Chitwan in India), a separate subpopulation exists, and is fragmented into smaller groups of individuals living in a largely unprotected, riverine habitat extending over 300+ km. On the basis of recent surveys on the Gandak between Tribeni Dam on the Indo-Nepalese border and the Gandak-Ganges confluence near Patna, the resident gharial are widely dispersed, but do aggregate, primarily in the upstream 100-200 km of the river (Nair and Katdare 2014a). Although the Narayani-Gandak River is contiguous across the border, these subpopulations are treated as separate entities because there is limited exchange, especially in upstream direction, due to the water control structures on the border. In 2016, six nests were laid at a site 100 km downstream from protected habitat at the Indo-Nepal border, with successful hatching.&#160; However, in 2017, no nests were recorded, after early nesting attempts were interrupted when water was released at the upstream barrage (Choudhury <em>et al</em>. 2016; WTI 2017).<br/><br/><strong>Corbett subpopulation </strong>(E in Table 1): At Corbett National Park, gharial have been living in the Kalagarh Reservoir, occupying an approximate area 3,500-4,000ha with 32 km of shoreline habitat. Recent estimates of mature adults indicate a total of ~30 individuals, of which ~10 are males and ~20 are females (Chowfin and Leslie 2014, 2016). Nesting data at Corbett in recent years (2012-2017) are largely unavailable, but a 2013 report indicated &lt; 13 nests (Chowfin, 2013). Earlier reports in 2008 and 2011 indicated that few nests were observed (1-2 nests; Chowfin and Leslie 2013). Hatchling mortality to one year of age is high, ~99% (Chowfin and Leslie 2016). Available evidence indicates limited nesting habitat exists, and that the reproduction rate of approximately 38% of mature females nesting annually is low.<br/><br/><strong>Babai subpopulation </strong>(F on Table 1): The Babai River location, entirely protected within Bardia National Park, comprises 45 km of river, bounded downstream by a major barrage and upstream by unsuitable habitat containing shallow water and rapids, which restrict gharial movements. No nesting has been detected at this locality in recent years, and there have been no young gharial observed (Lang 2016b, 2017). Nesting near Kalinara on the Babai River was noted in the 1980s (pers. comm., K.M. Shrestha, p.16, cited in DNPWC 2018). A small group of mature adults (5-10 total, including males and females) may form the nucleus of a breeding group with the potential to recover the sub-population.&#160; Head-started juveniles were released in this location in 2014 and 2015, and it is considered an excellent candidate for future releases of captive-reared juveniles (Lang 2017).<br/><br/><strong>Minor locations </strong>(eight subpopulations; 1,200 km; ~50 mature adults in total): Four minor locations (I, L, M, N; Table 2) have very few confirmed resident adults (&lt;10 mature adults overall).&#160; A recent loss of large males and other adults, with habitat alteration, characterizes the Son River, Ken River, Mahanadi River, and Karnali River at Bardia NP locations.&#160; Of these, the Karnali River site (I) is possibly recoverable, if adequate protection was achieved through legislation and enforcement, and if a robust restocking program were initiated.&#160; The other locations (Son, Ken, and Mahanadi Rivers; L-N) lack adequate protection from water use, detrimental resource extraction and unregulated fishing, all of which are currently impeding recovery (Sharma <em>et al</em>. 2011; Nair and Katdare 2013, 2014b; Mohanty <em>et al</em>. 2010; Nair <em>et al</em>. 2017).<br/><br/>The other four minor locations are diverse and difficult to categorize (G, H, J, K; Table 2). Two sites (Hooghly and Jamuna; H, J) are long stretches of deltaic rivers in the Ganges-Brahmaputra drainages in which small numbers of gharial have been encountered and/or documented during intermittent surveys (Ghosh and Merrill 2010; Ghosh 2013; Rashid <em>et al</em>. 2014; IUCN Bangladesh 2016).&#160; In these areas, shoreline and potential nesting habitats are especially transient, and residency patterns and known nesting sites have not been documented.&#160; Protection in these areas will be particularly challenging. <br/>Upstream in the Gangetic tributaries, the Ghaghara River location (G; Table 2) may contain a small number of mature adults in the middle and lower stretches, but nesting/recruitment has not been documented.&#160; Downstream movements from the Katerniaghat location upstream, probably by juveniles crossing the barrage during high water episodes, may augment gharial numbers in the Ghaghara River location (G). In recent years (2013-2017), there have been multiple releases of captive-raised juveniles in the upstream Ghaghara, in the vicinity of resident gharial sighted during recent surveys (pers. comm., S. Singh 2017)<br/><br/>The remaining minor locations are in the Brahmaputra-Barack Rivers, grouped here as a single location (K; Table 2).&#160; Much less is known about gharial distribution and abundance in Northeast (NE) India, primarily in Assam and possibly Aranchal and Manipur (Das <em>et al</em>. 2013). Saikia <em>et al</em>. (2010) describes 11 sightings during 2004-2007, identifying four specific sites as “direct observations”, and others documented by the Assam Forest Department. One site is a natural lake, Uropod beel (=lake) where gharial have reputedly been captured and photographed (see Saikia <em>et al</em>. 2010). T. Ghosh (pers. comm. 2017) observed a gharial in Dibru Saikhowa National Park, and he reports local residents make additional sightings in this area. In contrast, a detailed assessment of potential gharial habitats in NE India, principally at Manas, Nameri, Orang, Kaziranga, Dibru National Parks, and&#160; D’ering Sanctuary in 2011, found no evidence of gharial in these protected areas (Das <em>et al</em>. 2011). Clearly, information about gharial persisting in NE India is lacking, and additional data are needed.<br/><br/><strong>Hastinapur subpopulation </strong>(O on Table 2): In addition to the 14 major and minor locations where gharial are extant, there is an additional location where head-started juveniles have been released from 2009 through 2017. This is a protected stretch of the upstream Ganges River mainstream, near Meerut in NW Uttar Pradesh, recently established as a wildlife sanctuary in the midst of an intensively agricultural, riverine landscape. Some juveniles released have evidently survived and become resident, mostly within the protected area. Now sub adults, they are expected to mature in the next 5-10 years.&#160; This section of the Ganges was formerly occupied by gharial, and the overall strategy for river conservation is to re-establish the resident fauna and flora, to the extent possible. This is an innovative project conducted by the WWF India Freshwater Program, in collaboration with the Uttar Pradesh Forest Department and Ministry of Environment, Forests, and Climate Change, Government of India (Yadav and Khan 2016). However, since the generation time for gharial is estimated at 25 years, the lead time before intrinsic breeding is re-established at Hastinapur is likely to be at least 5 to 15 years into the future.",
+    "habitats": "<p>The gharial is a river dwelling crocodilian (Whitaker and Basu 1983) with adult gharial showing widespread use of river systems with seasonal migratory behaviours and social hierarchies (Lang and Kumar 2013, 2016). Gharials congregate for mating and nesting during the dry season in these highly seasonal, monsoonal rivers. &#160;Courting and mating occurs in mid–February followed by nesting and egg-laying in mid–March to early–April. Female gharial nest in seasonally exposed sandbanks along slow moving sections of medium- to large-sized rivers, and lay an average of 40 eggs. When concentrated in these areas, gharial are highly vulnerable to impacts from fishing and malicious killing. The eggs are also vulnerable because in some areas they are sought for food/medicine. Incubation takes 2-2.5 months with mostly females guarding nest sites. &#160;Hatching occurs in late May through mid-June. &#160;Adult care is well-documented. Females open the nests at the time of hatching but do not transport the young to the water. &#160;Hatchlings from multiple nests aggregate in crèches numbering from hundreds to a thousand or more.&#160; Females, and typically a single large male, guard hatchling crèches from potential predators for 1-2 months. Once monsoon waters start to rise, the guarding adults make long distance seasonal movements, and the crèches break up with hatchlings dispersing widely into aquatic shoreline habitats.&#160; Adult gharial are seasonal migrants in large, open river drainages, with movements of 50-200+ km recorded in Chambal. Upon release, non-resident, captive-reared individuals appear highly mobile, and some have moved in excess of 1,000 km. </p>  <p>In the Chambal subpopulation, most large females nest every year (reproductive frequency &gt;90%; Thorbjarbnarson 1996, Lang and Kumar 2016). Similar values appear to apply to other subpopulations, e.g. Katerniaghat subpopulation, but may not apply to the most northerly subpopulation, e.g. at Chitwan. The Nepalese subpopulations may show higher rates of biennial nesting.</p>  <p>A number of gharial subpopulations now exist in lentic, rather than lotic, environments, principally in reservoirs behind dams and/or barrages, formed in flooded water courses that were formerly river channels. These include the Katerniaghat subpopulation and the Corbett subpopulation.&#160; The Chitwan subpopulation is possibly impacted by the Tribeni Dam on the Gandak (=Narayani) River, but the distances between gharial concentrations and the dams in all three locations vary.&#160; Saikia <em>et al. </em>(2010) sighted gharial at natural lake localities on the Brahmaputra drainage, with presence confirmed by local inhabitants.&#160; A gharial photographed by local forest department staff, was caught there and translocated into a permanent channel (Saikia 2012).</p>  <p>Additional references on gharial habitats and ecology are noted in Groombridge (1982), Maskey (1989), Rao<em> et al. </em>(1995), Wildlife Institute of India (1999), Choudhury <em>et al. </em>(2007) and Stevenson (2015).&#160; </p>",
+    "threats": "<p><span class=\"datalabel1\"><strong>Dams and Barrages</strong>: Major water control structures, including dams, barrages (=low, gated diversion dams) and related constructions, have been detrimental to gharial distribution and abundance on all of the river drainages in which the species occurred. These structures resulted in serious habitat fragmentation and degradation. In freshwater systems, the extinction related to dam construction is not quantified nor understood, but apparently also affects freshwater dolphins (Braulik <em>et al.</em><span class=\"datalabel1\"> 2014, Paudel <em>et al.</em><span class=\"datalabel1\"> 2015, Braulik and Smith 2017). In the future, many dams and barrages are planned for major rivers and tributaries in areas where Gharials reside, or are suspected to remain, such as the upper reaches of the Brahmaputra. In this area recent studies predict major detrimental effects of hydropower and storage projects on the rich and diverse fishes inhabiting the Lohit river basin, a major Brahmaputra tributary (Kansal and Arora 2012). The relatively rapid disappearance and extirpation of the formerly common and abundant gharial in the Indus system is, perhaps, the best example of the magnitude and importance of this major threat to date (Lang 2018b). Rae (1933) notes unusual, high concentrations of gharial associated with new construction of a major barrage (Lloyd Barrage) on the Indus.&#160; He observed that local fishermen related such changes in gharial behaviour directly to newly closed dam gates trapping hundreds of gharial upstream, immediately following barrage construction. Dam construction on the Ramganga River, to create the Kalagarh Reservoir at Corbett National Park, involved extensive blasting, which caused gharial deaths. The formerly large numbers of gharial that frequented the deep pools, submerged by reservoir, were reduced to a few remnant individuals (Singh 1979). On the Narayani-Gandak River, when the Tribeni Dam was constructed on the Indo-Nepalese border, gharial distribution and abundance was altered, and fewer gharial frequented the areas despite previously being abundant (Maskey 1989). Irrigation and hydro projects on the Betwa River, a major Yamuna tributary, resulted in a marked reduction and eventual extinction of resident gharial (Singh 1979). On the Brahmani River in Odisha, east central India, dam construction also involved extensive blasting, killing many gharial, and eventually leading to the species’ extinction in this drainage (Singh and Bustard 1982). On the Kosi River in eastern Nepal, which flows into India and into the Ganges, the construction of the Kosi Barrage at the international border resulted in monsoonal flooding of upstream nests, and only allowed one-way downstream movements (Maskey 2008). In Nepal, Gharial no longer survive on the Kosi, despite numerous re-introduction attempts (Shah and Paudel 2016). In India, the Kosi was channelized in the 1970s, and embankments restricted river flow. As a consequence, hunting of Gharial increased, and numbers declined dramatically (Biswas 1970; Shahi 1974).&#160; Elsewhere in Nepal, dynamiting during bridge construction at Chisapani on the Karnali River resulted in declines in resident gharial in the Bardia National Park (Maskey 1989). <br/><br/><strong>Water Extraction /Irrigation</strong>: Lift stations on the Chambal threaten gharial survival because during the dry season, water flow and consequently river connectivity is greatly reduced. Such activities are illegal, but persist despite restrictive legislation and regulations (Hussain <em>et al.</em><span class=\"datalabel1\"> 2011; Nair 2017).&#160; During the last 20 years, the flow regime of the Chambal River has shown a declining trend and continued water withdrawal will negatively impact available riverine habitats important to the gharial in future years (Hussain <em>et al </em><span class=\"datalabel1\">2011). Water management programs adversely impacting gharial are now evident on the Son River (location L; Table 2) (Sharma <em>et al.</em><span class=\"datalabel1\"> 2011; Nair&#160;and Katdare 2013), and a more informed water management strategy will be needed to overcome them (Nair&#160;<em>et al.</em><span class=\"datalabel1\">&#160;2016). On the Chambal, there is a major upstream project proposed that would likely divert much of the remaining water now available to the Chambal main channel, via the Parbati and Kali Sindh tributaries upon which the Chambal relies for water flow during the dry season.&#160; On the lower Chambal, its recent declaration as National Waterway No. 24, a part of the development corridor across northern India, seriously threatens this river sanctuary (Nair 2017). Vegetation intrusion at the major nesting site at Katerniaghat impacts hatchling survival (G. Vashistha per. comm. 2018).<span class=\"datalabel1\"><br/><br/><strong>River Interlinking</strong>: The proposed Ganges-Brahmaputra inter-link canal and dam project, envisioned under the Indian National Waterways Act 2016, is intended to convert 111 reaches of 106 rivers to inland waterways for transport of cargo, coal, industrial raw materials, and for tourism, without government seeking environmental approvals for bulk of the waterways (Hindustan Times 2018). The cumulative effects of these projects will severely affect the remaining extant populations of gharial which persist in the few remaining remnants of natural riverine habitat, presently under governmental and legal sanctions as protected areas, etc. Previously, the completion of the Farakka Barrage on the lower Ganges in 1974, coupled with the construction of at least 19 other barrages and 18 high dams in the Ganges-Brahmaputra-Meghna system since 1957, resulted in major impediments to seasonal migratory movements throughout the system, and dramatic declines in the quantities and qualities of riverine habitats available to Gharial and Ganges River Dolphins (Braulik and Smith 2017).<br/><br/><strong>Mortality in Fishing Nets/Gear</strong>: As legal and illegal net fishing, especially with monofilament gill nets, has intensified in large rivers, gharial losses to entrapment are increasing. Data on mortality rates due to net fishing are scarce, but observations on the Chambal and Yamuna over the past decade indicate the gharials most vulnerable are young animals, primarily juveniles and sub adults, despite some large mature adults occasionally getting caught.&#160; Net related mortality is the main cause of adult losses in the Ken and Son Rivers. In 2016, on the Son River, two adult males died after being entangled in fishing nets (Nair 2017). In the Chitwan subpopulation in Nepal, one of the few resident adult breeding males was caught and drowned in a fishing net (Lang 2017). On the Chambal, fishing in the National Chambal Sanctuary is prohibited, but persists, especially in the lower reaches near the Yamuna confluence, and in the Yamuna stretches above and below the Chambal confluence. Young animals are susceptible to being caught in nets, and either drown or are killed or injured deliberately or accidentally. Older gharial appear to be “net savvy” and tend to not be captured in nets.&#160; Near the Yamuna confluence, gharial of all sizes with damaged snouts are more often encountered than elsewhere in the NCS.<br/><br/><span class=\"datalabel1\"><strong>Sand Mining and Boulder Collection</strong>: Sand mining removes critical riverside substrate for nesting.&#160; Increasing and widespread development has resulted in high demand for sand for construction purposes. Sand removal operates on an industrial scale at some localities on the Chambal River, and also on the Ken and Son Rivers, as well as at unprotected minor locations where gharial still survive. In Nepal, boulder removal in addition to sand mining continue on unprotected stretches of river adjacent to and within both Chitwan and Bardia National Parks. Sand mining continues at a number of Gharial localities, and has widespread and detrimental effects on wildlife directly, as well as on the integrity and lateral connectivity of these important riverine habitats (Vagholikar and Moghe 2003; Taigor and Rao 2008, 2010a, 2010b; Nair&#160;</span><span class=\"datalabel1\">and Katdare 2013, 2014b; Nair 2017; Lang and Kumar 2013, 2016; Rao <em>et al. </em><span class=\"datalabel1\">2016; Nair 2017).<br/><br/><span class=\"datalabel1\"><strong>Introduced Species</strong>: Exotic fish species are now established and common in the Yamuna-Chambal system. Feral, exotic <em>Tilapia</em> species are now the most abundant fish in sample catches at multiple stations on the lower Yamuna (Ganie <em>et al.</em><span class=\"datalabel1\"> 2013; Singh <em>et al.</em><span class=\"datalabel1\"> 2014). Although <em>Tilapia </em>were suggested to be a major contributor to the mass die off of gharial in 2007-08, there is scant evidence to support this suggestion (Stevenson 2015), despite the fact that this species is known to contain high levels of &#160;industrial effluents and pollutants in Yamuna waters (Laxmi <em>et al. </em><span class=\"datalabel1\">2015). A preliminary study in the NCS identified the dominant species of <em>Tilapia</em><span class=\"datalabel1\"> to be <em>T. mossambicus</em><span class=\"datalabel1\"> and fish from the upper Chambal were in better body condition than those collected in the lower Yamuna (Rainwater <em>et al. </em><span class=\"datalabel1\">2009). Downstream, the dominant tilapia species is<em> T. niloticus </em><span class=\"datalabel1\">(Dwivedi <em>et al</em><span class=\"datalabel1\">. 2016) although both species are found. Monsoon observations by Gharial Ecology Project researchers indicate that there are regular, seasonal concentrations of Gharial (&gt; 50+), primarily adults and large sub adults, assembled at the confluence of the Yamuna-Chambal rivers for feeding when currents and water levels are conducive. The dominant fish being caught and consumed by Gharials participating in these feeding aggregations is tilapia, and typically many fish are consumed by individual animals, on any given day when conditions are favourable (Lang and Kumar 2013, 2016, and unpublished observations). Elsewhere, the production of a strong male-bias in populations of the American Crocodile (<em>Crocodylus acutus</em><span class=\"datalabel1\">) has been attributed to a novel environmental androgen added to fish feed (methyl testosterone) for rapid growth in <em>Tilapia</em> aquaculture operations adjacent to the natural riverine habitats of the affected crocodiles (Murray <em>et al</em><span class=\"datalabel1\">. 2017). The possible effects of <em>Tilapia</em> consumption, a relatively new food source for Chambal Gharial, have not yet been studied, but may be noteworthy, with reference to the recent mass die-off, as well as to environmental influences on sex determination (Lang and Andrews 1994, Andrews and Whitaker 2004), growth and overall health.<span class=\"datalabel1\"></span>  <br/></span></span></span></span></span></span></span></span></span></p><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"MsoCommentReference\"><span lang=\"X-NONE\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"MsoCommentReference\"><span lang=\"X-NONE\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"><span class=\"datalabel1\"></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>",
+    "measures": "<p>For nearly half a century, serious concerns have been expressed about the status and continued survival of Gharial populations globally (Biswas 1970; Bustard 1975, 1999; Whitaker 1975, 1987; Maskey 1999, 2008; Sharma and Basu 2004; Choudhury <em>et al</em>. 2007). In a recent commentary and review, Stevenson (2015) outlined a brief history of these conservation initiatives for gharial, and evaluates successes and failures. These efforts have included ex-situ activities focused on enhancing existing populations and re-establishing populations in places where the species has been extirpated. <em>Ex situ</em> activities include production of juveniles through conservation ranching and captive breeding, with releases and introductions into wild habitats. <em>In situ</em> activities, focused on enhancing and strengthening existing populations, include habitat protection, direct species protection measures, and local community programs aimed at species’ protection and continued survival.<br/><br/><strong> Head-starting</strong>: Conservation ranching of wild eggs, with rear and release programs, were at the centre of initial conservation actions in the 1970s and 1980s, in both India (Bustard 1999) and Nepal (Maskey 1999). To date, in excess of 6,000 Gharial have been reared and released in both countries (India: ~5,000; Stevenson 2015; Nepal: ~1,000; Khadka&#160;<em>et al</em>. 2013, Lang 2016b; Acharya <em>et al</em>. 2017). However, the success of these programs is open to question, and remains largely untested. The initial restocking of suitable habitats such as the Chambal and Katerniaghat in India contributed to curbing the rapid rate of population decline prior to 1970s, helped stabilize existing numbers, and led to eventual population increases in selected localities. In fact many of breeding adults now living in the National Chambal Sanctuary may be animals released as juveniles 10 to 30 years ago. But a lack of any robust marking protocols or systematic follow-up on the fate of such releases, preclude objective evaluation of their effectiveness. Elsewhere, repeated releases of head-started juveniles have not resulted in appreciable population increases, and the fate of released individuals are either not known (Stevenson 2015) or known to have not succeeded in boosting the wild population (Shah and Paudel 2016, Acharya <em>et al</em>. 2017, Lang 2017). In general, relative to other species such as alligators, gharial eggs have proved difficult to transport and incubate successfully under artificial conditions. Likewise, developing suitable techniques for rearing gharial hatchlings (which prefer to feed on live fish) that thrive and grow in captivity has proved challenging. The head starting of gharials has proven to be more difficult than anticipated, expensive and has not become the panacea for gharial conservation anticipated, particularly when resources and manpower are in short supply.<br/><br/> <strong>Captive breeding</strong>: In India, successful captive breeding programs were established for gharial in the 1980s and 1990s, notably at Nandan Kanan in Odisha, at the Madras Crocodile Bank Trust in Tamil Nadu and at the Kukrail Breeding Center in Uttar Pradesh (Bustard 1984, 1999; Whitaker 1987).&#160; These facilities, in turn, produced young Gharial for the various release programs, as well as for exchanges with Asian and international zoos worldwide.&#160; In Nepal, the major sources of gharial for the head-start programs have been <em>ex situ</em> incubation of eggs from wild nests, but this strategy has been augmented in recent years by captive breeding (Khadka <em>et al</em>. 2013). Outside of south Asia, success in the captive breeding of gharial in zoos has lagged behind successful programs for most other crocodilian species but recently there have been some notable successes in Europe and in the USA (e.g., Crocodile Zoo Protivin in Czech Republic; Saint Augustine Alligator Farm, Florida).<br/><br/><strong>Release strategies</strong>: Within a decade after the start of Project Crocodile in India, more than a thousand raised juvenile gharial, 2 to 5 years of age, were released back into protected habitats (Whitaker 1987). In addition to releases in the National Chambal Sanctuary, gharial were released in the Girwa, Sharda, Ramganga, main Ganges, Betwa, Ghaghara, and Suheli Rivers (Bustard 1999). In the intervening years, prior to the species’ listing to Critically Endangered in 2007, releases have continued apace, but as Bustard (1999) noted earlier, “no systematic monitoring is being carried out”. Since 2007, releases have continued, but are poorly documented by individual state Forest Departments within India. These have occurred at localities inhabited by Gharial at Chambal, Girwa (=Katerniaghat), Ghaghara, Gandak, and Ken Rivers. In addition, head-started Gharial have been released in previously occupied habitats, including the Upper Ganges in protected sanctuaries, at Hastinapur in Uttar Pradesh, and at Haricke, in a reservoir on the Beas River, a tributary of the Indus in the Punjab, India. These latter two releases are re-introductions of juvenile Gharial back into riverine habitats from which gharial had been extirpated previously. Here the objective is to re-establish Gharial where they used to occur historically, but were eliminated in recent times.&#160; Similar efforts were made in the Koshi River, Nepal on repeated occasions in the 1980s and 1990s, but these earlier attempts to re-establish gharial failed (Shah and Paudel 2016). Recent releases in Nepal (2007 to 2016) at Bardia and at Chitwan have not resulted in appreciable population increases (Acharya <em>et al.&#160;</em>2017).</p>",
+    "use_trade": "<p>  </p><p>Eggs are known to be harvested as a food source and for medicinal purposes by river-dwelling local societies on the Girwa and the Rapti – Narayani Rivers (Choudhury <em>et al.</em> 2007)<span class=\"datalabel1\">. Hunting of the species is no longer considered a significant threat (Choudhury <em>et al.</em><span class=\"datalabel1\"> 2007). Gharial do not contribute to the local economies through consumptive uses but are featured in eco-tourism, which is primarily bird-based, at multiple localities in all three states along the National Chambal Sanctuary.&#160; </span></p>  <br/><span class=\"datalabel1\"><span class=\"datalabel1\"><p></p></span>",
+    "rationale": "<p>Gharial were historically distributed throughout the major channels of the Indus, Ganges, Mahanadi, Brahmaputra-Meghna and possibly Irrawaddy drainages, to elevations of &lt;500 m, an estimated combined linear river distance of &gt;20,000 km, or an historic occupancy area of 80,000 km² (using Red List standard 4 km² resolution). The species is currently extirpated from the Indus, Irrawaddy and most rivers and tributaries of the Ganges and Brahmaputra-Meghna systems, but persists in fourteen sites within the Ganges drainage (6 major and 8 minor), with confirmed breeding at only five locations (Table 1 in the Supplementary Information).<br/><br/>Surveys and counts in 2010-2017 indicate an adult global metapopulation conservatively estimated at 650 (median) with a range of 300-900.&#160; The largest and most populous location, the protected National Chambal Sanctuary in north India, spans 625 river km, with approximately 500 mature adults, comprising 77% of the global total, producing &gt;410 nests annually, or &gt;86% of the global total.&#160; Five other locations reporting breeding are small and highly disturbed.&#160; The remaining 8 minor locations together contain less than 10% of the world population (&lt;50 mature adults), with no recent breeding. During the next decade, gharial will likely be extirpated from some of the minor/non-breeding sites, including three sanctuaries in India designed for their protection (Son, Ken, Satkosia Gorge), as well as the Padma-Jamuna, Brahmaputra-Meghna, and Bhagirathi-Hooghly drainages, based on the infrequent sightings in these regions.<br/><br/>Generation time is estimated at 25 years giving a period of decline of 75 years or since 1943. Cause of declines have been principally dams and barrages disrupting river hydrology, mortality in fishing nets, and historically, unregulated hide-hunting. Current serious threats include major water control and extraction activities, mortality in fishing gear, and increased anthropogenic river-bank disruptions, especially sand mining and boulder removal.&#160; These threats are known, continuing and not reversible, therefore criterion A2 applies. The expansion of threats and major declines have intensified since the 1950s, and continue presently with increasing demand for river resources.<br/><br/>Past population levels are inferred to be &gt;20,000 adult gharial globally.&#160; Calculating across the range of current and past population estimates, exponential declines are 94% or greater. Even a very conservative calculation of 5,000 in 1943 and 1,000 currently gives a decline of 80%.&#160; Decline in 3 generations is confidently inferred to exceed the criterion A2bc&#160;80% for Critically Endangered.<br/><br/>Toxins/pollutants were strongly suspected to play a role in the death of &gt;110 gharial in the size range of 2-4m during the winter of 2008-2009 on the lower Chambal (Whitaker <em>et al</em>. 2008), and possibly the loss of additional gharial in 2012 (&lt;10-15 individuals; Nair <em>et al</em>. 2013).&#160; This initial major loss suggested a species-specific sensitivity to whatever caused the deaths, which were localized geographically, most occurring rapidly within 2-15 weeks.&#160; These deaths were related to articular and visceral gout, related to kidney failure, associated with low ambient temperatures.&#160; Despite the absence of a re-occurrence, the susceptibility of gharial to whatever resulted in gout in the first instance warrants the application of criterion A2e.<br/><br/>Extent of occurrence (EOO) exceeded 80,000km² historically. Area of occupancy (AOO) is generously estimated for the six major locations with sizeable resident populations at 4,400 km², a reduction of 94%.<br/><br/>A population estimate of 300-900 mature individuals meets criterion C1 for Endangered if we infer that the decline is continuing at a rate of at least 20% in two generations/50 years i.e. since 1967. Gharial meets criterion D1 Vulnerable (population size &lt;1,000 mature individuals). The species does not meet criteria E.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "None",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "None",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "None",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Yes",
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    }
+  ],
+  "researches": [
+    {
+      "note": "None",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Work & other activities"
+      },
+      "code": "6_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Lang, J, Chowfin, S. & Ross, J.P.",
+      "value": [
+        "Jeff Lang (University of North Dakota USA)",
+        "Perran Ross (IUCN SSC Crocodile Specialist Group)",
+        "Subir Chowfin (The Gadoli and Manda Khal Wildlife Conservation Trus)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bayshal, A., Choudhury, B.C., Gill, I., Isberg, S., Mallapur, G., Rao, R.J., Stevenson, C., Vashistha, G. & Webb, G.J.W.",
+      "value": [
+        "Gaurav Vashistha",
+        "A. Bayshal (Croc Sg)",
+        "Gowri Mallapur (Croc Sg Gudjarat)",
+        "Grahame Webb (IUCN SSC Crocodile Specialist Group)",
+        "Colin Stevenson (Crocodile Specialist Group)",
+        "Sally Isberg (Centre for Crocodile Research, Noonamah,  Australia)",
+        "B.C. Choudhury",
+        "RJ Rao (Jiwaji University)",
+        "Ira Gill"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Baliga, C., Baral, H., Bhatta, R., Bhatta, T., Bhattarai, A., Chauhan, R., Choudhary, A., Choudhary, S., Das, A., Ghosh, T., Hussain, S., Jailabdeen, A., Kandel, R., Katdare, S., Khadka, B., Khandal, D., Kumar, P., Malla, S., Meena, H., Nair, T., Rajbhandari, S., Sharma, R.K., Singh, L.A.K., Singh, R.P., Singh, S., Subedi, N., Taigor, S., Thapa, K., Theophilus, E., Tripathi, A., Whitaker, R. & Yadav, S.",
+      "value": [
+        "S. Yadav",
+        "R.K. Sharma (Croc SG)",
+        "C. Baliga (Crocodile Specialist Group)",
+        "H. Baral (Croc SG)",
+        "T. Bhatta (Croc SG)",
+        "R. Bhatta",
+        "A. Bhattarai (Croc SG)",
+        "R. Chauhan (Croc SG)",
+        "A. Choudhary (Croc SG)",
+        "S. Choudhary (Croc SG)",
+        "A. Das",
+        "T. Ghosh (Croc SG)",
+        "S. Hussain",
+        "A. Jailabdeen (Croc SG)",
+        "S. Katdare (Crtoc SG)",
+        "R.C. Kandel",
+        "B. Khadka (IUCN SSC Crocodile Specialist Group)",
+        "D. Khandal (Croc SG)",
+        "P. Kumar",
+        "S. Malla (Croc SG)",
+        "H. Meena (Croc SG)",
+        "T. Nair (IUCN SSC Crocodile SG)",
+        "S. Rajbhandari",
+        "S. Singh (Croc SG)",
+        "L.A.K. Singh (Croc SG)",
+        "R.P. Singh (Croc SG)",
+        "N. Subedi (Croc SG)",
+        "S. Taigor (Croc SG)",
+        "K. Thapa (Croc SG)",
+        "E. Theophilus (Croc SG)",
+        "A. Tripathi",
+        "R. Whitaker (Croc SG)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Balaguera-Reina, S.A.",
+      "value": [
+        "Sergio Balaguera-Reina (Texas Tech University, Lubbock, Texas)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version of the 2017 assessment was created to correct some formatting issues throughout the assessment, remove some references that are no longer applicable to the assessment, and to make some minor corrections to headings in tables included in the Supplementary Information."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Groombridge, B. (ed.). 1994. <i>1994 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1994",
+      "title": "1994 IUCN Red List of Threatened Animals",
+      "author": "Groombridge, B.",
+      "citation_short": "Groombridge 1994"
+    },
+    {
+      "citation": "IUCN Conservation Monitoring Centre. 1988. <i>IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1988",
+      "title": "IUCN Red List of Threatened Animals",
+      "author": "IUCN Conservation Monitoring Centre",
+      "citation_short": "IUCN Conservation Monitoring Centre 1988"
+    },
+    {
+      "citation": "IUCN. 1990. <i>IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1990",
+      "title": "IUCN Red List of Threatened Animals",
+      "author": "IUCN",
+      "citation_short": "IUCN 1990"
+    },
+    {
+      "citation": "IUCN Conservation Monitoring Centre. 1986. <i>1986 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1986",
+      "title": "1986 IUCN Red List of Threatened Animals",
+      "author": "IUCN Conservation Monitoring Centre",
+      "citation_short": "IUCN Conservation Monitoring Centre 1986"
+    },
+    {
+      "citation": "Baillie, J. and Groombridge, B. (eds). 1996. <i>1996 IUCN Red List of Threatened Animals</i>. pp. 378. International Union for Conservation of Nature, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "1996 IUCN Red List of Threatened Animals",
+      "author": "Baillie, J. and Groombridge, B.",
+      "citation_short": "Baillie and Groombridge 1996"
+    },
+    {
+      "citation": "Densmore, L.D. 1983. Biochemical and immunological systematics of the order Crocodilia. In: M.K. Hecht, B. Wallace and G.H. Prance (eds), <i>Evolutionary Biology. Volume 16</i>, pp. 397-465. Plenum Press, New York.",
+      "year": "1983",
+      "title": "Biochemical and immunological systematics of the order Crocodilia",
+      "author": "Densmore, L.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Willis, R.E., McAliley, L.R., Neeley, E.D. and Densmore, L.D. 2007. Evidence for placing the false gharial (<i>Tomistoma schlegelii</i>) into the family Gavialidae: Inferences from nuclear gene sequences. <i>Molecular Phylogenetics and Evolution</i> 43: 787-794.",
+      "year": "2007",
+      "title": "Evidence for placing the false gharial (<i>Tomistoma schlegelii</i>) into the family Gavialidae: Inferences from nuclear gene sequences",
+      "author": "Willis, R.E., McAliley, L.R., Neeley, E.D. and Densmore, L.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2009. IUCN Red List of Threatened Species. (Accessed: 30 September).",
+      "year": "2009",
+      "title": "IUCN Red List of Threatened Species",
+      "author": "IUCN",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorbjarnarson, J.B. 1996. Reproductive characteristics of the Crocodylia. <i>Herpetologica</i> 52(1): 8-24.",
+      "year": "1996",
+      "title": "Reproductive characteristics of the Crocodylia.",
+      "author": "Thorbjarnarson, J.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Groombridge, B. 1982. <i>The IUCN Amphibia-Reptilia Red Data Book, Part 1: Testudines, Crocodylia, Rhynocehapalia</i>. IUCN, Gland, Switzerland.",
+      "year": "1982",
+      "title": "<i>The IUCN Amphibia-Reptilia Red Data Book, Part 1: Testudines, Crocodylia, Rhynocehapalia</i>.",
+      "author": "Groombridge, B.",
+      "citation_short": "Groombridge 1982"
+    },
+    {
+      "citation": "Cox, J. and Rahman, M. 1994. An Assessment of Crocodile Resource Potential in Bangladesh. 12th Working Meeting of the Crocodiles Specalist Group, IUCN. Gland, Switzerland.",
+      "year": "1994",
+      "title": "An Assessment of Crocodile Resource Potential in Bangladesh",
+      "author": "Cox, J. and Rahman, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorbjarnarson, J., Platt, S.G., Win Ko Ko, Khin Myo Myo, Lay Lay Khaing, Kalyar and Holmstrom, B. 2006. Crocodiles in Myanmar: Species diversity, historic accounts, and current population status and conservation. <i>Herpetological Natural History</i> 10: 67-79.",
+      "year": "2006",
+      "title": "Crocodiles in Myanmar: Species diversity, historic accounts, and current population status and conservation",
+      "author": "Thorbjarnarson, J., Platt, S.G., Win Ko Ko, Khin Myo Myo, Lay Lay Khaing, Kalyar and Holmstrom, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rao, R.J., Basu, D., Hasan, S.M., Sharma, B.B., Molur, S. and  Walker, S. (eds). 1995. <i>Population and Habitat Viability Assessment (PHVA) Workshop for Gharial</i>. PHVA Workshop, 16-18th January 1995. Zoo Outreach Organization/CBSG, India, Coimbatore.",
+      "year": "1995",
+      "title": "Population and Habitat Viability Assessment (PHVA) Workshop for Gharial.",
+      "author": "Rao, R.J., Basu, D., Hasan, S.M., Sharma, B.B., Molur, S. and  Walker, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andrews, H. 2006. Status of the Indian Gharial (<i>Gavialis gangeticus</i>), Conservation Action and Assessment of Key Locations in North India. Report to the Madras Crocodile Bank Trust.",
+      "year": "2006",
+      "title": "Status of the Indian Gharial (<i>Gavialis gangeticus</i>), Conservation Action and Assessment of Key Locations in North India.",
+      "author": "Andrews, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Whitaker, R. and Basu, D. 1983. The Gharial (<i>Gavialis gangeticus</i>): A review. <i>Journal of the Bombay Natural History Society</i> 79(3): 531-548.",
+      "year": "1983",
+      "title": "The Gharial (<i>Gavialis gangeticus</i>): A review.",
+      "author": "Whitaker, R. and Basu, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khan, M.A.R. 1979. Gharial extinct in Bangladesh. <i>Crocodile Specialist Group Newsletter</i> 1: 2.",
+      "year": "1979",
+      "title": "Gharial extinct in Bangladesh.",
+      "author": "Khan, M.A.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hussain, S.A. and Badola, R. 2001. Integrated Conservation Planning for the Chambal River Basin: A Landscape Level Perspective. National Workshop on Regional Planning for Wildlife Protected Areas, New Delhi (Wildlife Institute of India).",
+      "year": "2001",
+      "title": "Integrated Conservation Planning for the Chambal River Basin: A Landscape Level Perspective.",
+      "author": "Hussain, S.A. and Badola, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. and Andrews, H.V. 2003. Crocodile conservation, Western Asia region: an update. <i>Journal of the Bombay Natural History Society</i> 100(2&3): 432-445.",
+      "year": "2003",
+      "title": "Crocodile conservation, Western Asia region: an update.",
+      "author": "Whitaker, R. and Andrews, H.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. 1976. Gharial survey report. Mimeographed report for the New York Zoological Society, pp. 1-19.",
+      "year": "1976",
+      "title": "Gharial survey report.",
+      "author": "Whitaker, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Faizuddin, M. 1985. Distribution, abundance and conservation of gharials in Bangladesh. <i>Tigerpaper</i> 12(3): 22-23.",
+      "year": "1985",
+      "title": "Distribution, abundance and conservation of gharials in Bangladesh.",
+      "author": "Faizuddin, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. 1975. Status and conservation of the Gharial. <i>Herpetological Review</i> 6(1): 1-3.",
+      "year": "1975",
+      "title": "Status and conservation of the Gharial.",
+      "author": "Whitaker, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maskey, T.M. 1999. Status and conservation of Gharial in Nepal. In: ENVIS <i>Wildlife & Protected Areas</i>, Vol 2(1), pp. 95-99. Wildlife Institute of India, Dehra Dun.",
+      "year": "1999",
+      "title": "Status and conservation of Gharial in Nepal.",
+      "author": "Maskey, T.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hussain, S.A. 1999. Reproductive success, hatchling survival and rate of increase of Gharial <i>Gavialis gangeticus</i> in National Chambal Sanctuary, India. <i>Biological Conservation</i> 87: 261-268.",
+      "year": "1999",
+      "title": "Reproductive success, hatchling survival and rate of increase of Gharial <i>Gavialis gangeticus</i> in National Chambal Sanctuary, India.",
+      "author": "Hussain, S.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hornaday, W.T. 1885. <i>Two Years in the Jungle</i>. Charles Scribner’s Sons, NY. (See pp 39 – 57).",
+      "year": "1885",
+      "title": "Two Years in the Jungle",
+      "author": "Hornaday, W.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, L.A.K. 1991. Distribution of <i>Gavialis gangeticus</i>. <i>Hamadryad</i> 16(1 & 2): 39-46.",
+      "year": "1991",
+      "title": "Distribution of <i>Gavialis gangeticus</i>",
+      "author": "Singh, L.A.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R. and Basu, D. 2004. Recent reversals in the population trends in the population of Gharial in the National Chambal Sanctuary in North India; implications and a suggested strategy for the conservation of one of the world's most endangered crocodilians. In: Crocodile Specialist Group <i>Crocodiles. Proceedings of the 17th Working Meeting of the Crocodile Specialist Group</i>, pp 180-186. IUCN, Gland, Switzerland.",
+      "year": "2004",
+      "title": "Recent reversals in the population trends in the population of Gharial in the National Chambal Sanctuary in North India; implications and a suggested strategy for the conservation of one of the world's most endangered crocodilians.",
+      "author": "Sharma, R. and Basu, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Biswas, S. 1970. A preliminary survey of Gharial on the Kosi River. <i>Indian Forester </i>96(9):  705-710.",
+      "year": "1970",
+      "title": "A preliminary survey of Gharial on the Kosi River.",
+      "author": "Biswas, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R., Rajamani, V., Basu, D. and Balakrishnan, V. 1974. Preliminary survey of the Gharial, <i>Gavialis gangeticus</i>. Madras Snake Park Trust Report, pp. 1-16.",
+      "year": "1974",
+      "title": "Preliminary survey of the Gharial, <i>Gavialis gangeticus</i>.",
+      "author": "Whitaker, R., Rajamani, V., Basu, D. and Balakrishnan, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Choudhury, A. 1997. Status of Gharial in Arunachal Pradesh. <i>Crocodile Specialist Group Newsletter</i> 16(3): 8.",
+      "year": "1997",
+      "title": "Status of Gharial in Arunachal Pradesh.",
+      "author": "Choudhury, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paudel, S., Pal, P., Cove, M.V., Jnawali, S.R., Abel, G., Koprowski, J.L. and Ranabhat, R. 2015. The Endangered Ganges River dolphin <i>Platanista gangetica gangetica</i> in Nepal: abundance, habitat and conservation threats. <i>Endangered Species Research</i> 29(1): 59-68.",
+      "year": "2015",
+      "title": "The Endangered Ganges River dolphin <i>Platanista gangetica gangetica</i> in Nepal: abundance, habitat and conservation threats",
+      "author": "Paudel, S., Pal, P., Cove, M.V., Jnawali, S.R., Abel, G., Koprowski, J.L. and Ranabhat, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chaudhry, A.A. 1993. Status of crocodiles in Pakistan. <i>Crocodile Specialist Group Newsletter</i> 12(1): 19-20.",
+      "year": "1993",
+      "title": "Status of crocodiles in Pakistan",
+      "author": "Chaudhry, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    },
+    {
+      "citation": "Acharya, K.P., Khadka, B., Jnawali, S.R., Malla, S., Bhattarai, S., Wikramanayake, E., and Kohl, M. 2017. Conservation and Population Recovery of Gharials (Gavialis gangeticus) in Nepal. <i>Herpetologica</i> 73(2): 129 - 135.",
+      "year": "2017",
+      "title": "Conservation and Population Recovery of Gharials (Gavialis gangeticus) in Nepal",
+      "author": "Acharya, K.P., Khadka, B., Jnawali, S.R., Malla, S., Bhattarai, S., Wikramanayake, E., and Kohl, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ahmad, A. 1990. Pakistan. <i>Crocodile Specialist Group Newsletter</i> 9(2): 16.",
+      "year": "1990",
+      "title": "Pakistan",
+      "author": "Ahmad, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andrews, H.V. 2006. Status of the Indian gharial,conservation action and assessment of key locations in North India. Cleveland Metro Park.",
+      "year": "2006",
+      "title": "Status of the Indian gharial,conservation action and assessment of key locations in North India",
+      "author": "Andrews, H.V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andrews, H.V. and Whitaker, N. 2004. Captive breeding and reproductive biology of the Indian gharial (Gavialis gangeticus (Gmelin)) in captivity. World Crocodile Conference, 17th Working Meeting of the Crocodile Specialist Group: 401- 411. Gland, Switzerland and Cambridge, UK.",
+      "year": "2004",
+      "title": "Captive breeding and reproductive biology of the Indian gharial (Gavialis gangeticus (Gmelin)) in captivity.",
+      "author": "Andrews, H.V. and Whitaker, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ballouard, J.M. and Cadi, A. 2005. Gharial conservation in Royal Chitwan National Park, Nepal. Dept. of National Parks and Wildlife Conservation and WWF, Nepal.",
+      "year": "2005",
+      "title": "Gharial conservation in Royal Chitwan National Park, Nepal",
+      "author": "Ballouard, J.M. and Cadi, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ballouard, J.M., Priol, P., Oison, J., Ciliberti, A. and Cadi, A. 2010. Does reintroduction stabilize the population of the critically endangered gharial (Gavialis gangeticus, Gavialidae) in Chitwan National Park, Nepal. <i>Aquatic Conserv. Mar. Freshw. Ecosyst.</i> 20: 756 - 761.",
+      "year": "2010",
+      "title": "Does reintroduction stabilize the population of the critically endangered gharial (Gavialis gangeticus, Gavialidae) in Chitwan National Park, Nepal.",
+      "author": "Ballouard, J.M., Priol, P., Oison, J., Ciliberti, A. and Cadi, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Basu, D. and Singh, S.P. 2010. Short Survey of river fauna of Ghaghra River, in the Districts Kheri Lakhimpur Bahraich, Sitapur and Bara Banki Districts in the State of Uttar Pradesh, India 8-11 December 2009.  Final Report to the Gharial Conservation Alliance. Madras Crocodile Bank Trust.",
+      "year": "2010",
+      "title": "Short Survey of river fauna of Ghaghra River, In the Districts Kheri Lakhimpur Bahraich, Sitapur and Bara Banki Districts in the State of Uttar Pradesh, India 8-11 December 2009.",
+      "author": "Basu, D. and Singh, S.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Behera S., Singh K. and Sagar V. 2014. . Indicator Species (Gharial and Dolphin) of Riverine Ecosystem: An Exploratory of River Ganga. In: Sanghi R. (ed.), <i>Our National River Ganga</i>, pp. 121-141. Springer Cham.",
+      "year": "2014",
+      "title": ". Indicator Species (Gharial and Dolphin) of Riverine Ecosystem: An Exploratory of River Ganga.",
+      "author": "Behera S., Singh K. and Sagar V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Behura, B.K. and Singh, L.A.K. 1978. Conservation of crocodiles in India. . <i>Indian Forester</i>: 83-92.",
+      "year": "1978",
+      "title": "Conservation of crocodiles in India. ",
+      "author": "Behura, B.K. and Singh, L.A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bhatta, J. 2009. Study on status, distribution and threats to Gharial in Rapti River of Chitwan National Park, Nepal. British Ecological Society (BES).",
+      "year": "2009",
+      "title": "Study on status, distribution and threats to Gharial in Rapti River of Chitwan National Park, Nepal.",
+      "author": "Bhatta, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Braulik, G.T. and Smith, B.D. 2017. <i>Platanista gangetica</i>. The IUCN Red List of Threatened Species 2017. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2017-3.RLTS. T41758A50383612.en\">http://dx.doi.org/10.2305/IUCN.UK.2017-3.RLTS. T41758A50383612.en</a>. ",
+      "year": "2017",
+      "title": "<i>Platanista gangetica</i>. The IUCN Red List of Threatened Species 2017",
+      "author": "Braulik, G.T. and Smith, B.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Braulik, G.T., Arshad, M. Noureen, U., and Northridge, S. 2014. Habitat fragmentation and species extirpation in freshwater ecosystems: causes of range decline of the Indus River dolphin (Platanista gangetica minor). <i>PloS one</i> 9(7): p.e.101657.",
+      "year": "2014",
+      "title": "Habitat fragmentation and species extirpation in freshwater ecosystems: causes of range decline of the Indus River dolphin (Platanista gangetica minor)",
+      "author": "Braulik, G.T., Arshad, M. Noureen, U., and Northridge, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bustard, H.R. 1975. A future for the gharial. <i>Cheetal</i> 16: 3 - 8.",
+      "year": "1975",
+      "title": "A future for the gharial",
+      "author": "Bustard, H.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bustard, H.R. 1984. Breeding the gharial (Gavialis gangeticus): captive breeding a key conservation strategy for endangered crocodilians. In: Ferguson, M.W.J. (ed.), <i>., The Structure, Development and Evolution of Reptiles.</i>, pp. 385 - 406 . Academic Press, Orlando, Florida.",
+      "year": "1984",
+      "title": "Breeding the gharial (Gavialis gangeticus): captive breeding a key conservation strategy for endangered crocodilians.",
+      "author": "Bustard, H.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bustard, H.R. 1999.  Indian crocodile conservation project.  In ENVIS Bulletin: Indian crocodilians 2(1): 5-9. Dehra Dun: Wildlife Institute of India, ENVIS Centre on Wildlife & Protected Areas.",
+      "year": "1999",
+      "title": " Indian crocodile conservation project",
+      "author": "Bustard, H.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Choudhary, S., Choudhury, B.C., and Gopi, G.V. 2017. Differential response to disturbance factors for the population of sympatric crocodilians (Gavialis gangeticus and Crocodylus palustris) in Katarniaghat Wildlife Sanctuary, India. <i>Aquatic Conserv. Mar. Freshw. Ecosyst</i> 2017: 1 - 7.",
+      "year": "2017",
+      "title": "Differential response to disturbance factors for the population of sympatric crocodilians (Gavialis gangeticus and Crocodylus palustris) in Katarniaghat Wildlife Sanctuary, India.",
+      "author": "Choudhary, S., Choudhury, B.C., and Gopi, G.V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Choudhary, S.K. 2010. Multi-species survey of River Gandak, Bihar with focus on Gharial & Ganges river dolphin (2009-10). In: VBREC, T.M. (ed.). Bhagalpur University, Bhagalpur.",
+      "year": "2010",
+      "title": "Multi-species survey of River Gandak, Bihar with focus on Gharial & Ganges river dolphin (2009-10).",
+      "author": "Choudhary, S.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Choudhury, B.C., Behera, S.K., Sinha, S.K. and Chandrashekar, S. 2016. Restocking, Monitoring, Population Status, New Breeding Record and Conservation Actions for Gharial in the Gandak River, Bihar, India, World Crocodile Conference, 24th Working Meeting of IUCN SSC Crocodile Specialist Group: 124.",
+      "year": "2016",
+      "title": "Restocking, Monitoring, Population Status, New Breeding Record and Conservation Actions for Gharial in the Gandak River, Bihar, India,",
+      "author": "Choudhury, B.C., Behera, S.K., Sinha, S.K. and Chandrashekar, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Choudhury B.C., Gautam, P. &amp; Nair, T. 2013. Generic tri-state management plan - National Chambal Sanctuary. National Tri-State Chambal Sanctuary Management and Co-ordination Committee (NTRIS-CASMACC). Ministry of Environment & Forests, Government of India.",
+      "year": "2013",
+      "title": "Generic tri-state management plan - National Chambal Sanctuary. ",
+      "author": "Choudhury B.C., Gautam, P. & Nair, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Choudhury, B.C., Singh, L.A.K., Rao, R.J., Basu, D., Sharma, R.K., Hussain, S.A., Andrews, H.V., Whitaker, N., Whitaker, R., Lenin, J., Maskey, T., Cadi, A., Rashid, S.M.A., Choudhury, A.A., Dahal, B., Win Ko Ko, U., Thorbjarnarson, J. and Ross, J.P. 2007. <i>Gavialis gangeticus</i>. In IUCN 2009. IUCN Red List of Threatened Species. Version 2009.1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 3 September).",
+      "year": "2007",
+      "title": "<i>Gavialis gangeticus</i>. In IUCN 2009. IUCN Red List of Threatened Species. Version 2009.1.",
+      "author": "Choudhury, B.C., Singh, L.A.K., Rao, R.J., Basu, D., Sharma, R.K., Hussain, S.A., Andrews, H.V., Whitaker, N., Whitaker, R., Lenin, J., Maskey, T., Cadi, A., Rashid, S.M.A., Choudhury, A.A., Dahal, B., Win Ko Ko, U., Thorbjarnarson, J. and Ross, J.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chowfin, S.M. 2013. Gharial “Baby” Boom in Corbett. <i>Crocodile Specialist Group Newsletter</i> 32(3): 5.",
+      "year": "2013",
+      "title": "Gharial “Baby” Boom in Corbett.",
+      "author": "Chowfin, S.M",
+      "citation_short": null
+    },
+    {
+      "citation": "Chowfin, S.M. and Leslie, A.J. 2013. A preliminary investigation into nesting and nest predation of the critically endangered, gharial (Gavialis gangeticus) at Boksar in Corbett Tiger Reserve, Uttarakhand, India. 22nd Working Meeting of the Crocodile Specialist Group: 26 - 28. Sri Lanka.",
+      "year": "2013",
+      "title": "A preliminary investigation into nesting and nest predation of the critically endangered, gharial (Gavialis gangeticus) at Boksar in Corbett Tiger Reserve, Uttarakhand, India",
+      "author": "Chowfin, S.M. and Leslie, A.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chowfin, S.M. and Leslie, A.J. 2014. . A multi-method approach for the inventory of the adult population of a critically endangered crocodilian, the gharial (Gavialis gangeticus) at Dhikala, Corbett Tiger Reserve. <i>International Journal of Biodiversity and Conservation </i> 6(2): 148 - 158.",
+      "year": "2014",
+      "title": ". A multi-method approach for the inventory of the adult population of a critically endangered crocodilian, the gharial (Gavialis gangeticus) at Dhikala, Corbett Tiger Reserve",
+      "author": "Chowfin, S.M. and Leslie, A.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chowfin, S.M. and Leslie, A.J. 2016. The Gharial (Gavialis gangeticus) in Corbett Tiger Reserve. World Crocodile Conference, 24th Working Meeting of IUCN SSC Crocodile Specialist Group: 120 - 124.",
+      "year": "2016",
+      "title": "The Gharial (Gavialis gangeticus) in Corbett Tiger Reserve.",
+      "author": "Chowfin, S.M. and Leslie, A.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Converse, L. 2009. Katerniaghat Gharial Project 2008-2009 Report of Preliminary Findings.. Progress report to Gharial Conservation Alliance, Madras Crocodile Bank Trust. ",
+      "year": "2009",
+      "title": "Katerniaghat Gharial Project 2008-2009 Report of Preliminary Findings.",
+      "author": "Converse, L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Das,A.,Basu,D.,Converse,L., and Choudhury, S. 2012. Herpetofauna of Katerniaghat Wildlife Sanctuary, Uttar Pradesh. <i>Journal of Threatened Taxa</i> 4(5): 2553 - 2568.",
+      "year": "2012",
+      "title": "Herpetofauna of Katerniaghat Wildlife Sanctuary, Uttar Pradesh.",
+      "author": "Das,A.,Basu,D.,Converse,L., and Choudhury, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Das, A., Das, A.K., and Dutta, S.K. 2013. An assessment of assisted recovery of Gavialis gangeticus in the river systems of Northeast India. Proceedings of World Crocodile Conference, 22nd Working Meeting of the IUCN SSC Crocodile Specialist Group: 28-35. Negombo, Sri Lanka.",
+      "year": "2013",
+      "title": "An assessment of assisted recovery of Gavialis gangeticus in the river systems of Northeast India",
+      "author": "Das, A., Das, A.K., and Dutta, S.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Das, A., Das, A.K., Sarma, P.K., and Singh, A.K. 2011. An Assessment of Assisted Recovery of Gharial (Gavialis gangeticus) in the River Systems of Northeast India..  Final Technical Report. Aaranyak, Guwahati, Assam.",
+      "year": "2011",
+      "title": "An Assessment of Assisted Recovery of Gharial (Gavialis gangeticus) in the River Systems of Northeast India..  Final Technical Report.",
+      "author": "Das, A., Das, A.K., Sarma, P.K., and Singh, A.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "DNPWC. 2018. <i>Gharial Conservation Action Plan for Nepal (2018-2022) </i>. Kathmandu, Nepal.",
+      "year": "2018",
+      "title": "Gharial Conservation Action Plan for Nepal (2018-2022) ",
+      "author": "DNPWC",
+      "citation_short": null
+    },
+    {
+      "citation": "DNPWC and WWF Nepal. 2013. Gharial Conservation Initiatives in Nepal. Tech. Prog. Rpt. (July 2012-June 2013). 21pp",
+      "year": "2013",
+      "title": "Gharial Conservation Initiatives in Nepal. Tech. Prog. Rpt. (July 2012-June 2013)",
+      "author": "DNPWC and WWF Nepal",
+      "citation_short": null
+    },
+    {
+      "citation": "Douie, J. 1916. <i>The Panjab, North-West Frontier Province and Kashmir.</i> Cambridge University Press, London.",
+      "year": "1916",
+      "title": "The Panjab, North-West Frontier Province and Kashmir.",
+      "author": "Douie, J",
+      "citation_short": null
+    },
+    {
+      "citation": "Dwivedi, A.C., Mayank, P., and Imran, S. 2016. Reproductive structure of invading fish, Oreochromis niloticus (Linneaeus, 1757) in respect of climate from the Yamuna River, India. <i>Journal of Climatology and Weather Forecasting.</i> 4(2): 1 - 5.Doi: 10.4172/2332-2594.1000164",
+      "year": "2016",
+      "title": "Reproductive structure of invading fish, Oreochromis niloticus (Linneaeus, 1757) in respect of climate from the Yamuna River, India.",
+      "author": "Dwivedi, A.C., Mayank, P., and Imran, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "ENVIS. 1999. <i>Wildlife and Protected Areas.  Volume 2(1)</i>. Wildlife Institute of India, Dehra Dun.",
+      "year": "1999",
+      "title": "Wildlife and Protected Areas.  Volume 2(1)",
+      "author": "ENVIS",
+      "citation_short": null
+    },
+    {
+      "citation": "Ganesan, N. 2007. Gharial god and Tiger goddess in the Indus Valley: Some aspects of Bronze Age Indian Religion, published later in arima nokku. <i>Journal of Central Institute of Classical Tamil, Chennai</i>. http://archive.org/details/IVCReligionByNagaGanesan2007",
+      "year": "2007",
+      "title": "Gharial god and Tiger goddess in the Indus Valley: Some aspects of Bronze Age Indian Religion, published later in arima nokku",
+      "author": "Ganesan, N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ganie, M.A., Bhat, M.D., Khan, M.I., Parveen, M., Balkhi, M.H. and Malla, M.A. 2013. Invasion of the Mozambique tilapia, Oreochromis mossambicus (Pisces: Cichlidae: Peters 1852) in the Yamuna River, Uttar Pradesh, India. . <i>Journal Ecology and the Natural Environment </i> 5(10): 310 - 317.",
+      "year": "2013",
+      "title": "Invasion of the Mozambique tilapia, Oreochromis mossambicus (Pisces: Cichlidae: Peters 1852) in the Yamuna River, Uttar Pradesh, India. ",
+      "author": "Ganie, M.A., Bhat, M.D., Khan, M.I., Parveen, M., Balkhi, M.H. and Malla, M.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "GCA (Gharial Conservation Alliance). 2008. International Gharial Recovery Action Plan. Available at: <a href=\"http://www. gharialconservation.org/PDF/GRAP.pdf\">http://www. gharialconservation.org/PDF/GRAP.pdf</a>.",
+      "year": "2008",
+      "title": "International Gharial Recovery Action Plan",
+      "author": "GCA (Gharial Conservation Alliance)",
+      "citation_short": null
+    },
+    {
+      "citation": "Gharial Conservation Alliance. 2009. Gharial Species Recovery Plan. Draft October 2009. 45pp. from a Workshop sponsored and convened by the GCA. Gharial Conservation Alliance, Delhi.",
+      "year": "2009",
+      "title": "Gharial Species Recovery Plan. Draft October 2009. 45pp. from a Workshop sponsored and convened by the GCA.",
+      "author": "Gharial Conservation Alliance",
+      "citation_short": null
+    },
+    {
+      "citation": "Gharial Conservation Alliance. 2011. Gharial Species Recovery Plan. Revised version for MoEF initiative to establish NTRIS-CASMACC and set up 5 year conservation plan for gharial.",
+      "year": "2011",
+      "title": "Gharial Species Recovery Plan. Revised version for MoEF initiative to establish NTRIS-CASMACC and set up 5 year conservation plan for gharial.",
+      "author": "Gharial Conservation Alliance",
+      "citation_short": null
+    },
+    {
+      "citation": "Gharial Ecology Project. 2017. Report on Population Size &amp; Nests (in National Chambal Sanctuary). Unpublished Report.13p. (available for download, on Academia.edu website, Jeffrey Lang)",
+      "year": "2017",
+      "title": "Report on Population Size & Nests (in National Chambal Sanctuary). Unpublished Report",
+      "author": "Gharial Ecology Project",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghosh, T. 2013. Gharial and Smooth-coated Otter in the River Hooghly and Surrounding Areas: Assessment of Current Conservation Status and Potential Habitats, Preparation of Distribution Maps, and Identification of Possible Immediate Threats. Final Report to WWF-India .",
+      "year": "2013",
+      "title": "Gharial and Smooth-coated Otter in the River Hooghly and Surrounding Areas: Assessment of Current Conservation Status and Potential Habitats, Preparation of Distribution Maps, and Identification of Possible Immediate Threats. Final Report to WWF-India ",
+      "author": "Ghosh, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ghosh, T. and Merrill, L.A. 2010. In Search of Gharials. <i>Sanctuary Asia</i> 30(6): 46 - 49.",
+      "year": "2010",
+      "title": "In Search of Gharials.",
+      "author": "Ghosh, T. and Merrill, L.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gill, I. 2014. Investigation of Conservation and Research Needs for Gharial (Gavialis gangeticus) in Nepal. Zoological Society of London.",
+      "year": "2014",
+      "title": "Investigation of Conservation and Research Needs for Gharial (Gavialis gangeticus) in Nepal.",
+      "author": "Gill, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Grant, E.H.C., Lynch, H.J., Muneepeerakul, R., Arunachalam, M.,  Rodrigueez-Iturbe, I. and Fagan, W.F. 2012. Interbasin Water Transfer, Riverine Connectivity, and Spatial Controls on Fish Biodiversity, <i>PloS ONE</i> 7(3): 1 - 7 e34170",
+      "year": "2012",
+      "title": "Interbasin Water Transfer, Riverine Connectivity, and Spatial Controls on Fish Biodiversity,",
+      "author": "Grant, E.H.C., Lynch, H.J., Muneepeerakul, R., Arunachalam, M.,  Rodrigueez-Iturbe, I. and Fagan, W.F",
+      "citation_short": null
+    },
+    {
+      "citation": "Huchzermeyer, F., Martelli, P., Martin, S., Stacy, B., Whitaker, R. 2008. Gharial Mortality Event in Chambal National Sanctuary 2007/2008. Report of Field Investigations. Crcocodile Specialist Group of IUCN.",
+      "year": "2008",
+      "title": "Gharial Mortality Event in Chambal National Sanctuary 2007/2008. Report of Field Investigations.",
+      "author": "Huchzermeyer, F., Martelli, P., Martin, S., Stacy, B., Whitaker, R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hussain, S. A. 2009.  Basking site and water depth selection by Gharial Gavialis gangeticus (Gmelin 1789) (Crocodylia, Reptilia) in National Chambal Sanctuary, India and its implication for river conservation. <i>J. Aquatic Conserv: Mar. Freshw. Ecosyst.</i> 19: 127 - 133.",
+      "year": "2009",
+      "title": " Basking site and water depth selection by Gharial Gavialis gangeticus (Gmelin 1789) (Crocodylia, Reptilia) in National Chambal Sanctuary, India and its implication for river conservation.",
+      "author": "Hussain, S. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hussain S.A., R.K. Shrama, N. Dasgupta N. and A. Raha. 2011. Assessment of minimum water flow requirements of Chambal River in the context of Gharial (Gavialis gangeticus) and Gangetic Dolphin (Platanista gangetica) conservation. Wildlife Institute of India., Dehra Dun.",
+      "year": "2011",
+      "title": "Assessment of minimum water flow requirements of Chambal River in the context of Gharial (Gavialis gangeticus) and Gangetic Dolphin (Platanista gangetica) conservation.",
+      "author": "Hussain S.A., R.K. Shrama, N. Dasgupta N. and A. Raha",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN Bangladesh. 2016. <i>Gharials of Bangladesh.</i> IUCN International Union for Conservation of Nature, Bangladesh Country Office., Dhaka, Bangladesh.",
+      "year": "2016",
+      "title": "Gharials of Bangladesh.",
+      "author": "IUCN Bangladesh",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN Crocodile Specialist Group. 2018. Review of “Gharial Conservation Action Plan for Nepal (2018-2022).",
+      "year": "2018",
+      "title": "Review of “Gharial Conservation Action Plan for Nepal (2018-2022)",
+      "author": "IUCN Crocodile Specialist Group",
+      "citation_short": null
+    },
+    {
+      "citation": "Jailabdeen A., Singh R.K., Lang, J.W., Archunan G. 2018c. Gharial communication, acoustic signalling via \"pops\". <i>World Crocodile Conference. Proceedings of 25th Working Meeting of IUCN-SSC Crocodile Specialist Group</i> (in press).",
+      "year": "2018c",
+      "title": "Gharial communication, acoustic signalling via \"pops\".",
+      "author": "Jailabdeen A., Singh R.K., Lang, J.W., Archunan G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kansal, M.L. and Arora, S. 2012. Biodiversity and present status of freshwater fishes in Lohit river basin of India. <i>Environmentalist</i> 32(1): 58 - 69.",
+      "year": "2012",
+      "title": "Biodiversity and present status of freshwater fishes in Lohit river basin of India.",
+      "author": "Kansal, M.L. and Arora, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Katdare, S., Srivathsa, A., Joshi, A., Panke, P., Pande, R., Khandal, D. and Everard, M. 2011. Gharial (Gavialis gangeticus) populations and human influences on habitat on the River Chambal, India. <i>J. Aquatic Conserv: Mar. Freshw. Ecosyst.</i> 21: 364 - 371.",
+      "year": "2011",
+      "title": "Gharial (Gavialis gangeticus) populations and human influences on habitat on the River Chambal, India",
+      "author": "Katdare, S., Srivathsa, A., Joshi, A., Panke, P., Pande, R., Khandal, D. and Everard, M",
+      "citation_short": null
+    },
+    {
+      "citation": "Khadka, B.B. 2010b. Gharial hatching status in 2010, Chitwan National Park, Nepal. <i>Crocodile Specialist Group Newsletter </i> 29(3): 16-17.",
+      "year": "2010b",
+      "title": "Gharial hatching status in 2010, Chitwan National Park, Nepal",
+      "author": "Khadka, B.B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Khadka B.B. 2011. . Gharial and Mugger monitoring in the Narayani and Rapti Rivers of Chitwan National Park. <i>Crocodile Specialist Group Newsletter</i> 30(1): 11-14.",
+      "year": "2011",
+      "title": ". Gharial and Mugger monitoring in the Narayani and Rapti Rivers of Chitwan National Park",
+      "author": "Khadka B.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khadka B.B. 2012. 100 Gharial Released into Chitwan National Park, Nepal. January to April 2012. <i>Crocodile Specialist Group Newsletter</i> 31(2): 14-16.",
+      "year": "2012",
+      "title": "100 Gharial Released into Chitwan National Park, Nepal. January to April 2012",
+      "author": "Khadka B.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khadka B.B. 2013. Population trends for Gharial and Muggers in the Narayani and Rapti Rivers of Chitwan National Park, Nepal. <i>Crocodile Specialist Group Newsletter</i> 32(1): 24-25.",
+      "year": "2013",
+      "title": "Population trends for Gharial and Muggers in the Narayani and Rapti Rivers of Chitwan National Park, Nepal.",
+      "author": "Khadka B.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Khadka, B.B., Gairhe, K.P., Kharel, F. and Malla, S. 2013. Captive, semi-captive gharial management and husbandry techniques in Chitwan National Park, Nepal. World Crocodile Conference. Proceedings of the 22nd Working Meeting of the IUCN-SSC Specialist Group. IUCN: 36 - 40 . : Gland, Switzerland..",
+      "year": "2013",
+      "title": "Captive, semi-captive gharial management and husbandry techniques in Chitwan National Park, Nepal.",
+      "author": "Khadka, B.B., Gairhe, K.P., Kharel, F. and Malla, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Khadka, M., Kafley, H. &amp; Thapaliya, B.P. 2008. <i>Population Status and Distribution of Gharial in Nepal.</i> FONAREM. 41pp",
+      "year": "2008",
+      "title": "Population Status and Distribution of Gharial in Nepal.",
+      "author": "Khadka, M., Kafley, H. & Thapaliya, B.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khandal, D., Sahu, Y.K., Dhakad, M., Shukla, A., Katdare, S., and Lang, J.W. 2017. Gharial and Mugger in upstream tributaries of the Chambal River, north India. <i>Crocodile Specialist Group Newsletter </i> 36(4) (in press).",
+      "year": "2017",
+      "title": "Gharial and Mugger in upstream tributaries of the Chambal River, north India.",
+      "author": "Khandal, D., Sahu, Y.K., Dhakad, M., Shukla, A., Katdare, S., and Lang, J.W",
+      "citation_short": null
+    },
+    {
+      "citation": "KoKo,  W. & Platt, S.G. 2012. Does the Gharial (Gavialis gangeticus) Survive in Myanmar? . <i>Crocodile Specialist Group Newsletter </i> 31(4): 14 - 16.",
+      "year": "2012",
+      "title": "Does the Gharial (Gavialis gangeticus) Survive in Myanmar? ",
+      "author": "KoKo,  W. & Platt, S.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar, S. 2012. Domestication of Animals in Harappan Culture: A Socio-economic Study. PhD thesis. Department of History., Maharshi Dayanand University.",
+      "year": "2012",
+      "title": "Domestication of Animals in Harappan Culture: A Socio-economic Study. PhD thesis",
+      "author": "Kumar, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kumar Sing, R., Jailabdeen A., J. W. Lang and Vasudevan K. 2018b. Genotyping gharials: Efficacy of \"next generation sequencing' vs conventional approaches. <i>World Crocodile Conference. Proceedings of 25th Working Meeting of IUCN-SSC Crocodile Specialist Group.</i> (in press).",
+      "year": "2018b",
+      "title": "Genotyping gharials: Efficacy of \"next generation sequencing' vs conventional approaches.",
+      "author": "Kumar Sing, R., Jailabdeen A., J. W. Lang and Vasudevan K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lang, J.W. 2016. <i>General Comments: Systematic, country-wide surveys for gharial &amp; crocodiles in Nepal.  Unpublished draft, 8p.</i>. (download at Academia.edu Jeffrey Lang)",
+      "year": "2016",
+      "title": "General Comments: Systematic, country-wide surveys for gharial & crocodiles in Nepal.  Unpublished draft, 8p.",
+      "author": "Lang, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang, J.W. 2016. India: Gharial Conservation Overview. <i>Crocodile Specialist Group Newsletter</i> 35(1): 10 - 14.",
+      "year": "2016",
+      "title": "India: Gharial Conservation Overview",
+      "author": "Lang, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang, J.W. 2017. Doing the Needful in Nepal: Priorities of Gharial Conservation. <i>Crocodile Specialist Group Newsletter </i> 36(2): 9 -12.",
+      "year": "2017",
+      "title": "Doing the Needful in Nepal: Priorities of Gharial Conservation.",
+      "author": "Lang, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang J.W. 2018a. <i>Proposal to MPFD to radiotag and track captive juveniles, head started at the Deori Eco-centre and released in the Chambal River, between Ater and Bareh (MP). </i>.",
+      "year": "2018a",
+      "title": "Proposal to MPFD to radiotag and track captive juveniles, head started at the Deori Eco-centre and released in the Chambal River, between Ater and Bareh (MP). ",
+      "author": "Lang J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang J.W. 2018c. Gharial Distribution and Abundance:Then and Now.  in World Crocodile Conference. Proceedings of the 25th Working Meeting of the IUCN-SSC Crocodile Specialist Group</i> (in press).",
+      "year": "2018a",
+      "title": "Gharial Distribution and Abundance:Then and Now.",
+      "author": "Lang J.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lang, J. W., &amp; Kumar, P. 2016. Chambal Gharial Ecology Project-2016 Update. in Crocodiles. Proceedings of the 24th Working  Meeting of the IUCN-SSC Crocodile Specialist Group. IUCN: 136 - 149. Gland, Switzerland.",
+      "year": "2016",
+      "title": "Chambal Gharial Ecology Project-2016 Update",
+      "author": "Lang, J. W., & Kumar, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang, J.W. and Andrews, H.V. 1994. Temperature-dependent sex determination in crocodilians. . <i>Journal of Experimental Biology </i> 270: 28 - 44.",
+      "year": "1994",
+      "title": "Temperature-dependent sex determination in crocodilians. ",
+      "author": "Lang, J.W. and Andrews, H.V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang, J.W. and Whitaker, S. 2010. Application of telemetry techniques in crocodilian research: Gharial Spatial Ecology in the Chambal River, North India. In: Sivakumar, K. and Habib, B. (eds), <i>Telemetry in Wildlife Science, ENVIS Bulletin: Wildlife & Protected Areas.</i>, pp. 161 - 171. Dehradun. India.",
+      "year": "2010",
+      "title": "Application of telemetry techniques in crocodilian research: Gharial Spatial Ecology in the Chambal River, North India.",
+      "author": "Lang, J.W. and Whitaker, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lang, J. W., & Kumar, P. 2013. Behavioral Ecology of Gharial on the Chambal River, India. World Crocodile Conference. Proceedings of the 22nd Working Meeting of the IUCN-SSC Specialist Group. IUCN. Gland, Switzerland.",
+      "year": "2013",
+      "title": "Behavioral Ecology of Gharial on the Chambal River, India.",
+      "author": "Lang, J. W., & Kumar, P",
+      "citation_short": null
+    },
+    {
+      "citation": "Laxmi, R., Arya, S., Sultana, A., and Das, S. 2015. Assessment and Impact of Industrial Effluents on River Yamuna Ecosystem. <i>International Journal of Current research </i> 7(9): 19956-19963.",
+      "year": "2015",
+      "title": "Assessment and Impact of Industrial Effluents on River Yamuna Ecosystem.",
+      "author": "Laxmi, R., Arya, S., Sultana, A., and Das, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Madhya Pradesh Forest Department. 2010. Management Plan of Kuno Wildlife Division, Sheopur, Madhya Pradesh.  Gharial sighting at N25deg48min52.90 E77deg10min45.55.",
+      "year": "2010",
+      "title": "Management Plan of Kuno Wildlife Division, Sheopur, Madhya Pradesh.  Gharial sighting at N25deg48min52.90 E77deg10min45.55.",
+      "author": "Madhya Pradesh Forest Department",
+      "citation_short": null
+    },
+    {
+      "citation": "Madhya Pradesh Forest Department. 2017. Annual Survey Report on Gharial and Mugger in National Chambal Sanctuary, February-2017. . Madhya Pradesh Forest Department.",
+      "year": "2017",
+      "title": "Annual Survey Report on Gharial and Mugger in National Chambal Sanctuary, February-2017. ",
+      "author": "Madhya Pradesh Forest Department",
+      "citation_short": null
+    },
+    {
+      "citation": "Malla, S. & K. Thapa. 2016. Nepal Gharial Monitoring Protocol. Conservation Science Unit, WWF, Nepal.",
+      "year": "2016",
+      "title": "Nepal Gharial Monitoring Protocol",
+      "author": "Malla, S. & K. Thapa",
+      "citation_short": null
+    },
+    {
+      "citation": "Malla, S., Pradhan, N.M.B., Gurung, G.S., and Khadka, B. 2012. Gharial Conservation Initiatives in Nepal. World Crocodile Conference, 21st Working Meeting of IUCN SSC Crocodile Specialist Group: 124 - 135.",
+      "year": "2012",
+      "title": "Gharial Conservation Initiatives in Nepal",
+      "author": "Malla, S., Pradhan, N.M.B., Gurung, G.S., and Khadka, B",
+      "citation_short": null
+    },
+    {
+      "citation": "Martin, B.G.H. and Bellairs, A.D'A. 1977. The narial excresence and pterygoid bulla of the gharial, <i>Gavialis gangeticus</i> (Crocodilia). <i>J. Zool. Lond.</i> 182: 541-558.",
+      "year": "1977",
+      "title": "The narial excresence and pterygoid bulla of the gharial, <i>Gavialis gangeticus</i> (Crocodilia)",
+      "author": "Martin, B.G.H. and Bellairs, A.D'A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maskey, T.M. 1989. Movement and survival of captive-reared gharial, Gavialis gangeticus, in the Narayani River, Nepal. PhD Thesis. University of Florida.",
+      "year": "1989",
+      "title": "Movement and survival of captive-reared gharial, Gavialis gangeticus, in the Narayani River, Nepal. PhD Thesis",
+      "author": "Maskey, T.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maskey, T.M. 2008. Gharial Conservation in Nepal. Wildlife Watch Group (WWG), Kathmandu, Nepal.",
+      "year": "2008",
+      "title": "Gharial Conservation in Nepal",
+      "author": "Maskey, T.M",
+      "citation_short": null
+    },
+    {
+      "citation": "McClure, G. 2013. Deficiencies of crocodilian husbandry in large head-starting facilities and a proposal for an alternative concept. Proceedings of the 21st Working Meeting of the IUCN-SSC Crocodile Specialist Group..",
+      "year": "2013",
+      "title": "Deficiencies of crocodilian husbandry in large head-starting facilities and a proposal for an alternative concept.",
+      "author": "McClure, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mohanty, B. 2004. Conservation of Gharial (Gavialis gangeticus) in the Mahanadi River System of Orissa, India. Final Project Report. World Wide Fund for Nature, Orissa State Office, and Rufford Foundation Nature Conservation.",
+      "year": "2004",
+      "title": "Conservation of Gharial (Gavialis gangeticus) in the Mahanadi River System of Orissa, India. Final Project Report",
+      "author": "Mohanty, B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mohanty, B., Nayak, S.K., Panda, P., Mitra, A., and Pattanaik, S.K. 2010. Gharial (Gavialis gangeticus) in the Mahanadi River System of Orissa, India: on the brink of extinction. <i>-planet-Journal of Organization for Protection of Ecosystem, Environment and Endangered Species</i> 8(2): 49 - 52.",
+      "year": "2010",
+      "title": "Gharial (Gavialis gangeticus) in the Mahanadi River System of Orissa, India: on the brink of extinction",
+      "author": "Mohanty, B., Nayak, S.K., Panda, P., Mitra, A., and Pattanaik, S.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "MPFD. 2013. Madhya Pradesh Forest Department Survey of Son Gharial Sanctuary-March 2013.",
+      "year": "2013",
+      "title": "Madhya Pradesh Forest Department Survey of Son Gharial Sanctuary-March 2013",
+      "author": "MPFD",
+      "citation_short": null
+    },
+    {
+      "citation": "Murray, C.M., Merchant, M., Easter, M., Padilla, S., Garrigos, D.B., Marin, M.S., and Guyer, C. 2017. Detection of a synthetic sex steroid in the American crocodile (Crocodylus acutus): Evidence for a novel environmental androgen. <i>Chemosphere </i> 180: 125-129.",
+      "year": "2017",
+      "title": "Detection of a synthetic sex steroid in the American crocodile (Crocodylus acutus): Evidence for a novel environmental androgen.",
+      "author": "Murray, C.M., Merchant, M., Easter, M., Padilla, S., Garrigos, D.B., Marin, M.S., and Guyer, C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, T. 2012. Gharial Hatchlings in the Yamuna. <i>Crocodile Specialist Group Newsletter </i> 31(4): 17.",
+      "year": "2012",
+      "title": "Gharial Hatchlings in the Yamuna",
+      "author": "Nair, T",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, T. 2017. Wet dreams and dry streams: the gharials’ grief in the Chambal and beyond. Opinion article on <i>Researchers for Wildlife Conservation website</i>; also appeared as: Of Government, God, and Gharial: the ecological pogrom in Chambal’s badlands on <i>WIRE.</i>",
+      "year": "2017",
+      "title": "Wet dreams and dry streams: the gharials’ grief in the Chambal and beyond",
+      "author": "Nair, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nair, T. and Katdare, S. 2013. Dry-season assessment of gharials (Gavialis gangeticus) in the Betwa, Ken and Son Rivers, India. <i>In: IUCN (ed.), World Crocodile Conference: Proceedings of the 22nd Working Meeting of IUCN-SSC Crocodile Specialist Group, pp. 53 - 65. Gland, Switzerland.</i>",
+      "year": "2013",
+      "title": "Dry-season assessment of gharials (Gavialis gangeticus) in the Betwa, Ken and Son Rivers, India. ",
+      "author": "Nair, T. and Katdare, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nair, T. and Katdare, S. 2014. Mayawati and other river monsters: in search of gharials in the Ken River. <i>Sanctuary Asia </i> 34(6): 64 - 67.",
+      "year": "2014",
+      "title": "Mayawati and other river monsters: in search of gharials in the Ken River.",
+      "author": "Nair, T. and Katdare, S",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, T. and Katdare, S. 2014. Summary Report on Gharial Surveys in the Gandak River. Gharial Conservation Alliance, Madras Crocodile Bank Trust, Tamil Nadu, India.",
+      "year": "2014",
+      "title": "Summary Report on Gharial Surveys in the Gandak River.",
+      "author": "Nair, T. and Katdare, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, T, Banerjee, S. and Rahim, V. 2013. Update on gharial mortalities in National Chambal Sanctuary, late 2012-early 2013. <i>Crocodile Specialist Group Newsletter</i> 32(3): 5 - 7.",
+      "year": "2013",
+      "title": "Update on gharial mortalities in National Chambal Sanctuary, late 2012-early 2013.",
+      "author": "Nair, T, Banerjee, S. and Rahim, V. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, T., Chellam, R., and Krishnaswamy, J. 2016. Estimation of ecological flows in the Son Gharial Sanctuary (Son River, Madhya Pradesh) with a focus on gharials Gavialis gangeticus. Final Report. FES, Anand and ATREE, Bangalore.",
+      "year": "2016",
+      "title": "Estimation of ecological flows in the Son Gharial Sanctuary (Son River, Madhya Pradesh) with a focus on gharials Gavialis gangeticus. Final Report",
+      "author": "Nair, T., Chellam, R., and Krishnaswamy, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, T., Thorbjarnarson, J.B., Aust, P. and Krshinaswamy, J. 2012. Rigorous gharial population estimation in the Chambal: implications for conservation and management of a globally threatened crocodilian. <i>Journal of Applied Ecology</i> 49: 1046 - 1054.",
+      "year": "2012",
+      "title": "Rigorous gharial population estimation in the Chambal: implications for conservation and management of a globally threatened crocodilian",
+      "author": "Nair, T., Thorbjarnarson, J.B., Aust, P. and Krshinaswamy, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nawab, A., Basu, D.J., Yadav, S.K., and Gautam, P. 2013. . Impact of Mass Mortality of Gharial Gavialis gangeticus (Gmelin, 1789) on its Conservation in the Chambal River in Rajasthan. In: Sharma, B. Kulshreshtha, S. and Rahmani, A. (eds.), <i>Faunal Heritage of Rajasthan, India.</i>, Springer Cham.",
+      "year": "2013",
+      "title": ". Impact of Mass Mortality of Gharial Gavialis gangeticus (Gmelin, 1789) on its Conservation in the Chambal River in Rajasthan.",
+      "author": "Nawab, A., Basu, D.J., Yadav, S.K., and Gautam, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "NTRIS-CASMACC. 2011. <i>National Tri-State Chambal Sanctuary Management and Coordination Committee</i>. Ministry of Environment and Forests, Government of India.",
+      "year": "2011",
+      "title": "National Tri-State Chambal Sanctuary Management and Coordination Committee",
+      "author": "NTRIS-CASMACC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Palei, N.C. and Rath, B.P. 2017. Wildlife Odisha-2017. Wildlife Census Results for Gharial, 2010-2017. Wildlife Organization, Forest & Environment Department, Government of Odisha, Bhubaneswar.",
+      "year": "2017",
+      "title": "Wildlife Odisha-2017. Wildlife Census Results for Gharial, 2010-2017",
+      "author": "Palei, N.C. and Rath, B.P",
+      "citation_short": ""
+    },
+    {
+      "citation": "Punjab Government. 1913. <i>Punjab District Gazetteers Vol. 5, A.  Delhi District, with maps. 1912.</i> The Civil and Military Gazette Press, Lahore.",
+      "year": "1913",
+      "title": "Punjab District Gazetteers Vol. 5, A.  Delhi District, with maps. 1912.",
+      "author": "Punjab Government",
+      "citation_short": null
+    },
+    {
+      "citation": "Rae, R.J. 1933. Gavial on the Indus. <i>Journal of the Sind Natural History Society </i> 1(4): 37.",
+      "year": "1933",
+      "title": "Gavial on the Indus.",
+      "author": "Rae, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rainwater, T.R., Milnes, M., and Singh, S. 2009. Health Assessment of Tilapia in the Chambal River, India: Progress Report. Turtle Survival Alliance-India, , Etawah, Uttar Pradesh.",
+      "year": "2009",
+      "title": "Health Assessment of Tilapia in the Chambal River, India: Progress Report",
+      "author": "Rainwater, T.R., Milnes, M., and Singh, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rajbhandari, S.L., Acharya, P.M., and Khadka, B.B. 2017. Enhancing the Reproductive and Hatching Success of Critically Endangered Gavialis gangeticus.  Booster Grant Final Report. Rufford Small Grants Foundation, UK.",
+      "year": "2017",
+      "title": "Enhancing the Reproductive and Hatching Success of Critically Endangered Gavialis gangeticus.  Booster Grant Final Report",
+      "author": "Rajbhandari, S.L., Acharya, P.M., and Khadka, B.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rajbhandari, S.L. and Acharya,P. 2013. Study of Investigation of Population, Habitat and Hatching Success of Gavialis gangeticus in Narayani River of the Chitwan National Park. <i>J. Nat. History. Mus. </i> 27: 1 -11.",
+      "year": "2013",
+      "title": "Study of Investigation of Population, Habitat and Hatching Success of Gavialis gangeticus in Narayani River of the Chitwan National Park.",
+      "author": "Rajbhandari, S.L. and Acharya,P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rajbhandari, S.L. and Acharya,P. 2015. Study of Investigation of Population, Habitat and Hatching Success of Gavialis gangeticus in Narayani River of the Chitwan National Park. 2nd Phase Final Report. Rufford Small Grant Foundation, U.K.",
+      "year": "2015",
+      "title": "Study of Investigation of Population, Habitat and Hatching Success of Gavialis gangeticus in Narayani River of the Chitwan National Park. 2nd Phase Final Report",
+      "author": "Rajbhandari, S.L. and Acharya,P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ranabhat, R., Khadka, B.B., Malla, S., Shah, K., Bhatta, T. and Bhattarai, S. 2016. Field Situation Analysis on conservation status on Gharial in Captivity and in the Wild. <i>Final report submitted to Ministry of Forest and Soil Conservation, Government of Nepal.</i>.",
+      "year": "2016",
+      "title": "Field Situation Analysis on conservation status on Gharial in Captivity and in the Wild.",
+      "author": "Ranabhat, R., Khadka, B.B., Malla, S., Shah, K., Bhatta, T. and Bhattarai, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ranjitsinh, M,K. and Singh, L.A.K. 2002. The gharial Gavialis gangeticus in Indravati River? . <i>Journal of Bombay Natural History Society </i> 99(2): 330.",
+      "year": "2002",
+      "title": "The gharial Gavialis gangeticus in Indravati River? ",
+      "author": "Ranjitsinh, M,K. and Singh, L.A.K",
+      "citation_short": null
+    },
+    {
+      "citation": "Rao, R.J. 1988. Nesting Ecology of the Gharial in National Chambal Sanctuary. Report to Wildlife Institute of India, New Forest, Dehra Dun.",
+      "year": "1988",
+      "title": "Nesting Ecology of the Gharial in National Chambal Sanctuary.",
+      "author": "Rao, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rao, R.J. 2007. Status and Distribution of Gharial Nests in National Chambal Sanctuary. Gharial Conservation Alliance.",
+      "year": "2007",
+      "title": "Status and Distribution of Gharial Nests in National Chambal Sanctuary.",
+      "author": "Rao, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rao, R.J., Taigor, S. and Sheikh, G.A. 2016. Quality Mapping of Gharial Habitat in National Chambal Sanctuary. World Crocodile Conference: Proceedings of the 24nd Working Meeting of IUCN-SSC Crocodile Specialist Group, IUCN: 125 - 135. Gland, Switzerland.",
+      "year": "2016",
+      "title": "Quality Mapping of Gharial Habitat in National Chambal Sanctuary",
+      "author": "Rao, R.J., Taigor, S. and Sheikh, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rao, R.J.,  Taigor, S., Singh, H., and Dasgupta, N. 2013. Monitoring of Gharial (Gavialis gangeticus) and its habitat in the National Chambal Sanctuary, India. World Crocodile Conference: Proceedings of the 22nd Working Meeting of IUCN-SSC Crocodile Specialist Group, IUCN: 66 - 73. Gland, Switzerland.",
+      "year": "2013",
+      "title": "Monitoring of Gharial (Gavialis gangeticus) and its habitat in the National Chambal Sanctuary, India",
+      "author": "Rao, R.J.,  Taigor, S., Singh, H., and Dasgupta, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rashid, S.M.A., Khan, A., and Sarowar Alam, A.B.M. 2014. Trans-boundary Sanctuary between Bangladesh and India for Gharial (Gavialis gangeticus) Conservation. In: Sinha, R.K. and Ahmed, B. (eds), Rivers for Life: Proceedings of the International Symposium on River Biodiversity: Ganges-Brahmaputra-Meghna River System. Ecosystems for Life, pp. 340.",
+      "year": "2014",
+      "title": "Trans-boundary Sanctuary between Bangladesh and India for Gharial (Gavialis gangeticus) Conservation",
+      "author": "Rashid, S.M.A., Khan, A., and Sarowar Alam, A.B.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Saikia, B.P., Saud, B.J., Kakati Saikia, M., and Saikia, P.K. 2010. Present distribution status and conservation threats of Indian Gharial in Assam, India. <i>International Journal of Biodiversity and Conservation </i> 2(12): 382 - 387.",
+      "year": "2010",
+      "title": "Present distribution status and conservation threats of Indian Gharial in Assam, India",
+      "author": "Saikia, B.P., Saud, B.J., Kakati Saikia, M., and Saikia, P.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Saikia, P.K. 2012. Indian Gharial (Gavialis gangeticus): Status, Ecology and Conservation. In: Singaravelan, N. Bentham Science Publishers Ltd. (ed.), <i>Rare Animals of India</i>.",
+      "year": "2012",
+      "title": "Indian Gharial (Gavialis gangeticus): Status, Ecology and Conservation",
+      "author": "Saikia, P.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sale, J.B. 1982. <i>Management Plan for the National Chambal Sanctuary. Central Crocodile Breeding and Management Institute</i>. Hyderabad. ",
+      "year": "1982",
+      "title": "Management Plan for the National Chambal Sanctuary. Central Crocodile Breeding and Management Institute",
+      "author": "Sale, J.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shahi, S.P. 1974. <i>Gharial (Gavialis gangeticus) and marsh crocodiles Crocodylus palustris. Cheetal 16:</i>.",
+      "year": "1974",
+      "title": "Gharial (Gavialis gangeticus) and marsh crocodiles Crocodylus palustris. Cheetal 16:",
+      "author": "Shahi, S.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shah, K.B., and Paudel, S. 2016. Ecology of crocodile and dolphin in the Koshi Basin. Chapter 11. In: Doody, T.M., Cuddy, S.M., Bhatta, L.D. (ed.), <i>Connecting flows and ecology in Nepal: current state of knowledge of the Koshi Basin. Sustainable Development Investment Portfolio (SDIP) project</i>, pp. 123 -128. CSIRO, Australia.",
+      "year": "2016",
+      "title": "Ecology of crocodile and dolphin in the Koshi Basin. Chapter 11",
+      "author": "Shah, K.B., and Paudel, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, H.S. 1979. <i>The physiography of the Lower Chambal Valley and its agricultural development: A study in applied geomorphology. Concept Publishing Company.</i>.",
+      "year": "1979",
+      "title": "The physiography of the Lower Chambal Valley and its agricultural development: A study in applied geomorphology. Concept Publishing Company",
+      "author": "Sharma, H.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R. K. 1999. Survey of Gharial in National Chambal Sanctuary, 1993-97. In: ENVIS (Wildlife and Protected Areas) (eds), <i>Indian Crocodilians</i>, Wildlife Institute of India, Dehra Dun.",
+      "year": "1999",
+      "title": "Survey of Gharial in National Chambal Sanctuary, 1993-97",
+      "author": "Sharma, R. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R.K. 2006. Survey of aquatic animals in National Chambal Sanctuary, Morena, MP. Internal report submitted to MP Forest Department.",
+      "year": "2006",
+      "title": "Survey of aquatic animals in National Chambal Sanctuary, Morena, MP.",
+      "author": "Sharma, R.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R.K. and Dasgupta, N. 2013. Status and Population trends of Gharial in Chambal River, National Chambal Sanctuary. Proceedings of the 22nd Working Meeting of the Crocodile Specialist Group: 74 - 77. Sri Lanka.",
+      "year": "2013",
+      "title": "Status and Population trends of Gharial in Chambal River, National Chambal Sanctuary",
+      "author": "Sharma, R.K. and Dasgupta, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R.K. and Singh, L.A.K. 2015. Status of Mugger Crocodile (Crocodylus palustris) in National Chambal Sanctuary after thirty years and its implications on conservation of Gharial (Gavialis gangeticus). <i>Zoo’s Print</i> 30(5): 9 - 16.",
+      "year": "2015",
+      "title": "Status of Mugger Crocodile (Crocodylus palustris) in National Chambal Sanctuary after thirty years and its implications on conservation of Gharial (Gavialis gangeticus)",
+      "author": "Sharma, R.K. and Singh, L.A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, R.K., Singh, H., and Dasgupta, N. 2011. A survey of habitat invetorization and habitat potentiality for sustenance of gharial in Sone (Gavialis gangeticus) Gharial Sanctuary. <i>. International Journal of Biodiversity and Conservation</i> e(1): 19 - 23.",
+      "year": "2011",
+      "title": "A survey of habitat invetorization and habitat potentiality for sustenance of gharial in Sone (Gavialis gangeticus) Gharial Sanctuary.",
+      "author": "Sharma, R.K., Singh, H., and Dasgupta, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, A.K., Ansari, A. Srivastava, S.C., Verma, P., and Pathak, A.K. 2014. Impacts of Invasive Fishes on Fishery Dynamics of the Yamuna River, India. <i>Agricultura Sciences</i> 5(2014): 813 - 821.",
+      "year": "2014",
+      "title": "Impacts of Invasive Fishes on Fishery Dynamics of the Yamuna River, India",
+      "author": "Singh, A.K., Ansari, A. Srivastava, S.C., Verma, P., and Pathak, A.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, L.A.K. 1978. Ecological studies on the Indian Gharial (Gavialis gangeticus Gmelin, Reptilia, Crocodylia).  PhD thesis. Utkal University.",
+      "year": "1978",
+      "title": "Ecological studies on the Indian Gharial (Gavialis gangeticus Gmelin, Reptilia, Crocodylia).  PhD thesis",
+      "author": "Singh, L.A.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, L.A.K. 1985. Gharial Population Trend in National Chambal Sanctuary with notes on radiotracking. Final Report . Government of India, Crocodile Research Centre of Wildlife Institute of India, Hyderabad-India.",
+      "year": "1985",
+      "title": "Gharial Population Trend in National Chambal Sanctuary with notes on radiotracking. Final Report ",
+      "author": "Singh, L.A.K",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, L.A.K. and Bustard, H.R. 1977. Studies on the Indian gharial, <i>Gavialis gangeticus</i> (Gmelin): V. Preliminary observations on maternal behavior. <i>Indian Forester</i> 103: 671-678.",
+      "year": "1977",
+      "title": "Studies on the Indian gharial, <i>Gavialis gangeticus</i> (Gmelin): V. Preliminary observations on maternal behavior",
+      "author": "Singh, L.A.K. and Bustard, H.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, L.A.K. and Bustard, H.R. 1982. The geographical distribution of the gharial, Gavialis gangeticus (Gmelin) in Orissa, India. . <i>British Journal of Herpetology </i> 6: 259-260.",
+      "year": "1982",
+      "title": "The geographical distribution of the gharial, Gavialis gangeticus (Gmelin) in Orissa, India. ",
+      "author": "Singh, L.A.K. and Bustard, H.R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Singh, V.B. 1979. The Status of the Gharial (Gavialis gangeticus) in U.P. and Its Rehabilitation. <i>Journal of the Bombay Natural History Society</i> 75(3): 668 - 683.",
+      "year": "1979",
+      "title": "The Status of the Gharial (Gavialis gangeticus) in U.P. and Its Rehabilitation.",
+      "author": "Singh, V.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, M.A. 1931. The Fauna of British India including Ceylon and Burma. In: Taylor and Francis (eds), <i>Reptilia and Amphibia. Vol. I. Loricata, Testudines</i>, London.",
+      "year": "1931",
+      "title": "The Fauna of British India including Ceylon and Burma",
+      "author": "Smith, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Srivastava, A.K. 1981. Biology of Indian Gharial Gavialis gangeticus with special reference to its behaviour. PhD thesis. University of Lucknow. Uttar Pradesh.",
+      "year": "1981",
+      "title": "Biology of Indian Gharial Gavialis gangeticus with special reference to its behaviour. PhD thesis",
+      "author": "Srivastava, A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Srivastava, A.K. 1981. Biology of Indian Gharial Gavialis gangeticus with special reference to its behaviour. PhD thesis. University of Lucknow. Uttar Pradesh.",
+      "year": "1981",
+      "title": "Biology of Indian Gharial Gavialis gangeticus with special reference to its behaviour. PhD thesis",
+      "author": "Srivastava, A.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevenson, C. and Whitaker, R. 2010. Indian Gharial Gavialis gangeticus. In: S.C. Manolis and C. Stevenson (eds), <i>Crocodiles. Status Survey and Conservation Action Plan. Third Edition</i>, Crocodile Specialist Group, Darwin.",
+      "year": "2010",
+      "title": "Indian Gharial Gavialis gangeticus",
+      "author": "Stevenson, C. and Whitaker, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stevenson, C.J. 2015. Conservation of the Indian Gharial Gavialis gangeticus: successes and failures . <i>International Zoo Yearbook </i> 49: 150 - 161.",
+      "year": "2015",
+      "title": "Conservation of the Indian Gharial Gavialis gangeticus: successes and failures ",
+      "author": "Stevenson, C.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Taigor, S. 2007. Threats of Sand Mining on the nesting of Turtles and Gharial in the National Chambal Sanctuary, Madhya Pradesh. Submitted to Madhya Pradesh State Biodiversity Board, Bhopal.",
+      "year": "2007",
+      "title": "Threats of Sand Mining on the nesting of Turtles and Gharial in the National Chambal Sanctuary, Madhya Pradesh. Submitted to Madhya Pradesh State Biodiversity Board, Bhopal",
+      "author": "Taigor, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Taigor, S. 2014. Gharial record in Banas River: a survey report. Unpublished report. WWF- India.",
+      "year": "2014",
+      "title": "Gharial record in Banas River: a survey report. Unpublished report",
+      "author": "Taigor, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taigor, S.R. and Rao, R.J. 2008. Sand Mining Practices on the Chambal River banks and their impact on the aquatic animal biodiversity. <i>Journal of Environmental Research and Development </i> 2(4): 644 - 650.",
+      "year": "2008",
+      "title": "Sand Mining Practices on the Chambal River banks and their impact on the aquatic animal biodiversity",
+      "author": "Taigor, S.R. and Rao, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taigor, S.R. and Rao, R.J. 2010. Anthropogenic threats in the National Chambal Sanctuary, Madhya Pradesh, India. <i>Tigerpaper</i> 37(1): 23 - 27.",
+      "year": "2010",
+      "title": "Anthropogenic threats in the National Chambal Sanctuary, Madhya Pradesh, India",
+      "author": "Taigor, S.R. and Rao, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taigor, S.R. and Rao, R.J. 2010. Habitat features of aquatic animals in the National Chambal Sanctuary, Madhya Pradesh, India. <i>Asian J. Exp Biol Sci</i> 1(2): 409 - 414.",
+      "year": "2010",
+      "title": "Habitat features of aquatic animals in the National Chambal Sanctuary, Madhya Pradesh, India",
+      "author": "Taigor, S.R. and Rao, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "TAL, PABZ. 2013. Gharial Conservation initiatives in Nepal. Technical Progress Report (July 2012-June 2013). Terai Arc Landscape Program-Protected Area and Buffer Zone. Report submitted to DNPWC, Babarmahal, Kathmandu.",
+      "year": "2013",
+      "title": "Gharial Conservation initiatives in Nepal;Technical Progress Report (July 2012-June 2013)",
+      "author": "TAL, PABZ",
+      "citation_short": null
+    },
+    {
+      "citation": "Vagholikar, N., and Moghe, K.A. 2003. <i>Undermining India: Impacts of mining on ecologically sensitive areas</i>. Kalpavriksh, Pune.",
+      "year": "2003",
+      "title": "Undermining India: Impacts of mining on ecologically sensitive areas",
+      "author": "Vagholikar, N., and Moghe, K.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Webb, G. 2009. Editorial. <i>Crocodile Specialist Group Newsletter</i> 28(2): 3.",
+      "year": "2009",
+      "title": "Editorial",
+      "author": "Webb, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. 1979. The Crocodilians of Corbett National Park. <i>Indian Journal of Forestry</i> 2(1): 38 - 40.",
+      "year": "1979",
+      "title": "The Crocodilians of Corbett National Park",
+      "author": "Whitaker, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R. 1987. The management of crocodilians in India. In: Webb, G.J.W. Manolis, S.C., and Whitehead, P.J. (eds), <i>Wildlife Management: crocodiles and alligators.</i>, pp. 63 - 72. Surrey Beatty & Sons Pty. Ltd., Chipping Norton, NSW.",
+      "year": "1987",
+      "title": "The management of crocodilians in India",
+      "author": "Whitaker, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R., and Daniels, J.C. 1980. The status of Indian crocodilians. <i>Journal of the Bombay Natural History Society</i> 75: 1238 - 1245.",
+      "year": "1980",
+      "title": "The status of Indian crocodilians",
+      "author": "Whitaker, R., and Daniels, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R., Basu, D. and Huchzermeyer, F. 2008. Update on gharial mass mortality in National Chambal Sanctuary. <i>Crocodile Specialist Group Newsletter</i> 27(1): 4-8.",
+      "year": "2008",
+      "title": "Update on gharial mass mortality in National Chambal Sanctuary",
+      "author": "Whitaker, R., Basu, D. and Huchzermeyer, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitaker, R., & Members of GMTF. 2007. The Gharial: going extinct again. <i>Iguana</i> 14: 24 - 33.",
+      "year": "2007",
+      "title": "The Gharial: going extinct again",
+      "author": "Whitaker, R., & Members of GMTF",
+      "citation_short": null
+    },
+    {
+      "citation": "Wildlife Institute of India. 1999. ENVIS. 1999. Indian Crocodilians. <i>Wildlife and Protected Areas. 2(1)</i>, Wildlife Institute of India, Dehra Dun.",
+      "year": "1999",
+      "title": "ENVIS. 1999. Indian Crocodilians",
+      "author": "Wildlife Institute of India",
+      "citation_short": null
+    },
+    {
+      "citation": "Wildlife Institute of India. Field Studies in Gharial Ecology in 2017. Unpublished Report..",
+      "year": "Field Studies in Gharial Ecology in 2017. Unpublished Report.",
+      "title": null,
+      "author": "Wildlife Institute of India",
+      "citation_short": null
+    },
+    {
+      "citation": "Wildlife Trust of India. 2017. Recovery of Critically Endangered Gharial in the Gandak River, Progress Report, December 2016-June 2017, submitted to Department of Environment & Forests, Government of Bihar.",
+      "year": "2017",
+      "title": "Recovery of Critically Endangered Gharial in the Gandak River, Progress Report, December 2016-June 2017, submitted to Department of Environment & Forests, Government of Bihar.",
+      "author": "Wildlife Trust of India",
+      "citation_short": null
+    },
+    {
+      "citation": "WWF Nepal. 2011. Population Status and distribution of Gharials in Nepal. WWF Report. Kathmandu, Nepal.",
+      "year": "2011",
+      "title": "Population Status and distribution of Gharials in Nepal. WWF Report",
+      "author": "WWF Nepal",
+      "citation_short": null
+    },
+    {
+      "citation": "Yadav, S.K. and Khan, A. 2016. Note on Gharial Reintroduction and Rescue in Upper Ganga River. <i>Crocodile Specialist Group Newsletter</i> 35(4): 6 - 8.",
+      "year": "2016",
+      "title": "Note on Gharial Reintroduction and Rescue in Upper Ganga River",
+      "author": "Yadav, S.K. and Khan, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 July 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-2"
+    },
+    {
+      "citation": "Khadka, B.B. 2010a. Gharial release into Rapti River. <i>Crocodile Specialist Group Newsletter </i> 29(1): 10-11.",
+      "year": "2010a",
+      "title": "Gharial release into Rapti River.",
+      "author": "Khadka, B.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Paudel, S., Levesque, J.C., Saavedra, C., Pita, C. and Pal, P. 2016. Characterization of the artisanal fishing communities in Nepal and potential implications for the conservation and management of Ganges River Dolphin (<i>Platanista gangetica gangetica</i>). <i>PeerJ</i>: 4:e1563 https://doi.org/10.7717/peerj.1563.",
+      "year": "2016",
+      "title": "Characterization of the artisanal fishing communities in Nepal and potential implications for the conservation and management of Ganges River Dolphin (<i>Platanista gangetica gangetica</i>)",
+      "author": "Paudel, S., Levesque, J.C., Saavedra, C., Pita, C. and Pal, P.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

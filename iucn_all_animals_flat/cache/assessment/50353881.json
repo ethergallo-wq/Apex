@@ -1,0 +1,986 @@
+{
+  "assessment_date": "2017-12-30T00:00:00.000+00:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 8097,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/8097/50353881",
+  "citation": "Cooke, J.G. 2018. Eschrichtius robustus. The IUCN Red List of Threatened Species 2018: e.T8097A50353881. Accessed on 05 May 2026.",
+  "assessment_id": 50353881,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 8097,
+    "scientific_name": "Eschrichtius robustus",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 8099,
+        "scientific_name": "Eschrichtius robustus western subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "ESCHRICHTIIDAE",
+        "genus_name": "Eschrichtius",
+        "species_name": "robustus",
+        "subpopulation_name": "western subpopulation",
+        "infra_name": null,
+        "authority": "(Lilljeborg, 1861)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Western Gray Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "ESCHRICHTIIDAE",
+    "genus_name": "Eschrichtius",
+    "species_name": "robustus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Lilljeborg, 1861)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Grey Whale",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "귀신고래",
+        "language": "kor"
+      },
+      {
+        "main": false,
+        "name": "コククジラ",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Ballena Gris",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Серый кит",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "灰鯨",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Gray Whale",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Eschrichtius gibbosus Erxleben, 1777",
+        "status": "ACCEPTED",
+        "genus_name": "Eschrichtius",
+        "species_name": "gibbosus",
+        "species_author": "Erxleben, 1777",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Balaenoptera robusta Lilljeborg, 1861",
+        "status": "ACCEPTED",
+        "genus_name": "Balaenoptera",
+        "species_name": "robusta",
+        "species_author": "Lilljeborg, 1861",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "No",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p></p><p>  </p><p>Gray Whales are now regularly found only in the North Pacific and adjacent seas. They congregate in winter in or around various lagoons along the west coast of Baja California (Mexico) and small numbers also occur in winter in the Gulf of California and along the Mexican mainland. Some calves are born during the southward migration and the remainder are born in shallow bays and lagoons on the west coast of Baja California (Jones and Swartz 2002). In spring, the population migrates to feeding grounds mainly in the shallow waters of the northwestern Bering Sea and the southern Chukchi and Beaufort seas, with some individuals migrating as far westward as Kamchatka and Sakhalin, Russia (Weller <em>et al.</em> 2012, Mate <em>et al</em>. 2015). Some Gray Whales also summer and feed along the Pacific coast of North America from northern California to Kodiak Island, Alaska; those animals are known as the Pacific Coast Feeding Group (PCFG) (Carretta <em>et al</em>. 2017).</p>  <p></p>Former whaling grounds off Korea and southwestern Japan indicate the existence of a separate western North Pacific or Asian population that migrated to breeding grounds south of the Korean Peninsula, based on the seasonality of catches in the Korean grounds (Weller <em>et al</em>. 2002, Kato and Kasuya 2002). The last sighting in Korean waters was in 1977, and recent surveys in Korean waters have failed to find any Gray Whales (Kim <em>et al.</em> 2013). <br/><br/>Gray Whales, including mothers with calves, return every year to a feeding ground off northeastern Sakhalin (Weller <em>et al</em>.  1999). This group was until recently thought to be a remnant of the  western breeding stock that was exploited in the Korean whaling grounds;  the Russian name “Korean-Okhotsk gray whale” for this population was  based on this assumption. Tracking with satellite-linked tags and  photo-matching data (Mate <em>et al</em>. 2015, Weller <em>et al</em>.  2012) show that at least some of the Sakhalin whales migrate to the  eastern North Pacific in winter. However, the number of movements  recorded to date has not been sufficient to conclude that all Gray  Whales observed off Sakhalin belong to the eastern breeding population  (Cooke <em>et al.</em> 2017, IWC 2017).  <br/>  <p>Since 1990, about 30 sightings and strandings have been documented in Japan, mainly on the Pacific coast (Kato <em>et al</em>. 2016). These include at least one reproductive female moving between Sakhalin and Japan and one individual seen in successive years alternately off Sakhalin in summer and off Japan in winter and spring (Weller <em>et al</em>. 2016, Nakamura <em>et al</em>. 2017). There have also been a few strandings on the coast of mainland China from the northern Yellow Sea to the Hainan Strait in the south (Zhu and Yue 1998), and one animal caught in fishing gear in the Taiwan Strait in 2011 (Wang <em>et al</em>. 2015). Therefore, at least some of the Gray Whales that feed in the Okhotsk Sea migrate into Japanese waters and possibly farther south in winter;&#160;these may be a remnant of the historical Asian Gray Whale population, but it is not known whether there exists an Asian calving and nursery aggregation, as occurs in Baja California. <br/> <br/> Gray Whales were once present in the North Atlantic as well as the North Pacific. Sub-fossil remains, the most recent dated to around 1675, have been found on the eastern seaboard of North America from Florida to New Jersey and on the coasts of the English Channel and the North and Baltic seas (Mead and Mitchell 1984). There are historical accounts of living Gray Whales from Iceland in the early 1600s and possibly off New England in the early 1700s (Rice 1998). </p>  A few rare occurrences of Gray Whales outside their normal range have recently been documented. One was seen in May 2010 in the Mediterranean Sea off Israel, and a few days later again off Spain (Scheinin <em>et al.</em> 2011). A Gray Whale was found stranded on the coast of El Salvador in July 2010, the southernmost record known in the Pacific Ocean (previously, the southernmost record was in Bahía de Banderas, Mexico) (Barraza 2011). A Gray Whale was seen in May 2013 off Namibia, possibly a juvenile and the only report to date of a Gray Whale in the Southern Hemisphere (Elwen and Gridley 2013).",
+    "population": "<p></p><p>Gray Whales in the eastern North Pacific were rapidly depleted by commercial whalers after the wintering concentrations in lagoons along the Baja California peninsula, Mexico, were discovered in the mid-19th century. Peak catches, averaging over 480 whales per year, occurred between 1855 and 1865. Lagoon whaling ended by about 1875, apparently due to exhaustion of the lagoon populations, but shore-based whaling in California continued at a lower level until the late 19th century (Henderson 1984, IWC 1993, Reeves and Smith 2010). In the 20th century, there were some pelagic catches off California and Mexico by Norwegian and American vessels in the 1920s and 1930s, and in the 1930s and 1940s by the Soviet pelagic fleet in the Bering and Chukchi seas (Allison 2017). A further 320 Gray Whales were taken under scientific permit in the 1960s (Rice and Wolman 1971), and 138 illegal Soviet catches occurred in the 1960s (Doroshenko 2000). “Aboriginal subsistence” whaling resumed in the Bering and Chukchi seas off Chukotka in 1948 and has continued into the present, apart from an interruption in the early 1990s. Reported catches during the years 1985-2016 averaged 118 per year. Very small numbers have also been taken by aboriginal whalers in Alaska, and by the Makah tribe in Washington State (IWC 2017). <br/></p>  <p>Despite the continuing catches, the eastern North Pacific population has recovered strongly from past over-exploitation, increasing by 2.5% per year during 1967-96 (Buckland and Breiwick 2002). Abundance seems to have peaked around 1997/98 when a census on the southward migration indicated a population of 24,000-36,000 (Laake <em>et al</em>. 2012). There followed a reduction in population size, with some recovery in recent years. The most recent abundance estimate is 26,960 (95% confidence interval 24,420-29,830) from the 2015/16 southbound migration survey off California (Durban <em>et al</em>. 2015, 2017).&#160; <br/></p>  <p>There was a downturn in population condition around the turn of the millenium involving poor calf production, high stranding rates, and relatively high numbers of emaciated animals (LeBouef <em>et al.</em> 2000, IWC 2003, Rugh <em>et al.</em> 2005). An observed die-off involved at least 651 whales between 1999 and 2001 (Thomas <em>et al</em>. 2016). Perryman <em>et al.</em> (2002) showed that calf production was related to the proportion of feeding habitat free of sea ice in the preceding summer. Since 2002, calf production has recovered, and mortality and the occurrence of emaciated whales have declined (IWC 2004). The presence of female-calf pairs has also recently increased in Laguna San Ignacio, Baja California Sur (Swartz <em>et al</em>. 2012). The population has probably reached a size where it exceeds the carrying capacity of the environment in years when food availability is below average, and is likely to fluctuate around some environmentally determined average level.</p><p>The Pacific Coast Feeding Group (PCFG) was estimated at 243 whales (standard error 19) in 2015 and has shown some increase in recent years (Calambokidis <em>et al</em>. 2017).&#160; <br/></p>The combined feeding aggregations off northeastern Sakhalin and southeastern Kamchatka were estimated to number 271-311 whales (excluding calves) in 2016, of which 175-192 were predominantly Sakhalin-feeding whales. The Sakhalin component has been increasing at 2-5% per year. Based on evidence of migration to the eastern North Pacific from tags and photo-identification matches between Sakhalin/Kamchatka and Mexico, it was estimated that at most 100 of the Sakhalin/Kamchatka whales migrate to wintering grounds in the western North Pacific (Cooke 2017). <p>Given documented catches of about 2,000 gray whales in Korean waters  during 1890-1966 (Kato and Kasuya 2002), and the lack of sightings in  Korean waters since 1977, the western breeding population, if it still  exists, is likely at a very small fraction of its original abundance.<br/></p>",
+    "habitats": "Gray Whales are unusual for large whales. They are primarily bottom feeders and are thus restricted to shallow continental shelf waters for feeding. They are largely coastal although they do occur at greater distances from shore on the shallow continental shelf of the Bering and Chukchi seas (Rice and Wolman (1971). Gray whales feed primarily on swarming mysids, tube-dwelling amphipods, and polychaete tube worms in the northern parts of their range, but are also known to take red crabs, baitfish, and other food (crab larvae, mobile amphipods, herring eggs and larvae, cephalopods, and megalops larvae) opportunistically or off the main feeding grounds (Nerini 1984). In one of their main feeding grounds in the Chukchi Sea, Gray Whale densities were highest in areas with high benthic amphipod abundance (Brower <em>et al</em>. 2016). Gray Whale feeding may have a dramatic effect on benthic invertebrate communities (Oliver and Slattery 1985). <br/><br/>Gray Whales are often preyed upon by Killer Whales, <em>Orcinus orca</em> (Lowry <em>et al</em>. 1987, Matkin <em>et al</em>. 2007).",
+    "threats": "<p></p><p>  </p><p>Gray Whales have been hunted since prehistoric times, and were particularly vulnerable to whalers due to their slow swimming speeds and coastal distribution. The North Atlantic population was extinct by the early 1700s, although it is unclear whether this was due primarily to hunting (Mead and Mitchell 1984). Gray Whales were hunted in prehistoric times on both sides of the North Pacific, but aboriginal catches declined to relatively low levels by the early 20th century due largely to depletion of the stocks by commercial whaling (Mitchell 1979).</p>  <p></p>  <p>Over-exploitation had been thought to have caused the extinction of the western North Pacific breeding population by the 1970s (Bowen 1974) but its probable continued existence in some form is noted above. The eastern North Pacific breeding population had reached such low numbers by the end of the 19th century that commercial whaling ceased, but it has now recovered to at or near carrying capacity, its abundance showing some fluctuation in response to environmental conditions. </p>  <p>Gray Whales are subject to anthropogenic threats such as entanglements in fishing gear and ship strikes. Scordino <em>et al</em>. (2017) estimated about 10 fatalities per year in the eastern North Pacific and the Bering Sea resulting from known incidents during 2010-15, of which ~80% involved entanglement in fishing gear and ~20% from ship strikes. The threat seems small in relation to the population size of 25,000-30,000 animals, but there are fisheries with little observer coverage, such as the Alaska gillnet fisheries, such that total mortality rates may be higher (Carretta <em>et al</em>. 2017).&#160; </p>  <p>Entanglement rates in the western North Pacific appear to have been comparatively high relative to abundance: out of only 18 records of Gray Whales on the Pacific coast of Japan during 2000-16, there were 10 live sightings, 4 entanglements, and 4 strandings (Kato <em>et al</em>. 2016). No further entanglements in Japanese waters have been reported since 2008 when Gray Whales in Japan acquired legal protection against deliberate killing and commercial utilization, but it is unclear whether this is coincidental. A Gray Whale death from entanglement was recorded in the Taiwan Strait in 2011 (Wang <em>et al</em>. 2015).<br/></p>  <p>Salmon trap nets have been set at least since 2013 in Gray Whale  feeding grounds off northeastern Sakhalin, with at least one observed entanglement and at least one probable entanglement death (Lowry <em>et al</em>. submitted). Based on analysis of photographs, approximately 20% of Gray Whales observed off Sakhalin during 1995-2005 showed evidence of scarring from past entanglements (Bradford <em>et al</em>. 2009), but it is not known where the scars were acquired. <br/></p><p></p><p>  </p><p></p><p></p><p>  </p><p><span lang=\"EN-US\">Seven to eight times more gray whales than average washed ashore on the US coast in 1999 and 2000, but the causes of this unusual mortality event have not been conclusively identified (Gulland <em>et al</em>. 2005).</p>  Perryman <em>et al</em>. (2002) and Salvadeo <em>et al</em>. (2015) showed that Gray Whale  calf production is positively correlated with the length of the ice-free season in the main feeding grounds in the preceding season. While this would imply that reduced ice coverage, as predicted by most climate models, could benefit Gray Whales in the short term, the longer term effects of arctic climate change on Gray Whales are unknown. There is some evidence that the distribution on the winter breeding grounds shifts northward in warm (El Niño) years and southward in cool (La Niña) years (Salvadeo <em>et al</em>. 2015). This trend seems to have continued in 2015 and 2016, with lower Gray Whale counts in the more southerly Bahia Magdalena Lagoon complex (24-25°N) compared to the previous years and with water temperatures 2.0-3.5° higher than in 2012-13 (Urbán <em>et al</em>. 2016). The conservation implications in the context of a general trend towards higher water temperatures and more frequent El Niño conditions are unclear.<p></p>  Plastic debris has been found in stomachs of dead Gray Whales but does not appear to have been a significant factor in the deaths of the individuals concerned.",
+    "measures": "<p>Gray Whales have been protected from commercial whaling by the International Convention for the Regulation of Whaling since its entry into force in 1948, and by its predecessor convention since 1936. Limited aboriginal subsistence whaling is permitted by the IWC, and catch limits have been set since the 1970s on the basis of advice from its Scientific Committee (most recently under its new aboriginal subsistence whaling management procedure) and requests from the relevant governments (Russian Federation and U.S.A.). The current (2013-2018) catch limit for the eastern subpopulation is 744 for the six years, subject to a maximum of 140 in any single year (IWC 2017). </p>  Three Gray Whale breeding lagoons in Mexico (Laguna Ojo de Liebre, Laguna San Ignacio, and Laguna Guerrero Negro) enjoy some protection in the form of limitations on boating, fishing, and coastal development, originally as National Gray Whale Refuges, now through their inclusions in the El Vizcaino Biosphere Reserve, which is also listed internationally as a UNESCO World Heritage Site and a Ramsar protected wetland (Hoyt 2005).<br/> <br/> The Gray Whale has a measure of legal protection in Russian waters through inclusion in the Russian Federation Red Book of Threatened Species: the Korean-Okhotsk subpopulation is listed as Endangered while the eastern North Pacific population, which migrates in Russian waters in summer, is listed as “Recovery and Restoration”. The Gray Whale has been legally protected in Japan since 2008: deliberate killing and commercial utilization are prohibited. The species is listed in Appendix I of the Convention on International Trade in Endangered Species.",
+    "use_trade": "<p>Commercial whaling of Gray Whales has ceased, but aboriginal subsistence whaling continues, primarily off Chukotka with a few taken in some years in Alaska. The IWC permitted a catch of 744 Gray Whales during the years 2013-18 with a maximum of 140 in any one year.</p>",
+    "rationale": "<p>The estimated population size for the Gray Whale is above the threshold for any IUCN Red List threatened category, and the population has increased over the last three generations, with some fluctuation. The only definitely surviving breeding population is in the eastern North Pacific. The North Atlantic breeding population is extinct, and the western North Pacific breeding population is possibly extinct.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Arctic Sea"
+      },
+      "code": "18"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Noise pollution"
+      },
+      "code": "9_6_3"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Cooke, J.G.",
+      "value": [
+        "Justin Cooke (IUCN SSC Cetacean Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Brownell Jr., R.L., Lang, A., Reeves, R. & Taylor, B.L.",
+      "value": [
+        "Barbara Taylor (independent researcher)",
+        "Robert Brownell Jr.",
+        "Randall Reeves (IUCN SSC Cetacean Specialist Group)",
+        "Aimee Lang"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Astudillo-Scalia, Y.",
+      "value": [
+        "Yaiyr Astudillo-Scalia (Arizona State University)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L.",
+      "value": [
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Rice, D.W. 1998. <i>Marine Mammals of the World: Systematics and Distribution</i>. Society for Marine Mammalogy, Special Publication Number 4, Lawrence, Kansas.",
+      "year": "1998",
+      "title": "Marine Mammals of the World: Systematics and Distribution",
+      "author": "Rice, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Doroshenko, N. V. 2000. Soviet Whaling for blue, gray, bowhead and right whales in the North Pacific Ocean, 1961-1979. <i>Soviet Whaling Data (1949-1979)</i>, pp. 96-103. Center for Russian Environmental Policy, Moscow, Russia.",
+      "year": "2000",
+      "title": "Soviet Whaling for blue, gray, bowhead and right whales in the North Pacific Ocean, 1961-1979",
+      "author": "Doroshenko, N. V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mitchell, E. 1979. Comments on the magnitude of the early catch of east Pacific gray whale (<i>Eschrichtius robustus</i>).  Report of the International Whaling Commission. 29: 307-314.",
+      "year": "1979",
+      "title": "Comments on the magnitude of the early catch of east Pacific gray whale (<i>Eschrichtius robustus</i>)",
+      "author": "Mitchell, E",
+      "citation_short": null
+    },
+    {
+      "citation": "Perryman, W. L., Donahue, M. A., Perkins, P. C. and Reilly, S. B. 2002. Gray whale calf production 1994-2000: Are observed fluctuations related to changes in seasonal ice cover? <i>Marine Mammal Science</i> 18(1): 121-144.",
+      "year": "2002",
+      "title": "Gray whale calf production 1994-2000: Are observed fluctuations related to changes in seasonal ice cover?",
+      "author": "Perryman, W. L., Donahue, M. A., Perkins, P. C. and Reilly, S. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Weller, D. W., Burdin, A. M., Wursig, B., Taylor, B. L. and Brownell Jr., R. L. 2002. The western gray whale : a review of past exploitation, current status and potential threats. <i>Journal of Cetacean Research and Management</i> 4(1): 7-12.",
+      "year": "2002",
+      "title": "The western gray whale : a review of past exploitation, current status and potential threats",
+      "author": "Weller, D. W., Burdin, A. M., Wursig, B., Taylor, B. L. and Brownell Jr., R. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buckland, S. T. and Breiwick, J. M. 2002. Estimated trends in abundance of eastern Pacific gray whales from shore counts (1967/68 to 1995/96). <i>Journal of Cetacean Research and Management</i> 4(1): 41-48.",
+      "year": "2002",
+      "title": "Estimated trends in abundance of eastern Pacific gray whales from shore counts (1967/68 to 1995/96)",
+      "author": "Buckland, S. T. and Breiwick, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "International Whaling Commission. 1993. Report of the Special Meeting of the Scientific Committee on the assessment of gray whales. <i>Report of the International Whaling Commission</i> 43: 241-259.",
+      "year": "1993",
+      "title": "Report of the Special Meeting of the Scientific Committee on the assessment of gray whales",
+      "author": "International Whaling Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Henderson, D. A. 1984. Nineteenth century gray whaling: grounds, catches and kills, practices and depletion of the whale population. In: M. L. Jones, S. L. Swartz and S. Leatherwood (eds), <i>The gray whale Eschrichtius robustus</i>, pp. 159-186. Academic Press, Orlando, Florida, USA.",
+      "year": "1984",
+      "title": "Nineteenth century gray whaling: grounds, catches and kills, practices and depletion of the whale population",
+      "author": "Henderson, D. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "International Whaling Commission. 2003. Report of the subcommittee on bowhead, right and gray whales. <i>Journal of Cetcaean Research and Management</i> 5: 226-247.",
+      "year": "2003",
+      "title": "Report of the subcommittee on bowhead, right and gray whales",
+      "author": "International Whaling Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Le Boeuf, B. J., Perez-Cotes M., H., Urban R., J., Mate, B. R. and Ollervides U., F. 2000. High gray whale mortality and low recruitment in 1999: potential causes and implications. <i>Journal of Cetacean Research and Management</i> 2(2): 85-99.",
+      "year": "2000",
+      "title": "High gray whale mortality and low recruitment in 1999: potential causes and implications",
+      "author": "Le Boeuf, B. J., Perez-Cotes M., H., Urban R., J., Mate, B. R. and Ollervides U., F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rugh, D. J., Hobbs, R. C., Lerczak, J. A. and Breiwick, J. M. 2005. Estimates of abundance of the eastern North Pacific stock of gray whales (<i>Eschrichtius robustus</i>) 1997-2002. <i>Journal of Cetacean Research and Management</i> 7(1): 1-12.",
+      "year": "2005",
+      "title": "Estimates of abundance of the eastern North Pacific stock of gray whales (<i>Eschrichtius robustus</i>) 1997-2002",
+      "author": "Rugh, D. J., Hobbs, R. C., Lerczak, J. A. and Breiwick, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jones, M. L. and Swartz, S. L. 2002. Gray whale <i>Eschrichtius robustus</i>. In: W. F. Perrin, B. Wursig and J. G. M. Thewissen (eds), <i>Encyclopedia of Marine Mammals</i>, pp. 524-536. Academic Press.",
+      "year": "2002",
+      "title": "Gray whale <i>Eschrichtius robustus</i>",
+      "author": "Jones, M. L. and Swartz, S. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rice, D. W. and Wolman, A. A. 1971. The life history and ecology of the gray whale (<i>Eschrichtius robustus</i>). <i>American Society of Mammalogists, Special Publication</i> 3: 142 pp.",
+      "year": "1971",
+      "title": "The life history and ecology of the gray whale (<i>Eschrichtius robustus</i>)",
+      "author": "Rice, D. W. and Wolman, A. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "International Whaling Commission. 2004. Report of the subcommittee on bowhead, right and gray whales. <i>Journal of Cetcaean Research and Management</i> 6: 211-223.",
+      "year": "2004",
+      "title": "Report of the subcommittee on bowhead, right and gray whales",
+      "author": "International Whaling Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoyt, E. 2005. <i>Marine Protected Areas for Whales, Dolphins and Porpoises</i>. Earthscan.",
+      "year": "2005",
+      "title": "Marine Protected Areas for Whales, Dolphins and Porpoises",
+      "author": "Hoyt, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bowen, S.L. 1974. Probable extinction of the Korean stock of the gray whale (<i>Eschrichtius robustus</i>). <i>Journal of Mammalogy</i> 55: 208-209.",
+      "year": "1974",
+      "title": "Probable extinction of the Korean stock of the gray whale (<i>Eschrichtius robustus</i>).",
+      "author": "Bowen, S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nerini, M. 1984. A review of gray whale feeding ecology. In: M.L. Jones, S.L. Swartz and S. Leatherwood (eds) <i>The gray whale</i> Eschrichtius robustus, pp.423-50. Academic Press, San Diego, CA.",
+      "year": "1984",
+      "title": "A review of gray whale feeding ecology.",
+      "author": "Nerini, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Weller, D.W., Würsig, B., Bradford, A.L., Burdin, A.M., Blokhin, S.A., Minakuchi, H. and Brownell Jr., R.L. 1999. Gray whales (<i>Eschrichtius robustus</i>) off Sakhalin Island, Russia: seasonal and annual patterns of occurrence. <i>Marine Mammal Science</i> 15:1208-1227.",
+      "year": "1999",
+      "title": "Gray whales (<i>Eschrichtius robustus</i>) off Sakhalin Island, Russia: seasonal and annual patterns of occurrence.",
+      "author": "Weller, D.W., Würsig, B., Bradford, A.L., Burdin, A.M., Blokhin, S.A., Minakuchi, H. and Brownell Jr., R.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhu, Q. and Yue, H. 1998. Strandings and sightings of the western Pacific stock of gray whale (Eschrichtius robustus) in Chinese coastal waters. Paper SC/50/AS5 presented to the IWC Scientific Committee, June 1998.",
+      "year": "1998",
+      "title": "Strandings and sightings of the western Pacific stock of gray whale (Eschrichtius robustus) in Chinese coastal waters",
+      "author": "Zhu, Q. and Yue, H",
+      "citation_short": null
+    },
+    {
+      "citation": "Kato, H. and Kasuya, T. 2002. Some analyses of the modern whaling catch history of the western North Pacific stock of gray whales (Eschrichtius robustus), with special reference to the Ulsan whaling ground. <i>Journal of  Cetacean Research Management</i> 4(3): 277-282.",
+      "year": "2002",
+      "title": "Some analyses of the modern whaling catch history of the western North Pacific stock of gray whales (Eschrichtius robustus), with special reference to the Ulsan whaling ground",
+      "author": "Kato, H. and Kasuya, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lowry, L.F., Nelson, R.R. and Frost, K.J. 1987. Observations of killer whales, <i>Orcinus orca</i>, in western Alaska: sightings, strandings, and predation on other marine mammals. <i>Canadian Field-Naturalist</i> 101: 6-12.",
+      "year": "1987",
+      "title": "Observations of killer whales, <i>Orcinus orca</i>, in western Alaska: sightings, strandings, and predation on other marine mammals",
+      "author": "Lowry, L.F., Nelson, R.R. and Frost, K.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Allison C. 2017. <i>International Whaling Commission Catch Data Base v. 6.1</i>.",
+      "year": "2017",
+      "title": "International Whaling Commission Catch Data Base v. 6.1",
+      "author": "Allison C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "International Whaling Commission. 2017. Catch Limits and Catches Taken. Available at: <a href=\"iwc.int/catches\">iwc.int/catches</a>. ",
+      "year": "2017",
+      "title": "Catch Limits and Catches Taken",
+      "author": "International Whaling Commission",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. 2017. U.S. Pacific Marine Mammal Stock Assessments: 2016.  National Oceanic and Atmospheric Administration Technical Memorandum NMFS-SWFSC-577.",
+      "year": "2017",
+      "title": "U.S. Pacific Marine Mammal Stock Assessments: 2016",
+      "author": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lowry, L.F., Burkanov, V.N., Altukhov, A., Weller, D. and Reeves, R.R. submitted. Entanglement risk to western gray whales from commercial fisheries in the Russian Far East . <i>Endangered Species Research</i> Submitted 31 December 2017.",
+      "year": "submitted",
+      "title": "Entanglement risk to western gray whales from commercial fisheries in the Russian Far East ",
+      "author": "Lowry, L.F., Burkanov, V.N., Altukhov, A., Weller, D. and Reeves, R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mate, B. R., Yu, Ilyashenko, V. Y., Bradford, A. L., Vertyankin, V. V., Tsidulko, G. A., Rozhnov, V. V. and Irvine, L. M. 2015. Critically endangered western gray whales migrate to the eastern North Pacific. <i>Biology Letters</i> 11: 20150071.",
+      "year": "2015",
+      "title": "Critically endangered western gray whales migrate to the eastern North Pacific",
+      "author": "Mate, B. R., Yu, Ilyashenko, V. Y., Bradford, A. L., Vertyankin, V. V., Tsidulko, G. A., Rozhnov, V. V. and Irvine, L. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nakamura, G., Katsumata, H., Kim, Y., Akagi, M., Hirose, A., Arai, K. and Kato, H. 2017. Matching of the Gray Whales of off Sakhalin and the Pacific Coast of Japan, with a Note on the Stranding at Wadaura, Japan in March, 2016. . <i>Open Journal of Animal Sciences</i> 7: 168-178.",
+      "year": "2017",
+      "title": "Matching of the Gray Whales of off Sakhalin and the Pacific Coast of Japan, with a Note on the Stranding at Wadaura, Japan in March, 2016. ",
+      "author": "Nakamura, G., Katsumata, H., Kim, Y., Akagi, M., Hirose, A., Arai, K. and Kato, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Weller, D.W., Takanawa, N., Ohizumi, H., Funahashi, N., Sychencko, A.O., Burdin, A.M., Lang, A.R. & Brownell, R.L., Jr. 2016. Gray whale migration in the western North Pacific: further support for a Russia-Japan connection. IWC Scientific Committee doc. SC/66b/BRG16.",
+      "year": "2016",
+      "title": "Gray whale migration in the western North Pacific: further support for a Russia-Japan connection",
+      "author": "Weller, D.W., Takanawa, N., Ohizumi, H., Funahashi, N., Sychencko, A.O., Burdin, A.M., Lang, A.R. & Brownell, R.L., Jr. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cooke J.G., Weller D.W., Bradford A.L., Sychenko A.O., Burdin A.M., Lanfg A.R. and Brownell R.L.Jr. 2017. Population assessment update for Sakhalin gray whales, with reference to stock identity. IWC Scientific Committee doc. SC/67a/NH11.",
+      "year": "2017",
+      "title": "Population assessment update for Sakhalin gray whales, with reference to stock identity.",
+      "author": "Cooke J.G., Weller D.W., Bradford A.L., Sychenko A.O., Burdin A.M., Lanfg A.R. and Brownell R.L.Jr ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weller, D. W., Klimek, A., Bradford, A. L., Calambokidis, J., Lang, A. R., Gisborne, B., Burdin, A. M., Szaniszlo, W., Urbán, J., Gómez-Gallardo U., A., Swartz, S. and Brownell Jr., R. L. 2012. Movements of gray whales between western and eastern North Pacific. <i>Endangered Species Research</i> 18: 193-199.",
+      "year": "2012",
+      "title": "Movements of gray whales between western and eastern North Pacific",
+      "author": "Weller, D. W., Klimek, A., Bradford, A. L., Calambokidis, J., Lang, A. R., Gisborne, B., Burdin, A. M., Szaniszlo, W., Urbán, J., Gómez-Gallardo U., A., Swartz, S. and Brownell Jr., R. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cooke J.G. 2017. Updated assessment of the Sakhalin gray whale population and its relationship to gray whales in other areas. IUCN Western Gray Whale Advisory Panel document 18/24(www.iucn.org/sites/dev/files/content/documents/wgwap-18-24_cooke_-_updated_assessment_of_the_sakhalin_gray_whale_population_and_its_relationship_to_gray_whales_in_other_areas.pdf).",
+      "year": "2017",
+      "title": "Updated assessment of the Sakhalin gray whale population and its relationship to gray whales in other areas",
+      "author": "Cooke J.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bradford, A. L., Weller, D. W., Ivashchenko, Y. V., Burdin, A. M. and Brownell, Jr, R. L. 2009. Anthropogenic scarring of western gray whales (<i>Eschrichtius robustus</i>). <i>Marine Mammal Science</i> 25(1): 161–175.",
+      "year": "2009",
+      "title": "Anthropogenic scarring of western gray whales (<i>Eschrichtius robustus</i>)",
+      "author": "Bradford, A. L., Weller, D. W., Ivashchenko, Y. V., Burdin, A. M. and Brownell, Jr, R. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kim, H.W., Sohn, H.S., An, Y.R., Park, K.J., Kim, D.N. and An, D.H. 2013. Report of the gray whale sighting surveys off Korean waters from 2003 to 2011. IWC Scientific Committee doc. SC/65/BRG26.",
+      "year": "2013",
+      "title": "Report of the gray whale sighting surveys off Korean waters from 2003 to 2011",
+      "author": "Kim, H.W., Sohn, H.S., An, Y.R., Park, K.J., Kim, D.N. and An, D.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kato H., Nakamura G., Yoshida H., Kishiro T., Okazoe N., Ito K., Bando T., Mogoe T. & Miyahsita T. 2016. Status report of conservation and researches on the western North Pacific gray whales in Japan, May 2015-April 2016. International Whaling Commission Scientific Committee doc. SC/66b/BRG11.",
+      "year": "2016",
+      "title": "Status report of conservation and researches on the western North Pacific gray whales in Japan, May 2015-April 2016",
+      "author": "Kato H., Nakamura G., Yoshida H., Kishiro T., Okazoe N., Ito K., Bando T., Mogoe T. & Miyahsita T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang X., Min X., Fuxing W., Weller D. W., Xing M., Lang A. R. and Qian Z. 2015. Insights from gray whale (<i>Eschrichtius robustus</i>) bycaught in the Taiwan Strait off China in 2011. <i>Aquatic Mammals</i> 41(3): 327-332.",
+      "year": "2015",
+      "title": "Insights from gray whale (<i>Eschrichtius robustus</i>) bycaught in the Taiwan Strait off China in 2011",
+      "author": "Wang X., Min X., Fuxing W., Weller D. W., Xing M., Lang A. R. and Qian Z.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Swartz, S. L., Urbán R., J., Gómez-Gallardo U., A., Martínez, S., Olavarrieta G., T., Lopez A., D.C.,  Rodríguez J., L., Rodríguez M., and Rojas-Bracho, L. 2012. Numbers of gray whales (<i>Eschrichtius robustus</i>) utilizing Laguna San Ignacio, Baja California Sur, Mexico during the winter breeding seasons: 2007-2012. LSIESP-May-2012.",
+      "year": "2012",
+      "title": "Numbers of gray whales (<i>Eschrichtius robustus</i>) utilizing Laguna San Ignacio, Baja California Sur, Mexico during the winter breeding seasons: 2007-2012",
+      "author": "Swartz, S. L., Urbán R., J., Gómez-Gallardo U., A., Martínez, S., Olavarrieta G., T., Lopez A., D.C.,  Rodríguez J., L., Rodríguez M., and Rojas-Bracho, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brower, A.A., Ferguson, M.C., Schonberg, S.V., Jewett, S.C. and Clarke, J.T. 2016. Gray whale distribution relative to benthic invertebrate biomass and abundance: Northeastern Chukchi Sea 2009–2012. <i>Deep Sea Research Part II: Topical Studies in Oceanography</i> 144: 156-174.",
+      "year": "2016",
+      "title": "Gray whale distribution relative to benthic invertebrate biomass and abundance: Northeastern Chukchi Sea 2009–2012",
+      "author": "Brower, A.A., Ferguson, M.C., Schonberg, S.V., Jewett, S.C. and Clarke, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thomas, P.O., Reeves, R.R. and Brownell Jr, R.L. 2016. Status of the world’s baleen whales. <i>Marine Mammal Science</i> 32(2): 682-734.",
+      "year": "2016",
+      "title": "Status of the world’s baleen whales",
+      "author": "Thomas, P.O., Reeves, R.R. and Brownell Jr, R.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mead, J.G. and Mitchell, E.D. 1984. Atlantic gray whales. In: M.L.  Jones,  S.L.  Swartz,  and  S.  Leatherwood (eds), <i>The  Gray  Whale </i>Eschrichtius  robustus <i></i>, pp. 33–53.  Academic Press, Orlando, FL.",
+      "year": "1984",
+      "title": "Atlantic gray whales",
+      "author": "Mead, J.G. and Mitchell, E.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Matkin, C.O., Barrett-Lennard, L.G., Yurk, H., Ellifrit, D. and Trites, A.W. 2007. Ecotypic variation and predatory behavior among killer whales (<i>Orcinus orca</i>) off the eastern Aleutian Islands, Alaska. <i>Fishery Bulletin</i> 105(1): 74-88.",
+      "year": "2007",
+      "title": "Ecotypic variation and predatory behavior among killer whales (<i>Orcinus orca</i>) off the eastern Aleutian Islands, Alaska",
+      "author": "Matkin, C.O., Barrett-Lennard, L.G., Yurk, H., Ellifrit, D. and Trites, A.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Durban, J. W., Weller, D. W., Lang, A. R. and Perryman, W. L. 2015. Estimating gray whale abundance from shore-based counts using a multilevel Bayesian model. <i>Journal of Cetacean Research and Management</i> 15: 61-68.",
+      "year": "2015",
+      "title": "Estimating gray whale abundance from shore-based counts using a multilevel Bayesian model",
+      "author": "Durban, J. W., Weller, D. W., Lang, A. R. and Perryman, W. L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Elwen, S. H. and Gridley, T. 2013. Gray whale (<i>Eschrichtius robustus</i>) sighting in Namibia (SE Atlantic)—first record for Southern Hemisphere. International Whaling Commission Scientific Committee doc. SC/65a/BRG30.",
+      "year": "2013",
+      "title": "Gray whale (<i>Eschrichtius robustus</i>) sighting in Namibia (SE Atlantic)—first record for Southern Hemisphere",
+      "author": "Elwen, S. H. and Gridley, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reeves R.R. and Smith T.D. 2010. Commercial  whaling,  especially  for  gray  whales,  <i>Eschrichtius robustus</i>,  and  humpback  whales,  <i>Megaptera novaeangliae</i>, at California and Baja California shore stations in the 19th  century  (1854–1899).  . <i>Mar.  Fish.  Rev.</i>  72(1): 1-25.",
+      "year": "2010",
+      "title": "Commercial  whaling,  especially  for  gray  whales,  <i>Eschrichtius robustus</i>,  and  humpback  whales,  <i>Megaptera novaeangliae</i>, at California and Baja California shore stations in the 19th  century  (1854–1899).  ",
+      "author": "Reeves R.R. and Smith T.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliver, J.S. and Slattery, P.N. 1985. Destruction and opportunity on the sea floor: effects of gray whale feeding. <i>Ecology, 66(6), pp.1965-1975</i> 66(6): 1965-1975.",
+      "year": "1985",
+      "title": "Destruction and opportunity on the sea floor: effects of gray whale feeding",
+      "author": "Oliver, J.S. and Slattery, P.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Scheinin, A. P., Kerem, D., Macleod, C. D., Gazo, M., Chicote, C. A. and Castellote, M. 2011. Gray whale (Eschrichtius robustus) in the Mediterranean Sea: anomalous event or early sign of climate-driven distribution change? <i>Marine Biodiversity Records</i> 4: e28. doi:10.1017/S1755267211000042.",
+      "year": "2011",
+      "title": "Gray whale (Eschrichtius robustus) in the Mediterranean Sea: anomalous event or early sign of climate-driven distribution change?",
+      "author": "Scheinin, A. P., Kerem, D., Macleod, C. D., Gazo, M., Chicote, C. A. and Castellote, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Urbán-R. J., Swartz S., Gómez-Gallardo-U. A., Martínez-A. S. and Rosales-Nanduca H. 2016. 2016 gray whale research in Laguna San Ignacio and Bahia Magdalena, México. <i>International Whaling Commission Scientific Committee</i> Doc. SC/66b/BRG19.",
+      "year": "2016",
+      "title": "2016 gray whale research in Laguna San Ignacio and Bahia Magdalena, México",
+      "author": "Urbán-R. J., Swartz S., Gómez-Gallardo-U. A., Martínez-A. S. and Rosales-Nanduca H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salvadeo, C. J., Gómez-Gallardo U., A., Nájera-Caballero, M., Urbán-Ramirez, J. and Lluch-Belda, D. 2015. The effect of climate variability on gray whales (<i>Eschrichtius robustus</i>) within their wintering areas. <i>PLoS ONE</i> 10(8): e0134655. doi:10.1371/journal.pone.0134655.",
+      "year": "2015",
+      "title": "The effect of climate variability on gray whales (<i>Eschrichtius robustus</i>) within their wintering areas",
+      "author": "Salvadeo, C. J., Gómez-Gallardo U., A., Nájera-Caballero, M., Urbán-Ramirez, J. and Lluch-Belda, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barraza, J. E. 2011. A dead specimen of gray whale in El Salvador: a southernmost distribution record. <i>Marine Biodiversity Records</i> 4: e35. doi:10.1017/S1755267211000376.",
+      "year": "2011",
+      "title": "A dead specimen of gray whale in El Salvador: a southernmost distribution record",
+      "author": "Barraza, J. E. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Calambokidis, J., Laake, J. and Pérez, A. 2017.  Updated analysis of abundance and population structure of seasonal gray whales in the Pacific Northwest, 1996-2015. International Whaling Commission Scientific Committee doc. SC/A17/GW5.",
+      "year": "2017",
+      "title": " Updated analysis of abundance and population structure of seasonal gray whales in the Pacific Northwest, 1996-2015",
+      "author": "Calambokidis, J., Laake, J. and Pérez, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gulland, F.M.D., Pérez-Cortés, H., Urgan, J., Rojas-Bracho, R.L., Ylitalo, G., Weir, J., Norman, S.A., Muto, M.M., Rugh, D.J., Kreuder, C. and Rowles, T. 2005. Eastern North Pacific gray whale (<i>Eschrichtius robustus</i>) unusual mortality event, 1999–2000. Technical Memorandum. NMFS-AFSC-150:1–33.",
+      "year": "2005",
+      "title": "Eastern North Pacific gray whale (<i>Eschrichtius robustus</i>) unusual mortality event, 1999–2000",
+      "author": "Gulland, F.M.D., Pérez-Cortés, H., Urgan, J., Rojas-Bracho, R.L., Ylitalo, G., Weir, J., Norman, S.A., Muto, M.M., Rugh, D.J., Kreuder, C. and Rowles, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Scordino J., Carretta J., Cottrell P., Greenman J., Savage K., Scordino J. & Wilkinson K. 2017. Ship strikes and entanglements of gray whales in the North Pacific Ocean, 1924-2015. International Whaling Commission Scientific Committee doc. SC/67a/HIM06.",
+      "year": "2017",
+      "title": "Ship strikes and entanglements of gray whales in the North Pacific Ocean, 1924-2015",
+      "author": "Scordino J., Carretta J., Cottrell P., Greenman J., Savage K., Scordino J. & Wilkinson K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Laake, J.L., Punt, A.E., Hobbs, R., Ferguson, M., Rugh, D. and Breiwick, J. 2012. Gray whale southbound migration surveys 1967–2006: an integrated re-analysis. . <i>J. Cetacean Res. Manage</i> 12(3): 287–306.",
+      "year": "2012",
+      "title": "Gray whale southbound migration surveys 1967–2006: an integrated re-analysis. ",
+      "author": "Laake, J.L., Punt, A.E., Hobbs, R., Ferguson, M., Rugh, D. and Breiwick, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Durbin, J.W., Weller, D.W. and Perryman, W.L. 2017. Gray whale abundance estimates from shore-based counts off California in 2014/15 and 2015/2016. International Whaling Commission Scientific Committee doc. SC/A17/GW6.",
+      "year": "2017",
+      "title": "Gray whale abundance estimates from shore-based counts off California in 2014/15 and 2015/2016",
+      "author": "Durbin, J.W., Weller, D.W. and Perryman, W.L.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

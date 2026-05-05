@@ -1,0 +1,1337 @@
+{
+  "assessment_date": "2020-08-26T01:00:00.000+01:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 1151,
+  "criteria": "C1",
+  "url": "https://www.iucnredlist.org/species/1151/214430287",
+  "citation": "Cassinello, J., Bounaceur, F., Brito, J.C., Bussière, E., Cuzin, F., Gil-Sánchez, J., Herrera-Sánchez, F.J. & Wacher, T. 2022. Ammotragus lervia (amended version of 2021 assessment). The IUCN Red List of Threatened Species 2022: e.T1151A214430287. Accessed on 05 May 2026.",
+  "assessment_id": 214430287,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 1151,
+    "scientific_name": "Ammotragus lervia",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "BOVIDAE",
+    "genus_name": "Ammotragus",
+    "species_name": "lervia",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Pallas, 1777)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Barbary Sheep",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Uaddan",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Ammotrago",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Aoudad de Barbarie",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Arrouy",
+        "language": "ber"
+      },
+      {
+        "main": false,
+        "name": "Arrui",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Arruí",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Capraberbera",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Carnero de Berbería",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Grivastiskakač",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Kebsh el Gebel",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Lerwi",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Mähnenschaf",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Mähnenspringer",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Mouflon à manchettes",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Muflón del Atlas",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Muflone Africano",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Naddan",
+        "language": "ber"
+      },
+      {
+        "main": false,
+        "name": "Naded",
+        "language": "ber"
+      },
+      {
+        "main": false,
+        "name": "Orwiyya",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Oudad",
+        "language": "ber"
+      },
+      {
+        "main": false,
+        "name": "Outhath",
+        "language": "ber"
+      },
+      {
+        "main": false,
+        "name": "Wadden",
+        "language": "ara"
+      },
+      {
+        "main": true,
+        "name": "Aoudad",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Antilope lervia Pallas, 1777",
+        "status": "ACCEPTED",
+        "genus_name": "Antilope",
+        "species_name": "lervia",
+        "species_author": "Pallas, 1777",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4100,
+    "lower_elevation_limit": 200,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "5000-10000",
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "5",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "41-50"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "6624571",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Formerly, the Aoudad was widespread in rugged and mountainous terrain from deserts and semi-deserts to open forests in North Africa, but it has suffered a strong decline due to poaching and competition from domestic livestock. Although it is crucial to carry out a genetic study to determine the accuracy of the subspecific classification for the Aoudad, the six subspecies currently established, based on morphological traits, have the following distribution:<br/><br/><em>Ammotragus lervia lervia </em>(Atlas Aoudad) occurs along the whole Atlas Mountain Range, from Morocco to north Algeria and Tunisia.<br/><br/><strong>Morocco</strong><br/>Presently, the Aoudad is living in the whole High Atlas, mainly in Toubkal National Park (some hundreds of individuals, with an increasing trend; Cuzin 2008, F. Cuzin pers. obs.) and Eastern High Atlas National Park and its surroundings (numbers and trend presently unknown). Observations are much more rare outside these two protected areas, except for High Dades, where about 50 animals were seen in 2019, in an agda—an area where grazing by domestic animals is traditionally forbidden during the whole year (F. Cuzin, pers. obs.). In Eastern Morocco, small populations are living in Eastern Middle Atlas, Saharan Atlas and areas near Algerian border (Djebel Grouz and Djebel Maïz). Globally, in Anti Atlas et Bani, the species is quite rare; but it seems more abundant in Central Anti Atlas (Irherm area), and in Western Anti Atlas, in Djebel Lekst, with more than 100 individuals (Cuzin 2019), and in Assif n’Oumarhouz gorges (F. Cuzin pers. obs.).<br/><br/><strong>Algeria</strong><br/>In the Atlas mountains of Algeria, only a few individuals have been observed in fragmented areas since about 2010, so it is possible that only small isolated populations remain in the area; this is probably the Aoudad that also inhabits areas of the Tademaït Plateau, in the centre of the country. Also, recently (April to July 2020) free ranging populations were located south Naama province, near Bechar, in south west Algeria.<br/><br/><strong>Tunisia</strong><br/>In Tunisia <em>A. l. lervia</em> occupies the mountains of the Saharan Atlas represented mainly by the Tunisian dorsal that runs from the mount of Tbessa on the side of Algeria until the Cap Bon Peninsula in the extreme northeast. It is also found in the steppe mountain chains scattered in the centre of the country (Ben Mimoun and Nouira, 2013). There is a possibility that the species dispersed from Algeria to Tunisia through the Tbessa-Chambi hallway and through Tamaghza region (Ben Mimoun <em>et al</em>. 2016).<br/><br/><em>Ammotragus lervia fassini</em> (Libyan Aoudad) is found only in extreme southern Tunisia and in Libya. In southern Tunisia, Aoudad can occupy the chain rising to 400–600 m propagating from the region of Matmata to the Libyan border; the presence in the region of Jenein and Senghar in the extreme south is uncertain (Ben Mimoun et al. 2016). Dispersion is also possible from Libya to Tunisia in the extreme south of the country. As for its Libyan presence, a population is currently inhabiting a mountainous area close to the Tassili Mountains, in the border to Argelia, and the Djebel Uweinat, a mountain located in the border between Libya, Egypt and Sudan; they might also be found in Djebel Arkenu and Djebel Bahari (Andras Zboray, pers. comm.).<br/><br/><em>Ammotragus lervia sahariensis</em> (Saharan Aoudad) has the largest range of the subspecies, including southern Morocco, the Western Sahara, Mauritania, the mountains of the Adrar des Ifoghas (located between Mali and Algeria border), the Hoggar mountains in southern Algeria (Irzagh <em>et al</em>. 2020; Koen de Smet, pers. comm.), south-west Libya, the Tibesti Massif, the Ennedi Massif in Chad and western Sudan.<br/><br/>Herewith, some recent information on some particular localities.<br/><br/><strong>Western Sahara</strong><br/>Aoudad global distribution and areas where it could be currently present are: Zemmur, Oum Dreyga, Negjyr, Adrar Soutuff and Bass Draa-Seguia Alhamra region (Cuzin <em>et al</em>. 2017, Gil-Sánchez and Herrera-Sánchez 2020). The five areas are the optimal habitats where the species was formerly cited (Morales Agacino 1949, Valverde 1957). Recent presence has been confirmed in Adrar Soutuff (Qninba <em>et al</em>. 2016) and Bass Draa–Seguia Alhamra region (Herrera-Sánchez <em>et al</em>. 2016), and probably is extinct in the Aouserd Mounts (Aulagnier <em>et al</em>. 2017). In recent surveys the species was detected in 15 independent locations in the Bass Draa–Seguia Alhamra region, with an estimate of less than 250 individuals, whereas in Negjyr–Aouserd Mountains less than 50 individuals might survive (Gil-Sánchez and Herrera-Sánchez 2020).<br/><br/><strong>Mauritania</strong><br/>Kediet ej Jill Massif: accessibility is highly limited as most of the mountain is a mining concession area. The north slope is heavily disturbed by machinery, explosions and the subsequent habitat alteration. The south slope is not so disturbed, but no Aoudads have recently been observed.<br/><br/>Adrar Massif, from Chinguetti to Ouadane: after numerous surveys carried out in the plateaux and also the northern escarpment, Aoudads have not been reported. There are some sectors that are relatively inaccessible, which opens the possibility for the species to persist. The same applies in the region East of Ouadane, from the Guelb er Richat to El Ghallouya, although the escarpment is much lower and thus any eventual population would be exposed to poaching. We cannot assure whether there remains any population in the area.<br/><br/>Adrar Massif, SE of Atar: the area has been visited numerous times since 2008, but Aoudads have never been observed. However, in November 2019 locals informed that Aoudads are present in an area south of Atar.<br/><br/><strong>Mali</strong><br/>The Aoudad is present in practically all mountainous territories in the Kidal Region (Adrar des Ifoghas), around the city of Tessalit (Koen de Smet, pers. comm.).<br/><br/><strong>Chad</strong><br/>Continued presence of Aoudads on the Tibesti has been confirmed in the last three years by aerial and ground sightings (R. Rava, pers. comm.), but no information is available on populations size.<br/><br/>Updated information has been obtained from aerial surveys carried out in the Ennedi Massif (Wacher 2016, 2019) and a GPS collaring operation in the Ennedi Natural and Cultural Reserve (Bussière 2020). The survey carried out in July 2016, wet season with abundant water available, estimated an Aoudad population in the surveyed area of around 1,000 individuals, whereas in December 2019, in dry conditions, less than 400 individuals were reported, but this apparent decline is postulated to be related to population seasonal movements (see Cassinello 2013). Results obtained by Bussière (2020) showed some relevant individual movements, although, at the date this assessment has been undertaken (summer 2020), data are still being collected and seasonal information is yet to be analysed.<br/><br/><em>Ammotragus lervia ornata</em> (Egyptian Aoudad) was formerly quite widespread throughout the Eastern and Western Deserts of Egypt and was actually thought extinct at the end of the 20th century (see Amer 1997). However, Wacher <em>et al</em>. (2002) reported evidence of its presence in both the Elba Protected Area and the Western Desert between 1997 and 2000 (see also Manlius <em>et al</em>. 2003). A population currently inhabits the Djebel Uweinat, probably reaching the Djebel Kissu in Sudan, too (A. Zboray, pers. comm.). Aoudads could also be expected to inhabit some areas of the Gilf Kebir and the Djebel Nazar, in Egypt (A. Zboray, pers. comm.).<br/><br/><em>Ammotragus lervia blainei </em>(Kordofan Aoudad) was once relatively widespread from west Sudan to the Red Sea coast, but, although no recent reports have been obtained, it is still probably restricted to the Red Sea hills of east Sudan (Nimir 1997). It is not clear whether other Aoudad populations present further west correspond to this subspecies (see Cassinello 1998).<br/><br/><em>Ammotragus lervia angusi</em> (Aïr Aoudad) inhabit both the Aïr and Termit Massifs (Niger).<br/><br/>Free-ranging introduced Aoudad populations can be found in the United States of America, Mexico, Spain, Croatia and probably Italy (Gray 1985, Cassinello 2015, Mori <em>et al</em>. 2017, Šprem <em>et al</em>. in press). These introduced populations are not included in this assessment and their range is not mapped here.<br/><br/>The species occurs from 200 to 4,100 m asl (Cuzin 2003).",
+    "population": "There are no total estimates of population size, but overall indications are that the population is in the order of 5,000–10,000 mature individuals. From east to west:<br/><p></p><ul><li>The total population in Morocco was estimated to be between 800 and 2,000 animals in the 2008 Red List assessment (see Cuzin <em>et al</em>. 2007). Currently (2020), and although Aoudads are still widespread in most mountainous regions, there are only estimations for the Toubkal National Park, that hosts some hundred animals, the High Dades area, with about 50 individuals and Djebel Lekst, with more than 100 individuals (Cuzin 2019, F. Cuzin pers. obs.). </li><li>In the Western Sahara there are only estimates for a couple of territories, the Bass Draa–Seguia Alhamra region, with less than 250 individuals, and the Negjyr–Aouserd Mountains, with less than 50 individuals (Gil-Sánchez and Herrera-Sánchez 2020). </li><li>In Algeria, several thousand animals are estimated to inhabit the country. Bounaceur <em>et al.</em> (2016a) have summarized Aoudad presence in several reserves or protected areas (see Conservation Actions). </li><li>There are no estimates from Mauritania and Adrar des Ifoghas in Mali, but we assume that low numbers survive there.</li><li>There are no estimates in Libya.</li><li>In Tunisia, and according to Ben Mimoun <em>et al.</em> (2016), Aoudad population does not exceed 700–800 individuals, living in severely fragmented and mainly located in protected areas.</li><li>In Niger, the aoudad population inhabiting the Réserve Naturelle Nationale de Termit et Tin-Toumma is estimated at between 100–150 individuals (Rabeil and Turmine 2016); whereas for the Réserve Naturelle Nationale de l’Aïr et Ténéré there is no updated information, although field observations carried out by the Sahara Conservation Fund indicate a strong decrease from the 3,500 individuals estimated in the 2008 Red List assessment (Razack and Zabeirou 2020). </li><li>In Chad, updated information has been obtained for the Ennedi Massif, where aerial surveys showed the presence of 1,000 individuals during the wet season (Wacher 2016), and 400 individuals in winter (Wacher 2019). </li><li>Once regarded as extinct, Aoudads seem to be locally numerous in the Eastern and Western Deserts of Egypt (M.A. Saleh, in Cassinello 2013; A. Zboray, pers. comm.).</li><li>  There are no population estimates available for Sudan, but the species is generally regarded as very rare and almost certainly declining (Shackleton 1997 and references therein).</li></ul>Although this assessment assumes that the total population size might still be within the same range as the previous assessment (Cassinello <em>et al.</em> 2008), and there is a lack of past and recent data on population sizes across most of the distribution range, there is a strong indication that the population has declined in some areas and will further substantially decline. Most of the range area of Aoudad is located in areas with low levels of law enforcement, partly affected by civil unrest and irregular armed groups, and a generally high incidence of poaching. Furthermore, increasing human population and associated growing livestock numbers contribute to loss of available habitat. An estimated decline of more than 10% over the coming 15 years (three generations) can therefore be reasonably assumed.<p></p>",
+    "habitats": "Aoudads can be found in various habitats, from clear forest (avoiding dense forests) to various types of steppes. They tend to occupy rocky and often precipitous areas, from near sea level up to snow-free areas at about 4,167 m (such as the Moroccan Atlas), using sparse tree cover for shade. They might wander far from water sources for long periods of time, even years, if they manage to find succulent forbs that supply water requirements (see Poilecot 1991). During the day, they take refuge in the steep slopes to avoid human disturbance or predation (Irzagh <em>et al.</em> 2020). This species is a generalist herbivore combining grazing with browsing, although recent analyses of its feeding habits in Spain (Miranda <em>et al.</em> 2012), Tunisia (Ben Mimoun and Nouira 2015), Algeria (Bounaceur <em>et al.</em> 2016b) and Morocco (H. Bachiri, M. Znari, M.A. Ait Baamranne and M. Aourir, unpub. data) show a significant greater consumption of grasses and forbs, pointing towards a behaviour more typical of grazer species, which may have relevant conservation implications for wild pasture lands. They probably make small migratory movements in relation to food availability.",
+    "threats": "The major threats across the range include poaching and habitat destruction, mainly from livestock grazing, fuelwood collection, and from drought and desertification. The decline of the Egyptian Aoudad was accelerated by competition with livestock and feral camels. The availability and distribution of gueltas (waterholes), that may fluctuate from year to year, would likely be a major factor in the condition of populations during summer, when water requirements are higher in areas without sufficient succulent plants to meet water requirements (see Poilecot 1991).",
+    "measures": "<strong>Algeria<br/></strong>General threats relevant to the species in its native lands are applicable to Algerian populations, that, particularly in the north, are very fragmented and in serious risk of extinction. De Smet (1997a) reported the presence of Aoudads in four protected areas in Algeria: Tassili n’Ajjer National Park, Hoggar National Park, Belezma National Park and in Djebel Aissa State Forest. However, the species disappeared from Belezma several decades ago (Bounaceur <em>et al</em>. 2016a), and since 2018 at least, no Aoudad traits can be found in Djebel Aissa State Forest (H. Djardini, pers. comm.).<br/><br/>As summarized by Bounaceur <em>et al</em>. (2016a), Aoudads have been successfully reintroduced into Djelfa Hunting Reserve (20,000 ha) located in the High Plateaux (34°40’N, 3°15'E); thus, from two founding individuals in 1993 the population was recently estimated to reach 24 animals. Also, in the Moutas Hunting Reserve (400 ha) in Tlemcen, located in the extreme north-west Algeria, between Oran and Oujda (34°52'N, l°15'E), Aoudads have been introduced in two enclosures: Torrich (35 ha), where six individuals from Algiers’ zoo and El Hamma enclosure were released from 2006 to 2008 to reach 15 individuals in 2012, and Boumerder (13 ha), where 11 individuals from Torrich were released in 2009 to reach 21 animals in 2012.<br/><br/>These authors also suggest that, based on this ongoing successful initiatives, new reserves should be established north of Negrine and close to Bechar, to protect the remaining northern Aoudad populations (Bounaceur <em>et al</em>. 2016a).<br/><br/>With respect to Aoudad distribution and presence in center and south Algeria, although a probable global decline is occurring due to poaching and habitat degradation, relevant Aoudad populations, reaching thousands, are still present in main mountain ranges/national parks, such as the Adrar des Ifoghas (located between Mali and Algeria border) and the Hoggar Mountains (Irzagh <em>et al</em>. 2020, Koen de Smet, pers. comm.).<br/><br/><strong>Chad</strong><br/>One of the main issues to be addressed is the implementation of a rational and sustainable hunting regulation, in order to protect wildlife in the Ennedi Massif. This should include the establishment of infrastructure and trained personnel to prevent poaching. Priority conservation measures proposed include: 1) carrying out surveys in the Tibesti and Ennedi mountains, and elsewhere to determine current numbers and actual distributions; 2) consider establishing a protected area, preferably a national park or at least a faunal reserve, in the Tibesti mountains; and 3) improve the levels of protection, especially anti-poaching efforts, staffing and support for Fada-Archei Faunal Reserve, as with other protected areas in the country.<br/><br/><strong>Egypt</strong><br/>Aoudads were confirmed as occurring in Gebel Elba Conservation Area (48,000 ha; est. 1986). Assiut University Protected Area was originally set aside in the 1930s to protect the species, but there are no reports of its presence since decades ago (Amer 1997). Conservation measures proposed include: 1) survey areas previously known to be inhabited by the species; and 2) evaluate the habitat along with the potential for re-introductions.<br/><br/><strong>Libya</strong><br/>It is not known whether Aoudads are protected by law. The species was introduced into Tripoli Nature Reserve (870 ha; est. 1978). It may also occur in Djebel Nefhusa Nature Reserve (20,000 ha; est. 1978) in northern Libya in the Djebel Tarabulus range of the Djebel Nefhusa mountains (Tripolitania Region 32°N, 12°50'E), although this reserve does not appear to fall within the suspected distribution of the species (Shackleton and De Smet 1997). There are captive populations in Sabratha, Surman and the Zoological Garden of Tripoli (T. Jdeidi pers. comm.). The latter definitely belongs to the subspecies A. l. fassini. A population survey is needed to determine the current distribution and status of the species.<br/><br/><strong>Mali</strong><br/>Aoudad receive neither protection nor do they occur in any protected areas in Mali (Lamarche 1997a). Proposed conservation measures include: 1) conduct censuses and surveys to determine population numbers and distribution within the Adrar des Ifoghas; and 2) consider the feasibility of establishing a protected area for Aoudad in this region.<br/><br/><strong>Mauritania</strong><br/>Aoudads are supposed to occur in one protected area in Adrar Mouflon Partial Faunal Reserve (Lamarche 1997b). Conservation measures proposed include censuses to determine current numbers and distribution.<br/><br/><strong>Morocco</strong><br/>Despite the fact that the Aoudad is protected by law since 1967, it has also been considered as a very high valuable game species, which has originated its extinction in numerous areas or an acute decrease in numbers in other ones. In Western High Atlas, the species was mainly saved due to the creation of the Takherkhort reserve (where dense forest is dominant), from which animals have escaped and dispersed towards the neighbouring Toubkal National Park since last 20 years. In Eastern High Atlas, the creation of Eastern High Atlas National Park combined with the low level of illegal hunting by local people allowed the survival of good (though presently unknown) numbers of animals. In Eastern Morocco, the management and wardenship by ECWP (Emirate Centre for Wildlife Propagation) have reduced illegal hunting, assuring the survival of the species; near the Algerian border, the species is often protected by military control. The recent increasing of the populations in some areas of Western Anti Atlas is probably related to the decrease of traditional human activities (both small cattle raising and agriculture), which ensure quietness of the habitats and a spectacular regeneration of vegetation. Everywhere else, though protected by law, the species is still illegally hunted, by local or regional people; thus, in the Atlantic Sahara, some poaching expeditions from regional origin and using four-wheeled drive vehicles have been reported (F. Cuzin, pers. comm.).<br/><br/>During the 1990s, animals from Agadir Zoo were acclimatized and released in Anezi (Western Anti Atlas); this population seems to be doing well (M. Karbid, pers. comm.). Inside the area of distribution of the species, fenced reserves have been built in Taforalt (Beni Snassen, NE Morocco), 235 individuals, Tazekka National Park (Middle Atlas), about 40 individuals, Imarigha, 370 individuals, Amassine, 90 individuals, and Iguer, 449 individuals (Western High Atlas), Seguia El Yakoubia (Jbilet, E of Marrakech), 32 individuals (Département des Eaux et Forêts, pers. comm.). Outside the area of distribution of the species, a fenced reserve was built near Oulmes (Central Plateau), but in 2014 the fence was destroyed, and the 125 individuals escaped, some of them staying in neighbouring cliffs, and others going toward the south-east (Cuzin 2015). In Beni Snassen mountains (inside the former range of the species), 63 individuals were released in 2018 and 2019, and began to spread in the area; about 20 births were recorded (Département des Eaux et Forêts 2020).<br/><br/><strong>Niger</strong><br/>All hunting has been banned since 1964 and though this law is enforced by the Nigerien Forest Service, the vast range occupied by the Aoudad, together with manpower limitations and political unrest, limit the effectiveness of anti-poaching efforts. Furthermore, Nigerien Law no. 98-07 of 29 April 1998 establishing the Hunting and Wildlife Protection Regime classifies the Aoudad in List I of animal species fully protected in the country. Despite these efforts, poaching is the main threat in the country (Razack and Zabeirou 2020), and it is considered that the Aoudad population numbers have fallen significantly in recent years and that the trend remains negative.<br/><br/>Aoudads occur in two protected areas (Razack and Zabeirou 2020): the Réserve Naturelle Nationale de l’Aïr et Ténéré (RNNAT), in north-central Niger, created in January 1988 and covering 77.370 km²; and the Réserve Naturelle Nationale de Termit et Tin-Toumma (RNNTT), further southeast, more recently created by the government of Niger, in 2012, with an area of 97,000 km² and whose boundaries were redefined in June 2019. The RNNAT reserve was estimated to harbour as much as 70% of the total population of Aoudads in Niger (Magin and Newby 1997). Aoudad population present in the Aïr mountains is probably connected to large populations of the species inhabiting the Hoggar Mountains in Algeria (Koen de Smet, pers. comm.).<br/><br/><strong>Sudan</strong><br/>The Aoudad falls under Schedule II as a protected species, though up to two can be shot by anyone with a class A or D license. None occur in any protected area (Nimir 1997).<br/><br/>Conservation measures proposed include: 1) carefully analyse which strategy could work better, either move the Aoudad to Schedule I so that it is completely protected, or consider a hunting regulation that encourages the creation of sustainable hunting areas; and 2) re-introduction of the species to remaining areas and habitats which are suitable.<br/><br/><strong>Tunisia</strong><br/>The Aoudad has been protected by law in Tunisia since 1966. A re-introduction of the species into the Djebel Chambi National Park began in 1987, when ten animals, originally from Kasserine, were released into a one ha enclosure for later release into the rest of the park; numbers reached 270 ind. about 10 years later (DGF 2001). Some animals escaped in 1988 (Shackleton 1997). A few animals are held in captivity in the Djebel Bou Hedma National Park, in the Bou Hedma ranges of the Saharan Atlas. Animals are also believed to occur in the proposed Dghoumes National Park (De Smet 1997b), and the species was also released in the Oued Dekouk Nature Reserve, south of Tataouine.<br/><br/>According to Ben Mimoun <em>et al</em>. (2016), currently, the Aoudad is basically present in protected territories, state reserves and a few nearby mountainous areas, such as the Chambi National Park (Ben Mimoun and Nouira 2013), and shows a fragmented population structure (Gharaibeh 1997, Ben Mimoun <em>et al</em>. 2016).<br/><br/>The main threats of the Aoudad in Tunisia are poaching as well as the loss of favourable habitats caused by overgrazing by livestock. Prolonged drought is an aggravating factor (Ben Mimoun <em>et al</em>. 2016, DGF and UICN 2017, Ben Mimoun and Nouira 2017). In addition, the war that is currently taking place against terrorist groups who have settled in Chambi National Park after the Tunisian revolution in 2011 is a severe factor of disturbance for the core Aoudad population of Tunisia (Ben Mimoun <em>et al</em>. 2016).<br/><br/>Finally, and according to Ben Mimoun <em>et al</em>. (2016), there is currently a reintroduction program for the Aoudad in some potentially suitable areas, such as Djebel Zaghouane and Djebel Saddine of the Tunisian dorsal; although main conservation actions are devoted to preserve and restore habitats, and transfer individuals between different territories, in order to assure connectivity between populations (DGF and UICN 2017).<br/><br/>Tunisia has developed a National Conservation Strategy for this species for the period 2018–2027 (DGF and UICN 2017).<br/><br/><strong>Western Sahara</strong><br/>The most important conservation measures proposed include: 1) establishing a protected area for the species, and 2) strict control of illegal hunting and grazing where Aoudad populations survive, as, currently, poaching is the greatest threat in the area (Harmusch, 2015), along with livestock competition.<br/><br/>The Aoudad is listed in CITES Appendix II.<br/><br/>In order to undertake a proper global conservation action for the Aoudad, it is imperative to undertake a thorough and comprehensive genetic analysis of population samples of the six recognized subspecies. Determining Aoudad main genetic units will allow us not only to redefine its actual subspecific criteria, but, above all, to take the conservation actions that ensure the protection and preservation of the species’ most relevant populations, so that its long-term survival can be assured. In order to accomplish this aim, it would also be convenient to determine the genetic value of the introduced alien populations, which could be a valuable reservoir of the species.<br/><br/>Furthermore, considering some type of sustainable hunting management through appropriate structures (community-based, tribal, private, etc.), in countries or regions where it has not been implemented, might well work as a conservation strategy to increase population distribution and the species eventual protection.",
+    "use_trade": "This is a game species, hunted for meat and trophy, introduced as alien for hunting purposes (trophy) in different countries. In Algeria, male pellets are given aphrodisiac attributes, and stuffed specimens can be found for sale in tourist markets, such as in Bousaâda, Taghit and Ghardaia (Bounaceur <em>et al.</em> 2016a).",
+    "rationale": "Although this assessment assumes that the total population size might still be within the same range as the previous assessment (Cassinello&#160;<em>et al.</em>&#160;2008), and there is a lack of past and recent data on population sizes across most of the distribution range, there is a strong indication that the population has declined in some areas and will substantially decline further. Therefore, this species is assessed as Vulnerable under criterion C1 as the total population size is in the order of 5,000–10,000 individuals, and an estimated decline of more than 10% over the coming 15 years (three generations) can be reasonably assumed because of&#160;increasing human population and associated growing livestock numbers contribute to loss of available habitat.",
+    "trend_justification": null,
+    "taxonomic_notes": "Six subspecies have been described (Ansell 1972; summarized in Cassinello 1998). However, apart from the fact that the morphological differences between them are not well defined, and there are several apparent zones of hybridization, relying exclusively on morphological traits is an obsolete and inadequate criterion to define subspecies. Therefore, and in order to re-evaluate aoudad subspecies distinction, a comprehensive genetic analysis of individuals from all the distinctive populations should be carried out. This would allow to properly identify genetic units that help redefining subspecific criteria and eventually allow undertaking proper conservation actions to protect the species (Cassinello 2015)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nomadic grazing"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Camelus dromedarius",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "contributor",
+      "full": "De Smet, K.",
+      "value": [
+        "Koenraad De Smet"
+      ]
+    },
+    {
+      "credit_type_name": "assessor",
+      "full": "Cassinello, J., Bounaceur, F., Brito, J.C., Bussière, E., Cuzin, F., Gil-Sánchez, J., Herrera-Sánchez, F.J. & Wacher, T.",
+      "value": [
+        "Jorge Cassinello (1Experimental Station of Arid Zones (EEZA-CSIC), Almeria, Spain)",
+        "Tim Wacher (Zoological Society of London)",
+        "F. Bounaceur (2Centre Universitaire de Tissemessilt, Algeria)",
+        "José Carlos Brito (CIBIO-InBIO, Universidade do Porto, Portugal)",
+        "E. Bussière (Ennedi Natural and Cultural Reserve, African Parks Network, Chad)",
+        "F. Cuzin (Wildlife and Protected Areas Consultant, Morocco)",
+        "J.M. Gil-Sánchez (Harmusch, Association for Wildlife Research and Conservation, Ciudad Real, Spain)",
+        "F.J. Herrera-Sánchez (Harmusch, Association for Wildlife Research and Conservation, Ciudad Real, Spain)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Herrero, J. & Michel, S.",
+      "value": [
+        "Stefan Michel (IUCN SSC Caprinae Specialist Group)",
+        "Juan  Herrero"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment was created to add some supporting references for this assessment."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Grubb, P. 2005. Artiodactyla. In: D.E. Wilson & D.M. Reeder (ed.), <i>Mammal Species of the World. A Taxonomic and Geographic Reference (3rd ed)</i>, pp. 637-722. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2005",
+      "title": "Artiodactyla",
+      "author": "Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cuzin, F. 2003. Les grands mammifères du Maroc méridional (Haut Atlas, Anti Atlas et Sahara): Distribution, Ecologie et Conservation. Ph.D. Thesis, Laboratoire de Biogéographie et Ecologie des Vertèbrés, Ecole Pratique des Hautes Etudes, Université Montpellier II.",
+      "year": "2003",
+      "title": "Les grands mammifères du Maroc méridional (Haut Atlas, Anti Atlas et Sahara): Distribution, Ecologie et Conservation",
+      "author": "Cuzin, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Osborn, D.J. and Helmy, I. 1980. <i>The contemporary land mammals of Egypt (including Sinai)</i>. Field Museum of Natural History, Bethseda, Maryland.",
+      "year": "1980",
+      "title": "The contemporary land mammals of Egypt (including Sinai)",
+      "author": "Osborn, D.J. and Helmy, I.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Manlius, N., Menardi-Noguera, A. and Zboray, A. 2003. Decline of the Barbary sheep (<i>Ammotragus lervia</i>) in Egypt during the 20th century: literature review and recent observations. <i>Journal of Zoology (London)</i> 259: 403-409.",
+      "year": "2003",
+      "title": "Decline of the Barbary sheep (<i>Ammotragus lervia</i>) in Egypt during the 20th century: literature review and recent observations",
+      "author": "Manlius, N., Menardi-Noguera, A. and Zboray, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hufnagl, E. 1972. <i>Lybian Mammals</i>. The Oleander Press, New York, USA.",
+      "year": "1972",
+      "title": "Lybian Mammals",
+      "author": "Hufnagl, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuzin, F., Sehhar, E. A. and Wacher, T. 2007. Etude pour l’élaboration de lignes directrices et d’un plan d’action stratégique pour la conservation des ongulés au Maroc. Haut Commissariat aux Eaux et Forêts et à la Lutte Contre le Désertification (HEFLCD), Projet de Gestion des Aires Protégées (PGAP) et Banque Mondiale, Global Environment Facility (GEF). Two volumes.",
+      "year": "2007",
+      "title": "Etude pour l’élaboration de lignes directrices et d’un plan d’action stratégique pour la conservation des ongulés au Maroc",
+      "author": "Cuzin, F., Sehhar, E. A. and Wacher, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cassinello, J. 2013. <i>Ammotragus lervia</i>. In: J. S. Kingdon and M. Hoffmann (eds), <i>The Mammals of Africa. Volume VI. Pigs, Deer, Giraffe, Bovids, and Hippos</i>, pp. 595-599. Bloomsbury Publishing, London, UK.",
+      "year": "2013",
+      "title": "<i>Ammotragus lervia</i>",
+      "author": "Cassinello, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, G. G. 1985. Status and distribution of <i>Ammotragus lervia</i>: a worldwide review. In: M. Hoefs (ed.), <i>WildSheep: distribution, abundance,ianagement and conservation of the sheep of the world and clusely related mountain ungulates</i>, pp. 95-133. Northern Wild Sheep & Goat Council, Whitehorse, Yukon, Canada.",
+      "year": "1985",
+      "title": "Status and distribution of <i>Ammotragus lervia</i>: a worldwide review",
+      "author": "Gray, G. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nimir, M. B. 1997. Sudan - Chapter 4.11. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 40-45. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland.",
+      "year": "1997",
+      "title": "Sudan - Chapter 4.11",
+      "author": "Nimir, M. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mekonlaou, M. and Daboulaye, B-Y. 1997. Chad. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 19-21. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Chad",
+      "author": "Mekonlaou, M. and Daboulaye, B-Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valverde, J. A. 1968. Ecological bases for fauna conservation in Western Sahara. Proceedings of the IBT/CT Technical meeting. Hammamet.",
+      "year": "1968",
+      "title": "Ecological bases for fauna conservation in Western Sahara",
+      "author": "Valverde, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Panouse, J. B. 1957. Les Mammiferes du Maroc. <i>Travaux de l’Institut Scientifique Cherifen, Série Zoologique</i> 5: 1-206.",
+      "year": "1957",
+      "title": "Les Mammiferes du Maroc",
+      "author": "Panouse, J. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lamarche, B. 1997. Mauritania. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 33-34. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Mauritania",
+      "author": "Lamarche, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "De Smet, K. 1989. The distribution and habitat choice of larger mammals in Algeria, with special reference to nature protection. Ph.D. Thesis, University of Ghent.",
+      "year": "1989",
+      "title": "The distribution and habitat choice of larger mammals in Algeria, with special reference to nature protection",
+      "author": "De Smet, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aulagnier, S. and Thevenot, M. 1997. Morocco. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 34-38. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Morocco",
+      "author": "Aulagnier, S. and Thevenot, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valverde, J.A. 1957. Mamiferos. <i>Aves de Sahara espafiol, estudio ecologic del desierto</i>, pp. 354-406. Madrid, Spain.",
+      "year": "1957",
+      "title": "Mamiferos",
+      "author": "Valverde, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shackleton, D.M. and De Smet, K. 1997. Libya. In: D. M. Shackleton (ed.), <i>Wild sheep and goats and their relatives. Status survey and conservation action plan for Caprinae</i>, pp. 30-32. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Libya",
+      "author": "Shackleton, D.M. and De Smet, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wacher, T., Baha El Din, S., Mikhail, G. and Baha El Din, M. 2002. The current status of Barbary sheep in Egypt. <i>Oryx</i> 36: 301-304.",
+      "year": "2002",
+      "title": "The current status of Barbary sheep in Egypt",
+      "author": "Wacher, T., Baha El Din, S., Mikhail, G. and Baha El Din, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gray, G. G. and Simpson, C. D. 1980. <i>Ammotragus lervia</i>. <i>Mammalian Species</i> 144: 1-7.",
+      "year": "1980",
+      "title": "<i>Ammotragus lervia</i>",
+      "author": "Gray, G. G. and Simpson, C. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Magin C. D. 1990. The status of wildlife populations in the Ai’r and Tenere National Nature Reserve, 1988-90.  Serie des Rapports Techniques. IUCN / WWF, Niamey, Niger.",
+      "year": "1990",
+      "title": "The status of wildlife populations in the Ai’r and Tenere National Nature Reserve, 1988-90",
+      "author": "Magin C. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mokhtari, S. 2006. Compte-rendu du suivi de la population de mouflon à manchettes (<i>Ammotragus lervia</i>) dans la réserve du Takherkhort. Haut Commissariat aux Eaux et Forêts et à la Lutte contre la Désertification.",
+      "year": "2006",
+      "title": "Compte-rendu du suivi de la population de mouflon à manchettes (<i>Ammotragus lervia</i>) dans la réserve du Takherkhort",
+      "author": "Mokhtari, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Amer, M. 1997. Egypt. In: D.M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 21-26. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Egypt",
+      "author": "Amer, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cassinello, J. 1998. <i>Ammotragus lervia</i>: a review on systematics, biology, ecology and distribution. <i>Annales Zoologici Fennici</i> 35(3): 149-162.",
+      "year": "1998",
+      "title": "<i>Ammotragus lervia</i>: a review on systematics, biology, ecology and distribution",
+      "author": "Cassinello, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Smet, K. 1997. Algeria. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 17-19. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Algeria",
+      "author": "de Smet, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Alados, C. L., Escós, J. and Vericad, J. R. 1988. Captive populations of northwest African Antilopinae and Caprinae at the Estación Experimental de Zonas Aridas. In: A. Dixon and D. Jones (eds), <i>Conservation and Biology of Desert Antelopes</i>, pp. 199-211. Christopher Helm Ltd, Kent, UK.",
+      "year": "1988",
+      "title": "Captive populations of northwest African Antilopinae and Caprinae at the Estación Experimental de Zonas Aridas",
+      "author": "Alados, C. L., Escós, J. and Vericad, J. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harper, F. 1945. <i>Extinct and Vanishing Mammals of the Old World</i>. American Committee for International Wild Life Preservation, New York, USA.",
+      "year": "1945",
+      "title": "Extinct and Vanishing Mammals of the Old World",
+      "author": "Harper, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shackleton, D.M. 1997. <i>Wild Sheep and Goats and Their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Wild Sheep and Goats and Their Relatives: Status Survey and Conservation Action Plan for Caprinae",
+      "author": "Shackleton, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lamarche, B. 1997. Mali. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 32-33. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Mali",
+      "author": "Lamarche, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ansell, W.F.H. 1972. Part 2, 15 Family Artiodactyla. In: J. Meester and H.W. Setzer (eds), <i>The Mammals of Africa: An Identification Manual</i>, pp. 1-84. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1972",
+      "title": "Part 2, 15 Family Artiodactyla",
+      "author": "Ansell, W.F.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "DGF. 2001. Stratégie nationale tunisiennepour la conservation et la restauration des antilopes sahélo-sahariennes et de leurs habitats. . Direction-Générale des Forets, Ministère de l'Agriculture., Tunis.",
+      "year": "2001",
+      "title": "Stratégie nationale tunisiennepour la conservation et la restauration des antilopes sahélo-sahariennes et de leurs habitats. ",
+      "author": "DGF",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    },
+    {
+      "citation": "Aulagnier, S., Cuzin, F. and Thévenot, M. 2017. <i>Mammifères sauvages au Maroc. Peuplement, répartition, ecologie. </i>. Paris, France.",
+      "year": "2017",
+      "title": "Mammifères sauvages au Maroc. Peuplement, répartition, ecologie. ",
+      "author": "Aulagnier, S., Cuzin, F. and Thévenot, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ben Mimoun, J. and Nouira, S. 2013. Social organization of Barbary Sheep (<i>Ammotragus lervia</i>) population in the Chambi National Park, Tunisia. <i>International Journal of Biodiversity and Conservation</i> 5: 15-19.",
+      "year": "2013",
+      "title": "Social organization of Barbary Sheep (<i>Ammotragus lervia</i>) population in the Chambi National Park, Tunisia",
+      "author": "Ben Mimoun, J. and Nouira, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ben Mimoun, J. and Nouira, S. 2015. Food habits of the aoudad <i>Ammotragus lervia</i> in the Bou Hedma mountains, Tunisia. <i>South African Journal of Science</i> 111: 2014-0448.",
+      "year": "2015",
+      "title": "Food habits of the aoudad <i>Ammotragus lervia</i> in the Bou Hedma mountains, Tunisia",
+      "author": "Ben Mimoun, J. and Nouira, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ben Mimoun, J. and Nouira. S. 2017. Le mouflon à manchettes (<i>Ammotragus lervia</i>) en Tunisie.  Presses Académiques Francophones.",
+      "year": "2017",
+      "title": "Le mouflon à manchettes (<i>Ammotragus lervia</i>) en Tunisie",
+      "author": "Ben Mimoun, J. and Nouira. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ben Mimoun, J., Cassinello, J. and Nouira, S. 2016. Update of the distribution and status of the aoudad <i>Ammotragus lervia</i> (Bovidae, Caprini) in Tunisia. <i>Mammalia</i> 81: 181-187.",
+      "year": "2016",
+      "title": "Update of the distribution and status of the aoudad <i>Ammotragus lervia</i> (Bovidae, Caprini) in Tunisia",
+      "author": "Ben Mimoun, J., Cassinello, J. and Nouira, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bounaceur, F., Benamor, N., Bissaad, F. Z., Abdi, A. and Aulagnier, S. 2016a. Is there a future for the last populations of Aoudad (<i>Ammotragus lervia</i>) in northern Algeria? <i>Pakistan Journal of Zoology</i> 48: 1727-1731.",
+      "year": "2016a",
+      "title": "Is there a future for the last populations of Aoudad (<i>Ammotragus lervia</i>) in northern Algeria?",
+      "author": "Bounaceur, F., Benamor, N., Bissaad, F. Z., Abdi, A. and Aulagnier, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bounaceur, F., Benamor, N., Bissaad, F. Z., Douba, F., Benmammar-Hasnaoui, H. and Guellil, L. 2016b. État des populations et régime alimentaire du mouflon à manchette <i>Ammotragus lervia</i> (Pallas, 1777) au niveau de la réserve de chasse de Moutas à Tlemcen. <i>Revue Écologie-Environnement</i> 12: 42-52.",
+      "year": "2016b",
+      "title": "État des populations et régime alimentaire du mouflon à manchette <i>Ammotragus lervia</i> (Pallas, 1777) au niveau de la réserve de chasse de Moutas à Tlemcen",
+      "author": "Bounaceur, F., Benamor, N., Bissaad, F. Z., Douba, F., Benmammar-Hasnaoui, H. and Guellil, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bussière, E. 2020. Collaring operation of aoudads and dorcas gazelles in Ennedi Natural and Cultural Reserve – February 2020.  Unpub. report. African Parks and Réserve Naturelle et Culturelle de L’Ennedi Tchad.",
+      "year": "2020",
+      "title": "Collaring operation of aoudads and dorcas gazelles in Ennedi Natural and Cultural Reserve – February 2020.",
+      "author": "Bussière, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cassinello, J. 2015. <i>Ammotragus lervia</i> (Aoudad). <i>Invasive Species Compendium</i>, CAB International, Wallingford, UK.",
+      "year": "2015",
+      "title": "<i>Ammotragus lervia</i> (Aoudad)",
+      "author": "Cassinello, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuzin, F. 2008. Etude sur le mouflon à manchettes (Ammotragus lervia) dans le Parc National du Toubkal. Recherche de groupes reproducteurs hors Réserve Zoologique du Takherkhort en période de rut et évaluation de l’occupation de l’ensemble du territoire du PNT par l’espèce en période printanière.  DREF Haut Atlas Marrakech, PN du Toubkal, Marrakech.",
+      "year": "2008",
+      "title": "Etude sur le mouflon à manchettes (Ammotragus lervia) dans le Parc National du Toubkal. Recherche de groupes reproducteurs hors Réserve Zoologique du Takherkhort en période de rut et évaluation de l’occupation de l’ensemble du territoire du PNT par l’espèce en période printanière",
+      "author": "Cuzin, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuzin, F. 2015. Plan d’action pour la Réserve Naturelle de Tergou – Oulmès. Haut Commissariat aux Eaux et Forêts et à la Lutte contre la Désertification. GIZ.",
+      "year": "2015",
+      "title": "Plan d’action pour la Réserve Naturelle de Tergou – Oulmès. Haut Commissariat aux Eaux et Forêts et à la Lutte contre la Désertification",
+      "author": "Cuzin, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuzin, F. 2019. Diagnostic de la Biodiversité du SIBE du Jbel Lekst. Haut Commissariat aux Eaux et Forêts et à la Lutte contre la Désertification. Direction Régionale du Sud-Ouest Agadir.",
+      "year": "2019",
+      "title": "Diagnostic de la Biodiversité du SIBE du Jbel Lekst. Haut Commissariat aux Eaux et Forêts et à la Lutte contre la Désertification",
+      "author": "Cuzin, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cuzin ,F., Aulagnier, S. and Thévenot, M. 2017. Cetartiodactyla. In: Aulagnier, S., F. Cuzin, and M. Thévenot (eds), <i>Mammifères sauvages du Maroc. Peuplement, Répartition, Ecologie. Société Française pour l’Etude et la Protection des Mammifères</i>, Société Française pour l’Etude et la Protection des Mammifères.",
+      "year": "2017",
+      "title": "Cetartiodactyla",
+      "author": "Cuzin ,F., Aulagnier, S. and Thévenot, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "De Smet, K. 1997a. Algeria. In: D.M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 17-19. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997a",
+      "title": "Algeria",
+      "author": "De Smet, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "De Smet, K. 1997b. Tunisia. In: D.M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 45-47. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997b",
+      "title": "Tunisia",
+      "author": "De Smet, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "DGF and IUCN. 2017. Stratégie et plan d’action pour la conservation du mouflon à manchettes (<i>Ammotragus lervia</i>) en Tunisie 2018-2027. IUCN/DGF, Malaga, Spain.",
+      "year": "2017",
+      "title": "Stratégie et plan d’action pour la conservation du mouflon à manchettes (<i>Ammotragus lervia</i>) en Tunisie 2018-2027",
+      "author": "DGF and IUCN",
+      "citation_short": null
+    },
+    {
+      "citation": "Gharaibeh, M.B. 1997. Systematics, distribution, and zoogeography of mammals of Tunisia. Technical University Texas.",
+      "year": "1997",
+      "title": "Systematics, distribution, and zoogeography of mammals of Tunisia",
+      "author": "Gharaibeh, M.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gil-Sánchez, J.M. and Herrera-Sánchez, F.J. 2020. Status of the Barbary sheep in the Atlantic Sahara: updating for the IUCN Red List (April 2020).  Harmusch, Association for Wildlife Research and Conservation..",
+      "year": "2020",
+      "title": "Status of the Barbary sheep in the Atlantic Sahara: updating for the IUCN Red List (April 2020)",
+      "author": "Gil-Sánchez, J.M. and Herrera-Sánchez, F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Harmusch. 2015. <i>Expediciones zoológicas al Sáhara Atlántico. Harmusch, Asociación de Estudio & Conservación de Fauna</i>. Ed. Rodeno, Valencia, Spain.",
+      "year": "2015",
+      "title": "Expediciones zoológicas al Sáhara Atlántico. Harmusch, Asociación de Estudio & Conservación de Fauna",
+      "author": "Harmusch",
+      "citation_short": null
+    },
+    {
+      "citation": "Herrera-Sánchez, F.J., de Lucas, J., Castillo, S., Rincón-García, A., Llaneza, L., Mellone, U., Mallo-Leira, M., Rodríguez-Siles, J. and Gil-Sánchez, J. M. 2016. Expedición zoológica y sondeo del arruí sahariano (<i>Ammotragus lervia sahariensis<i/>) en el Djebel Ouarkziz y Montes Aydar. <i>Go-South Bulletin </i> 13: 224- 240.",
+      "year": "2016",
+      "title": "Expedición zoológica y sondeo del arruí sahariano (<i>Ammotragus lervia sahariensis<i/>) en el Djebel Ouarkziz y Montes Aydar",
+      "author": "Herrera-Sánchez, F.J., de Lucas, J., Castillo, S., Rincón-García, A., Llaneza, L., Mellone, U., Mallo-Leira, M., Rodríguez-Siles, J. and Gil-Sánchez, J. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Irzagh, A., Bounaceur, F., Antar, D., Benrima, A. and Aulagnier, S. 2020. Contribution à l’actualisation des connaissances sur les mammifères du Tassili algérien. <i>Revue Agrobiologia</i> 10 : 2010 -2020.",
+      "year": "2020",
+      "title": "Contribution à l’actualisation des connaissances sur les mammifères du Tassili algérien",
+      "author": "Irzagh, A., Bounaceur, F., Antar, D., Benrima, A. and Aulagnier, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Magin, C.D. and Newby, J. 1997. Niger - Chapter 4.10. In: D. M. Shackleton (ed.), <i>Wild Sheep and Goats and their Relatives: Status Survey and Conservation Action Plan for Caprinae</i>, pp. 38-40. IUCN/SSC Caprinae Specialist Group, Gland, Switzerland.",
+      "year": "1997",
+      "title": "Niger - Chapter 4.10",
+      "author": "Magin, C.D. and Newby, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miranda, M., Sicilia, M., Bartolomé, J., Molina-Alcaide, E., Gálvez-Bravo, L., and Cassinello, J. 2012. Contrasting feeding patterns of native red deer and two exotic ungulates in a Mediterranean ecosystem. <i>Wildlife Research</i> 39: 171–182.",
+      "year": "2012",
+      "title": "Contrasting feeding patterns of native red deer and two exotic ungulates in a Mediterranean ecosystem",
+      "author": "Miranda, M., Sicilia, M., Bartolomé, J., Molina-Alcaide, E., Gálvez-Bravo, L., and Cassinello, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Morales Agacino, E. 1949. Datos y observaciones sobre ciertos mamíferos del Sahara Occidental e Ifni. <i>Boletín de la Real Sociedad Española de Historia Natural</i> 48: 13-44.",
+      "year": "1949",
+      "title": "Datos y observaciones sobre ciertos mamíferos del Sahara Occidental e Ifni",
+      "author": "Morales Agacino, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mori, E., Mazza, G., Saggiomo, L., Sommese, A. and Esattore, B. 2017. Strangers coming from the Sahara: an update of the worldwide distribution, potential impacts and conservation opportunities of alien aoudad. <i>Annales Zoologici Fennici</i> 54: 373-386.",
+      "year": "2017",
+      "title": "Strangers coming from the Sahara: an update of the worldwide distribution, potential impacts and conservation opportunities of alien aoudad",
+      "author": "Mori, E., Mazza, G., Saggiomo, L., Sommese, A. and Esattore, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Poilecot, P. 1991. La faune de la Réserve Naturelle Nationale de l’Aïr et du Ténéré. In: F. Giazzi, F. (ed.), <i>La Réserve Naturelle Nationale de l’Aïr et du Ténéré (Niger)</i>, pp. 181- 259. MHE/WWF/IUCN, Gland, Switzerland.",
+      "year": "1991",
+      "title": "La faune de la Réserve Naturelle Nationale de l’Aïr et du Ténéré",
+      "author": "Poilecot, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Qninba, A., El Balla, T., Khayya, M.L., Semlali, M.E.A., Samlali, M.L., Maarouf, S., El Jaffali, B., El Brini, H., Benhoussa, A. and Ibn Tattou, M. 2016. 2016. Koudiat Laghnam, problablement le dernier refuge pour le mouflon à manchettes <i>Ammotragus lervia</i> dans l’Adrar Soutouff (Province d’Aouserd- Sud Marocain). <i>Go-South Bulletin</i> 13: 55-60.",
+      "year": "2016",
+      "title": "Koudiat Laghnam, problablement le dernier refuge pour le mouflon à manchettes <i>Ammotragus lervia</i> dans l’Adrar Soutouff (Province d’Aouserd- Sud Marocain)",
+      "author": "Qninba, A., El Balla, T., Khayya, M.L., Semlali, M.E.A., Samlali, M.L., Maarouf, S., El Jaffali, B., El Brini, H., Benhoussa, A. and Ibn Tattou, M. 2016. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rabeil, T. and Turmine, V. 2016. Atlas de la Réserve Naturelle Nationale de Termit et Tin-Toumma.  Projet Antilopes Sahélo-Sahariennes Niger. Sahara Conservation Fund, Niamey, Niger.",
+      "year": "2016",
+      "title": "Atlas de la Réserve Naturelle Nationale de Termit et Tin-Toumma",
+      "author": "Rabeil, T. and Turmine, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Razack, A. and Zabeirou, M. 2020. Le Mouflon à manchettes (<i>Ammotragus lervia</i>) au Niger. Sahara Conservation Fund contribution to the species Red List reassessment.  SCF Project Officer Niger.",
+      "year": "2020",
+      "title": "Le Mouflon à manchettes (<i>Ammotragus lervia</i>) au Niger. Sahara Conservation Fund contribution to the species Red List reassessment",
+      "author": "Razack, A. and Zabeirou, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Šprem, N., Gančević, P., Safner, T., Jerina, K. and Cassinello, J. In press. Barbary sheep (<i>Ammotragus lervia</i>, Pallas 1777). In: Zachos E.F. and Hackländer, K. (eds), <i>Handbook of the Mammals of Europe</i>, Springer Nature.",
+      "year": null,
+      "title": "Barbary sheep (<i>Ammotragus lervia</i>, Pallas 1777)",
+      "author": "Šprem, N., Gančević, P., Safner, T., Jerina, K. and Cassinello, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Valverde, J. A. 1957. <i>Aves del Sahara español (estudio ecológico del desierto)</i>. Instituto de Estudios Africanos, Consejo Superior de Investigaciones Científicas, Madrid, Spain.",
+      "year": "1957",
+      "title": "Aves del Sahara español (estudio ecológico del desierto)",
+      "author": "Valverde, J. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wacher, T. 2016. Enquête aérienne du Massif de l’Ennedi - Juillet 2016.  African Parks and Zoological Society of London.",
+      "year": "2016",
+      "title": "Enquête aérienne du Massif de l’Ennedi - Juillet 2016",
+      "author": "Wacher, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wacher, T. 2019. Aerial survey of the Ennedi Massif - December 2019.  African Parks and Zoological Society of London.",
+      "year": "2019",
+      "title": "Aerial survey of the Ennedi Massif - December 2019",
+      "author": "Wacher, T.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

@@ -1,0 +1,916 @@
+{
+  "assessment_date": "2019-08-11T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 166563,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/166563/60591113",
+  "citation": "Chaudhry, S., de Alwis Goonatilake, S., Fernado, M. & Kotagama, O. 2019. Channa striata. The IUCN Red List of Threatened Species 2019: e.T166563A60591113. Accessed on 05 May 2026.",
+  "assessment_id": 60591113,
+  "assessment_points": true,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 166563,
+    "scientific_name": "Channa striata",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "PERCIFORMES",
+    "family_name": "CHANNIDAE",
+    "genus_name": "Channa",
+    "species_name": "striata",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Bloch, 1793)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Asian Snakehead",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Chevron Snakehead",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Common Snakehead",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Striped Snakehead",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Snakehead Murrel",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Ophiocephalus striatus Bloch, 1793",
+        "status": "ACCEPTED",
+        "genus_name": "Ophiocephalus",
+        "species_name": "striatus",
+        "species_author": "Bloch, 1793",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Channa striatus (Bloch, 1793)",
+        "status": "ACCEPTED",
+        "genus_name": "Channa",
+        "species_name": "striatus",
+        "species_author": "(Bloch, 1793)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 800,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Unknown",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The species is recorded from Pakistan, India, Nepal, Sri Lanka, Bangladesh, Myanmar, Malaysia, Indonesia, Laos, Cambodia, Viet Nam, Thailand and southern China. Possibly present in Bhutan. In Sri Lanka, <em>Channa striata</em> is commonly found in marshes, tanks, rivers and reservoirs throughout the low country both wet and dry zone except highlands. It is more common in the dry zone than the wet zone (De Silva <em>et al.</em> 2015).",
+    "population": "The species is widespread and abundant across its range.",
+    "habitats": "<em>Channa striata </em>inhabits swamps, freshwater ponds, streams and tanks in the plains; prefers stagnant muddy waters and grassy tanks. It breeds in the rainy season and, in Sri Lanka,<em> Channa striata</em> adults inhabit ponds, streams and rivers, preferring stagnant and muddy water of plains. This species can be found mainly in swamps, but also occurs in the lowland rivers. However, it is more common in relatively deep (1-2 m), still water and very common in freshwater plains. It also occurs in medium to large rivers, brooks, flooded fields and stagnant waters including sluggish flowing canals (De Silva <em>et al</em>. 2015, Pethiyagoda 1991, Senanayake 1980).",
+    "threats": "Local populations in Sri Lanka suffer habitat loss and degradation, competition and predation from invasive alien species species, siltation, and water pollution. Overfishing is also a major concern across its range.",
+    "measures": "There are no conservation actions in place for this species.",
+    "use_trade": "This is an important food fish for local use and trade. This species is fairly common in the plains of India and is the mainstay of the tank fishery in Tamil Nadu. It breeds mostly during the rainy season; the female matures at a size of about 30 cm when two years old, and lays from a few hundred to over a thousand amber-coloured eggs. A popular and highly priced fish especially when freshly caught. This species is the most widely distributed and economically important member of the genus. It can reach a length of 60 to 75 cm; common size is 30 to 40 cm. It is cultivated in India, Myanmar and Pakistan; tolerates slightly brackish water.&#160;<em>C. striata</em> is known to be an excellent source of protein and is used for human consumption in Sri Lankan dry zone (De Silva <em>et al.</em> 2015, Pethiyagoda 1991).",
+    "rationale": "As currently understood<span style=\"font-style: italic;\"></span>, <span style=\"font-style: italic;\">Channa striata</span>&#160;is a species complex. It is a widespread species with no major widespread threats and is currently assessed as Least Concern. However, the species requires taxonomic review and it should be re-assessed when this has been undertaken.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>As presently understood, <span style=\"font-style: italic;\">Channa striata </span>is a species complex.<br/></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Aquaculture Ponds"
+      },
+      "code": "15_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bhutan"
+      },
+      "code": "BT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Chaudhry, S., de Alwis Goonatilake, S., Fernado, M. & Kotagama, O.",
+      "value": [
+        "Shivaji Chaudhry (G.B. Pant Institute of Himalayan Environment and Development (Eastern Himalayas))",
+        "Odatha Kotagama (IUCN Sri Lanka)",
+        "Malka Fernado (IUCN Sri Lanka)",
+        "Sampath de Alwis Goonatilake (Sri Lanka - Programme Development Unit, IUCN)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Maiz-Tome, L. & Raghavan, R.",
+      "value": [
+        "Rajeev Raghavan (Western Ghats Freshwater Species Assessment)",
+        "Laura Maiz-Tome (IUCN GSP FBU)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Molur, S. & Daniels, A.",
+      "value": [
+        "Sanjay Molur (ZOO (Eastern Himalayas))",
+        "Adam Daniels (IUCN Freshwater Biodiversity Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Fernado, M., Kotagama, O. & de Alwis Goonatilake, S.",
+      "value": [
+        "Odatha Kotagama (IUCN Sri Lanka)",
+        "Sampath de Alwis Goonatilake (Sri Lanka - Programme Development Unit, IUCN)",
+        "Malka Fernado (IUCN Sri Lanka)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    },
+    {
+      "citation": "De Silva, M., Hapuarachchi, N. and Jayaratne, T. 2015. <i>Sri Lankan Freshwater Fishes</i>. Wildlife Conservation Society - Galle.",
+      "year": "2015",
+      "title": "Sri Lankan Freshwater Fishes",
+      "author": "De Silva, M., Hapuarachchi, N. and Jayaratne, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pethiyagoda, R. 1991. <i>Freshwater Fishes of Sri Lanka</i>. The Wildlife Heritage Trust of Sri Lanka, Colombo.",
+      "year": "1991",
+      "title": "Freshwater Fishes of Sri Lanka",
+      "author": "Pethiyagoda, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Senanayake, F.R. 1980. The Biogeography and Ecology of the Inland Fishes of Sri Lanka. University of California.",
+      "year": "1980",
+      "title": "The Biogeography and Ecology of the Inland Fishes of Sri Lanka",
+      "author": "Senanayake, F.R. ",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

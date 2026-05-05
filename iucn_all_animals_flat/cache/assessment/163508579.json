@@ -1,0 +1,640 @@
+{
+  "assessment_date": "2018-01-10T00:00:00.000+00:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 3745,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/3745/163508579",
+  "citation": "Kays, R. 2018. Canis latrans (errata version published in 2020). The IUCN Red List of Threatened Species 2018: e.T3745A163508579. Accessed on 05 May 2026.",
+  "assessment_id": 163508579,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 3745,
+    "scientific_name": "Canis latrans",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "CANIDAE",
+    "genus_name": "Canis",
+    "species_name": "latrans",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Say, 1823",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+        "url": "http://www.canids.org/",
+        "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "American Jackal",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Brush Wolf",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Prairie Wolf",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Kojote",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Coyote",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "4",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>Coyotes were originally native to the arid open country of U.S., Canada, and Mexico prior to European settlement (Hody and Kays 2018). During the 19th century, the Coyote expanded into forested biomes they previously hadn't used including eastern deciduous forests, taiga forests of the north, temperate rainforests in the north west, and tropical rainforests in the south. The fragmentation of forests with agriculture, and extinction of larger predators like the Grey Wolf <em>Canis lupus</em> and the Jaguar <em>Panthera onca</em>, are thought to have facilitated their expansion. Hybridization with dogs and wolves also played a role in their expansion eastward (Kays <em>et al</em>. 2010,; Von Holdt <em>et al</em>. 2011). Coyotes have now&#160;colonized all of North America except for polar areas, and are approaching the border between Central and South America in the Darien region of Panama.</p>",
+    "population": "Coyotes are abundant throughout their range and are increasing in distribution as humans continue to modify the landscape. Elimination of larger predators (wolves, coyotes, jaguars) may also have assisted their expansion. Coyote density varies geographically with food and climate, and seasonally due to mortality and changes in pack structure and food abundance. Localized control efforts have sometimes temporarily reduced population size, but they quickly rebound through migration and breeding, and Coyote populations generally are stable or increasing in most areas.&#160;<br/><br/>Coyote densities in different geographic areas and seasons vary from 0.01–0.09 coyotes/km² in the winter in the Yukon (O'Donoghue <em>et al.</em> 1997) to 0.9/km² in the fall and 2.3/km² during the summer (post-whelping) in Texas (Knowlton 1972; Andelt 1985). Density in different geographic areas and seasons are listed in Gese and Bekoff (2004).",
+    "habitats": "Coyotes utilize almost all available habitats including prairie, forest, desert, mountain and tropical ecosystems. The ability of coyotes to exploit human resources allows them to occupy urban areas; their recent expansion in eastern Panama has been attributed to their using deforested areas and areas of cattle&#160;ranching (Méndez-Carvajal and Moreno 2014). Water availability may limit Coyote distribution in some desert environments.&#160;Coyotes are opportunistic, generalist predators that eat a variety of food items, typically consuming items in relation to changes in availability. Coyotes eat foods ranging from fruit and insects to large ungulates and livestock. Livestock and wild ungulates may often be represented in coyote stomachs and scats as carrion, but predation on large ungulates (native and domestic) does occur (Andelt 1987). Predation by Coyotes on neonates of native ungulates can be high during fawning (Andelt 1987). Coyotes in suburban areas are adept at exploiting human-made food resources and will readily consume dog food or other human-related items.",
+    "threats": "There are no current major threats to Coyote populations throughout their range. Local reductions are temporary and their range has been expanding. Conservation measures have not been needed to maintain viable populations. Coyotes adapt to human environs and occupy most habitats, including urban areas. Hybridization with wolves and dogs is documented, but likely occurs only at the leading edge of expanding populations, with back-crossing into the Coyote populations resulting in low levels of dog and wolf introgression spread throughout some new populations (VonHoldt <em>et al</em>. 2011; Mõnzon <em>et al</em>. 2014).",
+    "measures": "<strong>Legislation</strong><br/>The species is not included on the CITES Appendices, and there is no legal protection of the species. Restrictions on harvest and method of harvest depend upon state or provincial regulations.<br/><br/><strong>Presence in protected areas</strong><br/>The Coyote occurs in almost all protected areas across its range.<br/><br/><span style=\"font-weight: bold;\">Occurrence in captivity</span><br/>Over 2,000 Coyotes occur in captivity in zoos, wildlife centres, etc., throughout their range. They readily reproduce in captivity and survival is high.<br/><br/><span style=\"font-weight: bold;\">Gaps in knowledge</span><br/>Several gaps in knowledge still remain: coyote reproductive physiology and possible modes of fertility control; selective management of problem animals; effects of control; genetic differentiation from other canids (particularly the red wolf); development of non-lethal depredation techniques; interactions of coyotes and other predators; coyote-prey interactions; human-coyote interactions and conflicts at the urban interface; factors influencing prey selection; communication; adaptations in urban and rural environments; and interactions with threatened and endangered species.",
+    "use_trade": "Coyote fur is still sought by trappers throughout its range, with harvest levels depending upon fur prices, local and state regulations, and traditional uses and practices. Many states and provinces consider Coyotes a furbearing species with varying regulations on method of take, bag limit, and seasons. Some furs are also sold internationally (e.g. to Russia and China).",
+    "rationale": "The Coyote has a wide distribution throughout North America, Mexico and into Central America. They are abundant throughout their range and are increasing in distribution as humans continue to modify the landscape. The species is very versatile, especially in their ability to exploit human modified environments and there is no reason to expect that they are currently at risk of extinction.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical High Altitude"
+      },
+      "code": "4_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Kays, R.",
+      "value": [
+        "Roland Kays"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hoffmann, M. & Sillero-Zubiri, C.",
+      "value": [
+        "Claudio Sillero-Zubiri (IUCN SSC Canid Specialist Group)",
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Gese, E., Bekoff, M., Carbyn, L., Andelt, W. & Knowlton, F.",
+      "value": [
+        "Frederick Knowlton",
+        "William Andelt",
+        "Lu  Carbyn",
+        "Eric Gese (Utah State University)",
+        "Marc Bekoff"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hoffmann, M.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version of the assessment was created to attach the updated distribution map; the original assessment accidentally used the older map."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Reid, F. 2009. <i>A Field Guide to the Mammals of Central America and Southeast Mexico</i>. Oxford University Press, New York, USA.",
+      "year": "2009",
+      "title": "A Field Guide to the Mammals of Central America and Southeast Mexico",
+      "author": "Reid, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baillie, J. and Groombridge, B. (comps and eds). 1996. <i>1996 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "1996 IUCN Red List of Threatened Animals",
+      "author": "Baillie, J. and Groombridge, B.",
+      "citation_short": "Baillie and Groombridge 1996"
+    },
+    {
+      "citation": "Bekoff, M. and Gese, E. M. 2003. Coyote (<i>Canis latrans</i>). In: G. A. Feldhamer, B. C. Thompson and J. A. Chapman (eds), <i>Wild mammals of North America: biology, management and conservation</i>, pp. 467-481. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "2003",
+      "title": "Coyote (<i>Canis latrans</i>)",
+      "author": "Bekoff, M. and Gese, E. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Donoghue, M., Boutin, S., Krebs, C. J. and Hofer, E. J. 1997. Numerical responses of coyotes and lynx to the snowshoe hare cycle. <i>Oikos</i> 80: 150-162.",
+      "year": "1997",
+      "title": "Numerical responses of coyotes and lynx to the snowshoe hare cycle",
+      "author": "O'Donoghue, M., Boutin, S., Krebs, C. J. and Hofer, E. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Moore, G. C. and Parker, G. R. 1992. Colonization by the eastern coyote (<i>Canis latrans</i>). In: A. Boer (ed.), <i>Ecology and management of the eastern coyote</i>, pp. 23-37. Wildlife Research Unit, University of New Brunswick, Fredericton, Canada.",
+      "year": "1992",
+      "title": "Colonization by the eastern coyote (<i>Canis latrans</i>)",
+      "author": "Moore, G. C. and Parker, G. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Knowlton, F. F. 1972. Preliminary interpretations of coyote population mechanics with some management implications. <i>Journal of Wildlife Management</i> 36: 369-382.",
+      "year": "1972",
+      "title": "Preliminary interpretations of coyote population mechanics with some management implications",
+      "author": "Knowlton, F. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andelt, W. F. 1985. Behavioral ecology of coyotes in south Texas. <i>Wildlife Monographs</i> 94: 45 pp.",
+      "year": "1985",
+      "title": "Behavioral ecology of coyotes in south Texas",
+      "author": "Andelt, W. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bekoff, M. 1982. Coyote, <i>Canis latrans</i>. In: J. Chapman and G. Feldhamer (eds), <i>Wild mammals of North America: biology, management and economics</i>, pp. 447-459. Johns Hopkins University Press, Baltimore, USA.",
+      "year": "1982",
+      "title": "Coyote, <i>Canis latrans</i>",
+      "author": "Bekoff, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Andelt, W. F. 1987. Coyote predation. In: M. Novak, J. A. Baker, M. E. Obbard and B. Malloch (eds), <i>Wild furbearer management and conservation in North America</i>, pp. 128-140. Ontario Ministry of Natural Resources and the Ontario Trappers Association, Ontario, Canada, Toronto, Ontario, Canada.",
+      "year": "1987",
+      "title": "Coyote predation",
+      "author": "Andelt, W. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "Hidalgo-Mihart, M.G., Cantu-Salazar, L., Gonzalez-Romero, A. and Lopez-Gonalez, C.A. 2004. Historical and present distribution of coyote (<i>Canis latrans</i>) in Mexico and Central America. <i>Journal of Biogeography</i> 31: 2025-2038.",
+      "year": "2004",
+      "title": "Historical and present distribution of coyote (<i>Canis latrans</i>) in Mexico and Central America",
+      "author": "Hidalgo-Mihart, M.G., Cantu-Salazar, L., Gonzalez-Romero, A. and Lopez-Gonalez, C.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Méndez-Carvajal, P. and Moreno, R. 2014. Mammalia, Carnivora, Canidae, <i>Canis latrans</i> (Say, 1823): Actual distribution in Panama. <i>CheckList</i> 10(2): 376-379.",
+      "year": "2014",
+      "title": "Mammalia, Carnivora, Canidae, <i>Canis latrans</i> (Say, 1823): Actual distribution in Panama",
+      "author": "Méndez-Carvajal, P. and Moreno, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "VonHoldt, B. M., Pollinger, J.P., Earl, D.A., Knowles, J.C., Boyko, A.R., Parker, H. et al. 2011. A genome-wide perspective on the evolutionary history of enigmatic wolf-like canids. <i>Genome Research </i> 21: 1294–1305.",
+      "year": "2011",
+      "title": "A genome-wide perspective on the evolutionary history of enigmatic wolf-like canids",
+      "author": "VonHoldt, B. M., Pollinger, J.P., Earl, D.A., Knowles, J.C., Boyko, A.R., Parker, H. et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kays, R., Curtis, A. and Kirchman, J.J. 2010. Rapid adaptive evolution of northeastern coyotes via hybridization with wolves. <i>Biology Letters</i> 6: 89–93.",
+      "year": "2010",
+      "title": "Rapid adaptive evolution of northeastern coyotes via hybridization with wolves",
+      "author": "Kays, R., Curtis, A. and Kirchman, J.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monzõn, J., Kays, R. and Dykhuizen, D.E. 2014. Assessment of coyote-wolf-dog admixture using ancestry-informative diagnostic SNPs. <i>Molecular Ecology</i> 23: 182–197.",
+      "year": "2014",
+      "title": "Assessment of coyote-wolf-dog admixture using ancestry-informative diagnostic SNPs",
+      "author": "Monzõn, J., Kays, R. and Dykhuizen, D.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gese, E. and Bekoff, M. 2004. Coyote <i>Canis latrans</i> Say, 1823. In: Sillero-Zubiri, C., Hoffmann, M. & Macdonald, D.W. (ed.), <i>Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan</i>, pp. 81-87. IUCN, Gland and Cambridge.",
+      "year": "2004",
+      "title": "Coyote <i>Canis latrans</i> Say, 1823",
+      "author": "Gese, E. and Bekoff, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hody, J. W. and Kays, R. 2018. Mapping the expansion of coyotes (<i>Canis latrans</i>) across North and Central America. <i>ZooKeys</i> 759: 81-87.",
+      "year": "2018",
+      "title": "Mapping the expansion of coyotes (<i>Canis latrans</i>) across North and Central America",
+      "author": "Hody, J. W. and Kays, R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 March 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

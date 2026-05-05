@@ -1,0 +1,949 @@
+{
+  "assessment_date": "2009-12-05T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 169967,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/169967/85697412",
+  "citation": "Bell, C 2015. Nephrops norvegicus. The IUCN Red List of Threatened Species 2015: e.T169967A85697412. Accessed on 05 May 2026.",
+  "assessment_id": 85697412,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 169967,
+    "scientific_name": "Nephrops norvegicus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "ARTHROPODA",
+    "class_name": "MALACOSTRACA",
+    "order_name": "DECAPODA",
+    "family_name": "NEPHROPIDAE",
+    "genus_name": "Nephrops",
+    "species_name": "norvegicus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Cigala",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Langoustine",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Norway Lobster",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Astacus norvegicus Fabricius, 1775 ",
+        "status": "ADD",
+        "genus_name": "Astacus",
+        "species_name": "norvegicus",
+        "species_author": "Fabricius, 1775 ",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Homarus norvegicus Weber, 1795",
+        "status": "ADD",
+        "genus_name": "Homarus",
+        "species_name": "norvegicus",
+        "species_author": "Weber, 1795",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Astacus rugosus Rafinesque, 1814",
+        "status": "ADD",
+        "genus_name": "Astacus",
+        "species_name": "rugosus",
+        "species_author": "Rafinesque, 1814",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nephropsis cornubiensis Bate & Rowe, 1880",
+        "status": "ADD",
+        "genus_name": "Nephropsis",
+        "species_name": "cornubiensis",
+        "species_author": "Bate & Rowe, 1880",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Nephrops norvegicus ssp. meridionalis Zariquiey Cenarro, 1935",
+        "status": "ADD",
+        "genus_name": "Nephrops",
+        "species_name": "norvegicus",
+        "species_author": null,
+        "infrarank_author": "Zariquiey Cenarro, 1935",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "meridionalis"
+      },
+      {
+        "name": "Cancer norvegicus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Cancer",
+        "species_name": "norvegicus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 800,
+    "upper_depth_limit": 20,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This is a widely distributed species ranging from Iceland, the Faroes and Norway in the north of its range, to the Atlantic coast of Morocco in the south including the west and central region of the Mediterranean. It is, however, absent from the eastern Mediterranean, the Baltic Sea, the Bosphorus and the Black Sea (Holthuis 1991).",
+    "population": "This species is found in commercial quantities throughout much of its range. Landings of this species have steadily increased since the 1950s from around 10,000 tonnes, to around 50-70,000 tonnes in the 2000s (FAO 2010).",
+    "habitats": "The species spends much of its time inside burrows constructed in muddy substrates.&#160; Emergence behaviour varies with depth and is related to light levels and other external factors.&#160; Adults are opportunistic predators and scavengers feeding on a range of benthic invertebrates.&#160; Reproductive frequency depends on latitude, varying from annual cycles in the southern part of the range to biennial cycles in the northern part. Spawning occurs in late summer or early autumn and ovigerous females remain in their burrows until the eggs hatch in late winter or early spring.&#160; Larvae are planktonic and settle in muddy substrates after 3-7 weeks (M. Bell pers. comm. 2010). Although specimens can reach up to 24 cm in length, this species is normally found between 10-20 cm in size (Holthuis 1991). Age at first maturity is thought to be around 2-3 years (Froglia and Gramitto 1981, Orsi Relini <span style=\"font-style: italic;\">et al.</span> 1998).",
+    "threats": "The greatest threat to this species is the commercial scale harvest for human food across its range. The largest fishing grounds for this species occur in the North Sea, the West of Scotland and the Irish Sea. It is also taken in the Bay of Biscay, the Iberian coast, Moroccan coast, Western and Eastern Mediterranean, and the Adriatic but in much smaller quantities (Bell, Redant and Tuck 2006).<br/><br/>Levels of fishery exploitation vary widely between individual stocks (Bell, Redant and Tuck 2006). ICES assessments indicate that many of the stocks with a long history of exploitation in the North Sea, to the west of Scotland and in the Irish and Celtic Seas, are fully exploited in terms of yield per recruit, but stock levels are relatively stable and with no evidence of recruitment declines (ICES 2003, 2004). New fisheries have developed over recent years on some large offshore stocks in the North Sea (notably the Fladen Ground and Norwegian Deeps) and there appears to be scope for further increases in fishing pressure on these grounds. In contrast. there have been declines in stock abundance in some southern areas, including the Bay of Biscay and, particularly, Atlantic shelf edge grounds around the Iberian peninsula, but it is not clear that recruitment declines have resulted from overexploitation (M. Bell pers. comm. 2010).<br/><br/>Trawling is the primary method of fishing. Vulnerability to trawling is strongly related to burrow emergence behaviour, and in areas where much of the fishing occurs in winter (e.g. the Farn Deeps grounds) there is a lower fishing mortality of females owing to the non-emergence of ovigerous individuals. Small creel fisheries also occur, notably in sea lochs in the west of Scotland. This is considered a more sustainable method of fishing than trawling, although there are concerns that larger numbers of ovigerous females are taken in creels (M. Bell pers. comm. 2010).",
+    "measures": "<p>There are a number of species-specific conservation measures in place to regulate the fishery of this species. Management strategies include: minimum legal sizes for harvest; restrictions on fishing gear type type and mesh size; total allowable catch limits (TAC) (Bell, Redant and Tuck 2006).<br/><br/></p>",
+    "use_trade": "This species is commercially harvested as a human food source throughout much of its range.",
+    "rationale": "<span style=\"font-style: italic;\">Nephrops norvegicus</span> has been assessed as Least Concern. This is a widespread species that is found in commercial quantities throughout its range. It is commercially harvested as a food source throughout its range and while stocks are in decline in some parts of its range, stocks appear to be stable in the northern fisheries which constitute the greater proportion of the population.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Soft Substrate"
+      },
+      "code": "11_1_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Deep Benthic - Continental Slope/Bathyl Zone (200-4,000m)"
+      },
+      "code": "11_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Ireland"
+      },
+      "code": "IRE-NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Great Britain"
+      },
+      "code": "GRB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Baleares"
+      },
+      "code": "BAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East Aegean Is."
+      },
+      "code": "EAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kriti"
+      },
+      "code": "KRI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_4_6"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Bell, C",
+      "value": [
+        "Michael Bell"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Collen, B., Livingstone, S. & Richman, N.",
+      "value": [
+        "Suzanne Livingstone (GMSA)",
+        "Ben Collen (SRLI)",
+        "Nadia Richman (Sampled Red List Index project)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Batchelor, A., De Silva, R., Dyer, E., Kasthala, G., Lutz, M.L., McGuinness, S., Milligan, H.T., Soulsby, A.-M. & Whitton, F.",
+      "value": [
+        "Anne-Marie Soulsby (Institute of Zoology, Zoological Society of London)",
+        "Alison Batchelor (SRLI)",
+        "Felix Whitton (Institute of Zoology, Zoological Society of London)",
+        "Ellen Dyer (Zoological Society of London)",
+        "Gita  Kasthala",
+        "Shane McGuinness",
+        "Ranmali De Silva (IOZ)",
+        "Harriet Milligan (IOZ)",
+        "Maiko Lutz (IUCN Red List Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Holthuis, L.B. 1991. <i>Marine lobsters of the world. An annotated and illustrated catalogue of species of interest to fisheries known to date</i>. FAO species catalogue 13(125). FAO, Rome.",
+      "year": "1991",
+      "title": "Marine lobsters of the world. An annotated and illustrated catalogue of species of interest to fisheries known to date",
+      "author": "Holthuis, L.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Bell, M.C., Redant, F. and Tuck, I. 2006. Nephrops Species. In: Phillips, B.F. (ed.), <i>Lobsters : biology, management, aquaculture, and fisheries</i>, pp. 412-461. Blackwell Publishing, Oxford.",
+      "year": "2006",
+      "title": "Nephrops Species",
+      "author": "Bell, M.C., Redant, F. and Tuck, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Orsi Relini, L., Zamboni, A., Fiorentino, F. and Massi, D. 1998. Reproductive patterns in Norway lobster Nephrops norvegicus (L.) of different Mediterranean areas. <i>Scientia Marina</i> 62(1): 25-41.",
+      "year": "1998",
+      "title": "Reproductive patterns in Norway lobster Nephrops norvegicus (L.) of different Mediterranean areas",
+      "author": "Orsi Relini, L., Zamboni, A., Fiorentino, F. and Massi, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fisheries Research Services. 2009. Norway Lobster. Available at: <a href=\"http://www.marlab.ac.uk/Delivery/standalone.aspx?contentid=491\">http://www.marlab.ac.uk/Delivery/standalone.aspx?contentid=491</a>. (Accessed: 16th November).",
+      "year": "2009",
+      "title": "Norway Lobster",
+      "author": "Fisheries Research Services",
+      "citation_short": null
+    },
+    {
+      "citation": "Froglia, C. and Gramitto, M. E. 1981. Summary of biological parameters on the Norway lobster, Nephrops norvegicus (L.), in the Adriatic. <i>FAO Fish. Rep.</i> 253: 165 – 178.",
+      "year": "1981",
+      "title": "Summary of biological parameters on the Norway lobster, Nephrops norvegicus (L.), in the Adriatic",
+      "author": "Froglia, C. and Gramitto, M. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICES. 2004. Report of the Working Group on Nephrops Stocks. ICES CM 2004/ACFM:19 (mimeo).",
+      "year": "2004",
+      "title": "Report of the Working Group on Nephrops Stocks",
+      "author": "ICES",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2010. Species Fact Sheet. Available at: <a href=\"http://www.fao.org/fishery/species/2647/en\">http://www.fao.org/fishery/species/2647/en</a>. (Accessed: 27th February).",
+      "year": "2010",
+      "title": "Species Fact Sheet",
+      "author": "FAO",
+      "citation_short": ""
+    },
+    {
+      "citation": "ICES. 2003. Report of the Working Group on Nephrops Stocks. ICES CM 2003/ACFM:18 (mimeo).",
+      "year": "2003",
+      "title": "Report of the Working Group on Nephrops Stocks",
+      "author": "ICES",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

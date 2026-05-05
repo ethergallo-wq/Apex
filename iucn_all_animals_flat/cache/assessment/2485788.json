@@ -1,0 +1,572 @@
+{
+  "assessment_date": "2012-05-07T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 197460,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/197460/2485788",
+  "citation": "Wilson, L.D., Nicholson, K. & Flores-Villela, O. 2016. Basiliscus vittatus. The IUCN Red List of Threatened Species 2016: e.T197460A2485788. Accessed on 05 May 2026.",
+  "assessment_id": 2485788,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 197460,
+    "scientific_name": "Basiliscus vittatus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "CORYTOPHANIDAE",
+    "genus_name": "Basiliscus",
+    "species_name": "vittatus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Wiegmann, 1828",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Brown Basilisk",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs at low and moderate elevations from Jalisco on the Pacific versant, and from northern Taumalipas on the Atlantic versant of Mexico, south and east through Central America, exclusive of the Pacific versant of southern Nicaragua, Costa Rica, and southwestern Panama; it has also introduced and established in southern Florida. Two records exist for Colombia, however these are misidentifications (Gutiérrez-Cárdenas <em>et al</em>. in review); previous references to this species' occurrence in northwestern Colombia are considered to be in error (Savage 2002). In the Yucatan Peninsula, it is pan-peninsular. It occurs at elevations from about sea level up to about 1,500 meters (Koehler 2008).",
+    "population": "This is one of the most common reptiles throughout its range.",
+    "habitats": "This species can be found in tropical and subtropical wet, moist, and dry forest. It occurs in dense vegetation along the margin of practically any body of water.  It is very tolerant of disturbed habitats. It is an egg-laying species.",
+    "threats": "There are no known threats to this species.",
+    "measures": "Currently, this species is of relatively low conservation concern and does not require significant additional protection or major management, monitoring, or research action. Its range includes several protected areas.",
+    "use_trade": "This species appears in the international pet trade.",
+    "rationale": "Listed as Least Concern because it is very widespread, common, and very adaptable to habitat alteration, and its population is stable.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Wilson, L.D., Nicholson, K. & Flores-Villela, O.",
+      "value": [
+        "Kirsten Nicholson (Central Michigan University)",
+        "Larry Wilson (Centro Zamorano de Biodiversidad (formerly Miami-Dade Community University, Florida))",
+        "Oscar Flores-Villela (Museo de Zoologia, Fac. De Cienicas, UNAM, Mexico)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "NatureServe",
+      "value": [
+        " NatureServe (Red List Partner & Red List Authority)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wilson, L.D., Townsend, J.H. and Johnson, J.D. (eds). 2010. <i>Conservation of Mesoamerican Amphibians and Reptiles</i>. pp. 816. Eagle Mountain Publishing, Eagle Mountain, Utah.",
+      "year": "2010",
+      "title": "Conservation of Mesoamerican Amphibians and Reptiles",
+      "author": "Wilson, L.D., Townsend, J.H. and Johnson, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Savage, J.M. 2002. <i>The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas</i>. University of Chicago Press, Chicago.",
+      "year": "2002",
+      "title": "The Amphibians and Reptiles of Costa Rica: A Herpetofauna between two Continents, between two Seas",
+      "author": "Savage, J.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Köhler, G. 2003. <i>Reptiles of Central America</i>. Herpeton, Germany.",
+      "year": "2003",
+      "title": "Reptiles of Central America",
+      "author": "Köhler, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Köhler, G. 2008. <i>Reptiles of Central America, 2nd Edition</i>. Herpeton Verlag, Offenbach, Germany.",
+      "year": "2008",
+      "title": "Reptiles of Central America, 2nd Edition",
+      "author": "Köhler, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Campbell, J.A. 1998. <i>Amphibians and Reptiles of Northern Guatemala, the Yucatan and Belize</i>. University of Oklahoma Press, Norman, OK, USA.",
+      "year": "1998",
+      "title": "Amphibians and Reptiles of Northern Guatemala, the Yucatan and Belize",
+      "author": "Campbell, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lee, J.C. 1996. <i>The Amphibians and Reptiles of the Yucatan Peninsula</i>. Comstock Publishing Associates, Ithaca and London.",
+      "year": "1996",
+      "title": "The Amphibians and Reptiles of the Yucatan Peninsula",
+      "author": "Lee, J.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gutiérrez-Cárdenas, P.D.A., Caicedo-Portilla, J.R., Bolívar-G. W., Rivas, G.A., Urbina-Cardona, N., Bock, B.C., Bowles, P., Velasco, J.A., Arredondo, J.C., Calderón, M., Castañeda, M.R., Cisneros-Heredia, D.F., Daza, J.M., Hammerson, G., Jérez, A., Ortega, Páez, Á.M., V.P., Ramírez-Pinilla, M.P., Renjifo, J.M., Rodríguez, J., Tognelli, M., Young, J.B. and Zamora, J.G. In Review. Checklist, distributional summary, and bibliography of the non-avian reptiles of Colombia. <i>Zootaxa</i>.",
+      "year": "In Review",
+      "title": "Checklist, distributional summary, and bibliography of the non-avian reptiles of Colombia",
+      "author": "Gutiérrez-Cárdenas, P.D.A., Caicedo-Portilla, J.R., Bolívar-G. W., Rivas, G.A., Urbina-Cardona, N., Bock, B.C., Bowles, P., Velasco, J.A., Arredondo, J.C., Calderón, M., Castañeda, M.R., Cisneros-Heredia, D.F., Daza, J.M., Hammerson, G., Jérez, A., Ortega, Páez, Á.M., V.P., Ramírez-Pinilla, M.P., Renjifo, J.M., Rodríguez, J., Tognelli, M., Young, J.B. and Zamora, J.G.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

@@ -1,0 +1,996 @@
+{
+  "assessment_date": "2014-01-20T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 41766,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/41766/21285876",
+  "citation": "Butynski, T., Hoeck, H., Koren, L. & de Jong, Y.A. 2015. Procavia capensis. The IUCN Red List of Threatened Species 2015: e.T41766A21285876. Accessed on 05 May 2026.",
+  "assessment_id": 21285876,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 41766,
+    "scientific_name": "Procavia capensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "HYRACOIDEA",
+    "family_name": "PROCAVIIDAE",
+    "genus_name": "Procavia",
+    "species_name": "capensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Pallas, 1766)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Afrotheria Specialist Group (including aardvarks, hyrax, golden-moles, tenrecs and elephant-shrews or sengis)",
+        "url": "http://www.afrotheria.net/",
+        "description": "Co-Chairs: Andrew Taylor (email: taylor.wa@gmail.com) and not designated\nRed List Authority Coordinator: Was Matthew Child (m.child@sanbi.org.za), currently not designated.\nNewsletter: http://www.afrotheria.net/newsletter.html\n\nSee also: https://www.iucn.org/our-union/commissions/group/iucn-ssc-afrotheria-specialist-group"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Rock Dassie",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Daman de rocher",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Klipdas",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Klipdassie",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Klippschliefer",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Pimbe",
+        "language": "swa"
+      },
+      {
+        "main": false,
+        "name": "Shaphan",
+        "language": "heb"
+      },
+      {
+        "main": true,
+        "name": "Rock Hyrax",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Heterohyrax antineae Heim de Balsac & Bégouen, 1932",
+        "status": "New",
+        "genus_name": "Heterohyrax",
+        "species_name": "antineae",
+        "species_author": "Heim de Balsac & Bégouen, 1932",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cavia capensis Pallas, 1766",
+        "status": "ACCEPTED",
+        "genus_name": "Cavia",
+        "species_name": "capensis",
+        "species_author": "Pallas, 1766",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4300,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "35000000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The species is found throughout sub-Saharan Africa and northeast Africa, being discontinuously distributed from Senegal through southern Algeria (isolated population), Libya and Egypt (east of the Nile River) to central and southern Africa (excluding the Congo Basin forests) (Olds and Shoshani 1982, Hoeck and Bloomer 2013). <em>Procavia capensis</em> extends to the Arabian Peninsula, mainly in the west, and to Lebanon, Jordan, and Israel (Olds and Shoshani 1982, Harrison and Bates 1991, Shoshani 2005). Reports of the occurrence of this species in Turkey are in error, and there is no evidence for its current or historical occurrence in this country (Kryštufek and Vohralík 2001). Its occurrence in Syria also has not been confirmed (D. Kock pers. comm.).</p>",
+    "population": "Widespread and abundant in drier rocky areas of Africa and the Arabian Peninsula. In some areas, such as in Matopos in Zimbabwe and the Serengeti of Tanzania (where they have been well-studied), they are characterized by extreme local population fluctuations (Hoeck and Bloomer 2013). On Mount Kenya, where they are considered among the most conspicuous of mammals, average density has been estimated at 20 - 100 animals per km (Young and Evans 1993).",
+    "habitats": "<p><em>Procavia capensis</em> occupy a wide range of habitats, from arid deserts to rainforest, occurring from sea level to 4,300 m on Mount Kenya (Coe 1962, Young and Evans 1993); they are typically associated with rocky outcrops, cliffs or boulders (Hoeck and Bloomer 2013). They often occur in association with Bush Hyrax <em>Heterohyrax bruce</em>i (Hoeck 1975, Barry and Mundy 1988). The diet comprises a variety of grasses, forbs and shrubs, with a predilection for new shoots, buds, fruits and berries (Hoeck and Bloomer 2013). A comprehensive review of its biology and literature is presented in Olds and Shoshani (1982) and in Hoeck and Bloomer (2013).</p>",
+    "threats": "<p>There are no major threats to this species. However, it is hunted locally, and may have been extirpated in some smaller localities (Hoeck and Bloomer 2013, T.M. Butynski pers. comm.). In Israel, where the species is protected by law and has few natural enemies, their numbers have grown in cultivated areas and settlements, resulting in damage to crops and gardens and necessitating effective control measures (e.g., electric fences, culling) (Mendelssohn and Yom-Tov 1999, L. Koren pers. comm.).</p>",
+    "measures": "The species occurs in many large, well-protected areas across much of its range.",
+    "use_trade": "The Rock Hyrax is snared for skins and meat. Poached for sport and meat in Saudi Arabia. This hunting appears to be heavy at some sites and is likely a major cause of its current restricted distribution in the country (T.M. Butynski pers. comm.).",
+    "rationale": "<p>Listed as Least Concern in view of its wide distribution, the wide range of habitats it is supported by, presumed large populations, occurrence in a large number of big protected areas, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>This taxon is split into separate species by some authors, including Cape Hyrax <em>P. capensis</em>, Abyssinian Hyrax <em>P. habessinica</em>, Johnston’s Hyrax <em>P. johnstoni</em>, and Western Hyrax <em>P. ruficeps</em> (Hahn 1934, Kingdon 1971). Recent classifications recognize 17 subspecies. The validity of some of those is, however, ambiguous, and it is regarded here as monotypic, following more recent classifications (Olds and Shoshani 1982, Schlitter 1993, Shoshani 2005, Hoeck and Bloomer 2013).&#160;</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lesotho"
+      },
+      "code": "LS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zambia"
+      },
+      "code": "ZM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eswatini"
+      },
+      "code": "SZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malawi"
+      },
+      "code": "MW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Butynski, T., Hoeck, H., Koren, L. & de Jong, Y.A.",
+      "value": [
+        "Thomas Butynski (Bioko Biodiversity Protection Program)",
+        "Lee Koren (The Mina and Everand Goodman Faculty of Science,  Bar-Ilan University, Ramat-Gan, Israel)",
+        "Yvonne de Jong (Eastern Africa Primate Diversity Program, Nanyuki, Kenya)",
+        "Hendrik Hoeck (IUCN SC Afrotheria Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Taylor, A.",
+      "value": [
+        "Andrew Taylor (IUCN SSC Afrotheria Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Barry, R., Bloomer, P. & Shoshani, H.",
+      "value": [
+        "Paulette Bloomer (Department of Genetics, University of Pretoria, Pretoria, South Africa)",
+        "R. Barry (IUCN SSC Afrotheria Specialist Group)",
+        "H. Shoshani (IUCN SSC Afrotheria Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Koren, L.",
+      "value": [
+        "Lee Koren (The Mina and Everand Goodman Faculty of Science,  Bar-Ilan University, Ramat-Gan, Israel)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Harrison, D.L. and Bates, P.J.J. 1991. <i>The Mammals of Arabia</i>. Harrison Zoological Museum, Sevenoaks, UK.",
+      "year": "1991",
+      "title": "The Mammals of Arabia",
+      "author": "Harrison, D.L. and Bates, P.J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Skinner, J.D. and Chimimba, C.T. (eds). 2005. <i>The Mammals of the Southern African Subregion</i>. Cambridge University Press, United Kingdom, Cambridge.",
+      "year": "2005",
+      "title": "The Mammals of the Southern African Subregion",
+      "author": "Skinner, J.D. and Chimimba, C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kingdon, J. 1997. <i>The Kingdon Field Guide to African Mammals</i>. Academic Press, San Diego, California, USA.",
+      "year": "1997",
+      "title": "The Kingdon Field Guide to African Mammals",
+      "author": "Kingdon, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kingdon, J.S. 1971. <i>East African Mammals. An Atlas of Evolution in Africa</i>. Academic Press, London, UK.",
+      "year": "1971",
+      "title": "East African Mammals. An Atlas of Evolution in Africa",
+      "author": "Kingdon, J.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kryštufek, B. and Vohralík, V. 2001. <i>Mammals of Turkey and Cyprus</i>. Zgodovinsko drustvo za juzno Primorsko, Koper, Slovenia.",
+      "year": "2001",
+      "title": "Mammals of Turkey and Cyprus",
+      "author": "Kryštufek, B. and Vohralík, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bothma, J. du P. 1971. Order Hyracoidea. In: J. Meester and H.H. Setzer (eds), <i>The Mammals of Africa: An Identification Manual</i>, Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1971",
+      "title": "Order Hyracoidea",
+      "author": "Bothma, J. du P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schlitter, D.A. 1993. Order Hyracoidea. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference</i>, pp. 373-374. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1993",
+      "title": "Order Hyracoidea",
+      "author": "Schlitter, D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shoshani, J. 2005. Order Hyracoidea. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 87-89. The Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Order Hyracoidea",
+      "author": "Shoshani, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Young, T.P. and Evans, M.R. 1993. Alpine vertebrates of Mount Kenya, with particular notes on the rock hyrax. <i>Journal of the East Africa Natural History Society and National Museum</i> 82(202): 55-79.",
+      "year": "1993",
+      "title": "Alpine vertebrates of Mount Kenya, with particular notes on the rock hyrax",
+      "author": "Young, T.P. and Evans, M.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mendelssohn, H. and Yom-Tov, Y. 1999. <i>Mammalia of Israel</i>. The Israel Academy of Sciences and Humanities, Jerusalem.",
+      "year": "1999",
+      "title": "Mammalia of Israel",
+      "author": "Mendelssohn, H. and Yom-Tov, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boitani, L. 1998. <i>African Mammals Databank - A Databank for the Conservation and Management of the African Mammals</i>. Report to the Directorate-General for Development of the European Commission, Bruxelles.",
+      "year": "1998",
+      "title": "African Mammals Databank - A Databank for the Conservation and Management of the African Mammals",
+      "author": "Boitani, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Olds, N. and Shoshani, J. 1982. <i>Procavia capensis</i>. <i>Mammalian Species</i> 171: 1-7.",
+      "year": "1982",
+      "title": "<i>Procavia capensis</i>",
+      "author": "Olds, N. and Shoshani, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoeck, H.N. 1975. Differential feeding behavior of the sympatric hyrax <i>Procavia johnstoni</i> and <i>Heterohyrax brucei</i>. <i>Oecologia</i> 22: 15-49.",
+      "year": "1975",
+      "title": "Differential feeding behavior of the sympatric hyrax <i>Procavia johnstoni</i> and <i>Heterohyrax brucei</i>",
+      "author": "Hoeck, H.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoeck, H.N., Klein, H. and Hoeck, P. 1982. Flexible social organization in hyrax. <i>Zeitschrift für Tierpsychologie</i> 59: 265-298.",
+      "year": "1982",
+      "title": "Flexible social organization in hyrax",
+      "author": "Hoeck, H.N., Klein, H. and Hoeck, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barry, R.E. and Mundy, P.J. 1998. Population dynamics of two species of hyraxes in the Matobo National Park, Zimbabwe. <i>African Journal of Ecology</i> 36: 221-233.",
+      "year": "1998",
+      "title": "Population dynamics of two species of hyraxes in the Matobo National Park, Zimbabwe",
+      "author": "Barry, R.E. and Mundy, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoeck, H.N. and Bloomer, P. 2013. Rock Hyrax <i>Procavia capensis</i>. In: J.S. Kingdon, D.H.D. Happold, T.M. Butynski, M. Hoffmann, M. Happold and J. Kalina (eds), <i>Mammals of Africa. Vol. I: Introductory Chapters and Afrotheria</i>, pp. 166-171. Bloomsbury Publishing, London.",
+      "year": "2013",
+      "title": "Rock Hyrax <i>Procavia capensis</i>",
+      "author": "Hoeck, H.N. and Bloomer, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coe, M.J. 1962. Notes on the habits of the Mount Kenya hyrax (<i>Procavia johnstoni mackinderi</i> Thomas). <i>Proceedings of the Zoological Society of London</i> 138: 639-644.",
+      "year": "1962",
+      "title": "Notes on the habits of the Mount Kenya hyrax (<i>Procavia johnstoni mackinderi</i> Thomas)",
+      "author": "Coe, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 23 June 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015.2"
+    },
+    {
+      "citation": "Hahn, H. 1934. Die Familie der Procaviidae. <i>Zeitschift für Säugetierkunde</i> 9: 207-358.",
+      "year": "1934",
+      "title": "Die Familie der Procaviidae",
+      "author": "Hahn, H.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

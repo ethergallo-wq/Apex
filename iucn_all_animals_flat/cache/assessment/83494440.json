@@ -1,0 +1,419 @@
+{
+  "assessment_date": "2017-06-15T01:00:00.000+01:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 83494364,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/83494364/83494440",
+  "citation": "Melville, J. & Wilson, S. 2018. Pogona vitticeps. The IUCN Red List of Threatened Species 2018: e.T83494364A83494440. Accessed on 05 May 2026.",
+  "assessment_id": 83494440,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 83494364,
+    "scientific_name": "Pogona vitticeps",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "AGAMIDAE",
+    "genus_name": "Pogona",
+    "species_name": "vitticeps",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Ahl, 1926)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Central Bearded Dragon",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Central Bearded Dragon",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Amphibolurus vitticeps Ahl, 1926",
+        "status": "ACCEPTED",
+        "genus_name": "Amphibolurus",
+        "species_name": "vitticeps",
+        "species_author": "Ahl, 1926",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is found in the interior of all eastern continental states of Australia, with ranges extending to the eastern half of South Australia and the southeast of the Northern Territory (Cogger 2014).",
+    "population": "This species is locally common.",
+    "habitats": "This species can be found in a range of habitats from dry sclerophyll forests, eucalypt and <em>Callitris</em>&#160;woodlands, mallee and acacia scrubs, to sandplain and sandridge deserts (Cogger 2014).",
+    "threats": "This species is known to be preyed on by introduced foxes and feral cats (Read and Bowen 2001), but there are thought to be no major threats to the species.",
+    "measures": "There are no species specific conservation action, however its range does coincide with multiple protected areas.",
+    "use_trade": "This species and&#160;<em>Pogona henrylawsoni </em>are the most common agamid lizards&#160;the global pet trade (Ezaz <em>et al. </em>2005). It is widely captive-bred.",
+    "rationale": "Listed as Least Concern on the basis that this species is very widespread and locally common. Although it is very common in the international pet trade it is very widely captive-bred and is not considered to be subject to major threats.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Temperate"
+      },
+      "code": "8_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Vulpes vulpes",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": "Feral",
+      "virus": null,
+      "ias": "Felis catus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Melville, J. & Wilson, S.",
+      "value": [
+        "Steve Wilson",
+        "Jane Melville"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Harris, J.",
+      "value": [
+        "Jaclyn Harris (Monash University, Melbourne, Victoria, Australia (GRA - Australia))"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Luedtke, J.",
+      "value": [
+        "Jennifer Luedtke (Re:wild)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 June 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-1"
+    },
+    {
+      "citation": "Cogger, H.G. 2014. <i>Reptiles and Amphibians of Australia: Seventh Edition</i>. CSIRO Publishing, Collingwood, Victoria.",
+      "year": "2014",
+      "title": "Reptiles and Amphibians of Australia: Seventh Edition",
+      "author": "Cogger, H.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Read, J. and Bowen, Z. 2001. Population dynamics, diet and aspects of the biology of feral cats and foxes in arid South Australia. <i>Wildlife Research</i> 28(2): 195-203.",
+      "year": "2001",
+      "title": "Population dynamics, diet and aspects of the biology of feral cats and foxes in arid South Australia",
+      "author": "Read, J. and Bowen, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ezaz, T., Quinn, A.E., Miura, I., Sarre, S.D., Georges, A. and Marshall Graves, J.A. 2005. The dragon lizard <i>Pogona vitticeps</i> has ZZ/ZW micro-sex chromosomes. <i>Chromosome Research</i> 13(8): 763-778.",
+      "year": "2005",
+      "title": "The dragon lizard <i>Pogona vitticeps</i> has ZZ/ZW micro-sex chromosomes",
+      "author": "Ezaz, T., Quinn, A.E., Miura, I., Sarre, S.D., Georges, A. and Marshall Graves, J.A.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

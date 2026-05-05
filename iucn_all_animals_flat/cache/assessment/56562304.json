@@ -1,0 +1,554 @@
+{
+  "assessment_date": "2021-02-12T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 59074,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/59074/56562304",
+  "citation": "IUCN SSC Amphibian Specialist Group 2022. Amphiuma means. The IUCN Red List of Threatened Species 2022: e.T59074A56562304. Accessed on 05 May 2026.",
+  "assessment_id": 56562304,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 59074,
+    "scientific_name": "Amphiuma means",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "AMPHIUMIDAE",
+    "genus_name": "Amphiuma",
+    "species_name": "means",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Garden, 1821",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": true,
+        "name": "Two-toed Amphiuma",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Axolotus lacertinus (Jarocki, 1822)",
+        "status": "ACCEPTED",
+        "genus_name": "Axolotus",
+        "species_name": "lacertinus",
+        "species_author": "(Jarocki, 1822)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species can be found in the Coastal Plain of southeastern the United States of America from southeastern Virginia to Florida and into eastern Louisiana.",
+    "population": "The total adult population size for this species is unknown, but is thought to surely exceed 10,000 and might exceed 100,000 individuals (NatureServe 2020). The population trends is unknown.",
+    "habitats": "This species can be found in swamps, bayous, margins of muddy sloughs, cypress heads, drainage ditches, sluggish streams, wet meadows, muddy lakes; soft substrate for burrowing or thick aquatic vegetation important for shelter. Often uses crayfish burrows. It may leave water, especially on rainy nights; sometimes found under objects at water's edge. Eggs are laid under objects in damp place near water's edge or possibly in shallow water, or underground. This species has a free-living larval stage. Individuals were found in drainage ditches, suggesting at least a degree of tolerance to habitat degradation.",
+    "threats": "Widespread loss of wetlands for agricultural development undoubtedly has eliminated many local subpopulations, but the species remains common in many other areas (Petranka 1998). Despite being found in the international pet trade, it is unknown if current levels constitute a major threat to the species.",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species likely occurs in several protected areas.<br/><br/><strong><em>Conservation Needed</em></strong><br/>Improved habitat protection and site management, particularly of coastal plain wetlands, is recommended.<br/><strong><em><br/></em></strong><strong><em>Research Needed</em></strong><br/>Further research on this species' distribution, population size and trends is recommended.",
+    "use_trade": "This species has international commercial value in the pet trade, but no national commercial value.",
+    "rationale": "Listed as Least Concern in view of its wide distribution and presumed large population.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Unknown",
+      "internationalTrade": "Unknown",
+      "score": "Unknown",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "García, N.",
+      "value": [
+        "Nieves García (Former IUCN staff, affiliated through various projects)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Hammerson, G.A.",
+      "value": [
+        "Geoffrey Hammerson (NatureServe)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Naylor Warr, L.",
+      "value": [
+        "Lauren Naylor Warr (IUCN SSC Amphibian Red List Authority)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Blackburn, L., Nanjappa, P. and Lannoo, M.J. 2001. <i>An Atlas of the Distribution of U.S. Amphibians</i>. Ball State University, Muncie, IN, USA.",
+      "year": "2001",
+      "title": "An Atlas of the Distribution of U.S. Amphibians",
+      "author": "Blackburn, L., Nanjappa, P. and Lannoo, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bartlett, R.D. and Bartlett, P.P. 1999. <i>A Field Guide to Florida Reptiles and Amphibians</i>. Gulf Publishing Company, Houston, TX, USA.",
+      "year": "1999",
+      "title": "A Field Guide to Florida Reptiles and Amphibians",
+      "author": "Bartlett, R.D. and Bartlett, P.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Frost, D.R. 1985. <i>Amphibian Species of the World: A Taxonomic and Geographic Reference</i>. Allen Press and the Association of Systematic Collections, Lawrence, Kansas.",
+      "year": "1985",
+      "title": "Amphibian Species of the World: A Taxonomic and Geographic Reference",
+      "author": "Frost, D.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tobey, F.J. 1985. <i>Virginia's amphibians and reptiles: a distributional survey</i>. Virginia Herpetological Survey, Virginia.",
+      "year": "1985",
+      "title": "Virginia's amphibians and reptiles: a distributional survey",
+      "author": "Tobey, F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Conant, R. and Collins, J.T. 1991. <i>A Field Guide to Reptiles and Amphibians: Eastern and Central North America. Third Edition</i>. Houghton Mifflin Company, Boston, Massachusetts.",
+      "year": "1991",
+      "title": "A Field Guide to Reptiles and Amphibians: Eastern and Central North America. Third Edition",
+      "author": "Conant, R. and Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Martof, B.S., Palmer, W.M., Bailey, J.R. and Harrison III, J.R. 1980. <i>Amphibians and Reptiles of the Carolinas and Virginia</i>. University of North Carolina Press, Chapel Hill, North Carolina.",
+      "year": "1980",
+      "title": "Amphibians and Reptiles of the Carolinas and Virginia",
+      "author": "Martof, B.S., Palmer, W.M., Bailey, J.R. and Harrison III, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mount, R.H. 1975. <i>The Reptiles and Amphibians of Alabama</i>. Auburn University Agricultural Experiment Station, Auburn, Alabama.",
+      "year": "1975",
+      "title": "The Reptiles and Amphibians of Alabama",
+      "author": "Mount, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petranka, J.W. 1998. <i>Salamanders of the United States and Canada</i>. Smithsonian Institution Press, Washington, D.C.",
+      "year": "1998",
+      "title": "Salamanders of the United States and Canada",
+      "author": "Petranka, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Behler, J.L. and King, F.W. 1979. <i>The Audubon Society Field Guide to North American Reptiles and Amphibians</i>. New York.",
+      "year": "1979",
+      "title": "The Audubon Society Field Guide to North American Reptiles and Amphibians",
+      "author": "Behler, J.L. and King, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dundee, H.A. and Rossman, D.A. 1989. <i>The Amphibians and Reptiles of Louisiana</i>. Louisiana State University Press, Baton Rouge, LA, USA.",
+      "year": "1989",
+      "title": "The Amphibians and Reptiles of Louisiana",
+      "author": "Dundee, H.A. and Rossman, D.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salthe, S.N. 1973. Amphiuma means. <i>Catalogue of American Amphibians and Reptiles</i>: 1-2.",
+      "year": "1973",
+      "title": "Amphiuma means",
+      "author": "Salthe, S.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karlin, A.A. and Means, D.B. 1994. Genetic variation in the aquatic salamander genus <i>Amphiuma</i>. <i>American Midland Naturalist</i>: 1-9.",
+      "year": "1994",
+      "title": "Genetic variation in the aquatic salamander genus <i>Amphiuma</i>",
+      "author": "Karlin, A.A. and Means, D.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "NatureServe. 2009. NatureServe Explorer: An online encyclopedia of life. Arlington, Virginia Available at: <a href=\"http://www.natureserve.org/explorer/\">http://www.natureserve.org/explorer/</a>. (Accessed: February 2010).",
+      "year": "2009",
+      "title": "NatureServe Explorer: An online encyclopedia of life",
+      "author": "NatureServe",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

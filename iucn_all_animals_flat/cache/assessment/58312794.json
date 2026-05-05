@@ -1,0 +1,2964 @@
+{
+  "assessment_date": "2022-07-15T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 135631,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/135631/58312794",
+  "citation": "Ford, M. 2024. Esox lucius. The IUCN Red List of Threatened Species 2024: e.T135631A58312794. Accessed on 05 May 2026.",
+  "assessment_id": 58312794,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 135631,
+    "scientific_name": "Esox lucius",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "ESOCIFORMES",
+    "family_name": "ESOCIDAE",
+    "genus_name": "Esox",
+    "species_name": "lucius",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Brochet",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Europinė lydeka",
+        "language": "lit"
+      },
+      {
+        "main": false,
+        "name": "Gädda",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "Gedde",
+        "language": "dan"
+      },
+      {
+        "main": false,
+        "name": "Gjedde",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Haugi",
+        "language": "lav"
+      },
+      {
+        "main": false,
+        "name": "Haugi",
+        "language": "est"
+      },
+      {
+        "main": false,
+        "name": "Hauki",
+        "language": "fin"
+      },
+      {
+        "main": false,
+        "name": "Hecht",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Luccio",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Lúcio",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Lucio europeo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ščuka",
+        "language": "slv"
+      },
+      {
+        "main": false,
+        "name": "Snoek",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Štika obecná",
+        "language": "cze"
+      },
+      {
+        "main": false,
+        "name": "Ştiucă",
+        "language": "rum"
+      },
+      {
+        "main": false,
+        "name": "Štuka",
+        "language": "bos"
+      },
+      {
+        "main": false,
+        "name": "Štuka",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Szczupak pospolity",
+        "language": "pol"
+      },
+      {
+        "main": false,
+        "name": "Turna balığı",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "اردک ماهي",
+        "language": "per"
+      },
+      {
+        "main": false,
+        "name": "البايك الشمالي",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Τούρνα",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "Штука",
+        "language": "scc"
+      },
+      {
+        "main": false,
+        "name": "Штука",
+        "language": "mac"
+      },
+      {
+        "main": false,
+        "name": "Щука",
+        "language": "bul"
+      },
+      {
+        "main": false,
+        "name": "Щу́ка",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "北梭子鱼",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Northern Pike",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Esox lucius var. atrox Anikin, 1902",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "lucius",
+        "species_author": null,
+        "infrarank_author": "Anikin, 1902",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "atrox"
+      },
+      {
+        "name": "Esox australis Valenciennes, 1846",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "australis",
+        "species_author": "Valenciennes, 1846",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Esox reichertii var. baicalensis Dybowski, 1874",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "reichertii",
+        "species_author": null,
+        "infrarank_author": "Dybowski, 1874",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "baicalensis"
+      },
+      {
+        "name": "Esox lucius ssp. bergi Kaganowsky, 1933",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "lucius",
+        "species_author": null,
+        "infrarank_author": "Kaganowsky, 1933",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "bergi"
+      },
+      {
+        "name": "Esox boreus Agassiz, 1850",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "boreus",
+        "species_author": "Agassiz, 1850",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Esox depraudus Lesueur, 1846",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "depraudus",
+        "species_author": "Lesueur, 1846",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Esox estor Lesueur, 1818",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "estor",
+        "species_author": "Lesueur, 1818",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Esox lucioides Agassiz & Girard, 1850",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "lucioides",
+        "species_author": "Agassiz & Girard, 1850",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Esox lugubrosus Lesueur, 1846",
+        "status": "ACCEPTED",
+        "genus_name": "Esox",
+        "species_name": "lugubrosus",
+        "species_author": "Lesueur, 1846",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Luccius vorax Rafinesque, 1810",
+        "status": "ACCEPTED",
+        "genus_name": "Luccius",
+        "species_name": "vorax",
+        "species_author": "Rafinesque, 1810",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": null,
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Unknown"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species has a Holarctic native range, occurring throughout much of Europe, Northern and Central Asia, and North America. <br/><br/>In the European Atlantic basin it occurs from southern Norway south to the Charente River system in western France, and throughout Great Britain with the exception of northeastern Scotland. The issue of whether it is native in Ireland has been the subject of  scientific debate, but the island is included in the native range here pending resolution of the issue.  It also inhabits the Baltic, White, and Black Sea basins, including northern Türkiye in the latter. It is naturally absent from far-northern parts of Scandinavia, the Kola Peninsula, southwestern France, and the Mediterranean basin except for the Rhône River system.<br/><br/>In Central Asia it is native to the Caspian Sea basin, southwestern Russia, and northern Kazakhstan. In northern Asia it is present throughout the majority of Siberia, plus portions of the upper Ob River in Xinjiang Uygur Autonomous Region, China, and the upper Yenisey River system in northern Mongolia.<br/><br/>In North America it occurs across the bulk of Canada, but is absent from the Maritime provinces, Newfoundland, northeastern Labrador, and most of British Columbia. In the South Saskatchewan River, its range also extends into the state of Montana, northern United States. Elsewhere in the United States, it is widespread in the trans-boundary Great Lakes system, and parts of the Mississippi River system in the states of Wyoming, Colorado, North Dakota, South Dakota, Nebraska, Kansas, Minnesota, Iowa, Missouri, Wisconsin, and Illinois. <br/><br/>This species has been extensively introduced to areas outside its native range in the Mediterranean basin, eastern Africa, and North America (see 'Use and Trade'). However, a map comprehensively illustrating its current non-native distribution could not be produced within the scope of this assessment due to a lack of oversight regarding unofficial introductions, and the species' status in Africa.",
+    "population": "This species' global population trend has not been explicitly quantified, but it is estimated to be undergoing a slow contraction (see 'Threats'). Conspicuous local declines have been recorded in some areas, e.g., the Baltic Sea and Great Lakes (see 'Threats'), but the species remains widespread and often abundant throughout the majority of its range.",
+    "habitats": "This large-bodied species naturally inhabits lentic and sluggish  lotic habitats such as lowland river and stream channels, floodplains, and natural lakes, but also some brackish coastal waters. It prefers relatively clear, shallow water with submerged woody structures and dense macrophyte beds. It is eurytopic, and able to breed prolifically in  artificial lakes, ponds, and canals while tolerating diverse physical and chemical water parameters, including variations in temperature,  oxygen concentration, salinity, and pH. Some northern subpopulations spend the winter months beneath ice cover, and in extreme conditions may undertake seasonal migrations.<br/><br/>Like other members of the genus <em>Esox</em>, the Northern Pike is an obligate ambush predator, employing a \"sit-and-wait\" hunting strategy and feeding primarily on other soft-rayed fishes. However, it will also prey opportunistically on aquatic invertebrates, amphibians, small mammals, and waterfowl. Within the native range it has been widely-identified as a keystone piscivore that plays an important role in \"top-down\" structuring of freshwater fish communities. Cannibalism and kleptoparasitism (i.e., stealing of prey) are also commonplace, and play important regulatory roles in terms of population structure and young-of-year recruitment. Although most often associated with structurally-complex habitats, this species  can utilise a wide range of environments while foraging, and is also known to hunt in open  water. <br/><br/>Where the Northern Pike has been artificially introduced (see 'Use and Trade'), it is generally considered to be invasive. Its opportunistic predation behaviour can drive significant reductions and even localised extirpations of native fish and other aquatic species, particularly those with similar habitat preferences. It has also repeatedly demonstrated an ability to target multiple alternative taxa once preferred prey species populations have been depleted or lost, leading to declines in aquatic biodiversity, disruption of behavioural responses and food webs in native species, and in the case of excessive predation on salmon, loss of marine-derived nutrient inputs into riparian environments.<br/><br/>The Northern Pike&#160;is long-lived and can reach at least 30 years of age.  Within the native range sexual maturity is attained between 1-6 years of age, with the precise timing dependant on a range of factors including latitude, temperature, food availability and growth rate. Females tend to grow faster and attain a larger size than males, and old individuals can weigh more than 20 kg. Spawning occurs from late winter to spring, when water temperatures reach 8-12°C, along inundated shorelines, backwaters and in floodplains. In fluvial systems, adults may  migrate some distance up tributaries in search of suitable spawning habitat.  It is a  highly fecund, fractional (i.e., females release batches of eggs at  intervals during the reproductive period) spawner, and fully-mature  females can produce tens of thousands of eggs per year. These are  released among dense vegetation such as grasses or sedges, with individual females often courted by several males. Hatched larvae possess an adhesive nasal gland which they use to attach vertically to macrophytes and other submerged surfaces until the yolk is absorbed. Once free-swimming they feed on zooplankton for 7-10 days before progressing to aquatic invertebrate larvae, and later small fishes. Young-of-the-year remain closely associated with submerged vegetation for a number of months post-hatching.<br/><br/>This species is able to hybridise with other esocids, and some translocated subpopulations thus represent a major threat to range-restricted congeners, e.g., <em>E. aquitanicus</em> and <em>E. cisalpinus</em> in southern Europe.",
+    "threats": "Anthropogenic habitat changes such as loss of wetlands, reduction of shoreline cover and structure, eutrophication, and siltation have negatively affected the production of Northern Pike&#160;in some areas, such as the Great Lakes and Baltic Sea. <br/><br/>These declines have been associated with changes in water and nutrient levels, temperature, shoreline development, watershed alterations, siltation, aquatic vegetation cover, and overfishing by both commercial and  recreational fisheries. <br/><br/>The loss of marginal, temporarily-inundated wetlands has in some cases severely reduced the extent of suitable spawning and nursery habitat, while increased eutrophication and turbidity negatively affect feeding and reduce the growth of macrophytes which provide cover for Northern Pike&#160;and their prey. <br/><br/>For example, in the Baltic Sea  commercial catches have declined by c. 80% since the 1950s, and  recreational angling data suggests a significant decline in large  individuals since around 1990. The latter decline may have been driven by increased mortality from recreational fisheries, which at the time did not tend to practice catch-and-release. However, despite a reduction in recreational landings since official measures were introduced during the 2000s (see 'Conservation') the decline has continued, suggesting a combination of causal factors. Among these, increases in the abundance of Grey Seal (<em>Halichoerus grypus</em>) and Great Cormorant (<em>Phalacrocorax carbo</em>) are likely to have contributed to dwindling numbers of Northern Pike&#160;and other piscivorous species such as European Perch (<em>Perca fluviatilis</em>). These declining stocks have given rise to a predator-prey reversal effect, whereby reduced predation pressure in combination with increased eutrophication and water temperature have favoured the dominance of Three-spined Stickleback (<em>Gasterosteus aculeatus</em>). This small mesopredator has increased by more than 50 times along some Baltic coastlines since the early 1990s, and inhibits Northern Pike recruitment by feeding on eggs and larvae, while driving a trophic cascade that further reduces the extent of suitable pike habitat.",
+    "measures": "Many Northern Pike&#160;subpopulations are actively managed, particularly those that are already depleted or where overexpolitation is a concern. The three primary strategies employed are implementation of fisheries restrictions to manage mortality, habitat management and restoration, and stocking.<br/><br/>Typical fisheries restrictions include closed seasons, bag limits and minimum size restrictions, as well as regulations to minimise bycatch. In some cases, e.g., the Great Lakes during the 1970s, fisheries have been entirely closed to allow stock recovery. There has also been an increase in catch-and-release practices in recreational fisheries.<br/><br/>Restoration efforts to improve habitat for Northern Pike&#160;has been ongoing within its North American range for a number of decades, and since the turn of the 21st century have also been carried out in Denmark and Sweden. Specific management procedures include dredging of channels, excavation of riverbanks to re-establish temporal wetlands, installation of control structures to artificially manipulate water levels, manual planting of emergent vegetation, and removal of herbivorous fish species such as carp to permit macrophyte regrowth.<br/><br/>Stocking efforts for conservation purposes tend to target severely depleted subpopulations, and involve the release of large numbers of wild or cultured age-0 fish within a short time period. Many such restocking efforts have the long-term aim that the re-established stock can later be exploited by fisheries. However, in waterbodies where Northern Pike&#160;reproduce on a natural basis, stocking has rarely proven successful in terms of increasing subpopulation size.",
+    "use_trade": "This species is heavily exploited by recreational and commercial fisheries, particularly in Eurasia and North America. It has thus been widely-stocked both within and outside its native range, with such efforts sometimes driven by concerns over recruitment due to loss of spawning habitat. These introductions include legitimate translocations by official entities in order to establish sports fisheries or aquaculture facilities, plus illegal stockings by private citizens. In parts of the United States it has also been stocked for biocontrol of invasive carp (<em>Cyprinus</em> spp.), and in Europe to improve water quality through predation of zooplanktivores.<br/><br/>Recreational fishing for trophy-sized Northern Pike&#160;has increased notably since the mid-20<sup>th</sup> century, and it is now a lucrative industry. For example, a 2015 economic study estimated that Northern Pike&#160;angling in Ireland contributes c. $102 million annually to the country's economy. There also exists a growing international market for specialised pike fishing gear, lures, and other equipment.<br/><br/>Conversely, in Alaska (United States) some formerly thriving salmon fisheries worth millions of dollars have collapsed following the illegal introduction and establishment of Northern Pike&#160;in areas outside its native range, and c. $3.7 million was spent on control and removal efforts between 2011 and 2016 alone. Elsewhere, a single eradication project in Lake Davis, California, cost c. $33 million dollars to carry out. An additional unfavourable outcome of such translocations is that when preferred prey species are sufficiently depleted, Northern Pike&#160;subpopulations become prone to stunting, and smaller individuals are not targeted by recreational anglers.<br/><br/>Recreational fisheries managers therefore face a difficult and occasionally politicised state of affairs in which they must balance possible long-term ecosystem consequences with potential economic benefits from pike introductions. This is complicated by intricate biological and social concerns, and it frequently causes conflict between resource users, fisheries managers, and conservationists.<br/><br/>Annual commercial harvest of Northern Pike&#160;ranges between 20,000-40,000 tonnes, the majority of which occurs throughout the northern portion of its range in both Europe and North America. A general decline in use of the species as a food fish in recent decades has led to reduced offtake in some regions, e.g., the Baltic Sea, although this may also be linked to localised subpopulation declines (see 'Threats'). In North America it is sold both fresh and frozen, typically minced or as fillets. In the European Union, particularly France,  it is normally marketed as frozen fillets, whereas elsewhere in Europe, e.g., Russia, it is sold fresh. <br/><br/>The Northern Pike&#160;is not commonly cultivated for human consumption due to issues arising from cannibalism, but fingerlings and fry are widely produced for stocking purposes.",
+    "rationale": "The Northern Pike&#160;remains extant throughout its extensive natural range. Although the global population is estimated to be declining, this trend is not believed to approach the threshold for any threat category, and the overall population size remains very large. It is therefore assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Freshwater Lakes"
+      },
+      "code": "13_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Aquaculture Ponds"
+      },
+      "code": "15_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turkmenistan"
+      },
+      "code": "TM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "YUG-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Manitoba"
+      },
+      "code": "MAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nagorno-Karabakh"
+      },
+      "code": "TCS-NK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gruziya"
+      },
+      "code": "TCS-GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alberta"
+      },
+      "code": "ABT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "TCS-AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Columbia"
+      },
+      "code": "BRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kosovo"
+      },
+      "code": "YUG-KO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azerbaijan"
+      },
+      "code": "AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Québec"
+      },
+      "code": "QUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northwest Territories"
+      },
+      "code": "NWT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yukon"
+      },
+      "code": "YUK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Adzhariya"
+      },
+      "code": "TCS-AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Abkhaziya"
+      },
+      "code": "TCS-AB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saskatchewan"
+      },
+      "code": "SAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nakhichevan"
+      },
+      "code": "TCS-NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Newfoundland I"
+      },
+      "code": "NFL-NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Armenia"
+      },
+      "code": "AM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Asia"
+      },
+      "code": "TUR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colorado"
+      },
+      "code": "COL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Dakota"
+      },
+      "code": "NDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Dakota"
+      },
+      "code": "SDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wyoming"
+      },
+      "code": "WYO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minnesota"
+      },
+      "code": "MIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nebraska"
+      },
+      "code": "NEB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wisconsin"
+      },
+      "code": "WIS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Mexico"
+      },
+      "code": "NWM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montana"
+      },
+      "code": "MNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "California"
+      },
+      "code": "CAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arizona"
+      },
+      "code": "ARI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Hampshire"
+      },
+      "code": "NWH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ohio"
+      },
+      "code": "OHI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maine"
+      },
+      "code": "MAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Washington"
+      },
+      "code": "WAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nevada"
+      },
+      "code": "NEV-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Delaware"
+      },
+      "code": "DEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oregon"
+      },
+      "code": "ORE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rhode Island"
+      },
+      "code": "RHO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Connecticut"
+      },
+      "code": "CNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Idaho"
+      },
+      "code": "IDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Utah"
+      },
+      "code": "UTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vermont"
+      },
+      "code": "VER-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Xinjiang"
+      },
+      "code": "CHX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Khabarovsk"
+      },
+      "code": "KHA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kaliningrad"
+      },
+      "code": "BLT-KA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dagestan"
+      },
+      "code": "NCS-DA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Buryatiya"
+      },
+      "code": "BRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central European Russia"
+      },
+      "code": "RUC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Stavropol"
+      },
+      "code": "NCS-ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Irkutsk"
+      },
+      "code": "IRK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amur"
+      },
+      "code": "AMU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chechnya"
+      },
+      "code": "NCS-CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Severo-Osetiya"
+      },
+      "code": "NCS-SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krasnodar"
+      },
+      "code": "NCS-KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuva"
+      },
+      "code": "TVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central Asian Russia"
+      },
+      "code": "RU-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East European Russia"
+      },
+      "code": "RUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eastern Asian Russia"
+      },
+      "code": "RU-EA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Magadan"
+      },
+      "code": "MAG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South European Russia"
+      },
+      "code": "RUS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kabardino-Balkariya"
+      },
+      "code": "NCS-KB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Karachaevo-Cherkessiya"
+      },
+      "code": "NCS-KC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krym"
+      },
+      "code": "KRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Altay"
+      },
+      "code": "ALT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ingushetiya"
+      },
+      "code": "NCS-IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yakutiya"
+      },
+      "code": "YAK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North European Russia"
+      },
+      "code": "RUN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krasnoyarsk"
+      },
+      "code": "KRA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northwest European Russia"
+      },
+      "code": "RUW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Siberia"
+      },
+      "code": "WSB-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Ford, M.",
+      "value": [
+        "Matthew Ford (Seriously Fish)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Freyhof, J.",
+      "value": [
+        "Jörg Freyhof (Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Kottelat, M.",
+      "value": [
+        "Maurice Kottelat (IUCN SSC Freshwater Fish Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Kottelat, M. and Freyhof, J. 2007. Handbook of European freshwater fishes. <i>Cornol, Switzerland, Publications Kottelat</i>:  i-xiii + 1-646.",
+      "year": "2007",
+      "title": "Handbook of European freshwater fishes",
+      "author": "Kottelat, M. and Freyhof, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Beaudoin, C.P., Tonn, W.M., Prepas, E.E. and Wassenaar, L.I. 1999. Individual specialization and trophic adaptability of northern pike (<i>Esox lucius</i>): an isotope and dietary analysis. <i>Oecologia</i> 120(3): 386-396.",
+      "year": "1999",
+      "title": "Individual specialization and trophic adaptability of northern pike (<i>Esox lucius</i>): an isotope and dietary analysis",
+      "author": "Beaudoin, C.P., Tonn, W.M., Prepas, E.E. and Wassenaar, L.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bergström, U., Larsson, S., Erlandsson, M., Ovegård, M., Stabo, H.R., Östman, Ö. and Sundblad, G. 2022. Long-term decline in northern pike (<i>Esox lucius</i> L.) populations in the Baltic Sea revealed by recreational angling data. <i>Fisheries Research</i> 251: 106307.",
+      "year": "2022",
+      "title": "Long-term decline in northern pike (<i>Esox lucius</i> L.) populations in the Baltic Sea revealed by recreational angling data",
+      "author": "Bergström, U., Larsson, S., Erlandsson, M., Ovegård, M., Stabo, H.R., Östman, Ö. and Sundblad, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bergström, U., Olsson, J., Casini, M., Eriksson, B.K., Fredriksson, R., Wennhage, H. and Appelberg, M. 2015. Stickleback increase in the Baltic Sea - a thorny issue for coastal predatory fish. <i>Estuarine, Coastal and Shelf Science</i> 163(Part B): 134-142.",
+      "year": "2015",
+      "title": "Stickleback increase in the Baltic Sea - a thorny issue for coastal predatory fish",
+      "author": "Bergström, U., Olsson, J., Casini, M., Eriksson, B.K., Fredriksson, R., Wennhage, H. and Appelberg, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bianco, P.G. 2014. An update on the status of native and exotic freshwater fishes of Italy. <i>Journal of Applied Ichthyology</i> 30(1): 62-77.",
+      "year": "2014",
+      "title": "An update on the status of native and exotic freshwater fishes of Italy",
+      "author": "Bianco, P.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Casselman, J.M. and Lewis, C.A. 1996. Habitat requirements of northern pike (<i>Esox lucius</i>). <i>Canadian Journal of Fisheries and Aquatic Sciences</i> 53(S1): 161-174.",
+      "year": "1996",
+      "title": "Habitat requirements of northern pike (<i>Esox lucius</i>)",
+      "author": "Casselman, J.M. and Lewis, C.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Crane, D.P., Miller, L.M., Diana, J.S., Casselman, J.M., Farrell, J.M., Kapuscinski, K.L. and Nohner, J.K. 2015. Muskellunge and Northern Pike ecology and management: important issues and research needs. <i>Fisheries</i> 40(6): 258-267.",
+      "year": "2015",
+      "title": "Muskellunge and Northern Pike ecology and management: important issues and research needs",
+      "author": "Crane, D.P., Miller, L.M., Diana, J.S., Casselman, J.M., Farrell, J.M., Kapuscinski, K.L. and Nohner, J.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Denys, G.P.J., Dettai, A., Persat, H., Hautecœur, M. and Keith, P. 2014. Morphological and molecular evidence of three species of pikes <i>Esox</i> spp. (Actinopterygii, Esocidae) in France, including the description of a new species. <i>Comptes Rendus Biologies</i> 337(9): 521-534.",
+      "year": "2014",
+      "title": "Morphological and molecular evidence of three species of pikes <i>Esox</i> spp. (Actinopterygii, Esocidae) in France, including the description of a new species.",
+      "author": "Denys, G.P.J., Dettai, A., Persat, H., Hautecœur, M. and Keith, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eklöf, J.S., Sundblad, G., Erlandsson, M., Donadi, S., Hansen, J.P., Eriksson, B.K. and Bergström, U. 2020. A spatial regime shift from predator to prey dominance in a large coastal ecosystem. <i>Nature Communications Biology</i> 3(1): 1-9.",
+      "year": "2020",
+      "title": "A spatial regime shift from predator to prey dominance in a large coastal ecosystem",
+      "author": "Eklöf, J.S., Sundblad, G., Erlandsson, M., Donadi, S., Hansen, J.P., Eriksson, B.K. and Bergström, U.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ensing, D. 2015. Pike (<i>Esox lucius</i>) could have been an exclusive human introduction to Ireland after all: a comment on Pedreschi et al.(2014). <i>Journal of Biogeography</i> 42(3): 604-607.",
+      "year": "2015",
+      "title": "Pike (<i>Esox lucius</i>) could have been an exclusive human introduction to Ireland after all: a comment on Pedreschi et al.(2014)",
+      "author": "Ensing, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Larsson, P., Tibblin, P., Koch-Schmidt, P., Engstedt, O., Nilsson, J., Nordahl, O. and Forsman, A. 2015. Ecology, evolution, and management strategies of northern pike populations in the Baltic Sea. <i>AMBIO</i> 44(3): 451-461.",
+      "year": "2015",
+      "title": "Ecology, evolution, and management strategies of northern pike populations in the Baltic Sea",
+      "author": "Larsson, P., Tibblin, P., Koch-Schmidt, P., Engstedt, O., Nilsson, J., Nordahl, O. and Forsman, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lehtonen, H., Leskinen, E., Selen, R. and Reinikainen, M. 2009. Potential reasons for the changes in the abundance of pike, <i>Esox lucius</i>, in the western Gulf of Finland, 1939-2007. <i>Fisheries Management and Ecology</i> 16(6): 484-491.",
+      "year": "2009",
+      "title": "Potential reasons for the changes in the abundance of pike, <i>Esox lucius</i>, in the western Gulf of Finland, 1939-2007",
+      "author": "Lehtonen, H., Leskinen, E., Selen, R. and Reinikainen, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nilsson, J., Flink, H. and Tibblin, P. 2019. Predator-prey role reversal may impair the recovery of declining pike populations. <i>Journal of Animal Ecology</i> 88(6): 927-939.",
+      "year": "2019",
+      "title": "Predator-prey role reversal may impair the recovery of declining pike populations",
+      "author": "Nilsson, J., Flink, H. and Tibblin, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nilsson, P.A. and Brönmark, C. 1999. Foraging among cannibals and kleptoparasites: effects of prey size on pike behavior. <i>Behavioral Ecology</i> 10(5): 557-566.",
+      "year": "1999",
+      "title": "Foraging among cannibals and kleptoparasites: effects of prey size on pike behavior",
+      "author": "Nilsson, P.A. and Brönmark, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pedreschi, D. and Mariani, S. 2015. Towards a balanced view of pike in Ireland: a reply to Ensing. <i>Journal of Biogeography</i> 42(3): 607-609.",
+      "year": "2015",
+      "title": "Towards a balanced view of pike in Ireland: a reply to Ensing",
+      "author": "Pedreschi, D. and Mariani, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pedreschi, D., Kelly‐Quinn, M., Caffrey, J., O'Grady, M. and Mariani, S. 2014. Genetic structure of pike (<i>Esox lucius</i>) reveals a complex and previously unrecognized colonization history of Ireland. <i>Journal of Biogeography</i> 41(3): 548-560.",
+      "year": "2014",
+      "title": "Genetic structure of pike (<i>Esox lucius</i>) reveals a complex and previously unrecognized colonization history of Ireland",
+      "author": "Pedreschi, D., Kelly‐Quinn, M., Caffrey, J., O'Grady, M. and Mariani, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sepulveda, A.J., Rutz, D.S., Dupuis, A.W., Shields, P.A. and Dunker, K.J. 2015. Introduced northern pike consumption of salmonids in southcentral Alaska. <i>Ecology of Freshwater Fish</i> 24(4): 519-531.",
+      "year": "2015",
+      "title": "Introduced northern pike consumption of salmonids in southcentral Alaska",
+      "author": "Sepulveda, A.J., Rutz, D.S., Dupuis, A.W., Shields, P.A. and Dunker, K.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sepulveda, A.J., Rutz, D.S., Ivey, S.S., Dunker, K.J. and Gross, J.A. 2013. Introduced northern pike predation on salmonids in southcentral Alaska. <i>Ecology of Freshwater Fish</i> 22(2): 268-279.",
+      "year": "2013",
+      "title": "Introduced northern pike predation on salmonids in southcentral Alaska",
+      "author": "Sepulveda, A.J., Rutz, D.S., Ivey, S.S., Dunker, K.J. and Gross, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Skov, C. and Nilsson, P.A. (eds). 2018. Biology and Ecology of Pike. <i>CRC Press</i>: 1-410.",
+      "year": "2018",
+      "title": "Biology and Ecology of Pike",
+      "author": "Skov, C. and Nilsson, P.A. (eds)",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

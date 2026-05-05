@@ -1,0 +1,802 @@
+{
+  "assessment_date": "2025-06-17T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22696012,
+  "criteria": "A2cd+4cd; C2a(i)",
+  "url": "https://www.iucnredlist.org/species/22696012/273773083",
+  "citation": "BirdLife International 2025. Pithecophaga jefferyi. The IUCN Red List of Threatened Species 2025: e.T22696012A273773083. Accessed on 05 May 2026.",
+  "assessment_id": 273773083,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22696012,
+    "scientific_name": "Pithecophaga jefferyi",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "ACCIPITRIFORMES",
+    "family_name": "ACCIPITRIDAE",
+    "genus_name": "Pithecophaga",
+    "species_name": "jefferyi",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Ogilvie-Grant, 1897",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Great Philippine Eagle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Monkey-eating Eagle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Aguila Comemonos",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Aguila Monera",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Philippine Eagle",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": "11-100",
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "128-924",
+    "population_severely_fragmented": "Unknown",
+    "population_continuing_decline": "Yes",
+    "generational_length": "18.99",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "86-102 cm. Huge eagle with large, deep bill and elongated nape feathers forming shaggy crest. Dark face, creamy-buff crown and nape with black shaft-streaks. Rest of upperparts dark brown. White underparts and underwings. Pale grey iris, dark grey bill, yellow legs with huge dark claws. Juvenile as adult but upperpart feathers fringed pale. <strong>Voice</strong> Loud, high-pitched whistles. Begging juvenile gives regular series of high-pitched cries.<p></p>",
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": "3-6",
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "45-500",
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "540000-607000",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<em>Pithecophaga jefferyi</em> is endemic to the <strong>Philippines</strong>, where it is known from eastern Luzon, Samar, Leyte and Mindanao.<br/><br/>Territory sizes of this species are very large (pairs occupy 68-72 km<sup>2</sup>; Sutton <em>et al</em>. 2023, 2024) hence even a small population size necessarily has a very large area of occupancy. Sutton <em>et al</em>. (2023) estimated the extent of occurrence (EOO) to be 272,272-605,759 km<sup>2</sup>. Similar values (at the upper end of this range) are used here based on the mapped range. Sutton <em>et al</em>. (2023) estimated that there is 23,185 km<sup>2</sup> of suitable habitat (AOH) in this species' range, although because of persecution (Collar&#160;<em>et al</em>. 1999,&#160;Ibañez&#160;<em>et al</em>. 2016,&#160;Collar and Berryman 2025) not all of this is likely to be occupied.<p></p>",
+    "population": "The population size of this species is highly uncertain, in large part because of uncertainty regarding (1) the species' density away from its undoubted stronghold on Mindanao; and (2) the effect persecution and fragmentation has had on occupancy throughout its range.<br/><br/>Historical attempts to estimate this species' population size were reviewed by Collar <em>et al</em>. (1999); see also Collar and Berryman (2025). Kennedy (1977) suggested that there were 309 mature individuals on Mindanao but, allowing for the fact that not all habitat was likely to be occupied due to persecution, Krupa (1989) suggested a value of 89-222 pairs. Soon after this latter estimation was made, the species was confirmed still to occur on Luzon, Samar and Leyte. Evaluating a wide range of possible scenarios, in an attempt to illustrate the considerable uncertainty over the species' density, habitat use and occupancy, Collar <em>et al</em>. (1999) estimated that the global population size was 60-1,120 pairs, with a preferred best (and precautionary) estimate of 113 pairs (used also in BirdLife International [2001]).<br/><br/>Applying novel data collected on density to revised forest-cover figures, Bueser <em>et al</em>. (2003) estimated 175-233 or 82-146 pairs (depending on the calculation used) on Mindanao, but also commented that persecution meant not all forest would be occupied; as noted by Collar and Berryman (2025), a reduction of 40% (suggested by Krupa [1989]) to the smaller range yields a value of only 33-93 pairs on Mindanao.<br/><br/>Subsequent estimations were largely more optimistic. Concepcion <em>et al</em>. (2006) suggested that there were 'fewer than 500 pairs'; Salvador and&#160;Ibañez (2006) wrote that there was 'about 500 pairs'; Luczon <em>et al</em>. (2014) said there can be 'at most 500 [pairs]'; and Senarillos <em>et al</em>. (2021) suggested there were 'no more than 400 adult pairs'. Using eagle tracking data, Sutton <em>et al</em>. (2023) calculated a range-wide area of suitable habitat of 28,624 km<sup>2</sup> (much larger than suitable land cover estimations used in any of the previous estimates) and, dividing this value by home-range size data from Mindanao (72 km<sup>2</sup>), suggested a global population size of 318-447 pairs. Sutton <em>et al</em>. (2024) went on to revise the interpretation their average home-range size to 68 km<sup>2</sup>, yielding a slightly higher maximum global estimate of 387-462 pairs. Because these last two values were based on a maximum modelled area of suitable habitat, they should be considered a maximum.<br/><br/>Collar and Berryman (2025) suggested an alternative, lower population size. They&#160;reduced the area of suitable habitat from Sutton <em>et al</em>. (2023) from 28,624 km<sup>2</sup>&#160;to 21,848 km<sup>2</sup> by removing: areas above 2,000 m elevation; small, isolated patches of forest; and mapped habitat in the Zambales Mountains and Bicol Peninsula (two areas from which there are no recent or historical records). Second, they suggested that the density of birds on Luzon may be significantly lower than that on Mindanao given the absence of&#160;<em>Cynocephalus volans</em> (a major prey base on Mindanao) and comparative lack of records. Third, echoing Krupa (1989), they suggested that occupancy throughout the species' range is unlikely to be 100%. These adjustments led Collar and Berryman (2025) to suggest a global population size of 64-321 pairs, with a best estimate of 64-223 pairs, similar to previous estimates made by Krupa (1989) and Bueser <em>et al</em>. (2003).<br/><br/>Reconciling all the above estimations (which span almost an order of magnitude) is challenging, in large part because of an absence of robust data underpinning important facets including range-wide occupancy and suggested differences in density between Luzon and Mindanao. Notably, on Luzon and Mindanao, only 3 and 35 nests have been found in recent years, despite considerable survey effort (Ibañez<em> et al</em>. 2016, Collar and Berryman 2025).<br/><br/>The population size here, capturing all uncertainty, is estimated at 64-462 pairs or 128-924 mature individuals.&#160;The lower bound reflects the most pessimistic scenario from Collar and Berryman (2025), while the upper bound offers the most optimistic scenario from Sutton <em>et al</em>. (2023, 2024) which assumes all suitable habitat is occupied. More accurate data, particularly regarding the species' density on Luzon is needed, as is a better understanding of what percentage of suitable habitat is occupied.",
+    "habitats": "It inhabits primary dipterocarp forest, particularly in steep terrain, sometimes frequenting secondary growth and gallery forest (but not occupying open canopy forest), from lowlands to at least 1,800 m. On Mindanao the primary prey species is the Philippine Flying Lemur <em>Cynocephalus volans</em>, which is absent from Luzon where the species was found to prey on two endemic species of Cloud Rats (Hurrell 2014). A range of other prey are taken, including palm civets <em>Paradoxurus</em>, snakes, monitor lizards, birds, bats and monkeys (Clark <em>et al</em>. 2015). On Mindanao, eagles begin nesting from September to December in primary and disturbed forest, with some differences in the timing of breeding between Mindanao and Luzon (Ibañez <em>et al</em>. 2003)<strong></strong>. A complete breeding cycle lasts two years, with successful pairs raising one offspring (Ibañez <em>et al</em>. 2003)<strong></strong><strong></strong>. Birds form a monogamous bond for life with sexual maturity for females at around five years and for males at around seven years (<strong></strong>J. Ibanez <em>in litt. </em>2008)<strong></strong>. The young fledge after<em> c. </em>4-5 months, but stay in the nest vicinity for almost a year and a half (<strong></strong>J. Ibanez <em>in litt. </em>2008).<strong></strong> Captive birds have reached more than 40 years of age (<strong></strong>J. Ibanez <em>in litt. </em>2008)<strong></strong>. <p></p>",
+    "threats": "The main threats to this species are habitat loss and hunting. For most, if not all, of the 20th century, this species declined in response to considerable clear-felling of native forests for timber and, from approximately the late-1980s, due to widespread swidden agriculture (e.g. Collar <em>et al</em>. 1999, BirdLife International 2001, Suarez and Sajise 2010). This latter threat has continued, albeit at a rate lower than in the 1970s-1990s in part because there are now relatively few tracts of accessible lowland forest left (Global Forest Watch 2025). Mining concessions and severe weather events (De Win 2013) are more marginal threats. Declines have almost certainly been&#160;compounded by hunting and persecution, which is thought to have reduced occupancy across much of the species' range (Collar <em>et al</em>. 1999, Ibañez <em>et al</em>. 2016, Collar and Berryman 2025).<br/><br/><br/><p></p>",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>Listed in CITES Appendix I. Sutton <em>et al</em>. (2023) estimated that approximately one-third of their modelled area of suitable habitat for the Philippine Eagle occurred in protected areas, and approximately two-thirds was covered by the KBA network. The species is listed as Critically Endangered nationally and is legally protected in the Philippines (Panopio 2017).<br/><br/>Since 1970, various initiatives have been launched, including the passing of legislation prohibiting persecution and protecting nests, conducting survey work, public awareness campaigns, captive breeding and a socio-economic project to alleviate pressure on an eagle territory whilst increasing local economic prosperity. Haribon Foundation, the Species Guardian, has implemented an extensive program of education and outreach throughout Luzon, including engaging science teachers to develop a module including information on biodiversity and conservation with the Philippine Eagle as the flagship species. The project has engaged with 1,200 students and two indigenous communities (Hurrell 2014). Participation at regional events and radio broadcasts have also taken place. Additionally, slash and burn agriculture is regulated by a local ordinance in the forest in which an active nest was found on Luzon, and 'green guards' are used to protect the forest habitat (Ranada 2015).<br/><br/>The Philippine Eagle Foundation operates the Philippine Eagle Center, and the National Bird Breeding Sanctuary, the only two Philippine Eagle breeding and rehabilitation facilities in the world. Birds are rescued at the centres (e.g. four in 2021; PEF 2021) and released (if they can be) or used for captive-breeding.<br/><br/>The first Philippine Eagle Integrated Conservation Plan was published in 1996 and revised in 2008; the Biodiversity Management Bureau, Haribon Foundation, and the Philippine Eagle Foundation facilitated workshops with participation by Regional Eagle Watch Teams, representatives of Indigenous People's Organisations, and other other concerned organisations, to inform the development of the 2019-2024 conservation plan as part of the overarching framework for the Philippine Eagle Integrated Conservation Plan 2021-2030&#160;(DENR <em>et al.</em>&#160;2021). An Action Programme has also been developed including a 30-50 year vision and 5-10 year goals to achieve \"a bountiful, sustainable and ecologically balanced habitat of the Philippine eagle managed by participative, self-determined, empowered and environmentally-conscious community\" (Panopio 2017).<br/><strong><br/>Conservation Actions Proposed</strong><br/>Several actions are recommended in the 2021-2030 conservation plan for this species (DENR <em>et al</em>.&#160;2021) including: improve the enforcement of wildlife laws and increase financial support for their implementation; conduct regular monitoring in collaboration with relevant stakeholders; establish appropriate management of nesting territories inside and outside protected areas; establish sustainable livelihoods and incentives to local communities to help conserve and protect nests and forest habitats; increase awareness and foster support for this species and the conservation of habitat; conduct research on the species’ population/population densities, habitat characteristics and usage, diet and feeding habits, and breeding biology, with a particular focus on populations in Luzon, Samar and Leyte.<br/><br/>Additional actions include the conservation, protection, and restoration of habitat on Mt. Mingan through greater law enforcement and protection, sufficient monitoring, sustainable livelihoods, and improved funding (Panopio 2017). However, all remaining tracts of lowland forest in this species' range should be urgently protected, which will also confer significant benefits and extinction risk reduction for other threatened bird species in the Philippines. Additionally, monitoring should also focus on obtaining a more accurate global population size by better-understanding rates of occupancy across the range. Monitoring of the extent and trends of suitable habitat using remote sensing data should also continue. Additional research is also required to determine genetic differences between birds on Luzon and those on Mindanao, Samar and Leyte, for better knowledge informing the release of captively bred birds (Miranda <em>et al.</em> 2008).<br/><br/>On Mindanao, Sutton <em>et al</em>. (2023) proposed upgrading to protected areas (1) Mount Hilong-hilong, (2)&#160;Mount Kampalili-Putting Bato, (3) an extension of Mount Apo Natural Park into the northern part of the KBA, along with protected status for the adjacent Mount Latian complex and Mount Busa-Kiamba KBAs, and (4) the Mount Kaluayan–Mount Kinabalian Complex along with the adjacent Mount Balatukan, and the Mount Tago Range KBAs. They further suggested extensions into the&#160;Mount Piagayungan and Butig Mountains and Munai/Tambo KBAs. The same authors identified that most suitable habitat on Samar was already protected in Samar Island Natural Park, but recommended extending this boundary to the north-east. On Leyte, they recommended protection for the Anonang-Lobi Range. On Luzon, they recommended new protected areas be established.<p></p>",
+    "use_trade": "Uncontrolled hunting (for food and, at least formerly, zoo exhibits and trade) is a significant threat to this species (Collar <em>et al</em>. 1999,&#160;<strong></strong>Miranda&#160;<em>et al.</em>&#160;2008, Ibañez&#160;<em>et al</em>. 2016, Collar and Berryman 2025)<strong></strong>. Naïve juvenile birds are easily shot or trapped, as are adults nesting near forest edges (<strong></strong>J. Ibañez&#160;<em>in litt.&#160;</em>2008)<strong></strong><strong></strong>. Reports from Mindanao included 12 birds shot for food in 12 years by a single hunter (1957–1969), 14 shot in retaliation in four years (1966–1969) and 35 shot or captured in 40 months (1970–1973); on Luzon, a 7-week survey produced reports of 13 birds killed and five captured in the years 1970–1978 (Collar <em>et al</em>. 1999). Birds are also vulnerable to accidental capture in traps intended for wild pigs and deer, and there are several records of individuals caught in snares presumably whilst hunting on the forest floor (<strong></strong>J. Ibañez&#160;<em>in litt.&#160;</em>2008)<strong></strong><strong></strong>.",
+    "rationale": "This long-lived species qualifies as Critically Endangered because it has an extremely small population as a result of exceedingly rapid declines in the past three generations (57 years), owing to extensive deforestation and compounding effects of hunting/persecution. Recruitment to the adult population currently appears to be very low, indicating that declines may continue into the future.<p></p> <p></p>",
+    "trend_justification": "Before extensive deforestation in the range of Philippine Eagle commenced (around the start of the 20th century), this species was estimated to have a population size of up to 6,000 individuals (Collar <em>et al</em>. 1999, BirdLife International 2001). Today, even the most optimistic estimates (e.g.&#160;Salvador and Ibañez 2006, Senarillos&#160;<em>et al</em>. 2021, Sutton <em>et al</em>. 2024) suggest there are fewer than 500 pairs. Thus, whichever contemporary population size estimates prove accurate, Philippine Eagle has evidently undergone a catastrophic decline over the past 125 years. Much of this decline took place in response to considerable clear-felling of native forests for timber and, from approximately the late-1980s, due to widespread swidden agriculture (e.g. Collar <em>et al</em>. 1999, BirdLife International 2001, Suarez and Sajise 2010). These declines have been compounded by persecution, which is thought to have reduced occupancy across much of the species' range (Collar <em>et al</em>. 1999, Ibañez <em>et al</em>. 2016, Collar and Berryman 2025).<br/><br/>This species is long-lived and slow to breed with a generation length of 19 years; thus for assessment against IUCN Red List Criterion A (which considers a time-span of three generations), contemporary populations must be compared to predicted estimates of population size in <em>c</em>. 1968. Calculating rates of forest loss over this time period is difficult owing to differences in methodology, the underlying data used, and the definition of forest accepted (see Gabriel 2023). What is apparent is that while forest loss is ongoing (Apan <em>et al</em>. 2017, Global Forest Watch 2025), rates were probably most rapid in the 1970s and 1980s. The Forest Management Bureau (1988) estimated that the total percentage of forested land area in the Philippines declined from 34.9% in 1969 to 22.2% in 1987, a 36% reduction in only 19 years (i.e. one generation length of Philippine Eagle). This will have disproportionately affected lowland forests which are favoured by Philippine Eagles (Collar <em>et al</em>. 1999) and concomitantly will have increased accessibility of forests to hunters (Liu <em>et al</em>. 1993). Thus, while no population data are available, it is plausible that in this single generation, the population of Philippine Eagles could feasibly have halved. More recent estimations of forest cover are not necessarily comparable but the area of forest cover has been far more stable over the past 20 years (Gabriel 2023, Global Forest Watch 2025).<br/><br/>In the absence of robust monitoring data, the population of Philippine Eagles is precautionarily suspected of having declined by at least 50% over the past three generations. An even more precautionary upper bound of 90% is used, on the basis that rates of forest loss over the past three generations have very plausibly exceeded 50% (notwithstanding difficulties in accurate calculation), while the effects of persecution may have had considerable effects on density and occupancy across the species' range (Collar&#160;<em>et al</em>. 1999,&#160;Ibañez&#160;<em>et al</em>. 2016,&#160;Collar and Berryman 2025).<br/><br/>Rates of population decline over the future three generations are not estimated due to great uncertainty over projecting trends into the future. However, given that annual rates of forest loss have significantly slowed (Global Forest Watch 2025) and some conservation action is being implemented, rates of population decline are suspected likely to be slower than over the past three generations.",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Conserve, protect, and restore habitat on Mt. Mingan through greater law enforcement and protection, sufficient monitoring, sustainable livelihoods, and improved funding. However, all remaining tracts of lowland forest in this species' range should be urgently protected, which will also confer significant benefit and extinction risk reduction for other threatened bird species in the Philippines. On Mindanao, Sutton <i>et al.</i> (2023) proposed upgrading to protected areas (1) Mount Hilong-hilong, (2) Mount Kampalili-Putting Bato, (3) an extension of Mount Apo Natural Park into the northern part of the KBA, along with protected status for the adjacent Mount Latian complex and Mount Busa-Kiamba KBAs, and (4) the Mount Kaluayan–Mount Kinabalian Complex along with the adjacent Mount Balatukan, and the Mount Tago Range KBAs. They further suggested extensions into the Mount Piagayungan and Butig Mountains and Munai/Tambo KBAs. The same authors identified that most suitable habitat on Samar was already protected in Samar Island Natural Park, but recommended extending this boundary to the north-east. On Leyte, they recommended protection for the Anonang-Lobi Range. On Luzon, they recommended new protected areas be established.",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "Increase awareness and foster support for this species and the conservation of habitat.",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "Establish appropriate management of nesting territories inside and outside protected areas.",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "Improve the enforcement of wildlife laws and increase financial support for their implementation. Conserve, protect, and restore habitat on Mt. Mingan through greater law enforcement and protection, sufficient monitoring, sustainable livelihoods, and improved funding.",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "Establish sustainable livelihoods and incentives to local communities to help conserve and protect nests and forest habitats. Conserve, protect, and restore habitat on Mt. Mingan through greater law enforcement and protection, sufficient monitoring, sustainable livelihoods, and improved funding.",
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Conduct further research into current distribution, numbers, ecological needs and threats. Monitoring should also focus on obtaining a more accurate global population size by better-understanding rates of occupancy across the range.  ",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "Conduct regular monitoring in collaboration with relevant stakeholders.",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "Conduct research on the species’ population/population densities, habitat characteristics and usage, diet and feeding habits, and breeding biology, with a particular focus on populations in Luzon, Samar and Leyte. Additional research is also required to determine genetic differences between birds on Luzon and those on Mindanao, Samar and Leyte, for better knowledge informing the release of captively bred birds.",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "Monitoring of the extent and trends of suitable habitat using remote sensing data should continue.",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Vine, J.",
+      "value": [
+        "Jemma Vine (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Ibanez, J.",
+      "value": [
+        "Jayson Ibanez (Philippine Eagle Foundation)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Ashpole, J, Benstead, P., Berryman, A., Bird, J., Lowen, J., Martin, R., Richardson, L., Symes, A., Taylor, J. & Westrip, J.R.S.",
+      "value": [
+        "James Lowen (BirdLife International)",
+        "Phil Benstead (BirdLife International)",
+        "Jeremy Bird (BirdLife International)",
+        "Joe Taylor (BirdLife International)",
+        "Andy Symes (BirdLife International)",
+        "Joscelyne Ashpole (BirdLife)",
+        "Rob Martin (BirdLife)",
+        "James Westrip (BirdLife International)",
+        "Alex Berryman (BirdLife International)",
+        "Lachlan Richardson (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Forest Management Bureau. 1988. Natural forest resources of the Philippines. Department of Environment and Natural Resources, Manila.",
+      "year": "1988",
+      "title": "Natural forest resources of the Philippines.",
+      "author": "Forest Management Bureau.",
+      "citation_short": null
+    },
+    {
+      "citation": "BirdLife International. 2001. <i>Threatened birds of Asia: the BirdLife International Red Data Book</i>. BirdLife International, Cambridge, U.K.",
+      "year": "2001",
+      "title": "Threatened birds of Asia: the BirdLife International Red Data Book",
+      "author": "BirdLife International",
+      "citation_short": null
+    },
+    {
+      "citation": "Collar, N. J.; Mallari, N. A. D.; Tabaranza, B. R. J. 1999. <i>Threatened birds of the Philippines: the Haribon Foundation/BirdLife International Red Data Book</i>. Bookmark, Makati City.",
+      "year": "1999",
+      "title": "Threatened birds of the Philippines: the Haribon Foundation/BirdLife International Red Data Book",
+      "author": "Collar, N. J.; Mallari, N. A. D.; Tabaranza, B. R. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Philippine Eagle Foundation. 2008. <i>Philippine Eagle Foundation 2007 annual report</i>.",
+      "year": "2008",
+      "title": "Philippine Eagle Foundation 2007 annual report",
+      "author": "Philippine Eagle Foundation",
+      "citation_short": null
+    },
+    {
+      "citation": "Salvador, D. 2004. First release of a captive-bred Philippine Eagle. <i>Peregrine Fund Newsletter</i> no 35: 8.",
+      "year": "2004",
+      "title": "First release of a captive-bred Philippine Eagle",
+      "author": "Salvador, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salvador, D. J. I.; Ibanez, J. C. 2006. Ecology and conservation of Philippine Eagles. <i>Ornithological Science</i> 5(2): 171-176.",
+      "year": "2006",
+      "title": "Ecology and conservation of Philippine Eagles",
+      "author": "Salvador, D. J. I.; Ibanez, J. C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ibañez, J. C.; Miranda, H. C. J.; Balaquit-Ibañez, G.; Afan, D. S.; Kennedy, R. S. 2003. Notes on the breeding behavior of a Philippine Eagle pair at Mount Sinaka, Central Mindanao. <i>Wilson Bulletin</i> 115: 333-336.",
+      "year": "2003",
+      "title": "Notes on the breeding behavior of a Philippine Eagle pair at Mount Sinaka, Central Mindanao",
+      "author": "Ibañez, J. C.; Miranda, H. C. J.; Balaquit-Ibañez, G.; Afan, D. S.; Kennedy, R. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bueser, G. L. L.; Bueser, K. G.; Afan, D. S.; Salvador, D. I.; Grier, J. W.; Kennedy, R. S.; Miranda, H. C. 2003. Distribution and nesting density of the Philippine eagle Pithecophaga jefferyi on Mindanao Island, Philippines: what do we know after 100 years? <i>Ibis</i> 145(1): 130-135.",
+      "year": "2003",
+      "title": "Distribution and nesting density of the Philippine eagle Pithecophaga jefferyi on Mindanao Island, Philippines: what do we know after 100 years?",
+      "author": "Bueser, G. L. L.; Bueser, K. G.; Afan, D. S.; Salvador, D. I.; Grier, J. W.; Kennedy, R. S.; Miranda, H. C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Miranda Jr. H.; Salvador, D. I.; Bueser, G. L. 2008. <i>Updates on the nesting biology and population status of the Philippine Eagle </i>Pithecophaga jefferyi<i></i>.",
+      "year": "2008",
+      "title": "Updates on the nesting biology and population status of the Philippine Eagle <i>Pithecophaga jefferyi</i>",
+      "author": "Miranda Jr. H.; Salvador, D. I.; Bueser, G. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suarez, R. K.; Sajise, P. E. 2010. Deforestation, swidden agriculture and Philippine biodiversity. <i>Philippine Science Letters</i> 3(1): 91-99.",
+      "year": "2010",
+      "title": "Deforestation, swidden agriculture and Philippine biodiversity",
+      "author": "Suarez, R. K.; Sajise, P. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ranada, P. 2015. First active Philippine eagle nest in Luzon found in Apayao. Rappler. Available at: <a href=\"http://www.rappler.com/science-nature/environment/99306-first-active-philippine-eagle-nest-luzon-apayao\">http://www.rappler.com/science-nature/environment/99306-first-active-philippine-eagle-nest-luzon-apayao</a>. (Accessed: 27/07/2015).",
+      "year": "2015",
+      "title": "First active Philippine eagle nest in Luzon found in Apayao",
+      "author": "Ranada, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hurrell, S. 2014. The king of the birds. <i>World Birdwatch</i> 36(3): 16-19.",
+      "year": "2014",
+      "title": "The king of the birds",
+      "author": "Hurrell, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haribon Foundation. 2013. Preventing Extinctions Programme - Philippine Eagle Report - August 2013.",
+      "year": "2013",
+      "title": "Preventing Extinctions Programme - Philippine Eagle Report - August 2013",
+      "author": "Haribon Foundation",
+      "citation_short": null
+    },
+    {
+      "citation": "De Win, S. 2013. Typhoon Haiyan left parts of the Philippines behind as a wintery landscape typically found in temperate climates only! Available at: <a href=\"http://www.birding2asia.com/articles/TyphoonHaiyan.html\">http://www.birding2asia.com/articles/TyphoonHaiyan.html</a>. (Accessed: 16/06/2015).",
+      "year": "2013",
+      "title": "Typhoon Haiyan left parts of the Philippines behind as a wintery landscape typically found in temperate climates only!",
+      "author": "De Win, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Clark, W.S., Sharpe, C.J., Boesman, P. and Marks, J.S. 2015. Philippine Eagle (<i>Pithecophaga jefferyi</i>). In: del Hoyo, J., Elliott, A., Sargatal, J., Christie, D.A. and de Juana, E. (eds), <i>Handbook of the Birds of the World Alive</i>, Lynx Edicions, Barcelona.",
+      "year": "2015",
+      "title": "Philippine Eagle (<i>Pithecophaga jefferyi</i>)",
+      "author": "Clark, W.S., Sharpe, C.J., Boesman, P. and Marks, J.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu, D.S., Iverson, L.R. and Brown, S. 1993. Rates and patterns of deforestation in the Philippines: application of geographic information system analysis. <i>Forest Ecology and Management</i> 57: 1-16.",
+      "year": "1993",
+      "title": "Rates and patterns of deforestation in the Philippines: application of geographic information system analysis",
+      "author": "Liu, D.S., Iverson, L.R. and Brown, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Apan, A., Suarez, L.A., Maraseni, T. and Castillo, J.A. 2017. The rate, extent and spatial predictors of forest loss (2000–2012) in the terrestrial protected areas of the Philippines. <i>Applied Geography</i> 81: 32-42.",
+      "year": "2017",
+      "title": "The rate, extent and spatial predictors of forest loss (2000–2012) in the terrestrial protected areas of the Philippines",
+      "author": "Apan, A., Suarez, L.A., Maraseni, T. and Castillo, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. 2020. Generation lengths of the world’s birds and their implications for extinction risk. <i>Conservation Biology</i> 34(5): 1252-1261.",
+      "year": "2020",
+      "title": "Generation lengths of the world’s birds and their implications for extinction risk",
+      "author": "Bird, J.P., Martin, R., Akçakaya, H.R., Gilroy, J., Burfield, I.J., Garnett, S.G., Symes, A., Taylor, J., Şekercioğlu, Ç.H. and Butchart, S.H.M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sutton, L.J., Ibañez, J.C., Salvador, D.I., Taraya, R.L., Opiso, G.S., Senarillos, T.L.P. and McClure, C.J.W. 2023. Priority conservation areas and a global population estimate for the critically endangered Philippine Eagle. <i>Animal Conservation</i>: 684-700.",
+      "year": "2023",
+      "title": "Priority conservation areas and a global population estimate for the critically endangered Philippine Eagle",
+      "author": "Sutton, L.J., Ibañez, J.C., Salvador, D.I., Taraya, R.L., Opiso, G.S., Senarillos, T.L.P. and McClure, C.J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "Global Forest Watch. 2025. Interactive Forest Change Mapping Tool. Available at: <a href=\"http://www.globalforestwatch.org/\">http://www.globalforestwatch.org/</a>. ",
+      "year": "2025",
+      "title": "Interactive Forest Change Mapping Tool",
+      "author": "Global Forest Watch",
+      "citation_short": null
+    },
+    {
+      "citation": "eBird. 2025. eBird: An online database of bird distribution and abundance [web application]. Ithaca, New York. eBird, Cornell Lab of Ornithology. Available at: <a href=\"http://www.ebird.org\">http://www.ebird.org</a>. ",
+      "year": "2025",
+      "title": "eBird: An online database of bird distribution and abundance [web application]",
+      "author": "eBird",
+      "citation_short": null
+    },
+    {
+      "citation": "Collar, N. J. and Berryman, A. J. 2025. Uncertainty and Precaution in Estimating the Population Size of the Philippine Eagle . <i>Journal of Raptor Research</i> 59(2): jrr2484.",
+      "year": "2025",
+      "title": "Uncertainty and Precaution in Estimating the Population Size of the Philippine Eagle ",
+      "author": "Collar, N. J. and Berryman, A. J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Concepcion, C., Sulapas, M. and Ibañez, J. C. 2006. Notes on food habits and breeding and nestling behavior of Philippine Eagles in Mount Apo Natural Park, Mindanao, Philippines. <i>Banwa</i> 3: 81-95.",
+      "year": "2006",
+      "title": "Notes on food habits and breeding and nestling behavior of Philippine Eagles in Mount Apo Natural Park, Mindanao, Philippines",
+      "author": "Concepcion, C., Sulapas, M. and Ibañez, J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Department of Environment and Natural Resources (DENR) - Biodiversity Management Bureau, Haribon Foundation and Philippine Eagle Foundation. 2021. Philippine Eagle Integrated Conservation Plan for 2019-2024. Department of Environment and Natural Resources, Haribon Foundation and Philippine Eagle Foundation, Quezon City, Philippines.",
+      "year": "2021",
+      "title": "Philippine Eagle Integrated Conservation Plan for 2019-2024",
+      "author": "Department of Environment and Natural Resources (DENR) - Biodiversity Management Bureau, Haribon Foundation and Philippine Eagle Foundation",
+      "citation_short": null
+    },
+    {
+      "citation": "Gabriel, M. J. C. 2023. Dynamics and drivers of deforestation in the Philippines. <i>Ecosystems and Development Journal</i> 13(1): 18-32.",
+      "year": "2023",
+      "title": "Dynamics and drivers of deforestation in the Philippines",
+      "author": "Gabriel, M. J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ibañez, J., Sumaya, A. M., Tampos, G. and Salvador, D. 2016. Preventing Philippine Eagle hunting: What are we missing? <i>Journal of Threatened Taxa</i> 8: 9505-9511.",
+      "year": "2016",
+      "title": "Preventing Philippine Eagle hunting: What are we missing?",
+      "author": "Ibañez, J., Sumaya, A. M., Tampos, G. and Salvador, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kennedy, R. S. 1977. Notes on the biology and population status of the Monkey-eating Eagle of the Philippines. <i>Wilson Bulletin</i> 89: 1-20.",
+      "year": "1977",
+      "title": "Notes on the biology and population status of the Monkey-eating Eagle of the Philippines",
+      "author": "Kennedy, R. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Krupa, R. E. 1989. Social and biological implications for endangered species management: the Philippine Eagle <i>Pithecophaga jefferyi</i>. In: Meyburg, B.-U.; Chancellor, R.D. (ed.), <i>Raptors in the modern world</i>, pp. 301-314. WWGBP, Berlin, London & Paris.",
+      "year": "1989",
+      "title": "Social and biological implications for endangered species management: the Philippine Eagle <i>Pithecophaga jefferyi</i>",
+      "author": "Krupa, R. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luczon, A. U., Fontanilla, I. K. C., Ong, P. S., Basiao, Z. U., Sumaya, A. M. T. and Quilang, J. P. 2014. Genetic diversity of the critically endangered Philippine Eagle Pithecophaga jefferyi (Aves: Accipitridae) and notes on its conservation. <i>Journal of Threatened Taxa</i> 6: 6335-6344.",
+      "year": "2014",
+      "title": "Genetic diversity of the critically endangered Philippine Eagle Pithecophaga jefferyi (Aves: Accipitridae) and notes on its conservation",
+      "author": "Luczon, A. U., Fontanilla, I. K. C., Ong, P. S., Basiao, Z. U., Sumaya, A. M. T. and Quilang, J. P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Panopio, J.K. 2017. ZSL EDGE of existence Survival Blueprint for the Philippine Eagle, <i>Pithecophaga jefferyi</i>. Zoological Society of London.",
+      "year": "2017",
+      "title": "ZSL EDGE of existence Survival Blueprint for the Philippine Eagle, <i>Pithecophaga jefferyi</i>",
+      "author": "Panopio, J.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "PEF (Philippine Eagle Foundation). 2021. 2021 Annual Report. Davao.",
+      "year": "2021",
+      "title": "2021 Annual Report",
+      "author": "PEF (Philippine Eagle Foundation)",
+      "citation_short": null
+    },
+    {
+      "citation": "Senarillos, T. L. P., Pitogo, K. M. E. and Ibañez, J. C. 2021. Bird observations in the Busa Mountain Range, Sarangani Province, Philippines. <i>Philippine Journal of Science</i> 150(S1): 347-362.",
+      "year": "2021",
+      "title": "Bird observations in the Busa Mountain Range, Sarangani Province, Philippines",
+      "author": "Senarillos, T. L. P., Pitogo, K. M. E. and Ibañez, J. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sutton, L. J., Ibañez, J. C., Salvador, D. I., Taraya, R. L., Opiso, G. S., Senarillos, T. L. P. and McClure, C. J. W. 2024. Space–time home-range estimates and resource selection for the critically endangered Philippine Eagle on Mindanao. <i>Ibis</i> 166: 156-170.",
+      "year": "2024",
+      "title": "Space–time home-range estimates and resource selection for the critically endangered Philippine Eagle on Mindanao",
+      "author": "Sutton, L. J., Ibañez, J. C., Salvador, D. I., Taraya, R. L., Opiso, G. S., Senarillos, T. L. P. and McClure, C. J. W.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

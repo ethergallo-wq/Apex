@@ -1,0 +1,2106 @@
+{
+  "assessment_date": "2021-01-15T00:00:00.000+00:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 21860,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/21860/46913402",
+  "citation": "Collette, B.B., Boustany, A., Fox, W., Graves, J., Juan Jorda, M. & Restrepo, V. 2021. Thunnus thynnus. The IUCN Red List of Threatened Species 2021: e.T21860A46913402. Accessed on 05 May 2026.",
+  "assessment_id": 46913402,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 21860,
+    "scientific_name": "Thunnus thynnus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "PERCIFORMES",
+    "family_name": "SCOMBRIDAE",
+    "genus_name": "Thunnus",
+    "species_name": "thynnus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Atún Aleta Azul",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Kuromaguro",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Thon Rouge de l'Atlantique",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Atlantic Bluefin Tuna",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Thynnus mediterraneus Risso, 1827",
+        "status": "ACCEPTED",
+        "genus_name": "Thynnus",
+        "species_name": "mediterraneus",
+        "species_author": "Risso, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Thunnus vulgaris Cuvier, 1832",
+        "status": "ACCEPTED",
+        "genus_name": "Thunnus",
+        "species_name": "vulgaris",
+        "species_author": "Cuvier, 1832",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Thynnus secundodorsalis Storer, 1855",
+        "status": "ACCEPTED",
+        "genus_name": "Thynnus",
+        "species_name": "secundodorsalis",
+        "species_author": "Storer, 1855",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Thynnus linnei Malm, 1877",
+        "status": "ACCEPTED",
+        "genus_name": "Thynnus",
+        "species_name": "linnei",
+        "species_author": "Malm, 1877",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Scomber thynnus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Scomber",
+        "species_name": "thynnus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orcynus thynnus  (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Orcynus",
+        "species_name": "thynnus ",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Thunnus thynnus  ssp. thynnus (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Thunnus",
+        "species_name": "thynnus ",
+        "species_author": null,
+        "infrarank_author": "(Linnaeus, 1758)",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "thynnus"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 1015,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "16-19",
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Atlantic Bluefin Tuna occurs throughout much of the North Atlantic Ocean and has been reported from the South Atlantic. Historically, it was present in the Western Atlantic from Canada to Brazil, including the Gulf of Mexico and the Caribbean Sea, although the bulk of the population off Brazil has now almost disappeared (Porch 2005, Takeuchi <em>et al</em>. 2009, Worm and Tittensor 2011), with very few catches in the area over the last 40 years. In the Eastern Atlantic, it is present from Norway to Cabo Verde and West Africa (Di Natale <em>et al</em>. 2013), while in the past there were catches in the southern-eastern&#160; Atlantic (Takeuchi <em>et al</em>. 2009, Schalit 2019, Di Natale <em>et al</em>. 2020). Rising water temperatures have brought Atlantic Bluefin Tuna into Greenland waters (MacKenzie <em>et al</em>., 2014, Di Natale 2012), and it has begun to migrate to the Icelandic Basin in the autumn (Olafsdottir <em>et al</em>. 2016, Collette and Graves 2019). It is also reported from Mauritania (Maigret and Ly 1986), Senegal (Ngom Sow and Ndaw 2015) and off South Africa (Collette and Nauen 1983). It is present in the Mediterranean Sea and in the Black Sea. In the Black Sea, Atlantic Bluefin Tuna were well documented in ancient times and there was an annual migration from the Black Sea to eastern Mediterranean spawning grounds. However, after World War II, the environmental condition in the Black Sea deteriorated and now sightings in the Black Sea are rare, but increasing in recent years (Di Natale <em>et al</em>. 2019). An analysis of present over historical ranges concluded that the Atlantic Bluefin Tuna has shown larger range contractions (minus 46% since 1960) than any other pelagic species (Worm and Tittensor 2011), but the ICCAT Atlantic-wide research programme for bluefin tuna was able to demonstrate that its current distribution range is now very similar to the historical largest one.",
+    "population": "This species has become much less common relative to historical levels due to overfishing (Fromentin and Powers 2005, Majkowski 2007, MacKenzie <em>et al</em>. 2009, Cor and Abuanza 2019). <br/><br/>Atlantic Bluefin Tuna are thought to comprise distinct western and eastern Atlantic stocks, which primarily spawn in the Gulf of Mexico and Mediterranean Sea, respectively. The eastern Atlantic stock is about an order of magnitude larger than the western Atlantic stock. Analyses of early life history stages and adults taken from the spawning grounds indicate that the two stocks are genetically distinct (Carlsson <em>et al</em>. 2007, Boustany <em>et al</em>. 2008). Individuals appear to demonstrate fidelity to either the Gulf of Mexico or Mediterranean Sea spawning grounds, but outside of the spawning grounds there can be considerable mixing of the two stocks throughout much of the North Atlantic (Block <em>et al</em>. 2005). Electronic tagging, analyses of otolith stable isotopes and organochlorine pollutants suggest that there is substantial variation in movements and stock composition both spatially and temporally (Rooker <em>et al</em>. 2008, Dickhut <em>et al</em>. 2009, Siskey <em>et al</em>. 2016). Since 1982, the International Commission for the Conservation of Atlantic Tunas (ICCAT) recognizes the western and eastern stocks of Atlantic Bluefin Tuna, and while it is understood that there is mixing of the two stocks, for management purposes they are separated at the 45°W meridian.<br/><br/>Atlantic Bluefin Tuna are currently taken with several gear types, including purse seines, longlines, traps, and a variety of hand gears. It is also an important recreational game fish throughout its range. It is highly valued commercial species, with much of the catch entering the sashimi market. Reported landings of Atlantic Bluefin Tuna fluctuated between 15,000 and 39,000 mt per year from 1950 to 1993. Reported and unreported landings increased with the start of ranching within the Mediterranean Sea in the 1990s and early 2000s to a peak of 62,638 mt in 2007. Implementation of management measures reduced catches to less than 15,000 mt from 2010 to 2014.&#160; Since that time there has been a gradual increase in landings, with a total of 21,032 mt reported for 2016 (Collette and Graves 2019). The estimated catch in 2019 was 31,065 mt (ICCAT 2020).<br/><br/>Population changes in the western and eastern Atlantic stocks were calculated using two methods. In the first method (hereforth \"method 1\"), population trends were estimated over the past three generation lengths (i.e. 39-57 years for the Western Atlantic and 39-48 years for the Eastern Atlantic), using 3-year averages for the endpoints and assuming a linear decline. However, to account for the non-linearity of the timeseries, a second method (\"method 2\") calculated the average annual rate of change across the entire timeseries. This average annual rate of change was then applied over the past three generation lengths, assuming exponential decay. Based on these methods, global population trends were estimated by calculating population trends for the eastern and western stocks separately, which were then weighted by the average of the 3 highest historical catch estimates for each stock in order to account for differences in stock size.<br/><br/><strong>Western Atlantic Stock</strong><br/>Western Atlantic Bluefin Tuna fisheries have been managed since the early 1980s. Since 1981, landings have mostly fluctuated between 1,800 and 3,000 mt, averaging only about 1,900 mt over the past five years. Currently the majority of the catch is taken by hand gears (rod and reel, handlines), with longlines accounting for a little more than a third of the landings (Collette and Graves 2019). <br/><br/>It is important to note that the Western Atlantic stock assessment includes all fish west of the 45°W management boundary rather than only genetically Western Atlantic fish. Similarly, based on the new knowledge provided by electronic tags, genetics and microchemical analyses over the last 10 years, it is likely that catches in the Western Atlantic may not show the reality of the Western Atlantic stock due to the strong but variable presence of individuals from the Eastern Atlantic population, which can reach over the 60% in some years. In addition, recent otolith studies have found increasing percentages of Mediterranean-spawned fish in Western Atlantic Bluefin fisheries (up to 75% in some areas in some years), which may indicate that the actual size of the Western Atlantic population is likely even smaller. After a more precise analysis of the high historical reference catches taken in the Brazilian waters, and therefore automatically attributed to the Western Atlantic stock, it was clear that these catches were obtained on both sides of the central-southern Atlantic. For example, the substantial catch made by the Japanese longline fishery off Brazil in the early 1960s has been assumed to be the Western stock. However, there is uncertainty about whether this catch belongs to the Western or Eastern stocks and assignment of these catches could have a significant impact on the stock assessment of the Western Atlantic population.<br/><br/>Prior to the 2017 stock assessment, stock status was determined based on MSY-related reference points using two alternative recruitment potential scenarios: a \"low recruitment\" scenario and a \"high recruitment\" scenario. The 2017 assessment did not use MSY reference points to provide management advice. Instead, it focused on giving short-term advice based on an F<sub>0.1</sub> reference point, a proxy for FMSY, using recent recruitment with the assumption that near term recruitment will be similar to that in the recent past. The estimated current F relative to the F<sub>0.1</sub> reference point was 0.72 based on the results of the Virtual Population Analysis (VPA) stock assessment platform, and 0.56 based on the results of the stock synthesis stock assessment platform, indicating that overfishing was not occurring. However, the stock recruitment relationship was poorly determined, and the latter determines whether F<sub>0.1</sub> is higher or lower than F<sub>MSY</sub>. The summary estimate for recent fishing mortality rate based on the geometric mean of apical F for the period 2012–2014 relative to the F reference point, F<sub>0.1</sub> (a proxy for F<sub>MSY</sub> based on recent recruitment estimates for the period 2007 to 2012) is 0.59, with a range of 0.44–0.79. However, according to the latest 2020 stock assessment, overfishing has been occurring on Western Atlantic Bluefin Tuna since 2018 (ICCAT 2020). <br/><br/>Two stock assessment platforms, VPA and Stock Synthesis (SS), were applied in the 2017 assessment and the results from each were weighted equally to formulate advice. However, only the SS gave a long enough time series of the population for the purposes of estimating declines over three generation lengths. In the recent time period, SS mean recruitment was similar to the VPA but the 1993 and 2003 year class magnitudes were estimated to be larger, causing fishing mortality to be lower, and biomass higher, than in the VPA. In 2015, total biomass was 18% of biomass in 1950 and 45% of biomass in 1974 (ICCAT 2017). In the most recent 2020 stock assessment, the SS model found that total biomass was 14% of biomass in 1950 and 36% of biomass in 1974 (ICCAT 2020). <br/><br/>Based on method 1 and SS biomass, there has been an estimated 50–83% decline in the Western Atlantic population over the past three generation lengths or 39 to 57 years (i.e. 1957–2014, 1966–2014, 1975–2014), with longer declines measured over the longer the generation length. Based on method 2, the estimated decline over the same three generation length timeframes is 63–77%.<br/><br/><strong>Eastern Atlantic and Mediterranean Stock</strong><br/>Overall catches in the eastern Atlantic and Mediterranean increased from about 20,000 mt in the late 1980s to more than 50,000 mt by the mid-1990s.&#160; There was significant underreporting of catches during this time, but it is estimated that annual landings exceeded 50,000 mt from the mid-1990s through 2007, and likely exceeded 60,000 mt in 2007. Management measures in place since 2002 but more strictly implemented by ICCAT in 2008 decreased fishing effort, resulting in catches of about 10,000 mt from 2010–2012.&#160; Since that time both quota and catches have been increasing, with reported landings of almost 29,784 mt in 2018 (ICCAT 2020). Currently, purse seines take 58% of the catch, traps 15%, pelagic longlines 17%, and assorted gear types the remaining 10%. Japan is a major importer of all bluefin tuna species, and it is estimated that approximately 80% of the Japanese market is supplied by the countries around the Mediterranean Sea (Heffernan 2014, Collette and Graves 2019). <br/><br/>There has been considerable uncertainty associated with assessments of the Eastern Atlantic and Mediterranean Sea stock of Atlantic Bluefin Tuna due to issues with the catch per unit effort data, misreporting of catch during the late 1990s and 2000s, a lack of understanding of stock-recruit relationships and potential recruitment levels. Overfishing occurred during the late 1990s and 2000s, resulting in a decrease in the SSB in those years. Meaningful management measures in 2008 reduced catches by more than half and have resulted in an increase in SSB (Collette and Graves 2019). In the 2017 stock assessment, estimates of biomass reference points were unreliable due to uncertainties in future recruitment. F<sub>0.1</sub> was used as a proxy for F<sub>MSY</sub>, with F<sub>cur</sub>/F<sub>0.1</sub> estimated at 0.34, indicating that overfishing was not occurring (ICCAT 2017). However, the current status of the Eastern Atlantic stock is below B<sub>0.1</sub>, and therefore overfished, if it is assumed that high recruitment levels apply for longer term future recruitment. The summary estimate for F<sub>2012-2014</sub>/F<sub>0.1</sub>, where F<sub>2012-2014</sub> is the geometric mean of the estimates for 2012–2014 (a proxy for recent F levels), is 0.339 with a range of 0.254–0.483. More recently, ICCAT's Standing Committee on Research and Statistics (SCRS) concluded that SSB<sub>current</sub>/SSB<sub>MSY</sub> is unknown due to biomass-based reference points not being estimated, while F/F<sub>MSY</sub> (using the F<sub>0.1</sub> proxy) is 0.43, again indicating that overfishing is therefore not occurring (ICCAT 2020, ISSF 2020).<br/><br/>Results from the 2017 stock assessment's VPA base case indicate that the SSB increased and then reached a maximum in the mid-1970s. It subsequently declined until 1991 and remained steady up to the mid-2000s. From the late 2000s, SSB increased substantially through 2015, although the extent of that increase is dependent on the choices of model configuration and the indices of abundance and terminal year (2014–2015). Another caveat is that information on the size composition of many eastern Atlantic and Mediterranean fleets is limited for a number of years before the implementation of stereo video camera in 2014 (ICCAT 2017).<br/><br/>Based on method 1 and the VPA base case run SSB, there has been an estimated 22% decline to a 24% increase in the population over the past 39 to 48 years, or three generation lengths (1975, 1968-2014), with the longer generation length showing a positive change in the population. Similarly, based on method 2, there has been an estimated 48 to 57% increase in the Eastern Atlantic population over the same 3 generation length timeframes, with the longer generation length showing more positive change.<br/><br/>Based on the 3 highest maximum historical catch estimates for each stock, the Eastern Atlantic stock constitutes approximately 78% of the global population of Atlantic Bluefin Tuna. However global population trends, calculated by weighting the percent change for each stock by its relative proportion of the global population, varied widely. For example, depending on the generation length and the method used to calculate population trends, this species has either decreased (28%), stayed constant (0% change), or increased (23–30%) over the past three generation lengths. Regardless, given that the generation length is likely greater than 13 years, and a decline in the global population is only achieved with 13 years as the generation length, no change or an overall increase in the global population is probably most representative of the global status of the species, recognizing that the signal for the Eastern Atlantic population masks the signal for the Western Atlantic population.",
+    "habitats": "This is a pelagic, oceanodromous species, which can be found to depths of at least 1,015 m (Lawson <em>et al</em>. 2010) and seasonally can be found close to shore. <br/><br/>Adults can tolerate the widest range of temperatures of the tunas, 1–29 °C, and show marked preference and tolerance for high-salinity waters, above 37 PSU (Arrizabalaga <em>et al</em>. 2015). The wider temperature tolerance in larger adults allows them to feed in the northern latitudes, up to the Norwegian Sea in the eastern Atlantic and to the Gulf of Saint Lawrence in the western Atlantic (Druon <em>et al</em>. 2016). This species schools by size, sometimes together with Albacore, Yellowfin, Bigeye or Skipjack Tunas (Galuardi and Lutcavage 2012). Electronic tagging studies indicate that Atlantic Bluefin Tuna spend considerable time in near-surface waters, but are capable of diving to depths in excess of 800 m (Collette and Graves 2019).<br/><br/>Atlantic Bluefin Tuna prey on small schooling fishes (anchovies, sauries, hakes) or on squids and red crabs. A study on the Mediterranean diet of this species provided evidence that juveniles prey mainly on zooplankton and small pelagic coastal fishes, sub-adults prey on medium pelagic fishes, shrimps and cephalopods, while adults prey mainly on cephalopods and larger fishes (Sarà and Sarà 2007). In the eastern Atlantic, krill, anchovies, and horse mackerel are important prey items of juvenile tuna in the Bay of Biscay (Logan <em>et al</em>. 2011, Varela <em>et al</em>. 2014). During autumn migrations to the Icelandic Basin, Atlantic Bluefin forage at pelagic and mesopelagic depths (Olafsdottir <em>et al</em>. 2016). Of the 36 prey species found in their stomachs, the most important were European Flying Squid (<em>Todarodes sagittatus</em>), barracudinas (Paralepididae), and gonate squid. Hyperiid amphipods were more abundant, but of minor importance due to their small size. In the Western Atlantic, pelagic schooling fishes such as Atlantic Herring (<em>Clupea harengus</em>) and Atlantic Mackerel (<em>Scomber scombrus</em>) dominated the diet of Atlantic Bluefin Tuna in the Gulf of St. Lawrence (Pleizier <em>et al</em>. 2012, Collette and Graves 2019).<br/><br/>Maturity schedules appear to differ between eastern and western Atlantic Bluefin Tuna. Reproductive analyses of fish sampled in the Mediterranean Sea (near or on the spawning grounds) are in general agreement, with first maturity occurring at age 3 (100 cm FL), 50% maturity at age 4 (115 cm FL), and 100% maturity by age 5 (135 cm) (Mather <em>et al</em>. 1995; Corriero <em>et al</em>. 2003; Santamaria <em>et al</em>. 2009; Rooker <em>et al</em>. 2007, 2008; Collette and Graves 2019). However, an age of first maturity has previously been estimated to be approximately 25 kg or age four years in the Mediterranean (ICCAT SCRS 2010). For the eastern Atlantic stock, the generation length is thus estimated to be approximately seven years based on average survivorship and fecundity across known bluefin stocks (Collette <em>et al</em>. 2011). Spawning frequency in the Mediterranean is 1–2 days (Medina <em>et al</em>. 2002). Estimated relative batch fecundity is greater than 90 oocytes/g of body weight, slightly higher than estimated for other tunas in the genus Thunnus (Sissenwine <em>et al</em>. 1998, Corriero <em>et al</em>. 2003, Rooker <em>et al</em>. 2007, Boustany <em>et al</em>. 2008, Rooker <em>et al</em>. 2008). Females weighing between 270 and 300 kg produce as many as 10 million eggs per spawning season (Corriero <em>et al</em>. 2005). Within the Mediterranean Sea, spawning is known to occur near the Balearic Islands, in the South Tyrrhenian Sea, and the waters around Malta and eastern Sicily plus the northern Levantine Sea (Oray and Karakulak 2005). Fish enter the Mediterranean Sea through the Straits of Gibraltar in May-June and leave in July–August. The onset of spawning near the Balearic Islands is between the end of May and the beginning of June (Gordoa and Carreras 2014).<br/><br/>Maturity schedules for western Atlantic Bluefin Tuna suggest later ages of maturation, and there is considerable range among studies, with age at 50% maturity ranging from 5 to 12 or more years (Baglin 1982, Mather <em>et al</em>. 1995, Rooker <em>et al</em>. 2007, Rooker <em>et al</em>. 2008, Boustany <em>et al</em>. 2008, Diaz <em>et al</em>. 2009, Diaz 2011, Collette and Graves 2019). Maximum age is around 32 years (Neilson and Campana 2008), although age composition structure has also changed over time (e.g., there are greater numbers of younger individuals). An age of first maturity has been estimated to be <em>ca</em>. 145 kg or about age nine years in the Gulf of Mexico (SRCS ICCAT 2010). For the western Atlantic stock, the generation length is thus estimated to be approximately 13 years based on average survivorship and fecundity across known bluefin stocks (Collette <em>et al</em>. 2011). Western Atlantic Bluefin Tuna spawn in the Gulf of Mexico and the Straits of Florida from mid-April to early June at temperatures of 22.6–27.5 °C. Results of electronic tagging studies suggest distinct behaviours during the spawning time, most noticeably with changes in diving times and depths. As they entered and exited the Gulf of Mexico, they dove to daily maximum depths of 568–580 m but during the putative breeding phase, they made significantly shallower daily maximum dives, 203±76 m (Teo <em>et al</em>. 2007). Some larvae have been collected northeast of Campeche Bank, suggesting spawning outside the Gulf of Mexico (Muhling <em>et al</em>. 2011), and recently, collections of larvae in the Slope Sea off the US Atlantic coast during July demonstrate some spawning activity in that region (Richardson <em>et al</em>. 2016). <br/><br/>Maximum recorded size is 458 cm (TL), but adult fish sizes to 200 cm are more common. The IGFA all-tackle game fish record is of a 678.58 kg fish caught in Aulds Cove, Nova Scotia in October 1979 (IGFA 2020). Longevity is at least 35 years and possibly to 50 years (Santamaria <em>et al</em>. 2009). Based on previously derived estimates(Collette <em>et al</em>. 2011), this species has been estimated to have a generation length of 7–13 years, however, given the significant historical decline of the Western Atlantic population, as well as continued uncertainty in recruitment in the Eastern Atlantic population, continued fishery pressure, and a requirement to apply a pre-exploitation generation length, this species has an estimated minimum generation length of at least 13 years. Moreover, based on the values of parameters including growth and maturity used in the latest stock assessment, the generation length would be between 16 and 19 years in the Western Atlantic (based on two different assumptions of maturity schedule), and as much as16 years in the Eastern Atlantic (Andre Boustany, pers. comm. July 2020). We therefore assume a range of estimates for this species' generation length: 13–19 years for the Western Atlantic and 13–16 years for the Eastern Atlantic.",
+    "threats": "The eastern stock of Atlantic Bluefin Tuna is fished by many nations, and achieving consensus on management measures, especially allocation issues, is extremely difficult, which greatly increases management response time. Data deficiencies remain, and the lack of information for some CPUE time series compromises assessments. More information is needed from the tuna cage growout operations, including better data on size at capture, as well as mortalities associated with transport and caging. The lack of understanding of stock-recruit relationships and the effects of regime shifts on recruitment levels has resulted in the loss of biomass-based reference points in both the east and west of this species’ range (Collette and Graves 2019). <br/><br/>The warm ambient temperatures on their breeding grounds in the Gulf of Mexico potentially present a distinct threat to these large, endothermic fish, and this potential threat will increase with increasing water temperatures due to global warming. Substantial breeding habitat loss for both adult and larval Atlantic Bluefin Tuna is thus predicted for the main spawning grounds in the northern Gulf of Mexico as water temperatures continue to warm (Muhling <em>et al</em>. 2015). Oil spills also pose a threat to spawning grounds in the Gulf of Mexico. Oil slicks have been shown to have toxic effects on the buoyant embryos (Brette <em>et al</em>. 2014, Collette and Graves 2019). Furthermore, ICCAT agreed in 2020 to allow continued overfishing of the Western Atlantic stock, which is projected to cause further declines in this already depleted population (ICCAT 2020).",
+    "measures": "The Center for Biological Diversity (2010) petitioned the U.S. Government to list the Atlantic Bluefin Tuna under the U.S. Endangered Species Act. The U.S. government agreed to conduct a status review for this species (Schwaab 2010), but decided not to list it as Endangered or Threatened but as a Species of Concern (NMFS 2011). In 2010, the species was also considered for an international trade ban based on a proposal from Monaco to list them on Appendix I of CITES, however, it was rejected by the CITES Parties.<br/><br/>There are several conservation measures for this species, mainly based on regulation of fisheries activities. The International Commission for the Conservation of the Atlantic Tuna (ICCAT) was established in 1967 and now oversees these fisheries conservation measures. <br/><br/><strong>Western Atlantic</strong><br/>ICCAT significantly reduced catches of Atlantic Bluefin Tuna in the western Atlantic in 1982 with the adoption of a total allowable catch (TAC) and a sharing arrangement specifying country-specific quotas. The TAC has fluctuated between 1,800 and 2,700 mt based on scientific advice following assessments every two or three years, and a formal rebuilding plan was adopted in 1998 that includes a 30 kg minimum size (with an allowance of small fish for the U.S. recreational fishery), as well as a ban on directed fishing in the Gulf of Mexico, and a host of other measures. There are also numerous domestic management measures within the United States, both for the commercial and recreational fisheries (Collette and Graves 2019). <br/><br/><strong>Eastern Atlantic and Mediterranean</strong><br/>Management of the eastern Atlantic and Mediterranean stock of Atlantic Bluefin Tuna&#160; has been challenging because of the large number of countries involved. ICCAT adopted measures in the late 1990s that greatly curtailed the catch of small fish in traditional fisheries within the Mediterranean Sea and banned the use of driftnets in 2004. A multifaceted stock rebuilding program was adopted in 2006, which included the establishment of a TAC, country-specific quotas, significant time/area closures for various fleets, and a host of monitoring, control, and surveillance measures. The rebuilding plan was amended in 2008 to include a significant reduction in the TAC and corresponding capacity limitations that eventually reduced catches from more than 60,000 mt to less than 15,000 mt in two years.&#160; The development of an electronic catch documentation system for Atlantic Bluefin Tuna has reduced (but by no means eliminated) illegal, unreported, and unregulated (IUU) fishing, as it&#160; potentially provides a means for countries to exclude IUU fish from their markets (Collette and Graves 2019).<br/><br/>In the future, climate variability, and especially increasing sea temperatures, should be taken into account in stock management plans of the Atlantic Bluefin Tuna (Faillettaz <em>et al</em>. 2019), as well as the genetically mixed component of the stock (Di Natale 2019). A management procedure is being developed for the species, with adoption expected in 2022.",
+    "use_trade": "The species is currently taken on several of gear types, including purse seines, longlines, traps, and a variety of hand gears. Atlantic Bluefin Tuna is also an important gamefish throughout its range. It is a highly valued species with much of the catch entering the Japanese sashimi market (Collette and Graves 2019),&#160;with an end value of $1.1 million in 2018 (Pew 2020). It is also now grown out in sea cages off Croatia and elsewhere in the Mediterranean Sea.",
+    "rationale": "<p>See the Supplementary Information for a glossary of abbreviations and acronyms used throughout this assessment.<br/><br/>Based on spawning stock biomass (SSB) in the Eastern Atlantic and Mediterranean and total biomass in the Western Atlantic from the most recent 2017 and 2020 stock assessments, there has been approximately no major decline in the global size of the Atlantic Bluefin Tuna population over the past three generation lengths (1966–2018), especially as the Eastern Atlantic stock may be increasing and comprises approximately 80% of the global population. However, the smaller Western Atlantic stock has declined by up to 83% over the past three generation lengths. As there has been little estimated change in the overall global biomass of this species over the past three generation lengths, driven by the larger size of the Eastern Atlantic stock, this species is listed globally as Least Concern, with high concern over the drastic decline of the Western Atlantic stock, which has been subject to historic overfishing and as recently as 2018.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "This is now considered to be a separate species from the Pacific bluefin, <em>Thunnus orientalis</em> (Collette 1999)."
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Collette, B.B., Boustany, A., Fox, W., Graves, J., Juan Jorda, M. & Restrepo, V.",
+      "value": [
+        "Victor  Restrepo (ISSF)",
+        "Bruce Collette (Smithsonian, USA)",
+        "William Fox (World Wildlife Fund, USA)",
+        "Maria Jose Juan Jorda (Recursos Marinos y Pesquerias, Spain)",
+        "John Graves (VIMS)",
+        "Andre Boustany (Duke University)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Polidoro, B., Di Natale, A., Kemppinen, K., Miller, S., Pollard, D.A., Shiffman, D. & Suzuki, J.",
+      "value": [
+        "Beth Polidoro (GMSA)",
+        "Jiro Suzuki (Japanese Trust Fund, WCPFC)",
+        "Shana Miller (Ocean Foundation)",
+        "David Shiffman (Arizona State University)",
+        "Krista Kemppinen (Arizona State Univeristy)",
+        "David Pollard (NSW Fisheries, Australia)",
+        "Antonio Di Natale (AQUASTUDIO Research Institute, Italy)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Amorim, A.F., Carpenter, K.E., Die, D., Fredou, F.L., Hinton, M., Kada, O., Minte Vera, C., Miyabe, N., Nelson, R., Oxenford, H., Pires Ferreira Travassos, P.E., Pollard, D.A., Schratwieser, J., Teixeira Lessa, R.P., Uozumi, Y., Viera Hazin, F.H. & de Oliveira Leite Jr., N.",
+      "value": [
+        "Carolina Minte Vera (Guest)",
+        "Alberto Ferreira Amorim (IUCN SSC Shark Specialist Group)",
+        "David Die (University of Miami)",
+        "Jason Schratwieser (IGFA)",
+        "Michael Hinton (IATTC)",
+        "Flavia Lucena Fredou (UFRPE)",
+        "Rosangela Paula Teixeira Lessa (UFRPE)",
+        "Paulo Eurico Pires Ferreira Travassos (UFRPE)",
+        "Fabio Hissa Viera Hazin (UFRPE)",
+        "Hazel Oxenford (CERMES, University of the West Indies)",
+        "Nilamon de Oliveira Leite Jr. (ICMBio)",
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)",
+        "Russell Nelson (The Billfish Foundation, USA)",
+        "Yuji Uozumi (National Research Institute of Far Seas Fisheries, Japan)",
+        "Naozumi Miyabe (National Research Institute of Far Seas Fisheries, Japan)",
+        "David Pollard (NSW Fisheries, Australia)",
+        "Omar Kada (Global Marine Species Assessments)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Collette, B.B., Carpenter, K.E., Polidoro, B.A., Juan-Jorda, M.J., Boustany, A., Die, D.J., Elfes, C., Fox, W., Graves, J., Harrison, L., McManus, R., Minte-Vera, C., Nelson, R., Restrepo, V., Schratwieser, J., Sun, C-L, Brick Peres, M., Canales, C., Cardenas, G., Chang, S.-K., Chiang, W-C, de Oliveira Leite, N., Harwell, H., Lessa, R., Fredou, F.L., Oxenford, H.A., Serra, R., Shao, K.-T., Sumalia, R., Wang, S-P, Watson, R. and Yanez, E. 2011. High value and long life: Double jeopardy for tunas and billfishes. <i>Science</i> 333: 291-292.",
+      "year": "2011",
+      "title": "High value and long life: Double jeopardy for tunas and billfishes",
+      "author": "Collette, B.B., Carpenter, K.E., Polidoro, B.A., Juan-Jorda, M.J., Boustany, A., Die, D.J., Elfes, C., Fox, W., Graves, J., Harrison, L., McManus, R., Minte-Vera, C., Nelson, R., Restrepo, V., Schratwieser, J., Sun, C-L, Brick Peres, M., Canales, C., Cardenas, G., Chang, S.-K., Chiang, W-C, de Oliveira Leite, N., Harwell, H., Lessa, R., Fredou, F.L., Oxenford, H.A., Serra, R., Shao, K.-T., Sumalia, R., Wang, S-P, Watson, R. and Yanez, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Collette, B.B. and Nauen, C.E. 1983. FAO Species Catalogue. Vol. 2. Scombrids of the World: an annotated and illustrated catalogue of tunas, mackerels, bonitos and related species known to date.  Food and Agriculture Organization of the United Nations (FAO) Fisheries Synopsis number 125, volume 2.",
+      "year": "1983",
+      "title": "FAO Species Catalogue. Vol. 2. Scombrids of the World: an annotated and illustrated catalogue of tunas, mackerels, bonitos and related species known to date",
+      "author": "Collette, B.B. and Nauen, C.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Worm, B. and Tittensor, D.P. 2011. Range contraction in large pelagic predators. <i>Proceedings of the National Academy of Sciences</i> doi/10.1073.pnas.110235108.",
+      "year": "2011",
+      "title": "Range contraction in large pelagic predators",
+      "author": "Worm, B. and Tittensor, D.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Majkowski, J. 2007. Global fishery resources of tuna and tuna-like species. <i>FAO Fisheries Technical Paper</i> 483: 54.",
+      "year": "2007",
+      "title": "Global fishery resources of tuna and tuna-like species.",
+      "author": "Majkowski, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Oray, I.K. and Karakulak, F.S. 2005. Further evidence of spawning of Bluefin Tuna (<i>Thunnus thynnus</i> L., 1758) and the tuna species (<i>Auxis rochei</i> Ris., 1810, <i>Euthynnus alletteratus</i> Raf., 1810) in the eastern Mediterranean Sea: preliminary results of TUNALEV larval survey in 2004. <i>Journal of Applied Ichthyology</i> 21: 236-240.",
+      "year": "2005",
+      "title": "Further evidence of spawning of Bluefin Tuna (<i>Thunnus thynnus</i> L., 1758) and the tuna species (<i>Auxis rochei</i> Ris., 1810, <i>Euthynnus alletteratus</i> Raf., 1810) in the eastern Mediterranean Sea: preliminary results of TUNALEV larval survey in 2004",
+      "author": "Oray, I.K. and Karakulak, F.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Collette, B.B. 1999. Mackerels, molecules, and morphology. In: B. Séret and J.-Y. Sire (eds), Proceeding of the 5th Indo-Pacific Fish Conference, pp. 149-164. Noumea.",
+      "year": "1999",
+      "title": "Mackerels, molecules, and morphology",
+      "author": "Collette, B.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT SCRS. 2010. Report on the Standing Committee on Research and Statistics (SCRS). International Commission for Conservation of Atlantic Tuna, Madrid, Spain October 4-8, 2010.",
+      "year": "2010",
+      "title": "Report on the Standing Committee on Research and Statistics (SCRS)",
+      "author": "ICCAT SCRS",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maigret, J. and Ly, B. 1986. <i>Les poissons de mer de Mauritanie</i>. Centre national de recherches océanographiques et des pêches (Mauritania) and Science Naturales, Compiègne, France.",
+      "year": "1986",
+      "title": "Les poissons de mer de Mauritanie",
+      "author": "Maigret, J. and Ly, B",
+      "citation_short": null
+    },
+    {
+      "citation": "Corriero, A., Desantis, S., Deflorio, M.,  Acone, F., Bridges, C.R., De La Sernas, J.M., Megalofonou, P. and De Metrio, G. 2003. Histological investigation on the ovarian cycle of the Bluefin Tuna in the Western and Central Mediterranean. <i>Journal of Fish Biology</i> 63: 108-119.",
+      "year": "2003",
+      "title": "Histological investigation on the ovarian cycle of the Bluefin Tuna in the Western and Central Mediterranean",
+      "author": "Corriero, A., Desantis, S., Deflorio, M.,  Acone, F., Bridges, C.R., De La Sernas, J.M., Megalofonou, P. and De Metrio, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neilson, J.D. and Compana, S.E. 2008. A validated description of age and growth of the Western Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>). <i>Canadian Journal of Fisheries and Aquatic Sciences</i> 65: 1523-1527.",
+      "year": "2008",
+      "title": "A validated description of age and growth of the Western Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>)",
+      "author": "Neilson, J.D. and Compana, S.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dickhut, R., Deshpande, A., Cincinelli, A., Cochran, M., Corsolini, S., Brill, R., Secor, D.H. and Graves, J.E. 2009. Atlantic Bluefin Tuna (<I>Thunnus thynnus</I>) population dynamics delineated by organochlorine tracers. <i>Environmental Science and Technology</i> 43: 8552-8557.",
+      "year": "2009",
+      "title": "Atlantic Bluefin Tuna (<I>Thunnus thynnus</I>) population dynamics delineated by organochlorine tracers.",
+      "author": "Dickhut, R., Deshpande, A., Cincinelli, A., Cochran, M., Corsolini, S., Brill, R., Secor, D.H. and Graves, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Porch, C.E. 2005. The sustainability of western Atlantic Bluefin Tuna: A warm-blooded fish in a hot-blooded fishery. <i>Bulletin of Marine Science</i> 76: 363–384.",
+      "year": "2005",
+      "title": "The sustainability of western Atlantic Bluefin Tuna: A warm-blooded fish in a hot-blooded fishery.",
+      "author": "Porch, C.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Takeuchi, Y., Oshima, K. and Suzuki, Z. 2009. Inference on nature of Atlantic Bluefin tuna off Brazil caught be the Japanese longline fishery around the early 1960s. <i>ICCAT Collected Volume of Scientific Papers</i> 63: 186-194.",
+      "year": "2009",
+      "title": "Inference on nature of Atlantic Bluefin tuna off Brazil caught be the Japanese longline fishery around the early 1960s",
+      "author": "Takeuchi, Y., Oshima, K. and Suzuki, Z.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schwaab, E.C. 2010. Listing Endangered and Threatened wildlife and plants; 90-day finding on a petition to list Atlantic Bluefin Tuna as Threatened or Endangered under the Endangered Species Act. <i>Federal Register</i> 75(182): 57431-57436.",
+      "year": "2010",
+      "title": "Listing Endangered and Threatened wildlife and plants; 90-day finding on a petition to list Atlantic Bluefin Tuna as Threatened or Endangered under the Endangered Species Act.",
+      "author": "Schwaab, E.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Teo, S.L.H., Boustany, A., Dewar, H., Stokesbury, M.J.W., Weng, K.C., Beemer, S., Seitz, A.C., Farwell, C.J., Prince, E.D. and Block, B.A. 2007. Annual migrations, diving behavior, and thermal biology of Atlantic Bluefin Tuna, <i>Thunnus thynnus</i> on their Gulf of Mexico breeding grounds. <i>Marine Biology</i> 151: 1-18.",
+      "year": "2007",
+      "title": "Annual migrations, diving behavior, and thermal biology of Atlantic Bluefin Tuna, <i>Thunnus thynnus</i> on their Gulf of Mexico breeding grounds.",
+      "author": "Teo, S.L.H., Boustany, A., Dewar, H., Stokesbury, M.J.W., Weng, K.C., Beemer, S., Seitz, A.C., Farwell, C.J., Prince, E.D. and Block, B.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rooker, J.R., Alvarado-Bremer, J.R., Block, B.A., Dewar, H., de Metrio, G., Corriero, A., Kraus, R.T., Prince, E.D., Rodríguez-Marín, E. and Secor, D.H. 2007. Life history and stock structure of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>). <i>Reviews in Fishery Science</i> 15: 265-310.",
+      "year": "2007",
+      "title": "Life history and stock structure of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>)",
+      "author": "Rooker, J.R., Alvarado-Bremer, J.R., Block, B.A., Dewar, H., de Metrio, G., Corriero, A., Kraus, R.T., Prince, E.D., Rodríguez-Marín, E. and Secor, D.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rooker, J.R., Secor, D.H., de Metrio, G., Schloesser, R., Block, B.A. and Neilson, J.D. 2008. Natal homing and connectivity in Atlantic Bluefin Tuna populations. <i>Science</i> 322: 742-744.",
+      "year": "2008",
+      "title": "Natal homing and connectivity in Atlantic Bluefin Tuna populations.",
+      "author": "Rooker, J.R., Secor, D.H., de Metrio, G., Schloesser, R., Block, B.A. and Neilson, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Muhling, B.A., Lamkin, J.T., Quattro, J.M., Smith, R.H., Roberts, M.A, Roffer, M.A. and Ramirez, K. 2011. Collection of larval Bluefin Tuna (<i>Thunnus thynnus</i>) outside documented western Atlantic spawning grounds. <i>Bulletin of Marine Science</i> 87(3): 687-694.",
+      "year": "2011",
+      "title": "Collection of larval Bluefin Tuna (<i>Thunnus thynnus</i>) outside documented Western Atlantic spawning grounds",
+      "author": "Muhling, B.A., Lamkin, J.T., Quattro, J.M., Smith, R.H., Roberts, M.A, Roffer, M.A. and Ramirez, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baglin, R.E. 1982. Reproductive biology of western Atlantic bluefin tuna. <i>Fishery Bulletin</i> 80: 121-134.",
+      "year": "1982",
+      "title": "Reproductive biology of western Atlantic Bluefin Tuna",
+      "author": "Baglin, R.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carlsson, J., McDowell, J., Carlsson, J.E. and Graves, J. 2007. Genetic identity of young of the year Bluefin Tuna from the eastern and western spawning areas. <i>Journal of Heredity</i> 98: 23-28.",
+      "year": "2007",
+      "title": "Genetic identity of young of the year Bluefin Tuna from the eastern and western spawning areas",
+      "author": "Carlsson, J., McDowell, J., Carlsson, J.E. and Graves, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Center for Biological Diversity. 2010. Petition to list the Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) as endangered under the United States Endangered Species Act.  Center for Biological Diversity. San Francisco.",
+      "year": "2010",
+      "title": "Petition to list the Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) as endangered under the United States Endangered Species Act",
+      "author": "Center for Biological Diversity",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacKenzie, B.R., Mosegaard, H. and Rosenberg, A.A. 2009. Impending collapse of Bluefin Tuna in the Northeast Atlantic and Mediterranean. <i>Conservation Letters</i> 2: 25-34.",
+      "year": "2009",
+      "title": "Impending collapse of Bluefin Tuna in the Northeast Atlantic and Mediterranean",
+      "author": "MacKenzie, B.R., Mosegaard, H. and Rosenberg, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Riccioni, G., Landi, M., Ferrara, G., Milano, I., Cariani, A ., Zane, L., Sella, M., Barbujani, G. and Tinti, F. 2010. Spatio-temporal population structuring and genetic diversity retention in depleted Atlantic bluefin tuna of the Mediterranean Sea. <i>Proceedings of the National Academy of Sciences of the United States of America</i> 107: 2102-2107.",
+      "year": "2010",
+      "title": "Spatio-temporal population structuring and genetic diversity retention in depleted Atlantic bluefin tuna of the Mediterranean Sea",
+      "author": "Riccioni, G., Landi, M., Ferrara, G., Milano, I., Cariani, A ., Zane, L., Sella, M., Barbujani, G. and Tinti, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Santamaria, N., Bello, G.,   Corriero, A., Deflorio, M., Vassallo-Agius, R., Bök, T., and De Metrio, G. 2009. Age and growth of Atlantic Bluefin Tuna,<i> Thunnus thynnus</i> (Osteichthyes: Thunnidae) in the Mediterranean Sea. <i>Journal of Applied Ichthyology</i> 25: 38-45.",
+      "year": "2009",
+      "title": "Age and growth of Atlantic Bluefin Tuna,<i> Thunnus thynnus</i> (Osteichthyes: Thunnidae) in the Mediterranean Sea",
+      "author": "Santamaria, N., Bello, G.,   Corriero, A., Deflorio, M., Vassallo-Agius, R., Bök, T., and De Metrio, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Diaz, G.A., Restrepo, V.R. and McHale, B. 2009. Characterization of the U.S. commercial and recreational tuna fleets during 2007. <i>Collective Volume of Scientific Papers ICCAT</i> 64(2): 449-453.",
+      "year": "2009",
+      "title": "Characterization of the U.S. commercial and recreational tuna fleets during 2007",
+      "author": "Diaz, G.A., Restrepo, V.R. and McHale, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corriero, A., Karakulak, S., Santamaria, S., Deflorio, M., Spedicato, D., Addis, P., Desantis, S., Cirillo, F., Fenech-Farrugia, A., Vassallo-Agius, R., de la Serna, J.M., Oray, Y., Cau, A., Magalofonou, P. and De Metrio, G. 2005. Size and age at sexual maturity of female Bluefin tuna (<i>Thunnus thynnus</i> L., 1758) from the Mediterranean Sea. <i>Journal of Applied Ichthyology</i> 21: 483-486.",
+      "year": "2005",
+      "title": "Size and age at sexual maturity of female Bluefin tuna (<i>Thunnus thynnus</i> L., 1758) from the Mediterranean Sea",
+      "author": "Corriero, A., Karakulak, S., Santamaria, S., Deflorio, M., Spedicato, D., Addis, P., Desantis, S., Cirillo, F., Fenech-Farrugia, A., Vassallo-Agius, R., de la Serna, J.M., Oray, Y., Cau, A., Magalofonou, P. and De Metrio, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Block, B.A., Teo, S.L.H., Walli, A., Boustany, A., Stokesbury, M.J.W., Farwell, C.J., Weng, K.C., Dewar, H. and Williams, T.D. 2005. Electronic tagging and population structure of Atlantic Bluefin Tuna. <i>Nature</i> 434: 1121-1127.",
+      "year": "2005",
+      "title": "Electronic tagging and population structure of Atlantic Bluefin Tuna",
+      "author": "Block, B.A., Teo, S.L.H., Walli, A., Boustany, A., Stokesbury, M.J.W., Farwell, C.J., Weng, K.C., Dewar, H. and Williams, T.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "National Marine Fisheries Service. 2011. Status review report of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>).  Report to National Marine Fisheries Service, Northeast Regional Office.",
+      "year": "2011",
+      "title": "Status review report of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>)",
+      "author": "National Marine Fisheries Service",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boustany, A.M., Reeb, C.A., and Block, B.A. 2008. Mitochondrial DNA and electronic tracking reveal population structure of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>). <i>Marine Biology</i> 156: 13-24.",
+      "year": "2008",
+      "title": "Mitochondrial DNA and electronic tracking reveal population structure of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>)",
+      "author": "Boustany, A.M., Reeb, C.A., and Block, B.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fromentin, J.M. and Powers, J.E. 2005. Atlantic Bluefin Tuna: population dynamics, ecology, fisheries and management. <i>Fish and Fisheries</i> 6: 281-306.",
+      "year": "2005",
+      "title": "Atlantic Bluefin Tuna: population dynamics, ecology, fisheries and management",
+      "author": "Fromentin, J.M. and Powers, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sarà, G. and Sarà, R. 2007. Feeding habits and trophic levels of Bluefin Tuna,<i> Thunnus thynnus</i>,of different size classes in the Mediterranean Sea. <i>Journal of Applied Ichthyology</i> 23: 122-127.",
+      "year": "2007",
+      "title": "Feeding habits and trophic levels of Bluefin Tuna,<i> Thunnus thynnus</i>,of different size classes in the Mediterranean Sea",
+      "author": "Sarà, G. and Sarà, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sissenwine, M.P., Mace, P.M., Powers, J.E. and Scott, G.P. 1998. A commentary on western Atlantic Bluefin Tuna assessments. <i>Transactions of the American Fisheries Society</i> 127: 838-855.",
+      "year": "1998",
+      "title": "A commentary on western Atlantic Bluefin Tuna assessments.",
+      "author": "Sissenwine, M.P., Mace, P.M., Powers, J.E. and Scott, G.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carlsson, J., McDowell, J.R., Díaz-Jaimes, P., Carlsson, J.E.L., Blrs, S.B., Gold, J.R. and Graves, J.E. 2004. Microsatellite and mitochondrial DNA analyses of Atlantic bluefin tuna (<i>Thunnus thynnus thynnus</i>) population structure in the Mediterranean Sea. <i>Molecular Biology</i> 13: 3345-3356.",
+      "year": "2004",
+      "title": "Microsatellite and mitochondrial DNA analyses of Atlantic bluefin tuna (<i>Thunnus thynnus thynnus</i>) population structure in the Mediterranean Sea",
+      "author": "Carlsson, J., McDowell, J.R., Díaz-Jaimes, P., Carlsson, J.E.L., Blrs, S.B., Gold, J.R. and Graves, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-2"
+    },
+    {
+      "citation": "Collette, B.B. and Graves, J. 2019. <i>Tunas and Billfishes of the World</i>. Johns Hopkins University Press, Baltimore, Maryland.",
+      "year": "2019",
+      "title": "Tunas and Billfishes of the World",
+      "author": "Collette, B.B. and Graves, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IGFA. 2020. <i>IGFA world record game fishes</i>. International Game Fish Association, Dania Beach, Florida.",
+      "year": "2020",
+      "title": "IGFA world record game fishes",
+      "author": "IGFA",
+      "citation_short": null
+    },
+    {
+      "citation": "Pew. 2020. Netting Billions 2020: A Global Tuna Valuation. https://www.pewtrusts.org/en/research-and-analysis/reports/2020/10/netting-billions-2020-a-global-tuna-valuation",
+      "year": "2020",
+      "title": "Netting Billions 2020: A Global Tuna Valuation",
+      "author": "Pew",
+      "citation_short": ""
+    },
+    {
+      "citation": "ISSF. 2020. Status of the world fisheries for tuna. Nov. 2020. ISSF Technical Report 2020-16. International Seafood Sustainability Foundation, Washington, D.C., USA.",
+      "year": "2020",
+      "title": "Status of the world fisheries for tuna. Nov. 2020. ISSF Technical Report 2020-16",
+      "author": "ISSF",
+      "citation_short": null
+    },
+    {
+      "citation": "Arrizabalaga, H., Dufour, F., Kell, L., Merino, G., Ibaibarriaga, L., Chust, G., Irigoien, X., Santiago, J., Murua, H., Fraile, I., Chifflet, M., Goikoetxea, N., Sagarminaga, Y., Aumont, O., Bopp, L., Herrera,M., Fromentin, J.M. and Bonhomeau, S. 2015. Global habitat preferences of commercially valuable tuna. <i>Deep Sea Research Part II: Topical Studies in Oceanography</i> 113: 102-112.",
+      "year": "2015",
+      "title": "Global habitat preferences of commercially valuable tuna",
+      "author": "Arrizabalaga, H., Dufour, F., Kell, L., Merino, G., Ibaibarriaga, L., Chust, G., Irigoien, X., Santiago, J., Murua, H., Fraile, I., Chifflet, M., Goikoetxea, N., Sagarminaga, Y., Aumont, O., Bopp, L., Herrera,M., Fromentin, J.M. and Bonhomeau, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Block, B. 2019. <i>The future of Bluefin Tunas. Ecology, Fisheries Management and Conservation</i>. Johns Hopkins University Press, Baltimore.",
+      "year": "2019",
+      "title": "The future of Bluefin Tunas. Ecology, Fisheries Management and Conservation",
+      "author": "Block, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brette, F., Machado, B., Cros, C., Incardona, J.P., Scholz, N.L. and Block, B.A. 2014. Crude Oil Impairs Cardiac Excitation-Contraction Coupling in Fish. <i>Science</i> 343(6172): 772-776.",
+      "year": "2014",
+      "title": "Crude Oil Impairs Cardiac Excitation-Contraction Coupling in Fish",
+      "author": "Brette, F., Machado, B., Cros, C., Incardona, J.P., Scholz, N.L. and Block, B.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Diaz, G.A. 2011. <i>A revision of western Atlantic Bluefin Tuna age of maturity derived from size samples collected by the Japanese longline fleet in the Gulf of Mexico (1975-1980)</i>. ICCAT Collective Volume of Scientific Papers.",
+      "year": "2011",
+      "title": "A revision of western Atlantic Bluefin Tuna age of maturity derived from size samples collected by the Japanese longline fleet in the Gulf of Mexico (1975-1980)",
+      "author": "Diaz, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Natale, A. 2012. New data on the historical distribution of Bluefin Tuna (<i>Thunnus thynnus</i>) in the Arctic Ocean. <i>Collect. Vol. Sci. Pap. ICCAT</i> 68(1): 102-114.",
+      "year": "2012",
+      "title": "New data on the historical distribution of Bluefin Tuna (<i>Thunnus thynnus</i>) in the Arctic Ocean",
+      "author": "Di Natale, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Di Natale, A., Idrissi, M. and Justel Rubio, A., 2013. The mistery of bluefin tuna (<i>Thunnus thynnus</i>) presence and behavior in the central South Atlantic in recent years. <i>ICCAT Coll. Vol. Sci. Pap., </i> 69: 857-868.",
+      "year": "2013",
+      "title": "The mistery of bluefin tuna (<i>Thunnus thynnus</i>) presence and behavior in the central South Atlantic in recent years",
+      "author": "Di Natale, A., Idrissi, M. and Justel Rubio, A., ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Di Natale, A., Macias, D. and Cort, J.L. 2020. Atlantic bluefin tuna fisheries: temporal changes in the exploitation pattern, feasibility of sampling, factors that can influence our ability to understand spawning structure and dynamics. <i>ICCAT Coll. Vol. Pap.</i> 76(2): 354-388.",
+      "year": "2020",
+      "title": "Atlantic bluefin tuna fisheries: temporal changes in the exploitation pattern, feasibility of sampling, factors that can influence our ability to understand spawning structure and dynamics",
+      "author": "Di Natale, A., Macias, D. and Cort, J.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Di Natale, A., Tensek, S. and Pagà Garcia, A. 2016. Preliminary information about the ICCAT GBYP tagging activities in Phase 5. SCRS/2015/149. <i>ICCAT Collect. Vol. Sci. Pap.</i> 72(6): 1589-1616.",
+      "year": "2016",
+      "title": "Preliminary information about the ICCAT GBYP tagging activities in Phase 5. SCRS/2015/149",
+      "author": "Di Natale, A., Tensek, S. and Pagà Garcia, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Di Natale A., Tensek S. and Pagà Garcìa A. 2019. Is the bluefin tuna slowly returning to the Black Sea? An updating of our knowledge on Bluefin tuna in the eastern Mediterranean Sea. <i>ICCAT Collect. Vol. Sci. Pap., </i> 75(6): 1261-1277.",
+      "year": "2019",
+      "title": "Is the bluefin tuna slowly returning to the Black Sea? An updating of our knowledge on Bluefin tuna in the eastern Mediterranean Sea",
+      "author": "Di Natale A., Tensek S. and Pagà Garcìa A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Druon, J.-N., Fromentin, J.-M., Hanke, A.R., Arrizabalaga, H., Damalas, D., Tičina, V., Quílez-Badia, G., Ramirez, K., Arregui, I., Tserpes, G., Reglero, P., Deflorio, M., Oray, I., Saadet Karakulak, F., Megalofonou, P., Ceyhan, T., Grubišić, L., MacKenzie, B.R., Lamkin, J., Afonso, P. and Addis, P. 2016. Habitat suitability of the Atlantic Bluefin Tuna by size class: An ecological niche approach. <i>Progress in Oceanography </i> 142: 30-46.",
+      "year": "2016",
+      "title": "Habitat suitability of the Atlantic Bluefin Tuna by size class: An ecological niche approach",
+      "author": "Druon, J.-N., Fromentin, J.-M., Hanke, A.R., Arrizabalaga, H., Damalas, D., Tičina, V., Quílez-Badia, G., Ramirez, K., Arregui, I., Tserpes, G., Reglero, P., Deflorio, M., Oray, I., Saadet Karakulak, F., Megalofonou, P., Ceyhan, T., Grubišić, L., MacKenzie, B.R., Lamkin, J., Afonso, P. and Addis, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Faillettaz, R., Beaugrand, G., Goberville, E. and Kirby, R.R. 2019. Atlantic Multidecadal Oscillations drive the basin-scale distribution of Atlantic bluefin tuna. <i>Science Advances</i> 5.",
+      "year": "2019",
+      "title": "Atlantic Multidecadal Oscillations drive the basin-scale distribution of Atlantic bluefin tuna",
+      "author": "Faillettaz, R., Beaugrand, G., Goberville, E. and Kirby, R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galuardi, B. and Lutcavage, M. 2012. Dispersal routes and habitat utilization of juvenile Atlantic Bluefin Tuna, <i>Thunnus thynnus</i>, tracked with mini PSAT and archival tags. <i>PLoS ONE</i> 7(5).",
+      "year": "2012",
+      "title": "Dispersal routes and habitat utilization of juvenile Atlantic Bluefin Tuna, <i>Thunnus thynnus</i>, tracked with mini PSAT and archival tags",
+      "author": "Galuardi, B. and Lutcavage, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gordoa, A. and Carreras, G. 2014. Determination of temporal spawning patterns and hatching time in response to temperature of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) in the western Mediterranean. <i>PLoS ONE</i> 9(3).",
+      "year": "2014",
+      "title": "Determination of temporal spawning patterns and hatching time in response to temperature of Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) in the western Mediterranean",
+      "author": "Gordoa, A. and Carreras, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heffernan, J.P. 2014. Dealing with Mediterranean Bluefin Tuna: A study in international environmental management. <i>Marine Policy</i> 50: 81-88.",
+      "year": "2014",
+      "title": "Dealing with Mediterranean Bluefin Tuna: A study in international environmental management",
+      "author": "Heffernan, J.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2014. Report of the 2014 Atlantic Bluefin Tuna Stock Assessment Session. Madrid, Spain.",
+      "year": "2014",
+      "title": "Report of the 2014 Atlantic Bluefin Tuna Stock Assessment Session",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2017. Report of the 2017 Atlantic Bluefin Tuna Stock Assessment Session. Madrid, Spain.",
+      "year": "2017",
+      "title": "Report of the 2017 Atlantic Bluefin Tuna Stock Assessment Session",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2017. Report of the 2017 ICCAT bluefin stock assessment meeting. Executive summary.",
+      "year": "2017",
+      "title": "Report of the 2017 ICCAT bluefin stock assessment meeting. Executive summary.",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2020. Draft Recommendation by ICCAT Amending REC. 17-06 for an Interim Conservation and Management Plan for Western Atlantic Bluefin Tuna. Doc. No. PA2_608C/2020: https://www.iccat.int/com2020/ENG/PA2_608C_ENG.pdf.",
+      "year": "2020",
+      "title": "Draft Recommendation by ICCAT Amending REC. 17-06 for an Interim Conservation and Management Plan for Western Atlantic Bluefin Tuna",
+      "author": "ICCAT",
+      "citation_short": null
+    },
+    {
+      "citation": "ICCAT. 2020. Report for Biennial period 2018-2019. Part II (2019).  In: SCRS (ed.), Vol 2.. Madrid.",
+      "year": "2020",
+      "title": "Report for Biennial period 2018-2019. Part II (2019)",
+      "author": "ICCAT",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lawson, G.L., Castleton, M.R. and Block, B.A. 2010. Movements and diving behavior of Atlantic bluefin tuna <i>Thunnus thynnus</i> in relation to water column structure in the northwestern Atlantic. <i>Marine Ecology Progress Series</i> 400: 245-265.",
+      "year": "2010",
+      "title": "Movements and diving behavior of Atlantic bluefin tuna <i>Thunnus thynnus</i> in relation to water column structure in the northwestern Atlantic",
+      "author": "Lawson, G.L., Castleton, M.R. and Block, B.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Logan, J.M., Rodríguez-Marín, E., Goñi, N., Barreiro, S., Arrizabalaga, H., Golet, W. and Lutcavage, M. 2011. Diet of young Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) in eastern and western Atlantic foraging grounds. <i>Marine Biology</i> 158: 73-85.",
+      "year": "2011",
+      "title": "Diet of young Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) in eastern and western Atlantic foraging grounds",
+      "author": "Logan, J.M., Rodríguez-Marín, E., Goñi, N., Barreiro, S., Arrizabalaga, H., Golet, W. and Lutcavage, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacKenzie, B.R, Payne, M.R., Boje, J., Høyer, J.L. and Siegstad, H. 2014. A cascade of warming impacts  brings Bluefin Tuna to Greenland waters. <i>Global Change Biology</i> 20: 2484-2491.",
+      "year": "2014",
+      "title": "A cascade of warming impacts  brings Bluefin Tuna to Greenland waters",
+      "author": "MacKenzie, B.R, Payne, M.R., Boje, J., Høyer, J.L. and Siegstad, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mather, R. J. III, Mason, J.M. and Jones, A.C. 1995. Historical document: Life history and fisheries of Atlantic bluefin tuna.  NOAA Technical Memorandum NMFS-SEFSC-370.",
+      "year": "1995",
+      "title": "Historical document: Life history and fisheries of Atlantic bluefin tuna",
+      "author": "Mather, R. J. III, Mason, J.M. and Jones, A.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Medina, A., Abascal, F.J., Megina, C. and Garcia, A. 2002. Stereological assessment of the reproductive status of female Atlantic northern bluefin tuna during migration to Mediterranean spawning grounds through the Strait of Gibraltar. <i>Journal of Fish Biology</i> 60(1): 203-217.",
+      "year": "2002",
+      "title": "Stereological assessment of the reproductive status of female Atlantic northern bluefin tuna during migration to Mediterranean spawning grounds through the Strait of Gibraltar",
+      "author": "Medina, A., Abascal, F.J., Megina, C. and Garcia, A",
+      "citation_short": null
+    },
+    {
+      "citation": "Muhling, B.A., Liu, Y., Lee, S-K., Lamkin, J.T., Roffer, M.A., Muller-Kargen, F. and Walter, J.F., III. 2015. Potential impact of climate change on the Intra-Americas Sea: Part 2. Implication for Atlantic Bluefin Tuna and Skipjack Tuna adult and larval habitats. <i>Journal of Marine Systems</i> 148: 1-13.",
+      "year": "2015",
+      "title": "Potential impact of climate change on the Intra-Americas Sea: Part 2. Implication for Atlantic Bluefin Tuna and Skipjack Tuna adult and larval habitats",
+      "author": "Muhling, B.A., Liu, Y., Lee, S-K., Lamkin, J.T., Roffer, M.A., Muller-Kargen, F. and Walter, J.F., III.",
+      "citation_short": ""
+    },
+    {
+      "citation": "National Marine Fisheries Service. 2019. <i>Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Fisheries; Pelagic Longline Fishery Management</i>. Federal Register.",
+      "year": "2019",
+      "title": "Atlantic Highly Migratory Species; Atlantic Bluefin Tuna Fisheries; Pelagic Longline Fishery Management",
+      "author": "National Marine Fisheries Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Ngom Sow, F. and Ndaw, S. 2015. Bluefin tuna caught by Senegalese baitboat and landed in Dakar in 2013. <i>ICCAT Coll. Vol. Sci. Pap.</i> 71(3): 1495-1498.",
+      "year": "2015",
+      "title": "Bluefin tuna caught by Senegalese baitboat and landed in Dakar in 2013",
+      "author": "Ngom Sow, F. and Ndaw, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Olafsdottir, D., MacKenzie, B.R., Chosson-P, V. and Ingimundardottir, T. 2016. Dietary evidence of mesopelagic and pelagic foraging by Atlantic Bluefin Tuna (<i>Thunnus thynnus L.</i>) during autumn migrations to the Iceland Basin. <i>Frontiers in Marine Science</i> 3(108).",
+      "year": "2016",
+      "title": "Dietary evidence of mesopelagic and pelagic foraging by Atlantic Bluefin Tuna (<i>Thunnus thynnus L.</i>) during autumn migrations to the Iceland Basin",
+      "author": "Olafsdottir, D., MacKenzie, B.R., Chosson-P, V. and Ingimundardottir, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pleizier, N.K., Campana, S.E., Schallert, R.J., Wilson, S.G. and Block, B.A. 2012. Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) diet in the Gulf of St. Lawrence and on the eastern Scotian Shelf. <i>Journal of  Northwest Atlantic Fishery Science</i> 44: 67-76.",
+      "year": "2012",
+      "title": "Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) diet in the Gulf of St. Lawrence and on the eastern Scotian Shelf",
+      "author": "Pleizier, N.K., Campana, S.E., Schallert, R.J., Wilson, S.G. and Block, B.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Richardson, D.E., Marancik, K.E., Guyon, J.R., Lutcavage, M.E., Galuardi, B., Lam, C.H., Walsh, H.J., Wildes, S., Yates, D.A. and Hare, J.A. 2016. Discovery of a spawning ground reveals diverse migration strategies in Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>). <i>Proceedings of the National Academy of Sciences</i> 11: 3299-3304.",
+      "year": "2016",
+      "title": "Discovery of a spawning ground reveals diverse migration strategies in Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>)",
+      "author": "Richardson, D.E., Marancik, K.E., Guyon, J.R., Lutcavage, M.E., Galuardi, B., Lam, C.H., Walsh, H.J., Wildes, S., Yates, D.A. and Hare, J.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schalit, D. 2019. Japanese longline catches of bluefin tuna in the Atlantic Ocean, 1950-1970. <i>ICCAT-GBYP MSE Meeting, St. Andrews, Canada</i> SCRS/2019/128: 1-17.",
+      "year": "2019",
+      "title": "Japanese longline catches of bluefin tuna in the Atlantic Ocean, 1950-1970",
+      "author": "Schalit, D",
+      "citation_short": null
+    },
+    {
+      "citation": "Siskey, M.R., Wilberg, M.J., Allman, R.J., Barnett, B.K. and Secor, D.H. 2016. Forty years of fishing: changes in age structure and stock mixing in northwestern Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) associated with size-selective and long-term exploitation. <i>ICES Journal of Marine Science </i> 73: 2518-2528.",
+      "year": "2016",
+      "title": "Forty years of fishing: changes in age structure and stock mixing in northwestern Atlantic Bluefin Tuna (<i>Thunnus thynnus</i>) associated with size-selective and long-term exploitation",
+      "author": "Siskey, M.R., Wilberg, M.J., Allman, R.J., Barnett, B.K. and Secor, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Varela, J.L., Rodríguez-Marín, E., Ruiz, M. and Medina, A. 2014. Feeding habits of young Bluefin Tuna (<i>Thunnus thynnus</i>) in the Bay of Biscay inferred from stomach-content and stable-isotope analyses. <i>Marine Biodiversity Records</i> 7.",
+      "year": "2014",
+      "title": "Feeding habits of young Bluefin Tuna (<i>Thunnus thynnus</i>) in the Bay of Biscay inferred from stomach-content and stable-isotope analyses",
+      "author": "Varela, J.L., Rodríguez-Marín, E., Ruiz, M. and Medina, A.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

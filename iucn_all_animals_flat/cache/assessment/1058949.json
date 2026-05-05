@@ -1,0 +1,1248 @@
+{
+  "assessment_date": "2018-06-08T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 164579,
+  "criteria": "A2d",
+  "url": "https://www.iucnredlist.org/species/164579/1058949",
+  "citation": "Cota, M., Stuart, B.L., Grismer, L., Quah, E., Panitvong, N., Neang, T., Nguyen, N.S., Wogan, G., Lwin, K., Srinivasulu, C., Srinivasulu, B., Vijayakumar, S.P., Ramesh, M., Ganesan, S.R., Madala, M., Sreekar, R., Rao, D.-Q., Thakur, S., Mohapatra, P. & Vyas, R. 2021. Varanus bengalensis. The IUCN Red List of Threatened Species 2021: e.T164579A1058949. Accessed on 05 May 2026.",
+  "assessment_id": 1058949,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 164579,
+    "scientific_name": "Varanus bengalensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "VARANIDAE",
+    "genus_name": "Varanus",
+    "species_name": "bengalensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Daudin, 1802)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Monitor Lizard Specialist Group",
+        "url": "https://www.iucn.org/commissions/ssc-groups/amphibians-reptiles/monitor-lizard",
+        "description": "Co-Chairs: Mark Auliya (email: mark.auliya@ufz.de) and André Koch (email: andrepascalkoch@web.de)\nRed List Authority Coordinator: Michael Cota (email: herpetologe@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Clouded Monitor",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Common Indian Monitor",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "孟加拉巨蜥",
+        "language": "chi"
+      },
+      {
+        "main": true,
+        "name": "Bengal Monitor Lizard",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Varanus nebulosus (Gray, 1831)",
+        "status": "MERGE",
+        "genus_name": "Varanus",
+        "species_name": "nebulosus",
+        "species_author": "(Gray, 1831)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tupinambis cepedianus Daudin, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Tupinambis",
+        "species_name": "cepedianus",
+        "species_author": "Daudin, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Tupinambis bengalensis Daudin, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Tupinambis",
+        "species_name": "bengalensis",
+        "species_author": "Daudin, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Varanus punctatus Merrem, 1820",
+        "status": "ACCEPTED",
+        "genus_name": "Varanus",
+        "species_name": "punctatus",
+        "species_author": "Merrem, 1820",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Monitor gemmatus Guérin-Méneville, 1829",
+        "status": "ACCEPTED",
+        "genus_name": "Monitor",
+        "species_name": "gemmatus",
+        "species_author": "Guérin-Méneville, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Varanus irrawadicus Yang & Li, 1987",
+        "status": "ACCEPTED",
+        "genus_name": "Varanus",
+        "species_name": "irrawadicus",
+        "species_author": "Yang & Li, 1987",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Varanus vietnamensis Yang & Liu, 1994",
+        "status": "ACCEPTED",
+        "genus_name": "Varanus",
+        "species_name": "vietnamensis",
+        "species_author": "Yang & Liu, 1994",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 3000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "6",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "Unknown",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "Unknown",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "This&#160;is a wide ranging monitor lizard found in Afghanistan, Pakistan, Bangladesh, Nepal, India, Sri Lanka, southern China&#160; (Daudin 1802, Zhao and Adler 1993), Myanmar, Viet Nam (Nguyen <em>et al.</em> 2009, Das 2010), Lao PDR (Duckworth<em> et al.</em> 1999), southeastern Iran, and as far as Java and the Anambas Islands in Indonesia. In Lao PDR, it has been reported from Nakai Plateau and is considered to have been locally extirpated in recent years in one area of Phou Louey NBCA (Stuart 1998c, Duckworth <em>et al.</em> 1999).&#160;In China, it is only known from the&#160;Wanding Valley, in Yunnan Province (Zhao and Adler 1993).&#160;It has an upper elevation limit of 2,150 m asl (though has been reported up to 2,600 m asl. in Afghanistan - Clark 1990).&#160;<em>Varanus bengalensis nebulosus&#160;</em>is present in Myanmar, Lao PDR, Thailand, Cambodia, Malaysia, Singapore, Indonesia, Viet Nam, and various islands in the South China Sea between Peninsular Malaysia and Sumatra and Borneo (Gray 1831, Nguyen&#160;<em>et al.</em>&#160;2009, Das 2010, Grismer 2011, Chan-ard<em>&#160;et al.</em>&#160;2015). In Viet Nam, it has been recorded from the provinces of Quang Tri (Dak Rong, Dong Tam Ve, Huong Hoa), Thua Thien-Hue (A Luoi, Loc Hai), Da Nang (Son Tra), Quang Nam (Nam Giang, Tay Giang), Kon Tum (Kon Plong, Bo Y), Gia Lai (K Bang), Dak Lak (Chu Yang Sin, Dak Phoi, Yok Don), Lam Dong (Lang Bian Plateau), Binh Phuoc (Nghia Trung), Dong Nai (Cat Tien), Ba Ria–Vung Tau (Con Dao) and Kien Giang (Phu Quoc) (Nguyen&#160;<em>et al.</em>&#160;2009). In Indonesia, it has been recorded from Java and its occurrence on Sumatra <span style=\"\">has been suggested (</span>Gray 1831, De Lisle 1996, Smith 1935, Das 2010). Although there are some old specimens purportedly from Sumatra, no recent records seem to exist from the mainland (e.g. Auffenberg 1994), but it has been <span style=\"\">recorded </span>on at least three islands in the Riau Archipelago close to the coast of Sumatra (E. Arida pers. comm. 2019,<span style=\"\">&#160;Arida&#160;<em>et al.</em>&#160;2015). Javan records </span>are from the west and east, but the only rec<span style=\"\">ent records are photographs of a dead and a live&#160;animal from Baluran National Park and from Meru Betiri National Park (Auliya and Koch 2020), both&#160;taken&#160;</span>in East Java two or three years ago (E. Arida pers. comm. 2019). Captive animals have been seen in West Java (D.T. Iskandar pers. comm. 2019).<br/><br/>In Malaysia, it is known from the states of Perlis (Wang Kelian), Kedah (Ulu Muda, Pulau Langkawi), Terengganu (Jertih, Hutan Lipur Sekayu, Tasik Kenyir, Perhentian Besar, Gunung Tebu), Perak (Batang Padang and Beruas, Selangor (Kepong), Negeri Sembilan (Pasoh), Endau-Rompin (Kampung Relau, Johor (Gunung Panti, Pulau Aur), Penang (Pulau Jerejak) and Pahang (Pulau Tioman, Krau Wildlife Reserve), and the foot of Gunung Lawit in Sungai Padang and Batang Padang (Cantor 1847, Boulenger 1903, Hendrickson 1966, Dring 1979, Sharma<em>&#160;et al.&#160;</em>2001, Grismer&#160;<em>et al.</em>&#160;2001, Norsham and Ong 2001, Daicus and Hashim 2004, Norsham&#160;<em>et al</em>. 2005, Ibrahim&#160;<em>et al.</em>&#160;2006, Chan&#160;<em>et al.</em>&#160;2009, 2010, Grismer 2011, Nurulhuda&#160;<em>et al.</em>&#160;2014, Sumarli&#160;<em>et al.</em>&#160;2015). In Thailand, it is present in forested areas throughout the country, although rare in the northeast (Chan-ard<em>&#160;et al.</em>&#160;2015). In Cambodia, it has been found in the northern Cardamom Mountains (Daltry and Chheang 2000, Swan and Daltry 2002). In Lao PDR, the species is sometimes referred as&#160;<em>V. nebulosus</em>, which has been reported from Nakai Plateau and considered as locally extirpated in recent years in one area of Phou Louey NBCA (Stuart 1998c, Duckworth<em>&#160;et al.</em>&#160;1999). It ranges up to 350 m asl (Grismer&#160;2011). The species is naturally absent from the Chao Phraya River Central Flood Plain in Thailand, a historically swampy area unsuitable for this typically dry forest species. It may be absent from naturally swampy areas in the Mekong Delta, but there are too few records for Myanmar to clarify its occurrence in this area (G. Wogan pers. comm. 2017). In China this species is distributed in Ruili River watershed in western Yunnan (Yang and Li 1987, as&#160;<em>Varanus irrawadicus</em>).<span style=\"\">&#160;The highest elevational record is 3,000 m asl (Singh<em> et al. </em>2020).</span><p></p>",
+    "population": "<span style=\"\">There is limited recent information on the population status of this species. Most available information on the population status reported here dates from 9–30 years ago, prior to evidence of decline in much of Southeast Asia. It is unclear whether comparable declines have taken place elsewhere, but as this species is widely exploited this is considered likely. In s</span>ome agricultural areas, this species has been found to be common (Auffenberg 1989). Density estimates varied greatly between different habitats in northern India and Pakistan, from an average of two individuals per km² recorded on the edge of a seasonally flooded evaporation basin in Rajasthan to just under 40 individuals on average per km² in marsh habitat in Pakistan (Auffenberg 1994). Various techniques were used to derive these estimates, so that the numbers are not directly comparable (Auffenberg 1994). Densities were also found to be relatively high in agricultural habitats, from around 14 to 30 individuals per km² (Auffenberg 1994). In the more arid parts of its range it probably occurs at reasonably low densities. Although present on Java, the species is reportedly very scarce and localized (S. Sweet pers. comm. 2010,&#160;Papenfuss&#160;<em>et al.</em>&#160;2010). The species is very common in southern Thailand, in areas where the predominantly Muslim population does not hunt the animal for food (M. Cota pers. comm. 2017).<br/><br/>In areas where the species is eaten b<span style=\"\">y humans or traded for other purposes, populations are</span> likely to be in decline. This includes most of Myanmar (though it appears to be very common in the southern Thananthari area, and the Myeik Archipelago - Kyi Soe Lwin pers. comm. 2017), much of southern Thailand; in much of northern and northeastern Thailand it is now very rare (following declines from around 30–15 years ago) and may not decline much further (M. Cota pers. comm. 2017). It is heavily hunted in Cambodia, and the population is estimated to have declined by around 30% over 20 years (T. Neang pers. comm. 2017). It is commonly seen in markets in Laos, but no information is available on rates of decline (S. Phimmachak pers. comm. 2017), although rates of decline are likely to be comparable (B. Stuart pers. comm. 2017). The species is now very rare in mainland Viet Nam as a result of hunting pressure, and it is confined largely to national parks (S. Nguyen pers. comm. 2017); there is however no information on rates of decline. It remains common in this country only in Can Dao National Park (S. Nguyen pers. comm. 2017). The species remains common in Malaysia (L. Grismer pers. comm. 2017). In China, it is a rare species. (D.Q. Rao pers. comm. 2018).",
+    "habitats": "<p>This diurnal and largely terrestrial species inhabits forests and forests edges, as well as plantations (Das 2010), including oil palm, and agricultural areas (Auffenberg 1994). It has been recorded from a variety of habitats, both arid and moist, and from scrubland to forests, at moderate to high elevations (Auffenberg 1994, Pianka 2004), although it is absent from swampy areas. It feeds on insects, spiders, snails, crabs, frogs, small mammals, birds, lizards and snakes; also known to scavenge (Das 2010). Clutches comprise 8–32 eggs, with 1–2 clutches laid per year (Auliya and Koch in press), which may be laid in termitaria (Das 2010); hatchlings measure 94 mm (Das 20<span style=\"\">10). The average age at reproduction may be 11 years, as the species has an age at maturity of three and maximum longevity of 20 years (M. Cota pers. comm. 2017).</span></p><p></p>",
+    "threats": "The greatest threat to this species is hunting, as it is hunted commercially for its skin (domestically), and its meat is commonly eaten; the fat is also used in traditional medicine (Papenfuss&#160;<em>et al.</em>&#160;2010), and in India the hatha jodi trade represents an additional impact. Although hunting for local use has historically been a subsistence-level activity in India, the recent emergence of festivals in which thousands gather to hunt animals (e.g. in West Bengal - Rajpoot <em>et al. </em>2018) can be expected to have serious impacts on local subpopulations. The Bengal Monitor has been declining \"for several decades\" in India, attributed to harvesting for the illegal skin trade (Traffic Post 2013), and Rajpoot et al. (2018) suggest that Indian Monitor species (including the Bengal Monitor) \"could go extinct very soon\" without protection, although do not specify the evidence for this expectation.<br/><br/>In Iran, it is killed by people who mistakenly consider it to be dangerous; it is not hunted for food or skins in that country (Papenfuss&#160;<em>et al.</em>&#160;2010). The species is very rare in most of Thailand and in Viet Nam outside protected areas (M. Cota and S. Nguyen pers. comm. 2017), where long-established infrastructure has made subpopulations vulnerable to exploitation, and it is very easily hunted with dogs (B. Stuart pers. comm. 2017). Recent declines in Cambodia and Viet Nam are linked to the opening up of these areas as they develop (B. Stuart pers. comm. 2017). In southern Thailand and presumably in Malaysia it has some cultural protection as a result of Islamic prohibitions on eating reptiles, but it is undergoing widespread declines in Southeast Asia save perhaps in Thailand and Viet Nam where densities have been very low for decades. H<span style=\"\">abitat loss and increase of the human population in India conflicts arise that pose another severe threat (Sharma <em>et al. </em>2018), and this is presumably also the case elsewhere. &#160;&#160;</span><p></p>",
+    "measures": "This species occurs in many protected areas across its extensive range and it is protected in a number of countries by national legislation because it is currently listed on Appendix I of CITES which prohibits legal export<span style=\"\">. While there are</span> reports of some cross-border illegal trade - including the hatha jodi trade from India - this listing is likely to be effective in limiting exploitation for the international leather industry (M. Cota pers. comm. 2017). Nevertheless, penalties for violating the Indian Wildlife Protection Act are not required to be strict, local hunting in rural areas is rarely reported (M. Auliya pers. comm. 2020), and skins of Appendix I listed monitor skins have been sold openly in the Philippines as recently as March 2020 (TNN 2020). Further research into the harvest levels of this species is needed.&#160;The establishment and management of new protected areas where it is illegal to hunt this species should be carried out to provide a refuge from persecution&#160;(Papenfuss&#160;<em>et al.</em>&#160;2010).&#160;According to Duckworth <em>et al.</em>&#160;(1999),<em>&#160;</em>it&#160;is considered as Potentially At Risk in Lao PDR.&#160;In China, this species is under National First Level Protection. It is a protected species in Indonesia under the name <em>Varanus nebulosus</em>. Research is recommended to clarify whether this species occurs on the Sumatran mainland (Arida<em> et al.</em> 2015).<span style=\"\"> Awareness workshops should be regularly conducted across the species' range (see Bhattacharya <em>et al.</em> 2019).&#160;</span>",
+    "use_trade": "This species is harvested for a number of uses: the skins are commercially valuable, the meat is eaten, and the fat is used in traditional medicine (Papenfuss&#160;<em>et al.</em>&#160;2010).&#160;<span style=\"background-color: rgb(255, 255, 255);\">In India there is an illegal trade in hemipenes of&#160; the Bengal and Yellow Monitors (</span><span style=\"background-color: rgb(255, 255, 255);\">termed \"hatha jodi\"), which are marketed as plant roots with magical powers (D'Cruze&#160;</span><em>et al</em><span style=\"background-color: rgb(255, 255, 255);\">. 2018; Sharma&#160;</span><em>et al.</em><span style=\"background-color: rgb(255, 255, 255);\">&#160;2019).&#160;</span>It is hunted for food and sold to traders in Lao PDR, Viet Nam and Thailand (Baird 1993, Stuart 1998b, 1998e, 1998d, Duckworth<em> et al</em>. 1999), and it has been estimated that a single village in Dong Khanthun<span style=\"\">g PNBCA a</span>nnually harvested 100 individuals for consumption and sale to Lao army soldiers and Lao traders (Stuart 1998e, Duckworth <em>et al</em>. 1999). International trade is prohibited, however, this species appears to be in regional trade between Lao PDR, Viet Nam and China (S. Phimmachak pers. comm. 2017), and trade from China appears to have declined or ceased since the 1990s (D.Q. Rao pers. comm. 2019).",
+    "rationale": "<span style=\"\">The species is heavily hunted in a variety of habitats&#160;across South Asia and continental Southeast Asia. Extreme local declines have been reported within 30 years (estimated to correspond to three generations) for most of Southeast Asia outside Malaysia. If the Southeast Asian <em>Varanus&#160;</em><em>nebulosus </em>is revalidated as a full species, it will consequently likely warrant a Vulnerable or Near Threatened listing, although Southeast Asian populations of <em>V. bengalensis</em> - as presently understood - rather reflect a geographically restricted distribution. More data on rates of any decline in India are needed, the main part of the global range. It is strongly suspected that local population declines of <em style=\"\">V. bengalensis</em> will increase across the species' global range, and the species appears to be close to qualifying for a threatened category, and is therefore assessed Near Threatened. &#160; &#160;&#160;</span>",
+    "trend_justification": null,
+    "taxonomic_notes": "<span style=\"font-style: italic;\">Varanus irrawadicus</span> Yang &amp; Li, 1987 and <span style=\"font-style: italic;\">V. vietnamensis</span> Yang &amp; Liu, 1994 were previously described as nominal species, but both were synonymized with <span style=\"font-style: italic;\">V. bengalensis</span> by Böhme and Ziegler (1997). The same authors raised <span style=\"font-style: italic;\">V. bengalensis nebulosus</span> (Gray, 1831) to full  species status based on a <span style=\"font-style: italic;\">V. b. bengalensis</span> specimen obtained from a market in Phuket (exhibiting characters within the range of <span style=\"font-style: italic;\">V. b. nebulosus</span>), which was thought to prove sympatry between the two forms, together with differences in hemipenial structure. It is widely accepted that this specimen instead represents a geographic race of <span style=\"font-style: italic;\">V. bengalensis</span>, based on a very detailed study of geographic variation in <span style=\"font-style: italic;\">V. bengalensis</span> across its range (Auffenberg 1994). The Phuket locality is also considered doubtful, as this is an extensively-visited area where no <em>nebulosus-</em>morph monitors have otherwise been recorded, and the specimen recorded in the market may have been collected further north&#160;(D. Bennett pers. comm. 2017). Consequently <em>V. nebulosus </em>is treated here as a junior synonym of <em>V. bengalensis</em>."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nepal"
+      },
+      "code": "NP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jawa"
+      },
+      "code": "JAW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sumatera"
+      },
+      "code": "SUM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Afghanistan"
+      },
+      "code": "AF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yunnan"
+      },
+      "code": "CHC-YN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tamil Nadu"
+      },
+      "code": "IND-TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kerala"
+      },
+      "code": "IND-KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jammu-Kashmir"
+      },
+      "code": "WHM-JK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Himachal Pradesh"
+      },
+      "code": "WHM-HP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Assam"
+      },
+      "code": "ASS-AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madhya Pradesh"
+      },
+      "code": "IND-MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gujarat"
+      },
+      "code": "IND-GU"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Cota, M., Stuart, B.L., Grismer, L., Quah, E., Panitvong, N., Neang, T., Nguyen, N.S., Wogan, G., Lwin, K., Srinivasulu, C., Srinivasulu, B., Vijayakumar, S.P., Ramesh, M., Ganesan, S.R., Madala, M., Sreekar, R., Rao, D.-Q., Thakur, S., Mohapatra, P. & Vyas, R.",
+      "value": [
+        "Michael Cota",
+        "Chelmala Srinivasulu (Osmania University, Hyderabad, India / GRA Western Ghats Workshop)",
+        "Bhargavi Srinivasulu (Osmania University, Hyderabad, India / GRA Western Ghats Workshop)",
+        "S.P Vijayakumar (Centre for Ecological Studies, Indian Institute of Science, Bengaluru, India / GRA Western Ghats Workshop)",
+        "Lee Grismer (SRLI Reptile Assessment)",
+        "Raju Vyas (SRLI Reptile Assessment /  Vadodara Zoo, Vadodara)",
+        "Subramaniam Ganesan (AVC College, Mayiladuthurai / Chennai Snake Park, Rajbhavan post, Chennai 600 022, Tamil Nadu, India / GRA Western Ghats Workshop)",
+        "Bryan Stuart",
+        "Madhuri Ramesh (Freelance consultant / GRA Western Ghats Workshop)",
+        "Pratyush Mohapatra (North Orissa University, Baripada)",
+        "Malik Madala (Sir Syed College. India / GRA Reptile Workshop)",
+        "Sanjay Thakur (WWF-India, Seoni. India / GRA Western Ghats Workshop)",
+        "Rachakonda Sreekar (Biodiversity Research and Conservation Society, Secunderabad, India / GRA Western Ghats Workshop)",
+        "Guinevere Wogan (University of California, Berkeley)",
+        "Ding-Qi Rao (Kunming Institute of Zoology)",
+        "Thy Neang",
+        "Evan Quah (University Sains Malaysia)",
+        "Kyi Soe Lwin (Friends of Wildlife, Yangon)",
+        "Ngoc Sang Nguyen (Institute of Tropical Biology, Ho Chi Minh City)",
+        "Nonn Panitvong"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Auliya, M. & Koch, A.",
+      "value": [
+        "Mark Auliya (Helmholtz-Zentrum für Umweltforschung (UFZ), Germany)",
+        "André Koch (IUCN SSC Monitor Lizard Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Cai, B., Papenfuss, T., Shafiei Bafti, S., Sharifi, M., Bennett, D. & Sweet, S.",
+      "value": [
+        "Daniel Bennett (Coordinator of the Monitor Lizard RLA)",
+        "Soheila Shafiei Bafti (GRA, SRLI Reptile Assessment)",
+        "Mozafar Sharifi (GRA, SRLI Reptile Assessment)",
+        "Sam Sweet (Ecology and Evolutionary Biology, University of California, Santa Barbara, USA)",
+        "Bo Cai (Chengdu Institute of Biology - Chinese Academy of Science)",
+        "Theodore Papenfuss (Museum of Vertebrate Zoology, University of California)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Zhang, J.",
+      "value": [
+        "Jing Zhang (Global Reptile Assessment)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Sindaco, R. and Jeremčenko, V.K. 2008. <i>The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia</i>. Edizioni Belvedere, Latina (Italy).",
+      "year": "2008",
+      "title": "The Reptiles of the Western Palearctic. 1. Annotated Checklist and Distributional Atlas of the Turtles, Crocodiles, Amphibians and Lizards of Europe, North Africa, Middle East and Central Asia",
+      "author": "Sindaco, R. and Jeremčenko, V.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zhao, E. and Adler, K. 1993. <i>Herpetology of China</i>. Society for the Study of Amphibians and Reptiles.",
+      "year": "1993",
+      "title": "Herpetology of China",
+      "author": "Zhao, E. and Adler, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anderson, S.C. 1999. <i>The Lizards of Iran. Contributions to Herpetology Volume 15</i>. Society for the Study of Amphibians and Reptiles, Saint Louis, Missouri.",
+      "year": "1999",
+      "title": "The Lizards of Iran. Contributions to Herpetology Volume 15",
+      "author": "Anderson, S.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Clark, R. 1990. A report on herpetological observations in Afghanistan. <i>British Herpetological Society Bulletin</i> 33: 20-42.",
+      "year": "1990",
+      "title": "A report on herpetological observations in Afghanistan",
+      "author": "Clark, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Khan, M.S and Tasnim, R. 1990. A new gecko of the genus Tenuidactylus from northeastern Punjab, Pakistan, and southwestern Azad Kashmir. <i>Herpetologica</i> 1: 142-148.",
+      "year": "1990",
+      "title": "A new gecko of the genus Tenuidactylus from northeastern Punjab, Pakistan, and southwestern Azad Kashmir.",
+      "author": "Khan, M.S and Tasnim, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nguyen, V.S., Ho, T.C. and Nguyen, Q.T. 2009. <i>Herpetofauna of Vietnam</i>. Edition Chimaira, Frankfurt am Main.",
+      "year": "2009",
+      "title": "Herpetofauna of Vietnam",
+      "author": "Nguyen, V.S., Ho, T.C. and Nguyen, Q.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duckworth, J.W., Salter, R.E. and Khounboline, K. 1999. Wildlife in Lao PDR: 1999 Status Report. IUCN, Vientiane, Laos.",
+      "year": "1999",
+      "title": "Wildlife in Lao PDR: 1999 Status Report",
+      "author": "Duckworth, J.W., Salter, R.E. and Khounboline, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ahsen, M.F. and Saeed, M.A. 2004. Some aspects of breeding biology of the Bengal Lizard (<i>Varanus bengalensis</i>) in Bangladesh. <i>Asiatic Herpteological Research</i> 10: 236-240.",
+      "year": "2004",
+      "title": "Some aspects of breeding biology of the Bengal Lizard (<i>Varanus bengalensis</i>) in Bangladesh",
+      "author": "Ahsen, M.F. and Saeed, M.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nawaz, M. and Nawaz, Y. 2003. Monitor lizard (Varanidae: Reptilia) in Baluchistan, Pakistan. <i>Tigerpaper</i> 30(3): 28-30.",
+      "year": "2003",
+      "title": "Monitor lizard (Varanidae: Reptilia) in Baluchistan, Pakistan",
+      "author": "Nawaz, M. and Nawaz, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hudson, R., Alberts, A., Ellis, S. and Byers, O. 1994. Conservation Assessment and Management Plan for Iguanidae and Varanidae.  IUCN/SSC Conservation Breeding Specialist Group, Apple Valley, Minnesota.",
+      "year": "1994",
+      "title": "<i>Conservation Assessment and Management Plan for Iguanidae and Varanidae</i>.",
+      "author": "Hudson, R., Alberts, A., Ellis, S. and Byers, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pianka, E.R. 2004. <i>Varanus bengalensis</i>. In: Pianka, E.R. and King, D.R. (eds), <i>Varanoid lizards of the world</i>, pp. 157-160. Indiana University Press, Bloomington, USA.",
+      "year": "2004",
+      "title": "<i>Varanus bengalensis</i>",
+      "author": "Pianka, E.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Auffenberg, W. 1994. <i>The Bengal Monitor</i>. University of Florida Press, Gainesville, USA.",
+      "year": "1994",
+      "title": "The Bengal Monitor",
+      "author": "Auffenberg, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Böhme, W. and Ziegler, T. 1997. On the synonymy and taxonomy of the Bengal monitor lizard, <i>Varanus bengalensis</i> (Daudin, 1802) complex (Sauria: Varanidae). <i>Amphibia-Reptilia</i> 18: 207-211.",
+      "year": "1997",
+      "title": "On the synonymy and taxonomy of the Bengal monitor lizard, <i>Varanus bengalensis</i> (Daudin, 1802) complex (Sauria: Varanidae)",
+      "author": "Böhme, W. and Ziegler, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "King, D. and Green B. 1999. <i>Monitors: The Biology of </i>Varanus<i> Lizards</i>. Krieger Publishing Company, Florida.",
+      "year": "1999",
+      "title": "Monitors: The Biology of <i>Varanus</i> Lizards",
+      "author": "King, D. and Green B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gupta, B.K. 1996. Trade of Bengal Monitor <i>Varanus bengalensis</i> in Uttar Pradesh, India. <i>Tigerpaper</i> 23(1): 1-3.",
+      "year": "1996",
+      "title": "Trade of Bengal Monitor <i>Varanus bengalensis</i> in Uttar Pradesh, India",
+      "author": "Gupta, B.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Auffenberg, W. 1989. Utilisation of Monitor Lizards in Pakistan. <i>TRAFFIC Bulletin</i> 11(1): 8-12.",
+      "year": "1989",
+      "title": "Utilisation of Monitor Lizards in Pakistan",
+      "author": "Auffenberg, W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Beacham, W., Castronova, F.V., Freedman, B. and Sessine, S. (eds). 2001. <i>Beacham's Guide to International Endangered Species</i>. Gale Research, Detroit.",
+      "year": "2001",
+      "title": "Beacham's Guide to International Endangered Species",
+      "author": "Beacham, W., Castronova, F.V., Freedman, B. and Sessine, S. (eds)",
+      "citation_short": null
+    },
+    {
+      "citation": "Gaulke, M. and de Silva, A. 1977. Monitor lizards of Sri Lanka: Preliminary investigations on their population structure. <i>Lyriocephalus</i> 3(1): 1-5.",
+      "year": "1977",
+      "title": "Monitor lizards of Sri Lanka: Preliminary investigations on their population structure",
+      "author": "Gaulke, M. and de Silva, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Das, A., Saikia U., Murthy B.H.C.K., Dey S. & Dutta S.K. 2009. A herpetofaunal inventory of Barail Wildlife Sanctuary and adjacent regions, Assam, north-eastern India. <i>Hamadryad</i> 34(1): 117-134.",
+      "year": "2009",
+      "title": "A herpetofaunal inventory of Barail Wildlife Sanctuary and adjacent regions, Assam, north-eastern India",
+      "author": "Das, A., Saikia U., Murthy B.H.C.K., Dey S. & Dutta S.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baird, I. 1993. Wildlife trade between the southern Lao PDR provinces of Champassak, Sekong, and Attapeu and Thailand, Cambodia, and Vietnam.  TRAFFIC Southeast Asia Field Report No. 3. Kuala Lumpur, Malaysia.",
+      "year": "1993",
+      "title": "Wildlife trade between the southern Lao PDR provinces of Champassak, Sekong, and Attapeu and Thailand, Cambodia, and Vietnam",
+      "author": "Baird, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mahony, S., Hasan, M.K., Kabir, M.M., Ahmed, M. and Hossain, M.K. 2009. A catalogue of amphibians and reptiles in the collection of Jahangirnargar University, Dhaka, Bangladesh. <i>Hamadryad</i> 34: 80-94.",
+      "year": "2009",
+      "title": "A catalogue of amphibians and reptiles in the collection of Jahangirnargar University, Dhaka, Bangladesh",
+      "author": "Mahony, S., Hasan, M.K., Kabir, M.M., Ahmed, M. and Hossain, M.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grismer, L.L. 2011. <i>Lizards of Peninsular Malaysia, Singapore and their adjacent archipelagos.</i> Edition Chimaira, Frankfurt.",
+      "year": "2011",
+      "title": "Lizards of Peninsular Malaysia, Singapore and their adjacent archipelagos.",
+      "author": "Grismer, L.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vyas, R. 2007. Herpetofauna of Purna Wildlife Sanctuary, Gujarat, India. <i>Reptile Rap Newsletter of the South Asian Reptile Network</i> 8: 10-15.",
+      "year": "2007",
+      "title": "Herpetofauna of Purna Wildlife Sanctuary, Gujarat, India",
+      "author": "Vyas, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bhattarai, S., Pokheral, C.P., Lamichhane, B. and Subedi, N. 2017. Herpetofauna of a Ramsar Site: Beeshazar and Associated Lakes, Chitwan National Park, Nepal. <i>IRCF Reptiles & Amphibians</i> 24(1): 17-29.",
+      "year": "2017",
+      "title": "Herpetofauna of a Ramsar Site: Beeshazar and Associated Lakes, Chitwan National Park, Nepal",
+      "author": "Bhattarai, S., Pokheral, C.P., Lamichhane, B. and Subedi, N",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rais, M., Akram, A., Ali, S.M., Asadi, M.A., Jahangir, M., Jilani, M.J. and Anwar, M. 2015. Qualitative analysis of factors influencing the diversity and spatial distribution of herpetofauna in Chakwal Tehsil (Chakwal District), Punjab, Pakistan. <i>Herpetological Conservation and Biology</i> 10(3): 801-810.",
+      "year": "2015",
+      "title": "Qualitative analysis of factors influencing the diversity and spatial distribution of herpetofauna in Chakwal Tehsil (Chakwal District), Punjab, Pakistan",
+      "author": "Rais, M., Akram, A., Ali, S.M., Asadi, M.A., Jahangir, M., Jilani, M.J. and Anwar, M",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-2"
+    },
+    {
+      "citation": "Ali, W., Javid, A., Hussain, S.M., Azmat, H. and Jabeen, G. 2016. The amphibians and reptiles collected from different habitat types in District Kasur, Punjab, Pakistan. <i>Pakistan Journal of Zoology</i> 48(4): 1201-1204.",
+      "year": "2016",
+      "title": "The amphibians and reptiles collected from different habitat types in District Kasur, Punjab, Pakistan",
+      "author": "Ali, W., Javid, A., Hussain, S.M., Azmat, H. and Jabeen, G",
+      "citation_short": ""
+    },
+    {
+      "citation": "Arida, E. and Setyawatiningsih, S.C. 2015. On the occurrence of <i>Varanus nebulosus</i> (Gray, 1831) (Squamata: Varanidae) on Riau Archipelago, Indonesia. <i>Zootaxa</i> 3919(1): 197-200.",
+      "year": "2015",
+      "title": "On the occurrence of <i>Varanus nebulosus</i> (Gray, 1831) (Squamata: Varanidae) on Riau Archipelago, Indonesia",
+      "author": "Arida, E. and Setyawatiningsih, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arida, E. and Setyawatiningsih, S.C. 2015. On the occurrence of <i>Varanus nebulosus</i> (Gray, 1831) (Squamata: Varanidae) on Riau Archipelago, Indonesia. <i>Zootaxa</i> 3919(1): 197-200.",
+      "year": "2015",
+      "title": "On the occurrence of <i>Varanus nebulosus</i> (Gray, 1831) (Squamata: Varanidae) on Riau Archipelago, Indonesia",
+      "author": "Arida, E. and Setyawatiningsih, S.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Auliya, M. and Koch, A. 2020. <i>Visual Identification Guide to the Monitor Lizard Species of the World (Genus </i>Varanus<i>) - Guidance for the Identification of Monitor Lizards with current Distribution Data as well as short Explanations on Reproductive Characteristics and Captive Breeding as Support for Authorities of Species Protection Enforcement. BfN-Skripten 552</i>. BfN [German Federal Agency for Nature Conservation], Bonn.",
+      "year": "2020",
+      "title": "Visual Identification Guide to the Monitor Lizard Species of the World (Genus <i>Varanus</i>) - Guidance for the Identification of Monitor Lizards with current Distribution Data as well as short Explanations on Reproductive Characteristics and Captive Breeding as Support for Authorities of Species Protection Enforcement. BfN-Skripten 552",
+      "author": "Auliya, M. and Koch, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baig, K.J., Masroor, R. and Arshad, M. 2008. Biodiversity and ecology of the herpetofauna of Cholistan Desert, Pakistan. <i>Russian Journal of Herpetology</i> 15(3): 193-205.",
+      "year": "2008",
+      "title": "Biodiversity and ecology of the herpetofauna of Cholistan Desert, Pakistan",
+      "author": "Baig, K.J., Masroor, R. and Arshad, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bhattacharya, S., Zia, S.Z., Mahato, S., Gangwar, R.K., Singh, N., Auliya, M. and Koch, A. 2019. Report on the Awareness Workshops “Perceptions of Wildlife Conservation of Today’s Youth in West Bengal, India, with a Focus on Monitor Lizards”. <i>Biawak</i> 13(2): 94-100.",
+      "year": "2019",
+      "title": "Report on the Awareness Workshops “Perceptions of Wildlife Conservation of Today’s Youth in West Bengal, India, with a Focus on Monitor Lizards”",
+      "author": "Bhattacharya, S., Zia, S.Z., Mahato, S., Gangwar, R.K., Singh, N., Auliya, M. and Koch, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bhupathy, S. and Sathishkumar, N. 2013. Status of reptiles in Meghamalai and its environs, Western Ghats, Tamil Nadu, India. <i>Journal of Threatened Taxa</i> 5(15): 4953-4961.",
+      "year": "2013",
+      "title": "Status of reptiles in Meghamalai and its environs, Western Ghats, Tamil Nadu, India",
+      "author": "Bhupathy, S. and Sathishkumar, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Botejue, W.M.S. and Wattavidanage, J. 2012. Herpetofaunal diversity and distribution in Kalugala proposed forest reserve, Western province of Sri Lanka. <i>Amphibian & Reptile Conservation</i> 5(2): 65-80(e38).",
+      "year": "2012",
+      "title": "Herpetofaunal diversity and distribution in Kalugala proposed forest reserve, Western province of Sri Lanka.",
+      "author": "Botejue, W.M.S. and Wattavidanage, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Daudin, F. M. 1802. <i>Histoire Naturelle, génerale et particulièredes reptiles, ouvrage faisant suite, a l'histoiure naturelle, générale et particulière composée par LECLERC DE BUFFON, et redigée par C. S. SONNINI</i>. vol. 3. F. Dufart. Paris.",
+      "year": "1802",
+      "title": "Histoire Naturelle, génerale et particulièredes reptiles, ouvrage faisant suite, a l'histoiure naturelle, générale et particulière composée par LECLERC DE BUFFON, et redigée par C. S. SONNINI",
+      "author": "Daudin, F. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "D’Cruze, N., Singh, B., Mookerjee, A., Macdonald, D.W., Hunter, K., Brassey, C.A., Rowntree, J., Megson, S., Megson, D., Fox, G., Louiesand, J. and Sharath, R.S. 2018. What’s in a name? Wildlife traders evade authorities using code words. <i>Oryx</i> 52(1): 13.",
+      "year": "2018",
+      "title": "What’s in a name? Wildlife traders evade authorities using code words",
+      "author": "D’Cruze, N., Singh, B., Mookerjee, A., Macdonald, D.W., Hunter, K., Brassey, C.A., Rowntree, J., Megson, S., Megson, D., Fox, G., Louiesand, J. and Sharath, R.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grismer, L.L., Norsham, Y., Lim, B.L., Leong, T.-M., Das, I., Sosa, R.A., Grismer, J.L., Crane, K.M., Diaz, R.E., Figueroa, S.V., Ledbetter, C.A, Newbold, S.C., Newbold, S.R. Patel, C.P., Castro, J., Escobar III, R.A., Guerrero, S., Pinedo, J.W., Trujillo, J. and Kaiser, H. 2001b. First report on the herpetofauna of Pulau Aur, Johor, West Malaysia. <i>Hamadryad</i> 26: 322-325.",
+      "year": "2001b",
+      "title": "First report on the herpetofauna of Pulau Aur, Johor, West Malaysia",
+      "author": "Grismer, L.L., Norsham, Y., Lim, B.L., Leong, T.-M., Das, I., Sosa, R.A., Grismer, J.L., Crane, K.M., Diaz, R.E., Figueroa, S.V., Ledbetter, C.A, Newbold, S.C., Newbold, S.R. Patel, C.P., Castro, J., Escobar III, R.A., Guerrero, S., Pinedo, J.W., Trujillo, J. and Kaiser, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Karunarathna, D.M.S. and Amarasinghe, A.A.T. 2011. A preliminary survey of the Reptile fauna in Nilgala Forest and its vicinity, Monaragala District, Sri Lanka. <i>Taprobanica</i> 3(2): 69-76.",
+      "year": "2011",
+      "title": "A preliminary survey of the Reptile fauna in Nilgala Forest and its vicinity, Monaragala District, Sri Lanka.",
+      "author": "Karunarathna, D.M.S. and Amarasinghe, A.A.T",
+      "citation_short": ""
+    },
+    {
+      "citation": "Manhas, A., Raina, R. and Wanganeo, A. 2016. An assessment of reptilian diversity and their distribution in Jammu and Kashmir state from Jammu city in northern India: A case study . <i>International Journal of Fauna and Biological Studies</i> 3(3): 20-23.",
+      "year": "2016",
+      "title": "An assessment of reptilian diversity and their distribution in Jammu and Kashmir state from Jammu city in northern India: A case study ",
+      "author": "Manhas, A., Raina, R. and Wanganeo, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Minton, S.A. 1956. An annotated key to the amphibians and reptiles of Sind and Las Bela, West Pakistan. <i>American Museum novitates</i> 2081: 1-60.",
+      "year": "1956",
+      "title": "An annotated key to the amphibians and reptiles of Sind and Las Bela, West Pakistan",
+      "author": "Minton, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Palot, M.J. 2015. A checklist of reptiles of Kerala, India. <i>Journal of Threatened Taxa</i> 7(13): 8010–8022.",
+      "year": "2015",
+      "title": "A checklist of reptiles of Kerala, India",
+      "author": "Palot, M.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Papenfuss, T., Shafiei Bafti, S., Sharifi, M., Bennett, D. and Sweet, S.S. 2010. <i>Varanus bengalensis</i>. The IUCN Red List of Threatened Species 2010: e.T164579A5909661. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2010-4.RLTS.T164579A5909661.en\">http://dx.doi.org/10.2305/IUCN.UK.2010-4.RLTS.T164579A5909661.en</a>. Downloaded on 26 April 2017.",
+      "year": "2010",
+      "title": "<i>Varanus bengalensis</i>",
+      "author": "Papenfuss, T., Shafiei Bafti, S., Sharifi, M., Bennett, D. and Sweet, S.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rajpoot A., Kumar V.P., Bahuguna A., Singh T., Joshi S. and Kumar D. 2018. Wildlife forensics in battle against veneration frauds in Uttarakhand, India: identification of protected Indian monitor lizard in items available in the local market under the name of Hatha Jodi. <i>Mitochondrial DNA Part B</i> 3(2): 925-932.",
+      "year": "2018",
+      "title": "Wildlife forensics in battle against veneration frauds in Uttarakhand, India: identification of protected Indian monitor lizard in items available in the local market under the name of Hatha Jodi",
+      "author": "Rajpoot A., Kumar V.P., Bahuguna A., Singh T., Joshi S. and Kumar D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Saikia, U., Sharma, D.K. & Sharma, R.M. 2007. Checklist of the Reptilian fauna of Himachal Pradesh, India. <i>Reptile Rap </i> 8: 6-9.",
+      "year": "2007",
+      "title": "Checklist of the Reptilian fauna of Himachal Pradesh, India",
+      "author": "Saikia, U., Sharma, D.K. & Sharma, R.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sharma, C.P., Kumar, A., Vipin, V., Sharma, V., Singh, B., Kumarand, G.C. and Gupta, S.K. 2019. Online selling of wildlife part with spurious name: A serious challenge for wildlife crime enforcement. <i>International Journal of Legal Medicine</i> 133: 65-69.",
+      "year": "2019",
+      "title": "Online selling of wildlife part with spurious name: A serious challenge for wildlife crime enforcement.",
+      "author": "Sharma, C.P., Kumar, A., Vipin, V., Sharma, V., Singh, B., Kumarand, G.C. and Gupta, S.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sharma, R.K., Goyal, A.K., Saini, J. and Sharma, M.B. 2018. The species in crisis: <i>Varanus bengalensis</i>. <i>Species</i> 19: 68-71.",
+      "year": "2018",
+      "title": "The species in crisis: <i>Varanus bengalensis</i>",
+      "author": "Sharma, R.K., Goyal, A.K., Saini, J. and Sharma, M.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Singh, A., Singh Rana, B., Thakur, M., Tripathy, B., Sharma, LK.. and Chandra, K. 2020. Range extension of the Bengal monitor (<i>Varanus bengalensis</i>) for the Trans-Himalayan Region with an altitude record for monitor lizards. <i>Zootaxa</i> 4732(2): DOI: 10.11646/zootaxa.4732.2.10.",
+      "year": "2020",
+      "title": "Range extension of the Bengal monitor (<i>Varanus bengalensis</i>) for the Trans-Himalayan Region with an altitude record for monitor lizards",
+      "author": "Singh, A., Singh Rana, B., Thakur, M., Tripathy, B., Sharma, LK.. and Chandra, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stuart, B. 1998b. A survey of amphibians and reptiles in Khammouane Limestone National Biodiversity Conservation Area. Vientiane: CPAWM/WCS.",
+      "year": "1998b",
+      "title": "A survey of amphibians and reptiles in Khammouane Limestone National Biodiversity Conservation Area",
+      "author": "Stuart, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stuart, B. 1998c. A survey of amphibians and reptiles in Phou Luey National Biodiversity Conservation Area, Huaphahn Province, Lao PDR. Vientiane: CPAWM/WCS.",
+      "year": "1998c",
+      "title": "A survey of amphibians and reptiles in Phou Luey National Biodiversity Conservation Area, Huaphahn Province, Lao PDR",
+      "author": "Stuart, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stuart, B. 1998d. A survey of amphibians and reptiles at That Xay waterfall, Phou Khao Khouay National Biodiversity Conservation Area, Bolikhamxay Province, Lao PDR. Vientiane: CPAWM/WCS.",
+      "year": "1998d",
+      "title": "A survey of amphibians and reptiles at That Xay waterfall, Phou Khao Khouay National Biodiversity Conservation Area, Bolikhamxay Province, Lao PDR",
+      "author": "Stuart, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stuart, B. 1998e. A survey of amphibians and reptiles in Dong Khanthung Proposed National Biodiversity Conservation Area, Champasak Province, Lao PDR. Vientiane: CPAWM/WCS.",
+      "year": "1998e",
+      "title": "A survey of amphibians and reptiles in Dong Khanthung Proposed National Biodiversity Conservation Area, Champasak Province, Lao PDR",
+      "author": "Stuart, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "TNN. 2020. Articles made of reptile skins seized, 1 held.",
+      "year": "2020",
+      "title": "Articles made of reptile skins seized, 1 held",
+      "author": "TNN",
+      "citation_short": null
+    },
+    {
+      "citation": "Traffic Post. 2013. Monitoring the illegal trade in the threatened king of lizard. <i>Traffic Post</i> 7(14-15).",
+      "year": "2013",
+      "title": "Monitoring the illegal trade in the threatened king of lizard",
+      "author": "Traffic Post",
+      "citation_short": null
+    },
+    {
+      "citation": "Upadhyay, V. 2006. The declining status of bengal monitor <i>Varanus bengalensis</i>, Daudin 1802 in Meemch District, Madhya Pradesh. <i>Cobra</i> 63: 20.",
+      "year": "2006",
+      "title": "The declining status of bengal monitor <i>Varanus bengalensis</i>, Daudin 1802 in Meemch District, Madhya Pradesh",
+      "author": "Upadhyay, V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vyas, R. 2011. Preliminary survey on reptiles of Jassore Wildlife Sanctuary, Gujarat State, India. <i>Russian Journal of Herpetology</i> 18(3): 210-214.",
+      "year": "2011",
+      "title": "Preliminary survey on reptiles of Jassore Wildlife Sanctuary, Gujarat State, India",
+      "author": "Vyas, R ",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

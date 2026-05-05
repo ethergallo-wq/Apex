@@ -1,0 +1,1428 @@
+{
+  "assessment_date": "2010-11-15T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 188581,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/188581/1896808",
+  "citation": "Rocha, L.A. & Myers, R. 2015. Abudefduf saxatilis. The IUCN Red List of Threatened Species 2015: e.T188581A1896808. Accessed on 05 May 2026.",
+  "assessment_id": 1896808,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 188581,
+    "scientific_name": "Abudefduf saxatilis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "NOT ASSIGNED",
+    "family_name": "POMACENTRIDAE",
+    "genus_name": "Abudefduf",
+    "species_name": "saxatilis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Damsel Fish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Five Finger",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Pilotfish",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Sargeant Major",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Sergeant Major",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Castagnole",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Castañuela",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Chauffet Soleil",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Petaca Rayada",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Píntano",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Sergent-major",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Sergent Major",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Sergeant-major",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Apogon quinquevittatus Blyth, 1858",
+        "status": "ACCEPTED",
+        "genus_name": "Apogon",
+        "species_name": "quinquevittatus",
+        "species_author": "Blyth, 1858",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Abudefduf saxatilis (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Abudefduf",
+        "species_name": "saxatilis",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Abudefduf ascensionis Fowler, 1919",
+        "status": "ACCEPTED",
+        "genus_name": "Abudefduf",
+        "species_name": "ascensionis",
+        "species_author": "Fowler, 1919",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Glyphisodon moucharra Lacepède, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Glyphisodon",
+        "species_name": "moucharra",
+        "species_author": "Lacepède, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Chaetodon mauritii Bloch, 1787",
+        "status": "ACCEPTED",
+        "genus_name": "Chaetodon",
+        "species_name": "mauritii",
+        "species_author": "Bloch, 1787",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Abudefduf sexatilis (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Abudefduf",
+        "species_name": "sexatilis",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Chaetodon marginatus Bloch, 1787",
+        "status": "ACCEPTED",
+        "genus_name": "Chaetodon",
+        "species_name": "marginatus",
+        "species_author": "Bloch, 1787",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Chaetodon sargoides Lacepède, 1802",
+        "status": "ACCEPTED",
+        "genus_name": "Chaetodon",
+        "species_name": "sargoides",
+        "species_author": "Lacepède, 1802",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Chaetodon saxatilis Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Chaetodon",
+        "species_name": "saxatilis",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 40,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is distributed in the tropical Atlantic Ocean. In the western Atlantic, it is known from North Carolina south along the U.S. coast, Bermuda, the Bahamas, throughout the Gulf of Mexico and Caribbean Sea to Trinidad including the Aves Islands, and along the Brazilian coast from Sao Luis to Santa Catarina including the San Fernando de Noronha Islands, St. Paul's Rocks, and Trinidade Island (Lubbock and Edwards 1981, Feitoza<em> et al.</em> 2003, Simon <em>et al.</em> 2013). Seasonal juveniles have been reported as far north as Rhode Island and far south as Uruguay (R.F. Myers pers. comm. 2010). In the eastern Atlantic, it is known from the Cape Verde Islands south along western Africa to Angola, including all mid-Atlantic oceanic islands. <br/><br/>It is replaced in the Indo-Pacific region by the closely related <em>Abudefduf vaigiensis</em> (G. Allen pers. comm. 2010).",
+    "population": "This species is the most common and widespread species of damselfish in the Atlantic. It is common off Mexico in the Gulf of Mexico (M. Vega-Cendejas pers. comm. 2013).&#160;Surveys found its abundance increased by 210% in St. Croix, 78% in St. John, and 61% in Puerto Rico from 2011 abundances (NOAA NCCOS 2010). In the&#160;Mamanguape Environmental Protection Area in NE Brazil, this species was one of the most abundant of fishes in the reef zones (Xavier<em> et al.</em> 2012).&#160;<em>Abudefduf saxatilis </em>comprised 1.7% of all fish species in reef fish assemblages off Havana City, Cuba (Gonzalez-Sanson and Aguilar 2010). In reef fish assemblages off northwest Cuba,<em> A. saxatilis</em> accounts for 3.2% of the total fish population and has a frequency of occurrence in the area of 66.7% (Gonzalez-Sanson <em>et al</em>. 2009).",
+    "habitats": "This species is reef-associated and non-migratory.  Juveniles of this species are common in tide pools and raft with drifting <em>Sargassum</em> and other floating objects (L.A. Rocha and R.F. Myers pers. comm. 2010); adults are found over shallow reef tops.  Adults frequently form large feeding aggregations of up to several hundred individuals.  Food items include algae, small crustaceans and fish, and various invertebrate larvae (Carter 2002).  At Fernando de Noronha Archipelago, this species feeds on spinner dolphins’ faeces and vomits.  The offal feeding may be regarded as a simple behavioural shift from plankton feeding to drifting offal picking.  Also, juveniles may hold cleaning stations together with the Doctorfish (<em>Acanthurus chirurgus</em>) and the Blue Tang (<em>Acanthurus coeruleus</em>) and graze algae as well as pick moulted skin and parasites from Green Turtles (<em>Chelonia mydas</em>).  This behaviour is preceded by a characteristic inspection usually followed by feeding nips on the turtles’ skin (head, limbs, and tail), as well as on the carapace. The most inspected and cleaned body parts are the flippers (Sazima <em>et al.</em> 2003).<br/><br/>It is a territorial species. Adult males adopt a bluish ground colour when guarding eggs.  They are attracted to divers who feed fish and are marketed fresh (Emery 1978).  This species has been reared in captivity (Moe 1992). <em>Abudefduf saxatilis</em> reaches first maturity at 12 cm (Xavier<em> et al.</em> 2012).&#160;It&#160;is oviparous, displaying distinct pairing during breeding. Its eggs are demersal and adhere to the substrate. Males guard and aerate the eggs (Thresher 1984). In transition zones,&#160;<em>A. saxatilis </em>is often the most populous and sometimes the sole omnivore.&#160;It&#160;utilizes shallow reef habitats for nursery grounds (Xavier<em> et al.</em> 2012). There is statistical evidence that this species of fish provides ontological connectivity between mangrove habitats and reef habitats, as juvenile individuals of <em>A. saxatilis</em>&#160;inhabit both mangrove forests and reefs and adult individuals migrate to or stay at reef habitats (Jones <em>et al.</em> 2010).&#160;It&#160;prefers reef structures with lower exposure and higher non-consolidated substratum cover (Krajewski and Floeter 2011).",
+    "threats": "This species is a component of subsistence fisheries and is incidentally caught in the aquarium trade. It&#160;has been identified as a prey item of the invasive Lionfish (<em>Pterois volitans</em>),<em><span class=\"apple-converted-space\">&#160;</em>however, only juveniles are consumed and it is not likely that this will drive significant population declines on a global level<em>&#160;</em>(Valdez-Moreno <em>et al.</em> 2012, L.A. Rocha pers. comm. 2014).<p></p>",
+    "measures": "There are no species-specific conservation measures in place for this fish.",
+    "use_trade": "This species is a component of subsistence fisheries. It is caught incidentally in the aquarium trade. The species is extremely hardy (indicating tolerance to a wide range of water and temperature regimes).",
+    "rationale": "<em>Abudefduf saxatilis</em> is widespread in the tropical Atlantic Ocean. It is the most common and abundant damselfish throughout its range. There are no major&#160; threats identified and it is found in a number of marine reserves in parts of its range. It is therefore assessed as Least Concern.<br/><p></p>",
+    "trend_justification": null,
+    "taxonomic_notes": "A. hoefleri may represent the E Atlantic population of A. saxatilis (L.A. Rocha pers. comm. 2010)."
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Outer Reef Channel"
+      },
+      "code": "9_8_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Back Slope"
+      },
+      "code": "9_8_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Foreslope (Outer Reef Slope)"
+      },
+      "code": "9_8_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Lagoon"
+      },
+      "code": "9_8_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Inter-Reef Rubble Substrate"
+      },
+      "code": "9_8_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Inter-Reef Soft Substrate"
+      },
+      "code": "9_8_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Rocha, L.A. & Myers, R.",
+      "value": [
+        "Robert F. Myers (IUCN SSC Grouper and Wrasses Specialist Group)",
+        "Luiz Rocha (University of Texas)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Ralph, G. & Linardich, C.",
+      "value": [
+        "Christi Linardich (Marine Biodiversity Unit)",
+        "Gina Ralph (Marine Biodiversity Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Valdez-Moreno, M., Quintal-Lizama, C., Gómez-Lozano, R. and García-Rivas, M.C. 2012. Monitoring an Alien Invasion: DNA Barcoding and the Identification of Lionfish and Their Prey on Coral Reefs of the Mexican Caribbean. <i>PLoS ONE</i> 7(6):  e36636.",
+      "year": "2012",
+      "title": "Monitoring an Alien Invasion: DNA Barcoding and the Identification of Lionfish and Their Prey on Coral Reefs of the Mexican Caribbean.",
+      "author": "Valdez-Moreno, M., Quintal-Lizama, C., Gómez-Lozano, R. and García-Rivas, M.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Simon, T., Macieira, R.M. and Joyeux, J.C. 2013. The shore fishes of the Trindade–Martin Vaz insular complex: an update. <i>Journal of Fish Biology</i> 82(6): 2113-2127.",
+      "year": "2013",
+      "title": "The shore fishes of the Trindade–Martin Vaz insular complex: an update",
+      "author": "Simon, T., Macieira, R.M. and Joyeux, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moe, A.M. Jr. 1992. The marine aquarium handbook. Beginner to breeder. Green Turtle Publication, Florida, USA.",
+      "year": "1992",
+      "title": "The marine aquarium handbook. Beginner to breeder",
+      "author": "Moe, A.M. Jr.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thresher, R.E. 1984. <i>Reproduction in reef fishes</i>. T.F.H. Publications, Inc. Ltd., Neptune City, New Jersey.",
+      "year": "1984",
+      "title": "Reproduction in reef fishes",
+      "author": "Thresher, R.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gonzalez-Sanson, C., Aguliar, C., Hernandez, I., and Cabrera, Y. 2009. Effects of depth and bottom communities on the distribution of highly territorial reef fish in the northwestern region of Cuba. <i>Journal of Applied Ichthyology</i> 25: 652-660.",
+      "year": "2009",
+      "title": "Effects of depth and bottom communities on the distribution of highly territorial reef fish in the northwestern region of Cuba",
+      "author": "Gonzalez-Sanson, C., Aguliar, C., Hernandez, I., and Cabrera, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gonzalez-Sanson, G. and Aguilar, C. 2010. Reef fish diversity components as indicators of cumulative effects in a highly impacted fringe reef. <i>Reef fish diversity components as indicators of cumulative effects in a highly impacted fringe reef</i> 10: 766-772.",
+      "year": "2010",
+      "title": "Reef fish diversity components as indicators of cumulative effects in a highly impacted fringe reef",
+      "author": "Gonzalez-Sanson, G. and Aguilar, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lubbock, R. and Edwards, A. 1981. The fishes of Saint Paul's Rocks. <i>Journal Fish Biology</i> 18: 135-157.",
+      "year": "1981",
+      "title": "The fishes of Saint Paul's Rocks",
+      "author": "Lubbock, R. and Edwards, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feitoza, B. Rocha, L. Luiz-Junior, O. Floeter, S. and Gasparini, J. 2003. Reef fishes of St Paul's rocks: new records and notes on biology and zoogeography. <i>Aqua, Journal of Ichthyology and aquatic biology</i> 7(2): 61-82.",
+      "year": "2003",
+      "title": "Reef fishes of St Paul's rocks: new records and notes on biology and zoogeography",
+      "author": "Feitoza, B. Rocha, L. Luiz-Junior, O. Floeter, S. and Gasparini, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "National Oceanic and Atmospheric Association (NOAA)/National Ocean Service (NOS)/National Centers for Coastal Ocean Science (NCCOS)/Center for Coastal Monitoring and Assessment (CCMA)/Biogeography Team. 2010. USVI Fish Assessment and Monitoring Data (2000 - Present). Silver Spring, MD Available at: <a href=\"http://ccma.nos.noaa.gov/ecosystems/coralreef/reef_fish.html\">http://ccma.nos.noaa.gov/ecosystems/coralreef/reef_fish.html</a>. ",
+      "year": "2010",
+      "title": "USVI Fish Assessment and Monitoring Data (2000 - Present)",
+      "author": "National Oceanic and Atmospheric Association (NOAA)/National Ocean Service (NOS)/National Centers for Coastal Ocean Science (NCCOS)/Center for Coastal Monitoring and Assessment (CCMA)/Biogeography Team",
+      "citation_short": ""
+    },
+    {
+      "citation": "Krajewski, J. and Floeter, S. 2011. Reef fish community structure of the Fernando de Noronha Archipelago (Equatorial Western Atlantic): the influence of exposure and benthic composition. <i>Environmental Biology of Fish</i> 92: 25-40.",
+      "year": "2011",
+      "title": "Reef fish community structure of the Fernando de Noronha Archipelago (Equatorial Western Atlantic): the influence of exposure and benthic composition",
+      "author": "Krajewski, J. and Floeter, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jones, D., Walter, J., Brooks, E., Serafy, J. 2010. Connectivity through ontogeny: fish population linkages among mangrove and coral reef habitat. <i>MARINE ECOLOGY PROGRESS SERIES</i> 401: 245-258.",
+      "year": "2010",
+      "title": "Connectivity through ontogeny: fish population linkages among mangrove and coral reef habitat",
+      "author": "Jones, D., Walter, J., Brooks, E., Serafy, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sazima, I., Sazima, C. and Silva-Jr., J.M. 2003. The cetacean offal connection: feces and vomits of spinner dolphins as a food source for reef fishes. <i>Bulletin of Marine Science</i> 72(1): 151-160.",
+      "year": "2003",
+      "title": "The cetacean offal connection: feces and vomits of spinner dolphins as a food source for reef fishes",
+      "author": "Sazima, I., Sazima, C. and Silva-Jr., J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Xavier, J.H.A., Cordeiro, C.A.M.M., Tenório, G.D., Diniz, A.F., Júnior, E.P.N., RosaI, R.S. and Rosa, I.L. 2012. Fish assemblage of the Mamanguape Environmental Protection Area, NE Brazil: abundance, composition and microhabitat availability along the mangrove-reef gradient. <i>Neotropical Ichthyology</i> 10(1): 109-122.",
+      "year": "2012",
+      "title": "Fish assemblage of the Mamanguape Environmental Protection Area, NE Brazil: abundance, composition and microhabitat availability along the mangrove-reef gradient",
+      "author": "Xavier, J.H.A., Cordeiro, C.A.M.M., Tenório, G.D., Diniz, A.F., Júnior, E.P.N., RosaI, R.S. and Rosa, I.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 19 November 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015-4",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015-4"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

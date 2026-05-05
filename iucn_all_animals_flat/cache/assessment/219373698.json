@@ -1,0 +1,1961 @@
+{
+  "assessment_date": "2020-01-24T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12304,
+  "criteria": "A3c",
+  "url": "https://www.iucnredlist.org/species/12304/219373698",
+  "citation": "Rheingantz, M.L., Rosas-Ribeiro, P., Gallo-Reynoso, J., Fonseca da Silva, V.C., Wallace, R., Utreras, V. & Hernández-Romero, P. 2022. Lontra longicaudis (amended version of 2021 assessment). The IUCN Red List of Threatened Species 2022: e.T12304A219373698. Accessed on 05 May 2026.",
+  "assessment_id": 219373698,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12304,
+    "scientific_name": "Lontra longicaudis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "MUSTELIDAE",
+    "genus_name": "Lontra",
+    "species_name": "longicaudis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Olfers, 1818)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Otter Specialist Group",
+        "url": "http://www.otterspecialistgroup.org/",
+        "description": "Co-Chairs: Nicole Duplaix (email: Nicole.Duplaix@oregonstate.edu) and Anna Loy (email: a.loy@unimol.it)\nRed List Authority Coordinator: Syed Ainul Hussain (email: hussain@wii.gov.in)\nNewsletter: http://www.otterspecialistgroup.org/Bulletin/IUCNOSGBull.html"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "La Plata Otter",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Long-tailed Otter",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Neotropical River Otter",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "South American River Otter",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Gato de Agua",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobito del Plata",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lobito de Río",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Loutre à longue queue",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Loutre d'AmériquedDu Sud",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Nutria De Agua",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Perro De Agua",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Taira",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Neotropical Otter",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Lutra longicaudis ssp. longicaudis Olfers, 1818",
+        "status": "S",
+        "genus_name": "Lutra",
+        "species_name": "longicaudis",
+        "species_author": null,
+        "infrarank_author": "Olfers, 1818",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "longicaudis"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 4000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": 14,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "9.43",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Neotropical Otter presents the broadest distribution among New World otters (Foster-Turley <em>et al. </em>1990, Rheingantz <em>et al.</em> 2018), even though there are several areas where its presence is still uncertain. It occurs from north-western Mexico to Uruguay and across the northern part of Argentina to the Buenos Aires province. The species is widely distributed in southern Mexico, extending its range to the state of Morelos where its range is bifurcated until it reaches southern Tamaulipas on the side of the Gulf of Mexico, and to northern parts of Sonora and Chihuahua states, down to the South Pacific in Chiapas (Gallo-Reynoso 1997, Sánchez and Gallo-Reynoso 2007).</p>  <p>In central America, <em>Lontra longicaudis</em> is known to occur from the Pacific to the Caribbean regions of Costa Rica (Wainwright 2007), Guatemala (Quintana-Morales 2013) and Belize (Meerman and Clabaugh 2012), occurring in almost all countries. However, very little information is available from this portion of the species’ range. In Ecuador, the Neotropical river otter presents a wide range, occupying various habitats from the coastal lowlands to the Amazonia (Utreras <em>et al. </em>2011, Utreras <em>et al. </em>2013). There are extreme records of presence at 3,885 m a.s.l. (Castro and Zapata Ríos 2001). Recently, Neotropical Otter<em> </em>was recorded in new localities, such as areas surrounding the Ecuadorian and Colombian Andes (Rodríguez-Mahecha <em>et al. </em>2006). In Bolivia the species<em> </em>is found across the Bolivian lowlands below 2,000 m a.s.l. (except the Chaco dry forests). There are occasional records at higher elevations on the humid eastern slopes of the Andes, reaching up to 3,200 m a.s.l. (Tarifa <em>et al. </em>2010, Wallace <em>et al. </em>2013).</p>  <p>In Brazil, <em>Lontra longicaudis </em>occurs in almost the entire territory, being absent only from a portion of the arid northeastern Brazil where river basins are fully located within Caatinga biome. Despite being absent from this more arid zone, the presence of the species was recently recorded in Caatinga, in intermittent stretches of river basins situated between the Caatinga and Atlantic Forest biomes, proving that the species can occur in semiarid conditions (Rosas-Ribeiro <em>et al. </em>2017). The presence of <em>Lontra longicaudis</em> was also recently recorded in the coastal zone of the Atlantic Forest of northeastern Brazil (Astúa <em>et al. </em>2010, Dantas and Donato 2011, Mendonça and Mendonça 2012, Souto 2012, Rosas-Ribeiro 2017), as well as in the eastern part of Amazonia, in Maranhão state (Mesquita and Meneses 2015).</p>  <p>Although Neotropical Otters are predicted to occur in all those areas, there are gaps in the data for the Brazilian Amazon, Pantanal and Paraguay.</p>",
+    "population": "<p>Estimates of Neotropical Otter’s population size and density have been obtained using different approaches at various times in different study areas. Most estimates are derived from visual censuses performed at distinct localities within the species’ distribution and are highly variable when compared to each other. For example, a density estimate of 0.21 otters per linear km of river (km) was reported for southern Mexico (Orozco-Meyer 1998), whereas in Argentina it was reported to be 0.06-0.47 individuals/km (Gil-Carbó 2003). In Mexico and Guatemala, additional density estimates (0.34-4.4 otters/km) were obtained through calculating the number of faeces/km or the defecation rate (Gallo 1996, Nicolás <em>et al.</em>2012, Duque-Dávila <em>et al. </em>2013, Quintana-Morales 2013). In Brazil, Quadros (2012) estimated the population size in a dam lake system based on the number of active dens, as previously proposed for <em>Lutra lutra </em>(Kruuk <em>et al. </em>1989).</p><p>The use of such methods for population estimation was a widespread theme of discussion during the 1980s and 1990s. Several authors argued that these indirect approaches are not a reliable tool for calculating density and population size, as there is little or no direct correlation between otter abundance and the number of faeces or latrines, or between the number of females and the number of dens (Mason and Macdonald 1987, Kruuk <em>et al. </em>1989, Gallant 2007). Numbers of dens and faeces may vary enormously due to the climate, environmental conditions and features of the waterbody and its margins (Kruuk and Conroy 1987, Mason and Macdonald 1987). It is important to highlight that reports of density and population sizes in Neotropical Otter are informative for local management purposes, and that density represents the only comparable datum.</p><p>Population size was recently estimated through non-invasive molecular approaches. Latorre-Cardenas <em>et al. </em>(2020) reported a density of 0.88 to 1.66 individuals per km in three river basins located in Mexico. Despite seeming that population sizes are good, the effective population size (<em>N</em><sub>e</sub>) per basin was considerably lower than those suggested that a population should have in order to maintain the genetic variation in the short-term. Ortega <em>et al. </em>(2012) reported a population size of 154 individuals in a watershed of Mexico. In a similar approach, by using faecal DNA analyses, Trinca <em>et al. </em>(2013) estimated linear density and population size of an otter population from an Atlantic Forest area in southern Brazil. They reported one otter per linear km and estimated a population size of 31 individuals during two years of sampling. Additionally, it was possible to estimate relatedness between individuals in the population, and to recover the population pedigree, as well as to gain insights into spatial organization patterns. According to their results, male otters tend to disperse larger distances than females, and relatedness among otters in the same watercourse seems to be higher that among otters from distinct streams, especially in cases of mother-daughter dyads, corroborating the hypothesis of female philopatry.</p><p>        Population relative abundance was determined in a stream of northwestern México&#160;using camera traps, resulting in a 2.2 otters/km in a portion of 5 km of lineal survey of a river, with as many as 11 different otters using different latrines in the surveyed area (Gallo-Reynoso <em>et al.&#160;</em>submitted), The use of this methodology reveals population structure in the area (i.e. number of adult males, adult females, females with cubs, and juveniles).</p>",
+    "habitats": "<p>Neotropical Otter is found in aquatic environments such as rivers, streams, lakes, lagoons, estuaries, mangroves, marshes and coastal shorelines (Rheingantz and Trinca 2015, Rheingantz <em>et al. </em>2017a). This adaptable otter occurs in a wide variety of habitats from rocky shorelines to deciduous and evergreen forests, warm and cold climate rainforests, and coastal savanna swamps, rivers and mountain lakes from sea level up to 4000 m (Larivière 1999, Castro and Zapata Ríos, 2001, Rheingantz <em>et al. </em>2014). It has been reported using coastal habitats and islands in Brazil (Carvalho-Júnior <em>et al. </em>2006), as well as intermittent rivers in seasonally dry tropical forests of the Brazilian northeast region (Rosas-Ribeiro <em>et al. </em>2017).<span lang=\"EN-US\"></p>  <p>The otter has a long, dark brown, heavily built body with fully webbed feet. The species is flexible in its activity behavior, being more diurnal in the Pantanal and more nocturnal in the Atlantic Forest, perhaps due to more intense human activity in the latter (Rheingantz <em>et al. </em>&#160;2016) and mainly nocturnal in Mexico, avoiding being exposed to higher air and water temperature. This also might explain their preference for shadowed areas in their river habitat where lower water and air temperatures are found (Gallo-Reynoso <em>et al. </em>2019).<span lang=\"EN-US\"></span></p>  <p>The Neotropical Otter is considered a solitary species, although pairs are observed during reproductive periods, and small groups of females and their cubs also occur (Rodrigues <em>et al. </em>2013). Despite its high dependence on water, the species spends a considerable amount of time on land, especially in activities such as scent marking, reproduction and parental care (Rodrigues <em>et al. </em>2013). Breeding occurs mostly during the dry or low water season but may occur throughout the year in some places (Parera 1996). Litter size varies from one to five cubs (Larivière 1999), with two or three on average (Parera 1996).<span lang=\"EN-US\"></p>  <p>Otters are opportunistic predators that mainly prey on fish and crustaceans (Gallo-Reynoso 1997, Pardini 1998, Utreras <em>et al. </em>2002, Rheingantz <em>et al. </em>2017b), but also opportunistically consume amphibians, mammals, birds, and other prey (Rheingantz <em>et al. </em>2017b). As an otter with a wide distribution range, <em>L. longicaudis </em>has a varied diet (Rheingantz <em>et al. </em>2017b).&#160;<span lang=\"EN-US\"></span></p>  <p>Detailed data on population size and densities for the species are scarce and limited to small areas but suggest that Neotropical Otter populations are decreasing (Trujillo and Arcila 2006, Rheingantz and Trinca 2015). Recently, efforts by researchers have generated a more complete database on the species status at the continental level that allowed the IUCN Red List status up listing from Data Deficient to Near Threatened (Rheingantz and Trinca 2015).<span lang=\"EN-US\"></p>",
+    "threats": "<p>The modification and fragmentation of natural habitats by human activities represents the main threat to the species, leading to population isolation and reduction. The species may occur in areas with some degree of human activity and habitat degradation (Rheingantz <em>et al. </em>2014, Rheingantz and Trinca 2015, Rheingantz <em>et al.</em> 2017a), but its presence has been negatively correlated with human population density (Gomez <em>et al. </em>2014, Rheingantz <em>et al. </em>2014). There are stable populations in more pristine areas throughout the species’ range, but populations are decreasing in more heavily human-modified areas (Rheingantz and Trinca 2015).</p>  <p>The species was severely hunted until the 1970s for the international fur market, with hundreds of thousands of pelts exported from South American ports between 1945 and 1975 (Brack Egg 1978, Donadio 1978, Larivière 1999, Utreras and Jorgenson 2003). Despite the ban on the international pelt trade, Neotropical Otters are still hunted illegally and killed in conflicts with fishermen and fish farmers due to supposed fish depredation (Chehébar 1990, Barbieri <em>et al. </em>2012). Although fishermen often have a negative perception of the otter, many of them report that actual damage from Neotropical Otter is small (Fonseca and Marmontel 2011, Barbieri <em>et al. </em>2012, Castro <em>et al. </em>2014, Hernández-Romero <em>et al. </em>2018). Indeed, fishermen from northeastern Mexico showed a positive attitude toward the development of conservation actions for the otter (Mayagoitia-González <em>et al. </em>2013). Otters can also become entangled in fishing nets, as reported in southern Brazil (Quintela <em>et al. </em>2011).</p>  <p>Bioaccumulation of toxins is known to harm the species (Josef <em>et al. </em>2008, Ramos-Rosas <em>et al. </em>2013). Mercury has been observed in fur and tissues samples of the species from the Pantanal (Fonseca <em>et al. </em>2004), as well as high levels in otter spraints from southeastern Brazil (Josef <em>et al. </em>2008). Studies show that Neotropical Otter may have high levels of other heavy metals such as lead and cadmium even in protected areas of Mexico (Ramos-Rosas <em>et al. </em>2013), and other Persistent Organic Pollutants (Latorre-Cárdenas 2013). Industrial waste spills increase heavy metal levels in watercourses and have been associated with otter mortality in Mexico (Gallo-Reynoso 1997).&#160;In Ecuador, recent oil spills, increasing mining activities, intense use of agrochemicals and incorrect treatment of residual waters from the cities continue increasing the pollution of many hydrological systems where otters are present. Among other threats, we also find destructive fishing practices including the use of dynamite, electrocution and chemicals.<span lang=\"EN-US\"></p>  <p>Roadkills of Neotropical Otters have been documented in the Guianas (Duplaix 2004), in southern and southeastern Brazil (Quintela <em>et al. </em>&#160;2011), in Costa Rica and Mexico (V.M. Santiago-Plata pers. comm.).<span lang=\"EN-US\"></span></p>  <p>Episodes of intense rainfall are becoming more frequent and when combined with deforestation along riverbanks, can cause landslides and flooding. According to Navarro and Quadros (2017) this can force otters to abandon an area, to which they return slowly. &#160;</p>  <p>Severe and long drought periods cause additional ecological stress to Neotropical Otters, which can be worrying if compounded with other normally tolerated environmental impacts, as pollution, cattle ranching and deforestation. This may have been the cause of the recent absence of Neotropical Otters in some river basins of Piauí state (Northeastern Brazil), where otters have not been seen in the last 50 years (Rosas-Ribeiro <em>et al. </em>2017).<span lang=\"EN-US\"></p>  <p>The effect of cattle ranching in the riparian habitat of some rivers in Mexico, as well in other countries, has devastated the biodiversity, causing significant riverbank erosion and turning the river ecosystem into an anoxic environment with reduced fish availability. There is also a concern that zoonotic diseases may be transmitted by cattle (J.P. Gallo-Reynoso pers. comm.).<span lang=\"EN-US\"></span></p>  <p>The long-term impacts of dam construction on the species are poorly understood. Dams degrade the environment by changing flowing to standing water and by decreasing functional connectivity for both individuals and populations. Dams also change the local prey community, affecting otter diet in unknown ways (Quadros 2012).<span lang=\"EN-US\"></p>  <p>The protozoans <em>Giardia </em>spp. and <em>Cryptosporidium </em>spp. were recently first reported for <em>L. longicaudis </em>from northern and northeastern Brazil (Borges <em>et al. </em>2017a, b). Although clinical significance of these results is still unclear, they raise concerns about transmission to other aquatic mammals and even humans, since oocysts and cysts may remain infectious for long periods (LeChevallier <em>et al. </em>1991). Mortality of otters due to diseases such as canine distemper (Hernández-Romero pers. obs.) is also a threat. Canine parvovirus infection was documented in an adult otter in southern Brazil, that died after treatment (Echenique <em>et al. </em>2018). This problem is rapidly expanding to rural areas, where interactions with feral dogs and cats are more frequent. The intensity and impacts of diseases on local otter populations need to be further investigated.<span lang=\"EN-US\"></span></p>  <p>The use of Neotropical Otter cubs as pets has been reported in several states of México (Gallo-Reynoso 1989), in the Brazilian Amazon (Marmontel <em>et al. </em>2011, Fonseca da Silva pers. comm.), and in northern Costa Rica (Santiago-Plata pers. comm.), Colombia (Restrepo <em>et al. </em>2018) and the Coast and Amazon region of Ecuador (Utreras <em>et al. </em>2013). In some locations, medicinal use of otters has been documented, for example, in the Brazilian Amazon an infusion of Neotropical Otter skins is said to cure shortness of breath and asthma (Fonseca and Marmontel 2011).<span lang=\"EN-US\"></p>  The intensity and effect of these threats on otter populations is poorly known, but there is a perception that populations are declining across the range (Rheingantz and Trinca 2015). Considering the expansion of human activities in Latin America, this otter may be subjected to further population decline in the future. This is more acute in some regions, such as in northeastern Brazil, where otter populations are concentrated in well-drained lowland rivers, which are also prime locations for agriculture, ranching and other human activities (Rosas-Ribeiro 2017).",
+    "measures": "<p><em>Lontra longicaudis</em>&#160;is legally protected in Argentina, Bolivia, Brazil, Colombia, Costa Rica, Guatemala, Ecuador, El Salvador, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Suriname, French Guiana, Trinidad, Tobago, Uruguay, and Venezuela. It is classified as Vulnerable (VU) in the Brazilian Atlantic Forest biome (Rodrigues <em>et al. </em>2013) and on the Minas Gerais state Red List (Anonymous 2010a), as well as in Ecuador (Utreras <em>et al. </em>2013) and Colombia (Rodríguez-Mahecha <em>et al. </em>2006). It is considered Near Threatened (NT) in Bolivia (Zambrana <em>et al. </em>2009), São Paulo (Bressan <em>et al. </em>2009) and Paraná (Anonymous 2010b) states in Brazil, and Susceptible in Uruguay (González and Martinez-Lanfranco 2010). The species is Endangered (EN) in Argentina (Ojeda <em>et al. </em>&#160;2012), Mexico (Sánchez and Gallo-Reynoso 2007), and in Central American countries such as El Salvador (Anonymous 2009a), Guatemala (Anonymous 2009b) and Nicaragua (Rivera and Manzanarez 2013). In Honduras, Neotropical Otter is listed as a Species of Special Concern (Cerrato <em>et al. </em>2002) and it is protected under Act No. 4 of 1981 in Belize (Anonymous 2000). It is considered Critically Endangered in Trinidad and Tobago (Anonymous 2013) and it is protected and regulated by the Law of Conservation of Wildlife No. 7317 in Costa Rica (Anonymous 2005).<span lang=\"EN-US\"></p>  <p>The Global Otter Conservation Strategy for the species (Rheingantz <em>et al.</em> 2018) recommends priority actions that include:<span lang=\"EN-US\"></span></p>  <p></p><ol><li>Mitigation of impacts of human activities such as dams, cooper and gold mining, agriculture, cattle ranching along rivers, deforestation and overfishing, as well as regulating the release of domestic and toxic waste in riverine systems near critical populations of otters.</li><li>Implementing monitoring programs with standardized methods in protected areas and combining data from all range countries to compare regional status.</li><li>Developing of National otter conservation plans for those range countries that do not yet have them, and implementation of such plans in range countries that already have them. National conservation plans determine regional threats and design specific conservation actions at a country and regional level.</li><li>Enforcement of existing legal protection, the expansion of protected areas that consider otters requirements, and the adoption of policies that mitigate the impact of humans on riverine and coastal habitats.</li><li>Surveys in areas with little information, such in Suriname, Guyana, Paraguay and most countries of Central America. We recommend long-term research inside and outside protected areas throughout the species range, to understand how human activities affect Neotropical Otter. Knowledge on the geographic distribution of the species needs to be improved, especially in the border areas of its distribution such as Mexico, Argentina and northeastern Brazil. This will advance an understanding of which climatic and ecological factors influence the limitations on the species range as well as the role of corridors and geographical barriers.</li><li>Public awareness of the ecological role of otters in aquatic systems and the impact of otters on fisheries need attention, particularly in areas of conflict. Effective education programs help change the negative perception of otters by fishermen in coastal and riverine habitats. Such programs already exist in Mexico, Colombia, French Guiana and Brazil, and need to be expanded throughout the species range. Training local people to work in the field and community involvement generates empathy for Neotropical Otter.</li><li>Development of strategies to prevent otter predation on fish farms and damage to fishnets. We recommend the adoption of fences in fish farms as used in Europe for <em>Lutra lutra</em>. A baseline evaluation of the economic impact of otters in fisheries and fish farms is also needed, and, at indigenous and community levels, the design and implementation of community agreements for responsible fishing.</li><li>Requirement of environmental impact studies for all hydroelectric projects and legal instruments to ensure compensatory measures for negative impacts on otters. Monitoring the impact of dams on Neotropical Otters before and after dam implementation is needed to assess changes in population dynamics and genetic structure.</li><li>Establishment of long-term Neotropical Otter conservation programs in Atlantic Forest coastal areas, Mexico, Brazilian Cerrado, Central America, Argentina and Amazon Basin.</li></ol><span lang=\"EN-US\"><p></p>  <p><span lang=\"EN-US\"></p>  <p><span lang=\"EN-US\"></span></p>  <p><span lang=\"EN-US\"></p>  <p><span lang=\"EN-US\"></span></p>  <p><span lang=\"EN-US\"></p>  <p><span lang=\"EN-US\"></span></p>",
+    "use_trade": "<p><em>Lontra longicaudis</em> was severely hunted until the 1970s for the international fur market. It is estimated that, from the port of Iquitos, Peru, alone, 148,930 Neotropical Otter pelts were exported between 1946 and 1973 (Brack Egg 1978). Another report pointed out that 23,760 skins of this species were exported from Leticia port on the Amazon, Bogota and Barranquilla in Colombia before 1973 (Donadio 1978). Between 1975 and 1985, 877 Neotropical Otter skins were exported from Argentina, 308 from Mexico, 639 from Honduras, 724 from Panama, 2,814 from Peru, and an astonishing number of 67,830 skins were exported from Paraguay (Broad 1987). In central-western Brazilian Amazon it is estimated that 362,335 Neotropical Otters were hunted for their pelts between 1904 and 1969 (Antunes <em>et al. </em>2016). These are probably underestimates, since official export numbers may be less than 50% of the actual trade (Donadio 1978). Despite absence of official numbers, many Neotropical Otter skins were traded from the Ecuadorian Amazonia together with giant otter skins, jaguars, ocelots and black caimans’ skins (Utreras and Jorgenson 2003). It is unclear whether or not this heavy demand for fur in the recent past led to local population extinctions (Brack Egg 1978, Donadio 1978, Lariviere 1999). Oral history and data from historical documents indicate that Neotropical Otter populations have persisted at low densities at local and regional scales (Pimenta <em>et al. </em>2018).</p>  After the Washington Convention in 1973, the Neotropical Otter was included on Appendix I of the endangered species list of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). Legal hunting of this species has therefore been restricted since 1975. Cubs may be taken as pets locally but appear not to enter the commercial trade (Duplaix 2002).",
+    "rationale": "<p>The recent increase in available information on the Neotropical Otter reveals that the species is widespread throughout the Neotropics and some adjacent areas. The species occurs in all regions with water bodies with availability of food resources, such as rivers, streams, lagoons, ponds&#160;and in coastal areas close to fresh water, with an altitudinal range between 0&#160;to more than 4,000 m asl. The species is negatively affected by human presence and environmental quality. There are local conflicts due to retaliation by fishermen and fish farmers. The species is also affected by mining activities, pollution, cattle ranching, urban expansion, and the hydroelectric network, which have been increasing throughout the species’&#160;range since the last 27 years and can lead to local extinctions. While critical data on aspects of its biology, demography and behaviour are still lacking for many areas, the effects of a large variety of anthropogenic threats such as pollution, gold and copper mining and habitat loss have not been rigorously assessed and are increasing across Central and South America. Although some populations can occur&#160;in disturbed environments, there is little information about the long-term viability and sustenance of such populations. Physiological stress has&#160;been reported in individuals inhabiting areas with high human activity&#160;and density,&#160;factors that have been negatively correlated with the species presence.&#160;As a semi-aquatic species, the Neotropical Otter is associated with&#160;well-drained plains and coastal habitats which overlap with the growing human population and its increasing resource demands. This raises negative environmental impacts and potential human-otter conflicts.&#160; </p>  <p>Despite being&#160;widely distributed in Latin America this does not imply that the species is free of population reductions and local extinction risks. In several countries (Mexico, Venezuela, Colombia, Belize, Ecuador),&#160;it has&#160;been identified as threatened in national and regional Red Lists, indicating its declining trend.&#160;Even in Brazil, where Neotropical Otter was recently assessed and nationally classified as Least Concern (LC), the species is identified as threatened in some states and regions, such as the Atlantic Forest biome and has a national decreasing population trend.</p>  <p>The paucity of robust biological and demographical data on this species across its large and diverse range hampers consideration of appropriate Red List category, and this assessment warrants review as knowledge grows of the species' tolerance to various factors.</p>  Considering the ongoing threats to the species, it is suspected that in the next 27 years (three generations, based on Pacifici <em>et al. </em>2013) there will be a reduction of ≥ 20% in the global population size of <em>Lontra longicaudis</em>, due to habitat loss and degradation. The species is therefore categorized&#160;as Near Threatened under the criteria A3c.",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>The taxonomy of the genus has been debated, but recent work supports the use of the name&#160;<em>Lontra</em>&#160;rather than&#160;<em>Lutra</em>&#160;for New World river otters (van Zyll de Jong 1982, Larivière and Walton 1998, Wozencraft 1993, Koepfli and Wayne 1998). Three proposed subspecies are suggested by their present disjunct distribution: <em>L. longicaudis annectens</em>, restricted to México, Central America and north-western South America; <em>L. l. enudris, </em>distributed across the Amazon region, from eastern Venezuela, Colombia, Ecuador and Peru to north-western Bolivia and northern Brazil; and <em>L. l. longicaudis, </em>southern part of its distribution in South America (Larivière 1999, Trinca <em>et al. </em>2012, Hernández-Romero <em>et al. </em>2018).</span></p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "4_1",
+      "description": {
+        "en": "Formal education"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "6_1",
+      "description": {
+        "en": "Linked enterprises & livelihood alternatives"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Wastewater Treatment Areas"
+      },
+      "code": "15_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Salt Exploitation Sites"
+      },
+      "code": "15_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Excavations (open)"
+      },
+      "code": "15_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Irrigated Land (includes irrigation channels)"
+      },
+      "code": "15_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Marine Coastal/supratidal - Coastal Caves/Karst"
+      },
+      "code": "13_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Artificial/Aquatic - Seasonally Flooded Agricultural Land"
+      },
+      "code": "15_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Salt Marshes (Emergent Grasses)"
+      },
+      "code": "12_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Freshwater Lakes"
+      },
+      "code": "13_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Saline, Brackish or Alkaline Marshes/Pools"
+      },
+      "code": "5_16"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Geothermal Wetlands"
+      },
+      "code": "5_12"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Inland Deltas"
+      },
+      "code": "5_13"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Lakes and Flats"
+      },
+      "code": "5_15"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Passage",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Aquaculture Ponds"
+      },
+      "code": "15_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Unknown",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Saline, Brackish or Alkaline Marshes/Pools"
+      },
+      "code": "5_17"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Saline, Brackish or Alkaline Lakes"
+      },
+      "code": "5_14"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Rheingantz, M.L., Rosas-Ribeiro, P., Gallo-Reynoso, J., Fonseca da Silva, V.C., Wallace, R., Utreras, V. & Hernández-Romero, P.",
+      "value": [
+        "V.C. Fonseca da Silva",
+        "Marcelo Lopes Rheingantz (Universidade Federal do Rio de Janeiro)",
+        "J.P Gallo-Reynoso",
+        "P.F. Rosas-Ribeiro",
+        "R. Wallace",
+        "V. Utreras",
+        "P.C. Hernández-Romero"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hussain, S.A., Duplaix, N. & Duckworth, J.W.",
+      "value": [
+        "William Duckworth (IUCN SSC Small Carnivore Specialist Group; IUCN SSC Deer Specialist Group)",
+        "Syed Ainul Hussain (IUCN SSC Otter Specialist Group)",
+        "Nicole Duplaix (Department of Fisheries and Wildlife, Oregon State University, USA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Rodrigues, L., Latorre-Cardenas, M.C. & Santiago-Plata, V.",
+      "value": [
+        "Livia Rodrigues",
+        "Maria Camila Latorre-Cardenas",
+        "Victor Manuel Santiago-Plata"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment was created to add \"Duckworth, J.W.\" to the Reviewers."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wozencraft, W.C. 1993. Order Carnivora. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference. Second Edition</i>, pp. 279-344. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1993",
+      "title": "Order Carnivora",
+      "author": "Wozencraft, W.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Larivière, S. and Walton, L.R. 1998. <i>Lontra canadensis</i>. <i>Mammalian Species</i> 587: 1-8.",
+      "year": "1998",
+      "title": "<i>Lontra canadensis</i>",
+      "author": "Larivière, S. and Walton, L.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Van Zyll de Jong, C.G. 1987. A phylogenetic study of the <i>Lutrinae</i> (<i>Carnivora; Mustelidae</i>) using morphological data. <i>Canadian Journal of Zoology</i> 65: 2536-2544.",
+      "year": "1987",
+      "title": "A phylogenetic study of the <i>Lutrinae</i> (<i>Carnivora; Mustelidae</i>) using morphological data",
+      "author": "Van Zyll de Jong, C.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Parera, A. 1996. Las nutrias verdaderas de la Argentina.  Boletín Tecnico de la Fundacion Vida Silvestre Argentina. Buenos Aires, Argentina.",
+      "year": "1996",
+      "title": "Las nutrias verdaderas de la Argentina",
+      "author": "Parera, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brack Egg, A. 1978. Situacion actual de las nutrias (Lutrinae: Mustelidae) en el Peru. In: N. Duplaix (ed.), <i>Otters: Proceedings of the first working meeting of the otter specialist group</i>, pp. 76-84. International Union for Conservation of Nature and Natural Resources, Morges, Switzerland.",
+      "year": "1978",
+      "title": "Situacion actual de las nutrias (Lutrinae: Mustelidae) en el Peru",
+      "author": "Brack Egg, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chehebar, C. 1990. <i>Action plan for Latin American otters</i>. IUCN/SSC Otter Specialist Group, Gland, Switzerland.",
+      "year": "1990",
+      "title": "Action plan for Latin American otters",
+      "author": "Chehebar, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster-Turley, P. (ed.). 1990. Introduction and overall recommendations. In: P. Foster-Turley, S. Macdonald and C. Mason (eds), <i>Otters: an Action Plan for their Conservation</i>, pp. 1-3. IUCN, Gland, Switzerland.",
+      "year": "1990",
+      "title": "Introduction and overall recommendations",
+      "author": "Foster-Turley, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Donadio, A. 1978. Some comments on otter trade and legislation in Colombia. In: N. Duplaix (ed.), Otters: Proceedings of the First Working Meeting of the Otter Specialist Group, pp. 3442. Morges, Switzerland.",
+      "year": "1978",
+      "title": "Some comments on otter trade and legislation in Colombia",
+      "author": "Donadio, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parera, A. 1996. Estimating river otter <i>Lutra longicaudis</i> population in Ibera lagoon using a direct sightings methodology. <i>IUCN Otter Specialist Group Bulletin</i> 13: 7743.",
+      "year": "1996",
+      "title": "Estimating river otter <i>Lutra longicaudis</i> population in Ibera lagoon using a direct sightings methodology",
+      "author": "Parera, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cockrum, E.L. 1964. Southern river otter, <i>Lutra annectens</i>, from Sonora, Mexico. <i>Journal of Mammalogy</i> 45: 634-635.",
+      "year": "1964",
+      "title": "Southern river otter, <i>Lutra annectens</i>, from Sonora, Mexico",
+      "author": "Cockrum, E.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duplaix, N. 2004. Guyana Giant Otter Project. Oceanic Society Expeditions.",
+      "year": "2004",
+      "title": "Guyana Giant Otter Project",
+      "author": "Duplaix, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Biodiversitas (ed.). 1998. <i>Livro vermelho das espécies ameaçadas de extinção da fauna de Minas Gerais</i>.In: A.B.M. Machado, G.A.B. da Fonseca, R.B. Machado, L.M.S.  Aguiar and L.V. Lins (eds), Fundação Biodiversitas, Belo Horizonte, Brazil.",
+      "year": "1998",
+      "title": "Livro vermelho das espécies ameaçadas de extinção da fauna de Minas Gerais",
+      "author": "Biodiversitas",
+      "citation_short": ""
+    },
+    {
+      "citation": "Biodiversitas. 2005. Fundação Biodiversitas. Available at: <a href=\"http://www.biodiversitas.org.br/livrovermelho2005\">http://www.biodiversitas.org.br/livrovermelho2005</a>. ",
+      "year": "2005",
+      "title": "Fundação Biodiversitas",
+      "author": "Biodiversitas",
+      "citation_short": null
+    },
+    {
+      "citation": "Gallo-Reynoso, J. P. 1996. Distribution of the neotropical river otter (<i>Lutra longicaudis annectens</i> Major, 1897) in the Rio Yaqui, Sonora, Mexico. <i>IUCN Otter Specialist Group Bulletin </i> 13(1): 27-31.",
+      "year": "1996",
+      "title": "Distribution of the neotropical river otter (<i>Lutra longicaudis annectens</i> Major, 1897) in the Rio Yaqui, Sonora, Mexico",
+      "author": "Gallo-Reynoso, J. P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rodrigues, L. de A., Leuchtenberger, C., Kasper, C.B., Carvalho-Junior, O. and Silva, V.C F. 2013. Avaliação do risco de extinção da <i>Lontra neotropical</i>. <i>Biodiversidade Brasileira</i> 3: 216.",
+      "year": "2013",
+      "title": "Avaliação do risco de extinção da <i>Lontra neotropical</i>",
+      "author": "Rodrigues, L. de A., Leuchtenberger, C., Kasper, C.B., Carvalho-Junior, O. and Silva, V.C F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Astúa, D., Asfora, P.H., Aléssio, F.M. and Langguth, A. 2010. On the occurrence of the Neotropical Otter (<i>Lontra longicaudis</i>) (Mammalia, Mustelidae) in Northeastern Brazil. <i>Mammalia </i> 74: 213-217.",
+      "year": "2010",
+      "title": "On the occurrence of the Neotropical Otter (<i>Lontra longicaudis</i>) (Mammalia, Mustelidae) in Northeastern Brazil",
+      "author": "Astúa, D., Asfora, P.H., Aléssio, F.M. and Langguth, A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koepfli, K.P. and Wayne, R.K. 1998. Phylogenetic relationships of otters (Carnivora: Mustelidae) based on mitochondrial cytochrome b sequences. <i>Journal of Zoology </i> 246: 410-416.",
+      "year": "1998",
+      "title": "Phylogenetic relationships of otters (Carnivora: Mustelidae) based on mitochondrial cytochrome b sequences",
+      "author": "Koepfli, K.P. and Wayne, R.K. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rheingantz, M.L., Oliveira-santos, L.G., Waldemarin, H.F. and Caramaschi, E.P. 2012. Are otters generalists or do they prefer larger, slower prey? Feeding flexibility of the neotropical otter <i>Lontra longicaudis</i> in the Atlantic Forest. <i>IUCN Otter Specialist Group Bulletin</i> 29: 80-94.",
+      "year": "2012",
+      "title": "Are otters generalists or do they prefer larger, slower prey? Feeding flexibility of the neotropical otter <i>Lontra longicaudis</i> in the Atlantic Forest",
+      "author": "Rheingantz, M.L., Oliveira-santos, L.G., Waldemarin, H.F. and Caramaschi, E.P. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gallo-Reynoso, J.P. 1997. Situación y distrubicion de las nutrias en Mexico, con énfasis en <i>Lontra longicaudis annectens</i> Major 1897.",
+      "year": "1997",
+      "title": "Situación y distrubicion de las nutrias en Mexico, con énfasis en <i>Lontra longicaudis annectens</i> Major 1897.",
+      "author": "Gallo-Reynoso, J.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Larivière, S. 1999. <i>Lontra longicaudis</i>. <i>Mammalian Species</i> 609: 1-5.",
+      "year": "1999",
+      "title": "<i>Lontra longicaudis</i>",
+      "author": "Larivière, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz, M.L. 2006. Ecologia alimentar de Lontra longicaudis (Olfers, 1818) (Mammalia: Carnivora) em rio costeiro do leste do estado do Rio de Janeiro. MSc Thesis, Universidade Federal do Rio de Janeiro/Museu Nacional.",
+      "year": "2006",
+      "title": "Ecologia alimentar de Lontra longicaudis (Olfers, 1818) (Mammalia: Carnivora) em rio costeiro do leste do estado do Rio de Janeiro.",
+      "author": "Rheingantz, M.L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rheingantz, M., Waldemarin, H., Rodrigues, L. and Moulton, T. 2011. Seasonal and spatial differences in feeding habits of the Neotropical otter (<i>Lontra longicaudis</i>) (<i>Carnivora: Mustelidae</i>) in a costal catchment of southeastern Brazil. <i>Zoologia </i> 28(1): 37-44.",
+      "year": "2011",
+      "title": "Seasonal and spatial differences in feeding habits of the Neotropical otter (<i>Lontra longicaudis</i>) (<i>Carnivora: Mustelidae</i>) in a costal catchment of southeastern Brazil",
+      "author": "Rheingantz, M., Waldemarin, H., Rodrigues, L. and Moulton, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pardini, R. 1998. Feeding ecology of the neotropical river otter Lontra longicaudis in an Atlantic Forest stream, south-eastern Brazil. <i>Journal of Zoology</i> 245: 385-391.",
+      "year": "1998",
+      "title": "Feeding ecology of the neotropical river otter Lontra longicaudis in an Atlantic Forest stream, south-eastern Brazil.",
+      "author": "Pardini, R. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Trujillo, F.  and Arcila, D. 2006. Nutria neotropical <i>Lontra longicaudis</i>. In: Rodríguez-M., J.V., Alberico, M., Trujillo, F., Jorgenson, J. (ed.), <i>Libro Rojo de los Mamíferos de Colombia. Serie Libros Rojos de Especies Amenazadas de Colombia.</i>, pp. 249. Conservación Internacional Colombia, Ministerio de Ambiente, Vivienda y Desarrollo Territorial, Bogotá, Colombia.",
+      "year": "2006",
+      "title": "Nutria neotropical <i>Lontra longicaudis</i>",
+      "author": "Trujillo, F.  and Arcila, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 09 December 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-3"
+    },
+    {
+      "citation": "Anonymous. 2000. Wildlife Protection Act Chapter 220. Government of Belize, Belmopan, Belize.",
+      "year": "2000",
+      "title": "Wildlife Protection Act Chapter 220. Government of Belize, Belmopan, Belize.",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2005. Reglamento a la Ley de Conservación de la Vida Silvestre. <i>La Gaceta -Diario Oficial de Costa Rica</i> 181: 6-25.",
+      "year": "2005",
+      "title": "Reglamento a la Ley de Conservación de la Vida Silvestre.",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2009a. Acuerdo No. 36. Diario Oficial de El Salvador. 383: 75–89.",
+      "year": "2009a",
+      "title": "Acuerdo No. 36. Diario Oficial de El Salvador",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2009b. Lista de Especies Amenazadas de Guatemala - LEA. 2nd edn. Departamento de Vida Silvestre - CONAP, Guatemala, Guatemala.",
+      "year": "2009b",
+      "title": "Lista de Especies Amenazadas de Guatemala - LEA. 2nd edn. Departamento de Vida Silvestre - CONAP, Guatemala, Guatemala.",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2010a. Lista de Espécies Ameaçadas de Extinção da Fauna do Estado de Minas Gerais. COPAM-MG, Belo Horizonte, Minas Gerais, Brazil.",
+      "year": "2010a",
+      "title": "Lista de Espécies Ameaçadas de Extinção da Fauna do Estado de Minas Gerais. COPAM-MG, Belo Horizonte, Minas Gerais, Brazil.",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2010 b. Mamíferos  Ameaçados  no  Paraná. Instituto  Federal  do  Paraná,  Curitiba,  Paraná,  Brazil.",
+      "year": "2010 b",
+      "title": "Mamíferos  Ameaçados  no  Paraná. Instituto  Federal  do  Paraná,  Curitiba,  Paraná,  Brazil.",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Anonymous. 2013. Forestry, Protected Areas and Wildlife Conservation Bill. Government of the Republic of Trinidad and Tobago, Port of Spain, Trinidad and Tobago.",
+      "year": "2013",
+      "title": "Forestry, Protected Areas and Wildlife Conservation Bill. Government of the Republic of Trinidad and Tobago, Port of Spain, Trinidad and Tobago.",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "Barbieri F, Machado R, Zappes CA, de Oliveira LR. 2012. Interactions between the Neotropical otter (Lontra longicaudis) and gillnet fishery in the southern Brazilian coast. <i>Ocean and Coastal Management</i> 63: 16.",
+      "year": "2012",
+      "title": "Interactions between the Neotropical otter (Lontra longicaudis) and gillnet fishery in the southern Brazilian coast",
+      "author": "Barbieri F, Machado R, Zappes CA, de Oliveira LR",
+      "citation_short": null
+    },
+    {
+      "citation": "Borges, J.C.G., Lima, D.S., Calera, B.M., Marmontel, M., Silva, E.M., Moreira, A.L.O. and Alves, L.C. 2017a. Cryptosporidium spp. and Giardia sp. In Neotropical river otters (Lontra longicaudis) and giant otters (Pteronura brasiliensis) in northern Brazil. <i>Journal of the Marine Biological Association of the United Kingdom</i> 98(8): 2153-2157.",
+      "year": "2017a",
+      "title": "Cryptosporidium spp. and Giardia sp. In Neotropical river otters (Lontra longicaudis) and giant otters (Pteronura brasiliensis) in northern Brazil.",
+      "author": "Borges, J.C.G., Lima, D.S., Calera, B.M., Marmontel, M., Silva, E.M., Moreira, A.L.O. and Alves, L.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Borges, J.C.G., Lima, D.S., Silva, E.M., Moreira, A.L.O., Marmontel, M., Amaral, R.S., Lazzarini, S.M. and Alves, L.C. 2017b. Cryptosporidium spp. and Giardia sp. in aquatic mammals in northern and northeastern Brazil. <i>Diseases of Aquatic Organisms</i> 126(1): 25-31.",
+      "year": "2017b",
+      "title": "Cryptosporidium spp. and Giardia sp. in aquatic mammals in northern and northeastern Brazil",
+      "author": "Borges, J.C.G., Lima, D.S., Silva, E.M., Moreira, A.L.O., Marmontel, M., Amaral, R.S., Lazzarini, S.M. and Alves, L.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bressan, P.M., Kierulff, M.C.M. and Sugieda, A.M. 2009. Fauna Ameaçada de Extinção do Estado de São Paulo. Fundação Parque Zoológico de São Paulo: Secretaria do Meio Ambiente, São Paulo, São Paulo, Brazil.",
+      "year": "2009",
+      "title": "Fauna Ameaçada de Extinção do Estado de São Paulo. Fundação Parque Zoológico de São Paulo: Secretaria do Meio Ambiente, São Paulo, São Paulo, Brazil.",
+      "author": "Bressan, P.M., Kierulff, M.C.M. and Sugieda, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Broad  S. 1987. A  Report  on  the  Harvest  of  and  Trade  in  Latin  American  Spotted  Cats  (Felidae)  and  Otters  (Lutrinae).  IUCN  Monitoring  Centre,  Cambridge,  UK.",
+      "year": "1987",
+      "title": "A  Report  on  the  Harvest  of  and  Trade  in  Latin  American  Spotted  Cats  (Felidae)  and  Otters  (Lutrinae).  IUCN  Monitoring  Centre,  Cambridge,  UK.",
+      "author": "Broad  S",
+      "citation_short": null
+    },
+    {
+      "citation": "Carvalho-Júnior, O., Banevicius, N.M.S. and Mafra, E.O. 2006. Distribution and characterization of environments used by otters in the coastal region of Santa Catarina state, Brazil. Journal of Coastal Research SI 39 (Proceedings of the 8th International Coastal Symposium): 1087-1089.",
+      "year": "2006",
+      "title": "Distribution and characterization of environments used by otters in the coastal region of Santa Catarina state, Brazil.",
+      "author": "Carvalho-Júnior, O., Banevicius, N.M.S. and Mafra, E.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Castro FR, Stutz-Reis S, Reis SS, Nakano- Oliveira E, Andriolo A. 2014. Fishermen’s perception of Neotropical otters (Lontra longicaudis) and their attacks on artisanal fixed fence traps: The case of caiçara communities. <i>Ocean & Coastal Management</i> 92: 19–27.",
+      "year": "2014",
+      "title": "Fishermen’s perception of Neotropical otters (Lontra longicaudis) and their attacks on artisanal fixed fence traps: The case of caiçara communities.",
+      "author": "Castro FR, Stutz-Reis S, Reis SS, Nakano- Oliveira E, Andriolo A",
+      "citation_short": null
+    },
+    {
+      "citation": "Castro I, Zapata Ríos G. 2001. New altitudinal record for Lontra longicaudis (Carnivora: Mustelidae) in Ecuador. <i>Mammalia</i> 65: 237-239.",
+      "year": "2001",
+      "title": "New altitudinal record for Lontra longicaudis (Carnivora: Mustelidae) in Ecuador.",
+      "author": "Castro I, Zapata Ríos G",
+      "citation_short": null
+    },
+    {
+      "citation": "Cerrato C, House P, Vreugdenhil D. 2002. VOLUMEN IV: Espécies de Preocupación Especial, Actualización 2002.",
+      "year": "2002",
+      "title": "VOLUMEN IV: Espécies de Preocupación Especial, Actualización 2002.",
+      "author": "Cerrato C, House P, Vreugdenhil D",
+      "citation_short": null
+    },
+    {
+      "citation": "Duque-Dávila, D. L., Martínez-Ramírez, E., Botello-López, F. J., & Sánchez-Cordero, V. 2013. Distribución, abundancia y hábitos alimentarios de la nutria (Lontra longicaudis annectens major, 1897) en el Río Grande, Reserva de la Biósfera Tehuacán-Cuicatlán, Oaxaca, México. <i>Therya</i> 4(2): 281-296.",
+      "year": "2013",
+      "title": "Distribución, abundancia y hábitos alimentarios de la nutria (Lontra longicaudis annectens major, 1897) en el Río Grande, Reserva de la Biósfera Tehuacán-Cuicatlán, Oaxaca, México.",
+      "author": "Duque-Dávila, D. L., Martínez-Ramírez, E., Botello-López, F. J., & Sánchez-Cordero, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Echenique JV, Soares MP, Mascarenhas CS, Bandarra PM, Quadros P, Driemeier D, Schild AL. 2018. Lontra longicaudis infected with canine parvovirus and parasitized by Dioctophyma renale. <i>Pesquisa Veterinária Brasileira</i> 38(9): 1844-1848.",
+      "year": "2018",
+      "title": "Lontra longicaudis infected with canine parvovirus and parasitized by Dioctophyma renale",
+      "author": "Echenique JV, Soares MP, Mascarenhas CS, Bandarra PM, Quadros P, Driemeier D, Schild AL",
+      "citation_short": null
+    },
+    {
+      "citation": "Fonseca F, Sanaiotti T, Malm O. 2004. Concentração de mercúrio em ariranhas (Pteronura brasiliensis), Lontras (Lontra longicaudis) e peixes de sua dieta no Pantanal, Brasil. <i>IV Simpósio sobre Recursos Naturais e Sócio- econômicos do Pantanal</i> 1. SIMPAN, Corumbá, MS.",
+      "year": "2004",
+      "title": "Concentração de mercúrio em ariranhas (Pteronura brasiliensis), Lontras (Lontra longicaudis) e peixes de sua dieta no Pantanal, Brasil.",
+      "author": "Fonseca F, Sanaiotti T, Malm O",
+      "citation_short": null
+    },
+    {
+      "citation": "Fonseca VC, Marmontel M. 2011. Local knowledge and conflicts with otters in western Brazilian Amazon: a preliminary report. <i>IUCN Otter Specialist Group Bulletin</i> 28: 47–63.",
+      "year": "2011",
+      "title": "Local knowledge and conflicts with otters in western Brazilian Amazon: a preliminary report.",
+      "author": "Fonseca VC, Marmontel M",
+      "citation_short": null
+    },
+    {
+      "citation": "Gallant D. 2007. Unveiling the limitations of scat surveys to monitor social species: a case study on river otters. <i>Journal of Wildlife Management</i> 71: 258–265.",
+      "year": "2007",
+      "title": "Unveiling the limitations of scat surveys to monitor social species: a case study on river otters.",
+      "author": "Gallant D",
+      "citation_short": null
+    },
+    {
+      "citation": "Gallo-Reynoso JP. 1989. Distribución y estado actual de la nutria o perro de agua (Lutra longicaudis annectens Major, 1897) en la Sierra Madre del Sur, México. <i>M. Sc. Thesis. Facultad de Ciencias, UNAM. 236 p.</i>.",
+      "year": "1989",
+      "title": "Distribución y estado actual de la nutria o perro de agua (Lutra longicaudis annectens Major, 1897) en la Sierra Madre del Sur, México.",
+      "author": "Gallo-Reynoso JP",
+      "citation_short": null
+    },
+    {
+      "citation": "Gallo-Reynoso JP, Macías-Sánchez S, Armenta-Méndez L, Barba-Acuña I, Nuñez-Ramos VA, Loya-Jaquez A, Ponce-García G, Gardea-Bejar AA. Submitted. Camera traps and otter latrines, what do they tell us? <i>IUCN Otter Specialist Group Bulletin</i>.",
+      "year": "2020",
+      "title": "Camera traps and otter latrines, what do they tell us?",
+      "author": "Gallo-Reynoso JP, Macías-Sánchez S, Armenta-Méndez L, Barba-Acuña I, Nuñez-Ramos VA, Loya-Jaquez A, Ponce-García G, Gardea-Bejar AA",
+      "citation_short": null
+    },
+    {
+      "citation": "Gallo-Reynoso JP, S Macías-Sánchez, VA Nuñez-Ramos, A Loya-Jaquez, ID Barba-Acuña, J Guerrero-Flores, G Ponce-García, and AA Gardea-Bejar. 2019. Identity and distribution of the Nearctic otter (Lontra canadensis) at the Rio Conchos Basin, Chihuahua, Mexico. <i>Therya</i> 10(3): 243-253.",
+      "year": "2019",
+      "title": "Identity and distribution of the Nearctic otter (Lontra canadensis) at the Rio Conchos Basin, Chihuahua, Mexico.",
+      "author": "Gallo-Reynoso JP, S Macías-Sánchez, VA Nuñez-Ramos, A Loya-Jaquez, ID Barba-Acuña, J Guerrero-Flores, G Ponce-García, and AA Gardea-Bejar",
+      "citation_short": null
+    },
+    {
+      "citation": "Gil-Carbó G. 2003. Densidades de Lobito de Río (Lontra longicaudis) en las lagunas Galarza y Luna. In: Alvarez BB (ed) Fauna del Iberá, 384 pp. EUDENE, Corrientes, Argentina.",
+      "year": "2003",
+      "title": "Densidades de Lobito de Río (Lontra longicaudis) en las lagunas Galarza y Luna. In: Alvarez BB (ed) Fauna del Iberá, 384 pp. EUDENE, Corrientes, Argentina.",
+      "author": "Gil-Carbó G",
+      "citation_short": null
+    },
+    {
+      "citation": "Gomez JJ, Túnez JI, Fracassi N, Cassini MH. 2014. Habitat suitability and anthropogenic correlates of Neotropical river otter (Lontra longicaudis) distribution. <i>Journal of Mammalogy</i> 95: 824–833.",
+      "year": "2014",
+      "title": "Habitat suitability and anthropogenic correlates of Neotropical river otter (Lontra longicaudis) distribution.",
+      "author": "Gomez JJ, Túnez JI, Fracassi N, Cassini MH",
+      "citation_short": null
+    },
+    {
+      "citation": "Hernández-Romero PC, Botello F, Hernández GN, Espinoza Rodríguez J. 2018. New altitudinal record of neotropical otter (Lontra longicaudis Olfers, 1818) and conflict with fish farmers in Mexico. <i>IUCN/SCC Otter Specialist Group Bulletin.</i> 35(4): 193 - 197.",
+      "year": "2018",
+      "title": "New altitudinal record of neotropical otter (Lontra longicaudis Olfers, 1818) and conflict with fish farmers in Mexico.",
+      "author": "Hernández-Romero PC, Botello F, Hernández GN, Espinoza Rodríguez J",
+      "citation_short": null
+    },
+    {
+      "citation": "Hernández-Romero PC, Guitiérrez-Rodríguez C, Valdespino C, Prieto-Torres DA. 2018. The role of geographical and ecological factors on population divergence of the Neotropical otter Lontra longicaudis (Carnivora, Mustelidae). <i>Evolutionary Biology</i> 45(1): 37-55.",
+      "year": "2018",
+      "title": "The role of geographical and ecological factors on population divergence of the Neotropical otter Lontra longicaudis (Carnivora, Mustelidae).",
+      "author": "Hernández-Romero PC, Guitiérrez-Rodríguez C, Valdespino C, Prieto-Torres DA",
+      "citation_short": null
+    },
+    {
+      "citation": "Josef CF, Adriano LR, França EJ, Arantes de Carvalho GG, Ferreira JR. 2008. Determination of Hg and diet identification in otter (Lontra longicaudis) feces. <i>Environmental Pollution</i> 152: 592–596.",
+      "year": "2008",
+      "title": "Determination of Hg and diet identification in otter (Lontra longicaudis) feces.",
+      "author": "Josef CF, Adriano LR, França EJ, Arantes de Carvalho GG, Ferreira JR",
+      "citation_short": null
+    },
+    {
+      "citation": "Kruuk H, Conroy J. 1987. Surveying otter Lutra lutra populations: a discussion of problems with spraints. <i>Biological Conservation</i> 41: 179–183.",
+      "year": "1987",
+      "title": "Surveying otter Lutra lutra populations: a discussion of problems with spraints.",
+      "author": "Kruuk H, Conroy J",
+      "citation_short": null
+    },
+    {
+      "citation": "Kruuk H, Moorhouse A, Conroy J, Durbin L, Frears S. 1989. An estimate of numbers and habitat preferences of otters Lutra lutra in Shetland, UK. <i>Biological Conservation</i> 49: 241–254.",
+      "year": "1989",
+      "title": "An estimate of numbers and habitat preferences of otters Lutra lutra in Shetland, UK.",
+      "author": "Kruuk H, Moorhouse A, Conroy J, Durbin L, Frears S",
+      "citation_short": null
+    },
+    {
+      "citation": "Latorre-Cardenas MC. 2013. Evaluación de respuesta al estrés, bioacumulación de contaminantes y calidad de hábitat de la nutria neotropical en Veracruz, México. MSc dissertation.",
+      "year": "2013",
+      "title": "Evaluación de respuesta al estrés, bioacumulación de contaminantes y calidad de hábitat de la nutria neotropical en Veracruz, México. MSc dissertation.",
+      "author": "Latorre-Cardenas MC",
+      "citation_short": null
+    },
+    {
+      "citation": "Latorre-Cárdenas MC, Gutiérrez-Rodríguez C, Rico Y. 2020. Estimating genetic and demographic parameters relevant for the conservation of the Neotropical otter, Lontra longicaudis, in Mexico. <i>Conservation Genetics</i> 21(4): 719-734.",
+      "year": "2020",
+      "title": "Estimating genetic and demographic parameters relevant for the conservation of the Neotropical otter, Lontra longicaudis, in Mexico",
+      "author": "Latorre-Cárdenas MC, Gutiérrez-Rodríguez C, Rico Y",
+      "citation_short": null
+    },
+    {
+      "citation": "LeChevallier MW, Norton WD, Lee RG. 1991. Occurrence of Giardia and Cryptosporidium spp. in surface water supplies. <i>Applied Environmental Microbiology</i> 57: 2610-2616.",
+      "year": "1991",
+      "title": "Occurrence of Giardia and Cryptosporidium spp. in surface water supplies.",
+      "author": "LeChevallier MW, Norton WD, Lee RG",
+      "citation_short": null
+    },
+    {
+      "citation": "Marmontel M, Buck Silva CI, Botero-Arias R, Miguel HA. 2011. Rescue, tagging and release of a Neotropical otter (Lontra longicaudis) in Western Brazilian Amazon. <i>IUCN Otter Specialist Group Bulletin</i> 28(B): 36-44.",
+      "year": "2011",
+      "title": "Rescue, tagging and release of a Neotropical otter (Lontra longicaudis) in Western Brazilian Amazon.",
+      "author": "Marmontel M, Buck Silva CI, Botero-Arias R, Miguel HA",
+      "citation_short": null
+    },
+    {
+      "citation": "Mayagoitia-González PE, Fierro-Cabo A, Valdez R, Andersen M, Cowley D, Steiner R. 2013. Uso de hábitat y perspectivas de Lontra longicaudis en un área protegida de Tamaulipas, México. <i>Therya</i> 4: 243–256.",
+      "year": "2013",
+      "title": "Uso de hábitat y perspectivas de Lontra longicaudis en un área protegida de Tamaulipas, México.",
+      "author": "Mayagoitia-González PE, Fierro-Cabo A, Valdez R, Andersen M, Cowley D, Steiner R",
+      "citation_short": null
+    },
+    {
+      "citation": "Meerman JC, Clabaugh J. 2012. Biodiversity and Environmental Resource Data System of Belize. Government of Belize, Belmoplan, Belize.",
+      "year": "2012",
+      "title": "Biodiversity and Environmental Resource Data System of Belize. Government of Belize, Belmoplan, Belize.",
+      "author": "Meerman JC, Clabaugh J",
+      "citation_short": null
+    },
+    {
+      "citation": "Mendonça MAD, Mendonça CED. 2012. Novo registro de lontra Neotropical Lontra longicaudis (Olfers, 1818) (Carnivora: Mustelidae) no estado de Sergipe, nordeste do Brasil. <i>Scientia Plena</i> 8: 1–5.",
+      "year": "2012",
+      "title": "Novo registro de lontra Neotropical Lontra longicaudis (Olfers, 1818) (Carnivora: Mustelidae) no estado de Sergipe, nordeste do Brasil.",
+      "author": "Mendonça MAD, Mendonça CED",
+      "citation_short": null
+    },
+    {
+      "citation": "Mesquita, G. P., & Meneses, R. F. 2015. Registro de Lontra longicaudis (Olfers, 1818) no estado do Maranhão, Nordeste do Brasil.. <i>Scientia Plena</i> 11(7): 7.",
+      "year": "2015",
+      "title": "Registro de Lontra longicaudis (Olfers, 1818) no estado do Maranhão, Nordeste do Brasil..",
+      "author": "Mesquita, G. P., & Meneses, R. F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Navarro MA Quadros J. 2017. Impacto de um desastre natural sobre o habitat e a ocorrência de Lontra longicaudis (Mustelidae, Carnivora) na Serra da Prata, Paraná, Brasil. <i>Iheringia. Série Zoologia</i> 107: e2017039.",
+      "year": "2017",
+      "title": "Impacto de um desastre natural sobre o habitat e a ocorrência de Lontra longicaudis (Mustelidae, Carnivora) na Serra da Prata, Paraná, Brasil.",
+      "author": "Navarro MA Quadros J",
+      "citation_short": null
+    },
+    {
+      "citation": "Nicolás E, Sánchez Núnez E, Mosqueda Cabrera MA, Arellano Nicolás E, Sánchez Núnez E, Mosqueda Cabrera A. 2012. Distribución y Abundancia de la nutria Neotropical (Lontra longicaudis annectens) en Tlacotalpan, Veracruz, Mexico. <i>Acta Zoológica Mexicana</i> 28: 270–279.",
+      "year": "2012",
+      "title": "Distribución y Abundancia de la nutria Neotropical (Lontra longicaudis annectens) en Tlacotalpan, Veracruz, Mexico.",
+      "author": "Nicolás E, Sánchez Núnez E, Mosqueda Cabrera MA, Arellano Nicolás E, Sánchez Núnez E, Mosqueda Cabrera A",
+      "citation_short": null
+    },
+    {
+      "citation": "Ojeda RA, Chillo V, Isenrath GBD. 2012. Libro Rojo de Mamíferos Amenazados de la Argentina. SAREM, Mendoza, Argentina.",
+      "year": "2012",
+      "title": "Libro Rojo de Mamíferos Amenazados de la Argentina. SAREM, Mendoza, Argentina.",
+      "author": "Ojeda RA, Chillo V, Isenrath GBD",
+      "citation_short": null
+    },
+    {
+      "citation": "Orozco-Meyer A. 1998. Tendencia de la Distribución y Abundancia de la Nutria de río (Lontra Longicaudis annectens Major, 1897), en la Ribera del río Hondo, Quintana Roo, México. <i>B.Sc. thesis, Instituto Tecnológico de Chetumal, Chetumal, México.</i>.",
+      "year": "1998",
+      "title": "Tendencia de la Distribución y Abundancia de la Nutria de río (Lontra Longicaudis annectens Major, 1897), en la Ribera del río Hondo, Quintana Roo, México.",
+      "author": "Orozco-Meyer A",
+      "citation_short": null
+    },
+    {
+      "citation": "Ortega J, Navarrete D, Maldonado J. 2012. Non-invasive sampling of endangered Neotropical river otters reveals high levels of dispersion in the Lacantun River System of Chiapas, Mexico. <i>Animal Biodiversity and Conservation</i> 35: 59–69.",
+      "year": "2012",
+      "title": "Non-invasive sampling of endangered Neotropical river otters reveals high levels of dispersion in the Lacantun River System of Chiapas, Mexico.",
+      "author": "Ortega J, Navarrete D, Maldonado J",
+      "citation_short": null
+    },
+    {
+      "citation": "Pimenta NC, Antunes AP, Barnett AA, Macedo VW, Shepard GH Jr. 2018. Differential resilience of Amazonian otters along the Rio Negro in the aftermath of the 20th century international fur trade. <i>PLOS ONE</i> 13(3): e0193984.",
+      "year": "2018",
+      "title": "Differential resilience of Amazonian otters along the Rio Negro in the aftermath of the 20th century international fur trade.",
+      "author": "Pimenta NC, Antunes AP, Barnett AA, Macedo VW, Shepard GH Jr",
+      "citation_short": null
+    },
+    {
+      "citation": "Quintana-Morales Y. 2013. Distribución y Estado de Conservación de la Nutria de río (Lontra longicaudis, Olfers, 1818) en los Humedales del Sistema Guatemalteco de Áreas Protegidas y su Conservación. Organización Nacional para la Conservación y el Ambiente, Guatemala, Guatemala.",
+      "year": "2013",
+      "title": "Distribución y Estado de Conservación de la Nutria de río (Lontra longicaudis, Olfers, 1818) en los Humedales del Sistema Guatemalteco de Áreas Protegidas y su Conservación. Organización Nacional para la Conservación y el Ambiente, Guatemala, Guatemala.",
+      "author": "Quintana-Morales Y",
+      "citation_short": null
+    },
+    {
+      "citation": "Quintela F, Ibarra C, Colares E. 2011. Utilização de abrigos e latrinas por Lontra longicaudis (Olfers, 1818) em um arroio costeiro na Área de Proteção Ambiental da Lagoa Verde, Rio Grande do Sul, Brasil. <i>Neotropical Biology and Conservation</i> 6: 35–43.",
+      "year": "2011",
+      "title": "Utilização de abrigos e latrinas por Lontra longicaudis (Olfers, 1818) em um arroio costeiro na Área de Proteção Ambiental da Lagoa Verde, Rio Grande do Sul, Brasil.",
+      "author": "Quintela F, Ibarra C, Colares E",
+      "citation_short": null
+    },
+    {
+      "citation": "Ramos-Rosas N, Valdespino C, García Hernández J, Gallo Reynoso JP, Olguín E. 2013. Heavy metals in the habitat and throughout the food chain of the Neotropical Otter, Lontra longicaudis, in protected Mexican wetlands. <i>Environmental Monitoring and Assessment</i> 184(1): 11.",
+      "year": "2013",
+      "title": "Heavy metals in the habitat and throughout the food chain of the Neotropical Otter, Lontra longicaudis, in protected Mexican wetlands.",
+      "author": "Ramos-Rosas N, Valdespino C, García Hernández J, Gallo Reynoso JP, Olguín E",
+      "citation_short": null
+    },
+    {
+      "citation": "Restrepo CA, Botero-Botero A, Puerta-Parra JC, Franco-Pérez LM, Guevara G. 2018. The case of the Neotropical Otter (Lontra longicaudis Olfers, 1818) as a wild pet at the Magdalena River (Colombia). Boletín Científico. Centro de Museos. <i>Museo de Historia Natural</i> 22(2): 76-83.",
+      "year": "2018",
+      "title": "The case of the Neotropical Otter (Lontra longicaudis Olfers, 1818) as a wild pet at the Magdalena River (Colombia). Boletín Científico. Centro de Museos.",
+      "author": "Restrepo CA, Botero-Botero A, Puerta-Parra JC, Franco-Pérez LM, Guevara G",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz ML, Leuchtenberger C, Zucco CA, Fernandez FAS. 2016. Differences in activity patterns of the Neotropical otter Lontra longicaudis between rivers of two Brazilian ecoregions. <i>Journal of Tropical Ecology</i> 32: 170-174.",
+      "year": "2016",
+      "title": "Differences in activity patterns of the Neotropical otter Lontra longicaudis between rivers of two Brazilian ecoregions.",
+      "author": "Rheingantz ML, Leuchtenberger C, Zucco CA, Fernandez FAS",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz, ML, Menezes JFS, Galliez M, Fernandez FAS. 2017b. Biogeographic patterns in the feeding habits of the opportunist and semiaquatic Neotropical otter. <i>Hydrobiologia</i> 792: 1-15.",
+      "year": "2017b",
+      "title": "Biogeographic patterns in the feeding habits of the opportunist and semiaquatic Neotropical otter.",
+      "author": "Rheingantz, ML, Menezes JFS, Galliez M, Fernandez FAS",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz ML, Menezes JFS, Thoisy B. 2014. Defining Neotropical otter Lontra longicaudis distribution, conservation priorities and ecological frontiers. <i>Tropical Conservation Science.</i> 7: 214-229.",
+      "year": "2014",
+      "title": "Defining Neotropical otter Lontra longicaudis distribution, conservation priorities and ecological frontiers.",
+      "author": "Rheingantz ML, Menezes JFS, Thoisy B",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz ML, Santiago‐Plata VM, Trinca CS. 2017a. The Neotropical otter Lontra longicaudis: a comprehensive update on the current knowledge and conservation status of this semiaquatic carnivore. <i>Mammal Review.</i> 47: 291-305.",
+      "year": "2017a",
+      "title": "The Neotropical otter Lontra longicaudis: a comprehensive update on the current knowledge and conservation status of this semiaquatic carnivore.",
+      "author": "Rheingantz ML, Santiago‐Plata VM, Trinca CS",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz M.L., Trinca C.S. 2015. Lontra longicaudis. <i>The IUCN Red List of Threatened Species</i> 2015: e. T12304A21937379.",
+      "year": "2015",
+      "title": "Lontra longicaudis.",
+      "author": "Rheingantz M.L., Trinca C.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rheingantz ML, Valenzuela A, Botero-Botero A, Thoisy B, Trujillo F, González I, Gallo-Reynoso JP, Marmontel M, Hernández-Romero PC, Rosas-Ribeiro PF, Wallace R, Utreras VM. 2018. Neotropical otter. In: Duplaix, N. and M. Savage (eds). <i>Global Otter Conservation Strategy</i> IUCN Otter Specialist Group. Pages: 82-89.",
+      "year": "2018",
+      "title": "Neotropical otter. In: Duplaix, N. and M. Savage (eds)",
+      "author": "Rheingantz ML, Valenzuela A, Botero-Botero A, Thoisy B, Trujillo F, González I, Gallo-Reynoso JP, Marmontel M, Hernández-Romero PC, Rosas-Ribeiro PF, Wallace R, Utreras VM",
+      "citation_short": null
+    },
+    {
+      "citation": "Rivera EC, Manzanarez R. 2013. Lista Roja de Especies en Alto Riesgo. Centro de Investigación, Capacitación y Formación Ambiental (CICFA) del Movimiento Jóvenes Ambientalistas, Managua, Costa Rica.",
+      "year": "2013",
+      "title": "Lista Roja de Especies en Alto Riesgo. Centro de Investigación, Capacitación y Formación Ambiental (CICFA) del Movimiento Jóvenes Ambientalistas, Managua, Costa Rica.",
+      "author": "Rivera EC, Manzanarez R",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas-Ribeiro PF. 2007. A Lontra Neotropical (Lontra longicaudis) no Nordeste brasileiro: distribuição,  uso do habitat e diversidade genética. DSc. Thesis.",
+      "year": "2007",
+      "title": "A Lontra Neotropical (Lontra longicaudis) no Nordeste brasileiro: distribuição,  uso do habitat e diversidade genética. DSc. Thesis",
+      "author": "Rosas-Ribeiro PF ",
+      "citation_short": null
+    },
+    {
+      "citation": "Rosas-Ribeiro PF, Ranulpho R, Venticinque E. 2017. New records and update on the geographic distribution of Lontra longicaudis (Olfers, 1818) (Carnivora: Mustelidae) in seasonally dry tropical forests of northeastern Brazil. <i>Check List</i> 13(3): 2108.",
+      "year": "2017",
+      "title": "New records and update on the geographic distribution of Lontra longicaudis (Olfers, 1818) (Carnivora: Mustelidae) in seasonally dry tropical forests of northeastern Brazil.",
+      "author": "Rosas-Ribeiro PF, Ranulpho R, Venticinque E",
+      "citation_short": null
+    },
+    {
+      "citation": "Sánchez O, Gallo-Reynoso JP. 2007. Evaluación del riesgo de extinción de Lontra longicaudis de acuerdo al numeral 5-7 de la NOM-059-ECOL-2001. in Sánchez, O., R. Medellín, A. Aldama, B. Goettsch, J. Soberón y M. Tambutti (eds.). <i>Método de evaluación del riesgo de extinción de las especies silvestres en México. SEMARNAT-INE-UNAM-CONABIO</i>: Pp. 61-89.",
+      "year": "2007",
+      "title": "Evaluación del riesgo de extinción de Lontra longicaudis de acuerdo al numeral 5-7 de la NOM-059-ECOL-2001. in Sánchez, O., R. Medellín, A. Aldama, B. Goettsch, J. Soberón y M. Tambutti (eds.)",
+      "author": "Sánchez O, Gallo-Reynoso JP",
+      "citation_short": null
+    },
+    {
+      "citation": "Souto LRA. 2012. New occurrence data of Neotropical otters Lontra longicaudis (Olfers, 1818), in Bahia state, northeastern Brazil. <i>IUCN Otter Specialist Group Bulletin </i> 29: 71–79.",
+      "year": "2012",
+      "title": "New occurrence data of Neotropical otters Lontra longicaudis (Olfers, 1818), in Bahia state, northeastern Brazil.",
+      "author": "Souto LRA",
+      "citation_short": null
+    },
+    {
+      "citation": "Tarifa T, Yensen E, Ríos-Uzeda B, Zambrana V, Van Damme PA, Wallace RB. 2010. Mustelidae. Pp. 445-482. In: Wallace, R.B., Gómez, H., Porcel, Z.R., and Rumiz, D.I. (Eds.). Distribución, Ecología y Conservación de los Mamíferos Medianos y Grandes de Bolivia. Editorial: Centro de Ecología Difusión Simón I. Patiño. Santa Cruz de la Sierra, Bolivia. 906 pp.",
+      "year": "2010",
+      "title": "Mustelidae. Pp. 445-482. In: Wallace, R.B., Gómez, H., Porcel, Z.R., and Rumiz, D.I. (Eds.). Distribución, Ecología y Conservación de los Mamíferos Medianos y Grandes de Bolivia. Editorial: Centro de Ecología Difusión Simón I. Patiño. Santa Cruz de la Sierra, Bolivia. 906 pp.",
+      "author": "Tarifa T, Yensen E, Ríos-Uzeda B, Zambrana V, Van Damme PA, Wallace RB",
+      "citation_short": null
+    },
+    {
+      "citation": "Trinca CS, Jaeger CF, Eizirik E. 2013. Molecular ecology of the Neotropical otter (Lontra longicaudis): non-invasive sampling yields insights into local population dynamics. <i>Biological Journal of the Linnean Society</i> 109: 932–948.",
+      "year": "2013",
+      "title": "Molecular ecology of the Neotropical otter (Lontra longicaudis): non-invasive sampling yields insights into local population dynamics.",
+      "author": "Trinca CS, Jaeger CF, Eizirik E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trinca CS, Thoisy B, Rosas FCW, Waldemarin HF, Koepfli KP, Vianna JA, Eizirik E. 2012. Phylogeography and demographic history of the neotropical otter (Lontra longicaudis). <i>Journal of Heredity</i> 103: 479-492.",
+      "year": "2012",
+      "title": "Phylogeography and demographic history of the neotropical otter (Lontra longicaudis).",
+      "author": "Trinca CS, Thoisy B, Rosas FCW, Waldemarin HF, Koepfli KP, Vianna JA, Eizirik E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras V, Jorgenson JP. 2003. Aspectos sobre la cacería y la distribución actual e histórica de la nutria gigante (Pteronura brasiliensis) en la Amazonía ecuatoriana. In: Polanco-Ochoa, R.(ed.). Manejo de fauna silvestre en Amazonía y Latinoamérica. Selección de trabajos V Congreso Internacional. CITES, Fundación Natura. Bogotá, Colombia.: 130-135.",
+      "year": "2003",
+      "title": "Aspectos sobre la cacería y la distribución actual e histórica de la nutria gigante (Pteronura brasiliensis) en la Amazonía ecuatoriana. In: Polanco-Ochoa, R.(ed.). Manejo de fauna silvestre en Amazonía y Latinoamérica. Selección de trabajos V Congreso Internacional. CITES, Fundación Natura. Bogotá, Colombia.",
+      "author": "Utreras V, Jorgenson JP",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras V, Rodríguez M, Araya I. 2002. Preliminary study on the diet of the neotropical otter (Lutra longicaudis) in the Tiputini river, Yasuni National Park, Ecuadorian Amazonia. Pp. 370-373 In: Dulfer R, Conroy J, Gutleb AC (eds) Proceedings VIIth International Otter Colloquium, Trebon. IUCN Otter Specialist Group Bulletin. Volume 19A, Special Issue.",
+      "year": "2002",
+      "title": "Preliminary study on the diet of the neotropical otter (Lutra longicaudis) in the Tiputini river, Yasuni National Park, Ecuadorian Amazonia. Pp. 370-373 In: Dulfer R, Conroy J, Gutleb AC (eds) Proceedings VIIth International Otter Colloquium, Trebon. IUCN Otter Specialist Group Bulletin. Volume 19A, Special Issue.",
+      "author": "Utreras V, Rodríguez M, Araya I",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras V, Tirira DG, Zapata-Ríos G. 2011. Nutria Neotropical (Lontra longicaudis). In: Tirira DG (ed) Libro Rojo de los Mamíferos del Ecuador, 2ª. edición. Fundación Mamíferos y Conservación, Pontificia Universidad Católica del Ecuador y Ministerio del Ambiente del Ecuador. Publicación especial sobre los mamíferos del Ecuador 8. Quito.: 221-222.",
+      "year": "2011",
+      "title": "Nutria Neotropical (Lontra longicaudis). In: Tirira DG (ed) Libro Rojo de los Mamíferos del Ecuador, 2ª. edición. Fundación Mamíferos y Conservación, Pontificia Universidad Católica del Ecuador y Ministerio del Ambiente del Ecuador. Publicación especial sobre los mamíferos del Ecuador 8. Quito.",
+      "author": "Utreras V, Tirira DG, Zapata-Ríos G",
+      "citation_short": null
+    },
+    {
+      "citation": "Utreras V, Trujillo F, Usma JS. 2013. Plan de Acción para la Conservación de los Mamíferos Acuáticos de la Amazonía Ecuatoriana. Ministerio del Ambiente, Wildlife Conservation Society, Fundación Omacha, World Wildlife Fund. Quito. 72 pp.",
+      "year": "2013",
+      "title": "Plan de Acción para la Conservación de los Mamíferos Acuáticos de la Amazonía Ecuatoriana. Ministerio del Ambiente, Wildlife Conservation Society, Fundación Omacha, World Wildlife Fund. Quito. 72 pp.",
+      "author": "Utreras V, Trujillo F, Usma JS",
+      "citation_short": null
+    },
+    {
+      "citation": "Wainwright M. 2007. The Mammals of Costa Rica: A Natural History and Field Guide. Cornell University Press, Ithaca, New York, USA.",
+      "year": "2007",
+      "title": "The Mammals of Costa Rica: A Natural History and Field Guide. Cornell University Press, Ithaca, New York, USA.",
+      "author": "Wainwright M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace RB, Lopez-Strauss H, Mercado N, Porcel ZR. 2013. Base de Datos sobre la Distribución de los Mamíferos Medianos y Grandes de Bolivia. DVD Interactivo. Wildlife Conservation Society, La Paz, Bolivia.",
+      "year": "2013",
+      "title": "Base de Datos sobre la Distribución de los Mamíferos Medianos y Grandes de Bolivia. DVD Interactivo. Wildlife Conservation Society, La Paz, Bolivia.",
+      "author": "Wallace RB, Lopez-Strauss H, Mercado N, Porcel ZR",
+      "citation_short": null
+    },
+    {
+      "citation": "Zambrana V, Van Damme PA, Becerra P. 2009. Lontra longicaudis (Olfers, 1818). In: Aguirre LF, Aguayo R, Balderrama JA, Cortez C, Tarifa T, Rocha O (Eds.). Libro Rojo de la Fauna Silvestre de Vertebrados de Bolivia. Ministerio de Medio Ambiente y Agua, La Paz, Bolivia, 180-182.",
+      "year": "2009",
+      "title": "Lontra longicaudis (Olfers, 1818). In: Aguirre LF, Aguayo R, Balderrama JA, Cortez C, Tarifa T, Rocha O (Eds.). Libro Rojo de la Fauna Silvestre de Vertebrados de Bolivia. Ministerio de Medio Ambiente y Agua, La Paz, Bolivia, 180-182.",
+      "author": "Zambrana V, Van Damme PA, Becerra P",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 08 December 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

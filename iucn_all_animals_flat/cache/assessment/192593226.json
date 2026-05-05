@@ -1,0 +1,930 @@
+{
+  "assessment_date": "2015-01-26T00:00:00.000+00:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 136346,
+  "criteria": "A2acd",
+  "url": "https://www.iucnredlist.org/species/136346/192593226",
+  "citation": "Martins, A.B., Fialho, M.S., Jerusalinsky, L., Valença-Montenegro, M.M., Bezerra, B.M., Laroque, P.O., de Melo, F.R. & Lynch Alfaro, J.W. 2021. Sapajus libidinosus (amended version of 2019 assessment). The IUCN Red List of Threatened Species 2021: e.T136346A192593226. Accessed on 05 May 2026.",
+  "assessment_id": 192593226,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 136346,
+    "scientific_name": "Sapajus libidinosus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PRIMATES",
+    "family_name": "CEBIDAE",
+    "genus_name": "Sapajus",
+    "species_name": "libidinosus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Spix, 1823)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Primate Specialist Group",
+        "url": "http://www.primate-sg.org/",
+        "description": "Chair: Russell Mittermeier (email: rmittermeier@globalwildlife.org)\nRed List Authority Focal Points: \nProsimians, monkeys and smaller apes - Sanjay Molur (email: sanjay@zooreach.org) and Christoph Schwitzer (email: cschwitzer@bristolzoo.org.uk)\nVice-Chair for great apes - Dirck S. Byler (email: dbyler@globalwildlife.org)\nVice-Chair for small apes - Susan M. Cheyne (email: section.small.apes@gmail.com)\nJournals and Newsletters: \nPrimate Conservation: http://www.primate-sg.org/primate_conservation/\nNeotropical Primates: http://www.primate-sg.org/neotropical_primates/\nAsian Primates: http://www.primate-sg.org/asian_primates_newsletter/ and http://www.primate-sg.org/asian_primates_journal/\nLemur News: http://www.primate-sg.org/lemur_news/\nAfrican Primates: http://www.primate-sg.org/african_primates/\n"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Black-striped Capuchin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Macaco-prego",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Macaco-prego-amarelo",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Rückenstreifen-Kapuzineraffe",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Bearded Capuchin",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cebus libidinosus Spix, 1823",
+        "status": "ACCEPTED",
+        "genus_name": "Cebus",
+        "species_name": "libidinosus",
+        "species_author": "Spix, 1823",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cebus versuta Elliot, 1910",
+        "status": "ACCEPTED",
+        "genus_name": "Cebus",
+        "species_name": "versuta",
+        "species_author": "Elliot, 1910",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Cebus elegans I. Geoffroy, 1850",
+        "status": "ACCEPTED",
+        "genus_name": "Cebus",
+        "species_name": "elegans",
+        "species_author": "I. Geoffroy, 1850",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "16",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The species occurs in northeastern Brazil, in the eastern part of the state of Maranhão, from the basin of the Mearim and Itapecuru Rivers, through Piaui and Ceará Staes, into Rio Grande do Norte, Paraíba, Pernambuco, and Alagoas States. It ranges west of the Rio São Francisco, through the Cerrado or bush savanna, into Tocantins, Goiás, western Minas Gerais (Silva Jr. 2001) and São Paulo States (above the Tietê River; Aquinho<em> et al. </em>2010). It further occurs in parts of western Bahia and northeastern Mato Grosso, being replaced by <em>S. apella</em> to the north in transition to the Amazon rain forest and the dry forests of Mato Grosso (Silva Jr. 2001). Silva Jr. (2001) indicates that the right (east) bank of the Rio Araguaia may be the westernmost limit to its range to the north, with <em>S. apella </em>occurring west of the left bank, and further south, at the headwaters, giving way to <em>S. cay.</em> The southern limit is in the region of the Rio Grande in western Minas Gerais (Triângulo Mineiro) and northwestern São Paulo. <em>Sapajus nigritus</em> occurs to the south of the Rio Grande (Fragaszy <em>et al.</em> 2004; Rylands<em> et al.</em> 2005).",
+    "population": "Ferreira <em>et al.</em> (2009) observed a group of 53 individuals, but considering the great variation in group size among capuchins, further studies are necessary. In addition, some studies reported population densities as follows: three groups/km² and 6.7 groups/km² in the Parque Estadual Altamiro de Moura Pacheco, Goiânia, GO (Villar<em> et al.</em> 2007), and 7.1 to 11.3 individuals/km² in the Serra da Capivara (Moura 2007).<br/>The population is declining due to ongoing habitat loss. Both Caatinga and Cerrado biomes, the regions in which the species occurs, have almost lost 50% of suitable habitat due to continued deforestation (Machado <em>et al</em>. 2002, IBGE 2012).",
+    "habitats": "<em>Sapajus libidinosus</em> occurs in a wide range of habitats, such as dry, deciduous forest, mangroves, forest and scrub of the Caatinga of northeastern Brazil, gallery forest and dry forests of the Cerrado (bush savanna) in central Brazil. They are able to exploit a wide range of food resources, including a variety of fruits, seeds, arthropods, frogs, nestlings and even small mammals, supplemented by stems, flowers and leaves. This species is capable of using tools whilst foraging (e.g. Fragaszy <em>et al.</em> 2004, Visalberghi <em>et al.</em> 2008), which is an uncommon behaviour among Neotropical primates. It is highly resistant to anthropogenic disturbances and can survive in areas of disturbed habitat. A home range size of 135 ha was observed in Serra da Capivara (Moura 2007).",
+    "threats": "<em>Sapajus libidinosus</em> lives in the Cerrado and Caatinga biomes in Brazil. The ongoing habitat loss was estimated at 50% for the Cerrado until 2002 (Machado<em> et al.</em> 2002) and at 50% for the Caatinga until 2009 (IBGE 2012). This species is severely hunted and collected from the wild for the illegal pet trade. The seriousness of the hunting pressure is demonstrated by the high number of individuals seized from illegal trade by the Wild Animal Screening Centers (CETAS-IBAMA, Levacov <em>et al.</em> 2011). Most of these seized individuals cannot return to the wild because of physical and behavioral disorders caused in captivity. Additional threats are hybrids or exotics deliberately released from captivity. Most populations in the Caatinga biome are isolated on hills and mountains, often damaging or feeding on crops of nearby farms, causing conflicts with farmers and often leading to persecution.",
+    "measures": "This species is listed on CITES Appendix II. It occurs in the following protected areas: <br/><ul><li>Brasília National Park (30,000 ha) (Pinha <em>et al.</em> 2007) </li><li>Planalto Central Environmental Protected Area (503,432.86 ha) (Vilela 2007) </li><li>Serra Geral do Tocantins Ecological Station (Lima 2005, see also Carmignoto and Aires 2011) </li><li>Altamiro de Moura Pacheco State Park (2,132 ha) (Villar<em> et al.</em> 2007), </li><li>Lençóis Maranhenses National Park (156,605 ha) </li><li>Pico do Jabre State Park (851 ha) </li><li>Serra da Capivara National Park (91,848.88 ha) (Mannu and Ottoni 2005, Moura 2007), </li><li>Delta do Parnaíba Extractive Reserve (27,021 ha) </li><li>Serra das Confusões National Park (526,108 ha) (IBAMA 2009) </li><li>da Furna Feia National Park (8,517.63 ha) (M.S. Fialho unpubl. data)</li></ul>",
+    "use_trade": null,
+    "rationale": "In spite of the fact that <em>Sapajus libidinosus</em> remains widespread in Cerrado and Caatinga biomes in Brazil where there is &gt;50% deforestation and the species is hunted for the pet trade. It is listed as Near Threatened due to its ability to adapt to degraded habitats and the rate of population decline is not high to meet the threshold for a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": "Historically the capuchins were classified in the genus <em>Cebus</em> Erxleben, 1777 by Hershkovitz (1949, 1955). Silva Jr. (2001) argued that the tufted and untufted capuchins (sensu Hershkovitz 1949, 1955) are so distinct in their morphology that they should be considered separate genera. Based on genetic, morphological, and phylogeographic analyses, Silva Jr. (2002) and Lynch Alfaro <em>et al.</em> (2012a, b) grouped the untufted capuchins in the genus <em>Cebus </em>and the tufted capuchins in the genus<em> Sapajus</em> Kerr, 1792. Hershkovitz (1949, 1955) recognized only a single species of tufted capuchins, i.e. <em>C. apella.</em> Groves (2001, 2005) presented an alternative taxonomy for the tufted capuchins: <em>C. apella apella</em> (Linnaeus, 1758); <em>C. apella fatuellus </em>(Linnaeus, 1766); <em>C. apella macrocephalus</em> Spix, 1823; <em>C. apella peruanus </em>Thomas, 1901; <em>C. apella tocantinus</em> Lönnberg, 1939; <em>C. apella margaritae</em> Hollister, 1914; <em>C. libidinosus libidinosus</em> Spix, 1823; <em>C. libidinosus pallidus</em> Gray, 1866; <em>C. libidinosus paraguayanus </em>Fischer, 1829; <em>C. libidinosus juruanus</em> Lönnberg, 1939; <em>C. nigritus nigritus </em>(Goldfuss, 1809); <em>C. nigritus robustus</em> Kuhl, 1820; <em>C. nigritus cucullatus </em>Spix, 1823; <em>C. xanthosternos</em> Wied-Neuwied, 1826 (see Fragaszy<em> et al.</em> 2004; Rylands <em>et al. </em>2005). However, Silva Jr. (2001) did not recognize any subspecific forms. Additionally, Silva Jr. (2001) considered <em>C. libidinosus juruanus</em> as a junior synonym of <em>C. macrocephalus, and C. libidinosus pallidus</em> and <em>C. libidinosus paraguayanus </em>as junior synonyms of <em>C. cay. </em>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahia"
+      },
+      "code": "BZE-BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Piauí"
+      },
+      "code": "BZE-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rio Grande do Norte"
+      },
+      "code": "BZE-RN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso"
+      },
+      "code": "BZC-MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minas Gerais"
+      },
+      "code": "BZL-MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "São Paulo"
+      },
+      "code": "BZL-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso do Sul"
+      },
+      "code": "BZC-MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pernambuco"
+      },
+      "code": "BZE-PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tocantins"
+      },
+      "code": "BZN-TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alagoas"
+      },
+      "code": "BZE-AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pará"
+      },
+      "code": "BZN-PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ceará"
+      },
+      "code": "BZE-CE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maranhão"
+      },
+      "code": "BZE-MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Goiás"
+      },
+      "code": "BZC-GO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraíba"
+      },
+      "code": "BZE-PB"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Martins, A.B., Fialho, M.S., Jerusalinsky, L., Valença-Montenegro, M.M., Bezerra, B.M., Laroque, P.O., de Melo, F.R. & Lynch Alfaro, J.W.",
+      "value": [
+        "Fabiano R. de Melo (IUCN SSC Primate Specialist Group)",
+        "Marcos de Souza Fialho",
+        "Leandro Jerusalinsky",
+        "Plautino de Oliveira Laroque",
+        "Jessica W. Lynch Alfaro",
+        "Mônica Mafra Valença-Montenegro",
+        "Bruna M. Bezerra",
+        "Amely B. Martins"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cotton, A., Molur, S. & Schwitzer, C.",
+      "value": [
+        "Alison Cotton (IUCN SSC Primate Specialist Group, Bristol Zoological Society)",
+        "Sanjay Molur (ZOO (Eastern Himalayas))",
+        "Christoph Schwitzer (IUCN SSC Primate RLA / Bristol Conservation and Science Foundation , Bristol Zoo Gardens, Clifton, Bristol)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Rylands, A.B. & Kierulff, M.C.M.",
+      "value": [
+        "Anthony B. Rylands (Conservation International)",
+        "Maria Cecília M. Kierulff"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Angelico, M.",
+      "value": [
+        "Marco  Angelico (Global Mammal Assessment)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The list of Assessor names has been corrected in this assessment."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Lynch Alfaro, J.W., Silva, J.S. and Rylands, A.B. 2012. How different are robust and gracile Capuchin Monkeys? An argument for the use of <i>Sapajus</i> and <i>Cebus</i>. <i>American Journal of Primatology</i> 74(4): 273–286.",
+      "year": "2012",
+      "title": "How different are robust and gracile Capuchin Monkeys? An argument for the use of <i>Sapajus</i> and <i>Cebus</i>",
+      "author": "Lynch Alfaro, J.W., Silva, J.S. and Rylands, A.B.",
+      "citation_short": "Lynch <i>et al</i>. 2012"
+    },
+    {
+      "citation": "Groves C.P. 2001. <i>Primate Taxonomy</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2001",
+      "title": "Primate Taxonomy",
+      "author": "Groves C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C.P. 2005. Order Primates. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 111-184. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Primates",
+      "author": "Groves, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fragaszy, D. M., Visalberghi, E. and Fedigan, L. 2004. <i>The Complete Capuchin: The Biology of the Genus </i>Cebus<i></i>. Cambridge University Press, Cambridge, UK.",
+      "year": "2004",
+      "title": "The Complete Capuchin: The Biology of the Genus <i>Cebus</i>",
+      "author": "Fragaszy, D. M., Visalberghi, E. and Fedigan, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silva Jr., J. de S. 2001. Especiação nos macacos-prego e caiararas, gênero <i>Cebus</i> Erxleben, 1777 (Primates, Cebidae). Doctoral Thesis, Universidade Federal do Rio de Janeiro.",
+      "year": "2001",
+      "title": "Especiação nos macacos-prego e caiararas, gênero <i>Cebus</i> Erxleben, 1777 (Primates, Cebidae)",
+      "author": "Silva Jr., J. de S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rylands, A. B, Kierulff, M. C. M. and Mittermeier, R. A. 2005. Some notes on the taxonomy and distributions of the tufted capuchin monkeys (<i>Cebus</i>, Cebidae) of South America. <i>Lundiana</i> 6: 97–110.",
+      "year": "2005",
+      "title": "Some notes on the taxonomy and distributions of the tufted capuchin monkeys (<i>Cebus</i>, Cebidae) of South America",
+      "author": "Rylands, A. B, Kierulff, M. C. M. and Mittermeier, R. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hershkovitz, P. 1955. Notes on the American monkeys of the genus <i>Cebus</i>. <i>Journal of Mammalogy</i> 36: 449–452.",
+      "year": "1955",
+      "title": "Notes on the American monkeys of the genus <i>Cebus</i>",
+      "author": "Hershkovitz, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hershkovitz, P. 1949. Mammals of northern Colombia. Preliminary report No. 4: Monkeys (Primates) with taxonomic revisions of some forms. <i>Proceedings of the United States National Museum</i> 98: 323–427.",
+      "year": "1949",
+      "title": "Mammals of northern Colombia. Preliminary report No. 4: Monkeys (Primates) with taxonomic revisions of some forms",
+      "author": "Hershkovitz, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silva Jr., J. de S. 2002. Sistemática dos macacos –prego e caiararas, gênero <i>Cebus</i> Erxleben, 1777 (Primates, Cebidae). Livro de Resumos, X Congresso Brasieliero de Primatologia: Amazônia – A Última Fronteira: 35. Bélém, Brazil.",
+      "year": "2002",
+      "title": "Sistemática dos macacos –prego e caiararas, gênero <i>Cebus</i> Erxleben, 1777 (Primates, Cebidae)",
+      "author": "Silva Jr., J. de S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vilela, S. L. 2007. Sympatry and diet of <i>Callithrix penicillata</i> (Hershkovitz) (Callitrichidae) and <i>Cebus libidinosus</i> (Spix) (Cebidae) in gallery forests from Distrito Federal, Brasil. <i>Revista Brasileira de Zoologia</i> 24(3): 601-607.",
+      "year": "2007",
+      "title": "Sympatry and diet of <i>Callithrix penicillata</i> (Hershkovitz) (Callitrichidae) and <i>Cebus libidinosus</i> (Spix) (Cebidae) in gallery forests from Distrito Federal, Brasil",
+      "author": "Vilela, S. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Machado, R.B., Ramos Neto, M.B., Pereira, P., Caldas, E., Concalves, D., Santos, N., Tabor, K. and Steininger, M. 2004. Estimativas de perda da area do Cerrado brasileiro. Concervation International do Brazil.",
+      "year": "2004",
+      "title": "Estimativas de perda da area do Cerrado brasileiro",
+      "author": "Machado, R.B., Ramos Neto, M.B., Pereira, P., Caldas, E., Concalves, D., Santos, N., Tabor, K. and Steininger, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN/SSC. 2007. Neotropical Primates Species Assessment Workshop (Red List). . Orlando, Florida.",
+      "year": "2007",
+      "title": "Neotropical Primates Species Assessment Workshop (Red List). ",
+      "author": "IUCN/SSC",
+      "citation_short": ""
+    },
+    {
+      "citation": "Di Bitetti, M.S. & Janson, C.H. 2001. Reproductive socioecology of tufted capuchins (Cebus apella nigritus) in northeastern Argentina. . <i>International Journal of Primatology</i> 229(2): 127-140.",
+      "year": "2001",
+      "title": "Reproductive socioecology of tufted capuchins (Cebus apella nigritus) in northeastern Argentina. ",
+      "author": "Di Bitetti, M.S. & Janson, C.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    },
+    {
+      "citation": "Lynch Alfaro, J. W., Boubli, J. P., Olson, L. E., Di Fiore, A., Wilson, B., Gutiérrez‐Espeleta, G. A., ... & Schwochow, D. 2012. Explosive Pleistocene range expansion leads to widespread Amazonian sympatry between robust and gracile capuchin monkeys. . <i>Journal of Biogeography</i> 39(2): 272-288.",
+      "year": "2012",
+      "title": "Explosive Pleistocene range expansion leads to widespread Amazonian sympatry between robust and gracile capuchin monkeys. ",
+      "author": "Lynch Alfaro, J. W., Boubli, J. P., Olson, L. E., Di Fiore, A., Wilson, B., Gutiérrez‐Espeleta, G. A., ... & Schwochow, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Aquino, C. C.; Nascimento, F. O. ; Alves, T. F. 2010. . Distribuição geográfica das espécies de macaco-prego Cebus nigritus (Goldfuss, 1809) e Cebus libidinosus Spix, 1823 (Primates:Cebidae) no Estado de São Paulo. <i>V Congresso Brasileiro de Mastozoologia, São Pedro, SP.</i>.",
+      "year": "2010",
+      "title": ". Distribuição geográfica das espécies de macaco-prego Cebus nigritus (Goldfuss, 1809) e Cebus libidinosus Spix, 1823 (Primates:Cebidae) no Estado de São Paulo",
+      "author": "Aquino, C. C.; Nascimento, F. O. ; Alves, T. F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carmignotto, A.P. & Aires, C.C. 2011. Mamíferos não voadores (Mammalia) da Estação Ecológica Serra Geral do Tocantins. . <i>Biota Neotropica</i> 11(1): 307-322.",
+      "year": "2011",
+      "title": "Mamíferos não voadores (Mammalia) da Estação Ecológica Serra Geral do Tocantins. ",
+      "author": "Carmignotto, A.P. & Aires, C.C",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreira, R.G.; Jerusalinsky, L.; Silva, T.C.F.; Fialho, M.S.; Roque, A.A.; Fernandes, A. & Arruda, F. 2009. On the occurrence of Cebus flavius (Schreber 1774) in the Caatinga, and the use of semi-arid environments by Cebus species in the Brazilian state of Rio Grande do Norte. <i>Primates</i> 50: 357-362.",
+      "year": "2009",
+      "title": "On the occurrence of Cebus flavius (Schreber 1774) in the Caatinga, and the use of semi-arid environments by Cebus species in the Brazilian state of Rio Grande do Norte.",
+      "author": "Ferreira, R.G.; Jerusalinsky, L.; Silva, T.C.F.; Fialho, M.S.; Roque, A.A.; Fernandes, A. & Arruda, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IBAMA. Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis. 2009. Plano de Manejo do Parque Nacional da Serra das Confusões. Brasília.",
+      "year": "2009",
+      "title": "Plano de Manejo do Parque Nacional da Serra das Confusões. Brasília.",
+      "author": "IBAMA. Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IBGE. Instituto Brasileiro de Geografia e Estatística. 2012. Indicadores de desenvolvimento sustentáveis. Instituto Brasileiro de Geografia e Estatística, Diretoria de Geociências, Rio de Janeiro.",
+      "year": "2012",
+      "title": "Indicadores de desenvolvimento sustentáveis. Instituto Brasileiro de Geografia e Estatística, Diretoria de Geociências, Rio de Janeiro",
+      "author": "IBGE. Instituto Brasileiro de Geografia e Estatística",
+      "citation_short": null
+    },
+    {
+      "citation": "Kinzey, W.G. 1997. Cebus. In: Kinzey, W.G. (ed.), <i>New World Primates: Ecology, Evolution, and Behavior. Aldine de Gruyter.</i>, pp. 460.",
+      "year": "1997",
+      "title": "Cebus.",
+      "author": "Kinzey, W.G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Levacov, D.; Jerusalinsky, L. & Fialho, M.S. 2011. Levantamento dos primatas recebidos em Centros de Triagem e sua relação com o tráfico de animais silvestres no Brasil. <i>A Primatologia no Brasil</i> 11(281-305).",
+      "year": "2011",
+      "title": "Levantamento dos primatas recebidos em Centros de Triagem e sua relação com o tráfico de animais silvestres no Brasil.",
+      "author": "Levacov, D.; Jerusalinsky, L. & Fialho, M.S",
+      "citation_short": null
+    },
+    {
+      "citation": "Mannu, M. & Ottoni, E.B. 2005. Tool use by two groups of capuchins (Cebus apella) in Caatinga: preliminary data. p. 45. In: XI Congresso Brasileiro de Primatologia. <i>Anais do XI Congresso Brasileiro de Primatologia</i>.",
+      "year": "2005",
+      "title": "Tool use by two groups of capuchins (Cebus apella) in Caatinga: preliminary data. p. 45. In: XI Congresso Brasileiro de Primatologia",
+      "author": "Mannu, M. & Ottoni, E.B. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Moura, A. C. 2007. Primate group size and abundance in the Caatinga dry forest, northeastern Brazil. . <i>International Journal Primatology</i> 28(1279-1297).",
+      "year": "2007",
+      "title": "Primate group size and abundance in the Caatinga dry forest, northeastern Brazil. ",
+      "author": "Moura, A. C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Pinha, P.S.; Pereira, L.B.R.; Silva, R.G.P.; Brisolla, T.F. & Macedo, R.H.F. 2007. Social play in Cebus libidinosus groups in the Brasília National Park. <i>XII Congresso Brasileiro de Primatologia. Livro de resumo do XII Congresso Brasileiro de Primatologia.</i>: 94.",
+      "year": "2007",
+      "title": "Social play in Cebus libidinosus groups in the Brasília National Park.",
+      "author": "Pinha, P.S.; Pereira, L.B.R.; Silva, R.G.P.; Brisolla, T.F. & Macedo, R.H.F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Robinson, J. G. and Janson, C. H. 1987. Capuchins, squirrel monkeys, and atelines: Socioecological convergence with Old World monkeys. In: B. B. Smuts, D. L. Cheney, R. M. Seyfarth, R. W. Wrangham and T. T. Struhsaker (eds), <i>Primate Societies</i>, pp. 69–82. Chicago University Press, Chicago, Illinois, USA.",
+      "year": "1987",
+      "title": "Capuchins, squirrel monkeys, and atelines: Socioecological convergence with Old World monkeys",
+      "author": "Robinson, J. G. and Janson, C. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silva, T.C.F.; Valença-Montenegro, M.M.; Lucas, J.L.B.; Wagner, P.G.C.; Ferreira, J.G.; Ferreira, D.R.A.; Jerusalinsky, L.; Martins, A.B.; Senna, M.B.; Laroque, P.O. 2009. . Morfometria de Cebus libidinosus SPIX, 1823 (Primates, Cebidae). . <i>: XIII Congresso Brasileiro de Primatologia. Livro de Resumos do XIII Congresso Brasileiro de Primatologia.</i>.",
+      "year": "2009",
+      "title": ". Morfometria de Cebus libidinosus SPIX, 1823 (Primates, Cebidae). ",
+      "author": "Silva, T.C.F.; Valença-Montenegro, M.M.; Lucas, J.L.B.; Wagner, P.G.C.; Ferreira, J.G.; Ferreira, D.R.A.; Jerusalinsky, L.; Martins, A.B.; Senna, M.B.; Laroque, P.O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Villar, D.N.A.; Costa, T.C. & Mendes, F.D.C. 2007. Population census of Cebus libidinosus in the Altamiro de Moura Pacheco State Park, an area of Cerrado in Goiania (GO). . <i>XII Congresso Brasileiro de Primatologia. Livro de Resumos do XII Congresso Brasileiro de Primatologia.</i>.",
+      "year": "2007",
+      "title": "Population census of Cebus libidinosus in the Altamiro de Moura Pacheco State Park, an area of Cerrado in Goiania (GO). ",
+      "author": "Villar, D.N.A.; Costa, T.C. & Mendes, F.D.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Visalberghi, E.; Sabbatini, G.; Spagnoletti, N.; Andrade, F.R.; Ottoni, E.; Izar, P. & Fragaszy, D. 2008. . Physical properties of palm fruits processed with tools by wild bearded capuchins (Cebus libidinosus). . <i>American Journal of Primatology</i> 70: 884-891.",
+      "year": "2008",
+      "title": ". Physical properties of palm fruits processed with tools by wild bearded capuchins (Cebus libidinosus). ",
+      "author": "Visalberghi, E.; Sabbatini, G.; Spagnoletti, N.; Andrade, F.R.; Ottoni, E.; Izar, P. & Fragaszy, D. ",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 25 March 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

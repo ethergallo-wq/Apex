@@ -1,0 +1,634 @@
+{
+  "assessment_date": "2014-02-03T00:00:00.000+00:00",
+  "year_published": "2015",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 40600,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/40600/21288387",
+  "citation": "Bronner, G. 2015. Chrysochloris asiatica. The IUCN Red List of Threatened Species 2015: e.T40600A21288387. Accessed on 05 May 2026.",
+  "assessment_id": 21288387,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 40600,
+    "scientific_name": "Chrysochloris asiatica",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "AFROSORICIDA",
+    "family_name": "CHRYSOCHLORIDAE",
+    "genus_name": "Chrysochloris",
+    "species_name": "asiatica",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Afrotheria Specialist Group (including aardvarks, hyrax, golden-moles, tenrecs and elephant-shrews or sengis)",
+        "url": "http://www.afrotheria.net/",
+        "description": "Co-Chairs: Andrew Taylor (email: taylor.wa@gmail.com) and not designated\nRed List Authority Coordinator: Was Matthew Child (m.child@sanbi.org.za), currently not designated.\nNewsletter: http://www.afrotheria.net/newsletter.html\n\nSee also: https://www.iucn.org/our-union/commissions/group/iucn-ssc-afrotheria-specialist-group"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Kapgoldmull",
+        "language": "ger"
+      },
+      {
+        "main": true,
+        "name": "Cape Golden Mole",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Talpa asiatica Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Talpa",
+        "species_name": "asiatica",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "82000",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>This species is endemic to South Africa. Ranges from the Cape Peninsula (Western Cape) south-eastwards across Cape Flats to Bredasdorp, Swellendam, possibly as far as Knysna; and northwards along the Atlantic coast to Port Nolloth in Northern Cape. Occurs inland to Ceres, Worcester, Sutherland and Stellenbosch in the south, and Calvinia, Garies and Kamieskroon in the north, but does not penetrate the arid Karoo. One specimen (type of <em>C. damarensis</em>) recorded from Damaraland in Namibia is probably a misidentified specimen from Little Namaqualand (Meester <em>et al</em>. 1986).</p>",
+    "population": "Common in most habitats, depending on soil friability and invertebrate prey resources; less common on rocky mountain slopes, but nevertheless have still colonized even some mountain plateaux. Inferred densities of up to four per hectare in prime habitat.",
+    "habitats": "<p>Sandy soils in the Fynbos and Succulent Karoo biomes. Recorded from a wide variety of vegetation types, most commonly in Renosterveld, Fynbos and Strandveld Succulent Karoo. Common in parks, gardens and cultivated lands, readily invade lawns and golf courses. Also forages on beaches, presumably for amphipods and isopods associated with kelp wracks (Bennett and Spinks 1995, Bronner 2013). Coexists with <em>A. hottentotus</em> at Stellenbosch, but prefers drier, sandier soils (Broom 1907).</p>",
+    "threats": "<p>Natural habitats of this species have undoubtedly been dramatically altered by urbanization, coastal tourism developments, mining for alluvial diamonds and agriculture during the past 350 years, but this is not considered a threat as it coexists (indeed even thrives) in close association with humans. Persecuted by gardeners and greenkeepers, regularly caught by domestic dogs and cats, but such mortalities are negligible given the abundance of this widespread species, and its cryptic nature.</p>",
+    "measures": "Protected in many national and provincial conservation areas. No species-specific conservation actions deemed necessary. Research to clarify status of described forms/subspecies is needed, as some of these may be distinct taxa given that their range largely corresponds with the Western Cape fold mountains which may serve as barriers to gene flow between some populations.",
+    "use_trade": null,
+    "rationale": "A widespread species that does not appear to be in decline. Although habitat alteration/degradation is ongoing in some parts of this species range, it has adapted well to mildly transformed habitats ranging from vineyards and pasturelands to city parks and gardens; habitat alteration is not, therefore, considered to be a major threat and it is therefore listed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "Provisionally includes <em>Kilimatalpa</em> as a subgenus (Bronner 1995), although recent (but still unpublished) phylogenetic analyses suggest that <em>Kilimatalpa</em> should be recognized as a separate genus; see comments under <em>C. stuhlmanni</em>. <br/><br/>Up to ten subspecies have previously been recognized, but size and colour varies clinally, hence validity of these taxa is dubious (Meester <em>et al</em>. 1986). The only known specimen of <em>damarensis</em> may have been incorrectly labelled as no <em>Chrysochloris</em> have subsequently been collected in Damaraland, Namibia (Meester 1974)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical High Altitude"
+      },
+      "code": "3_7"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eastern Cape Province"
+      },
+      "code": "CPP-EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Cape Province"
+      },
+      "code": "CPP-NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Cape"
+      },
+      "code": "CPP-WC"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Bronner, G.",
+      "value": [
+        "Gary Bronner (Department of Biological Sciences, University of Cape Town, South Africa)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Asher, R.J. & Taylor, A.",
+      "value": [
+        "Andrew Taylor (IUCN SSC Afrotheria Red List Authority)",
+        "Robert Asher (Museum of Zoology, Cambridge University, Cambridge, UK)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Meester, J. 1974. <i>Family Chrysochloridae</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1974",
+      "title": "Family Chrysochloridae",
+      "author": "Meester, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bronner, G.N. and Jenkins, P.D. 2005. Order Afrosoricida. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World</i>, pp. 70-81. The Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Order Afrosoricida",
+      "author": "Bronner, G.N. and Jenkins, P.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Afrotheria Specialist Group. 2014. Specialist Group website. Available at: <a href=\"http://www.afrotheria.net/index.php\">http://www.afrotheria.net/index.php</a>. ",
+      "year": "2014",
+      "title": "Specialist Group website",
+      "author": "Afrotheria Specialist Group",
+      "citation_short": ""
+    },
+    {
+      "citation": "Meester, J.A.J., Rautenbach, I.L., Dippenaar, N.J. and Baker, C.M. 1986. <i>Classification of Southern African Mammals</i>. Transvaal Museum , Pretoria, South Africa.",
+      "year": "1986",
+      "title": "Classification of Southern African Mammals",
+      "author": "Meester, J.A.J., Rautenbach, I.L., Dippenaar, N.J. and Baker, C.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bronner, G.N. 1995. Systematic revision of the golden mole genera <i>Amblysomus</i>, <i>Chlorotalpa</i> and <i>Calcochloris</i> (Insectivora: Chrysochloromorpha; Chrysochloridae). Ph.D. Thesis, University of Natal.",
+      "year": "1995",
+      "title": "Systematic revision of the golden mole genera <i>Amblysomus</i>, <i>Chlorotalpa</i> and <i>Calcochloris</i> (Insectivora: Chrysochloromorpha; Chrysochloridae)",
+      "author": "Bronner, G.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Broom, R. 1907. A contribution to the knowledge of the Cape golden moles. <i>Transactions of the South African Philosophical Society</i> 18: 283–311.",
+      "year": "1907",
+      "title": "A contribution to the knowledge of the Cape golden moles",
+      "author": "Broom, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bennett, N.C. and Spinks, A.C. 1995. Thermoregulation and metabolism in the Cape golden mole (Insectivora: <i>Chrysochloris asiatica</i>). <i>Journal of Zoology (London)</i> 76: 957–971.",
+      "year": "1995",
+      "title": "Thermoregulation and metabolism in the Cape golden mole (Insectivora: <i>Chrysochloris asiatica</i>)",
+      "author": "Bennett, N.C. and Spinks, A.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bronner, G.N. 2013. <i>Chrysochloris asiatica</i>. In: J. Kingdon, D. Happold, T. Butynski, M. Hoffmann, M. Happold and J. Kalina (eds), <i>Mammals of Africa, Volume I: Introductory Chapters and Afrotheria </i>, pp. 242-244. Bloomsbury Publishing, London.",
+      "year": "2013",
+      "title": "<i>Chrysochloris asiatica</i>",
+      "author": "Bronner, G.N. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015.2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 23 June 2015).",
+      "year": "2015",
+      "title": "The IUCN Red List of Threatened Species. Version 2015.2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2015.2"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

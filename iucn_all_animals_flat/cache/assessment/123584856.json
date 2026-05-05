@@ -1,0 +1,1464 @@
+{
+  "assessment_date": "2019-05-02T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12763,
+  "criteria": "A2d+3d+4d",
+  "url": "https://www.iucnredlist.org/species/12763/123584856",
+  "citation": "Challender, D., Willcox, D.H.A., Panjang, E., Lim, N., Nash, H., Heinrich, S. & Chong, J. 2019. Manis javanica. The IUCN Red List of Threatened Species 2019: e.T12763A123584856. Accessed on 05 May 2026.",
+  "assessment_id": 123584856,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12763,
+    "scientific_name": "Manis javanica",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PHOLIDOTA",
+    "family_name": "MANIDAE",
+    "genus_name": "Manis",
+    "species_name": "javanica",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Desmarest, 1822",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Pangolin Specialist Group",
+        "url": "http://www.pangolinsg.org/",
+        "description": "Chair: Daniel W. S. Challender (email: dan_pangolin@hotmail.co.uk)\nRed List Authority Coordinator: Carly Waterman (email: carly.waterman@zsl.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Malayan Pangolin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Pangolin Javanais",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Pangolin Malais",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Pangolín Malayo",
+        "language": "spa"
+      },
+      {
+        "main": true,
+        "name": "Sunda Pangolin",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1700,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": "Yes",
+    "generational_length": "7",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Unknown"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>The Sunda Pangolin is widely distributed geographically, occurring across mainland and island Southeast Asia, from central Myanmar south through western, southeasterrn and southern Thailand, lowland Lao People's Democratic Republic (PDR), central and southern Viet Nam, Cambodia, Peninsular Malaysia and Singapore. It then occurs on Sumatra, Java and adjacent islands (Indonesia), and Borneo (Malaysia, Indonesia and Brunei Darussalam) and surrounding islands. The northern and western limits of its range are poorly known (Schlitter 2005). Wu <em>et al.</em> (2005) note the occurrence of the species in Yunnan Province, southwestern China based on specimens at the Kunming Institute of Zoology, but there is uncertainty over the provenance of these specimens and thereby occurrence of the species in China (Chong <em>et al. </em>2019). Further details on distribution within each range state are provided below. &#160;&#160;</p><p>Altitudinal limits are not well understood, but in the northern part of its range the species probably does not widely occur above 600 m asl (J.W. Duckworth pers. comm. 2006). Moreover, individuals in captivity north of the Sunda Pangolin’s estimated geographic range have high mortality rates, often dying from exposure due to colder temperatures (Carnivore and Pangolin Conservation Program, unpubl. data). On Borneo, the species has been recorded up to 1,700 m asl at Mount Kinabalu (Payne <em>et al.</em> 1985) and there is a specimen in the Natural History Museum in London from 1,500 m asl. from Lombok, Indonesia (P. Newton, unpubl. data). Kaicheen and Mohd-Azlan (2018) recorded the species at &gt;1,200 m in the Mt. Penrissen area, Sarawak. Despite being present in a number of protected areas (PAs - see the Conservation section) across its range, these are mostly located in poorly accessible areas – either they are at high altitudes or they have steep terrains – meaning they offer limited protection for the Sunda Pangolin, as it is mostly found at altitudes below 1,000 m asl in Indochina, Myanmar and Thailand. It is suspected that the species has been extirpated from some lowland areas of Lao PDR, Myanmar and Thailand, and is highly vulnerable in other lowland areas in these countries as well as Cambodia and Viet Nam.</p><p>It appears likely that the detectability of pangolins from conventional large mammal focused camera trapping is low, thus data (or its absence) from camera trap by-catch information may not provide as much value for pangolins as many other species of ground-dwelling mammals in tropical Asia. For example, the Sunda Pangolin was detected from 11 of 65 randomly set-up camera trap stations (across ~8,000 camera trap nights) in the Southern Cardamom National Park, Cambodia, despite no previous records from more than 22,000 camera-trap nights previously in the landscape (Gray <em>et al</em>. 2017a).</p>  <p>This species is distributed in central and southern Myanmar (Salter 1983, Corbet and Hill 1992), but has apparently been eradicated widely from lowland areas due to human agricultural expansion and hunting (J.W. Duckworth pers. comm. 2006). The species has been recorded in the Tanintharyi region in the south (Challender and Waterman 2017). Moo <em>et al.</em> (2017) recorded<em> Manis</em> spp. in Karen State in Myanmar which likely comprises this species. Rao <em>et al.</em> (2005) recorded this species in Hkakborazi National Park in northern Myanmar in the early 2000s but there is uncertainty over the species identification (M. Rao, pers. comm.) and this record may refer to the Chinese Pangolin (<em>Manis pentadactyla</em>)<em>.</em><br/></p><p><em></em>The species historically occurred throughout Thailand (Lekagul and McNeely 1977, Bain and Humphrey 1982), but, like in Myanmar, has reportedly been lost from most of the lowland areas due to agricultural expansion and hunting/poaching (J.W. Duckworth and R. Steinmitz pers. comm. 2006). Camera-trap data confirms the presence of the species in Khao Yai National Park (ZSL 2017) and there are records from Khao Ang Ru Nai Wildlife Sanctuary (Jenks et al., 2012), Kaeng Krachan National Park (W. Sodsai, unpubl. data), Khlong Nakha Wildlife Sanctuary, and the southeastern western forest complex (sWEFCOM) in Kanchanaburi Province (ZSL, 2017), as well as Hala-Bala Wildlife Sanctuary in the far south (Kitamura et al., 2010). The species occurs also on islands e.g., Ko Ra, Phang Nga Province (GVI, unpubl. data).<strong></strong><em></em><u></u><sub></sub><sup></sup><br/></p><p>Recent research suggests the species is present but rare in central and southern Viet Nam (MacMillan and Nguyen 2013, Nuwer and Bell 2013), however records from these areas vary in reliability. There are older records from Kon Tum Province, Tay Ninh Province and Quang Nam Province (Bourret 1942). Meanwhile, there are more recent records (summarised by Newton 2007) from Ha Tinh Province (Timmins and Cuong 1999), Kien Giang and Ca Mau Provinces (in U Minh Thuong National Park) (CARE 2004), Dong Nai, Bin Phuoc and Lam Dong Provinces (Cat Tien National Park) (Murphy and Phan 2001), Quang Binh (Le <em>et al</em>. 1997a), and Dak Lak (Le&#160;<em>et al</em>. 1997b). Recent enforcement activity suggests the species is still present in Dak Nong, Kon Tum, Quang Binh and Gia Lai provinces (L. Fletcher and A. Nguyen, unpubl. data). Based on camera trap data, the species is also present in U Minh Ha National Park (Willcox <em>et al.</em> 2017). Additionally, camera trap records from December 2012 to August 2014 recorded this species in Thua Thien Hue and Quang Nam Saola Reserves in central Vietnam (T. Gray <em>in litt</em>. 2017). The species was recorded in 2013 in Cat Tien National Park (Save Vietnam’s Wildlife, unpubl. data). Surveys using trained detection dogs have recorded the species in Cat Tien National Park and camera-trapping has recorded it in Pu Mat National Park (Save Vietnam’s Wildlife, unpubl. data), though it is unknown whether these were released animals. A Sunda pangolin was observed at night during reptile and amphibian surveys in Pu Mat National Park in 2014 (S. Trageser, pers. comm<em>. </em>2018) and it has been camera-trapped in Bach Ma National Park (A. Wilting, pers. comm. 2017).</p><p>This species was likely widespread in Lao PDR historically. There are records of varying reliability from a wide range of areas below <em>ca</em> 600 m asl. However, it is possible that in Lao PDR the species is restricted to the Mekong plain and adjacent foothills up to <em>c. </em>900 m asl, with a possible occurrence on the Bolaven Plateau, north from Xe Pian National Biodiversity Conservation Area in the south and at least as far north as Nam Kading (Duckworth&#160;<em>et al</em>. 1999, J.W. Duckworth pers. comm. 2006). Nooren and Claridge (2001) reported that populations in Lao PDR have been severely reduced as a result of hunting for consumption and trade. Camera trap data from Nakai-Nam Thuen in 2016 recorded six instances of pangolins at six different stations, however as the range of the Sunda and Chinese Pangolins overlap here, it was not possible to identify the species (Coudrat 2017).<br/> <br/> In Cambodia, the Sunda Pangolin has been recorded from sea level to 830 m asl (A. Olsson pers. comm. 2012, T. Gray <em>in litt</em>. 2017) and historically occurred throughout deciduous forest, lowland and mountainous evergreen forest, and secondary forest prior to the extensive hunting driven declines that have likely occurred in the past 10-20 years. Extensive recent (meaning post-2012) camera trapping conducted across many of the country’s protected landscapes has generated very few records of this species (though as noted previously, it is difficult to detect pangolins within general large mammal focused camera trapping). For example, there are no post-2008 camera trap records of the Sunda Pangolin from Cambodia’s Eastern Plains Landscape despite more than 100,000 trap nights and a small number (less than five since 2012) of confiscations by law enforcement teams (R. Crouthers, O. Griffin and T. Gray <em>in litt</em>. 2017). However, there have been two records since 2010 from camera trapping in deciduous dipterocarp dominated areas of Preah Vihear Province in the Northern Plains (Songkom Thmey District, May 2017, G. McCann <em>in litt</em>. 2017, and Chep Wildlife Sanctuary (Suzuki <em>et al</em>. 2017) and one from the evergreen forest in Virachey National Park, Rattanakiri, at 830 m asl (McCann and Pawlowski 2017). The Songkom Thmey record was obtained from proactively investigating a “a small tunnel-like game trail” and further emphasises that targeted camera trapping may be necessary to detect the species. There have been more than 10 camera trap records since 2016 from low to mid (10-500 m asl) elevation evergreen forest in the Southern Cardamom National Park and northern Botum Sakor National Park, Koh Kong province (Gray <em>et al</em>. 2017a). It is worth noting that at least two of the recent camera trap records were obtained from small sites managed for ecotourism. This level of intense benign human activity may be necessary to prevent hunting and it is possible that extinction in most of the country’s large, but insufficiently staffed or managed, protected areas is inevitable. It seems likely that numbers in Cambodia are depressed to such a level, particularly in accessible areas of the country, that detection during most biodiversity surveys is unlikely. Nevertheless, the species remains regularly confiscated by law enforcement teams throughout the country, with a total of 375 confiscations by the Wildlife Rapid Rescue Team between 2001 and 2016 (Wildlife Alliance <em>in litt</em>. 2017). Furthermore, between four and five individuals are confiscated annually in the landscape by the Wildlife Alliance law enforcement teams (T. Gray <em>in litt</em>. 2017). Other recent records (for example, there are at least two from central Phnom Penh since 2014) may involve individuals that have escaped from wildlife trade, rather than representing wild animals (T. Gray <em>in litt</em>. 2017).</p>  <p>The species is widely distributed geographically in Peninsular Malaysia, primarily in forest, but also in gardens and plantations, including oil palm and rubber plantations (Medway 1977, Numata <em>et al</em>. 2005). It is also found on the island of Penang. Numata <em>et al. </em>(2005) and Ickes and Thomas (2003) note its presence in oil palm and regenerating lowland dipterocarp forest in and around Pasoh Forest Reserve, where it was previously considered common. The Sunda Pangolin<em> </em>remains&#160;present within oil palm plantations in Selangor and Negri Sembilan, Peninsular Malaysia, based on interviews with plantation workers (Azhar <em>et al.</em> 2013). However, Azhar <em>et al.</em> (2013) also report that in areas where interviews have been conducted, it is in decline from hunting for trade. Additionally, the species is present in Kelantan, Pahang and Terengganu, based on interviews with the Orang Asli hunters (Chong <em>et al</em>. 2016), who also reported that the populations there are decreasing (J.L. Chong pers. comm. 2017). Camera trap data from Kelantan and Terengganu produced just a single record of a Sunda Pangolin, despite an effort of 4,364 and 3,453 nights, respectively (Jambari <em>et al</em>. 2015).</p><p>This species is widely distributed on Borneo, including Sabah and Sarawak in Malaysia. It has been recorded in mixed dipterocarp forest and riverine forest (Azlan and Engkamat 2013), as well as remnant forests in this region (Giman <em style=\"color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: italic; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">et al. </em>2007). In Sabah between 2010 and 2017, camera trap data revealed Sunda Pangolins in: Maliau Basin and Imbak Canyon (Bernard <em style=\"color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: italic; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">et al</em>. 2013); Sipitang Forest Reserve; Tabin Wildlife Reserve; Ulu Kalumpang Forest Reserve, Ulu Padas; Malua Forest Reserve, Danum Valley; Sepilok-Kabili Forest Reserve; Lower Kinabatangan Wildlife Sanctuary; and unprotected forest adjacent to Universiti Malaysia Sabah (E. Panjang, unpubl. dataa). It is rarely seen in Sabah, especially compared to 10 years ago (E. Panjang, unpubl. data). Interviews were conducted with local communities and plantation workers living near Sepilok-Kabili Forest Reserve between 2011-2015 and Lower Kinabatangan Wildlife Sanctuary between 2016-2019. Respondents claimed that pangolins became rare about 20-30 years ago. The species is reportedly still found in Kebun Cina Forest Reserve in Sabah (Damit 2009), while data from surveys conducted in 2005 report the species is present at Bintulu, Sarawak (Wilson <em style=\"color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: italic; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">et al. </em>2006), though it appears to be absent from the extensive peat swamp forests in this state (Anon 2000). The species does appear as part of the bushmeat trade in Sarawak, especially in markets in Kuching, Sibu and Kapit (J.L. Chong pers. comm. 2017). Kaicheen and Mohd-Azlan (2018) recorded the species at &gt;1,200 m in the Mt. Penrissen area in 2015-2017.<br/></p><p>The abundance of this species is understood to be low in the peat-swamp forests of east and central Kalimantan, Indonesian Borneo (S. Cheyne pers. comm. 2012), but otherwise has a widespread distribution in Indonesia on Sumatra, Java, Borneo, Kiau and Lingga archipelago, Bangka and Belitung, Nias and Pagi islands, Bali and adjacent islands (Corbet and Hill 1992), as well as the Great Bunguran Islands (Natuna Islands) on the northwest coast of Borneo (Phillips and Phillips 2018).&#160;In Bali, local people report that thirty years ago pangolins would wander into household gardens around Ubud and central Bali, whereas now it is hard to find them. The northern parts of Bali have a slightly higher abundance, but they are very rare today (H. Nash, unpubl. data). There are also records from Tanggamus and Lampung Barat Districts in West Java, where the species was found in secondary forests and plantations, ranging between 360-900 m asl. The species was reported in Brunei Darussalam by Medway (1977), which is supported by the 'rescue' of a small number of individuals in 2013. It is reported to occur in all four districts in Brunei Darussalam: Brunei Muara, Tutong, Kuala Belait and Temburong (Fletcher 2016).</p>  <p>The species is still found in the wild in Singapore and adjacent islands, including Pulau Tekong and potentially, Pulau Ubin (Lim and Ng 2008). Wildlife Reserves Singapore (WRS) receives around 20 wild pangolins per year – over 80% of which have been successfully released back into the wild.&#160;</p>",
+    "population": "<p>There are very little quantitative data on Sunda Pangolin populations at any level (local, national or international), with the exception of Singapore (see below). This species is rarely observed, principally because of its increasing rarity, but also because it is secretive, elusive and primarily nocturnal. There is a paucity of research on population densities at all scales (Willcox <em>et al.</em> 2019). However, population declines are inferred in various places based on the knowledge of local community members and indigenous peoples and from shifting trade dynamics, both legal and illegal. For instance pangolins are now being poached in South Asia (India, Nepal, Bangladesh, Pakistan (Mahmood <em>et al.</em> 2012, Mohapatra <em>et al.</em> 2015), and Africa to meet demand which has been met from Southeast Asia in recent decades, mainly Malaysia and Indonesia (Challender and Hywood 2012, Gomez et al. 2016, Challender and Waterman 2017, Heinrich <em>et al.</em> 2017), following declines in populations of the Sunda Pangolin in the north of its range and Chinese Pangolin (Zhang 2008, Chong <em>et al.</em> 2019)</p>  <p>This species is now extremely rare in the northern part of its range where there have been massive declines in Indochina (Duckworth <em>et al.</em> 1999, Nooreen and Claridge 2001). </p>  <p>It is listed as Endangered in Viet Nam (Nguyen, 2007). In three areas of Viet Nam where interviews were conducted (Khe Net Protected Area, Ke Go Nature Reserve and Song Thanh National Park), 95% of hunters believed pangolins populations have declined severely, because of hunting pressure (Newton <em>et al.</em> 2008). Hunters reported that populations had massively declined in the last few decades, but particularly since about 1990, when the commercial trade in pangolins began to escalate (Newton 2007). In all three areas, the species was described as now being extremely rare. The intense biodiversity survey effort and extremely limited number of confirmed records of pangolins throughout Viet Nam's protected areas adds weight to this observation (see Newton <em>et al.</em> 2008). The rarity of the species was highlighted in more recent research in U Minh Thuong National Park (Nuwer and Bell 2013) and Quang Nam Province (MacMillan and Nguyen 2013). </p>  <p>The species was listed as ‘Rare’ in Cambodia in 2003. There are no population estimates for the country but it is suspected the species is in decline. In a number of reserves in the Cardamom Mountains, this species is present but populations are heavily suspected to be declining. This includes the Elephant Mountains, Central Cambodian Lowland Forests (Prey Long), Eastern Plains Landscape, Northern Plains and Northeast Cambodia. Interviews with hunters suggest that the species is absent in some of these areas, which is attributed to hunting (A. Olsson pers. comm. 2013), and it is likely that these declines have continued since this appraisal.&#160;</p>  <p>In three separate areas within the range of the Sunda Pangolin in Lao PDR (Xe Pian, Dong Phou Veng and Khammouan Limestone National Biodiversity Conservation Area [NBCA]), villagers reported in the late 1990s that pangolin populations had declined due to hunting; in some areas, to as little as one percent of numbers 30 years ago, i.e. (since the 1960s; Duckworth <em>et al.</em> 1999, Nooren and Claridge 2001). The species has largely been extirpated from the lowlands in Lao PDR and is being exploited where areas that were not previously accessible are opening up due to development, including the expansion of agro-industrial plantations (D. Willcox, pers. comm.). </p>  <p>In Peninsular Malaysia, the species has previously been described as common in some areas, at least up until 1999 (Ickes and Thomas 2003). It was listed as Vulnerable in Peninsular Malaysia in 2012. Azhar <em>et al.</em> (2013) report its presence in oil palm plantations in Selangor and Negri Sembilan, though it is subject to very heavy hunting pressure here. According to Numata <em>et al.</em> (2005) the species is present in Pasoh Forest Reserve. Based on recent camera trap data, the species is also present in the Kenyir Wildlife Corridor (D.W.S. Challender, pers. comms. 2013) and also as roadkill in Kenyir (J.L. Chong, J. L. pers. comm. 2017). However, interviews with hunters and villagers in 2007 and 2011 indicate populations in Peninsular Malaysia are decreasing as a result of hunting pressure for trade (D.W.S. Challender, unpubl. data, J.L. Chong, unpubl. data). This is supported by results of pangolin hunting frequency and patterns of the Orang Asli in Kelantan, Pahang and Terengganu (Chong <em>et al.</em> 2016).&#160;&#160; </p>  <p>In Sabah, the Sunda Pangolin has previously been considered relatively common, but there is little recent data on the species' status here. Populations are under pressure from collection for both local use and international trafficking, which seems to have intensified in recent years, and is inferred to be having a detrimental impact on population levels. For example, Pantel and Anak (2010) report that &gt;22,000 Sunda Pangolin were collected for illicit export in the state in an 18 -month period in Sabah between 2007 and 2009. In February 2019, local authorities seized ~30 tonnes of Sunda Pangolins in Sabah, involving frozen animals, live animals and their skins and scales (Anon 2019).&#160;&#160;</p>  <p>In Sarawak, recent data are lacking, but it is believed that populations are under heavy collection pressure for local use, mostly as Sunda Pangolin meat is favoured as a protein source, but the species is also in trade and it is inferred to be causing a decline in the wild populations (J.L. Chong unpubl. data).&#160; </p>  <p>There is a small population in Singapore that might be stable. A recent estimate put the population in the country at 1068 individuals (D. Fung Yu En, unpubl. data). The species is listed as Critically Endangered in Singapore (Davison <em>et al.,</em> 2008).</p>  <p>There is no recent data on the status of this species in Myanmar; though seizures involving the Sunda Pangolin in China in recent years infer that trade originated in Myanmar, suggesting populations of this species here are under threat (Challender and Waterman 2017). It is thought the Sunda Pangolin has been lost from lowland areas due to hunting and habitat conversion to agricultural land.&#160;&#160; </p>  <p>The Sunda Pangolin is considered threatened and is becoming increasingly rare in Thailand (Bain and Humphrey 1982).<br/></p>  <p>Evidence from seizures involving this species attest that it is present in some numbers in Indonesia (including Sumatra, Java and Kalimantan). However, the magnitude of international trafficking originating from Indonesia in the last decade suggests populations here are, or could be, in severe decline. Stating categorically that this is the case is difficult due to a lack of information on past or present population levels, and warrants further research. The estimated generation length of seven years, the indiscriminate nature of poaching and the magnitude of seized trade supports this assertion (Challender and Waterman 2017). For example, there have been seizures comprising 11, 14 and 17 tonnes of Sunda Pangolins between 2000 and 2013, each of which involved several thousand animals, and which likely comprises only a fraction of the trade, based on low detection rates associated with illegal wildlife trade. In Bali, local people report that thirty years ago pangolins would wander into household gardens around Ubud and central Bali whereas now it is hard to find them. Apparently, the northern parts of Bali have higher abundance but the species is generally very rare (H. Nash, unpubl. data).</p>",
+    "habitats": "<p>This species is found in primary and secondary forest, including lowland dipterocarp forest, and cultivated areas – including oil palm and rubber plantations – including and near human settlements (e.g., in gardens; Nowak 1999, Azhar et al. 2013, Chong <em>et al.</em> 2016, Nash <em>et al.</em> 2019). Hunters interviewed in Viet Nam reported that the species is found in a variety of habitats, though areas with primary forest support higher abundances, likely because they contain more older, larger trees with hollows suitable for sleeping and for use as den sites (Newton <em>et al</em>. 2008, see also Lim and Ng 2008) and support lower levels of human activity. While there have been no targeted field studies on abundance and population densities in Singapore, the Sunda Pangolin has persisted for decades without an obvious decline in parts of the city where forest quality is not high (Nash et al. 2019). This is likely due to the lack of strong habitat and diet preferences (Lim 2007) and low levels of hunting/poaching. However, further research is required into habitat utilization and the ability of this species to persist outside primary forest in the long-term. A recent study reported that the Sunda Pangolin was found to be able to utilise boulder cavities as dens in areas of high disturbance in Kelantan, Malaysia (Chong <em>et al.</em> 2016). Similarly, a study in Malaysian Borneo recorded Sunda Pangolins more frequently in modified habitat than primary forest, but it is unclear if this is the result of easier detection rather than being the species being more abundant in this habitat and this requires further research (Davies and Payne 1982).</p>  <p>As with most other species of pangolin, the Sunda Pangolin is primarily nocturnal, solitary – except when breeding – and is a specialized feeder on ants and termites. The species is thought to play a role in regulating insect populations. Lim and Ng (2008) observed that Sunda Pangolins foraged for ant species for 67% of the time versus 33% for termite species. The species also consumes ant larvae, bee pupas, flies, worms, crickets, and other insect larvae, as well as sand and grass (Hua <em>et al.</em> 2015). Sunda Pangolins have an observed preference for Oecophylla ant species (weaver ants), both in the wild and in captivity (Lim, 2007; Nguyen <em>et al.</em> 2014), and for <em>Anoplolepis gracilipes</em> (the Yellow Crazy Ant; Lim 2007). Sunda Pangolins will also eat <em>Crematogaster</em> spp. in captivity (Nguyen <em style=\"color: rgb(0, 0, 0); font-family: Times New Roman; font-size: 16px; font-style: italic; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;\">et al</em>. 2014), though this species was avoided in the wild in Singapore (Lim 2007).</p>  <p>Sunda Pangolins breed all year round (Lim and Ng 2008, Nguyen <em>et al.</em> 2014, Zhang <em>et al.</em> 2015), although breeding may be seasonal in the northern parts of the species’ range, due to colder temperatures reducing prey activity during the winter months. The species has low fecundity, giving birth to one young after a gestation period of about 6 months (180 days; Nguyen <em>et al. </em>2014, Zhang<em> et al.</em> 2015). Lim and Ng (2008) recorded the activity budget of a radio-tracked female with young and concluded that maternal care following the birth of a single offspring was for approximately three to four months. Challender <em>et al.</em> (2012) witnessed behaviour in captivity concurring with this. Lim and Ng (2008) reported that three natal dens were used, all associated with hollows in large trees (&gt;50 cm diameter at breast height [DBH]); female home-range size was estimated as being 6.97 ha, and daily activity was 127 ± 13.1 minutes (mean&#160;± SE.E), with peak activity between 03h00 and 06h00. Adult male home range based on radio-tracking four individuals was 41.3 ha, daily activity was 165 ± 14 minutes, and 11 genera of ants (67% of diet) were foraged upon (Lim 2007). Lim (2007) observed males displaying territorial behaviour suggesting the species is territorial.</p>  <p>There is little information on mortality rates but it is thought to be high due to indiscriminate poaching, meaning individuals are poached regardless of their age or sex. Further information is needed on survival rates of Sunda Pangolins that are released back into the wild and the impact of releases on resident populations. A number of parasites and diseases have been associated with Sunda Pangolins, some of which can be picked up by trafficked individuals during transportation – pangolin are often kept in poor, unsanitary conditions – therefore there is a risk of transmission between the recently released pangolin and the wild population.</p>  <p>Hunters in Viet Nam consistently reported that the Sunda Pangolin is more arboreal than the Chinese Pangolin (<em>Manis pentadactyla</em>). They are adept climbers and their prehensile tails make excellent climbing aids. They often climb to access ants nests, including weaver ants, in trees (Lim 2007). They sleep in hollows either in, or at the base of, trees, but have also been known to dig burrows in soil and shelter in fallen logs. Females may be dependent on tree hollows around parturition and whilst caring for infants (Lim and Ng 2008). By excavating burrows, as well as ant nests and termite mounds whilst searching for prey, Sunda Pangolins are thought to aerate the soil, facilitating the nutrient cycle, and play an important role in the ecosystem.</p>  <p>The species is also a capable swimmer, like other pangolin species, and appears well adapted to wetland ecosystems e.g., the U Minh wetlands in Viet Nam (Willcox<em> et al. </em>2017). The Sunda Pangolin has also been observed frequenting pools of water when cared for in captivity (Nguyen <em>et al.</em> 2014).</p>",
+    "threats": "<p>The primary threat to the Sunda Pangolin is overexploitation from hunting and poaching, both targeted and untargeted, for local and international use. The latter is largely driven by demand in China and Viet Nam and associated incentives to supply those markets, and involves industrial quantities of live and dead animals and their meat and scales each year (Wu and Ma 2007, Challender and Waterman 2017, Heinrich <em>et al</em>. 2017). In China and Viet Nam, pangolin meat is consumed as a luxury product in high end urban restaurants (as well as more locally e.g., on the fringes of protected areas in Viet Nam), and the scales are used as an ingredient in traditional medicines to purportedly cure skin ailments, improve blood circulation and stimulate milk secretion in lactating women, as well as to treat other illnesses, including cancer (Yu and Hong 2018). Contemporary trade routes are sophisticated and extensive occurring over land and by sea (Sopyan 2009). Heinrich <em>et al.</em> (2017) studied the global pangolin trade and found a mean of 29 new routes each year between 2010 and 2015. Trafficking today follows a heavy international trade historically. According to the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES), trade data between 1975 and 2018, trade in this species included ~500,000 animals, which mainly comprised skins that were traded to North America, mainly between 1978 and 2000. However, evidence indicates a heavy, unrecorded, illegal trade involving live animals and scales took place simultaneously, potentially involving an additional 500,000-935,000 Sunda Pangolin (Challender <em>et al.</em> 2015). Challender <em>et al.</em> (2019) estimated that trafficking in Asian pangolins between 2001 and 2018 potentially involved &gt;280,000 individuals, most of which involved this species.<br/></p><p>The pervasive snaring throughout South East Asia (Gray <em>et al</em>. 2017b) means Sunda Pangolins, like all ground-dwelling mammals, are at risk of accidental mortality or injuries in most forests across the region. Local use also comprises a threat, though evidence suggests this is now largely forgone in favour of international trade, given the high monetary value of this species (Newton <em>et al. </em>2008, MacMillan and Nguyen 2013). Hunting and poaching of the Sunda Pangolin may take place to meet subsistence needs and the ultimate driver is absolute or relative poverty, though in some areas poaching appears to be opportunistic and undertaken by hobbyists as well as organised criminal syndicates (Pantel and Anak 2010). It is compounded by the ease with which the species can be captured once found, ineffective and insufficient enforcement in most range states and a lack of resources dedicated to conservation efforts. It is thought that icreasing demand combined with a decreasing supply of Sunda Pangolins has resulted in poaching in areas that were previously considered too costly and inaccessible for hunting.</p><p>This species is known to be harvested for international trade in both live animals and scales in Myanmar, as evidenced by seizures in China (Challender and Waterman 2017). Myanmar, on the basis of its geographic position, size and weak government, has emerged as an important transit country for the smuggling of pangolins to China; although the origin of pangolins is often unclear, trade seems to comprise a mixture of pangolins from Myanmar and neighbouring countries (Nijman <em>et al.</em> 2015). The northern Myanmar region has been identified as a potential transit and source place for the illegal trade of pangolins and their scales (Zhang <em>et al.</em> 2017).<strong></strong><em></em><u></u><sub></sub><sup></sup><br/></p>  <p>The population in the southern part of Thailand has crashed because of trade and in the last few years many pangolins have been confiscated from illegal traders (Challender and Waterman 2017). This species is hunted by specially trained dogs, which can smell it out, making hunting much more effective. Habitat loss, often in the form of deliberate and accidental burning of forests, constitutes a secondary threat to the species here.</p><p>  </p><p></p><p>In Cambodia, the threat to the Sunda Pangolin from hunting and poaching is increasing due to rising prices, and loggers are expending more effort hunting pangolins due to a decrease in luxury wood in the forest (A. Olsson pers. comm. 2013). Pangolins are also often hunted using trained detection dogs and certain villages (e.g., those around Botum Sakor National Park, Koh Kong) are known to specialise in training and deploying such dogs (T. Gray in litt. 2017). In protected areas in the Northern Plains complex, local villagers are financially rewarded for simply reporting pangolin signs to local traders and middlemen (A. Suzuki in litt. 2017).</p>  <p>In Lao PDR, interviews with villagers in the 1990s suggested populations had declined by up to 90% within a decade (i.e., between the 1980s and 1990s; Duckworth <em>et al.</em> 1999), though there is a lack of hard data supporting this (J.W. Duckworth pers. comm. 2006). Consequently, trafficking in the last decade (2009-2019) has originated or been exported from Malaysia and Indonesia, and is destined for China, based on seizure data (Challender and Waterman 2017). Both Lao PDR and Thailand play a key role as transit countries in regional trade involving live animals. Lao PDR is being exploited as a low-risk transport hub for illegal wildlife goods, including pangolins. Lao PDR’s weak laws and ineffective enforcement allow pangolins from both Asian and African countries to be shipped through the country and into consumer countries, such as China and Viet Nam. Between 2010 and 2015, Lao PDR was involved in a total of 43 reported trafficking incidents, in which it was either a seizure (2.3%), origin (32.6%), transit (44.2%) or destination country (23.3%). Thirty-three incidents (76.7%) exclusively involved Asian countries (meaning they did not involve African or non-range countries), and accounted for an estimated ~3,015 pangolins. Based on seizure data from (2010-2015), Asian pangolin species are often smuggled from Indonesia or Malaysia into Lao PDR through Thailand and involve both live and dead or frozen pangolins (Gomez <em>et al.</em> 2016, Challender and Waterman 2017).</p>  <p>Eighty-four hunters in Viet Nam were interviewed and every one reported that they now sell all pangolins that they catch (Newton <em>et al.</em> 2008). Prices are so high that local, subsistence use of pangolins, for either meat or their scales, has completely halted in favour of selling to the national or international trade (MacMillan and Nguyen 2013, Nuwer and Bell 2013). The only occasions on which a hunter might eat a pangolin is if it is already dead when they retrieve it from a trap, then they would use the meat and sell the scales (P. Newton, pers. comm.). The price per kg of pangolin, paid to hunters (in Viet Nam at least) escalated rapidly in the decade up to 2007 and since the commercial trafficking in pangolins began to expand in about 1990 (P. Newton pers. comm.). The main threat in Viet Nam remains hunting therefore, including taking pangolins caught as non-target species. This species is in demand in urban centres such as Hanoi and Ho Chi Minh City both for meat – a luxury product –&#160; and scales, and which is attributed to increasing affluence following economic reforms in the late 20th century. Viet Nam is a persistent consumer market in Asia for wildlife species and this is a key factor in the decline of the species in Viet Nam and surrounding regions (Shairp <em>et al.</em> 2016). After two decades of rapid economic growth, newly wealthy consumers are purchasing wildlife to advertise their status, including luxury wild meats the price of which is usually associated with the rarity of a species and its wild origins. Pangolins are often the most expensive meat on the menu in Vietnamese restaurants (Challender <em>et al.</em> 2015, Shairp<em> et al.</em> 2016).</p><p>  </p><p></p><p>Malaysia has been experiencing targeted hunting and poaching almost exclusively for international trade in meat and scales in recent years and though this includes foreigners, it mostly involves Malaysian nationals. Reported price increases have acted to create a strong incentive to poach and enter the species into national and international trafficking (Pantel and Anak 2010, Chong <em>et al</em>. 2016). This is attracting poachers from outside the country (J.L. Chong, unpubl. data). Increasing land conversion for palm oil throughout Malaysia has created easy road access for poachers. The longevity of palm oil cycles (i.e. the removal of old palms and the replanting of new, which occurs on average every 25 years, suggests that where this species does persist in these habitats (Chong <em>et al.</em> 2016), it may not be viable in the long term, though further research on such dynamics is needed. Malaysia also plays a key role as a transit country for the movement of pangolins, mostly live individuals and meat, from Indonesia to China (Challender and Waterman 2017).&#160;</p><p>  </p><p></p><p>Indonesia has been illegally exporting large numbers of live pangolins as well as meat, especially since 2000, some of which comes from east Kalimantan (Sopyan 2009). Targeted hunting and poaching is the biggest threat in Indonesia, especially on Sumatra, Kalimantan and Java, as evidenced by seizures involving several thousands pangolins over the last two decades (Pantel and Chin 2009, Sopyan 2009).</p>  <p>In Singapore, roadkill is seemingly the biggest threat to this species and though poaching does occur here, it is not thought to be a significant problem.<strong></strong><em></em><u></u><sub></sub><sup></sup><br/></p><p>Secondary threats include habitat loss, largely driven by commercial operations, such as logging, mining and hydro-power dams, and the construction of roads, which has facilitated hunting and poaching by opening previously inaccessible areas. Across Lao PDR, Cambodia and Indonesia this has occurred even within protected areas. The conversion of primary forest to agricultural land is a major driver of habitat loss. This is particularly common in Malaysia and Thailand with habitat replaced with large-scale oil, rubber and paper and pulp plantations. The severity of the threat from habitat loss is not well understood given the species' ability to survive in modified landscapes. However, the ability of the species to persist long-term in habitats such as oil palm and rubber plantations is unknown and commands research attention.</p>",
+    "measures": "<p>The Sunda Pangolin is protected by legislation in virtually all its range states, being listed as a protected or totally protected which typically prohibits exploitation. There may be customary laws which permit indigenous peoples to exploit the species for subsistence purposes in some range states (e.g. Malaysia). Exceptions include Brunei Darussalam where the species is not specifically listed as protected but does receive protection under broader wildlife and forestry legislation. In China, the species is a State Category II protected species. </p>  <p>The species occurs in a number of protected areas across its range including Cambodia: Chep (Suzuki <em>et al</em>. 2017) and Pream Krasop Wildlife Sanctuaries (McCann and Pawlowski 2017), Southern Cardamom (Gray <em>et al.</em> 2017a), Virachey and Botum Sakor National Parks; Thailand: Khao Yai and Kaeng Krachan National Parks (W. Sodsai, unpubl. data); Khlong Nakha, Khao Ang Ru Nai and Hala-Bala Wildlife Sanctuaries (Kitamura <em>et al.</em> 2010, ZSL 2017)&#160;and the southeastern western forest complex (sWEFCOM) in Kanchanaburi Province (ZSL 2017); Viet Nam: U Minh Thuong, U Minh Ha, Cat Tien, Bach Ma, Pu Mat and Song Thanh National Parks, Saola Reserve (Quang Nam), Khe Net Protected Area, and Ke Go Nature Reserve; Lao PDR: Xe Pian National Biodiversity Conservation Area (NCBA), Dong Phou Veng National Protected Area, Khammouan Limestone NBCA; Malaysia: Pasoh Forest Reserve, Kenyir Wildlife Corridor and Krau Wildlife Reserve, including in Sabah: Sepilok-Kabili Forest Reserve, Lower Kinabatangan Wildlife Sanctuary, Kebun Cina Forest Reserve, Sipitang Forest Reserve, Tabin Wildlife Reserve, Ulu Kalumpang Forest Reserve and Malua Forest Reserve, and Imbak Canyon (Bernard <em>et al.</em> 2013).</p>",
+    "use_trade": "<p>This species has historically been exploited across its geographic range. This has primarily comprised hunting for local, subsistence level consumption, as a source of protein, as well as other uses, and for international trade in skins, scales and meat (Harrisson and Loh 1965, Anon 1992, 1999, Challender <em>et al.</em> 2015, Hafiz and Chong, 2016). There were high levels of international trade in skins from across the species' range in the 1970-1990s, most of which were destined for the United States and Mexico for the manufacture and sale of leather goods including boots, shoes and handbags among other leather items (Anon 1999, Challender <em>et al.</em> 2015, Heinrich <em>et al.</em> 2016), while the scales have been used, either in whole or powdered form, as an ingredient in traditional Chinese and Vietnamese medicine, and in other medicines (Anon 1992, 1999). Other uses include for ritualistic and spiritual purposes, such as protection against bad omens (Anon 1992).</p><p>Most trade reported to the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) up to the year 2000 involved skins and scales (Challender <em>et al.</em> 2015, Heinrich <em>et al.</em> 2016), but there was also a parallel illegal trade involving substantial numbers of this species comprising a combination of live animals and scales for consumptive purposes that was principally destined to mainland China (live animals) and China, Taiwan (Province of China) and South Korea (scales; Anon 1992, 1999, Li and Li 1998, Wu and Ma 2007, Challender <em>et al</em>. 2015). In the year 2000, CITES introduced zero export quotas for wild-caught Sunda Pangolins traded for commercial purposes (essentially a proxy trade ban). Despite this measure there has been an ongoing illicit trade in industrial volumes of live and dead Sunda Pangolins and their scales since, which culminated in the species being included in CITES Appendix I at CoP17 in 2016. Challender <em>et al</em>. (2015) estimate that this trade may have involved more than 200,000 Sunda Pangolins exported from Southeast Asia and mainly destined for China and Viet Nam (see also Challender and Waterman 2017). In China and Viet Nam pangolin meat is consumed conspicuously as a luxury dish and scales are used in traditional medicines (Shairp <em>et al. </em>2016, Xu <em>et al.</em> 2016). Legislation prohibits the consumption of pangolin meat in China and Viet Nam, and scales in Viet Nam. In China, there is a legal market for pangolin scales which is regulated by the government. Although official Chinese pharmacopeia prescribe scales from the Chinese Pangolin (<em>Manis pentadactyla</em>), Sunda Pangolins are used in traditional medicines in the country (see Challender<em> et al.</em> 2019). Prices for pangolin meat and scales in China and Viet Nam appear to have risen in recent years, plausibly due to a combination of the increasing rarity of Chinese and Sunda Pangolins, increasing demand and the risk to vendors of selling illegal products (Newton <em>et al.</em> 2008, Challender <em>et al. </em>2015). A study on illegal trade in China suggested that illegal in trade in pangolins is considered easier than other wildlife products, such as ivory and rhino horn, because the products are small and easy to conceal, and is high-profit but apparently low-risk. In many parts of the Sunda Pangolin's range it is understood that traditional, subsistence use of pangolins and their products has been replaced by international trade due to the high financial value of pangolin derivatives (MacMillan and Nguyen 2013, Nuwer and Bell 2013).&#160;</p><p>Other markets for illegal pangolin products also exist. The United States has recently been identified as an end-use market for pangolin products (Heinrich <em>et al.</em> 2017).</p><p>Although dated, Martin and Phipps (1996) noted Sunda Pangolin meat, scales and blood for sale in a restaurant in Cambodia. This practice continues today largely for Chinese expats and tourists (T. Gray in litt. 2017). Research suggests that animals caught in Cambodia are traded across the border to meet demand for luxury meat and scales in Viet Nam (D.W.S. Challender, unpubl. data). However, there have been a number of recent trade confiscations of the Sunda Pangolin on the Thailand-Cambodian border, originating from Thailand (Wildlife Alliance in litt. 2017), suggesting Cambodia may also be a transit or demand country for pangolin. Sunda Pangolins are also sourced in Cambodia and demand exists, particularly from Chinese restaurants in the country (Gray <em>et al.</em> 2017b). </p>  <p>Lao PDR and Thailand both play key roles in illegal trade in live animals and scales from Southeast Asia to East Asia (Gomez <em>et al.</em> 2016). Trade routes typically follow Indonesia-Malaysia-Thailand-Lao PDR-China/Viet Nam. Market observations in recent years within the northern regions of Lao PDR revealed an open trade in pangolin scales mostly for use in traditional medicine and to a lesser extent as jewellery (Gomez <em>et al.</em> 2016).</p><p>It is understood pangolin scales, as well as live animals, are sourced from Myanmar for international trade to China (Nijman <em>et al.</em> 2016). Surveys in Mong La, Myanmar, revealed open trade in pangolin scales, skins, live pangolins and pangolin carcasses, including foetuses emerged in wine, which were observed at the central market, specialised wildlife shops, and in front of the restaurants and casinos. The pangolins and their derivatives are believed to be sourced locally, as well as from neighbouring countries (Nijman <em>et al.</em> 2016 ).</p><p>In Malaysia, the scales of this species have been used in the belief that they cure asthma (CITES 2000) and provide protection from spirits (Hafiz and Chong, 2016). However, as above, there is evidence of heavy illicit, international trade in live animals and their scales from both Peninsular Malaysia and Malaysian Borneo, largely to East Asia (Pantel and Anak 2010, Challender and Waterman 2017). In Sabah in 2016, wildlife rangers seized 25 live pangolins after they arrested a local man at a roadblock in Lahad Datu: the Sabah Wildlife Department believed these pangolins were poached from a nearby forest in Lahad Datu (New Strait Times, 2016). The Orang Asli from the Krau Wildlife Reserve in Malaysia will not consume pangolins as they believe the species is an incarnation of the human placenta, and as such, it is taboo to consume it (Hafiz and Chong, 2016). Similarly, the Orang Asli in Pos Pulat, Kelantan, and Sungai Berua, Terengganu, will burn dried pangolin scales to drive away elephants and other wild animals in the jungle (Hafiz and Chong, 2016). The Kadazans in Sabah will use dried pangolin scales to deter crocodiles while in the river (J.L. Chong, unpubl. data). For the Ibans in Sarawak, the scales of the pangolin inspired the pattern called ‘tisik tenggilling’ utilised in the ketapu rotan, which is a helmet type of hat made from coarsely plaited rattan commonly used as part of the Iban cultural dress (J.L. Chong, unpubl. data). Around 50-100 years ago, indigenous people of Sabah (e.g. Kadazan, Dusun, Murut and Rungus) used Sunda Pangolin scales to make vests for their warriors, and for belts to cure arthritis (E. Panjang, unpubl. data). In Sabah, indigenous people who are non-Muslim consume pangolin meat, which they claim cures illnesses like asthma, and drink pangolin blood, which they regard as a tonic. However, because of the high prices offered by middle men, people frequently choose to sell pangolins rather than consume them (E. Panjang, unpubl. data)</p><p>In Indonesia, this species continues to be hunted for local, subsistence use in central and eastern Kalimantan (S. Cheyne pers. comm. 2013, Wirdadeti and Nash, pers. comm. 2016). Practitioners of traditional medicine in Indonesia continue to recommend pangolin scale products for heart conditions and skin disorders (H. Nash, unpubl. data). However, there is voluminous, illicit trade in the animals from Indonesia, largely from Sumatra, and primarily to China and Viet Nam (Pantel and Chin 2009, Challender and Waterman 2017). There is evidence of professional, commercial-scale hunting of the species both in Sumatra, and more widely in Indonesia, solely for the purpose of commercial but illegal international trade (Takandjiti and Sawitri 2016). While this largely involved pangolin skins prior to 2000, for the leather trade to North America (Heinrich <em>et al.</em> 2016), in the last two decades it has involved live animals, their scales and pangolin meat, and which has primarily been destined for China and Viet Nam (Sopyan 2009, Takandjiti and Sawitri 2016, Challender and Waterman 2017).<br/></p>",
+    "rationale": "<p>This species is listed as Critically Endangered (A2d+3d+4d). It is inferred that populations have declined by 80% over the past 21 years (three generations, generation length estimated at seven years, i.e. 1998-2019) based on overexploitation from hunting and poaching (A2d). Being precautionary, the species is listed as Critically Endangered (A3d+4d), both looking forward three generations (2019-2040) and looking backward one generations and forward two generations (2012-2033). This is based on very high levels of harvest for commercial trafficking of live and dead individuals, industrially processed frozen pangolins, and scales, seemingly across the species’ range, combined with ongoing exploitation for local use. Quantifying the extent of exploitation spatially is difficult but it seems likely that Singapore and smaller islands (e.g., those surrounding mainland and island Southeast Asia in the species’ range) may be the only localities where overexploitation is not a threat. This predicament is compounded by a number of factors including the likelihood that governance and law enforcement changes on a level needed to prevent the overexploitation of the species are unlikely to occur within three generations time. Additionally, there is currently weak evidence that demand reduction efforts in key consumer countries for Asian pangolin products and derivatives, which theoretically could lead to a reduction in harvest, are effective. Meanwhile, the incentives for harvesting and illegally trading in the species are universally high based on the high financial value of pangolin parts and derivatives.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "Populations in the Philippines formerly attributed to this species were separated under the name <em>Manis culionensis</em> by Feiler (1998) and subsequently by Gaubert and Antunes (2005)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Compliance with CITES and its adopted provisions, including Res. Conf. 17.10 on conservation of and trade in pangolins.",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "Compliance with CITES and its adopted provisions, including Res. Conf. 17.10 on conservation of and trade in pangolins.",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "Needed at the local community level and among relevant agencies and stakeholders including protected area management, wildlife, CITES, and customs agencies.",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "With appropriate authorities, including protected area management, wildlife, CITES, and customs agencies.",
+      "code": "4_2",
+      "description": {
+        "en": "Training"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Montane"
+      },
+      "code": "1_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Terrestrial - Subtropical/Tropical Heavily Degraded Former Forest"
+      },
+      "code": "14_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Arable Land"
+      },
+      "code": "14_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Plantations"
+      },
+      "code": "14_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Other"
+      },
+      "code": "17"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lao People's Democratic Republic"
+      },
+      "code": "LA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Challender, D., Willcox, D.H.A., Panjang, E., Lim, N., Nash, H., Heinrich, S. & Chong, J.",
+      "value": [
+        "Daniel Challender (IUCN SSC Pangolin Specialist Group)",
+        "Elisa Panjang",
+        "Helen Nash",
+        "Daniel Willcox",
+        "Ju lian Chong",
+        "Norman Lim",
+        "Sarah Heinrich"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Waterman, C.",
+      "value": [
+        "Carly Waterman (IUCN SSC Pangolin Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Nguyen Van, T., Shepherd, C., Krishnasamy, K., Lee, B.P.Y-H, Fletcher, L., Seah Han Ming, J., Nguyen, T.T.A., Nguyen Van, Q., Chung, Y.F., Olsson, A., Heng, S. & Wang, A.",
+      "value": [
+        "Chris Shepherd (TRAFFIC Southeast Asia)",
+        "Kanitha Krishnasamy",
+        "Thai Nguyen Van",
+        "Jeffrey  Seah Han Ming",
+        "Sokrith Heng",
+        "Annette Olsson",
+        "Louise Fletcher",
+        "The Nguyen",
+        "Quan Nguyen Van",
+        "Benjamin Lee",
+        "Yi Fei Chung",
+        "Adelle Wang"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Li, Y. and Li, D. 1998. The dynamics of trade in live wildlife across the Guangxi border between China and Vietnam during 1993-1996 and its control strategies. <i>Biodiversity and Conservation</i> 1998(7): 895-914.",
+      "year": "1998",
+      "title": "The dynamics of trade in live wildlife across the Guangxi border between China and Vietnam during 1993-1996 and its control strategies",
+      "author": "Li, Y. and Li, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duckworth, J.W., Salter, R.E. and Khounboline, K. 1999. Wildlife in Lao PDR: 1999 Status Report. IUCN, Vientiane, Laos.",
+      "year": "1999",
+      "title": "Wildlife in Lao PDR: 1999 Status Report",
+      "author": "Duckworth, J.W., Salter, R.E. and Khounboline, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Corbet, G.B. and Hill, J.E. 1992. <i>Mammals of the Indo-Malayan Region: a Systematic Review</i>. Oxford University Press, Oxford, UK.",
+      "year": "1992",
+      "title": "Mammals of the Indo-Malayan Region: a Systematic Review",
+      "author": "Corbet, G.B. and Hill, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Payne, J., Francis, C.M. and Phillipps, K. 1985. <i>A field guide to the mammals of Borneo</i>. The Sabah Society and WWF Malaysia, Kota Kinabalu and Kuala Lumpur, Malaysia.",
+      "year": "1985",
+      "title": "A field guide to the mammals of Borneo",
+      "author": "Payne, J., Francis, C.M. and Phillipps, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nowak, R.M. (ed.) 1999. <i>Walkers Mammals of the World</i>. Sixth edition. The Johns Hopkins University Press, Baltimore and London.",
+      "year": "1999",
+      "title": "Walkers Mammals of the World. Sixth edition.",
+      "author": "Nowak, R.M. (ed.)",
+      "citation_short": null
+    },
+    {
+      "citation": "Lekagul, B. and McNeely, J.A. 1977. <i>Mammals of Thailand</i>. Association for the Conservation of Wildlife, Bangkok, Thailand.",
+      "year": "1977",
+      "title": "Mammals of Thailand",
+      "author": "Lekagul, B. and McNeely, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bain, J.R. and Humphrey, S.R. 1982. A Profile of the Endangered Species in Thailand.  Report No.4.. Office of Ecological Services, Florida State Museum, University of Florida, Gainesville, Florida, USA.",
+      "year": "1982",
+      "title": "A Profile of the Endangered Species in Thailand",
+      "author": "Bain, J.R. and Humphrey, S.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schlitter, D.A. 2005. Order Pholidota. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A Taxonomic and Geographic Reference</i>, pp. 530-531. Johns Hopkins University Press, Baltimore, MD, USA.",
+      "year": "2005",
+      "title": "Order Pholidota",
+      "author": "Schlitter, D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "World Conservation Monitoring Centre. 1999. <i>Review of significant trade in animal species included in CITES Appendix II: Detailed reviews of 37 species</i>. CITES Animals Committee.",
+      "year": "1999",
+      "title": "Review of significant trade in animal species included in CITES Appendix II: Detailed reviews of 37 species",
+      "author": "World Conservation Monitoring Centre",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES. 2000. Prop. 11.13. <i>Manis crassicaudata, Manis pentadactyla, Manis javanica</i>. Transfer from Appendix II to Appendix I (India, Nepal, Sri Lanka, United States). Available at: <a href=\"http://www.cites.org/eng/cop/11/prop/13.pdf\">http://www.cites.org/eng/cop/11/prop/13.pdf</a>. ",
+      "year": "2000",
+      "title": "Prop. 11.13. <i>Manis crassicaudata, Manis pentadactyla, Manis javanica</i>. Transfer from Appendix II to Appendix I (India, Nepal, Sri Lanka, United States)",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "Harrisson, T. and Yin, L.C. 1965. To scale a pangolin. <i>Sarawak Museum Journal</i> 12: 415-418.",
+      "year": "1965",
+      "title": "To scale a pangolin",
+      "author": "Harrisson, T. and Yin, L.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bourret, R. 1942. Les mammifères de la collection du Laboratoire de Zoologie de l'Ecole Supérieure des Sciences. <i>Notes et Travaux de l'Ecole Supérieure, Université Indochinoise No. 1</i>.",
+      "year": "1942",
+      "title": "Les mammifères de la collection du Laboratoire de Zoologie de l'Ecole Supérieure des Sciences",
+      "author": "Bourret, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Feiler, A. 1998. Das Philippinen Schuppentier, <i>Manis culionensis</i> (Mammalia: Manidae). --Zoologische Abhandlungen Staat. <i>Museum Tierkunde Dresden</i> 50: 161-164.",
+      "year": "1998",
+      "title": "Das Philippinen Schuppentier, <i>Manis culionensis</i> (Mammalia: Manidae). --Zoologische Abhandlungen Staat",
+      "author": "Feiler, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murphy, D. and Phan, T. D. 2001. Mammal observations in Cat Tien National Park. WWF, Hanoi, Vietnam.",
+      "year": "2001",
+      "title": "Mammal observations in Cat Tien National Park",
+      "author": "Murphy, D. and Phan, T. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Timmins, R.J. and Cuong, T.V. 1999. An assessment of the conservation importance of the Huong Son (Annamite) Forest, Ha Tinh province, Vietnam, based on the results of a field survey for large mammals and birds. Center for Biodiversity and Conservation and American Museum of Natural History., New York, USA.",
+      "year": "1999",
+      "title": "An assessment of the conservation importance of the Huong Son (Annamite) Forest, Ha Tinh province, Vietnam, based on the results of a field survey for large mammals and birds",
+      "author": "Timmins, R.J. and Cuong, T.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Martin, E.B. and Phipps, M. 1996. A Review of the Wild Animal Trade in Cambodia. <i>TRAFFIC Bulletin</i> 16(2): 45–60.",
+      "year": "1996",
+      "title": "A Review of the Wild Animal Trade in Cambodia",
+      "author": "Martin, E.B. and Phipps, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Newton, P. 2007. Potential applications of hunters' knowledge for the conservation of pangolins in Vietnam. M.Sc. Thesis, University of East Anglia.",
+      "year": "2007",
+      "title": "Potential applications of hunters' knowledge for the conservation of pangolins in Vietnam",
+      "author": "Newton, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Salter, R.E. 1983. <i>Summary of currently available information on internationally threatened wildlife species in Burma</i>. FAO, Rangoon, Burma.",
+      "year": "1983",
+      "title": "Summary of currently available information on internationally threatened wildlife species in Burma",
+      "author": "Salter, R.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lim, N.T.L. and Ng, P.K.L. 2007. Home range, activity cycle and natal den usage of a female Sunda pangolin <i>Manis javanica</i> (Mammalia: Pholidota) in Singapore. <i>Endangered Species Research</i> 3: 1-8.",
+      "year": "2007",
+      "title": "Home range, activity cycle and natal den usage of a female Sunda pangolin <i>Manis javanica</i> (Mammalia: Pholidota) in Singapore",
+      "author": "Lim, N.T.L. and Ng, P.K.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Le Xuan Canh, Pham Trong Anh, Duckworth, J.W., Vu Ngoc Thanh and Lic Vuthy. 1997. A survey of large mammals in Dak Lak Province, Viet Nam.  Unpublished report to IUCN and WWF. Hanoi, Viet Nam.",
+      "year": "1997",
+      "title": "A survey of large mammals in Dak Lak Province, Viet Nam",
+      "author": "Le Xuan Canh, Pham Trong Anh, Duckworth, J.W., Vu Ngoc Thanh and Lic Vuthy",
+      "citation_short": ""
+    },
+    {
+      "citation": "C.X., Le, Truong, L.V., Dang, D.T., Ho, C.T., Ngo, D.A., Nguyen, N.C., Vu, D.V., Pham, H., Nguyen, T.T., Nguyen, T.Q. and Tran, H.M. 1997. A report of field surveys on biodiversity in Phong Nha Ke Bang forest (Quang Binh Province, central Vietnam). IEBR / FIPI / Forestry College / University of Vinh / WWF Indochina Programme, Hanoi, Vietnam.",
+      "year": "1997",
+      "title": "A report of field surveys on biodiversity in Phong Nha Ke Bang forest (Quang Binh Province, central Vietnam)",
+      "author": "C.X., Le, Truong, L.V., Dang, D.T., Ho, C.T., Ngo, D.A., Nguyen, N.C., Vu, D.V., Pham, H., Nguyen, T.T., Nguyen, T.Q. and Tran, H.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CARE. 2004. Biodiversity survey: U Minh Thuong National Park, Vietnam. U Minh Thuong National Park conservation and community development program (1998-2003). CARE, Agricultural Publishing House.",
+      "year": "2004",
+      "title": "Biodiversity survey: U Minh Thuong National Park, Vietnam. U Minh Thuong National Park conservation and community development program (1998-2003)",
+      "author": "CARE",
+      "citation_short": null
+    },
+    {
+      "citation": "Davies, G. and Payne, J.B. 1982. <i>A Faunal Survey of Sabah</i>. WWF Malaysia, Kuala Lumpur.",
+      "year": "1982",
+      "title": "A Faunal Survey of Sabah",
+      "author": "Davies, G. and Payne, J.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Medway, L. 1977. <i>Mammals of Borneo: Field keys and an annotated checklist</i>. Monographs of the Malaysian Branch of the Royal Asiatic Society, Kuala Lumpur, Malaysia.",
+      "year": "1977",
+      "title": "Mammals of Borneo: Field keys and an annotated checklist",
+      "author": "Medway, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gaubert, P. and Antunes, A. 2005. Assessing the taxonomic status of the Palawan pangolin <i>Manis culionensis</i> (Pholidota) using discrete morphological characters. <i>Journal of Mammalogy</i> 86: 1068–1074.",
+      "year": "2005",
+      "title": "Assessing the taxonomic status of the Palawan pangolin <i>Manis culionensis</i> (Pholidota) using discrete morphological characters",
+      "author": "Gaubert, P. and Antunes, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rao, M., Myint, T., Zaw, T. and Htun, S. 2005. Hunting patterns in tropical forests adjoining the Hkakaborazi National Park, north Myanmar. <i>Oryx</i> 39(3):  292-300.",
+      "year": "2005",
+      "title": "Hunting patterns in tropical forests adjoining the Hkakaborazi National Park, north Myanmar",
+      "author": "Rao, M., Myint, T., Zaw, T. and Htun, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ickes, K. and Thomas, S.C. 2003. Native, wild pigs (<i>Sus scrofa</i>) at Pasoh and their impacts on the plant community in T. Okuda. In: N. Manokaran, Y. Matsumoto, K. Niiyama, S. C. Thomas and P. S. Ashton (eds), <i>Pasoh: Ecology and Natural History of a Southeast Asian Lowland Tropical Rain Forest</i>.",
+      "year": "2003",
+      "title": "Native, wild pigs (<i>Sus scrofa</i>) at Pasoh and their impacts on the plant community in T. Okuda",
+      "author": "Ickes, K. and Thomas, S.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wilson, D.E., Helgen, K.M., Chin, S.Y. and Giman B. 2006. Small mammal survey at two sites in planted forest zone, Bintulu, Sarawak. <i>Malayan Nature Journal</i> 52(2): 165-187.",
+      "year": "2006",
+      "title": "Small mammal survey at two sites in planted forest zone, Bintulu, Sarawak",
+      "author": "Wilson, D.E., Helgen, K.M., Chin, S.Y. and Giman B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mahmood, T., Hussain, R., Irshad, N., Akrim, F. and Nadeem, M.S. 2012. Illegal mass killing of Indian Pangolin (Manis crassicaudata) on Potohar Region, Pakistan. <i>Pakistan Journal of Zoology</i> 44(5): 1457-1461.",
+      "year": "2012",
+      "title": "Illegal mass killing of Indian Pangolin (Manis crassicaudata) on Potohar Region, Pakistan",
+      "author": "Mahmood, T., Hussain, R., Irshad, N., Akrim, F. and Nadeem, M.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Challender, D.W.S. and Hywood, L. 2012. African pangolins under increased pressure from poaching and intercontinental trade. <i>TRAFFIC Bulletin</i> 24(2): 53-55.",
+      "year": "2012",
+      "title": "African pangolins under increased pressure from poaching and intercontinental trade",
+      "author": "Challender, D.W.S. and Hywood, L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pantel, S. and Chin, S.Y. 2009. Proceedings of the Workshop on Trade and Conservation of Pangolins native to South and Southeast Asia. TRAFFIC Southeast Asia. Petaling Jaya, Selangor, Malaysia.",
+      "year": "2009",
+      "title": "Proceedings of the Workshop on Trade and Conservation of Pangolins native to South and Southeast Asia",
+      "author": "Pantel, S. and Chin, S.Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wu, S., Wang, Y. and Feng, Q. 2005. A new record of Mammalia in China - Manis javanica. <i>Acta Zootaxonomica Sinica</i> 30(2): 440-443.",
+      "year": "2005",
+      "title": "A new record of Mammalia in China - Manis javanica",
+      "author": "Wu, S., Wang, Y. and Feng, Q.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sopyan, E. 2008. Malayan Pangolin Manis javanica Trade in Sumatra, Indonesia. In: Pantel, S. and Yun, C.S. (eds), Proceedings of the Workshop on Trade and Conservation of Pangolins native to South and Southeast Asia. TRAFFIC Southeast Asia, Petaling Jaya, Selangor, Malaysia. Singapore Zoo.",
+      "year": "2008",
+      "title": "Malayan Pangolin Manis javanica Trade in Sumatra, Indonesia",
+      "author": "Sopyan, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wu, S. and Ma, G. 2007. The status and conservation of pangolins in China. <i>TRAFFIC East Asia Newsletter</i>: 1-5.",
+      "year": "2007",
+      "title": "The status and conservation of pangolins in China",
+      "author": "Wu, S. and Ma, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nooren, H. and Claridge, G. 2001. <i>Wildlife trade in Laos: the end of the game</i>. Netherlands Committee for IUCN, Amsterdam.",
+      "year": "2001",
+      "title": "Wildlife trade in Laos: the end of the game",
+      "author": "Nooren, H. and Claridge, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Numata, S., Okuda, T., Sugimoto, T., Nishimura, S., Yoshida, K., Quah EngSeng, Yasuda, M., Muangkhum, K. and Nur Supardi, M.N. 2005. Camera-trapping: a non-invasive approach as an additional tool in the study of mammals in Pasoh Forest Reserve and adjacent fragmented areas in Peninsular Malaysia. <i>Malayan Nature Journal</i> 57(1): 39-45.",
+      "year": "2005",
+      "title": "Camera-trapping: a non-invasive approach as an additional tool in the study of mammals in Pasoh Forest Reserve and adjacent fragmented areas in Peninsular Malaysia",
+      "author": "Numata, S., Okuda, T., Sugimoto, T., Nishimura, S., Yoshida, K., Quah EngSeng, Yasuda, M., Muangkhum, K. and Nur Supardi, M.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Azlan, M. and Engkamat, L. 2013. Camera trapping and conservation in Lanjak Entimau Wildlife Sanctuary, Sarawak, Borneo. <i>Raffles Bulletin of Zoology</i> 61(1): 397-405.",
+      "year": "2013",
+      "title": "Camera trapping and conservation in Lanjak Entimau Wildlife Sanctuary, Sarawak, Borneo",
+      "author": "Azlan, M. and Engkamat, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pantel, S. and Anak, N.A. 2010. A preliminary assessment of the pangolin trade in Sabah. TRAFFIC Southeast Asia, Petaling Jaya, Selangor, Malaysia.",
+      "year": "2010",
+      "title": "A preliminary assessment of the pangolin trade in Sabah",
+      "author": "Pantel, S. and Anak, N.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nuwer, R. and Bell, D. 2013. Identifying and quantifying the threats to biodiversity in the U Minh peat swamp forests of the Mekong Delta, Vietnam. <i>Oryx FirstView</i>: 1-7.",
+      "year": "2013",
+      "title": "Identifying and quantifying the threats to biodiversity in the U Minh peat swamp forests of the Mekong Delta, Vietnam",
+      "author": "Nuwer, R. and Bell, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Willcox, D., Tran, Q.P. and Roberton, S. In prep. Conservation status of small carnivores in the U Minh wetlands. Carnivore and Pangolin Conservation Programme., Cuc Phuong, Viet Nam.",
+      "year": "",
+      "title": "Conservation status of small carnivores in the U Minh wetlands.",
+      "author": "Willcox, D., Tran, Q.P. and Roberton, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Giman, B., Stuebig, R., Megum, N., McShea, W.J. and Stewart, C.M. 2007. A camera trapping inventory for mammals in a mixed use planted forest in Sarawak. <i>Raffles Bulletin of Zoology</i> 55(1): 209-215.",
+      "year": "2007",
+      "title": "A camera trapping inventory for mammals in a mixed use planted forest in Sarawak",
+      "author": "Giman, B., Stuebig, R., Megum, N., McShea, W.J. and Stewart, C.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Newton, P., Nguyen Van, T., Roberton, S. and Bell, D. 2008. Pangolins in Peril: using local hunters' knowledge to conserve elusive species in Vietnam. <i>Endangered Species Research</i> 6(41-53).",
+      "year": "2008",
+      "title": "Pangolins in Peril: using local hunters' knowledge to conserve elusive species in Vietnam",
+      "author": "Newton, P., Nguyen Van, T., Roberton, S. and Bell, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "MacMillan, D.C. and Nguyen Anh, Q. 2013. Factors influencing the illegal taking of wildlife by trapping and snaring among the Katu ethnic group in Vietnam. <i>Oryx FirstView</i>: 1-9.",
+      "year": "2013",
+      "title": "Factors influencing the illegal taking of wildlife by trapping and snaring among the Katu ethnic group in Vietnam",
+      "author": "MacMillan, D.C. and Nguyen Anh, Q.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Damit, A. 2009. Sandakan Rainforest Park: A Scientifically & Historically Important Forest. Sabah Forestry Department.",
+      "year": "2009",
+      "title": "Sandakan Rainforest Park: A Scientifically & Historically Important Forest",
+      "author": "Damit, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Challender, D.W.S., Nguyen Van, T., Jones, M. and May, L. 2011. Time-budgets and activity patterns of captive Sunda pangolins (Manis javanica). <i>Zoo Biology</i> 29: 1-13.",
+      "year": "2011",
+      "title": "Time-budgets and activity patterns of captive Sunda pangolins (Manis javanica)",
+      "author": "Challender, D.W.S., Nguyen Van, T., Jones, M. and May, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Azhar, B., Lindenmayer, D., Wood, J., Fischer, J., Manning, A., McElhinny, C. and Zakaria, M. 2013. Contribution of illegal hunting, culling of pest species, road accidents and feral dogs to biodiversity loss in established oil-palm landscapes. <i>Wildlife Research</i> 40: 1-9.",
+      "year": "2013",
+      "title": "Contribution of illegal hunting, culling of pest species, road accidents and feral dogs to biodiversity loss in established oil-palm landscapes",
+      "author": "Azhar, B., Lindenmayer, D., Wood, J., Fischer, J., Manning, A., McElhinny, C. and Zakaria, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anon. 1999. Review of Significant Trade in Animal Species included in CITES Appendix II: Detailed Reviews of 37 Species, Manis javanica. Draft Report to the CITES Animals Committee. WCMC (World Conservation Monitoring Centre), IUCN Species Survivial Commission and TRAFFIC Network.",
+      "year": "1999",
+      "title": "Review of Significant Trade in Animal Species included in CITES Appendix II: Detailed Reviews of 37 Species, Manis javanica. Draft Report to the CITES Animals Committee",
+      "author": "Anon.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Yue, Z. 2008. Conservation and Trade Control of Pangolins in China. In: Pantel, S., Chin, S.Y. (ed.), Workshop on Trade and Conservation of Pangolins Native to South and Southeast Asia, pp. 66-74. Singapore Zoo, Singapore.",
+      "year": "2008",
+      "title": "Conservation and Trade Control of Pangolins in China",
+      "author": "Yue, Z.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nguyen, K.S. 2007. Vietnam Red Data Book. Natural Science and Technology Publishing House, Hanoi, Vietnam.",
+      "year": "2007",
+      "title": "Vietnam Red Data Book",
+      "author": "Nguyen, K.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    },
+    {
+      "citation": "Challender, D.W.S. and Waterman, C. 2017. Implementation of CITES Decisions 17.239 b) and 17.240 on Pangolins (Manis spp.). Prepared by IUCN for the CITES Secretariat. SC69 Doc.57 Annex 1.",
+      "year": "2017",
+      "title": "Implementation of CITES Decisions 17.239 b) and 17.240 on Pangolins (Manis spp.). Prepared by IUCN for the CITES Secretariat. SC69 Doc.57 Annex 1.",
+      "author": "Challender, D.W.S. and Waterman, C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Challender, D.W.S., Shepherd, C.R., Heinrich, S. and Katsis, L. 2019. International trade and trafficking in pangolins, 1900-2018. In: Challender, DWS., Nash, HC., Waterman, C. (ed.), <i>Pangolins: Science, Society and Conservation</i>, Academic Press.",
+      "year": "2019",
+      "title": "International trade and trafficking in pangolins, 1900-2018",
+      "author": "Challender, D.W.S., Shepherd, C.R., Heinrich, S. and Katsis, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heinrich, S., Wittmann, T.A., Ross, J.V., Shepherd, C.R., Challender, D.W.S. and Cassey, P. 2017. The Global Trafficking of Pangolins: A comprehensive summary of seizures and trafficking routes from 2010–2015. TRAFFIC, Southeast Asia Regional Office, Petaling Jaya, Selangor, Malaysia.",
+      "year": "2017",
+      "title": "The Global Trafficking of Pangolins: A comprehensive summary of seizures and trafficking routes from 2010–2015",
+      "author": "Heinrich, S., Wittmann, T.A., Ross, J.V., Shepherd, C.R., Challender, D.W.S. and Cassey, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mohapatra, R.K., Panda, S., Acharjyo, L.N., Nair, M. V. and Challender, D.W.S. 2015. A note on the illegal trade and use of pangolin body parts in India. <i>TRAFFIC Bulletin</i> 27(1): 33-40.",
+      "year": "2015",
+      "title": "A note on the illegal trade and use of pangolin body parts in India",
+      "author": "Mohapatra, R.K., Panda, S., Acharjyo, L.N., Nair, M. V. and Challender, D.W.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Willcox, D., Nash, H., Trageser, S., Kim, H.J., Hywood, L., Connelly, E., Ichu, I.G., Moumbolou, C.L.M., Ingram, D.J. and Challender, D.W.S. 2019. Evaluating methods for the detection and ecological monitoring of pangolins (Pholidota: Manidae). <i>Global Ecology and Conservation</i> 17: e00539.",
+      "year": "2019",
+      "title": "Evaluating methods for the detection and ecological monitoring of pangolins (Pholidota: Manidae)",
+      "author": "Willcox, D., Nash, H., Trageser, S., Kim, H.J., Hywood, L., Connelly, E., Ichu, I.G., Moumbolou, C.L.M., Ingram, D.J. and Challender, D.W.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anon. 1992. Review of Significant Trade in Animal Species included in CITES Appendix II, Detailed Review of 24 priority species, Indian, Malayan and Chinese pangolin. CITES, Geneva, Switzerland.",
+      "year": "1992",
+      "title": "Review of Significant Trade in Animal Species included in CITES Appendix II, Detailed Review of 24 priority species, Indian, Malayan and Chinese pangolin. CITES, Geneva, Switzerland",
+      "author": "Anon",
+      "citation_short": null
+    },
+    {
+      "citation": "Anon. 2019. Malaysia makes record 30-ton pangolin seizure. Available at: <a href=\"https://phys.org/news/2019-02-malaysia-tonne-pangolin-seizure.html\">https://phys.org/news/2019-02-malaysia-tonne-pangolin-seizure.html</a>. (Accessed: 7/7/2019).",
+      "year": "2019",
+      "title": "Malaysia makes record 30-ton pangolin seizure",
+      "author": "Anon",
+      "citation_short": null
+    },
+    {
+      "citation": "Bernard, H., Ahmad, A.H., Brodie, J., Giordano, A.J., Lakim, M., Amat, R., Hue, S.K.P., Khee, L.S., Tuuga, A., Malim, P.T., Lim-Hasegawa, D., Yap, S.W. and Sinun, W. 2013. Camera trapping survey of mammals in and around Imbak canyon conservation area in Sabah, Malaysian Borneo. <i>Raffles Bulletin of Zoology</i> 61: 861-870.",
+      "year": "2013",
+      "title": "Camera trapping survey of mammals in and around Imbak canyon conservation area in Sabah, Malaysian Borneo",
+      "author": "Bernard, H., Ahmad, A.H., Brodie, J., Giordano, A.J., Lakim, M., Amat, R., Hue, S.K.P., Khee, L.S., Tuuga, A., Malim, P.T., Lim-Hasegawa, D., Yap, S.W. and Sinun, W",
+      "citation_short": ""
+    },
+    {
+      "citation": "Challender, D.W.S., Harrop, S.R. and MacMillan, D.C. 2015. Understanding markets to conserve trade-threatened species in CITES. <i>Biological Conservation</i> 187: 249-259.",
+      "year": "2015",
+      "title": "Understanding markets to conserve trade-threatened species in CITES",
+      "author": "Challender, D.W.S., Harrop, S.R. and MacMillan, D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chong, J.L., Panjang, E., Willcox, D., Nash, H.C., Semiadi, G., Sodsai, W., Lim, N., Fletcher, L., Kurnaiwan, A. and Cheema, S. 2019. Sunda pangolin <i>Manis javanica</i> (Desmarest, 1822). In: Challender, D.W.S., Nash, H.C., Waterman, C. (ed.), <i>Pangolins: Science, Society and Conservation</i>, Academic Press.",
+      "year": "2019",
+      "title": "Sunda pangolin <i>Manis javanica</i> (Desmarest, 1822)",
+      "author": "Chong, J.L., Panjang, E., Willcox, D., Nash, H.C., Semiadi, G., Sodsai, W., Lim, N., Fletcher, L., Kurnaiwan, A. and Cheema, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chong, J.L., Sulaiman, M.H. and Marina, H. 2016. Conservation of the Sunda pangolin (<i>Manis javanica</i>) in Peninsular Malaysia: Important Findings and Conclusion. <i>Malayan Nature Journal</i> 68(4): 161-171.",
+      "year": "2016",
+      "title": "Conservation of the Sunda pangolin (<i>Manis javanica</i>) in Peninsular Malaysia: Important Findings and Conclusion",
+      "author": "Chong, J.L., Sulaiman, M.H. and Marina, H",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coudrat, C. 2017. Report on camera trap survey in Nakai-Nam Theun National Protected Area. Project Analouk, Lao PDR. Unpublished report.",
+      "year": "2017",
+      "title": "Report on camera trap survey in Nakai-Nam Theun National Protected Area. Project Analouk, Lao PDR. Unpublished report.",
+      "author": "Coudrat, C",
+      "citation_short": null
+    },
+    {
+      "citation": "Davison G.W.H., Ng, P.K.L. and Ho, H.C. (eds). 2008. <i>The Singapore Red Data Book: Threatened Plants and Animals of Singapore</i>.In: Davison G.W.H., Ng, P.K.L., Ho, H.C. (ed.), Singapore: The Nature Society, Singapore.",
+      "year": "2008",
+      "title": "The Singapore Red Data Book: Threatened Plants and Animals of Singapore",
+      "author": "Davison G.W.H., Ng, P.K.L. and Ho, H.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fletcher, L. 2016. Developing a strategy for pangolin conservation in Brunei: Refining guidelines for the release of confiscated animals and gathering baseline data. Unpublished report for 1st Stop Brunei, Brunei Darussalam.",
+      "year": "2016",
+      "title": "Developing a strategy for pangolin conservation in Brunei: Refining guidelines for the release of confiscated animals and gathering baseline data. Unpublished report for 1st Stop Brunei, Brunei Darussalam",
+      "author": "Fletcher, L",
+      "citation_short": null
+    },
+    {
+      "citation": "Gomez, L., Leupen, B.T.C. and Heinrich, S. 2016. Observations of the Illegal Pangolin Trade in Lao PDr. TRAFFIC, Petaling Jaya, Selangor, Malaysia.",
+      "year": "2016",
+      "title": "Observations of the Illegal Pangolin Trade in Lao PDr",
+      "author": "Gomez, L., Leupen, B.T.C. and Heinrich, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, T.N.E., Billingsley, A., Crudge, B., Frechett e, J.L., Grosu, R., Herranz-Muñoz, V., Holden, J., Keo O., Kong K., Macdonald, D., Neang T., Ou R., Phan C. and Sim S. 2017a. Status and conservation significance of ground-dwelling mammals in the Cardamom Rainforest Landscape, southwestern Cambodia. <i>Cambodian Journal of Natural History</i> 17: 38-48.",
+      "year": "2017a",
+      "title": "Status and conservation significance of ground-dwelling mammals in the Cardamom Rainforest Landscape, southwestern Cambodia.",
+      "author": "Gray, T.N.E., Billingsley, A., Crudge, B., Frechett e, J.L., Grosu, R., Herranz-Muñoz, V., Holden, J., Keo O., Kong K., Macdonald, D., Neang T., Ou R., Phan C. and Sim S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gray, T.N.E., Marx, N., Khem, V., Lague, D., Nijman, V. and Gauntlett, S. 2017b. Holistic managment of live animals confiscated from illegal wildlife trade. <i>Journal of Applied Ecology</i> 54(3): 726-730.",
+      "year": "2017b",
+      "title": "Holistic managment of live animals confiscated from illegal wildlife trade",
+      "author": "Gray, T.N.E., Marx, N., Khem, V., Lague, D., Nijman, V. and Gauntlett, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hafiz, S.M and Chong, J.L. 2016. <i>Tenggiling Sunda Khazanah Alam Malaysia</i>. Penerbit UMT, Kuala Terengganu.",
+      "year": "2016",
+      "title": "Tenggiling Sunda Khazanah Alam Malaysia",
+      "author": "Hafiz, S.M and Chong, J.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heinrich, S., Wittmann, T.A., Prowse, T.A.A., Ross, J.V., Delean, S., Shepherd, C.R. and Cassey, P. 2016. Where did all the pangolins go? International CITES trade in pangolin species. <i>Global Ecology and Conservation</i> 8: 241–253.",
+      "year": "2016",
+      "title": "Where did all the pangolins go? International CITES trade in pangolin species",
+      "author": "Heinrich, S., Wittmann, T.A., Prowse, T.A.A., Ross, J.V., Delean, S., Shepherd, C.R. and Cassey, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hua, L., Gong, S., Wang, F., Li, W., Ge, Y., Li, X. and Hou, F. 2015. Captive breeding of pangolins: Current status, problems and future prospects. <i>ZooKeys</i> 507: 99-114.",
+      "year": "2015",
+      "title": "Captive breeding of pangolins: Current status, problems and future prospects",
+      "author": "Hua, L., Gong, S., Wang, F., Li, W., Ge, Y., Li, X. and Hou, F",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jambari, A., Elaguipillay, S.E., Halim, H.R.A., Saharudin, M.H., Mohamed, K.A., Mohd, A., … and Azmi, I.S.M. 2012. A camera trap assessment of terrestrial vertebrates in Taman Negara Kelantan and Terengganu, Malaysia. <i>Journal of Wildlife and Parks</i> 30: 1-10.",
+      "year": "2012",
+      "title": "A camera trap assessment of terrestrial vertebrates in Taman Negara Kelantan and Terengganu, Malaysia",
+      "author": "Jambari, A., Elaguipillay, S.E., Halim, H.R.A., Saharudin, M.H., Mohamed, K.A., Mohd, A., … and Azmi, I.S.M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jenks, K.E., Songasen, N. and Leimgruber P. 2012. Camera traps records of dholes in Khao Khang Rue  Nai Wildlife  Sanctuary, Thailand. <i>Canid News</i> 5.",
+      "year": "2012",
+      "title": "Camera traps records of dholes in Khao Khang Rue  Nai Wildlife  Sanctuary, Thailand",
+      "author": "Jenks, K.E., Songasen, N. and Leimgruber P",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kaicheen, S.S. and Mohd-Azlan, J. 2018. Camera trapping wildlife on Mount Penrissen area in Western Sarawak. <i>Malaysian Applied Biology</i> 47(1): 7-14.",
+      "year": "2018",
+      "title": "Camera trapping wildlife on Mount Penrissen area in Western Sarawak",
+      "author": "Kaicheen, S.S. and Mohd-Azlan, J",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kitamura, S., Thon-Aree, S., Madsri, S. and Poonswad, P. 2010. Mammal Diversity and Conservation in a small isolated forets of southern Thailand. <i>The Raffles Bulletin of Zoology</i> 58(1): 145-156.",
+      "year": "2010",
+      "title": "Mammal Diversity and Conservation in a small isolated forets of southern Thailand",
+      "author": "Kitamura, S., Thon-Aree, S., Madsri, S. and Poonswad, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kitamura, S., Thon-Aree, S., Madsri, S. and Poonswad, P. 2010. Mammal Diversity and Conservation in a small isolated forets of southern Thailand. <i>The Raffles Bulletin of Zoology </i> 58(1): 145-156.",
+      "year": "2010",
+      "title": "Mammal Diversity and Conservation in a small isolated forets of southern Thailand",
+      "author": "Kitamura, S., Thon-Aree, S., Madsri, S. and Poonswad, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lim, N.T.L. 2007. Autecology of the Sunda Pangolin (Manis javanica) in Singapore. MSc Thesis. National University of Singapore.",
+      "year": "2007",
+      "title": "Autecology of the Sunda Pangolin (Manis javanica) in Singapore. MSc Thesis. National University of Singapore",
+      "author": "Lim, N.T.L",
+      "citation_short": null
+    },
+    {
+      "citation": "McCann, G. and Pawlowski, K. 2016. Small carnivores’ records from Virachey National Park, north-east Cambodia. <i>Small Carnivore Conservation</i> 55: 26-41.",
+      "year": "2016",
+      "title": "Small carnivores’ records from Virachey National Park, north-east Cambodia",
+      "author": "McCann, G. and Pawlowski, K",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moo, S.S.B., Froese, G.Z.L. and Gray, T.N.E. 2017. First structured camera-trap surveys in Karen State, Myanmar, reveal high diversity of globally threatened mammals. <i>Oryx</i> 52(3): 537-543.",
+      "year": "2017",
+      "title": "First structured camera-trap surveys in Karen State, Myanmar, reveal high diversity of globally threatened mammals",
+      "author": "Moo, S.S.B., Froese, G.Z.L. and Gray, T.N.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nash, H.C., Lee, P.B., Lim, N.T.L., Luz, S., Li, C., Chung, Y.F., Olsson, A., Boopal, A., Strange, B.C.N. and Rao, M. 2019. The Sunda pangolin in Singapore: a multi-stakeholder approach to research and conservation. In: Challender, D.W.S., Nash, H.C., Waterman, C. (ed.), <i>Pangolins: Science, Society and Conservation</i>, Academic Press.",
+      "year": "2019",
+      "title": "The Sunda pangolin in Singapore: a multi-stakeholder approach to research and conservation",
+      "author": "Nash, H.C., Lee, P.B., Lim, N.T.L., Luz, S., Li, C., Chung, Y.F., Olsson, A., Boopal, A., Strange, B.C.N. and Rao, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "New Strait Times. 2016. Ensaring pangolin poachers. Available at: <a href=\"https://www.nst.com.my/news/2016/02/129017/ensnaring-pangolin-poachers\">https://www.nst.com.my/news/2016/02/129017/ensnaring-pangolin-poachers</a>. (Accessed: 5 August 2019).",
+      "year": "2016",
+      "title": "Ensaring pangolin poachers",
+      "author": "New Strait Times",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nguyen, V.T., Clark, L. and Tran, T.Q. 2014. Sunda Pangolin Husbandry Guidelines. Save Vietnam's Wildlife, Cuc Phuong National Park, Vietnam.",
+      "year": "2014",
+      "title": "Sunda Pangolin Husbandry Guidelines",
+      "author": "Nguyen, V.T., Clark, L. and Tran, T.Q",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nijman, V., Zhang, M.X. and Shepherd, C.R. 2016. Pangolin trade in the Mong La wildlife market and the role of Myanmar in the smuggling of pangolins into China. <i>Global Ecology and Conservation</i> 5: 118-126.",
+      "year": "2016",
+      "title": "Pangolin trade in the Mong La wildlife market and the role of Myanmar in the smuggling of pangolins into China",
+      "author": "Nijman, V., Zhang, M.X. and Shepherd, C.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Phillips, Q. and Phillips, K. 2018. <i>Phillips' Field Guide to the Mammals of Borneo and their Ecology, Sabah, Sarawak, Brunei and Kalimantan</i>. John Beaufoy Ltd.",
+      "year": "2018",
+      "title": "Phillips' Field Guide to the Mammals of Borneo and their Ecology, Sabah, Sarawak, Brunei and Kalimantan",
+      "author": "Phillips, Q. and Phillips, K",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shairp, R., Veríssimo, D., Fraser, I., Challender, D.W.S. and MacMillan, D.C. 2016. Understanding Urban Demand for Wild Meat in Vietnam: Implications for Conservation Actions. <i>PLoS ONE</i> 11: e0134787.",
+      "year": "2016",
+      "title": "Understanding Urban Demand for Wild Meat in Vietnam: Implications for Conservation Actions",
+      "author": "Shairp, R., Veríssimo, D., Fraser, I., Challender, D.W.S. and MacMillan, D.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Suzuki, A., Thong, S., Tan, S. and Iwata, A. 2017. Camera trapping of large mammals in Chhep Wildlife Sanctuary, northern Cambodia. <i>Cambodian Journal of Natural History</i> 1: 63-75.",
+      "year": "2017",
+      "title": "Camera trapping of large mammals in Chhep Wildlife Sanctuary, northern Cambodia",
+      "author": "Suzuki, A., Thong, S., Tan, S. and Iwata, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Takandjandji, M. and Sawitri, R. 2016. Analisis Penangkapan dan Perdagangan Trenngiling Jawa (Manis javanica Demarest, 1822) Di Indonesia. <i>Jurnal Analisis Kebijakan</i> 13(2): 85-101.",
+      "year": "2016",
+      "title": "Analisis Penangkapan dan Perdagangan Trenngiling Jawa (Manis javanica Demarest, 1822) Di Indonesia",
+      "author": "Takandjandji, M. and Sawitri, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Xu, L., Guan, J., Lau, W. and Xiao, Y. 2016. An overview of pangolin trade in China.  TRAFFIC BRIEFING PAPER.",
+      "year": "2016",
+      "title": "An overview of pangolin trade in China",
+      "author": "Xu, L., Guan, J., Lau, W. and Xiao, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yu, R. and Hong, H. 2018. <i>Cancer Management with Chinese Medicine. Prevention and Complementary Treatments</i>. World Scientific Publishing Co. Pte. Ltd, Singapore.",
+      "year": "2018",
+      "title": "Cancer Management with Chinese Medicine. Prevention and Complementary Treatments",
+      "author": "Yu, R. and Hong, H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zhang, F., Wu, S.B., Yang, L., Zhang, L. and Sun, Y., I, S. 2016. Reproductive parameters of the Sunda pangolin <i>Manis javanica</i>. <i>Folia Zoologica</i> 64(2): 129-135.",
+      "year": "2016",
+      "title": "Reproductive parameters of the Sunda pangolin <i>Manis javanica</i>",
+      "author": "Zhang, F., Wu, S.B., Yang, L., Zhang, L. and Sun, Y., I, S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zhang, M. X, Gouveia, A.,  Qin, T., Quan, R. and Nijman, V. 2017. Illegal pangolin trade in northernmost Myanmar and its links to India and China. <i>Global Ecology and Conservation</i> 10: 23-31.",
+      "year": "2017",
+      "title": "Illegal pangolin trade in northernmost Myanmar and its links to India and China",
+      "author": "Zhang, M. X, Gouveia, A.,  Qin, T., Quan, R. and Nijman, V",
+      "citation_short": ""
+    },
+    {
+      "citation": "ZSL. 2017. Sunda Pangolin Monitoring Protocol - Thailand V.1.0. Zoological Society of London, UK.",
+      "year": "2017",
+      "title": "Sunda Pangolin Monitoring Protocol - Thailand V.1.0",
+      "author": "ZSL",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

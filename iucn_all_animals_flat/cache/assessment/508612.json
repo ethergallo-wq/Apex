@@ -1,0 +1,928 @@
+{
+  "assessment_date": "2018-08-23T01:00:00.000+01:00",
+  "year_published": "2020",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12776,
+  "criteria": "B1ab(ii,iii,v)+2ab(ii,iii,v)",
+  "url": "https://www.iucnredlist.org/species/12776/508612",
+  "citation": "IUCN SSC Amphibian Specialist Group 2020. Mantella aurantiaca. The IUCN Red List of Threatened Species 2020: e.T12776A508612. Accessed on 05 May 2026.",
+  "assessment_id": 508612,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12776,
+    "scientific_name": "Mantella aurantiaca",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "MANTELLIDAE",
+    "genus_name": "Mantella",
+    "species_name": "aurantiaca",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Mocquard, 1900",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Ginger Tree Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Golden Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Madagascan Golden Frog",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Malagasy Golden Mantella",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Orange Mantella",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Red Mantella",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Yellow Mantella",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Golden Mantella",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": "2",
+    "upper_elevation_limit": 1065,
+    "lower_elevation_limit": 867,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": null,
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Percentage of population protected by PAs",
+            "value": "0"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "152",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "699-730",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is endemic to Madagascar and is currently only known from the Moramanga District, in the central-east of the island.&#160;<br/><br/>The 2008 IUCN Red List assessment described the range as being \"centered on the Torotofotsy area (<em>c</em>. 7 km northeast of Andasibe) and the Andromena Forest at the Samarirana River [...] with several other small forest fragments north and south of Moramanga\" (Vences and Raxworthy 2008).&#160;<br/><br/>Bora<em> et al</em>. (2008) confirmed the presence of the species at 16 localities. Randrianavelona&#160;<em>et al.&#160;</em>(2010) surveyed those 16 localities and an additional 17, where various sources had reported the occurrence of the species, and confirmed that it was extant at 26 of the 33 known localities. The seven localities where the species was not detected have been converted or degraded between 2003–2008 (Randrianavelona<em> et al.</em> 2010). Between 2010–2013, Piludu <em>et al</em>. (2015) visited 23 of the 26 localities confirmed by Randrianavelona<em> et al.</em> (2010) and an additional 186 breeding ponds, and confirmed the species' presence in 139 ponds. However, the paper states that some ponds occur near each other and could count as a single locality, but it does not offer a revised number of localities. This should be clarified in the future. Two notable outliers at Analabe and the Ambakoana forest located to the north of Moramanga were verified in 2007 by Bora&#160;<em>et al</em>. (2008), but the forest at these sites is reported to have been destroyed, no surveys have been conducted there since 2008, and the species is feared to have disappeared from this part of its range (R.R. Andriantsimanarilafy pers. comm. March 2018).&#160;<br/><br/>The results of these surveys show that extant localities can be grouped into two general areas: 1) Ambatovy-Torotofotsy (or Analamay) northeast of Moramanga, and 2) Andranomena-Mangabe forest southwest of Moramanga. All but one site is east of the Mangoro River. The current distribution map reflects this expansion and the grouping of confirmed, extant records into these two areas, which are separated by <em>ca</em>. 35 km (R.R.&#160;Andriantsimanarilafy pers. comm. 2018).&#160;The validity of record at the Sahasarotra forest locality of Bora <em>et al</em>. (2008) to the southeast of Moramanga is uncertain&#160;(R.R.&#160;Andriantsimanarilafy pers. comm. 2018).<br/><br/>The elevational range of this species has been updated from 920–960 m&#160;<span style=\"background-color: rgb(255, 255, 255);\">asl</span>&#160;(Vences and Raxworthy 2008) to 867–1,065 m asl (Bora&#160;<em>et al</em>. 2008, Randrianavelona&#160;<em>et al</em>. 2010).&#160;Its extent of occurrence (EOO) was reported as 626 km<sup>2</sup> in Andreone and Randriamahazo (2008) and was increased by Piludu <em style=\"\">et al.</em> (2015) to 699 km<sup>2</sup>. The EOO of the 2008 distribution, as calculated by the IUCN SSC Amphibian Specialist Group, was 539 km<sup>2</sup> and the EOO of the 2018 distribution is 730 km<sup>2</sup>. This increase is due to the additional ponds identified by Piludu <em>et al.</em> (2015). The area of occupancy (AOO) of confirmed records in Piludu <em>et al.</em> (2015) is 152 km<sup>2</sup>. The distribution is thought to be divided into two threat-defined locations:&#160;1) Ambatovy-Torotofotsy and 2) Andranomena-Mangabe.",
+    "population": "<p>There are a few estimates available of the abundance or density of this species and these range from 500–3,000 individuals ha<sup>-1</sup> (Behra <em>et al</em>. 1995) to 836–1,371 individuals ha<sup>-1</sup>&#160;(Rabemananjara <em>et al.</em> 2008). There is no published information on temporal (seasonal and annual) or spatial (inter-site) variation in the local population abundance.<br/><br/>The findings of Piludu <em>et al</em>. (2015) do not represent an increase in population size. Instead, the increased number of known breeding sites was associated with an increase in survey effort. However, Piludu <em>et al.</em> (2015) reported that 50% of the 139 confirmed ponds were actively affected by habitat loss, that seven had been lost since 2008 due to agricultural expansion and illegal gold mining, and an additional eight ponds were projected to be lost due to legal nickel and cobalt mining \"in the near future\". In addition, Randrianavelona<em>&#160;et al.</em>&#160;(2010) reported the loss of seven sites between 2003–2008 due to habitat destruction and conversion to agriculture. The species was also confirmed as occurring at the two northernmost known sites at Analabe and the Ambakoana forest in 2007, but these have since been lost.<br/><br/>Based on the ongoing decline in quality and extent of suitable habitat, and the ongoing harvesting of individuals from the wild for the pet trade, the population is inferred to be decreasing at an unknown rate. It is also thought that the population is severely fragmented.</p>",
+    "habitats": "<p>This species inhabits mid-elevation humid forests and its often associated with&#160;<em>P</em><em>andanus&#160;</em>swamp (Vences&#160;<em>et al</em>. 1999, Andreone&#160;<em>et al.</em>&#160;2005). Adult frogs are found under leaf litter, dead logs, and in tree-root cavities in the forest surrounding breeding pools during the austral winter. The&#160;species requires small lentic wetlands for reproduction and adults aggregate around them during the breeding season (Randrianavelona <em>et al.</em>&#160;2010 -&#160;Stratégie de Conservation).&#160;The eggs are laid on the ground, and the larvae are flushed by rain into swamps, temporary ponds, and flooded forest, where they develop further.&#160;It appears to tolerate a degree of moderate forest disturbance and occupies a range of sites that vary both in vegetation structure and fragment size (Andreone <em>et al</em>. 2005). Adults have been observed in recently burned forest, but the viability of these post-fire breeding sites is uncertain (Andreone <em>et al</em>. 2005).</p>",
+    "threats": "The species is currently restricted to fragments of forest surrounded by degraded land. The remaining forest is under threat from subsistence agriculture, timber extraction, legal and illegal natural resource extraction, fires, and expanding human settlements.<br/><br/>Expanding small-scale agriculture and both artisanal and industrial mining are the primary threats to this species because they can result in rapid and complete destruction of breeding ponds over a wide area (Piludu&#160;<em>et al.</em>&#160;2015). Surveys reported in the 2008 assessment, indicated that the habitat was being degraded in all areas where the species was known to occur, and that in 2001 a significant amount of the remaining suitable habitat at Torotorofotsy was affected by fire (although three years later the species was still common in the affected areas). Piludu <em>et al.</em> (2015) estimated that 50% of the 139 ponds with confirmed sightings were actively threatened with habitat destruction, even though 51% of the ponds are located inside provisional protected areas.&#160;<br/><br/>A current concern is the spread of the invasive Asian Common toad (<em>Duttaphrynus melanostictus</em>), which was first recorded in Madagascar in Toamasina in March 2014 (Kolby 2014). A species distribution model by Pearson (2015) suggests that there is a high probability of this invasive toad occurring in the range of this species, increasing the risk of disease transmission and food-web disruption (Piludu&#160;<em>et al</em>. 2015).<br/><br/>It is possible that over-collecting for commercial and private purposes is a threat, but so far harvesting levels have not had a visible effect on its population.&#160;<span id=\"docs-internal-guid-0828d414-22c7-83e8-23b7-7e450829798c\">Species in this genus have also tested positive for <em>Batrachochytrium dendrobatidis</em> (<em>Bd</em>), however currently there have been no negative effects observed within amphibian populations in Madagascar suggesting the <em>Bd</em> strain has a low virulence level (Bletz<em> et al</em>. 2015).",
+    "measures": "<strong><em>Conservation Actions In-Place<br/></em></strong>Piludu <em>et al.</em> (2015) reported 51% of known sites as occurring within protected areas.&#160;Conservation activities to protect habitat are underway at the Torotorofotsy Ramsar site. Similarly, the forest at Mangabe, southwest of Moramanga, was established as a protected area in 2015 as a sustainable use protected area. However, both these sites currently lack strong enforcement and reductions in habitat quality and extent are ongoing. The sites that occur within the perimeters of the Ambatovy mine, northeast of Moramanga, currently receive effective protection, but the long-term future of these sites is uncertain and some are expected to be lost.&#160;<br/><br/>A species conservation strategy was launched in February 2011 by the government of Madagascar that set out the key steps over the next five years to maintain this species in the wild (Randrianavelona&#160;<em>et al</em>. 2010 -&#160;Stratégie de Conservation). This species has also been assessed through Amphibian Ark as being in need of <em>ex-situ</em> conservation efforts (D. Edmonds pers. comm. November 2015) and many zoos and aquaria have responded to this need. There is also a genetically viable assurance colony being maintained in captivity near Andasibe, within the species' native range, by Association Mitsinjo (D. Edmonds pers. comm. November 2015, Edmonds&#160;<em>et al.</em>&#160;2015).<br/><br/><strong><em>Conservation Actions Needed</em></strong><span><br/><span id=\"docs-internal-guid-0828d414-22cc-ef03-0abc-c9c30306bda3\">In general, improved management and protection of the breeding ponds--both inside and outside protected areas--is required. In particular, the identification of sites at which collection is taking place is required, followed by careful management of these sites and long-term monitoring of the population in order to assess the impact of this activity on the species (R.R.&#160;Andriantsimanarilafy pers. comm. August 2018).&#160;<strong><em><br/></em></strong><br/><strong><em>Research Needed</em></strong><br/>There is a need to learn more about the natural history and population parameters of this species in order to support evidence-based conservation interventions (Piludu <em>et al</em>. 2015). Surveys in some areas may also be warranted to confirm the anecdotal reports of the species' presence.&#160;<span id=\"docs-internal-guid-0828d414-22cc-ef03-0abc-c9c30306bda3\">Research is essential to fully understand the distribution, origin, type and virulence of <em>Bd </em>lineages found in Madagascar (Bletz <em>et al</em>. 2015).</span>",
+    "use_trade": "<p>This species<em> </em>has been collected from the wild for use in national and international trade, as well as scientific research. It is popular in the exotic pet trade (Rabemananjara <em>et al</em>. 2008) and uses of this species include commercial display in zoos and aquaria, as well as, in private collections. It&#160;is held in a number of private and public institutions, mainly in North America and Europe. A total captive population of 694 frogs was reported from 51 different institutions for 2009&#160;(<a href=\"http://www.isis.org\">www.species360.org</a>).<br/><br/>There is little information on the domestic use of this species,<em> </em>but live individuals are known to be housed in the Croc Farm (Antananarivo), Parc Botanique and Zoologique de Tsimbazaza (Antananarivo), and the Madagascar Exotic Park (Mandraka). This species is also used to promote tourism and conservation in Madagascar (www.parcs-madagascar.com). It is also the emblem of the Torotorofotsy RAMSAR site near Andasibe.<br/><br/>Since 1995, the trade in wild individuals of this species&#160;has been monitored by CITES. The species accounted for 50% of the <em>Mantella </em>frogs imported from Madagascar between 1994 and 2003 (Rabemananjara <em>et al</em>. 2008), with North America (United States and Canada) and western Europe being the largest importers of <em>Mantella </em>frogs (Rabemananjara <em>et al.</em>&#160;2008).&#160;A&#160;quota of 2,500 frogs was agreed by CITES in&#160;2009.&#160;The consequences of increasing the quota from zero to 2,500 individuals in 2009 is unknown.&#160;Currently, CITES-recorded exports of this species seem to be on the order of a few hundred each year (CITES 2018).</p><p><br/></p>",
+    "rationale": "Listed as Endangered because its extent of occurrence (EOO) is between 699-730 km<sup>2</sup>, there is ongoing decline in its area of occupancy (AOO) of 152 km<sup>2</sup>, it occurs in two threat-defined locations, its population is severely fragmented, the extent of its forest habitat in east-central Madagascar is declining, and the number of mature individuals might also be declining through over-exploitation.",
+    "trend_justification": null,
+    "taxonomic_notes": "There are populations of \"golden\" mantellas that might belong to other species. The taxonomy of this group is uncertain but the definition of <em>Mantella aurantiaca</em> is clear and there seems to be little genetic subdivision within the species (M. Vences pers. comm.)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Research"
+      },
+      "code": "14"
+    },
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shifting agriculture"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Trend Unknown/Unrecorded"
+      },
+      "code": "7_1_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Seepage from mining"
+      },
+      "code": "9_2_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Duttaphrynus melanostictus",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Neam, K. & Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)",
+        "Kelsey Neam (Amphibian RLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Raxworthy, C.J., Edmonds, D., Rakotondrasoa, E., Glaw, F., Razafimanahaka, J., Scherz, M.D., Vences, M., Razafindraibe, P., Andriantsimanarilafy, R.R. & Jenkins, R.K.B.",
+      "value": [
+        "Raphali Rodlis Andriantsimanarilafy (IUCN SSC Chameleon Specialist Group / Madagasikara Voakajy)",
+        "Devin Edmonds",
+        "Mark Scherz (Amphibian RLA)",
+        "Christopher Raxworthy (American Museum of Natural History, Centrap Park West at 79th St., New York, NY 10024, USA)",
+        "Julie Razafimanahaka (Madagasikara Voakajy)",
+        "Pierre Razafindraibe",
+        "Richard Jenkins (IUCN, Global Species Programme, Cambridge, UK / IUCN SSC Chameleon Specialist Group)",
+        "Frank Glaw (Zoologische Staatssammlung München, Germany)",
+        "Miguel Vences (Zoological Institute, Technical University of Braunschweig, Germany)",
+        "Eddie Rakotondrasoa"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Luedtke, J. & Hobin, L.",
+      "value": [
+        "Louise Hobin (SSC Amphibian RLA)",
+        "Jennifer Luedtke (Re:wild)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Glaw, F. and Vences, M. 2007. <i>A Fieldguide to the Amphibians and Reptiles of Madagascar. Third Edition</i>. Vences & Glaw Verlag, Cologne.",
+      "year": "2007",
+      "title": "A Fieldguide to the Amphibians and Reptiles of Madagascar. Third Edition",
+      "author": "Glaw, F. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bletz, M.C., Rosa, G.M., Andreone, F., Courtois, E.A., Schmeller, D.S., Rabibisoa, N.H.C, Rabemananjara, F.C.E., Raharivololoniaina, L., Vences, M., Weldon, C., Edmonds, D., Raxworthy, C.J., Harris, R.N., Fisher, M.C. and Crottini, A. 2015. Widespread presence of the pathogenic fungus <i>Batrachochytrium dendrobatidis</i> in wild amphibian communities in Madagascar. <i>Scientific Reports</i> 5(8633): 1-10.",
+      "year": "2015",
+      "title": "Widespread presence of the pathogenic fungus <i>Batrachochytrium dendrobatidis</i> in wild amphibian communities in Madagascar",
+      "author": "Bletz, M.C., Rosa, G.M., Andreone, F., Courtois, E.A., Schmeller, D.S., Rabibisoa, N.H.C, Rabemananjara, F.C.E., Raharivololoniaina, L., Vences, M., Weldon, C., Edmonds, D., Raxworthy, C.J., Harris, R.N., Fisher, M.C. and Crottini, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F., Cox, N., Glaw, F., Rabibisoa, N.A.C., Randriamahazo, H., Randrianasolo, H., Raxworthy, C.J., Stuart, S., Vallan, D. and Vences, M. 2008. Update of the Global Amphibian Assessment for Malagasy amphibians in light of new species discoveries, taxonomic changes, and new field information. In: F. Andreone (ed.), <i>A Conservation Strategy for the Amphibians of Madagascar</i>, Monografie del Museo Regionale di Scienze Naturali di Torino, 419-436.",
+      "year": "2008",
+      "title": "Update of the Global Amphibian Assessment for Malagasy amphibians in light of new species discoveries, taxonomic changes, and new field information",
+      "author": "Andreone, F., Cox, N., Glaw, F., Rabibisoa, N.A.C., Randriamahazo, H., Randrianasolo, H., Raxworthy, C.J., Stuart, S., Vallan, D. and Vences, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vieites, D. R. Wollenburg, K.C. Andreone, F. Kohler, J. Glaw, F. and Vences, M. 2009. Vast underestimation of Madagascar’s biodiversity evidenced by an integrative amphibian inventory. <i>Proceeding of the National Academy of Sciences</i> 106: 8267-8272.",
+      "year": "2009",
+      "title": "Vast underestimation of Madagascar’s biodiversity evidenced by an integrative amphibian inventory",
+      "author": "Vieites, D. R. Wollenburg, K.C. Andreone, F. Kohler, J. Glaw, F. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Glaw, F. and Vences, M. 1994. <i>A Fieldguide to the Amphibians and Reptiles of Madagascar. Second Edition</i>. Zoologisches Forschungsinstitut und Museum Alexander Koenig, Bonn.",
+      "year": "1994",
+      "title": "A Fieldguide to the Amphibians and Reptiles of Madagascar. Second Edition",
+      "author": "Glaw, F. and Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blommers-Schlösser, R.M.A. and Blanc, C.P. 1991. Amphibiens (première partie). <i>Fauna de Madagascar</i> 75: 1-379.",
+      "year": "1991",
+      "title": "Amphibiens (première partie)",
+      "author": "Blommers-Schlösser, R.M.A. and Blanc, C.P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Guibé, J. 1978. Les batraciens de Madagascar. <i>Bonner Zoologische Monographien</i> 11: 1-140.",
+      "year": "1978",
+      "title": "Les batraciens de Madagascar",
+      "author": "Guibé, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vences, M. 1996. <i>Untersuchungen zur Phylogenie der madigassischen Anurangattung </i>Mantella<i> unter Integration biochemischer und morphologischer Merkmale</i>. Ph.D. Thesis, Vences, Köln, Germany.",
+      "year": "1996",
+      "title": "Untersuchungen zur Phylogenie der madigassischen Anurangattung <i>Mantella</i> unter Integration biochemischer und morphologischer Merkmale",
+      "author": "Vences, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blommers-Schlösser, R.M.A. 1979. Biosystematics of the Malagasy frogs. I. Mantellinae (Ranidae). <i>Beaufortia</i> 29(352): 1-77.",
+      "year": "1979",
+      "title": "Biosystematics of the Malagasy frogs. I. Mantellinae (Ranidae)",
+      "author": "Blommers-Schlösser, R.M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vences, M., Chiari, Y., Raharivololoniaina, L. and Meyer, A. 2003. High mitochondrial diversity within and among populations of Malagasy poison frogs. <i>Molecular Phylogenetics and Evolution</i> 30: 295-307.",
+      "year": "2003",
+      "title": "High mitochondrial diversity within and among populations of Malagasy poison frogs",
+      "author": "Vences, M., Chiari, Y., Raharivololoniaina, L. and Meyer, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jovanovic, O., Rabemananjara, F., Ramilijaona, O., Andreone, F., Glaw, F. and Vences, M. 2006. <i>Frogs of Madagascar, Genus Mantella. Pocket Identification Guide</i>. Conservation International. Tropical Pocket Guide Series, Washington DC.",
+      "year": "2006",
+      "title": "Frogs of Madagascar, Genus Mantella. Pocket Identification Guide",
+      "author": "Jovanovic, O., Rabemananjara, F., Ramilijaona, O., Andreone, F., Glaw, F. and Vences, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Glaw, F., Vences, M. and Schmidt, K. 2000. Nachzucht, Juvenilfärbung und Oophagie von <i>Mantella laevigata</i> im Vergleich zu anderen Arten der Gattung (Amphibia: Ranidae). <i>Salamandra</i> 36: 1-24.",
+      "year": "2000",
+      "title": "Nachzucht, Juvenilfärbung und Oophagie von <i>Mantella laevigata</i> im Vergleich zu anderen Arten der Gattung (Amphibia: Ranidae)",
+      "author": "Glaw, F., Vences, M. and Schmidt, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Raxworthy, C.J. and Nussbaum, R.A. 2000. Extinction and extinction vulnerability of amphibians and reptiles in Madagascar. <i>Amphibian and Reptile Conservation</i> 2: 15-23.",
+      "year": "2000",
+      "title": "Extinction and extinction vulnerability of amphibians and reptiles in Madagascar",
+      "author": "Raxworthy, C.J. and Nussbaum, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zimmermann, H. and Hetz, S. 1992. Vorlaufige Bestandsaufnahme und Kartierung des gefahrdeten Goldfroschchen, <i>Mantella aurantiaca</i>, im tropischen Regenwald Ost-Madagaskars. <i>Herpetofauna</i>: 33-34.",
+      "year": "1992",
+      "title": "Vorlaufige Bestandsaufnahme und Kartierung des gefahrdeten Goldfroschchen, <i>Mantella aurantiaca</i>, im tropischen Regenwald Ost-Madagaskars",
+      "author": "Zimmermann, H. and Hetz, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zimmermann, H. 1992. Nachzucht und Schutz von <i>Mantella crocea</i>, <i>Mantella viridis</i> und vom madagassischen Goldfroschchen <i>Mantella aurantiaca</i>. <i>Zeitschrift des Kolner Zoo</i> 35: 165-171.",
+      "year": "1992",
+      "title": "Nachzucht und Schutz von <i>Mantella crocea</i>, <i>Mantella viridis</i> und vom madagassischen Goldfroschchen <i>Mantella aurantiaca</i>",
+      "author": "Zimmermann, H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Raxworthy, C.J. and Nussbaum, R.A. 1996. Montane amphibian and reptile communities in Madagascar. <i>Conservation Biology</i> 10: 750-756.",
+      "year": "1996",
+      "title": "Montane amphibian and reptile communities in Madagascar",
+      "author": "Raxworthy, C.J. and Nussbaum, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mattioli F., Gili C. and Andreone F. 2006. Economics of captive breeding applied to the conservation of selected amphibian and reptile species from Madagascar. In: F. Andreone (ed.), <i>Dalla tutela ambientale e faunistica allo sviluppo sostenibile: esperienze di ricerca e gestione participative in Africa e in Madagascar. Atti della giornata di studio Milano 29 giugno 2005</i>, pp. 67-80. Natura - Società italiana di scienze naturali e del Museo civico di storia naturale di Milano.",
+      "year": "2006",
+      "title": "Economics of captive breeding applied to the conservation of selected amphibian and reptile species from Madagascar",
+      "author": "Mattioli F., Gili C. and Andreone F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F. and Luiselli, L.M. 2003. Conservation priorities and potential threats influencing the hyper-diverse amphibians amphibians of Madagascar. <i>Italian Journal of Zoology</i> 70: 53-63.",
+      "year": "2003",
+      "title": "Conservation priorities and potential threats influencing the hyper-diverse amphibians amphibians of Madagascar",
+      "author": "Andreone, F. and Luiselli, L.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F., Cadle, J.E., Cox, N., Glaw, F., Nussbaum, R.A., Raxworthy, C.J., Stuart, S.N., Vallan, D. and Vences, M. 2005. A species review of amphibian extinction risks in Madagascar: results from the Global Amphibian Assessment. <i>Conservation Biology</i> 19: 1790-1802.",
+      "year": "2005",
+      "title": "A species review of amphibian extinction risks in Madagascar: results from the Global Amphibian Assessment",
+      "author": "Andreone, F., Cadle, J.E., Cox, N., Glaw, F., Nussbaum, R.A., Raxworthy, C.J., Stuart, S.N., Vallan, D. and Vences, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chiari, Y., Vences, M., Vieites, D.R., Rabemananjara, F., Bora, P., Ramilijaona Ravoahangimalala, O. and Meyer, A. 2004. New evidence for parallel evolution of colour patterns in Malagasy poison frogs (<i>Mantella</i>). <i>Molecular Ecology</i> 13: 3763-3774.",
+      "year": "2004",
+      "title": "New evidence for parallel evolution of colour patterns in Malagasy poison frogs (<i>Mantella</i>).",
+      "author": "Chiari, Y., Vences, M., Vieites, D.R., Rabemananjara, F., Bora, P., Ramilijaona Ravoahangimalala, O. and Meyer, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vences, M., Glaw, F. and Böhme, W. 1999. A review of the genus <i>Mantella</i> (Anura, Ranidae, Mantellinae): taxonomy, distribution and conservation of the Malagasy poison frogs. <i>Alytes</i> 17: 3-72.",
+      "year": "1999",
+      "title": "A review of the genus <i>Mantella</i> (Anura, Ranidae, Mantellinae): taxonomy, distribution and conservation of the Malagasy poison frogs",
+      "author": "Vences, M., Glaw, F. and Böhme, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vences, M., Glaw, F., Mausfeld, P. and Böhme, W. 1998. Comparative osteology of Malagasy poison frogs of the genus <i>Mantella</i> (Amphibia: Reptilia: Mantellidae). <i>Bonner Zoologische Beiträege</i> 48: 205-215.",
+      "year": "1998",
+      "title": "Comparative osteology of Malagasy poison frogs of the genus <i>Mantella</i> (Amphibia: Reptilia: Mantellidae)",
+      "author": "Vences, M., Glaw, F., Mausfeld, P. and Böhme, W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F., Mercurio, V. and Mattioli, F. 2006. Between environmental degradation and international pet trade: conservation strategies for the threatened amphibians of Madagascar. <i>Natura – Soc. it. Sci. nat. Museo civ. Stor. Nat. Milano, (Milano, Italy)</i> 95(2): 81-96.",
+      "year": "2006",
+      "title": "Between environmental degradation and international pet trade: conservation strategies for the threatened amphibians of Madagascar.",
+      "author": "Andreone, F., Mercurio, V. and Mattioli, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Daly, J.W., Andriamaharavo, N.R., Andriantsiferana, M. amd Myers, C W. 1996. Madagascan poison frogs (<i>Mantella</i>) and their skin alkaloids. <i>American Museum Novitates</i> 3177: 1-34.",
+      "year": "1996",
+      "title": "Madagascan poison frogs (<i>Mantella</i>) and their skin alkaloids",
+      "author": "Daly, J.W., Andriamaharavo, N.R., Andriantsiferana, M. amd Myers, C W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Staniszewski, M. 2001. <i>Mantellas</i>. Edition Chimaira, Frankfurt am Main.",
+      "year": "2001",
+      "title": "Mantellas",
+      "author": "Staniszewski, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vieites, D.R., Chiari, Y., Vences, M., Andreone, F., Rabemananjara, F., Bora, P., Nieto-Roman, S. and Meyer, A. 2006. Mitochondrial evidence for distinct phylogeographic units in the endangered Malagasy poison frog <i>Mantella bernhardi</i>. <i>Molecular Ecology</i> 15: 1617-1625.",
+      "year": "2006",
+      "title": "Mitochondrial evidence for distinct phylogeographic units in the endangered Malagasy poison frog <i>Mantella bernhardi</i>",
+      "author": "Vieites, D.R., Chiari, Y., Vences, M., Andreone, F., Rabemananjara, F., Bora, P., Nieto-Roman, S. and Meyer, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andreone, F. and Randriamahazo, H. (eds). 2008. <i>Sahonagasy Action Plan. Conservation Strategies for the Amphibians of Madagascar / Programmes de conservation pour les amphibiens de Madagascar</i>. Museo Regionale di Scienze Naturali, Conservation International, IUCN SSC Amphibian Specialist Group, Turin, Italy.",
+      "year": "2008",
+      "title": "Sahonagasy Action Plan. Conservation Strategies for the Amphibians of Madagascar / Programmes de conservation pour les amphibiens de Madagascar",
+      "author": "Andreone, F. and Randriamahazo, H. (eds)",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Andreone, F., Carpenter, A.I., Copsey, J., Crottini, A., Garcia, G., Jenkins, R.K.B., Köhler, J., Rabibisoa, N.H.C., Randriamahazo, H. and Raxworthy, C.J. 2012. Saving the diverse Malagasy amphibian fauna: where are we four years after implementation of the Sahonagasy Action Plan? <i>Alytes</i> 29(1-4): 44-58.",
+      "year": "2012",
+      "title": "Saving the diverse Malagasy amphibian fauna: where are we four years after implementation of the Sahonagasy Action Plan?",
+      "author": "Andreone, F., Carpenter, A.I., Copsey, J., Crottini, A., Garcia, G., Jenkins, R.K.B., Köhler, J., Rabibisoa, N.H.C., Randriamahazo, H. and Raxworthy, C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bora, P., Dolch, R., Jenkins, R.K.B., Jovanovic, O., Rabemananjara, F.C.E., Randrianirina, J., Rafanomezantsoa, J., Raharivololoniaina, L., Ramilijaona, O., Raminosoa,  N., Randrianavelona, R., Raselimanana, A., Razafimahatratra, B. and Vences, M. 2008. Geographical distribution of three species of Malagasy poison frogs of high conservation priority: <i>Mantella aurantiaca</i>, <i>M. crocea</i> and <i>M. milotympanum</i>. <i>Herpetology Notes</i> 1: 39-48.",
+      "year": "2008",
+      "title": "Geographical distribution of three species of Malagasy poison frogs of high conservation priority: <i>Mantella aurantiaca</i>, <i>M. crocea</i> and <i>M. milotympanum</i>",
+      "author": "Bora, P., Dolch, R., Jenkins, R.K.B., Jovanovic, O., Rabemananjara, F.C.E., Randrianirina, J., Rafanomezantsoa, J., Raharivololoniaina, L., Ramilijaona, O., Raminosoa,  N., Randrianavelona, R., Raselimanana, A., Razafimahatratra, B. and Vences, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2018. Trade statistics derived from the CITES Trade Database. UNEP World Conservation Monitoring Centre, Cambridge, UK. (Accessed: 23 August).",
+      "year": "2018",
+      "title": "Trade statistics derived from the CITES Trade Database. UNEP World Conservation Monitoring Centre, Cambridge, UK",
+      "author": "CITES",
+      "citation_short": ""
+    },
+    {
+      "citation": "Edmonds, D., Rakotoarisoa, J.C., Rasoanantenaina, S., Sam, S.S., Soamiarimampionona, J., Tsimialomanana, E., Youssouf, Dolch, R., Rabemananjara, F., Rabibisoa, N. and Robsomanitrandrasana, E. 2015. Captive husbandry, reproduction, and fecundity of the golden mantella (<i>Mantella aurantiaca</i>) at the Mitsinjo breeding facility in Madagascar. <i>Salamandra</i> 51(4): 315-325.",
+      "year": "2015",
+      "title": "Captive husbandry, reproduction, and fecundity of the golden mantella (<i>Mantella aurantiaca</i>) at the Mitsinjo breeding facility in Madagascar.",
+      "author": "Edmonds, D., Rakotoarisoa, J.C., Rasoanantenaina, S., Sam, S.S., Soamiarimampionona, J., Tsimialomanana, E., Youssouf, Dolch, R., Rabemananjara, F., Rabibisoa, N. and Robsomanitrandrasana, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jovanovici, O., Vences, M., Safarek, G., Rabemananjara, F.C.E. and Dolch, R. 2009. Predation upon <i>Mantella aurantiaca</i> in the Torotorofotsy wetlands, central-eastern Madagascar. . <i>Herpetology Notes</i> 2: 95-97.",
+      "year": "2009",
+      "title": "Predation upon <i>Mantella aurantiaca</i> in the Torotorofotsy wetlands, central-eastern Madagascar. ",
+      "author": "Jovanovici, O., Vences, M., Safarek, G., Rabemananjara, F.C.E. and Dolch, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kolby, J.E. 2010. Ecology: Stop Madagascar’s toad invasion now. <i>Nature</i> 509: 563.",
+      "year": "2010",
+      "title": "Ecology: Stop Madagascar’s toad invasion now",
+      "author": "Kolby, J.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pearson, R.G. 2015.  Asian common toads in Madagascar: an urgent effort to inform surveys and eradication efforts. . <i>Global Change Biology</i> 21: 9.",
+      "year": "2015",
+      "title": " Asian common toads in Madagascar: an urgent effort to inform surveys and eradication efforts. ",
+      "author": "Pearson, R.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Piludu, N., Dubos, N., Razafimanahaka, J.H., Razafindraibe, P., Randrianantoandro, J.C. and Jenkins, R.K.B. 2015. Distribution, threats and conservation of a Critically Endangered amphibian (<i>Mantella aurantiaca</i>) in eastern Madagascar. <i>Herpetology Notes</i> 8: 119-123.",
+      "year": "2015",
+      "title": "Distribution, threats and conservation of a Critically Endangered amphibian (<i>Mantella aurantiaca</i>) in eastern Madagascar.",
+      "author": "Piludu, N., Dubos, N., Razafimanahaka, J.H., Razafindraibe, P., Randrianantoandro, J.C. and Jenkins, R.K.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rabemananjara, F.C.E., Bora, P., Razafindrabe, T., Randriamitso, E., Ramilijaona, O.R., Raminosoa, N.R., Rakotondravony, D., Vieites, D.R. and Vences, M. 2008. Rapid assessments of population sizes in ten species of Malagasy poison frogs, Genus Mantella. In: F. Andreone (ed.), <i>A Conservation Strategy for the Amphibians of Madagascar - Monografie XLV. Museo Regionale di Scienze Naturali</i>, pp. 253-264. Torino.",
+      "year": "2008",
+      "title": "Rapid assessments of population sizes in ten species of Malagasy poison frogs, Genus Mantella",
+      "author": "Rabemananjara, F.C.E., Bora, P., Razafindrabe, T., Randriamitso, E., Ramilijaona, O.R., Raminosoa, N.R., Rakotondravony, D., Vieites, D.R. and Vences, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Randrianavelona, R., Rakotonoely, H., Ratsimbazafy, J. and Jenkins, R.K.B. 2010. Conservation assessment of the critically endangered frog <i>Mantella aurantiaca</i> in Madagascar. <i>African Journal of Herpetology</i> 59: 65-78.",
+      "year": "2010",
+      "title": "Conservation assessment of the critically endangered frog <i>Mantella aurantiaca</i> in Madagascar.",
+      "author": "Randrianavelona, R., Rakotonoely, H., Ratsimbazafy, J. and Jenkins, R.K.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Randrianavelona R., Randrianantoandro J. C., Rabibisoa N., Randrianasolo H., Rabesihanaka S., Randriamahaleo S. and Jenkins R. K. B. 2010. Stratégie de Conservation de l’Espèce <i>Mantella aurantiaca</i> (grenouille dorée) 2011-2015.",
+      "year": "2010",
+      "title": "Stratégie de Conservation de l’Espèce <i>Mantella aurantiaca</i> (grenouille dorée) 2011-2015",
+      "author": "Randrianavelona R., Randrianantoandro J. C., Rabibisoa N., Randrianasolo H., Rabesihanaka S., Randriamahaleo S. and Jenkins R. K. B. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vences, M. and Raxworthy, C.J. 2008. Mantella aurantiaca. 2008: e.T12776A3381123. http://dx.doi.org/10.2305/IUCN.UK.2008.RLTS.T12776A3381123.en.",
+      "year": "2008",
+      "title": "Mantella aurantiaca. 2008: e.T12776A3381123. http://dx.doi.org/10.2305/IUCN.UK.2008.RLTS.T12776A3381123.en",
+      "author": "Vences, M. and Raxworthy, C.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Woodhead, C., Vences, M., Vieites, D.R., Gamboni, I., Fisher, B.L., Griffiths, R. 2007. Specialist or generalist? Feeding ecology of the Malagasy poison frog <i>Mantella aurantiaca</i>. <i>Herpetological Journal</i> 17: 225-236.",
+      "year": "2007",
+      "title": "Specialist or generalist? Feeding ecology of the Malagasy poison frog <i>Mantella aurantiaca</i>.",
+      "author": "Woodhead, C., Vences, M., Vieites, D.R., Gamboni, I., Fisher, B.L., Griffiths, R.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

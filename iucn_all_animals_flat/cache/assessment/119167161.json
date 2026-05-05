@@ -1,0 +1,1784 @@
+{
+  "assessment_date": "2024-05-23T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22137,
+  "criteria": "A2acd",
+  "url": "https://www.iucnredlist.org/species/22137/119167161",
+  "citation": "Neo, M.L. & Li, R. 2024. Tridacna gigas. The IUCN Red List of Threatened Species 2024: e.T22137A119167161. Accessed on 05 May 2026.",
+  "assessment_id": 119167161,
+  "assessment_points": true,
+  "assessment_ranges": false,
+  "taxon": {
+    "sis_id": 22137,
+    "scientific_name": "Tridacna gigas",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "MOLLUSCA",
+    "class_name": "BIVALVIA",
+    "order_name": "CARDIIDA",
+    "family_name": "CARDIIDAE",
+    "genus_name": "Tridacna",
+    "species_name": "gigas",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Mollusc Specialist Group",
+        "url": "http://www.iucn.org/about/work/programmes/species/who_we_are/ssc_specialist_groups_and_red_list_authorities_directory/invertebrates/",
+        "description": "Chair and Mollusc RLA Coordinator: Mary Seddon (email: mary.molluscsg@gmail.com)\nCephalapod RLA Coordinator: Louise Allcock (email: louise.allcock@nuigalway.ie)\nCone Snail RLA Coordinator: Under discussion\nEuropean Land Snails RLA Coordinator: Eike Neubert (email: eike.neubert@nmbe.ch)\nAustralian Land and Freshwater Molluscs: Frank Kohler (email: Frank.Koehler@austmus.gov.au)\nFreshwater Bivalves: Manuel Lopes-Lima (email: lopeslima.ciimar@gmail.com)"
+      },
+      {
+        "name": "Marine Invertebrates Red List Authority (MIRLA)",
+        "url": "https://www.iucn.org/our-union/commissions/group/iucn-ssc-marine-invertebrates-red-list-authority",
+        "description": "Red List Authority Coordinator: Anne Helene Tandberg (email: anne-helene.tandberg@senckenberg.de)\nOther RLA contacts:\nJulia Beneti - Programme Officer (email: julia.beneti@senckenberg.de)\nJulia Sigwart (email: julia.sigwart@senckenberg.de)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bénitier Géant",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Giant Clam",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Chama gigas Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Chama",
+        "species_name": "gigas",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Chama gigantea G. Perry, 1811",
+        "status": "ACCEPTED",
+        "genus_name": "Chama",
+        "species_name": "gigantea",
+        "species_author": "G. Perry, 1811",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dinodacna cookiana Iredale, 1937",
+        "status": "ACCEPTED",
+        "genus_name": "Dinodacna",
+        "species_name": "cookiana",
+        "species_author": "Iredale, 1937",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 20,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": "Yes",
+    "generational_length": "33.5",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "<em>Tridacna gigas</em> is the only truly gigantic giant clam species, with the largest specimen recorded at 137 cm long (Rosewater 1965) and the heaviest known specimen weighing approximately 300 kg (Knop 1996). The species is easily identified by its large body size and distinctive elongate, triangular projections on the upper shell margins. The mantle exhibits mostly dull brown and olive-green colours, and the mantle bears numerous eyes surrounded by iridescent blue-green circles. Unlike other <em>Tridacna</em> species, the incurrent siphon of <em>T. gigas</em> bears no tentacles.",
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Yes",
+    "extreme_fluctuations_in_subpopulations": "Yes",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": "208",
+    "estimated_area_of_occupancy": "2028",
+    "continuing_decline_in_area_of_occupancy": "Yes",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "8295968",
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Tridacna gigas</em> has been found throughout the Indo-Pacific, from Myanmar (Burma) to the Republic of Kiribati (but not the Cook Islands) and the Ryukyus (southern Japan) to Queensland (Australia) (Neo <em>et al</em>. 2017). There are at least 31 reported regions with natural wild populations of this species, but it is severely depleted, locally extinct, or lacking data in the vast majority of regions (see Neo <em>et al</em>. 2017).<br/><br/>Based on anecdotal accounts, the previous range of this species possibly extended to southeast Africa (Kenya: Accordi <em>et al</em>. 2010), Madagascar (Hopkins 2009), and Mauritius (Michel <em>et al</em>. 1985), but this information could not be verified.<br/><br/>New information has better resolved the full range of this species. Notably some extant populations were previously considered possibly extinct—in Vanuatu, Fiji, and Micronesia—at the time of the last Red List assessment (Wells 1996); however, far more regional populations have declined and are possibly extinct or locally extinct—in Tuvalu, Thailand, Taiwan, Singapore, Papua New Guinea, New Caledonia, and Kiribati. These apparent fluctuations highlight a long pattern of ongoing decline for the species and reduction in population and range.",
+    "population": "Broadly, the paucity of contemporary information on <em>Tridacna gigas</em> could reflect the species' rarity on reefs today and the local extinctions. Recent survey efforts on this species generally concurred that it is rare throughout its geographic range (Yusuf <em>et al</em>. 2009, Gonzales <em>et al</em>. 2014, Harahap <em>et al</em>. 2018, Purcell <em>et al</em>. 2020, Rehm <em>et al</em>. 2021, Dolorosa <em>et al</em>. 2024), being found in low numbers (i.e., fewer than 10 individuals per subpopulation) or only in a few patches. Moreover, extensive surveys in the Pacific Islands indicated that the presence of this species is sometimes limited to one individual (C.C.C. Wabnitz pers. obs. 2016). An exception is the Great Barrier Reef in Australia, which is the most extensive area within the natural distribution of <em>T. gigas</em> that still supports relatively undisturbed and stable populations (Braley 1984, 1986, 2023) and exhibits evidence of natural recruitment (Braley and Muir 1995, Braley 2023). The largest known subpopulation comprises 277 individuals, including 208 mature ones (Braley 2023, data from 2017). Threats to the Australian population could result in a much higher extinction risk of the species. As reviewed by Neo <em>et al</em>. (2017), the lowest density reported was 0.2 individuals per hectare at Tarawa Atoll, Republic of Kiribati (Munro 1988), while the highest density reported was at 431.9 individuals per hectare at Michaelmas Reef, Australia (Pearson and Munro 1991). Furthermore, the uncertain presence or local extinction of this species has been reported from 26 of the 31 localities (Neo <em>et al</em>. 2017), strongly suggesting that the global population has declined significantly over the decades.<br/><br/>The age of <em>Tridacna gigas</em> has been measured at 76 years (Mecha and Dolorosa 2020), or estimated as at least 60 years (Watanabe <em>et al</em>. 2004). According to Mingoa-Licuanan and Gomez (2007), this species exhibits male maturity at 42 cm and females at 53 cm, but no age was provided. Generation length is calculated as: Age of first reproduction + [ z * (length of the reproductive period) ], with a minimum value of z=0.5 reflecting that mortality is highly skewed toward larvae in broadcast spawning species. Under mariculture conditions, male-phase maturity is at 3.5 years (i.e., a mean size of 18.7 cm, Heslinga and Perron, 1983, Heslinga <em>et al</em>. 1984) or at 5 years (Syafyudin Yusuf pers. comm. 2024); the mean value of 4 years is considered. This provides: Age of first reproduction + [ z * (length of the reproductive period) ] 4 + (0.5 * 56) = 32 years (generation length for the male phase). Female-phase maturity is at around 10 years (H.A. Roa-Quiaoit pers. comm. 2024), so: 10 + (0.5 * 50) = 35 years (generation length for the female phase). Mean value = 33.5 years. This assessment considers 100 years as representing three generations for this species.<br/><br/>Recent research on the population genetics of this species is sparse, but studies from the 1990s indicate discrepancies between current ocean currents and the observed genetic differences among populations in the Central and West Pacific groups, the Great Barrier Reef, and the Solomon Islands (Benzie and Williams 1992, 1995). This discrepancy suggests that despite the large size of <em>T. gigas</em>, its dispersal capabilities might be more limited than those of its relatives, potentially increasing its risk of local extinction due to reduced genetic exchange and diversity.<br/><br/>While the knowledge on the mariculture of this species is well-established and the raising of cultured individuals has been successful, the outcomes of translocating these cultured clams for conservation are not well understood or under reported (i.e., it is unclear whether efforts have led to an increase in stock numbers). The exception is restocking efforts in the Philippines that have yielded success in recruitment from their cultured <em>T. gigas</em> clams (Gomez and Mingoa-Licuanan 2006, Cabaitan and Conaco 2017, Requilme <em>et al</em>. 2021).",
+    "habitats": "This species is usually free-living on either sand or hard reef substrata and typically lives in coral reefs with good light penetration. All species of giant clams are known to be simultaneous hermaphrodites. <em>Tridacna gigas</em> has one of the highest fecundity rates, producing up to 500 million eggs in a single spawning event. The reproductive periodicity of the Great Barrier Reef population of this species showed diel periodicity to spawning, generally coinciding with incoming tides near the second (full), third, and fourth (new) quarters of the moon phase, occurring over the austral summer (Braley 1984). The mariculture of <em>T. gigas</em> is well known and published (Crawford <em>et al</em>. 1986; Braley <em>et al</em>. 1988), and the reproductive potential is known to some extent. A piece of indirect evidence for the natural reproductive potential of this species is the successful recruitment of juveniles in the Philippines arising from restocked cultured individuals transplanted in 1985, which took approximately 30 years (Cabaitan and Conaco 2017).<br/><br/><em>Tridacna gigas</em> can produce beneficial outcomes for coral reef ecosystems. For instance, a population of cultured <em>T. gigas</em> can produce substantial biomass (e.g., 29 tonnes ha<sup>-1</sup> yr<sup>-1</sup> of wet tissue biomass, estimated 1,682 kg dry weight ha<sup>-1</sup> yr<sup>-1</sup>) (Barker <em>et al</em>. 1988). Giant clams filter large quantities of seawater; even a sparse population of mature <em>T. gigas</em> (0.04 clams m²) on the Great Barrier Reef is capable of filtering over 28,000 L ha<sup>-1</sup> h<sup>-1</sup> (Neo <em>et al</em>. 2015). An experimental study found that <em>T. gigas</em> introduced onto degraded reefs significantly improved fish diversity and abundance compared to control plots with no clams (Cabaitan <em>et al</em>. 2008) and their shells provided additional shelter to surrounding organisms (Cabaitan <em>et al</em>. 2018, de Guzman <em>et al</em>. 2023). An opportunistic observation also discovered that the <em>T. gigas</em> gametes were a source of food for the blue sprat (<em>Spratelloides delicatulus</em>) (Maboloc and Mingoa-Licuanan 2011). Furthermore, this species is a known host of cyclopoid copepod species (<em>Anthessius alatus</em> and <em>Lichomolgus tridacnae</em>), pea crabs (<em>Tridacnatheres whitei</em> and <em>Xanthasia murigera</em>), and pontoniinid shrimps (<em>Anchistus australis</em>, <em>Anchistus demani</em>, <em>Anchistus miersi</em>, <em>Marygrande mirabilis</em>, and <em>Paranchistus armatus</em>) (Neo <em>et al</em>. 2015).",
+    "threats": "Overexploitation of the species, both for consumption and the shell trade, has been reported as a major cause of population declines (Dawson and Philipson 1989, Hviding 1993, Gomez 2015, Purcell <em>et al</em>. 2020, Rehm <em>et al</em>. 2021). As the sub-adults/adults of <em>T. gigas</em> are free-living (i.e., not attached to the substratum) they are particularly vulnerable to over-extraction (Hviding 1993). The extent of fishing can vary depending on the local coastal communities. For instance, <em>T. gigas</em> (with other large clam species) is opportunistically taken during fishing trips targeting other marine resources such as fish and lobsters (Purcell <em>et al</em>. 2020). On the other hand, in the Republic of Kiribati, all giant clams (including <em>T. gigas</em>) are heavily exploited for subsistence purposes (Eurich <em>et al</em>. 2023). Present-day populations of <em>T. gigas</em> continue to face high levels of exploitation pressure and habitat deterioration (Gomez 2015). This species remains a valuable coastal resource for both domestic and commercial markets, as it is highly favoured for its meat as food and large shells for the ornamental trade (Larson 2016).<br/><br/>Poaching of <em>T. gigas</em> (and other large giant clam species) for food was widespread throughout the region. Prior to the 1980s, commercial exports of giant clam adductor muscles to Asian markets and poaching by long-range foreign vessels were responsible for the severe stock reductions occurring in the Indo-Pacific (Dawson and Philipson 1989). Between 2012 and 2017, coastal resource authorities from various countries (Australia, Cambodia, Malaysia, and the Philippines) reported an increase in the number of fishing boats harvesting giant clams illegally (see Neo <em>et al</em>. 2017). Large-scale poaching also poses a major and persistent threat to wild populations.<br/><br/>Climate change has been mentioned as a threat to this species. Studies have confirmed that increased irradiance and seawater temperature bleach <em>T. gigas</em>. Specifically, Buck <em>et al</em>.'s (2002) experiment found that there is a loss of symbionts, reduced chlorophyll content in symbionts, retention of small zooxanthellae in the tissue, and release of ammonium into the water column. Bleaching of <em>T. gigas</em> can further reduce the fitness of host clams, resulting in reduced growth, fecundity/reproduction, and survival (Leggat <em>et al</em>. 2003, Sayco <em>et al</em>. 2023). In extreme cases, mortality of <em>T. gigas</em> has been associated with high seawater temperatures in Australia (Norton <em>et al</em>. 1995) and the Philippines (Gomez and Mingoa-Licuanan 1998). The early life stages of this species could also become vulnerable to elevated temperatures, where higher water temperatures promote rapid progression through early larval development but result in lower overall survival as a consequence of abnormal development and reduced post-settlement survival (Enricuso <em>et al</em>. 2019).<br/><br/>Other threats include anthropogenic influences such as effluent outfalls and agricultural run-offs that could affect calcified reef invertebrates. For example, <em>T. gigas</em> supplemented for three months with elevated ammonium and phosphate had significantly enhanced growth rates, but compromised shell formation (i.e., weaker shells) (Belda <em>et al</em>. 1993). The survival rates of <em>T. gigas</em> larvae were also found to decrease considerably with reduced salinities and the presence of copper (Blidberg 2003, Sayco <em>et al</em>. 2019). In juvenile <em>T. gigas</em>, reduced salinities showed effects of reduced heterotrophic feeding (Maboloc <em>et al</em>. 2014), and reduced rates of respiration and photosynthesis (Maboloc and Villanueva 2017). When cultured in masses, this species may be threatened by ectoparasite pyramidellids (<em>Turbonilla</em> spp.) that have been shown to impact the growth, survival, and physiology of juvenile <em>T. gigas</em> (Boglio and Lucas 1997). Apart from the various predators (see Neo <em>et al</em>. 2015), bacterial disease could cause mortality in juvenile <em>T. gigas</em> (Norton <em>et al</em>. 1993).",
+    "measures": "In 1983, <em>T. gigas</em> was formally listed in Appendix II of the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). This is unlike the other giant clam species of subfamily Tridacninae, which are listed on the basis of so-called 'look-alike species', i.e., species whose specimens in trade look like those of species listed for conservation reasons (Wells 1997). Thus, CITES regulates the international trade in any of their parts (shells, tissues, alive or dead).<br/><br/><strong><em>In situ</em> protection of stocks</strong>: <em>T. gigas</em> has legal protection under the respective wildlife and fisheries laws in the following countries: Australia, China, Taiwan, Indonesia, Malaysia, Myanmar, Philippines, Singapore, New Caledonia, Solomon Islands, and Pitcairn Islands. In contrast, the South Pacific nations (such as Papua New Guinea, FSM, Palau, Marshall Islands, Republic of Kiribati, Tonga, and Vanuatu) protect their wild stocks by introducing restrictions on harvesting wild giant clams (such as using size, weight or bag limits, gear restrictions or permits) or introducing restrictions on individual uses, including recreational, tourism and aquaculture. The levels of enforcement of laws, however, are unclear and underreported.<br/><br/><strong>Stock enhancement through mariculture</strong>: During the 1980s, the efforts to re-establish or supplement depleted populations of giant clams (including <em>T. gigas</em>) were mainly funded by the Australian Centre for International Agricultural Research (ACIAR) (Davila <em>et al. </em>2017). The focus of the programme was to breed and release hatchery-reared giant clams back to the wild at local and regional scales. <em>Tridacna gigas</em> has been extensively cultured and reintroduced (albeit sometimes limited to a couple of individuals in some areas) to Peninsular Malaysia, Sabah, the Philippines, Fiji, Northern Mariana Islands, Vanuatu, and Tonga, as well as introduced to American Samoa, the Cook Islands, Hawaii (USA), and Samoa (Neo <em>et al</em>. 2017). Some of the oldest maricultured <em>T. gigas</em> individuals were 34 years old (produced at the Palau’s Micronesian Mariculture Demonstration Center in 1982), as well as two others around 40–45 years old. All individuals were previously displayed at the Waikiki Aquarium in Honolulu (Carlson 2012, Heslinga 2012). While, in general, there is little information available regarding the outcomes of restocking in these areas, there has been a notable exception in the Philippines. According to Neo <em>et al</em>. (2017), for &gt;20 years, the Marine Science Institute, University of the Philippines, has been culturing giant clam species for the restoration of depleted populations in the Philippines. Several species were initially restocked, but later efforts focused on <em>T. gigas</em> (Gomez and Mingoa-Licuanan 2006). Recruits of this species were first observed in the vicinity of Bolinao, Pangasinan, where the broodstock was placed (Cabitan and Conaco 2017). Additional reports on <em>T. gigas</em> recruitment around the Philippines have been reported by Requilme <em>et al</em>. (2021).<br/><br/><strong>Wildlife trade</strong>: Most of the <em>T. gigas</em> marketed in the trade are cultured, while the wild-sourced clams are traded in very low quantities (Vogel and Hoeksema 2024). Based on the CITES Trade Database, Tonga was a major exporting country for both wild-sourced and cultured <em>T. gigas</em> between 2001 and 2010, while the Philippines was a major exporting country for both wild-sourced and cultured individuals between 2011 and 2019 (Vogel and Hoeksema 2024). Notably, the trade numbers for this species were much lower in recent years (2011–2019) compared to 2001–2010, suggesting a reduced demand for the species. Between 2001 and 2019, the import-export of <em>T. gigas</em> shells was greater than that of live specimens (Vogel and Hoeksema 2024). In general, it appears that several cultivation programmes are focused on growing giant clams for the global marine aquarium trade (Mies <em>et al</em>. 2017).<p></p><p>As the largest extant bivalve species, <em>T. gigas</em> holds substantial scientific interest. For instance, its significant size and longevity make it an important model for studying bivalve growth patterns and longevity (Li <em>et al</em>. 2024). In another example, subfossil <em>T. gigas</em> shells have the potential to yield reliable records of past changes in seasonality and ENSO variability, and mean climate conditions (Welsh <em>et al</em>. 2011). This makes its conservation not only an ecological priority but also a significant research imperative.<br/><br/>This species has been assessed as a proposed endangered species in a status review for the US Endangered Species Act (NOAA, 2024).</p>",
+    "use_trade": "In the past, <em>T. gigas</em> was highly regarded as a primary species of interest for food and its shells because of the large body sizes. It is traditionally used as a reserve food when times are difficult (Firdausy and Tisdell 1992, Rehm <em>et al</em>. 2021). In contemporary times, this species (lumped together with other giant clams) continues to be harvested for subsistence purposes to varying extents (i.e. opportunistic to intensive harvesting) across its range (Purcell <em>et al</em>. 2020, Eurich <em>et al</em>. 2023).<br/><br/>In the 1990s, the shells of this species were exported internationally for sale (to Japan, the US, and Europe) (Tisdell 1994). In the Philippines, the large <em>T. gigas</em> shells were made into bird baths, wash basins, and garden ornaments (Juinio <em>et al</em>. 1987). In Palau, the then Micronesian Mariculture Demonstration Center (MMDC; now known as PMDC) sold thousands of giant clam shells as ornaments in the early 1990s (Heslinga 1996). This species was particularly fashioned as large bowls and soap dishes (Heslinga 1996). In contemporary times, <em>T. gigas</em> shells are heavily used in the handicraft carving industry located in Hainan Island, China (Larson 2016). One of the largest <em>Tridacna</em> shell markets today is China. Many of the local fishermen from Tanmen, Hainan, have converted from traditional fishing to the more lucrative tridacnine fishing as their main livelihood (Zhang 2014). Shells of giant clams may have become a substitute for ivory, the import of which is now regulated strictly (Gomez 2015, Larson 2016).<br/><br/>Another specific use/trade of <em>T. gigas</em> shells is the floor-tile industry. The shells of this species (lumped together with other giant clams) were previously collected for the highly popular floor-tile industry in Central Java, Jakarta, and East Java (Firdausy and Tisdell 1992). Approximately 10–20 tonnes of processed clam shells were sought every two weeks for the floor-tile industry in Jakarta. <em>Tridacna gigas</em> was listed as one of the species sold in the market.<br/><br/>Cultivated <em>T. gigas</em> is marketed in the aquarium trade (Mies <em>et al</em>. 2017, Militz and Southgate 2021, Vogel and Hoeksema 2024) and possibly as food (Militz and Southgate 2021). Elsewhere, such as in Palau, cultivated <em>T. gigas</em> are grown and sold for local consumption (M.L. Neo pers. obs. 2023).",
+    "rationale": "<em>Tridacna gigas</em>, the largest species among the giant clams, is primarily distributed in the Central Indo-Pacific region. Despite extensive surveys, it is currently found in extremely low numbers (i.e., presence limited to one individual in the Pacific Islands) or is locally extinct in many regions where it has been previously reported, while other remaining populations have also declined; this represents an estimated total population decline of approximately 84% over three generation lengths (= <em>ca</em> 100 years, since 1924). Given that it is associated with coral reefs, there is evidence of declining quality of habitats in this period. Moreover, its large size and high value for meat and ornamental purposes make it particularly susceptible to overfishing. It is also vulnerable to the impacts of ocean warming that affect its symbiotic relationship with photosynthetic algae and its overall habitat stability. Poor water quality and habitat destruction further threaten its survival.<br/><br/>This species continues to face fishing pressures where individuals are collected for domestic consumption or shell trade. Notably, the ornamental trade of <em>T. gigas</em> is mostly of cultured origins, suggesting success in mariculture. While the mariculture knowledge on this species is well-established and successful in raising individuals in culture, there is no compelling evidence that translocation has led to an increase in stock numbers. However, the outcomes of translocating these cultured clams for conservation are not well understood or underreported. Further work on the potential for mariculture to protect or enhance wild populations is needed for future conservation. The population decline is projected to continue in the future as the causes of reduction may not have ceased.<br/><br/>The information gathered in this assessment indicates that the status of the species has continued to decline since the previous assessment. CITES provides important ongoing protection for this species. Giant clams are vulnerable to climate change, as rising temperatures can cause bleaching of their photosymbionts. Ongoing monitoring is important to provide early warning of future declines.<br/><br/>On the basis of the observed population decline (&gt;80% over three generation lengths), ongoing exploitation, and decline in area of occupancy (AOO) over the last 100 years, <em>Tridacna gigas</em> is assessed as Critically Endangered (CR A2acd).",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4_2",
+      "description": {
+        "en": "Genome resource bank"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Inter-Reef Rubble Substrate"
+      },
+      "code": "9_8_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Lagoon"
+      },
+      "code": "9_8_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "SAM-AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paracel Is."
+      },
+      "code": "SCS-PI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Disputed Territory"
+      },
+      "code": "DT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spratly Is."
+      },
+      "code": "SCS-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sabah"
+      },
+      "code": "BOR-SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nansei-shoto"
+      },
+      "code": "NNS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Possibly Extinct",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Research"
+      },
+      "code": "14"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Other household goods"
+      },
+      "code": "11"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "High Impact: 8",
+      "severity": "Very Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Neo, M.L. & Li, R.",
+      "value": [
+        "Ruiqi Li",
+        "Mei Lin Neo (St John's Island National Marine Laboratory)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "ter Poorten, J., Fatherree, J., Sigwart, J. & Seddon, M.B.",
+      "value": [
+        "Jan Johan ter Poorten",
+        "Mary Seddon (IUCN SSC Mollusc Specialist Group)",
+        "Julia Sigwart (Queen's University, Belfast)",
+        "James Fatherree"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Choy, C. & Lee, S.",
+      "value": [
+        "Samuel Hsien Rong Lee",
+        "Christina Pei Pei Choy"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Beneti, J.",
+      "value": [
+        "Julia Beneti (Senckenberg Museum, Germany)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wells, S.M., Pyle, R.M. and Collins, N.M. (compilers) 1983. <i>The IUCN Invertebrate Red Data Book</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1983",
+      "title": "<i>The IUCN Invertebrate Red Data Book</i>.",
+      "author": "Wells, S.M., Pyle, R.M. and Collins, N.M.",
+      "citation_short": "Wells <i>et al</i>. 1983"
+    },
+    {
+      "citation": "Rosewater, J. 1965. The family Tridacnidae in the Indo-Pacific. <i>Indo-Pacific Mollusca</i> 1: 347-396.",
+      "year": "1965",
+      "title": "The family Tridacnidae in the Indo-Pacific",
+      "author": "Rosewater, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Davila, F., Sloan, T., Milne, M. and van Kerkhoff, L. 2017. Impact assessment of giant clam research in the Indo-Pacific region.  ACIAR Impact Assessment Series Report No. 94. Australian Centre for International Agricultural Research: Canberra.",
+      "year": "2017",
+      "title": "Impact assessment of giant clam research in the Indo-Pacific region",
+      "author": "Davila, F., Sloan, T., Milne, M. and van Kerkhoff, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "de Guzman, I.J.A., Cabaitan, P.C., Hoeksema, B.W., Sayco, S.L.G. and Conaco, C. 2023. Variation in epibiont communities among restocked giant clam species (Cardiidae: Tridacninae) and across different habitat types. <i>Marine Biodiversity</i> 53: 51.",
+      "year": "2023",
+      "title": "Variation in epibiont communities among restocked giant clam species (Cardiidae: Tridacninae) and across different habitat types.",
+      "author": "de Guzman, I.J.A., Cabaitan, P.C., Hoeksema, B.W., Sayco, S.L.G. and Conaco, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Eurich, J.G., Tekiau, A., Seto, K.L., Aram, E., Beiateuea, T., Golden, C.D., Rabwere, B. and McCauley, D.J. 2023. Resilience of a giant clam subsistence fishery in Kiribati to climate change. <i>Pacific Conservation Biology</i> 30: PC22050.",
+      "year": "2023",
+      "title": "Resilience of a giant clam subsistence fishery in Kiribati to climate change.",
+      "author": "Eurich, J.G., Tekiau, A., Seto, K.L., Aram, E., Beiateuea, T., Golden, C.D., Rabwere, B. and McCauley, D.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Firdausy, C. and Tisdell, C. 1992. Status of, and demand for giant clams in Indonesia: a survey of four coastal villages in Bali and Java. In: C. Tisdell (ed.), <i>Giant clams in the sustainable development of South Pacific: socioeconomic issues in mariculture and conservation</i>, pp. 101-116. ACIAR Monograph, Canberra.",
+      "year": "1992",
+      "title": "Status of, and demand for giant clams in Indonesia: a survey of four coastal villages in Bali and Java",
+      "author": "Firdausy, C. and Tisdell, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heslinga, G.A. 1996. Clams to cash: How to make and sell giant clam shell products. <i>Center for Tropical and Subtropical Aquaculture Publication Number 125</i>: 35pp.",
+      "year": "1996",
+      "title": "Clams to cash: How to make and sell giant clam shell products",
+      "author": "Heslinga, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hviding, E. 1993. <i>The rural context of giant clam mariculture in Solomon Islands: an anthropological study.</i> ICLARM Technical Reports 39.",
+      "year": "1993",
+      "title": "The rural context of giant clam mariculture in Solomon Islands: an anthropological study.",
+      "author": "Hviding, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Juinio, A.R., Meñez, L.A. and Villanoy, C. 1987. Use of giant clam resources in the Philippines. <i>Naga, The ICLARM Quarterly</i>: 7–8.",
+      "year": "1987",
+      "title": "Use of giant clam resources in the Philippines",
+      "author": "Juinio, A.R., Meñez, L.A. and Villanoy, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Juinio, M.A.R., Meñez, L.A.B., Villanoy, C.L. and Gomez, E.D. 1989. Status of giant clam resources of the Philippines. <i>Journal of Molluscan Studies</i> 55: 431-440.",
+      "year": "1989",
+      "title": "Status of giant clam resources of the Philippines.",
+      "author": "Juinio, M.A.R., Meñez, L.A.B., Villanoy, C.L. and Gomez, E.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Knop, D. 1996. <i>Giant Clams: A Comprehensive Guide to the Identification and Care of Tridacnid Clams</i>. Dahne Verlag, Ettlingen, Germany.",
+      "year": "1996",
+      "title": "Giant Clams: A Comprehensive Guide to the Identification and Care of Tridacnid Clams",
+      "author": "Knop, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Larson, C. 2016. Shell trade pushes giant clams to the brink. <i>Science</i> 351(323-324).",
+      "year": "2016",
+      "title": "Shell trade pushes giant clams to the brink",
+      "author": "Larson, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mies, M., Dor, P., Guth, A.Z. and Sumida, P.Y.G. 2017. Production in giant clam aquaculture: Trends and Challenges. <i>Reviews in Fisheries Science & Aquaculture</i> 25(4): 286-296.",
+      "year": "2017",
+      "title": "Production in giant clam aquaculture: Trends and Challenges",
+      "author": "Mies, M., Dor, P., Guth, A.Z. and Sumida, P.Y.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Militz, T.A. and Southgate, P.C. 2021. Chapter 3 - Culture of giant clams. In: S.E. Shumway (ed.), <i>Molluscan Shellfish Aquaculture: A Practical Guide</i>, pp. 61–85. 5m Books.",
+      "year": "2021",
+      "title": "Chapter 3 - Culture of giant clams",
+      "author": "Militz, T.A. and Southgate, P.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mingoa-Licuanan, S.S. and Gomez, E.D. 2007. <i>Giant Clam Hatchery, Ocean Nursery and Stock Enhancement</i>. Aquaculture Department, Southeast Asian Fisheries Development Center, Iloilo, Philippines.",
+      "year": "2007",
+      "title": "Giant Clam Hatchery, Ocean Nursery and Stock Enhancement",
+      "author": "Mingoa-Licuanan, S.S. and Gomez, E.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "National Oceanic and Atmospheric Administration. 2024. Endangered and Threatened Wildlife and Plants; Proposed Listing Determinations for Ten Species of Giant Clams under the Endangered Species Act. US Department of Commerce, Washington, D.C.",
+      "year": "2024",
+      "title": "Endangered and Threatened Wildlife and Plants; Proposed Listing Determinations for Ten Species of Giant Clams under the Endangered Species Act",
+      "author": "National Oceanic and Atmospheric Administration",
+      "citation_short": null
+    },
+    {
+      "citation": "Neo, M.L., Eckman, W., Vicentuan, K., Teo, S.L-M. and Todd, P.A. 2015. The ecological significance of giant clams in coral reef ecosystems. <i>Biological Conservation</i> 181: 111-123.",
+      "year": "2015",
+      "title": "The ecological significance of giant clams in coral reef ecosystems",
+      "author": "Neo, M.L., Eckman, W., Vicentuan, K., Teo, S.L-M. and Todd, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Neo, M.L., Wabnitz, C.C.C., Braley, R.D., Heslinga, G.A., Van Wynsberge, S., Andréfouët, S., Waters, C., Tan, A.S-H., Gomez, E.D., Costello, M.J. and Todd, P.A. 2017. Giant clams (Bivalvia: Cardiidae: Tridacninae): A comprehensive update of species and their distribution, current threats and conservation status. In: S.J. Hawkins, D.J. Hughes, I.P. Smith, A.C. Dale, L.B. Firth and A.J. Evans (eds), <i>Oceanography and Marine Biology: An Annual Review</i>, pp. 87-388. Taylor & Francis.",
+      "year": "2017",
+      "title": "Giant clams (Bivalvia: Cardiidae: Tridacninae): A comprehensive update of species and their distribution, current threats and conservation status",
+      "author": "Neo, M.L., Wabnitz, C.C.C., Braley, R.D., Heslinga, G.A., Van Wynsberge, S., Andréfouët, S., Waters, C., Tan, A.S-H., Gomez, E.D., Costello, M.J. and Todd, P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Purcell, S.W., Gossuin, H. and Ceccarelli, D.M. 2020. Fishery management and spatial variation of giant clam stocks: lessons from New Caledonia. <i>Ocean and Coastal Management</i> 193: 105243.",
+      "year": "2020",
+      "title": "Fishery management and spatial variation of giant clam stocks: lessons from New Caledonia.",
+      "author": "Purcell, S.W., Gossuin, H. and Ceccarelli, D.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rehm, L., Marino, L.L., Jonathan, R., Holt, A.L., McCourt, R.M. and Sweeney, A.M. 2021. Population structure of giant clams (subfamily: Tridacninae) across Palau: Implications for conservation. <i>Aquatic Conservation: Freshwater and Marine Ecosystems</i> 32(4): 617–632.",
+      "year": "2021",
+      "title": "Population structure of giant clams (subfamily: Tridacninae) across Palau: Implications for conservation",
+      "author": "Rehm, L., Marino, L.L., Jonathan, R., Holt, A.L., McCourt, R.M. and Sweeney, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vogel, M.L. and Hoeksema, B.W. 2024. The role of aquaculture in the international trade of giant clams (Tridacninae) for the aquarium industry (2001–2019). <i>Aquaculture</i> 583: 740563.",
+      "year": "2024",
+      "title": "The role of aquaculture in the international trade of giant clams (Tridacninae) for the aquarium industry (2001–2019)",
+      "author": "Vogel, M.L. and Hoeksema, B.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, S. 1997. <i>Giant clams: Status, trade and mariculture, and the role of CITES in management.</i> IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1997",
+      "title": "Giant clams: Status, trade and mariculture, and the role of CITES in management.",
+      "author": "Wells, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolorosa, R.G., Mecha, N.J.M.F., Bano, J.D., Ecube, K.M.A., Villanueva, E.G. and Cabaitan, P.C. 2024. Declining population of giant clams (Cardiidae: Tridacninae) in Palawan, Philippines. <i>Ocean and Coastal Research</i> 72: e24010.",
+      "year": "2024",
+      "title": "Declining population of giant clams (Cardiidae: Tridacninae) in Palawan, Philippines.",
+      "author": "Dolorosa, R.G., Mecha, N.J.M.F., Bano, J.D., Ecube, K.M.A., Villanueva, E.G. and Cabaitan, P.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yusuf, C., Ambariyanto and Hartati, R. 2009. Abundance of <i>Tridacna</i> (family Tridacnidae) at Seribu Islands and Manado waters, Indonesia. <i>Ilmu Kelautan</i> 14: 150-154.",
+      "year": "2009",
+      "title": "Abundance of <i>Tridacna</i> (family Tridacnidae) at Seribu Islands and Manado waters, Indonesia",
+      "author": "Yusuf, C., Ambariyanto and Hartati, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Harahap, S.A., Yanuar, Y. and Ilham, Y. 2018. Diversity and abundance of giant clams in Anambas Islands, Indonesia. <i>ES3 Web of Conferences</i> 47: 03005.",
+      "year": "2018",
+      "title": "Diversity and abundance of giant clams in Anambas Islands, Indonesia.",
+      "author": "Harahap, S.A., Yanuar, Y. and Ilham, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Braley, R.D. 1984. Reproduction in the giant clams <i>Tridacna gigas</i> and <i>T. derasa</i> in situ on the North-Central Great Barrier Reef, Australia, and Papua New Guinea. <i>Coral Reefs </i> 3: 221-227.",
+      "year": "1984",
+      "title": "Reproduction in the giant clams <i>Tridacna gigas</i> and <i>T. derasa</i> in situ on the North-Central Great Barrier Reef, Australia, and Papua New Guinea",
+      "author": "Braley, R.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Braley, R.D. 1986. Reproduction and recruitment of giant clams and some aspects of their larval and juvenile biology. University of New South Wales, Australia.",
+      "year": "1986",
+      "title": "Reproduction and recruitment of giant clams and some aspects of their larval and juvenile biology",
+      "author": "Braley, R.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Braley, R.D. 2023. A population study of giant clams (Tridacninae) on the Great Barrier Reef over three-decades. <i>Molluscan Research</i> 43(2): 77–95.",
+      "year": "2023",
+      "title": "A population study of giant clams (Tridacninae) on the Great Barrier Reef over three-decades.",
+      "author": "Braley, R.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dawson, R.F. and Philipson, P.W. 1989. The market for giant clam in Japan, Taiwan, Hong Kong and Singapore. In: P.W. Philipson (ed.), <i>The Marketing of Marine Products from the South Pacific</i>, pp. 90-123. Institute of Pacific Studies of the University of the South Pacific, Suva, Fiji.",
+      "year": "1989",
+      "title": "The market for giant clam in Japan, Taiwan, Hong Kong and Singapore",
+      "author": "Dawson, R.F. and Philipson, P.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heslinga, G.A. and Perron, F. 1983. Palau Giant Clam Hatchery. <i>ICLARM Newsletter</i> 5.",
+      "year": "1983",
+      "title": "Palau Giant Clam Hatchery",
+      "author": "Heslinga, G.A. and Perron, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pearson, R.G. and Munro. J.L. 1991. Growth, mortality and recruitment rates of giant clams, <i>Tridacna gigas</i> and <i>T. derasa</i>, at Michaelmas Reef, central Great Barrier Reef, Australia. <i>Australian Journal of Marine and Freshwater Research</i> 42: 241-262.",
+      "year": "1991",
+      "title": "Growth, mortality and recruitment rates of giant clams, <i>Tridacna gigas</i> and <i>T. derasa</i>, at Michaelmas Reef, central Great Barrier Reef, Australia",
+      "author": "Pearson, R.G. and Munro. J.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Watanabe, T., Suzuki, A., Kawahata, H., Kan, H. and Ogawa, S. 2004. A 60-year isotopic record from a mid-Holocene fossil giant clam (<i>Tridacna gigas</i>) in the Ryukyu Islands: physiological and paleoclimatic implications. <i>Palaeogeography, Palaeoclimatology, Palaeoecology</i> 212: 343-354.",
+      "year": "2004",
+      "title": "A 60-year isotopic record from a mid-Holocene fossil giant clam (<i>Tridacna gigas</i>) in the Ryukyu Islands: physiological and paleoclimatic implications",
+      "author": "Watanabe, T., Suzuki, A., Kawahata, H., Kan, H. and Ogawa, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Accordi, G., Brilli, M., Carbone, F. and Voltaggio, M. 2010. The raised coral reef complex of the Kenyan coast: <i>Tridacna gigas </i>U-series dates and geological implications. <i>Journal of African Earth Sciences</i> 58(1): 97–114.",
+      "year": "2010",
+      "title": "The raised coral reef complex of the Kenyan coast: <i>Tridacna gigas </i>U-series dates and geological implications.",
+      "author": "Accordi, G., Brilli, M., Carbone, F. and Voltaggio, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barker, J.R., Crawford, C.M., Shelley, C., Braley, R.D., Lucas, J.S., Nash, W.J. and Lindsay, S. 1988. Ocean-nursery technology and production data from lines and cover for the giant clam, <i>Tridacna gigas</i>. In: J.W. Copland and J.S. Lucas (eds), <i>Giant clams in Asia and the Pacific</i>, pp. 225-228. Australian Centre for International Agricultural Research, Canberra, Australia.",
+      "year": "1988",
+      "title": "Ocean-nursery technology and production data from lines and cover for the giant clam, <i>Tridacna gigas</i>",
+      "author": "Barker, J.R., Crawford, C.M., Shelley, C., Braley, R.D., Lucas, J.S., Nash, W.J. and Lindsay, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Belda, C.A., Cuff, C. and Yellowlees, D. 1993. Modification of shell formation in the giant clam <i>Tridacna gigas</i> at elevated nutrient levels in sea water. <i>Marine Biology</i> 117: 251-257.",
+      "year": "1993",
+      "title": "Modification of shell formation in the giant clam <i>Tridacna gigas</i> at elevated nutrient levels in sea water",
+      "author": "Belda, C.A., Cuff, C. and Yellowlees, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Benzie, J.A.H. and Williams, S.T. 1992. No genetic differentiation of giant clam (<i>Tridacna gigas</i>) populations in the Great Barrier Reef, Australia. <i>Marine Biology</i> 113: 373–377.",
+      "year": "1992",
+      "title": "No genetic differentiation of giant clam (<i>Tridacna gigas</i>) populations in the Great Barrier Reef, Australia.",
+      "author": "Benzie, J.A.H. and Williams, S.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Benzie, J.A.H. and Williams, S.T. 1995. Gene flow among giant clam (<i>Tridacna gigas</i>) populations in Pacific does not parallel ocean circulation. <i>Marine Biology</i> 123: 781–787.",
+      "year": "1995",
+      "title": "Gene flow among giant clam (<i>Tridacna gigas</i>) populations in Pacific does not parallel ocean circulation.",
+      "author": "Benzie, J.A.H. and Williams, S.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Blidberg, E. 2003. Effects of copper and decreased salinity on survival rate and development of <i>Tridacna gigas</i> larvae. <i>Marine Environmental Research</i> 58: 793-797.",
+      "year": "2003",
+      "title": "Effects of copper and decreased salinity on survival rate and development of <i>Tridacna gigas</i> larvae",
+      "author": "Blidberg, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boglio, E.C. and Lucas, J.S. 1997. Impacts of ectoparasitic gastropods on growth, survival, and physiology of juvenile giant clams (<i>Tridacna gigas</i>), including a simulation model of mortality and reduced growth rate. <i>Aquaculture </i> 150: 25-43.",
+      "year": "1997",
+      "title": "Impacts of ectoparasitic gastropods on growth, survival, and physiology of juvenile giant clams (<i>Tridacna gigas</i>), including a simulation model of mortality and reduced growth rate",
+      "author": "Boglio, E.C. and Lucas, J.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Braley, R.D. and Muir, F. 1995. The case history of a large natural cohort of the giant clam <i>Tridacna gigas</i> (Fam. Tridacnidae) and the implications for restocking depauperate reefs with maricultured giant clams. <i>Asian Fisheries Journal</i> 8: 229-237.",
+      "year": "1995",
+      "title": "The case history of a large natural cohort of the giant clam <i>Tridacna gigas</i> (Fam. Tridacnidae) and the implications for restocking depauperate reefs with maricultured giant clams",
+      "author": "Braley, R.D. and Muir, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Braley, R.D., Nash, W.J., Lucas, J.S. and Crawford, C.M. 1988. Comparison of different hatchery and nursery culture methods for the giant clam <i>Tridacna gigas</i>. In: J.W. Copland and J.S. Lucas (eds), <i>Giant Clams in Asia and the Pacific</i>, pp. 110–114. Australian Centre for International Agricultural Research.",
+      "year": "1988",
+      "title": "Comparison of different hatchery and nursery culture methods for the giant clam <i>Tridacna gigas</i>",
+      "author": "Braley, R.D., Nash, W.J., Lucas, J.S. and Crawford, C.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Brown, J.H. and Muskanofola, M.R. 1985. An investigation of stocks of giant clams (family Tridacnidae) in Java and of their utilization and potential. <i>Aquaculture and Fisheries Management</i> 1: 25–39.",
+      "year": "1985",
+      "title": "An investigation of stocks of giant clams (family Tridacnidae) in Java and of their utilization and potential",
+      "author": "Brown, J.H. and Muskanofola, M.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buck, B.H., Rosenthal, H. and Saint-Paul, U. 2002. Effect of increased irradiance and thermal stress on the symbiosis of <i>Symbiodinium microadriaticum</i> and <i>Tridacna gigas</i>. <i>Aquatic Living Resources</i> 15: 107-117.",
+      "year": "2002",
+      "title": "Effect of increased irradiance and thermal stress on the symbiosis of <i>Symbiodinium microadriaticum</i> and <i>Tridacna gigas</i>",
+      "author": "Buck, B.H., Rosenthal, H. and Saint-Paul, U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cabaitan, P.C. and Conaco, C. 2017. Bringing back the giants: juvenile <i>Tridacna gigas</i> from natural spawning of restocked giant clams. <i>Coral Reefs</i> 36: 519.",
+      "year": "2017",
+      "title": "Bringing back the giants: juvenile <i>Tridacna gigas</i> from natural spawning of restocked giant clams",
+      "author": "Cabaitan, P.C. and Conaco, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cabaitan, P.C., Gomez, E.D. and Aliño, P.M. 2008. Effects of coral transplantation and giant clam restocking on the structure of fish communities on degraded patch reefs. . <i>Journal of Experimental Marine Biology Ecology </i> 357: 85–98.",
+      "year": "2008",
+      "title": "Effects of coral transplantation and giant clam restocking on the structure of fish communities on degraded patch reefs. ",
+      "author": "Cabaitan, P.C., Gomez, E.D. and Aliño, P.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carlson, B.C. 2012. Waikiki Aquarium's giant clams mark 30-year anniversary. <i>CORAL Magazine</i> 9: 54-60.",
+      "year": "2012",
+      "title": "Waikiki Aquarium's giant clams mark 30-year anniversary",
+      "author": "Carlson, B.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Crawford, C.M., Nash. W.J. and Lucas, J.S. 1986. Spawning induction, and larval and juvenile rearing of giant clam, <i>Tridacna gigas</i>. <i>Aquaculture</i> 58(3–4): 281–295.",
+      "year": "1986",
+      "title": "Spawning induction, and larval and juvenile rearing of giant clam, <i>Tridacna gigas</i>.",
+      "author": "Crawford, C.M., Nash. W.J. and Lucas, J.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Enricuso, O.B., Conaco, C., Sayco, S.L.G., Neo, M.L. and Cabaitan, P.C. 2019. Elevated seawater temperatures affect embryonic and larval development in the giant clam <i>Tridacna gigas</i> (Cardiidae: Tridacninae). <i>Journal of Molluscan Studies</i> 85: 66–72.",
+      "year": "2019",
+      "title": "Elevated seawater temperatures affect embryonic and larval development in the giant clam <i>Tridacna gigas</i> (Cardiidae: Tridacninae)",
+      "author": "Enricuso, O.B., Conaco, C., Sayco, S.L.G., Neo, M.L. and Cabaitan, P.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gomez, E.D. 2015. Rehabilitation of biological resources: coral reefs and giant clam populations need to be enhanced for a sustainable marginal sea in the western Pacific. <i>Journal of International Wildlife Law and Policy</i> 18: 120-127.",
+      "year": "2015",
+      "title": "Rehabilitation of biological resources: coral reefs and giant clam populations need to be enhanced for a sustainable marginal sea in the western Pacific",
+      "author": "Gomez, E.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gomez, E.D. and Mingoa-Licuanan, S.S. 1998. Mortalities of Giant Clams Associated With Unusually High Temperatures and Coral Bleaching. <i>Reef Encounter</i> 24: 23.",
+      "year": "1998",
+      "title": "Mortalities of Giant Clams Associated With Unusually High Temperatures and Coral Bleaching",
+      "author": "Gomez, E.D. and Mingoa-Licuanan, S.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gomez, E.D. and Mingoa-Licuana, S.S. 2006. Achievements and lessons learned in restocking giant clams in the Philippines. <i>Fisheries Research</i> 80(46-52).",
+      "year": "2006",
+      "title": "Achievements and lessons learned in restocking giant clams in the Philippines",
+      "author": "Gomez, E.D. and Mingoa-Licuana, S.S. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gonzales, B.J., Becira, J.G., Galon, W.M. and Gonzales, M.M.G. 2014. Protected versus unprotected area with reference to fishes, corals, marine invertebrates, and CPUE in Honda Bay, Palawan. <i>The Palawan Scientist</i> 6: 42-59.",
+      "year": "2014",
+      "title": "Protected versus unprotected area with reference to fishes, corals, marine invertebrates, and CPUE in Honda Bay, Palawan",
+      "author": "Gonzales, B.J., Becira, J.G., Galon, W.M. and Gonzales, M.M.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heslinga, G.A. 2012. The origin and future of farming giant clams. <i>CORAL Magazine</i> 9: 38-52.",
+      "year": "2012",
+      "title": "The origin and future of farming giant clams",
+      "author": "Heslinga, G.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Heslinga, G.A., Perron, F.E. and Orak, O. 1984. Mass culture of giant clams (F. Tridacnidae) in Palau. <i>Aquaculture</i> 39: 197–215.",
+      "year": "1984",
+      "title": "Mass culture of giant clams (F. Tridacnidae) in Palau.",
+      "author": "Heslinga, G.A., Perron, F.E. and Orak, O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hopkins, A. 2009. Marine invertebrates as indicators of reef health: a study of the reefs in the region of Andavadoaka, South West Madagascar. Imperial College, London, UK.",
+      "year": "2009",
+      "title": "Marine invertebrates as indicators of reef health: a study of the reefs in the region of Andavadoaka, South West Madagascar.",
+      "author": "Hopkins, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leggat, W., Buck, B.H.,Grice,  A. and Yellowlees, D. 2003. The impact of bleaching on the metabolic contribution of dinoflagellate symbionts to their giant clam host. <i>Plant, Cell and Environment</i> 26: 1951-1961.",
+      "year": "2003",
+      "title": "The impact of bleaching on the metabolic contribution of dinoflagellate symbionts to their giant clam host",
+      "author": "Leggat, W., Buck, B.H.,Grice,  A. and Yellowlees, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Li, R., Li, J., Lopez, J.V., Oatley, G., Clayton-Lucey, I.A., Sinclair, E., Aunin, E., Gettle, N., Santos, C., Paulini, M., Niu, H., McKenna, V. and O’Brien, R. 2024. The genome sequence of the giant clam, <i>Tridacna gigas</i> (Linnaeus, 1758) [version 1; peer review: awaiting peer review]. <i>Wellcome Open Research</i> 2024: 145.",
+      "year": "2024",
+      "title": "The genome sequence of the giant clam, <i>Tridacna gigas</i> (Linnaeus, 1758) [version 1; peer review: awaiting peer review]",
+      "author": "Li, R., Li, J., Lopez, J.V., Oatley, G., Clayton-Lucey, I.A., Sinclair, E., Aunin, E., Gettle, N., Santos, C., Paulini, M., Niu, H., McKenna, V. and O’Brien, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maboloc, E.A. and Mingoa-Licuanan, S.S. 2011. Feeding aggregation of <i>Spratelloides delicatulus</i> on giant clams’ gametes. <i>Coral Reefs </i> 30: 167.",
+      "year": "2011",
+      "title": "Feeding aggregation of <i>Spratelloides delicatulus</i> on giant clams’ gametes",
+      "author": "Maboloc, E.A. and Mingoa-Licuanan, S.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maboloc, E.A. and Villanueva, R.D. 2017. Effects of salinity variations on the rates of photosynthesis and respiration of the juvenile giant clam (<i>Tridacna gigas</i>, Bivalvia, Cardiidae). <i>Marine and Freshwater Behaviour and Physiology</i> 50(4): 273-284.",
+      "year": "2017",
+      "title": "Effects of salinity variations on the rates of photosynthesis and respiration of the juvenile giant clam (<i>Tridacna gigas</i>, Bivalvia, Cardiidae)",
+      "author": "Maboloc, E.A. and Villanueva, R.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maboloc, E.A., Mingoa-Licuanan, S.S. and Villanueva, R.D. 2014. Effects of reduced salinity on the heterotrophic feeding of the juvenile giant clam <i>Tridacna gigas</i>. <i>Journal of Shellfish Research</i> 33(2): 373-379.",
+      "year": "2014",
+      "title": "Effects of reduced salinity on the heterotrophic feeding of the juvenile giant clam <i>Tridacna gigas</i>",
+      "author": "Maboloc, E.A., Mingoa-Licuanan, S.S. and Villanueva, R.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mecha, N.J.M.F. and Dolorosa, R.G. 2020. Searching the virtually extinct Tridacna gigas (Linnaeus, 1758) in the reefs of Palawan, Philippines. <i>The Philippine Journal of Fisheries</i> 27: 1–18.",
+      "year": "2020",
+      "title": "Searching the virtually extinct Tridacna gigas (Linnaeus, 1758) in the reefs of Palawan, Philippines",
+      "author": "Mecha, N.J.M.F. and Dolorosa, R.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Michel, C., Coowar, M. and Takoor, S. 1985. <i>The Marine Molluscs of Mauritius</i>. WWF and IUCN, Gland, Switzerland.",
+      "year": "1985",
+      "title": "The Marine Molluscs of Mauritius",
+      "author": "Michel, C., Coowar, M. and Takoor, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Norton, J.H., Prior, H.C,.Baillie, B. and Yellowlees, D. 1995. Atrophy of the zooxanthellal tubular system in bleached giant clams <i>Tridacna gigas</i>. <i>Journal of Invertebrate Pathology</i> 66: 307-310.",
+      "year": "1995",
+      "title": "Atrophy of the zooxanthellal tubular system in bleached giant clams <i>Tridacna gigas</i>",
+      "author": "Norton, J.H., Prior, H.C,.Baillie, B. and Yellowlees, D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Norton, J.H., Shepherd, M.A. and Prior, H.C. 1993. Intracellular bacteria associated with winter mortality in juvenile giant clams, <i>Tridacna gigas</i>. <i>Journal of Invertebrate Pathology</i> 62: 204-206.",
+      "year": "1993",
+      "title": "Intracellular bacteria associated with winter mortality in juvenile giant clams, <i>Tridacna gigas</i>",
+      "author": "Norton, J.H., Shepherd, M.A. and Prior, H.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rehm, L., Marino, L.L., Jonathan, R., Holt, A.L., McCourt, R.M. and Sweeney, A.M. 2021. Population structure of giant clams (subfamily: Tridacninae) across Palau: Implications for conservation. <i>Aquatic Conservation: Freshwater and Marine Ecosystems</i> 32(4): 617–632.",
+      "year": "2021",
+      "title": "Population structure of giant clams (subfamily: Tridacninae) across Palau: Implications for conservation.",
+      "author": "Rehm, L., Marino, L.L., Jonathan, R., Holt, A.L., McCourt, R.M. and Sweeney, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Requilme, J.N.C., Conaco, C., Sayco, S.L.G., Roa-Quiaoit, H.A. and Cabaitan, P.C. 2021. Using citizen science and survey data to determine the recruitment envelope of the giant clam, <i>Tridacna gigas</i> (Cardiidae: Tridacninae). <i>Ocean and Coastal Management</i> 202: 105515.",
+      "year": "2021",
+      "title": "Using citizen science and survey data to determine the recruitment envelope of the giant clam, <i>Tridacna gigas</i> (Cardiidae: Tridacninae).",
+      "author": "Requilme, J.N.C., Conaco, C., Sayco, S.L.G., Roa-Quiaoit, H.A. and Cabaitan, P.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sayco, S.L.G., Cabaitan, P.C. and Kurihara, H. 2023. Bleaching reduces reproduction in the giant clam <i>Tridacna gigas</i>. <i>Marine Ecology Progress Series</i> 706: 47–56.",
+      "year": "2023",
+      "title": "Bleaching reduces reproduction in the giant clam <i>Tridacna gigas</i>.",
+      "author": "Sayco, S.L.G., Cabaitan, P.C. and Kurihara, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tisdell, C. 1994. 15. An overview of the shell trade. In: Tisdell, C.A.,  Y.C. Shang & P.S. Leung (ed.), <i>Economics of commercial giant clam mariculture</i>, pp. 223-234. Australian Centre for International Agricultural Research, Canberra, Australia.",
+      "year": "1994",
+      "title": "15. An overview of the shell trade",
+      "author": "Tisdell, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wells, S. 1996. <i>Tridacna gigas</i>. The IUCN Red List of Threatened Species. e.T22137A9362283. Available at: <a href=\"https://dx.doi.org/10.2305/IUCN.UK.1996.RLTS.T22137A9362283.en\">https://dx.doi.org/10.2305/IUCN.UK.1996.RLTS.T22137A9362283.en</a>. (Accessed: 17.07.2024).",
+      "year": "1996",
+      "title": "<i>Tridacna gigas</i>. The IUCN Red List of Threatened Species",
+      "author": "Wells, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Welsh, K., Elliot, M., Tudhope, A., Ayling, B. and Chappell, J. 2011. Giant bivalves (<i>Tridacna gigas</i>) as recorders of ENSO variability. <i>Earth and Planetary Science Letters</i> 307: 266–270.",
+      "year": "2011",
+      "title": "Giant bivalves (<i>Tridacna gigas</i>) as recorders of ENSO variability",
+      "author": "Welsh, K., Elliot, M., Tudhope, A., Ayling, B. and Chappell, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zhang, H. 2014. Chinese fishermen in troubled waters. The Diplomat. Available at: <a href=\"http:// thediplomat.com/2014/10/chinese-fishermen-in-troubled-waters/\">http:// thediplomat.com/2014/10/chinese-fishermen-in-troubled-waters/</a>. (Accessed: 26-February).",
+      "year": "2014",
+      "title": "Chinese fishermen in troubled waters. The Diplomat",
+      "author": "Zhang, H.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Sea of Japan"
+      },
+      "code": "4_5_5"
+    },
+    {
+      "description": {
+        "en": "Indonesian Seas"
+      },
+      "code": "4_5_4"
+    },
+    {
+      "description": {
+        "en": "Sulu-Celebes Sea"
+      },
+      "code": "4_5_7"
+    },
+    {
+      "description": {
+        "en": "East China Sea"
+      },
+      "code": "4_5_11"
+    },
+    {
+      "description": {
+        "en": "South China Sea"
+      },
+      "code": "4_5_12"
+    },
+    {
+      "description": {
+        "en": "Gulf of Thailand"
+      },
+      "code": "4_5_13"
+    },
+    {
+      "description": {
+        "en": "Bay of Bengal"
+      },
+      "code": "4_6_1"
+    },
+    {
+      "description": {
+        "en": "Kuroshio Current"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "description": {
+        "en": "Northwest Australian Shelf"
+      },
+      "code": "4_4_2"
+    },
+    {
+      "description": {
+        "en": "Northeast Australian Shelf"
+      },
+      "code": "4_4_3"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "assessment_date": "2017-02-20T00:00:00.000+00:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 109481538,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/109481538/109481555",
+  "citation": "Shea, G. 2017. Tiliqua scincoides. The IUCN Red List of Threatened Species 2017: e.T109481538A109481555. Accessed on 05 May 2026.",
+  "assessment_id": 109481555,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 109481538,
+    "scientific_name": "Tiliqua scincoides",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 235997195,
+        "scientific_name": "Tiliqua scincoides ssp. intermedia",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "SCINCIDAE",
+        "genus_name": "Tiliqua",
+        "species_name": "scincoides",
+        "subpopulation_name": null,
+        "infra_name": "intermedia",
+        "authority": "Mitchell, 1955",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Skink Specialist Group",
+            "url": "https://www.skinks.org/",
+            "description": "Chair: David Chapple (email: david.chapple@monash.edu)\nRed List Authority Coordinator: Shai Meiri (email: uncshai@post.tau.ac.il)"
+          }
+        ],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 235998511,
+        "scientific_name": "Tiliqua scincoides ssp. scincoides",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "REPTILIA",
+        "order_name": "SQUAMATA",
+        "family_name": "SCINCIDAE",
+        "genus_name": "Tiliqua",
+        "species_name": "scincoides",
+        "subpopulation_name": null,
+        "infra_name": "scincoides",
+        "authority": "(White, 1790)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Skink Specialist Group",
+            "url": "https://www.skinks.org/",
+            "description": "Chair: David Chapple (email: david.chapple@monash.edu)\nRed List Authority Coordinator: Shai Meiri (email: uncshai@post.tau.ac.il)"
+          }
+        ],
+        "common_names": [],
+        "synonyms": [
+          {
+            "name": "Lacerta scincoides ssp. scincoides White, 1790",
+            "status": "ACCEPTED",
+            "genus_name": "Lacerta",
+            "species_name": "scincoides",
+            "species_author": null,
+            "infrarank_author": "White, 1790",
+            "subpopulation_name": null,
+            "infra_type": "subspecies",
+            "infra_name": "scincoides"
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "SCINCIDAE",
+    "genus_name": "Tiliqua",
+    "species_name": "scincoides",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(White, 1790)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Skink Specialist Group",
+        "url": "https://www.skinks.org/",
+        "description": "Chair: David Chapple (email: david.chapple@monash.edu)\nRed List Authority Coordinator: Shai Meiri (email: uncshai@post.tau.ac.il)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Eastern Bluetongue",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Eastern Blue-Tongued Lizard",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Northern Bluetongue",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Common Bluetongue",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Lacerta scincoides White, 1790",
+        "status": "ACCEPTED",
+        "genus_name": "Lacerta",
+        "species_name": "scincoides",
+        "species_author": "White, 1790",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "<em>Tiliqua scincoides</em><em>&#160;scincoides </em>is a highly variable subspecies, but usually displays six to nine pale bands between the nape and the hips, and often a dark prominent stripe between the eye and above the ear (Wilson and Swan 2013). <em>T. s. intermedia </em>is larger and the bands are often broken into variegations of accompanied by heavy mottling on the back. It is distinctly flushed with yellow or orange and has alternating black bars on the flanks (Cogger 2000, Wilson and Swan 2013).",
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Present in Australia and the Tanibar Islands of Indonesia<em>. </em>In Australia,<em> Tiliqua scincoides </em>ranges from the east of South Australia, through eastern Victoria and New South Wales to the eastern two-thirds of Queensland, and the northern coast of Northern Territory and Western Australia. <em>T. s. scincoides </em>occurs in the southern and eastern portions of this range, whereas <em>T. s.&#160;intermedia </em>occupies the north and west (Cogger 2000, Wilson and Swan 2013). There is an isolated subpopulation of&#160;<em>T. s. scincoides</em>&#160;in central Australia.",
+    "population": "It is a common to abundant species.&#160;<em>Tiliqua scincoides</em><em>&#160;scincoides </em>is likely stable, whereas <em>T. s.&#160;intermedia </em>may be experiencing population declines.",
+    "habitats": "This species occupies a wide variety of habitats within its range, occurring in virtually all conditions through eastern and northern Australia, except for the alps (Wilson and Swan 2013).",
+    "threats": "Cane Toads are a significant threat to this species, especially for the northern&#160;<em>Tiliqua scincoides</em><em>&#160;intermedia </em>(Price-Rees <em>et al</em>. 2009). Taste aversion training may be a successful management tool to combat this threat (Price-Rees <em>et al</em>. 2011). In the Sydney region, despite the significant fragmentation of bush remnants, the species has persisted and is abundant throughout the suburbs, and hence, habitat loss or degradation may not pose a serious threat&#160;(Koenig <em>et al</em>. 2001).",
+    "measures": "There are no specific conservation actions for this species. Subpopulations are present within a variety of protected areas, including 46 National Parks in Queensland (Macdonald 2012).",
+    "use_trade": "This species can be kept privately with an appropriate recreational wildlife license and is used in the pet trade (Queensland Government 2017). Many individuals are captive-bred.",
+    "rationale": "Listed as Least Concern in view of its wide distribution, a threat from cane toads is localized and unlikely to be resulting in rapid enough population declines to justify a threatened listing.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Victoria"
+      },
+      "code": "VIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Australia"
+      },
+      "code": "SOA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australian Capital Territory"
+      },
+      "code": "NSW-CT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Rhinella marina",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Shea, G.",
+      "value": [
+        "Glenn Shea (Faculty of Veterinary Science, University of Sydney, NSW 2006, Australia)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Bowles, P.",
+      "value": [
+        "Philip Bowles (IUCN SSC/CI Biodiversity Assessment Unit)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Harrison, N., Macdonald, S.M & Meiri, S.",
+      "value": [
+        "Stewart Macdonald",
+        "Natasha             Harrison (University of Western Australia, Perth, WA, Australia (GRA - Australia))",
+        "Shai Meiri (Tel Aviv University, Jersualem, Israel (GRA - Australia))"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Cox, N.A.",
+      "value": [
+        "Neil Cox (Biodiversity Assessment Unit)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wilson, S. and Swan, G. 2013. <i>A Complete Guide to Reptiles of Australia</i>. New Holland Publishers, Sydney.",
+      "year": "2013",
+      "title": "A Complete Guide to Reptiles of Australia",
+      "author": "Wilson, S. and Swan, G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cogger, H.G. 2000. <i>Reptiles and Amphibians of Australia</i>. New Holland Publishers, Sydney.",
+      "year": "2000",
+      "title": "Reptiles and Amphibians of Australia",
+      "author": "Cogger, H.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Queensland Government. 2017. Recreational wildlife licence. Brisbane Available at: <a href=\"https://www.qld.gov.au/environment/plants-animals/wildlife-permits/recreational-licence/\">https://www.qld.gov.au/environment/plants-animals/wildlife-permits/recreational-licence/</a>. (Accessed: 5 December 2016).",
+      "year": "2017",
+      "title": "Recreational wildlife licence",
+      "author": "Queensland Government",
+      "citation_short": ""
+    },
+    {
+      "citation": "Price-Rees, S.J., Brown, G.P. and Shine, R. 2009. Predation on toxic cane toads (<i>Bufo marinus</i>) may imperil bluetongue lizards <i>(Tiliqua scincoides intermedia</i>, Scincidae) in tropical Australia. <i>Wildlife Research</i> 37(2): 166-173.",
+      "year": "2009",
+      "title": "Predation on toxic cane toads (<i>Bufo marinus</i>) may imperil bluetongue lizards <i>(Tiliqua scincoides intermedia</i>, Scincidae) in tropical Australia",
+      "author": "Price-Rees, S.J., Brown, G.P. and Shine, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Price-Rees, S.J., Webb, J.K. and Shine, R. 2011. School for skinks: Can conditioned taste aversion enable Blue-tongued lizards (<i>Tiliqua scincoides</i>) to avoid toxic cane toads (<i>Rhinella marina</i>) as prey? <i>Ethology</i> 117: 749-757.",
+      "year": "2011",
+      "title": "School for skinks: Can conditioned taste aversion enable Blue-tongued lizards (<i>Tiliqua scincoides</i>) to avoid toxic cane toads (<i>Rhinella marina</i>) as prey?",
+      "author": "Price-Rees, S.J., Webb, J.K. and Shine, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koenig, J., Shine, R. and Shea, G. 2001. The ecology of an Australian reptile icon: how do blue-tongued lizards (<i>Tiliqua scincoides</i>) survive in suburbia? <i>Wildlife Research</i> 28(3): 214-227.",
+      "year": "2001",
+      "title": "The ecology of an Australian reptile icon: how do blue-tongued lizards (<i>Tiliqua scincoides</i>) survive in suburbia?",
+      "author": "Koenig, J., Shine, R. and Shea, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Macdonald, S. 2012. Common blue-tongued skink (<i>Tiliqua scincoides</i>). Available at: <a href=\"http://www.arod.com.au/arod/reptilia/Squamata/Scincidae/Tiliqua/scincoides?tab=distributiondistribution\">http://www.arod.com.au/arod/reptilia/Squamata/Scincidae/Tiliqua/scincoides?tab=distributiondistribution</a>. (Accessed: 5 December 2016).",
+      "year": "2012",
+      "title": "Common blue-tongued skink (<i>Tiliqua scincoides</i>)",
+      "author": "Macdonald, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

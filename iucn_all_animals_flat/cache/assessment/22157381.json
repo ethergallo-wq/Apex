@@ -1,0 +1,1315 @@
+{
+  "assessment_date": "2015-09-27T01:00:00.000+01:00",
+  "year_published": "2016",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 56003281,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/56003281/22157381",
+  "citation": "Hundertmark, K. 2016. Alces alces. The IUCN Red List of Threatened Species 2016: e.T56003281A22157381. Accessed on 05 May 2026.",
+  "assessment_id": 22157381,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 56003281,
+    "scientific_name": "Alces alces",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 41782,
+        "scientific_name": "Alces alces ssp. alces",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "CERVIDAE",
+        "genus_name": "Alces",
+        "species_name": "alces",
+        "subpopulation_name": null,
+        "infra_name": "alces",
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [
+          {
+            "name": "IUCN SSC Deer Specialist Group",
+            "url": "http://www.icneotropical.org/home.htm",
+            "description": "Co-chairs: Susana Gonzalez (email: iconservacionneotropical@gmail.com) and Noam Werner (email: wernerny@jerusalemzoo.org.il)\nRed List Authority Coordinators:\nOld World: Sarah Brook (email: sarahmbrook@gmail.com)\nNew World: Mariano Gimenez-Dixon (email: mgimenezdixon@gmail.com)\nNewsletter: http://www.icneotropical.org/newsletters.htm"
+          }
+        ],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Elk",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Eurasian Moose",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "European Elk",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Moose",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Siberian Elk",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Alce",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Élan",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Elch",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Eurasischer Elch",
+            "language": "ger"
+          },
+          {
+            "main": false,
+            "name": "Moltsog Khandgai",
+            "language": "mon"
+          },
+          {
+            "main": true,
+            "name": "Eurasian Elk",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Alces alces (Linnaeus, 1758)",
+            "status": "ACCEPTED",
+            "genus_name": "Alces",
+            "species_name": "alces",
+            "species_author": "(Linnaeus, 1758)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "CERVIDAE",
+    "genus_name": "Alces",
+    "species_name": "alces",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Deer Specialist Group",
+        "url": "http://www.icneotropical.org/home.htm",
+        "description": "Co-chairs: Susana Gonzalez (email: iconservacionneotropical@gmail.com) and Noam Werner (email: wernerny@jerusalemzoo.org.il)\nRed List Authority Coordinators:\nOld World: Sarah Brook (email: sarahmbrook@gmail.com)\nNew World: Mariano Gimenez-Dixon (email: mgimenezdixon@gmail.com)\nNewsletter: http://www.icneotropical.org/newsletters.htm"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Elk",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Eurasian Elk",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Eurasian Moose",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "European Elk",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Siberian Elk",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Alce",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Élan",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Moose",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Cervus alces Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Cervus",
+        "species_name": "alces",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 2500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "In North America it occurs in Alaska and Canada south through the Rocky Mountains, northern Great Lakes, and New England. The species is estimated to have arrived in North America from Asia about 11,000-14,000 years ago, shortly before flooding of the Bering land bridge (Hundertmark <em><em><em><em>et al.</em></em></em></em> 2002b). The species' range has decreased over the past 100 years in the southern boreal forest regions in the eastern provinces of Canada (e.g., Beazley <em><em><em><em>et al.</em></em></em></em> 2006), but has expanded in other areas. In recent decades, it has expanded its range westward into the coastal temperate rainforests of British Columbia and some coastal islands (Darimont <em><em><em><em>et al.</em></em></em></em> 2005). These changes have been due to habitat changes caused by humans in boreal and rainforest ecosystems.<br/><br/>The species has a range in north Eurasia from Scandinavia, Poland, N Austria, and S Czech Republic (vagrant in Croatia, Hungary, and Romania), east to the Yenisei River (Siberia) and south to Ukraine, N Kazakhstan, N China (N Sinkiang), and possibly northern Mongolia (Wilson and Reeder 2005). It has been extinct in the Caucasus region since the 19th century (Wilson and Reeder 2005) and was introduced but now extirpated in New Zealand (Nugent <em><em><em><em>et al.</em></em></em></em> 2001, Boyeskorov 1999, Grubb in Wilson and Reeder 2005).<br/><br/>In Europe, it has a continuous distribution extending through Norway, Sweden, Finland, Russia, the Baltic states, Belarus, Poland and northern Ukraine. There was a small population in northern Austria, which is now extinct (although there may still be occasional migrants). There are three isolated subpopulations in southern Czech Republic, and the species is occasionally recorded in Germany, Croatia, Hungary and Romania. It has been extending its range southwards along the rivers into the northern Caucasus lowlands. It ranges from sea level up to at least 1,500 m in Europe (H. Henttonen pers. comm. 2006), and up to 2,500 m in the Altai mountains of Central Asia (Nygrén 1986). The species occurs east to the Yenisei River (Siberia) and south to Ukraine, N Kazakhstan, N China (N Sinkiang and the Altai region of Xinjiang, and possibly adjacent parts of Mongolia.",
+    "population": "It is a widespread and abundant species in most range states with the exception of China where it is extremely rare and of limited distribution (Piao <em><em><em>et al.</em></em></em> 1995, Sheng and Ohtaishi 1993, Yu <em><em><em>et al.</em></em></em> 1993). It is common in Siberia and North Ameri<em><em><em>ca.</em></em></em> In 2003, the species was declared endangered in Nova Scotia, Canada (Beazley <em><em><em>et al.</em></em></em> 2006). Populations have expanded and increased in western British Colombia since the mid-1900s (Darimont <em><em><em>et al.</em></em></em> 2005).<br/><br/>In the last 50 years European populations have increased dramatically, there are at least 440,000 individuals of which about 50% are harvested annually (Wilson and Mittermeier 2011). Numbers have increased markedly in Scandinavia in recent decades, and the range is expanding in the Caucasus. European populations show fluctuations over a multi-year cycle (Bauer and Nygrén 1999). Population estimates for European countries include the following: Czech Republic - maximum of 50 animals, Estonia - 10,000 individuals, Finland - at least 110,000 individuals (60-80,000 shot annually), Poland - 2,800 individuals, Sweden - 340,000 individuals (Pielowski and Jaworski 2005, Ruusila and Kojola 2010).<br/><br/>In North America the estimated population is approximately one million, with an annual harvest in the late 1990s of about 85,000 individuals (Wilson and Mittermeier 2011).",
+    "habitats": "<em>Alces alces</em> is found in a range of woodland habitats, both coniferous and broadleaved, from the tundra and taiga southwards through boreal to temperate zones. This species prefers a mosaic of second-growth boreal forest, openings, swamps, lakes and wetlands. It thrives in secondary growth, and its population expansion in Scandinavia has been linked to the replacement of natural taiga forest by secondary woodland after logging (Bauer and Nygrén 1999). It is also found in open country in the lowlands and mountains, including farmland, if there is forest nearby. The species avoids hot summer conditions by utilizing dense shade or bodies of water. Mineral licks may be an important sodium source, used in early summer in Canada and Alaska. It feeds on vegetative parts of various broadleaf trees, preferring birch, ashes and willow in the spring and summer and the twigs of these species as well as of fir, alpine, and juniper in the autumn and winter. It also eats shrubs, such as blueberry and heather, dwarf shrubs, herbs, and aquatic plants and can be a pest of agriculture and forestry in at least parts of its range (Ma Yiqing pers. comm; (Ruusila and Kojola 2010). In the search for food, some populations migrate during the year - covering up to 180 km (110 miles) in North America and 300 km (180 miles) in Asia. Whether sedentary or migratory, <em>A. alces</em> utilize specific home ranges, varying in size from 3.6 to &gt;259 km² (Hundertmark 1997).<br/><br/>The species may become sexually mature after one year (Schwartz 1997), and the maximum life span is about 20 years (Peterson 1977). It is active throughout the day and night, although there are peaks at dawn and especially at dusk.<br/><br/>Populations can be limited or regulated by complex interactions of ecological factors that vary from population to population, or ecosystem to ecosystem. Winter weather (snow accumulation) may strongly affect populations, even more so than wolf density (Mech <em><em>et al.</em></em> 1987); however, Messier (1991) found that competition for food, but not wolf predation and snow, had a regulatory impact on the species. Van Ballenberghie and Ballard (1994) found that in some naturally regulated ecosystems, predation by bears and wolves often is limiting and may be regulating under certain conditions. Messier (1994) developed population models of <em>A. alces</em>-wolf interactions. Under favourable conditions, populations are capable of large annual increases (20-25%) in population size; large populations may degrade habitat. In the presence of relatively few predators, Albright and Keith (1987) documented high calf-survival despite poor physical conditions during winter in a study of population dynamics of introduced populations in Newfoundland.<br/><br/>See Nudds (1990) for discussion of relation between the species, white-tailed deer, and meningeal (brain) worms. Brain worm (<em>Parelaphostrongylus tenuis</em>) may limit populations in areas where white-tailed deer are common (Nudds 1990). Deer are not negatively impacted by the brain worm, the larval stage of which is passed in deer faeces. Snails, often inadvertently ingested by A. alces feeding on vegetation, are the intermediate host for the worm. Deer, through worm-mediated impacts, commonly are believed to exclude <em>A. alces</em> and caribou from areas where deer occur; however, an analysis by Schmitz and Nudds (1994) concluded that the species may be able to coexist with deer, albeit at lower densities, even in the absence of habitat refuges from the disease. Whitlaw and Lankester (1994) found that the evidence that brain worm has caused <em>A. alces</em> declines is weak. The species is also severely impacted by another parasite of white-tailed deer, the winter tick (Samuel <em><em>et al.</em></em> 2000).<br/><br/>Where there is no human, wolf or bear predation, <em>A. alces</em> may alter the structure and dynamics of boreal forest ecosystems. At Isle Royale, Michigan, browsing by the species prevented saplings of preferred species from growing into the tree canopy, resulting in a forest with fewer canopy trees and a well-developed understory of shrubs and herbs; also, browsing may have caused an increase in spruce and a decrease in balsam fir (McInnes <em><em>et al.</em></em> 1992).<br/><br/>Ferguson <em><em>et al.</em></em> (2000) reviewed the dynamics of 15 Canadian <em>A. alces</em> populations, and reconciled some major factors that influence various populations differently. Populations that live in greater forest cover (i.e., greater primary productivity) and with greater natural predation had more predictable population trends from year to year. Populations living in areas with low primary productivity and with low natural predation experienced more density-independent population change with lower predictability in population size.",
+    "threats": "Threats to the status of the <em>Alces alces</em> populations are primarily human-caused habitat alteration. Forestry and agricultural practices in the southern range of the species have caused massive and extensive reductions in the extent of boreal forest in southern Canada. In these areas white-tailed deer have occupied modified boreal forests that are increasingly open agricultural fields and extensive deciduous forests. Diseases from deer may also be a threat to <em>Alces alces</em>.<br/><br/>In Nova Scotia, Canada, where <em>A. alces</em> has been declared endangered, recovery issues have been listed as: genetic structure, health, illegal harvest, habitat suitability and fragmentation, and potential climate-related habitat change (Beazley <em>et al.</em> 2006).<br/><br/>Human-caused habitat change is also the major force causing westward expansion into non-typical habitats (i.e., rainforest ecosystems) in British Columbia. The expansion occurred concomitant with extensive logging in the Coastal Mountain Range. This has led to concerns about the future of native deer (<em>Odocoileus hemionus</em>) with the introduction of this new alternate prey species for predators and the potential introduction of diseases (Darimont <em>et al.</em> 2005).<br/><br/>A wasting disease has been reported, and its causes remain poorly understood (Frank 2004), but it is not considered to be a serious problem for the species. Overexploitation caused significant population declines and range contractions in Europe in the 18th and 19th centuries, but since then populations have recovered (Ruusila and Kojola 2010, Bauer and Nygrén 1999). In most European range states, populations are controlled to prevent damage to forestry and arable crops (Bauer and Nygrén 1999).",
+    "measures": "It is listed on Appendix III of the Bern Convention. It occurs in a large number of protected areas across its range (Wemmer 1998, EMA Workshop 2006). The species is subject to intense management in some countries through hunting quotas (e.g. in Finland: Ruusila and Kojola 2010). It is protected under national legislation in a number of countries (e.g. Germany). The major conservation concern is extensive regional and landscape scale habitat change. Although Ferguson <em>et al.</em> (2000) did not analyze populations considered to be at risk, they identified populations occurring in areas with low primary productivity and low natural predation, show the least persistence and require the greatest conservation effort. Both low primary productivity and predation usually occur where humans have caused extensive habitat disturbance. This species thrives where protected from overkill by humans or predators.",
+    "use_trade": null,
+    "rationale": "This species is listed as Least Concern as it is still very widespread and extremely abundant despite fairly intense hunting pressures in parts of its range. It is expanding its range in places and it thrives in secondary habitat.",
+    "trend_justification": null,
+    "taxonomic_notes": "Grubb (in Wilson and Reeder 2005) recognized Eurasian Elk (<em>Alces alces</em>) and Moose (<em>Alces americanus</em>) as distinct species, citing sources that documented differences in karyotype, body dimensions and proportions, form of premaxilla, coloration, and structure and dimensions of antlers (Geist 1998, Boyeskorov 1999). There is still some debate surrounding whether Moose comprise one or two species. Groves and Grubb (1987) called them \"semi-species\". Boeskorov (1997) proposed that the chromosomal races of <em>Alces alces </em>were different species, however, Bowyer <em>et al.</em> (2000) cautioned that chromosome numbers might be a poor designator of species among large mammals. Based on cited sources that documented differences between Eurasian Elk and Moose, Geist (1998) recommended separation at the subspecies level (i.e., <em>Alces alces alces</em> Linneaus, 1758 and <em>Alces alces americanus</em> Clinton, 1822). Geist (1998) noted a broad zone of hybridization between the two forms in central and eastern Siberia but Boeskorov (2003) identifies the Yenisei River as the boundary between the ranges of the two putative species. There are no differences in antler morphology on either side of the river, however, suggesting substantial gene flow (Kolesnikov and Kozlovskii 2014). Moreover, genetic analyses have generally supported distinguishing the two at the subspecific level (Hundertmark <em>et al.</em> 2002 a,b; Udina <em>et al.</em> 2002; Hundertmark and Bowyer 2004); further research is needed before a consensus would support species-level classification.<br/><br/>Hundertmark <em>et al.</em> (2002b) report that analysis of mtDNA revealed three haplogroups, one entirely Asian, one primarily European and one primarily North American. Eight extant subspecies are recognised here:<br/><em>A. a. alces</em> - Scandinavia, Finland, Baltic states and Poland E to Yenisei River<br/><em>A. a. americana</em> - E Canada (C Ontario to Newfoundland)<br/><em>A. a. andersoni</em> - British Colombia to Minnesota and Ontario<br/><em>A. a. buturlini</em> - NE Siberia and Kamchatka<br/><em>A. a. cameloides</em> - N Mongolia, Ussuriland, N Manchuria<br/><em>A. a. gigas</em> - Alaska and Yukon<br/><em>A. a. pfizenmayeri</em> - C Siberia and Stanovoy and Cherskiy Mountains<br/><em>A. a. shirasi</em> - S Alberta to Wyoming and Utah"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subarctic"
+      },
+      "code": "1_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Artificial/Terrestrial - Pastureland"
+      },
+      "code": "14_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extinct Post-1500",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mongolia"
+      },
+      "code": "MN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alaska"
+      },
+      "code": "ASK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Hundertmark, K.",
+      "value": [
+        "Kris Hundertmark (University of Alaska Fairbanks)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Brook, S.M. & McShea, W.J.",
+      "value": [
+        "William McShea (Smithsonian Conservation Biology Institute, Virginia, USA)",
+        "Sarah Brook (IUCN SSC Deer RLA - Old World Deer)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Geist, V., Ferguson, M., Rachlow, J., Henttonen, H., Stubbe, M., Maran, T. & Tikhonov, A.",
+      "value": [
+        "Tiit Maran (Foundation Lutreola, Tallinn Zoo)",
+        "A Tikhonov",
+        "M Stubbe",
+        "V Geist",
+        "M Ferguson",
+        "J Rachlow",
+        "H Henttonen"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. (eds). 2005. <i>Mammal Species of the World: A Taxonomic and Geographical Reference</i>. Third edition. John Hopkins University Press, Baltimore.",
+      "year": "2005",
+      "title": "Mammal Species of the World: A Taxonomic and Geographical Reference. Third edition.",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geist, V. 1998. <i>Deer of the World: Their Evolution, Behaviour, and Ecology</i>. Stackpole Books, Mechanicsburg, Pennsylvania, USA.",
+      "year": "1998",
+      "title": "Deer of the World: Their Evolution, Behaviour, and Ecology",
+      "author": "Geist, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 30 June 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-1"
+    },
+    {
+      "citation": "Wemmer, C. 1998. <i>Deer Status Survey and Conservation Action Plan</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1998",
+      "title": "Deer Status Survey and Conservation Action Plan",
+      "author": "Wemmer, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sheng, H.I. and Ohtaishi, N. 1993. The status of deer in China. In: N. Ohtaishi and H.I. Sheng (eds), Deer of China: Biology and Management, pp. 8. Elsevier, Oxford, UK.",
+      "year": "1993",
+      "title": "The status of deer in China",
+      "author": "Sheng, H.I. and Ohtaishi, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wilson, D.E. and Ruff, S. 1999. <i>The Smithsonian Book of North American Mammals</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1999",
+      "title": "The Smithsonian Book of North American Mammals",
+      "author": "Wilson, D.E. and Ruff, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nowak, R.M. 1991. <i>Walker's Mammals of the World</i>. The Johns Hopkins University Press, Baltimore, USA and London, UK.",
+      "year": "1991",
+      "title": "Walker's Mammals of the World",
+      "author": "Nowak, R.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sokolov, V. E. and Orlov, V. N. 1980. <i>Guide to the Mammals of Mongolia</i>. Pensoft, Moscow, Russia.",
+      "year": "1980",
+      "title": "Guide to the Mammals of Mongolia",
+      "author": "Sokolov, V. E. and Orlov, V. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, D.E. and Reeder, D.M. 1993. <i>Mammal Species of the World. A Taxonomic and Geographic Reference</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1993",
+      "title": "Mammal Species of the World. A Taxonomic and Geographic Reference",
+      "author": "Wilson, D.E. and Reeder, D.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dulamtseren, S., Tsendjav, D. and Avirmed, D. 1989. <i>Mammals of Mongolia</i>. Publishing House of the Academy of Science, Ulaanbaatar.",
+      "year": "1989",
+      "title": "Mammals of Mongolia",
+      "author": "Dulamtseren, S., Tsendjav, D. and Avirmed, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bannikov, A.G. 1954. <i>Mammals of the Mongolian People’s Republic</i>. Nauka, Moscow, Russia.",
+      "year": "1954",
+      "title": "Mammals of the Mongolian People’s Republic",
+      "author": "Bannikov, A.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Shagdarsuren, O., Jigi, S., Tsendjav, D., Dulamtseren, S., Bold, A., Munkhbayar, Kh., Dulmaa, A., Erdenejav, G., Olziihutag, N., Ligaa, U. and Sanchir, Ch. 1987. <i>Mongolian Red Book</i>. Publishing House of the Mongolian Academy of Sciences, Ulaanbaatar, Mongolia.",
+      "year": "1987",
+      "title": "Mongolian Red Book",
+      "author": "Shagdarsuren, O., Jigi, S., Tsendjav, D., Dulamtseren, S., Bold, A., Munkhbayar, Kh., Dulmaa, A., Erdenejav, G., Olziihutag, N., Ligaa, U. and Sanchir, Ch.",
+      "citation_short": null
+    },
+    {
+      "citation": "Corbet, G.B. 1978. <i>The Mammals of the Palaearctic Region: a Taxonomic Review</i>. British Museum (Natural History) and Cornell University Press, London, UK and Ithaca, NY, USA.",
+      "year": "1978",
+      "title": "The Mammals of the Palaearctic Region: a Taxonomic Review",
+      "author": "Corbet, G.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 1997. Mongolian Red Book. In: Ts. Shiirevdamba, O. Shagdarsuren, G. Erdenejav, T. Amgalan and Ts. Tsetsegmaa (eds). ADMON Printing, Ulaanbaatar.",
+      "year": "1997",
+      "title": "Mongolian Red Book",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": ""
+    },
+    {
+      "citation": "Groves, C.P. and Grubb, P. 1987. Relationships of Living Deer. In: C.M. Wemmer (ed.), <i>Biology and Management of the Cervidae</i>, pp. 21-59. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1987",
+      "title": "Relationships of Living Deer",
+      "author": "Groves, C.P. and Grubb, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Whitehead, K.G. 1993. <i>The Whitehead Encyclopedia of Deer</i>. Voyageur Press, Inc, Stillwater, MN, USA.",
+      "year": "1993",
+      "title": "The Whitehead Encyclopedia of Deer",
+      "author": "Whitehead, K.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ministry of Nature and Environment. 1996. Biodiversity Conservation Action Plan for Mongolia. Ministry of Nature and Environment, Ulaanbaatar.",
+      "year": "1996",
+      "title": "Biodiversity Conservation Action Plan for Mongolia",
+      "author": "Ministry of Nature and Environment",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruusila, V. and Kojola, I. In press. Ungulate management in Finland.  In: M. Apollonio, R. Andersen and R. Putman (eds), Ungulate Management in Europe in the XXI Century.",
+      "year": "In press",
+      "title": "Ungulate management in Finland",
+      "author": "Ruusila, V. and Kojola, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pratt, D. G., Macmillan, D. C. and Gordon, I. J. 2004. Local Community Attitudes to Wildlife Utilization in the Changing Economic and Social Context of Mongolia. <i>Biodiversity and Conservation</i> 13: 591-613.",
+      "year": "2004",
+      "title": "Local Community Attitudes to Wildlife Utilization in the Changing Economic and Social Context of Mongolia",
+      "author": "Pratt, D. G., Macmillan, D. C. and Gordon, I. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ohtaishi, N. and Sheng, HI (eds). 1993. Deer in China. <i>Biology and Management</i>, Elsevier, London, UK and New York, USA.",
+      "year": "1993",
+      "title": "Deer in China",
+      "author": "Ohtaishi, N. and Sheng, HI",
+      "citation_short": null
+    },
+    {
+      "citation": "Shagdarsuren, O. and Stubbe, M. 1974. Zur Säugetierfauna der Mongolei IV. Der Ussurische Elch - <i>Alces alces cameloides</i> (Milne-Edwards, 1867) - in der Mongolei. <i>Archiv für Naturschutz und Landschaftsforschung</i> 14: 147-150.",
+      "year": "1974",
+      "title": "Zur Säugetierfauna der Mongolei IV. Der Ussurische Elch - <i>Alces alces cameloides</i> (Milne-Edwards, 1867) - in der Mongolei",
+      "author": "Shagdarsuren, O. and Stubbe, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bauer, K. and Nygrén, K. 1999. <i>Alces alces</i>. In: A. J. Mitchell-Jones, G. Amori, W. Bogdanowicz, B. Kryštufek, P. J. H. Reijnders, F. Spitzenberger, M. Stubbe, J. B. M. Thissen, V. Vohralík, and J. Zima (eds), <i>The Atlas of European Mammals</i>, Academic Press, London, UK.",
+      "year": "1999",
+      "title": "<i>Alces alces</i>",
+      "author": "Bauer, K. and Nygrén, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hundertmark, K. J., Shields, G. F., Bowyer, R. T. and Schwartz, C. C. 2002. Genetic Relationships Deduced From Cytochrome- b Sequences Among Moose. <i>Alces</i> 38: 113-122.",
+      "year": "2002",
+      "title": "Genetic Relationships Deduced From Cytochrome- b Sequences Among Moose",
+      "author": "Hundertmark, K. J., Shields, G. F., Bowyer, R. T. and Schwartz, C. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Frank, A. 2004. A Review of the “Mysterious” Wasting Disease in Swedish Moose (<i>Alces alces</i> L.) Related to Molybdenosis and Disturbances in Copper Metabolism. <i>Biological Trace Element Research</i> 102(1-3): 143-160.",
+      "year": "2004",
+      "title": "A Review of the “Mysterious” Wasting Disease in Swedish Moose (<i>Alces alces</i> L.) Related to Molybdenosis and Disturbances in Copper Metabolism",
+      "author": "Frank, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Geptner, V. G., Nasimovich, A. A. and Bannikov, A. G. 1961. <i>The Mammals of the Soviet Union</i>. Vischay Shkola, Moscow, Russia.",
+      "year": "1961",
+      "title": "The Mammals of the Soviet Union",
+      "author": "Geptner, V. G., Nasimovich, A. A. and Bannikov, A. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nygrén, K. 1986. <i>Alces alces</i> (Linnaeus, 1758) - Elch. In: J. Niethammer and F. Krapp (eds), <i>Handbuch der Säugetiere Europas, Band 2/II Paarhufer</i>, Akademische Verlagsgesellschaft, Wiesbaden.",
+      "year": "1986",
+      "title": "<i>Alces alces</i> (Linnaeus, 1758) - Elch",
+      "author": "Nygrén, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yu, Y., Miura, S., Pen, J. and Ohtaishi, N. 1993. Parturition and neonatal behavior of white-lipped deer. In: N. Ohtaishi and H. I. Sheng (eds), <i>Deer of China: Biology and Management. Proceedings of the International Symposium on Deer of China</i>, pp. 235–241. Elsevier, Oxford, UK.",
+      "year": "1993",
+      "title": "Parturition and neonatal behavior of white-lipped deer",
+      "author": "Yu, Y., Miura, S., Pen, J. and Ohtaishi, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wilson, D.E. and Mittermeier, R.A. 2011. <i>Handbook of the mammals of the world. Vol. 2. Hoofed mammals</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "2011",
+      "title": "Handbook of the mammals of the world. Vol. 2. Hoofed mammals",
+      "author": "Wilson, D.E. and Mittermeier, R.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nudds, T. D. 1990. Reproductive logic in retrospect: The ecological effects of meningeal worms. <i>Journal of Wildlife Management</i> 54(3): 396-402.",
+      "year": "1990",
+      "title": "Reproductive logic in retrospect: The ecological effects of meningeal worms",
+      "author": "Nudds, T. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Beazley, K., Ball, M., Isaacman, L., McBurney, S., Wilson, P. and Nette, T. 2006. Complexity and information gaps in recovery planning for moose (<i>Alces alces americana</i>) in Nova Scotia, Canada. <i>Alces</i> 42: 89-109.",
+      "year": "2006",
+      "title": "Complexity and information gaps in recovery planning for moose (<i>Alces alces americana</i>) in Nova Scotia, Canada",
+      "author": "Beazley, K., Ball, M., Isaacman, L., McBurney, S., Wilson, P. and Nette, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koleznikov, V.V. and Kozlovskii, I.S. 2014. Geographical variation in antler morphology of moose (<i>Alces alces</i>) in Russia. <i>Mammal Research</i> 59: 443-448.",
+      "year": "2014",
+      "title": "Geographical variation in antler morphology of moose (<i>Alces alces</i>) in Russia",
+      "author": "Koleznikov, V.V. and Kozlovskii, I.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Messier, F. 1991. The significance of limiting and regulating factors on the demography of moose and white-tailed deer. <i>Journal of Animal Ecology</i> 60: 377-393.",
+      "year": "1991",
+      "title": "The significance of limiting and regulating factors on the demography of moose and white-tailed deer",
+      "author": "Messier, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hundertmark, K. J., Shields, G. F., Udina, I. G., Bowyer. R. T., Danilkin, A. A. and Schwartz, C. C. 2002. Mitochondrial phylogeography of moose (<i>Alces alces</i>): Late Pleistocene divergence and population expansion. <i>Molecular Phylogenetics and Evolution</i> 22: 375–387.",
+      "year": "2002",
+      "title": "Mitochondrial phylogeography of moose (<i>Alces alces</i>): Late Pleistocene divergence and population expansion",
+      "author": "Hundertmark, K. J., Shields, G. F., Udina, I. G., Bowyer. R. T., Danilkin, A. A. and Schwartz, C. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "EMA Workshop. 2006. European Mammal Assessment.",
+      "year": "2006",
+      "title": "European Mammal Assessment",
+      "author": "EMA Workshop",
+      "citation_short": null
+    },
+    {
+      "citation": "Lawson, E. J. G. and Rodgers, A. R. 1997. Differences in home range size computed in commonly used software programs. <i>Wildlife Society Bulletin</i> 25: 721-729.",
+      "year": "1997",
+      "title": "Differences in home range size computed in commonly used software programs",
+      "author": "Lawson, E. J. G. and Rodgers, A. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bowyer, R. T., Leslie Jr., D. M. and Rachlow, J. L. 2000. <i>Dall’s and Stone’s sheep</i>. Prentice Hall, Upper Saddle River, NJ, USA.",
+      "year": "2000",
+      "title": "Dall’s and Stone’s sheep",
+      "author": "Bowyer, R. T., Leslie Jr., D. M. and Rachlow, J. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwartz, C. C. 1997. Reproduction, natality and growth. In: A. W. Franzmann and C. C. Schwartz (eds), <i>Ecology and Management of the North American Moose</i>, pp. 141-171. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1997",
+      "title": "Reproduction, natality and growth",
+      "author": "Schwartz, C. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Udina, I. G., Danilkin, A. A. and Boeskorov, G. G. 2002. Genetic diversity of moose (<i>Alces alces</i> L.) in Eurasia. <i>Journal of Genetics</i>: 951–957.",
+      "year": "2002",
+      "title": "Genetic diversity of moose (<i>Alces alces</i> L.) in Eurasia",
+      "author": "Udina, I. G., Danilkin, A. A. and Boeskorov, G. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Ballenberghe, V. and Ballard, W. B. 1994. Limitation and regulation of moose populations: the role of predation. <i>Canadian Journal of Zoology</i> 72: 2071-2077.",
+      "year": "1994",
+      "title": "Limitation and regulation of moose populations: the role of predation",
+      "author": "Van Ballenberghe, V. and Ballard, W. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Piao, R.Z., Guan, G.S. and Zhang, M.H. 1995. Population size and distribution of moose in China. <i>Acta Theriol Sin</i> 15: 11-16.",
+      "year": "1995",
+      "title": "Population size and distribution of moose in China",
+      "author": "Piao, R.Z., Guan, G.S. and Zhang, M.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Boeskorov, G. G. 1997. Chromosomal differences in moose. <i>Genetika</i> 33: 974-978.",
+      "year": "1997",
+      "title": "Chromosomal differences in moose",
+      "author": "Boeskorov, G. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hundertmark, K. J. 1997. Home range, dispersal and migration. In: A.W. Franzmann and C.C. Schwartz (eds), <i>Ecology and Management of the North American Moose</i>, pp. 303-336. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1997",
+      "title": "Home range, dispersal and migration",
+      "author": "Hundertmark, K. J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Peterson, R. O. 1977. Wolf ecology and prey relationships on Isle Royale. <i>U.S. National Park Service Science Monograph, Series 11</i>: 210 pp.",
+      "year": "1977",
+      "title": "Wolf ecology and prey relationships on Isle Royale",
+      "author": "Peterson, R. O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hundertmark, K.J. and Bowyer, R.T. 2004. Genetics, evolution, and phylogeography of moose. <i>Alces</i> 40: 103-122.",
+      "year": "2004",
+      "title": "Genetics, evolution, and phylogeography of moose",
+      "author": "Hundertmark, K.J. and Bowyer, R.T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Samuel, W. M., Mooring, M. S. and Aalangdong, I. O. 2000. Adaptations of winter ticks (<i>Dermacentor albipictus</i>) to invade moose and moose to evade ticks. <i>Alces</i> 36: 183-195.",
+      "year": "2000",
+      "title": "Adaptations of winter ticks (<i>Dermacentor albipictus</i>) to invade moose and moose to evade ticks",
+      "author": "Samuel, W. M., Mooring, M. S. and Aalangdong, I. O.",
+      "citation_short": null
+    },
+    {
+      "citation": "McInnes, P. F., Naiman, R. J., Pastor, J. and Cohen, Y. 1992. <i>Effects of moose browsing on vegetation and litter of the boreal forest, Isle Royale, Michigan, USA</i>.",
+      "year": "1992",
+      "title": "Effects of moose browsing on vegetation and litter of the boreal forest, Isle Royale, Michigan, USA",
+      "author": "McInnes, P. F., Naiman, R. J., Pastor, J. and Cohen, Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nugent, G., Fraser, K. W., Asher, G. W. and Tustin, K. G. 2001. Advances in New Zealand Mammalogy 1990-2000: Deer. <i>Journal of the Royal Society of New Zealand</i> 31: 263-298.",
+      "year": "2001",
+      "title": "Advances in New Zealand Mammalogy 1990-2000: Deer",
+      "author": "Nugent, G., Fraser, K. W., Asher, G. W. and Tustin, K. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Albright, C. A. and Keith, L. B. 1987. Population dynamics of moose, <i>Alces alces</i>, on the south-coast barrens of Newfoundland. <i>Canadian Field-Naturalist</i> 101: 373-387.",
+      "year": "1987",
+      "title": "Population dynamics of moose, <i>Alces alces</i>, on the south-coast barrens of Newfoundland",
+      "author": "Albright, C. A. and Keith, L. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferguson, S. H., Bisset, A. R. and Messier, F. 2000. <i>The influences of density of growth and reproduction in moose </i>Alces alces<i></i>.",
+      "year": "2000",
+      "title": "The influences of density of growth and reproduction in moose <i>Alces alces</i>",
+      "author": "Ferguson, S. H., Bisset, A. R. and Messier, F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pielowski, Z. and Jaworski, G. 2005. Elch,  Biber, Wolf,  Luchs und  Fischotter in  Polen. <i>Zwickmühle zwischen Vollschutz und Nutzung</i> 30: 247-251.",
+      "year": "2005",
+      "title": "Elch,  Biber, Wolf,  Luchs und  Fischotter in  Polen",
+      "author": "Pielowski, Z. and Jaworski, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Whitlaw, H. A. and Lankester, M. W. 1994. A retrospective evaluation of the effects of parelaphostrongylosis on moose populations. <i>Canadian Journal of Zoology</i> 72: 1-7.",
+      "year": "1994",
+      "title": "A retrospective evaluation of the effects of parelaphostrongylosis on moose populations",
+      "author": "Whitlaw, H. A. and Lankester, M. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Messier, F. 1994. Ungulate population models with predation: A case study with the North American moose. <i>Ecology</i> 75: 478-488.",
+      "year": "1994",
+      "title": "Ungulate population models with predation: A case study with the North American moose",
+      "author": "Messier, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Darimont, C. T., Paquet, P. C., Reimchen, T. E. and Crichton, V. 2005. Range expansion by moose into coastal temperate rainforests of British Columbia, Canada. <i>Diversity and Distributions</i> 11: 235–239.",
+      "year": "2005",
+      "title": "Range expansion by moose into coastal temperate rainforests of British Columbia, Canada",
+      "author": "Darimont, C. T., Paquet, P. C., Reimchen, T. E. and Crichton, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Boeskorov, G. 2003. The genetics of modern moose and a review of its taxonomy. <i>Cranium </i> 20: 31-45.",
+      "year": "2003",
+      "title": "The genetics of modern moose and a review of its taxonomy",
+      "author": "Boeskorov, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Boyeskorov, G. 1999. New data on moose (<i>Alces</i>, Artiodactyla) systematics. <i>Säugetierkundliche Mitteilungen</i> 44: 3-13.",
+      "year": "1999",
+      "title": "New data on moose (<i>Alces</i>, Artiodactyla) systematics",
+      "author": "Boyeskorov, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmitz, O.J. and Nudds, T.D. 1994. Parasite-mediated competition in deer and moose: how strong is the effect of meningeal worm on moose? <i>Ecological Applications</i>: 91-103.",
+      "year": "1994",
+      "title": "Parasite-mediated competition in deer and moose: how strong is the effect of meningeal worm on moose?",
+      "author": "Schmitz, O.J. and Nudds, T.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mech, L.D., McRoberts, R.E., Peterson, R.O. and Page, R.E. 1987. Relationship of deer and moose populations to previous winters' snow. <i>The Journal of Animal Ecology</i>: 615-627.",
+      "year": "1987",
+      "title": "Relationship of deer and moose populations to previous winters' snow",
+      "author": "Mech, L.D., McRoberts, R.E., Peterson, R.O. and Page, R.E.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

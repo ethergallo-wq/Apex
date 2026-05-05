@@ -1,0 +1,1804 @@
+{
+  "assessment_date": "2022-01-21T00:00:00.000+00:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 88416883,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/88416883/207983513",
+  "citation": "Andreone, F., Anthony, B.P., Beebee, T., Cogălniceanu, D., Crnobrnja-Isailović, J., Halpern, B., Kiss, A., Kornilev, Y., Kovács, T., Kuzmin, S., Litvinchuk, S., Nyström, P., Ogielska, M., Ogrodowczyk, A., Poboljšaj, K., Schmidt, B.R., Vörös, J. & Wilkinson, J. 2024. Pelophylax lessonae. The IUCN Red List of Threatened Species 2024: e.T88416883A207983513. Accessed on 05 May 2026.",
+  "assessment_id": 207983513,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 88416883,
+    "scientific_name": "Pelophylax lessonae",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "ANURA",
+    "family_name": "RANIDAE",
+    "genus_name": "Pelophylax",
+    "species_name": "lessonae",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Camerano, 1882)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Kis tavibéka",
+        "language": "hun"
+      },
+      {
+        "main": false,
+        "name": "Rana di Lessona",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Rana Verde Minore",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Zaba Jeziorkowa",
+        "language": "pol"
+      },
+      {
+        "main": false,
+        "name": "Прудoвaя Лягушка",
+        "language": "rus"
+      },
+      {
+        "main": true,
+        "name": "Pool Frog",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Rana esculenta var. lessonae Camerano, 1882",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "esculenta",
+        "species_author": null,
+        "infrarank_author": "Camerano, 1882",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "lessonae"
+      },
+      {
+        "name": "Rana meridionalis (Lataste, 1876)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "meridionalis ",
+        "species_author": "(Lataste, 1876)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana esculenta acutirostris (Lessona, 1877)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "esculenta acutirostris",
+        "species_author": "(Lessona, 1877)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana esculenta obtusirostris (Lessona, 1877)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "esculenta obtusirostris ",
+        "species_author": "(Lessona, 1877)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana esculenta var. lessonae (Camerano, 1882)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "esculenta var. lessonae ",
+        "species_author": "(Camerano, 1882)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana esculenta lessonae var. immaculata (Camerano, 1884)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana ",
+        "species_name": "esculenta lessonae var. immaculata",
+        "species_author": "(Camerano, 1884)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana esculenta lessonae var. maculata (Camerano, 1884)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "esculenta lessonae var. maculata ",
+        "species_author": "(Camerano, 1884)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana esculenta var. bolkayi (Fejérváry, 1909)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "esculenta var. bolkayi ",
+        "species_author": "(Fejérváry, 1909)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Rana lessonae pannonica (Karaman, 1948)",
+        "status": "ACCEPTED",
+        "genus_name": "Rana",
+        "species_name": "lessonae pannonica ",
+        "species_author": "(Karaman, 1948)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pelophylax bergeri (Günther in Engelmann, Fritzsche, Günther &amp; Obst, 1986)",
+        "status": "MERGE",
+        "genus_name": "Pelophylax",
+        "species_name": "bergeri",
+        "species_author": "(Günther in Engelmann, Fritzsche, Günther &amp; Obst, 1986)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pelophylax esculentus (Linnaeus, 1758)",
+        "status": "MERGE",
+        "genus_name": "Pelophylax",
+        "species_name": "esculentus",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pelophylax hispanicus (Bonaparte, 1839)",
+        "status": "MERGE",
+        "genus_name": "Pelophylax",
+        "species_name": "hispanicus",
+        "species_author": "(Bonaparte, 1839)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1550,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "3320609",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species is distributed over much of Europe, ranging as far east as Bashkortostan Republic in Russia.  It is absent from the Iberian Peninsula (except for introductions to Spain), from much of Scandinavia and from the most of the Balkans (Lukanov <em>et al.</em> 2013, Tzankov and Popgeorgiev 2015, Speybroeck <em>et al</em>. 2016). There are two isolated subpopulations - one near Oslo (Norway) and Uppland (Sweden) north of Stockholm. It is native but formerly extirpated to the British Isles, but has been reintroduced to a single site in East Anglia (<a href=\"https://www.arc-trust.org/news/historic-reintroduction-reverses-extinction-of-englands-rarest-frog#:~:text=This%20year's%20release%20completes%20the,as%20critically%20endangered%20in%20England.\">Amphibian and Reptile Conservation Trust</a>) from Sweden. The species has recently been recorded from the Volgograd region in Russia (Lada <em>et al</em>. 2016), and, the first country records, from Bulgaria along the Danube River in the northern part of the country (Lukanov <em>et al.</em> 2017). It might occur up to 1,550 m asl in southern parts of its range.",
+    "population": "Although this species is reported to be declining over much of its European range (Gasc <em>et al.</em> 1997), it remains widespread and common in Poland, the Baltic Republics, Moldova, Russia and Ukraine. According to Speybroeck <em>et al.</em> (2016), the range of <em>P. </em><em>lessonae</em> largely overlap with the <em>P. </em>kl.<em> esculentus</em> range. \"<em>l</em><em>essonae</em>-only\" areas have been recorded in Sweden, Norway, partly Finland, Belarus, Latvia, Lithuania, Estonia and Russia, and, on the south of distribution area, in Corsica and in northern parts of Croatia and Bosnia and Herzegovina.",
+    "habitats": "It is present in deciduous and mixed forests, forest steppe, steppe, bushlands (e.g. riparian alder groves), meadows, fields and fens. It may often be found in shallow stagnant waterbodies (usually without fish) such as lakes, ponds, marshes, moors, swamps, large puddles, clay and gravel pits, ditches, and small ponds, often covered with dense herbaceous vegetation (Speybroeck <em>et al</em>. 2016). The species breeds in these wetlands but may be found hibernating away from waterbodies. It is not very adaptable but can occur in slightly modified habitats.",
+    "threats": "The species is threatened by habitat loss through agricultural intensification and urbanisation, channelisation of waterbodies, drainage and pollution of wetlands, and the introduction of predatory fishes to breeding sites. It is additionally threatened by afforestation (in northern parts of the range) and competition with the larger sympatric<em> P. ridibundus</em>. Road mortality impacts across the range of the species.<br/><br/>Destruction of naturally occurring metapopulation systems through lack of connectivity increases local population extinction rates (Sjorgen-Gulve, 2020).<br/><br/>The frog-leg trade and high levels of pollution led to significant declines in subpopulations within countries of former Yugoslavia, particularly in Serbia and Montenegro (Džukić <em>et al</em>. 1996, Ljubisavljević <em>et al</em>. 2003); it is not clear to what extent intentional harvest continues, but unintentional collection may persist.<br/><br/>The species is also susceptible to pathogens; Stupar <em>et al</em>. (2020) recently discovered a case of the presence of water mould <em>Aphanomyces sp</em>. on the skin of Pool Frogs in Serbia.<br/><br/>Introduced fish <em>Perccottus glenii</em> strongly prey on tadpoles of this species causing a strong decline in the number of local populations in Russia (Reshetnikov 2001).",
+    "measures": "This species is present in many protected areas, including Natura 2000 sites, across its range. It is listed on Appendix III of the Bern Convention and on Annex IV of the EU Natural Habitats Directive. It is protected by national legislation in many countries and is recorded on a number of national and sub-national Red Data books and lists. It is considered Critically Endangered in Great Britain (Foster <em>et al</em>. 2021), Vulnerable in Czechia (Chobot and Nemec 2017), Austria (Gollmann 2007), Slovenia (Anonymous 2010), Albania (Anonymous 2013), Romania (Botnariuc and Tatole 2005), Near Threatened in France (UICN France <em>et al</em>. 2015), Switzerland (Schmidt and Zumbach 2005), Hungary (Halpern <em>et al.</em> 2019), Data Deficient in Serbia (Kalezić <em>et al</em>. 2015). In parts of the species' range, mitigation measures to reduce road kill have been established.<br/><br/>The species has been reintroduced to the UK. Monitoring is required for this species, and conservation action to protect sites and improve habitat condition are required.",
+    "use_trade": "They were collected for human consumption within the former Yugoslavia and, after, in Serbia and Montenegro (Džukić <em>et al</em>. 1996, Ljubisavljević <em>et al</em>. 2003). Although somewhat smaller in size than edible and marsh frogs, the pool frog also could be harvested in syntopic areas with these two, if there is no adequate taxonomic screening.",
+    "rationale": "Global and European regional assessment: Least Concern (LC)<br/>EU 27 regional assessment: Least Concern (LC)<br/><br/>This European endemic species is assessed as Least Concern both globally and for the EU27 Member States in view of its wide distribution, tolerance of a broad range of habitats, presumed large population, and because it is unlikely to be declining fast enough to qualify for listing in a threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belarus"
+      },
+      "code": "BY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovakia"
+      },
+      "code": "SK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Switzerland"
+      },
+      "code": "CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hungary"
+      },
+      "code": "HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Great Britain"
+      },
+      "code": "GRB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liechtenstein"
+      },
+      "code": "LI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Reintroduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East European Russia"
+      },
+      "code": "RUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northwest European Russia"
+      },
+      "code": "RUW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South European Russia"
+      },
+      "code": "RUS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central European Russia"
+      },
+      "code": "RUC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "Aphanomyces spp.",
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Perccottus glenii",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Andreone, F., Anthony, B.P., Beebee, T., Cogălniceanu, D., Crnobrnja-Isailović, J., Halpern, B., Kiss, A., Kornilev, Y., Kovács, T., Kuzmin, S., Litvinchuk, S., Nyström, P., Ogielska, M., Ogrodowczyk, A., Poboljšaj, K., Schmidt, B.R., Vörös, J. & Wilkinson, J.",
+      "value": [
+        "Franco Andreone (Zoology Department, Museo Regionale di Scienze Naturali di Torino, Torino, Italy)",
+        "Jelka Crnobrnja-Isailović (IUCN SSC Amphibian Specialist Group)",
+        "Sergius Kuzmin (Amphibian RLA)",
+        "Dan Cogălniceanu (Amphibian RLA)",
+        "Benedikt R. Schmidt (Amphibian RLA)",
+        "John Wilkinson (Amphibian RLA)",
+        "Spartak Litvinchuk",
+        "Trevor Beebee",
+        "Andrei Kiss (The Natural Histories Department)",
+        "Katja Poboljšaj (Amphibian RLA)",
+        "Brandon P. Anthony",
+        "Agnieszka Ogrodowczyk",
+        "Maria Ogielska (maria.ogielska@uwr.edu.pl)",
+        "Tibor Kovács",
+        "Per Nyström",
+        "Judit Vörös",
+        "Yurii Kornilev",
+        "Bálint Halpern"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Corti, C., Crochet, P.-A., Dujsebayeva, T., Ficetola, F., Jablonski, D., Kirschey, T., Lymberakis, P., Manenti, R., Martinez Solano, I., Mueldner, L., Razzetti, E., Romano, A., Salvi, D., Schulte, U., Speybroeck, J., Stănescu, F., Vignoli, L. & Üzüm, N.",
+      "value": [
+        "Claudia Corti (Museo di Storia Naturale dell'Università di Firenze, Sezione di Zoologia \"La Specola\", Italy)",
+        "Pierre-André Crochet (CNRS-UMR 5175 Centre d'Ecologie Fonctionnelle et Evolutive, 1919, route de Mende, 34293 Montpellier cedex 5, France)",
+        "Nazan Üzüm (Amphibian RLA)",
+        "Iñigo Martinez Solano (Amphibian RLA)",
+        "Raoul Manenti (IUCN SSC Cave Invertebrate Speialist Group, IUCN SSC Amphibian Specialist Group)",
+        "Antonio Romano",
+        "Ulrich Schulte (Amphibian RLA)",
+        "Tatjana Dujsebayeva",
+        "Francesco Ficetola",
+        "Tom Kirschey",
+        "Daniele Salvi",
+        "Florina Stănescu",
+        "Jeroen Speybroeck",
+        "Petros Lymberakis (Natural History Museum of Crete - University of Crete)",
+        "Leo Vignoli",
+        "Daniel Jablonski (Comenius University in Bratislava)",
+        "Leon Mueldner (Intern, IUCN Brussels)",
+        "Edoardo Razzetti"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Hobin, L.",
+      "value": [
+        "Louise Hobin (SSC Amphibian RLA)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Botnariuc, N. and Tatole, V. (eds). 2005. <i>Cartea Rosie a vertebratelor din România. Museul National de Istorie Naturala “Grigore antipa”</i>.",
+      "year": "2005",
+      "title": "Cartea Rosie a vertebratelor din România. Museul National de Istorie Naturala “Grigore antipa”",
+      "author": "Botnariuc, N. and Tatole, V. (eds)",
+      "citation_short": null
+    },
+    {
+      "citation": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F. 2006. <i>Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.</i> Societas Herpetologica Italica - Edizioni Polistampa, Firenze.",
+      "year": "2006",
+      "title": "Atlas of Italian Amphibians and Reptiles\\\\Atlante Degli Anfibi E Dei Rettili D'Italia.",
+      "author": "Sindaco, R., Doria, G., Razzetti, E. and Bernini, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gasc, J.-P. <i>et al.</i> (ed.). 1997. <i>Atlas of Amphibians and Reptiles in Europe</i>. pp. 494. Societas Europea Herpetologica & Museum National d’Histoire Naturelle, Paris.",
+      "year": "1997",
+      "title": "Atlas of Amphibians and Reptiles in Europe",
+      "author": "Gasc, J.-P. <i>et al.</i>",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mlynarski, M. 1966. Plazy I Gady Polski. <i>Panstwowe Zaklady Wydawnictw Szkolnych, Warszawa</i> 75.",
+      "year": "1966",
+      "title": "Plazy I Gady Polski",
+      "author": "Mlynarski, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. 2000. A kétéltûek védelme Magyarországon (Conservation of amphibians in Hungary). In: Faragó, S. (ed.), <i>Gerinces állatfajok védelme (Conservation of vertebrate species)</i>, pp. 143-158. Nyugat-Magyarországi Egyetem Erdõmérnöki Kar, Sopron.",
+      "year": "2000",
+      "title": "A kétéltûek védelme Magyarországon (Conservation of amphibians in Hungary)",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Puky, M. et al. 2003. <i>Preliminary herpetological atlas of Hungary</i>. Varangy Akciócsoport Egyesület, Budapest.",
+      "year": "2003",
+      "title": "Preliminary herpetological atlas of Hungary",
+      "author": "Puky, M. et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, H.R. 1995. Atlas of amphibians and reptiles in Britain. <i>ITE Research Publication</i> 10: 40.",
+      "year": "1995",
+      "title": "Atlas of amphibians and reptiles in Britain",
+      "author": "Arnold, H.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. 2003. Az újraárasztott Nyirkai Hany - Keleti Mórrétek (Hanság) herpetofaunája (Occurrence of amphibians and reptiles in the Nyirkai Hany Keleti Mórrétek wetland restoration area, Hanság, Hungary in the first year following inundation). <i>Folia Historico Naturalia Musei Matraensis</i> 27: 341-347.",
+      "year": "2003",
+      "title": "Az újraárasztott Nyirkai Hany - Keleti Mórrétek (Hanság) herpetofaunája (Occurrence of amphibians and reptiles in the Nyirkai Hany Keleti Mórrétek wetland restoration area, Hanság, Hungary in the first year following inundation)",
+      "author": "Puky, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Puky, M. 2003. Amphibian mitigation measures in Central-Europe. In: Irwin, L.C., Garrett, P. and McDermott, K.P. (eds), <i>Proceedings of the International Conference on Ecology and Transportation, 26-31 August, 2003, Lake Placid, New York, USA</i>, pp. 413-429. Center for Transportation and the Environment, North Carolina State University, USA.",
+      "year": "2003",
+      "title": "Amphibian mitigation measures in Central-Europe",
+      "author": "Puky, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. 1995. <i>Die Amphibien Russlands und Angrenzender Gebiete</i>. Westarp – Spektrum, Magdeburg - Heidelberg.",
+      "year": "1995",
+      "title": "Die Amphibien Russlands und Angrenzender Gebiete",
+      "author": "Kuzmin, S.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dely, G. 1967. <i>Kétéltűek-Amphibia: Magyarország Állatvilága, Faunae Hungariae</i>. Ákadémiai Kiadó, Budapest.",
+      "year": "1967",
+      "title": "Kétéltűek-Amphibia: Magyarország Állatvilága, Faunae Hungariae",
+      "author": "Dely, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. 1996. Threatened amphibians in the former Soviet Union: the current situation and the main threats. <i>Oryx</i> 30: 24-30.",
+      "year": "1996",
+      "title": "Threatened amphibians in the former Soviet Union: the current situation and the main threats",
+      "author": "Kuzmin, S.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vogrin, N. 1997. The status of amphibians in Slovenia. <i>FrogLog</i> 20.",
+      "year": "1997",
+      "title": "The status of amphibians in Slovenia",
+      "author": "Vogrin, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kovács, T. 2002. Monitoring of amphibians and reptiles along the Drava River. <i>FrogLog</i> 52.",
+      "year": "2002",
+      "title": "Monitoring of amphibians and reptiles along the Drava River",
+      "author": "Kovács, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Szczerbak, N.N. 1977. <i>Opredelitel Zemnovodnykh i Presmykayushchikhsya Fauny SSSR [Guide to Amphibians and Reptiles of the USSR Fauna]</i>. Prosvechshenie, Moscow.",
+      "year": "1977",
+      "title": "Opredelitel Zemnovodnykh i Presmykayushchikhsya Fauny SSSR [Guide to Amphibians and Reptiles of the USSR Fauna]",
+      "author": "Bannikov, A.G., Darevsky, I.S., Ishchenko, V.G., Rustamov, A.K. and Szczerbak, N.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Plötner, J. 2005. <i>Die Westpaläarkischen Wasserfrösche von Märtyrern der Wissenschaft zur Biologischen Sensation</i>. Laurenti-Verlag, Bielefeld.",
+      "year": "2005",
+      "title": "Die Westpaläarkischen Wasserfrösche von Märtyrern der Wissenschaft zur Biologischen Sensation",
+      "author": "Plötner, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Garanin, V.I. 2000. The distribution of amphibians in the Volga-Kama region. <i>Advances in Amphibian Research in the former Soviet Union</i>, pp. 79-132.",
+      "year": "2000",
+      "title": "The distribution of amphibians in the Volga-Kama region",
+      "author": "Garanin, V.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zeisset, I. and Beebee, T.J.C. 2001. Determination of biogeographical range: an application of molecular phylogeograpphy to the European pool frog <i>Rana lessonae</i>. <i>Proceedings of the Royal Society of London Series B</i> 268: 933-938.",
+      "year": "2001",
+      "title": "Determination of biogeographical range: an application of molecular phylogeograpphy to the European pool frog <i>Rana lessonae</i>",
+      "author": "Zeisset, I. and Beebee, T.J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Som, C., Anholt, B.R. and Reyer, H.-U. 2000. The effect of assortative mating on the coexistence of a hybridogenetic waterfrog and its sexual host. <i>American Naturalist</i> 156: 34-46.",
+      "year": "2000",
+      "title": "The effect of assortative mating on the coexistence of a hybridogenetic waterfrog and its sexual host",
+      "author": "Som, C., Anholt, B.R. and Reyer, H.-U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Milinski, M. 1994. Hybridogenetic Frogs on an Evolutionary Dead End Road. <i>Trends in Ecology and Evolution</i> 9(2): 62.",
+      "year": "1994",
+      "title": "Hybridogenetic Frogs on an Evolutionary Dead End Road",
+      "author": "Milinski, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vorburger, C. and Reyer, H.-U. 2003. A genetic mechanism of species replacement in European waterfrogs? <i>Conservation Genetics</i> 4(2): 141-155.",
+      "year": "2003",
+      "title": "A genetic mechanism of species replacement in European waterfrogs?",
+      "author": "Vorburger, C. and Reyer, H.-U.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sjögren, P. 1994. Distribution and extinction patterns within a northern metapopulation of the pool frog, <i>Rana lessonae</i>. <i>Ecology</i> 75: 1357-1367.",
+      "year": "1994",
+      "title": "Distribution and extinction patterns within a northern metapopulation of the pool frog, <i>Rana lessonae</i>",
+      "author": "Sjögren, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wycherley, J., Doran, S. and Beebee, T.J.C. 2002. Frog calls echo microsatellite phylogeography in the European pool frog <i>Rana lessonae</i>. <i>Journal of Zoology</i> 258: 479-484.",
+      "year": "2002",
+      "title": "Frog calls echo microsatellite phylogeography in the European pool frog <i>Rana lessonae</i>",
+      "author": "Wycherley, J., Doran, S. and Beebee, T.J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "UICN France, MNHN and DIREN Polynésie française. 2015. La liste rouge des espèces menacées en France - chapitre flore vasculaire endémique de Polynésie française. UICN France, Paris.",
+      "year": "2015",
+      "title": "La liste rouge des espèces menacées en France - chapitre flore vasculaire endémique de Polynésie française",
+      "author": "UICN France, MNHN and DIREN Polynésie française",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt B.R. and Zumbach S. 2005. Rote Liste der gefährdeten Amphibien der Schweiz. Hrsg. Bundesamt für Umwelt, Wald und Landschaft, Bern, und Koordinationsstelle für Amphibien- und Reptilienschutz in der Schweiz. BUWAL-Reihe: Vollzug Umwelt, Bern.",
+      "year": "2005",
+      "title": "Rote Liste der gefährdeten Amphibien der Schweiz. Hrsg. Bundesamt für Umwelt, Wald und Landschaft, Bern, und Koordinationsstelle für Amphibien- und Reptilienschutz in der Schweiz",
+      "author": "Schmidt B.R. and Zumbach S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stanković, D., Lužnik, M. and Poboljšaj, K. 2015. Conservation and declines of amphibians in Slovenia. In: Heatwole, A. and Wilkinson, J.W. (eds), <i>Status of conservation and decline of amphibians : Eastern Hemisphere.Part 4, Southern Europe and Turkey.</i>, Pelagic Publishing, Exeter.",
+      "year": "2015",
+      "title": "Conservation and declines of amphibians in Slovenia.",
+      "author": "Stanković, D., Lužnik, M. and Poboljšaj, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    },
+    {
+      "citation": "Dubey, S., Leuenberger, J. and Perrin, N. 2014. Multiple origins of invasive and ‘native’ water frogs (<i>Pelophylax</i> spp.) in Switzerland. <i>Biological Journal of the Linnean Society.</i> London 112: 442-449.",
+      "year": "2014",
+      "title": "Multiple origins of invasive and ‘native’ water frogs (<i>Pelophylax</i> spp.) in Switzerland.",
+      "author": "Dubey, S., Leuenberger, J. and Perrin, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kalezić, M., Tomović, L. and ǅukić, G. 2015. <i>Red Book of fauna of Serbia I – Amphibians.</i> Planeta Print, Belgrade.",
+      "year": "2015",
+      "title": "Red Book of fauna of Serbia I – Amphibians.",
+      "author": "Kalezić, M., Tomović, L. and ǅukić, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lada, G., Gordeev, D., Prilipko, S., Borkin, L., Litvinchuk, S. and Rosanov, Y. 2016. On the southern distributional limit of the pool frog, <i>Pelophylax lessonae</i> (Camerano, 1882): the first record in Volgograd region, Russia. <i>Biological Communications</i> 3: 64-68.",
+      "year": "2016",
+      "title": "On the southern distributional limit of the pool frog, <i>Pelophylax lessonae</i> (Camerano, 1882): the first record in Volgograd region, Russia.",
+      "author": "Lada, G., Gordeev, D., Prilipko, S., Borkin, L., Litvinchuk, S. and Rosanov, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Crnobrnja-Isailovic, J., Adrovic, A., Bego, F., Cadenovic, N., Hadziahmetovic Jurida E., Jablonski, D., Sterijovski, B. and Jovanovic Glavas, O. 2022. The importance of small water bodies’ conservation for maintaining local amphibian diversity in the Western Balkans. In: V. Pesic, Dj. Milosevic and M. Milisa (eds), <i>Small Water Bodies of the Western Balkans</i>, pp. 351-358. Springer Nature, Cham.",
+      "year": "2022",
+      "title": "The importance of small water bodies’ conservation for maintaining local amphibian diversity in the Western Balkans",
+      "author": "Crnobrnja-Isailovic, J., Adrovic, A., Bego, F., Cadenovic, N., Hadziahmetovic Jurida E., Jablonski, D., Sterijovski, B. and Jovanovic Glavas, O",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tzankov, N.D. and Popgeorgiev, G.S. 2015. Conservation and decline of amphibians in Bulgaria. In: H. Heathvole and J. Wilkinson (eds), <i>Amphibian Biology Vol 11. Part 4. Status of Conservation and Decline of Amphibians: Eastern Hemisphere: Southern Europe and Turkey</i>, pp. 131-139. Pelagic Publishing, Exeter.",
+      "year": "2015",
+      "title": "Conservation and decline of amphibians in Bulgaria",
+      "author": "Tzankov, N.D. and Popgeorgiev, G.S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anonymous. 2013. Red List of Wild Flora and Fauna of Albania. Approved by Ministerial Order No. 1280.",
+      "year": "2013",
+      "title": "Red List of Wild Flora and Fauna of Albania",
+      "author": "Anonymous",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Speybroeck, J., Beukema, W., Bok, B., Van Der Voort, J. and Velikov, I. 2016. <i>Field Guide to the Amphibians & Reptiles of Britain and Europe</i>. Bloomsbury, London-New York.",
+      "year": "2016",
+      "title": "Field Guide to the Amphibians & Reptiles of Britain and Europe",
+      "author": "Speybroeck, J., Beukema, W., Bok, B., Van Der Voort, J. and Velikov, I",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anonymous. 2010. Rules on the inclusion of endangered plant and animal species in the Red List, Annex 6: Red list of Amphibians (Amphibia).  Official Gazette of the Republic of Slovenia.",
+      "year": "2010",
+      "title": "Rules on the inclusion of endangered plant and animal species in the Red List, Annex 6: Red list of Amphibians (Amphibia)",
+      "author": "Anonymous",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gollmann, G. 2007. Rote Liste der in Österreich gefährdeten Lurche (Amphibia) und Kriechtiere (Reptilia). In: K.P. Zulka (ed.), <i>Rote Listen gefährdeter Tiere Österreichs. Checklisten, Gefährdungsanalysen, Handlungsbedarf. Teil 2: Kriechtiere, Lurche, Fische, Nachtfalter, Weichtiere. (Grüne Reihe des Lebensministeriums 14/2)</i>, pp. 37–60. Böhlau Verlag, Wien.",
+      "year": "2007",
+      "title": "Rote Liste der in Österreich gefährdeten Lurche (Amphibia) und Kriechtiere (Reptilia)",
+      "author": "Gollmann, G",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kostanjšek, R., Turk, M., Vek, M., Gutiérrez-Aguirre, I. and Gunde-Cimerman, N. 2021. First screening for <i>Batrachochytrium dendrobatidis</i>, <i>B. salamandrivorans</i> and <i>Ranavirus</i> infections in wild and captive amphibians in Slovenia. <i>Salamandra</i> 57(1): 162-166.",
+      "year": "2021",
+      "title": "First screening for <i>Batrachochytrium dendrobatidis</i>, <i>B. salamandrivorans</i> and <i>Ranavirus</i> infections in wild and captive amphibians in Slovenia",
+      "author": "Kostanjšek, R., Turk, M., Vek, M., Gutiérrez-Aguirre, I. and Gunde-Cimerman, N",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reshetnikov, A.N. 2001. Influence of introduced fish <i>Perccottus glenii</i> (Odontobutidae) on amphibians in small waterbodies of Moscow region. <i>Zhurnal obshchey biologii</i> 62(4): 352-361.",
+      "year": "2001",
+      "title": "Influence of introduced fish <i>Perccottus glenii</i> (Odontobutidae) on amphibians in small waterbodies of Moscow region",
+      "author": "Reshetnikov, A.N",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vorobyeva, E.I. and Darevsky, I.S. 1995. Amphibian Populations in the Commonwealth of Independent States: Current Status and Declines. <i>Pensoft, Moscow</i>.",
+      "year": "1995",
+      "title": "Amphibian Populations in the Commonwealth of Independent States: Current Status and Declines",
+      "author": "Vorobyeva, E.I. and Darevsky, I.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Foster, J., Driver, D., Ward, R. and Wilkinson, J. 2021. IUCN Red List assessment of amphibians and reptiles at Great Britain and country scale.  Report to Natural England. Amphibian and Reptile Conservation (ARC), Bournemouth.",
+      "year": "2021",
+      "title": "IUCN Red List assessment of amphibians and reptiles at Great Britain and country scale",
+      "author": "Foster, J., Driver, D., Ward, R. and Wilkinson, J",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cogalniceanu, D. and Rozylowicz, L. 2015. Amphibian Conservation and Decline in Romania. In: H. Heathvole & J. Wilkinson (ed.), <i>Amphibian Biology Vol 11. Part 4. Status of Conservation and Decline of Amphibians: Eastern Hemisphere: Southern Europe and Turkey</i>, pp. 87-98. Pelagic Publishing, Exeter.",
+      "year": "2015",
+      "title": "Amphibian Conservation and Decline in Romania",
+      "author": "Cogalniceanu, D. and Rozylowicz, L",
+      "citation_short": ""
+    },
+    {
+      "citation": "Arnold, E.N. 2003. <i>Reptiles and amphibians of Europe</i>. Princeton University Press.",
+      "year": "2003",
+      "title": "Reptiles and amphibians of Europe",
+      "author": "Arnold, E.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bakharev, V. A., Pozyvaylo, O. P., Vorobyova, M. M., Mamazhanov, M. M., Lesnichiy, D. Yu. 2016. The Analysis of The Biodiversity of Herpetocomplex of Territories of G. of Mazyr and its Vicinities Depending on Degree of The Antopogenic Stress. <i>Biologychnie Navuki. Vesnik MDPU imya I.P. Shamyakina</i> 48: 3-8.",
+      "year": "2016",
+      "title": "The Analysis of The Biodiversity of Herpetocomplex of Territories of G. of Mazyr and its Vicinities Depending on Degree of The Antopogenic Stress",
+      "author": "Bakharev, V. A., Pozyvaylo, O. P., Vorobyova, M. M., Mamazhanov, M. M., Lesnichiy, D. Yu.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Burny, J. and Parent, G.H. 1985 . Les grenouilles vertes de le Belgique et des régions limitrophes. Données chorologiques et écologiques. <i>Alytes </i> 4(1): 12-33.",
+      "year": "1985 ",
+      "title": "Les grenouilles vertes de le Belgique et des régions limitrophes. Données chorologiques et écologiques.",
+      "author": "Burny, J. and Parent, G.H. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Crnobrnja Isailovic, J., Adrovic, A., Cafuta, M, Cosic, N., Jelic, D., Kotrosan, D., Lisicic, D, Marinkovic, S., Poboljsaj, K., Presetnik, P. and Sekulic, G. 2015. Fauna of the Riparian Ecosystems – Amphibians, Reptiles, Birds and Mammals . In: R. Milacic, J. Scancar & M. Paunovic (ed.), <i>The Handbook of Environmental Chemistry, Vol. 31.  The Sava River</i>, pp. 401-436. Springer-Verlag GmbH, Heidelberg.",
+      "year": "2015",
+      "title": "Fauna of the Riparian Ecosystems – Amphibians, Reptiles, Birds and Mammals ",
+      "author": "Crnobrnja Isailovic, J., Adrovic, A., Cafuta, M, Cosic, N., Jelic, D., Kotrosan, D., Lisicic, D, Marinkovic, S., Poboljsaj, K., Presetnik, P. and Sekulic, G",
+      "citation_short": ""
+    },
+    {
+      "citation": "Džukić, G., Kalezić, M., Aleksić, I. and Crnobrnja-Isailović, J. 1996. Green frogs are exploited in the former Yugoslavia. <i>FrogLog</i> 19: 3-4.",
+      "year": "1996",
+      "title": "Green frogs are exploited in the former Yugoslavia",
+      "author": "Džukić, G., Kalezić, M., Aleksić, I. and Crnobrnja-Isailović, J",
+      "citation_short": ""
+    },
+    {
+      "citation": "Gent, T. 1999. The UK Pool Frog species action plan. <i>FrogLog </i> 32.",
+      "year": "1999",
+      "title": "The UK Pool Frog species action plan",
+      "author": "Gent, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gunther, R. 1997. <i>Rana lessonae</i> Camerano, 1882. In: J.-P. Gasc <i>et al</i> (ed.), <i>Atlas of Amphibians and Reptiles in Europe</i>, pp. 148-149. Societas Europaea Herpetologica & Museum National d' Histoire Naturelle (IEGB/SPN), Paris.",
+      "year": "1997",
+      "title": "<i>Rana lessonae</i> Camerano, 1882",
+      "author": "Gunther, R",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hejda, R., Farkač, J. and Chobot, K. (eds.). 2017. <i>Červený seznam ohrožených druhů České republiky. Bezobratlí [Red List of threatened species of the Czech Republic. Invertebrates]</i>. Příroda, Praha.",
+      "year": "2017",
+      "title": "Červený seznam ohrožených druhů České republiky. Bezobratlí [Red List of threatened species of the Czech Republic. Invertebrates]",
+      "author": "Hejda, R., Farkač, J. and Chobot, K. (eds.)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoogesteger, T., Rahkonen, J. and Karhilahti, A. 2013. Pool frog (<i>Pelophylax lessonae</i>) Camerano 1882 (Anura, Ranidae), an addition to the Finnish amphibian fauna. <i>Memoranda Soc. Fauna Flora Fennica</i> 89: 25-31.",
+      "year": "2013",
+      "title": "Pool frog (<i>Pelophylax lessonae</i>) Camerano 1882 (Anura, Ranidae), an addition to the Finnish amphibian fauna",
+      "author": "Hoogesteger, T., Rahkonen, J. and Karhilahti, A",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2009. IUCN Red List of Threatened Species (ver. 2009.1). Available at: <a href=\"www.iucnredlist.org.\">www.iucnredlist.org.</a>. ",
+      "year": "2009",
+      "title": "IUCN Red List of Threatened Species (ver. 2009.1)",
+      "author": "IUCN",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-1.",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-1",
+      "author": "IUCN",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kalezic, M. and Dzukic, G. 2001. Amphibian status in Serbia and Montenegro (FR Yugoslavia). <i>FrogLog </i> 45: 2-3.",
+      "year": "2001",
+      "title": "Amphibian status in Serbia and Montenegro (FR Yugoslavia)",
+      "author": "Kalezic, M. and Dzukic, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Krizmanic, I.I. 2008. Water frogs (<i>Rana esculenta</i> complex) in Serbia - morphological data. <i>Archiv Biological Sciences, Belgrade</i> 60: 449-457.",
+      "year": "2008",
+      "title": "Water frogs (<i>Rana esculenta</i> complex) in Serbia - morphological data",
+      "author": "Krizmanic, I.I",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kuzmin, S.L. 1999. <i>The Amphibians of the Former Soviet Union</i>. Pensoft, Sofia-Moscow.",
+      "year": "1999",
+      "title": "The Amphibians of the Former Soviet Union",
+      "author": "Kuzmin, S.L.  ",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuzmin, S.L. and Cavagnaro, J. 2017. Amphibia Web 2017 <i>Pelophylax lessonae</i>: Pool Frog. Berkeley. University of California, CA,USA. Available at: <a href=\"https://amphibiaweb.org/species/5077\">https://amphibiaweb.org/species/5077</a>. (Accessed: 01/21/, 2022).",
+      "year": "2017",
+      "title": "Amphibia Web 2017 <i>Pelophylax lessonae</i>: Pool Frog",
+      "author": "Kuzmin, S.L. and Cavagnaro, J",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ljubisavljevic, K., Džukić, G. and Kalezic, M. 2003. Green frogs are greatly endangered in Serbia and Montenegro. <i>FrogLog</i> 58: 2-3.",
+      "year": "2003",
+      "title": "Green frogs are greatly endangered in Serbia and Montenegro",
+      "author": "Ljubisavljevic, K., Džukić, G. and Kalezic, M",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ljubisavljevic, K., Dzukic, G., Kalezic, M. 2003. Green frogs are greatly endangered in Serbia and Montenegro. <i>FrogLog</i> 58.",
+      "year": "2003",
+      "title": "Green frogs are greatly endangered in Serbia and Montenegro",
+      "author": "Ljubisavljevic, K., Dzukic, G., Kalezic, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lukanov, S.P., Tzankov, N.D. and Naumov, B.Y. 2017. First Documented Records of <i>Pelophylax lessonae</i> (Camerano, 1882) (Amphibia: Ranidae) from Bulgaria. <i>Acta Zoologica Bulgarica</i> 69: 483-488.",
+      "year": "2017",
+      "title": "First Documented Records of <i>Pelophylax lessonae</i> (Camerano, 1882) (Amphibia: Ranidae) from Bulgaria",
+      "author": "Lukanov, S.P., Tzankov, N.D. and Naumov, B.Y",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maiorano, L., Amori, G., Capula, M., Falcucci, A., Masi, M., Montemaggiori. A., et al. 2013. Threats from Climate Change to Terrestrial Vertebrate Hotspots in Europe. <i>PLoS ONE </i> 8: e74989.",
+      "year": "2013",
+      "title": "Threats from Climate Change to Terrestrial Vertebrate Hotspots in Europe",
+      "author": "Maiorano, L., Amori, G., Capula, M., Falcucci, A., Masi, M., Montemaggiori. A., et al. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Mayer, M., Hawlitschek, O., Zahn, A., Glaw, F. 2013. Composition of twenty Green Frog populations (Pelophylax) across Bavaria, Germany. <i>Salamandra </i> 49:  31-44.",
+      "year": "2013",
+      "title": "Composition of twenty Green Frog populations (Pelophylax) across Bavaria, Germany",
+      "author": "Mayer, M., Hawlitschek, O., Zahn, A., Glaw, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sjögren-Gulve, P. 2020. Metapopulation Dynamics and Extinction in Pristine Habitats - a Demographic Explanation. <i>AgroLife Scientific Journal</i> 9: 306-315.",
+      "year": "2020",
+      "title": "Metapopulation Dynamics and Extinction in Pristine Habitats - a Demographic Explanation",
+      "author": "Sjögren-Gulve, P",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smit, G.  1998. DAPTF-Netherlands Report. <i>FrogLog </i> 28: 3.",
+      "year": " 1998",
+      "title": "DAPTF-Netherlands Report",
+      "author": "Smit, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stupar, M., Breka, K., Krizmanic, I., Stamenkovic, S., Ljaljevic-Grbic, M. 2020. First report of water mold (Aphanomyces sp.) documented on skin of pool frog (Pelophylax lessonae) in Serbia. <i>North-Western Journal of Zoology</i> 16 : 216-219.",
+      "year": "2020",
+      "title": "First report of water mold (Aphanomyces sp.) documented on skin of pool frog (Pelophylax lessonae) in Serbia",
+      "author": "Stupar, M., Breka, K., Krizmanic, I., Stamenkovic, S., Ljaljevic-Grbic, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tzankov, N.D. and Popgeorgiev, G.S. 2015. Conservation and declines of amphibians in Bulgaria. In: Heathvole, H., Wilkinson, J. (ed.), <i>Amphibian Biology Vol 11. Part 4. Status of Conservation and Decline of Amphibians: Eastern Hemisphere: Southern Europe and Turkey.</i>, pp. 131-139. Pelagic Publishing, Exeter.",
+      "year": "2015",
+      "title": "Conservation and declines of amphibians in Bulgaria",
+      "author": "Tzankov, N.D. and Popgeorgiev, G.S",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vörös, J., Kiss, I. Puky, M. 2015. Conservation and declines of amphibians in Hungary. In: Heathvole, H., Wilkinson, J. (ed.), <i>Amphibian Biology Vol 11. Part 4.Status of Conservation and Decline of Amphibians: Eastern Hemisphere: Southern Europe and Turkey </i>, pp. 99-130. Pelagic Publishing,  Exeter.",
+      "year": "2015",
+      "title": "Conservation and declines of amphibians in Hungary",
+      "author": "Vörös, J., Kiss, I. Puky, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Zeisset, I.,  and Hoogesteger, T. 2018. A reassessment of the biogeographic range of northern clade pool frogs (<i>Pelophylax lessonae</i>). <i>The Herpetological Journal</i> 28: 63-72.",
+      "year": "2018",
+      "title": "A reassessment of the biogeographic range of northern clade pool frogs (<i>Pelophylax lessonae</i>)",
+      "author": "Zeisset, I.,  and Hoogesteger, T.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Europe"
+      },
+      "code": "2"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

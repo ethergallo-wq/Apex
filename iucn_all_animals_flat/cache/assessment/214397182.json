@@ -1,0 +1,3418 @@
+{
+  "assessment_date": "2019-11-12T00:00:00.000+00:00",
+  "year_published": "2022",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 198921,
+  "criteria": "A2bcd+3d",
+  "url": "https://www.iucnredlist.org/species/198921/214397182",
+  "citation": "Marshall, A., Barreto, R., Carlson, J., Fernando, D., Fordham, S., Francis, M.P., Derrick, D., Herman, K., Jabado, R.W., Liu, K.M., Rigby, C.L. & Romanov, E. 2022. Mobula birostris (amended version of 2020 assessment). The IUCN Red List of Threatened Species 2022: e.T198921A214397182. Accessed on 05 May 2026.",
+  "assessment_id": 214397182,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 198921,
+    "scientific_name": "Mobula birostris",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "CHONDRICHTHYES",
+    "order_name": "MYLIOBATIFORMES",
+    "family_name": "MOBULIDAE",
+    "genus_name": "Mobula",
+    "species_name": "birostris",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Walbaum, 1792)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Shark Specialist Group (sharks and rays)",
+        "url": "https://www.iucnssg.org",
+        "description": "Chair: Rima Jabado (email: rimajabado@hotmail.com)\nRed List Authority Coordinator: Cassie Rigby (email: crigby@westnet.com.au)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Chevron Manta Ray",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Giant Manta Ray",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Pacific Manta Ray",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Pelagic Manta Ray",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Manta Cornuda",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Manta Diablo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Manta Gigante",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Manta Raya",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Manta Voladora",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Oniitomakiei",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Raia-jamanta",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "شيطان البحر المحيطي",
+        "language": "ara"
+      },
+      {
+        "main": true,
+        "name": "Oceanic Manta Ray",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Manta hamiltoni Hamilton & Newman, 1849)",
+        "status": "ACCEPTED",
+        "genus_name": "Manta",
+        "species_name": "hamiltoni",
+        "species_author": "Hamilton & Newman, 1849)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Manta birostris (Walbaum, 1792)",
+        "status": "ACCEPTED",
+        "genus_name": "Manta",
+        "species_name": "birostris",
+        "species_author": "(Walbaum, 1792)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Raja birostris Donndorff, 1798",
+        "status": "ACCEPTED",
+        "genus_name": "Raja",
+        "species_name": "birostris",
+        "species_author": "Donndorff, 1798",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Endangered"
+    },
+    "code": "EN"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 1000,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": "29",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Oceanic Manta Ray is circumglobal in tropical and temperate waters from the surface to 1,000 m depth (Last <em>et al</em>. 2016).",
+    "population": "The global population size of the Oceanic Manta Ray is difficult to assess, but abundance trajectories have been estimated based on long time series of sightings at diving sites. Generally, divers encounter the Oceanic Manta Ray less frequently than the Reef Manta Ray (<em>Mobula alfredi</em>) and this is thought to be due to their more oceanic habitat preferences and behaviour. Locally, abundance varies substantially and may be based on food availability and the degree that they were, or are currently, being fished. In most regions, Oceanic Manta Ray population sizes appear to be small (less than 1,000 individuals). Photo-identification studies at specific aggregation sites have yielded minimum estimates of 42 to 500 individuals over almost a decade of monitoring in most locations, including: Mozambique, Thailand, Myanmar, Indonesia (Holmberg and Marshall 2018), Japan (Kashiwagi <em>et al</em>. 2010), Brazil (Luiz <em>et al</em>. 2008), and Mexico (Rubin 2002). A 6-year study has catalogued more than 2,000 individuals in a single site, off mainland Ecuador (Holmberg and Marshall 2018).<br/><br/>Oceanic Manta Ray aggregation sites are widely separated, and the lack of genetic substructuring indicates occasional large-scale movements have occurred. Cross-referencing of regional photo-identification databases has not detected inter-region individual movements (e.g. across ocean basins) (Holmberg and Marshall 2018), indicating a low degree of interchange between ocean basins. Unlike the Reef Manta Ray, no significant genetic substructuring has been detected within the Oceanic Manta Ray (Stewart <em>et al</em>. 2016, Hosegood <em>et al</em>. 2019). Long-term studies, including those that have incorporated telemetry, have shown low re-sighting rates but a degree of philopatry.<br/><br/>The trend of the number of individuals varies widely across the range of the Oceanic Manta Ray, but trends appear stable where they are protected and declining rapidly where fishing pressure is greater. The sighting trends appear stable where they receive some level of protections, such as Hawaii (Ward-Paige <em>et al</em>. 2013) and Ecuador (Holmberg and Marshall 2018), although individuals sighted in Ecuador seasonally migrate to Peru (A. Marshall unpubl. data 2019) where directed  fishing occurs (Heinrichs <em>et al</em>. 2011). Elsewhere, the number of individuals is likely to be declining in places where the species is targeted or caught regularly as bycatch. There are two estimates based on sightings-per-unit-effort. In southern Mozambique, a 94% decline in diver sighting records occurred over a 15-year period in a well-studied population (Rohner <em>et al</em>. 2017). In Cocos Island, Costa Rica there has been an 89% decline in diver sighting records of Oceanic Manta Rays over a 21-year period (White <em>et al</em>. 2015). These steep declines have occurred in less than one generation length (29 years).<br/><br/>Along with these sightings data, it is suspected (based on historical sightings, distribution data, and habitat suitability), that the Oceanic Manta Ray may have been depleted in areas where significant fisheries or threats  for manta rays exist, such as the west coast of mainland Mexico (Booda  1984, Rubin 2002), Madagascar, Tanzania (Bianchi 1985), Kenya, Somalia, Pakistan (Nawaz and  Khan 2015, Moazzam 2018), India, Sri Lanka, Bangladesh, Myanmar, China, Indonesia, and the Philippines. In these densely populated and heavily fished countries, fishing pressure may have more swiftly depleted resident populations of Oceanic Manta Rays.<br/><br/>There are narratives consistent with rapid local depletion, and disappearance of manta rays, particularly in Indonesia. In Lamakera, eastern Indonesia, increasing international trade demand for manta ray products in the 1990s resulted in increased fishing effort, with up to 2,400 manta and devil rays landed per year. Consequently, manta ray catches (including Oceanic Manta Ray) declined sharply in this region, forcing fishers to travel further afield to find manta rays (Dewar 2002). Furthermore, landings of <em>Manta</em> spp. (including Oceanic Manta Ray which was the main target) continued to decline in Lamakera despite increased effort, with a reduction in landings of 75% over a 13-year period from 2001 to 2014 leading to possible local extinction of <em>Manta</em> spp. from Lamakera (Lewis <em>et al</em>. 2015). Landings of <em>Manta</em> spp. also declined significantly during the same 13-year period in two other regions in Indonesia where effort also increased: Tanjung Luar (Lombok) (95% declines) and Cilicap (Central Java) (71% declines) (Lewis <em>et al</em>. 2015). Aggregations of manta rays have entirely disappeared from three other locations within Indonesia, that is Lembeh Strait, South Sulawesi and Northwest Alor, with the cause strongly suspected as targeted and bycatch fishing (Lewis <em>et al</em>. 2015). In East Flores and Lembata, Indonesia, manta rays (including the Oceanic Manta Ray) had historically been fished by  indigenous villagers since 1959, with up to 360 individuals caught a year (Barnes  2005). By 2001, less than 10 manta rays had been seen per year for the  previous 6-year period (Lewis <em>et al</em>. 2015).<br/><br/>In the Bohol Sea, Philipines, manta rays (including Oceanic Manta Rays) were targeted for over a century with landings estimated to have declined since the 1960s by 50–90%, despite increasing fishing effort (Alava <em>et al</em>. 2002). Concern for the species led to a ban on targeting of Oceanic Manta Rays in the Philippines in 1998, yet other <em>Mobula</em> species could still be targeted, and Oceanic Manta Ray continued to be caught (Acebes and Tull 2016, Rambahiniarison <em>et al</em>. 2018). In 2017, all targeted <em>Mobula</em> fisheries in the Bohol Seas were banned, yet <em>Mobula</em> species may still be taken as bycatch in tuna fisheries in the Bohol Sea (Rambahiniarison <em>et al</em>. 2018). Declining trends in the abundance and body size of mobulid fisheries landings  occurred both in India and Sri Lanka (Fernando and Stevens 2011, Pillai  1998, Nair <em>et al.</em> 2013, Raje <em>et al</em>. 2007). In Papua New Guinea, local declines have been noted and are attributed to fishing pressure (Rose 2008). Unspecified manta rays (some of which, based on distribution records, were likely Oceanic Manta Rays) were caught as non-target species in purse seine sets from 1995 to 2006. There was a distinct and significant rise in the number of manta rays caught in these fisheries in 2001, which steadily rose until 2005/2006 when sharp declines were noted in the catch (Rose 2008).<br/><br/>Although sparse, the available data suggest that localized populations of the Oceanic Manta Ray have been rapidly depleted by target fisheries in some regions and that local extinction is suspected to have occurred in many parts of their historical range. Globally, the suspected population reduction is 50–79% over three generation lengths (87 years), with a further population reduction suspected over the next three generation lengths (2018–2105), based on current and ongoing threats and exploitation levels, steep declines in monitored populations, and a reduction in area of occupancy. In the few places where manta rays are protected, the number of individuals is stable.",
+    "habitats": "The Oceanic Manta Ray is a neritic and oceanic pelagic ray that occurs in places with regular upwelling along coastlines, oceanic islands, and offshore pinnacles and seamounts (Marshall <em>et al</em>. 2009). The Oceanic Manta Ray can exhibit diel patterns in habitat use, moving inshore during the day to clean and socialize in shallow waters, and then moving offshore at night to feed to depths of 1,000 meters (Hearn <em>et al</em>. 2014, Burgess 2017). It can spend long periods of time offshore without visiting shallow coastal waters (Stewart <em>et al</em>. 2016, A. Marshall unpubl. data 2019). The Oceanic Manta Ray may be the largest living ray species, attaining a maximum size of 700 cm disc width (DW) with anecdotal reports up to 910 cm DW (Compagno 1999, Alava <em>et al</em>. 2002). Males mature at 350–400 cm DW and females mature at 380–500 cm DW (White <em>et al</em>. 2006, Last <em>et al</em>. 2016, Stevens <em>et al</em>. 2018). Reproduction is aplacental viviparous with a single large pup of 122–200 cm DW (White <em>et al</em>. 2006, Rambahiniarison <em>et al</em>. 2018). Reproductive periodicity is unknown, but assumed to be 4–5 years, similar to the closely related Reef Manta Ray (<em>M. alfredi</em>). Female age-at-maturity is estimated as 8.6 years of age, but first pregnancy may be delayed by up to 4 years (making first age of pregnancy 12 years) depending upon food availability (Rambahiniarison <em>et al</em>. 2018). The maximum age is estimated as 45 years, based on the longevity of the Reef Manta Ray; generation length is therefore estimated as 29 years. Based on this life history, the maximum intrinsic rate of population increase could range between 0.019 and 0.046 per year (median 0.032 per year) (J. Carlson unpubl. data 2019, following methods in Dulvy <em>et al</em>. 2014). The species is among the longest-living rays and has an extremely conservative life history; the average Oceanic Manta Ray may produce only 4–7 pups during its estimated lifespan, which would contribute to its slow recovery from population reductions due to over-exploitation or other threats.",
+    "threats": "Mobulid rays, including the Oceanic Manta Ray, are both targeted and caught incidentally in industrial and artisanal fisheries (Couturier <em>et al</em>. 2012, Croll <em>et al</em>. 2016, Stewart <em>et al</em>. 2018). These rays are captured in a wide range of gear types including harpoons, drift nets, purse seine nets, gill nets, traps, trawls, and longlines. Manta rays are also caught in bather protection nets (Cliff and Dudley 2011, Department of Agriculture and Fisheries 2018). Their coastal and offshore distribution, and tendency to aggregate, makes mobulid rays particularly susceptible to bycatch in purse seine and longline fisheries and targeted capture in artisanal fisheries (Croll <em>et al</em>. 2016, Duffy and Griffiths 2017). In particular, Oceanic Manta Rays are easy to target because of their large size, slow swimming speed, tendency to aggregate, predictable habitat use, and lack of human avoidance (Couturier <em>et al</em>. 2012).<br/><br/><em>Mobula</em> rays, including Oceanic Manta Rays, are caught in at least 13 targeted artisanal fisheries in 12 countries. Some of the largest documented fisheries have been in Indonesia, the Philippines, India, Sri Lanka, México, Taiwan, Mozambique, Palestine (Gaza strip), and Peru (Couturier <em>et al</em>. 2012, Ward-Paige <em>et al</em>. 2013, Croll <em>et al</em>. 2016), where sometimes thousands of manta rays are landed per annum (Alava <em>et al</em>. 2002, Dewar 2002, White <em>et al</em>. 2006, Lewis <em>et al</em>. 2015). While many artisanal fisheries have grown to meet international trade demand for gill plates, some still target these rays mainly for food and local products (White <em>et al</em>. 2006, Essumang 2010, Rohner <em>et al</em>. 2017).<br/><br/><em>Mobula</em> rays, including Oceanic Manta Rays, are caught incidentally as bycatch throughout their ranges in at least 21 small scale fisheries in 15 countries and nine large-scale fisheries in 11 countries (Croll <em>et al</em>. 2016). Despite being unintentionally caught, mobulid rays are typically retained because of their high trade value. Even when discarded alive, e.g. from tuna purse seine fisheries, they are often injured and have high post-release mortality (Tremblay-Boyer and Brouwer 2016, Francis and Jones 2017). Many fisheries remain open and active even after dozens of national fishing bans and international listings on the appendices of both Convention for the Conservation of Migratory Species of Wild Animals (CMS) and the Convention on International Trade in Endangered Species of Wild Flora and Fauna (CITES) (Lawson <em>et al</em>. 2017, Lawson and Fordham 2018).<br/><br/>Global landings of mobulid species, including Oceanic Manta Ray, have been increasing steadily due in large part to the recent rise (from the 1990s onwards) in demand for gill plates (Croll <em>et al</em>. 2016, O’Malley <em>et al</em>. 2017). Many former bycatch fisheries have become directed commercial export fisheries (Dewar 2002, White <em>et al</em>. 2006, Heinrichs <em>et al</em>. 2011, Fernando and Stevens 2011). Between 2000 and 2007, total landings of ‘Mantas, devil rays nei’ ('nei' refers to 'not landed elsewhere') increased from 900 tonnes to over 3,300 tonnes according to the FAO Fishstat Capture Production database (Lack and Sant 2009). This equates to an average of 1,593 metric t being landed per annum with this average increasing to 4,462 metric t per annum from 2008 to 2017 (Oakes and Sant 2019); reported landings are likely to estimate only a fraction of total fishing-related mortality (Ward-Paige <em>et al</em>. 2013).<br/><br/>In the markets of Guangzhou, China, where 99% of mobulid products are routed, mobulid products are sourced from over 20 countries and regions (O’Malley <em>et al</em>. 2017). The source locations for the largest amounts of product are Indonesia, Sri Lanka, India, China, and Vietnam (O’Malley <em>et al</em>. 2017). Demand for products has driven up the price and traded volume of these products in recent decades. Between 2011 and 2013, there was an increase from 60 to 120 t of mobulid product moved through shops in Guangzhou (O’Malley <em>et al</em>. 2017).<br/><br/>In the Western Indian Ocean, Romanov (2002) estimated that between 253 and 539 manta rays and devil rays were being caught per year as bycatch in purse seine fisheries, and between 2003 and 2007, 35 manta rays were observed in purse seine bycatch, most of which were likely Oceanic Manta Ray (Amandè <em>et al</em>. 2012). In the Western and Central Pacific, from 2010 to 2015, observed bycatch of Oceanic Manta Rays in purse seine fisheries was 4,176 individuals, and in longline fisheries was 226 individuals (based on distribution, some of these were likely Oceanic Manta Ray) (Tremblay-Boyer and Brouwer, 2016). While a few individuals were released in good condition, post-release mortality is likely to be high as most were released alive but injured, or dead (Francis and Jones 2017). The Eastern Pacific purse seine fisheries show a substantial increase in the bycatch of mobulid rays, including Oceanic Manta Rays, from 20 tonnes per year before 2005 to 150 tonnes per year by 2006, which then reduced to 10 tonnes per year by 2009 (Hall and Roman 2013). The Inter-American Tropical Tuna Commission (IATTC) purse seine vessels operating from 1993 to 2015 reported an average catch of approximately 135 Oceanic Manta Rays per year (Miller and Klimovich 2017). A susceptibility analysis indicated that negative interactions with fishing gear and unintended mortality will continue to be an issue with this species as these fisheries coincide with high productivity areas where Oceanic Manta Rays are likely to aggregate for feeding (Duffy and Griffiths 2017, Duffy <em>et al</em>. 2019).<br/><br/>While the overwhelming cause of population reduction is fishing mortality, sublethal effects and lower levels of mortality occur from numerous lesser threats, such as entanglement in nets, recreational foul hooking, and vessel strikes (Marshall and Bennett 2010, Deakos <em>et al</em>. 2011, Couturier <em>et al</em>. 2012, Stewart <em>et al</em>. 2018). While there is no direct evidence, there are concerns for effects of climate change, ocean acidification, oil spills, and other forms of pollution and contaminants (e.g., heavy metals) (Essumang 2010, Ooi <em>et al</em>. 2015, Stewart <em>et al</em>. 2018). Furthermore, shallow water lagoon nursery habitats are subject to habitat loss and degradation that pose threats to juvenile Oceanic Manta Rays (Stewart <em>et al</em>. 2018).",
+    "measures": "The Oceanic Manta Ray is protected in over a dozen countries and territories (Lawson <em>et al</em>. 2017, Lawson and Fordham 2018, Booth <em>et al</em>. 2020). Local, national, and territory-level restrictions and/or protections for manta rays are currently in place in the USA (Hawaii), Australia and its territories, the Maldives, the United Arab Emirates, the Federated States of Micronesia (Yap), Thailand, Mozambique, Indonesia, and the Philippines. Even with legislative protection in some areas, fisheries for manta ray persist in others and there are more locations still where they are incidentally captured as bycatch in artisanal as well as small and large fisheries. With little to no effort to monitor or regulate mobulid fisheries in many countries, these current paper regulations are proving inadequate and misleading.<br/><br/>Manta rays have been listed in the appendices of a number of international conventions. The Oceanic Manta Ray was listed on Appendix I and II of the Bonn Convention for the Conservation of Migratory Species of Wild Animals (CMS) in 2011, however, many CMS Parties have inadequate protections (Lawson and Fordham 2018). As a threatened species whose wide-ranging migratory tendencies put it at risk, this listing acknowledges the fact that this species would benefit from the implementation of cooperative international agreements to manage and protect its populations and encourages range states to work together toward this goal. Manta species (i.e., including Oceanic Manta Ray) were listed on Appendix II of the Convention on International Trade in Endangered Species (CITES) in 2013, requiring fishing states to legitimize all exports through a permitting system based on non-detrimental findings which delimit acceptable, sustainable catches.<br/><br/>Some Regional Fishing Management Organizations (RFMOs) have formally prohibited the retention of manta rays as bycatch, however most regulatory systems doing an inadequate job of protecting mobulids from fishing mortality. In 2015, recognizing the threatened status of mobulids, including the Oceanic Manta Ray, IATTC adopted recommendations which prohibited retaining, trans-shipping, landing, storing or selling, in whole or in part, any species of Mobula and required going forward that all mobulids be promptly released alive under strict non-detrimental protocols (Lawson <em>et al</em>. 2017, Lawson and Fordham 2018). Since then IOTC (2019), have adopted similar recommendations, and the WCPFC will adopt similar conservation measures in January 2021. Efforts should be put in place to reduce the unintentional capture of these rays and when they are caught, protocols should be in place for their safe release, to reduce the chances of post-release mortality.<br/><br/>Manta ray tourism is managed in some locations, but if sustainable tourism industries are indeed to be developed around encounters with these rays, they should be legislated, continuously monitored, and enforced with permitting systems to make sure operators and tourists are adhering to best practice protocols and codes of conduct.",
+    "use_trade": "Mobulids are widely used for their meat, skin, liver oil, and gill plates (Couturier <em>et al</em>. 2012). The gill plates fetch high prices in Asia and are used for Chinese health tonics (O’Malley <em>et al</em>. 2017). The meat from mobulids is often used for food and shark bait or attractant, and the skin of mobulids is sometimes used for leather products (shoes, wallets, and knife handles). Oceanic Manta Rays are sometimes caught and transported to aquariums for use in display tanks. Some of these captive animals have been released into the wild.",
+    "rationale": "The Oceanic Manta Ray (<em>Mobula birostris</em>) is a large (to 700 cm disc width) ray with a circumglobal distribution in tropical and temperate waters throughout the Pacific, Indian, and Atlantic Oceans in coastal and pelagic waters from the surface to a depth of 1,000 m. Within this broad range, aggregations are sparsely distributed and while individuals are capable of long-distance movements they do so infrequently and exhibit a degree of philopatry resulting in a high likelihood of local depletion. The global population size is not known, but local and regional abundance has been estimated and is mostly small, numbering less than 500 individuals, except for Ecuador where abundance is estimated at more than 2,000 individuals. The species has an extremely slow life history, producing only 1 pup on average every 4–5 years, and consequently is likely to have one of the lowest maximum rates of population increase (median 0.032 per year) of any elasmobranch. Oceanic Manta Rays are targeted or taken as bycatch in artisanal small-scale fisheries, as well as taken as bycatch in large-scale tuna fisheries. The meat is consumed locally, and the species is traded internationally due to the rapid rise of the valuable gill plate trade. Where Oceanic Manta Ray are protected (in over a dozen countries and territories), and hence where they are not being fished, the sighting trends appear stable. Elsewhere, however, very rapid declines have been noted in sightings records and landings where they are targeted or caught as bycatch; these range from 71 to 95% declines over 13- to 21-year periods (all less than one generation length of 29 years). It is suspected that the Oceanic Manta Ray has undergone a population reduction of 50–79% over the past three generation lengths (87 years), with further population reduction suspected over the next three generation lengths (2018–2105) due to current and ongoing levels of exploitation, and a reduction in area of occupancy due to suspected local and regional extinctions, and it is assessed as Endangered (EN A2bcd+A3d).",
+    "trend_justification": null,
+    "taxonomic_notes": "<p>The previously, monotypic genus <em>Manta</em> was re-evaluated with two species identified, Reef Manta Ray (<em>Manta alfredi</em>) and Giant Manta Ray (<em>Manta birostris</em>) (Marshall <em>et al</em>. 2009). Genetic evidence supported the separation (Kashiwagi <em>et al</em>. 2012). Both species have broad global distributions and are sympatric in some locations and allopatric in others (Kashiwagi <em>et al</em>. 2011, Lawson <em>et al.</em> 2017). A third species of manta ray has also been proposed (Marshall <em>et al.</em> 2009) with increasing genetic support (Hinojosa-Alvarez <em>et al</em>. 2016, Kashiwagi <em>et al.</em> 2017, Hosegood <em>et al.</em> 2018). Genetic evidence has also resulted in the genus <em>Manta </em>being subsumed within the genus <em>Mobula</em> (Poortvliet <em>et al.</em> 2015, White <em>et al.</em> 2018).<br/> <br/> Due to the recent taxonomic changes, both present day and historical reports can often be unclear and without adequate descriptions, photographs or geographic locations, it can be difficult to conclusively attribute fisheries data to a single species. Care should be taken when using reports or accounts of the Giant Manta Ray. Melanistic (black) and leucistic (white) colour morphs occur in all species of manta ray (Marshall <em>et al</em>. 2009). Variant colour morphs often contribute an added degree of confusion when attempting to visually discriminate between species of manta rays in the field or in photographs, especially when close examination is not possible. It should be noted that these colour morphs could be a source of error, resulting in misidentifications in past or future studies or surveys of distribution.</p>"
+  },
+  "biogeographical_realms": [],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Azores"
+      },
+      "code": "AZO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Navassa I."
+      },
+      "code": "HAI-NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ascension"
+      },
+      "code": "ASC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andaman Is."
+      },
+      "code": "AND-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea (mainland)"
+      },
+      "code": "EQG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "US Line Is."
+      },
+      "code": "LIN-US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica (mainland)"
+      },
+      "code": "COS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Johnston I."
+      },
+      "code": "HAW-JI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madeira"
+      },
+      "code": "MDR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Eustatius"
+      },
+      "code": "NLA-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wake Is."
+      },
+      "code": "WAK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Howland-Baker Is."
+      },
+      "code": "HBI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saba"
+      },
+      "code": "NLA-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos I."
+      },
+      "code": "CPI-CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Annobón"
+      },
+      "code": "GGI-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Selvagens"
+      },
+      "code": "SEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia (mainland)"
+      },
+      "code": "CLM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico (main island)"
+      },
+      "code": "PUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombian Caribbean Is."
+      },
+      "code": "SWC-CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Midway Is."
+      },
+      "code": "HAW-MI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena (main island)"
+      },
+      "code": "STH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire"
+      },
+      "code": "NLA-BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Marshall, A., Barreto, R., Carlson, J., Fernando, D., Fordham, S., Francis, M.P., Derrick, D., Herman, K., Jabado, R.W., Liu, K.M., Rigby, C.L. & Romanov, E.",
+      "value": [
+        "Sonja Fordham (Shark Advocates International)",
+        "Rima Jabado (Elasmo Project)",
+        "Malcolm Francis (IUCN SSC Shark Specialist Group)",
+        "Andrea Marshall (IUCN SSC Shark Specialist Group)",
+        "John Carlson (NOAA)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Evgeny Romanov",
+        "Daniel Fernando",
+        "Katelyn Herman (Georgia Aquarium, Atlanta, Georgia / IUCN SSC Shark Specialist Group)",
+        "Rodrigo Barreto (Centro de Pesquisa e Conservação da Biodiversidade Marinha do Sudeste e Sul (CEPSUL/ICMBio))",
+        "Kwang-Ming Liu",
+        "Danielle Derrick (Simon Fraser University)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Kashiwagi, T. & Dulvy, N.K.",
+      "value": [
+        "Tom Kashiwagi (The University of Queensland)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Marshall, A., Bennett, M.B., Kodja, G., Hinojosa-Alvarez, S., Galvan-Magana, F., Harding, M., Stevens, G. & Kashiwagi, T.",
+      "value": [
+        "Michael Bennett (University of Queensland)",
+        "Andrea Marshall (IUCN SSC Shark Specialist Group)",
+        "Felipe Galvan-Magana (Instituto Politecnico Nacional, Centro Interdisciplinario de Ciencas Marinas)",
+        "Guilherme Kodja (Laja Viva Institute)",
+        "Guy Stevens (Maldivian Manta Ray Project)",
+        "Mark Harding (Project Elasmo)",
+        "Silvia Hinojosa-Alvarez (Facultad de Ciencias UNAM)",
+        "Tom Kashiwagi (The University of Queensland)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rigby, C.L., Kyne, P.M., Pollom, R., Herman, K. & Dulvy, N.K.",
+      "value": [
+        "Peter Kyne (Charles Darwin University, Australia / IUCN SSC Shark RLA Coordinator)",
+        "Riley Pollom (Project Seahorse)",
+        "Cassandra Rigby (James Cook University, Queensland, Australia)",
+        "Nicholas Dulvy (Simon Fraser University, Canada / IUCN SSC Shark Specialist Group)",
+        "Katelyn Herman (Georgia Aquarium, Atlanta, Georgia / IUCN SSC Shark Specialist Group)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This amended assessment corrects the common name \"devilray\" to \"devil ray\" and \"Giant Manta Ray\" to \"Oceanic Manta Ray\", and fixes some formatting issues in the text."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Last, P., White, W., de Carvalho, M., Séret, B., Stehmann, M. and Naylor, G. 2016. <i>Rays of the World</i>. CSIRO Publishing, Clayton.",
+      "year": "2016",
+      "title": "Rays of the World",
+      "author": "Last, P., White, W., de Carvalho, M., Séret, B., Stehmann, M. and Naylor, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alava, M.N.R., Dolumbaló, E.R.Z., Yaptinchay, A.A. and Trono, R.B. 2002. Fishery and trade of whale sharks and manta rays in the Bohol Sea, Philippines. Pp. 132-148. In: S.L. Fowler, T.M. Reed and F.A. Dipper (eds), Elasmobranch Biodiversity, Conservation and Management: Proceedings of the International Seminar and Workshop. Sabah, Malaysia, July 1997. <i>Occasional paper of the IUCN Species Survival Commission</i> No. 25.",
+      "year": "2002",
+      "title": "Fishery and trade of whale sharks and manta rays in the Bohol Sea, Philippines. Pp. 132-148",
+      "author": "Alava, M.N.R., Dolumbaló, E.R.Z., Yaptinchay, A.A. and Trono, R.B",
+      "citation_short": ""
+    },
+    {
+      "citation": "White, E.R., Myers, M.C., Flemming, J.M. and Baum, J.K. 2015. Shifting elasmobranch community assemblage at Cocos Island--an isolated marine protected area. <i>Conservation Biology</i> 29(4): 1186–1197.",
+      "year": "2015",
+      "title": "Shifting elasmobranch community assemblage at Cocos Island--an isolated marine protected area.",
+      "author": "White, E.R., Myers, M.C., Flemming, J.M. and Baum, J.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heinrichs, S., O'Malley, M., Medd, H. and Hilton, P. 2011. Manta Ray of Hope 2011 Report: The Global Threat to Manta and Mobula Rays. WildAid, San Francisco, CA.",
+      "year": "2011",
+      "title": "Manta Ray of Hope 2011 Report: The Global Threat to Manta and Mobula Rays",
+      "author": "Heinrichs, S., O'Malley, M., Medd, H. and Hilton, P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hall M. and Roman M. 2013. Bycatch and Non-Tuna Catch in the Tropical Tuna Purse Seine Fisheries of the World.  FAO Fisheries and Aquaculture Technical Paper.",
+      "year": "2013",
+      "title": "Bycatch and Non-Tuna Catch in the Tropical Tuna Purse Seine Fisheries of the World",
+      "author": "Hall M. and Roman M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Raje, S.G., Sivakami, S., Mohanraj, G., Manojkumar, P.P., Raju, A. and Joshi, K.K. 2007. An atlas on the Elasmobranch fishery resources of India.  CMFRI Special Publication, 95. 1-253.",
+      "year": "2007",
+      "title": "An atlas on the Elasmobranch fishery resources of India",
+      "author": "Raje, S.G., Sivakami, S., Mohanraj, G., Manojkumar, P.P., Raju, A. and Joshi, K.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lawson, J.M., Fordham, S. V,  O'Malley, M.P., Davidson, L. N. K., Walls, R. H. L., Heupel, M. R., Stevens, G., Fernando, D., Budziak, A., Simpfendorfer, C. A., Ender, I., Francis, M. P., Notarbartolo di Sciara, G., and Dulvy, N. K. 2017. Sympathy for the devil: a conservation strategy for devil and manta rays. <i>PeerJ </i> 5:e3027 : doi: 10.7717/peerj.3027.",
+      "year": "2017",
+      "title": "Sympathy for the devil: a conservation strategy for devil and manta rays",
+      "author": "Lawson, J.M., Fordham, S. V,  O'Malley, M.P., Davidson, L. N. K., Walls, R. H. L., Heupel, M. R., Stevens, G., Fernando, D., Budziak, A., Simpfendorfer, C. A., Ender, I., Francis, M. P., Notarbartolo di Sciara, G., and Dulvy, N. K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lewis, S.A., Setiasih, N., Dharmadi, Fahmi, O’Malley, M.P., Campbell, S.J., Yusuf, M. and Sianipar, A. 2015. Assessing Indonesian Manta and Devil Ray Populations Through Historical Landings and Fishing Community Interviews. <i>PeerJ Preprints</i>: available online at  https://peerj.com/preprints/1334/.",
+      "year": "2015",
+      "title": "Assessing Indonesian Manta and Devil Ray Populations Through Historical Landings and Fishing Community Interviews",
+      "author": "Lewis, S.A., Setiasih, N., Dharmadi, Fahmi, O’Malley, M.P., Campbell, S.J., Yusuf, M. and Sianipar, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ward-Paige, C.A., David, B. and Worm, B. 2013. Global population trends and human use patterns of <i>Manta</i> and <i>Mobula</i> rays. <i>PLoS ONE</i> 8(9): e74835. doi:10.1371/journal.pone.0074835.",
+      "year": "2013",
+      "title": "Global population trends and human use patterns of <i>Manta</i> and <i>Mobula</i> rays",
+      "author": "Ward-Paige, C.A., David, B. and Worm, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Couturier, L.I.E., Marshall, A.D., Jaine, F.R.A., Kashiwagi, T., Pierce, S.J., Townsend, K.A., Weeks, S.J., Bennet, M.B. and Richardson, A.J. 2012. Biology, ecology and conservation of the Mobulidae. <i>Journal of Fish Biology</i> 80: 1075-1119.",
+      "year": "2012",
+      "title": "Biology, ecology and conservation of the Mobulidae",
+      "author": "Couturier, L.I.E., Marshall, A.D., Jaine, F.R.A., Kashiwagi, T., Pierce, S.J., Townsend, K.A., Weeks, S.J., Bennet, M.B. and Richardson, A.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Poortvliet, M., Olsen, J., Croll, D.A., Bernardi, G., Newton, K., Kollias, S., O’Sullivan, J., Fernando, D., Stevens, G., Galván Magaña, F., Seret, B., Wintner, S. and Hoarau, G. 2015. A dated molecular phylogeny of manta and devil rays (Mobulidae) based on mitogenome and nuclear sequences. <i>Molecular Phylogenetics and Evolution</i> 83: 72-85.",
+      "year": "2015",
+      "title": "A dated molecular phylogeny of manta and devil rays (Mobulidae) based on mitogenome and nuclear sequences.",
+      "author": "Poortvliet, M., Olsen, J., Croll, D.A., Bernardi, G., Newton, K., Kollias, S., O’Sullivan, J., Fernando, D., Stevens, G., Galván Magaña, F., Seret, B., Wintner, S. and Hoarau, G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lack, M. and Sant, G. 2009. Trends in Global Shark Catch and Recent Developments in Management. TRAFFIC International, Cambridge, UK.",
+      "year": "2009",
+      "title": "Trends in Global Shark Catch and Recent Developments in Management",
+      "author": "Lack, M. and Sant, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Nair, R.J., Zacharia, P.U., Kishor, T.G., Dinesh, K.S., Dhaneesh, K.V., Suraj, K.S., Siva, G.K. and Seetha, P.K. 2013. Heavy landings of mobulids reported at Cochin Fisheries Harbour, Kerala. <i>Marine Fisheries Information Services, T&E Series</i> 21: 19-20.",
+      "year": "2013",
+      "title": "Heavy landings of mobulids reported at Cochin Fisheries Harbour, Kerala",
+      "author": "Nair, R.J., Zacharia, P.U., Kishor, T.G., Dinesh, K.S., Dhaneesh, K.V., Suraj, K.S., Siva, G.K. and Seetha, P.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "White, W.T., Giles, J., Dharmadi and Potter, I.C. 2006b. Data on the bycatch fishery and reproductive biology of mobulid rays (Myliobatiformes) in Indonesia. <i>Fisheries Research</i> 82: 65-73.",
+      "year": "2006b",
+      "title": "Data on the bycatch fishery and reproductive biology of mobulid rays (Myliobatiformes) in Indonesia",
+      "author": "White, W.T., Giles, J., Dharmadi and Potter, I.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pillai, S. 1998. A note on giant devil ray <i>Mobula diabolus</i> caught at Vizhinjam.  <i>Report of the Marine Fisheries Information Service</i>. No 152. Pp. 14-15.",
+      "year": "1998",
+      "title": "A note on giant devil ray <i>Mobula diabolus</i> caught at Vizhinjam",
+      "author": "Pillai, S",
+      "citation_short": null
+    },
+    {
+      "citation": "Dewar, H. 2002. Preliminary report: Manta harvest in Lamakera.  Report from the Pfleger Institute of Environmental Research and the Nature Conservancy.",
+      "year": "2002",
+      "title": "Preliminary report: Manta harvest in Lamakera",
+      "author": "Dewar, H",
+      "citation_short": null
+    },
+    {
+      "citation": "Fernando, D. and Stevens, G. 2011. A study of Sri Lanka’s Manta & Mobula Ray Fishery. Manta Trust.",
+      "year": "2011",
+      "title": "A study of Sri Lanka’s Manta & Mobula Ray Fishery",
+      "author": "Fernando, D. and Stevens, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dulvy, N.K., Pardo, S.A., Simpfendorfer, C.A., Carlson, J.K. 2014. Diagnosing the dangerous demography of manta rays using life history theory. <i>PeerJ</i> 2(e400).",
+      "year": "2014",
+      "title": "Diagnosing the dangerous demography of manta rays using life history theory.",
+      "author": "Dulvy, N.K., Pardo, S.A., Simpfendorfer, C.A., Carlson, J.K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Deakos, M.H., Baker, J.D. and Bejder, L. 2011. Characteristics of a manta ray <i>Manta alfredi</i> population off Maui, Hawaii and implications for management. <i>Marine Ecology Progress Series</i> 429: 245-260.",
+      "year": "2011",
+      "title": "Characteristics of a manta ray <i>Manta alfredi</i> population off Maui, Hawaii and implications for management",
+      "author": "Deakos, M.H., Baker, J.D. and Bejder, L",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barnes, R.H. 2005. Indigenous use and management of Whales and other Marine Resources in East Flores and Lembata, Indonesia. 国立民族学博物館 Indigenous Use and Management of Marine Resources.",
+      "year": "2005",
+      "title": "Indigenous use and management of Whales and other Marine Resources in East Flores and Lembata, Indonesia. 国立民族学博物館 Indigenous Use and Management of Marine Resources.",
+      "author": "Barnes, R.H",
+      "citation_short": null
+    },
+    {
+      "citation": "Marshall, A.D., Compagno, L.J.V. and Bennett, M.B. 2009. Redescription of the genus <i>Manta</i> with resurrection of <i>Manta alfredi</i> (Krefft, 1868) (Chondrichthyes; Myliobatoidei; Mobulidae). <i>Zootaxa</i> 2301: 1-28.",
+      "year": "2009",
+      "title": "Redescription of the genus <i>Manta</i> with resurrection of <i>Manta alfredi</i> (Krefft, 1868) (Chondrichthyes; Myliobatoidei; Mobulidae)",
+      "author": "Marshall, A.D., Compagno, L.J.V. and Bennett, M.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Kashiwagi, T., Marshall, A.D., Bennett, M.B. and Ovenden, J.R. 2011. Habitat segregation and mosaic sympatry of the two species of manta ray in the Indian and Pacific Oceans, <i>Manta alfredi</i> and <i>M. birostris</i>. <i>Marine Biodiversity Records</i> 4: e53.",
+      "year": "2011",
+      "title": "Habitat segregation and mosaic sympatry of the two species of manta ray in the Indian and Pacific Oceans, <i>Manta alfredi</i> and <i>M. birostris</i>",
+      "author": "Kashiwagi, T., Marshall, A.D., Bennett, M.B. and Ovenden, J.R",
+      "citation_short": null
+    },
+    {
+      "citation": "Kashiwagi, T., Ito, T. and Sato, F. 2010. Occurrences of reef manta ray, <i>Manta alfredi</i>, and giant manta ray, <i>M. birostris</i>, in Japan, examined by photographic records. <i>Report of Japanese Society for Elasmobranch Studies</i> 46: 20-27.",
+      "year": "2010",
+      "title": "Occurrences of reef manta ray, <i>Manta alfredi</i>, and giant manta ray, <i>M. birostris</i>, in Japan, examined by photographic records",
+      "author": "Kashiwagi, T., Ito, T. and Sato, F",
+      "citation_short": null
+    },
+    {
+      "citation": "Essumang, D.K. 2010. First determination of the levels of platinum group metals in <i>Manta birostris</i> (manta ray) caught along the Ghanaian coastline. <i>Bulletin of Environmental Contamination and Toxicology</i> 84: 720-725.",
+      "year": "2010",
+      "title": "First determination of the levels of platinum group metals in <i>Manta birostris</i> (manta ray) caught along the Ghanaian coastline",
+      "author": "Essumang, D.K",
+      "citation_short": null
+    },
+    {
+      "citation": "Compagno, L.J.V. 1999. Systematics and body form. Pp 1-42. In: W.C. Hamlett (ed.), <i>Sharks, Skates, and Rays: the Biology of Elasmobranch Fishes</i>. John Hopkins University Press, Baltimore.",
+      "year": "1999",
+      "title": "Systematics and body form. Pp 1-42",
+      "author": "Compagno, L.J.V",
+      "citation_short": null
+    },
+    {
+      "citation": "Bianchi, G. 1985. Field guide to the commercial marine and brackish water species of Tanzania.  FAO Species Identification Sheets for Fishery Purposes. Project No. TCP/URT/4406. FAO, Rome.",
+      "year": "1985",
+      "title": "Field guide to the commercial marine and brackish water species of Tanzania",
+      "author": "Bianchi, G",
+      "citation_short": null
+    },
+    {
+      "citation": "Rubin, R. 2002. Manta rays: not all black and white. <i>Shark Focus</i> 15: 4-5.",
+      "year": "2002",
+      "title": "Manta rays: not all black and white",
+      "author": "Rubin, R",
+      "citation_short": null
+    },
+    {
+      "citation": "Booda, L. 1984. Manta ray wings, shark meat posing as scallops. <i>Sea Technology</i> 25(11): 71.",
+      "year": "1984",
+      "title": "Manta ray wings, shark meat posing as scallops",
+      "author": "Booda, L",
+      "citation_short": null
+    },
+    {
+      "citation": "White, W.T., Last, P.R., Stevens, J.D., Yearsley, G.K., Fahmi and Dharmadi. 2006. <i>Economically Important Sharks and Rays of Indonesia</i>. ACIAR Publishing, Canberra, Australia.",
+      "year": "2006",
+      "title": "Economically Important Sharks and Rays of Indonesia",
+      "author": "White, W.T., Last, P.R., Stevens, J.D., Yearsley, G.K., Fahmi and Dharmadi",
+      "citation_short": null
+    },
+    {
+      "citation": "Cliff, G., Dudley, S.F.J. 2011. Reducing the environmental impact of shark-control programs: a case study from KwaZulu-Natal, South Africa. <i>Marine and Freshwater Research </i> 62: 700-709.",
+      "year": "2011",
+      "title": "Reducing the environmental impact of shark-control programs: a case study from KwaZulu-Natal, South Africa",
+      "author": "Cliff, G., Dudley, S.F.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Romanov, E.V. 2002. Bycatch in the tuna purse-seine ﬁsheries of the western Indian Ocean. <i>Fishery Bulletin</i> 100: 90-105.",
+      "year": "2002",
+      "title": "Bycatch in the tuna purse-seine ﬁsheries of the western Indian Ocean",
+      "author": "Romanov, E.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "White, W.T., Corrigan, S., Yang, L., Henderson, A.C., Bazinet, A.L., Swofford, D.L. and Naylor, G.J.P. 2018. Phylogeny of the manta and devilrays (Chondrichthyes: mobulidae), with an updated taxonomic arrangement for the family. <i>Zoological Journal of the Linnean Society </i> 182(1): 50-75.",
+      "year": "2018",
+      "title": "Phylogeny of the manta and devilrays (Chondrichthyes: mobulidae), with an updated taxonomic arrangement for the family",
+      "author": "White, W.T., Corrigan, S., Yang, L., Henderson, A.C., Bazinet, A.L., Swofford, D.L. and Naylor, G.J.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tremblay-Boyer, L. and Brouwer, S. 2016. Review of information on non-key shark species including mobulids and fisheries interactions. EB-WP-08. Western Central Pacific Fisheries Commission. Scientific Committee Twelfth Regular Session. Bali, Indonesia 3–11 August 2016.",
+      "year": "2016",
+      "title": "Review of information on non-key shark species including mobulids and fisheries interactions. EB-WP-08",
+      "author": "Tremblay-Boyer, L. and Brouwer, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hosegood, J., Humble, E., Ogden, R., de Bruyn, M., Creer, S., Stevens, G., Abudaya, M., Bassos-Hull, K., Bonfil, R., Fernando, D., Foote, A.D., Hipperson, H., Jabado, R.W., Kaden, J., Moazzam, M., Peel, L., Pollett, S., Ponzo, A., Poortvliet, M., Salah, J., Senn, H., Stewart, J., Wintner, S. and Carvalho, G. 2018. Phylogenomics and species delimitation of mobulid rays reveals cryptic diversity and a new species of manta ray. <i>bioRxiv</i>: doi:10.1101/458141.",
+      "year": "2018",
+      "title": "Phylogenomics and species delimitation of mobulid rays reveals cryptic diversity and a new species of manta ray",
+      "author": "Hosegood, J., Humble, E., Ogden, R., de Bruyn, M., Creer, S., Stevens, G., Abudaya, M., Bassos-Hull, K., Bonfil, R., Fernando, D., Foote, A.D., Hipperson, H., Jabado, R.W., Kaden, J., Moazzam, M., Peel, L., Pollett, S., Ponzo, A., Poortvliet, M., Salah, J., Senn, H., Stewart, J., Wintner, S. and Carvalho, G. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Croll, D.A., Dewar, H., Dulvy, N.K., Fernando, D., Francis, M.P., Galván-Magaña, F., Hall, M., Heinrichs, S., Marshall, A., McCauley, D., Newton, K.M., Notarbartolo-Di-Sciara, G., O'Malley, M., O'Sullivan, J., Poortlivet, M., Roman, M., Stevens, G., Tershy, B.R. and White, W.T. 2016. Vulnerabilities and fisheries impacts: the uncertain future of manta and devil rays. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 26(3): 562-575.",
+      "year": "2016",
+      "title": "Vulnerabilities and fisheries impacts: the uncertain future of manta and devil rays",
+      "author": "Croll, D.A., Dewar, H., Dulvy, N.K., Fernando, D., Francis, M.P., Galván-Magaña, F., Hall, M., Heinrichs, S., Marshall, A., McCauley, D., Newton, K.M., Notarbartolo-Di-Sciara, G., O'Malley, M., O'Sullivan, J., Poortlivet, M., Roman, M., Stevens, G., Tershy, B.R. and White, W.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duffy, L. and Griffiths, S. 2017. Resolving potential redundancy of productivity attributes to improve ecological risk assessments. SAC-08-07c. Inter-American Tropical Tuna Commission. Scientific Advisory Committee Eight Meeting, La Jolla, California (USA), 8-12 May 2017.",
+      "year": "2017",
+      "title": "Resolving potential redundancy of productivity attributes to improve ecological risk assessments. SAC-08-07c",
+      "author": "Duffy, L. and Griffiths, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Francis, M.P. and Jones, E.G. 2017. Movement, depth distribution and survival of spinetail devilrays (<i>Mobula japanica</i>) tagged and released from purse-seine catches in New Zealand. <i>Aquatic Conservation: Marine and Freshwater Ecosystems </i> 27(1): 219-236.",
+      "year": "2017",
+      "title": "Movement, depth distribution and survival of spinetail devilrays (<i>Mobula japanica</i>) tagged and released from purse-seine catches in New Zealand",
+      "author": "Francis, M.P. and Jones, E.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "O'Malley, M.P., Townsend, K.A., Hilton, P., Heinrichs, S. and Stewart, J.D. 2017. Characterization of the trade in manta and devil ray gill plates in China and South-east Asia through trader surveys. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 27(2): 394-413.",
+      "year": "2017",
+      "title": "Characterization of the trade in manta and devil ray gill plates in China and South-east Asia through trader surveys",
+      "author": "O'Malley, M.P., Townsend, K.A., Hilton, P., Heinrichs, S. and Stewart, J.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ooi, M.S.M., Townsend, K.A., Bennett, M.B., Richardson, A.J., Fernando, D., Villa, C.A. and Gaus, C. 2015. Levels of arsenic, cadmium, lead and mercury in the branchial plate and muscle tissue of mobulid rays. <i>Marine Pollution Bulletin </i> 94(1): 251-259.",
+      "year": "2015",
+      "title": "Levels of arsenic, cadmium, lead and mercury in the branchial plate and muscle tissue of mobulid rays.",
+      "author": "Ooi, M.S.M., Townsend, K.A., Bennett, M.B., Richardson, A.J., Fernando, D., Villa, C.A. and Gaus, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rohner, C.A., Flam, A.L., Pierce, S.J. and Marshall, A.D. 2017. Steep declines in sightings of manta rays and devilrays (Mobulidae) in southern Mozambique. <i>PeerJ Preprints</i> 5: e3051v1.",
+      "year": "2017",
+      "title": "Steep declines in sightings of manta rays and devilrays (Mobulidae) in southern Mozambique",
+      "author": "Rohner, C.A., Flam, A.L., Pierce, S.J. and Marshall, A.D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stevens, G., Fernando, D., Dando, M. and Notarbartolo di Sciara, G. 2018. <i>Guide to Manta & Devil Rays of the World</i>. Wild Nature Press, Plymouth.",
+      "year": "2018",
+      "title": "Guide to Manta & Devil Rays of the World",
+      "author": "Stevens, G., Fernando, D., Dando, M. and Notarbartolo di Sciara, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stewart, J.D., Jaine, F.R.A., Armstrong, A.J., Armstrong, A.O., Bennett, M.B., Burgess, K.B., Couturier, L.I.E., Croll, D.A., Cronin, M.R., Deakos, M.H., Dudgeon, C.L., Fernando, D., Froman, N., Germanov, E.S., Hall, M.A., Hinojosa-Alvarez, S., Hosegood, J.E., Kashiwagi, T., Laglbauer, B.J.L., Lezama-Ochoa, N., Marshall, A.D., McGregor, F., Notarbartolo di Sciara, G., Palacios, M.D., Peel, L.R., Richardson, A.J., Rubin, R.D., Townsend, K.A., Venables, S.K. and Stevens, G.M.W. 2018.  Research priorities to support effective manta and devil ray conservation. <i>Frontiers in Marine Science </i> 5(314).",
+      "year": "2018",
+      "title": " Research priorities to support effective manta and devil ray conservation",
+      "author": "Stewart, J.D., Jaine, F.R.A., Armstrong, A.J., Armstrong, A.O., Bennett, M.B., Burgess, K.B., Couturier, L.I.E., Croll, D.A., Cronin, M.R., Deakos, M.H., Dudgeon, C.L., Fernando, D., Froman, N., Germanov, E.S., Hall, M.A., Hinojosa-Alvarez, S., Hosegood, J.E., Kashiwagi, T., Laglbauer, B.J.L., Lezama-Ochoa, N., Marshall, A.D., McGregor, F., Notarbartolo di Sciara, G., Palacios, M.D., Peel, L.R., Richardson, A.J., Rubin, R.D., Townsend, K.A., Venables, S.K. and Stevens, G.M.W. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Acebes, J.M.V. and Tull, M. 2016. The history and characteristics of the mobulid ray fishery in the Bohol Sea, Philippines. <i>PLOS ONE </i> 11(8): e0161444.",
+      "year": "2016",
+      "title": "The history and characteristics of the mobulid ray fishery in the Bohol Sea, Philippines",
+      "author": "Acebes, J.M.V. and Tull, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Amandè, M. J., Chassot, E., Chavance, P., Murua, H., de Molina, A. D. and Bez, N. 2012. Precision in bycatch estimates: the case of tuna purse-seine fisheries in the Indian Ocean. <i>ICES Journal of Marine Science </i> 69(8): 1501-1510.",
+      "year": "2012",
+      "title": "Precision in bycatch estimates: the case of tuna purse-seine fisheries in the Indian Ocean",
+      "author": "Amandè, M. J., Chassot, E., Chavance, P., Murua, H., de Molina, A. D. and Bez, N. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Department of Agriculture and Fisheries. 2018. Shark control program: shark catch numbers. Available at: <a href=\"https://www.daf.qld.gov.au/business-priorities/fisheries/shark-control-program/catch-numbers\">https://www.daf.qld.gov.au/business-priorities/fisheries/shark-control-program/catch-numbers</a>. (Accessed: 3 December 2018).",
+      "year": "2018",
+      "title": "Shark control program: shark catch numbers",
+      "author": "Department of Agriculture and Fisheries",
+      "citation_short": null
+    },
+    {
+      "citation": "Hinojosa-Alvarez S., Walter R.P., Diaz-Jaimes P., Galván-Magaña F. and Paig-Tran E.M. 2016.  A potential third Manta Ray species near the Yucatán Peninsula? Evidence for a recently diverged and novel genetic Manta group from the Gulf of Mexico. <i>PeerJ</i> 4: e2586.",
+      "year": "2016",
+      "title": " A potential third Manta Ray species near the Yucatán Peninsula? Evidence for a recently diverged and novel genetic Manta group from the Gulf of Mexico",
+      "author": "Hinojosa-Alvarez S., Walter R.P., Diaz-Jaimes P., Galván-Magaña F. and Paig-Tran E.M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Holmberg J. and Marshall A.D. 2018. Manta Matcher Photo-identification Library. Available at: <a href=\"http://www. mantamatcher.org\">http://www. mantamatcher.org</a>. (Accessed: 21 November 2018).",
+      "year": "2018",
+      "title": "Manta Matcher Photo-identification Library",
+      "author": "Holmberg J. and Marshall A.D. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kashiwagi, T., Marshall A.D., Bennett M.B. and Ovenden J.R. 2012. The genetic signature of recent speciation in manta rays (<i>Manta alfredi</i> and <i>M. birostris</i>). <i>Molecular Phylogenetics and Evolution</i> 64: 212-218.",
+      "year": "2012",
+      "title": "The genetic signature of recent speciation in manta rays (<i>Manta alfredi</i> and <i>M. birostris</i>)",
+      "author": "Kashiwagi, T., Marshall A.D., Bennett M.B. and Ovenden J.R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kashiwagi, T., Marshall, A.D., Corrigan, S., Dove, A.D.M., de la Parra Venegas, R., Naylor, G.J.P. and Heist, E.J. 2017. Are there DNA evidences for the new species of Manta ray? Abstract. American Elasmobranch Society Conference. Austin, Texas, USA.",
+      "year": "2017",
+      "title": "Are there DNA evidences for the new species of Manta ray?",
+      "author": "Kashiwagi, T., Marshall, A.D., Corrigan, S., Dove, A.D.M., de la Parra Venegas, R., Naylor, G.J.P. and Heist, E.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lawson, J.M. and Fordham, S.V. 2018. Sharks Ahead: Realizing the Potential of the Convention on Migratory Species to Conserve Elasmobranchs. Shark Advocates International, The Ocean Foundation, Washington, DC, USA.",
+      "year": "2018",
+      "title": "Sharks Ahead: Realizing the Potential of the Convention on Migratory Species to Conserve Elasmobranchs",
+      "author": "Lawson, J.M. and Fordham, S.V. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rose, C. 2008. Shark catches in Papua New Guinea. Report to IUCN Shark Specialist Group.",
+      "year": "2008",
+      "title": "Shark catches in Papua New Guinea. Report to IUCN Shark Specialist Group",
+      "author": "Rose, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marshall, A.D. and Bennett, M.B. 2010. The frequency and effect of shark-inflicted bite injuries to the reef manta ray (<i>Manta alfredi</i>). <i>African Journal of Marine Science</i> 32: 573-580.",
+      "year": "2010",
+      "title": "The frequency and effect of shark-inflicted bite injuries to the reef manta ray (<i>Manta alfredi</i>)",
+      "author": "Marshall, A.D. and Bennett, M.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Miller, M.H. and Klimovich, C. 2017. Endangered Species Act Status Review Report: Giant Manta Ray (<i>Manta birostris</i>) and Reef Manta Ray (<i>Manta alfredi</i>). Report to National Marine Fisheries Service, Office of Protected Resources, Silver Spring, MD.",
+      "year": "2017",
+      "title": "Endangered Species Act Status Review Report: Giant Manta Ray (<i>Manta birostris</i>) and Reef Manta Ray (<i>Manta alfredi</i>).",
+      "author": "Miller, M.H. and Klimovich, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nawaz, R. and Khan, M.M. 2015. Developing conservation strategy for Mobulids found in waters of Pakistan, 2013-2015.  Final Project Report 2013-2015. WWF Pakistan and Save Our Seas Foundation, Pakistan.",
+      "year": "2015",
+      "title": "Developing conservation strategy for Mobulids found in waters of Pakistan, 2013-2015",
+      "author": "Nawaz, R. and Khan, M.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rambahiniarison, J.M., Lamoste, M.J., Rohner, C.A., Murray, R., Snow, S., Labaja, J., Araujo, G. and Ponzo, A. 2018. Life history, growth, and reproductive biology of four mobulid species in the Bohol Sea, Philippines. <i>Frontiers in Marine Science </i> 5(269): doi: 10.3389/fmars.2018.00269.",
+      "year": "2018",
+      "title": "Life history, growth, and reproductive biology of four mobulid species in the Bohol Sea, Philippines",
+      "author": "Rambahiniarison, J.M., Lamoste, M.J., Rohner, C.A., Murray, R., Snow, S., Labaja, J., Araujo, G. and Ponzo, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hosegood, J., Humble, E., Ogden, R., de Bruyn, M., Creer, S., Stevens, G., Abudaya, M., Bassos-Hull, K., Bonfil, R., Fernando, D., Foote, A.D., Hipperson, H., Jabado, R.W., Kaden, J., Moazzam, M., Peel, L., Pollett, S., Ponzo, A., Poortvliet, M., Salah, J., Senn, H., Stewart, J., Wintner, S. and Carvalho, G. 2019. Genome-wide data for effective conservation of manta and devil ray species. <i>bioRxiv, 458141</i>.",
+      "year": "2019",
+      "title": "Genome-wide data for effective conservation of manta and devil ray species.",
+      "author": "Hosegood, J., Humble, E., Ogden, R., de Bruyn, M., Creer, S., Stevens, G., Abudaya, M., Bassos-Hull, K., Bonfil, R., Fernando, D., Foote, A.D., Hipperson, H., Jabado, R.W., Kaden, J., Moazzam, M., Peel, L., Pollett, S., Ponzo, A., Poortvliet, M., Salah, J., Senn, H., Stewart, J., Wintner, S. and Carvalho, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hearn, A.R., Acuna, D., Ketchum, J.T., Penaherrera, C., Green, J., Marshall, A., Guerrero, M. and Shillinger, G. 2014. Elasmobranchs of the Galapagos Marine Reserve. In: Denkinger, J. and Vinueza, L. (eds), <i>The Galapagos Marine Reserve, Social and Ecological Interactions in the Galapagos Islands</i>, pp. 23–59. Springer Science+Business Media, New York.",
+      "year": "2014",
+      "title": "Elasmobranchs of the Galapagos Marine Reserve",
+      "author": "Hearn, A.R., Acuna, D., Ketchum, J.T., Penaherrera, C., Green, J., Marshall, A., Guerrero, M. and Shillinger, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Oakes, N. and Sant, G. 2019. An overview of major shark traders, catchers and species. TRAFFIC, Cambridge, UK.",
+      "year": "2019",
+      "title": "An overview of major shark traders, catchers and species",
+      "author": "Oakes, N. and Sant, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2020. The IUCN Red List of Threatened Species. Version 2020-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2020).",
+      "year": "2020",
+      "title": "The IUCN Red List of Threatened Species. Version 2020-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2020-3"
+    },
+    {
+      "citation": "Booth, H., Pooley, S., Clements, T., Putra, M.I.H., Lestari, W.P., Lewis, S., Warwick, L. and Milner-Gulland, E.J. 2020. Assessing the impact of regulations on the use and trade of wildlife: An operational framework, with a case study on manta rays. <i>Global Ecology and Conservation </i> 22: e00953.",
+      "year": "2020",
+      "title": "Assessing the impact of regulations on the use and trade of wildlife: An operational framework, with a case study on manta rays",
+      "author": "Booth, H., Pooley, S., Clements, T., Putra, M.I.H., Lestari, W.P., Lewis, S., Warwick, L. and Milner-Gulland, E.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burgess, K. 2017. Feeding ecology and habitat use of the giant manta ray <i>Manta birostris</i> at a key aggregation site off mainland Ecuador. PhD Thesis. University of Queensland.",
+      "year": "2017",
+      "title": "Feeding ecology and habitat use of the giant manta ray <i>Manta birostris</i> at a key aggregation site off mainland Ecuador. PhD Thesis",
+      "author": "Burgess, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Duffy, L.M., Lennert-Cody, C.E., Olson, R.J., Minte-Vera, C.V. and Griffiths, S.P. 2019. Assessing vulnerability of bycatch species in the tuna purse-seine fisheries of the eastern Pacific Ocean. <i>Fisheries Research</i> 219: 105316.",
+      "year": "2019",
+      "title": "Assessing vulnerability of bycatch species in the tuna purse-seine fisheries of the eastern Pacific Ocean",
+      "author": "Duffy, L.M., Lennert-Cody, C.E., Olson, R.J., Minte-Vera, C.V. and Griffiths, S.P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Luiz, O.J., Balboni, A.P., Kodja, G., Andrade, M. and Marum, H. 2008. Seasonal occurrences of <i>Manta birostris</i> (Chondrichthyes: Mobulidae) in southeastern Brazil. <i>Ichthyological Research </i> 56(1): 96–99.",
+      "year": "2008",
+      "title": "Seasonal occurrences of <i>Manta birostris</i> (Chondrichthyes: Mobulidae) in southeastern Brazil.",
+      "author": "Luiz, O.J., Balboni, A.P., Kodja, G., Andrade, M. and Marum, H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moazzam, M. 2018. Unprecedented decline in the catches of mobulids: an important component of tuna gillnet fisheries in the Northern Arabian Sea.  IOTC-2018-WPEB14-30. Indian Ocean Tuna Commission Report.",
+      "year": "2018",
+      "title": "Unprecedented decline in the catches of mobulids: an important component of tuna gillnet fisheries in the Northern Arabian Sea",
+      "author": "Moazzam, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stewart, J.D., Beale, C.S., Fernando, D., Sianipar, A.B., Burton, R.S., Semmens, B.X. and Aburto-Oropeza, O. 2016. Spatial ecology and conservation of <i>Manta birostris</i> in the Indo-Pacific. <i>Biological Conservation </i> 200: 178–183.",
+      "year": "2016",
+      "title": "Spatial ecology and conservation of <i>Manta birostris</i> in the Indo-Pacific",
+      "author": "Stewart, J.D., Beale, C.S., Fernando, D., Sianipar, A.B., Burton, R.S., Semmens, B.X. and Aburto-Oropeza, O. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2022. The IUCN Red List of Threatened Species. Version 2022-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 July 2022).",
+      "year": "2022",
+      "title": "The IUCN Red List of Threatened Species. Version 2022-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2022-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

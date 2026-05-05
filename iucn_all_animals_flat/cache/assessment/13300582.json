@@ -1,0 +1,945 @@
+{
+  "assessment_date": "2019-10-24T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 13300572,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/13300572/13300582",
+  "citation": "Alexander, G.J., Tolley, K.A., Penner, J., Luiselli, L., Jallow, M., Segniagbeto, G., Niagate, B., Howell, K., Beraduccii, J., Msuya, C.A. & Ngalason, W. 2021. Python sebae. The IUCN Red List of Threatened Species 2021: e.T13300572A13300582. Accessed on 05 May 2026.",
+  "assessment_id": 13300582,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 13300572,
+    "scientific_name": "Python sebae",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "PYTHONIDAE",
+    "genus_name": "Python",
+    "species_name": "sebae",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gmelin in Linnaeus, 1789)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Boa and Python Specialist Group",
+        "url": "https://www.facebook.com/IUCN-Boa-Python-Specialist-Group-128747243921848/",
+        "description": "Chair: Daniel Natusch (email: d_natusch_14@hotmail.com)\nRed List Authority Coordinator: Under discussion \nBPSG brochure: https://www.iucn.org/sites/dev/files/boapythonsg_brochure_1.pdf"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "African Rock Python",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Central African Rock Python",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Coluber sebae Gmelin in Linnaeus, 1789",
+        "status": "ACCEPTED",
+        "genus_name": "Coluber",
+        "species_name": "sebae",
+        "species_author": "Gmelin in Linnaeus, 1789",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "16000000",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs throughout northern and central sub-Saharan Africa, from the fringes of the Sahara in Mauritania, Mali and Chad east to Somalia, Eritrea, Ethiopia, western Kenya, Rwanda and Tanzania, with apparently isolated records from central areas of Tanzania (Largen and Spawls 2010, Spawls&#160;<em>et al.</em>&#160;2018). The southern limit is in Angola in Central Africa (Largen and Spawls 2010), and northern Tanzania in East Africa (Spawls <em>et al</em>. 2018). It is replaced south of this range, and in central Kenya, eastern Congo, Zambia and Burundi, by the Southern African Python (<em>Python natalensis</em>), although the two species exhibit some overlap in both Tanzania (Spawls <em>et al</em>. 2018) and Angola (Marques <em>et al.</em> 2018) and apparent hybrids from the former area are known (Spawls <em>et al. </em>2018). It is found in most territories in West Africa.",
+    "population": "This species is described as being ubiquitous in forest below the Sahel (Chippaux 2006); however although widespread, it occurs at population densities of approximately 0.2-0.4 individuals per km<sup>2</sup>&#160;in Nigeria, and 0.1 individuals per km<sup>2</sup>&#160;in Cameroon, Ghana and Togo (Luiselli <em>et al.</em> 2012). This low density puts it at risk from harvesting pressures as well as habitat loss; in southern regions of Nigeria declines as high as 60% over the past 15 years (likely to be within three generations) have been recorded (G. Akani and L. Luiselli unpubl. data). Significantly, very few individuals of the sizes favoured for harvesting (above 3.5 m) were found following declines. G. Segniagbeto and A. Aidan (unpubl. data) report high, but unquantified, rates of decline in Togo. The snake now appears to be very rare in both countries, and to retain moderate abundance only in inaccessible mangrove forests in Nigeria (L. Luiselli pers. comm. 2012). Due to its association with permanent water, it is rare or absent in arid regions of eastern Ethiopia, eastern Eritrea, and northern and central Somalia (Largen and Spawls 2010).&#160;<span style=\"\"></span>There have been some reductions in local populations in urban centres of Tanzania (K. Howell pers. comm. 2014).",
+    "habitats": "This snake is closely-associated with swampy areas and the banks of permanent watercourses (Trape and Mané 2006). In Togo it ranges into the littoral zone, characterized by marshland and mangroves (Segniagbeto <span style=\"font-style: italic;\">et al. </span>2011). In West Africa it is also known from the moderately dry to arid areas of the Sahelian and Sudan climatic zones (Trape and Mané 2006, Segniagbeto<span style=\"font-style: italic;\"> et al</span>. 2011). It is a strong swimmer, and has colonized the of<span style=\"\">fshore&#160;Bijágos islands of Guinea-Bissau where it is widespread (Auliya <em>et al.</em> 2012),</span> but will also climb into the trees (Trape and Mané 2006). This nocturnal python is the largest snake in Africa, and preys on mammals and birds, sometimes including livestock (Trape and Mané 2006). In very exceptional cases, the largest animals have been known to prey on human children <span style=\"\">(Auliya <em>et al.</em> 2012</span>) and, occasionally, adults (Trape and Mané 2006). Generation length is unclear, however this is a large, slow-growing animal, and mark-recapture data indicates that individuals only attain large sizes (4 m and above) at 10–13 years of age (G. Akani and L. Luiselli unpubl. data); conversely Spawls <em>et al. </em>(2018) indicate that this is a fast-growing species and juveniles can reach a length of 1.4 m in a year. This is an oviparous species laying clutches of 60–100 eggs. Captive specimens have lived for more than 27 years (Spawls <em>et al</em>. 2018).",
+    "threats": "Exports of this species from Togo have risen rapidly in recent years, but it is not known whether harvesting for the pet trade has yet reached or is likely to reach a level that is unsustainable in this country, or whether this reflects trends throughout the snake's very wide range. Most of the pet trade specimens appear to be hatchlings. This species is, however, very popular as bushmeat (e.g. Fuashi<em> et al</em>. 2019, Eniang <em>et al</em>. 2008, Jensen <em>et al. </em>2017), and, at national and local scales, for use in leather manufacture (L. Luiselli pers. comm. 2012). There is, however, no skin trade from East Africa (K. Howell pers. comm. 2014). Most trade occurs at national and sub-national level, for which no figures are available, and as such the relatively small numbers of animals reported in international trade (e.g. from Tanzania - UNEP 2007) are not representative of actual levels of exploitation. This is a slow-growing species which occurs in low population densities, and harvesting for skins and meat preferentially targets animals 4 m and above in length (corresponding to an age of 10–13 years - G. Akani and L. Luiselli unpubl. data), and this preferential harvesting of larger animals is likely to have negative effects on the viability of subpopulations of this snake. The species is also heavily used in traditional medicine in Cameroon and much of West Africa. A further major threat exists from deforestation, as this species is often found in primary, secondary and gallery forest habitats (L. Luiselli pers. comm. 2012, Luiselli <em>et al</em>. 2012). Due to its wide range and presence in a number of large protected areas, it is not thought to be at risk in East Africa despite pressures from development (Spawls <em>et al. </em>2018). This species is subject to some degree of persecution, as it is perceived as a threat to livestock and potentially to humans, however, in some areas traditional beliefs discourage killing these snakes (Spawls <em>et al. </em>2018).",
+    "measures": "This species is listed on CITES Appendix II. Further research into the impacts of harvesting of this species is recommended for West and Central Africa. It occurs in a number of protected areas.",
+    "use_trade": "This python is heavily exploited commercially for leather and food, as its meat is prized by local people within its range (Luiselli and&#160;Akani&#160;2002,&#160;Chippaux 2006). Between 2006 and 2018, more than 209,000 <em>P. sebae</em>-derived products were exported. It is used intensively in traditional medicine in Cameroon, Nigeria, Benin, Togo and Ghana (L. Luiselli pers. comm. 2012,<span style=\"\">&#160;Segniagbeto <em>et al.</em> 2013</span>). It is not actively hunted for food or skins in East Africa.",
+    "rationale": "This species is heavily-exploited throughout its West African range, particularly for bushmeat and leather, and high rates of decline have been reported within West Africa.&#160; Where quantifiable, in West Africa these declines appear to exceed 60% over three generations (a generation estimated as likely to be in excess of 15 years for this long-lived snake). There are unlikely to be substantial declines in East Africa, and it is uncertain whether global declines of between 30–50% over three generations are likely. Further research is needed to quantify declines in this species, and it is tentatively listed as Near Threatened here pending these studies.",
+    "trend_justification": null,
+    "taxonomic_notes": "The southern African taxon&#160;<em>Python sebae natalensis&#160;</em>was elevated to full species status by Broadley (1999).&#160;A phylogenetic analysis (K. A. Tolley, Unpublished data 2019) supports the treatment of <em>P. natalensis</em> and <em>P. sebae</em> as full species."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Mangrove Vegetation Above High Tide Level"
+      },
+      "code": "1_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chad"
+      },
+      "code": "TD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Central African Republic"
+      },
+      "code": "CF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rwanda"
+      },
+      "code": "RW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Alexander, G.J., Tolley, K.A., Penner, J., Luiselli, L., Jallow, M., Segniagbeto, G., Niagate, B., Howell, K., Beraduccii, J., Msuya, C.A. & Ngalason, W.",
+      "value": [
+        "Krystal Tolley (IUCN SSC Chameleon Specialist Group / SANBI-ABR)",
+        "Luca Luiselli (Institute for Development Ecology Conservation and Cooperation (IDECC))",
+        "Kim Howell",
+        "Charles Msuya (University of Dar es Salaam)",
+        "Johannes Penner (Museum für Naturkunde, Leibniz Institute for Research on Evolution and Biodiversity)",
+        "Bourama Niagate",
+        "Mawdo Jallow",
+        "Gabriel Segniagbeto",
+        "Joe Beraduccii",
+        "Wilirk Ngalason",
+        "Graham Alexander (South African Reptile Assessment / Animal, Plant and Environmental Sciences, University of the Witwatersrand, Johannesburg, Gauteng, South Africa)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Auliya, M.",
+      "value": [
+        "Mark Auliya (Helmholtz-Zentrum für Umweltforschung (UFZ), Germany)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Weeber, J.",
+      "value": [
+        "Josh Weeber (SANBI, NBA Reptile Group, Kirstenbosch, Western Cape, South Africa)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J. 2002. <i>A Field Guide to the Reptiles of East Africa</i>. Academic Press, Elsevier Science, San Diego, San Francisco, New York, Boston, London.",
+      "year": "2002",
+      "title": "A Field Guide to the Reptiles of East Africa",
+      "author": "Spawls, S., Howell, K.M., Drewes, R.C. and Ashe, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Trape, J.-F. and Mané, Y. 2006. <i>Guide des serpents d'Afrique occidentale - savane et désert</i>. IRD Editions, Paris.",
+      "year": "2006",
+      "title": "Guide des serpents d'Afrique occidentale - savane et désert",
+      "author": "Trape, J.-F. and Mané, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Largen, M. and Spawls, S. 2010. <i>The Amphibians and Reptiles of Ethiopia and Eritrea</i>. Edition Chimaira, Frankfurt am Main, Germany.",
+      "year": "2010",
+      "title": "The Amphibians and Reptiles of Ethiopia and Eritrea",
+      "author": "Largen, M. and Spawls, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chippaux, J.-P. 2006. <i>Les serpents d'Afrique Occidentale et Centrale</i>. IRD Éditions, Paris.",
+      "year": "2006",
+      "title": "Les serpents d'Afrique Occidentale et Centrale",
+      "author": "Chippaux, J.-P.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Segniagbeto, G.H., Trape, J.-F., David, P., Ohler, A., Dubois, A. and Glitho, I.A. 2011. The snake fauna of Togo: systematics, distribution and biogeography, with remarks on selected taxonomic problems. <i>Zoosystema</i> 33(3): 325-360.",
+      "year": "2011",
+      "title": "The snake fauna of Togo: systematics, distribution and biogeography, with remarks on selected taxonomic problems",
+      "author": "Segniagbeto, G.H., Trape, J.-F., David, P., Ohler, A., Dubois, A. and Glitho, I.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schleip, W.D. and O'Shea, M. 2010. Annotated checklist of the recent and extinct pythons (Serpentes, Pythonidae), with notes on nomenclature, taxonomy, and distribution. <i>Zookeys</i> 66: 29-79.",
+      "year": "2010",
+      "title": "Annotated checklist of the recent and extinct pythons (Serpentes, Pythonidae), with notes on nomenclature, taxonomy, and distribution",
+      "author": "Schleip, W.D. and O'Shea, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luiselli, L., Bonnet, X., Rocco, M. and Amori, G. 2012. Conservation implications of rapid shifts in the trade of wild African and Asian pythons. <i>Biotropica</i> (in press).",
+      "year": "2012",
+      "title": "Conservation implications of rapid shifts in the trade of wild African and Asian pythons",
+      "author": "Luiselli, L., Bonnet, X., Rocco, M. and Amori, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marques, M.P., Ceríaco, L.M.P., Blackburn, D.C. and Bauer, A.M. 2018. Diversity and distribution of the amphibians and terrestrial reptiles of Angola: Atlas of historical and bibliographic records (1840-2017). <i>Proceedings of the California Academy of Sciences</i> Series 4 Volume 65(Supplement II): 1-501.",
+      "year": "2018",
+      "title": "Diversity and distribution of the amphibians and terrestrial reptiles of Angola: Atlas of historical and bibliographic records (1840-2017)",
+      "author": "Marques, M.P., Ceríaco, L.M.P., Blackburn, D.C. and Bauer, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Spawls, S., Howell, K., Hinkel, H. and Menegon, M. 2018. <i>Field Guide to East African Reptiles, 2nd Edition</i>. Bloomsbury Publishing, London.",
+      "year": "2018",
+      "title": "Field Guide to East African Reptiles, 2nd Edition",
+      "author": "Spawls, S., Howell, K., Hinkel, H. and Menegon, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luiselli, L. and Akani, G.C. 2002. An investigation into the composition, complexity and functioning of snake communities in the mangroves of south‐eastern Nigeria. <i>African Journal of Ecology</i> 40(3): 220-227.",
+      "year": "2002",
+      "title": "An investigation into the composition, complexity and functioning of snake communities in the mangroves of south‐eastern Nigeria",
+      "author": "Luiselli, L. and Akani, G.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 04 September 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-2"
+    },
+    {
+      "citation": "Broadley, D.G. 1999. The Southern African Python, <i>Python natalensis</i> A. Smith 1840, is a valid species. <i>African Herp News</i> 28: 31-32.",
+      "year": "1999",
+      "title": "The Southern African Python, <i>Python natalensis</i> A. Smith 1840, is a valid species",
+      "author": "Broadley, D.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Auliya, M., Wagner P. and Böhme, W. 2012. The herpetofauna of the Bijagós archipelago, Guinea-Bissau (West Africa) and a first country-wide checklist. <i>Bonn Zoological Bulletin</i> 61(2): 255-281.",
+      "year": "2012",
+      "title": "The herpetofauna of the Bijagós archipelago, Guinea-Bissau (West Africa) and a first country-wide checklist",
+      "author": "Auliya, M., Wagner P. and Böhme, W. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bellosa, H., Dirksen, L. and Auliya, M. 2007. <i>Faszination Riesenschlangen - Mythos, Fakten und Geschichten</i>. BLV, Munich.",
+      "year": "2007",
+      "title": "Faszination Riesenschlangen - Mythos, Fakten und Geschichten",
+      "author": "Bellosa, H., Dirksen, L. and Auliya, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Branch, W.R. 1984. Pythons and people: predators and prey. <i>African Wildlife</i> 38(6): 236-237; 240-241.",
+      "year": "1984",
+      "title": "Pythons and people: predators and prey",
+      "author": "Branch, W.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, W.R. and Bauer, A.M. 2005. <i>The Herpetological Contributions of Sir Andrew Smith, with an Introduction, Concordance of Names, and Annotated Bibliography</i>. SSAR, Villanova, PA.",
+      "year": "2005",
+      "title": "The Herpetological Contributions of Sir Andrew Smith, with an Introduction, Concordance of Names, and Annotated Bibliography",
+      "author": "Branch, W.R. and Bauer, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Eniang, M.A., Eniang, M.E. and Akpan, C.E. 2008. Bush meat trading in the Oban Hills region of south-eastern Nigeria: Implications for sustainable livelihoods and conservation. <i>Ethiopian Journal of Environmental Studies and Management</i> 1: 70-83.",
+      "year": "2008",
+      "title": "Bush meat trading in the Oban Hills region of south-eastern Nigeria: Implications for sustainable livelihoods and conservation",
+      "author": "Eniang, M.A., Eniang, M.E. and Akpan, C.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fuashi, N.A., Ekane, M.M., Jacqueline, E. and Zeh, F.A. 2019. An evaluation of poaching and bushmeat off takes in the Ebo Forest Reserve (EFR), Littoral Region, Cameroon. <i>Journal of Ecology and The Natural Environment</i> 11: 14-25.",
+      "year": "2019",
+      "title": "An evaluation of poaching and bushmeat off takes in the Ebo Forest Reserve (EFR), Littoral Region, Cameroon",
+      "author": "Fuashi, N.A., Ekane, M.M., Jacqueline, E. and Zeh, F.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jensen, T.J. 2017. Snakes of Africa: Exploitation and Conservation. MSc thesis. Aalborg University.",
+      "year": "2017",
+      "title": "Snakes of Africa: Exploitation and Conservation. MSc thesis",
+      "author": "Jensen, T.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mendyk R.W., Krysko K.L., Rochford M.R., Wallace S.-P. and Mazzotti F.J. 2016. Reproductive biology of female northern African rock pythons (<i>Python sebae</i>) in Southern Florida, USA. <i>IRCF Reptiles and Amphibian Journal </i> 23: 16-20.",
+      "year": "2016",
+      "title": "Reproductive biology of female northern African rock pythons (<i>Python sebae</i>) in Southern Florida, USA",
+      "author": "Mendyk R.W., Krysko K.L., Rochford M.R., Wallace S.-P. and Mazzotti F.J. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Segniagbeto, G.H., Petrozzi F., Aïdam A. and Luiselli, L. 2013. Reptiles Traded in the Fetish Market of Lomé, Togo (West Africa). <i>Herpetological Conservation and Biology </i> 8(2): 400−408.",
+      "year": "2013",
+      "title": "Reptiles Traded in the Fetish Market of Lomé, Togo (West Africa)",
+      "author": "Segniagbeto, G.H., Petrozzi F., Aïdam A. and Luiselli, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "United Nations Environment Programme World Conservation Monitoring Centre (UNEP-WCMC). 2007. United Republic of Tanzania: A review of trade in CITES-listed species.  Prepared for the European Commission. Directorate General E - Environment. ENV.E.2 - Development and Environment.",
+      "year": "2007",
+      "title": "United Republic of Tanzania: A review of trade in CITES-listed species",
+      "author": "United Nations Environment Programme World Conservation Monitoring Centre (UNEP-WCMC)",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

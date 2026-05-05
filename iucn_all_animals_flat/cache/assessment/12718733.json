@@ -1,0 +1,255 @@
+{
+  "assessment_date": "2007-03-01T00:00:00.000+00:00",
+  "year_published": "2007",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 63820,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/63820/12718733",
+  "citation": "Hammerson, G.A. 2007. Heterodon platirhinos. The IUCN Red List of Threatened Species 2007: e.T63820A12718733. Accessed on 05 May 2026.",
+  "assessment_id": 12718733,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 63820,
+    "scientific_name": "Heterodon platirhinos",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "SQUAMATA",
+    "family_name": "DIPSADIDAE",
+    "genus_name": "Heterodon",
+    "species_name": "platirhinos",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Latreille, 1801",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Eastern Hog-nosed Snake",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Eastern Hognose Snake",
+        "language": "eng"
+      }
+    ],
+    "synonyms": []
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": null,
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species occurs widely in the united States, extending into southern Canada. Its range extends from southern New England through southern Ontario to Minnesota and South Dakota, and south to southern Texas, the Gulf Coast, and southern Florida (Conant and Collins 1991, Ernst and Ernst 2003).",
+    "population": "This species is represented by hundreds of occurrences (subpopulations). The adult population size is unknown but surely exceeds 100,000. This snake is fairly common in many parts of its range. The extent of occurrence, area of occupancy, number of subpopulations, and population size are probably relatively stable or declining at a rate of less than 10% over 10 years or three generations.",
+    "habitats": "Habitats include openly wooded upland hills, forest edges, fields, woodland meadows, prairies, forest-grassland ecotones, sand plains, barrier islands, fire-managed pinelands, river valleys, riparian zones, and various other habitats with loose soils and amphibian prey. This snake crawls on the surface and burrows into soil. It overwinters in burrows (made by mammal or self-dug) or under rocks of talus slopes. Eggs are laid in nests a few inches below the ground surface (Platt 1969) or in rotting wood (DeGraaf and Rudis 1983).",
+    "threats": "No major threats are known. Locally, some populations have declined as a result of conversion of habitat to intensive human uses.",
+    "measures": "Many occurrences are in protected areas.",
+    "use_trade": null,
+    "rationale": "Listed as Least Concern in view of its wide distribution, presumed large population, and because it is unlikely to be declining fast enough to qualify for listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Temperate"
+      },
+      "code": "3_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [],
+  "use_and_trade": [],
+  "threats": [],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Hammerson, G.A.",
+      "value": null
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cox, N., Chanson, J.S. & Stuart, S.N. (Global Reptile Assessment Coordinating Team)",
+      "value": null
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Ernst, C.H. and Ernst, E.M. 2003. <i>Snakes of the United States and Canada</i>. Smithsonian Books, Washington, D.C.",
+      "year": "2003",
+      "title": "Snakes of the United States and Canada.",
+      "author": "Ernst, C.H. and Ernst, E.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Conant, R. and Collins, J.T. 1991. <i>A Field Guide to Reptiles and Amphibians: Eastern and Central North America</i>. Third Edition. Houghton Mifflin Company, Boston, Massachusetts.",
+      "year": "1991",
+      "title": "A Field Guide to Reptiles and Amphibians: Eastern and Central North America. Third Edition",
+      "author": "Conant, R. and Collins, J.T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bartlett, R D. and Bartlett, P.P. 1999. <i>A Field Guide to Texas Reptiles and Amphibians</i>. Gulf Publishing Company, Houston, Texas. xviii + 331 pp.",
+      "year": "1999",
+      "title": "A Field Guide to Texas Reptiles and Amphibians.",
+      "author": "Bartlett, R D. and Bartlett, P.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dixon, J.R. 2000. <i>Amphibians and Reptiles of Texas. With Keys, Taxonomic Synopses, Bibliography, and Distribution Maps</i>. Second edition. Texas A & M University Press, College Station, College Station, Texas.",
+      "year": "2000",
+      "title": "Amphibians and Reptiles of Texas. Second edition.",
+      "author": "Dixon, J.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mount, R.H. 1975. <i>The Reptiles and Amphibians of Alabama.</i> Auburn University Agricultural Experiment Station, Auburn, Alabama. vii + 347 pp.",
+      "year": "1975",
+      "title": "The Reptiles and Amphibians of Alabama",
+      "author": "Mount, R.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2007. 2007 IUCN Red List of Threatened Species. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 12th September 2007).",
+      "year": "2007",
+      "title": "2007 IUCN Red List of Threatened Species",
+      "author": "IUCN",
+      "citation_short": "IUCN 2007"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

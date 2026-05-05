@@ -1,0 +1,3106 @@
+{
+  "assessment_date": "2018-02-20T00:00:00.000+00:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 20733,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/20733/156927622",
+  "citation": "Braulik, G.T. & Reeves, R. 2018. Stenella longirostris (errata version published in 2019). The IUCN Red List of Threatened Species 2018: e.T20733A156927622. Accessed on 05 May 2026.",
+  "assessment_id": 156927622,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 20733,
+    "scientific_name": "Stenella longirostris",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [
+      {
+        "sis_id": 134821812,
+        "scientific_name": "Stenella longirostris ssp. centroamericana",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Stenella",
+        "species_name": "longirostris",
+        "subpopulation_name": null,
+        "infra_name": "centroamericana",
+        "authority": "Perrin, 1990",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Central American Spinner Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 134821888,
+        "scientific_name": "Stenella longirostris ssp. longirostris",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Stenella",
+        "species_name": "longirostris",
+        "subpopulation_name": null,
+        "infra_name": "longirostris",
+        "authority": "(Gray, 1828)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Gray’s Spinner Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 133712,
+        "scientific_name": "Stenella longirostris ssp. orientalis",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Stenella",
+        "species_name": "longirostris",
+        "subpopulation_name": null,
+        "infra_name": "orientalis",
+        "authority": "Perrin 1990",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Eastern Spinner Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      },
+      {
+        "sis_id": 134822222,
+        "scientific_name": "Stenella longirostris ssp. roseiventris",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Stenella",
+        "species_name": "longirostris",
+        "subpopulation_name": null,
+        "infra_name": "roseiventris",
+        "authority": "(Wagner, 1846)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Dwarf Spinner Dolphin",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "DELPHINIDAE",
+    "genus_name": "Stenella",
+    "species_name": "longirostris",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Gray, 1828)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Long-beaked Dolphin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Long-snouted Dolphin",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Dauphin longirostre",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Delfín Tornillón",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Estenela Giradora",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Toldolfyn",
+        "language": "afr"
+      },
+      {
+        "main": true,
+        "name": "Spinner Dolphin",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Delphinus longirostris Gray, 1828",
+        "status": "ACCEPTED",
+        "genus_name": "Delphinus",
+        "species_name": "longirostris",
+        "species_author": "Gray, 1828",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "Spinner Dolphins occur throughout tropical and subtropical waters in both hemispheres from approximately 40°N to 40°S. They inhabit the Pacific, Atlantic, and Indian Oceans, including the Persian Gulf and the Red Sea, however they do not occur in the Mediterranean Sea. <br/> <br/> <em>Stenella longirostris longirostris</em> is the most common and widely distributed subspecies. It occurs mainly around oceanic islands and near coastlines in the tropical Atlantic and Indian Oceans and in the central and western Pacific (Rice 1998). Distribution in many parts of East and West Africa as well as in South America is poorly known.<br/> <br/> <em>Stenella longirostris orientalis</em> inhabits pelagic waters of the eastern tropical Pacific (ETP) east of about 145°W, from 24°N off Baja California (Mexico) to 10°S off Peru, but exclusive of the range of <em>S. l. centroamericana</em> (Perrin 1990). <br/> <br/> <em>Stenella longirostris centroamericana</em> is found in coastal waters over the continental shelf of the ETP, from the Gulf of Tehuantepec in southern Mexico, southeastward to Costa Rica (Perrin 1990). <br/> <br/> <em>Stenella longirostris roseiventris</em> is distributed in shallow waters of inner Southeast Asia, including the Gulf of Thailand, the Timor and Arafura Seas off northern Australia, and other similar areas off Indonesia and Malaysia. It is replaced in deeper waters by the larger pelagic subspecies <em>S. l. longirostris</em> (Perrin <em>et al</em>. 1999).",
+    "population": "<p>The Spinner Dolphin is the most common small cetacean in tropical pelagic waters (Perrin 2018). It was considered the most abundant cetacean species in the Indian Ocean (Ballance and Pitman 1998) and the Red Sea (Notarbartolo <em>et al</em>. 2017), and it was by far the most common cetacean encountered, and also had the largest mean school size, in the Maldives (Ballance <em>et al.</em> 2001), Tanzania (Braulik <em>et al</em>. 2018), and Pakistan (Gore <em>et al.</em> 2012). There were an estimated 801,000 (coefficient of variation (CV)=37%) White-bellied Spinners (<em>S. l. orientalis</em> – <em>S. l. longirostris</em> intergrades) in the ETP in 2000 (Gerrodette <em>et al</em>. 2005). The Eastern Spinner, which is the dolphin most heavily affected by the ETP tuna fishery, numbered about 613,000 (CV=22%) in 2003 (Gerrodette and Forcada 2005). Despite large reductions in bycatch mortality since the 1970s, this population appeared to be recovering at an estimated rate of only 1.1% per year during the early 2000s, an estimate that was not statistically different from zero (Gerrodette and Forcada 2005). Estimated abundance in the southern part of the Sulu Sea and northeastern Malaysian waters was 4,000 (Dolar <em>et al</em>. 1997), and in the southeastern Sulu Sea, about 31,000 (CV=27%) (Dolar <em>et al</em>. 2006). In Egyptian waters of the southern Red Sea, line-transect surveys in 2010, 2011, and 2012 generated an estimate of 6,961 (CV=0.26) Spinner Dolphins (Costa 2015). Although survey effort has been limited, the small number of records suggests that Spinner Dolphins are present but less abundant in the Atlantic (Weir 2010, Carretta <em>et al.</em> 2017) than in the Indian or Pacific Oceans.</p>  <p>Island-associated populations of Spinner Dolphins are often genetically distinct and inhabit relatively small areas. For example, the Hawaii Island (‘Big Island’) stock was estimated as 631 (95% confidence interval (CI) 524–761) from surveys conducted between September 2010 and August 2011 (Tyne <em>et al.</em> 2015a), and a population of Spinners on the leeward coast of Kauai Island was estimated as 601 (CV = 0.20) for the period October to November 2005 (Carretta <em>et al.</em> 2017). Abundance of Spinner Dolphins on the southwest coast of Mauritius was estimated using photo-identification data collected between April 2008 and June 2010, as ranging between 138 and 399 individuals (Webster <em>et al.</em> 2015). At the South Pacific island of Moorea, Spinner Dolphin abundance in 2002 was estimated using mark-recapture as 135 (95% CI 112-163) (Oremus <em>et al.</em> 2007).</p>  There is no global abundance estimate for this widely distributed species. The abundance estimates listed above add up to more than a million dolphins. However, the vast majority of the species range remains unsurveyed, therefore the actual abundance is presumed to be considerably greater.",
+    "habitats": "<p>Spinner Dolphins occur both on the high seas and in inshore waters associated with islands or banks. In the ETP, they are present in very large numbers many hundreds of kilometers from the nearest land, and they favour a specific habitat type, which oceanographers call \"tropical surface water\" that is typified by a shallow mixed layer, a sharp thermocline, and relatively small annual variation in surface temperature (Perrin and Gilpatrick 1994). They are often found there in close association with Pantropical Spotted Dolphins (<em>Stenella attenuata</em>), Yellowfin Tuna (<em>Thunnus albacares</em>) and birds of several species. School size varies greatly, from just a few to a thousand or more dolphins, and is often larger in pelagic than inshore waters (Perrin 2018). Numerous islands or island groups host small groups of Spinner Dolphins that predictably use shallow, near-shore areas for resting during the day. These include the Hawaiian Islands (Tyne <em>et al.</em> 2015a), Maldives (Ballance and Pitman 2001), and many islands in the South Pacific including Fiji, Tahiti, and Moorea (Oremus <em>et al.</em> 2007).</p>  <p>The dwarf form of the Spinner Dolphin in Southeast Asian waters inhabits shallow coral reef habitat (Perrin and Gilpatrick 1994, Perrin <em>et al.</em> 1999). In the north-central and western Gulf of Mexico, <em>Stenella longirostris</em> is found over intermediate bottom depths (Davis <em>et al</em>. 1998). <br/> <br/> Most Spinner Dolphins feed predominantly at night, on small (&lt;20 cm) mid-water fishes of many different families (including myctophids), squids, and sergestid shrimps (Perrin <em>et al</em>. 1973, Dolar <em>et al</em>. 2003). Dwarf Spinner Dolphins are exceptional, however; they feed (presumably during daylight hours) on small, reef-associated organisms (benthic reef fishes and invertebrates) (Perrin <em>et al</em>. 1999).</p>",
+    "threats": "<p>Over the period 1960 to 1972, it was estimated that more than 4 million dolphins were killed in the ETP yellowfin tuna purse-seine fishery (Wade <em>et al.</em> 2007). The main species killed were the Pantropical Spotted Dolphin (<em>Stenella attenuata</em>) and the Spinner Dolphin, both of which associate with tuna in that area. Fishermen use the dolphins to locate schools of tuna, and often purposely chase and encircle them in the nets; this maximizes the catch of tuna but can also result in entanglement and mortality of the dolphins (Gerrodette 2018). Mortality in the tuna fishery was estimated to have reduced the population of Eastern Spinners by 65% (Wade <em>et al.</em> 2007, Reilly <em>et al</em>. 2005). Since the Inter-American Tropical Tuna Commission (IATTC) implemented per-vessel mortality limits on the international fleet, the reported mortality of Eastern and White-bellied Spinners, combined, decreased dramatically to only a few hundred individuals (IATTC 2006). Despite this reduction in mortality, the eastern subspecies appears to be recovering slowly at best. Factors such as fishery-related stress, unobserved mortality due to calf separation and orphaning during fishing operations (Archer <em>et al</em>. 2001), mortality caused by small vessels that do not carry observers, and under-reporting of mortality have been suggested as possible reasons for the Eastern Spinner’s slow recovery (Gerrodette and Forcada 2005). <br/> <br/> Throughout much of their range, Spinner Dolphins are taken as bycatch in purse-seine, gillnet, and trawl fisheries (Perrin <em>et al</em>. 1994, Donahue and Edwards 1996), often in high numbers. Spinner Dolphins are the most abundant dolphins in the Indian Ocean (Ballance and Pitman 1998) and are taken throughout that region in numbers that are largely unknown but may be substantial, especially as there is evidence that dolphins associate with tuna in this region (Anderson 2014). Annual bycatch levels of hundreds of Spinner Dolphins were reported in the few fisheries examined in India in the 1980s and early 1990s (Mohan 1994), and annual takes in the thousands were reported in Sri Lanka in the 1980s (Leatherwood and Reeves 1989). They were reported to be the most frequently bycaught cetaceans in the Union of the Comoros (Kiszka <em>et al.</em> 2008), and amongst the most commonly taken in Madagascar (Razafindrakoto <em>et al</em>. 2004), Mayotte, and other countries in the western Indian Ocean (Kiszka <em>et al.</em> 2008). Unknown numbers have been taken in the tuna purse-seine fishery in the eastern Atlantic (Donahue and Edwards 1996) and in small-scale gillnet fisheries in the western Atlantic (Siciliano 1994). They have been reported as bycatch in the Caribbean Sea (Vidal <em>et al.</em> 1994). <br/></p>  <p>Dwarf Spinners are caught incidentally in shrimp trawls in the Gulf of Thailand (Perrin <em>et al</em>. 1999). Zerbini and Kotas (1998) reported on by-catches in Brazilian drift-net fisheries and Cockcroft (1990) on animals entangled in shark nets off KwaZulu-Natal, South Africa. There are likely to be undocumented interactions with fisheries off West Africa (Weir 2010, Jefferson <em>et al.</em> 1997).<br/> </p>  <p>In some areas, human use of bycaught cetaceans has led to directed hunting or deliberate gillnetting of Spinner Dolphins. For example, this has been reported in Sri Lanka (Leatherwood and Reeves 1989), the Philippines (Dolar 1994), and Indonesia (Kahn 2004). However. it is unclear whether, or how extensively, this activity continues in all of these places. Spinners may also be taken intentionally in West Africa (Van Waerebeek <em>et al</em>. 1999). Drive hunting of Spinner Dolphins takes place in Anakao, Madagascar (Cerchio <em>et al</em>. 2011) and in the Solomon Islands (Oremus <em>et al. </em>2015). <br/></p>  <p>The habit of resting in shallow coastal waters during the day leads to problems of disturbance by dolphin-watching boats and swimmers in many areas.</p>",
+    "measures": "<p>The Spinner Dolphin is listed in Appendix II of the Convention on International Trade in Endangered Species.<br/> <br/> The taking of Spinner Dolphins and other cetaceans affected by the ETP tuna purse-seine fishery is managed both nationally by the coastal countries and internationally by the IATTC. The IATTC has imposed annual stock mortality limits on each purse seine fleet and promulgated regulations regarding the safe release of dolphins (Gosliner 1999, Bayliff 2001). <br/> <br/> In several locations where Spinner Dolphins are the target of dolphin tourism, including Samadai Reef in Egypt and the Hawaiian Islands, local authorities have implemented management measures to control the number of visitors and boats, and thus to limit the impacts on dolphins (Notarbartolo <em>et al.</em> 2009, Tyne <em>et al.</em> 2015b). </p>  <p>The species is composed of several subspecies and numerous regional populations, each of which could be assessed separately for the IUCN Red List. The eastern spinner dolphin (<em>Stenella longirostris orientalis</em>) is currently listed as Vulnerable (http://www.iucnredlist.org/details/133712/0). The available estimates of abundance and removals suggest that some of the other populations may also fall into a Threatened category.</p>",
+    "use_trade": "<p>As one of the most common cetaceans in many tropical oceanic regions, the Spinner Dolphin is also often one of the species bycaught in fishing gear. In many places, accidentally captured dolphins are eaten or used as bait in shark fisheries and in some instances this accidental taking has led to directed, targeted taking as well (Dolar <em>et al.</em> 1994, Leatherwood and Reeves 1989, Robards and Reeves 2009, Kiszka 2012). ‘Incidentally’ captured Spinner Dolphins are reportedly eaten in Madagascar (Razafindrakoto <em>et al</em>. 2004), Tanzania (Amir <em>et al</em>. 2002), India (Kumarran 2012), the Grenadines in the Caribbean (where they are also hunted), Brazil, Venezuela, Indonesia, the Philippines (Robards and Reeves 2009) and much of West Africa (Weir 2010, Alfaro-Shigueto and Van Waerebeek 2001). Dolphin meat, including Spinner Dolphin meat, is sometimes used as bait for sharks in at least Tanzania, the Philippines, and Venezuela (Amir <em>et al. </em>2002, Dolar <em>et al</em>. 1994, Perrin and Gilpatrick 1994). They are hunted in the Solomon Islands, mainly for teeth used in a traditional economy (Oremus <em>et al.</em> 2015). <br/></p>  <p>Non-consumptive uses of Spinner Dolphins include dolphin-watching tourism. Because of their gregarious nature and acrobatic behaviour, Spinner Dolphins are targeted for both boat-based and swim-with-the-dolphins tourism in many places, including Hawaii, Egypt, and French Polynesia (Gannier and Petiau 2006, Tyne <em>et al.</em> 2017, Notarbartolo <em>et al.</em> 2007). Harassment by dolphin-watching boats is emerging as a new source of disturbance to Spinner Dolphins at several localities in Oceania and Southeast Asia (Tyne <em>et al</em>. 2015b, 2017). In west Hawaii, abundance estimates from 2011 and 2012 were lower than all previous years, indicating a possible long-term impact of dolphin-centred tourism on local population size (Tyne <em>et al</em>. 2017).</p>",
+    "rationale": "The Spinner Dolphin is one of the most abundant cetaceans globally (Perrin 2018). The sum of existing abundance estimates is more than one million dolphins, and as these estimates are from only a small fraction of the total distribution range of the species, total abundance is presumably much higher. The Eastern Spinner Dolphin population was listed as Vulnerable on the IUCN Red List in 2012 (<a href=\"http://www.iucnredlist.org/details/133712/0\">http://www.iucnredlist.org/details/133712/0</a>); it suffered large mortality in tuna-purse seine fisheries in the past, and is no longer thought to be declining but has shown no clear signs of recovery. Some island-associated populations of Spinner Dolphins are small, insular, and vulnerable to disturbance and other threats. Spinner Dolphins are taken throughout much of their range as bycatch in fisheries and as direct targets of hunting in some areas. There is little quantitative information on bycatch rates in most range states, but it is clear that as well as being one of the most abundant cetaceans, the Spinner Dolphin is one of the more frequently bycaught species. Direct removals are substantial in a few areas, notably the Solomon Islands (average of 214 spinners per year 2000-2002). The species was classified as Data Deficient (DD) on the IUCN Red List in 2008 and it remains data-poor in much of its range. However, given its generally high abundance and pan-tropical distribution, and in the absence of evidence that threats are significant throughout the species’ extensive range, the Spinner Dolphin is assessed as Least Concern. There is not enough information to determine whether the global population has declined by 30% or more over three generations (therefore qualifying for listing as Vulnerable) but this is possible.",
+    "trend_justification": null,
+    "taxonomic_notes": "Recent genetic work indicates that the genus <em>Stenella</em> is paraphyletic, and it is likely that the Delphininae will be restructured in coming years (LeDuc <em>et al</em>. 1999, Perrin <em>et al</em>. 2013). Four subspecies of Spinner Dolphins are currently recognized: <em>S. l. longirostris</em> (Gray’s Spinner Dolphin), <em>S. l. orientalis</em> (Eastern Spinner Dolphin), <em>S. l. centroamericana</em> (Central American Spinner Dolphin) and <em>S. l. roseiventris</em> (Dwarf Spinner Dolphin) (Perrin 1990, Perrin <em>et al.</em> 1999). There is a zone of hydridisation between Gray’s Spinner and the Eastern Spinner where an intermediate form called the White-bellied Spinner occurs (Andrews <em>et al. </em>2013). Smaller individuals in Arabian waters (Red Sea and Persian Gulf) (Van Waerebeek <em>et al</em>. 1999) and morphologically different animals in West Africa may represent as yet undescribed subspecies (Cadenat 1959, Jefferson <em>et al</em>. 1997). Several studies have demonstrated significant meta-population genetic structure, especially where relatively insular dolphin communities are strongly associated with island resting habitat such as in the Hawaiian Archipelago (Andrews <em>et al.</em> 2013) and in the South Pacific (Oremus <em>et al.</em> 2007)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Bathypelagic (1000-4000m)"
+      },
+      "code": "10_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honshu"
+      },
+      "code": "JAP-HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Socotra"
+      },
+      "code": "SOC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Iraq"
+      },
+      "code": "IQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "KwaZulu-Natal"
+      },
+      "code": "NAT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Is."
+      },
+      "code": "NZN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kermadec Is."
+      },
+      "code": "KER-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": [
+        "Seasonal Occurrence Uncertain"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Andaman Is."
+      },
+      "code": "AND-AN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicobar Is."
+      },
+      "code": "NCB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Braulik, G.T. & Reeves, R.",
+      "value": [
+        "Gillian Braulik (IUCN SSC Cetacean Specialist Group)",
+        "Randall Reeves (IUCN SSC Cetacean Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Taylor, B.L. & Perrin, W.",
+      "value": [
+        "William Perrin (IUCN SSC Cetacean RLA)",
+        "Barbara Taylor (independent researcher)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L.",
+      "value": [
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "This errata version has been generated to remove the section about the UAE from the Taxonomic Notes which was erroneously copied into the global assessment from the national assessment."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Rice, D.W. 1998. <i>Marine Mammals of the World: Systematics and Distribution</i>. Society for Marine Mammalogy, Special Publication Number 4, Lawrence, Kansas.",
+      "year": "1998",
+      "title": "Marine Mammals of the World: Systematics and Distribution",
+      "author": "Rice, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dolar, M. L. L., Walker, W. A., Kooyman, G. L. and Perrin, W. F. 2003. Comparative feeding ecology of spinner dolphins (<i>Stenella longirostris</i>) and Fraser's dolphins (<i>Lagenodelphis hosei</i>) in the Sulu Sea. <i>Marine Mammal Science</i> 19(1): 1-19.",
+      "year": "2003",
+      "title": "Comparative feeding ecology of spinner dolphins (<i>Stenella longirostris</i>) and Fraser's dolphins (<i>Lagenodelphis hosei</i>) in the Sulu Sea",
+      "author": "Dolar, M. L. L., Walker, W. A., Kooyman, G. L. and Perrin, W. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kahn, B. 2004. Indonesia Oceanic Cetacean Program activity report: October-December 2003.  Apex Environmental report to The Nature Conservancy SE Asia Center for Marine Protected Areas.",
+      "year": "2004",
+      "title": "Indonesia Oceanic Cetacean Program activity report: October-December 2003",
+      "author": "Kahn, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolar, M. L. L., Leatherwood, S., Wood, C. J., Alava, M. N. R., Hill, C. L. and Arangones, L. V. 1994. Directed fisheries for cetaceans in the Philippines. <i>Reports of the International Whaling Commission</i> 44: 439-449.",
+      "year": "1994",
+      "title": "Directed fisheries for cetaceans in the Philippines",
+      "author": "Dolar, M. L. L., Leatherwood, S., Wood, C. J., Alava, M. N. R., Hill, C. L. and Arangones, L. V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cockcroft, V. G. 1990. Dolphin catches in the Natal shark nets, 1980-1988. <i>South African Journal of Wildlife Research</i> 20: 44-51.",
+      "year": "1990",
+      "title": "Dolphin catches in the Natal shark nets, 1980-1988",
+      "author": "Cockcroft, V. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolar, M. L. L., Perrin, W. F., Taylor, B. L., Kooyman, G. L. and Alava, M. N. R. 2006. Abundance and distributional ecology of cetaceans in the central Philippines. <i>Journal of Cetacean Research and Management</i> 8(1): 93-112.",
+      "year": "2006",
+      "title": "Abundance and distributional ecology of cetaceans in the central Philippines",
+      "author": "Dolar, M. L. L., Perrin, W. F., Taylor, B. L., Kooyman, G. L. and Alava, M. N. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leduc, R. G., Perrin, W. F. and Dizon, A. E. 1999. Phylogenetic relationships among the delphinid cetaceans based on full cytochrome b sequences. <i>Marine Mammal Science</i> 15: 619-648.",
+      "year": "1999",
+      "title": "Phylogenetic relationships among the delphinid cetaceans based on full cytochrome b sequences",
+      "author": "Leduc, R. G., Perrin, W. F. and Dizon, A. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Vidal, O., Van Waerebeek, K. and Findley, L.T. 1994. Cetaceans and gillnet fisheries in Mexico, Central America and the wider Caribbean: a preliminary review. <i>Report of the International Whaling Commission</i> (Special Issue) 15: 221–233.",
+      "year": "1994",
+      "title": "Cetaceans and gillnet fisheries in Mexico, Central America and the wider Caribbean: a preliminary review.",
+      "author": "Vidal, O., Van Waerebeek, K. and Findlay, L.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wade, P.R., Watters, G.M., Gerrodette, T. and Reilly, S.B. 2007. Depletion of spotted and spinner dolphins in the eastern tropical Pacific: modeling hypotheses for their lack of recovery. <i>Marine Ecology Progress Series</i> 343: 1-14.",
+      "year": "2007",
+      "title": "Depletion of spotted and spinner dolphins in the eastern tropical Pacific: modeling hypotheses for their lack of recovery",
+      "author": "Wade, P.R., Watters, G.M., Gerrodette, T. and Reilly, S.B",
+      "citation_short": null
+    },
+    {
+      "citation": "Siciliano, S. 1994. Review of small cetaceans and fishery interactions in coastal waters of Brazil. <i>Reports of the International Whaling Commission Special Issue</i> 15: 241-250.",
+      "year": "1994",
+      "title": "Review of small cetaceans and fishery interactions in coastal waters of Brazil",
+      "author": "Siciliano, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mohan, L.R.S. 1994. Review of gillnet fisheries and cetacean bycatches in the northeastern Indian Ocean. In: W. F. Perrin, G. P. Donovan and J. Barlow (eds), <i>Gillnets and Cetaceans: incorporating the proceedings of the symposium and workshop on the mortality of cetaceans in passive fishing nets and traps</i>, pp. 329-343. International Whaling Commission, Cambridge, UK.",
+      "year": "1994",
+      "title": "Review of gillnet fisheries and cetacean bycatches in the northeastern Indian Ocean",
+      "author": "Mohan, L.R.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reilly, S. B., Donaghue, M. A., Gerrodette, T., Wade, P., Balance, L., Fiedler, P., Dizon, A., Perryman, W., Archer, F. A. and Edwards, E. F. 2005. Report of the scientific research program under the International Dolphin Conservation Program Act.  NOAA Technical Memorandum.",
+      "year": "2005",
+      "title": "Report of the scientific research program under the International Dolphin Conservation Program Act",
+      "author": "Reilly, S. B., Donaghue, M. A., Gerrodette, T., Wade, P., Balance, L., Fiedler, P., Dizon, A., Perryman, W., Archer, F. A. and Edwards, E. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ballance, L. T. and Pitman, R. L. 1998. Cetaceans of the western tropical Indian Ocean: distribution, relative abundance, and comparisons with cetacean communities of two other tropical ecosystems. <i>Marine Mammal Science</i> 14: 429-459.",
+      "year": "1998",
+      "title": "Cetaceans of the western tropical Indian Ocean: distribution, relative abundance, and comparisons with cetacean communities of two other tropical ecosystems",
+      "author": "Ballance, L. T. and Pitman, R. L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bayliff, W. H. 2001. Organization, functions, and achievements of the Inter-American Tropical Tuna Commission. Inter-American Tropical Tuna Commission.",
+      "year": "2001",
+      "title": "Organization, functions, and achievements of the Inter-American Tropical Tuna Commission",
+      "author": "Bayliff, W. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gerrodette, T. and Forcada, J. 2005. Non-recovery of two spotted and spinner dolphin populations in the eastern tropical Pacific Ocean. <i>Marine Ecology Progress Series</i> 291: 1-21.",
+      "year": "2005",
+      "title": "Non-recovery of two spotted and spinner dolphin populations in the eastern tropical Pacific Ocean",
+      "author": "Gerrodette, T. and Forcada, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gerrodette, T., Watters, G. and Forcada, J. 2005. Preliminary estimates of 2003 dolphin abundance in the eastern tropical Pacific. SWFSC.",
+      "year": "2005",
+      "title": "Preliminary estimates of 2003 dolphin abundance in the eastern tropical Pacific",
+      "author": "Gerrodette, T., Watters, G. and Forcada, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Archer, F., Gerrodette, T., Dizon, A., Abella, K. and Southern, S. 2001. Unobserved kill of nursing dolphin calves in a tuna purse-seine fishery. <i>Marine Mammal Science</i> 17(3): 540-554.",
+      "year": "2001",
+      "title": "Unobserved kill of nursing dolphin calves in a tuna purse-seine fishery",
+      "author": "Archer, F., Gerrodette, T., Dizon, A., Abella, K. and Southern, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolar, M. L. L. 1994. Incidental takes of small cetaceans in fisheries in Palawan, Central Visayas and northern Mindanao in the Philippines. <i>Reports of the International Whaling Commission Special Issue</i> 15: 355-363.",
+      "year": "1994",
+      "title": "Incidental takes of small cetaceans in fisheries in Palawan, Central Visayas and northern Mindanao in the Philippines",
+      "author": "Dolar, M. L. L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Zerbini, A. N. and Kotas, J. E. 1998. A note on cetacean bycatch in pelagic driftnetting off southern Brazil. <i>Reports of the International Whaling Commission</i> 48: 519-524.",
+      "year": "1998",
+      "title": "A note on cetacean bycatch in pelagic driftnetting off southern Brazil",
+      "author": "Zerbini, A. N. and Kotas, J. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Davis, R. W., Fargion, G. S., May, N., Leming, T. D., Baumgartner, M., Evans, W. E., Hansen, L. J. and Mullin, K. 1998. Physical habitat of cetaceans along the continental slope in the north-central and western Gulf of Mexico. <i>Marine Mammal Science</i> 14(3): 490-507.",
+      "year": "1998",
+      "title": "Physical habitat of cetaceans along the continental slope in the north-central and western Gulf of Mexico",
+      "author": "Davis, R. W., Fargion, G. S., May, N., Leming, T. D., Baumgartner, M., Evans, W. E., Hansen, L. J. and Mullin, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perrin, W. F. 1990. Subspecies of <i>Stenella longirostris</i> (Mammalia: Cetacea: Delphinidae). <i>Proceedings of the Biological Society of Washington</i> 103: 453-463.",
+      "year": "1990",
+      "title": "Subspecies of <i>Stenella longirostris</i> (Mammalia: Cetacea: Delphinidae)",
+      "author": "Perrin, W. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Inter-American Tropical Tuna Commission. 2006. 2004 Annual Report.: 96.",
+      "year": "2006",
+      "title": "2004 Annual Report",
+      "author": "Inter-American Tropical Tuna Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Leatherwood, S. and Reeves, R.R. 1989. Marine mammal research and conservation in Sri Lanka 1985-1986.  UNEP Marine Mammal Technical Report. United Nations Environment Programme, Nairobi, Kenya.",
+      "year": "1989",
+      "title": "Marine mammal research and conservation in Sri Lanka 1985-1986",
+      "author": "Leatherwood, S. and Reeves, R.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Perrin, W. F. and Gilpatrick, J. W. 1994. Spinner dolphin <i>Stenella longirostris</i> (Gray, 1828). In: S. H. Ridgway and R. Harrison (eds), <i>Handbook of marine mammals, Volume 5: The first book of dolphins</i>, pp. 99-128. Academic Press.",
+      "year": "1994",
+      "title": "Spinner dolphin <i>Stenella longirostris</i> (Gray, 1828)",
+      "author": "Perrin, W. F. and Gilpatrick, J. W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Van Waerebeek, K., Gallagher, M., Baldwin, R., Papastavrou, V. and Al-Lawati-Samira, M. 1999. Morphology and distribution of the spinner dolphin, <i>Stenalla longirostris</i>, rough-toothed dolphin, <i>Steno bredanensis</i>, and melon-headed whale, <i>Peponocephala electra</i>, from waters off the Sultanate of Oman. <i>Journal of Cetacean Research and Management</i> 1(2): 167-177.",
+      "year": "1999",
+      "title": "Morphology and distribution of the spinner dolphin, <i>Stenalla longirostris</i>, rough-toothed dolphin, <i>Steno bredanensis</i>, and melon-headed whale, <i>Peponocephala electra</i>, from waters off the Sultanate of Oman",
+      "author": "Van Waerebeek, K., Gallagher, M., Baldwin, R., Papastavrou, V. and Al-Lawati-Samira, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolar, M. L. L., Perrin, W. F., Yaptinchay, A. A. S. P., Jaaman, S. A. B. H. J., Santos, M. D., Alava, M. N. and Suliansa, M. S. B. 1997. Preliminary investigation of marine mammal distribution, abundance, and interactions with humans in the southern Sulu Sea. <i>Asian Marine Biology</i> 14: 61-81.",
+      "year": "1997",
+      "title": "Preliminary investigation of marine mammal distribution, abundance, and interactions with humans in the southern Sulu Sea",
+      "author": "Dolar, M. L. L., Perrin, W. F., Yaptinchay, A. A. S. P., Jaaman, S. A. B. H. J., Santos, M. D., Alava, M. N. and Suliansa, M. S. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Donahue, M. A. and Edwards, E. F. 1996. An annotated bibliography of available literature regarding cetacean interactions with tuna purse seine fisheries outside of the eastern tropical Pacific. <i>Southwest Fisheries Science Center Administrative Report</i> 96-20: 46 pp.",
+      "year": "1996",
+      "title": "An annotated bibliography of available literature regarding cetacean interactions with tuna purse seine fisheries outside of the eastern tropical Pacific",
+      "author": "Donahue, M. A. and Edwards, E. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perrin, W. F., Dolar, M. L. L. and Robineau, D. 1999. Spinner dolphins (<i>Stenella longirostris</i>) of the western Pacific and southeast Asia: pelagic and shallow-water forms. <i>Marine Mammal Science</i> 15(4): 1029-1053.",
+      "year": "1999",
+      "title": "Spinner dolphins (<i>Stenella longirostris</i>) of the western Pacific and southeast Asia: pelagic and shallow-water forms",
+      "author": "Perrin, W. F., Dolar, M. L. L. and Robineau, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perrin, W. F., Warner, R. R., Fiscus, C. H. and Holts, D. B. 1973. Stomach contents of porpoise, <i>Stenella</i> spp., and yellowfin tuna, <i>Thunnus albacares</i>, in mixed-species aggregations. <i>Fishery Bulletin</i> 71: 1077-1092.",
+      "year": "1973",
+      "title": "Stomach contents of porpoise, <i>Stenella</i> spp., and yellowfin tuna, <i>Thunnus albacares</i>, in mixed-species aggregations",
+      "author": "Perrin, W. F., Warner, R. R., Fiscus, C. H. and Holts, D. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kiszka, J., 2012. Bycatch assessment of vulnerable megafauna in coastal artisanal fisheries in the southwest Indian Ocean. <i>Final Report to South West Indian Ocean Fisheries Project (SWIOFP)</i>.",
+      "year": "2012",
+      "title": "Bycatch assessment of vulnerable megafauna in coastal artisanal fisheries in the southwest Indian Ocean",
+      "author": "Kiszka, J.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Robards, M.D. and Reeves R.R. 2011. The global extent and character of marine mammal consumption by humans: 1970–2009. <i>Biological Conservation</i> 144: 2770–2786.",
+      "year": "2011",
+      "title": "The global extent and character of marine mammal consumption by humans: 1970–2009",
+      "author": "Robards, M.D. and Reeves R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cadenat J. 1959. Rapport sur les petits Cétacés Ouest-Africains. Résultats des recherches entreprises sur ces animaux jusqu’au mois de mars 1959. <i>Bulletin de l’Institut Français d’Afrique Noire</i> 21A: 1367-1409.",
+      "year": "1959",
+      "title": "Rapport sur les petits Cétacés Ouest-Africains. Résultats des recherches entreprises sur ces animaux jusqu’au mois de mars 1959",
+      "author": "Cadenat J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Alfaro-Shigueto, J., Van Waerebeek, K. 2001. Drowning in the sea of silence: the bushmeat concept applied for marine fauna. Abstract, Fourth Biennial Zoos and Aquariums. <i>Committing to Conservation Conference, Cocoa Beach, Florida 28 November - 2 December 2001</i>.",
+      "year": "2001",
+      "title": "Drowning in the sea of silence: the bushmeat concept applied for marine fauna. Abstract, Fourth Biennial Zoos and Aquariums",
+      "author": "Alfaro-Shigueto, J., Van Waerebeek, K. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Jefferson, T. A., Curry, B. E., Leatherwood, S., Powell, J. A. 1997. Dolphins and porpoises of West Africa: a review of records (Cetacea: Delphinidae, Phocoenidae). <i>Mammalia</i> 61: 87-108.",
+      "year": "1997",
+      "title": "Dolphins and porpoises of West Africa: a review of records (Cetacea: Delphinidae, Phocoenidae)",
+      "author": "Jefferson, T. A., Curry, B. E., Leatherwood, S., Powell, J. A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Waring, G.T., Josephson, E., Maze-Foley, K. and Rosel, P.E. 2013. U.S. Atlantic and Gulf of Mexico Marine Mammal Stock Assessments–2012.  NOAA Technical Memorandum NMFS-NE-223. U.S. Department of Commerce, National Oceanic and Atmospheric Administration, National Marine Fisheries Service, Northeast Fisheries Science Center.",
+      "year": "2013",
+      "title": "U.S. Atlantic and Gulf of Mexico Marine Mammal Stock Assessments–2012",
+      "author": "Waring, G.T., Josephson, E., Maze-Foley, K. and Rosel, P.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kumarran, R.P. 2012. Cetaceans and cetacean research in India. <i>Journal of Cetacean Research and Management</i> 12: 159-172.",
+      "year": "2012",
+      "title": "Cetaceans and cetacean research in India",
+      "author": "Kumarran, R.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gore, M.A., Kiani, M.S., Ahmad, E., Hussain, B., Ormond, R.F., Siddiqui, J., Waqas, U., Culloch, R. 2012. Occurrence of whales and dolphins in Pakistan with reference to fishers' knowledge and impacts. <i>Journal of Cetacean Research and Management</i> 12: 235-247.",
+      "year": "2012",
+      "title": "Occurrence of whales and dolphins in Pakistan with reference to fishers' knowledge and impacts",
+      "author": "Gore, M.A., Kiani, M.S., Ahmad, E., Hussain, B., Ormond, R.F., Siddiqui, J., Waqas, U., Culloch, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Braulik, G.T., Kasuga, M., Wittich, A., Kiszka, J.J., MacCaulay, J., Gillespie, D., Gordon, J., Said, S.S. and Hammond, P.S. 2018. Cetacean rapid assessment: An approach to fill knowledge gaps and target conservation across large data deficient areas. <i>Aquatic Conservation: Marine and Freshwater Ecosystems</i> 28(1): 216-230.",
+      "year": "2018",
+      "title": "Cetacean rapid assessment: An approach to fill knowledge gaps and target conservation across large data deficient areas",
+      "author": "Braulik, G.T., Kasuga, M., Wittich, A., Kiszka, J.J., MacCaulay, J., Gillespie, D., Gordon, J., Said, S.S. and Hammond, P.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Amir, O.A., Berggren, P., Jiddawi, N.S. 2002. The incidental catch of dolphins in gillnet fisheries in Zanzibar, Tanzania. Western Indian Ocean. <i>Journal of Marine Science</i> 1: 155-162.",
+      "year": "2002",
+      "title": "The incidental catch of dolphins in gillnet fisheries in Zanzibar, Tanzania. Western Indian Ocean",
+      "author": "Amir, O.A., Berggren, P., Jiddawi, N.S",
+      "citation_short": null
+    },
+    {
+      "citation": "Razafindrakoto, Y., Andrianarivelo, N. and Rosenbaum, H. C. 2004. Sightings, catches, and other records of Indo-Pacific humpback dolphins in the coastal waters of Madagascar. <i>Aquatic Mammals</i> 30(1): 103-110.",
+      "year": "2004",
+      "title": "Sightings, catches, and other records of Indo-Pacific humpback dolphins in the coastal waters of Madagascar",
+      "author": "Razafindrakoto, Y., Andrianarivelo, N. and Rosenbaum, H. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. 2017. U.S. Pacific Marine Mammal Stock Assessments: 2016.  National Oceanic and Atmospheric Administration Technical Memorandum NMFS-SWFSC-577.",
+      "year": "2017",
+      "title": "U.S. Pacific Marine Mammal Stock Assessments: 2016",
+      "author": "Carretta, J.V., Forney, K.A., Oleson, E.M., Weller, D.W., Lang, A.R., Baker, J., Muto, M.M., Hanson B., Orr, A.J., Huber, H., Lowry, M.S., Barlow, J., Moore, J.E., Lynch, D., Carswell, L. and Brownell, R.L. Jr. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weir, C.R. 2010. A review of cetacean occurrence in West African waters from the Gulf of Guinea to Angola. <i>Mammal Review</i> 40(1): 2–39.",
+      "year": "2010",
+      "title": "A review of cetacean occurrence in West African waters from the Gulf of Guinea to Angola",
+      "author": "Weir, C.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Notarbartolo di Sciara, G., Kerem, D., Smeenk, C., Rudolph, P., Cesario, A., Costa, M., Elasar, M., Feingold, D., Fumagalli, M., Goffman, O., Hadar, N., Mebrathu, Y.T. and Scheinin, A. 2017. Cetaceans of the Red Sea.  Convention on Migratory Species Technical Series 33. Convention on Migratory Species, Bonn.",
+      "year": "2017",
+      "title": "Cetaceans of the Red Sea",
+      "author": "Notarbartolo di Sciara, G., Kerem, D., Smeenk, C., Rudolph, P., Cesario, A., Costa, M., Elasar, M., Feingold, D., Fumagalli, M., Goffman, O., Hadar, N., Mebrathu, Y.T. and Scheinin, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anderson, R.C. 2014. Cetaceans and Tuna Fisheries in the Western and Central Indian Ocean.  NLF Technical Report 2, International Pole and Line Foundation, London. 133p.",
+      "year": "2014",
+      "title": "Cetaceans and Tuna Fisheries in the Western and Central Indian Ocean",
+      "author": "Anderson, R.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Oremus, M., Leqata, J., and Baker, C.S. 2015. Resumption of traditional drive hunting of dolphins in the Solomon Islands. <i>Royal Society Open Science</i>: doi:10.1098/rsos.140524.",
+      "year": "2015",
+      "title": "Resumption of traditional drive hunting of dolphins in the Solomon Islands",
+      "author": "Oremus, M., Leqata, J., and Baker, C.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perrin, W.F., Rosel, P. and Cipriano, F. 2013. How to contend with paraphyly in the taxonomy of the delphinine cetaceans? <i>Marine Mammal Science</i> 29: 567-588.",
+      "year": "2013",
+      "title": "How to contend with paraphyly in the taxonomy of the delphinine cetaceans?",
+      "author": "Perrin, W.F., Rosel, P. and Cipriano, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Perrin, W.F. 2018. Spinner dolphin <i>Stenella longirostris</i>. In: B. Wursig, J.G.M. Thewissen and K.M. Kovacs (eds), <i>Encyclopedia of Marine Mammals Third Edition</i>, pp. 925-928. Academic Press.",
+      "year": "2018",
+      "title": "Spinner dolphin <i>Stenella longirostris</i>",
+      "author": "Perrin, W.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Andrews, K.R., Karczmarski, L., Au, W.W.L., Rickards, S., Vanderlip, C.A., Bowen, B.W., Grau, E.G., and Toonen, R.J. 2010. Rolling stones and stable homes: Social structure, habitat diversity and population genetics of the Hawaiian spinner dolphin. <i>Molecular Ecology</i> 19: 732-748.",
+      "year": "2010",
+      "title": "Rolling stones and stable homes: Social structure, habitat diversity and population genetics of the Hawaiian spinner dolphin",
+      "author": "Andrews, K.R., Karczmarski, L., Au, W.W.L., Rickards, S., Vanderlip, C.A., Bowen, B.W., Grau, E.G., and Toonen, R.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gosliner, M.L. 1999. The tuna-dolphin controversy. In: J.R. Twiss, Jr. and R.R. Reeves (eds), <i>Conservation and Management of Marine Mammals</i>, pp. 120-155. Smithsonian Institution Press, Washington, D.C.",
+      "year": "1999",
+      "title": "The tuna-dolphin controversy",
+      "author": "Gosliner, M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gerrodette, T. 2018. The tuna-dolphin issue. In: B. Würsig, J.G.M. Thewissen and K.M. Kovacs (eds), <i>Encyclopedia of Marine Mammals Third Edition</i>, pp. 128-130. Academic Press, San Diego, CA.",
+      "year": "2018",
+      "title": "The tuna-dolphin issue",
+      "author": "Gerrodette, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kiszka, J., Muir, C., Poonian, C., Cox, T. M., Amir, O. A., Bourjea, J., Razafindrakoto, Y., Wambiji, N. and Bristol, N. 2008. Marine mammal bycatch in the Southwest Indian Ocean: review and need for a comprehensive status assessment. <i>Western Indian Ocean Journal of Marine Science</i> 7(2): 119-136.",
+      "year": "2008",
+      "title": "Marine mammal bycatch in the Southwest Indian Ocean: review and need for a comprehensive status assessment",
+      "author": "Kiszka, J., Muir, C., Poonian, C., Cox, T. M., Amir, O. A., Bourjea, J., Razafindrakoto, Y., Wambiji, N. and Bristol, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tyne, J.A., Johnston, D.W., Rankin, R., Loneragan, N.R., and Bejder, L. 2015b. The importance of spinner dolphin (<i>Stenella longirostris</i>) resting habitat: Implications for management. <i>Journal of Applied Ecology</i> 52: 621-630.",
+      "year": "2015b",
+      "title": "The importance of spinner dolphin (<i>Stenella longirostris</i>) resting habitat: Implications for management",
+      "author": "Tyne, J.A., Johnston, D.W., Rankin, R., Loneragan, N.R., and Bejder, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cerchio, S., Gruden, P., Andrianarivelo, N., and Strindberg, S. 2011. Assessment of cetacean diversity, distribution, and population status on the West Coast of Madagascar and Mozambique Channel.  Final Report to the Kate Sanderson Bequest to the International Union for Conservation of Nature, Species Survival Commission, Gland, Switzerland.",
+      "year": "2011",
+      "title": "Assessment of cetacean diversity, distribution, and population status on the West Coast of Madagascar and Mozambique Channel",
+      "author": "Cerchio, S., Gruden, P., Andrianarivelo, N., and Strindberg, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ballance, L.T., Anderson, R.C., Pitman, R.L., Stafford, K., Shaan, A., Waheed, Z. and Brownell Jr, R.L. 2001. Cetacean sightings around the Republic of the Maldives, April 2001. <i>Journal of Cetacean Research and Management</i> 3(2): 213-218.",
+      "year": "2001",
+      "title": "Cetacean sightings around the Republic of the Maldives, April 2001",
+      "author": "Ballance, L.T., Anderson, R.C., Pitman, R.L., Stafford, K., Shaan, A., Waheed, Z. and Brownell Jr, R.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gannier, A. and Petiau, E. 2011. Environmental Variables Affecting the Residence of Spinner Dolphins (<i>Stenella longirostris</i>) in a Bay of Tahiti (French Polynesia). <i>Aquatic Mammals</i> 32(2): 202-211.",
+      "year": "2011",
+      "title": "Environmental Variables Affecting the Residence of Spinner Dolphins (<i>Stenella longirostris</i>) in a Bay of Tahiti (French Polynesia)",
+      "author": "Gannier, A. and Petiau, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oremus, M., Poole, M., Steel, D. and Baker, C. 2007. Isolation and interchange among insular spinner dolphin communities in the South Pacific revealed by individual identification and genetic diversity. <i>Marine Ecology Progress Series</i> 336: 275-289.",
+      "year": "2007",
+      "title": "Isolation and interchange among insular spinner dolphin communities in the South Pacific revealed by individual identification and genetic diversity",
+      "author": "Oremus, M., Poole, M., Steel, D. and Baker, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tyne, J.A., Johnston, D.W., Christiansen, F., Bejder, L. 2017. Temporally and spatially partitioned behaviours of spinner dolphins: implications for resilience to human disturbance. <i>Royal Society Open Science</i> 4: 160626.",
+      "year": "2017",
+      "title": "Temporally and spatially partitioned behaviours of spinner dolphins: implications for resilience to human disturbance",
+      "author": "Tyne, J.A., Johnston, D.W., Christiansen, F., Bejder, L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Costa, M. 2015. Abundance and distribution of delphinids in the Red Sea (Egypt). PhD Thesis, University of St. Andrews, UK.",
+      "year": "2015",
+      "title": "Abundance and distribution of delphinids in the Red Sea (Egypt)",
+      "author": "Costa, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Notarbartolo-di-Sciara, G., Hanafy, M., Fouda, M., Afifi, A., and Costa, M. 2009. Spinner dolphin (<i>Stenella longirostris</i>) resting habitat in Samadai Reef (Egypt, Red Sea) protected through tourism management. <i>Journal of the Marine Biological Association of the United Kingdom</i> 89(1): 211-216.",
+      "year": "2009",
+      "title": "Spinner dolphin (<i>Stenella longirostris</i>) resting habitat in Samadai Reef (Egypt, Red Sea) protected through tourism management",
+      "author": "Notarbartolo-di-Sciara, G., Hanafy, M., Fouda, M., Afifi, A., and Costa, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Webster, I., Cockcroft, V., and Cadinouche, A. 2015. Spinner dolphins <i>Stenella longirostris</i> off south-west Mauritius: abundance and residency. <i>African Journal of Marine Science</i> 37(1): 115-124.",
+      "year": "2015",
+      "title": "Spinner dolphins <i>Stenella longirostris</i> off south-west Mauritius: abundance and residency",
+      "author": "Webster, I., Cockcroft, V., and Cadinouche, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tyne, J.A., Pollock, K.H., Johnston, D.W., and Bejder, L. 2015a. Abundance and survival rates of the Hawai’i Island associated spinner dolphin (<i>Stenella longirostris</i>) stock. <i>PLoS One</i> 9(1): 1-10.",
+      "year": "2015a",
+      "title": "Abundance and survival rates of the Hawai’i Island associated spinner dolphin (<i>Stenella longirostris</i>) stock",
+      "author": "Tyne, J.A., Pollock, K.H., Johnston, D.W., and Bejder, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 December 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,1758 @@
+{
+  "assessment_date": "2022-05-27T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 21257,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/21257/135092980",
+  "citation": "Ford, M. 2024. Syngnathus abaster. The IUCN Red List of Threatened Species 2024: e.T21257A135092980. Accessed on 05 May 2026.",
+  "assessment_id": 135092980,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 21257,
+    "scientific_name": "Syngnathus abaster",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "SYNGNATHIFORMES",
+    "family_name": "SYNGNATHIDAE",
+    "genus_name": "Syngnathus",
+    "species_name": "abaster",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Risso, 1827",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Seahorse, Pipefish & Seadragon Specialist Group",
+        "url": "https://iucn-seahorse.org/",
+        "description": "Chair: Amanda Vincent (email: a.vincent@oceans.ubc.ca)\nRed List Authority Coordinator: Riley Pollom (email: r.pollom@fisheries.ubc.ca)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Aguja de río",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Deniziğnesi baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Europäische Kurznasen-Seenadel",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gjilpërëza shiritazezë",
+        "language": "alb"
+      },
+      {
+        "main": false,
+        "name": "Gremxula Tal-baħar Ħalqha Qasir.",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Kratkokljuno šilo",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Malo šilo",
+        "language": "slv"
+      },
+      {
+        "main": false,
+        "name": "Pesce ago codagrossa",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Šilo",
+        "language": "scc"
+      },
+      {
+        "main": false,
+        "name": "Syngnathe de rivière",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Ταινιοσακοράφα",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "Итальянская рыба-игла",
+        "language": "rus"
+      },
+      {
+        "main": false,
+        "name": "Іглиця пухлощока",
+        "language": "ukr"
+      },
+      {
+        "main": false,
+        "name": "Късомуцунеста игла",
+        "language": "bul"
+      },
+      {
+        "main": true,
+        "name": "Black-Striped Pipefish",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Syngnathus anguisigola Nardo, 1847",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "anguisigola",
+        "species_author": "Nardo, 1847",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus ethon Risso, 1827",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "ethon",
+        "species_author": "Risso, 1827",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus algeriensis Günther, 1870",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "algeriensis",
+        "species_author": "Günther, 1870",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus nigrolineatus Eichwald, 1831",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "nigrolineatus",
+        "species_author": "Eichwald, 1831",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus flavescens Kaup, 1856",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "flavescens",
+        "species_author": "Kaup, 1856",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus microchirus Moreau, 1891",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "microchirus",
+        "species_author": "Moreau, 1891",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus bucculentus Rathke, 1837",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "bucculentus",
+        "species_author": "Rathke, 1837",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus nigrolineatus ssp. maeoticus Slastenenko, 1938",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "nigrolineatus",
+        "species_author": null,
+        "infrarank_author": "Slastenenko, 1938",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "maeoticus"
+      },
+      {
+        "name": "Syngnathus ethon ssp. aeolicus Di Caporiacco, 1948",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "ethon",
+        "species_author": null,
+        "infrarank_author": "Di Caporiacco, 1948",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "aeolicus"
+      },
+      {
+        "name": "Syngnathus agassiz Michahelles, 1829",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "agassiz",
+        "species_author": "Michahelles, 1829",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus cuvieri Kaup, 1856",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "cuvieri",
+        "species_author": "Kaup, 1856",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Syngnathus abaster var. ganzirrensis D'Ancona, 1934",
+        "status": "ACCEPTED",
+        "genus_name": "Syngnathus",
+        "species_name": "abaster",
+        "species_author": null,
+        "infrarank_author": "D'Ancona, 1934",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "ganzirrensis"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species' distribution is currently understood to include the Mediterranean and Black Sea basins, including the Sea of Azov, as well as the northeastern Atlantic coast northwards from the Strait of Gibraltar to the southern English Channel (but see 'Taxonomic Notes'). In the Black Sea basin it is expanding into major rivers, and landlocked subpopulations have been recorded hundreds of kilometres upstream in the Danube, Southern Bug, Dnieper, Don and Kuban systems. It has also been introduced to the Volga River system in Russia, where it now occurs upstream to Moscow.",
+    "population": "This species' overall population trend has not been quantified. Many subpopulations remain locally abundant, but ongoing anthropogenic degradation of coastal wetlands and seagrass beds is estimated to be driving a general population decline in the Mediterranean basin. Conversely, Black Sea subpopulations appear to be increasing via expansion into major tributary river systems.",
+    "habitats": "This species is euryhaline, inhabiting the lower reaches of rivers and  their estuaries, coastal lagoons, inshore marine zones and artificial habitats such as drainage channels and salt exploitation sites. It is particularly abundant in shallow seagrass meadows but is also found in open habitats dominated by detritus, mud or sand. Some studies suggest that its upstream expansion into major  rivers of the Black Sea basin has been facilitated by  dam construction and transportation in ship ballast-water. It is a carnivorous species preying largely on zooplankton, sometimes including its own juveniles. <br/><br/>Like some other members of the family Syngnathidae, this species exhibits highly-specialised role-reversal during the reproductive cycle. Females are larger and more competitive than males, and possess ornamentation designed to attract partners. In contrast, males are responsible for brood care and provide nutrients to the developing embryos at an energy investment cost believed to exceed that of most other vertebrates. This species is also polygynandrous, with both sexes participating in multiple mating events over the course of a single reproductive season. Males possess an inverted marsupium (brood pouch) located on the underside of the tail. Females deposit eggs into the marsupium, where they are fertilised and incubated for about 20-30 days, depending on water temperature. Individual males may receive eggs from multiple females during the reproductive season, and these are segregated by maternity within the marsupium. Newborn juveniles are immediately benthic, with no pelagic phase, and this potentially contributes to limited connectivity between individual subpopulations. <br/><br/>Maximum lifespan is thought to be around 4 years, with sexual maturity attained at 1 year of age and reproduction occurring from spring to summer. Maximum recorded total length is 21 cm.",
+    "threats": "Some subpopulations are threatened by pollution from a variety of sources, or drainage of coastal wetlands for agricultural, industrial, touristic or urban development. For example, since 2016 the Mar Menor coastal lagoon in Murcia, southeastern Spain, has suffered a rapid ecological collapse. Despite being protected at the national and international scales, eutrophication driven by decades of agricultural pollution has resulted in the disappearance of extensive sea grass meadows and the fish communities associated with them. Elsewhere, adult spinal deformities linked to domestic and industrial pollution have been observed in the Lake of Tunis, Tunisia, since the mid-2000s.",
+    "measures": "This species occurs in a number of officially-protected areas, but there are no specific conservation measures in place. Further research focussed on its population and habitat trends is required, particularly in the Mediterranean basin.",
+    "use_trade": "This species is not used or traded, but is sometimes harvested as bycatch in commercial fisheries.",
+    "rationale": "The Black-striped Pipefish remains widespread and abundant at many locations within its range, and its non-native distribution is expanding. It is plausible that anthropogenic degradation of coastal environments is driving subpopulation declines in some areas, particularly the Mediterranean basin, and this warrants further study given its uncertain taxonomic status. It is currently assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "This species' taxonomy remains partially unresolved, with molecular studies demonstrating the current concept to comprise at least three potentially distinct taxa in the western Mediterranean alone (Sanna <em>et al</em>. 2013).<br/><br/>Some authors refer to the subpopulation inhabiting the Azov and Black Sea basins, including their affluent rivers, as <em>S. nigrolineatus</em> Eichwald 1831, but this taxon is currently treated as a synonym of <em>S. abaster</em>. The former subpopulation from the Caspian Sea basin is currently valid as <em>S. caspius</em> Eichwald 1831 (Fricke <em>et al</em>. 2023)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Muddy"
+      },
+      "code": "9_6"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Freshwater Lakes"
+      },
+      "code": "13_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Salt Exploitation Sites"
+      },
+      "code": "15_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Moldova"
+      },
+      "code": "MD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Baleares"
+      },
+      "code": "BAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kriti"
+      },
+      "code": "KRI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Adzhariya"
+      },
+      "code": "TCS-AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krym"
+      },
+      "code": "KRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gruziya"
+      },
+      "code": "TCS-GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Asia"
+      },
+      "code": "TUR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Abkhaziya"
+      },
+      "code": "TCS-AB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East Aegean Is."
+      },
+      "code": "EAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kosovo"
+      },
+      "code": "YUG-KO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spanish North African Territories"
+      },
+      "code": "MOR-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "YUG-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt (African part)"
+      },
+      "code": "EGY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krasnodar"
+      },
+      "code": "NCS-KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South European Russia"
+      },
+      "code": "RUS-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Ford, M.",
+      "value": [
+        "Matthew Ford (Seriously Fish)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Freyhof, J.",
+      "value": [
+        "Jörg Freyhof (Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Kottelat, M. & Pollom, R.",
+      "value": [
+        "Maurice Kottelat (IUCN SSC Freshwater Fish Specialist Group)",
+        "Riley Pollom (Project Seahorse)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Vincent, A.C.J., Foster, S.J. and Koldewey, H.J. 2011. Conservation and management of seahorses and other Syngnathidae. <i>Journal of Fish Biology</i> 78: 1681-1724.",
+      "year": "2011",
+      "title": "Conservation and management of seahorses and other Syngnathidae",
+      "author": "Vincent, A.C.J., Foster, S.J. and Koldewey, H.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Silva, K., Monteiro, M.N., Vieira, M.N. and Almada V.C. 2006. Reproductive behaviour of the black striped pipefish <i>Sygnathus abaster</i> (Pisces, Sygnathidae). <i>Journal of Fish Biology</i> 69: 1860-1869.",
+      "year": "2006",
+      "title": "Reproductive behaviour of the black striped pipefish <i>Sygnathus abaster</i> (Pisces, Sygnathidae)",
+      "author": "Silva, K., Monteiro, M.N., Vieira, M.N. and Almada V.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silva, K., Monteiro, N.M., Almanda, V.C. and Vieira, M.N. 2006. Early life history of <i>Sygnathus abaster</i>. <i>Journal of Fish Biology</i> 68: 80-86.",
+      "year": "2006",
+      "title": "Early life history of <i>Sygnathus abaster</i>",
+      "author": "Silva, K., Monteiro, N.M., Almanda, V.C. and Vieira, M.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hubner, K., Gonzalez--Wanguemert, M., Diekmann, O. E., and Serrao, E. A. 2013. Genetic evidence for polygynandry in the black-striped pipefish <i>Syngnathus abaster</i>: A microsatellite-based approach. <i>Journal of Heredity</i> 104(6): 791-797.",
+      "year": "2013",
+      "title": "Genetic evidence for polygynandry in the black-striped pipefish <i>Syngnathus abaster</i>: A microsatellite-based approach",
+      "author": "Hubner, K., Gonzalez--Wanguemert, M., Diekmann, O. E., and Serrao, E. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuljanishvili, T., Epitashvili, G., Freyhof, J., Japoshvili, B., Kalous, L., Levin, B., Mustafayev, N., Ibrahimov, S., Pipoyan, S. and Mumladze, L. 2020. Checklist of the freshwater fishes of Armenia, Azerbaijan and Georgia. <i>Journal of Applied Ichthyology</i> 36(4): 501-514.",
+      "year": "2020",
+      "title": "Checklist of the freshwater fishes of Armenia, Azerbaijan and Georgia",
+      "author": "Kuljanishvili, T., Epitashvili, G., Freyhof, J., Japoshvili, B., Kalous, L., Levin, B., Mustafayev, N., Ibrahimov, S., Pipoyan, S. and Mumladze, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fricke, R., Eschmeyer, W.N. and Van der Laan, R. (eds). 2023. Eschmeyer's Catalog of Fishes: genera, species, references. Updated 05 December 2023. Available at: <a href=\"http://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp\">http://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp</a>. (Accessed: 02 October 2023).",
+      "year": "2023",
+      "title": "Eschmeyer's Catalog of Fishes: genera, species, references. Updated 05 December 2023",
+      "author": "Fricke, R., Eschmeyer, W.N. and Van der Laan, R. (eds).",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Naseka, A. A. and Bogutskaya, N.G. 2009. Fishes of the Caspian Sea: zoogeography and updated check-list. <i>Zoosystematica Rossica</i> 18(2): 295-317.",
+      "year": "2009",
+      "title": "Fishes of the Caspian Sea: zoogeography and updated check-list",
+      "author": "Naseka, A. A. and Bogutskaya, N.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alaya, H.B., Galzin, R., Quignard, J.P. and Trabelsi, M. 2011. Spinal deformities in the black-striped pipefish <i>Syngnathus abaster</i> (Pisces, Syngnathidae) from the Tunis North Lake, Tunisia. <i>Chemosphere</i> 82(3): 318-320.",
+      "year": "2011",
+      "title": "Spinal deformities in the black-striped pipefish <i>Syngnathus abaster</i> (Pisces, Syngnathidae) from the Tunis North Lake, Tunisia",
+      "author": "Alaya, H.B., Galzin, R., Quignard, J.P. and Trabelsi, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cakić, P., Lenhardt, M., Mićković, D., Sekulić, N. and Budakov, L.J. 2002. Biometric analysis of <i>Syngnathus abaster</I> populations. <i>Journal of Fish Biology</i> 60(6): 1562-1569.",
+      "year": "2002",
+      "title": "Biometric analysis of <i>Syngnathus abaster</I> populations",
+      "author": "Cakić, P., Lenhardt, M., Mićković, D., Sekulić, N. and Budakov, L.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "J.M. Ruiz-Fernández, L. Marín-Guirao, F. Giménez-Casalduero, J. Alvárez-Rogel, M.A. Esteve-Selma, R. Gómez-Cerezo, F. Robledano-Aymerich, G. González-Barberá and Martínez-Fernández, J. 2019. Synthesis report on the current state of Mar Menor lagoon and its causes in relation to the nutrient contents. <i>Mar Menor. Sustainability and Conservation Technical Report</i>: 1-7.",
+      "year": "2019",
+      "title": "Synthesis report on the current state of Mar Menor lagoon and its causes in relation to the nutrient contents.",
+      "author": "J.M. Ruiz-Fernández, L. Marín-Guirao, F. Giménez-Casalduero, J. Alvárez-Rogel, M.A. Esteve-Selma, R. Gómez-Cerezo, F. Robledano-Aymerich, G. González-Barberá and Martínez-Fernández, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Monteiro, N.M. and Vieira, M.N. 2017. Rendez-Vous at the Baltic? The Ongoing Dispersion of the Black-Striped Pipefish, <i>Syngnathus abaster</i>. <i>Oceanography and Fisheries Open Access Journal</i> 3(2): 1-6.",
+      "year": "2017",
+      "title": "Rendez-Vous at the Baltic? The Ongoing Dispersion of the Black-Striped Pipefish, <i>Syngnathus abaster</i>",
+      "author": "Monteiro, N.M. and Vieira, M.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sanna, D., Biagi, F., Alaya, H.B., Maltagliati, F., Addis, A., Romero, A., De Juan, J., Quignard, J.P., Castelli, A., Franzoi, P., Torricelli, P., Casu, M., Carcupino, M. and Francalacci, P. 2013. Mitochondrial DNA variability of the pipefish <i>Syngnathus abaster</i>. <i>Journal of Fish Biology</i> 82(3): 856-876.",
+      "year": "2013",
+      "title": "Mitochondrial DNA variability of the pipefish <i>Syngnathus abaster</i>",
+      "author": "Sanna, D., Biagi, F., Alaya, H.B., Maltagliati, F., Addis, A., Romero, A., De Juan, J., Quignard, J.P., Castelli, A., Franzoi, P., Torricelli, P., Casu, M., Carcupino, M. and Francalacci, P. ",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "Celtic-Biscay"
+      },
+      "code": "4_2_8"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "North Sea"
+      },
+      "code": "4_2_6"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

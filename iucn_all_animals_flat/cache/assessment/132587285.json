@@ -1,0 +1,1433 @@
+{
+  "assessment_date": "2018-08-10T01:00:00.000+01:00",
+  "year_published": "2018",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 22696657,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/22696657/132587285",
+  "citation": "BirdLife International 2018. Morus bassanus. The IUCN Red List of Threatened Species 2018: e.T22696657A132587285. Accessed on 05 May 2026.",
+  "assessment_id": 132587285,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 22696657,
+    "scientific_name": "Morus bassanus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AVES",
+    "order_name": "SULIFORMES",
+    "family_name": "SULIDAE",
+    "genus_name": "Morus",
+    "species_name": "bassanus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Bird Red List Authority (BirdLife International)",
+        "url": "https://www.birdlife.org/",
+        "description": "Red List Authority Coordinator: Ian Burfield (ian.burfield@birdlife.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Gannet",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Fou de Bassan",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Northern Gannet",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Sula bassana —  Cramp and Simmons (1977-1994)",
+        "status": "ACCEPTED",
+        "genus_name": "Sula",
+        "species_name": "bassana",
+        "species_author": "—  Cramp and Simmons (1977-1994)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Sula bassana — Dowsett and Forbes-Watson (1993)",
+        "status": "ACCEPTED",
+        "genus_name": "Sula",
+        "species_name": "bassana",
+        "species_author": "— Dowsett and Forbes-Watson (1993)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Pelecanus bassanus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Pelecanus",
+        "species_name": "bassanus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Increasing"
+    },
+    "code": "0"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 200,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": "1500000-1800000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "20.7",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Unknown",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": "41700000",
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "This species is found on both sides of the Atlantic Ocean, with small numbers of individuals reaching the equator on the western and eastern side in the south, and reaching Norway in the north. Breeding sites include northern <strong>France</strong>, the <strong>United Kingdom</strong>, <strong>Ireland</strong>, <strong>Iceland</strong>, <strong>Norway</strong> and the eastern tip Quebec (<strong>Canada</strong>) (del Hoyo <em>et al</em>. 1992).",
+    "population": "In Europe, the breeding population is estimated to number&#160;683,000 pairs, which equates to 1,370,000 mature individuals&#160;(BirdLife International 2015). Europe forms 75-94% of the global range, so the global population size is estimated at 1,500,000-1,800,000 mature individuals, although further validation of this estimate is needed.",
+    "habitats": "This strictly marine species wanders mostly over continental selves, feeding on shoaling pelagic fish which are mostly caught by plunge-diving from large heights. It also attends trawlers and will form large congregations where food is plentiful. Breeding is highly seasonal starting between March and April, usually in large colonies on cliffs and offshore islands, but also sometimes on the mainland. Young birds will migrate to the extreme south of its range, whereas adults range less extensively but still regularly winter in the Mediterranean and Gulf of Mexico (del Hoyo <em>et al</em>. 1992).",
+    "threats": "Northern Gannets are consistently recorded as bycatch across fisheries in the Atlantic. It is the species most freqently killed as bycatch in fisheries assessed in Portuguese Atlantic waters, and captured at a relatively high rate in demersal longline operations, but also set-nets and purse-seines (Oliveira&#160;<em>et al.</em>&#160;2015). Total estimates of numbers killed are lacking. In nearshore water off the east coast of the U.S., estimates of under 500 individuals per year suggest that population level impacts may be relatively small; however, this is derived from observers on less than 5% of fisheries within a small proportion of the range, and there is no cumulative assessment of impact (U.S. Fish and Wildlife Service 2011). Considering the observation of bycatch in fisheries across the range of the Northern Gannet (Smith and Morgan 2005, García-Barcelona&#160;<em>et al. </em>2010, Oliviera <em>et al. </em>2015) and evidence of increased breeding populations following the closure of Canadian gillnet fisheries (Regular <em>et al. </em>2013),&#160;levels of bycatch are sufficient to cause significant declines in the species. The use of fishing methods that reduce this mortality risk must be a conservation priority in future.<br/>This species has been identified as being of particular risk of collision with offshore wind farms (Bradbury <em>et al.</em> 2014), but impacts appear limited as yet. Impacts from waste, particularly plastic pollution are currently unknown, but have the potential to reduce reproductive success. The species is hunted for food in some places, for example, a small annual harvest is carried out on Sula Sgeir, off north-west Scotland.",
+    "measures": "<strong>Conservation Actions Underway</strong><br/>The species is listed on the African Eurasian Waterbird Agreement. It is covered by the EU Birds Directive as a regularly occurring migratory species. In Europe it is currently listed within 34 marine Important Bird Areas. Within the EU, it is currently listed within nine Special Protection Areas.<br/><br/><strong>Conservation Actions Proposed</strong><br/>The following information refers to the species's European range only: Identification and protection of important sites at sea. Collection of more information on individual movements to assist careful placement of offshore wind farms. On-board monitoring programmes on fishing vessels to determine the number of birds caught across the region, and implementation of bycatch mitigation measures where appropriate.",
+    "use_trade": null,
+    "rationale": "This species has a very large range, and hence does not approach the thresholds for Vulnerable under the range size criterion (Extent of Occurrence &lt;20,000 km<sup>2</sup> combined with a declining or fluctuating range size, habitat extent/quality, or population size and a small number of locations or severe fragmentation). The population trend appears to be increasing, and hence the species does not approach the thresholds for Vulnerable under the population trend criterion (&gt;30% decline over ten years or three generations). The population size is very large, and hence does not approach the thresholds for Vulnerable under the population size criterion (&lt;10,000 mature individuals with a continuing decline estimated to be &gt;10% in ten years or three generations, or with a specified population structure). For these reasons the species is evaluated as Least Concern.",
+    "trend_justification": "In North America, the population trend is increasing (based on BBS/CBC data: Butcher and Niven 2007). The European population is also estimated to be increasing (BirdLife International 2015).",
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "Protection of important sites at sea.",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "On-board monitoring programmes on fishing vessels to determine the number of birds caught across the region, and implementation of bycatch mitigation measures where appropriate.",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Sea Cliffs and Rocky Offshore Islands"
+      },
+      "code": "13_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy-Mud"
+      },
+      "code": "9_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Macroalgal/Kelp"
+      },
+      "code": "9_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kazakhstan"
+      },
+      "code": "KZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage",
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Luxembourg"
+      },
+      "code": "LU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Lithuania"
+      },
+      "code": "LT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Latvia"
+      },
+      "code": "LV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Estonia"
+      },
+      "code": "EE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Czechia"
+      },
+      "code": "CZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Poland"
+      },
+      "code": "PL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Svalbard and Jan Mayen"
+      },
+      "code": "SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Passage",
+        "Breeding Season"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Central Asian Russia"
+      },
+      "code": "RU-CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "North Macedonia"
+      },
+      "code": "MK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident",
+        "Passage"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Greenland"
+      },
+      "code": "GL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Austria"
+      },
+      "code": "AT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Non-Breeding Season",
+        "Passage"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    }
+  ],
+  "researches": [
+    {
+      "note": "Collection of more information on individual movements to assist careful placement of offshore wind farms.",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "Identification of important sites at sea.",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Garbage & solid waste"
+      },
+      "code": "9_4"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Renewable energy"
+      },
+      "code": "3_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "BirdLife International",
+      "value": [
+        " BirdLife International (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Hermes, C.",
+      "value": [
+        "Claudia Hermes (BirdLife International)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Ashpole, J, Bennett, S., Butchart, S., Calvert, R., Ekstrom, J., Fjagesund, T. & Martin, R.",
+      "value": [
+        "Jonathan Ekstrom (BirdLife International)",
+        "Stuart Butchart (BirdLife International)",
+        "Rob Calvert (BirdLife International)",
+        "Joscelyne Ashpole (BirdLife)",
+        "Rob Martin (BirdLife)",
+        "Tonje Fjagesund",
+        "Sophie Bennett"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "BirdLife International",
+      "value": [
+        "BirdLife International"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "BirdLife International. 2004. <i>Birds in Europe: population estimates, trends and conservation status</i>. BirdLife International, Cambridge, U.K.",
+      "year": "2004",
+      "title": "Birds in Europe: population estimates, trends and conservation status",
+      "author": "BirdLife International",
+      "citation_short": ""
+    },
+    {
+      "citation": "del Hoyo, J., Elliot, A. and Sargatal, J. 1992. <i>Handbook of the Birds of the World, Vol. 1: Ostrich to Ducks</i>. Lynx Edicions, Barcelona, Spain.",
+      "year": "1992",
+      "title": "Handbook of the Birds of the World, Vol. 1: Ostrich to Ducks",
+      "author": "del Hoyo, J., Elliot, A. and Sargatal, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Butcher, G. S.; Niven, D. K. 2007. <i>Combining data from the Christmas bird count and the breeding bird survey to determine the continental status and trends of North American birds</i>.",
+      "year": "2007",
+      "title": "Combining data from the Christmas bird count and the breeding bird survey to determine the continental status and trends of North American birds",
+      "author": "Butcher, G. S.; Niven, D. K.",
+      "citation_short": null
+    },
+    {
+      "citation": "García-Barcelona, S.; Ortiz de Urbina, J. M.; de la Serna, J. M.; Alot, E.; Macias, D. 2010. Seabird bycatch in Spanish Mediterranean large pelagic longline fisheries, 2000-2008. <i>Aquatic Living Resources</i> 23: 363–371.",
+      "year": "2010",
+      "title": "Seabird bycatch in Spanish Mediterranean large pelagic longline fisheries, 2000-2008",
+      "author": "García-Barcelona, S.; Ortiz de Urbina, J. M.; de la Serna, J. M.; Alot, E.; Macias, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "BirdLife International. 2015. European Red List of Birds. Office for Official Publications of the European Communities, Luxembourg.",
+      "year": "2015",
+      "title": "European Red List of Birds",
+      "author": "BirdLife International",
+      "citation_short": null
+    },
+    {
+      "citation": "Bradbury, G., Trinder, M., Furness, B., Banks, A.N., Caldow, R.W.G. and Hume, D. 2014. Mapping Seabird Sensitivity to Offshore Wind Farms. <i>PLoS ONE </i> 9(9): e106366.",
+      "year": "2014",
+      "title": "Mapping Seabird Sensitivity to Offshore Wind Farms",
+      "author": "Bradbury, G., Trinder, M., Furness, B., Banks, A.N., Caldow, R.W.G. and Hume, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Oliveira, N. Henriques, A., Miodonski, J., Pereira, J., Marujo, D., Almeida, A., Barros, N., Andrade, J., Marçalo, J., Santos, I., Oliveira, B., Ferreira, M., Araújo, H., Monteiro, S., Vingada, J. and Ramírez, I. 2015. Seabird Bycatch in Portuguese Mainland Coastal Fisheries: An Assessment through on-Board Observations and Fishermen Interviews. <i>Global Ecology and Conservation</i> 3: 51-61.",
+      "year": "2015",
+      "title": "Seabird Bycatch in Portuguese Mainland Coastal Fisheries: An Assessment through on-Board Observations and Fishermen Interviews",
+      "author": "Oliveira, N. Henriques, A., Miodonski, J., Pereira, J., Marujo, D., Almeida, A., Barros, N., Andrade, J., Marçalo, J., Santos, I., Oliveira, B., Ferreira, M., Araújo, H., Monteiro, S., Vingada, J. and Ramírez, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2018. The IUCN Red List of Threatened Species. Version 2018-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 15 November 2018).",
+      "year": "2018",
+      "title": "The IUCN Red List of Threatened Species. Version 2018-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2018-2"
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. 2011. BUSINESS PLAN FOR ADDRESSING & REDUCING MARINE BIRD BYCATCH IN U.S. ATLANTIC FISHERIES. U.S. Fish and Wildlife Service, Division of Migratory Birds, Hadley, MA.",
+      "year": "2011",
+      "title": "BUSINESS PLAN FOR ADDRESSING & REDUCING MARINE BIRD BYCATCH IN U.S. ATLANTIC FISHERIES",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "Regular, P., Montevecchi, W., Hedd, A., Robertson, G., & Wilhelm, S. 2013. Canadian fishery closures provide a large-scale test of the impact of gillnet bycatch on seabird populations. <i>Biology Letters</i> 9(4): 20130088.",
+      "year": "2013",
+      "title": "Canadian fishery closures provide a large-scale test of the impact of gillnet bycatch on seabird populations.",
+      "author": "Regular, P., Montevecchi, W., Hedd, A., Robertson, G., & Wilhelm, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith, J. and Morgan, K. 2005. An assessment of Seabird Bycatch in longline and net fisheries in British Columbia.  Technical Report Series #401. Canadian Wildlife Service.",
+      "year": "2005",
+      "title": "An assessment of Seabird Bycatch in longline and net fisheries in British Columbia.",
+      "author": "Smith, J. and Morgan, K.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

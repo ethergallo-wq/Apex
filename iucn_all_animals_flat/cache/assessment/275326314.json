@@ -1,0 +1,1608 @@
+{
+  "assessment_date": "2024-09-23T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 12518,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/12518/275326314",
+  "citation": "Murray, D. & Thornton, D. 2025. Lynx canadensis. The IUCN Red List of Threatened Species 2025: e.T12518A275326314. Accessed on 05 May 2026.",
+  "assessment_id": 275326314,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 12518,
+    "scientific_name": "Lynx canadensis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "FELIDAE",
+    "genus_name": "Lynx",
+    "species_name": "canadensis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Kerr, 1792)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Cat Specialist Group (wild cats)",
+        "url": "http://www.catsg.org/",
+        "description": "Chair: Christine Breitenmoser (email: ch.breitenmoser@kora.ch) and Urs Max Breitenmoser (email: urs.breitenmoser@vetsuisse.unibe.ch)\nRed List Authority Coordinator: Tabea Lanz (email: t.lanz@kora.ch)\nNewsletter: http://www.catsg.org/index.php?id=7"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "American Lynx",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Lince del Canadá",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lince del Canadá",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lynx du Canada",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Canada Lynx",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Felis lynx ssp. canadensis Kerr, 1792",
+        "status": "ACCEPTED",
+        "genus_name": "Felis",
+        "species_name": "lynx",
+        "species_author": null,
+        "infrarank_author": "Kerr, 1792",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "canadensis"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 4310,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Yes",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>Canada lynx are mostly found in the boreal and mixed forest regions of North America, where they rely primarily on snowshoe hare (<em>Lepus americanus</em>) as prey (Krebs <em>et al.</em> 2001, Anderson and Lovallo 2003, Poole 2003). The geographic range of lynx across North America closely matches the snowshoe hare distribution, which overlaps the boreal forest distribution from mainland Alaska to Newfoundland and include most of the northern boreal region of Yukon, Northwest Territories, Nunavut, and Quebec. Lynx are found across most of the Canadian provinces but are absent from the west coast of British Columbia, the western prairies of Alberta, Saskatchewan, and Manitoba, southern Ontario and southern Quebec, eastern New Brunswick, and mainland Nova Scotia. Lynx are extirpated from Prince Edward Island. In southeastern Canada, lynx range has receded northward during the last century, and currently they occupy ~90-95% of their historic range in Canada (Poole 2003, Koen <em>et al.</em> 2014a). In the contiguous United States, lynx historically occurred in 24 states (McKelvey <em>et al. </em>2000), possibly ranging as far south through the Rocky Mountains as New Mexico (Frey 2006). Currently, lynx occurrence in the contiguous US is considerably less than the historic (~1900) range (McKelvey <em>et al. </em>2000, Thornton and Murray 2024), and is retracting (King <em>et al.</em> 2020). In 2000, lynx were listed as Threatened in 14 States: Colorado, Idaho, Maine, Michigan, Minnesota, Montana, New Hampshire, New York, Oregon, Utah, Vermont, Washington, Wisconsin, and Wyoming. Subsequently, six \"core\" areas were identified where recent lynx reproduction is known, and currently there are five recognized breeding populations (northern Maine and New Hampshire, northeastern Minnesota, northwestern Montana and northeastern Idaho, the northern Cascade mountains of Washington State, and a reintroduced population in Colorado; USFWS 2017). The lynx population in the southern Rocky Mountains of Colorado was successfully established from translocated animals from Canada and Alaska.</p>  <p>The continental lynx population is mostly panmictic across the boreal and southern mixed forests (Row <em>et al. </em>2014). There is apparently no connectivity with the reintroduced Colorado population and the core lynx range, although lynx used to repopulate Colorado originate from across a range of locations across Canada and Alaska, and therefore genetic integrity of this population is mixed (Murray <em>et al.</em> 2008). Lynx populations south of the St-Lawrence River appear to be differentiated from the remainder of the continental population (Prentice<em> et al.</em> 2019). Newfoundland lynx are not connected to the continental mainland lynx population and the small Cape Breton Island lynx population is also isolated (Prentice <em>et al. </em>2019, 2017). Nevertheless, given uncertainties related to lynx dispersal, connectivity, and genetic status across the distribution, and IUCN definitions of ‘Location’ (Criteria B and D), it is appropriate to consider the species as occurring across a single location.</p>  The Canada lynx distribution map is identical to that from the previous IUCN assessment because of the paucity and reliability of recent data related to range change. Using existing citizen science observations or research studies to develop a map would yield a weakly defensible product with bias due to low species detectability. Range change since the last assessment is probably &lt;5% of the geographic range.",
+    "population": "<p>It is not possible to obtain an accurate estimate of lynx population size across the entire distribution of the species. Over most of their geographic range in Canada and Alaska, lynx are trapped for fur and populations are managed accordingly, but harvest statistics are not a reliable source for population estimation (Poole 2003). Lynx populations in core northern areas can be periodically high in response to hare population cycles (Elton and Nicholson 1942, Mowat <em>et al.</em> 2000) and estimates range from 30-45 lynx/100 km<sup>2</sup> to 2-3 lynx/100 km<sup>2</sup> during the cyclic peak and low, respectively (O’Donoghue <em>et al.</em> 2022, Poole 1994, Slough and Mowat 1996). However, lynx population estimates vary widely depending on the estimator used and underlying assumptions (Doran-Myers <em>et al.</em> 2021). In the southern range, lynx densities tend to be lower (Parker <em>et al. </em>1983, Banville 1986, Noiseux and Doucet 1987,&#160; Kesterson&#160; 1988,&#160; Fortin&#160; and&#160; Huot 1995) and across much of the contiguous US, lynx numbers are estimated below 5 lynx/100 km<sup>2</sup> (Koehler&#160; 1990, Vashon <em>et al. </em>2008a, Squires <em>et al. </em>2012, &#160;Anderson <em>et al.</em> 2023).</p>    Lynx in New Brunswick and Nova Scotia are recognized as Special Concern and Regionally Endangered, respectively (Nowell and Jackson 1996, Poole 2003, NSLRT 2006, COSSARNB 2022). Northward recession of southern lynx range in Ontario is estimated at ~175 km during the past 50 years (Koen <em>et al.</em> 2014a), with some ebb and flow corresponding to the lynx population cycle and extrinsic conditions (Marrotte and Bowman 2021). In the contiguous US, lynx populations are smaller and protected from harvest, and in 2000 lynx were federally listed as threatened in 14 States (USFWS 2000). Lynx in the contiguous US occur as five recognized breeding populations (USFWS 2023): northern Maine/northeastern New Hampshire, northeastern Minnesota, northwestern Montana and northern Idaho, northcentral Washington, and a reintroduced population in southwestern Colorado. Lynx populations in Maine, New Hampshire and Vermont are increasing (Vashon<em> et al.</em> 2012), but this increase may be temporary given anticipated changes in forest succession and climate change impacts on winter snow cover and snowshoe hare populations in the region (USFWS 2017). Declines in lynx numbers were recorded in Washington State following recent forest fires (Koehler<em> et al.</em> 2008) and population models suggest wildfires since 2013 have resulted in a 66-73% reduction in lynx carrying capacity in the region (Lyons <em>et al.</em> 2023). Studies in Washington (King <em>et al.</em> 2021) and Minnesota (Hostetter<em> et al.</em> 2020) find that lynx only occupy between 10-40% of designated critical habitat. Lynx are uncommon in Utah, Wyoming, and Idaho and are functionally absent from Oregon, New York, Wisconsin, and Michigan (USFWS 2000). Lynx were reintroduced unsuccessfully in northern New York state in the late 1980s (Anderson and Lovallo 2003), and more recently, successfully, in Colorado where breeding has been documented (Devineau<em> et al.</em> 2010). A small reintroduction program in the Kettle Mountains, Washington State, is ongoing (USFWS 2023). In the northern parts of their range, lynx populations undergo dramatic 9-11 year fluctuations that correspond with cyclic population dynamics of their preferred prey, snowshoe hare (<em>Lepus americanus</em>). Southern lynx populations are possibly less reliant on hares (Roth<em> et al. </em>2007, Szumski <em>et al. </em>2023) and have more stationary population dynamics than their northern counterparts (McKelvey <em>et al.</em> 2000, Murray<em> et al.</em> 2008). Continental lynx populations are mostly panmictic (Row <em>et al</em>. 2012, Schwartz <em>et al. </em>2002) except for possible differentiation south of the St Lawrence River (Prentice <em>et al. </em>2019) and further differentiation in Newfoundland and Cape Breton Island (Prentice <em>et al</em>. 2019, 2017). Some evidence suggests fine-scale genetic differentiation in mid-continental lynx populations (Rueness <em>et al.</em> 2003) which may become aggravated with future loss of lynx habitat owing to climate change (Row <em>et al</em>. 2014). It appears that some southwestern lynx populations may be genetically differentiated from core populations (Schwartz<em> et al.</em> 2003a).",
+    "habitats": "Canada Lynx are found primarily in boreal forests and mixed boreal-deciduous forests across North America, where their primary prey species, snowshoe hare (<em>Lepus americanus</em>), depends largely on forest patches comprised of successional growth in older multi-layered stands or younger regenerating stands following disturbance (Murray 2003). Across the lynx distribution, hares are the main component of lynx diet, making their habitat requirements closely associated with those of hares. There is no known occurrence of a viable Canada Lynx population in the absence of snowshoe hares, but lynx also require larger tracts of suitable forested habitat to sustain movements, breeding, and meta-population dynamics. Lynx home ranges vary widely across their geographical distribution, with range sizes 15-45 km<sup>2</sup> being common in the north and &gt;150 km<sup>2</sup> being recorded in the south (Anderson and Lovallo 2003). Local snowshoe hare densities seem to have a strong influence on lynx home ranges, with sizes increasing dramatically when hare densities are &lt;1.0 hare / ha (Mowat <em>et al.</em> 2000). The extent of lynx reliance on hares is lower in the southern range, where alternate prey like red squirrels (<em>Tamiasciurus hudsonicus</em>) and ground squirrels (<em>Urocitellus columbianus</em>) are more important (Roth <em>et al.</em> 2007, Hanson and Moen 2008, Maletzke <em>et al.</em> 2008, Fuller <em>et al. </em>2007, Ivan and Shenk 2016, Squires and Ruggiero 2007, Szumski<em> et al.</em> 2023). Lynx reliance on hares varies according to cyclic phase (O’Donoghue et al. 1998, Burkstahler <em>et al.</em> 2016), with average hare consumption rates estimated at one hare every 1-2 days (Parker 1981, O’Donoghue <em>et al.</em> 1998, Ivan and Schenk 2016, Squires and Ruggiero 2007, Studd <em>et al. </em>2021). Ungulates do not usually figure prominently in the lynx's diet, other than as carrion, although lynx preyed on caribou calves in Newfoundland after the hare population crashed (Bergerud 1983).",
+    "threats": "<p>In eastern Canada, including Nova Scotia, New Brunswick, eastern Quebec and southern Ontario, lynx numbers have declined during the last century (Poole 2003). These declines are manifest through northward recession of the southernmost lynx distribution (Koen<em> et al. </em>2014a, Marrotte and Bowman 2021), although there is evidence of some recent range expansion in New Brunswick, Maine and other northeastern States (NBDNRED 2022, Vashon <em>et al.</em> 2012). However, these increases may be short-lived, owing to expected changes in forest succession and climate conditions, both which will reduce local snowshoe hare populations (USFWS 2017). There is no clear evidence of recent range shifts in the western portion of the Canada Lynx distribution, although substantive range loss was observed through the last century and is expected in the future (McKelvey <em>et al.</em> 2000, Thornton and Murray 2024). Projected losses are likely to be more severe in the southeastern range, although over the longer term some isolated areas in the southwestern mountainous range may remain suitable lynx habitat by providing sufficient forest structure and snow (Thornton and Murray 2024). Despite limited and inconsistent harvest controls during much of the last century, lynx-hare population cycles may be maintained in the northern range, with no discernible changes in distribution and abundance being detected (Mowat <em>et al. </em>2000, Poole 2003). However, harvest statistics are recognized as weak indices of population abundance (Schmidt <em>et al. </em>2015, Leclerc <em>et al. </em>2016) and changes in trapping effort and regulations through time, combined with the prolonged duration of lynx population cycles, make it difficult to infer possible longer-term numerical change or cyclic attenuation. There are no other long-term datasets available for tracking broader population changes in Canada Lynx, but recent work from Alaska (Arnold <em>et al.</em> 2024, see also Ranta <em>et al. </em>1997a,b) reveals that lynx population cycles travel in demographic waves that may challenge large-scale harvest management goals. Lynx population declines and range recession in the southern range are primarily related to forest loss and declining snow cover, with both changes directly impacting snowshoe hare populations and lynx habitat suitability (USFWS 2017). Interspecific competition from other carnivores including coyote (<em>Canis latrans</em>), bobcat (<em>Lynx rufus</em>) and fisher (<em>Martes pennanti</em>), whose populations have increased in recent decades, may also affect southern lynx through interference or exploitative competition (Buskirk <em>et al. </em>2000, Bunnell <em>et al.</em> 2006, Bayne<em> et al. </em>2008, Peers <em>et al. </em>2013, but see Kolbe <em>et al. </em>2007, Murray <em>et al. </em>2008, King <em>et al. </em>2021, Morin <em>et al.</em> 2020, Sirén <em>et al.</em> 2021a, Nakamoto <em>et al.</em> 2024). Notably, robust studies of interspecific competition involving Canada Lynx are absent from the literature (Murray <em>et al.</em> 2023) so the importance of interspecific competition in lynx population limitation is unclear. It is alleged that trapping may not be responsible for low lynx numbers at the southern range (USFWS 2000), but lynx harvest in southern Canada remains a concern in terms of incidental captures associated with trapping for other furbearers and limiting dispersalfrom core populations to the contiguous United States (Murray <em>et al. </em>2008, Thornton <em>et al. </em>2018). Further, a recent concern for southern lynx populations in British Columbia is related to hound hunting, which is not restricted to a select area (as trapping efforts are) but instead can span large regions (G. Mowat, pers. comm. 2024). This source of mortality may be impactful especially to lynx populations that occur in marginal or fragmented habitat. To date, hunting restrictions have not been enacted in British Columbia, although mandatory reporting is now required. Older multi-storied forests provide winter habitat for lynx and snowshoe hares (Koehler et al. 2008, Squires <em>et al.</em> 2010) and in the western US fire frequency has increased four-fold, with this disturbance expected to increase with warmer climate (Westerling <em>et al. </em>2006). In the short-term, forest fires have removed substantial suitable habitat for lynx in parts of the western United States (Lyons <em>et al.</em> 2023). However, young dense conifer forest provide habitat for lynx and snowshoe hares, thus natural disturbance and logging practices that foster dense understoreys of conifers can benefit lynx and hares (Burdett 2008, Vashon <em>et al.</em> 2008, and Walpole <em>et al.</em> 2012). Climate change increases insect-related disturbance to boreal forests (Fleming<em> et al.</em> 2002, Logan <em>et al.</em> 2003), though lynx may make use of insect-disturbed forests and cope with insect outbreaks if horizontal cover and hare densities are maintained (Squires <em>et al. </em>2020, 2022). Maintaining connectivity with the more abundant northern lynx population is considered essential for recovery of southern lynx populations (Ruediger <em>et al. </em>2000, Nordstrom 2005, Walpole <em>et al.</em> 2012, Squires <em>et al.</em> 2013), especially with warmer climate (Hoving <em>et al.</em> 2005). Since listed as threatened in the contiguous United States, some lynx continue to be trapped incidentally in traps or snares set for other furbearers (DelGiudice <em>et al.</em> 2007, Vashon <em>et al.</em> 2012, NBDNRED 2022). Lynx are occasionally killed in vehicle collisions on roads with high/intermediate traffic speed and volume (Moen et al. 2008, Vashon <em>et al.</em> 2012). Both motorized and non-motorized recreation can result in lower lynx activity, reduced movement, or spatially avoidance of high recreation areas (Olson <em>et al</em>. 2018, Squires<em> et al.</em> 2019, Anderson <em>et al.</em> 2023). Given that recreation is increasing across most public lands in the US and Canada, these impacts may increase in the future. Although, hybridization with bobcats has been detected in Minnesota, Maine, and New Brunswick (Schwartz <em>et al.</em> 2003b, Homyack <em>et al.</em> 2008), hybridization in areas of distributional overlap between lynx and bobcats is surprisingly uncommon at a rangewide scale and does not appear to threaten southern lynx populations (Koen <em>et al.</em> 2014b).</p>",
+    "measures": "<p>Although Canada lynx are one of five North American furbearers included on CITES Appendix II, in order to monitor the international trade of their fur, there are no quotas or suspensions currently in place. In Canada, the national and provincial governments manage harvests by region (Government of U.S. 2007), using closed seasons, quotas, limited entry and long-term trapping concessions (Nowell and Jackson 1996). In the US, trapping takes place only in Alaska, and harvest quotas may be increased during periods of population increase and decreased during periods of cyclic decline (Government of U.S.&#160;2007). However, for best success such dynamic harvest strategies require both numerical synchrony across large geographic regions, and robust understanding of regional population trends and future trajectories, including annual survival, recruitment and harvest rates.<br/> <br/> The lynx population in the contiguous US was listed as Threatened under the Endangered Species Act in 2000, due to inadequate regulatory mechanisms to protect lynx or lynx habitat on Federal lands (USFWS 2000) requiring the US government to develop a recovery plan and identify critical habitat for lynx (Nordstrom 2005). A species status assessment was completed in 2017 (USFWS 2017), and a draft recovery plan was released at the end of 2023 (USFWS 2023). Currently, activities on federal lands are guided by the lynx conservation assessment and strategy (Interagency Lynx Biology Team 2013). In New Brunswick and Nova Scotia, where lynx populations are known to be under pressure, recovery planning is initiated (NSLRT 2006, NBDNRED 2022) but currently (2025) without notable field implementation.<br/> <br/> Lynx are trapped incidentally in traps set for other furbearers like bobcat or coyote, including in jurisdictions where lynx trapping is closed for conservation purposes. In the contiguous United States, various measures have been recommended to trappers (e.g., avoid the use of hares or rabbits as bait) to reduce accidental taking of lynx in traps set for other furbearers (Golden and Krause 2003). In addition, several States have passed trapping regulations to further reduce accidental capture of lynx in traps set for other furbearers (Del Giudice <em>et al.</em> 2007, Vashon <em>et al.</em> 2012). In New Brunswick, a program is in place for recovery of carcasses of lynx caught incidentally in traps, and these are being used to track population demography (NBDNRED 2022). In some areas lynx may continue to be trapped either incidentally or illegally, but estimates of this harvest are not available. It is likely that not all carcasses from incidentally trapped lynx are surrendered through such programmes, and surrender rates likely represent an underestimate of the impact of trapping on lynx populations in regions where harvest is prohibited.<br/> <br/> In the contiguous US. critical habitat designations only apply to federal lands or private lands with federally funded or permitted activities. This designation gives the federal government authority to manage activities that affect the designated habitat. In 2009, the US Fish and Wildlife Service published a revised designation of critical habitat which significantly increased a 2006 designation of 4,768 square miles within the boundaries of Voyagers National Park in Minnesota, Glacier National Park in Montana, and North Cascades National Park in Washington (USFWS 2009). In total, 39,000 square miles of critical lynx habitat was designated in 2009 as follows:<br/> <br/> Maine: Approximately 15,284 km<sup>2</sup> (9,497 square miles) in portions of Aroostook, Franklin, Penobscot, Piscataquis and Somerset Counties.<br/> <br/> Minnesota: Approximately 12,979 km2 (8,065 square miles) in portions of Cook, Koochiching, Lake, and St. Louis Counties, and Superior National Forest.<br/> <br/> Northern Rocky Mountains: Approximately 16,258 km<sup>2</sup> (10,102 square miles) in portions of Boundary County in Idaho, and Flathead, Glacier, Granite, Lake, Lewis and Clark, Lincoln, Missoula, Pondera, Powell and Teton Counties in Montana. This area includes the Flathead Indian Reservation, National Forest lands and Bureau of Land Management (BLM) lands in the Garnet Resource Area. North Cascades: Approximately 1,836 square miles in portions of Chelan and Okanogan Counties which includes BLM lands in the Spokane District. Greater Yellowstone Area: Approximately 9,500 square miles in Gallatin, Park, Sweetgrass, Stillwater, and Carbon Counties in Montana, and Park, Teton, Fremont, Sublette, and Lincoln Counties in Wyoming. The Kettle range of Washington State was not included as critical habitat due to lack of recent evidence of reproduction, and the reintroduced population of Colorado and Utah in the southern Rockies was also not included due to lack of evidence that it is self-sustaining. A recovery outline for lynx in the contiguous US was released in 2005 and designated critical habitat was identified in 2006 and reevaluated 2007. Critical lynx habitat designation was revised in 2009 and 2014, and a complete species status assessment was released in 2017, with an addendum in 2023 (USFWS 2023). </p>",
+    "use_trade": "Lynx are an important furbearer, with regulated trapping occurring in Alaska, Yukon, Northwest Territories, British Columbia, Alberta, Saskatchewan, Manitoba, Ontario, Quebec, Newfoundland, and Nunavut. Lynx trapping is closed in New Brunswick, Nova Scotia and the contiguous United States, although some lynx are captured incidentally in traps set for other species. The Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES) recognizes&#160;<em>Lynx canadensis</em>&#160;in Appendix II, meaning that their trade should be regulated to ensure sustainability. Exported lynx pelts require a CITES license, and illegal international trade of lynx pelts is negligible (Poole 2003). Lynx trapping seasons typically span November-March, which corresponds to the period when lynx fur is in its prime. Across Canada, lynx trapping is managed across provincial, and territorial jurisdictions, often through registered traplines and occasional bag limits. Wildlife Management Boards oversee furbearer harvest in areas with land claims settlements. Lynx trapping is a longstanding mainstay of the fur industry in North America, and&#160;through the 19th and early 20th&#160;century lynx and bobcat harvest records were combined (Obbard <em>et al.</em> 1987). During this time continental harvest ranged from 10,000-70,000 animals per year (Elton and Nicholson 1942, Mowat <em>et al. </em>2000). Lynx harvest statistics for the past century have been categorized in 3 phases: ~1920-1950, spanning a decline in numbers apparently due to forest habitat loss and declining snowshoe hare abundance, ~1950-1980, involving harvest increase due to higher snowshoe hare numbers related to forest regrowth post-logging, high fur prices, and increased access to remote areas, and ~1980-present reflecting some increases in regulation and reduced trapping pressure (Poole 2003). In the 1980s, in response to concerns about declining numbers and possible over-harvest, Alaska and some Canadian provinces temporarily restricted lynx trapping seasons or established bag limits to better match harvest with lynx population levels and trends (Golden 1999, Mowat&#160;<em>et al.</em>&#160;2000). It is understood that trapping can reduce lynx populations and historically, trapping may have impacted cyclic amplitude in harvest statistics (Poole 2003), but animals harvested during the peak/decline phase of the cycle may have naturally low survival due to the cyclic low density of snowshoe hares spanning several years and high risk of starvation during their cyclic nadir. Thus, some lynx trapping mortality likely is compensatory. Closing lynx trapping seasons during their cyclic low numbers may improve lynx harvest sustainability, but these measures have not been enacted consistently or at a meaningfully large scale because of spatial variability and asynchrony in lynx population cycles within jurisdictions (Arnold <em>et al.</em> 2024). During the last century reported lynx harvest numbers in Canada and Alaska ranged from 4588 (1949-50) to 58530 (1972-73) per year, and recent annual lynx harvest for the continent averaged 18891 (1980-89), 8360 (1990-99), 12714 (2000-2009), and 12351 (2010-2019) pelts per year (Novak 1987, ADF&amp;G 2024, Statistics Canada 2024, FIC 2024). Although at a continental scale lynx harvest numbers have declined since the 1970’s-1980’s, some Canadian provinces (e.g., British Columbia) have not experienced notable changes in pelt numbers (G. Mowat, pers. comm. 2024).",
+    "rationale": "The Canada Lynx (<em>Lynx canadensis</em>) is assessed as Least Concern because it has a widespread transcontinental distribution across the boreal forest of Canada and Alaska (US), where it is periodically abundant through 9–11 year population cycles (Poole 2003). Lynx are harvested for their fur in most Canadian provinces and territories as well as in Alaska, and this harvest has been ongoing for hundreds of years. Northerly lynx populations appear to be secure for the foreseeable future, although long-term and gradual changes in population trends cannot be reliably confirmed from available harvest data. Lynx distribution and abundance have declined in portions of their southern range in the boreal-mixed forest transition zone of southeastern Canada and the contiguous United States, resulting in northward range limit recession in the southeastern range (Koen <em>et al. </em>2014a). Lynx distribution in the contiguous United States is less than in the early 1900’s (McKelvey <em>et al. </em>2000, Thornton and Murray 2024), with confirmed population and range losses in Washington State, Montana/Idaho, Minnesota, and Maine. Lynx were listed as \"Threatened\" in the contiguous United States in 2000 (USFWS 2000), but this region represents &lt;10% of the current geographical range of the species, and core populations occupy more northerly regions. In Nova Scotia, lynx occur in an isolated population on Cape Breton Island and are listed as \"Endangered\" (NSLRT 2006). Some southern lynx populations appear to be increasing, including in New Brunswick where they were recently downlisted to “Special Concern” (COSSARNB 2022), and in Maine and surrounding states (Vashon <em>et al. </em>2012). However, these increases may be short-lived owing primarily to the maturation of regenerating forests in eastern North America, making them less suitable for snowshoe hares (<em>Lepus americanus</em>), the preferred prey of Canada Lynx. A reintroduced lynx population in Colorado appears to be well-established. Forest habitat loss and fragmentation are primarily responsible for lynx population decline across much of their southern range, and climate change likely contributes to habitat deterioration, including via decline in snowshoe hare numbers. In the next decades lynx and hare distribution and abundance likely will continue declining in the southern range, although some localized and short-term increases are predicted in regions of recent timber harvest. A federal plan for lynx recovery in the contiguous United States is in development (USFWS 2023). However, some long-term recovery goals may not be attainable given ongoing climate change and habitat loss (Thornton and Murray 2024, 2025). In the shorter term, lynx population sustainability in the contiguous United States may be dependent on connectivity with more northerly populations in Canada, meaning that establishment and protection of trans-boundary corridors should benefit southern populations (Thornton <em>et al.</em> 2018).&#160;<br/>At this time, Least Concern designation is appropriate for Canada Lynx because: 1) Although lynx harvest in their core range has declined since the 1970-1980 period, available harvest numbers and extensive field research results across the distribution exceed Data Deficient designation; 2) Harvest numbers for the northern range must be interpreted with care and do not clearly indicate a declining population trend or attenuating population cycle; and 3) Range loss and population decline in the southern distribution are unlikely to meet the conditions for Near Threatened status designation.",
+    "trend_justification": null,
+    "taxonomic_notes": "The taxonomy of this species is currently under review by the IUCN SSC Cat Specialist Group. It has been placed in the genus <em>Lynx</em> according to genetic analysis (Johnson <em>et al.</em> 2006)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3_1",
+      "description": {
+        "en": "Reintroduction"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": null,
+      "season": "Resident",
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Boreal"
+      },
+      "code": "3_3"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subarctic"
+      },
+      "code": "1_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "This is well studied across the species range, but more focused research is needed in local areas of declining numbers. ",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Past, Unlikely to Return",
+      "internationalTrade": null,
+      "score": "Past Impact",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Canis latrans",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_2_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects (species is not the target)"
+      },
+      "code": "5_1_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Mining & quarrying"
+      },
+      "code": "3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Supression in fire frequency/intensity"
+      },
+      "code": "7_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Murray, D. & Thornton, D.",
+      "value": [
+        "Dennis Murray (trent univ, canada)",
+        "Daniel Thornton (Washington State University)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Nakamoto, B., O'Donoghue, M. & Mowat, G.",
+      "value": [
+        "Bobby Nakamoto (University of California, Merced)",
+        "Mark O'Donoghue",
+        "Gareth Mowat (Government of British Columbia)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Nowell, K. and Jackson, P. 1996. <i>Wild Cats. Status Survey and Conservation Action Plan</i>. IUCN/SSC Cat Specialist Group, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "Wild Cats. Status Survey and Conservation Action Plan",
+      "author": "Nowell, K. and Jackson, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnson, W.E., Eizirik, E., Pecon-Slattery, J., Murphy, W.J., Antunes, A., Teeling, E. and O'Brien, S.J. 2006. The late Miocene radiation of modern Felidae: A genetic assessment. <i>Science</i> 311: 73-77.",
+      "year": "2006",
+      "title": "The late Miocene radiation of modern Felidae: A genetic assessment",
+      "author": "Johnson, W.E., Eizirik, E., Pecon-Slattery, J., Murphy, W.J., Antunes, A., Teeling, E. and O'Brien, S.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mckelvey, K.S., Aubry, K.B., Ortega, Y.K., Ruggiero, L.F., Buskirk, S.W., Koehler, G.M., Krebs, C.J. and Squires, J.R. 2000. History and distribution of lynx in the contiguous United States. In: L.F. Ruggiero, K.B. Aubry, S.W. Buskirk, G.M. Koehler, C.J. Krebs, K.S. McKelvey and J.R. Squires (eds), <i>Ecology and Conservation of Lynx in the United States</i>, pp. 207-264. University Press of Colorado, Boulder, Colorado.",
+      "year": "2000",
+      "title": "History and distribution of lynx in the contiguous United States",
+      "author": "Mckelvey, K.S., Aubry, K.B., Ortega, Y.K., Ruggiero, L.F., Buskirk, S.W., Koehler, G.M., Krebs, C.J. and Squires, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Schwartz, M.K., Pilgrim, K.L., Mckelvey, K.S., Lindquist, E.L., Claar, J.J., Loch, S. and Ruggiero, L.F. 2003. Hybridization between Canada lynx and bobcats: Genetic results and management implications. <i>Conservation Genetics</i> 5: 349.",
+      "year": "2003",
+      "title": "Hybridization between Canada lynx and bobcats: Genetic results and management implications",
+      "author": "Schwartz, M.K., Pilgrim, K.L., Mckelvey, K.S., Lindquist, E.L., Claar, J.J., Loch, S. and Ruggiero, L.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Frey, J.K. 2006. Inferring species distributions in the absence of occurrence records: An example considering wolverine (<i>Gulo gulo</i>) and Canada lynx (<i>Lynx canadensis</i>) in New Mexico. <i>Biological Conservation</i> 130: 16-24.",
+      "year": "2006",
+      "title": "Inferring species distributions in the absence of occurrence records: An example considering wolverine (<i>Gulo gulo</i>) and Canada lynx (<i>Lynx canadensis</i>) in New Mexico",
+      "author": "Frey, J.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Government of U.S. 2007. Additional information on amendment proposal.  COP 14 P02.  CITES COP14 Inf. 30.",
+      "year": "2007",
+      "title": "Additional information on amendment proposal",
+      "author": "Government of U.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ruediger, B., Claar, J., Gniadek, S., Holt, B., Lewis, L., Mighton, S., Rinaldi, T. Trick, J., Vandehrey, A., Wahl, F., Warren, N., Wenger, D. and Williamson, A. 2000. Canada lynx conservation assessment and strategy. USDA Forest Service, USDI Fish and Wildlife Service, USDI Bureau of Land Management, and USDI National Park Service, Missoula, MT, USA.",
+      "year": "2000",
+      "title": "Canada lynx conservation assessment and strategy",
+      "author": "Ruediger, B., Claar, J., Gniadek, S., Holt, B., Lewis, L., Mighton, S., Rinaldi, T. Trick, J., Vandehrey, A., Wahl, F., Warren, N., Wenger, D. and Williamson, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwartz, M.K., Mills, L.S., Ortega, Y., Ruggiero, L.F. and Allendorf, F.W. 2003. Landscape location affects genetic variation of Canada lynx (<i>Lynx canadensis</i>). <i>Molecular Ecology</i> 12: 1807-1816.",
+      "year": "2003",
+      "title": "Landscape location affects genetic variation of Canada lynx (<i>Lynx canadensis</i>)",
+      "author": "Schwartz, M.K., Mills, L.S., Ortega, Y., Ruggiero, L.F. and Allendorf, F.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mowat, G., Poole, K.G., O'Donoghue, M., Ruggiero, L.F., Aubry, K.B., Buskirk, S.W., Koehler, G.M., Krebs, C.J., Mckelvey, K.S. and Squires, J.R. 2000. Ecology of lynx in northern Canada and Alaska. In: L.F. Ruggiero, K.B. Aubry, S.W. Buskirk, G.M. Koehler, C.J. Krebs, K.S. McKelvey and J.R. Squires (eds), <i>Ecology and Conservation of Lynx in the United States</i>, pp. 265-306. University Press of Colorado, Boulder, Colorado.",
+      "year": "2000",
+      "title": "Ecology of lynx in northern Canada and Alaska",
+      "author": "Mowat, G., Poole, K.G., O'Donoghue, M., Ruggiero, L.F., Aubry, K.B., Buskirk, S.W., Koehler, G.M., Krebs, C.J., Mckelvey, K.S. and Squires, J.R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nordstrom, L. 2005. Recovery Outline: Contiguous United States Distinct Population Segment of the Canada Lynx. US Fish and Wildlife Service, Helena, USA.",
+      "year": "2005",
+      "title": "Recovery Outline: Contiguous United States Distinct Population Segment of the Canada Lynx",
+      "author": "Nordstrom, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Buskirk, S.W., Ruggiero, L.F., Aubry, K.B., Pearson, K.B., Squires, J.R., Mckelvey, K S., Koehler, G.M. and Krebs, C J. 2000. Comparative ecology of lynx in North America. In: L.F. Ruggiero, K.B. Aubry, S.W. Buskirk, G.M. Koehler, C.J. Krebs, K.S. McKelvey and J.R. Squires (eds), <i>Ecology and Conservation of Lynx in the United States</i>, pp. 397-418. University Press of Colorado, Boulder, Colorado.",
+      "year": "2000",
+      "title": "Comparative ecology of lynx in North America",
+      "author": "Buskirk, S.W., Ruggiero, L.F., Aubry, K.B., Pearson, K.B., Squires, J.R., Mckelvey, K S., Koehler, G.M. and Krebs, C J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bergerud, A.T. 1983. Prey switching in a simple ecosystem. <i>Scientific American</i> 249(6): 130.",
+      "year": "1983",
+      "title": "Prey switching in a simple ecosystem",
+      "author": "Bergerud, A.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Poole, K.G. 2003. A review of the Canada lynx, <i>Lynx canadensis</i>, in Canada. <i>Canadian Field Naturalist</i> 117: 360-376.",
+      "year": "2003",
+      "title": "A review of the Canada lynx, <i>Lynx canadensis</i>, in Canada",
+      "author": "Poole, K.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Krebs, C.J. , Boonstra, R., Boutin, S. and Sinclair, A.R.E. 2001. What drives the 10-year cycle of Snowshoe Hares? <i>BioScience</i> 51(1): 25-35.",
+      "year": "2001",
+      "title": "What drives the 10-year cycle of Snowshoe Hares?",
+      "author": "Krebs, C.J. , Boonstra, R., Boutin, S. and Sinclair, A.R.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Homyack, J., Vashon, J.H., Libby, C., Lindquist, E.L., Loch, S., McAlpine, D.F., Pilgrim, K.L. and Schwartz, M.K. 2008. Canada lynx-bobcat (<i>Lynx canadensis</i> x <i>L. rufus</i>) hybrids at the southern periphery of lynx range in Maine, Minnesota, and New Brunswick. <i>American Midland Naturalist</i> 159: 504-508.",
+      "year": "2008",
+      "title": "Canada lynx-bobcat (<i>Lynx canadensis</i> x <i>L. rufus</i>) hybrids at the southern periphery of lynx range in Maine, Minnesota, and New Brunswick",
+      "author": "Homyack, J., Vashon, J.H., Libby, C., Lindquist, E.L., Loch, S., McAlpine, D.F., Pilgrim, K.L. and Schwartz, M.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Interagency Lynx Biology Team. 2013. Canada lynx conservation assessment and strategy. Available at: <a href=\"http://www.fs.fed.us/biology/resources/pubs/wildlife/LCAS_revisedAugust2013.pdf\">http://www.fs.fed.us/biology/resources/pubs/wildlife/LCAS_revisedAugust2013.pdf</a>. ",
+      "year": "2013",
+      "title": "Canada lynx conservation assessment and strategy.",
+      "author": "Interagency Lynx Biology Team.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fuller, A.K., Harrison, D.J. and Vashon, J.H. 2007. Winter habitat selection by Canada lynx in Maine: prey abundance or accessibility? <i>Journal of Wildlife Management</i> 71(6): 1980-1986.",
+      "year": "2007",
+      "title": "Winter habitat selection by Canada lynx in Maine: prey abundance or accessibility?",
+      "author": "Fuller, A.K., Harrison, D.J. and Vashon, J.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bayne, E.M., Boutin, S. and Moses, R.A. 2008. Ecological factors influencing the spatial patterns of Canada lynx relative to its southern range edge in Alberta, Canada. <i>Canadian Journal of Zoology</i> 86: 1189-1197.",
+      "year": "2008",
+      "title": "Ecological factors influencing the spatial patterns of Canada lynx relative to its southern range edge in Alberta, Canada",
+      "author": "Bayne, E.M., Boutin, S. and Moses, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "DelGiudice, G.D., DonCarlos, M. and Erb, J. 2007. An incidental take plan for Canada lynx and Minnesota’s trapping program. Available at: <a href=\"http://www.lic.wisc.edu/glifwc/Polymet/SDEIS/references/DelGiudice%20et%20al.%202007.pdf\">http://www.lic.wisc.edu/glifwc/Polymet/SDEIS/references/DelGiudice%20et%20al.%202007.pdf</a>. ",
+      "year": "2007",
+      "title": "An incidental take plan for Canada lynx and Minnesota’s trapping program",
+      "author": "DelGiudice, G.D., DonCarlos, M. and Erb, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Squires, J.R., Decesare, N.J., Kolbe, J.A. and Ruggiero, L.F. 2010. Seasonal resource selection of Canada lynx in managed forests of the northern Rocky Mountains. <i>The Journal of Wildlife Management</i> 74(8): 1648-1660.",
+      "year": "2010",
+      "title": "Seasonal resource selection of Canada lynx in managed forests of the northern Rocky Mountains",
+      "author": "Squires, J.R., Decesare, N.J., Kolbe, J.A. and Ruggiero, L.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hoving, C.L, Harrison, D.J., Krohn, W.B., Joseph, R.A. and O'Brien, M. 2005. Broad-scale predictors of Canada lynx occurrence in eastern North America. <i>The Journal of Wildlife Management</i> 69(2): 739-751.",
+      "year": "2005",
+      "title": "Broad-scale predictors of Canada lynx occurrence in eastern North America",
+      "author": "Hoving, C.L, Harrison, D.J., Krohn, W.B., Joseph, R.A. and O'Brien, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vashon, J., McLellan, S., Crowley, S., Meehan, A. and Lausten, K. 2012. Canada Lynx Assessment. Maine Department of Inland Fisheries and Wildlife.",
+      "year": "2012",
+      "title": "Canada Lynx Assessment",
+      "author": "Vashon, J., McLellan, S., Crowley, S., Meehan, A. and Lausten, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Koehler, G.M., Maletzke, B.T., Von Kienast, J.A., Aubry, K.B., Wielgus, R.B. and Naney, R.H. 2008. Habitat fragmentation and the persistence of lynx populations in Washington State. <i>Journal of Wildlife Management</i> 72(7): 1518-1524.",
+      "year": "2008",
+      "title": "Habitat fragmentation and the persistence of lynx populations in Washington State",
+      "author": "Koehler, G.M., Maletzke, B.T., Von Kienast, J.A., Aubry, K.B., Wielgus, R.B. and Naney, R.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Devineau, O., Shenk, T.M., White, G.C., Doherty Jr., P.F., Lukacs, P.M. and Kahn, R.H. 2010. Evaluating the Canada lynx reintroduction programme in Colorado: patterns in mortality. <i>Journal of Applied Ecology</i> 47: 524-531.",
+      "year": "2010",
+      "title": "Evaluating the Canada lynx reintroduction programme in Colorado: patterns in mortality",
+      "author": "Devineau, O., Shenk, T.M., White, G.C., Doherty Jr., P.F., Lukacs, P.M. and Kahn, R.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vashon, J.H, Meehan, A.L., Jakubas, W.J., Organ, J.F., Vashon, A.D., McLaughlin, C.R., Matula, G.J.,and Crowley, S.M. 2008. Spatial ecology of a Canada lynx population in northern Maine. <i>Journal of Wildlife Management</i> 72(7): 1479-1487.",
+      "year": "2008",
+      "title": "Spatial ecology of a Canada lynx population in northern Maine",
+      "author": "Vashon, J.H, Meehan, A.L., Jakubas, W.J., Organ, J.F., Vashon, A.D., McLaughlin, C.R., Matula, G.J.,and Crowley, S.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Golden H.N. 1999. <i> An expert-system model for lynx management in Alaska</i>.  Mammal Trapping. Alpha Wildlife Research & Management Ltd., Sherwood Park, Alberta.",
+      "year": "1999",
+      "title": " An expert-system model for lynx management in Alaska",
+      "author": "Golden H.N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Squires, J.R. and Ruggiero, L.F. 2007. Winter prey selection of Canada lynx in northwestern Montana. <i>The Journal of Wildlife Management</i> 71(2): 310-315.",
+      "year": "2007",
+      "title": "Winter prey selection of Canada lynx in northwestern Montana",
+      "author": "Squires, J.R. and Ruggiero, L.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Westerling, A.L., Hidalgo, D.R., Cayan, H. and Swetnam, T. 2006. Warming and earlier spring increases western US forest wildfire activity. <i>Science</i> 313: 940-943.",
+      "year": "2006",
+      "title": "Warming and earlier spring increases western US forest wildfire activity",
+      "author": "Westerling, A.L., Hidalgo, D.R., Cayan, H. and Swetnam, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bunnell, K.D., Flinders, J.T. and Wolfe, M.L. 2006. Potential Impacts of Coyotes and Snowmobiles on Lynx Conservation in the Intermountain West. <i>Wildlife Society Bulletin</i> 34(3): 828-838.",
+      "year": "2006",
+      "title": "Potential Impacts of Coyotes and Snowmobiles on Lynx Conservation in the Intermountain West",
+      "author": "Bunnell, K.D., Flinders, J.T. and Wolfe, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "USFWS. 2000. Endangered and Threatened Wildlife and Plants; Determination of Threatened Status for the Contiguous U.S. Distinct Population Segment of the Canada Lynx and Related Rule; Final Rule VerDate. Available at: <a href=\"http://www.fws.gov/mountain-prairie/es/species/mammals/lynx/canada%20lynx%20final%20rule%2003242000.pdf\">http://www.fws.gov/mountain-prairie/es/species/mammals/lynx/canada%20lynx%20final%20rule%2003242000.pdf</a>. (Accessed: March 24 2000).",
+      "year": "2000",
+      "title": "Endangered and Threatened Wildlife and Plants; Determination of Threatened Status for the Contiguous U.S. Distinct Population Segment of the Canada Lynx and Related Rule; Final Rule VerDate",
+      "author": "USFWS",
+      "citation_short": null
+    },
+    {
+      "citation": "Hanson, K. and Moen, R. 2008. Diet of Canada Lynx in Minnesota Estimated from Scat Analysis. <i>NRRI Technical Report No. NRRI/TR-2008/13</i>.",
+      "year": "2008",
+      "title": "Diet of Canada Lynx in Minnesota Estimated from Scat Analysis",
+      "author": "Hanson, K. and Moen, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Vashon, J.H., Meehan, A.L., Organ, J.F., Jakubas, W.J., McLaughlin, C.R., Vashon, A.D. and Crowley, S.M. 2008. Diurnal habitat relationships of Canada lynx in an intensively managed forest landscape in northern Maine. <i>Journal of Wildlife Management</i> 72(7): 1488-1496.",
+      "year": "2008",
+      "title": "Diurnal habitat relationships of Canada lynx in an intensively managed forest landscape in northern Maine.",
+      "author": "Vashon, J.H., Meehan, A.L., Organ, J.F., Jakubas, W.J., McLaughlin, C.R., Vashon, A.D. and Crowley, S.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Squires, J.R., DeCesare,N.J., Olson, L.E., Kolbe, J.A., Hebblewhite, M. and Parks, S.A. 2013. Combining resource selection and movement behavior to protect corridors for Canada lynx at their southern range periphery. <i>Biological Conservation</i> 157: 187-195.",
+      "year": "2013",
+      "title": "Combining resource selection and movement behavior to protect corridors for Canada lynx at their southern range periphery.",
+      "author": "Squires, J.R., DeCesare,N.J., Olson, L.E., Kolbe, J.A., Hebblewhite, M. and Parks, S.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Burdett, C. 2008. Hierarchical structure of Canada lynx space use and habitat selection in northeastern Minnesota. Thesis. College of Food, Agriculture and Natural Science, University of Minnesota.",
+      "year": "2008",
+      "title": "Hierarchical structure of Canada lynx space use and habitat selection in northeastern Minnesota.",
+      "author": "Burdett, C",
+      "citation_short": ""
+    },
+    {
+      "citation": "Squires, J.R., Olson, L.E.,  Turner, D.L., DeCesare, N.J. and Kolbe, J.A. 2012. Estimating detection probability for Canada lynx Lynx Canadensis using snow-track surveys in the northern Rocky Mountains, Montana, USA. <i>Wildlife Biology</i> 18(1): 215-224.",
+      "year": "2012",
+      "title": "Estimating detection probability for Canada lynx Lynx Canadensis using snow-track surveys in the northern Rocky Mountains, Montana, USA",
+      "author": "Squires, J.R., Olson, L.E.,  Turner, D.L., DeCesare, N.J. and Kolbe, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maletzke, B.J., Koehler, G.M., Wielgus, R.B., Aubry, K.B. and Evans, M.A. 2008. Habitat conditions associated with lynx hunting behavior during winter in northern Washington. <i>Journal of Wildlife Management</i> 72(7): 1473-1478.",
+      "year": "2008",
+      "title": "Habitat conditions associated with lynx hunting behavior during winter in northern Washington",
+      "author": "Maletzke, B.J., Koehler, G.M., Wielgus, R.B., Aubry, K.B. and Evans, M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Moen, R., Burdett, C.L. and Niemi, J.J. 2008. Movement and habitat use of Canada Lynx during denning in Minnesota. <i>The Journal of Wildlife Management</i> 72(7): 1507-1513.",
+      "year": "2008",
+      "title": "Movement and habitat use of Canada Lynx during denning in Minnesota",
+      "author": "Moen, R., Burdett, C.L. and Niemi, J.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Walpole, A.A., Bowman, J., Murray, D.L. and Wilson, P.J. 2012. Functional connectivity of lynx at their southern range periphery in Ontario, Canada . <i>Landscape Ecology</i> 27: 761-773.",
+      "year": "2012",
+      "title": "Functional connectivity of lynx at their southern range periphery in Ontario, Canada ",
+      "author": "Walpole, A.A., Bowman, J., Murray, D.L. and Wilson, P.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bunnell, K.D., Flinders, J.T. and Wolfe, M.L. 2006. Potential Impacts of Coyotes and Snowmobiles on Lynx Conservation in the Intermountain West. <i>Wildlife Society Bulletin</i> 34(3): 828-838.",
+      "year": "2006",
+      "title": "Potential Impacts of Coyotes and Snowmobiles on Lynx Conservation in the Intermountain West",
+      "author": "Bunnell, K.D., Flinders, J.T. and Wolfe, M.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Logan, J.A., Jacques, R. and Powell, J.A. 2003. Assessing the impacts of global warming on forest pest dynamics. <i>Frontiers in Ecology and the Environment </i> 1: 130-137.",
+      "year": "2003",
+      "title": "Assessing the impacts of global warming on forest pest dynamics",
+      "author": "Logan, J.A., Jacques, R. and Powell, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fleming R.A., Candau, J. and McAlpline, R.S. 2002. Landscape-Scale Analysis of Interactions between Insect Defoliation and Forest Fire in Central Canada. <i>Climate Change</i> 55: 251-272.",
+      "year": "2002",
+      "title": "Landscape-Scale Analysis of Interactions between Insect Defoliation and Forest Fire in Central Canada",
+      "author": "Fleming R.A., Candau, J. and McAlpline, R.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nova Scotia Lynx Recovery Team. 2006. Provincial Recovery Plan for the Canada Lynx (<i>Lynx canadensis</i>), Nova Scotia. 32 pages. Available at: <a href=\"http://novascotia.ca/natr/wildlife/biodiversity/pdf/recoveryplans/LynxRecoveryPlan2007.pdf\">http://novascotia.ca/natr/wildlife/biodiversity/pdf/recoveryplans/LynxRecoveryPlan2007.pdf</a>. (Accessed: Feb 2007).",
+      "year": "2006",
+      "title": "Provincial Recovery Plan for the Canada Lynx (<i>Lynx canadensis</i>), Nova Scotia.",
+      "author": "Nova Scotia Lynx Recovery Team.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kolbe, J.A., Squires, J.R., Pletscher, D.H. and Ruggiero, L.F. 2007. The Effect of Snowmobile Trails on Coyote Movements Within Lynx Home Range. <i>Journal of Wildlife Management</i> 71(5): 1409-1418.",
+      "year": "2007",
+      "title": "The Effect of Snowmobile Trails on Coyote Movements Within Lynx Home Range",
+      "author": "Kolbe, J.A., Squires, J.R., Pletscher, D.H. and Ruggiero, L.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "Alaska Department of Fish and Game. 2024. Manual search of annual trapping records. Available at: <a href=\"https://www.adfg.alaska.gov/index.cfm?adfg=librarypublications.wildlifepublications&sort=all&species=Lynx&submit=Search\">https://www.adfg.alaska.gov/index.cfm?adfg=librarypublications.wildlifepublications&sort=all&species=Lynx&submit=Search</a>. (Accessed: 10 August 2024).",
+      "year": "2024",
+      "title": "Manual search of annual trapping records",
+      "author": "Alaska Department of Fish and Game",
+      "citation_short": null
+    },
+    {
+      "citation": "Anderson, A.,K, Waller, J.S. and Thornton, D.H. 2023. Canada lynx occupancy and density in Glacier National Park. <i>Journal of Wildlife Management</i> 87(4): e22383.",
+      "year": "2023",
+      "title": "Canada lynx occupancy and density in Glacier National Park",
+      "author": "Anderson, A.,K, Waller, J.S. and Thornton, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anderson, A., Waller, J., and Thornton, D.H. 2023. Partial COVID-19 closure of a national park reveals negative influence of low-impact recreation on wildlife spatiotemporal ecology. <i>Scientific Reports</i> 13: 687.",
+      "year": "2023",
+      "title": "Partial COVID-19 closure of a national park reveals negative influence of low-impact recreation on wildlife spatiotemporal ecology",
+      "author": "Anderson, A., Waller, J., and Thornton, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Anderson, E. M., and Lovallo, M. J. 2003. Bobcat and Lynx. In: Feldhamer, G. A. and Thompson, B. (eds), <i>Wild Mammals of North America</i>, pp. 758-786. Johns Hopkins University Press.",
+      "year": "2003",
+      "title": "Bobcat and Lynx",
+      "author": "Anderson, E. M., and Lovallo, M. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arnold, D.A, Breed, G.A., Laufenberg, J.S., Berg, N.D., Bertram, M.R., Scotton, B.D., and Kielland, K. 2024. Evidence for a survival-driven traveling wave in a keystone boreal predator population. <i>Proceedings of the National Academy of Sciences</i> 121: e2414052121.",
+      "year": "2024",
+      "title": "Evidence for a survival-driven traveling wave in a keystone boreal predator population",
+      "author": "Arnold, D.A, Breed, G.A., Laufenberg, J.S., Berg, N.D., Bertram, M.R., Scotton, B.D., and Kielland, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Banville, D. 1986. Étude écologique du lynx du Canada sur la haute Côte-Nord. Québec Ministère du Loiser, de la Chasse et de la Pêche. Québec, Canada.",
+      "year": "1986",
+      "title": "Étude écologique du lynx du Canada sur la haute Côte-Nord. Québec Ministère du Loiser, de la Chasse et de la Pêche",
+      "author": "Banville, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Burkstahler, C.M., Roth, J.D., Gau, R.J. and Murray, D.L. 2016. Demographic differences of Canada lynx during a fluctuation in prey availability. <i>Ecology and Evolution</i> 6: 6366-6375.",
+      "year": "2016",
+      "title": "Demographic differences of Canada lynx during a fluctuation in prey availability",
+      "author": "Burkstahler, C.M., Roth, J.D., Gau, R.J. and Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Committee on the Status of Species at Risk in New Brunswick (COSSARNB). 2022. Canada lynx.",
+      "year": "2022",
+      "title": "Canada lynx",
+      "author": "Committee on the Status of Species at Risk in New Brunswick (COSSARNB)",
+      "citation_short": null
+    },
+    {
+      "citation": "Doran-Myers, D., Kenney, A., Krebs, C., Lamb, C.T., Menzies, A., Murray, D., Studd, E., Whittington, J. and Boutin, S. 2022. Density estimates for Canada lynx vary among estimation methods. <i>Ecosphere</i> 12(10): e03774.",
+      "year": "2022",
+      "title": "Density estimates for Canada lynx vary among estimation methods",
+      "author": "Doran-Myers, D., Kenney, A., Krebs, C., Lamb, C.T., Menzies, A., Murray, D., Studd, E., Whittington, J. and Boutin, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Elton, C., and Nicholson, M. 1942. The ten-year cycle in numbers of the lynx in Canada. <i>Journal of Animal Ecology</i> 11: 215-244.",
+      "year": "1942",
+      "title": "The ten-year cycle in numbers of the lynx in Canada",
+      "author": "Elton, C., and Nicholson, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fortin, C. and Huot, J. 1995. Ecologie comparée du Coyote, du Lynx du Canada et du Renard roux au parc national Forillon. Rapport Final for Parcs Canada, Département de Biologie, Université Laval, Québec, Canada.",
+      "year": "1995",
+      "title": "Ecologie comparée du Coyote, du Lynx du Canada et du Renard roux au parc national Forillon",
+      "author": "Fortin, C. and Huot, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fur Institute of Canada. 2024. Canadian Wild Fur Production From 2010-2024.",
+      "year": "2024",
+      "title": "Canadian Wild Fur Production From 2010-2024",
+      "author": "Fur Institute of Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "Golden, H.N. and Krause, T. 2020. How to avoid incidental take of lynx while trapping or hunting bobcats or other furbearers. International Association of Fish and Wildlife Agencies, U.S. Fish and Wildlife Service, Colorado Division of Wildlife, Colorado, USA.",
+      "year": "2020",
+      "title": "How to avoid incidental take of lynx while trapping or hunting bobcats or other furbearers",
+      "author": "Golden, H.N. and Krause, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hostetter N.J., Ryan, D., Grosshuesch, D., Catton, T., Malick-Wahls, S., Smith, T.A., and Gardner, B. 2020. Quantifying spatiotemporal occupancy dynamics and multi-year core-use areas at a species range boundary. <i>Diversity and Distributions</i> 26: 795–805.",
+      "year": "2020",
+      "title": "Quantifying spatiotemporal occupancy dynamics and multi-year core-use areas at a species range boundary",
+      "author": "Hostetter N.J., Ryan, D., Grosshuesch, D., Catton, T., Malick-Wahls, S., Smith, T.A., and Gardner, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ivan, J.S., and Shenk, T.M. 2016. Winter diet and hunting success of Canada lynx in Colorado. <i>Journal of Wildlife Management</i> 80: 1049-1058.",
+      "year": "2016",
+      "title": "Winter diet and hunting success of Canada lynx in Colorado",
+      "author": "Ivan, J.S., and Shenk, T.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kesterson, M. B. 1988. Lynx home range and spatial organization in relation to population density and prey abundance. MS Thesis, University of Alaska.",
+      "year": "1988",
+      "title": "Lynx home range and spatial organization in relation to population density and prey abundance",
+      "author": "Kesterson, M. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "King, T., Vynne, C., Miller, D., Fisher, S., Fitkin, S., Rohrer, J., Ransom, J., and Thornton, D.H. 2021. The influence of spatial and temporal scale on the relative importance of biotic vs. abiotic factors for species distributions. <i>Diversity and Distributions</i> 27: 327-343.",
+      "year": "2021",
+      "title": "The influence of spatial and temporal scale on the relative importance of biotic vs. abiotic factors for species distributions",
+      "author": "King, T., Vynne, C., Miller, D., Fisher, S., Fitkin, S., Rohrer, J., Ransom, J., and Thornton, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "King, T.W., Vynne, C., Miller, D., Fisher, S., Fitkin, S., Rohrer, J., Ransom, J.I., and Thornton, D. 2020. Will Lynx Lose Their Edge? Canada Lynx Occupancy in Washington. <i>Journal of Wildlife Management </i> 84: 705–725.",
+      "year": "2020",
+      "title": "Will Lynx Lose Their Edge? Canada Lynx Occupancy in Washington",
+      "author": "King, T.W., Vynne, C., Miller, D., Fisher, S., Fitkin, S., Rohrer, J., Ransom, J.I., and Thornton, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koehler, G. M. 1990. Population and habitat characteristics of lynx and snowshoe hares in north central Washington. <i>Canadian Journal of Zoology</i> 68: 845–853.",
+      "year": "1990",
+      "title": "Population and habitat characteristics of lynx and snowshoe hares in north central Washington",
+      "author": "Koehler, G. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koen, E.L., Bowman, J., Lawlor, J., and Wilson, P.J. 2014b. Continental-scale assessment of the hybrid zone between bobcat and Canada lynx. <i>Biological Conservation</i> 178: 107-115.",
+      "year": "2014b",
+      "title": "Continental-scale assessment of the hybrid zone between bobcat and Canada lynx",
+      "author": "Koen, E.L., Bowman, J., Lawlor, J., and Wilson, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koen, E. L., Bowman, J., Murray, D. L., and Wilson, P. J. 2014a. Climate change reduces genetic diversity of Canada lynx at the trailing range edge. <i>Ecography</i> 37(8): 754–762.",
+      "year": "2014a",
+      "title": "Climate change reduces genetic diversity of Canada lynx at the trailing range edge",
+      "author": "Koen, E. L., Bowman, J., Murray, D. L., and Wilson, P. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leclerc, M., Van de Walle,  J., Zedrosser A., Swenson J.E. and Pelletier, F. 2016. Can hunting data be used to estimate unbiased population parameters? A case study on brown bears. <i>Biology Letters</i> 12: 20160197.",
+      "year": "2016",
+      "title": "Can hunting data be used to estimate unbiased population parameters? A case study on brown bears",
+      "author": "Leclerc, M., Van de Walle,  J., Zedrosser A., Swenson J.E. and Pelletier, F. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lyons, A., Gaines, W., Lewis, J., Maletzke, B., Werntz, D., Thornton, D., Begley, J., Vanbianchi, C., King, T., Blatz, G., and Fitkin, S. 2023. Climate change, wildfire, and forest management challenge survival of Canada lynx in the North Cascades, USA. <i>Journal of Wildlife Management</i> 87: e22410.",
+      "year": "2023",
+      "title": "Climate change, wildfire, and forest management challenge survival of Canada lynx in the North Cascades, USA",
+      "author": "Lyons, A., Gaines, W., Lewis, J., Maletzke, B., Werntz, D., Thornton, D., Begley, J., Vanbianchi, C., King, T., Blatz, G., and Fitkin, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marrotte, R.R., and Bowman, J. 2021. Seven decades of southern range dynamics of Canada lynx. <i>Ecology and Evolution</i> 9: 4644-4655.",
+      "year": "2021",
+      "title": "Seven decades of southern range dynamics of Canada lynx",
+      "author": "Marrotte, R.R., and Bowman, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Morin, S.J., Bowman, J., Marrotte, R.R., and Fortin, M.J. 2020. Fine-scale habitat selection by sympatric Canada lynx and bobcat. Ecology and Evolution. <i>10</i> 17: 9396–9409.",
+      "year": "2020",
+      "title": "Fine-scale habitat selection by sympatric Canada lynx and bobcat. Ecology and Evolution",
+      "author": "Morin, S.J., Bowman, J., Marrotte, R.R., and Fortin, M.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murray, D.L. 2003. Snowshoe hare and other hares. In: Feldhamer, G.A. and Thompson, B. (eds), <i> Wild Mammals of North America</i>, pp. 147-175. Johns Hopkins University Press.",
+      "year": "2003",
+      "title": "Snowshoe hare and other hares",
+      "author": "Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murray, D.L., Gobin, J., Scully, A.S., Thornton, D.H. 2023. Conventional niche overlap measurements are not effective for assessing interspecific competition. <i>Frontiers in Ecology and Evolution</i> 11: 1281108.",
+      "year": "2023",
+      "title": "Conventional niche overlap measurements are not effective for assessing interspecific competition",
+      "author": "Murray, D.L., Gobin, J., Scully, A.S., Thornton, D.H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Murray, D.L., Steury, T.D., and Roth, J.D. 2008. Assessment of Canada lynx research and conservation needs in the southern range: another kick at the cat. <i>Journal of Wildlife Management</i> 72: 1463-1472.",
+      "year": "2008",
+      "title": "Assessment of Canada lynx research and conservation needs in the southern range: another kick at the cat",
+      "author": "Murray, D.L., Steury, T.D., and Roth, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nakamoto, B., Forbes, G., Bursey, C., Cormier, J., O’Sullivan, A., and Hayden, B. 2024. Niche partitioning of bobcat and Canada lynx near their distribution contact zone. <i>Facets</i> 9: 1-11.",
+      "year": "2024",
+      "title": "Niche partitioning of bobcat and Canada lynx near their distribution contact zone",
+      "author": "Nakamoto, B., Forbes, G., Bursey, C., Cormier, J., O’Sullivan, A., and Hayden, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "New Brunswick Department of Natural Resources and Energy Development (NBDNRED). 2022. Canada lynx, Lynx canadensis, in New Brunswick: Status Report. New Brunswick Department of Natural Resources and Energy Development, Fredericton, NB.",
+      "year": "2022",
+      "title": "Canada lynx, Lynx canadensis, in New Brunswick: Status Report.",
+      "author": "New Brunswick Department of Natural Resources and Energy Development (NBDNRED)",
+      "citation_short": null
+    },
+    {
+      "citation": "Noiseux, F., and Doucet, G.J. 1987. Étude de la population du lynx du Canada (Lynx canadensis) de la Réserve Faunique des Laurentides, Québec. Québec Ministère du Loisir, de la Chasse et de la Pêche, Québec, Canada.",
+      "year": "1987",
+      "title": "Étude de la population du lynx du Canada (Lynx canadensis) de la Réserve Faunique des Laurentides, Québec",
+      "author": "Noiseux, F., and Doucet, G.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Novak, M. 1987. Furbearer Harvests in North America, 1600-1984. A supplement to: Wild Furbearer Management and Conservation in North America (1987).",
+      "year": "1987",
+      "title": "Furbearer Harvests in North America, 1600-1984. A supplement to: Wild Furbearer Management and Conservation in North America (1987)",
+      "author": "Novak, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Obbard, M.E., Jones, J.G., Newman, R., Booth, A., Satterthwaite, A.J., and Lindscome, G. 1987. Furbearer harvests in North America. In: Novak, M. Baker, J.A.., Obbard, M.E. and Malloch, B. (eds), <i>Wild Furbearer Management and Conservation in North America</i>, pp. 1007-1034. Ministry of Natural Resources, Ontario, Canada.",
+      "year": "1987",
+      "title": "Furbearer harvests in North America",
+      "author": "Obbard, M.E., Jones, J.G., Newman, R., Booth, A., Satterthwaite, A.J., and Lindscome, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Donoghue, M., Boutin, S., Krebs, C.J., Zuleta, G., Murray, D.L. and Hofer, E.J. 1998. Functional responses of coyotes and lynx to the snowshoe hare cycle. <i>Ecology</i> 79: 1209-1222.",
+      "year": "1998",
+      "title": "Functional responses of coyotes and lynx to the snowshoe hare cycle",
+      "author": "O’Donoghue, M., Boutin, S., Krebs, C.J., Zuleta, G., Murray, D.L. and Hofer, E.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Donoghue, M., Slough, B.G., Poole, K., Boutin, S., Hofer, E.J., Mowat, G., Murray, D., and Krebs, C.J. 2022. Snow track counts for density estimation of mammalian predators in the boreal forest. <i>Wildlife Research</i> 50(6): 425-434.",
+      "year": "2022",
+      "title": "Snow track counts for density estimation of mammalian predators in the boreal forest",
+      "author": "O’Donoghue, M., Slough, B.G., Poole, K., Boutin, S., Hofer, E.J., Mowat, G., Murray, D., and Krebs, C.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Olson, L.E., Squires, J.R., Roberts, E.K., Ivan, J.S., and Hebblewhite, M. 2018. Sharing the same slope: behavioral responses of a threatened mesocarnivore to motorized and nonmotorized winter recreation. <i>Ecology and Evolution</i> 8: 8555-8572.",
+      "year": "2018",
+      "title": "Sharing the same slope: behavioral responses of a threatened mesocarnivore to motorized and nonmotorized winter recreation",
+      "author": "Olson, L.E., Squires, J.R., Roberts, E.K., Ivan, J.S., and Hebblewhite, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parker, G. R. 1981. Winter habitat use and hunting activities of lynx (<i>Lynx canadensisis </i>) on Cape Breton Island, Nova Scotia. In: Chapman, J.A. and Pursley, D. (eds), Worldwide Furbearer Conference proceedings. Frostburg, Maryland, USA.",
+      "year": "1981",
+      "title": "Winter habitat use and hunting activities of lynx (<i>Lynx canadensisis </i>) on Cape Breton Island, Nova Scotia",
+      "author": "Parker, G. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Parker, G. R., Maxwell, J.W., Morton, L.D. and Smith, G.E.J. 1983. The ecology of the lynx (<i>Lynx canadensis</i>) on Cape Breton Island. <i>Canadian Journal of Zoology</i> 61: 770–786.",
+      "year": "1983",
+      "title": "The ecology of the lynx (<i>Lynx canadensis</i>) on Cape Breton Island",
+      "author": "Parker, G. R., Maxwell, J.W., Morton, L.D. and Smith, G.E.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Peers, M.J.L, Thornton, D.H. and Murray, D.L. 2013. Evidence for large-scale effects of competition: niche displacement in carnivores. <i>Proceedings of the Royal Society of London </i> 280: 20132495.",
+      "year": "2013",
+      "title": "Evidence for large-scale effects of competition: niche displacement in carnivores",
+      "author": "Peers, M.J.L, Thornton, D.H. and Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Poole, K.G. 1994. Characteristics of an unharvested lynx population during a snowshoe hare decline. <i>Journal of Wildlife Management</i> 58: 608–618.",
+      "year": "1994",
+      "title": "Characteristics of an unharvested lynx population during a snowshoe hare decline",
+      "author": "Poole, K.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Prentice, M.B., Bowman, J., Murray, D.L., Klütsch, C.F.C. and Wilson, P.J. 2019. Evaluating evolutionary history and adaptive differentiation to identify conservation units of Canada lynx (<i>Lynx canadensis</i>). <i>Global Ecology and Conservation</i> 20: 1-16.",
+      "year": "2019",
+      "title": "Evaluating evolutionary history and adaptive differentiation to identify conservation units of Canada lynx (<i>Lynx canadensis</i>)",
+      "author": "Prentice, M.B., Bowman, J., Murray, D.L., Klütsch, C.F.C. and Wilson, P.J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Prentice, M., Bowman, J., Khidas, K., Koen, E.L., Row, J.R., Murray, D.L., and Wilson, P.J. 2017. Selection and drift influence genetic differentiation of insular Canada lynx (<i>Lynx canadensis</i>) on Newfoundland and Cape Breton Island. <i>Ecology and Evolution</i> 7(9): 3281–3294.",
+      "year": "2017",
+      "title": "Selection and drift influence genetic differentiation of insular Canada lynx (<i>Lynx canadensis</i>) on Newfoundland and Cape Breton Island",
+      "author": "Prentice, M., Bowman, J., Khidas, K., Koen, E.L., Row, J.R., Murray, D.L., and Wilson, P.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ranta, E., Kaitala, V., and Lindström, J. 1997a. Dynamics of Canadian lynx populations in space and time. <i>Ecography</i> 20: 454-460.",
+      "year": "1997a",
+      "title": "Dynamics of Canadian lynx populations in space and time",
+      "author": "Ranta, E., Kaitala, V., and Lindström, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ranta. E, Kaitala, V, and  Lundberg, P. 1997b. The spatial dimension in population fluctuations. <i>Science</i> 278: 1621-1623.",
+      "year": "1997b",
+      "title": "The spatial dimension in population fluctuations",
+      "author": "Ranta. E, Kaitala, V, and  Lundberg, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Roth, J.D., Marshall, J.D., Murray, D.L., Nickerson, D.M., Steury, T.D. 2007. Latitudinal gradients in diet and population dynamics of Canada lynx. <i>Ecology</i> 88: 2736-2743.",
+      "year": "2007",
+      "title": "Latitudinal gradients in diet and population dynamics of Canada lynx",
+      "author": "Roth, J.D., Marshall, J.D., Murray, D.L., Nickerson, D.M., Steury, T.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Row, J.R., Gomez, C., Koen, E.L., Bowman, J., Murray, D.L. and Wilson, P. 2012. Dispersal promotes high gene flow among Canada lynx populations across mainland North America. <i>Conservation Genetics</i> 13: 1259–1268.",
+      "year": "2012",
+      "title": "Dispersal promotes high gene flow among Canada lynx populations across mainland North America",
+      "author": "Row, J.R., Gomez, C., Koen, E.L., Bowman, J., Murray, D.L. and Wilson, P. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Row, J.R., Wilson, P.J., Gomez, C., Koen, E.L., Bowman, J., Thornton, D. and Murray, D.L. 2014. The subtle role of climate change on population genetic structure in Canada lynx. <i>Global Change Biology</i> 20: 2076-2086.",
+      "year": "2014",
+      "title": "The subtle role of climate change on population genetic structure in Canada lynx",
+      "author": "Row, J.R., Wilson, P.J., Gomez, C., Koen, E.L., Bowman, J., Thornton, D. and Murray, D.L",
+      "citation_short": null
+    },
+    {
+      "citation": "Rueness E.K., Stenseth N.C., O'Donoghue M., Boutin S., Ellegren H. and Jakobsen K.S. 2003. Ecological and genetic spatial structuring in the Canadian lynx. <i>Nature</i> 425(6953): 69-72.",
+      "year": "2003",
+      "title": "Ecological and genetic spatial structuring in the Canadian lynx.",
+      "author": "Rueness E.K., Stenseth N.C., O'Donoghue M., Boutin S., Ellegren H. and Jakobsen K.S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Schmidt, J.I., Kellie, K.A. and Chapin, F.S. 2015. Detecting, estimating, and correcting for bias in harvest data. <i>Journal of Wildlife Management</i> 79: 1152-1162.",
+      "year": "2015",
+      "title": "Detecting, estimating, and correcting for bias in harvest data",
+      "author": "Schmidt, J.I., Kellie, K.A. and Chapin, F.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Schwartz, M.K. Mills, L.S., McKelvey, K.S., Ruggiero, L.F., and Allendorf, F.W. 2002. DNA reveals high dispersal synchronizing the population dynamics of Canada lynx. <i>Nature</i> 415: 520-522.",
+      "year": "2002",
+      "title": "DNA reveals high dispersal synchronizing the population dynamics of Canada lynx",
+      "author": "Schwartz, M.K. Mills, L.S., McKelvey, K.S., Ruggiero, L.F., and Allendorf, F.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sirén, A.P.K., Sutherland, C.S., Bernier, C.A., Royar, K.J., Kilborn, J.R., Callahan, C.B., Cliché, R.M., Prout, L.S. and Morelli, T.L. 2021. Abiotic stress and biotic factors mediate range dynamics on opposing edges. <i>Journal of Biogeography</i> 48: 1758-1772.",
+      "year": "2021",
+      "title": "Abiotic stress and biotic factors mediate range dynamics on opposing edges",
+      "author": "Sirén, A.P.K., Sutherland, C.S., Bernier, C.A., Royar, K.J., Kilborn, J.R., Callahan, C.B., Cliché, R.M., Prout, L.S. and Morelli, T.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Slough, B. G. and Mowat, G. 1996. Population dynamics of lynx in a refuge and interactions between harvested and unharvested populations. <i>Journal of Wildlife Management</i> 60: 946–961.",
+      "year": "1996",
+      "title": "Population dynamics of lynx in a refuge and interactions between harvested and unharvested populations",
+      "author": "Slough, B. G. and Mowat, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Squires, J.R., Holbrook, J.D., Olson, L.E., Ivan, J.S., Ghormley, R.W., and Lawrence, R.L. 2020. A specialized forest carnivore navigates landscape-level disturbance: Canada lynx in spruce-beetle impacted forests. <i>Forest Ecology and Management</i> 475: 118400.",
+      "year": "2020",
+      "title": "A specialized forest carnivore navigates landscape-level disturbance: Canada lynx in spruce-beetle impacted forests",
+      "author": "Squires, J.R., Holbrook, J.D., Olson, L.E., Ivan, J.S., Ghormley, R.W., and Lawrence, R.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Squires, J.R., Ivan, J.S., Paolini, K.E., Olson, L.E., Jones, G.M., and Holbrook, J.D. 2022. Keystone structures maintain forest function for Canada lynx after large-scale spruce beetle outbreak. <i>Environmental Research: Ecology</i> 2: 011001.",
+      "year": "2022",
+      "title": "Keystone structures maintain forest function for Canada lynx after large-scale spruce beetle outbreak",
+      "author": "Squires, J.R., Ivan, J.S., Paolini, K.E., Olson, L.E., Jones, G.M., and Holbrook, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Squires, J.R., Olson, L.E., Roberts, E.K., Ivan, J.S., and Hebblewhite, M. 2019. Winter recreation and Canada lynx: reducing conflict through niche partitioning. <i>Ecosphere</i> 10: e02876.",
+      "year": "2019",
+      "title": "Winter recreation and Canada lynx: reducing conflict through niche partitioning",
+      "author": "Squires, J.R., Olson, L.E., Roberts, E.K., Ivan, J.S., and Hebblewhite, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Statistics Canada. 2024. Archived – Number and value of pelts produced. Available at: <a href=\"https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3210029301\">https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3210029301</a>. (Accessed: 17 July, 2024).",
+      "year": "2024",
+      "title": "Archived – Number and value of pelts produced",
+      "author": "Statistics Canada",
+      "citation_short": null
+    },
+    {
+      "citation": "Studd, E., Derbyshire, R., Menzies, A., Simms, J., Humphries, M.M., Murray, D.L., Boutin, S. 2021. The Purr-fect Catch: using accelerometers and acoustic recorders to document kill rates and hunting behaviour of small prey specialists. <i>Methods in Ecology and Evolution</i> 12(7): 1277-1287.",
+      "year": "2021",
+      "title": "The Purr-fect Catch: using accelerometers and acoustic recorders to document kill rates and hunting behaviour of small prey specialists",
+      "author": "Studd, E., Derbyshire, R., Menzies, A., Simms, J., Humphries, M.M., Murray, D.L., Boutin, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Szumski, C.M., Roth, J.D, Murray, D.L. 2023. Canada lynx foraging strategies: facultative specialists become obligate generalists towards the distribution edge. <i>Ecosphere</i> 14.",
+      "year": "2023",
+      "title": "Canada lynx foraging strategies: facultative specialists become obligate generalists towards the distribution edge",
+      "author": "Szumski, C.M., Roth, J.D, Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Tape, K.D., Christie, K., Carroll, G. and O’Donnell, J.A. 2015. Novel wildlife in the Arctic: the influence of changing riparian ecosystems and shrub habitat expansion on snowshoe hares. <i>Global Change Biology</i> 22: 208-219.",
+      "year": "2015",
+      "title": "Novel wildlife in the Arctic: the influence of changing riparian ecosystems and shrub habitat expansion on snowshoe hares",
+      "author": "Tape, K.D., Christie, K., Carroll, G. and O’Donnell, J.A. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thornton, D.H. and Murray, D.L. 2024. Modeling the historic range of at-risk species to help inform conservation planning: Canada lynx in the contiguous United States. <i>Biological Conservation</i> 292: 110541.",
+      "year": "2024",
+      "title": "Modeling the historic range of at-risk species to help inform conservation planning: Canada lynx in the contiguous United States",
+      "author": "Thornton, D.H. and Murray, D.L. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Thornton, D.H., and Murray, D.L. 2025. Historical range modeling - A necessary and robust step in Canada lynx recovery planning. <i>Biological Conservation</i> 301: 110877.",
+      "year": "2025",
+      "title": "Historical range modeling - A necessary and robust step in Canada lynx recovery planning",
+      "author": "Thornton, D.H., and Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thornton, D.H., Wirsing, A.J., Lopez-Gonzalez, C., Squires, J.R., Fisher, S., Larsen, K.W., Peatt, A., Scrafford, M.A., Moen, R.A., Scully, S.E., King, T.W., and Murray, D.L. 2018. Asymmetric cross-border protection of peripheral transboundary species. <i>Conservation Letters</i> 11: e12430.",
+      "year": "2018",
+      "title": "Asymmetric cross-border protection of peripheral transboundary species",
+      "author": "Thornton, D.H., Wirsing, A.J., Lopez-Gonzalez, C., Squires, J.R., Fisher, S., Larsen, K.W., Peatt, A., Scrafford, M.A., Moen, R.A., Scully, S.E., King, T.W., and Murray, D.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. 2017. Species Status Assessment for the Canada lynx (<i>Lynx canadensis</i>) Contiguous United States District Population Segment. Lakewood, CO.",
+      "year": "2017",
+      "title": "Species Status Assessment for the Canada lynx (<i>Lynx canadensis</i>) Contiguous United States District Population Segment",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "U.S. Fish and Wildlife Service. 2023. Draft recovery plan for the contiguous United States distinct population segment of Canada lynx (<i>Lynx canadensis</i>). Fish and Wildlife Service, Mountain-Prairie Region, Denver, Colorado.",
+      "year": "2023",
+      "title": "Draft recovery plan for the contiguous United States distinct population segment of Canada lynx (<i>Lynx canadensis</i>)",
+      "author": "U.S. Fish and Wildlife Service",
+      "citation_short": null
+    },
+    {
+      "citation": "USFWS. 2009. Revised Critical Habitat Designation. Available at: <a href=\"http://www.fws.gov/mountain-prairie/es/canadaLynx.php\">http://www.fws.gov/mountain-prairie/es/canadaLynx.php</a>. ",
+      "year": "2009",
+      "title": "Revised Critical Habitat Designation",
+      "author": "USFWS",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Indirect ecosystem effects"
+      },
+      "code": "1_3"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

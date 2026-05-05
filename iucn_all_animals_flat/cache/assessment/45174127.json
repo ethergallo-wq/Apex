@@ -1,0 +1,975 @@
+{
+  "assessment_date": "2018-07-31T01:00:00.000+01:00",
+  "year_published": "2019",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 21474,
+  "criteria": "A2cde+3cde",
+  "url": "https://www.iucnredlist.org/species/21474/45174127",
+  "citation": "Varela, D., Flesher, K., Cartes, J.L., de Bustos, S., Chalukian, S., Ayala, G. & Richard-Hansen, C. 2019. Tapirus terrestris. The IUCN Red List of Threatened Species 2019: e.T21474A45174127. Accessed on 05 May 2026.",
+  "assessment_id": 45174127,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 21474,
+    "scientific_name": "Tapirus terrestris",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "PERISSODACTYLA",
+    "family_name": "TAPIRIDAE",
+    "genus_name": "Tapirus",
+    "species_name": "terrestris",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tapir Specialist Group",
+        "url": "http://www.tapirs.org/",
+        "description": "Chair: Patricia Medici (email: epmedici@uol.com.br)\nRed List Authority Coordinator: Cody Schank (email: codyschank@gmail.com)\nNewsletter: http://tapirs.org/Downloads/tsg-newsletter.html"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Brazilian Tapir",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "South American Tapir",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Anta",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Anta Brasileña",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Danta",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Danta Amazónica",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Gran Bestia",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Maypouir",
+        "language": "que"
+      },
+      {
+        "main": false,
+        "name": "Tapir Brasileño",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tapir D'Amérique",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tapir Terrestre",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Lowland Tapir",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Hippopotamus terrestris Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Hippopotamus",
+        "species_name": "terrestris",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "11",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<em>Tapirus terrestris</em> is found in lowland regions of northern and central South America, from Argentina, Bolivia, Brazil, Colombia, Ecuador, French Guiana, Guyana, Paraguay, Peru, Suriname, and Venezuela. Historically this species was found east of the Andes and north of the Espinal grasslands and shrublands of Argentina throughout the chaco, pantanal, cerrado, llanos, caatinga and Amazonian/Orinoco forests, however, populations have been severely reduced and often limited to forest biomes and wetlands. The species has been extirpated from the caatinga. In the northern Andes Lowland Tapir has been extirpated from the dry inter-Andean valleys and is becoming increasingly rare along the agriculture frontiers than are sweeping through parts of the western and southern Amazon basin. The distribution in the cerrado has been diminished to a few small populations in protected areas and those in the pantanal are rapidly declining.",
+    "population": "Very little is known of Lowland Tapir populations. Populations are decreasing across its range, though numerous strongholds exist. However, there is insufficient information available to extrapolate population sizes across these regions. In recent years camera-traps have been effective for estimating probability of occupancy, relative abundance, and even density estimates for many species within the tapir's range (Trolle <em>et al.</em> 2008, Cruz 2012, Wallace <em>et al.</em> 2012, Tobler <em>et al.&#160;</em>2013, Ferregueti <em>et al.</em> 2017).&#160;A variety of density estimates have been proposed ranging from 0.20 to 3.7 individuals/km² (P. Medici pers. comm). The most likely reason for this variation is both sampling and study design bias as well as the fact that Lowland Tapir, although generally rare and elusive, can be locally common (i.e. around salt lick and permanent and seasonal water sources). In fact great variation in density likely also reflects the results of both direct and indirect threats in the form of hunting pressure, protection and seasonal variation.  Additionally, it can also reflect the tapir’s ability to adapt to different habitat types and availability of resources (food and water).",
+    "habitats": "<em>Tapirus terrestris </em>inhabits lowland South American moist swamp forests, dry and moist shrublands and grasslands and a wide variety of wetlands. Habitat association varies extensively, although the most important habitats tend to be moist, wet or seasonally inundated areas (Bodmer and Brooks 1997, Ayala and Wallace 2009). This species has been observed to be associated with both water and salt-licks. The degree to which tapir are tolerant to habitat degradation varies regionally, but generally tapir are a forest dependent species. To date, no conclusion has been drawn as to why tapirs may thrive in one partially logged or disturbed area and be absent from others, however, it can be inferred based on other tapir species that Lowland Tapir&#160;cannot tolerate large scale habitat change in combination with hunting pressure. There is some evidence from the Atlantic Forest that suggests tapirs can tolerate radical large scale changes in habitat, as they have been found to persist in landscapes of commercially produced grains with only small degraded forest fragments (Rossi <em>et al.</em> 1999). Additional evidence from the interior of Sao Paulo and Parana confirms this research. Habitat condition appears to be less important in limiting population persistence than hunting and deaths caused by vehicle collisions.<br/>Harald Beck (pers. comm.) reports that tapirs have higher densities in Amazonian forests that contain two crucial features: Aguajales and salt licks.  Aguajales are palm swamps that typically range between 0.1 ha to over 100 ha and are dominated by the Mauritia flexuosa palm. The fruits of this palm are a crucial food resource for tapirs especially during the dry season.  In fact, tapirs are the prime seed dispersers for this palm, indicating the close evolutionary relationship between both species. Furthermore, Aguajales have incoming streams or small rivers which may also be crucial for other ecological requirements of tapir's including thermoregulation thus they sustain higher tapir densities.  Salt licks are smaller aquatic systems and may occur in clumped spatial distribution. Tapirs, among other mammals, frequently visit salt licks to obtain essential minerals.  Hunters, knowing the tapir’s fondness for salt, wait at those locations because their success is dramatically increased.<br/><br/>Tapir are ecologically more prone to be impacted by hunting due to long gestation and generational time. Reproduction is slow enough to make recovery difficult for the species in areas where there is any prolonged hunting activity. Hunting is a serious threat along the numerous new road systems, settlement and along the agricultural frontier in the Amazon basin. Hunting also occurs around logging camps and can completely eliminate the species from seemingly viable habitat.",
+    "threats": "<p>The main threats to the species include loss of habitat through deforestation, hunting for meat, road-kill, and competition with domestic livestock. The impacts of hunting on populations are amplified by the very low ability of tapir to quickly re-populate impacted areas. Though several strongholds occur - populations have been severely reduced and fragmented across the entire Cerrado (Brazil), Chaco (Argentina/ Paraguay), Atlantic forest (Brazil/ Argentina/ Paraguay) and llanos (Venezuela/Colombia) biomes. In Argentina and southern Brazil the species has been extirpated from the tropical and temperate grassland and shrubland - and are rapidly declining in the dry Chaco. Additionally the species has been extirpated from the entire Caatinga biome of north-eastern Brazil. <br/> <br/> In the northeast, tapirs are present only inside protected areas where illegal hunting is minimal. Outside protected areas, they are still hunted, chased by dogs, and negatively impacted by competition with cattle and illegal timber activities. The species is in rapid decline along the eastern Amazon and its Southern Tributaries where extensive hunting and deforestation have reduced almost all large mammal populations. In addition, populations are declining rapidly along the agricultural front spreading into western Brazil and along the Andean foothills of Ecuador and Colombia.<br/> <br/> In Argentina, <em>T. terrestris</em> has disappeared from around 50% of its original distribution, as a consequence of deforestation, hunting and livestock activity. The species is absent in many areas of transition between the montane forests, in important sectors of the Chaco and the Atlantic forest and completely in the Espinal. However, there are still populations in good condition in some forested areas, mainly those with limited accessibility and human activities, such as mountain forests or protected areas with strict controls. There is currently an important effort to reintroduce the species in the province of Corrientes (Esteros del Iberá).<br/> <br/> Roadkill is becoming a major threat to Tapir in the Cerrado (Brazil), the Pantanal (Brazil), and the Atlantic Forest (Argentina/Brazil) (P. Medici pers.comm, D. Varela in litt.).</p>  <p>In Bolivia, tapirs are susceptible to hunting, and habitat degradation. While they may well be more common than expected in protected areas, as was found out in Costa Rica and elsewhere for <em>T. bairdii</em>, they do not fare well in the presence of hunting. In French Guiana, tapirs are regularly hunted and sold commercially for meat in markets and restaurants. Little information is available for the population in Guyana, however, tapirs are not protected there at present and are hunted by subsistence hunters as well as by a developing bush-meat industry as roads are cut into the forest for logging.</p>  <p>In Paraguay a recent threatened species workshop assessed the Lowland Tapir as \"Vulnerable A2ac\" mainly due to habitat loss in the last 40 years, and the resulting decline in the distribution and population of the species.&#160; More than 90% of the Atlantic Forest has been lost, and the Chaco could experience the same declines over the next 30 years. Hunting and habitat loss were identified as main threats to the species.<br/> <br/> In conclusion it is difficult to calculate the overall impact of hunting on populations, but we can infer from previous studies that in the past 30 years extensive and ongoing habitat loss combined with hunting and accumulated indirect threats have been much greater than previously estimated, and much greater than would be suspected by looking at maps of remaining forest in the Amazon.</p>",
+    "measures": "This species occurs in numerous protected areas across its range. The species is officially and legally protected in many range countries, however, hunting laws are seldom enforced and therefore these have proven ineffective. It is listed on CITES Appendix II.<br/><br/>In Argentina, one of the main tapir populations in the Chaco forest was protected by the recently created Impenetrable National Park. In the Atlantic Forest of north-eastern Argentina, wildlife underpasses and overpasses were built for mitigating roadkill. Camera trap monitoring confirmed tapir use of these mitigation structures (D. Varela, in litt.). Currently, there are some experiences of tapir re-introduction in areas where the species was extinct many decades ago (e.g. the Iberá wetland in Argentina and the Rio de Janeiro Atlantic Forest in Brazil).",
+    "use_trade": "This species is hunted for food. Also, the skin is used internationally, with leather goods products having been seen for sale in Italy (A. Shoemaker pers. comm).",
+    "rationale": "This species is considered to be Vulnerable due to ongoing population reduction estimated to be slightly greater than 30% in the past three generations (33 years) due to habitat loss, illegal hunting, road-kill and competition with livestock, and the current rate of decline is projected to continue for the next three generations (33 years). Although this rate of decline seems improbable considering the species’ occurrence in the vast Amazon, the fact is that the species has been extirpated over large portions of its range and severely reduced in other large portions. Lowland tapir populations seem unlikely to persist anywhere humans occur at densities any greater than 1/km².<br/><br/>The estimated 30% decline over three generations takes into consideration the entire global range and was calculated using an average of reduction between a variety of biomes. Although only about 15-20% of the Amazon has been deforested in the past 30 years, 90% of the Atlantic forests have disappeared and 40% of the Pantanal has been converted to human use. Most of the Cerrado and Caatinga biomes have been converted to agriculture and cattle ranching, however this has happened over a period greater than three generations. Even where habitat remains, populations are reduced and dispersed due to the effects of hunting,&#160; which is greatly amplified around increasing human populations and settlement of the Amazon basin, especially along rivers and in the Andean foothills.<br/><br/>The effects of deforestation, hunting, and competition from domestic livestock have all contributed to population declines and fragmentation in the past and are inferred to continue at the present rate (if not more) into the future. An increase in road-kill is leading to tapir population declines in the Cerrado, the Pantanal, and the Atlantic Forest. Deforestation is increasing in certain parts of the species' range (e.g. Chaco Forest), while subsistence hunting and a developing wild-meat industry may cause further declines in the future. The Lowland Tapir&#160;is now either completely absent or severely fragmented across much of its historic range, with the Northern Amazon and the remaining Pantanal (Bolivia, Brazil, and Paraguay) becoming important strongholds as southern, eastern and northwestern populations are declining rapidly.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Marginal",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Swamp"
+      },
+      "code": "1_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Moist"
+      },
+      "code": "3_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Medicine - human & veterinary"
+      },
+      "code": "3"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Motivation Unknown/Unrecorded"
+      },
+      "code": "5_3_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Varela, D., Flesher, K., Cartes, J.L., de Bustos, S., Chalukian, S., Ayala, G. & Richard-Hansen, C.",
+      "value": [
+        "Kevin Flesher (Reserva Ecologica Michelin, Igrapiuna, Bahia, Brasil)",
+        "Soledad de Bustos",
+        "Silvia Chalukian",
+        "G Ayala",
+        "Cécile Richard-Hansen (ONCFS (Office National de la Chasse et de la Faune Sauvage))",
+        "José Cartes (IUCN SSC Deer and Tapir Specialist Groups)",
+        "Diego Varela"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Schank, C. & Medici, P.",
+      "value": [
+        "Patricia Medici (Lowland Tapir Conservation Initiative)",
+        "Cody Schank (University of Texas)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Naveda, A., De Thoisy, B., Torres, D.A., Salas, L. & Wallace, R.B.",
+      "value": [
+        "A Naveda",
+        "Denis Alexander Torres (Fundación Andígena)",
+        "Leonardo Salas",
+        "Robert B. Wallace (IUCN SSC Specialist Group member - several groups)",
+        "Benoit De Thoisy (IUCN SSC Cat Specalist Group)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Emmons, L. H. 1990. <i>Neotropical rainforest mammals</i>. University Chicago Press, Chicago, USA.",
+      "year": "1990",
+      "title": "Neotropical rainforest mammals",
+      "author": "Emmons, L. H.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brooks, D.M., Bodmer, R.E. and Matola, S. 1997. Tapirs. Status Survey and Conservation Action Plan. IUCN, Gland, Switzerland.",
+      "year": "1997",
+      "title": "Tapirs. Status Survey and Conservation Action Plan",
+      "author": "Brooks, D.M., Bodmer, R.E. and Matola, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dávalos, L.M. 2001. The San Lucas mountain range in Colombia: how much conservation is owed to the violence? <i>Biodiversity and Conservation</i> 10: 69-78.",
+      "year": "2001",
+      "title": "The San Lucas mountain range in Colombia: how much conservation is owed to the violence?",
+      "author": "Dávalos, L.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Semple, K. 2000. A habitat held hostage (FARC guerrillas drive out researchers). <i>Audubon</i> 102: 82-103.",
+      "year": "2000",
+      "title": "A habitat held hostage (FARC guerrillas drive out researchers)",
+      "author": "Semple, K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brazilian Tapir PHVA Report. 2007. Available at: <a href=\"http://www.tapirs.org/\">http://www.tapirs.org/</a>. ",
+      "year": "2007",
+      "title": null,
+      "author": "Brazilian Tapir PHVA Report",
+      "citation_short": null
+    },
+    {
+      "citation": "Ministerio del Medio Ambiente. 2002. Programa Nacional para la Conservación y Recuperación de la Danta  (Genero <i>Tapirus</i>) en el El Territorio Colombiano. Ministerio del Medio Ambiente.",
+      "year": "2002",
+      "title": "Programa Nacional para la Conservación y Recuperación de la Danta  (Genero <i>Tapirus</i>) en el El Territorio Colombiano",
+      "author": "Ministerio del Medio Ambiente",
+      "citation_short": null
+    },
+    {
+      "citation": "Igac and Corpoica. 2002. Zonificación de los Conflictos de Uso de las Tierras en Colombia. Estudio en 4 C Rom. CD-4 : Uso Adecuado y Conflicto de Uso de las tierras en Colombia. I. Instituto Geográfico Agustin Codazzi y Corporación Colombiana de Investigación Agropecuaria, Bogotá, Columbia.",
+      "year": "2002",
+      "title": "Zonificación de los Conflictos de Uso de las Tierras en Colombia. Estudio en 4 C Rom. CD-4 : Uso Adecuado y Conflicto de Uso de las tierras en Colombia. I",
+      "author": "Igac and Corpoica",
+      "citation_short": null
+    },
+    {
+      "citation": "Hershkovitz, P. 1954. Mammals of Northern Colombia, Preliminary report No. 7: Tapirs (Genus <i>Tapirus</i>), with a Systematic Review of American Species. <i>Proceedings of the United States National Museum</i> 103(3329): 465-496.",
+      "year": "1954",
+      "title": "Mammals of Northern Colombia, Preliminary report No. 7: Tapirs (Genus <i>Tapirus</i>), with a Systematic Review of American Species",
+      "author": "Hershkovitz, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taber, A., Chalukian, S.C.,  Altrichter, M., Minkowski, K., Lizárraga, L., Sanderson, E., Rumiz, D., Ventincinque, E., Moraes, Jr., E.M.,  de Angelo, C., Antúnez, M., Ayala, G., Beck, H., Bodmer, R., Boher. S., Cartes, S.B., Eaton, D., Emmons, L., Estrada, N., Oliveira, L.F., Fragoso, J., Garcia, R., Gomez, C., Gómez, H., Keuroghlian, A., Ledesma, K., Lizcano, D.,  Lozano, M., Montenegro, O., Neris, C., Noss, A., Vieira, J.A.P., Paviolo, A., Perovic, P., Portillo, H., Radachowsky, J., Reyna-Hurtado, R., Ortiz, J.R., Salas, L., Duenas, A.S., Perea, J.A.S., Schiaffino, K., de Thoisy, B., Tobler, M., Utreras, V., Varela, D., Wallace, R.B. and Ríos, G.Z. 2008. El Destino de los arquitectos de los bosques Neotropicales: Evaluación de la distribución y el estado de conservación de los Pecaríes Labiados y los Tapires de Tierras Bajas. Grupo Especialista de la CSE/UICN en Cerdos, Pecarı´es & Hipopotamos; Grupo Especialista de la CSE/ UICN en Tapires, Wildlife Conservation Society and Wildlife Trust, New York, USA.",
+      "year": "2008",
+      "title": "El Destino de los arquitectos de los bosques Neotropicales: Evaluación de la distribución y el estado de conservación de los Pecaríes Labiados y los Tapires de Tierras Bajas",
+      "author": "Taber, A., Chalukian, S.C.,  Altrichter, M., Minkowski, K., Lizárraga, L., Sanderson, E., Rumiz, D., Ventincinque, E., Moraes, Jr., E.M.,  de Angelo, C., Antúnez, M., Ayala, G., Beck, H., Bodmer, R., Boher. S., Cartes, S.B., Eaton, D., Emmons, L., Estrada, N., Oliveira, L.F., Fragoso, J., Garcia, R., Gomez, C., Gómez, H., Keuroghlian, A., Ledesma, K., Lizcano, D.,  Lozano, M., Montenegro, O., Neris, C., Noss, A., Vieira, J.A.P., Paviolo, A., Perovic, P., Portillo, H., Radachowsky, J., Reyna-Hurtado, R., Ortiz, J.R., Salas, L., Duenas, A.S., Perea, J.A.S., Schiaffino, K., de Thoisy, B., Tobler, M., Utreras, V., Varela, D., Wallace, R.B. and Ríos, G.Z.",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2019. The IUCN Red List of Threatened Species. Version 2019-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 21 March 2019).",
+      "year": "2019",
+      "title": "The IUCN Red List of Threatened Species. Version 2019-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2019-1"
+    },
+    {
+      "citation": "Ayala, G. and Wallace, R. 2009. Tapir . In: Ministerio de Medio Mabiente y Agua (ed.), <i>Libro Rojo de la fauna silvestre de vertebrados de Bolivia</i>, pp. 536-538. La Paz, Bolivia.",
+      "year": "2009",
+      "title": "Tapir ",
+      "author": "Ayala, G. and Wallace, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Chalukian, S., de Bustos, S., Lizárraga, L., Paviolo, A., Varela, D. and Quse, V. 2009. Plan de Acción para la Conservación del tapir (<i>Tapirus terrestris</i>) en Argentina. Wildlife Conservation Society, Tapir Specialist Group-UICN, Dirección de Fauna – Secretaría de Ambiente y Desarrollo Sustentable de la Nación.",
+      "year": "2009",
+      "title": "Plan de Acción para la Conservación del tapir (<i>Tapirus terrestris</i>) en Argentina",
+      "author": "Chalukian, S., de Bustos, S., Lizárraga, L., Paviolo, A., Varela, D. and Quse, V.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cruz, M.P. 2012. Densidad, uso del hábitat y patrones de actividad diaria del tapir (<i>Tapirus terrestris</i>) en el Corredor Verde de Misiones, Argentina. Universidad de Buenos Aires .",
+      "year": "2012",
+      "title": "Densidad, uso del hábitat y patrones de actividad diaria del tapir (<i>Tapirus terrestris</i>) en el Corredor Verde de Misiones, Argentina",
+      "author": "Cruz, M.P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferreguetti, A.C., Tomás, W.M. and Bergallo, H.G. 2017. Density, occupancy, and detectability of lowland tapirs, <i>Tapirus terrestris</i>, in Vale Natural Reserve, southeastern Brazil. <i>Journal of Mammalogy</i> 98(1): 114-123.",
+      "year": "2017",
+      "title": "Density, occupancy, and detectability of lowland tapirs, <i>Tapirus terrestris</i>, in Vale Natural Reserve, southeastern Brazil",
+      "author": "Ferreguetti, A.C., Tomás, W.M. and Bergallo, H.G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rossi, L.B., Panachão, E.I. and Arasaki, M.O. 1999. Monitoramento da Mastofauna con Armadilha Fotografica no Parque Estadual Mata dos Godoy, Londrina-PR. <i>Biological Conservation</i> 89(1999): 71-82.",
+      "year": "1999",
+      "title": "Monitoramento da Mastofauna con Armadilha Fotografica no Parque Estadual Mata dos Godoy, Londrina-PR",
+      "author": "Rossi, L.B., Panachão, E.I. and Arasaki, M.O. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tobler, M.W., Hibert, F., Debeir, L. and Richard-Hansen, C. 2014. Estimates of density and sustainable harvest of the lowland tapir <i>Tapirus terrestris</i> in the Amazon of French Guiana using a Bayesian spatially explicit capture–recapture model. . <i>Oryx</i> 48(3): 410-419.",
+      "year": "2014",
+      "title": "Estimates of density and sustainable harvest of the lowland tapir <i>Tapirus terrestris</i> in the Amazon of French Guiana using a Bayesian spatially explicit capture–recapture model. ",
+      "author": "Tobler, M.W., Hibert, F., Debeir, L. and Richard-Hansen, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trolle, M., Noss, A.J., Cordeiro, J.L.P. and Oliveira, L.F.B. 2008. Brazilian tapir density in the Pantanal: a comparison of systematic camera-trapping and line-transect surveys. <i>Biotropica, 40, 211–217.</i> 40: 211-217.",
+      "year": "2008",
+      "title": "Brazilian tapir density in the Pantanal: a comparison of systematic camera-trapping and line-transect surveys",
+      "author": "Trolle, M., Noss, A.J., Cordeiro, J.L.P. and Oliveira, L.F.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wallace, R., Ayala, G. and Viscarra, M. 2012. Lowland tapir (<i>Tapirus terrestris</i>) distribution, activity patterns and relative abundance in the Greater Madidi-Tambopata Landscape. <i>Integrative Zoology</i> 7: 407-419.",
+      "year": "2012",
+      "title": "Lowland tapir (<i>Tapirus terrestris</i>) distribution, activity patterns and relative abundance in the Greater Madidi-Tambopata Landscape",
+      "author": "Wallace, R., Ayala, G. and Viscarra, M.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

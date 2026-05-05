@@ -1,0 +1,3313 @@
+{
+  "assessment_date": "2023-07-01T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 163424,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/163424/251347989",
+  "citation": "Moldowan, P.D. & van Dijk, P.P. 2025. Chelydra serpentina. The IUCN Red List of Threatened Species 2025: e.T163424A251347989. Accessed on 05 May 2026.",
+  "assessment_id": 251347989,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 163424,
+    "scientific_name": "Chelydra serpentina",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "REPTILIA",
+    "order_name": "TESTUDINES",
+    "family_name": "CHELYDRIDAE",
+    "genus_name": "Chelydra",
+    "species_name": "serpentina",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Tortoise and Freshwater Turtle Specialist Group",
+        "url": "http://www.iucn-tftsg.org/",
+        "description": "Chair: Craig Stanford (email: stanford@usc.edu)\nRed List Authority Coordinator: Carla Eisemberg (email:Carla.Eisemberg@cdu.edu.au)\nNewsletters: Chelonian Conservation and Biology (http://www.chelonian.org/ccb/); Turtle and Tortoise Newsletter (http://www.chelonian.org/crf-publications/turtle-and-tortoise-newsletter/); TurtleLog Online Newsletter (http://www.iucn-tftsg.org/turtlelog_online_newsletter/)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Common Snapping Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "North American Snapping Turtle",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Tortue serpentine",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Snapping Turtle",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Chelydra osceola Stejneger, 1918",
+        "status": "ACCEPTED",
+        "genus_name": "Chelydra",
+        "species_name": "osceola",
+        "species_author": "Stejneger, 1918",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Testudo serpentina Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Testudo",
+        "species_name": "serpentina",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Chelydra emarginata Agassiz, 1857",
+        "status": "ACCEPTED",
+        "genus_name": "Chelydra",
+        "species_name": "emarginata",
+        "species_author": "Agassiz, 1857",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 2000,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "25-31",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": "5250199",
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "9022386",
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The North American Snapping Turtle,&#160;<span style=\"font-style: italic;\">Chelydra serpentina,</span>&#160;ranges throughout North America east of the Rocky Mountains (Iverson 1992, Ernst and Lovich 2009, TTWG 2021). In Canada, the species is present in the southern portions of the provinces of Saskatchewan, Manitoba, Ontario, Quebec, New Brunswick, and the province of Nova Scotia. Northernmost range records occur at approximately 51°N latitude in Manitoba and Ontario (Holman and Andrews 1994; Manitoba Herp Atlas Project; Ontario Reptile and Amphibian Atlas). In the USA, <em>C. serpentina</em> reaches a natural western range boundary in the states of Montana, Wyoming, Colorado, and New Mexico, and is widespread eastward to the Atlantic coast. The species is native to 41 of the 48 conterminous USA states. Southernmost range records occur at approximately 25–26°N latitude in the southwest approximated by the Nueces River in Texas and in the southeast at the southern tip of peninsular Florida. Naturally occurring individuals of the species have never been confirmed in northern Mexico, but it is plausible that populations may exist (Smith and Smith 1979, Legler and Vogt 2013). The estimated historical indigenous extent of occurrence (EOO) is 9,022,386 sq. km, and the estimated historical indigenous range (area of occupancy, AOO) is 5,250,199 sq. km (TTWG in press).<br/><br/>The species has been introduced in many places, including the following:&#160;Canada (British Columbia), Belgium, China (eastern and southeastern China, approximated by Liaoning, Heibei, Shandong, Jiangsu, Anhui, Zhejiang, Hubei, Hunan, Jiangxi, Guangdong; Liu <em>et al</em>. 2021), France, Germany, Hong Kong, Italy (Esposito <em>et al</em>. 2022), Japan (Chubu region of Honshu Island; Kobayashi <em>et al</em>. 2006), Mexico, Republic of&#160; Korea (Koo <em>et al</em>. 2020), Taiwan, Province of China (Shiau <em>et al</em>. 2006), and USA outside its native range (Arizona, California, Nevada, northwestern New Mexico, Oregon, Utah, Washington).",
+    "population": "There are many highly localized (e.g., lake or river system) population estimates for <em>Chelydra serpentina</em> available in the literature. No estimates or extrapolations are available at landscape scales, such as provinces, states, or countries. The species is widely and continuously distributed across a variety of habitats in eastern North America. It is rarely the numerically dominant turtle species in any location, but it usually represents about 2–30% of the total number of turtles and a high proportion of turtle biomass in wetland habitats (e.g., Dreslik <em>et al</em>. 2005, Aresco and Gunzburger 2007, Browne and Hecnar 2007). The species presumably has a substantial ecological significance given its large body size, relatively high densities of 1.2–74 turtles per hectare, biomass estimates of 19–340 kg per hectare of suitable habitat (Iverson 1982, Congdon <em>et al</em>. 1986; Galbraith <em>et al</em>. 1988, Congdon and Gibbons 1989, Iverson <em>et al</em>. 2000, Johnston <em>et al</em>. 2012), and large potential for nutrient cycling and nutrient standing stock (e.g., Sterrett <em>et al</em>. 2015, Wenger <em>et al</em>. 2019). The ecological role of common species, such as <em>C. serpentina</em>, is generally understudied and underappreciated; however, even relatively small proportional declines in the abundance of common species can result in large absolute losses of individuals and biomass, causing significant disruptions to ecosystem structure, function, and services (Gaston and Fuller 2008, Gaston 2010, 2011).<br/><br/>On a landscape scale, <em>C. serpentina</em> appears relatively tolerant to habitat loss given its persistence in areas of high wetland destruction, road density, and semi-urban spaces; however, care must be taken when interpreting occupancy and abundance at finer spatial scales (e.g., Paterson <em>et al</em>. 2021), which can be the spatial scales at which key processes such as population connectivity and ecosystem function are occurring. Major threats, such as wetland destruction and road mortality, are likely to negatively affect populations of <em>C. serpentina</em> at fine spatial scales. Increased road networks and density have led to male-biased populations as females make more overland migrations for nesting (Gibbs and Steen 2005). Also, the persistence of at least one animal (occupancy) can mask declines in abundance. The long and slow life history of <em>C. serpentina</em>, very high natural survival of adults, high percentages of egg predation and mortality of hatchlings, and long generation time make the species vulnerable to population declines and slow to recover.",
+    "habitats": "Habitat types: <em>Chelydra serpentina</em> is a habitat generalist (Ernst and Lovich 2009, Paterson <em>et al</em>. 2012) capable of living in a wide variety of aquatic habitats. Still or slow-moving bodies of water with a soft mud or sand bottom and abundant aquatic vegetation are preferred habitats (Ernst and Lovich 2009). Typical aquatic habitats include bogs, creeks, fens, lakes, marshes, permanent or temporary ponds, rivers, and swamps. Human-modified water bodies, such as agricultural ponds and stormwater retention ponds, are also used, as are brackish coastal habitats. Aquatic habitats used in areas of the introduced range are similar to those in the native range (e.g., Kobayashi <em>et al</em>. 2006). Habitat use can differ between summer and winter, with the flooded root systems in riparian woodlots serving as hibernacula (Ryan <em>et al</em>. 2014).&#160;In the northern range, aquatic dormancy and overwintering occur amongst submerged debris or in the soft bottom of waterbodies (Ultsch 2006). <em>Chelydra serpentina</em> can undertake long-distance aquatic and terrestrial migration (greater than 10 km round trip) to access nest sites (Obbard and Brooks 1980). Females nest in open-canopy habitats with high sun exposure, such as in forest clearings, meadows, shorelines, rock outcrops, beaches, agricultural fields, and road shoulders. Nest sites range from less than a meter to a few hundred metres from a water body. The species will shift habitat use away from the preferred habitat of Alligator Snapping Turtles (<em>Macrochelys temminckii</em>) when the two species occur in microsympatry (Riedle <em>et al</em>. 2015, Lescher <em>et al</em>. 2013).&#160;<br/><br/><em>Chelydra serpentina</em> is a generalist omnivore (Ernst and Lovich 2009). Plant matter can be a major component of the diet (Alexander 1943; Lagler 1940, 1943; Aresco and Gunzburger 2007; Lewis and Iverson 2018). Animal prey items include amphibians, fishes, crayfish, molluscs, aquatic insects, carrion, and, infrequently, birds and mammals.<br/><br/>Males can be combative and sustain serious injury from male-male sexual competition (Keevil <em>et al</em>. 2017). The mating system might be one of convenience polyandry in which females acquiesce to the mating attempts of much larger males (Keevil <em>et al</em>. 2017). Mate searching, combat, and copulatory behaviour are concentrated in spring but can occur throughout the active season (Brown and Brooks 1993). Clutches demonstrate multiple paternity (Galbraith <em>et al</em>. 1993).<br/><br/>The estimated generation length for <em>C. serpentina</em> is 25 years (Michigan, Congdon <em>et al</em>. 1994) to 31 years (south-central Ontario, COSEWIC 2008). Average sizes for females and males (straight midline carapace length, SCL): female 28–32 cm, male 35 cm (Keevil <em>et al</em>. 2017, Hughes and Meshaka 2020). Median male <em>C. serpentina</em> are 1.2 times longer in SCL and 1.8 times heavier than females (Ontario, Canada; Keevil <em>et al</em>. 2017). Maximum sizes for females and males (straight midline carapace length): female 39.0 cm, male 50.3 cm (Gerholdt and Oldfield 1987, Pritchard 1989, Iverson <em>et al</em>. 1997, Johnston <em>et al</em>. 2012, Walde<em> et al</em>. 2016). The size at hatching (straight midline carapace length, SCL) has been recorded as 27–29 mm in Ontario (Riley <em>et al</em>. 2014); 16–38 mm (mean 28.8 mm) in Pennsylvania (Ernst and Lovich 2009); and 35 mm SCL in Florida (Aresco <em>et al</em>. 2006).<br/><br/>Clutch size is positively correlated with latitude. Mean clutch sizes are approximately 35–51 eggs (up to approximately 100 eggs in exceptional cases) in northerly and westerly areas of the species’ geographic range and approximately 20 eggs in southerly areas (Iverson <em>et al</em>. 1997). See Iverson <em>et al</em>. (1997) for clutch size data across the geographic range of <em>C. serpentina</em>.<br/><br/>At constant incubation temperatures spanning 22–30°C, full-term embryonic development takes 55–95 days (Yntema 1978). In the northern range of the United States and in Canada, incubation duration typically exceeds 90 days (Congdon <em>et al</em>. 1987, Riley and Litzgus 2013). In these northerly regions, high rates of annual nest failure can occur because the developmental period is too cool or too short to allow for full-term embryonic development before the onset of lethal freezing temperatures (Obbard and Brooks 1981).<br/><br/>Sexual maturation is related to size rather than age (Armstrong and Brooks 2013). Size and age at maturity vary with latitude, with northerly and westerly populations experiencing slower annual growth and a relatively later onset of size at maturity. In south-central Ontario, female <em>C. serpentina</em> reach sexual maturity at 24 cm SCL at approximately 15–20 years of age (Galbraith <em>et al</em>. 1989; Armstrong and Brooks 2013, 2014). In Nebraska, females mature at 28–29 cm SCL at 10–12 years of age (Iverson <em>et al</em>. 1997). Female age at maturity is 11–16 years in Michigan (Congdon <em>et al</em>. 1994). Other sizes and ages at maturity for female <em>C. serpentina</em> include: 23 cm SCL in Iowa (Christiansen and Burken 1979), 27.5 cm SCL and 12 years in Texas (Suriyamongkol <em>et al</em>. 2023), and 18.5–20.2 cm SCL and 6–8 years in Florida (Aresco <em>et al</em>. 2006, Aresco and Gunzburger 2007). Following sexual maturity, females reproduce approximately annually (0.85–1.0 reproductive frequency per year) up to a maximum of one clutch per year (Congdon <em>et al</em>. 1994, 2008; Iverson <em>et al</em>. 1997; Keevil <em>et al</em>. 2021). In Michigan, the annual fecundity of reproductive females (considered as the number of daughters a reproductive female can produce) was estimated as 12 eggs, based on a mean clutch size of 28 eggs, a reproductive frequency of 0.85, and an estimated half of all eggs producing females (Congdon <em>et al</em>. 1994). Reportedly, farmed&#160;<em>C. serpentina</em>&#160;in China are capable of nesting three times per year (Shi <em>et al</em>. 2004).<br/><br/>Annual survival of adult <em>C. serpentina</em> is naturally very high: 97–98% in Ontario (Galbraith and Brooks 1987. Brooks <em>et a</em>l. 1991, Armstrong <em>et al</em>. 2018, Keevil <em>et al</em>. 2018), 93–96% in Wisconsin and Minnesota (Paisley <em>et al</em>. 2009), 93–97% in Michigan (Congdon <em>et al</em>. 1994), 90–95% in Pennsylvania (Hughes and Meshaka 2020), 97% in West Virginia (Flaherty <em>et al</em>. 2008), 91% in Virginia (Colteaux and Johnson 2017b), 91–99% in North Carolina (Eskew <em>et al</em>. 2010), 95% in Nebraska (Iverson 2023), and 93–94% in Texas (Rose and Small 2014). Females with reproductive histories spanning at least 40 years are known from long-term study in Ontario, Canada (Keevil <em>et al</em>. 2018). Individuals are confirmed to live to at least 70 years (COSEWIC 2008) and life span estimates greater than 100 years are plausible (Armstrong and Brooks 2014).",
+    "threats": "<em>Chelydra serpentina</em> is widely exploited, in some areas at the northern limits of occurrence to the degree that populations have declined significantly. As a result, Canada and many states in the U.S. have brought the species under various degrees of regulation or legislation to manage exploitation and trade, with a regulated or unrestricted commercial offtake permitted in about half the U.S. states in which the species occurs. Collection of Snapping Turtles from the wild, and captive production in turtle farms, for export to East Asia increased substantially in recent years, from about 10,000 animals declared as exported from the USA in 1999 to over 300,000 annually in recent years (LEMIS database - total recorded export numbers: 1999 – 10,053; 2000 – 18,486; 2001 – 38,911; 2002 – 63,644; 2003 – 129,683; 2004 – 141,544; 2005 – 316,500; 2006 – 377,408; 2007 – 316,093; 2008 – 558,491; available data do not allow differentiation of farmed vs. wild-collected trade volumes).<br/><br/>While habitat loss and degradation likely affect individuals and populations, Snapping Turtles are adaptable and mobile and are less likely than many other turtle species to be threatened by habitat change processes. The impact of 'subsidized' predators (i.e., unnaturally large populations of predators subsidized by easily available resources near human settlements) is generally unquantified but may be significant. The impact of pollution, particularly of pesticides, industrial chemicals, and heavy metals, on Snapping Turtles appears to be sub-lethal at worst, to the point that snappers are a recognized biomonitoring species to monitor the accumulation of pollutants in aquatic ecosystems. Road-kill and other human-induced mortality occurs, but it is not clear whether this represents an overall threat to the species in combination with other impacts.<br/><br/>Vulnerability due to slow life history.—Like turtles generally, the long and slow life history of <em>C. serpentina</em> makes the species vulnerable to decline. Small increases in adult mortality will lead to steady population declines. Harvest pressure of as little as 10% of adults over 15 years of age can halve population size in as little as 15 years (Congdon <em>et al</em>. 1994). Populations are most sensitive to elevated mortality of adults, especially adult females (Doak <em>et al</em>. 1994, Cunnington and Brooks 1996, Enneson and Litzgus 2008). Long generation times (25–30 years, or more) make population recovery very slow following declines, if recovery occurs at all. Literature review did not uncover any examples of <em>C. serpentina</em> populations with documented recovery following decline (population recovery, especially in the absence of an intensive management programme, has been rarely reported among turtle populations). A three-year mortality event that caused annual survival to temporarily decline from 94% to 76–86% in a <em>C. serpentina</em> population reduced the population by half and there has been no evidence of recovery in the following 22 years (Brooks <em>et al</em>. 1991, Keevil <em>et al</em>. 2018). This lack of recovery at management-relevant timescales and the risk of further declines strongly support prioritizing the protection of populations rather than relying on recovery after declines have occurred (Keevil <em>et al</em>. 2018). Similar findings are reported for other turtle species in North America (e.g., Pitt and Nickerson 2013, King <em>et al</em>. 2016). Regional populations of <em>C. serpentina</em> are known to have experienced substantive declines that have resulted in conservation assessments and status listings, particularly in Canada. The high starting abundances, the longevity of individuals, and continued presence at sites (albeit at possibly declining abundances and densities) can easily mask long-term population declines.<br/><br/>Harvest, domestic and international markets.—<em>Chelydra serpentina</em> is exploited as food, in the international pet trade, and for unsubstantiated medical use (folk medicine, traditional Chinese medicine). The species is significantly less abundant in regions with commercial harvest compared to non-harvested areas (Shaffer <em>et al</em>. 2017, Colteaux and Johnson 2017b), supporting previous findings that even legal harvest regulations in U.S. states allow unsustainable levels of exploitation (Zimmer-Shaffer <em>et al</em>. 2014). All harvest estimates presented throughout this account are to be considered underestimates because of incomplete and conservatively estimated data.<br/><br/>Habitat degradation, fragmentation, and destruction.—There has been widespread degradation, fragmentation, and destruction of primary habitat for <em>C. serpentina</em> across the eastern half of North America over the past two centuries (equivalent to approximately six to eight generations of the species). For example, in southern Ontario, the centre of the distribution of <em>C. serpentina</em> in Canada, more than 70% of wetlands were drained over the past 200 years (Glooschenko 1983, Snell 1987, Ducks Unlimited Canada 2010). This region has the most thermally favourable and productive wetland conditions for <em>C. serpentina</em> in Canada and hence these populations have (or had) the highest natural abundances and densities in the region (COSEWIC 2008). It can be reasonably inferred that the destruction of most wetlands in southern Ontario has resulted in large-scale population declines of <em>C. serpentina</em> in the region and in the Canadian population at large (See Appendix 1 of COSEWIC [2016] for an assessment of the decline in the relative abundance of an Ontario turtle species attributable to historic wetland conversion). Similar logic extends to many regions of the central and eastern United States with histories of large-scale wetland destruction and urbanization. States throughout the range of <em>C. serpentina</em> have experienced major wetland destruction from the 1780s to 1980s (equivalent to approximately 6–8 generations of <em>C. serpentina</em>): Alabama (-50% wetland coverage), Arkansas (-72%), Colorado (-50%), Connecticut (-74%), Delaware (-54%), Florida (-46%), Georgia (-23%), Illinois (-85%), Indiana (-87%), Iowa (-89%), Kansas (-48%), Kentucky (-81%), Louisiana (-46%), Maine (-20%), Maryland (-73%), Massachusetts (-59%), Michigan (-50%), Minnesota (-42%), Mississippi (-59%), Missouri (-87%), Montana (-27%), Nebraska (-35%), New Hampshire (-9%), New Jersey (-39%), New Mexico (-33%), New York (-60%), North Carolina (-49%), North Dakota (-49%), Ohio (-90%), Oklahoma (-67%), Pennsylvania (-56%), Rhode Island (-37%), South Carolina (-27%), South Dakota (-35%), Tennessee (-59%), Texas (-52%), Vermont (-35%), Virginia (-42%), West Virginia (-24%), Wisconsin (-46%), and Wyoming (-38%) (Dahl 1990). Ignoring other threats, wetland destruction alone is almost certainly responsible for massive declines in the relative abundance of <em>C. serpentina</em> over the past one to two centuries in the central and eastern United States. Snapping Turtles can use human-modified aquatic habitats, such as agricultural and wastewater treatment ponds. However, it is important to consider that the presence/occupancy of <em>C. serpentina</em> in degraded, low-quality or otherwise marginal habitats is likely not ecologically equivalent to abundances in minimally impacted, high-quality habitats.&#160;The human-modified habitats make <em>C. serpentina</em> more susceptible to contaminants due to water quality and stormwater runoff (Ryan <em>et al</em>. 2013).<br/><br/>Road and railway mortality.—The first documented account of road-killed wildlife is reportedly that of <em>C. serpentina</em> crushed under the wheel of a loaded wagon in North Dakota in 1897 (Knutson 1987). There is an extensive literature reporting the major negative impacts of mortality experienced by turtles on roads, <em>C. serpentina</em> included (e.g., Ashley and Robinson 1996, Haxton 2000, Gibbs and Shriver 2002). The species has a home range of several square kilometres, which increases its risk of road morality or trauma (Ryan <em>et al</em>. 2013). Additionally, increased road networks have led to male-biased populations as females make more overland migrations for nesting (Gibbs and Steen 2005, Steen <em>et al</em>. 2006). Even low levels of additional mortality, especially of reproductive females, can have detrimental effects on the long-term sustainability of turtle populations. Juvenile mortality on roads is largely overlooked but can have negative demographic consequences that are equally severe as adult mortality (Keevil <em>et al</em>. 2023). Similarly, a largely unquantified threat is the entrapment and mortality of turtles along extensive railway networks in North America.<br/><br/>Subsidized predators.—The impact of subsidized predators (i.e., unnaturally large populations of predators subsidized by easily available resources near human settlements; e.g., Raccoons that depredate Snapping Turtle nests) demonstrates major regional variation generally unquantified and can be a major cause of low nest success. In Algonquin Provincial Park, Ontario, an area largely free from subsidized predators, 19% of Snapping Turtle nests were destroyed by predators (Obbard and Brooks 1981). Subsequent research in Algonquin Provincial Park estimated nest survival as approximately 0.40–0.70 (Riley and Litzgus 2014). Nest survivorship ranged from 0 to 0.70, with a long-term average of 0.23 in the population at the ES George Reserve, Michigan (Congdon <em>et al</em>. 1987, 1994). In human-disturbed habitats of Point Pelee National Park, Ontario, nest survivorship averaged 0.16 over two years, with the high depredation rate attributable to subsidized Raccoons (Wirsing <em>et al</em>. 2012). Other reports of nest depredation rates include 59% in South Dakota (Hammer 1969) and 94% in northern New York state (Petokas and Alexander 1980).<br/><br/>Environmental pollution.—Snapping Turtles are relatively tolerant of high levels of pollution, including pesticides, industrial chemicals, and heavy metals, and have been used as a biomonitoring species to monitor pollutants in aquatic ecosystems (e.g., de Solla <em>et al</em>. 2001, 2008). Environmental contamination is known to feminize male <em>C. serpentina</em> (de Solla <em>et al</em>. 1998), increase embryonic deformities (Bishop <em>et al</em>. 1998), reduce hatching success (Bishop <em>et al</em>. 1991, 1998; Golet and Haines 2001; de Solla <em>et al</em>. 2008), and might have long-term population consequences (Rowe 2008). The longevity, omnivorous diet, and high trophic position of <em>C. serpentina</em> tends to result in high levels of contaminants in their tissues through bioaccumulation, bioconcentration, and biomagnification. Tissue of <em>C. serpentina</em> can readily exceed levels of mercury, polychlorobiphenyls (PCBs), and persistent organic pollutants considered safe for human consumption (Hebert <em>et al</em>. 1993, Golet and Haines 2001, Sherwood 2017). Other physical and chemical forms of environmental pollution, such as siltation and eutrophication, have unknown consequences for <em>C. serpentina</em>.<br/><br/>Miscellaneous causes of mortality by humans.—<em>Chelydra serpentina</em> is often vilified and targeted for human persecution because of its large size, fearsome appearance, and unjust reputation for aggression and as a voracious predator of waterfowl and sport fish. The species is vulnerable to direct persecution by humans in many forms: intentional road mortality (Ashley <em>et al</em>. 2007), blunt trauma and recreational firearms target practice (“plinking”; Shook <em>et al</em>. 2023), boat and propeller strikes (including in protected areas that allow motorized boat traffic; Bennett and Litzgus 2014, Smith <em>et al</em>. 2018), lead poisoning and ingestion of hooks from recreational and sport fishing (Borkowski 1997, Brown and Sleeman 2002, Steen <em>et al</em>. 2014, Steen and Robinson 2017), and bycatch mortality in freshwater fisheries (Raby <em>et al</em>. 2014, Midwood <em>et al</em>. 2014, Shook <em>et al</em>. 2023). The severity of these threats remains largely unquantified but recent research suggests they are underestimated and of concern when combined with other known and pervasive threats (e.g., habitat destruction, road mortality, commercial harvest).<br/><br/>Infectious disease.—Several diseases have been reported from populations of <em>C. serpentina</em> and sympatric turtle species in recent years. <em>Ranavirus</em> infections vary from low to high prevalence in wild populations (Carstairs 2019, Carstairs <em>et al</em>. 2020), and are known to cause mortality of <em>C. serpentina</em> (McKenzie <em>et al</em>. 2019). Herpesviruses and <em>Mycoplasma</em> sp. have been detected in <em>C. serpentina</em> without apparent ill effects, but infections by these agents are known to cause illness and mortality in other chelonian species (Alplasca <em>et al</em>. 2019).<br/><br/>Climate change.—<em>Chelydra serpentina</em> exhibits temperature-dependent sex determination with females produced at low and high temperatures and males produced at intermediate temperatures. Climatic warming, as is generally expected across the native range of <em>C. serpentina</em>, could potentially shift the production of sex ratios&#160;(O'Steen 1998).&#160;However, in a population near the northern climatic range limit, no shift in hatchling sex ratio was reported across 48 years despite significant warming of the environment during this period (Leivesley <em>et al</em>. 2022). The resilience of populations to climate change remains to be investigated elsewhere in the species' range.",
+    "measures": "<em>Chelydra serpentina</em> is listed as a species of Special Concern by the Committee on the Status of Endangered Species in Canada (COSEWIC 2008) and the federal government of Canada. This designation recognizes the species as particularly sensitive to human activities or natural events; that it has declined to a level of abundance at which its persistence is increasingly threatened by genetic, demographic or environmental stochasticity, but the decline is not yet sufficient to qualify the wildlife species as Threatened; and that the species may become Threatened if factors suspected of negatively influencing the persistence of the wildlife species are neither reversed nor managed with demonstrable effectiveness.&#160;<em>Chelydra serpentina</em>&#160;has been listed in CITES Appendix II since 2023; previously (since 2016) it was listed in Appendix III (USA).<br/><br/>The species does not have a federal conservation status in the United States, but occurs in a substantial number of protected areas, both public and private. Conservation designations vary at the state level. According to NatureServe, this species is Secure (S5) in North America. Available long-term trend data suggest that populations appear stable, but some have increased in area as they colonized ponds created by humans. <em>Chelydra serpentina</em> is considered a Secure species because it is widespread in North America and occupies disturbed habitats and colonizes new habitats. Most natural heritage databases rank this species as Secure (S5) and Apparently Secure (S4). In Montana in the United States, and in Saskatchewan, Manitoba, New Brunswick, and Nova Scotia in Canada, it is ranked as Vulnerable (S3).&#160;<br/><br/>In Canada no commercial harvest is allowed in any province. <em>Chelydra serpentina</em> was delisted as a game reptile in Ontario (2017), which closed the recreational hunt of the species. Federal conservation listing of <em>C. serpentina</em> as a species of Special Concern has been in effect for 15 years (COSEWIC 2008). This listing does not confer any habitat protection or conservation actions, but it recognizes past declines and the potential for future declines if threats are not managed.&#160;<br/><br/>In the United States state-level regulations are increasingly addressing the commercial harvesting of turtles; many states have closed harvests of <em>C. serpentina</em>&#160;and other species completely. Regulatory strategies vary by state but have included: caps on maximum harvest, size limits, harvest reporting requirements, regulation of commercial harvesting permits/licenses, spatial and/or temporal restrictions on turtle harvest. See Mali <em>et al</em>. (2014), Colteaux and Johnson (2017a), Sherwood (2017), and Bennett and Loda (2020) for the descriptions of turtle harvesting regulations by state.<br/><br/>In both Canada and the United States&#160;the goal of conservation and management for&#160;<em>C. serpentina</em>&#160;should be to keep this “common” species common.<br/><br/>Conservation measures needed:<br/><ul><li>Implementation of state-level data collection addressing the number of turtles harvested and butchered domestically for international sale as processed products</li><li>Implementation of state-level commercial permit/licensing system with mandatory harvest reporting requirements</li><li>Implementation of regulations at the state level to address the stocking of farms with wild stock, and the laundering of turtles through farming operations</li><li>Federal coordination among states to collect robust harvest and export data across the range of <em>C. serpentina</em></li><li>Continued data collection about import and export numbers of <em>C. serpentina</em>&#160; &#160; &#160; &#160;&#160;\t</li><li>Action from the USA to address uncertainties about reporting wild vs. captive (farm) origin of exported <em>C. serpentina</em>, as well as reporting the types of exports (hatchling vs. adult live exports, processed meat, soup, other parts, etc.)</li><li>Action by wildlife inspection authorities to ensure that exports of live animals, meat, soup, and other parts and products of <em>C. serpentina</em> are adequately inspected and reported.</li></ul>",
+    "use_trade": "<em>Chelydra serpentina</em> is heavily exploited for food, pets, and unsubstantiated medicinal use (folk medicine, traditional Chinese medicine). Consumption ranges from local, subsistence collection to commercial trade for local, national, and international markets. Specimens available in the market can be of wild-caught origin, commercially farmed within the native range (United States), or commercially farmed outside the native range (especially China). Wild-caught individuals can also supply the commercial farming sector inside and outside the native range. <em>Chelydra serpentina</em> is among the most highly harvested, farmed, and exported turtle species in the United States (Reed and Gibbons 2003, Mali <em>et al</em>. 2014).<br/><br/>The international demand for turtles from North America coincides with the severe overexploitation and collapse of turtle populations in Asia. China is the chief market for the consumption, medicinal use, and trade of turtles (van Dijk <em>et al</em>. 2000, Luiselli <em>et al</em>. 2016). In North America, principally the United States, <em>C. serpentina</em> is subject to exploitation because of its large body size (high meat yield), broad geographic distribution, and relative abundance. <em>Chelydra serpentina</em> is one of the most common species available for harvest and consumption in the United States, particularly in the Mid-Atlantic states where a sizable harvest, processing, and meat canning industry exists (Cain <em>et al</em>. 2017) and in the southeastern states where a culture of turtle consumption persists (Roman and Bowen 2000) and export numbers are high (Mali <em>et al</em>. 2014).<br/><br/>There is no legal commercial or recreational harvest of <em>C. serpentina</em> in Canada. In the United States, the recreational and commercial harvest (regulated and unregulated) of <em>C. serpentina</em> is still permitted in selected states. Conservatively estimated, the harvest of <em>C. serpentina</em> in the USA increased 209% from 1998 to 2014 (Colteaux and Johnson 2017a). As of 2015, “19 of the 37 states” within the native range of <em>C. serpentina</em> in the USA were open to commercial harvest (Colteaux and Johnson 2017a; note that the present assessment reports <em>C. serpentina</em> as native to 41 states of the United States). Of the 19 states allowing commercial harvest at that time, eight had a minimum size limit and five had limits on the number of turtles that could be harvested over a given time period (Colteaux and Johnson 2017a). At least Connecticut, South Carolina, and Texas have eliminated commercial harvest of Snapping Turtles since 2017. See Mali <em>et al</em>. (2014), Colteaux and Johnson (2017a), Sherwood (2017), and Bennett and Loda (2020) for a summary of commercial turtle trapping laws of the United States. Requirements and regulations for recreational (personal) and commercial harvest are highly variable between states. In some jurisdictions, only a standard fishing license, sometimes with a nominal surcharge, is required to harvest <em>C. serpentina</em>, whereas other states maintain a monitored commercial permit system (Cain <em>et al</em>. 2017, Sherwood 2017). Several states maintain weak or non-existent laws and poor practices regulating the commercial overexploitation of turtles, including unlimited harvest allowances, nondisclosure of harvest data, absent or voluntary harvest reporting requirements, poor regulation of commercial permits, and/or a lack of season, size limit, or geographic restrictions on turtle harvest (see Mali <em>et al</em>. 2014, Sherwood 2017, Bennett and Loda 2020).<br/><br/>Overall, from 1998 through 2013 (16 years), a minimum estimated 348,529 <em>C. serpentina</em> were reported as commercially harvested among the 11 US states for which harvest data were available (Colteaux and Johnson 2017a). The commercial harvest of <em>C. serpentina</em> is particularly active in some Mid-Atlantic states (Maryland, Delaware, New Jersey, Virginia, North Carolina; Thorbjarnarson <em>et al</em>. 2000, Cain <em>et al</em>. 2017, Colteaux and Johnson 2017a, Sherwood 2017). In the United States, the wholesale purchase, processing, and resale of wild-harvested <em>C. serpentina</em> is seemingly concentrated in the Mid-Atlantic states, notably Maryland. During the period 2008–2016, more than 70,000 <em>C. serpentina</em> (equivalent to more than 1,000,000 pounds, or 454,000 kg, of live turtles) were harvested in Maryland (Maryland Department of Natural Resources 2016). Annually during 2008 and 2016, 19 to 55 harvesters reported wild harvests of approximately 74,000 to 144,000 pounds (33,600 to 65,500 kg) of <em>C. serpentina</em>, with the top three harvesters in each year accounting for 34% to 69% of the annual harvest (Maryland Department of Natural Resources 2016). A major turtle wholesaler in Maryland purchased 4,500 to 9,000 kg of <em>C. serpentina</em> per day in May and June, equating to the capture of 1,000 to 2,000 average-sized adult female turtles per day (but note that both sexes were harvested;&#160;Cain <em>et al</em>. 2017). Harvesters travel from other states, some quite distant (e.g., Ohio, Connecticut), to sell their harvest in Maryland (Cain <em>et al</em>. 2017). In New Jersey, the number of registered commercial harvesters and the number of harvested <em>C. serpentina</em>&#160;reported in the period 2014–2022 have gradually declined significantly as compared to the higher levels recorded in 2009–2013 (B. Zarate pers. comm.).<br/><br/>Records from Virginia indicate that 721,000 pounds (327,700 kg) of <em>C. serpentina</em> were commercially harvested from 2002 to 2015 (Colteaux and Johnson 2017a). Annual harvest ranged from approximately 11,500 to 125,500 pounds (5,200 to 57,000 kg) or, on average, 3,100 individuals (up to nearly 8,000 individuals) annually (Colteaux and Johnson 2017b). These values are underestimates because there is an indication that not all harvesters are fully reporting their harvests and private harvest is not reported or monitored (Colteaux and Johnson 2017b). In Virginia, harvest pressure was estimated to cause a 17% reduction in adult survival in harvest areas (Colteaux and Johnson 2017b), which exceeds values known to cause steady population declines (Congdon <em>et al</em>. 1994) and are equivalent to reductions in survival that have resulted in failed population recovery on a quarter-century timescale for <em>C. serpentina</em> (Keevil <em>et al</em>. 2018). In Virginia, densities of <em>C. serpentina</em> are 47% to 62% lower at harvest sites compared to an unharvested site (Colteaux and Johnson 2017b). Similarly, in Missouri, abundances of <em>C. serpentina</em> were drastically reduced in harvested locations (mean of 15 turtles) compared to unharvested locations (mean of 90 turtles; Shaffer <em>et al</em>. 2017). Such harvests are not sustainable. <em>Chelydra serpentina</em> has been the most harvested species in Iowa since 1987 (Fowler 2020, cited in Dolan 2020) and the contemporary absence of larger individuals as well as regional declines in catch-per-unit-effort are highly suggestive of a negative effect of harvest on wild populations (Dolan 2020).<br/><br/>Several states in the United States have recently restricted or eliminated commercial harvesting of freshwater turtles and/or Snapping Turtles (e.g., Texas in 2007 and 2018, Florida in 2009, Alabama in 2012, Iowa in 2017, Connecticut in 2018, South Carolina in 2020; Mali <em>et al</em>. 2014, Bennett and Loda 2020, M.J. Ravesi pers. comm.) or enacted regulations on harvest (e.g., minimum size limits,&#160;daily catch limits, and/or closed seasons and closed areas for <em>C. serpentina</em>; Cain <em>et al</em>. 2017, Colteaux and Johnson 2017a). Tightening regulations and enforcement in one jurisdiction can shift harvest efforts and trafficking to neighbouring states with weaker regulations (e.g., see Mali <em>et al</em>. 2014, Colteaux and Johnson 2017b). Virginia is one such example, having maintained lax regulations while nearby states (Maryland and North Carolina) enacted stricter harvest policies. Over 15 years (2002–2017), the number of commercial turtle harvesting permits sold to out-of-state persons in Virginia increased from 1 to 26 and harvest of <em>C. serpentina</em> increased by 1,300% (Colteaux and Johnson 2017b). From 2009 to 2013, out-of-state harvesters, representing only a quarter of all permit holders, accounted for as much as 70% of the annual reported harvest in Virginia (Colteaux and Johnson 2017b). A similar scenario might explain an increase in turtle exports, including <em>C. serpentina</em>, from Louisiana following commercial harvest closures in Alabama and Florida (Mali <em>et al</em>. 2014).<br/><br/>Collection of Snapping Turtles from the wild and captive production in U.S. turtle farms for export to East Asia increased substantially over the past two decades. Based on data from the United States Fish and Wildlife Service Law Enforcement Management Information System (LEMIS), exports from the USA have increased approximately linearly from 7,000 turtles declared as exported from the USA in 1999 to over 1,324,000 exported annually in the late 2010s (Colteaux and Johnson 2017a). From 1999 to 2011, the export of wild-harvested <em>C. serpentina</em> fluctuated between approximately 18,000 and 68,000 individuals per year, but exports in 2012 and 2014 increased an order of magnitude to 249,609 and 207,383, exported wild individuals, respectively (Colteaux and Johnson 2017a). In general, the proportion of wild-caught turtles supplying export has fluctuated from 8% to 24% (Colteaux and Johnson 2017a).<br/><br/>Export data underestimate the number of wild-harvested <em>C. serpentina</em> in two ways (Colteaux and Johnson 2017a). Firstly, an unknown (unreported) number of individuals/biomass are processed and canned as meat in the USA before export. Reporting exports of processed Snapping Turtle meat is required to the U.S. Fish and Wildlife Service (B. Weissgold pers. comm.); however, a lack of records in the Law Enforcement Management Information System of the U.S. Fish and Wildlife Service make clear that there is extensive non-compliance in reporting by exporters. The lack of trade data for canned meat and soup exports of <em>C. serpentina</em> is inconsistent with the large processing volumes and large overseas markets. Overall, the lack of reported trade data for <em>C. serpentina</em> is concerning and indicates a failure of traders’ adherence to regulations. Secondly, the distinction between wild and farm-produced stock is questionable because there can be fraudulent classification of wild-caught turtles as exported as farmed supply after having passed through farms. That is, it is unclear whether farms are truly supplying export demand through captive breeding or to what degree they are restocking with wild captures and laundering wild-caught turtles into export markets.<br/><br/>From 2002 to 2012, approximately 100,000 <em>C. serpentina</em> were exported from Texas, 125,000 from Florida, 665,000 from Louisiana, and 4,349,000 from California (Mali <em>et al</em>. 2014). The number of exported <em>C. serpentina</em> of wild-caught origin significantly increased from 2002 to 2012, notably among exports from California (Mali <em>et al</em>. 2014). Notably, California received <em>C. serpentina</em> from elsewhere in the United States given that the species is not native to the state, any within-state harvest of introduced populations would not come close to supporting such an export quantity, and there is no large-scale farming of the species in the state.<br/><br/>The trade data in Table S1 (see Supplementary Information) involving <em>C. serpentina</em> were retrieved from CITES Wildlife Tradeview (2023), as reported by <strong>exporters</strong> from 2016 to 2021: total trade amounts to 831,886 live individuals and only 84 eggs.&#160;Table S1 provides source data for traded <em>C. serpentina</em>. Export and import summaries by nation:&#160;USA exported 831,620; Mexico exported 350; China imported 719,847; Hong Kong imported 93,049; Macau imported 18,090; Spain imported 500; France imported 300; UK imported 100, and Canada imported 84.<br/><br/>The trade data in Table S2 (see Supplementary Information) involving <em>C. serpentina</em> were retrieved from CITES Wildlife Tradeview (2023), as reported by <strong>importers</strong> for the period of 2016 to 2021: total trade amounts to 647,472 live individuals, 260,000 specimens, and 1 carapace; USA exported 907,462; China exported 9; and Canada exported 2.&#160;Table S2 provides source data for traded <em>C. serpentina.&#160;</em>Export and import summaries by nation:&#160;China imported 797,765; Hong Kong imported 103,593; Indonesia imported 5,400; Spain imported 500; Netherlands imported 200; USA imported 11; Belgium imported 3; and Australia imported 1.<br/><br/>It is not clear what accounts for the many discrepancies between CITES trade data for <em>C. serpentina</em> as reported by exporters and importers. Discrepancies can arise for many reasons, such as traders shipping smaller numbers than their permit allows (e.g., exporters may report permit quantity, whereas importers may report actual quantity), as well as an export (application) date and actual export occurring in different calendar years. Discrepancies between reported data from importers and exporters include: countries of export, countries of import, the origin of traded individuals (notably among the categories “wild” and “captive-bred”), year-specific volumes of trade (especially in 2020 and 2021), total volumes of trade from 2016 to 2022 (a difference of over 75,000 units), and the purported state of units (notably between the categories “live” individuals and “specimens”).<br/><br/>A 2008 survey of recognized turtle farms in China generated an estimated captive population size of 32,000 <em>C. serpentina</em> with annual sales of 4,100 individuals (based on a 45% survey response rate; Shi <em>et al</em>. 2008). More recently, Liu <em>et al</em>. (2021) estimated the online sale of more than 100,000 snapping turtles (<em>Chelydra</em> spp. and <em>Macrochelys</em> spp. combined) through a single e-commerce platform in China. However, much of China’s production of <em>C. serpentina</em> involves the rearing of hatchlings (aquaculture) acquired from elsewhere. Summing exports (hatchlings) from elsewhere and apparent production in China is not necessarily accurate because it risks double-counting the same turtles. Farming efforts and populations of <em>C. serpentina</em> in international farms are likely grossly underestimated.<br/><br/>Cain <em>et al</em>. (2017) reported that the harvest pressure and market value of <em>C. serpentina</em> as meat in the eastern United States is highly dependent upon market forces, such as demand and domestic sales vs. international sales. Depending on market demands, wild harvested females are exported live for aquaculture (with gravid females particularly sought after; Colteaux and Johnson 2017b), whereas males tend to be killed, processed, and their meat canned for export (Cain <em>et al</em>. 2017, Colteaux and Johnson 2017a). A harvester was estimated to generate a gross income of $14,000 to $28,000 USD for a 31-day trapping season, with an estimated daily harvest of 204 kg at $2.20 to $4.41 USD per kilogram of <em>C. serpentina</em> (Cain <em>et al</em>. 2017). Sherwood (2017) reported the value of wild harvested <em>C. serpentina</em> in New Jersey ranged from approximately $0.65 to $2.00 USD per pound ($1.43 to $4.40 per kg) when sold to meat processing factories or seafood vendors and $1.00 to $2.50 USD per pound ($2.20 to $5.50 USD per kg) when sold to restaurants. Females were preferred and generated higher prices ($0.75 to $1.00 USD more per pound, equivalent to $1.65 to $2.20 USD per kilogram, for female turtles; Sherwood 2017). In New Jersey, surveyed harvesters reported earning up to $10,000 per year from harvest sales (Sherwood 2017).<br/><br/>Ceballos and Fitzgerald (2004) reported values of $3.00 to $10.89 USD per kg for turtle meat sold in Texas (turtle species unknown, but presumably <em>C. serpentina</em> and/or <em>Apalone</em> spp.). Online markets in the United States sell meat for $44 to $66 USD per kilogram of unknown turtle species (Mali <em>et al</em>. 2015). The value of farmed-raised <em>C. serpentina</em> in China was approximately $25 USD per individual or $45 USD per kilogram of meat (Shi <em>et al</em>. 2008).<br/><br/>In the U.S. pet trade, individual juvenile <em>C. serpentina</em> are available for as little as $6 USD (Montague <em>et al</em>. 2022). Online platforms selling undersized <em>C. serpentina</em> violate U.S. federal regulations prohibiting the sale of turtles less than 4 inches (10 cm) in size (Montague <em>et al</em>. 2022).",
+    "rationale": "The Snapping Turtle (<em>Chelydra serpentina</em>) was previously evaluated as Least Concern (LC) on the IUCN Red List (van Dijk 2012) and we assess it again as Least Concern at this time. The species has since been listed in CITES Appendix III (2016) with a recent up-listing to CITES Appendix II (2023). <em>Chelydra serpentina</em> remains widespread and relatively abundant throughout its native range in the eastern half of North America. Decades of large-volume trade for consumption and the pet trade has seeded non-native populations in regions of western North America, Europe, and Asia. <em>Chelydra serpentina</em> is a habitat and dietary generalist, capable of living in a variety of aquatic habitats and tolerant across a range of climates and human disturbances. Ecologically common species such as <em>C. serpentina</em> play key roles in freshwater wetland ecosystems, but they also bear the brunt of habitat destruction, ecosystem degradation, and overexploitation. The species is harvested from the wild and farmed in large volumes in the United States and increasingly in China to support markets for consumption, pets, and unsubstantiated medicine (folk medicine, traditional Chinese medicine). Export volumes of live <em>C. serpentina</em> from the United States have been substantial in recent decades, ranging from tens of thousands to hundreds of thousands of known wild-caught individuals annually and totals of hundreds of thousands to greater than one million individuals annually.<br/><br/>Despite their generalist habits and high starting abundance, populations of <em>C. serpentina</em> are limited in their ability to tolerate added mortality. Considering the geographic range and variety of habitats occupied by <em>C. serpentina</em>, populations are likely to experience multiple concurrent threats (e.g., harvest, road mortality, subsidized predators, fishhook ingestion). The cumulative effect of several concurrent threats can easily elevate mortality and gradually cause decreased population abundance. Very high adult survival (greater than 90% per annum) combined with a long and slow life history—characterized by low egg, hatchling, and juvenile survival, slow growth, late age at maturity, low reproductive output spread over a long lifespan, and long generation time—makes populations susceptible to decline. Small increases in adult mortality, especially of reproductive females, can lead to sustained population declines that are difficult to detect. There is strong evidence of population declines caused by acute (e.g., predation) and chronic (e.g., commercial harvest, road mortality) reductions to survival in <em>C. serpentina</em> populations, particularly in the northerly populations in the United States and Canada. Some populations have demonstrated no evidence of recovery even decades after threats were abated, despite adult survival having rebounded to high levels and population connectivity maintained. The absence of population recovery on management-relevant timescales warrants a precautionary approach to conservation and the maintenance of existing populations rather than attempting recovery once populations have already declined. The high starting abundance of <em>C. serpentina</em> means that they have further to decline before conservation action is taken and, of critical importance, further to recover in order to restore populations to some semblance of their pre-impact abundances. The high starting abundance, longevity, and continued persistence at sites of relatively high disturbance can easily mask long-term population declines. The goal of conservation and management for <em>C. serpentina</em> should be to keep this “common” species common.<br/><em><br/>Chelydra serpentina</em> currently qualifies as Least Concern (LC) status on the IUCN Red List. Moving forward, the careful monitoring of population, harvest, and trade trends is necessary. State and federal agencies in the United States need to collaborate, use harvest and trade data to make evidence-based decisions around harvest/export, and continue to refine regulations around wild harvest. Conservation and management actions should include: implementation of meaningful harvest restrictions at US state levels; addressing uncertainties about the scale of domestic harvest (recreational and commercial) and processing of turtle meat for international markets; enacting regulations to address farm stocking, including closing loopholes that allow for the laundering of wild turtles through farms; and regular review of export quotas in light of monitoring of wild and farm populations of <em>C. serpentina</em>.",
+    "trend_justification": null,
+    "taxonomic_notes": "Two subspecies, <em>Chelydra serpentina serpentina</em> (Linnaeus, 1758) and <em>C. s. osceola</em> Stejneger, 1918, were recognized until <em>osceola</em> was synonymized with <em>serpentina</em> by Shaffer <em>et al</em>. (2008), based on lack of significant genetic differentiation. Phillips <em>et al</em>. (1996) removed the two former subspecies <em>rossignonii</em> and <em>acutirostris</em> by elevating these to species level, based on genetic differentiation."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_1_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Habitat & natural process restoration"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Freshwater Springs and Oases"
+      },
+      "code": "5_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Bogs, Marshes, Swamps, Fens, Peatlands"
+      },
+      "code": "5_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_8"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Artificial/Terrestrial - Rural Gardens"
+      },
+      "code": "14_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Artificial/Terrestrial - Urban Areas"
+      },
+      "code": "14_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Forest - Boreal"
+      },
+      "code": "1_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Grassland - Temperate"
+      },
+      "code": "4_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Freshwater Lakes"
+      },
+      "code": "13_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Artificial/Aquatic - Water Storage Areas (over 8ha)"
+      },
+      "code": "15_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Artificial/Aquatic - Ponds (below 8ha)"
+      },
+      "code": "15_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Artificial/Aquatic - Wastewater Treatment Areas"
+      },
+      "code": "15_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Artificial/Aquatic - Canals and Drainage Channels, Ditches"
+      },
+      "code": "15_9"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent/Irregular Rivers/Streams/Creeks"
+      },
+      "code": "5_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Shrub Dominated Wetlands"
+      },
+      "code": "5_3"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Seasonal/Intermittent Freshwater Lakes (over 8ha)"
+      },
+      "code": "5_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": null,
+      "description": {
+        "en": "Wetlands (inland) - Permanent Freshwater Marshes/Pools (under 8ha)"
+      },
+      "code": "5_7"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Manitoba"
+      },
+      "code": "MAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Carolina"
+      },
+      "code": "SCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tennessee"
+      },
+      "code": "TEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Illinois"
+      },
+      "code": "ILL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Hampshire"
+      },
+      "code": "NWH-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Brunswick"
+      },
+      "code": "NBR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nova Scotia"
+      },
+      "code": "NSC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colorado"
+      },
+      "code": "COL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kansas"
+      },
+      "code": "KAN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mississippi"
+      },
+      "code": "MSI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Connecticut"
+      },
+      "code": "CNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maryland"
+      },
+      "code": "MRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ontario"
+      },
+      "code": "ONT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maine"
+      },
+      "code": "MAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Québec"
+      },
+      "code": "QUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Carolina"
+      },
+      "code": "NCA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wisconsin"
+      },
+      "code": "WIS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kentucky"
+      },
+      "code": "KTY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Missouri"
+      },
+      "code": "MSO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pennsylvania"
+      },
+      "code": "PEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montana"
+      },
+      "code": "MNT-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nebraska"
+      },
+      "code": "NEB-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Texas"
+      },
+      "code": "TEX-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saskatchewan"
+      },
+      "code": "SAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rhode Island"
+      },
+      "code": "RHO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New York"
+      },
+      "code": "NWY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oklahoma"
+      },
+      "code": "OKL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Delaware"
+      },
+      "code": "DEL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iowa"
+      },
+      "code": "IOW-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indiana"
+      },
+      "code": "INI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Louisiana"
+      },
+      "code": "LOU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wyoming"
+      },
+      "code": "WYO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Michigan"
+      },
+      "code": "MIC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "District of Columbia"
+      },
+      "code": "WDC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Alabama"
+      },
+      "code": "ALA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arkansas"
+      },
+      "code": "ARK-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GEO-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minnesota"
+      },
+      "code": "MIN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ohio"
+      },
+      "code": "OHI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Dakota"
+      },
+      "code": "SDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "West Virginia"
+      },
+      "code": "WVA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Massachusetts"
+      },
+      "code": "MAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virginia"
+      },
+      "code": "VRG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Mexico"
+      },
+      "code": "NWM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "North Dakota"
+      },
+      "code": "NDA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vermont"
+      },
+      "code": "VER-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Jersey"
+      },
+      "code": "NWJ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "British Columbia"
+      },
+      "code": "BRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arizona"
+      },
+      "code": "ARI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "California"
+      },
+      "code": "CAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nevada"
+      },
+      "code": "NEV-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oregon"
+      },
+      "code": "ORE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Utah"
+      },
+      "code": "UTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Washington"
+      },
+      "code": "WAS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hubei"
+      },
+      "code": "CHC-HU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zhejiang"
+      },
+      "code": "CHS-ZJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anhui"
+      },
+      "code": "CHS-AH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hebei"
+      },
+      "code": "CHN-HB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Shanghai"
+      },
+      "code": "CHS-SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hunan"
+      },
+      "code": "CHS-HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jiangsu"
+      },
+      "code": "CHS-JS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jiangxi"
+      },
+      "code": "CHS-JX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liaoning"
+      },
+      "code": "CHM-LN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Introduced",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honshu"
+      },
+      "code": "JAP-HN"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder farming"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other ecosystem modifications"
+      },
+      "code": "7_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small-holder grazing, ranching or farming"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small dams"
+      },
+      "code": "7_2_9"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Diseases of unknown cause"
+      },
+      "code": "8_6"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Industrial aquaculture"
+      },
+      "code": "2_4_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Moldowan, P.D. & van Dijk, P.P.",
+      "value": [
+        "Peter Paul van Dijk (N/A)",
+        "moldowan.gen.1702744681242@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Rhodin, A.G.J. & Stanford, C.B.",
+      "value": [
+        "rhodin.gen.1701537143623@gen.iucnsis.org",
+        "stanford.gen.1701537184669@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Buchanan, J.L., Hall, C.D., Howery, M., Kleopfer, J.D., O'Hanlon, B., Pierce, L.J., Ravesi, M.J., Riedle, D.J., Weissgold, B. & Zarate, B.",
+      "value": [
+        "riedle.gen.1704106084034@gen.iucnsis.org",
+        "howery.gen.1707843082644@gen.iucnsis.org",
+        "C.D. Hall",
+        "ohanlon.gen.1708784670900@gen.iucnsis.org",
+        "pierce.gen.1708804674789@gen.iucnsis.org",
+        "kleopfer.gen.1708805045974@gen.iucnsis.org",
+        "buchanan.gen.1708981615807@gen.iucnsis.org",
+        "zarate.gen.1709986873408@gen.iucnsis.org",
+        "ravesi.gen.1710339470459@gen.iucnsis.org",
+        "weissgold.gen.1710348096336@gen.iucnsis.org"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Rhodin, A.G.J.",
+      "value": [
+        "rhodin.gen.1701537143623@gen.iucnsis.org"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Iverson, J.B. 1992. <i>A Revised Checklist with Distribution Maps of the Turtles of the World</i>. Privately published, Richmond, Indiana.",
+      "year": "1992",
+      "title": "A Revised Checklist with Distribution Maps of the Turtles of the World",
+      "author": "Iverson, J.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ernst, C.H. and  Lovich, J.E. 2009. <i>Turtles of the United States and Canada. Second edition</i>. Johns Hopkins University Press, Baltimore.",
+      "year": "2009",
+      "title": "Turtles of the United States and Canada. Second edition",
+      "author": "Ernst, C.H. and  Lovich, J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Phillips, C.A., Dimmick, W.W. and Carr, J.L. 1996. Conservation genetics of the common snapping turtle (<i>Chelydra serpentina</i>). <i>Conservation Biology</i> 10(2): 397-405.",
+      "year": "1996",
+      "title": "Conservation genetics of the common snapping turtle (<i>Chelydra serpentina</i>).",
+      "author": "Phillips, C.A., Dimmick, W.W. and Carr, J.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaffer, H.B., Starkey, D.E. and Fujita, M.K. 2008. Molecular insights into the systematics of snapping turtles (Chelydridae). In: Steyermark, Finkler & Brooks (ed.), <i>Biology of the Snapping Turtle (</i>Chelydra serpentina<i>)</i>, pp. 44-49. Johns Hopkins Press, Baltimore.",
+      "year": "2008",
+      "title": "Molecular insights into the systematics of snapping turtles (Chelydridae)",
+      "author": "Shaffer, H.B., Starkey, D.E. and Fujita, M.K.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aresco, M.J., Ewert, M.A., Gunzburger, M.S., Heinrich, G.L. and Meylan, P.A. 2006. <i>Chelydra serpentina</i> - Snapping Turtle. In: Meylan, P.A. (ed.), <i>Biology and Conservation of Florida Turtles</i>, pp. 44-57. Chelonian Research Foundation, Lunenburg, MA.",
+      "year": "2006",
+      "title": "<i>Chelydra serpentina</i> - Snapping Turtle",
+      "author": "Aresco, M.J., Ewert, M.A., Gunzburger, M.S., Heinrich, G.L. and Meylan, P.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R., Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.]. 2021. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (9th Ed.). Turtle Taxonomy Working Group (TTWG). In: A.G.J. Rhodin, J.B. Iverson, P.P. van Dijk, C.B. Stanford, E.V. Goode, K.A. Buhlmann and R.A. Mittermeier (eds), <i>Conservation Biology of Freshwater Turtles and Tortoises: A Compilation Project of the IUCN/SSC Tortoise and Freshwater Turtle Specialist Group. Chelonian Research Monographs, Volume  8</i>, pp. 1–472: DOI: 10.3854/crm.8.checklist.atlas.v9.2021.",
+      "year": "2021",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (9th Ed.). Turtle Taxonomy Working Group (TTWG)",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Bour, R., Fritz, U., Georges, A., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Fritz, U., Gallego-García, N., Georges, A., Ihlow, F., Shaffer, H.B. and van Dijk, P.P.]. In Press. Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (10th Ed.). <i>Chelonian Research Monographs</i> 9.",
+      "year": "In Press",
+      "title": "Turtles of the World: Annotated Checklist and Atlas of Taxonomy, Synonymy, Distribution, and Conservation Status (10th Ed.)",
+      "author": "TTWG [Turtle Taxonomy Working Group: Rhodin, A.G.J., Iverson, J.B., Fritz, U., Gallego-García, N., Georges, A., Ihlow, F., Shaffer, H.B. and van Dijk, P.P.]",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Alexander MM. 1943. Food habits of the Snapping Turtle in Connecticut. Journal of Wildlife Management 7(3): 278–282.",
+      "year": null,
+      "title": null,
+      "author": "Alexander MM. 1943. Food habits of the Snapping Turtle in Connecticut. Journal of Wildlife Management 7(3): 278–282.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aplasca AC, V Titus, RJ Ossiboff, L Murphy, TA Seimon, K Igerman, WE Moser, PP Calle, JM Sykes IV. 2019. Health assessment of free-ranging chelonians in an urban section of the Bronx River, New York, USA. Journal of Wildlife Diseases 55(2): 352–362.",
+      "year": null,
+      "title": null,
+      "author": "Aplasca AC, V Titus, RJ Ossiboff, L Murphy, TA Seimon, K Igerman, WE Moser, PP Calle, JM Sykes IV. 2019. Health assessment of free-ranging chelonians in an urban section of the Bronx River, New York, USA. Journal of Wildlife Diseases 55(2): 352–362.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aresco MJ, MS Gunsburger. 2007. Ecology and morphology of Chelydra serpentina in northwestern Florida. Southeastern Naturalist 6(3): 435–448.",
+      "year": null,
+      "title": null,
+      "author": "Aresco MJ, MS Gunsburger. 2007. Ecology and morphology of Chelydra serpentina in northwestern Florida. Southeastern Naturalist 6(3): 435–448.",
+      "citation_short": null
+    },
+    {
+      "citation": "Armstrong DP, MG Keevil, N Rollinson, RJ Brooks. 2018. Subtle individual variation in indeterminate growth leads to major variation in survival and lifetime reproductive outputs in a long-lived reptile. Functional Ecology 32(3): 752–761.",
+      "year": null,
+      "title": null,
+      "author": "Armstrong DP, MG Keevil, N Rollinson, RJ Brooks. 2018. Subtle individual variation in indeterminate growth leads to major variation in survival and lifetime reproductive outputs in a long-lived reptile. Functional Ecology 32(3): 752–761.",
+      "citation_short": null
+    },
+    {
+      "citation": "Armstrong DP, RJ Brooks. 2013. Application of hierarchical biphasic growth models to long-term data for Snapping Turtles. Ecological Modelling 250: 119–125.",
+      "year": null,
+      "title": null,
+      "author": "Armstrong DP, RJ Brooks. 2013. Application of hierarchical biphasic growth models to long-term data for Snapping Turtles. Ecological Modelling 250: 119–125.",
+      "citation_short": null
+    },
+    {
+      "citation": "Armstrong DP, RJ Brooks. 2014. Estimating ages of turtles from growth data. Chelonian Conservation and Biology 13: 9–15.",
+      "year": null,
+      "title": null,
+      "author": "Armstrong DP, RJ Brooks. 2014. Estimating ages of turtles from growth data. Chelonian Conservation and Biology 13: 9–15.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ashley EP, A Kosloski, SA Petrie. 2007. Incidence of intentional vehicle-reptile collisions. Human Dimensions of Wildlife 12(3): 137–143.",
+      "year": null,
+      "title": null,
+      "author": "Ashley EP, A Kosloski, SA Petrie. 2007. Incidence of intentional vehicle-reptile collisions. Human Dimensions of Wildlife 12(3): 137–143.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ashley EP, JT Robinson. 1996. Road mortality of amphibians, reptiles and other wildlife on the Long Point Causeway, Lake Erie, Ontario. Canadian Field-Naturalist 110(3): 403–412.",
+      "year": null,
+      "title": null,
+      "author": "Ashley EP, JT Robinson. 1996. Road mortality of amphibians, reptiles and other wildlife on the Long Point Causeway, Lake Erie, Ontario. Canadian Field-Naturalist 110(3): 403–412.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bennett AM, JD Litzgus. 2014. Injury rates of freshwater turtles on a recreational waterway in Ontario. Journal of Herpetology 48(2); 262–266.",
+      "year": null,
+      "title": null,
+      "author": "Bennett AM, JD Litzgus. 2014. Injury rates of freshwater turtles on a recreational waterway in Ontario. Journal of Herpetology 48(2); 262–266.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bennett E, J Loda. 2020. Robbing the wild: How nine states’ refusal to ban trapping is hurting America’s wild turtles (version 2.0). Center for Biological Diversity. Available at: https://www.biologicaldiversity.org/species/reptiles/pdfs/4_Robbing_the_Wild.pdf.",
+      "year": null,
+      "title": null,
+      "author": "Bennett E, J Loda. 2020. Robbing the wild: How nine states’ refusal to ban trapping is hurting America’s wild turtles (version 2.0). Center for Biological Diversity. Available at: https://www.biologicaldiversity.org/species/reptiles/pdfs/4_Robbing_the_Wild.pdf ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bishop CA, P Ng, KE Pettitt, SW Kennedy, JJ Stegeman, RJ Norstrom, RJ Brooks. 1998. Environmental contamination and developmental abnormalities in eggs and hatchlings of the common Snapping Turtle (Chelydra serpentina serpentina) from the Great Lakes-St. Lawrence River basin (1989–91). Environmental Pollution 101: 143–156.",
+      "year": null,
+      "title": null,
+      "author": "Bishop CA, P Ng, KE Pettitt, SW Kennedy, JJ Stegeman, RJ Norstrom, RJ Brooks. 1998. Environmental contamination and developmental abnormalities in eggs and hatchlings of the common Snapping Turtle (Chelydra serpentina serpentina) from the Great Lakes-St. Lawrence River basin (1989–91). Environmental Pollution 101: 143–156.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bishop CA, RJ Brooks, JH Carey, P Ng, RJ Norstrom, DRS. Lean. 1991. The case for a cause-effect linkage between environmental contamination and development in eggs of the Common Snapping Turtle Chelydra serpentina from Ontario, Canada. Journal of Toxicology and Environmental Health 33: 512–547.",
+      "year": null,
+      "title": null,
+      "author": "Bishop CA, RJ Brooks, JH Carey, P Ng, RJ Norstrom, DRS. Lean. 1991. The case for a cause-effect linkage between environmental contamination and development in eggs of the Common Snapping Turtle Chelydra serpentina from Ontario, Canada. Journal of Toxicology and Environmental Health 33: 512–547.",
+      "citation_short": null
+    },
+    {
+      "citation": "Borkowski R. 1997. Lead poisoning and intestinal perforations in a Snapping Turtle Chelydra serpentina due to fishing gear ingestion. Journal of Zoo and Wildlife Medicine 28: 109-113.",
+      "year": null,
+      "title": null,
+      "author": "Borkowski R. 1997. Lead poisoning and intestinal perforations in a Snapping Turtle Chelydra serpentina due to fishing gear ingestion. Journal of Zoo and Wildlife Medicine 28: 109-113. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Brooks RJ, GP Brown, and DA Galbraith. 1991. Effects of a sudden increase in natural mortality of adults on a population of the Common Snapping Turtle (Chelydra serpentina). Canadian Journal of Zoology 69: 1314–1320.",
+      "year": null,
+      "title": null,
+      "author": "Brooks RJ, GP Brown, and DA Galbraith. 1991. Effects of a sudden increase in natural mortality of adults on a population of the Common Snapping Turtle (Chelydra serpentina). Canadian Journal of Zoology 69: 1314–1320.",
+      "citation_short": null
+    },
+    {
+      "citation": "Browne CL, SJ Hecnar. 2007. Species loss and shifting population structure of freshwater turtles despite habitat protection. Biological Conservation 138(3–4): 421–429.",
+      "year": null,
+      "title": null,
+      "author": "Browne CL, SJ Hecnar. 2007. Species loss and shifting population structure of freshwater turtles despite habitat protection. Biological Conservation 138(3–4): 421–429.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brown GP, RJ Brooks. 1993. Sexual and seasonal differences in activity in a northern population of Snapping Turtles. Herpetologica 49(3): 311–318.",
+      "year": null,
+      "title": null,
+      "author": "Brown GP, RJ Brooks. 1993. Sexual and seasonal differences in activity in a northern population of Snapping Turtles. Herpetologica 49(3): 311–318.",
+      "citation_short": null
+    },
+    {
+      "citation": "Brown JD, JM Sleeman. 2002. Morbidity and mortality of reptiles admitted to the Wildlife Center of Virginia, 1991–2000. Journal of Wildlife Disease 38: 699–705.",
+      "year": null,
+      "title": null,
+      "author": "Brown JD, JM Sleeman. 2002. Morbidity and mortality of reptiles admitted to the Wildlife Center of Virginia, 1991–2000. Journal of Wildlife Disease 38: 699–705. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cain PW, MD Cross, RA Seigel. 2017. Field data and stakeholders: Regulating the commercial harvest of Snapping Turtles in Maryland. Chelonian Conservation and Biology 16(2): 229–235.",
+      "year": null,
+      "title": null,
+      "author": "Cain PW, MD Cross, RA Seigel. 2017. Field data and stakeholders: Regulating the commercial harvest of Snapping Turtles in Maryland. Chelonian Conservation and Biology 16(2): 229–235.",
+      "citation_short": null
+    },
+    {
+      "citation": "Carstairs SJ. 2019. Evidence for low prevalence of ranaviruses in Ontario, Canada’s freshwater turtle population. PeerJ 7: e6987.",
+      "year": null,
+      "title": null,
+      "author": "Carstairs SJ. 2019. Evidence for low prevalence of ranaviruses in Ontario, Canada’s freshwater turtle population. PeerJ 7: e6987. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carstairs SJ, CJ Kyle, ST Vilaça. 2020. High prevalence of subclinical frog virus 3 infection in freshwater turtles of Ontario, Canada. Virology 543: 76–83.",
+      "year": null,
+      "title": null,
+      "author": "Carstairs SJ, CJ Kyle, ST Vilaça. 2020. High prevalence of subclinical frog virus 3 infection in freshwater turtles of Ontario, Canada. Virology 543: 76–83.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ceballos CP, Fitzgerald LA.2004.  The trade in native and exotic turtles in Texas. Wildlife Society Bulletin 323: 881–891.",
+      "year": null,
+      "title": null,
+      "author": "Ceballos CP, Fitzgerald LA.2004.  The trade in native and exotic turtles in Texas. Wildlife Society Bulletin 323: 881–891.",
+      "citation_short": null
+    },
+    {
+      "citation": "Christiansen JL, R. Burken. 1979. Growth and maturity of the Snapping Turtle (Chelydra serpentina) in Iowa. Herpetologica 29: 152–163.",
+      "year": null,
+      "title": null,
+      "author": "Christiansen JL, R. Burken. 1979. Growth and maturity of the Snapping Turtle (Chelydra serpentina) in Iowa. Herpetologica 29: 152–163.",
+      "citation_short": null
+    },
+    {
+      "citation": "CITES Wildlife Tradeview. 2023. Import and export data, Chelydra serpentina (2016–2022), Convention on the International Trade in Endangered Species. Available at: https://tradeview.cites.org/.",
+      "year": null,
+      "title": null,
+      "author": "CITES Wildlife Tradeview. 2023. Import and export data, Chelydra serpentina (2016–2022), Convention on the International Trade in Endangered Species. Available at: https://tradeview.cites.org/ ",
+      "citation_short": null
+    },
+    {
+      "citation": "Colteaux BC, DM Johnson. 2017a. Commercial harvest and export of Snapping Turtles (Chelydra serpentina) in the United States: trends and the efficacy of size limits at reducing harvest. Journal for Nature Conservation 32: 13–19.",
+      "year": null,
+      "title": null,
+      "author": "Colteaux BC, DM Johnson. 2017a. Commercial harvest and export of Snapping Turtles (Chelydra serpentina) in the United States: trends and the efficacy of size limits at reducing harvest. Journal for Nature Conservation 32: 13–19.",
+      "citation_short": null
+    },
+    {
+      "citation": "Colteaux BC, DM Johnson. 2017b. The status of Snapping Turtles in the coastal Plain of Virginia: Commercial harvest, conservation, demography, and regulatory recommendations. Report prepared for the Virginia Department of Game & Inland Fisheries and the Virginia Commonwealth University Rice Center. Available at https://dwr.virginia.gov/wildlife/reptiles/commercial-harvest-of-snapping-turtles-in-virginia/.",
+      "year": null,
+      "title": null,
+      "author": "Colteaux BC, DM Johnson. 2017b. The status of Snapping Turtles in the coastal Plain of Virginia: Commercial harvest, conservation, demography, and regulatory recommendations. Report prepared for the Virginia Department of Game & Inland Fisheries and the Virginia Commonwealth University Rice Center. Available at https://dwr.virginia.gov/wildlife/reptiles/commercial-harvest-of-snapping-turtles-in-virginia/ ",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, AE Dunham, RC van Loben Sels. 1994. Demographics of Common Snapping Turtles (Chelydra serpentina): Implications for conservation and management of long-lived organisms. American Zoologist 34: 397–4008.",
+      "year": null,
+      "title": null,
+      "author": "Congdon JD, AE Dunham, RC van Loben Sels. 1994. Demographics of Common Snapping Turtles (Chelydra serpentina): Implications for conservation and management of long-lived organisms. American Zoologist 34: 397–4008.",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, AE Dunham, RC van Loben Sels. 1994. Demographics of Common Snapping Turtles (Chelydra serpentina): Implications for conservation and management of long-lived organisms. American Zoologist 34: 397–4008.",
+      "year": null,
+      "title": "Congdon JD, AE Dunham, RC van Loben Sels. 1994. Demographics of Common Snapping Turtles (Chelydra serpentina): Implications for conservation and management of long-lived organisms. American Zoologist 34: 397–4008.",
+      "author": null,
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, AE Dunham, RC van Loben Sels. 1994. Demographics of Common Snapping Turtles (Chelydra serpentina): Implications for conservation and management of long-lived organisms. American Zoologist 34: 397–4008.",
+      "year": "1994",
+      "title": "Demographics of Common Snapping Turtles (Chelydra serpentina): Implications for conservation and management of long-lived organisms. American Zoologist 34: 397–4008.",
+      "author": "Congdon JD, AE Dunham, RC van Loben Sels",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, GL Breitenbach, RC van Loben Sels, DW Tinkle. 1987. Reproduction and nesting ecology of Snapping Turtles (Chelydra serpentina) in southeastern Michigan. Herpetologica 43(1): 39–54.",
+      "year": null,
+      "title": null,
+      "author": "Congdon JD, GL Breitenbach, RC van Loben Sels, DW Tinkle. 1987. Reproduction and nesting ecology of Snapping Turtles (Chelydra serpentina) in southeastern Michigan. Herpetologica 43(1): 39–54.",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, JL Greene, JW Gibbons. 1986. Biomass of freshwater turtles: A geographic comparison. American Midland Naturalist 115: 165–173.",
+      "year": null,
+      "title": null,
+      "author": "Congdon JD, JL Greene, JW Gibbons. 1986. Biomass of freshwater turtles: A geographic comparison. American Midland Naturalist 115: 165–173.",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, JL Greene, RJ Brooks. 2008. Reproductive and nesting ecology of female snapping turtles. Pp. 123–134 in Biology of the Snapping Turtle (Chelydra serpentina), AC Steyermark, MS Finkler, and RJ Brooks (eds.). The Johns Hopkins University Press, Baltimore, USA.",
+      "year": null,
+      "title": null,
+      "author": "Congdon JD, JL Greene, RJ Brooks. 2008. Reproductive and nesting ecology of female snapping turtles. Pp. 123–134 in Biology of the Snapping Turtle (Chelydra serpentina), AC Steyermark, MS Finkler, and RJ Brooks (eds.). The Johns Hopkins University Press, Baltimore, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, JL Greene, RJ Brooks. 2008. Reproductive and nesting ecology of female snapping turtles. Pp. 123–134 in Biology of the Snapping Turtle (Chelydra serpentina), AC Steyermark, MS Finkler, and RJ Brooks (eds.). The Johns Hopkins University Press, Baltimore, USA.",
+      "year": null,
+      "title": null,
+      "author": "Congdon JD, JL Greene, RJ Brooks. 2008. Reproductive and nesting ecology of female snapping turtles. Pp. 123–134 in Biology of the Snapping Turtle (Chelydra serpentina), AC Steyermark, MS Finkler, and RJ Brooks (eds.). The Johns Hopkins University Press, Baltimore, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Congdon JD, JW Gibbons. 1989. Biomass productivity of turtles in freshwater wetlands: A geographic comparison. Pp. 583–590, Freshwater Wetlands and Wildlife DOE Symposium Series, RR Sharitz, JW Gibbons (eds.). South Carolina, USA.",
+      "year": null,
+      "title": null,
+      "author": "Congdon JD, JW Gibbons. 1989. Biomass productivity of turtles in freshwater wetlands: A geographic comparison. Pp. 583–590, Freshwater Wetlands and Wildlife DOE Symposium Series, RR Sharitz, JW Gibbons (eds.). South Carolina, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "COSEWIC. 2008. COSEWIC assessment and status report on the Snapping Turtle Chelydra serpentina in Canada. Committee on the Status of Endangered Wildlife in Canada. Ontario, Canada. Available at: https://wildlife-species.canada.ca/species-risk-registry/virtual_sara/files/cosewic/sr_snapping_turtle_0809_e.pdf.",
+      "year": null,
+      "title": null,
+      "author": "COSEWIC. 2008. COSEWIC assessment and status report on the Snapping Turtle Chelydra serpentina in Canada. Committee on the Status of Endangered Wildlife in Canada. Ontario, Canada. Available at: https://wildlife-species.canada.ca/species-risk-registry/virtual_sara/files/cosewic/sr_snapping_turtle_0809_e.pdf ",
+      "citation_short": null
+    },
+    {
+      "citation": "COSEWIC. 2016. COSEWIC assessment and status report on the Blanding’s Turtle Emydoidea blandingii, Nova Scotia population and Great Lakes/St. Lawrence population, in Canada. Committee on the Status of Endangered Wildlife in Canada, Ottawa, Canada. Available at: https://wildlife-species.canada.ca/species-risk-registry/virtual_sara/files/cosewic/sr_Blanding’s%20Turtle_2016_e.pdf.",
+      "year": null,
+      "title": null,
+      "author": "COSEWIC. 2016. COSEWIC assessment and status report on the Blanding’s Turtle Emydoidea blandingii, Nova Scotia population and Great Lakes/St. Lawrence population, in Canada. Committee on the Status of Endangered Wildlife in Canada, Ottawa, Canada. Available at: https://wildlife-species.canada.ca/species-risk-registry/virtual_sara/files/cosewic/sr_Blanding’s%20Turtle_2016_e.pdf ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cunnington DC, RJ Brooks. 1996. Bet-hedging theory and eigenelasticity: A comparison of the life histories of Loggerhead Sea Turtles (Caretta caretta) and Snapping Turtles (Chelydra serpentina). Canadian Journal of Zoology 74(2): 291–296.",
+      "year": null,
+      "title": null,
+      "author": "Cunnington DC, RJ Brooks. 1996. Bet-hedging theory and eigenelasticity: A comparison of the life histories of Loggerhead Sea Turtles (Caretta caretta) and Snapping Turtles (Chelydra serpentina). Canadian Journal of Zoology 74(2): 291–296. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Dahl TE. 1990. Wetland losses in the United States, 1980s to 1980s. United States Department of the INerrior and United States Fish and Wildlife Service. Washington, D.C., USA.",
+      "year": null,
+      "title": null,
+      "author": "Dahl TE. 1990. Wetland losses in the United States, 1980s to 1980s. United States Department of the INerrior and United States Fish and Wildlife Service. Washington, D.C., USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Solla SR, CA Bishop, G Van Der Kraak, RJ Brooks. 1998. Impact of organochlorine contamination on levels of sex hormones and external morphology of common Snapping Turtles (Chelydra serpentina serpentina) in Ontario, Canada. Environmental Health Perspectives 106(5): 253–260.",
+      "year": null,
+      "title": null,
+      "author": "de Solla SR, CA Bishop, G Van Der Kraak, RJ Brooks. 1998. Impact of organochlorine contamination on levels of sex hormones and external morphology of common Snapping Turtles (Chelydra serpentina serpentina) in Ontario, Canada. Environmental Health Perspectives 106(5): 253–260.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Solla SR, CA Bishop, H Lickers, K Jock. 2001. Organochlorine pesticides, PCBs, dibenzodioxin, and furan concentrations in Common Snapping Turtle Eggs (Chelydra serpentina serpentina) in Akwesasne, Mohawk Territory, Ontario, Canada. Archives of Environmental Contamination and Toxicology 40: 410–417.",
+      "year": null,
+      "title": null,
+      "author": "de Solla SR, CA Bishop, H Lickers, K Jock. 2001. Organochlorine pesticides, PCBs, dibenzodioxin, and furan concentrations in Common Snapping Turtle Eggs (Chelydra serpentina serpentina) in Akwesasne, Mohawk Territory, Ontario, Canada. Archives of Environmental Contamination and Toxicology 40: 410–417.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Solla SR, KJ Fernie. 2004. Characterization of contaminants in Snapping Turtles (Chelydra serpentina) from Canadian Lake Erie Areas of Concern: St. Clair River, Detroit River, and Wheatley Harbour. Environmental Pollution 132: 101–112.",
+      "year": null,
+      "title": null,
+      "author": "de Solla SR, KJ Fernie. 2004. Characterization of contaminants in Snapping Turtles (Chelydra serpentina) from Canadian Lake Erie Areas of Concern: St. Clair River, Detroit River, and Wheatley Harbour. Environmental Pollution 132: 101–112.",
+      "citation_short": null
+    },
+    {
+      "citation": "de Solla SR, KJ Fernie, S Ashpole 2008. Snapping Turtles Chelydra serpentina as bioindicators in Canadian Areas of Concern in the Great Lakes Basin. II. Changes in hatching success and hatchling deformities in relation to persistent organic pollutants. Environmental Pollution 153: 529–536.",
+      "year": null,
+      "title": null,
+      "author": "de Solla SR, KJ Fernie, S Ashpole 2008. Snapping Turtles Chelydra serpentina as bioindicators in Canadian Areas of Concern in the Great Lakes Basin. II. Changes in hatching success and hatchling deformities in relation to persistent organic pollutants. Environmental Pollution 153: 529–536.",
+      "citation_short": null
+    },
+    {
+      "citation": "Doak D, P Kareiva, B Klepetka. 1994. Modeling population viability for the Desert Tortoise in the western Mojave Desert. Ecological Applications 4: 446–460.",
+      "year": null,
+      "title": null,
+      "author": "Doak D, P Kareiva, B Klepetka. 1994. Modeling population viability for the Desert Tortoise in the western Mojave Desert. Ecological Applications 4: 446–460.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dolan C. 2020. Five-year review of the status of Iowa’s turtle populations, 2016–2020. Iowa Department of Natural Resources, Iowa, USA.",
+      "year": null,
+      "title": null,
+      "author": "Dolan C. 2020. Five-year review of the status of Iowa’s turtle populations, 2016–2020. Iowa Department of Natural Resources, Iowa, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dreslik MJ, AR Kuhns, CA Phillips. 2005. Structure and composition of a southern Illinois freshwater turtle assemblage. Northeastern Naturalist 12(2): 173–186.",
+      "year": null,
+      "title": null,
+      "author": "Dreslik MJ, AR Kuhns, CA Phillips. 2005. Structure and composition of a southern Illinois freshwater turtle assemblage. Northeastern Naturalist 12(2): 173–186.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ducks Unlimited Canada. 2010. Southern Ontario Wetland Conversion Analysis. Ontario, Canada.",
+      "year": null,
+      "title": null,
+      "author": "Ducks Unlimited Canada. 2010. Southern Ontario Wetland Conversion Analysis. Ontario, Canada.",
+      "citation_short": null
+    },
+    {
+      "citation": "Enneson JJ., JD Litzgus. 2008. Using long-term survey data and a stage-classified matrix to assess conservation strategies for an endangered turtle (Clemmys guttata). Biological Conservation 141: 1560–1568.",
+      "year": null,
+      "title": null,
+      "author": "Enneson JJ., JD Litzgus. 2008. Using long-term survey data and a stage-classified matrix to assess conservation strategies for an endangered turtle (Clemmys guttata). Biological Conservation 141: 1560–1568.",
+      "citation_short": null
+    },
+    {
+      "citation": "Eskew EA, SJ Price, ME Dorcas. 2010. Survival and recruitment of semi-aquatic turtles in an urbanized region. Urban Ecosystems 13: 365–374.",
+      "year": null,
+      "title": null,
+      "author": "Eskew EA, SJ Price, ME Dorcas. 2010. Survival and recruitment of semi-aquatic turtles in an urbanized region. Urban Ecosystems 13: 365–374.",
+      "citation_short": null
+    },
+    {
+      "citation": "Esposito G, LD Tizio, M Prearo, A Dondo, C Ercolini, G Nieddu, A Ferrari, P Pastorino. 2022. Non-native turtles (Chelydridae) in freshwater ecosystems in Italy: A threat to biodiversity and human health? Animals 12(16): 2057.",
+      "year": null,
+      "title": null,
+      "author": "Esposito G, LD Tizio, M Prearo, A Dondo, C Ercolini, G Nieddu, A Ferrari, P Pastorino. 2022. Non-native turtles (Chelydridae) in freshwater ecosystems in Italy: A threat to biodiversity and human health? Animals 12(16): 2057.",
+      "citation_short": null
+    },
+    {
+      "citation": "Flaherty KL, JT Anderson, ED Michael. 2008. Survivorship and capture probability of the Common Snapping Turtle. Journal of Herpetology 42(1): 202–205.",
+      "year": null,
+      "title": null,
+      "author": "Flaherty KL, JT Anderson, ED Michael. 2008. Survivorship and capture probability of the Common Snapping Turtle. Journal of Herpetology 42(1): 202–205.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fowler A. 2020. Commercial turtle harvest report. Job Completion Report, Iowa Department of Natural Resources, Iowa, USA.",
+      "year": null,
+      "title": null,
+      "author": "Fowler A. 2020. Commercial turtle harvest report. Job Completion Report, Iowa Department of Natural Resources, Iowa, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galbraith DA, BN White, RJ Brooks, PT Boag. 1993. Multiple paternity in clutches of Snapping Turtles (Chelydra serpentina) detected using DNA fingerprints. Canadian Journal of Zoology 71(2): 318–324.",
+      "year": null,
+      "title": null,
+      "author": "Galbraith DA, BN White, RJ Brooks, PT Boag. 1993. Multiple paternity in clutches of Snapping Turtles (Chelydra serpentina) detected using DNA fingerprints. Canadian Journal of Zoology 71(2): 318–324.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galbraith DA, CA Bishop, RJ Brooks, WL Simser, KP Lampman. 1988. Factors affecting the density of populations of Common Snapping Turtles (Chelydra serpentina). Canadian Journal of Zoology 66: 1233–1240.",
+      "year": null,
+      "title": null,
+      "author": "Galbraith DA, CA Bishop, RJ Brooks, WL Simser, KP Lampman. 1988. Factors affecting the density of populations of Common Snapping Turtles (Chelydra serpentina). Canadian Journal of Zoology 66: 1233–1240.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galbraith DA, RJ Brooks. 1987. Survivorship of adult females in a northern population of Common Snapping Turtles, Chelydra serpentina. Canadian Journal of Zoology 65: 1581–1586.",
+      "year": null,
+      "title": null,
+      "author": "Galbraith DA, RJ Brooks. 1987. Survivorship of adult females in a northern population of Common Snapping Turtles, Chelydra serpentina. Canadian Journal of Zoology 65: 1581–1586. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Galbraith DA, RJ Brooks, ME Obbard. 1989. The influence of growth rate on age and body size at maturity in female Snapping Turtles (Chelydra serpentina). Copeia 1989: 896–904.",
+      "year": null,
+      "title": null,
+      "author": "Galbraith DA, RJ Brooks, ME Obbard. 1989. The influence of growth rate on age and body size at maturity in female Snapping Turtles (Chelydra serpentina). Copeia 1989: 896–904.",
+      "citation_short": null
+    },
+    {
+      "citation": "Galois P, È-L Grenier, M Ouellet. 2018. New size record for Snapping Turtle (Chelydra serpentina) in southern Quebec, Canada. Canadian Field-Naturalist 132: 378–381.",
+      "year": null,
+      "title": null,
+      "author": "Galois P, È-L Grenier, M Ouellet. 2018. New size record for Snapping Turtle (Chelydra serpentina) in southern Quebec, Canada. Canadian Field-Naturalist 132: 378–381.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gaston KJ. 2010. Valuing common species. Science 327: 154–155.",
+      "year": null,
+      "title": null,
+      "author": "Gaston KJ. 2010. Valuing common species. Science 327: 154–155.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gaston KJ. 2011. Common ecology. Bioscience 61(5): 354–362.",
+      "year": null,
+      "title": null,
+      "author": "Gaston KJ. 2011. Common ecology. Bioscience 61(5): 354–362.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gaston KJ, RA Fuller. 2008. Commonness, population depletion and conservation biology. Trends in Ecology & Evolution 23(1): 14–19.",
+      "year": null,
+      "title": null,
+      "author": "Gaston KJ, RA Fuller. 2008. Commonness, population depletion and conservation biology. Trends in Ecology & Evolution 23(1): 14–19.",
+      "citation_short": null
+    },
+    {
+      "citation": "GBIF (Global Biodiversity Information Facility) Secretariat. 2022. Chelydra serpentina (Linnaeus, 1758). GBIF Backbone Taxonomy. Available at https://doi.org/10.15468/39omei.",
+      "year": null,
+      "title": null,
+      "author": "GBIF (Global Biodiversity Information Facility) Secretariat. 2022. Chelydra serpentina (Linnaeus, 1758). GBIF Backbone Taxonomy. Available at https://doi.org/10.15468/39omei. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Gerholdt JE, B Oldfield. 1987. Chelydra serpentina serpentina (Common Snapping Turtle), size. Herpetological Review 18: 73.",
+      "year": null,
+      "title": null,
+      "author": "Gerholdt JE, B Oldfield. 1987. Chelydra serpentina serpentina (Common Snapping Turtle), size. Herpetological Review 18: 73.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gibbs JP, DA Steen. 2005. Trends in sex ratios of turtles in the United States: implications of road mortality. Conservation Biology 19(2): 552–556.",
+      "year": null,
+      "title": null,
+      "author": "Gibbs JP, DA Steen. 2005. Trends in sex ratios of turtles in the United States: implications of road mortality. Conservation Biology 19(2): 552–556.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gibbs JP, WG Shriver. 2002. Estimating the effects of road mortality on turtle populations. Conservation Biology 16: 1647–1652.",
+      "year": null,
+      "title": null,
+      "author": "Gibbs JP, WG Shriver. 2002. Estimating the effects of road mortality on turtle populations. Conservation Biology 16: 1647–1652. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Glooschenko V. 1983. Development of an evaluation system for wetlands in southern Ontario. Wetlands 3: 192–200.",
+      "year": null,
+      "title": null,
+      "author": "Glooschenko V. 1983. Development of an evaluation system for wetlands in southern Ontario. Wetlands 3: 192–200.",
+      "citation_short": null
+    },
+    {
+      "citation": "Golet WJ, TA Haines. 2001. Snapping Turtles (Chelydra serpentina) as monitors for mercury contamination of aquatic environments. Environmental Monitoring and Assessment 71: 211–220.",
+      "year": null,
+      "title": null,
+      "author": "Golet WJ, TA Haines. 2001. Snapping Turtles (Chelydra serpentina) as monitors for mercury contamination of aquatic environments. Environmental Monitoring and Assessment 71: 211–220.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hammer DA. 1969. Parameters of a marsh Snapping Turtle population Lacreek Refuge, South Dakota. The Journal of Wildlife Management. 33(4): 995–100.",
+      "year": null,
+      "title": null,
+      "author": "Hammer DA. 1969. Parameters of a marsh Snapping Turtle population Lacreek Refuge, South Dakota. The Journal of Wildlife Management. 33(4): 995–100.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haxton T. 2000. Road mortality of Snapping Turtles, Chelydra serpentina, in central Ontario during their nesting period. Canadian Field-Naturalist 114: 106–110.",
+      "year": null,
+      "title": null,
+      "author": "Haxton T. 2000. Road mortality of Snapping Turtles, Chelydra serpentina, in central Ontario during their nesting period. Canadian Field-Naturalist 114: 106–110. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Hebert CE, V Glooschenko, GD Haffner, R Lazar. 1993. Organic contaminants in Snapping Turtles (Chelydra serpentina) populations from southern Ontario, Canada. Archives of Environmental Contamination and Toxicology 24: 35–43.",
+      "year": null,
+      "title": null,
+      "author": "Hebert CE, V Glooschenko, GD Haffner, R Lazar. 1993. Organic contaminants in Snapping Turtles (Chelydra serpentina) populations from southern Ontario, Canada. Archives of Environmental Contamination and Toxicology 24: 35–43.",
+      "citation_short": null
+    },
+    {
+      "citation": "Holman JA, KD Andrews. 1994. North American Quaternary cold-tolerant turtles: Distributional adaptations and constraints. Boreas 23: 44–52.",
+      "year": null,
+      "title": null,
+      "author": "Holman JA, KD Andrews. 1994. North American Quaternary cold-tolerant turtles: Distributional adaptations and constraints. Boreas 23: 44–52.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hughes DF, WE Meshaka Jr. 2020. Demography of aquatic turtles (Chrysemys picta marginata and Chelydra serpentina serpentina) in southwestern Pennsylvania. Annals of Carnegie Museum 86(4): 361–376.",
+      "year": null,
+      "title": null,
+      "author": "Hughes DF, WE Meshaka Jr. 2020. Demography of aquatic turtles (Chrysemys picta marginata and Chelydra serpentina serpentina) in southwestern Pennsylvania. Annals of Carnegie Museum 86(4): 361–376.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iverson JB. 1982. Biomass in turtle populations: A neglected subject. Oecologia 55: 69–76.",
+      "year": null,
+      "title": null,
+      "author": "Iverson JB. 1982. Biomass in turtle populations: A neglected subject. Oecologia 55: 69–76.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iverson, J.B. and E L. Lewis.  2019.  Chelydra serpentina (Common Snapping Turtle). Growth, maturity, and longevity. Herpetological Review 50:119-120.",
+      "year": null,
+      "title": null,
+      "author": "Iverson, J.B. and E L. Lewis.  2019.  Chelydra serpentina (Common Snapping Turtle). Growth, maturity, and longevity. Herpetological Review 50:119-120.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iverson, J.B., D. Hearne, J. Watters, D. Croshaw, and J. Larson. 2000. Chelydra serpentina (Common snapping turtle): Density and biomass. Herpetological Review 31(4):238.",
+      "year": null,
+      "title": null,
+      "author": "Iverson, J.B., D. Hearne, J. Watters, D. Croshaw, and J. Larson. 2000. Chelydra serpentina (Common snapping turtle): Density and biomass. Herpetological Review 31(4):238.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iverson JB, GR Smith. 2023. Survival in Common Snapping Turtles, Chelydra serpentina (Testudines: Chelydridae), in western Nebraska. Herpetology Notes 16: 233–236.",
+      "year": null,
+      "title": null,
+      "author": "Iverson JB, GR Smith. 2023. Survival in Common Snapping Turtles, Chelydra serpentina (Testudines: Chelydridae), in western Nebraska. Herpetology Notes 16: 233–236.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iverson JB, H Higgins, A Sirulnik, C Griffiths. 1997. Local and geographic variation in the reproductive biology of the Snapping Turtle (Chelydra serpentina). Herpetologica 53(1): 96–117.",
+      "year": null,
+      "title": null,
+      "author": "Iverson JB, H Higgins, A Sirulnik, C Griffiths. 1997. Local and geographic variation in the reproductive biology of the Snapping Turtle (Chelydra serpentina). Herpetologica 53(1): 96–117.",
+      "citation_short": null
+    },
+    {
+      "citation": "Johnston GR, E Suarez, JC Mitchell, GA Shemitz, PL Butt, M Kaunert. 2012. Population ecology of the Snapping Turtle (Chelydra serpentina osceola) in a northern Florida river. Bulletin of the Florida Museum of Natural History 51(4): 243–256.",
+      "year": null,
+      "title": null,
+      "author": "Johnston GR, E Suarez, JC Mitchell, GA Shemitz, PL Butt, M Kaunert. 2012. Population ecology of the Snapping Turtle (Chelydra serpentina osceola) in a northern Florida river. Bulletin of the Florida Museum of Natural History 51(4): 243–256.",
+      "citation_short": null
+    },
+    {
+      "citation": "Keevil MG, BS Hewitt, RJ Brooks, JD Litzgus. 2017. Patterns of intraspecific aggression inferred from injuries in an aquatic turtles with male-biased size dimorphism. Canadian Journal of Zoology 95: 393–403.",
+      "year": null,
+      "title": null,
+      "author": "Keevil MG, BS Hewitt, RJ Brooks, JD Litzgus. 2017. Patterns of intraspecific aggression inferred from injuries in an aquatic turtles with male-biased size dimorphism. Canadian Journal of Zoology 95: 393–403.",
+      "citation_short": null
+    },
+    {
+      "citation": "Keevil MG, DP Armstrong, RJ Brooks, JD Litzgus. 2021. A model of seasonal variation in somatic growth rates applied to two temperate turtle species. Ecological Modeling 443: 109454.",
+      "year": null,
+      "title": null,
+      "author": "Keevil MG, DP Armstrong, RJ Brooks, JD Litzgus. 2021. A model of seasonal variation in somatic growth rates applied to two temperate turtle species. Ecological Modeling 443: 109454.",
+      "citation_short": null
+    },
+    {
+      "citation": "Keevil MG, N Noble, S Boyle, D Lesbarreres, J Litzgus. 2023. Lost reproductive value reveals a high burden of juvenile road mortality in a long-lived species. Ecological Applications 33: e2789.",
+      "year": null,
+      "title": null,
+      "author": "Keevil MG, N Noble, S Boyle, D Lesbarreres, J Litzgus. 2023. Lost reproductive value reveals a high burden of juvenile road mortality in a long-lived species. Ecological Applications 33: e2789.",
+      "citation_short": null
+    },
+    {
+      "citation": "Keevil MG, RJ Brooks and JD Litzgus. 2018. Post-catastrophe patterns of abundance and survival reveal no evidence of population recovery in a long-lived animal. Ecosphere 9: e02396.",
+      "year": null,
+      "title": null,
+      "author": "Keevil MG, RJ Brooks and JD Litzgus. 2018. Post-catastrophe patterns of abundance and survival reveal no evidence of population recovery in a long-lived animal. Ecosphere 9: e02396.",
+      "citation_short": null
+    },
+    {
+      "citation": "King RI, BP Hepler, LL Smith, JB Jensen. 2016. The status of Macrochelys temminckii (Alligator Snapping Turtle) in the Flint River, GA, 22 years after the close of commercial harvest. Southeastern Naturalist 15(4): 575–585.",
+      "year": null,
+      "title": null,
+      "author": "King RI, BP Hepler, LL Smith, JB Jensen. 2016. The status of Macrochelys temminckii (Alligator Snapping Turtle) in the Flint River, GA, 22 years after the close of commercial harvest. Southeastern Naturalist 15(4): 575–585.",
+      "citation_short": null
+    },
+    {
+      "citation": "Knutson RM. 1987. Flattened Fauna. Ten Speed Press, California, USA.",
+      "year": null,
+      "title": null,
+      "author": "Knutson RM. 1987. Flattened Fauna. Ten Speed Press, California, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kobayashi R, M Hasegawa, T Miyashita. 2006. Home range and habitat use of the exotic turtle Chelydra serpentina in the Inbanuma Basin, Chiba Prefecture, Central Japan. Current Herpetology 25(2): 47–55.",
+      "year": null,
+      "title": null,
+      "author": "Kobayashi R, M Hasegawa, T Miyashita. 2006. Home range and habitat use of the exotic turtle Chelydra serpentina in the Inbanuma Basin, Chiba Prefecture, Central Japan. Current Herpetology 25(2): 47–55.",
+      "citation_short": null
+    },
+    {
+      "citation": "Koo, Kyo Soung, Seoung-Min Park, Hee-Jin Kang, Hye-Rin Park, Jae Hyeok Choi, Joon-Seok Lee, Bong-Kyun Kim, and Ha-Cheol Sung. 2020. New record of the non-native Snapping Turtle Chelydra serpentina (Linnaeus, 1758) in the wild of the Republic of Korea. BioInvasions Records 9: 444–449.",
+      "year": null,
+      "title": null,
+      "author": "Koo, Kyo Soung, Seoung-Min Park, Hee-Jin Kang, Hye-Rin Park, Jae Hyeok Choi, Joon-Seok Lee, Bong-Kyun Kim, and Ha-Cheol Sung. 2020. New record of the non-native Snapping Turtle Chelydra serpentina (Linnaeus, 1758) in the wild of the Republic of Korea. BioInvasions Records 9: 444–449.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lagler KF. 1940. A turtle loss? American Wildlife 29: 41–44.",
+      "year": null,
+      "title": null,
+      "author": "Lagler KF. 1940. A turtle loss? American Wildlife 29: 41–44.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lagler KF. 1943. Food habitat and economic relations of the turtles of Michigan with special reference to fish management. American Midland Naturalist 29(2): 257–312.",
+      "year": null,
+      "title": null,
+      "author": "Lagler KF. 1943. Food habitat and economic relations of the turtles of Michigan with special reference to fish management. American Midland Naturalist 29(2): 257–312.",
+      "citation_short": null
+    },
+    {
+      "citation": "Legler J, RC Vogt. 2013. Turtles of Mexico: Land and freshwater forms. University of California Press, California, USA.",
+      "year": null,
+      "title": null,
+      "author": "Legler J, RC Vogt. 2013. Turtles of Mexico: Land and freshwater forms. University of California Press, California, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Leivesley JA, EG Nancekivell, RJ Brooks, JD Litzgus, N Rollinson. 2022. Long-term resilience of primary sex ratios in a species with temperature-dependent sex determination after decades of climate warming. The American Naturalist 200(4): 532–543.",
+      "year": null,
+      "title": null,
+      "author": "Leivesley JA, EG Nancekivell, RJ Brooks, JD Litzgus, N Rollinson. 2022. Long-term resilience of primary sex ratios in a species with temperature-dependent sex determination after decades of climate warming. The American Naturalist 200(4): 532–543.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lescher, T.C., Z. Tang-Martinez, and J.T. Briggler. 2013. Habitat use by the Alligator Snapping Turtle (Macrochelys temminckii) and Eastern Snapping Turtle (Chelydra serpentina), in southeastern Missouri. American Midland Naturalist 169:86-96.",
+      "year": null,
+      "title": null,
+      "author": "Lescher, T.C., Z. Tang-Martinez, and J.T. Briggler. 2013. Habitat use by the Alligator Snapping Turtle (Macrochelys temminckii) and Eastern Snapping Turtle (Chelydra serpentina), in southeastern Missouri. American Midland Naturalist 169:86-96. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Lewis, E.L. and J.B. Iverson.  2018.  Chelydra serpentina (Common Snapping Turtle). Diet. Herpetological Review 49:522-524.",
+      "year": null,
+      "title": null,
+      "author": "Lewis, E.L. and J.B. Iverson.  2018.  Chelydra serpentina (Common Snapping Turtle). Diet. Herpetological Review 49:522-524.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu S, C Newman, CD Buesching, DW Macdonald, Y Zhang, K-J Zhang, F Li, Z-M Zhou. 2021. E-commerce promotes trade in invasive turtles in China. Oryx 55(3): 352–355.",
+      "year": null,
+      "title": null,
+      "author": "Liu S, C Newman, CD Buesching, DW Macdonald, Y Zhang, K-J Zhang, F Li, Z-M Zhou. 2021. E-commerce promotes trade in invasive turtles in China. Oryx 55(3): 352–355.",
+      "citation_short": null
+    },
+    {
+      "citation": "Liu S, C Newman, CD Buesching, DW Macdonald, Y Zhang, K-J Zhang, F Li, Z-M Zhou. 2021. E-commerce promotes trade in invasive turtles in China. Oryx 55(3): 352–355.",
+      "year": null,
+      "title": null,
+      "author": "Liu S, C Newman, CD Buesching, DW Macdonald, Y Zhang, K-J Zhang, F Li, Z-M Zhou. 2021. E-commerce promotes trade in invasive turtles in China. Oryx 55(3): 352–355.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luiselli L, A Starita, GM Carpaneto, GH Segniagbeto, G Amori. 2016. A short review of the international trade of wild tortoises and freshwater turtles across the world and throughout two decades. Chelonian Conservation and Biology 15(2): 167–172.",
+      "year": null,
+      "title": null,
+      "author": "Luiselli L, A Starita, GM Carpaneto, GH Segniagbeto, G Amori. 2016. A short review of the international trade of wild tortoises and freshwater turtles across the world and throughout two decades. Chelonian Conservation and Biology 15(2): 167–172.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mali I, H-H Wang, WE Grnt, M Feldman, MRJ Forstner. 2015. Modeling commercial freshwater turtle production on US farms for pet and meat markets. PLoS ONE 10(9): e0139053.",
+      "year": null,
+      "title": null,
+      "author": "Mali I, H-H Wang, WE Grnt, M Feldman, MRJ Forstner. 2015. Modeling commercial freshwater turtle production on US farms for pet and meat markets. PLoS ONE 10(9): e0139053.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mali I, MW Vandewege, SK Davis, MRJ Forstner. 2014. Magnitude of the freshwater turtle exports from the US: Long term trends and early effects of newly implemented harvest management regimes. PLoS ONE 9(1): e86478.",
+      "year": null,
+      "title": null,
+      "author": "Mali I, MW Vandewege, SK Davis, MRJ Forstner. 2014. Magnitude of the freshwater turtle exports from the US: Long term trends and early effects of newly implemented harvest management regimes. PLoS ONE 9(1): e86478.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maryland Department of Natural Resources. 2018. Untitled document (contents a single-page table of harvest data for Chelydra serpentina, 2008–2016). https://dnr.maryland.gov/fisheries/Documents/snapping_turtle_harvest.pdf.",
+      "year": null,
+      "title": null,
+      "author": "Maryland Department of Natural Resources. 2018. Untitled document (contents a single-page table of harvest data for Chelydra serpentina, 2008–2016). https://dnr.maryland.gov/fisheries/Documents/snapping_turtle_harvest.pdf. ",
+      "citation_short": null
+    },
+    {
+      "citation": "McKenzie CM, ML Piczak, HN Snyman, T Joseph, C Theijin, P Chow-Fraser, CM Jardine. 2019. First report of ranavirus mortality in a Common Snapping Turtle Chelydra serpentina. Diseases of Aquatic Organisms 132: 221–227.",
+      "year": null,
+      "title": null,
+      "author": "McKenzie CM, ML Piczak, HN Snyman, T Joseph, C Theijin, P Chow-Fraser, CM Jardine. 2019. First report of ranavirus mortality in a Common Snapping Turtle Chelydra serpentina. Diseases of Aquatic Organisms 132: 221–227.",
+      "citation_short": null
+    },
+    {
+      "citation": "Midwood JD, NA Cairns, LJ Stott, SJ Cooke, G Blouin-Demers. 2014. Bycatch mortality can cause extirpation in four freshwater turtle species. Aquatic Conservation: Marine and Freshwater Ecosystems 25(1): 71–80.Midwood JD, NA Cairns, LJ Stott, SJ Cooke, G Blouin-Demers. 2014. Bycatch mortality can cause extirpation in four freshwater turtle species. Aquatic Conservation: Marine and Freshwater Ecosystems 25(1): 71–80.",
+      "year": null,
+      "title": null,
+      "author": "Midwood JD, NA Cairns, LJ Stott, SJ Cooke, G Blouin-Demers. 2014. Bycatch mortality can cause extirpation in four freshwater turtle species. Aquatic Conservation: Marine and Freshwater Ecosystems 25(1): 71–80.Midwood JD, NA Cairns, LJ Stott, SJ Cooke, G Blouin-Demers. 2014. Bycatch mortality can cause extirpation in four freshwater turtle species. Aquatic Conservation: Marine and Freshwater Ecosystems 25(1): 71–80.",
+      "citation_short": null
+    },
+    {
+      "citation": "Montague LE, JM Marcotrigiano, NE Keane, HE Marquardt, JA Sevin, NA Karraker. 2022. Online sale of small turtles circumvents public health regulations in the United States. PLoS ONE 17(12): e0278443.",
+      "year": null,
+      "title": null,
+      "author": "Montague LE, JM Marcotrigiano, NE Keane, HE Marquardt, JA Sevin, NA Karraker. 2022. Online sale of small turtles circumvents public health regulations in the United States. PLoS ONE 17(12): e0278443.",
+      "citation_short": null
+    },
+    {
+      "citation": "NatureServe. 2023. NatureServe Network biodiversity location data for Chelydra serpentina accessed through NatureServe Explorer [web application]. NatureServe, Arlington, Virginia. Available at https://explorer.natureserve.org/.",
+      "year": null,
+      "title": null,
+      "author": "NatureServe. 2023. NatureServe Network biodiversity location data for Chelydra serpentina accessed through NatureServe Explorer [web application]. NatureServe, Arlington, Virginia. Available at https://explorer.natureserve.org/. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Obbard ME, RJ Brooks. 1980. Nesting migrations of the Snapping Turtle (Chelydra serpentina). Herpetologica 36: 158–162.",
+      "year": null,
+      "title": null,
+      "author": "Obbard ME, RJ Brooks. 1980. Nesting migrations of the Snapping Turtle (Chelydra serpentina). Herpetologica 36: 158–162.",
+      "citation_short": null
+    },
+    {
+      "citation": "Obbard ME, RJ Brooks. 1981. Fate of overwintered clutches of the Common Snapping Turtle (Chelydra serpentina) in Algonquin Park, Ontario. The Canadian-Field Naturalist 95: 350–352.",
+      "year": null,
+      "title": null,
+      "author": "Obbard ME, RJ Brooks. 1981. Fate of overwintered clutches of the Common Snapping Turtle (Chelydra serpentina) in Algonquin Park, Ontario. The Canadian-Field Naturalist 95: 350–352.",
+      "citation_short": null
+    },
+    {
+      "citation": "O’Steen, S. 1998. Embryonic temperature influences juvenile temperature choice and growth rate in snapping turtles Chelydra serpentina. Journal of Experimental Biology, 201(3): 439-449.",
+      "year": null,
+      "title": null,
+      "author": "O’Steen, S. 1998. Embryonic temperature influences juvenile temperature choice and growth rate in snapping turtles Chelydra serpentina. Journal of Experimental Biology, 201(3): 439-449.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paisley RN, JF Wetzel, JS Nelson, C Stetzer, MG Hamernick, BP Anderson. 2009. Survival and spatial ecology of the Snapping Turtle, Chelydra serpentina, on the Upper Mississippi River. Canadian Field-Naturalist 123: 329–337.",
+      "year": null,
+      "title": null,
+      "author": "Paisley RN, JF Wetzel, JS Nelson, C Stetzer, MG Hamernick, BP Anderson. 2009. Survival and spatial ecology of the Snapping Turtle, Chelydra serpentina, on the Upper Mississippi River. Canadian Field-Naturalist 123: 329–337.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paterson JE, BD Steinberg, JD Litzgus. 2012. Generally specialized or especially general? Habitat selection by Snapping Turtles (Chelydra serpentina) in central Ontario. Canadian Journal of Zoology 90: 139–149.",
+      "year": null,
+      "title": null,
+      "author": "Paterson JE, BD Steinberg, JD Litzgus. 2012. Generally specialized or especially general? Habitat selection by Snapping Turtles (Chelydra serpentina) in central Ontario. Canadian Journal of Zoology 90: 139–149.",
+      "citation_short": null
+    },
+    {
+      "citation": "Paterson JE, T Pulfer, E Horrigan, S Sukumar, BI Vezina, R Zimmerling, CM Davy. 2021. Individual and synergistic effects of habitat loss and roads on reptile occupancy. Global Ecology and Conservation 31: e01865.",
+      "year": null,
+      "title": null,
+      "author": "Paterson JE, T Pulfer, E Horrigan, S Sukumar, BI Vezina, R Zimmerling, CM Davy. 2021. Individual and synergistic effects of habitat loss and roads on reptile occupancy. Global Ecology and Conservation 31: e01865.",
+      "citation_short": null
+    },
+    {
+      "citation": "Petokas PJ, MM Alexander. 1980. The nesting of Chelydra serpentina in northern New York. Journal of Herpetology 14(3): 239–244.Petokas PJ, MM Alexander. 1980. The nesting of Chelydra serpentina in northern New York. Journal of Herpetology 14(3): 239–244.",
+      "year": null,
+      "title": null,
+      "author": "Petokas PJ, MM Alexander. 1980. The nesting of Chelydra serpentina in northern New York. Journal of Herpetology 14(3): 239–244.Petokas PJ, MM Alexander. 1980. The nesting of Chelydra serpentina in northern New York. Journal of Herpetology 14(3): 239–244.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pitt AL, MA Nickerson. 2013. Potential recovery of a decline turtle population diminished by a community shift towards more generalist species. Amphibia-Reptilia 34: 193–200.",
+      "year": null,
+      "title": null,
+      "author": "Pitt AL, MA Nickerson. 2013. Potential recovery of a decline turtle population diminished by a community shift towards more generalist species. Amphibia-Reptilia 34: 193–200.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pritchard PCH. 1989. The Alligator Snapping Turtle: Biology and conservation. Milwaukee Public Museum, Milwaukee, USA.",
+      "year": null,
+      "title": null,
+      "author": "Pritchard PCH. 1989. The Alligator Snapping Turtle: Biology and conservation. Milwaukee Public Museum, Milwaukee, USA. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Raby GD, AH Colotelo, G Blouin-Demers, SJ Cooke. 2011. Freshwater commercial bycatch: an understated conservation problem. BioScienc 61(4): 271–280.",
+      "year": null,
+      "title": null,
+      "author": "Raby GD, AH Colotelo, G Blouin-Demers, SJ Cooke. 2011. Freshwater commercial bycatch: an understated conservation problem. BioScienc 61(4): 271–280.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reed RN, JW Gibbons. 2003. Conservation status of the live U.S. nonmarine turtles in domestic and international trade. Report to the United States Department of the Interior and United States Fish and Wildlife Service, USA.",
+      "year": null,
+      "title": null,
+      "author": "Reed RN, JW Gibbons. 2003. Conservation status of the live U.S. nonmarine turtles in domestic and international trade. Report to the United States Department of the Interior and United States Fish and Wildlife Service, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riedle, J.D., R.T. Kazmaier, J. Killian, and W.B. Littrell. 2015. Assemblage structure of an eastern Texas aquatic turtle community. Herpetological Conservation and Biology 10:695-702.",
+      "year": null,
+      "title": null,
+      "author": "Riedle, J.D., R.T. Kazmaier, J. Killian, and W.B. Littrell. 2015. Assemblage structure of an eastern Texas aquatic turtle community. Herpetological Conservation and Biology 10:695-702.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riley JL, S Freedberg, JD Litzgus. Incubation temperature in the wild influences hatchling phenotype of two freshwater turtle species. Evolutionary Ecology Research 16: 397–416.",
+      "year": null,
+      "title": null,
+      "author": "Riley JL, S Freedberg, JD Litzgus. Incubation temperature in the wild influences hatchling phenotype of two freshwater turtle species. Evolutionary Ecology Research 16: 397–416.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riley RL, JD Litzgus. 2013. Evaluation of predator-exclusion cages used in turtle conservation: cost analysis and effects on nest environment and proxies of hatchling fitness. Wildlife Research 40(6): 499–511.",
+      "year": null,
+      "title": null,
+      "author": "Riley RL, JD Litzgus. 2013. Evaluation of predator-exclusion cages used in turtle conservation: cost analysis and effects on nest environment and proxies of hatchling fitness. Wildlife Research 40(6): 499–511.",
+      "citation_short": null
+    },
+    {
+      "citation": "Riley RL, JD Litzgus. 2014. Cues used by predators to detect freshwater turtle nests may persist lake into incubation. Canadian Field-Naturalist 128(2): 179–188.",
+      "year": null,
+      "title": null,
+      "author": "Riley RL, JD Litzgus. 2014. Cues used by predators to detect freshwater turtle nests may persist lake into incubation. Canadian Field-Naturalist 128(2): 179–188.",
+      "citation_short": null
+    },
+    {
+      "citation": "Roman J, BW Bowen. 2000. The mock turtle syndrome: Genetic identification of turtle meat purchased in the south-eastern United States of America. Animal Conservation 3: 61–65.",
+      "year": null,
+      "title": null,
+      "author": "Roman J, BW Bowen. 2000. The mock turtle syndrome: Genetic identification of turtle meat purchased in the south-eastern United States of America. Animal Conservation 3: 61–65.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rose FL, MF Small. 2014. Population size, survivorship, density, and capture probability of Chelydra serpentina inhabiting an urban environment. Southwestern Naturalist 59(3): 331–336.",
+      "year": null,
+      "title": null,
+      "author": "Rose FL, MF Small. 2014. Population size, survivorship, density, and capture probability of Chelydra serpentina inhabiting an urban environment. Southwestern Naturalist 59(3): 331–336.",
+      "citation_short": null
+    },
+    {
+      "citation": "Rowe CL 2008. “The calamity of so long life”: life histories, contaminants, and potential emerging threats to long-lived vertebrates. BioScience 58: 623–631.",
+      "year": null,
+      "title": null,
+      "author": "Rowe CL 2008. “The calamity of so long life”: life histories, contaminants, and potential emerging threats to long-lived vertebrates. BioScience 58: 623–631.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ryan, T.J., Peterman, W.E., Stephens, J.D., and Sterrett, S.C. 2014. Movement and habitat use of the snapping turtle in an urban landscape. Urban Ecosystems 17:613-623.",
+      "year": null,
+      "title": null,
+      "author": "Ryan, T.J., Peterman, W.E., Stephens, J.D., and Sterrett, S.C. 2014. Movement and habitat use of the snapping turtle in an urban landscape. Urban Ecosystems 17:613-623.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaffer SA, JT Briggler, RA Gitzen, JJ Millspaugh. 2017. Abundance and harvest proportion of river turtles in Missouri. Journal of Freshwater Ecology 32(1): 541–555.",
+      "year": null,
+      "title": null,
+      "author": "Shaffer SA, JT Briggler, RA Gitzen, JJ Millspaugh. 2017. Abundance and harvest proportion of river turtles in Missouri. Journal of Freshwater Ecology 32(1): 541–555.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shaiu T-W, P-C Hou, S-H Wu, M-C Tu. 2006. A survey on alien pet reptiles in Taiwan. Taiwania 51(2): 71–80.",
+      "year": null,
+      "title": null,
+      "author": "Shaiu T-W, P-C Hou, S-H Wu, M-C Tu. 2006. A survey on alien pet reptiles in Taiwan. Taiwania 51(2): 71–80.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sherwood NR. 2017. Risks associated with harvesting and human consumption of two turtle species in New Jersey. PhD dissertation, Montclair State University, New Jersey.",
+      "year": null,
+      "title": null,
+      "author": "Sherwood NR. 2017. Risks associated with harvesting and human consumption of two turtle species in New Jersey. PhD dissertation, Montclair State University, New Jersey.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shi, H, JF Parham, F Zhiyong, H Meiling, Y Feng. 2008. Evidence for the massive scale of turtle farming in China. Oryx 42(1): 147–150.",
+      "year": null,
+      "title": null,
+      "author": "Shi, H, JF Parham, F Zhiyong, H Meiling, Y Feng. 2008. Evidence for the massive scale of turtle farming in China. Oryx 42(1): 147–150.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shi H, Z Fan, F Yin, Z Yuan. 2004. New data on the trade and captive breeding of turtles in Guangxi Province, South China. Asiatic Herpetological Research 19: 126–128.",
+      "year": null,
+      "title": null,
+      "author": "Shi H, Z Fan, F Yin, Z Yuan. 2004. New data on the trade and captive breeding of turtles in Guangxi Province, South China. Asiatic Herpetological Research 19: 126–128.",
+      "citation_short": null
+    },
+    {
+      "citation": "Shook AK, CD Battaglia, KM Enge, CJ Franklin, JC Godwin, AC Johnson, EJ Kessler, E Munscher, K Norrid, L Pearson, V Ricardez, DJ Stevenson, M Thomas, JL Carr. 2023. Anthropogenic threats to Alligator Snapping Turtles (Chelydridae: Macrochelys). Southeastern Naturalist 22(sp12): 25–55.",
+      "year": null,
+      "title": null,
+      "author": "Shook AK, CD Battaglia, KM Enge, CJ Franklin, JC Godwin, AC Johnson, EJ Kessler, E Munscher, K Norrid, L Pearson, V Ricardez, DJ Stevenson, M Thomas, JL Carr. 2023. Anthropogenic threats to Alligator Snapping Turtles (Chelydridae: Macrochelys). Southeastern Naturalist 22(sp12): 25–55.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith GR, JB Iverson, JE Rettig. 2018. Frequency of propeller damage in a turtle community in a northern Indiana, USA, lake: A long-term study. Herpetological Conservation and Biology 13(3): 691–699.",
+      "year": null,
+      "title": null,
+      "author": "Smith GR, JB Iverson, JE Rettig. 2018. Frequency of propeller damage in a turtle community in a northern Indiana, USA, lake: A long-term study. Herpetological Conservation and Biology 13(3): 691–699.",
+      "citation_short": null
+    },
+    {
+      "citation": "Smith HM, RB Smith. 1979. Synopsis of the herpetofauna of Mexico: Vol. IV, Guide to Mexican Turtles. Bibliographic addendum III. John Johnson, Vermont, USA.",
+      "year": null,
+      "title": null,
+      "author": "Smith HM, RB Smith. 1979. Synopsis of the herpetofauna of Mexico: Vol. IV, Guide to Mexican Turtles. Bibliographic addendum III. John Johnson, Vermont, USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Snell E. 1987. Wetland distribution and conversion in southern Ontario. Working Paper No. 48, Canada Land Use Monitoring Program, Inland Waters and Lands Directorate, Environment Canada, Ontario, Canada.",
+      "year": null,
+      "title": null,
+      "author": "Snell E. 1987. Wetland distribution and conversion in southern Ontario. Working Paper No. 48, Canada Land Use Monitoring Program, Inland Waters and Lands Directorate, Environment Canada, Ontario, Canada.",
+      "citation_short": null
+    },
+    {
+      "citation": "Steen DA, BC Hopkins, JU Van Dyke, WA Hopkins. 2014. Prevalence of ingested fish hooks in freshwater turtles from five rivers in the southeastern United States. PLoS ONE 9(3): e91368.",
+      "year": null,
+      "title": null,
+      "author": "Steen DA, BC Hopkins, JU Van Dyke, WA Hopkins. 2014. Prevalence of ingested fish hooks in freshwater turtles from five rivers in the southeastern United States. PLoS ONE 9(3): e91368.",
+      "citation_short": null
+    },
+    {
+      "citation": "Steen DA, MJ Aresco, SG Beilke, BW Compton, EP Condon, CK Dodd Jr, H Forrester, JW Gibbons, JL Greene, G Johnson, TA Langen MJ Oldham, DN Oxier, RA Saumure, FW Schueler, JM Sleeman, LL Smith, JK Tucker, JP Gibbs. 2006. Relative vulnerability of female turtles to road mortality. Animal Conservation 9(3): 269–273.",
+      "year": null,
+      "title": null,
+      "author": "Steen DA, MJ Aresco, SG Beilke, BW Compton, EP Condon, CK Dodd Jr, H Forrester, JW Gibbons, JL Greene, G Johnson, TA Langen MJ Oldham, DN Oxier, RA Saumure, FW Schueler, JM Sleeman, LL Smith, JK Tucker, JP Gibbs. 2006. Relative vulnerability of female turtles to road mortality. Animal Conservation 9(3): 269–273.",
+      "citation_short": null
+    },
+    {
+      "citation": "Steen DA, OJ Robinson Jr. 2017. Estimating freshwater turtle mortality rates and population declines following hook ingestion. Conservation Biology 31(6): 1333–1339.",
+      "year": null,
+      "title": null,
+      "author": "Steen DA, OJ Robinson Jr. 2017. Estimating freshwater turtle mortality rates and population declines following hook ingestion. Conservation Biology 31(6): 1333–1339.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sterrett SC, JC Maerz, RA Katz. 2015. What can turtles teach us about the theory of ecological stoichiometry? Freshwater Biology 60: 443–455.",
+      "year": null,
+      "title": null,
+      "author": "Sterrett SC, JC Maerz, RA Katz. 2015. What can turtles teach us about the theory of ecological stoichiometry? Freshwater Biology 60: 443–455.",
+      "citation_short": null
+    },
+    {
+      "citation": "Suriyamongkol T, FL Rose, I Mali. 2023. Estimates of somatic growth rates of Common Snapping Turtles (Chelydra serpentina) in Texas, USA. Herpetological Conservation and Biology 18(1): 196–203.",
+      "year": null,
+      "title": null,
+      "author": "Suriyamongkol T, FL Rose, I Mali. 2023. Estimates of somatic growth rates of Common Snapping Turtles (Chelydra serpentina) in Texas, USA. Herpetological Conservation and Biology 18(1): 196–203.",
+      "citation_short": null
+    },
+    {
+      "citation": "Thorbjarnarson J, CJ Lagueux, D Bolze, MW Klemens, AB Meylan. 2000. Human use of turtles. Pp. 33–84 in Turtle Conservation, M Klemens (ed.). Smithsonian Institution Press, Washington, D.C., USA.",
+      "year": null,
+      "title": null,
+      "author": "Thorbjarnarson J, CJ Lagueux, D Bolze, MW Klemens, AB Meylan. 2000. Human use of turtles. Pp. 33–84 in Turtle Conservation, M Klemens (ed.). Smithsonian Institution Press, Washington, D.C., USA.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ultsch GR. 2006. The ecology of overwintering among turtles: Where turtles overwinter and its consequences. Biological Review 81: 339–367.",
+      "year": null,
+      "title": null,
+      "author": "Ultsch GR. 2006. The ecology of overwintering among turtles: Where turtles overwinter and its consequences. Biological Review 81: 339–367.",
+      "citation_short": null
+    },
+    {
+      "citation": "van Dijk, P.P. 2012. Chelydra serpentina (errata version published in 2016). The IUCN Red List of Threatened Species 2012: e.T163424A97408395. https://dx.doi.org/10.2305/IUCN.UK.2012.RLTS.T163424A18547887.en.",
+      "year": null,
+      "title": null,
+      "author": "van Dijk, P.P. 2012. Chelydra serpentina (errata version published in 2016). The IUCN Red List of Threatened Species 2012: e.T163424A97408395. https://dx.doi.org/10.2305/IUCN.UK.2012.RLTS.T163424A18547887.en. ",
+      "citation_short": null
+    },
+    {
+      "citation": "van Dijk PP, BL Stuart, AGJ Rhodin (eds.). 2000. Asian turtle trade: proceedings of a workshop on conservation and trade of freshwater turtles and tortoises in Asia. Chelonian Research Monographs 2: 1–164.",
+      "year": null,
+      "title": null,
+      "author": "van Dijk PP, BL Stuart, AGJ Rhodin (eds.). 2000. Asian turtle trade: proceedings of a workshop on conservation and trade of freshwater turtles and tortoises in Asia. Chelonian Research Monographs 2: 1–164.",
+      "citation_short": null
+    },
+    {
+      "citation": "VertNet. 2016. VertNet (version 29 September 2016). Available at http://www.vertnet.org/index.html.",
+      "year": null,
+      "title": null,
+      "author": "VertNet. 2016. VertNet (version 29 September 2016). Available at http://www.vertnet.org/index.html. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Walde AD, EC Munscher, AM Walde. 2016. Record size Chelydra serpentina (Snapping Turtle) from Florida’s freshwater springs. . <i>Southeastern Naturalist 15(2): N16–N22.</i>.",
+      "year": "2016",
+      "title": "Record size Chelydra serpentina (Snapping Turtle) from Florida’s freshwater springs. ",
+      "author": "Walde AD, EC Munscher, AM Walde",
+      "citation_short": null
+    },
+    {
+      "citation": "Wenger SJ, AL Subalusky, MC Freeman. 2019. The missing dead: The lost role of animal remains in nutrient cycling in North American Rivers. Food Webs 18: e00106.",
+      "year": null,
+      "title": null,
+      "author": "Wenger SJ, AL Subalusky, MC Freeman. 2019. The missing dead: The lost role of animal remains in nutrient cycling in North American Rivers. Food Webs 18: e00106.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wirsing AJ, JR Phillips, ME Obbard, DL Murray. 2012. Incidental nest predation in freshwater turtles: Inter- and intraspecific differences in vulnerability are explained by relative crypsis. Oecologica 168: 977–988.",
+      "year": null,
+      "title": null,
+      "author": "Wirsing AJ, JR Phillips, ME Obbard, DL Murray. 2012. Incidental nest predation in freshwater turtles: Inter- and intraspecific differences in vulnerability are explained by relative crypsis. Oecologica 168: 977–988.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yntema CL. 1978. Incubation times for eggs of the turtle Chelydra serpentina (Testudines: Chelydridae) at various temperatures. Herpetologica 34(3): 274–277.",
+      "year": null,
+      "title": null,
+      "author": "Yntema CL. 1978. Incubation times for eggs of the turtle Chelydra serpentina (Testudines: Chelydridae) at various temperatures. Herpetologica 34(3): 274–277.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zimmer-Shaffer SA, JT Briggler JJ Millspaugh. 2014. Modeling the effects of commercial harvest on population growth of river turtles. Chelonian Conservation and Biology 13: 227–236.",
+      "year": null,
+      "title": null,
+      "author": "Zimmer-Shaffer SA, JT Briggler JJ Millspaugh. 2014. Modeling the effects of commercial harvest on population growth of river turtles. Chelonian Conservation and Biology 13: 227–236.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Skewed sex ratios"
+      },
+      "code": "2_3_6"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

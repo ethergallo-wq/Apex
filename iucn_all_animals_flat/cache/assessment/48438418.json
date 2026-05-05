@@ -1,0 +1,1252 @@
+{
+  "assessment_date": "2020-12-09T00:00:00.000+00:00",
+  "year_published": "2023",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 179010104,
+  "criteria": "A2acde",
+  "url": "https://www.iucnredlist.org/species/179010104/48438418",
+  "citation": "IUCN SSC Amphibian Specialist Group 2023. Andrias davidianus. The IUCN Red List of Threatened Species 2023: e.T179010104A48438418. Accessed on 05 May 2026.",
+  "assessment_id": 48438418,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 179010104,
+    "scientific_name": "Andrias davidianus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "AMPHIBIA",
+    "order_name": "CAUDATA",
+    "family_name": "CRYPTOBRANCHIDAE",
+    "genus_name": "Andrias",
+    "species_name": "davidianus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Blanchard, 1871)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Amphibian Specialist Group",
+        "url": "https://www.iucn-amphibians.org/",
+        "description": "Chair: Ariadne Angulo (email: aangulo@amphibians.org)\nRed List Authority Coordinator: Jennifer Luedtke (email: jluedtke@amphibians.org)\nNewsletter: http://www.amphibians.org/froglog/"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Huangshan Giant Salamander",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Maoershan Giant Salamander",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Chinese Giant Salamander",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Sieboldia davidiana Blanchard, 1871",
+        "status": "ACCEPTED",
+        "genus_name": "Sieboldia",
+        "species_name": "davidiana",
+        "species_author": "Blanchard, 1871",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Critically Endangered"
+    },
+    "code": "CR"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": "4",
+    "upper_elevation_limit": 1700,
+    "lower_elevation_limit": 100,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "Yes",
+    "population_continuing_decline": "Yes",
+    "generational_length": "15",
+    "congregatory": null,
+    "movement_patterns": "Not a Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "Unknown"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": "Unknown",
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species has traditionally been interpreted as a single geographically wide-ranging species distributed across multiple montane ecoregions and river basins (Yangtze, Yellow, Pearl, and southeast Chinese river drainages); however, it has recently been shown to constitute a complex of at least three different species including the South China Giant Salamander <em>Andrias sligoi</em> and at least one other undescribed taxon (Yan<em> et al</em>. 2018, Liang <em>et al</em>. 2019, Turvey <em>et al</em>. 2019).&#160;This species&#160;is now considered to be native only to the Yangtze and Yellow River drainages in China (Liang <em>et al</em>. 2018, Yan&#160;<em>et al</em>. 2018,&#160;Turvey <em>et al</em>. 2019) and is associated with the Qinling, Dabashan, Zhongtiaoshan, Daliangshan and Wumengshan mountain ranges (Liang <em>et al</em>. 2019). It is known with certainty from Gansu, Henan, Hubei, Hunan, Shaanxi, Shanxi, Sichuan and Yunnan provinces and Chongqing municipality in China (Yan <em>et al.</em> 2018, Liang<em> et al</em>. 2019). Records from&#160;Daliangshan mountain range are uncertain, and further taxonomic work needs to be carried out to verify their identity (Andrias Workshop December 2020).&#160;<br/><br/>While this species has been reported from in the Qinling mountains of Gansu and Sichuan provinces (Clade C of Yan <em>et al.</em> 2018, Liang <em>et al.</em> 2019), and the Nanling mountains of Guangxi Province&#160;(Clade A of Yan <em>et al.</em> 2018), the taxonomic identity of these records remain uncertain. Clade C subpopulations&#160;represent a sister lineage to this species; however, these subpopulations might represent a distinct undescribed species, as phylogenetic analyses show a deep genetic divergence between these two clades. The Clade A subpopulation from the Nanling mountains&#160;in Guangxi Province&#160;is not sister to either of the described Chinese<em> Andrias</em> species and this subpopulation might also represent a distinct, undescribed, species. A giant salamander specimen was also reportedly collected in 1966 from the headwaters of the Yangtze River in Qumalai County, Qinghai Province, China at an elevation of 4,200 m asl; this potentially represents a disjunct, isolated salamander subpopulation occurring at an elevation &gt;2,000 m asl, higher than any other known subpopulation (Chen 2011, Pierson <em>et al.</em> 2014). The existence of this subpopulation has not been confirmed (Pierson <em>et al</em>. 2014), and its taxonomic status is uncertain. For the purpose of this assessment, these records are included in the map but coded as 'Presence Uncertain'.<br/> <br/> Records of the species in Taiwan, Province of China have not been confirmed although Chinese giant salamanders that were due to be illegally exported to Taiwan have been confiscated in Fujian Province (B. Tapley pers. comm. October 2020).<br/><br/>A single captive specimen of&#160;<em>A. sligoi</em>&#160;exists in Japan (M. Takahashi pers. comm. November 2020).&#160;There are possibly other introduced lineages of Chinese<em>&#160;Andrias&#160;</em>present in Japan as well. Morphological data suggest mixing between the Japanese and Chinese <em>Andrias</em> species, and&#160;mtDNA that are specific to Chinese <em>Andrias</em> was found from giant salamanders in Japanese rivers showing intermediate morphology between Japanese and Chinese species&#160;(Matsui <em>et al</em>. 2008).<br/><br/>The&#160;wide-scale and intentional releases of giant salamanders across China have resulted in genetic homogenisation of some local subpopulations (Yan<em> et al.</em> 2018). <em>A. davidianus </em>that were thought to have originated from farm releases<em>&#160;</em>have been found across China e.g. Anhui, Fujian, Gansu, Guangdong, Guizhou, Hebei, Jiangxi and Zhejiang Provinces (Yan <em>et al.</em> 2018) although it is not yet known if these translocated animals can form viable subpopulations, and little evidence of any giant salamander subpopulations found across China in an extensive 2013–2016 field survey (Turvey <em>et al</em>. 2018).<br/><br/>It is thought to occur between 100–1,700 m asl; however, there are historical (unconfirmed) reports of <em>Andrias</em> at one site in Qinghai Province at 4,200 m asl (Fei <em>et al</em>. 2012, Pierson<em> et al</em>. 2014).",
+    "population": "Giant salamander subpopulations in areas of good-quality habitat have probably been in decline since at least the 1980s due to local consumption and/or exploitation for trade (Turvey <em>et al.</em> 2021). This is several decades before the development of the Chinese giant salamander farming industry, which has driven an escalation in the decline of wild populations since the early 2000s, due to extraction of wild animals across China to stock farms (Cunningham <em>et al</em>. 2016). Wild subpopulations may have further declined due to competition and/or hybridisation with farm escapees or deliberate releases of other giant salamander species from farms (Cunningham <em>et al</em>. 2016).&#160;In certain areas, populations may now be restricted to caves due to high levels of exploitation in non-subterranean habitats (Liang <em>et al</em>. 2019).&#160;Conversely, millions of individuals of the species exist in intensive farming operations for human consumption (Cunningham <em>et al</em>. 2016). There are small numbers in captive populations in&#160;zoos and aquaria in Europe, the United States, China, Canada, Japan and Singapore, although the lineage/species represented by these captive populations is unknown (B. Tapley pers. comm. October 2020, <em>Andrias </em>Workshop December 2020).&#160;<br/><br/>In addition, good-quality habitat for giant salamanders has declined across China in recent decades due to water development projects, pollution, industrialisation and urbanisation (Dai <em>et al</em>. 2009).&#160;<br/><br/>There is an inferred dramatic population decline of <em>Andrias davidianus</em>&#160;of at least 80% across its suspected natural range. Interviews&#160;conducted with freshwater resource users in&#160;2013-2016 recorded that 56% of 1,163 people living within 1 km of the 40 field survey sites in Chongqing Municipality and Gansu, Hubei, Hunan, Henan, Shanxi, Shaanxi and Sichuan provinces&#160;had seen a giant salamander in their lifetime (Turvey <em>et al</em>. 2018); however, across China, the mean time of last giant salamander sightings was 18.96 years earlier (Turvey <em>et al</em>. 2018). Only six individuals were detected at three sites during extensive ecological surveys conducted in 2013-2016, in suitable habitat (and often at sites with local historical records) across Chongqing Municipality (3 sites), Anhui Province (6 sites), Fujian Province (1 site), Gansu Province (4 sites), Guangdong Province (1 site), Hubei Province (4 sites), Henan Province (3 sites), Hunan Province (13 sites), Jiangxi Province (2 sites), Shaanxi Province (3 sites), Shanxi Province (1 site) Sichuan Province (9 sites), Yunnan Province (1 site) and Zhejiang Province (4 sites); these surveys represented a total of 3.96 years of cumulative search effort (Turvey <em>et al</em>. 2018). Evidence of electrofishing or the use of poison (known methods for harvesting giant salamanders)&#160;was observed at 22 of the 55 sites surveyed in this study (Turvey <em>et al</em>. 2018). Surveys for <em>A. davidianus</em> in Qinghai Province from June and July 2017 found no direct evidence for the species, although there were unverified reports of sightings by local people, the most recent dating from 2012 (Pierson <em>et al</em>. 2014).&#160;<br/><em><br/> </em>This species<em>&#160;</em>is present outside its native range due to the deliberate releases of farmed individuals (Yan <em>et al.</em> 2018). There is insufficient evidence to state whether these releases have resulted in the establishment of viable populations, however, dead giant salamanders have been reported at release sites (Turvey <em>et al</em>. 2018).<br/> <br/> The population is severely fragmented; more than 50% of the population is inferred to occur in patches with no natural dispersal between them.",
+    "habitats": "<p>Like its congeners,&#160;<em>Andrias davidianus&#160;</em>occurs in clear, cool, slow to swift flowing streams with a pH of 6–7 in steep-sided, well-vegetated valleys (including forest) that have caves in rocky banks and karst landscapes (Wang&#160;<em>et al</em>. 2004).&#160;Between July and September, a single female can lay between 300–1,500 eggs (Fei <em>et al</em>. 2012) in an underwater burrow or cavity that is occupied by a male. Eggs are fertilized externally and are guarded by the male until they hatch 50–60 days later. Larvae then develop in the streams, taking food after about 30 days (Haker 1997). This species is also known to breed in subterranean caves (Dai <em>et al</em>. 2009, Liang <em>et al</em>. 2019).<br/> <br/>Congeneric species are known to reach maturity between 5–6 years of age; there are no exact records indicating longevity in the wild, but captive individuals of Chinese <em>Andrias</em> lineages have been known to survive for over 55 years (Ye <em style=\"\">et al.</em> 1993).&#160;Based on this information, its generation length is estimated to be 15 years (Liang and Wu&#160;2012).&#160;</p>",
+    "threats": "The range-wide decline of giant salamanders across China has been attributed to overexploitation for various food markets (Wang <em>et al</em>. 2004; Feng <em>et al</em>. 2007; Dai <em>et al</em>. 2009; Cunningham <em>et al</em>. 2016; Turvey <em>et al</em>. 2018, 2021; <em>Andrias</em> Workshop December 2020), and to habitat loss and degradation through anthropogenic modification of freshwater habitats, including through pollutant emissions and the alteration of flow regimes and water turbidity from damming (Wang <em>et al</em>. 2004, Dai <em>et al</em>. 2009). Giant salamander populations in areas of good-quality habitat have probably been in decline from at least the 1980s, due to local consumption and/or exploitation for trade; this is several decades before the development of the Chinese giant salamander farming industry (Turvey <em>et al</em>. 2021). Since the farming industry was established there has been a major escalation in levels of exploitation (Turvey <em>et al</em>. 2018, 2021), including the illegal collection of wild giant salamanders to stock farms (Cunningham <em>et al</em>. 2016).<br/><br/>Habitat loss and fragmentation are highly likely to have a detrimental impact on any remaining <em>Andrias davidianus</em> subpopulations; Guangdong and Guangxi Provinces are ranked within the top five Chinese provinces for broad-sense deforestation (Ren <em>et al</em>. 2015), and giant salamanders are known to be associated with forest cover (Wang <em>et al</em>. 2004). Furthermore, much of the surveyed habitat for salamanders in Qinghai Province was deemed unsuitable for the species due to turbidity resulting from mining and erosion (Pierson <em>et al</em>. 2014).<br/><br/>Molecular analysis of farmed giant salamanders demonstrates that <em>A. davidianus</em> has been harvested to stock breeding farms (Yan <em>et al</em>. 2018). Evidence of electrofishing or the use of poison (known methods for harvesting giant salamanders) were detected at 22 of the 55 sites surveyed in 2013–2016 in Chongqing Municipality and Anhui, Fujian, Gansu, Guangxi, Hubei, Hunan, Jiangxi, Sichuan, Yunnan and Zhejiang Provinces (Turvey <em>et al</em>. 2018).<br/><br/>In a questionnaire-based interview survey conducted in 2013–2016, respondents across Chongqing Municipality and Anhui, Fujian, Gansu, Guangdong, Guangxi,&#160; Hubei, Hunan, Jiangxi Shaanxi, Sichuan, Yunnan and Zhejiang Provinces reported that they had hunted giant salamanders during their lifetime (Tapley <em>et al</em>. 2021).<br/><br/>This species has been released into areas outside of its native range as part of a well-intentioned ongoing programme by Chinese national and provincial governments to restock wild populations. Hybrids between Chinese and Japanese Giant Salamanders are now invasive in parts of Japan (Fukumoto <em>et al</em>. 2015). Given that <em>Andrias</em> spp. from China are more closely related to each other than <em>A. japonicus</em> it is likely that different species of giant salamanders in China are able to hybridise. It is therefore likely that hybridisation with both described and undescribed congeners is a threat to this species. The wide-scale transportation and release of giant salamanders across China has already resulted in the genetic homogenisation of some local populations (Yan <em>et al</em>. 2018). Furthermore, there is a risk that pathogens that cause disease in farmed giant salamanders could be inadvertently released, and this poses a threat to wild amphibians (Cunningham <em>et al</em>. 2016).",
+    "measures": "<strong><em>Conservation Actions In-Place</em></strong><br/>This species is listed as a Class II state key protected wildlife species in China, and all&#160;<em>Andrias</em>&#160;species&#160;have been listed in CITES Appendix I since 1975. The genus is considered a global priority for conservation due to its evolutionary history and global endangerment (Isaac <em>et al</em>. 2012).&#160;<br/><br/>The Chinese government has been carrying out a national action plan for Chinese giant salamander reintroduction into the wild since 2002 but this reintroduction has not considered the phylogeography of the genus (Yan <em>et al</em>. 2018). There are very few published accounts of successful reintroductions as post-release monitoring is not undertaken. Luo <em>et al</em>. (2009) reported the survival of some released individuals a year after their release. Some of the more recently released individuals have been pit tagged; however only one pit tagged individual (that was released in 2017) has been found and recorded again to date (Z. Liang pers. comm. December 2020). It is unknown which of the described Chinese <em>Andrias</em> species they belong to, and work needs to be carried out to identify their lineage (Z. Liang pers. comm. December 2020).&#160;Although releases are known to take place across much of central, southern and eastern China, very few surviving released individuals were detected in the wild during the range-wide giant salamander survey in 2013–2016, and&#160;dead salamanders have been found at known release sites (Turvey <em>et al</em>. 2018).&#160;Farm releases have not met IUCN translocation guidelines and they pose a risk to wild subpopulations, with translocations possibly spreading pathogens and mixing different lineages and/or species (Cunningham <em>et al</em>. 2016, Turvey <em>et al</em>. 2018, Yan <em>et al</em>. 2018, Liang <em>et al</em>. 2019, Turvey <em>et al</em>. 2019). In 2020,&#160;Hunan Provincial Forestry Bureau issued a document to the local governments of Zhangjiajie city, Shimen and Chenxi County to regulate the breeding and release programmes of giant salamanders which states the following:&#160;1) The release programmes in the reserve areas must be approved by both the Ministry of Agriculture and Rural Affairs and Zhangjiajie Giant Salamander National Nature Reserve; any release by social organisations or persons without approval are prohibited; and&#160;2) Salamanders for release in nature reserve areas can only be provided by the rescue centre, both genetic assessment and disease quarantine are required, and releases of any hybrid individuals are prohibited<strong> </strong>(<em>Andrias </em>Workshop December 2020).<br/><br/><em>Andrias davidianus</em> is reported to occur in over 50 national, provincial and county-level nature reserves – some of which use the species as their main conservation target. It is difficult to determine how successful these reserves are in protecting the species, or even if the species is still extant in some of them, and it is known that releases (presumably including non-native species or lineages) are known to take place within many of these reserves (e.g. Luo <em>et al</em>. 2009) although this is thought to have stopped in many regions in recent years (J. Chai pers. comm. December 2020). The Hunan Giant Salamander Rescue Centre is conducting <em>ex-situ</em> conservation breeding for the genetic lineages they hold. Genetic testing has been carried out and is ongoing with individuals from clades B and D (as per Yan <em>et al</em>. 2018) identified as being held at the centre (J. Chai pers. comm. December 2020).<strong><br/></strong><br/><strong><em>Conservation Needed</em></strong><br/>There are a number of different conservation actions required for this species. Firstly, protective legislation should be strengthened and enforced so that any remaining subpopulations can be safeguarded including legislation to separate farmed individuals from wild individuals (Lu&#160;<em>et al</em>. 2020, <em>Andrias</em> Workshop December 2020). Targeted&#160;<em>ex situ</em>&#160;action is required including the establishment of captive populations of different lineages that are managed for conservation breeding, with separation of individuals used for conservation breeding and in commercial breeding, and with&#160;subsequent translocations being considered (Lu&#160;<em>et al</em>. 2020).&#160;The release of salamanders from farms should be halted immediately. These animals are of unknown provenance and lineage, and are released into sites with no pre-release evaluation of the presence of extant giant salamanders, ecological impacts of the releases, or post-release monitoring. A coordinated and evidence based approach to reintroduction is needed, especially with regards to genetic screening and pre-release health screening, translocations should be evaluated with post release monitoring, and there is a need for closer collaboration between conservation biologists, protected area managers, fisheries departments and researchers to implement conservation actions (Lu&#160;<em>et al</em>. 2020). Measures are also required for a tagging system and farming licenses should be regulated (X. Lingyun pers. comm. December 2020). Any conservation plan will also need to incorporate a programme to raise awareness, involving civil societies, and educate locals on the importance of conserving the species (R. Murphy and W. Bo pers. comm. December 2020).<strong><br/></strong><br/><em><strong>Research Needed&#160;&#160;</strong></em><br/>Further research into the population size, distribution and trends,&#160;life history, ecology and threats&#160;is required. More work is also required to resolve taxonomic uncertainty and to identify&#160;evolutionarily significant units. There is an urgent need to develop a updated species conservation action plan.<br/><p></p>",
+    "use_trade": "<p>Giant salamanders are known to have been exploited for both local use and regional trade for food in China throughout the twentieth century and probably earlier, with known movement of animals around China to historical trading centres such as Canton (= Guangzhou, Guangdong Province) (Sowerby 1925a, 1925b). Giant salamander populations in areas of good-quality habitat have probably been in decline from at least the 1980s due to local consumption and/or exploitation for trade (Turvey <em>et al</em>. 2021). Past exploitation has been for food, with little evidence for exploitation for traditional medicine (Turvey&#160;<em>et al</em>. 2021). Large-scale interview surveys conducted in 2013–2016 across the range of <em>Andrias</em> spp. in China revealed that 15.4% of 2,932 respondents in rural communities had consumed giant salamanders, and that dates of last consumption ranged from the 1940s to 2010 (Turvey&#160;<em>et al</em>. 2021). A nation-wide giant salamander farming industry has developed since the early 2000s, to supply animals for the various food markets within China (Cunningham <em>et al</em>. 2016, <em>Andrias</em> Workshop December 2020).&#160;Since the farming industry was established there has been a major escalation in levels of exploitation, including the illegal collection of wild giant salamanders to stock farms (Cunningham <em>et al.</em> 2016).&#160;Molecular analysis of farmed giant salamanders demonstrates that this species has been harvested to stock breeding farms, and&#160;has been detected on farms across its presumed native range as well as being exported to other parts of China (e.g. Guizhou Province) to stock farms (Yan <em>et al</em>. 2018). There are also hybridised individuals that are being used to stock farms, and further work is required to identify these individuals (Yan <em>et al</em>. 2018).</p>",
+    "rationale": "<p>Listed as Critically Endangered because of an observed drastic population decline, estimated to be more than 80% over the last three generations (the generation length is estimated to be 15 years), due to a decline in the extent of occurrence and habitat quality, over-exploitation which has extirpated subpopulations from areas of remaining suitable habitat, and the possible effects of introduced pathogens and hybridisation from salamander farming operations. Despite the uncertainty surrounding its true distribution and further taxonomic work needing to be carried out, there are sufficient data that demonstrates widespread, severe declines across all&#160;<em>Andrias</em>&#160;species populations within China due to extensive harvesting for food and habitat loss.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "This is a restricted concept of this species following the split of the broader concept into this and <em>Andrias sligoi</em> (Turvey <em>et al</em>. 2019)."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Resource & habitat protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Species recovery"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4_1",
+      "description": {
+        "en": "Captive breeding/artificial propagation"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_1",
+      "description": {
+        "en": "Site/area protection"
+      }
+    },
+    {
+      "note": "",
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Invasive/problematic species control"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Karst and Other Subterranean Hydrological Systems (inland)"
+      },
+      "code": "5_18"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Shaanxi"
+      },
+      "code": "CHN-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sichuan"
+      },
+      "code": "CHC-SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gansu"
+      },
+      "code": "CHN-GS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Henan"
+      },
+      "code": "CHS-HE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Shanxi"
+      },
+      "code": "CHN-SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Anhui"
+      },
+      "code": "CHS-AH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Fujian"
+      },
+      "code": "CHS-FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yunnan"
+      },
+      "code": "CHC-YN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Guangdong"
+      },
+      "code": "CHS-GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Guangxi"
+      },
+      "code": "CHS-GX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Hebei"
+      },
+      "code": "CHN-HB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Qinghai"
+      },
+      "code": "CHQ-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Zhejiang"
+      },
+      "code": "CHS-ZJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": "Unknown",
+      "origin": "Origin Uncertain",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guizhou"
+      },
+      "code": "CHC-GZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hunan"
+      },
+      "code": "CHS-HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Origin Uncertain",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Jiangxi"
+      },
+      "code": "CHS-JX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chongqing"
+      },
+      "code": "CHC-CQ"
+    },
+    {
+      "is_endemic": true,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Establishing ex-situ production *"
+      },
+      "code": "16"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Large dams"
+      },
+      "code": "7_2_10"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Seepage from mining"
+      },
+      "code": "9_2_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": "Introduced, mixed genetic material from farming operations",
+      "description": {
+        "en": "Introduced genetic material"
+      },
+      "code": "8_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Subsistence/artisinal aquaculture"
+      },
+      "code": "2_4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Industrial aquaculture"
+      },
+      "code": "2_4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Whole (>90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "High Impact: 8",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Small dams"
+      },
+      "code": "7_2_9"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": "Andrias sligoi",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "IUCN SSC Amphibian Specialist Group",
+      "value": [
+        " IUCN SSC Amphibian Specialist Group (IUCN SSC)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Chanson, J.S.",
+      "value": [
+        "Janice Chanson (IUCN SSC Amphibian Red List Authority)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Cunningham, A.A., Tapley, B., Wen, B., Xie, F., Liang, G., Wei, G., Baorong, G., Chai, J., Che, J., Zuo, L., Xiao, L., Lau, M., Takahashi, M., Murphy, R.W., Turvey, S.T., Chen, S., Okada, S., Zhao, T., Jie, W., Jiang, W.-S., Yan, F., Zhang, Y., Liang, Z. & Zhao, Z.",
+      "value": [
+        "Wan-Sheng Jiang (Kunming Institute of Zoology, Chinese Academy of Sciences)",
+        "Michael Lau (WWF)",
+        "Wang Jie (Chengdu Institute of Biology)",
+        "Gang Liang (Shaanxi Normal University)",
+        "Geng Baorong",
+        "Benjamin Tapley (IUCN SSC Amphibian RLA / Curator of Herpetology, Zoological Society of London, UK)",
+        "Andrew Cunningham (Zoological Society of London)",
+        "Robert Murphy",
+        "Lingyun Xiao",
+        "Zhiqiang Liang",
+        "Shu Chen",
+        "Zhong Zhao",
+        "Sumio Okada",
+        "Mizuki Takahashi",
+        "Tian Zhao",
+        "Bo Wen",
+        "Gang Wei",
+        "Yuechan Zhang",
+        "Jing Chai",
+        "Ling-Ren Zuo",
+        "Jing Che",
+        "Fang Yan (Kunming Institute of Zoology, China)",
+        "Feng Xie",
+        "Samuel Turvey (Institute of Zoology, Zoological Society of London)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Tapley, B., Luedtke, J. & Hobin, L.",
+      "value": [
+        "Jennifer Luedtke (Re:wild)",
+        "Louise Hobin (SSC Amphibian RLA)",
+        "Benjamin Tapley (IUCN SSC Amphibian RLA / Curator of Herpetology, Zoological Society of London, UK)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Ye, C.-Y, Fei, L. and Hu, S.Q. 1993. <i>Rare and Economic Amphibians of China</i>. Sichuan Publishing House of Science and Technology, Chengdu.",
+      "year": "1993",
+      "title": "Rare and Economic Amphibians of China",
+      "author": "Ye, C.-Y, Fei, L. and Hu, S.Q.",
+      "citation_short": null
+    },
+    {
+      "citation": "MacKinnon, J., Meng, S., Cheung, C., Carey, G., Zhu, X. and Melville, D. 1996. <i>A Biodiversity Review of China</i>. World Wide Fund for Nature International, Hong Kong.",
+      "year": "1996",
+      "title": "A Biodiversity Review of China",
+      "author": "MacKinnon, J., Meng, S., Cheung, C., Carey, G., Zhu, X. and Melville, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, P. 2000. Protection of the habitat of giant salamanders should be realized. <i>Sichuan Journal of Zoology</i>: 164.",
+      "year": "2000",
+      "title": "Protection of the habitat of giant salamanders should be realized",
+      "author": "Wang, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Haker, J. 1997. Haltung und Zucht des Chinesischen Riesensalamanders <i>Andrias davidianus</i>. <i>Salamandra</i>: 69-74.",
+      "year": "1997",
+      "title": "Haltung und Zucht des Chinesischen Riesensalamanders <i>Andrias davidianus</i>",
+      "author": "Haker, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhang, K.-J., Wang, X.-M., Wu, W., Wang, Z.-H. and Huang, S. 2002. Advances in conservation biology of Chinese giant salamander. <i>Biodiversity Science</i>: 291-297.",
+      "year": "2002",
+      "title": "Advances in conservation biology of Chinese giant salamander",
+      "author": "Zhang, K.-J., Wang, X.-M., Wu, W., Wang, Z.-H. and Huang, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wang, X.-M., Zhang, K.-J.,  Wang, Z.-H., Ding, Y.-Z., Wu, W. and Huang, S. 2004. The decline of the Chinese giant salamander <i>Andrias davidianus</i> and implications for its conservation. <i>Oryx</i>: 197-202.",
+      "year": "2004",
+      "title": "The decline of the Chinese giant salamander <i>Andrias davidianus</i> and implications for its conservation",
+      "author": "Wang, X.-M., Zhang, K.-J.,  Wang, Z.-H., Ding, Y.-Z., Wu, W. and Huang, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zhao, E.-M. 1998. <i>China Red Data Book of Endangered Animals - Amphibia</i>. Science Press, Beijing.",
+      "year": "1998",
+      "title": "China Red Data Book of Endangered Animals - Amphibia",
+      "author": "Zhao, E.-M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Qu, W.-Y. 2000. <i>Rare and Endangered Animals in Henan</i>. Henan Science and Technology Press, Zhengzhou.",
+      "year": "2000",
+      "title": "Rare and Endangered Animals in Henan",
+      "author": "Qu, W.-Y.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fei L, Ye C Y, Jiang J P. 2012. Colored Atlas of Chinese Amphibians and Their Distributions. Sichuan Publishing House of Science and Technology, Chengdu.",
+      "year": "2012",
+      "title": "Colored Atlas of Chinese Amphibians and Their Distributions. Sichuan Publishing House of Science and Technology, Chengdu.",
+      "author": " Fei L, Ye C Y, Jiang J P",
+      "citation_short": null
+    },
+    {
+      "citation": "Matsui, M., Tominaga, A., Liu, W. and Tanaka-Ueno, T. 2008. Reduced genetic variation in the Japanese giant salamander, <i>Andrias japonicus</i> (Amphibia: Caudata). <i>Molecular Phylogenetics and Evolution</i> 49(2008): 318-326.",
+      "year": "2008",
+      "title": "Reduced genetic variation in the Japanese giant salamander, <i>Andrias japonicus</i> (Amphibia: Caudata)",
+      "author": "Matsui, M., Tominaga, A., Liu, W. and Tanaka-Ueno, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2023. The IUCN Red List of Threatened Species. Version 2023-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2023).",
+      "year": "2023",
+      "title": "The IUCN Red List of Threatened Species. Version 2023-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2023-1"
+    },
+    {
+      "citation": "Chen, X. 2011. Amphibia and reptilia. In D. Li (Ed.), Economic fauna of Qinghai (pp. 173–227). Xining, China: Northwest Plateau Institute of Biology.",
+      "year": "2011",
+      "title": "Amphibia and reptilia. In D. Li (Ed.), Economic fauna of Qinghai (pp. 173–227). Xining, China: Northwest Plateau Institute of Biology.",
+      "author": "Chen, X. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Cunningham, A.A., Turvey, S.T., Zhou, F., Meredith, H.M., Guan, W., Liu, X., Sun, C., Wang, Z. and Wu, M. 2016. Development of the Chinese giant salamander <i>Andrias davidianus</i> farming industry in Shaanxi Province, China: conservation threats and opportunities. <i>Oryx</i> 50: 265-273.",
+      "year": "2016",
+      "title": "Development of the Chinese giant salamander <i>Andrias davidianus</i> farming industry in Shaanxi Province, China: conservation threats and opportunities",
+      "author": "Cunningham, A.A., Turvey, S.T., Zhou, F., Meredith, H.M., Guan, W., Liu, X., Sun, C., Wang, Z. and Wu, M. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Dai, Q., Wang, Y. and Liang, G. 2009. Conservation Status of Chinese Giant Salamander (<i>Andrias davidianus</i>). Chinese Academy of Sciences, Chengdu.",
+      "year": "2009",
+      "title": "Conservation Status of Chinese Giant Salamander (<i>Andrias davidianus</i>)",
+      "author": "Dai, Q., Wang, Y. and Liang, G. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Feng, X., Lau, M.W.N., Stuart, S.N., Chanson, J.S., Cox, N.A. and Fishman, L. 2007. Conservation needs of amphibians in China: a review. <i>Science in China, Series X, Life Sciences</i> 50: 265-276.",
+      "year": "2007",
+      "title": "Conservation needs of amphibians in China: a review",
+      "author": "Feng, X., Lau, M.W.N., Stuart, S.N., Chanson, J.S., Cox, N.A. and Fishman, L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fukumoto, S., Ushimaru, A. and Minamoto, T. 2015. A basin‐scale application of environmental DNA assessment for rare endemic species and closely related exotic species in rivers: a case study of giant salamanders in Japan. <i>Journal of Applied Ecology</i> 52: 358-365.",
+      "year": "2015",
+      "title": "A basin‐scale application of environmental DNA assessment for rare endemic species and closely related exotic species in rivers: a case study of giant salamanders in Japan",
+      "author": "Fukumoto, S., Ushimaru, A. and Minamoto, T. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Isaac, N.J., Redding, D.W., Meredith, H.M. and Safi, K. 2012. Phylogenetically-informed priorities for amphibian conservation. <i>PLoS ONE</i> 7(8): e43912.",
+      "year": "2012",
+      "title": "Phylogenetically-informed priorities for amphibian conservation",
+      "author": "Isaac, N.J., Redding, D.W., Meredith, H.M. and Safi, K. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Liang, G. and Wu. F. 2012. The activity rhythm and reproductive behaviours of <i>Andrias davidianus</i>. <i>Chinese Journal of Zoology</i> 45: 77-82.",
+      "year": "2012",
+      "title": "The activity rhythm and reproductive behaviours of <i>Andrias davidianus</i>",
+      "author": "Liang, G. and Wu. F. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Liang, Z.Q., Chen, W.T., Wang, D.Q., Zhang, S.H., Wang, C.R., He, S.P., Wu, Y.A., He, P., Xie, J., Li, C.W. and Merilä, J. 2019. Phylogeographic patterns and conservation implications of the endangered Chinese giant salamander. <i>Ecology and Evolution</i> 9: 3879-3890.",
+      "year": "2019",
+      "title": "Phylogeographic patterns and conservation implications of the endangered Chinese giant salamander",
+      "author": "Liang, Z.Q., Chen, W.T., Wang, D.Q., Zhang, S.H., Wang, C.R., He, S.P., Wu, Y.A., He, P., Xie, J., Li, C.W. and Merilä, J. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Luo, Q., Liu, Y. and Zhang, L. 2009. Effectiveness of releasing artificially-bred Chinese giant salamander (<i>Andrias davidianus</i>) into the wild in Zhangjiajie, Hunan. <i>Biodiversity Science</i> 17: 310-317.",
+      "year": "2009",
+      "title": "Effectiveness of releasing artificially-bred Chinese giant salamander (<i>Andrias davidianus</i>) into the wild in Zhangjiajie, Hunan",
+      "author": "Luo, Q., Liu, Y. and Zhang, L. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pierson, T.W., Yan, F., Wang, Y. and Papenfuss, T.A. 2014. A survey for the Chinese giant salamander (<i>Andrias davidianus</i>) in the Qinghai Province. <i>Amphibian & Reptile Conservation</i> 8: 1–6.",
+      "year": "2014",
+      "title": "A survey for the Chinese giant salamander (<i>Andrias davidianus</i>) in the Qinghai Province",
+      "author": "Pierson, T.W., Yan, F., Wang, Y. and Papenfuss, T.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ren, G., Young, S.S., Wang, L., Wang, W., Long, Y., Wu, R., Li, J., Zhu, J. and Yu, D.W. 2015. Effectiveness of China's national forest protection program and nature reserves. <i>Conservation Biology</i> 29(5): 1368-1377.",
+      "year": "2015",
+      "title": "Effectiveness of China's national forest protection program and nature reserves",
+      "author": "Ren, G., Young, S.S., Wang, L., Wang, W., Long, Y., Wu, R., Li, J., Zhu, J. and Yu, D.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Settle, R.A., Briggler, J.T. and Mathis, A. 2018. A quantitative field study of paternal care in Ozark hellbenders, North America’s giant salamanders. <i>Journal of Ethology</i> 36(3): 235-242.",
+      "year": "2018",
+      "title": "A quantitative field study of paternal care in Ozark hellbenders, North America’s giant salamanders",
+      "author": "Settle, R.A., Briggler, J.T. and Mathis, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Sowerby, A.C. 1925a. The giant salamander of China. <i>China Journal of Science and Arts</i> 1: 253-256.",
+      "year": "1925a",
+      "title": "The giant salamander of China",
+      "author": "Sowerby, A.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Sowerby, A.C. 1925b. A Naturalist’s Note-Book in China. <i>Shanghai: North-China Daily News & Herald</i>.",
+      "year": "1925b",
+      "title": "A Naturalist’s Note-Book in China",
+      "author": "Sowerby, A.C. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Tapley, B., Turvey, S.T., Chen, S., Wei, G., Xie, F., Yang, J., Liang, Z., Tian, H., Wu, M., Okada, S., Wang, J., Lü, J., Zhou, F., Xu, J., Haipeng, Z., Redbond, J., Brown, T. Cunningham, A.A. 2021. Range-wide decline of Chinese giant salamanders <i>Andrias</i> spp. from suitable habitat. <i>Oryx</i> 55: 373−381. DOI:10.1017/S0030605320000411.",
+      "year": "2021",
+      "title": "Range-wide decline of Chinese giant salamanders <i>Andrias</i> spp. from suitable habitat.",
+      "author": "Tapley, B., Turvey, S.T., Chen, S., Wei, G., Xie, F., Yang, J., Liang, Z., Tian, H., Wu, M., Okada, S., Wang, J., Lü, J., Zhou, F., Xu, J., Haipeng, Z., Redbond, J., Brown, T. Cunningham, A.A. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Turvey, S.T., Chen, S., Tapley, B., Liang, Z., Wei, G., Yang, J., Wang, J., Wu, M., Redbond, J., Brown, T. and Cunningham, A.A. 2021. From dirty to delicacy? Changing exploitation in China threatens the world’s largest amphibians. <i>People and Nature</i> 3(2): 446-456. DOI: 10.1002/pan3.10185.",
+      "year": "2021",
+      "title": "From dirty to delicacy? Changing exploitation in China threatens the world’s largest amphibians",
+      "author": "Turvey, S.T., Chen, S., Tapley, B., Liang, Z., Wei, G., Yang, J., Wang, J., Wu, M., Redbond, J., Brown, T. and Cunningham, A.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Turvey, S.T., Marr, M., Barnes, I., Brace, S., Tapley, B., Murphy, R., Zhao, E. and Cunningham, A.A. 2019. Historical museum collections clarify the evolutionary history of cryptic species radiation in the world’s largest amphibians. <i>Ecology and Evolution</i> 9: 10070-10084.",
+      "year": "2019",
+      "title": "Historical museum collections clarify the evolutionary history of cryptic species radiation in the world’s largest amphibians",
+      "author": "Turvey, S.T., Marr, M., Barnes, I., Brace, S., Tapley, B., Murphy, R., Zhao, E. and Cunningham, A.A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yan, F., Lü, J., Zhang, B., Yuan, Z., Zhao, H., Huang, S., Wei, G., Mi, X., Zou, D., Xu, W., Chen, S., Wang, J., Xie, F., Wu, M., Xiao, H., Liang, Z., Jin, J., Wu, S., Xu, C.S., Tapley, B., Turvey, S.T., Papenfuss, T.J., Cunningham, A.A., Murphy, R.W., Zhang, Y. and Che, J. 2018. The Chinese giant salamander exemplifies the hidden extinction of cryptic species. <i>Current Biology</i> 28: R590-R592.",
+      "year": "2018",
+      "title": "The Chinese giant salamander exemplifies the hidden extinction of cryptic species",
+      "author": "Yan, F., Lü, J., Zhang, B., Yuan, Z., Zhao, H., Huang, S., Wei, G., Mi, X., Zou, D., Xu, W., Chen, S., Wang, J., Xie, F., Wu, M., Xiao, H., Liang, Z., Jin, J., Wu, S., Xu, C.S., Tapley, B., Turvey, S.T., Papenfuss, T.J., Cunningham, A.A., Murphy, R.W., Zhang, Y. and Che, J. ",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Hybridisation"
+      },
+      "code": "2_3_1"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Competition"
+      },
+      "code": "2_3_2"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    }
+  ]
+}

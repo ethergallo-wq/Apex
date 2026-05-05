@@ -1,0 +1,4226 @@
+{
+  "assessment_date": "2022-05-30T01:00:00.000+01:00",
+  "year_published": "2024",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 135567,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/135567/155662225",
+  "citation": "Camara, K.D., Carpenter, K.E., Djiman, R., Nunoo, F., Sagna, A., Sidibé, A, Sylla, M., de Morais, L., Jelks, H., Tolan, J., Vega-Cendejas, M., Espinosa-Perez, H., Chao, L., Moretzsohn, F., Sparks, J.S. & Ford, M. 2024. Mugil cephalus. The IUCN Red List of Threatened Species 2024: e.T135567A155662225. Accessed on 05 May 2026.",
+  "assessment_id": 155662225,
+  "assessment_points": true,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 135567,
+    "scientific_name": "Mugil cephalus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "ACTINOPTERYGII",
+    "order_name": "MUGILIFORMES",
+    "family_name": "MUGILIDAE",
+    "genus_name": "Mugil",
+    "species_name": "cephalus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "Linnaeus, 1758",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Striped mullet",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Striped Mullet",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Aalder",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Aarder",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Albur",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Ama'ama",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Anae",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Anubah",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Araaby",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Asfatiya",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Avrita baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Baldigare",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Beyah",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Biah",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Biyah",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Bolpina",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Bora",
+        "language": "jpn"
+      },
+      {
+        "main": false,
+        "name": "Bouri",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Cabezudo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Cabot",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Cachamba",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Cá Dối Mục",
+        "language": "vie"
+      },
+      {
+        "main": false,
+        "name": "Cagarraz",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Cambiro",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Capazzone",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Capitán",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Capiton",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Capocefalo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Capozzo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cap Pla",
+        "language": "cat"
+      },
+      {
+        "main": false,
+        "name": "Capuozzo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Carida",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Caridou",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Cefalo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Céfalo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Cefalo mazzone",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cefalo verace",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cefalo vero",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cefalu",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cefolo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cefulu cirini",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cephalos",
+        "language": "gre"
+      },
+      {
+        "main": false,
+        "name": "Ciavarini",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Ciefl",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cievollo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cievolo",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Cipal bataš",
+        "language": "scr"
+      },
+      {
+        "main": false,
+        "name": "Cipol glavaš",
+        "language": "scc"
+      },
+      {
+        "main": false,
+        "name": "Cremole",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Curemà",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Curimã",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Curimã-í",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Diklipharder",
+        "language": "dut"
+      },
+      {
+        "main": false,
+        "name": "Eirigo-do-rio",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Firzetta",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Galupe",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Gawafa",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Gefalu",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Gemeine meeräsche",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gestreifte meeräsche",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gewöhnliche meeräsche",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gharyb",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Glissà",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Grå multe",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "Grossköpfige meeräsche",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Gutarana",
+        "language": "ara"
+      },
+      {
+        "main": false,
+        "name": "Haskefal baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Kahaha",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Kanae",
+        "language": "mao"
+      },
+      {
+        "main": false,
+        "name": "Kaplat",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Kefal baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Koklan baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Lisa",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lisa cabezuda",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lisa común",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lisa pardete",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lisa rayada",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lissa",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Lizarra",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Machuto",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Massun",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mattarello",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mazzone",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mecia",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Meciatino",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Meciato",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Merma",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Meuil",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Muge cabot",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Muge céphale",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mugem",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Muggine",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Muggine calamita",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Muggine orifrangio",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mugil común",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Muja",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mujól",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Mujou",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mulet",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mulet à grosse tête",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mulet cabot",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mulet-cabot",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Mulett",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Muletta",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Mulett ta' l'imcarrta",
+        "language": "mlt"
+      },
+      {
+        "main": false,
+        "name": "Multe",
+        "language": "dan"
+      },
+      {
+        "main": false,
+        "name": "Multe",
+        "language": "nor"
+      },
+      {
+        "main": false,
+        "name": "Olhal",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Ono",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Paganeo",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Pardete",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Pseftomarida",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Pua",
+        "language": "haw"
+      },
+      {
+        "main": false,
+        "name": "Qefulli i veres",
+        "language": "alb"
+      },
+      {
+        "main": false,
+        "name": "Storhovad multe",
+        "language": "dan"
+      },
+      {
+        "main": false,
+        "name": "Storhovedet multe",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "Tainha",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Taínha",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tainha-negra",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tainha-sabão",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Testolina",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Testu",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tistazza",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Tjockläppad multe",
+        "language": "swe"
+      },
+      {
+        "main": false,
+        "name": "Topan baliği",
+        "language": "tur"
+      },
+      {
+        "main": false,
+        "name": "Vocche mozze",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Volpino",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Κέφαλος",
+        "language": "gre"
+      },
+      {
+        "main": true,
+        "name": "Flathead Mullet",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Myxus  flavus Mohr, 1927",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus ",
+        "species_name": "flavus",
+        "species_author": "Mohr, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  plumieri Bloch, 1794",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "plumieri",
+        "species_author": "Bloch, 1794",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  rammelsbergii Tschudi, 1846",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "rammelsbergii",
+        "species_author": "Tschudi, 1846",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil vulpinus Nardo, 1847",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "vulpinus",
+        "species_author": "Nardo, 1847",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil provensalis Risso, 1810",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "provensalis",
+        "species_author": "Risso, 1810",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil grandis Castelnau, 1879",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "grandis",
+        "species_author": "Castelnau, 1879",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil cephalotus Valenciennes, 1836",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "cephalotus",
+        "species_author": "Valenciennes, 1836",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil japonicus Temminck & Schlegel, 1845",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "japonicus",
+        "species_author": "Temminck & Schlegel, 1845",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil gelatinosus Klunzinger, 1872",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "gelatinosus",
+        "species_author": "Klunzinger, 1872",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil hypselosoma Ogilby, 1897",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "hypselosoma",
+        "species_author": "Ogilby, 1897",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil ashanteensis Bleeker, 1863",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "ashanteensis",
+        "species_author": "Bleeker, 1863",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil albula Linnaeus, 1766",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "albula",
+        "species_author": "Linnaeus, 1766",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Myxus superficialis Klunzinger, 1870",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus",
+        "species_name": "superficialis",
+        "species_author": "Klunzinger, 1870",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil lineatus Valenciennes, 1836",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "lineatus",
+        "species_author": "Valenciennes, 1836",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil tang Bloch, 1794",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "tang",
+        "species_author": "Bloch, 1794",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Myxus barnardi Gilchrist & Thompson, 1914",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus",
+        "species_name": "barnardi",
+        "species_author": "Gilchrist & Thompson, 1914",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil dobula Günther, 1861",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "dobula",
+        "species_author": "Günther, 1861",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil muelleri Klunzinger, 1879",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "muelleri",
+        "species_author": "Klunzinger, 1879",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  berlandieri Girard, 1858",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "berlandieri",
+        "species_author": "Girard, 1858",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  borbonicus Valenciennes in Cuvier & Valenciennes 1836",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "borbonicus",
+        "species_author": "Valenciennes in Cuvier & Valenciennes 1836",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  catalarum Whitley, 1951",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "catalarum",
+        "species_author": "Whitley, 1951",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  ciliilabis Valenciennes in Cuvier & Valenciennes 1836",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "ciliilabis",
+        "species_author": "Valenciennes in Cuvier & Valenciennes 1836",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  constantiae Valenciennes in Cuvier & Valenciennes 1836",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "constantiae",
+        "species_author": "Valenciennes in Cuvier & Valenciennes 1836",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  galapagensis Ebeling, 1961",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "galapagensis",
+        "species_author": "Ebeling, 1961",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Myxus  lepidopterus Mohr, 1927",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus ",
+        "species_name": "lepidopterus",
+        "species_author": "Mohr, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  marginalis De Vis, 1885",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "marginalis",
+        "species_author": "De Vis, 1885",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Myxus  niger Mohr, 1927",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus ",
+        "species_name": "niger",
+        "species_author": "Mohr, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  peruanus Hildebrand, 1946",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "peruanus",
+        "species_author": "Hildebrand, 1946",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Myxus  tincoides Mohr, 1927",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus ",
+        "species_name": "tincoides",
+        "species_author": "Mohr, 1927",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  tongae Günther, 1880",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "tongae",
+        "species_author": "Günther, 1880",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil  trichilus Vaillant & Sauvage, 1875",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil ",
+        "species_name": "trichilus",
+        "species_author": "Vaillant & Sauvage, 1875",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Myxus caecutiens Günther, 1876",
+        "status": "ACCEPTED",
+        "genus_name": "Myxus",
+        "species_name": "caecutiens",
+        "species_author": "Günther, 1876",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil cephalus var. cestreo Rafinesque, 1810",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "cephalus",
+        "species_author": null,
+        "infrarank_author": "Rafinesque, 1810",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "cestreo"
+      },
+      {
+        "name": "Sparus  cetaceus Cabrera y Corro, Pérez & Hänseler, 1887",
+        "status": "ACCEPTED",
+        "genus_name": "Sparus ",
+        "species_name": "cetaceus",
+        "species_author": "Cabrera y Corro, Pérez & Hänseler, 1887",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil chaptalii Eydoux & Souleyet, 1850",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "chaptalii",
+        "species_author": "Eydoux & Souleyet, 1850",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil cephalus var. chelone Rafinesque, 1810",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "cephalus",
+        "species_author": null,
+        "infrarank_author": "Rafinesque, 1810",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "chelone"
+      },
+      {
+        "name": "Mugil mexicanus Steindachner, 1875",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "mexicanus",
+        "species_author": "Steindachner, 1875",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Mugil cephalus var. myxone Rafinesque, 1810",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil",
+        "species_name": "cephalus",
+        "species_author": null,
+        "infrarank_author": "Rafinesque, 1810",
+        "subpopulation_name": null,
+        "infra_type": "variety",
+        "infra_name": "myxone"
+      },
+      {
+        "name": "Mugil crenilabis ssp. our Fabricius, 1775",
+        "status": "ACCEPTED",
+        "genus_name": "Mugil  ",
+        "species_name": "crenilabis",
+        "species_author": null,
+        "infrarank_author": "Fabricius, 1775",
+        "subpopulation_name": null,
+        "infra_type": "subspecies",
+        "infra_name": "our"
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": 0,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": null,
+    "congregatory": "Congregatory (year-round)",
+    "movement_patterns": "Full Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "No"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "No",
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "No",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "Unknown"
+  },
+  "documentation": {
+    "range": "This species is distributed circumglobally in shallow coastal waters of tropical, subtropical and warm temperate regions from 51°N to 42°S. <br/><br/>In the western Atlantic its range extends from Nova Scotia, Canada, south along the United States coastline, and throughout the Gulf of Mexico, but it is absent from the Caribbean Sea. <br/><br/>In the eastern Atlantic it occurs around France, the Iberian Peninsula, the Mediterranean Sea, the Black Sea, and the entire coastline of western Africa, including offshore islands. <br/><br/>In the Indo-West Pacific it is known from the Red Sea, the coastline of eastern Africa, the Persian Gulf, India, Réunion, Mauritius, Rodrigues, Madagascar, the Seychelles, New Caledonia, Australia, New Zealand, Japan (Hokkaido south to the Ryukyu Islands), and from Hawaii Island to the Midway Atoll. <br/><br/>In the eastern Pacific it is found from California (United States) to Chile including the Galapagos.<br/><br/>It is considered rare in the Philippines, East Indies, Bahamas, West Indies, and eastern tropical Atlantic.<br/><br/>The striped mullet has also been introduced to a number of areas outside its natural range, notably becoming established in the Caspian Sea.",
+    "population": "This species is abundant in most areas, especially subtropical to warm temperate regions, but is scarcer in the tropics. It is the most abundant of the grey mullet species occurring throughout the majority of its range, especially in freshwater and estuarine areas. <br/><br/>In commercial catch records this species is typically combined with related taxa under the generic term 'mullets nei' (nei = not elsewhere included). This has complicated analysis of its population trends, which have not been quantified at the global scale. A number of localised declines have been reported, however, e.g. subpopulations in the southwestern Indian Ocean are considered likely to be declining (see 'Threats'). <br/><br/>In Tamiahua Lagoon, Mexico, the catch has declined by 70% since the 1960s and 70s, while in Laguna Madre the maximum sustainable yield in the year 2000 was estimated at 3,017 tonnes, although catches of up to 5,000 tonnes were not uncommon. Elsewhere in Mexico, the species is considered to be fully-exploited off Tamaulipas state, while a 70% decline in catch has been recorded off Veracruz since the year 2000. <br/><br/>In Cuba catches of 'mullets nei' have declined markedly due to overfishing of spawning aggregations and migrations. <br/><br/>In the United States there is no report of overfishing in the 2010 Florida Fish and Wildlife Research Institute report, with a 35% SPR (spawning potential ratio) target in place throughout the state. This species was reported among the top ten most abundant species collected from the lower mouth of the Peace River in Florida from 1997 to 2010. It was also among the ten dominant species collected from tidal streams in Texas state from 1991 to 2009, and is one of the most abundant species collected with bag seines in every bay system throughout Texas (J. Tolan pers. comm.). <br/><br/>Its estimated area of occupancy (AOO) in the Gulf of Mexico is 155,503 km<sup>2</sup> (calculated by clipping the distribution polygon to the zero to a 20-metre bathymetric layer extracted from ETOPO), of which 11,566 km<sup>2</sup> comprises areas of known overexploitation (Tamaulipas, Veracruz and Cuba). Therefore, it is estimated that less than half of the overall Gulf of Mexico subpopulation has experienced significant declines.<br/><br/>In the British Isles, data provided by members of the National Mullet Club suggest the England and Wales population declined by more than 30% from 2006-2016. A decrease in average specimen size is a known indicator of over-exploitation in a fish population, and the average weight of individuals captured by anglers in southern England declined by more than 40% from 2008-2017. Anecdotal evidence from Association of Inshore Fisheries and Conservation Authorities officers based in northwest England suggests a concurrent decline in the Irish Sea (A. Burt pers. comm.). <br/><br/>A major decline in the western Mediterranean 'mullets nei' stock saw average annual catches fall from c. 40,000 tonnes per year during the period 1996-2001 to 13,000-16,000 tonnes per year from 2013-2017 (D. Crosetti pers comm.). A recent study demonstrated that grey mullets have become increasingly rare in the Neretva River estuary, Croatia, having once been the most abundant fish species present.",
+    "habitats": "<p>This species is euryhaline and benthopelagic, frequenting coastal areas. It often forages in lagoons, estuaries and the lower courses of rivers, and can tolerate tolerate wide ranges of temperature and salinity including pure freshwater. Adults are found in waters that range in temperature and salinity from 8 to 24°C, and 0 ppt to 75 ppt; respectively. Juveniles are able to tolerate salinities from 0 ppt to 35 ppt.  It is capable of surviving temperatures ranging from 12-25°C.</p><p>It is usually found at depths of zero to 10 metres, but can be found as deep as 120 metres, and tends to form schools over substrates of sand or mud. <br/><br/>Adults feed on detritus and microphytobenthos filtered from the sediment, but also consume foraminiferans and other protists, meiofauna and small invertebrates, and graze on filamentous green algae. Juveniles feed on zooplankton. The flathead mullet contributes significantly to the functioning of estuarine systems by direct exploitation of particulate organic matter and primary production, and acceleration of microphytobenthos turnover in littoral zones. It is capable of transporting large quantities of surface sediment through its feeding activities and faecal production, and has been referred to as an ‘ecosystem engineer’. It has also been described as a 'keystone species' since it comprises an important dietary component for a range of species from piscivorous birds to crocodiles. A number of studies have proposed that it would be an ideal species to use for coastal biomonitoring studies given its cosmopolitan distribution and its tendency to bioaccumulate land-based pollution.<br/><br/>The timing of reproduction varies in different parts of the world, with spawning activity peaking at temperatures between 20-26ºC. Adults migrate far offshore to spawn, often forming large aggregations. For example, in the Gulf of Mexico spawning takes place at depths of 40-1,650 metres beyond the continental shelf and 50-100 km away from the coast. This species has a polyandrous, oviparous mating system, whereby eggs are released in batches. Spawning is followed by young-of-the-year recruitment to monospecific schools in nursery zones along coastlines or in estuaries, where juveniles remain for up to three years. Tag returns along the U.S. Gulf of Mexico coast indicate that adult individuals display a high degree of residency, with localised subpopulations remaining within relatively small areas and returning to their original bay systems post-spawning. Fecundity ranges from 270,000-1.6 million eggs per individual per season, with absolute fecundity between 2.9-16 million. <br/><br/>The average lifespan has been estimated at 5-8 years, with adults becoming sexually mature at around 32-50 cm in length and 2-3 years in age. However, individuals in some subpopulations, e.g., the western Mediterranean, achieve sexual maturity at much smaller sizes. Maximum standard length for this species is 120 cm male/unsexed, with maximum reported weight 12 kg, and maximum reported age 16 years.</p>",
+    "threats": "No major threats have been identified at the global scale, although a number of localised declines have been reported.<br/><br/>For example, in the Atlantic Ocean this species' relatively slow growth, late maturity, complex reproductive cycle and high site fidelity render it vulnerable to over-exploitation, and this is likely to be reflected throughout much of its range. <br/><br/>The ongoing decline around the British Isles is thought to be driven by commercial overfishing (in particular for juveniles since where size limits are set they are below the size at which adults are known to become sexually mature), habitat degradation due to increased construction of coastal infrastructure, and water pollution caused by chemicals and compounds used in agriculture and water treatment. These combined pressures are driving an ongoing reduction in available nursery zones for juveniles and subadults. Winter aggregations of adults are also vulnerable to pair-trawling, tangle netting and even shore seine nets. <br/><br/>Proposed hydroelectric schemes and tidal barriers are likely to prevent some subpopulations reaching their summer holding areas and block access to nursery zones, while in the Mediterranean fry and juveniles are harvested in large numbers to grow on in aquaculture schemes. <br/><br/>In the Gulf of Mexico, over-exploitation by commercial fisheries has been noted in both Mexico and Cuba. Subpopulations from the southwestern Indian Ocean are also likely to be threatened by fisheries exploitation and dam construction, the latter leading to degradation of river deltas and associated coastal wetlands.",
+    "measures": "There are a handful of specific conservation efforts and catch limits in place, but in general this species is not proected throughout the majority of its range.<br/><br/>In the Gulf of Mexico, the Mexican fishery is regulated by the NOM -016 -PESC -1994 (DOF 24/04/95). There are seasonal closures to coastal waters off northern Tamaulipas and Veracruz, from the Tuxpan River and Lake Tampamachoco to the Rio Panuco from 1 to 31 December and from 1 to 28 February each year. The minimum catch size for flathead mullet is 31 cm and the minimum mesh size is 101 mm (4 inches). It is recommended to not increase the current fishing effort in terms of fishing permits. In the Laguna Madre it is recommended that the level of exploitation should not exceed 3,000 tonnes per year, and that seasonal closure should be considered for the months of September and October. Recovery strategies should be designed for analyses and evaluations in each annual fishing season, mainly for the state of Veracruz, and a management plan should be developed for the Northwestern Gulf of Mexico.<br/><br/>Management measures in Texas include a ban on possessing mullet measuring over 12 inches during the months of October through January, in order  to allow the spawning stock to migrate offshore and reproduce (Texas Parks and Wildlife).<br/><br/>In the UK, Association of Inshore Fisheries and Conservation Authorities in the southern English counties of Devon and Cornwall have introduced bylaws to control netting within estuaries. The UK Marine Conservation Society considers the species as a 'fish to avoid' from eating. Evidence that the species is declining in the northern (Atlantic), western Mediterranean, Gulf of Mexico and Indian Ocean portions of its range suggest that in-depth population studies are required to assess whether this is true elsewhere.",
+    "use_trade": "Although usually reported only in mixed catches (see below), the flathead mullet has been described as the most important commercial mullet in the eastern United States, with a mean yield of approximately 12,000 tonnes/year. It forms around half of the commercial catch in Australia and Tonga.<br/><br/>Grey mullets ('mullets nei') are important commercial species that are harvested with trammel nets, cast nets, hook and line, trawls, stake nets, lift nets, fish corrals and beach seines and marketed fresh, frozen and salted as a food fish. The roe is sold fresh or smoked, while juveniles are often used for bait. They are often an important component of artisanal fisheries.<br/><br/>According to FAO FishStat Plus, the total fishery production for mullets in the eastern central Atlantic was 30,257 tons in 2010. In the UK, commercial landings were historically small, e.g., between 1923 and 1967 the average was 31 tonnes per annum with a maximum of 87 tonnes. This has increased considerably since the turn of the century, with an average of 151 tonnes from 2006-2017 peaking at 209 tonnes in 2010, after which a steep decline to 81 tonnes in 2016 was observed. The increase is thought to have been driven by restrictions placed on landings of European seabass (<em>Dicentrarchus labrax</em>), but the subsequent decrease has seen market values rise and demand outstrip supply. Fishery statistics show that a total of 13,186 tonnes of grey mullets were produced by capture fisheries in European marine and inland waters during 2013, of which almost 10,000 tonnes was listed as 'mullets nei'.<br/><br/>Grey mullets have been exploited for aquaculture for centuries, and have been reported in FAO FishStat statistics since records began in the 1950s. Production in aquaculture intensified during the 1990s and drove a threefold increase in global aquaculture production from 1999 to 2007, peaking at 271,816 tonnes in 2007, but this has since dropped to annual totals of 133,000-150,000 tonnes. Production is mainly concentrated in the Mediterranean and Black Sea basins plus Southeast Asia, with 84% taking place in Egypt. Nigeria reported an aquaculture production of mullets from 200-1,512 tons between the years 1990-1995, but no recent records exist. In Mauritania, they are used for oil and dried and exported to other countries (Camara pers. comm.). They are also important to the aquaculture industry in Tabasco and Vera Cruz, Mexico (Vega-Cendejas pers. comm.), which is among the top ten global mullet-producing countries. In Europe the biggest producers are Greece, Spain, Italy and Ukraine, and flathead mullet is among the species utilised, although it is not reported separately in official statistics. <br/><br/>Despite extensive research and experimental trials, artificial propagation has never been successful at a commercial scale and grey mullet culture is still mainly based on collection of fry and juveniles from the wild. In Italy, 30-58 million 'mullets nei' fry were harvested annually from 1988-2000. In the Mediterranean fry collection for aquaculture continues in Albania, Greece, Israel, Egypt, Algeria, Tunisia, Spain and Italy, but is banned in Croatia, Cyprus, France, Morocco and Türkiye, while many unlicensed fishers also take fry.",
+    "rationale": "This mullet remains common and abundant throughout most of its range. Although fisheries data suggests that some subpopulations have declined significantly since the   early 2000s, the species does not currently trigger any threat category criteria. It is therefore assessed as Least Concern.",
+    "trend_justification": null,
+    "taxonomic_notes": "Flathead Mullet taxonomy remains unresolved, and there is a wealth of evidence suggesting that it comprises a complex of closely-related species rather than a single cosmopolitan taxon (Whitfield <em>et al.</em> 2012, Durand and Borsa 2015). It is thus likely to be revised in the future."
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Non-Breeding Season",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Wetlands (inland) - Permanent Rivers/Streams/Creeks (includes waterfalls)"
+      },
+      "code": "5_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Coastal/Supratidal - Coastal Brackish/Saline Lagoons/Marine Lakes"
+      },
+      "code": "13_4"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritius"
+      },
+      "code": "MU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine"
+      },
+      "code": "UA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Romania"
+      },
+      "code": "RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bulgaria"
+      },
+      "code": "BG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bosnia and Herzegovina"
+      },
+      "code": "BA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Albania"
+      },
+      "code": "AL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Serbia"
+      },
+      "code": "RS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Slovenia"
+      },
+      "code": "SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Georgia"
+      },
+      "code": "GE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Palestine, State of"
+      },
+      "code": "PS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Macao"
+      },
+      "code": "MO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Lord Howe Is."
+      },
+      "code": "NFK-LH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "New South Wales"
+      },
+      "code": "NSW-NS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Northern Territory"
+      },
+      "code": "NTA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Queensland"
+      },
+      "code": "QLD-QU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Western Australia"
+      },
+      "code": "WAU-WA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "France (mainland)"
+      },
+      "code": "FRA-FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Baleares"
+      },
+      "code": "BAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Greece (mainland)"
+      },
+      "code": "GRC-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sardegna"
+      },
+      "code": "SAR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Adzhariya"
+      },
+      "code": "TCS-AD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Italy (mainland)"
+      },
+      "code": "ITA-IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sicilia"
+      },
+      "code": "SIC-SI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Portugal (mainland)"
+      },
+      "code": "POR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krym"
+      },
+      "code": "KRY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Corsica"
+      },
+      "code": "COR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kriti"
+      },
+      "code": "KRI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Abkhaziya"
+      },
+      "code": "TCS-AB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Gruziya"
+      },
+      "code": "TCS-GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spanish North African Territories"
+      },
+      "code": "MOR-SP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South European Russia"
+      },
+      "code": "RUS-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "European Russia"
+      },
+      "code": "RU-EU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Asia"
+      },
+      "code": "TUR-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "East Aegean Is."
+      },
+      "code": "EAI-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Canary Is."
+      },
+      "code": "CNY-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Krasnodar"
+      },
+      "code": "NCS-KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ukraine (main part)"
+      },
+      "code": "UKR-UK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Türkiye-in-Europe"
+      },
+      "code": "TUE-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Spain (mainland)"
+      },
+      "code": "SPA-SP"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Dams (size unknown)"
+      },
+      "code": "7_2_11"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Housing & urban areas"
+      },
+      "code": "1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Commercial & industrial areas"
+      },
+      "code": "1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Tourism & recreation areas"
+      },
+      "code": "1_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Camara, K.D., Carpenter, K.E., Djiman, R., Nunoo, F., Sagna, A., Sidibé, A, Sylla, M., de Morais, L., Jelks, H., Tolan, J., Vega-Cendejas, M., Espinosa-Perez, H., Chao, L., Moretzsohn, F., Sparks, J.S. & Ford, M.",
+      "value": [
+        "Howard Jelks (USGS Southeast Ecological Science Center)",
+        "Matthew Ford (Seriously Fish)",
+        "Kent Carpenter (IUCN SSC Global Marine Species Assessment, Old Dominion University, Virginia, US)",
+        "Labbish Chao",
+        "Mor Sylla (CRODT- SENEGAL)",
+        "Alphonse Sagna (CRODT- SENEGAL)",
+        "James  Tolan (Texas Parks and Wildlife Department, Coastal Fisheries Division)",
+        "Maria Eugenia Vega-Cendejas (CINVESTAV-IPN, Unidad Merida)",
+        "Fabio Moretzsohn",
+        "Aboubacar Sidibé (Ressources Aquatiques Vivantes et Environnements marins côtiers)",
+        "Hector Espinosa-Perez (National University of Mexico)",
+        "John Sparks (American Museum of Natural History)",
+        "Khair Dine Camara (IMROP)",
+        "Luis Tito de Morais (GIBAO and AMPHORE projects)",
+        "Roger Djiman (Department of Fisheries Benin)",
+        "Francis Nunoo (University of Ghana)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Daniels, A.",
+      "value": [
+        "Adam Daniels (Global Tree Assessment, BGCI)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Larson, H., Pippard, H., Kottelat, M. & Freyhof, J.",
+      "value": [
+        "Maurice Kottelat (IUCN SSC Freshwater Fish Specialist Group)",
+        "Helen Pippard (IUCN Oceania Regional Office)",
+        "Jörg Freyhof (Museum für Naturkunde, Leibniz Institute for Evolution and Biodiversity Science, Berlin)",
+        "Helen  Larson (former curator of fishes at the Australian Museum)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Claro, R., de Mitcheson, Y.S., Lindeman, K.C. and García-Cagide, A.R. 2009. Historical analysis of Cuban commercial fishing effort and the effects of management interventions on important reef fishes from 1960–2005. <i>Fisheries Research  </i> 99: 7–16.",
+      "year": "2009",
+      "title": "Historical analysis of Cuban commercial fishing effort and the effects of management interventions on important reef fishes from 1960–2005",
+      "author": "Claro, R., de Mitcheson, Y.S., Lindeman, K.C. and García-Cagide, A.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fricke, R., Kulbicki, M. and Wantiez, L. 2011. Checklist of the fishes of New Caledonia, and their distribution in the Southwest Pacific Ocean (Pisces). <i>Stuttgarter Beiträge zur Naturkunde A, Neue Serie</i> 4: 341-463.",
+      "year": "2011",
+      "title": "Checklist of the fishes of New Caledonia, and their distribution in the Southwest Pacific Ocean (Pisces).",
+      "author": "Fricke, R., Kulbicki, M. and Wantiez, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fricke, R., Mulochau, T., Durville, P., Chabanet, P., Tessier, E. and Letourneur, Y. 2009. Annotated checklist of the fish species (Pisces) of La Réunion, including a Red List of threatened and declining species. <i>Stuttgarter Beiträge zur Naturkunde</i>: 1–168.",
+      "year": "2009",
+      "title": "Annotated checklist of the fish species (Pisces) of La Réunion, including a Red List of threatened and declining species",
+      "author": "Fricke, R., Mulochau, T., Durville, P., Chabanet, P., Tessier, E. and Letourneur, Y.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Mundy, B.C. 2005. Checklist of the fishes of the Hawaiian Archipelago. <i>Bishop Museum Bulletins in Zoology</i>, pp. 1-703.",
+      "year": "2005",
+      "title": "Checklist of the fishes of the Hawaiian Archipelago",
+      "author": "Mundy, B.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stevens P.W., Greenwood, M.F.D. and Blewett, D.A. 2013. Fish Assemblages in the Oligohaline Stretch of a Southwest Florida River during Periods of Extreme Freshwater Inﬂow Variation. <i>Transactions of the American Fisheries Society </i> 142(6): 1644-1658.",
+      "year": "2013",
+      "title": "Fish Assemblages in the Oligohaline Stretch of a Southwest Florida River during Periods of Extreme Freshwater Inﬂow Variation",
+      "author": "Stevens P.W., Greenwood, M.F.D. and Blewett, D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Menezes, N. A., Nirchio, M., De Oliveira, C. and Siccharamirez, R. 2015. Taxonomic review of the species of <i>Mugil</i> (Teleostei: Perciformes: Mugilidae) from the Atlantic South Caribbean and South America, with integration of morphological, cytogenetic and molecular data. <i>Zootaxa</i> 3918(1): 001-038.",
+      "year": "2015",
+      "title": "Taxonomic review of the species of <i>Mugil</i> (Teleostei: Perciformes: Mugilidae) from the Atlantic South Caribbean and South America, with integration of morphological, cytogenetic and molecular data",
+      "author": "Menezes, N. A., Nirchio, M., De Oliveira, C. and Siccharamirez, R. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ndour, I., Diadhiou, H.D. and Thiaw, O.T. 2013. Reproduction of yellow mullet <i>Mugil cephalus</i> on Northern Coast of Senegal, West Africa. <i>AACL Bioflux</i> 6(5): 439-445.",
+      "year": "2013",
+      "title": "Reproduction of yellow mullet <i>Mugil cephalus</i> on Northern Coast of Senegal, West Africa",
+      "author": "Ndour, I., Diadhiou, H.D. and Thiaw, O.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Cardona, L. 2000. Effects of salinity on the habitat selection and growth performance of Mediterranean flathead grey mullet <i>Mugil cephalus</i> (Osteichthyes, Mugilidae). <i>Estuarine, Coastal and Shelf Science</i> 50: 727-737.",
+      "year": "2000",
+      "title": "Effects of salinity on the habitat selection and growth performance of Mediterranean flathead grey mullet <i>Mugil cephalus</i> (Osteichthyes, Mugilidae)",
+      "author": "Cardona, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Whitfield, A.K., Panfili, J. and Durand, J.-D. 2012. A global review of the cosmopolitan flathead mullet <i>Mugil cephalus</i> Linnaeus 1758 (Teleostei: Mugilidae), with emphasis on the biology, genetics, ecology and fisheries aspects of this apparent species complex. <i>Rev Fish Biol Fisheries</i> 22(3): 641–681.",
+      "year": "2012",
+      "title": "A global review of the cosmopolitan flathead mullet <i>Mugil cephalus</i> Linnaeus 1758 (Teleostei: Mugilidae), with emphasis on the biology, genetics, ecology and fisheries aspects of this apparent species complex",
+      "author": "Whitfield, A.K., Panfili, J. and Durand, J.-D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Waltham, N.J., Teasdale, P.R. and Connolly, R.M. 2013. Use of flathead mullet (Mugil cephalus) in coastal biomonitor studies: Review and recommendations for future studies. <i>Marine Pollution Bulletin</i> 69: 195-205.",
+      "year": "2013",
+      "title": "Use of flathead mullet (Mugil cephalus) in coastal biomonitor studies: Review and recommendations for future studies",
+      "author": "Waltham, N.J., Teasdale, P.R. and Connolly, R.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ibáñez, A.L., chane, C.W., Hus, C.C., Wang, C.H., Iizuka, Y. and Tzeng, W.N. 2012. Diversity of migratory environmental history of the mullets <i>Mugil cephalus</i> and <i>M. curema</i> in Mexican coastal waters as indicated by otolith Sr:Ca ratios. <i>Ciencias Marinas</i> 38(1A): 73-87.",
+      "year": "2012",
+      "title": "Diversity of migratory environmental history of the mullets <i>Mugil cephalus</i> and <i>M. curema</i> in Mexican coastal waters as indicated by otolith Sr:Ca ratios",
+      "author": "Ibáñez, A.L., chane, C.W., Hus, C.C., Wang, C.H., Iizuka, Y. and Tzeng, W.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Durand, J.D. and Borsa, P. 2015. Mitochondrial phylogeny of grey mullets (Acanthopterygii: Mugilidae) suggests high proportion of cryptic species. <i>Comptes Rendus Biologies</i> 338(4): 266-277.",
+      "year": "2015",
+      "title": "Mitochondrial phylogeny of grey mullets (Acanthopterygii: Mugilidae) suggests high proportion of cryptic species",
+      "author": "Durand, J.D. and Borsa, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Esmaeili, H.R., Sayyadzadeh, G., Eagder, S. and Abbasi, K. 2018. Checklist of Freshwater Fishes of Iran. <i>FishTaxa</i> 3(3): 1-95.",
+      "year": "2018",
+      "title": "Checklist of Freshwater Fishes of Iran",
+      "author": "Esmaeili, H.R., Sayyadzadeh, G., Eagder, S. and Abbasi, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kottelat, M. and Freyhof, J. 2007. Handbook of European freshwater fishes. <i>Cornol, Switzerland, Publications Kottelat</i>:  i-xiii + 1-646.",
+      "year": "2007",
+      "title": "Handbook of European freshwater fishes",
+      "author": "Kottelat, M. and Freyhof, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Barbieri, R., Zogaris, S., Kalogianni, E., Stoumboudi, M.T., Chatzinikolaou, Y., Giakoumi, S., Kapakos, Y., Kommatas, D., Koutsikos, N., Tachos, V., Vardakas, L. and Economou, A.N. 2015. <i>Freshwater fishes and lampreys of Greece: An annotated checklist.</i> Hellenic Centre for Marine Research, Athens, Greece.",
+      "year": "2015",
+      "title": "Freshwater fishes and lampreys of Greece: An annotated checklist.",
+      "author": "Barbieri, R., Zogaris, S., Kalogianni, E., Stoumboudi, M.T., Chatzinikolaou, Y., Giakoumi, S., Kapakos, Y., Kommatas, D., Koutsikos, N., Tachos, V., Vardakas, L. and Economou, A.N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ćaleta, M., Marčić, Z., Buj, I., Zanella, D., Mustafić, P., Duplić, A. and Horvatić, S. 2019. A review of extant Croatian freshwater fish and lampreys: annotated list and distribution. <i>Croatian Journal of Fisheries</i> 77(3): 137-234.",
+      "year": "2019",
+      "title": "A review of extant Croatian freshwater fish and lampreys: annotated list and distribution.",
+      "author": "Ćaleta, M., Marčić, Z., Buj, I., Zanella, D., Mustafić, P., Duplić, A. and Horvatić, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2024. The IUCN Red List of Threatened Species. Version 2024-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 28 October 2024).",
+      "year": "2024",
+      "title": "The IUCN Red List of Threatened Species. Version 2024-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2024-2"
+    },
+    {
+      "citation": "Burt, A. 2016. Proposed MCZ to Protect Aggregated Shoals Of Grey Mullet. <i>National Mullet Club (UK) report</i>: 1-12.",
+      "year": "2016",
+      "title": "Proposed MCZ to Protect Aggregated Shoals Of Grey Mullet.",
+      "author": "Burt, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Butterworth, A. and Burt, A. 2018. Vulnerability and Over-Exploitation of Grey Mullet in UK Waters. <i>National Mullet Club (UK) report</i>: 1-8.",
+      "year": "2018",
+      "title": "Vulnerability and Over-Exploitation of Grey Mullet in UK Waters.",
+      "author": "Butterworth, A. and Burt, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "D. Crosetti and S.J. Blaber (eds.). 2016. Biology, ecology and culture of grey mullets (Mugilidae). <i>CRC Press, Boca Raton</i>: 1-539.",
+      "year": "2016",
+      "title": "Biology, ecology and culture of grey mullets (Mugilidae).",
+      "author": "D. Crosetti and S.J. Blaber (eds.)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bartulović, V., Dulčić, J., Matić‐Skoko, S. and Glamuzina, B. 2011. Reproductive cycles of <i>Mugil cephalus</i>, <i>Liza ramada</i> and <i>Liza aurata</i> (Teleostei: Mugilidae). <i>Journal of Fish Biology</i> 78(7): 2067-2073.",
+      "year": "2011",
+      "title": "Reproductive cycles of <i>Mugil cephalus</i>, <i>Liza ramada</i> and <i>Liza aurata</i> (Teleostei: Mugilidae)",
+      "author": "Bartulović, V., Dulčić, J., Matić‐Skoko, S. and Glamuzina, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Durand, J.D. and Borsa, P. 2015. Mitochondrial phylogeny of grey mullets (Acanthopterygii: Mugilidae) suggests high proportion of cryptic species. <i>Comptes Rendus Biologies</i> 338(4): 266-277.",
+      "year": "2015",
+      "title": "Mitochondrial phylogeny of grey mullets (Acanthopterygii: Mugilidae) suggests high proportion of cryptic species",
+      "author": "Durand, J.D. and Borsa, P.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Northeast Australian Shelf"
+      },
+      "code": "4_4_3"
+    },
+    {
+      "description": {
+        "en": "North Australian Shelf"
+      },
+      "code": "4_4_4"
+    },
+    {
+      "description": {
+        "en": "Northwest Australian Shelf"
+      },
+      "code": "4_4_2"
+    },
+    {
+      "description": {
+        "en": "East-Central Australian Shelf"
+      },
+      "code": "4_4_5"
+    },
+    {
+      "description": {
+        "en": "Gulf of California"
+      },
+      "code": "4_5_1"
+    },
+    {
+      "description": {
+        "en": "California Current"
+      },
+      "code": "4_5_2"
+    },
+    {
+      "description": {
+        "en": "Indonesian Seas"
+      },
+      "code": "4_5_4"
+    },
+    {
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "4_5_6"
+    },
+    {
+      "description": {
+        "en": "Sulu-Celebes Sea"
+      },
+      "code": "4_5_7"
+    },
+    {
+      "description": {
+        "en": "Somali Current"
+      },
+      "code": "4_6_3"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "Red Sea"
+      },
+      "code": "4_6_5"
+    },
+    {
+      "description": {
+        "en": "Arabian Sea"
+      },
+      "code": "4_6_2"
+    },
+    {
+      "description": {
+        "en": "Gulf of Mexico"
+      },
+      "code": "3_1_2"
+    },
+    {
+      "description": {
+        "en": "West-Central Australian Shelf"
+      },
+      "code": "4_4_1"
+    },
+    {
+      "description": {
+        "en": "Kuroshio Current"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "description": {
+        "en": "Pacific Central American Coastal"
+      },
+      "code": "4_5_8"
+    },
+    {
+      "description": {
+        "en": "SE US Continental Shelf"
+      },
+      "code": "4_1_4"
+    },
+    {
+      "description": {
+        "en": "Bay of Bengal"
+      },
+      "code": "4_6_1"
+    },
+    {
+      "description": {
+        "en": "Guinea Current"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "description": {
+        "en": "South China Sea"
+      },
+      "code": "4_5_12"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "description": {
+        "en": "NE US Continental Shelf"
+      },
+      "code": "4_1_3"
+    },
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "Canary Current"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "description": {
+        "en": "Benguela Current"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "description": {
+        "en": "Insular Pacific Hawaiian"
+      },
+      "code": "3_2_1"
+    },
+    {
+      "description": {
+        "en": "Gulf of Thailand"
+      },
+      "code": "4_5_13"
+    },
+    {
+      "description": {
+        "en": "Scotian Shelf"
+      },
+      "code": "4_1_1"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Freshwater (=Inland waters)"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

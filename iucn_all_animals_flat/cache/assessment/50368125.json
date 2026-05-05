@@ -1,0 +1,4204 @@
+{
+  "assessment_date": "2017-06-20T01:00:00.000+01:00",
+  "year_published": "2017",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 15421,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/15421/50368125",
+  "citation": "Reeves, R., Pitman, R.L. & Ford, J.K.B. 2017. Orcinus orca. The IUCN Red List of Threatened Species 2017: e.T15421A50368125. Accessed on 05 May 2026.",
+  "assessment_id": 50368125,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 15421,
+    "scientific_name": "Orcinus orca",
+    "species_taxa": [],
+    "subpopulation_taxa": [
+      {
+        "sis_id": 132948040,
+        "scientific_name": "Orcinus orca Strait of Gibraltar subpopulation",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Orcinus",
+        "species_name": "orca",
+        "subpopulation_name": "Strait of Gibraltar subpopulation",
+        "infra_name": null,
+        "authority": "(Linnaeus, 1758)",
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": false,
+            "name": "Orca",
+            "language": "eng"
+          },
+          {
+            "main": false,
+            "name": "Epaulard",
+            "language": "fre"
+          },
+          {
+            "main": false,
+            "name": "Espadarte",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Orca",
+            "language": "spa"
+          },
+          {
+            "main": false,
+            "name": "Orque",
+            "language": "fre"
+          },
+          {
+            "main": true,
+            "name": "Killer Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": [
+          {
+            "name": "Delphinus orca Linnaeus, 1758",
+            "status": "ACCEPTED",
+            "genus_name": "Delphinus",
+            "species_name": "orca",
+            "species_author": "Linnaeus, 1758",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Orcinus glacialis (Berzin & Vladimirov, 1983)",
+            "status": "ACCEPTED",
+            "genus_name": "Orcinus",
+            "species_name": "glacialis",
+            "species_author": "(Berzin & Vladimirov, 1983)",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          },
+          {
+            "name": "Orcinus nanus Mikhalev, Ivashin, Savusin & Zelenaya, 1981",
+            "status": "ACCEPTED",
+            "genus_name": "Orcinus",
+            "species_name": "nanus",
+            "species_author": "Mikhalev, Ivashin, Savusin & Zelenaya, 1981",
+            "infrarank_author": null,
+            "subpopulation_name": null,
+            "infra_type": null,
+            "infra_name": null
+          }
+        ]
+      }
+    ],
+    "infrarank_taxa": [
+      {
+        "sis_id": 134820808,
+        "scientific_name": "Orcinus orca ssp. nov. 'ENP resident killer whale'",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Orcinus",
+        "species_name": "orca",
+        "subpopulation_name": null,
+        "infra_name": "nov. 'ENP resident killer whale'",
+        "authority": null,
+        "ssc_groups": [],
+        "common_names": [],
+        "synonyms": []
+      },
+      {
+        "sis_id": 134820824,
+        "scientific_name": "Orcinus orca ssp. nov. 'ENP transient killer whale'",
+        "kingdom_name": "ANIMALIA",
+        "phylum_name": "CHORDATA",
+        "class_name": "MAMMALIA",
+        "order_name": "ARTIODACTYLA",
+        "family_name": "DELPHINIDAE",
+        "genus_name": "Orcinus",
+        "species_name": "orca",
+        "subpopulation_name": null,
+        "infra_name": "nov. 'ENP transient killer whale'",
+        "authority": null,
+        "ssc_groups": [],
+        "common_names": [
+          {
+            "main": true,
+            "name": "Bigg’s Killer Whale",
+            "language": "eng"
+          }
+        ],
+        "synonyms": []
+      }
+    ],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "ARTIODACTYLA",
+    "family_name": "DELPHINIDAE",
+    "genus_name": "Orcinus",
+    "species_name": "orca",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Orca",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Epaulard",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Espadarte",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Moordvis",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Orca",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Orca assassina",
+        "language": "ita"
+      },
+      {
+        "main": false,
+        "name": "Orque",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Killer Whale",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Orcinus glacialis (Berzin & Vladimirov, 1983)",
+        "status": "New",
+        "genus_name": "Orcinus",
+        "species_name": "glacialis",
+        "species_author": "(Berzin & Vladimirov, 1983)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Delphinus orca Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Delphinus",
+        "species_name": "orca",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Orcinus nanus Mikhalev, Ivashin, Savusin & Zelenaya, 1981",
+        "status": "ACCEPTED",
+        "genus_name": "Orcinus",
+        "species_name": "nanus",
+        "species_author": "Mikhalev, Ivashin, Savusin & Zelenaya, 1981",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Data Deficient"
+    },
+    "code": "DD"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": 0,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": 1000,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "No",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": "Unknown",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "No",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": "Unknown",
+    "extreme_fluctuations_in_area_of_occupancy": "No",
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Unknown",
+    "extreme_fluctuations_in_extent_of_occurence": "No",
+    "continuing_decline_in_number_of_locations": "No",
+    "extreme_fluctuations_in_number_of_locations": "No"
+  },
+  "documentation": {
+    "range": "<p>The Killer Whale is the most cosmopolitan of all cetaceans and may be the second-most widely ranging mammal species on the planet, after Humans (Rice 1998). Killer Whales may occur in virtually any marine habitat but are most common in cold-water areas of high marine productivity, particularly at higher latitudes and near shore (Dahlheim and Heyning 1999, Forney and Wade 2006). Sightings range from the surf zone to the open sea with no clear restrictions of water temperature or depth on their range. The distribution extends to many semi-enclosed seas such as the Mediterranean Sea, Okhotsk Sea, Gulf of California, Gulf of Mexico, Red Sea, and Persian Gulf.<br/></p>  <p>Although Killer Whales occur worldwide, reported densities are 1-2 orders of magnitude lower in the tropics than in the highest latitudes in the Arctic and Antarctic where there has been sampling (Forney and Wade 2006). Killer Whales tend to be more common along continental margins; however, there is some variation in this general pattern that appears linked to ocean productivity. Killer Whales appear to be less common in warm western boundary currents, such as the Gulf Stream or the Kuroshio Current, than in more productive eastern boundary currents, such as the California Current. However, they are also common in cold-water western boundary currents such as the Oyashio and Falkland Currents.<br/> <br/> The map shows the inferred range based on a very large number of observations at sea.</p>",
+    "population": "<p>Killer Whale populations   have been relatively well-studied in the North Pacific. In the Eastern Tropical   Pacific, a line-transect survey resulted in an estimate of 8,500 (CV=0.37) in   1986-1990 (Wade and Gerrodette 1993). A catalogue of 86 individuals was   compiled for waters around the Baja California peninsula, Mexico, from   1972-1997 (Guerrero-Ruiz <em>et al</em>. 1998). A shipboard line-transect   survey of the Hawaii EEZ in 2002 resulted in an estimate of 349 (CV = 0.98) Killer   Whales (Barlow 2006). The southern resident population that inhabits the   inland waters of Washington State and southern British Columbia numbered 77   whales in June 2017 (K.C. Balcomb, Center for Whale Research, pers. comm., 13   June 2017); it is depleted due to past live removals and is listed as   endangered under the U.S. Endangered Species Act and Canada’s Species at Risk   Act. The northern resident population in British Columbia numbered 290 in   2014 and had been increasing at a mean rate of 2.2% per annum since 1974   (Towers <em>et al</em>. 2015). A   photographic catalogue of the west coast transient population in British   Columbia and Southeast Alaska included 272 individuals in 2012 (Towers <em>et al.</em> 2012). This population was   estimated to have increased at an average annual rate of about 2% in the two   decades ending in 2006 (Ford <em>et al</em>.   2007). Bayesian mark-recapture modelling estimated that there were 300   offshore-type Killer Whales (95% CL 257–373) in the region from Alaska to   California in 2012 (Ford <em>et al</em>.   2014). Shipboard line-transect surveys extending out to 300 nm offshore in   2005 and 2007 resulted in an estimate of 691 (CV=0.49) off California, Oregon   and Washington (Carretta <em>et al</em>.   2016); these estimates likely include whales from the aforementioned west   coast transient, southern resident, northern resident, and offshore   populations. A line-transect survey from the Aleutian Islands to the Gulf of   Alaska resulted in an estimate of abundance for transient Killer Whales of   251 (CV=0.51) (Zerbini <em>et al</em>. 2007), while the AT1 transient   population (which inhabits Prince William Sound and waters of the Seward   Peninsula, Alaska) numbered only 7 animals in 2010 (Matkin <em>et al</em>.   2012). Over 700 unique individual resident Killer Whales were   photo-identified over the course of a field study during 1984-2010 in coastal   waters of the Gulf of Alaska (Matkin <em>et al</em>. 2014). Only a subset of   pods within this population were regularly encountered, and those pods   increased in abundance at an average rate of 3.5% per annum during the study.   A line-transect survey from the Aleutian Islands to the Gulf of Alaska   resulted in an estimate of 991 (CV=0.52) resident Killer Whales and 251 (CV=0.51)   transient Killer Whales (Zerbini <em>et al</em>. 2007). <br/></p>   <p>The following figures are   available for Killer Whales in the Russian Far East, all representing   photo-identified individuals and therefore “minimum” counts (Filatova <em>et al</em>. 2014, Erich Hoyt, Whale and   Dolphin Conservation, pers. comm. 12 June 2017): Avacha   Gulf/eastern Kamchatka (1999-2013) – resident type 688, transient type 26   (note that rate of new discovery is very low indicating this may be close to   actual levels of abundance, and site fidelity is much higher than in the   Commander Islands); Commander Islands (2008-2013) - residents &gt; 800,   transients 18 (note that rate of new discovery is high so actual abundance is   certainly higher and about 80% of the identified individuals were encountered   in only one year); western Okhotsk Sea (from Udskaya Gulf to Sakhalin Gulf,   mainly Academiya Gulf) (2011-2013) – residents none, transients 55 (note that no dedicated study was carried out, only   opportunistic sightings along with beluga research; also this is the   population that has been subject to live-capture since 2010).<br/>   <br/>   Line-transect surveys have resulted in high estimates of abundance in several   regions in the North Atlantic, 3,100 (CV=0.63) in Norwegian waters in the   1980s (Øien 1990) and 6,618 (CV=0.32) in Iceland and Faroe Islands waters   also in the 1980s (Gunnlaugsson and Sigurjónsson 1990, Sigurjónsson <em>et al</em>.   1989). A long-term photo-identification study in coastal northern Norway   resulted in an abundance estimate of 731 (CI = 505-1059) in 2003 (Kuningas <em>et al</em>. 2014). In central and southern   European waters there are only two known populations of Killer Whales – one   in the Strait of Gibraltar with 39 individuals in 2011 (Esteban <em>et al</em>. 2016) and the other a pod of   nine individuals regularly seen around western Ireland and northwestern   Scotland (Beck <em>et al</em>. 2013). Killer   Whales are not common in the waters off the eastern United States. Line-transect   surveys yielded an estimate of 133 (CV=49%) in the northern Gulf of Mexico in   the early 2000s (Waring <em>et al</em>.   2006).<br/>   <br/>   Several analyses of line-transect surveys have yielded abundance estimates   for Killer Whales around Antarctica (Hammond 1984, Kasamatsu and Joyce 1995);   however, some of the estimates have been considered biased by methodology and   survey coverage (Branch and Butterworth 2001). More recent analyses that   account for some of these biases resulted in an estimate of about 25,000 for   waters south of 60°S (Branch and Butterworth 2001); however, there are still   uncertainties related to coverage of areas in the pack ice, so true abundance   could be higher. Densities are known to vary locally within Antarctic waters,   ranging from very abundant to uncommon (Secchi <em>et al</em>. 2002, Pitman   and Ensor 2003), and it has been recognized that Killer Whale densities are   higher closer to the ice edge and within the marginal ice zone where the   smaller, fish-eating Killer Whales can occur in aggregations of tens to   hundreds of animals (Berzin and Vladimirov 1983, Pitman and Ensor 2003). A   photo-identification study of type C Killer Whales (a small, fish-eating   form) in McMurdo Sound from 2001-2015 estimated a population of at least 370   animals including 70 that were resident in the Sound each year during the   summer; the remainder were mostly just passing through (Pitman <em>et al</em>. submitted). In the Antarctic   Peninsula area, a photo-identification study of the three different ecotypes   that occur there has to date (June 2017) identified at least 372 type A Killer   Whales (specialist predators of Minke Whales; R. Pitman unpublished data).   Photo-identification studies in the Prince Edward Island Archipelago (mainly   around Marion Island) from 2006-2009 estimated a local population there of   around 42 individuals (95% CI=35-50) that prey seasonally on Penguins and Elephant   Seals (Reisinger <em>et al</em>. 2011). In   other parts of the Southern Hemisphere, 119 (CV=0.20) Killer Whales have been   estimated in New Zealand waters (Visser 2000), and 30 were identified off northern   Patagonia, Argentina, during 1975-1997 (Lopez and Lopez 1985, Iñíguez 2001). No   abundance estimates have been made for type D Killer Whales in the Southern   Hemisphere.<br/>   <br/>   According to Forney and Wade (2006), although the available data are far from   complete, abundance estimates for sampled areas provided a minimum worldwide   abundance estimate of about 50,000 Killer Whales of all types. Those authors   noted that the total was likely higher, because estimates were not available   for many high-latitude areas of the northern hemisphere and for large areas   of the South Pacific, South Atlantic, and Indian Ocean.</p>",
+    "habitats": "<p>Killer Whales are known to   feed on a wide array of prey, including most marine mammal species (except river dolphins and Manatees), seabirds, sea turtles, many species of fish   (including sharks and rays) and cephalopods (Dahlheim and Heyning 1999, Ford   and Ellis 1999, Ford 2009). They have a diversity of foraging tactics,   including intentional beaching to capture pinnipeds on shore, creating waves   to wash seals off ice floes, and using cooperative techniques to herd fish   and to attack large prey such as Tuna and large whales (Dahlheim and Heyning   1999, Baird 2000, Pitman and Durban 2012).</p><p>Although Killer Whales are a generalist as a species, at least some   subpopulations (ecotypes and/or morphotypes) specialize on particular types   of prey (Bigg <em>et al</em>. 1990, Baird 2000). Studies in coastal waters of   the ENP, from California to Alaska, have described three distinct ecotypes of   Killer Whales, referred to as residents, transients (or Bigg’s Killer Whales),   and offshores. Although distinguished by ecological differences, there are   also differences in coloration, external morphology, behavior and acoustics   (Ford and Ellis 2014). The three ecotypes maintain social isolation from each   other (<em>i.e</em>., no interbreeding)   despite sometimes overlapping ranges. The ENP residents are Pacific Salmon   specialists and have a strong preference for one species, the Chinook Salmon   (Ford and Ellis 2006). Transients in coastal waters of the ENP focus their   foraging on pinnipeds and small cetaceans but also take large whales, especially   calves, opportunistically. Killer Whales in coastal Norway specialize on Herring   (Simila <em>et al</em>. 1996) and in the Strait of Gibraltar on Bluefin Tuna   (Cañadas and de Stephanis 2006). Some Killer Whales in New Zealand may forage   selectively on rays and other elasmobranchs (Visser 1999), and in Western   Australia, Killer Whales take scores of Humpback Whale calves for several   months a year (Pitman <em>et al.</em> 2015).   Off the south coast of Western Australia one group of Killer Whales forages,   at least seasonally, on Beaked Whales (Wellard <em>et al</em>. 2106). In the Antarctic, there are five described ecotypes   of Killer Whales, each of them morphologically distinct with different   habitat and prey preferences. One type specializes on Minke Whales and Elephant   Seals taken in open water, one eats mostly ice-associated seals taken off ice   floes, another regularly preys on penguins but is probably mainly a   fish-eater, another rarely seen form has only been observed depredating Patgonian   Toothfish from commercial longlines, and the smallest form appears to be   entirely a fish-eater (Pitman and Ensor 2003, Pitman <em>et al.</em> 2011, Durban <em>et al.</em>   2016). <br/></p>   <p>Long-distance migrations   have been documented for high-latitude Killer Whales. Matthews <em>et al</em>. (2011) satellite-tracked an   individual for 5,400 km (and 38° of latitude) from the eastern Canadian   Arctic into the central North Atlantic. Durban and Pitman (2012) tracked Killer   Whales from the Antarctic Peninsula to southern Brazil and back – a non-stop   roundtrip of almost 9,400 km, and Pitman <em>et   al</em>. (in prep.) tracked fish-eating ecotype Killer Whales from the Ross   Sea to north of New Zealand and back – a &gt;11,000 km roundtrip covering 48°   of latitude. Many Antarctic Killer Whales appear to be highly philopatric. In   the Antarctic, some ecotypes readily enter areas of floe ice in search of   prey, while others hunt only in open water (Pitman and Ensor 2003, Pitman and   Durban 2012). Killer Whales in some areas congregate seasonally in coastal   channels to forage and occasionally enter river mouths.</p>",
+    "threats": "<p>Killer Whales have been exploited (i.e., deliberately hunted) in several regions. Norwegian whalers in the eastern North Atlantic took an average of 56 whales per year from 1938 to 1981. Whalers in Japan took an average of 43 per year in coastal waters from 1946 to 1981. Soviet commercial whalers took an average of 26 Killer Whales annually from 1935 to 1979, primarily in the Antarctic, and then took 916 animals in the 1979/80 Antarctic season (Dahlheim and Heyning 1999,). Killer whales are also taken in small numbers for food (or as a population control measure) in coastal fisheries in Japan, Greenland, Indonesia, and the Caribbean islands (Reeves <em>et al</em>. 2003).<br/> <br/> Fishermen in many areas see Killer Whales as competitors, and intentional shooting is known to occur. This problem was especially serious in Alaska, where depredation of longline fisheries is extensive (Jefferson <em>et al</em>. 1993, Yano and Dahlheim 1995, Donohue <em>et al</em>. 2003), and retaliation for depredation was credited with contributing to a temporary population decline at Crozet Island, in the Southern Ocean (Poncelet <em>et al</em>. 2010). Depredation of longline catches appears to be a recent and increasing phenomenon, and now occurs in many regions (e.g., Aleutian Islands and Southeast Alaska, South Georgia, Crozet Islands, and several other Southern Ocean Subantarctic island areas, Australia, and other locations in the South Pacific). Increased depredation of Toothfish hooked in fisheries in the Crozet Archipelago appears to have had a positive effect on calving rates of female Killer Whales (Tixier <em>et al.</em> 2015).<br/> <br/> Incidental mortality in trawl, longline and driftnet fishing operations occurs, but is considered rare (Dahlheim and Heyning 1999, Muto <em>et al</em>. 2016).<br/> <br/> Persistent bio-accumulating contaminants present a serious potential risk to some Killer Whale populations. Ross <em>et al</em>. (2000) reported that total polychlorinated biphenyl (PCB) concentrations were very high in three Killer Whale populations (2 resident and 1 transient) frequenting the coastal waters of British Columbia, Canada. Transient Killer Whales were particularly contaminated due to their high trophic position in the marine ecosystem. PCB levels in most Killer Whales sampled were greater than levels established at which adverse effects occur in Harbor Seals, suggesting that the majority of free-ranging Killer Whales in this region are at risk of toxic effects. The southern resident and transient Killer Whales of British Columbia and Washington are considered among the most PCB-contaminated cetaceans in the world (Ross <em>et al</em>. 2000). &#160;More recently, Jepson <em>et al</em>. (2016) found very high mean blubber PCB concentrations in Killer Whales in Europe. Small or declining populations of Killer Whales in the northeastern Atlantic (e.g., the very small population associated with the Strait of Gibraltar) have been associated with low recruitment, which is consistent with PCB-induced reproductive toxicity. Also, increasing levels of polybrominated diphenyl ethers which, like PCBs, can cause immunotoxicity, neurotoxicity, and reproductive impairment, have become a concern in the southern resident population in British Columbia and Washington (Mongillo <em>et al</em>. 2012).</p>  <p><br/> Disturbance is another concern in areas where Killer Whales are subject to whale-watching tourism. Moving boats can disrupt foraging and resting, and underwater boat noise can affect social and echolocation signals of the whales or otherwise interfere with foraging (Erbe 2002, Williams <em>et al</em>. 2002, Noren <em>et al.</em> 2009). For example, close approaches by whale-watching vessels have been shown to result in avoidance responses by resident Killer Whales in British Columbia, which presumably has energetic costs to whales that are frequently subjected to this activity (Williams <em>et al</em>. 2002, 2006). Fast-moving boats in the proximity of Killer Whales also present a risk of vessel strikes (e.g., Visser 1999). </p>  <p>&#160;</p>  <p>Potential disturbance and acoustic masking effects of increasing ambient noise levels associated with shipping and other vessel traffic is a growing concern in some regions (Williams <em>et al</em>. 2014). Disturbance responses and masking of echolocation signals in areas with heavy ship activity have the potential to disrupt foraging behavior and reduce prey acquisition with possible population-level consequences (Williams <em>et al</em>. 2014, Veirs <em>et al.</em> 2016).<br/> <br/> </p>  <p>The <em>Exxon Valdez</em> oil spill in Alaska in March 1989 was strongly correlated with the subsequent loss of Killer Whales from transient and resident pods that had been seen swimming near or through oil slicks early in the spill (Dahlheim and Matkin 1994). The AT1 pod had at least 22 individuals when first censused in 1984, before the spill. Eleven individuals have been missing from this pod since 1990 and two more since 1992. Four more whales from this pod died in the early 2000s and there have been no recorded births within the pod since 1984. As of 2012, only 7 of the original 22 AT1 pod members remained. A resident Killer Whale pod affected by the oil had failed to recover 16 years after the spill (Matkin <em>et al.</em> 2008, 2012). Oil spills may also have indirect effects on Killer Whales by reducing prey abundance. </p>  <p><br/> There have been large-scale reductions in predatory fish populations (Myers and Worm 2003; Baum <em>et al</em>. 2003) along with overfishing and collapse of several important “prey” fish stocks worldwide (Jackson <em>et al</em>. 2001). There have also been large declines in some marine mammal populations but many of those populations have recovered or are recovering under protection, and this may mean that some mammal-eating populations of Killer Whales are recovering as well. The same is not likely true of many fish-eating populations, however. </p>  <p><br/> Due to their dietary specialization, some populations of Killer Whales could be especially vulnerable to a reduction of their food supply. In British Columbia and Washington State, many Pacific Salmon stocks have significantly declined as a result of overfishing, habitat degradation, and reduced survival at sea. Declines in survival and reproductive rates of resident Killer Whales were found to correlate with a multi-year reduction in Chinook Salmon abundance in coastal British Columbia and Washington State (Ward <em>et al.</em> 2009, Ford <em>et al.</em> 2010). Mammal-eating Killer Whales along the west coast of North America likely experienced periods of reduced prey availability due to depletion of pinniped populations prior to 1970 (Ford and Ellis 1999). Depletion of Bluefin Tuna stocks in the Mediterranean Sea has almost certainly had a serious impact on the survival of Killer Whales near the Strait of Gibraltar (Cañadas and de Stephanis 2006, Esteban <em>et al</em>. 2016).<br/> <br/> How global climate change and its impacts on the marine environment will affect the different populations and ecotypes of Killer Whales is uncertain (e.g., Learmonth <em>et al</em>. 2006). However, in the Arctic, declining extent and duration of sea ice has given Killer Whales more access to marine mammal prey (Belugas, Narwhals, Bowhead Whales) that depend on ice for refuge from predation (Ferguson <em>et al.</em> 2010, Higdon <em>et al</em>. 2012, George <em>et al.</em> 2015). Similarly, in the Antarctic, the abundance and availability of Killer Whale prey is mediated through the presence of ice (<em>e.g</em>., Pitman and Durban 2012), which means that many species, including both Killer Whales and their prey, face an uncertain future.</p>",
+    "measures": "<p></p><p>The Killer Whale is listed in Appendix II of the Convention on International Trade in Endangered Species and Appendices I and II of the Convention on Migratory Species (CMS). The eastern North Atlantic as well as the ENP populations are included in Appendix II of CMS. <br/> <br/> Further studies on subpopulation structure, abundance and life history are needed for most regions. Regional populations of Killer Whales can be small and highly specialized, and therefore vulnerable to over-exploitation, disturbance, prey reductions and habitat deterioration. Several small populations are already recognized as having a high risk of extinction. Many similarly small and threatened populations may exist worldwide but have not yet been adequately studied and described (e.g., Foote <em>et al</em>. 2013).</p>",
+    "use_trade": "<p></p><p>  </p><p>During the period 1962-1977, at least 65 Killer Whales were live-captured in British Columbia and Puget Sound, Washington (Bigg 1982). In addition, from 1976-1988, 59 Killer Whales were captured alive off Iceland: eight were released, three died and 48 (average 3.7 per year) were exported (Sigurjónsson and Leatherwood 1988). Small numbers of Killer Whales have also been live-captured in Japanese waters (Fisher and Reeves 2005). Killer Whales are still in demand for display in aquariums and amusement parks, especially in China. Most recent captures and exports have been of animals in the Russian Far East (Fisher and Reeves 2005, Filatova <em>et al</em>. 2014). Of 21 Killer Whales known to have been live-captured in the western Sea of Okhotsk from 2012-2016, at least 13 of them were exported to China between 2013 and 2016 (Filatova <em>et al</em>. 2017). </p>  <p></p>",
+    "rationale": "<p>The Killer Whale, as the taxon is presently defined and recognized (Society for Marine Mammalogy 2017), does not meet any of the IUCN Red List criteria for a threatened status. Killer Whales are numerically abundant (at least tens of thousands of mature individuals) and very widely distributed. Experts agree that the present taxon likely includes more than one subspecies, and possibly multiple species. Some small regional populations are known to have declined significantly and would easily qualify for a threatened status if assessed individually (e.g., ENP southern residents, the Bluefin Tuna-dependent population associated with the Strait of Gibraltar), but there is insufficient evidence to support a global decline in the species abundance that would make it meet Criterion A. However, the statement in the previous species assessment (Taylor <em>et al</em>. 2013) still holds: “The combination of potential declines driven by depletion of prey resources and the effects of pollutants is believed sufficient that a 30% global reduction over three generations (77 years; Taylor <em>et al</em>. 2007) cannot be ruled out for some ‘groups’ that may [eventually] be designated as species.” <br/></p>  <p>Although considerable effort continues to be made on improved understanding of the taxonomy of the genus <em>Orcinus</em>, the taxonomic issues have not been fully resolved. This is especially problematic due to the occurrence of sympatric, non-interbreeding ecotypes in the ENP, Antarctic, and possibly elsewhere. The taxon has previously been listed by IUCN as Data Deficient due to taxonomic uncertainty, and that listing should be continued until proper taxonomic units are described and Red List assessments of them can be carried out.</p>",
+    "trend_justification": null,
+    "taxonomic_notes": "<p><span lang=\"EN-CA\">This taxonomic unit is treated as a single species even though there is extensive and growing evidence that it is in fact a complex of multiple forms with morphological, genetic, ecological, and behavioral differences that merit subspecies if not also species designations. At the time of writing (June 2017), the Committee on Taxonomy of the Society for Marine Mammalogy (https://www.marinemammalscience.org/species-information/list-marine-mammal-species-subspecies/), which is generally regarded as the authority for marine mammal taxonomy, recognized a single killer whale species, <em>Orcinus orca</em> (Linnaeus, 1758), and two unnamed subspecies in the eastern North Pacific, the ENP resident killer whale (<em>O. o.</em> un-named subsp.) and the ENP transient killer whale (<em>O. o.</em> un-named subsp.) also known as Bigg’s killer whale. The Committee noted, however, “Other forms of killer whales in the North Pacific, North Atlantic and Antarctic [Southern] Ocean may warrant recognition as separate subspecies or even species, but the taxonomy has not yet been fully clarified or agreed (Morin et al. 2010; Foote et al. 2009, 2013).” One population (a “distinct population segment”) of the ENP resident subspecies (the “southern resident” population) was listed as Endangered under the Canadian Species at Risk Act in 2003 and the U.S. Endangered Species Act in 2005.</p>"
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Antarctic"
+      },
+      "code": "1"
+    },
+    {
+      "description": {
+        "en": "Australasian"
+      },
+      "code": "2"
+    },
+    {
+      "description": {
+        "en": "Indomalayan"
+      },
+      "code": "3"
+    },
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    },
+    {
+      "description": {
+        "en": "Oceanian"
+      },
+      "code": "6"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mediterranean and Black Sea"
+      },
+      "code": "37"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southeast"
+      },
+      "code": "47"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - Antarctic"
+      },
+      "code": "88"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - western central"
+      },
+      "code": "71"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - eastern central"
+      },
+      "code": "77"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - Antarctic"
+      },
+      "code": "48"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southwest"
+      },
+      "code": "81"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - southwest"
+      },
+      "code": "41"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - southeast"
+      },
+      "code": "87"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - western"
+      },
+      "code": "51"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Arctic Sea"
+      },
+      "code": "18"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northwest"
+      },
+      "code": "61"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - Antarctic"
+      },
+      "code": "58"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pacific - northeast"
+      },
+      "code": "67"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Indian Ocean - eastern"
+      },
+      "code": "57"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northwest"
+      },
+      "code": "21"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - eastern central"
+      },
+      "code": "34"
+    },
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - northeast"
+      },
+      "code": "27"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Epipelagic (0-200m)"
+      },
+      "code": "10_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Estuaries"
+      },
+      "code": "9_10"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Pelagic"
+      },
+      "code": "9_1"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Oceanic - Mesopelagic (200-1000m)"
+      },
+      "code": "10_2"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Chile"
+      },
+      "code": "CL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Réunion"
+      },
+      "code": "RE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Aleutian Is."
+      },
+      "code": "ALU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Spain"
+      },
+      "code": "ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Newfoundland I"
+      },
+      "code": "NFL-NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Helena, Ascension and Tristan da Cunha"
+      },
+      "code": "SH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Canada"
+      },
+      "code": "CA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Pierre and Miquelon"
+      },
+      "code": "PM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Sao Tome and Principe"
+      },
+      "code": "ST"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Norway"
+      },
+      "code": "NO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Falkland Islands (Malvinas)"
+      },
+      "code": "FK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Liberia"
+      },
+      "code": "LR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Madagascar"
+      },
+      "code": "MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Portugal"
+      },
+      "code": "PT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Galápagos"
+      },
+      "code": "GAL-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Monaco"
+      },
+      "code": "MC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Mayotte"
+      },
+      "code": "YT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Montenegro"
+      },
+      "code": "ME"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Netherlands"
+      },
+      "code": "NL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "American Samoa"
+      },
+      "code": "AS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gabon"
+      },
+      "code": "GA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Antarctica"
+      },
+      "code": "AQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Wallis and Futuna"
+      },
+      "code": "WF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Christmas Island"
+      },
+      "code": "CX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Vanuatu"
+      },
+      "code": "VU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Equatorial Guinea"
+      },
+      "code": "GQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Australia"
+      },
+      "code": "AU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea-Bissau"
+      },
+      "code": "GW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guinea"
+      },
+      "code": "GN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ghana"
+      },
+      "code": "GH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gambia"
+      },
+      "code": "GM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo"
+      },
+      "code": "CG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Comoros"
+      },
+      "code": "KM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Russian Federation"
+      },
+      "code": "RU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cabo Verde"
+      },
+      "code": "CV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Djibouti"
+      },
+      "code": "DJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Hawaiian Is."
+      },
+      "code": "HAW-HI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Côte d'Ivoire"
+      },
+      "code": "CI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Taiwan, Province of China"
+      },
+      "code": "TW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Congo, The Democratic Republic of the"
+      },
+      "code": "CD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Republic of"
+      },
+      "code": "KR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Niue"
+      },
+      "code": "NU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Philippines"
+      },
+      "code": "PH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Gibraltar"
+      },
+      "code": "GI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Norfolk Island"
+      },
+      "code": "NF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Malta"
+      },
+      "code": "MT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cocos (Keeling) Islands"
+      },
+      "code": "CC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Bahrain"
+      },
+      "code": "BH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Fiji"
+      },
+      "code": "FJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cook Islands"
+      },
+      "code": "CK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Cyprus"
+      },
+      "code": "CY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Italy"
+      },
+      "code": "IT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Ireland"
+      },
+      "code": "IE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Georgia and the South Sandwich Islands"
+      },
+      "code": "GS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Polynesia"
+      },
+      "code": "PF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Lebanon"
+      },
+      "code": "LB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kiribati"
+      },
+      "code": "KI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guam"
+      },
+      "code": "GU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Marshall Islands"
+      },
+      "code": "MH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "China"
+      },
+      "code": "CN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Caledonia"
+      },
+      "code": "NC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Finland"
+      },
+      "code": "FI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nauru"
+      },
+      "code": "NR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bangladesh"
+      },
+      "code": "BD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Togo"
+      },
+      "code": "TG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "France"
+      },
+      "code": "FR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "British Indian Ocean Territory"
+      },
+      "code": "IO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "NZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Brunei Darussalam"
+      },
+      "code": "BN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Vagrant",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Germany"
+      },
+      "code": "DE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Faroe Islands"
+      },
+      "code": "FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Micronesia, Federated States of "
+      },
+      "code": "FM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Denmark"
+      },
+      "code": "DK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "India"
+      },
+      "code": "IN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Seychelles"
+      },
+      "code": "SC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Croatia"
+      },
+      "code": "HR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sierra Leone"
+      },
+      "code": "SL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cambodia"
+      },
+      "code": "KH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Belgium"
+      },
+      "code": "BE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "French Southern Territories"
+      },
+      "code": "TF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Guatemala"
+      },
+      "code": "GT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Timor-Leste"
+      },
+      "code": "TL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Türkiye"
+      },
+      "code": "TR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Viet Nam"
+      },
+      "code": "VN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sri Lanka"
+      },
+      "code": "LK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United States Minor Outlying Islands"
+      },
+      "code": "UM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Thailand"
+      },
+      "code": "TH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "El Salvador"
+      },
+      "code": "SV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Tuvalu"
+      },
+      "code": "TV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Benin"
+      },
+      "code": "BJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tonga"
+      },
+      "code": "TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Tokelau"
+      },
+      "code": "TK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Cameroon"
+      },
+      "code": "CM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pakistan"
+      },
+      "code": "PK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Kingdom"
+      },
+      "code": "GB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Solomon Islands"
+      },
+      "code": "SB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Samoa"
+      },
+      "code": "WS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Korea, Democratic People's Republic of"
+      },
+      "code": "KP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Sweden"
+      },
+      "code": "SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Maldives"
+      },
+      "code": "MV"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Pitcairn"
+      },
+      "code": "PN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Heard Island and McDonald Islands"
+      },
+      "code": "HM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Indonesia"
+      },
+      "code": "ID"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Papua New Guinea"
+      },
+      "code": "PG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iceland"
+      },
+      "code": "IS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Japan"
+      },
+      "code": "JP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Malaysia"
+      },
+      "code": "MY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Svalbard and Jan Mayen"
+      },
+      "code": "SJ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Hong Kong"
+      },
+      "code": "HK"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Singapore"
+      },
+      "code": "SG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Presence Uncertain",
+      "seasonality": null,
+      "description": {
+        "en": "Greece"
+      },
+      "code": "GR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Palau"
+      },
+      "code": "PW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Northern Mariana Islands"
+      },
+      "code": "MP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Greenland"
+      },
+      "code": "GL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kerguelen"
+      },
+      "code": "KEG-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Myanmar"
+      },
+      "code": "MM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_1",
+      "description": {
+        "en": "Taxonomy"
+      }
+    }
+  ],
+  "use_and_trade": [],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 1",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Habitat shifting & alteration"
+      },
+      "code": "11_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_2_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_4_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Shipping lanes"
+      },
+      "code": "4_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_3_4"
+    },
+    {
+      "scope": null,
+      "timing": "Future",
+      "internationalTrade": null,
+      "score": "No/Negligible Impact: 1",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil spills"
+      },
+      "code": "9_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unspecified species"
+      },
+      "code": "8_2_1"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Unintentional effects: (large scale) [harvest]"
+      },
+      "code": "5_4_4"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Oil & gas drilling"
+      },
+      "code": "3_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Reeves, R., Pitman, R.L. & Ford, J.K.B.",
+      "value": [
+        "John Ford (The University of British Columbia, Department of Zoology)",
+        "Randall Reeves (IUCN SSC Cetacean Specialist Group)",
+        "Robert Pitman (Protected Resources Division, Southwest Fisheries Science Center/NOAA)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Brownell, R.",
+      "value": [
+        "Robert Jr Brownell"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Lowry, L., Taylor, B.L., Chiozza, F. & Pollock, C.M.",
+      "value": [
+        "Caroline Pollock (IUCN Red List Unit)",
+        "Federica Chiozza (Global Mammal Assessment)",
+        "Barbara Taylor (independent researcher)",
+        "Lloyd Lowry (Deceased Nov 2018. Formerely atUniversity of Alaska Fairbanks)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Linnaeus, C. 1758. <i>Systema naturae per regna tria naturae, secundum classes, ordinus, genera, species, cum characteribus, differentiis, synonymis, locis. Tomus I. Editio decima, reformata</i>. Impensis Direct, Laurentii Salvii, Holmiae.",
+      "year": "1758",
+      "title": "Systema naturae per regna tria naturae, secundum classes, ordinus, genera, species, cum characteribus, differentiis, synonymis, locis. Tomus I. Editio decima, reformata",
+      "author": "Linnaeus, C",
+      "citation_short": ""
+    },
+    {
+      "citation": "Learmonth, J.A., Macleod, C.D., Santos, M.B., Pierce, G.J., Crick, H.Q.P. and Robinson, R.A. 2006. Potential effects of climate change on marine mammals. <i>Oceanography and Marine Biology: An Annual Review</i> 44: 431-464.",
+      "year": "2006",
+      "title": "Potential effects of climate change on marine mammals",
+      "author": "Learmonth, J.A., Macleod, C.D., Santos, M.B., Pierce, G.J., Crick, H.Q.P. and Robinson, R.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rice, D.W. 1998. <i>Marine Mammals of the World: Systematics and Distribution</i>. Society for Marine Mammalogy, Special Publication Number 4, Lawrence, Kansas.",
+      "year": "1998",
+      "title": "Marine Mammals of the World: Systematics and Distribution",
+      "author": "Rice, D.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Jefferson, T. A., Leatherwood, S. and Webber, M. A. 1993. <i>Marine Mammals of the World: FAO Species Identification Guide</i>. United Nation Environment Programme and Food and Agricultural Organization of the UN.",
+      "year": "1993",
+      "title": "Marine Mammals of the World: FAO Species Identification Guide",
+      "author": "Jefferson, T. A., Leatherwood, S. and Webber, M. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, B.L., Chivers, S.J., Larese, J. and Perrin, W.F. 2007. Generation length and percent mature estimates for IUCN assessments of Cetaceans. NOAA Southwest Fisheries Science Center, La Jolla, California. Administrative Report LJ-07-01.",
+      "year": "2007",
+      "title": "Generation length and percent mature estimates for IUCN assessments of Cetaceans",
+      "author": "Taylor, B.L., Chivers, S.J., Larese, J. and Perrin, W.F.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kasamatsu, F. and Joyce, G. G. 1995. Current status of odontocetes in the Antarctic. <i>Antarctic Science</i> 7: 365-379.",
+      "year": "1995",
+      "title": "Current status of odontocetes in the Antarctic",
+      "author": "Kasamatsu, F. and Joyce, G. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Waring, G.T., Josephson, E., Fairfield, C.P. and Maze-Foley, K. 2006. U.S. Atlantic and Gulf of Mexico marine mammal stock assessments - 2005.  NOAA Technical Memorandum NMFS-NE-201. 346 p.",
+      "year": "2006",
+      "title": "U.S. Atlantic and Gulf of Mexico marine mammal stock assessments - 2005",
+      "author": "Waring, G.T., Josephson, E., Fairfield, C.P. and Maze-Foley, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wade, P.R. and Gerrodette, T. 1993. Estimates of cetacean abundance and distribution in the eastern tropical Pacific. <i>Reports of the International Whaling Commission</i> 43: 477-493.",
+      "year": "1993",
+      "title": "Estimates of cetacean abundance and distribution in the eastern tropical Pacific",
+      "author": "Wade, P.R. and Gerrodette, T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Reeves, R.R., Smith, B.D., Crespo, E.A. and Notarbartolo di Sciara, G. 2003. Dolphins, Whales and Porpoises: 2002-2010 Conservation Action Plan for the World's Cetaceans. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "2003",
+      "title": "Dolphins, Whales and Porpoises: 2002-2010 Conservation Action Plan for the World's Cetaceans",
+      "author": "Reeves, R.R., Smith, B.D., Crespo, E.A. and Notarbartolo di Sciara, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Berzin, A. A. and Vladimirov, V.L. 1983. A new species of killer whale (Cetacea, Delphinidae) from Antarctic waters. <i>Zoologicheskii Zhurnal</i> 62: 287-295.",
+      "year": "1983",
+      "title": "A new species of killer whale (Cetacea, Delphinidae) from Antarctic waters",
+      "author": "Berzin, A. A. and Vladimirov, V.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baird, R. W. 1994. Foraging behaviour and ecology of transient killer whales (<i>Orcinus orca</i>). Simon Fraser University.",
+      "year": "1994",
+      "title": "Foraging behaviour and ecology of transient killer whales (<i>Orcinus orca</i>)",
+      "author": "Baird, R. W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ford, J. K. B. and Ellis, G. M. 1999. <i>Transients: Mammal-hunting killer whales of British Columbia, Washington, and southeastern Alaska</i>. Univ. British Columbia Press.",
+      "year": "1999",
+      "title": "Transients: Mammal-hunting killer whales of British Columbia, Washington, and southeastern Alaska",
+      "author": "Ford, J. K. B. and Ellis, G. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ford, J. K. B. 2002. Killer whale Orcinus orca. In: W. F. Perrin;B. Wursig;J. G. M. Thewissen (ed.), <i>Encyclopedia of Marine Mammals</i>, pp. 669-676. Academic Press.",
+      "year": "2002",
+      "title": "Killer whale Orcinus orca",
+      "author": "Ford, J. K. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dahlheim, M. E. and Heyning, J. E. 1999. Killer whale <i>Orcinus orca</i> (Linneaus, 1758). In: S. H. Ridgway and R. Harrison (eds), <i>Handbook of marine mammals, Vol. 6: The second book of dolphins and the porpoises</i>, pp. 281-322. Academic Press.",
+      "year": "1999",
+      "title": "Killer whale <i>Orcinus orca</i> (Linneaus, 1758)",
+      "author": "Dahlheim, M. E. and Heyning, J. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gunnlaugsson, T. and Sigurjónsson, J. 1990. NASS-87: Estimation of whale abundance based on observations made onboard Icelandic and Faroese survey vessels. <i>Reports of the International Whaling Commission</i> 40: 571-580.",
+      "year": "1990",
+      "title": "NASS-87: Estimation of whale abundance based on observations made onboard Icelandic and Faroese survey vessels",
+      "author": "Gunnlaugsson, T. and Sigurjónsson, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Miyashita, T. 1993. Abundance of dolphin stocks in the western North Pacific taken by the Japanese drive fishery. <i>Reports of the International Whaling Commission</i> 43: 417-437.",
+      "year": "1993",
+      "title": "Abundance of dolphin stocks in the western North Pacific taken by the Japanese drive fishery",
+      "author": "Miyashita, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Guerrero-Ruiz, M., Gendron, D. and Urban, J. R. 1998. Distribution, movements and communities of killer whales (<i>Orcinus orca</i>) in the Gulf of California, Mexico. <i>Reports of the International Whaling Commission</i> 48: 537-543.",
+      "year": "1998",
+      "title": "Distribution, movements and communities of killer whales (<i>Orcinus orca</i>) in the Gulf of California, Mexico",
+      "author": "Guerrero-Ruiz, M., Gendron, D. and Urban, J. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barrett-Lennard, L. G. 2000. Population structure and mating patterns of killer whales (<i>Orcinus orca</i>) as revealed by DNA analysis. University of British Columbia.",
+      "year": "2000",
+      "title": "Population structure and mating patterns of killer whales (<i>Orcinus orca</i>) as revealed by DNA analysis",
+      "author": "Barrett-Lennard, L. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Cañadas, A. and de Stephanis, R. 2006. <i>Orcinus orca</i>. In: R. Reeves and G. Notarbartolo di Sciara (eds), <i>The Status and Distribution of Cetaceans in the Black Sea and Mediterranean Sea</i>, pp. 34-38. IUCN Centre for Mediterranean Cooperation, Malaga, Spain.",
+      "year": "2006",
+      "title": "<i>Orcinus orca</i>",
+      "author": "Cañadas, A. and de Stephanis, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hammond, P. S. 1984. Abundance of killer whales in Antarctic areas II, III, IV and V. <i>Reports of the International Whaling Commission</i> 34: 543-548.",
+      "year": "1984",
+      "title": "Abundance of killer whales in Antarctic areas II, III, IV and V",
+      "author": "Hammond, P. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Erbe, C. 2002. Underwater noise of whale-watching boats and potential effects on killer whales (<i>Orcinus orca</i>), based on an acoustic impact model. <i>Marine Mammal Science</i> 18(2): 394-418.",
+      "year": "2002",
+      "title": "Underwater noise of whale-watching boats and potential effects on killer whales (<i>Orcinus orca</i>), based on an acoustic impact model",
+      "author": "Erbe, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Iñíguez, M. A. 2001. Seasonal distribution of killer whales (<i>Orcinus orca</i>) in Northern Patagonia, Argentina. <i>Aquatic Mammals</i> 27(2): 154-161.",
+      "year": "2001",
+      "title": "Seasonal distribution of killer whales (<i>Orcinus orca</i>) in Northern Patagonia, Argentina",
+      "author": "Iñíguez, M. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, R., Lusseau, D. and Hammond, P. S. 2006. Estimating relative energetic costs of human disturbance to killer whales (<i>Orcinus orca</i>). <i>Biological Conservation</i> 133: 301-311.",
+      "year": "2006",
+      "title": "Estimating relative energetic costs of human disturbance to killer whales (<i>Orcinus orca</i>)",
+      "author": "Williams, R., Lusseau, D. and Hammond, P. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "López, J. C. and López, D. 1985. Killer whales (<i>Orcinus orca</i>) of Patagonia, and their behavior of intentional stranding while hunting nearshore. <i>Journal of Mammalogy</i> 66: 181-183.",
+      "year": "1985",
+      "title": "Killer whales (<i>Orcinus orca</i>) of Patagonia, and their behavior of intentional stranding while hunting nearshore",
+      "author": "López, J. C. and López, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Secchi, E. R., Dalla Rosa, L., Kinas, P. G., Santos, M. C. O., Zerbini, A. N., Bassoi, M. and Moreno, I. B. 2002. Encounter rates of whales around the Antarctic Peninsula with special reference to humpback whales, <i>Megaptera novaeangliae</i>, in the Gerlache Strait: 1997/98 to 1999/2000. <i>Memoirs of the Queensland Museum</i> 47: 571-578.",
+      "year": "2002",
+      "title": "Encounter rates of whales around the Antarctic Peninsula with special reference to humpback whales, <i>Megaptera novaeangliae</i>, in the Gerlache Strait: 1997/98 to 1999/2000",
+      "author": "Secchi, E. R., Dalla Rosa, L., Kinas, P. G., Santos, M. C. O., Zerbini, A. N., Bassoi, M. and Moreno, I. B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Zerbini, A. N., Waite, J. M., Durban, J. W., LeDuc, R. Dahlheim, M. E. and Wade, P. R. 2007. Estimating abundance of killer whales in the nearshore waters of the Gulf of Alaska and Aleutian Islands using line transect sampling. <i>Marine Biology</i> 150(5): 1033-1045.",
+      "year": "2007",
+      "title": "Estimating abundance of killer whales in the nearshore waters of the Gulf of Alaska and Aleutian Islands using line transect sampling",
+      "author": "Zerbini, A. N., Waite, J. M., Durban, J. W., LeDuc, R. Dahlheim, M. E. and Wade, P. R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Forney, K. A. and Wade, P. 2006. Worldwide distribution and abundance of killer whales. In: J. A. Estes, R. L. Brownell, Jr., D. P. DeMaster, D. F. Doak and T. M. Williams (eds), <i>Whales, Whaling and Ocean Ecosystems</i>, pp. 145-162. University of California Press.",
+      "year": "2006",
+      "title": "Worldwide distribution and abundance of killer whales",
+      "author": "Forney, K. A. and Wade, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, R., Trites, A. W. and Bain, D. E. 2002. Behavioural responses of killer whales (<i>Orcinus orca</i>) to whale-watching boats: opportunistic observations and experimental approaches. <i>Journal of Zoology (London)</i> 256: 255-270.",
+      "year": "2002",
+      "title": "Behavioural responses of killer whales (<i>Orcinus orca</i>) to whale-watching boats: opportunistic observations and experimental approaches",
+      "author": "Williams, R., Trites, A. W. and Bain, D. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stevens, T. A., Duffield, D. A., Asper, E. D., Hewlett, K. G., Bolz, A., Gage, L. J. and Bossart, G. D. 1989. Preliminary findings of restriction fragment differences in mitochondrial DNA among killer whales (<i>Orcinus orca</i>). <i>Canadian Journal of Zoology</i> 67: 2592-2595.",
+      "year": "1989",
+      "title": "Preliminary findings of restriction fragment differences in mitochondrial DNA among killer whales (<i>Orcinus orca</i>)",
+      "author": "Stevens, T. A., Duffield, D. A., Asper, E. D., Hewlett, K. G., Bolz, A., Gage, L. J. and Bossart, G. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mikhalev, Y. A., Ivashin, M. V., Sausin, V. P. and Zelemaya, F. E. 1981. The distribution and biology of killer whales in the Southern Hemisphere. <i>Reports of the International Whaling Commission</i> 31: 551-566.",
+      "year": "1981",
+      "title": "The distribution and biology of killer whales in the Southern Hemisphere",
+      "author": "Mikhalev, Y. A., Ivashin, M. V., Sausin, V. P. and Zelemaya, F. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Simila, T., Holst, J. C. and Christensen, I. 1996. Occurrence and diet of killer whales in northern Norway: seasonal patterns relative to the distribution and abundance of Norwegian spring-spawning herring. <i>Canadian Journal of Fisheries and Aquatic Sciences</i> 53: 769-779.",
+      "year": "1996",
+      "title": "Occurrence and diet of killer whales in northern Norway: seasonal patterns relative to the distribution and abundance of Norwegian spring-spawning herring",
+      "author": "Simila, T., Holst, J. C. and Christensen, I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sigurjónsson, J., Gunnlaugsson, T. and Payne, M. 1989. Shipboard sighting surveys in Icelandic and adjacent waters June-July 1987. <i>Reports of the International Whaling Commission</i> 39: 395-409.",
+      "year": "1989",
+      "title": "Shipboard sighting surveys in Icelandic and adjacent waters June-July 1987",
+      "author": "Sigurjónsson, J., Gunnlaugsson, T. and Payne, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Krahn, M. M., Ford, M. J., Perrin, W. F., Wade, P. R., Angliss, R. P., Hanson, M. B., Taylor, B. L., Ylitalo, G. M., Dahlheim, M. E., Stein, J. E. and Waples, R. S. 2004. 2004 status review of southern resident killer whales (<i>Orcinus orca</i>) under the Endangered Species Act. <i>NOAA Technical Memorandum NMFS-NWFSC</i> 73: 133.",
+      "year": "2004",
+      "title": "2004 status review of southern resident killer whales (<i>Orcinus orca</i>) under the Endangered Species Act",
+      "author": "Krahn, M. M., Ford, M. J., Perrin, W. F., Wade, P. R., Angliss, R. P., Hanson, M. B., Taylor, B. L., Ylitalo, G. M., Dahlheim, M. E., Stein, J. E. and Waples, R. S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ford, J. K. B. and Ellis, G. M. 2006. Selective foraging by fish-eating killer whales <i>Orcinus orca</i> in British Columbia. <i>Marine Ecology Progress Series</i> 316: 185-199.",
+      "year": "2006",
+      "title": "Selective foraging by fish-eating killer whales <i>Orcinus orca</i> in British Columbia",
+      "author": "Ford, J. K. B. and Ellis, G. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Berzin, A. A. and Vladimirov, V. L. 1989. Recent distribution and abundance of cetaceans in the Sea of Okhotsk. <i>Soviet Journal of Marine Biology</i> 15(2): 84-90.",
+      "year": "1989",
+      "title": "Recent distribution and abundance of cetaceans in the Sea of Okhotsk",
+      "author": "Berzin, A. A. and Vladimirov, V. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoelzel, A. R., Dahlheim, M. and Stern, S. J. 1998. Low genetic variation among killer whales (<i>Orcinus orca</i>) in the eastern North Pacific and genetic differentiation between foraging specialists. <i>Journal of Heredity</i> 89: 121-128.",
+      "year": "1998",
+      "title": "Low genetic variation among killer whales (<i>Orcinus orca</i>) in the eastern North Pacific and genetic differentiation between foraging specialists",
+      "author": "Hoelzel, A. R., Dahlheim, M. and Stern, S. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Black, N. A., Schulman-Janiger, A., Ternullo, R. L. and Guerrero-Ruiz, M. 1997. Killer whales of California and western Mexico: a catalog of photo-identified individuals. <i>NOAA Technical Memorandum NMFS SWFSC</i> 247: 174 pp.",
+      "year": "1997",
+      "title": "Killer whales of California and western Mexico: a catalog of photo-identified individuals",
+      "author": "Black, N. A., Schulman-Janiger, A., Ternullo, R. L. and Guerrero-Ruiz, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jackson, J. B. C., Kirby, M. X., Berger, W. H., Bjorndal, K. A., Botsford, L. W., Bourque, B. J., Bradbury, R. H., Cooke, R., Erlandson, J., Estes, J. A., Hughes, T. P., Kidwell, S., Lange, C. B., Lenihan, H. S., Pandolfi, J. M., Peterson, C. H., Steneck, R. S., Tegner, M. J. and Warner, R. R. 2001. Historical overfishing and the recent collapse of coastal ecosystems. <i>Science</i> 293: 629-637.",
+      "year": "2001",
+      "title": "Historical overfishing and the recent collapse of coastal ecosystems",
+      "author": "Jackson, J. B. C., Kirby, M. X., Berger, W. H., Bjorndal, K. A., Botsford, L. W., Bourque, B. J., Bradbury, R. H., Cooke, R., Erlandson, J., Estes, J. A., Hughes, T. P., Kidwell, S., Lange, C. B., Lenihan, H. S., Pandolfi, J. M., Peterson, C. H., Steneck, R. S., Tegner, M. J. and Warner, R. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Yano, K. and Dahlheim, M. E. 1995. Killer whale, <i>Orcinus orca</i>, depredation on longline catches of bottomfish in the southeastern Bering Sea and adjacent waters. <i>Fishery Bulletin</i> 93: 355-372.",
+      "year": "1995",
+      "title": "Killer whale, <i>Orcinus orca</i>, depredation on longline catches of bottomfish in the southeastern Bering Sea and adjacent waters",
+      "author": "Yano, K. and Dahlheim, M. E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pitman, R. L., Perryman, W. L., Leroi, D. and Eilers, E. 2007. A dwarf form of killer whale in Antarctica. <i>Journal of Mammalogy</i> 88: 43-48.",
+      "year": "2007",
+      "title": "A dwarf form of killer whale in Antarctica",
+      "author": "Pitman, R. L., Perryman, W. L., Leroi, D. and Eilers, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Dahlheim, M. E. and Matkin, C. O. 1994. Assessment of injuries to Prince William Sound killer whales. In: T. R. Loughlin (ed.), <i>Marine mammals and the Exxon Valdez</i>, pp. 163-172. Academic Press.",
+      "year": "1994",
+      "title": "Assessment of injuries to Prince William Sound killer whales",
+      "author": "Dahlheim, M. E. and Matkin, C. O.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pitman, R. L. and Ensor, P. 2003. Three forms of killer whales (<i>Orcinus orca</i>) in Antarctic waters. <i>Journal of Cetacean Research and Management</i> 5: 131-139.",
+      "year": "2003",
+      "title": "Three forms of killer whales (<i>Orcinus orca</i>) in Antarctic waters",
+      "author": "Pitman, R. L. and Ensor, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ford, J. K. B., Ellis, G. M. and Balcomb, K. C. 2000. <i>Killer Whales. Second edition</i>. University of British Columbia Press, Vancouver, British Columbia, Canada.",
+      "year": "2000",
+      "title": "Killer Whales. Second edition",
+      "author": "Ford, J. K. B., Ellis, G. M. and Balcomb, K. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Øien, N. 1990. Sightings surveys in the northeast Atlantic in July 1988: distribution and abundance of cetaceans. <i>Reports of the International Whaling Commission</i> 40: 499-511.",
+      "year": "1990",
+      "title": "Sightings surveys in the northeast Atlantic in July 1988: distribution and abundance of cetaceans",
+      "author": "Øien, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ross, P. S., Ellis, G. M., Ikonomou, M. G., Barrett-Lennard, L. G. and Addison, R. F. 2000. High PCB concentrations in free-ranging Pacific killer whales, <i>Orcinus orca</i>: effects of age, sex and dietary preference. <i>Marine Pollution Bulletin</i> 40: 504-515.",
+      "year": "2000",
+      "title": "High PCB concentrations in free-ranging Pacific killer whales, <i>Orcinus orca</i>: effects of age, sex and dietary preference",
+      "author": "Ross, P. S., Ellis, G. M., Ikonomou, M. G., Barrett-Lennard, L. G. and Addison, R. F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Matkin, C. O., Ellis, G. M., Saulitis, E., Barrett-Lennard, L. G. and Matkin, D. 1999. <i>Killer Whales of Southern Alaska</i>. North Gulf Oceanic Society, Homer, Alaska, USA.",
+      "year": "1999",
+      "title": "Killer Whales of Southern Alaska",
+      "author": "Matkin, C. O., Ellis, G. M., Saulitis, E., Barrett-Lennard, L. G. and Matkin, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Barlow, J. 2006. Cetacean abundance in Hawaiian waters during summer/fall 2002. <i>Southwest Fisheries Center Administrative Report</i> LJ-03-13: 20 pp.",
+      "year": "2006",
+      "title": "Cetacean abundance in Hawaiian waters during summer/fall 2002",
+      "author": "Barlow, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Baird, R.W. 2000. The killer whale: foraging specializations and group hunting. In: J. Mann, R. C. Connor, P. L. Tyack and H. Whitehead (eds), <i>Cetacean societies: field studies of dolphins and whales</i>, pp. 127-153. University of Chicago Press, Chicago, USA.",
+      "year": "2000",
+      "title": "The killer whale: foraging specializations and group hunting",
+      "author": "Baird, R.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Donoghue, M., Reeves, R. R. and Stone, G. S. 2003. Report of the Workshop on Interactions Between Cetaceans and Longline Fisheries. New England Aquarium Aquatic Forum Series Report 03-1. New England Aquarium Press, Boston, MA, USA in cooperation with the South Pacific Regional Environmental Programme, Apia, Samoa.",
+      "year": "2003",
+      "title": "Report of the Workshop on Interactions Between Cetaceans and Longline Fisheries",
+      "author": "Donoghue, M., Reeves, R. R. and Stone, G. S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Visser, I. N. 1999. Antarctic orca in New Zealand waters? <i>New Zealand Journal of Marine and Freshwater Research</i> 33: 515-520.",
+      "year": "1999",
+      "title": "Antarctic orca in New Zealand waters?",
+      "author": "Visser, I. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reeves, R. R., Perrin, W. F., Taylor, B. L., Baker, C. S. and Mesnick, S. L. 2004. Report of the Workshop on Shortcomings of Cetacean Taxonomy in Relation to Needs of Conservation and Management, April 30 - May 2, 2004, La Jolla, California. <i>NOAA Technical Memorandum NMFS-SWFSC</i> 363: 94 pp.",
+      "year": "2004",
+      "title": "Report of the Workshop on Shortcomings of Cetacean Taxonomy in Relation to Needs of Conservation and Management, April 30 - May 2, 2004, La Jolla, California",
+      "author": "Reeves, R. R., Perrin, W. F., Taylor, B. L., Baker, C. S. and Mesnick, S. L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baird, R. W., Abrams, P. A. and Dill, L. M. 1992. Possible indirect interactions between transient and resident killer whales: implications for the evolution of foraging specializations in the genus <i>Orcinus</i>. <i>Oecologia</i> 89: 125-132.",
+      "year": "1992",
+      "title": "Possible indirect interactions between transient and resident killer whales: implications for the evolution of foraging specializations in the genus <i>Orcinus</i>",
+      "author": "Baird, R. W., Abrams, P. A. and Dill, L. M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bigg, M. A., Olesiuk, P. F., Ellis, G. M., Ford, J. K. B. and Balcomb, K. C. 1990. Social organization and genealogy of resident killer whales (<i>Orcinus orca</i>) in coastal waters of British Columbia and Washington State. <i>Reports of the International Whaling Commission</i> Special Issue 12: 383-405.",
+      "year": "1990",
+      "title": "Social organization and genealogy of resident killer whales (<i>Orcinus orca</i>) in coastal waters of British Columbia and Washington State",
+      "author": "Bigg, M. A., Olesiuk, P. F., Ellis, G. M., Ford, J. K. B. and Balcomb, K. C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Hoelzel, A. R. and Dover, G. A. 1991. Genetic differentiation between sympatric killer whale populations. <i>Heredity</i> 66: 191-195.",
+      "year": "1991",
+      "title": "Genetic differentiation between sympatric killer whale populations",
+      "author": "Hoelzel, A. R. and Dover, G. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Myers, R. A. and Worm, B. 2003. Rapid worldwide depletion of predatory fish communities. <i>Nature</i> 423: 280-283.",
+      "year": "2003",
+      "title": "Rapid worldwide depletion of predatory fish communities",
+      "author": "Myers, R. A. and Worm, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Branch, T.A. and Butterworth, D.S. 2001. Estimates of abundance south of 60°S for cetacean species sighted frequently on the 1978/79 to 1997/98 IWC/IDCR-SOWER sighting surveys. <i>Journal of Cetacean Research and Management</i> 3(3): 251-270.",
+      "year": "2001",
+      "title": "Estimates of abundance south of 60°S for cetacean species sighted frequently on the 1978/79 to 1997/98 IWC/IDCR-SOWER sighting surveys",
+      "author": "Branch, T.A. and Butterworth, D.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ohsumi, S. 1981. Distribution and abundance of killer whales in the southern Hemisphere. International Whaling Commission.",
+      "year": "1981",
+      "title": "Distribution and abundance of killer whales in the southern Hemisphere",
+      "author": "Ohsumi, S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Keith, M., Bester, M. N., Bartlett, P. A. and Baker, D. 2001. Killer whales (<i>Orcinus orca</i>) at Marion Island, Southern Ocean. <i>African Zoology</i> 36: 163-175.",
+      "year": "2001",
+      "title": "Killer whales (<i>Orcinus orca</i>) at Marion Island, Southern Ocean",
+      "author": "Keith, M., Bester, M. N., Bartlett, P. A. and Baker, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baum, J. K., Myers, R. A., Kehler, D. G., Word, B., Harley, S. J. and Doherty, P. A. 2003. Collapse and conservation of shark populations in the Northwest Atlantic. <i>Science</i> 299: 389-392.",
+      "year": "2003",
+      "title": "Collapse and conservation of shark populations in the Northwest Atlantic",
+      "author": "Baum, J. K., Myers, R. A., Kehler, D. G., Word, B., Harley, S. J. and Doherty, P. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Visser, I. N. 2000. Killer whale (<i>Orcinus orca</i>) interactions with longline fisheries in New Zealand waters. <i>Aquatic Mammals</i> 26(3): 241-252.",
+      "year": "2000",
+      "title": "Killer whale (<i>Orcinus orca</i>) interactions with longline fisheries in New Zealand waters",
+      "author": "Visser, I. N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ford, J.K.B., Ellis, G.M., and Durban, J.W. 2007. An Assessment of the Potential for Recovery of West Coast Transient Killer Whales Using Coastal Waters of British Columbia.  DFO Can. Sci. Advis. Sec. Res. Doc. 2007/088. iv + 34 pp..",
+      "year": "2007",
+      "title": "An Assessment of the Potential for Recovery of West Coast Transient Killer Whales Using Coastal Waters of British Columbia",
+      "author": "Ford, J.K.B., Ellis, G.M., and Durban, J.W.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferguson, S. H., J. W. Higdon and E. G. Chmelnitsky. 2010. The rise of killer whales as a major Arctic predator. In: S. H. Ferguson, L. L. Loseto and M. L. Mallory (eds), <i>. A little less Arctic: Top predators in the world’s largest northern inland sea, Hudson Bay</i>, pp. 117-136. Springer Publishing Company, New York, NY.",
+      "year": "2010",
+      "title": "The rise of killer whales as a major Arctic predator.",
+      "author": "Ferguson, S. H., J. W. Higdon and E. G. Chmelnitsky. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Carretta J.V., Oleson E.M., Baker J., Weller D.W., Lang A.R., Forney K.A., Muto M.M., Hanson B., Orr A.J., H uber H., Lowry M.S., Barlow J., Moore J.E., Lynch D., Carswell L., Brownell R.L. Jr. 2016. U.S. Pacific Marine Mammal Stock Assessments: 2015.  NOAA Technical Memorandum NMFS. NOAA-TM-NMFS-SWFSC-561.",
+      "year": "2016",
+      "title": "U.S. Pacific Marine Mammal Stock Assessments: 2015",
+      "author": "Carretta J.V., Oleson E.M., Baker J., Weller D.W., Lang A.R., Forney K.A., Muto M.M., Hanson B., Orr A.J., H uber H., Lowry M.S., Barlow J., Moore J.E., Lynch D., Carswell L., Brownell R.L. Jr.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Durban, J. W., and R. L. Pitman. 2011. Antarctic killer whales make rapid, round-trip movements to sub-tropical waters: evidence for physiological maintenance migrations? . <i>Biology Letters </i> 8: 274-277.",
+      "year": "2011",
+      "title": "Antarctic killer whales make rapid, round-trip movements to sub-tropical waters: evidence for physiological maintenance migrations? ",
+      "author": "Durban, J. W., and R. L. Pitman.",
+      "citation_short": null
+    },
+    {
+      "citation": "Wellard, R., Lightbody, K., Fouda, L., Blewitt, M., Riggs, D. and Erbe, C. 2016. Killer Whale (<i>Orcinus orca</i>) predation on beaked whales (<i>Mesoplodon</i> spp.) in the Bremer Sub-Basin, Western Australia. <i>PLoS One</i>: DOI: 10.1371/journal.pone.0166670.",
+      "year": "2016",
+      "title": "Killer Whale (<i>Orcinus orca</i>) predation on beaked whales (<i>Mesoplodon</i> spp.) in the Bremer Sub-Basin, Western Australia",
+      "author": "Wellard, R., Lightbody, K., Fouda, L., Blewitt, M., Riggs, D. and Erbe, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Matkin, C.O., Testa, J.W., Ellis, G.M. and Saulitis, E.L. 2014. Life history and population dynamics of southern Alaska resident killer whales (<i>Orcinus orca</i>). <i>Marine Mammal Science</i> 30(2): 460-479.",
+      "year": "2014",
+      "title": "Life history and population dynamics of southern Alaska resident killer whales (<i>Orcinus orca</i>)",
+      "author": "Matkin, C.O., Testa, J.W., Ellis, G.M. and Saulitis, E.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Towers, J.R., Ellis, G.M., and Ford, J.K.B. 2012. Photo-identification catalogue of Bigg’s (transient) killer whales from coastal waters of British Columbia, northern Washington, and southeastern Alaska.  Can. Data Rep. Fish. Aquat. Sci. 1241: v + 127 p. .",
+      "year": "2012",
+      "title": "Photo-identification catalogue of Bigg’s (transient) killer whales from coastal waters of British Columbia, northern Washington, and southeastern Alaska",
+      "author": "Towers, J.R., Ellis, G.M., and Ford, J.K.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pitman, R. L., and J. W. Durban. 2012. Cooperative hunting behavior, prey selectivity and prey handling by pack ice killer whales (<i>Orcinus orca</i>), type B, in Antarctic Peninsula waters. <i>Marine Mammal Science </i> 28: 16-36.",
+      "year": "2012",
+      "title": "Cooperative hunting behavior, prey selectivity and prey handling by pack ice killer whales (<i>Orcinus orca</i>), type B, in Antarctic Peninsula waters",
+      "author": "Pitman, R. L., and J. W. Durban",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ford, J.K.B., and Ellis, G.M. 2014. You are what you eat: ecological specializations and their influence on the social organization and behaviour of killer whales. In: Yamagiwa, J., and L. Karczmarski (eds), <i>Primates and Cetaceans: Field Research and Conservation of Complex Mammalian Societies</i>, pp. 75-98. Springer, New York, NY.",
+      "year": "2014",
+      "title": "You are what you eat: ecological specializations and their influence on the social organization and behaviour of killer whales",
+      "author": "Ford, J.K.B., and Ellis, G.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Jepson, P., Deaville, R., Barber, J., Aguilar, A., Borrell, A., Murphy, S., Barry, J., Brownlow, A., Barnett, J., Berrow, S., Cunningham, A., Davison, N., ten Doeschate, M., Esteban, R., Ferreira, M., Foote, A., Genov, T., Gimenez, J., Loveridge, J., Llavona, A., Martin, V., Maxwell, D., Papachlimitzou, A., Penrose, R., Perkins, M., Smith, B., de Stephanis, R., Tregenza, N., Verborgh, P., Fernandez, A., Law, R. 2016. PCB pollution continues to impact populations of orcas and other dolphins in European waters. <i>Scientific Reports</i> 6:18573. DOI: 10.1038/srep18573.",
+      "year": "2016",
+      "title": "PCB pollution continues to impact populations of orcas and other dolphins in European waters",
+      "author": "Jepson, P., Deaville, R., Barber, J., Aguilar, A., Borrell, A., Murphy, S., Barry, J., Brownlow, A., Barnett, J., Berrow, S., Cunningham, A., Davison, N., ten Doeschate, M., Esteban, R., Ferreira, M., Foote, A., Genov, T., Gimenez, J., Loveridge, J., Llavona, A., Martin, V., Maxwell, D., Papachlimitzou, A., Penrose, R., Perkins, M., Smith, B., de Stephanis, R., Tregenza, N., Verborgh, P., Fernandez, A., Law, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pitman, R. L., J. A. Totterdell, H. Fearnbach, L. T. Ballance, J. W. Durban,  and H. Kemps. 2015. Whale killers: prevalence and ecological implications of killer whale predation on humpback whale calves off Western Australia. <i>Marine Mammal Science </i> 31: 629-657.",
+      "year": "2015",
+      "title": "Whale killers: prevalence and ecological implications of killer whale predation on humpback whale calves off Western Australia",
+      "author": "Pitman, R. L., J. A. Totterdell, H. Fearnbach, L. T. Ballance, J. W. Durban,  and H. Kemps.",
+      "citation_short": null
+    },
+    {
+      "citation": "Williams, R., Erbe, C., Ashe, E., Beerman, A. and Smith, J. 2014. Severity of killer whale behavioral responses to ship noise: a dose–response study. <i>Marine Pollution Bulletin</i> 79: 254-260.",
+      "year": "2014",
+      "title": "Severity of killer whale behavioral responses to ship noise: a dose–response study",
+      "author": "Williams, R., Erbe, C., Ashe, E., Beerman, A. and Smith, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Reisinger, R.R., de Bruyn, P.J.N., and Bester, M.N. 2011. Abundance estimates of killer whales at subantarctic Marion Island. <i>Aquatic Biology </i> 12: 177–185. DOI: 10.3354/ab00340.",
+      "year": "2011",
+      "title": "Abundance estimates of killer whales at subantarctic Marion Island",
+      "author": "Reisinger, R.R., de Bruyn, P.J.N., and Bester, M.N. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Bigg, M.A. 1982. An assessment of killer whale (<i>Orcinus orca</i>) stocks off Vancouver Island,  British Columbia. <i>Reports of the International Whaling Commission </i> 32: 655-666.",
+      "year": "1982",
+      "title": "An assessment of killer whale (<i>Orcinus orca</i>) stocks off Vancouver Island,  British Columbia",
+      "author": "Bigg, M.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ward, E.J., Holmes, E.E. and Balcomb, K.C. 2009. Quantifying the effects of prey abundance on killer whale reproduction. <i>Journal of Applied Ecology </i> 46: 632-640.",
+      "year": "2009",
+      "title": "Quantifying the effects of prey abundance on killer whale reproduction",
+      "author": "Ward, E.J., Holmes, E.E. and Balcomb, K.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mongillo, T.M., Holmes, E.E., Noren, D.P., VanBlaricom, G.R., Punt, A.E., Neill, S.M., Ylitalo, G.M., Hanson, M.B. and Ross, P.S. 2012. Predicted polybrominated diphenyl ether (PBDE) and polychlorinated biphenyl (PCB) accumulation in southern resident killer whales. <i>Marine Ecology Progress Series</i> 453: 236-277.",
+      "year": "2012",
+      "title": "Predicted polybrominated diphenyl ether (PBDE) and polychlorinated biphenyl (PCB) accumulation in southern resident killer whales",
+      "author": "Mongillo, T.M., Holmes, E.E., Noren, D.P., VanBlaricom, G.R., Punt, A.E., Neill, S.M., Ylitalo, G.M., Hanson, M.B. and Ross, P.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Taylor, B.L., Baird, R., Barlow, J., Dawson, S.M., Ford, J., Mead, J.G., Notarbartolo di Sciara, G., Wade, P. & Pitman, R.L. 2013. Orcinus orca. Available at: <a href=\"http://dx.doi.org/10.2305/IUCN.UK.2013-1.RLTS.T15421A44220470.en. \">http://dx.doi.org/10.2305/IUCN.UK.2013-1.RLTS.T15421A44220470.en. </a>. (Accessed: 10 June 2017).",
+      "year": "2013",
+      "title": "Orcinus orca",
+      "author": "Taylor, B.L., Baird, R., Barlow, J., Dawson, S.M., Ford, J., Mead, J.G., Notarbartolo di Sciara, G., Wade, P. & Pitman, R.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fisher, S.J. and Reeves, R.R. 2005. The global trade in live cetaceans: implications for conservation. <i>Journal of International Wildlife Law and Policy </i> 8(4): 315-340.",
+      "year": "2005",
+      "title": "The global trade in live cetaceans: implications for conservation.",
+      "author": "Fisher, S.J. and Reeves, R.R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Durban, J. W., H. Fearnbach, D. G. Burrows, G. M. Ylitalo, and R. L. Pitman. 2016. Morphological and ecological evidence for two sympatric forms of Type B killer whale around the Antarctic Peninsula. <i>Polar Biology</i> DOI:10.1007/s00300-016-1942-x.",
+      "year": "2016",
+      "title": "Morphological and ecological evidence for two sympatric forms of Type B killer whale around the Antarctic Peninsula.",
+      "author": "Durban, J. W., H. Fearnbach, D. G. Burrows, G. M. Ylitalo, and R. L. Pitman.",
+      "citation_short": null
+    },
+    {
+      "citation": "Veirs, S., Veirs, V. and Wood, J.D. 2016. Ship noise extends to frequencies used for echolocation by endangered killer whales. <i>Peer J,</i> 4: e1657.",
+      "year": "2016",
+      "title": "Ship noise extends to frequencies used for echolocation by endangered killer whales",
+      "author": "Veirs, S., Veirs, V. and Wood, J.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pitman, R. L., J. W. Durban, M. Greenfelder, C. Guinet, M. Jorgensen, P. A. Olson, J. Plana, P. Tixier, J. R. Towers. 2011. Observations of a distinctive morphotype of killer whale (<i>Orcinus orca</i>), type D, from subantarctic waters. <i>Polar Biology </i> 34: 303-306.",
+      "year": "2011",
+      "title": "Observations of a distinctive morphotype of killer whale (<i>Orcinus orca</i>), type D, from subantarctic waters",
+      "author": "Pitman, R. L., J. W. Durban, M. Greenfelder, C. Guinet, M. Jorgensen, P. A. Olson, J. Plana, P. Tixier, J. R. Towers.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ford, J.K.B. 2009. Killer whale <i>Orcinus orca</i>. In: W. F. Perrin, B. Würsig and J. G. M. Thewissen (eds), <i>Encyclopedia of Marine Mammals, Second Edition</i>, pp. 650-657. Elsevier.",
+      "year": "2009",
+      "title": "Killer whale <i>Orcinus orca</i>",
+      "author": "Ford, J.K.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Esteban, R., Verborgh, P., Gauffier, P., Alarcón, D., Salazar-Sierra, J.M., Giménez, J., Foote, A.D. and de Stephanis, R. 2016. Conservation Status of Killer Whales, <i>Orcinus orca</i>, in the Strait of Gibraltar. <i>Advances in Marine Biology </i> 75: 141-172.",
+      "year": "2016",
+      "title": "Conservation Status of Killer Whales, <i>Orcinus orca</i>, in the Strait of Gibraltar",
+      "author": "Esteban, R., Verborgh, P., Gauffier, P., Alarcón, D., Salazar-Sierra, J.M., Giménez, J., Foote, A.D. and de Stephanis, R.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wellard, R., Lightbody, K., Fouda, L., Blewitt, M., Riggs, D. and Erbe, C. 2016. Killer Whale (<i>Orcinus orca</i>) Predation on Beaked Whales (<i>Mesoplodon</i> spp.) in the Bremer Sub-Basin, Western Australia. <i>PLoS ONE </i> DOI: 10.1371/journal.pone.0166670.",
+      "year": "2016",
+      "title": "Killer Whale (<i>Orcinus orca</i>) Predation on Beaked Whales (<i>Mesoplodon</i> spp.) in the Bremer Sub-Basin, Western Australia",
+      "author": "Wellard, R., Lightbody, K., Fouda, L., Blewitt, M., Riggs, D. and Erbe, C. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "Filatova, O.A. and Shpak, O.V. 2017. Update on the killer whale live captures in the Okhotsk Sea.  Paper SC/67a/SM24 presented to the IWC Scientific Committee. Bled, Slovenia (unpublished).",
+      "year": "2017",
+      "title": "Update on the killer whale live captures in the Okhotsk Sea.",
+      "author": "Filatova, O.A. and Shpak, O.V.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Foote, A. D, P. A. Morin, R. L. Pitman, M. C. Ávila-Arcos, J. W. Durban, A. van Helden, M.-H. S. Sinding, T. P. Gilbert. 2013. Mitogenomic insights into a recently described and rarely observed killer whale morphotype. <i>Polar Biology </i> DOI 10.1007/s00300-013-1354-0.",
+      "year": "2013",
+      "title": "Mitogenomic insights into a recently described and rarely observed killer whale morphotype",
+      "author": "Foote, A. D, P. A. Morin, R. L. Pitman, M. C. Ávila-Arcos, J. W. Durban, A. van Helden, M.-H. S. Sinding, T. P. Gilbert.",
+      "citation_short": null
+    },
+    {
+      "citation": "Towers, J.R., Ellis, G.M., and Ford, J.K.B. 2015. Photo-identification catalogue and status of the northern resident killer whale population in 2014.  Can. Tech. Rep. Fish. Aquat. Sci. 3139: vi + 75 p.",
+      "year": "2015",
+      "title": "Photo-identification catalogue and status of the northern resident killer whale population in 2014",
+      "author": "Towers, J.R., Ellis, G.M., and Ford, J.K.B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pitman, R. L., H. Fearnbach, and J. W. Durban. Submitted. Abundance and population status of Ross Sea killer whales (<i>Orcinus orca</i>, type C) in McMurdo Sound, Antarctica: Evidence for impact by commercial fishing? <i>Polar Biology</i>.",
+      "year": "Submitted",
+      "title": "Abundance and population status of Ross Sea killer whales (<i>Orcinus orca</i>, type C) in McMurdo Sound, Antarctica: Evidence for impact by commercial fishing?",
+      "author": "Pitman, R. L., H. Fearnbach, and J. W. Durban",
+      "citation_short": ""
+    },
+    {
+      "citation": "George, J.C., Sheffield, G., Reed, D.J., Tudor, B. and Suydam, R. 2015. Evidence of injuries from line entanglements, killer whales and ship strikes on Bering-Chukchi-Beaufort Seas bowhead whales.  IWC Scientific Committee SC/66a/HIM10..",
+      "year": "2015",
+      "title": "Evidence of injuries from line entanglements, killer whales and ship strikes on Bering-Chukchi-Beaufort Seas bowhead whales.",
+      "author": "George, J.C., Sheffield, G., Reed, D.J., Tudor, B. and Suydam, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Matthews, C. J. D., Luque, S. P., Petersen, S. D., Andrews, R. D., Ferguson, S. H. 2011. Satellite tagging of a killer whale (<i>Orcinus orca</i>) in the eastern Canadian Arctic documents ice avoidance and rapid, long-distance movement into the North Atlantic. <i>Polar Biology </i> 34: 1091-1096.",
+      "year": "2011",
+      "title": "Satellite tagging of a killer whale (<i>Orcinus orca</i>) in the eastern Canadian Arctic documents ice avoidance and rapid, long-distance movement into the North Atlantic",
+      "author": "Matthews, C. J. D., Luque, S. P., Petersen, S. D., Andrews, R. D., Ferguson, S. H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Noren, D.P., Johnson, A.H., Rehder, D. and Larson, A. 2009. Close approaches by vessels elicit surface active behaviors by southern resident killer whales. <i>Endangered Species Research </i> 8: 179-192.",
+      "year": "2009",
+      "title": "Close approaches by vessels elicit surface active behaviors by southern resident killer whales",
+      "author": "Noren, D.P., Johnson, A.H., Rehder, D. and Larson, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Sigurjónsson, J. and Leatherwood, S. 1988. The Icelandic live-capture fishery for killer whales, 1976-1988. <i>Rit Fiskideildar </i> 11: 307-316.",
+      "year": "1988",
+      "title": "The Icelandic live-capture fishery for killer whales, 1976-1988",
+      "author": "Sigurjónsson, J. and Leatherwood, S. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Ford, J.K.B, Stredulinsky, E.H., Ellis, G.M., Durban, J.W., and Pilkington, J.F. 2014. Offshore killer whales in Canadian Pacific waters: distribution, seasonality, foraging ecology, population Status and potential for recovery.  DFO Can. Sci. Advis. Sec. Res. Doc. 2014/088. vii + 55 p..",
+      "year": "2014",
+      "title": "Offshore killer whales in Canadian Pacific waters: distribution, seasonality, foraging ecology, population Status and potential for recovery.",
+      "author": "Ford, J.K.B, Stredulinsky, E.H., Ellis, G.M., Durban, J.W., and Pilkington, J.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Muto, M.M., Helker, V.T., Angliss, R.P. et al. 2016. Alaska marine mammal stock assessments, 2015.  NOAA Technical Memorandum NMFS-AFSC-323.",
+      "year": "2016",
+      "title": "Alaska marine mammal stock assessments, 2015",
+      "author": "Muto, M.M., Helker, V.T., Angliss, R.P. et al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kuningas, S., Similä, T. and Hammond, P.S. 2014. Population size, survival and reproductive rates of northern Norwegian killer whales (<i>Orcinus orca</i>) in 1986–2003. <i>Journal of the Marine Biological Association of the United Kingdom</i> 94: 1277-1291.",
+      "year": "2014",
+      "title": "Population size, survival and reproductive rates of northern Norwegian killer whales (<i>Orcinus orca</i>) in 1986–2003",
+      "author": "Kuningas, S., Similä, T. and Hammond, P.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Matkin, C.O., Saulitis, E.L., Ellis, G.M., Olesiuk, P. and Rice, S.D. 2008. Ongoing population-level impacts on killer whales <i>Orcinus orca</i> following the ‘Exxon Valdez’oil spill in Prince William Sound, Alaska. <i>Marine Ecology Progress Series </i> 356: 269-281.",
+      "year": "2008",
+      "title": "Ongoing population-level impacts on killer whales <i>Orcinus orca</i> following the ‘Exxon Valdez’oil spill in Prince William Sound, Alaska",
+      "author": "Matkin, C.O., Saulitis, E.L., Ellis, G.M., Olesiuk, P. and Rice, S.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Poncelet, E., Barbraud, C. & Guinet, C. 2010. Population dynamics of killer whales in Crozet archipelago, southern Indian Ocean: a mark recapture study from 1977 to 2002. <i>J. Cet. Res. Manag</i> 11: 41-48.",
+      "year": "2010",
+      "title": "Population dynamics of killer whales in Crozet archipelago, southern Indian Ocean: a mark recapture study from 1977 to 2002",
+      "author": "Poncelet, E., Barbraud, C. & Guinet, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ford, J.K.B, Ellis, G.M., Olesiuk, P.F., and Balcomb, K.C. 2010. Linking killer whale survival and prey abundance: food limitation in the oceans’ apex predator?  . <i>Biology Letters</i> 6: 139-142.",
+      "year": "2010",
+      "title": "Linking killer whale survival and prey abundance: food limitation in the oceans’ apex predator?  ",
+      "author": "Ford, J.K.B, Ellis, G.M., Olesiuk, P.F., and Balcomb, K.C",
+      "citation_short": null
+    },
+    {
+      "citation": "Filatova, O.A., Shpak, O.V., Ivkovich, T.V., Borisova, E.A., Burdin, A.M. and Hoyt, E. 2014. Killer whale status and live-captures in the waters of the Russian Far East.  Paper SC/65b/SM07 presented to the IWC Scientific Committee. Bled, Slovenia (unpublished).",
+      "year": "2014",
+      "title": "Killer whale status and live-captures in the waters of the Russian Far East.",
+      "author": "Filatova, O.A., Shpak, O.V., Ivkovich, T.V., Borisova, E.A., Burdin, A.M. and Hoyt, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Higdon, J.W., Hauser, D.D.W. and Ferguson, S.H. 2012. Killer whales (<i>Orcinus orca</i>) in the Canadian Arctic: distribution, prey items, group sizes, and seasonality. <i>Marine Mammal Science</i> 28: E93-E109.",
+      "year": "2012",
+      "title": "Killer whales (<i>Orcinus orca</i>) in the Canadian Arctic: distribution, prey items, group sizes, and seasonality",
+      "author": "Higdon, J.W., Hauser, D.D.W. and Ferguson, S.H. ",
+      "citation_short": ""
+    },
+    {
+      "citation": "IUCN. 2017. The IUCN Red List of Threatened Species. Version 2017-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 5 December 2017).",
+      "year": "2017",
+      "title": "The IUCN Red List of Threatened Species. Version 2017-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2017-3"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Chukchi Sea"
+      },
+      "code": "1_1_7"
+    },
+    {
+      "description": {
+        "en": "Red Sea"
+      },
+      "code": "4_6_5"
+    },
+    {
+      "description": {
+        "en": "Agulhas Current"
+      },
+      "code": "4_6_4"
+    },
+    {
+      "description": {
+        "en": "East Siberian Sea"
+      },
+      "code": "1_1_6"
+    },
+    {
+      "description": {
+        "en": "Somali Current"
+      },
+      "code": "4_6_3"
+    },
+    {
+      "description": {
+        "en": "Arabian Sea"
+      },
+      "code": "4_6_2"
+    },
+    {
+      "description": {
+        "en": "Bay of Bengal"
+      },
+      "code": "4_6_1"
+    },
+    {
+      "description": {
+        "en": "Gulf of Thailand"
+      },
+      "code": "4_5_13"
+    },
+    {
+      "description": {
+        "en": "South China Sea"
+      },
+      "code": "4_5_12"
+    },
+    {
+      "description": {
+        "en": "East China Sea"
+      },
+      "code": "4_5_11"
+    },
+    {
+      "description": {
+        "en": "Yellow Sea"
+      },
+      "code": "4_5_10"
+    },
+    {
+      "description": {
+        "en": "Sea of Okhotsk"
+      },
+      "code": "4_5_9"
+    },
+    {
+      "description": {
+        "en": "Pacific Central American Coastal"
+      },
+      "code": "4_5_8"
+    },
+    {
+      "description": {
+        "en": "Laptev Sea"
+      },
+      "code": "1_1_5"
+    },
+    {
+      "description": {
+        "en": "Sulu-Celebes Sea"
+      },
+      "code": "4_5_7"
+    },
+    {
+      "description": {
+        "en": "New Zealand"
+      },
+      "code": "4_5_6"
+    },
+    {
+      "description": {
+        "en": "Faroe Plateau Shelf"
+      },
+      "code": "4_2_4"
+    },
+    {
+      "description": {
+        "en": "Iceland Shelf"
+      },
+      "code": "4_2_3"
+    },
+    {
+      "description": {
+        "en": "East Greenland Shelf"
+      },
+      "code": "4_2_2"
+    },
+    {
+      "description": {
+        "en": "Beaufort Sea"
+      },
+      "code": "1_1_2"
+    },
+    {
+      "description": {
+        "en": "West Greenland Shelf"
+      },
+      "code": "4_2_1"
+    },
+    {
+      "description": {
+        "en": "SE US Continental Shelf"
+      },
+      "code": "4_1_4"
+    },
+    {
+      "description": {
+        "en": "NE US Continental Shelf"
+      },
+      "code": "4_1_3"
+    },
+    {
+      "description": {
+        "en": "Newfoundland-Labrador Shelf"
+      },
+      "code": "4_1_2"
+    },
+    {
+      "description": {
+        "en": "Scotian Shelf"
+      },
+      "code": "4_1_1"
+    },
+    {
+      "description": {
+        "en": "Insular Pacific Hawaiian"
+      },
+      "code": "3_2_1"
+    },
+    {
+      "description": {
+        "en": "Hudson Bay"
+      },
+      "code": "1_1_1"
+    },
+    {
+      "description": {
+        "en": "Gulf of Mexico"
+      },
+      "code": "3_1_2"
+    },
+    {
+      "description": {
+        "en": "Arctic Ocean"
+      },
+      "code": "1_1_8"
+    },
+    {
+      "description": {
+        "en": "Eastern Bering Sea"
+      },
+      "code": "1_2_1"
+    },
+    {
+      "description": {
+        "en": "Western Bering Sea"
+      },
+      "code": "1_2_2"
+    },
+    {
+      "description": {
+        "en": "Antarctic"
+      },
+      "code": "1_3_1"
+    },
+    {
+      "description": {
+        "en": "Mediterranean Sea"
+      },
+      "code": "2_1_1"
+    },
+    {
+      "description": {
+        "en": "Canary Current"
+      },
+      "code": "2_1_2"
+    },
+    {
+      "description": {
+        "en": "Guinea Current"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "description": {
+        "en": "Benguela Current"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "description": {
+        "en": "Kuroshio Current"
+      },
+      "code": "2_2_1"
+    },
+    {
+      "description": {
+        "en": "Oyashio Current"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "description": {
+        "en": "Gulf of Alaska"
+      },
+      "code": "2_2_3"
+    },
+    {
+      "description": {
+        "en": "Caribbean Sea"
+      },
+      "code": "3_1_1"
+    },
+    {
+      "description": {
+        "en": "Black Sea"
+      },
+      "code": "4_2_5"
+    },
+    {
+      "description": {
+        "en": "North Sea"
+      },
+      "code": "4_2_6"
+    },
+    {
+      "description": {
+        "en": "Norwegian Sea"
+      },
+      "code": "4_2_7"
+    },
+    {
+      "description": {
+        "en": "Celtic-Biscay"
+      },
+      "code": "4_2_8"
+    },
+    {
+      "description": {
+        "en": "Baltic Sea"
+      },
+      "code": "4_2_9"
+    },
+    {
+      "description": {
+        "en": "Iberian Coastal"
+      },
+      "code": "4_2_10"
+    },
+    {
+      "description": {
+        "en": "Barents Sea"
+      },
+      "code": "1_1_3"
+    },
+    {
+      "description": {
+        "en": "East Brazil Shelf"
+      },
+      "code": "4_3_1"
+    },
+    {
+      "description": {
+        "en": "Patagonian Shelf"
+      },
+      "code": "4_3_2"
+    },
+    {
+      "description": {
+        "en": "North Brazil Shelf"
+      },
+      "code": "4_3_3"
+    },
+    {
+      "description": {
+        "en": "South Brazil Shelf"
+      },
+      "code": "4_3_4"
+    },
+    {
+      "description": {
+        "en": "West-Central Australian Shelf"
+      },
+      "code": "4_4_1"
+    },
+    {
+      "description": {
+        "en": "Northwest Australian Shelf"
+      },
+      "code": "4_4_2"
+    },
+    {
+      "description": {
+        "en": "Northeast Australian Shelf"
+      },
+      "code": "4_4_3"
+    },
+    {
+      "description": {
+        "en": "North Australian Shelf"
+      },
+      "code": "4_4_4"
+    },
+    {
+      "description": {
+        "en": "East-Central Australian Shelf"
+      },
+      "code": "4_4_5"
+    },
+    {
+      "description": {
+        "en": "Kara Sea"
+      },
+      "code": "1_1_4"
+    },
+    {
+      "description": {
+        "en": "Southeast Australian Shelf"
+      },
+      "code": "4_4_6"
+    },
+    {
+      "description": {
+        "en": "Southwest Australian Shelf"
+      },
+      "code": "4_4_7"
+    },
+    {
+      "description": {
+        "en": "Gulf of California"
+      },
+      "code": "4_5_1"
+    },
+    {
+      "description": {
+        "en": "California Current"
+      },
+      "code": "4_5_2"
+    },
+    {
+      "description": {
+        "en": "Humboldt Current"
+      },
+      "code": "4_5_3"
+    },
+    {
+      "description": {
+        "en": "Indonesian Seas"
+      },
+      "code": "4_5_4"
+    },
+    {
+      "description": {
+        "en": "Sea of Japan"
+      },
+      "code": "4_5_5"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

@@ -1,0 +1,736 @@
+{
+  "assessment_date": "2014-03-14T00:00:00.000+00:00",
+  "year_published": "2014",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 15642,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/15642/46123809",
+  "citation": "Hoffmann, M. 2014. Otocyon megalotis. The IUCN Red List of Threatened Species 2014: e.T15642A46123809. Accessed on 05 May 2026.",
+  "assessment_id": 46123809,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 15642,
+    "scientific_name": "Otocyon megalotis",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CARNIVORA",
+    "family_name": "CANIDAE",
+    "genus_name": "Otocyon",
+    "species_name": "megalotis",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Desmarest, 1822)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Canid Specialist Group (foxes, jackals and wild dogs)",
+        "url": "http://www.canids.org/",
+        "description": "Chair: Claudio Sillero-Zubiri (email: canids@zoology.oxford.ac.uk)\nRed List Authority Coordinator: Michael Hoffmann (email: mike.hoffmann@zsl.org)\nNewsletter: http://www.canids.org/c-b-c"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Bakoorjakkals",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Bakoorvos",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Draaijakkals",
+        "language": "afr"
+      },
+      {
+        "main": false,
+        "name": "Löffelhund",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "l 'Otocyon",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Bat-eared Fox",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Canis megalotis Desmarest, 1822",
+        "status": "ACCEPTED",
+        "genus_name": "Canis",
+        "species_name": "megalotis",
+        "species_author": "Desmarest, 1822",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Stable"
+    },
+    "code": "2"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": null,
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          },
+          {
+            "name": "Invasive species control or prevention",
+            "value": "Not Applicable"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "No"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "No"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "No"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Bat-eared Fox has a disjunct distribution range, occurring across the arid and semi-arid regions of eastern and southern Africa in two discrete populations (representing each of the known subspecies) separated by about 1,000 km. Subspecies&#160;<em>O. m. virgatus</em> ranges from southern Sudan, Ethiopia and Somalia down through Uganda and Kenya to south-western Tanzania; <em>O. m. megalotis</em> occurs from Angola through Namibia and Botswana to Mozambique and South Africa (Coetzee 1977; Kingdon 1977;&#160;Nel and Maas 2004, 2013;&#160;Skinner and Chimimba 2005).&#160;There are no confirmed records from Zambia (Ansell 1978).&#160;The two ranges were probably connected during the Pleistocene (Coe and Skinner 1993). This disjunct distribution is similar to that of other endemic, xeric species e.g., Aardwolf <em>Proteles cristatu</em>s and Black-backed Jackal <em>Canis mesomelas</em>.&#160;Range extensions in southern Africa documented in recent years (e.g., Stuart 1981, Marais and Griffin 1993) have been linked to changing rainfall patterns (MacDonald 1982).",
+    "population": "The species is common in conservation areas in southern and eastern Africa, becoming uncommon in arid areas and on farms in South Africa where they are occasionally persecuted. Within a circumscribed habitat, numbers can fluctuate from abundant to rare depending on rainfall, food availability (Waser 1980, Nel <em>et al.</em> 1984), breeding stage and disease (Maas 1993a,b; Nel 1993). Recorded densities include 0.7-14/km²<sup>&#160;</sup>in the Kalahari (Nel <em>et al</em>. 1984) and 0.3-1.0 / km²&#160;in the Serengeti (Hendrichs 1972).",
+    "habitats": "In southern Africa, the prime habitat is mainly short-grass plains and areas with bare ground (Mackie and Nel 1989), but they are also found in open scrub vegetation and arid, semi-arid or winter rainfall (fynbos or Cape macchia) shrub lands, and open arid savanna. The range of both subspecies overlaps almost completely with that of <em>Hodotermes</em> and <em>Microhodotermes</em>, termite genera prevailing in the diet (Mackie and Nel 1989, Maas 1993a). In the Serengeti, they are common in open grassland and woodland boundaries but not short-grass plains (Lamprecht 1979, Malcolm 1986); harvester termite (<em>H. mossambicus</em>) foraging holes and dung from migratory ungulates are more abundant in areas occupied by Bat-eared Foxes, while grass is shorter and individual plants are more widely spaced (Maas 1993a).",
+    "threats": "There are no major threats, but they are subject to subsistence hunting for skins or because they are perceived as being predators of small livestock.&#160;Populations fluctuate due to disease (especially rabies and canine distemper, which can cause short-term drastic declines in populations) or drought (which depresses insect numbers).",
+    "measures": "The species is not included in the CITES Appendices. It is present in a number of&#160;protected areas across its range (see Nel and Maas 2004, 2013). <br/><br/>Bat-eared Foxes are kept in captivity in North America, Europe, South Africa and Asia, although never in large numbers. A Bat-eared Fox European StudBook was established at Banham Zoo in 2011 and an AZA Studbook has been established at Peoria Zoo in Illinois (2012/2013) (M. Woolham pers. comm. 2013). Importations have occurred throughout the history of the captive population despite successful captive breeding since 1970. Bat-eared Foxes can coexist well with other species and are frequently seen in African plains exhibits at zoos.<br/><br/>Little is known about dispersal of young and the formation of new breeding pairs. The causal factors for differences in home range size in different localities, group size and changes in density as a function of food availability are poorly known. In the Serengeti, behavioural evidence on group and pair formation and the existence of 'super families', consisting of one male and up to three closely related breeding females, raises interesting questions about regular inbreeding between males and their daughters from several generations (see Maas 1993a).",
+    "use_trade": "Commercial use is very limited, but winter pelts are valued and sold as blankets. They are also sold as hunting trophies in South Africa.",
+    "rationale": "The Bat-eared Fox occurs in two discrete subpopulations in eastern and southern Africa. The species is widespread and is common in conservation areas, becoming uncommon in arid areas and on farms in South Africa where they are occasionally persecuted. There are no major threats believed to be resulting in any major range-wide declines.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Mediterranean-type Shrubby Vegetation"
+      },
+      "code": "3_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Zimbabwe"
+      },
+      "code": "ZW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tanzania, United Republic of"
+      },
+      "code": "TZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Africa"
+      },
+      "code": "ZA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Namibia"
+      },
+      "code": "NA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mozambique"
+      },
+      "code": "MZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Kenya"
+      },
+      "code": "KE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ethiopia"
+      },
+      "code": "ET"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Botswana"
+      },
+      "code": "BW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Angola"
+      },
+      "code": "AO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Uganda"
+      },
+      "code": "UG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "South Sudan"
+      },
+      "code": "SS"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": "",
+      "code": "4",
+      "description": {
+        "en": "Other"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": null,
+      "description": {
+        "en": "Sport hunting/specimen collecting"
+      },
+      "code": "15"
+    },
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Wearing apparel, accessories"
+      },
+      "code": "10"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Problematic native species/diseases"
+      },
+      "code": "8_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Persecution/control"
+      },
+      "code": "5_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": "No",
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "No decline",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Droughts"
+      },
+      "code": "11_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Hoffmann, M.",
+      "value": [
+        "Michael Hoffmann (Zoological Society of London / IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Sillero-Zubiri, C.",
+      "value": [
+        "Claudio Sillero-Zubiri (IUCN SSC Canid Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Nel, J.A.J., Maas, B. & Woolham, M.",
+      "value": [
+        "Jan Nel",
+        "Barbara Maas",
+        "Mike Woolham (Banham Zoo)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Baillie, J. and Groombridge, B. (comps and eds). 1996. <i>1996 IUCN Red List of Threatened Animals</i>. IUCN, Gland, Switzerland and Cambridge, UK.",
+      "year": "1996",
+      "title": "1996 IUCN Red List of Threatened Animals",
+      "author": "Baillie, J. and Groombridge, B.",
+      "citation_short": "Baillie and Groombridge 1996"
+    },
+    {
+      "citation": "Rathbun, G.B. (subeditor). 2005. Macroscelidea. In: J.D. Skinner and C.T. Chimimba (eds), <i>The Mammals of the Southern African Subregion, 3rd edition</i>, pp. 22-34. Cambridge University Press, Cambridge, UK.",
+      "year": "2005",
+      "title": "Macroscelidea",
+      "author": "Rathbun, G.B. (subeditor)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Ansell, W.F.H. 1978. The Mammals of Zambia. pp. 73-74. The National Parks and Wildlife Service, Chilanga, Zambia.",
+      "year": "1978",
+      "title": "The Mammals of Zambia",
+      "author": "Ansell, W.F.H.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coetzee, C.G. 1977. Order Carnivora. Part 8. In: J. Meester and H.W. Setzer (eds), <i>The Mammals of Africa: An Identification Manual</i>, pp. 1-42. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "1977",
+      "title": "Order Carnivora. Part 8",
+      "author": "Coetzee, C.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Malcolm, J. R. 1986. Socio-ecology of bat-eared foxes (<i>Otocyon megalotis</i>). <i>Journal of Zoology (London)</i> 208: 457-467.",
+      "year": "1986",
+      "title": "Socio-ecology of bat-eared foxes (<i>Otocyon megalotis</i>)",
+      "author": "Malcolm, J. R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Marais, E. and Griffin, M. 1993. Range extension in the bat-eared fox <i>Otocyon megalotis</i> in Namibia. <i>Madoqua</i> 19: 187-188.",
+      "year": "1993",
+      "title": "Range extension in the bat-eared fox <i>Otocyon megalotis</i> in Namibia",
+      "author": "Marais, E. and Griffin, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nel, J. A. J. 1993. The bat-eared fox: a prime candidate for rabies vector? <i>Onderstepoort Journal of Veterinary Research</i> 60: 396-397.",
+      "year": "1993",
+      "title": "The bat-eared fox: a prime candidate for rabies vector?",
+      "author": "Nel, J. A. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Nel, J. A. J., Mills, M. G. L. and Van Aarde, R. J. 1984. Fluctuating group size in bat-eared foxes (<i>Otocyon m. megalotis</i>) in the south-western Kalahari. <i>Journal of Zoology (London)</i> 203: 294-298.",
+      "year": "1984",
+      "title": "Fluctuating group size in bat-eared foxes (<i>Otocyon m. megalotis</i>) in the south-western Kalahari",
+      "author": "Nel, J. A. J., Mills, M. G. L. and Van Aarde, R. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Stuart, C.T. 1981. Notes on the mammalian carnivores of the Cape Province, South Africa. <i>Bontebok</i> 1: 1-58.",
+      "year": "1981",
+      "title": "Notes on the mammalian carnivores of the Cape Province, South Africa",
+      "author": "Stuart, C.T.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Waser, P.M. 1980. Small nocturnal carnivores: ecological studies in the Serengeti. <i>African Journal of Ecology</i> 18: 167-185.",
+      "year": "1980",
+      "title": "Small nocturnal carnivores: ecological studies in the Serengeti",
+      "author": "Waser, P.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Coe, M. J. and Skinner, J. D. 1993. Connections, disjunctions and endemism in the eastern and southern African mammal faunas. <i>Transactions of the Royal Society of South Africa</i> 48: 233-256.",
+      "year": "1993",
+      "title": "Connections, disjunctions and endemism in the eastern and southern African mammal faunas",
+      "author": "Coe, M. J. and Skinner, J. D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Maas, B. 1993a. Behavioural ecology and social organisation of the bat-eared fox in the Serengeti national Park, Tanzania. D.Phil. dissertation, University of Cambridge, UK.",
+      "year": "1993a",
+      "title": "Behavioural ecology and social organisation of the bat-eared fox in the Serengeti national Park, Tanzania.",
+      "author": "Maas, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Maas, B. 1993b. Bat-eared fox behavioural ecology and the incidence of rabies in the Serengeti National Park. <i>Onderstepoort Journal of Veterinary Research</i> 60:389-393.",
+      "year": "1993b",
+      "title": "Bat-eared fox behavioural ecology and the incidence of rabies in the Serengeti National Park.",
+      "author": "Maas, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Lamprecht, J. 1979. Field observations on the behaviour and social system of the bat-eared fox <i>Otocyon megalotis</i> Desmarest). <i>Zeitschrift für Tierpsychologie</i> 49: 260-284.",
+      "year": "1979",
+      "title": "Field observations on the behaviour and social system of the bat-eared fox <i>Otocyon megalotis</i> Desmarest)",
+      "author": "Lamprecht, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Mackie, A. J. and Nel, J. A. J. 1989. Habitat selection, home range use, and group size of bat-eared foxes in the Orange Free State. <i>South African Journal of Wildlife Research</i> 19: 135-139.",
+      "year": "1989",
+      "title": "Habitat selection, home range use, and group size of bat-eared foxes in the Orange Free State",
+      "author": "Mackie, A. J. and Nel, J. A. J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kingdon, J. 1977. <i>East African Mammals: An Atlas of Evolution in Africa. Volume IIIA (Carnivores)</i>. Academic Press, London, UK.",
+      "year": "1977",
+      "title": "East African Mammals: An Atlas of Evolution in Africa. Volume IIIA (Carnivores)",
+      "author": "Kingdon, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nel, J. A. J. and Maas, B. 2004. Bat-eared Fox Otocyon megalotis (Desmarest, 1822). In: Sillero-Zubiri, C., Hoffmann, M. & Macdonald, D.W. (ed.), <i>Canids: Foxes, Wolves, Jackals and Dogs. Status Survey and Conservation Action Plan</i>, pp. 183-189. IUCN, Gland.",
+      "year": "2004",
+      "title": "Bat-eared Fox Otocyon megalotis (Desmarest, 1822)",
+      "author": "Nel, J. A. J. and Maas, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nel, J. A. J. and Maas, B. 2013. Otocyon megalotis Bat-eared Fox. In: Kingdon, J. & Hoffmann, M. (ed.), <i>Mammals of Africa. Volume 5. Carnivores, Pangolins, Equids and Rhinoceroses</i>, pp. 78-81. Bloomsbury, London.",
+      "year": "2013",
+      "title": "Otocyon megalotis Bat-eared Fox",
+      "author": "Nel, J. A. J. and Maas, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Heindrichs, H. 1972. Beobachtungen und Untersuchungen zur Ökologie und Ethologie, insbesondere zur sozialen Organisation ostafrikanischer Säugetiere. <i>Zeitschrift für Tierpsychologie</i> 30: 146-189.",
+      "year": "1972",
+      "title": "Beobachtungen und Untersuchungen zur Ökologie und Ethologie, insbesondere zur sozialen Organisation ostafrikanischer Säugetiere",
+      "author": "Heindrichs, H.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2014. The IUCN Red List of Threatened Species. Version 2014.1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 12 June 2014).",
+      "year": "2014",
+      "title": "The IUCN Red List of Threatened Species. Version 2014.1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2014.1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

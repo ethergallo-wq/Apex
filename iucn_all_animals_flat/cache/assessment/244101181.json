@@ -1,0 +1,1529 @@
+{
+  "assessment_date": "2024-08-19T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 18144,
+  "criteria": "A2cd",
+  "url": "https://www.iucnredlist.org/species/18144/244101181",
+  "citation": "Superina, M., Desbiez, A., Di Blanco, Y., Smith, P., De Thoisy, B. & Earl, E. 2025. Priodontes maximus. The IUCN Red List of Threatened Species 2025: e.T18144A244101181. Accessed on 05 May 2026.",
+  "assessment_id": 244101181,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 18144,
+    "scientific_name": "Priodontes maximus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "CINGULATA",
+    "family_name": "CHLAMYPHORIDAE",
+    "genus_name": "Priodontes",
+    "species_name": "maximus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Kerr, 1792)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+        "url": "http://www.xenarthrans.org/index",
+        "description": "Chair: Mariella Superina (email: mariella@superina.ch)\nRed List Authority Coordinator: Agustin Abba (email: abbaam@yahoo.com.ar)\nNewsletter: http://www.xenarthrans.org/bibliography/edentata"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Armadillo Gigante",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Carachupa Manan",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Cuspon",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Riesengürteltier",
+        "language": "ger"
+      },
+      {
+        "main": false,
+        "name": "Tatou géant",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Tatu-Canastra",
+        "language": "por"
+      },
+      {
+        "main": false,
+        "name": "Tatú Carreta",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Tatú Guazú",
+        "language": "grn"
+      },
+      {
+        "main": true,
+        "name": "Giant Armadillo",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Priodontes giganteus G. Fischer, 1814",
+        "status": "ACCEPTED",
+        "genus_name": "Priodontes",
+        "species_name": "giganteus",
+        "species_author": "G. Fischer, 1814",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Dasypus maximus Kerr, 1792",
+        "status": "ACCEPTED",
+        "genus_name": "Dasypus",
+        "species_name": "maximus",
+        "species_author": "Kerr, 1792",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Vulnerable"
+    },
+    "code": "VU"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 500,
+    "lower_elevation_limit": 0,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Yes",
+    "generational_length": "11",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "No"
+          },
+          {
+            "name": "Systematic monitoring scheme",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          },
+          {
+            "name": "Area based regional management plan",
+            "value": "No"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "No"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to recent education and awareness programmes",
+            "value": "Yes"
+          },
+          {
+            "name": "Included in international legislation",
+            "value": "Yes"
+          },
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": "Yes",
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "<p>This largest of all extant armadillo species is restricted to northern and central South America, where it occurs east of the Andes. If can be found from northern Venezuela and the Guianas (French Guiana, Guyana, and Suriname), south to Paraguay and northern Argentina.&#160;<br/>This species has disappeared from large parts of its southern range, and possibly from other parts of its range. It may be extinct in Uruguay, and is not listed at all for this country by Fallabrino and Castiñeira (2006). It has been recorded from sea level up to 500 m asl.</p>",
+    "population": "<span style=\"font-style: italic;\">Priodontes maximus</span> appears to be naturally rare where it occurs, with a very patchy distribution (Carter <em>et al.</em> 2016). Population density estimates are always low. Surveys in Suriname over a 18 year period recorded seven individuals in an area of 650 km² (Walsh and Gannon 1967).&#160;<span lang=\"EN-US\">Reported densities are 3.4–10.67 individuals/100&#160;km²&#160;in Brazil, 5.8 individuals/100&#160;km²&#160;in Colombia, and 5.8–6.3 individuals/100&#160;km² in Bolivia (Aya-Cuero&#160;<em>et al</em>.&#160;2017,&#160;Desbiez&#160;<em>et al</em>.&#160;2020<span lang=\"EN-US\">, Noss<em>&#160;et al.</em> 2004, Pasa<em>&#160;et al</em>.&#160;2022, Silveira&#160;<em>et al</em>.&#160;2009).&#160;<span lang=\"ES-AR\">The wild population is decreasing.</span>",
+    "habitats": "<p><span lang=\"EN-US\">This terrestrial species is found within undisturbed primary rain forest habitats, dry forests, humid to dry lowland forests, and savannas. It has been reported to survive in fragmented landscapes in the Cerrado of Brazil (Lemos&#160;<em>et al.</em> 2018, Ferraz&#160;<em>et al</em>. 2021). It excavates burrows, usually in grasslands or open areas of the forest, and is considered an ecosystem engineer (Desbiez&#160;and Kluyber 2013). The species spends 75–80% of its time underground; accelerometer data show that giant armadillos are not active and do not feed while underground, suggesting a fossorial behaviour (Desbiez <em>et al</em>. 2021)<span lang=\"EN-US\">.<span lang=\"EN-US\">&#160;Habitat selection of giant armadillos seems to vary, among others, according to sex and life stage, but&#160;&#160;forests showed to be fundamental for the survival of the species (Desbiez&#160;<em>et al</em>.&#160;2020). Home range size has been estimated to be at least 452 ha (Carter 1985)&#160;in the Brazilian Pantanal.&#160;<span lang=\"EN-US\">Median home-range size of adults was reported at 2,518 ha, with males occupying median ranges of 5,109 ha and females of 1,998 ha&#160;<span lang=\"EN-US\">(Desbiez&#160;<em>et al</em>.&#160;2020).&#160;</span></span></p><p><span lang=\"EN-US\">The high prevalence of termites and ants identified in the faecal simples of giant armadillos confirms their myrmecophagous specialization (Teixeira Nascimento <em>et al</em>. 2024), even though a diverse array of invertebrates, plants, fruits, have also been found (Wallace and Painter 2013, Campos <em>et al.</em> 2016, Teixeira Nascimento <em>et al.</em> 2024).&#160;&#160;</span></p><p><span lang=\"EN-US\">Male and female giant armadillos reach sexual maturity at 6.5–8 years of age (Luba&#160;<em>et al.</em> 2020). Reproduction seems to be aseasonal in the Pantanal of Brazil (Desbiez&#160;<em>et al</em>.&#160;2020) but seasonal in the Llanos of Colombia (Aya-Cuero&#160;<em>et al.</em>&#160;2015).&#160;Gestation length is 5 months, and the females usually give birth to one offspring (Desbiez&#160;<em>et al.</em>&#160;2020).<span lang=\"EN-US\">&#160;Parental care is long. The offspring remain inside the burrow and are completely dependent of the mother’s milk for 6–8 months. Although the weaning process ends at about 1 year of age, the offspring remain with their mother until they are 18 months old (Desbiez&#160;<em>et al</em>.&#160;2020). Due to the long dependence of the offspring from their mother, the interbirth interval probably exceeds 3 years (Desbiez&#160;<em>et al</em>.&#160;2020). The longevity of&#160;<span lang=\"DE-CH\"><em>P. maximus</em><span lang=\"EN-US\">&#160;is unknown, but seems to be at least 18 years (Desbiez&#160;<em>et al.</em>&#160;2021).</span></span></p><p><span lang=\"EN-US\">Based on available scientific information, the generation length has been estimated at 11 years (Luba&#160;<em>et al</em>.&#160;2020).</p>",
+    "threats": "<p><span lang=\"EN-US\">The main threat to the species is habitat loss and fragmentation due to deforestation, land use change and agriculture. Wildlife vehicle collisions also threaten the species, but can be mitigated through the use of fencing and underpasses that the species can use (Banhos <em>et al</em>. 2020, Arasaki <em>et al</em>. 2023).&#160;It is also threatened by hunting for meat (generally for subsistence). The illegal capture of giant armadillos for clandestine sale to wealthy animal collectors may also be a threat, but is difficult to quantify (Porini 2001).&#160;</p><p><span lang=\"EN-US\">Wildfires can have a severe impact on the species, with two individuals being found burnt to death in a 2,000 ha area following a fire in Emas National Park (Silveira <em>et al</em>. 1999).&#160;<span lang=\"EN-US\"><em>Priodontes</em> was also found to be one of the species most affected by the mega fires in the Pantanal in 2020 (Bardales <em>et al</em>. 2024). Beekeepers retaliate against giant armadillos that destroy their hives in search of larvae (Desbiez <em>et al.</em> 2020). Although not quantified, it is highly probable that pesticides represent a threat to giant armadillo health, reproduction, and general fitness.</span></p><p><span lang=\"EN-US\">In the Paraguayan Chaco they are persecuted for damage caused by their digging into the side of water tanks (\"tanque Australiano\") (Weiler and Nuñez 2012).</span></p>",
+    "measures": "<em></em><p><em>Priodontes maximus</em>&#160;is listed in Appendix I of CITES. It is present in many protected areas.&#160;</p><p>The species is regionally extinct in Uruguay, listed as Endangered in Argentina (Di Blanco and Superina 2019) and Paraguay (Abba <em>et al. </em>2017), and considered Vulnerable in eight countries; the two remaining range countries do not maintain threatened species lists (Superina and Abba 2020).&#160;In Paraguay there are very few records in the last 50 years from the Oriental region east of the Paraguay River, and the majority of the population now appears to be confined to the northern Chaco region (Smith and Ríos 2018).</p><p>Long-term research and conservation initiatives are being implemented in Brazil (Giant Armadillo Conservation Program) and Colombia (Programa de Conservación y Manejo de los Armadillos de los Llanos Orientales de Colombia). Among others, the “canastras e colmeias” initiative in Brazil promotes the peaceful coexistence between beekeepers and giant armadillos (Desbiez&#160;<em>et al.</em>&#160;2020). In Colombia, the&#160;Armadillo Conservation Program is implementing different strategies to establish armadillos as flagship species in the Llanos and closely works with plantations to implement good practices that benefit armadillos (Superina&#160;<em>et al</em>.&#160;2019, Superina and Trujillo 2023).&#160;<span lang=\"EN-US\">In Argentina, the Proyecto Tatú Carrera aims at establishing a long-term study to understand how landscape features affect giant armadillo presence and persistence and its role in the ecosystem to promote a conservation plan for the species (Di Blanco&#160;<em>et al.</em> 2020, 2022).</p>",
+    "use_trade": "This armadillo is used as food and is sometimes captured to be kept as a pet, but it usually does not survive long in captivity. The carapace, tail and claws are used locally as cradles, tools and pans, among others (Trujillo and Superina 2013).",
+    "rationale": "<p><span lang=\"EN-US\"><em>Priodontes maximus</em><span lang=\"EN-US\">, the largest of all extant armadillo species, has a wide area of distribution, but it is naturally rare over its entire range, is very patchily distributed and the wild population is decreasing. The main threat to the species is habitat loss and fragmentation due to deforestation, land use change, and agriculture, but the species is also affected by hunting for meat and vehicle collisions. On the other hand, the recent increase in wildfires in several parts of its range has<span lang=\"EN-US\">&#160;a severe impact on this species, including in pristine and/or protected areas such as Emas National Park, Amazonian forest, and&#160;the&#160;<span lang=\"EN-US\">Pantanal<span lang=\"EN-US\">.&#160;<span lang=\"EN-US\">Furthermore, it is sometimes captured to be kept as a pet or to be sold as a “living fossil” on the black market, but it usually does not survive long in captivity. This species has disappeared from large parts of its southern range; in fact, it is categorized as potentially extinct in Uruguay, listed as Endangered in Argentina and Paraguay, and considered Vulnerable in eight countries. These threats have led to a suspected population decline of at least 30% in the past three generations (around 33 years); hence, it is listed as Vulnerable under criterion A2cd.</span></span></span></p>",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": null,
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Site/area management"
+      }
+    },
+    {
+      "note": null,
+      "code": "5_4_1",
+      "description": {
+        "en": "International level"
+      }
+    },
+    {
+      "note": null,
+      "code": "4_3",
+      "description": {
+        "en": "Awareness & communications"
+      }
+    }
+  ],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Temperate"
+      },
+      "code": "1_4"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Moist"
+      },
+      "code": "2_2"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Savanna - Dry"
+      },
+      "code": "2_1"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Dry"
+      },
+      "code": "1_5"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Seasonally Wet/Flooded"
+      },
+      "code": "4_6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Forest - Subtropical/Tropical Moist Lowland"
+      },
+      "code": "1_6"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela (mainland)"
+      },
+      "code": "VEN-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Rondônia"
+      },
+      "code": "BZN-RO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Chaco"
+      },
+      "code": "AGE-CH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraguay"
+      },
+      "code": "PY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "French Guiana"
+      },
+      "code": "GF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Suriname"
+      },
+      "code": "SR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Formosa"
+      },
+      "code": "AGE-FO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Santiago del Estero"
+      },
+      "code": "AGW-SE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Brazil"
+      },
+      "code": "BR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Roraima"
+      },
+      "code": "BZN-RM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Tocantins"
+      },
+      "code": "BZN-TO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso do Sul"
+      },
+      "code": "BZC-MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Possibly Extinct",
+      "seasonality": null,
+      "description": {
+        "en": "Uruguay"
+      },
+      "code": "UY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Minas Gerais"
+      },
+      "code": "BZL-MG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bolivia, Plurinational States of"
+      },
+      "code": "BO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Pará"
+      },
+      "code": "BZN-PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Paraná"
+      },
+      "code": "BZS-PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Peru"
+      },
+      "code": "PE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador (mainland)"
+      },
+      "code": "ECU-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia (mainland)"
+      },
+      "code": "CLM-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Ecuador"
+      },
+      "code": "EC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amapá"
+      },
+      "code": "BZN-AP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Maranhão"
+      },
+      "code": "BZE-MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Acre"
+      },
+      "code": "BZN-AC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Argentina"
+      },
+      "code": "AR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Salta"
+      },
+      "code": "AGW-SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Amazonas"
+      },
+      "code": "BZN-AZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Goiás"
+      },
+      "code": "BZC-GO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Espírito Santo"
+      },
+      "code": "BZL-ES"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guyana"
+      },
+      "code": "GY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mato Grosso"
+      },
+      "code": "BZC-MT"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_3",
+      "description": {
+        "en": "Trade trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_2",
+      "description": {
+        "en": "Harvest level trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_3",
+      "description": {
+        "en": "Life history & ecology"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_1",
+      "description": {
+        "en": "Species Action/Recovery Plan"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_5",
+      "description": {
+        "en": "Threats"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_6",
+      "description": {
+        "en": "Actions"
+      }
+    },
+    {
+      "note": null,
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    },
+    {
+      "note": null,
+      "code": "3_4",
+      "description": {
+        "en": "Habitat trends"
+      }
+    },
+    {
+      "note": null,
+      "code": "2_2",
+      "description": {
+        "en": "Area-based Management Plan"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Other household goods"
+      },
+      "code": "11"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Pets/display animals, horticulture"
+      },
+      "code": "13"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry grazing, ranching or farming"
+      },
+      "code": "2_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry plantations"
+      },
+      "code": "2_2_2"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Medium Impact: 6",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Scale Unknown/Unrecorded"
+      },
+      "code": "2_1_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Agro-industry farming"
+      },
+      "code": "2_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Roads & railroads"
+      },
+      "code": "4_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Slow, Significant Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Increase in fire frequency/intensity"
+      },
+      "code": "7_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Superina, M., Desbiez, A., Di Blanco, Y., Smith, P., De Thoisy, B. & Earl, E.",
+      "value": [
+        "Mariella Superina (CONICET)",
+        "Arnaud Desbiez (IUCN SSC Peccary RLA)",
+        "Paul Smith (Fauna Paraguay)",
+        "Benoit De Thoisy (IUCN SSC Cat Specalist Group)",
+        "Yamil Di Blanco ( Instituto de Biología Subtropical CONICET-UN of Misiones and CeIBA)",
+        "Erin Earl"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Abba, A.M. & Morales-Campos, J.",
+      "value": [
+        "Agustín Abba (CONICET)",
+        "Jesús Morales-Campos (Independent)"
+      ]
+    },
+    {
+      "credit_type_name": "facilitators",
+      "full": "Abba, A.M.",
+      "value": [
+        "Agustín Abba (CONICET)"
+      ]
+    },
+    {
+      "credit_type_name": "institutions",
+      "full": "IUCN SSC Anteater, Sloth and Armadillo Specialist Group",
+      "value": [
+        "IUCN SSC Anteater, Sloth and Armadillo Specialist Group"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "Tirira, D.G. 2007. <i>Guía de Campo de los Mamíferos del Ecuador</i>. Ediciones Murciélago Blanco. Publicación especial sobre los mamíferos del Ecuador 6, Quito, Ecuador.",
+      "year": "2007",
+      "title": "Guía de Campo de los Mamíferos del Ecuador",
+      "author": "Tirira, D.G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pacheco, V., de Macedo, H., Vivar, E., Ascorra, C.F., Arana-Cardó, R. and Solari, S. 1995. Lista anotada de los mamíferos peruanos. <i>Occasional Papers in Conservation Biology</i> 2: 1-35.",
+      "year": "1995",
+      "title": "Lista anotada de los mamíferos peruanos",
+      "author": "Pacheco, V., de Macedo, H., Vivar, E., Ascorra, C.F., Arana-Cardó, R. and Solari, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Engstrom, M. and Lim, B. 2000. <i>Checklist of the mammals of Guyana</i>. Smithsonian Institution Press, Washington, DC, USA.",
+      "year": "2000",
+      "title": "Checklist of the mammals of Guyana",
+      "author": "Engstrom, M. and Lim, B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Fallabrino, A. and Castiñeira, E. 2006. Situacion de los Edentados en Uruguay. <i>Edentata</i> 7: 1-3.",
+      "year": "2006",
+      "title": "Situacion de los Edentados en Uruguay",
+      "author": "Fallabrino, A. and Castiñeira, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Meritt Jr., D.A. 2008. Xenarthrans of the Paraguayan Chaco. In: S.F. Vizcaino and W.J. Loughry (eds), <i>The Biology of the Xenarthra</i>, pp. 294-299. University Press of Florida, Gainesville, FL, USA.",
+      "year": "2008",
+      "title": "Xenarthrans of the Paraguayan Chaco",
+      "author": "Meritt Jr., D.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carter, T.S. and Encarnação, C.D. 1983. Characteristics and use of burrows by four species of Armadillo in Brazil. <i>Journal of Mammalogy</i> 64: 103-108.",
+      "year": "1983",
+      "title": "Characteristics and use of burrows by four species of Armadillo in Brazil",
+      "author": "Carter, T.S. and Encarnação, C.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Chebez, J.C. 1994. Los Que Se Van. Especies Argentinas en Peligro. <i>Buenos Aires, Argentina: Editorial Albatros</i>: 604.",
+      "year": "1994",
+      "title": "Los Que Se Van. Especies Argentinas en Peligro",
+      "author": "Chebez, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tarifa, T. 2009. <i>Priodontes maximus</i>. In: Aguirre, L.F., Aguayo, R., Balderrama, J.A., Cortez, C., Tarifa, T., and Rocha O., O. (eds), <i>Libro rojo de la fauna silvestre de vertebrados de Bolivia</i>, pp. 496-498. Ministerio de Medio Ambiente y Agua, La Paz.",
+      "year": "2009",
+      "title": "<i>Priodontes maximus</i>",
+      "author": "Tarifa, T.",
+      "citation_short": null
+    },
+    {
+      "citation": "Gardner, A.L. 2005. Order Cingulata. In: D.E. Wilson and D.M. Reeder (eds), <i>Mammal Species of the World: A taxonomic and geographic reference. Third edition.</i>, pp. 94-99. The Johns Hopkins University Press, Baltimore, Maryland, USA.",
+      "year": "2005",
+      "title": "Order Cingulata",
+      "author": "Gardner, A.L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Anacleto, T.C.S., Diniz-Filho, J.A.F. and Vital, M.V.C. 2006. Estimating potential geographic ranges of armadillos (Xenarthra, Dasypodidae) in Brazil under niche-based models. <i>Mammalia</i> 70(3-4): 202-213.",
+      "year": "2006",
+      "title": "Estimating potential geographic ranges of armadillos (Xenarthra, Dasypodidae) in Brazil under niche-based models",
+      "author": "Anacleto, T.C.S., Diniz-Filho, J.A.F. and Vital, M.V.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Abba, A.M., Tognelli, M.F., Seitz, V.P., Bender, J.B. and Vizcaíno, S.F. 2012. Distribution of extant xenarthrans (Mammalia: Xenarthra) in Argentina using species distribution models. <i>Mammalia</i> 76: 123-136.",
+      "year": "2012",
+      "title": "Distribution of extant xenarthrans (Mammalia: Xenarthra) in Argentina using species distribution models",
+      "author": "Abba, A.M., Tognelli, M.F., Seitz, V.P., Bender, J.B. and Vizcaíno, S.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Trujillo, F. and Superina, M. 2013. <i>Armadillos de los Llanos Orientales</i>. ODL, Fundación Omacha, Cormacarena, Corporinoquia, Bioparque Los Ocarros, Bogotá, Colombia.",
+      "year": "2013",
+      "title": "Armadillos de los Llanos Orientales",
+      "author": "Trujillo, F. and Superina, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Noss, A., Cuéllar, E., Gómez, H., Tarifa, T. and Aliaga-Rossel, E. 2010. Dasypodidae. In: R.B. Wallace, H. Gómez, Z.R. Porcel and D.I. Rumiz (eds), <i>Distribución, ecología y conservación de los mamíferos medianos y grandes de Bolivia</i>, pp. 173-212. Centro de Ecología Difusión Simón I. Patiño, Santa Cruz de la Sierra, Bolivia.",
+      "year": "2010",
+      "title": "Dasypodidae",
+      "author": "Noss, A., Cuéllar, E., Gómez, H., Tarifa, T. and Aliaga-Rossel, E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Superina, M., Pagnutti, N. and Abba, A.M. 2014. What do we know about armadillos? An analysis of four centuries of knowledge about a group of South American mammals, with emphasis on their conservation. <i>Mammal Review</i> 44: 69-80.",
+      "year": "2014",
+      "title": "What do we know about armadillos? An analysis of four centuries of knowledge about a group of South American mammals, with emphasis on their conservation",
+      "author": "Superina, M., Pagnutti, N. and Abba, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Grzimek, B. 1988. <i>Grzimeks Enzyklopädie Säugetiere</i>. Kindler Verlag, München.",
+      "year": "1988",
+      "title": "Grzimeks Enzyklopädie Säugetiere",
+      "author": "Grzimek, B.",
+      "citation_short": null
+    },
+    {
+      "citation": "Silveira, L., Jácomo, A.T.A., Torres, N.M., Sollmann, R. and Vynne, C. 2009. Ecology of the giant armadillo (<i>Priodontes maximus</i>) in the grasslands of central Brazil. <i>Edentata</i> 8-10: 25-34.",
+      "year": "2009",
+      "title": "Ecology of the giant armadillo (<i>Priodontes maximus</i>) in the grasslands of central Brazil",
+      "author": "Silveira, L., Jácomo, A.T.A., Torres, N.M., Sollmann, R. and Vynne, C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Merrett, P.K. 1983. <i>Edentates : Project for city and guilds animal management course</i>. Zoological Trust of Guernsey, Guernsey, Channel Islands.",
+      "year": "1983",
+      "title": "Edentates : Project for city and guilds animal management course",
+      "author": "Merrett, P.K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Noss, A., Peña, R. and Rumiz, D.I. 2004. Camera trapping <i>Priodontes maximus</i> in the dry forests of Santa Cruz, Bolivia. <i>Endangered Species Update</i> 21(2): 43-52.",
+      "year": "2004",
+      "title": "Camera trapping <i>Priodontes maximus</i> in the dry forests of Santa Cruz, Bolivia.",
+      "author": "Noss, A., Peña, R. and Rumiz, D.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Srbek-Araujo, A. C., Scoss, L. M., Hirsch, A. and Chiarello, A. G. 2009. Records of the giant-armadillo <i>Priodontes maximus</i> (Cingulata: Dasypodidae) in the Atlantic Forest: are Minas Gerais and Espírito Santo the last strongholds of the species? <i>Zoologia</i> 26(3): 461-468.",
+      "year": "2009",
+      "title": "Records of the giant-armadillo <i>Priodontes maximus</i> (Cingulata: Dasypodidae) in the Atlantic Forest: are Minas Gerais and Espírito Santo the last strongholds of the species?",
+      "author": "Srbek-Araujo, A. C., Scoss, L. M., Hirsch, A. and Chiarello, A. G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Walsh, J. and Gannon, R. 1967. <i>Time is short and the water rises: Operation Gwamba: the incredible story of how 10,000 animals were rescued from certain death in a South American rain forest.</i> Tower Publications, Inc.",
+      "year": "1967",
+      "title": "Time is short and the water rises: Operation Gwamba: the incredible story of how 10,000 animals were rescued from certain death in a South American rain forest.",
+      "author": "Walsh, J. and Gannon, R.",
+      "citation_short": null
+    },
+    {
+      "citation": "Campos, Z., Muniz, F. and Magnusson, W.E. 2016. Predation on eggs of Schneider’s dwarf caiman, <i>Paleosuchus trigonatus</i> (Schneider, 1807), by armadillos and other predators. <i>Journal of Natural History</i> 50: 1543 -1548.",
+      "year": "2016",
+      "title": "Predation on eggs of Schneider’s dwarf caiman, <i>Paleosuchus trigonatus</i> (Schneider, 1807), by armadillos and other predators",
+      "author": "Campos, Z., Muniz, F. and Magnusson, W.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Silveira, L., Rodrigues, F.H.G., Tereza, A., Jacomo, D.A., Alexandre, J., and Filho, F.D. 1999. Impact of wildfires on the megafauna of Emas National Park , central Brazil. <i>Oryx</i> 33(2): 108-114.",
+      "year": "1999",
+      "title": "Impact of wildfires on the megafauna of Emas National Park , central Brazil.",
+      "author": "Silveira, L., Rodrigues, F.H.G., Tereza, A., Jacomo, D.A., Alexandre, J., and Filho, F.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 27 March 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-1"
+    },
+    {
+      "citation": "Superina, M. and Abba, A.M. 2018. Family Chlamyphoridae (Chlamyphorid armadillos). In: Wilson, D.E. and Mittermeier, R.A. (eds), <i>Handbook of the mammals of the world. Volume 8: insectivores, sloths and colugos</i>, pp. 48-73. Lynx Edicions, Barcelona.",
+      "year": "2018",
+      "title": "Family Chlamyphoridae (Chlamyphorid armadillos)",
+      "author": "Superina, M. and Abba, A.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Smith, P. and Ríos, S.D. 2018. Distribution and status of Paraguayan Xenarthra: towards a better understanding. <i>Edentata</i> 19: 1-29.",
+      "year": "2018",
+      "title": "Distribution and status of Paraguayan Xenarthra: towards a better understanding",
+      "author": "Smith, P. and Ríos, S.D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Superina, M. and Trujillo, F. 2023. <i>Armadillos de los Llanos Orientales de Colombia</i>. Fundación Omacha, Fondation Segré, Bogotá.",
+      "year": "2023",
+      "title": "Armadillos de los Llanos Orientales de Colombia",
+      "author": "Superina, M. and Trujillo, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Superina, M., Cortés Duarte, A. and Trujillo, F. 2019. Connecting research, management, education and policy for the conservation of armadillos in the Orinoco Llanos of Colombia. <i>Oryx</i> 53: 17-26.",
+      "year": "2019",
+      "title": "Connecting research, management, education and policy for the conservation of armadillos in the Orinoco Llanos of Colombia",
+      "author": "Superina, M., Cortés Duarte, A. and Trujillo, F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Abba, A.M., Ríos, S.D. and Smith, P. 2017. Xenarthra: armadillos y osos hormigueros. In: Saldívar, S., Rojas, V. and Giménez, D. (eds), <i>Libro Rojo de mamíferos del Paraguay</i>, pp. 41-47. Asociación Paraguaya de Mastozoología y Secretaría del Ambiente, Asunción.",
+      "year": "2017",
+      "title": "Xenarthra: armadillos y osos hormigueros",
+      "author": "Abba, A.M., Ríos, S.D. and Smith, P.",
+      "citation_short": null
+    },
+    {
+      "citation": "Arasaki, M.O., Oliveira, R.C., Panachão, E.I., Barbosa, R.B. and Lizarelli, T.F. 2023. <i>Priodontes maximus</i> (Cingulata: Chlamyphoridae) using a highway wildlife underpass in a fragmented Cerrado landscape from Eastern Goiás State, central Brazil. <i>Xenarthra</i> 24: e2405.",
+      "year": "2023",
+      "title": "<i>Priodontes maximus</i> (Cingulata: Chlamyphoridae) using a highway wildlife underpass in a fragmented Cerrado landscape from Eastern Goiás State, central Brazil",
+      "author": "Arasaki, M.O., Oliveira, R.C., Panachão, E.I., Barbosa, R.B. and Lizarelli, T.F.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aya-Cuero, C., Rodríguez-Bolaños, A. and Superina, M. 2017. Population density, activity patterns, and ecological importance of giant armadillos (<i>Priodontes maximus</i>) in Colombia. <i>Journal of Mammalogy</i> 98(3): 770-778.",
+      "year": "2017",
+      "title": "Population density, activity patterns, and ecological importance of giant armadillos (<i>Priodontes maximus</i>) in Colombia",
+      "author": "Aya-Cuero, C., Rodríguez-Bolaños, A. and Superina, M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Aya-Cuero, C., Superina, M. and Rodríguez-Bolaños, A. 2015. Primeros registros de crías de ocarro (<i>Priodontes maximus</i> Kerr, 1792) en Colombia. <i>Edentata</i> 16: 57-64.",
+      "year": "2015",
+      "title": "Primeros registros de crías de ocarro (<i>Priodontes maximus</i> Kerr, 1792) en Colombia",
+      "author": "Aya-Cuero, C., Superina, M. and Rodríguez-Bolaños, A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Banhos, A., Fontes, B.L., Yogui, D.R., Alves, M.H., Ardente, N.C., Valls, R., Barreto, L.M., Damasio, L., Ferreguetti, A.C., Carvalho, A.S., Schettino,V.R., dos Santos, A.R., Bergallo, H.G., Srbek-Araujo, C., Medici, E.P., Canena, A. and Desbiez, A.L.J. 2020. Highways are a threat for giant armadillos that underpasses can mitigate. <i>Biotropica</i> 52(3): 421-426.",
+      "year": "2020",
+      "title": "Highways are a threat for giant armadillos that underpasses can mitigate",
+      "author": "Banhos, A., Fontes, B.L., Yogui, D.R., Alves, M.H., Ardente, N.C., Valls, R., Barreto, L.M., Damasio, L., Ferreguetti, A.C., Carvalho, A.S., Schettino,V.R., dos Santos, A.R., Bergallo, H.G., Srbek-Araujo, C., Medici, E.P., Canena, A. and Desbiez, A.L.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Bardales, R., Boron, V., Passos Viana, D.F., Sousa, L.L., Dröge, E., Porfirio, G., Jaramillo, M., Payán, E., Sillero-Zubiri, C. and Hyde, M. 2024. Neotropical mammal responses to megafires in the Brazilian Pantanal. <i>Global Change Biology</i> 30: e17278.",
+      "year": "2024",
+      "title": "Neotropical mammal responses to megafires in the Brazilian Pantanal",
+      "author": "Bardales, R., Boron, V., Passos Viana, D.F., Sousa, L.L., Dröge, E., Porfirio, G., Jaramillo, M., Payán, E., Sillero-Zubiri, C. and Hyde, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Carter, T.S., Superina, M. and Leslie, D.M. 2016. <i>Priodontes maximus</i> (Cingulata: Chlamyphoridae). <i>Mammalian Species</i> 48(932): 21-34.",
+      "year": "2016",
+      "title": "<i>Priodontes maximus</i> (Cingulata: Chlamyphoridae)",
+      "author": "Carter, T.S., Superina, M. and Leslie, D.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L.J. and Kluyber, D. 2013. The role of giant armadillos (<i>Priodontes maximus</i>) as physical ecosystem engineers. <i>Biotropica</i> 45(5): 537-540.",
+      "year": "2013",
+      "title": "The role of giant armadillos (<i>Priodontes maximus</i>) as physical ecosystem engineers.",
+      "author": "Desbiez, A.L.J. and Kluyber, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L.J., Kluyber, D., Massocato, G.F., Oliveira-Santos, L.G.R. and Attias, N. 2020. Life stage, sex, and behavior shape habitat selection and influence conservation strategies for a threatened fossorial mammal. <i>Hystrix</i> 31(2): 123-129.",
+      "year": "2020",
+      "title": "Life stage, sex, and behavior shape habitat selection and influence conservation strategies for a threatened fossorial mammal",
+      "author": "Desbiez, A.L.J., Kluyber, D., Massocato, G.F., Oliveira-Santos, L.G.R. and Attias, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L.J., Kluyber, D., Massocato, G.F., Oliveira-Santos, L.G.R. and Attias, N. 2020. Spatial ecology of the giant armadillo <i>Priodontes maximus</i> in Midwestern Brazil. <i>Journal of Mammalogy</i> 101(1): 151-163.",
+      "year": "2020",
+      "title": "Spatial ecology of the giant armadillo <i>Priodontes maximus</i> in Midwestern Brazil",
+      "author": "Desbiez, A.L.J., Kluyber, D., Massocato, G.F., Oliveira-Santos, L.G.R. and Attias, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L.J., Larsen, D., Massocato, G.F., Attias, N., Kluyber, D. and Rumiz, D.I. 2021. First estimates of potential lifespan of giant armadillo (<i>Priodontes maximus</i>) in the wild. <i>Edentata</i> 22: 9-15.",
+      "year": "2021",
+      "title": "First estimates of potential lifespan of giant armadillo (<i>Priodontes maximus</i>) in the wild",
+      "author": "Desbiez, A.L.J., Larsen, D., Massocato, G.F., Attias, N., Kluyber, D. and Rumiz, D.I.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L.J., Massocato, G.F. and Kluyber, D. 2020. Insights into giant armadillo (<i>Priodontes maximus</i> Kerr, 1792) reproduction. <i>Mammalia</i> 84(3): 283-293.",
+      "year": "2020",
+      "title": "Insights into giant armadillo (<i>Priodontes maximus</i> Kerr, 1792) reproduction",
+      "author": "Desbiez, A.L.J., Massocato, G.F. and Kluyber, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L.J., Massocato, G.F., Attias, N. and Cove, M. 2020. Comparing density estimates from a short-term camera trap survey with a long-term telemetry study of giant armadillos (<i>Priodontes maximus</i>). <i>Mastozoología Neotropical</i> 27(2): 241-246.",
+      "year": "2020",
+      "title": "Comparing density estimates from a short-term camera trap survey with a long-term telemetry study of giant armadillos (<i>Priodontes maximus</i>)",
+      "author": "Desbiez, A.L.J., Massocato, G.F., Attias, N. and Cove, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Desbiez, A.L.J., Oliveira, B. and Catapani, M.L. 2020. Bee careful! Conflict between beekeepers and giant armadillos (<i>Priodontes maximus</i>) and potential ways to coexist. <i>Edentata</i> 21: 9-15.",
+      "year": "2020",
+      "title": "Bee careful! Conflict between beekeepers and giant armadillos (<i>Priodontes maximus</i>) and potential ways to coexist",
+      "author": "Desbiez, A.L.J., Oliveira, B. and Catapani, M.L.",
+      "citation_short": null
+    },
+    {
+      "citation": "Desbiez, A.L., Kluyber, D., Massocato, G. and Attias, N. 2021. Methods for the characterization of activity patterns in elusive species: the giant armadillo in the Brazilian Pantanal. <i>Journal of Zoology</i> 315: 301-312.",
+      "year": "2021",
+      "title": "Methods for the characterization of activity patterns in elusive species: the giant armadillo in the Brazilian Pantanal.",
+      "author": "Desbiez, A.L., Kluyber, D., Massocato, G. and Attias, N.",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Blanco, Y.E. and Superina, M. 2019. <i>Priodontes maximus</i>. In: SAyDS-SAREM (ed.), <i>Categorización 2019 de los mamíferos de Argentina según su riesgo de extinción. Lista Roja de los mamíferos de Argentina. Versión digital: http://cma.sarem.org.ar.</i>.",
+      "year": "2019",
+      "title": "<i>Priodontes maximus</i>",
+      "author": "Di Blanco, Y.E. and Superina, M. ",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Blanco, Y.E., Desbiez, A.L.J., di Francescantonio, D. and Di Bitetti, M.S. 2020. Excavations of giant armadillos alter environmental conditions and provide new resources for a range of animals. <i>Journal of Zoology</i> 311(4): 227-238.",
+      "year": "2020",
+      "title": "Excavations of giant armadillos alter environmental conditions and provide new resources for a range of animals",
+      "author": "Di Blanco, Y.E., Desbiez, A.L.J., di Francescantonio, D. and Di Bitetti, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Di Blanco, Y.E., Quiroga, V.A., Desbiez, A.L., Insaurralde, A. and Di Bitetti, M.S. 2022. High dependence on protected areas by the endangered giant armadillo in Argentina. <i>Journal for Nature Conservation</i> 68: 126228.",
+      "year": "2022",
+      "title": "High dependence on protected areas by the endangered giant armadillo in Argentina.",
+      "author": "Di Blanco, Y.E., Quiroga, V.A., Desbiez, A.L., Insaurralde, A. and Di Bitetti, M.S.",
+      "citation_short": null
+    },
+    {
+      "citation": "Ferraz, K.M.P.M.B, Oliveira, B.G., Attias, N. and Desbiez, A.L.J. 2021. Species distribution models reveals only highly fragmented suitable patches for giant armadillos in the Brazilian Cerrado. <i>Perspectives in Ecology and Conservation</i> 19: 43-52.",
+      "year": "2021",
+      "title": "Species distribution models reveals only highly fragmented suitable patches for giant armadillos in the Brazilian Cerrado",
+      "author": "Ferraz, K.M.P.M.B, Oliveira, B.G., Attias, N. and Desbiez, A.L.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Fontes, B.L., Desbiez, A.L.J, Massocato, G.F., Srbek-Araujo, A.C., Sanaiotti, T.M., Bergallo, E.G., Ferreguetti, A. C., Noia C.H.R., et. al. 2021. The local extinction of one of the greatest terrestrial ecosystem engineers, the giant armadillo (<i>Priodontes maximus</i>) in one of its last refuges in the Atlantic Forest will be felt by a large vertebrate community. <i>Global Ecology and Conservation</i> 19(1): 43-52.",
+      "year": "2021",
+      "title": "The local extinction of one of the greatest terrestrial ecosystem engineers, the giant armadillo (<i>Priodontes maximus</i>) in one of its last refuges in the Atlantic Forest will be felt by a large vertebrate community",
+      "author": "Fontes, B.L., Desbiez, A.L.J, Massocato, G.F., Srbek-Araujo, A.C., Sanaiotti, T.M., Bergallo, E.G., Ferreguetti, A. C., Noia C.H.R., et. al.",
+      "citation_short": null
+    },
+    {
+      "citation": "Lemos, F., Costa, A., Azevedo, F., Fragoso, C., Freitas-Junior, M. and Rocha, E. 2020. Surveying in highly-modified landscapes to document the occurrence of threatened species: a study of the giant armadillo <i>Priodontes maximus</i> in central Brazil. <i>Oryx</i> 54(1): 133-139.",
+      "year": "2020",
+      "title": "Surveying in highly-modified landscapes to document the occurrence of threatened species: a study of the giant armadillo <i>Priodontes maximus</i> in central Brazil",
+      "author": "Lemos, F., Costa, A., Azevedo, F., Fragoso, C., Freitas-Junior, M. and Rocha, E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Luba, C.N., Kluyber, D., Massocato, G.F., Attias, N., Fromme, L., Rodrigues, A.L.R., Ferreira, A.M.R. and Desbiez, A.L.J. 2020. Size matters: penis size, sexual maturity and their consequences for giant armadillo conservation planning. <i>Mammalian Biology</i> 100: 621-630.",
+      "year": "2020",
+      "title": "Size matters: penis size, sexual maturity and their consequences for giant armadillo conservation planning",
+      "author": "Luba, C.N., Kluyber, D., Massocato, G.F., Attias, N., Fromme, L., Rodrigues, A.L.R., Ferreira, A.M.R. and Desbiez, A.L.J.",
+      "citation_short": null
+    },
+    {
+      "citation": "Pasa, J.B., Massara, R.L., Widmer, C.E., Desbiez, A.L.J., Massocato, G.F., Barreto, L.M. and Azevedo, F.C.C. 2022. Density, habitat use and activity patterns of the last giant armadillo population in the Brazilian Atlantic Forest. <i>Mammalian Biology</i> 102: 1631-1645.",
+      "year": "2022",
+      "title": "Density, habitat use and activity patterns of the last giant armadillo population in the Brazilian Atlantic Forest",
+      "author": "Pasa, J.B., Massara, R.L., Widmer, C.E., Desbiez, A.L.J., Massocato, G.F., Barreto, L.M. and Azevedo, F.C.C.",
+      "citation_short": null
+    },
+    {
+      "citation": "Porini, G. 2001. Tatú carreta (<i>Priodontes maximus</i>) en Argentina. <i>Edentata</i> 4: 9-14.",
+      "year": "2001",
+      "title": "Tatú carreta (<i>Priodontes maximus</i>) en Argentina",
+      "author": "Porini, G.",
+      "citation_short": null
+    },
+    {
+      "citation": "Superina, M. and Abba, A.M. 2020. Conservation perspectives for a highly disparate lineage of mammals: the Xenarthra. <i>Mastozoología Neotropical</i> 27(S1): 48-67.",
+      "year": "2020",
+      "title": "Conservation perspectives for a highly disparate lineage of mammals: the Xenarthra",
+      "author": "Superina, M. and Abba, A.M.",
+      "citation_short": null
+    },
+    {
+      "citation": "Teixeira Nascimento, N., Attias, N., Galvão Santana, T., Rocha, M. Tibcherani, M., Massocato, G., Kluyber, D. and Desbiez, A.L.J. 2024. Dietary habits of the giant armadillo (<i>Priodontes maximus</i>) in the Brazilian wetlands. <i>Mammal Research</i> 69: 423-434.",
+      "year": "2024",
+      "title": "Dietary habits of the giant armadillo (<i>Priodontes maximus</i>) in the Brazilian wetlands",
+      "author": "Teixeira Nascimento, N., Attias, N., Galvão Santana, T., Rocha, M. Tibcherani, M., Massocato, G., Kluyber, D. and Desbiez, A.L.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Wallace, R.B. and Painter, R.L.E. 2013. Observations on the diet of the giant armadillo (<i>Priodontes maximus</i> Kerr, 1792). <i>Edentata</i> 14: 85-86.",
+      "year": "2013",
+      "title": "Observations on the diet of the giant armadillo (<i>Priodontes maximus</i> Kerr, 1792)",
+      "author": "Wallace, R.B. and Painter, R.L.E.",
+      "citation_short": null
+    },
+    {
+      "citation": "Weiler, A. and Núñez, K. 2012. Desafíos para la conservación del tatú carreta (<i>Priodontes maximus</i>) en el Chaco Paraguayo. <i>Reportes Científicos de la FACEN</i> 3: 5-13.",
+      "year": "2012",
+      "title": "Desafíos para la conservación del tatú carreta (<i>Priodontes maximus</i>) en el Chaco Paraguayo.",
+      "author": "Weiler, A. and Núñez, K.",
+      "citation_short": null
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem conversion"
+      },
+      "code": "1_1"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Ecosystem degradation"
+      },
+      "code": "1_2"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    },
+    {
+      "description": {
+        "en": "Species disturbance"
+      },
+      "code": "2_2"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}

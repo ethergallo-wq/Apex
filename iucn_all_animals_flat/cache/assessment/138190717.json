@@ -1,0 +1,1578 @@
+{
+  "assessment_date": "2025-06-02T01:00:00.000+01:00",
+  "year_published": "2025",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 138190680,
+  "criteria": "A2ab",
+  "url": "https://www.iucnredlist.org/species/138190680/138190717",
+  "citation": "Tallowin, O. 2025. Aliger gigas. The IUCN Red List of Threatened Species 2025: e.T138190680A138190717. Accessed on 05 May 2026.",
+  "assessment_id": 138190717,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 138190680,
+    "scientific_name": "Aliger gigas",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "MOLLUSCA",
+    "class_name": "GASTROPODA",
+    "order_name": "LITTORINIMORPHA",
+    "family_name": "STROMBIDAE",
+    "genus_name": "Aliger",
+    "species_name": "gigas",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Mollusc Specialist Group",
+        "url": "http://www.iucn.org/about/work/programmes/species/who_we_are/ssc_specialist_groups_and_red_list_authorities_directory/invertebrates/",
+        "description": "Chair and Mollusc RLA Coordinator: Mary Seddon (email: mary.molluscsg@gmail.com)\nCephalapod RLA Coordinator: Louise Allcock (email: louise.allcock@nuigalway.ie)\nCone Snail RLA Coordinator: Under discussion\nEuropean Land Snails RLA Coordinator: Eike Neubert (email: eike.neubert@nmbe.ch)\nAustralian Land and Freshwater Molluscs: Frank Kohler (email: Frank.Koehler@austmus.gov.au)\nFreshwater Bivalves: Manuel Lopes-Lima (email: lopeslima.ciimar@gmail.com)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Pink Conch",
+        "language": "eng"
+      },
+      {
+        "main": false,
+        "name": "Bututo",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Caracol Pala",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Concha Reina",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Concha Reina del Caribe",
+        "language": "spa"
+      },
+      {
+        "main": false,
+        "name": "Lambi",
+        "language": "fre"
+      },
+      {
+        "main": false,
+        "name": "Strombe géant",
+        "language": "fre"
+      },
+      {
+        "main": true,
+        "name": "Queen Conch",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Strombus gigas Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Strombus",
+        "species_name": "gigas",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Lobatus gigas (Linnaeus, 1758)",
+        "status": "NEW",
+        "genus_name": "Lobatus",
+        "species_name": "gigas",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      },
+      {
+        "name": "Eustrombus gigas (Linnaeus, 1758)",
+        "status": "ACCEPTED",
+        "genus_name": "Eustrombus",
+        "species_name": "gigas",
+        "species_author": "(Linnaeus, 1758)",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Decreasing"
+    },
+    "code": "1"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Near Threatened"
+    },
+    "code": "NT"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": "No",
+    "number_of_locations": null,
+    "upper_elevation_limit": null,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": 90,
+    "upper_depth_limit": 0,
+    "population_size": "743000000",
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": "Unknown",
+    "generational_length": "14.1",
+    "congregatory": "Congregatory (and dispersive)",
+    "movement_patterns": "Altitudinal Migrant",
+    "continuing_decline_in_area": "Yes",
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place research and monitoring",
+        "actions": [
+          {
+            "name": "Action Recovery Plan",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over part of range"
+          },
+          {
+            "name": "Occurs in at least one protected area",
+            "value": "Yes"
+          }
+        ]
+      },
+      {
+        "name": "In-place species management",
+        "actions": [
+          {
+            "name": "Harvest management plan",
+            "value": "Yes"
+          },
+          {
+            "name": "Successfully reintroduced or introduced benignly",
+            "value": "No"
+          },
+          {
+            "name": "Subject to ex-situ conservation",
+            "value": "No"
+          }
+        ]
+      },
+      {
+        "name": "In-place education",
+        "actions": [
+          {
+            "name": "Subject to any international management / trade controls",
+            "value": "Yes"
+          }
+        ]
+      }
+    ],
+    "identification_information": "<p>Adult queen conch possess a substantial shell, weighing up to 2.3 kg, adorned with spines on each whorl of the spire. The shell has a glossy, deep pink, flared aperture. As the queen conch matures, the exterior of the shell becomes coated with an organic layer, which can be darker than the shell's natural colour. Distinguishing characteristics of the queen conch from other family members include a large, heavy shell; short, sharp spires; a brown and horny operculum (foot); and a vibrant pink interior of the shell (Prada et al., 2009).</p>",
+    "extreme_fluctuations": "No",
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": "Unknown",
+    "extreme_fluctuations_in_subpopulations": "No",
+    "all_individuals_in_one_subpopulation": "No",
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": null,
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "The Queen Conch occurs is endemic to the Wider Caribbean Region occurring throughout the Caribbean Sea, Gulf of Mexico, The Bahamas archipelago and around Bermuda (Horn <em>et al</em>. 2022). Its distribution extends from Bermuda and the United States (Florida Keys and Flower Garden Banks, Texas) south throughout the Caribbean islands and coasts of Central America and north-eastern South America to Venezuela (Horn <em>et al</em>. 2022).",
+    "population": "<p><strong>Current Global population size<br/></strong>The global population size of the Queen Conch has been estimated to total 743 million individuals (based on a 90% confidence interval of 451 million to 1.49 billion individuals; Horn <em>et al</em>. 2022). Horn <em>et al</em>. (2022) derived population abundance estimates across country jurisdictions and banks using median adult conch densities from available studies and multiplied this with estimated habitat area. Eight of 39 range countries/territories with the highest estimated median Queen Conch adult populations comprised 96% of the total population (collectively totalling 712 million; Horn <em>et al</em>. 2022). These included Cuba (439 million; 59% of total population), The Bahamas (100 million; 14%), Nicaragua (85 million; 11%), Jamaica (33 million; 4%), Honduras (21 million; 3%), Turks and Caicos Islands (18 million; 2%), Mexico (11 million; 1%) and Belize (5 million; 1%) [Horn <em>et al</em>. 2022]. The remaining 31 range countries/territories each had estimated total populations of less than 4 million, and collectively totalled an estimated population of 31 million (4%; Horn <em>et al</em>. 2022). It is important to note that these estimates are based on data with varying quantity and quality, and therefore they are associated with a high degree of uncertainty (Horn <em>et al</em>. 2022). The low number of available surveys of adult Queen Conch densities in jurisdictions with a high proportion of the species habitat, such as Cuba, mean the abundance estimates are highly uncertain (Horn <em>et al</em>. 2022). The estimates also do not account for deep water habitats (&gt;20 m) and as such some jurisdictional estimates are likely to be conservative (Horn <em>et al</em>. 2022).<br/><br/>Queen Conch populations prior to 2003 were reported to have significantly declined due to intensive fishing, and led to stock collapses and the closure of fisheries in several regions, including Bermuda, Cuba, Florida (US), Mexico, parts of the U.S. Virgin Islands, and Venezuela [CITES AC19 Doc. 8.3 (Rev. 1)].</p><p><strong>Global population structure<br/></strong>Queen Conch was reported to have low population densities and poor recruitment throughout the vast majority of its range, with recovery restricted by limited larval dispersal and interrupted population connectivity (Horn <em>et al.</em> 2022). The viability of the species was noted to currently be&#160;reliant on a few populations located in Cuba, Colombia (Serrana Bank), Jamaica (Pedro Bank), Nicaragua, The Bahamas (Cay Sal and Jumento/ Ragged Cays), and Turks and Caicos (Horn <em>et al.</em> 2022). Within these locations, the higher densities recorded indicate that reproduction and recruitment of Queen Conch is still occurring (Horn <em>et al.</em> 2022).<br/><br/>A genetic study on Queen Conch, which sampled nine microsatellites from 643 individuals from 19 locations across Florida, The Bahamas, Anguilla, the Caribbean Netherlands, Jamaica, Honduras, Belize, and Mexico, determined that Queen Conch do not exhibit a single panmictic population in the Caribbean (Truelove <em>et al.</em> 2017). Evidence of population structuring has also been documented in local populations in The Bahamas (Truelove <em>et al. </em>2017), the Pedro Bank in Jamaica (Blythe-Mallett <em>et al.</em> 2021) and in Puerto Rico (Beltrán <em>et al.</em> 2019 in Horn <em>et al.</em> 2022). The genetic structure of Queen Conch in Florida suggest there is very limited larval input from other locations and that the population in Florida is predominantly self-recruiting (Truelove <em>et al.</em> 2017).<br/><br/>While Caribbean conch populations are not panmictic, there is evidence of genetic connectivity among certain regions, such as between the Nicaraguan Bank and the Mesoamerican Reef, suggesting potential genetic links among populations in Nicaragua, Honduras, Belize, Mexico, and possibly other neighbouring nations (A. Stoner pers. comm. 2024). Furthermore, the genetic data reflect population structure that existed well before regionally intense harvesting began, and that it reflects conditions more typical of virgin populations (R. Appeldoorn pers. comm. 2024). Alexander Tewfik (pers. comm. 2025) noted, it likely takes only limited larval movement to generate a detectable genetic signal of connectivity compared to the much greater larval flow needed to sustain demographic recruitment. As such, current genetic analyses may have overlooked broken links between historic source and sink populations that would have supported sink populations prior to major exploitation (A. Tewfik pers. comm. 2025).&#160;</p><strong>Current population trend<br/></strong>Evidence suggests that Queen Conch subpopulations have experienced significant declines in recent decades due to various anthropogenic pressures (Stoner and Appeldoorn 2022, Horn <em>et al</em>. 2022). Queen Conch subpopulations are reported to be undergoing continuing decline despite a suite of national regulations (Stoner and Appeldoorn 2022, Horn <em>et al. </em>2022). This is supported by the fact that Queen Conch range states, which have implemented sustainable management protocols, have not yet observed significant stock recovery (Stoner and Appeldoorn 2022, Horn <em>et al</em>. 2022). A meta-analysis conducted in 2014 suggested that commercial catch of Queen Conch was likely to have declined by up to 47% globally between 1995 (40,835 tons) and 2011 (21,448 tons) [National Marine Fisheries Service 2014], suggesting a substantial reduction in harvestable biomass. Furthermore, localised subpopulations have shown declines of up to 70% over the past three generations (~42 years), particularly in areas heavily impacted by overfishing and habitat degradation.<br/><br/>However, while these localised declines are severe, the overall evidence for a population-wide reduction exceeding or approaching 30% remains uncertain and inconsistent across the species’ range. A trend analysis across 12 range states with the highest proportion of Queen Conch habitat found no statistically significant trends in ten areas. In the remaining two areas, Florida (US) and Jamaica, models suggest population increases. These findings indicate that while some subpopulations are in decline, others may be stabilising or recovering, likely due to conservation and management efforts implemented since the early 1990s, including the listing on CITES Appendix II in 1992 and subsequent trade regulations.<br/><br/><strong>Spatial Distribution Patterns</strong><br/>Queen Conch populations exhibit patchy spatial distribution patterns due to various abiotic and biotic factors (Boman <em>et al</em>. 2021). While most commonly found at depths less than 25 meters, Queen Conch can occur down to 90 meters (R. Appeldoorn pers. comm. 2024), with older and larger individuals often moving to deeper waters. Deep-water populations (&gt;25 m) play a crucial role as spawning refugia and sources of recruitment for shallow-water stocks (Appeldoorn, 1997). Queen conch also aggregate, especially during the reproductive season (Glazer and Kidney, 2004).&#160;However, the existence and reproductive contribution of deep-water spawning stocks remain uncertain in some regions, where their presence has not been confirmed (A. Tewfik pers. comm. 2025).",
+    "habitats": "Queen Conch occupy a variety of habitats during the different stages of their life history (Stoner <em>et al.</em> 2023). Egg masses are laid in coarse sandy habitat, with the larvae (veligers) emerging after around five days (Stoner <em>et al</em>. 2023). The planktonic phase lasts an average of 2–4 weeks with larvae drifting in the upper few meters of the water column feeding on phytoplankton (Stoner <em>et al.</em> 2023). Metamorphosis from pelagic larval stages to a benthic snail occurs in response to trophic cues associated with seagrass, macroalgae, and sediments where the young conch are likely to thrive (Davis and Stoner 1994, Stoner <em>et al</em>. 2023).<br/><br/>In their benthic stage, Queen&#160;Conch occupy a range of shallow habitats including: algal beds, hard bottom substrate, coral-rubble, bare sand, mixed algal and seagrass beds, sand flats and seagrass beds (Horn <em>et al</em>. 2022). Juvenile Queen Conch are principally associated with areas of native seagrass, including <em>Thalassia testudinum</em>&#160;(Turtle Grass), at depths of less than 15 m (Appeldoorn and Baker 2013). Adults are able to tolerate a greater variety of environmental conditions than juveniles, and prefer sand or algal flats and hard bottom substrate such as coral rubble (Appeldoorn and Baker 2013). Adult Queen&#160;Conch have been recorded at depths ranging from 0 to 90 m (R. Appeldoorn pers. comm. 2024), but are typically observed at depths of less than 30 m (Appeldoorn and Baker 2013). The species’ depth is reportedly linked to light attenuation limitations on their photosynthetic food source (Randall 1964).<br/><br/>Generation length is estimated to be 14.1 years.&#160;Queen Conch are estimated to have a life span of up to 40 years (Berg <em>et al. </em>1992). Shell morphology and growth rate are reported to vary depending on an individual’s age class, depth, food availability, habitat type, latitude and sex (Stoner&#160;<em>et al</em>. 2023). Seasonal growth has also been observed and is linked to food availability and water temperature (Horn <em>et al</em>. 2022). Typically, female Queen Conch have a faster growth rate and grow to a larger size (Stoner <em>et al</em>. 2023).<br/><br/>Queen Conch reach sexual maturity at around three and a half to four years and is characterised by the shell lip turning outwards and becoming flared (Stoner <em>et al</em>. 2012). After the shell lip has formed, the shell does not increase in length, and shell thickness is reported to provide a better indicator of sexual maturity than the formation of the flared lip (Stoner <em>et al.</em> 2012). Queen Conch are gonochoristic and exhibit sexual dimorphism (Horn <em>et al</em>. 2022). The number of egg masses produced per female per season is highly variable, ranging from 1–24 per female per season, and the number of eggs per mass also varies markedly ranging from 100,000 to &gt;900,000 million (Stoner <em>et al.</em> 2023).<br/><br/>Queen Conch exhibit seasonal movements that are generally associated with the initiation of the reproductive season; however, large-scale movements do not occur across their entire range (Horn <em>et al</em>. 2022). Adult conch have been recorded to move from wintering offshore seagrass areas, to summer spawning grounds in shallow, inshore sandy habitats, at Los Roques, Venezuela (Weil and Laughlin 1984), Turks and Caicos islands (Hesse 1979) and Saint Croix in the U.S. Virgin Islands (Coulston <em>et al</em>. 1987).<br/><br/>Queen Conch habitat has been estimated to total 73,058 km² across 39 range states (Horn <em>et al</em>. 2022). Eight of the 39 range countries/territories with the highest estimated Queen Conch habitat comprised 75% of the total habitat area (54,887 km²). These included The Bahamas (21,135 km²;&#160;29%), Cuba (15,420 km²;&#160;21%), Nicaragua (4,098 km²;&#160;6%), Honduras (3,343 km²;&#160;5%), Mexico (3,181 km²;&#160;5%), Haiti (2,642 km²;&#160;4%), Belize (2,588 km²;&#160;4%), and Jamaica (2,480 km²;&#160;4%) [Horn <em>et al</em>. 2022]. The remaining 31 range countries/ territories each had an estimated total habitat area of less than 2,427 km²<sup> </sup>and in total comprised 18,170 km² (25%; Horn <em>et al</em>. 2022).",
+    "threats": "The most significant threat to Queen Conch is overutilization through commercial, artisanal, and illegal, unreported, or unregulated fishing for commercial purposes (Horn <em>et al.</em> 2022). Illegal poaching is a well-documented issue throughout the Caribbean and recognised by management mechanisms including, CITES, CFMC and OPSECA (Horn<em> et al.</em> 2022). The reduction of densities caused by overharvesting of spawning aggregations was shown to increase the probability of recruitment failure beyond what would be anticipated from delays in mate finding alone (Farmer and Doerr 2022). However, R. Appeldoorn (pers. comm. 2024) notes that the assumption of recruitment failure based on spawning densities is invalid.<br/><br/>Queen Conch populations not reported to be experiencing Allee effects (based on adult density estimates) in Cuba, Colombia (Serrana Bank), Jamaica (Pedro Bank), Nicaragua, The Bahamas (Cay Sal and Jumento/ Ragged Cays), and Turks and Caicos were however, reported to still have significant Queen Conch fisheries in operation (Horn <em>et al.</em> 2022). As such, it was inferred that within 30 years the fisheries were likely to have a moderate risk of extinction over the next 30 years, indicating that the species is not presently at a high risk of extinction but this demographic factor may significantly increase the species’ extinction risk in the foreseeable future (Horn <em>et al</em>. 2022).<br/><br/>The life history traits of Queen Conch make them vulnerable to depensatory processes, whereby reductions in the breeding population leads to reductions in the per capita population growth rates and inhibits stock recovery (Horn<em> et al.</em> 2022).<br/><br/>Horn <em>et al.</em> (2022) noted that if the species’ subpopulations becomes more depleted, resulting in the closure of fisheries, inadequate law enforcement would not be able to halt the illegal harvesting of Queen&#160;Conch. As such, poor enforcement of existing regulations would mean poaching of the species would likely continue, or increase, and the species’ population would continue to decline (Horn <em>et al.</em> 2022).<br/><br/>A study contrasting juvenile Queen Conch growth rates in native (<em>Syringodium filiforme</em>, <em>Halophila decipiens</em>, <em>Halodule wrightii</em> and <em>Thalassia testudinum</em>) versus non-native seagrass beds (e.g., <em>Halophila stipulacea</em>) observed the probability of positive growth significantly decreased in areas occupied by the non-native seagrass species (Boman <em>et al.</em> 2019). As such, within the range of the Queen Conch where native seagrass species are replaced by<em> H. stipulacea</em>, the growth rate of juvenile Queen&#160;Conch will deteriorate, and the species’ early survivorship and fitness of Queen&#160;Conch are impacted (Boman <em>et al.</em> 2019). The reduction in native seagrass habitat due to replacement by an invasive seagrass species is reducing the overall Queen&#160;Conch habitat quality in the Caribbean will continue to decline in future (Horn <em>et al.</em> 2022).<br/><br/>Rising sea temperatures are also impacting Queen Conch populations, particularly in Florida, where reproductive failure in nearshore conch beds is believed to be linked to elevated summer temperatures (R. Appeldoorn pers. comm. 2024). Evaluating the effects of sea surface temperatures on the spatial distribution of Queen Conch in the Florida Keys, Delgado (comment in Alexa Robles-Gil, 2024) stated that rising ocean temperatures are causing Queen Conch populations residing in shallow coastal habitats to experience decreased reproductive activity, while conchs in deeper, cooler waters continue to mate and thrive. This disparity suggests that the shallow coastal environment, subjected to temperature extremes, may be inhibiting reproduction among nearshore conch populations.<br/><br/>Climate change is likely to affect the entire Caribbean region and threaten Queen Conch primarily through rising sea surface temperatures and ocean acidification (Stoner and Appeldoorn 2021, Stoner <em>et al.</em> 2023). While some laboratory studies indicate that elevated temperatures up to 32°C can enhance the feeding and growth of conch veligers, mortality rates can vary significantly, with some treatments resulting in 100% mortality (Stoner and Appeldoorn 2022, Stoner <em>et al.</em> 2023). Ocean acidification may impede the biomineralization of conch shells, leading to potential vulnerabilities in growth and survival that are not yet fully understood. Additionally, changing climate conditions, including increased storm frequency and intensity, affect larval ecology, transport, and settlement, potentially impacting the Queen Conch fishery (Stoner and Appeldoorn 2022, Stoner <em>et al</em>. 2023). Warming temperatures could extend the spawning season and allow for a geographic range expansion; however, high temperatures may lead to low oxygen levels in maturation habitats, adversely affecting reproductive success. Overall, the cascading effects of climate change may disrupt Queen Conch population management and warrant further research to inform conservation strategies (Stoner and Appeldoorn 2022, Stoner <em>et al.</em> 2023).<br/><br/>Hurricanes pose a significant threat to Queen Conch subpopulations by causing sedimentation and erosion in marine habitats, which leads to declines in conch densities below the mating threshold, as seen in the Florida Keys following Hurricanes Irma and Ian (Voss <em>et al</em>. 2024). This situation is further exacerbated by the species' density-dependent reproduction and limited larval connectivity, complicating recovery from other threats like exploitation, particularly as hurricanes are predicted to become more intense and frequent due to climate change (Voss <em>et al</em>. 2024). The Queen Conch faces significant threats from siltation due to agricultural land use, and in many areas, the problem is exacerbated by substantial siltation resulting from coastal development (R. Appeldoorn pers. comm. 2024).<br/><br/>Queen Conch are closely associated with seagrass meadows and are therefore impacted by directs threats to these habitats, such as tropical storms, urban/port infrastructure development, dredging, trawling and recreational boat damage (Horn <em>et al</em>. 2022). They are also indirectly threatened through oxygen depletion, reduced light or burial by fine sediments from algal blooms, oil spills and sea level rise (Horn <em>et al</em>. 2022).<br/><br/>Environmental contamination impacts Queen Conch at various life stages, from veligers to adults (Stoner and Appeldoorn 2022, Stoner <em>et al</em>. 2023). Common contaminants, such as trace metals, pharmaceuticals, and pesticides, are frequently found in nearshore waters and sediments, adversely affecting adult reproductive health (Stoner and Appeldoorn 2022, Stoner <em>et al.</em> 2023). For instance, tributyltin (TBT) may cause a condition known as \"imposex\" in females, which can impact egg viability (Stoner and Appeldoorn 2022, Stoner <em>et al</em>. 2023). Eutrophication, resulting from nutrient runoff, leads to harmful phytoplankton blooms and increased pathogenic bacteria, which have been linked to high mortality rates in veligers (Stoner and Appeldoorn 2022, Stoner <em>et al</em>. 2023). Laboratory studies reveal that Queen Conch veligers are especially sensitive to chemical pollutants like copper and zinc, affecting their survival and development (Stoner and Appeldoorn 2021, Stoner <em>et al</em>. 2023). Exposure to contaminated nearshore sediment has also shown reduced success in metamorphosis and locomotion in newly settled juveniles (Stoner and Appeldoorn 2022, Stoner <em>et al</em>. 2023). Overall, contamination poses a critical threat to Queen Conch populations, necessitating further research to understand and mitigate these effects (Stoner and Appeldoorn 2022, Stoner <em>et al</em>. 2023).",
+    "measures": "The Status Review Team in Horn <em>et al. </em>(2022) noted it would likely take a minimum of 30 years for conservation management actions to be detected. This has been observed in Aruba, Bermuda and Florida where all conch harvest was prohibited in the mid 1980s, yet their respective populations still exhibit reproductive failure (Horn <em>et al.</em> 2022).<br/><br/>Managing and monitoring Queen Conch across jurisdictions and fisheries has presented a complex challenge, due to various factors such as the complex biological nature of the species, the uncertainty of catch and effort data and illegal, unreported and unregulated (IUU) fishing practices (Horn <em>et al.</em> 2022).&#160; <br/><br/>To ensure sustainable exploitation rates for Queen Conch it was recommended that no more than 8% of the estimated mean or median fishable biomass (i.e., standing stock) be set as a precautionary sustainable yield if the stock was not depleted (FAO Western Central Atlantic Fishery Commission 2013). It was also recommended the 8% target be reduced to rebuild depleted fisheries (FAO Western Central Atlantic Fishery Commission 2013).&#160;A 2017 Regional Queen Conch Fishery Management and Conservation Plan&#160;included a suite of short-, mid- and long-term recommendations (page ix-xiii in Prada<em> et al.</em> 2017).<br/><br/>On February 15, 2024, the National Marine Fisheries Service (NMFS) listed the queen conch (<em>Aliger gigas</em>, formerly known as <em>Strombus gigas</em>) as a threatened species under the Endangered Species Act (ESA; Final Rule (89 FR 11208; 02/14/2024)). NOAA Fisheries determined that the Queen Conch is not currently in danger of extinction throughout all or a significant portion of its range, but is likely to become so within the foreseeable future.<br/><br/>The majority of studies comparing Queen Conch abundance in Marine Protected Areas (MPAs) report increased abundance and individual sizes when compared with those in fished areas (Glazer <em>et al. </em>2003, Acosta 2006, Baker <em>et al.</em> 2016, Kough <em>et al. </em>2017, Tewfik <em>et al.</em> 2017; but see Schweizer and Posada 2002, Torres and Sullivan-Sealy 2002 and Stoner, Davis, Booker 2012). However, despite protection from fishing, repeat surveys in the Exuma Cays Land Sea Park indicated a significant decline in conch populations over a 20-year period (Stoner, Davis, Booker 2012). This suggests that the large Marine Protected Area (MPA) was not fully self-sustaining and that the conch population was aging due to reduced larval delivery from fished upstream populations (Stoner, Davis, Booker 2012). Horn <em>et al</em>. (2022) reported that MPAs, and seasonal closures of fisheries, can be effective regulatory controls if they are established in appropriate habitats, encompass reproductive seasons, and are enforced effectively. Varying degrees of successful application of Marine Reserves for Queen Conch are reported at Glovers Reef in Belize, the western platform edge in Puerto Rico, and Cabo Cruz in Cuba (R. Appeldoorn pers. comm. 2024).<br/><br/>In CITES, the Queen Conch was listed in Appendix II in 1992. It was included in the Review of Significant Trade (RST) process in 1994 at the 12<sup>th</sup> Animals Committee (AC12) on the basis that harvesting and international trade in this species had caused the severe local population declines (AC12 Summary Record). At AC17 in 2001, Queen conch was retained in the RST process and at AC19 in 2003, trade in Queen conch was noted to be ‘of urgent concern’ for Dominican Republic, Haiti and Honduras and ‘of possible concern’ in a further 13 range States, with recommendations directed to these countries (AC19 Summary Record). Following non-compliance with the recommendations, Notification 2003/057 advised that the Standing Committee (SC) recommend a trade suspension for Haiti, while the Dominican Republic and Honduras had agreed to suspend the issuance of export permits for Queen conch from 29 September 2003. In 2006, Belize, Dominican Republic, Honduras and Nicaragua were removed from the RST process. A recommendation to suspend trade for Grenada was also made in 2006 (Notification 2006/034). As of the 10<sup>th</sup> May 2024, the suspensions for Grenada and Haiti remain in place.",
+    "use_trade": "Queen Conch is one of the most important fishery resources, both economically and culturally, in the Caribbean (Stoner and Appeldoorn 2021, Farmer <em>et al.</em> 2022). It is principally harvested for its meat for human consumption, with its meat exported to foreign markets (Horn <em>et al</em>. 2022). Additional important queen conch trade items include shells, shell products and pearls (Horn <em>et al</em>. 2022). While these products are often sold as tourist items (Horn <em>et al</em>. 2022), the pearls are a highly valuable export commodity (R. Appeldoorn pers. comm. 2024). The Queen Conch is an important cultural symbol throughout the Caribbean (Rogers 2014).<br/><br/><strong>Legal trade<br/></strong>According to the FAO FishStat database, a total of 331,122 tonnes of Queen Conch were reportedly landed by 30 jurisdictions between 2013 and 2022 (FAO, 2020). The mean quantities of landed Queen Conch during this period show that twelve jurisdictions produced 95% of the landings across the region. Jurisdictions reporting the highest landed quantities were Nicaragua (109,949 tonnes; 33%), Belize (33,539 tonnes; 10%), The Bahamas (31,508 tonnes; 10%), Jamaica (27,080 tonnes; 8%) and Honduras (23,028 tonnes; 7%). The annual landing quantities remained relatively stable during this period. Caveats in this dataset include varying reporting capacity, as well as varying queen conch processing measures provided for landings. Processing measures include live weight of whole animals to various levels of cleaned conch meat, such as dirty conch (unprocessed, removed from shell), 50% (operculum and viscera removed) and 100% cleaned (i.e., only the pure white meat remains; Horn <em>et al</em>. 2022). It is important to note that inclusion of the shell in the weight measure can change the result by an order of magnitude (R. Appeldoorn pers. comm. 2024). Furthermore, Alexander Tewfik (pers. comm. 2025) noted Belize has not submitted updated catch data to FAO since 2017, and subsequent FAO estimates may not fully capture recent extraction levels. Notably, a reported increase in fishing licenses at Glover’s Reef, a key fishing area, over the past five years suggests evolving patterns of fishing effort that may warrant further evaluation in the context of national policy objectives aimed at stabilising or reducing effort (A. Tewfik pers. comm. 2025).<br/><br/>To account for gaps and biases in the Queen Conch landing data, the Sea Around Us (SAU) Program (Pauly <em>et al</em>. 2020) developed a protocol to reconstruct landings histories for most of the jurisdictions where Queen Conch is fished. According to the SAU database, a total of 379,896 tonnes of reported and unreported Queen Conch were landed by 30 jurisdictions between 2013–2022 (Pauly <em>et al</em>. 2020). Reported landings comprised a total of 299,763 tonnes (79%) with unreported landings totalling 80,133 tonnes (21%). Jurisdictions with the highest reported landed quantities during this period comprised Nicaragua (96,611 tonnes; 32%), The Bahamas (43,737 tonnes; 15%), Jamaica (32,925; 11%) and Belize (30,668; 10%). The highest unreported landed quantities were attributed to the Turks and Caicos Islands (44,625 tonnes; 56%), The Bahamas (12,817 tonnes; 16%) and Honduras (10,145 tonnes; 13%).<br/><br/>Over the most recent ten years of CITES trade, 2013–2022, the highest quantities of trade commodities of Queen Conch (<em>Aliger gigas</em>) directly exported by countries by weight (kilograms, kg), as reported by exporters, were meat (over 17.4 million kg), shells (735,494 kg) and skins (155,898 kg). The top direct exporters of Queen Conch meat during this period were Nicaragua (6.7 million kg; 38%), Belize (3.4 million kg; 19%) and Saint Vincent and the Grenadines (1.8 million kg; 10%); and the top importer was the United States of America (13.2 million kg; 75%). During this period the trade in meat remained relatively stable, ranging between 1.5–2.3 million kg.<br/><br/>Over the same period, the highest quantities of trade commodities of Queen Conch (<em>Aliger gigas</em>) directly exported by countries by number of individuals, as reported by exporters, were meat (955,771), shells (879,946) and pearls (24,637). The top direct exporters of Queen Conch meat by number of individuals during this period were Jamaica (572,114; 60%) and Honduras (259,139; 27%); and the top importers were the United States of America (337,399; 35%), Martinique (306,740; 32%) and Guadeloupe (197,370; 21%). During this period the overall trade in meat by number of individuals showed a decreasing trend.<br/><br/><strong>Illegal trade<br/></strong>Illegal, unregulated and unreported (IUU) fishing of Queen Conch occurs widely across the species’ range and its likely to contributing to the species’ populations declines and reproductive failures in multiple locations (Horn <em>et al</em>. 2022). Given the persistent demand for queen conch and the challenges related to compliance, appropriateness of morphometric regulations, enforcement, and poaching, along with the observed low densities and declining trends in many populations, current regulatory mechanisms are deemed inadequate for controlling the harvest and overutilization of queen conch across most of its range.<br/><br/>Bothwell (2009) noted that local poaching of queen conch and illegal harvest for export are major issues in the Cayman Islands and regularly occur in protected areas. In Cuba, a 2019 news article reported the illegal harvest of queen conch involved 2,500 people and 1,000 vessels (14ymedio 2019), however, little information is available to validate illegal harvest levels in this country (Horn <em>et al</em>. 2022). Evidence of illegal harvest and poaching have been recorded in both the Leeward and Windward Caribbean islands (Horn <em>et al</em>. 2022). Despite the closure of Venezuela’s commercial Queen Conch fishery in 2000, an annual illegal harvest of 2 mt of Queen Conch has been reported (Horn <em>et al</em>. 2022). Illegal queen conch fishing at Mexico’s Chinchorro Bank, Cozumel Bank, and Alacranes Reef were reported to be significant factors inhibiting the species recovery (CITES 2012). In Belize, reports of illegal harvest and poaching have been reported in areas close to the border with Guatemala (Arzu 2019), and a large proportions of Queen Conch landed in Honduras were reported to have been sourced illegally from neighbouring jurisdictions (Horn <em>et al</em>. 2022). In the Bahamas, there remains ongoing concern about illegal harvesting and underreported landings, likely worsening the serial depletion of Queen Conch populations across much of country (Stoner <em>et al</em>. 2019). In Jamaica, Queen Conch poaching is an issue principally due to intense IUU fishing by vessels from jurisdictions including Honduras, Dominican Republic and Nicaragua (FAO Western Central Atlantic Fishery Commission 2020). Illegal fishing of Queen Conch was reported to be common in the Dominican Republic and Haiti, as shown by the confiscation of more than 20 mt of Queen Conch fillets (FAO 2016) and the CITES moratorium. In Colombia, Prada <em>et al</em>. (2009) reported that illegal Queen Conch harvest potentially represents 2–14% of clean meat equating to 1.4–21.8 mt.<br/><br/>Queen Conch seizure and incident data was obtained from the TRAFFIC International (2024) Wildlife Trade Portal. Over the most recent ten years of data, 2013–2022, the commodity most frequently seized by both number and weight were shells (3,619 individuals and 9,098 kg) and dead individuals (10 individuals and 1,852 kg). The countries reporting the highest seizure quantities by weight during this period were the Dominican Republic (9,000 kg) and Martinique (1,942 kg). The countries reporting the highest seizure quantities by number were Sri Lanka (2,434), Colombia (490) and France (450).",
+    "rationale": "The Queen Conch (<em>Aliger gigas</em>) has experienced declines in parts of its range, with reductions of up to 70% reported in some localised subpopulations over the past three generations (~42 years). However, the overall evidence for a population-wide decline exceeding or approaching 30% is highly uncertain and inconsistent across the species’ range. While historic overexploitation and habitat degradation have caused declines, especially prior to the implementation of CITES regulations following its inclusion in Appendix II in 1992, there is also evidence of recent stabilisation and even recovery in several areas due to conservation and management efforts.<br/><br/>A trend analyses across 12 range states with the highest proportion of Queen Conch habitat and estimated population found no statistical support for trends in ten areas. In the remaining two areas (Florida (US), and Jamaica), the best-fit models suggest population increases. However, the available data are insufficient to estimate the global population trend over three generations (~42 years) with a high degree of confidence. Large fluctuations are evident across regions, further complicating the ability to detect directional change.<br/><br/>The species is assessed as Near Threatened (NT) because of the degree of uncertainty in the population reduction data. Queen Conch may&#160;qualify as Vulnerable under criterion A2ab, based on suspected past declines and current threats, but it could also qualify for listing as Least Concern (LC) if the population has been stable long enough, albeit that it is now much smaller than its historical population size.&#160;Given ongoing fishing pressures in parts of its range, continued uncertainty about true population trends, and potential future risks if conservation measures are not maintained, the&#160;Near Threatened listing reflects the uncertainty about the status of this species and is suitably precautionary.<br/><br/>If existing conservation actions continue and are expanded, and data continue to show signs of stability or recovery, the species may be eligible for down listing to Least Concern in the future. Conversely, if protections lapse or unregulated harvest increases, the species could move into a higher threat category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Nearctic"
+      },
+      "code": "4"
+    },
+    {
+      "description": {
+        "en": "Neotropical"
+      },
+      "code": "5"
+    }
+  ],
+  "conservation_actions": [
+    {
+      "note": "",
+      "code": "3_1_1",
+      "description": {
+        "en": "Harvest management"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1_2",
+      "description": {
+        "en": "Trade management"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_2",
+      "description": {
+        "en": "Policies and regulations"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_2",
+      "description": {
+        "en": "National level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_3",
+      "description": {
+        "en": "Sub-national level"
+      }
+    },
+    {
+      "note": "",
+      "code": "5_4_4",
+      "description": {
+        "en": "Scale unspecified"
+      }
+    }
+  ],
+  "faos": [
+    {
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Atlantic - western central"
+      },
+      "code": "31"
+    }
+  ],
+  "habitats": [
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Seagrass (Submerged)"
+      },
+      "code": "9_9"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Sandy Shoreline and/or Beaches, Sand Bars, Spits, Etc"
+      },
+      "code": "12_2"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Coral Reef"
+      },
+      "code": "9_8"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Sandy"
+      },
+      "code": "9_4"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Mangrove Submerged Roots"
+      },
+      "code": "12_7"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Rock and Rocky Reefs"
+      },
+      "code": "9_2"
+    },
+    {
+      "majorImportance": "No",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Intertidal - Rocky Shoreline"
+      },
+      "code": "12_1"
+    },
+    {
+      "majorImportance": "Yes",
+      "season": "Resident",
+      "suitability": "Suitable",
+      "description": {
+        "en": "Marine Neritic - Subtidal Loose Rock/pebble/gravel"
+      },
+      "code": "9_3"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Anguilla"
+      },
+      "code": "AI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Antigua and Barbuda"
+      },
+      "code": "AG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Nicaragua"
+      },
+      "code": "NI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Belize"
+      },
+      "code": "BZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Barthélemy"
+      },
+      "code": "BL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Costa Rica"
+      },
+      "code": "CR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Honduras"
+      },
+      "code": "HN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Martin (French part)"
+      },
+      "code": "MF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cayman Islands"
+      },
+      "code": "KY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominican Republic"
+      },
+      "code": "DO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Guadeloupe"
+      },
+      "code": "GP"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Lucia"
+      },
+      "code": "LC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Mexico"
+      },
+      "code": "MX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, British"
+      },
+      "code": "VG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "United States"
+      },
+      "code": "US"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Vincent and the Grenadines"
+      },
+      "code": "VC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Aruba"
+      },
+      "code": "AW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Puerto Rico"
+      },
+      "code": "PR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Saint Kitts and Nevis"
+      },
+      "code": "KN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Dominica"
+      },
+      "code": "DM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Trinidad and Tobago"
+      },
+      "code": "TT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Cuba"
+      },
+      "code": "CU"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Martinique"
+      },
+      "code": "MQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Sint Maarten (Dutch part)"
+      },
+      "code": "SX"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bermuda"
+      },
+      "code": "BM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Grenada"
+      },
+      "code": "GD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Jamaica"
+      },
+      "code": "JM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Florida"
+      },
+      "code": "FLA-OO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Turks and Caicos Islands"
+      },
+      "code": "TC"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Panama"
+      },
+      "code": "PA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bonaire, Sint Eustatius and Saba"
+      },
+      "code": "BQ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Curaçao"
+      },
+      "code": "CW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Bahamas"
+      },
+      "code": "BS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Virgin Islands, U.S."
+      },
+      "code": "VI"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Barbados"
+      },
+      "code": "BB"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Haiti"
+      },
+      "code": "HT"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Colombia"
+      },
+      "code": "CO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Montserrat"
+      },
+      "code": "MS"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": [
+        "Resident"
+      ],
+      "description": {
+        "en": "Venezuela, Bolivarian Republic of"
+      },
+      "code": "VE"
+    }
+  ],
+  "researches": [
+    {
+      "note": "",
+      "code": "2_3",
+      "description": {
+        "en": "Harvest & Trade Management Plan"
+      }
+    },
+    {
+      "note": "",
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_2",
+      "description": {
+        "en": "Population size, distribution & trends"
+      }
+    },
+    {
+      "note": "",
+      "code": "1_4",
+      "description": {
+        "en": "Harvest, use & livelihoods"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": true,
+      "national": true,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Handicrafts, jewellery, etc."
+      },
+      "code": "12"
+    }
+  ],
+  "threats": [
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Type Unknown/Unrecorded"
+      },
+      "code": "9_1_3"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Nutrient loads"
+      },
+      "code": "9_3_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Soil erosion, sedimentation"
+      },
+      "code": "9_3_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Herbicides and pesticides"
+      },
+      "code": "9_3_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Storms & flooding"
+      },
+      "code": "11_4"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Other impacts"
+      },
+      "code": "11_5"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (subsistence/small scale) [harvest]"
+      },
+      "code": "5_4_1"
+    },
+    {
+      "scope": "Majority (50-90%)",
+      "timing": "Ongoing",
+      "internationalTrade": "Yes",
+      "score": "Medium Impact: 7",
+      "severity": "Rapid Declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use: (large scale) [harvest]"
+      },
+      "code": "5_4_2"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Recreational activities"
+      },
+      "code": "6_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 5",
+      "severity": "Causing/Could cause fluctuations",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Sewage"
+      },
+      "code": "9_1_1"
+    },
+    {
+      "scope": "Minority (<50%)",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 4",
+      "severity": "Negligible declines",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Run-off"
+      },
+      "code": "9_1_2"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Temperature extremes"
+      },
+      "code": "11_3"
+    },
+    {
+      "scope": "Unknown",
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Unknown",
+      "severity": "Unknown",
+      "ancestry": null,
+      "virus": null,
+      "ias": "Halophila stipulacea",
+      "text": null,
+      "description": {
+        "en": "Named species"
+      },
+      "code": "8_1_2"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Tallowin, O.",
+      "value": [
+        "Oliver Tallowin (IUCN)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Sigwart, J. & Tandberg, A.H.",
+      "value": [
+        "Julia Sigwart (Queen's University, Belfast)",
+        "Anne Helene Tandberg (Senkenberg Museum / MIRLA)"
+      ]
+    },
+    {
+      "credit_type_name": "contributor",
+      "full": "Beneti, J., Kough, A.S., Punt, A., Prada, M.C., Stoner, A.W., Appeldoorn, R.S. & Tewfik, A.",
+      "value": [
+        "Richard Appeldoorn (University of Puerto Rico)",
+        "Andre Punt (College of the Environment, University of Washington)",
+        "Julia Beneti (Senckenberg Museum, Germany)",
+        "Allan Stoner (Community Conch)",
+        "Martha Prada ((assessor/contributor for Queen Conch))",
+        "Alexander Tewfik ((assessor/contributor for Queen Conch))",
+        "Andrew Kough (Shedd Aquarium)"
+      ]
+    }
+  ],
+  "errata": [],
+  "references": [
+    {
+      "citation": "IUCN. 2025. The IUCN Red List of Threatened Species. Version 2025-2. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 10 October 2025).",
+      "year": "2025",
+      "title": "The IUCN Red List of Threatened Species. Version 2025-2",
+      "author": "IUCN",
+      "citation_short": "IUCN 2025-2"
+    },
+    {
+      "citation": "14ymedio. 2019.  Cuban Government Tries to Stop Illegal Fishing with New Legislation.  Translating Cuba, Cuba.",
+      "year": "2019",
+      "title": " Cuban Government Tries to Stop Illegal Fishing with New Legislation.  Translating Cuba, Cuba.",
+      "author": "14ymedio",
+      "citation_short": null
+    },
+    {
+      "citation": "Acosta, C.A. 2006. Impending trade suspensions of Caribbean queen conch under CITES: A case study on fishery impacts and potential for stock recovery. <i>Fisheries</i> 31(12): 601-606.",
+      "year": "2006",
+      "title": "Impending trade suspensions of Caribbean queen conch under CITES: A case study on fishery impacts and potential for stock recovery",
+      "author": "Acosta, C.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Alcolado, P.M. 1976. Growth, morphological variations of the shell and some biological data of the conch <i>Strombus gigas</i> L. (Mollusca, Mesogastropoda). <i>Acad. Cienc. Cub. Ser. Oceanol.</i> 34: 26.",
+      "year": "1976",
+      "title": "Growth, morphological variations of the shell and some biological data of the conch <i>Strombus gigas</i> L. (Mollusca, Mesogastropoda)",
+      "author": "Alcolado, P.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Appeldoorn, R.S. and Baker, N. 2013. A literature review of the queen conch, <i>Strombus gigas</i>. <i>University of Puerto Rico: Mayaguez, PR</i>: 00681-9000.",
+      "year": "2013",
+      "title": "A literature review of the queen conch, <i>Strombus gigas</i>",
+      "author": "Appeldoorn, R.S. and Baker, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Arzu, D. 2019. What if you could no longer enjoy Belizean conch soup or ceviché? Ambergris  Today Online, December 18, 2019.",
+      "year": "2019",
+      "title": "What if you could no longer enjoy Belizean conch soup or ceviché? Ambergris  Today Online, December 18, 2019.",
+      "author": "Arzu, D.",
+      "citation_short": null
+    },
+    {
+      "citation": "Baker, N., Appeldoorn, R.S. and Torres-Saavedra., P.A. 2016. Fishery-independent surveys of the queen conch stock in western Puerto Rico, with an assessment of historical trends and management effectiveness. <i>Marine and Coastal Fisheries</i> 8(1): 567-579.",
+      "year": "2016",
+      "title": "Fishery-independent surveys of the queen conch stock in western Puerto Rico, with an assessment of historical trends and management effectiveness",
+      "author": "Baker, N., Appeldoorn, R.S. and Torres-Saavedra., P.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Berg Jr, C.J., Glazer, R., Carr, J., Krieger, J. and Acton, S. 1992. Status of the queen conch, <i>Strombus gigas</i>, in Florida waters: a progress report. <i>Proc Gulf Carib Fish Inst</i> 41: 439–443.",
+      "year": "1992",
+      "title": "Status of the queen conch, <i>Strombus gigas</i>, in Florida waters: a progress report.",
+      "author": "Berg Jr, C.J., Glazer, R., Carr, J., Krieger, J. and Acton, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Blythe-Mallett, A., Aiken, K.A., Segura-Garcia, I., Truelove, N.K., Webber, M.K., Roye, M.E. and Box, S.J., 2021. Genetic composition of queen conch (<i>Lobatus gigas</i>) population on Pedro Bank, Jamaica and its use in fisheries management. <i>Plos one</i> 16(4): p.e0245703.",
+      "year": "2021",
+      "title": "Genetic composition of queen conch (<i>Lobatus gigas</i>) population on Pedro Bank, Jamaica and its use in fisheries management",
+      "author": "Blythe-Mallett, A., Aiken, K.A., Segura-Garcia, I., Truelove, N.K., Webber, M.K., Roye, M.E. and Box, S.J.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boman, E.M., Bervoets, T., De Graaf, M., Dewenter, J., Maitz, A., Zu Schlochtern, M.P.M., Stapel, J., Smaal, A.C. and Nagelkerke, L.A. 2019. Diet and growth of juvenile queen conch <i>Lobatus gigas</i> (Gastropoda: Strombidae) in native, mixed and invasive seagrass habitats. <i>Marine Ecology Progress Series</i> 621: 143-154.",
+      "year": "2019",
+      "title": "Diet and growth of juvenile queen conch <i>Lobatus gigas</i> (Gastropoda: Strombidae) in native, mixed and invasive seagrass habitats",
+      "author": "Boman, E.M., Bervoets, T., De Graaf, M., Dewenter, J., Maitz, A., Zu Schlochtern, M.P.M., Stapel, J., Smaal, A.C. and Nagelkerke, L.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Boman, E.M., De Graaf, M., Kough, A.S., Izioka‐Kuramae, A., Zuur, A.F., Smaal, A. and Nagelkerke, L. 2021. Spatial dependency in abundance of Queen conch, <i>Aliger gigas</i>, in the Caribbean, indicates the importance of surveying deep‐water distributions. <i>Diversity and Distributions</i> 27(11): 2157-2169.",
+      "year": "2021",
+      "title": "Spatial dependency in abundance of Queen conch, <i>Aliger gigas</i>, in the Caribbean, indicates the importance of surveying deep‐water distributions",
+      "author": "Boman, E.M., De Graaf, M., Kough, A.S., Izioka‐Kuramae, A., Zuur, A.F., Smaal, A. and Nagelkerke, L.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Bothwell, J. 2009. Section 2. Current Situation of the Queen Conch in the Southwestern Caribbean. Conchs in the Cayman Islands: Population, CITES and IUU fishery status. In: M.C. Prada and E. Castro (eds), Proceedings of Regional Workshop for the Improvement of the Queen Conch Collaborative Management and Enforcement in the Southwestern Caribbean, July 28-31, 2008, pp. 38-40. San Andres Island, Colombia.",
+      "year": "2009",
+      "title": "Section 2. Current Situation of the Queen Conch in the Southwestern Caribbean. Conchs in the Cayman Islands: Population, CITES and IUU fishery status",
+      "author": "Bothwell, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "CITES. 2012. Evaluation of the review of significant trade: Case studies [Decision 13.67 (REV.  COP14)]. Secretariat of the Convention on International Trade in Endangered Species of  Wild Fauna and Flora (CITES), AC26/PC20 Doc. 7, Annex 5, Dublin, Ireland.",
+      "year": "2012",
+      "title": "Evaluation of the review of significant trade: Case studies [Decision 13.67 (REV.  COP14)]. Secretariat of the Convention on International Trade in Endangered Species of  Wild Fauna and Flora (CITES), AC26/PC20 Doc. 7, Annex 5, Dublin, Ireland.",
+      "author": "CITES",
+      "citation_short": null
+    },
+    {
+      "citation": "Coulston, M.L., Berey, R.W., Dempsey, A.C. and Odum, P., 1987. Assessment of the queen conch (<i>Strombus gigas</i>) population and predation studies of hatchery reared juveniles in Salt River Canyon, St. Croix, US Virgin Islands.",
+      "year": "1987",
+      "title": "Assessment of the queen conch (<i>Strombus gigas</i>) population and predation studies of hatchery reared juveniles in Salt River Canyon, St. Croix, US Virgin Islands.",
+      "author": "Coulston, M.L., Berey, R.W., Dempsey, A.C. and Odum, P.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "Davis, M. 2005. Differential growth rate influences dispersal potential of queen conch larvae.",
+      "year": "2005",
+      "title": "Differential growth rate influences dispersal potential of queen conch larvae",
+      "author": "Davis, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Davis, M. and Stoner, A.W., 1994. Trophic cues induce metamorphosis of queen conch larvae (<i>Strombus gigas</i> Linnaeus). <i>Journal of Experimental Marine Biology and Ecology</i> 180(1): 83-102.",
+      "year": "1994",
+      "title": "Trophic cues induce metamorphosis of queen conch larvae (<i>Strombus gigas</i> Linnaeus)",
+      "author": "Davis, M. and Stoner, A.W.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "FAO. 2016. Report of the second meeting of the CFMC/OSPESCA/WECAFC/CRFM Working  Group on Queen Conch, Panama City, Panama.",
+      "year": "2016",
+      "title": "Report of the second meeting of the CFMC/OSPESCA/WECAFC/CRFM Working  Group on Queen Conch, Panama City, Panama.",
+      "author": "FAO",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO. 2020. FishStatJ, a tool for fishery statistics analysis. Release: 4.02.04. Universal Software for Fishery Statistical Time Series. Global aquaculture production:  Quantity 1950–2020; Value 1950–2020; Global capture  production. Global fish processed production statistics: Quantity 1976-2020. Rome. Italy.",
+      "year": "2020",
+      "title": "FishStatJ, a tool for fishery statistics analysis. Release: 4.02.04. Universal Software for Fishery Statistical Time Series. Global aquaculture production:  Quantity 1950–2020; Value 1950–2020; Global capture  production. Global fish processed production statistics: Quantity 1976-2020",
+      "author": "FAO",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO Western Central Atlantic Fishery Commission. 2013. Report of the first meeting of the CFMC/OSPESCA/WECAFC/CRFM Working Group on Queen Conch, Panama City, Panama, 23–25 October 2012. Food and Agriculture Organization of the United Nations (FAO), FAO Fisheries and Aquaculture Report No. 1029, Bridgetown, Barbados.",
+      "year": "2013",
+      "title": "Report of the first meeting of the CFMC/OSPESCA/WECAFC/CRFM Working Group on Queen Conch, Panama City, Panama, 23–25 October 2012",
+      "author": "FAO Western Central Atlantic Fishery Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "FAO Western Central Atlantic Fishery Commission. 2020. Report of the Fourth Meeting of  CFMC/OSPESCA/WECAFC/CRFM/CITES Working Group on Queen Conch, San Juan,  Puerto Rico, 16–17 December 2019. Food and Agriculture Organization of the United  Nations (FAO), FAO Fisheries and Aquaculture Report No. 1326, Bridgetown, Barbados. .",
+      "year": "2020",
+      "title": "Report of the Fourth Meeting of  CFMC/OSPESCA/WECAFC/CRFM/CITES Working Group on Queen Conch, San Juan,  Puerto Rico, 16–17 December 2019. Food and Agriculture Organization of the United  Nations (FAO), FAO Fisheries and Aquaculture Report No. 1326, Bridgetown, Barbados. ",
+      "author": "FAO Western Central Atlantic Fishery Commission",
+      "citation_short": null
+    },
+    {
+      "citation": "Farmer, N.A. and Doerr, J.C. 2022. Limiting factors for queen conch (<i>Lobatus gigas</i>) reproduction: A simulation-based evaluation. <i>Plos One</i> 17(3): e0251219.",
+      "year": "2022",
+      "title": "Limiting factors for queen conch (<i>Lobatus gigas</i>) reproduction: A simulation-based evaluation",
+      "author": "Farmer, N.A. and Doerr, J.C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Foley, J.R. and Takahashi, M. 2017. Shell lip thickness is the most reliable proxy to sexual maturity in Queen Conch (<i>Lobatus gigas</i>) of Port Honduras Marine Reserve, Belize; informing management to reduce the risk of growth overfishing. <i>Frontiers in Marine Science</i> 4: 179.",
+      "year": "2017",
+      "title": "Shell lip thickness is the most reliable proxy to sexual maturity in Queen Conch (<i>Lobatus gigas</i>) of Port Honduras Marine Reserve, Belize; informing management to reduce the risk of growth overfishing",
+      "author": "Foley, J.R. and Takahashi, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "García-Sais, J.R., Sabater-Clavell, J., Esteves, R. and Carlo, M., 2012. Fishery independent survey of commercially exploited fish and shellfish populations from mesophotic reefs within the Puerto Rican EEZ.  Final Report to the Caribbean Fisheries Management Council.. San Juan, Puerto Rico.",
+      "year": "2012",
+      "title": "Fishery independent survey of commercially exploited fish and shellfish populations from mesophotic reefs within the Puerto Rican EEZ",
+      "author": "García-Sais, J.R., Sabater-Clavell, J., Esteves, R. and Carlo, M.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Glazer, R.A. and Kidney, J.A. 2004. Habitat Associations of Adult Queen conch (<i>Strombus gigas</i>) in an unfished Florida Keys back reef: Applications to essential fish habitat. <i>Bulleting of Marine Science</i> 75(2): 205-224.",
+      "year": "2004",
+      "title": "Habitat Associations of Adult Queen conch (<i>Strombus gigas</i>) in an unfished Florida Keys back reef: Applications to essential fish habitat",
+      "author": "Glazer, R.A. and Kidney, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Glazer, R.A., Delgado, G.A. and Kidney, J.A. 2003. Estimating queen conch (<i>Strombus gigas</i>) home ranges using acoustic telemetry: implications for the design of marine fishery reserves. <i>Gulf and Caribbean Research </i> 14(2): 79-89.",
+      "year": "2003",
+      "title": "Estimating queen conch (<i>Strombus gigas</i>) home ranges using acoustic telemetry: implications for the design of marine fishery reserves",
+      "author": "Glazer, R.A., Delgado, G.A. and Kidney, J.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Hesse, K.O. 1979. Movement and migration of the queen conch, <i>Strombus gigas</i>, in the Turks and Caicos Islands. <i>Bulletin of Marine Science</i> 29(3): 303-311.",
+      "year": "1979",
+      "title": "Movement and migration of the queen conch, <i>Strombus gigas</i>, in the Turks and Caicos Islands",
+      "author": "Hesse, K.O.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Horn, C., Karnauskas, M., Doerr, J.C., Miller, M.H., Neuman, M., Hill, R. and McCarthy, K.J. 2022. Endangered species act status review report: Queen conch (<i>Aliger gigas</i>).  NOAA Technical Memorandum NMFS-SEFSC-756.",
+      "year": "2022",
+      "title": "Endangered species act status review report: Queen conch (<i>Aliger gigas</i>)",
+      "author": "Horn, C., Karnauskas, M., Doerr, J.C., Miller, M.H., Neuman, M., Hill, R. and McCarthy, K.J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Kough, A.S., Belak, C.A., Paris, C.B., Lundy, A., Cronin, H., Gnanalingam, G., Hagedorn, S., Skubel, R., Weiler, A.C. and Stoner, A.W. 2019. Ecological spillover from a marine protected area replenishes an over-exploited population across an island chain. <i>Conservation Science and Practice</i> 1(3): 1-9.",
+      "year": "2019",
+      "title": "Ecological spillover from a marine protected area replenishes an over-exploited population across an island chain",
+      "author": "Kough, A.S., Belak, C.A., Paris, C.B., Lundy, A., Cronin, H., Gnanalingam, G., Hagedorn, S., Skubel, R., Weiler, A.C. and Stoner, A.W.",
+      "citation_short": ""
+    },
+    {
+      "citation": "McCarthy, K. 2008. A review of Queen Conch (<i>Strombus gigas</i>) life history. SEDAR 14-DW-4. National Marine Fishery Service, Southeast Fisheries Science Center, Sustainable Fisheries Division, Contribution SFD-2007-008, Florida.",
+      "year": "2008",
+      "title": "A review of Queen Conch (<i>Strombus gigas</i>) life history. SEDAR 14-DW-4",
+      "author": "McCarthy, K.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Pauly, D., Zeller, D. and Palomares, M.L.D. (eds). 2020. Sea Around Us Concepts, Design and Data. Available at: <a href=\"(www.seaaroundus.org\">(www.seaaroundus.org</a>. (Accessed: 30/11/2024).",
+      "year": "2020",
+      "title": "Sea Around Us Concepts, Design and Data",
+      "author": "Pauly, D., Zeller, D. and Palomares, M.L.D. (eds)",
+      "citation_short": ""
+    },
+    {
+      "citation": "Prada, M., Castro, E., Taylor, E., Puentes, V., Appeldoorn, R. and Daves, N. 2009. Non-detrimental findings for the queen conch (<i>Strombus gigas</i>) in Colombia.  CORALINA. NDF Workshop Case Studies, WG 9 – Aquatic Invertebrates, Case Study 3.",
+      "year": "2009",
+      "title": "Non-detrimental findings for the queen conch (<i>Strombus gigas</i>) in Colombia",
+      "author": "Prada, M., Castro, E., Taylor, E., Puentes, V., Appeldoorn, R. and Daves, N.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Randall J.E. 1964. Contributions to the biology of the queen conch, <i>Strombus gigas</i>. <i>Bulletin of Marine Science</i> 14: 246–295.",
+      "year": "1964",
+      "title": "Contributions to the biology of the queen conch, <i>Strombus gigas</i>.",
+      "author": "Randall J.E.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rizo, O.D., Olivares Reumont, S., Viguri Fuente, J., Díaz Arado, O., López Pino, N., D’Alessandro Rodríguez, K., Arado López, J.O., Gelen Rudnikas, A. and Arencibia Carballo, G. 2010. opper, zinc and lead bioaccumulation in marine snail, <i>Strombus gigas</i>, from Guacanayabo Gulf, Cuba. <i>Bulletin of environmental contamination and toxicology</i> 85(3): 330-333.",
+      "year": "2010",
+      "title": "opper, zinc and lead bioaccumulation in marine snail, <i>Strombus gigas</i>, from Guacanayabo Gulf, Cuba",
+      "author": "Rizo, O.D., Olivares Reumont, S., Viguri Fuente, J., Díaz Arado, O., López Pino, N., D’Alessandro Rodríguez, K., Arado López, J.O., Gelen Rudnikas, A. and Arencibia Carballo, G.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Robles-Gil, A. 2024. Scientists Play Matchmaker for Beloved Sea Snails in the Florida Keys. <i>Smithsonian Magazine</i>.",
+      "year": "2024",
+      "title": "Scientists Play Matchmaker for Beloved Sea Snails in the Florida Keys",
+      "author": "Robles-Gil, A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Rogers, B., 2014. Conchservation in the Caribbean: A Call for Stricter Fishing Regulations of the Queen Conch. <i>U. Miami Int'l & Comp. L. Rev.</i> 22: 91.",
+      "year": "2014",
+      "title": "Conchservation in the Caribbean: A Call for Stricter Fishing Regulations of the Queen Conch",
+      "author": "Rogers, B.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Schweizer, D. and Posada, J.M. 2006. Distribution, density, and abundance of the queen conch, <i>Strombus gigas</i>, in Los Roques Archipelago National Park, Venezuela. <i>Bulletin of Marine Science</i> 79(2): 243-257.",
+      "year": "2006",
+      "title": "Distribution, density, and abundance of the queen conch, <i>Strombus gigas</i>, in Los Roques Archipelago National Park, Venezuela",
+      "author": "Schweizer, D. and Posada, J.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Spade, D.J., Griffitt, R.J., Liu, L., Brown-Peterson, N.J., Kroll, K.J., Feswick, A., Glazer, R.A., Barber, D.S. and Denslow, N.D. 2010. Queen conch (<i>Strombus gigas</i>) testis regresses during the reproductive season at nearshore sites in the Florida Keys. <i>PLoS One</i> 5(9): p.e12737.",
+      "year": "2010",
+      "title": "Queen conch (<i>Strombus gigas</i>) testis regresses during the reproductive season at nearshore sites in the Florida Keys",
+      "author": "Spade, D.J., Griffitt, R.J., Liu, L., Brown-Peterson, N.J., Kroll, K.J., Feswick, A., Glazer, R.A., Barber, D.S. and Denslow, N.D.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stoner, A.W. and Appeldoorn, R.S., 2022. Synthesis of Research on the Reproductive biology of queen conch (<i>Aliger gigas</i>): toward the goals of sustainable fisheries and species conservation. <i>Reviews in Fisheries Science & Aquaculture</i> 30(3): 346-390.",
+      "year": "2022",
+      "title": "Synthesis of Research on the Reproductive biology of queen conch (<i>Aliger gigas</i>): toward the goals of sustainable fisheries and species conservation",
+      "author": "Stoner, A.W. and Appeldoorn, R.S.,",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stoner, A.W. and Ray-Culp, M. 2000. Evidence for Allee effects in an over-harvested marine gastropod: Density-dependent mating and egg production. <i>Marine Ecology Progress Series </i> 202: 297-302.",
+      "year": "2000",
+      "title": "Evidence for Allee effects in an over-harvested marine gastropod: Density-dependent mating and egg production",
+      "author": "Stoner, A.W. and Ray-Culp, M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stoner, A.W., Davis, M. and Kough, A.S. 2023. Relationships between queen conch larval biology and recruitment, connectivity and fishery management. <i>Reviews in Fisheries Science and Aquaculture</i> 31(4): 535-597.",
+      "year": "2023",
+      "title": "Relationships between queen conch larval biology and recruitment, connectivity and fishery management",
+      "author": "Stoner, A.W., Davis, M. and Kough, A.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Stoner, A.W., Davis, M. and Kough, A.S., 2023. Relationships between Queen Conch Larval Biology and Recruitment, Connectivity, and Fishery Management. <i>Reviews in Fisheries Science & Aquaculture</i> 31(4): 535-597.",
+      "year": "2023",
+      "title": "Relationships between Queen Conch Larval Biology and Recruitment, Connectivity, and Fishery Management",
+      "author": "Stoner, A.W., Davis, M. and Kough, A.S.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Stoner, A.W., Davis, M.H. and Booker, C.J., 2012.  Abundance and population structure of queen conch inside and outside a marine protected area: repeat surveys show significant declines. <i>Marine Ecology Progress Series</i> 460: 101-114.",
+      "year": "2012",
+      "title": " Abundance and population structure of queen conch inside and outside a marine protected area: repeat surveys show significant declines",
+      "author": "Stoner, A.W., Davis, M.H. and Booker, C.J.,",
+      "citation_short": null
+    },
+    {
+      "citation": "Tewfik, A., Appeldoorn, R. and Kingston, J. 1998. The 1997 queen conch (<i>Strombus gigas</i>) abundance survey and potential yield estimates for Pedro Bank, Jamaica. <i>Jamaica: Fisheries Division</i>: 39.",
+      "year": "1998",
+      "title": "The 1997 queen conch (<i>Strombus gigas</i>) abundance survey and potential yield estimates for Pedro Bank, Jamaica",
+      "author": "Tewfik, A., Appeldoorn, R. and Kingston, J.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Tewfik, A., Babcock, E.A., Gibson, J., Burns Perez, V.R. and Strindberg, S. 2017. Benefits of a replenishment zone revealed through trends in focal species at Glover’s Atoll, Belize. <i>Marine Ecology Progress Series </i> 580: 37-56.",
+      "year": "2017",
+      "title": "Benefits of a replenishment zone revealed through trends in focal species at Glover’s Atoll, Belize",
+      "author": "Tewfik, A., Babcock, E.A., Gibson, J., Burns Perez, V.R. and Strindberg, S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Torres, R.E. and Sullivan-Sealey, K.M. 2002. Shell midden surveys as source of information about fished queen conch (<i>Strombus gigas</i>) populations: a case study in Parque Nacional del Este. Dominican Republic.",
+      "year": "2002",
+      "title": "Shell midden surveys as source of information about fished queen conch (<i>Strombus gigas</i>) populations: a case study in Parque Nacional del Este",
+      "author": "Torres, R.E. and Sullivan-Sealey, K.M.",
+      "citation_short": ""
+    },
+    {
+      "citation": "TRAFFIC International. 2024. Wildlife Trade Portal. Available at www.wildlifetradeportal.org.",
+      "year": "2024",
+      "title": "Wildlife Trade Portal. Available at www.wildlifetradeportal.org.",
+      "author": "TRAFFIC International",
+      "citation_short": null
+    },
+    {
+      "citation": "Truelove, N.K., Box, S.J., Aiken, K.A., Blythe‐Mallett, A., Boman, E.M., Booker, C.J., Byfield, T.T., Cox, C.E., Davis, M.H., Delgado, G.A. and Glazer, B.A., 2017. Isolation by oceanic distance and spatial genetic structure in an overharvested international fishery. <i>Diversity and Distributions</i> 21(11): 1292-1300.",
+      "year": "2017",
+      "title": "Isolation by oceanic distance and spatial genetic structure in an overharvested international fishery",
+      "author": "Truelove, N.K., Box, S.J., Aiken, K.A., Blythe‐Mallett, A., Boman, E.M., Booker, C.J., Byfield, T.T., Cox, C.E., Davis, M.H., Delgado, G.A. and Glazer, B.A.,",
+      "citation_short": null
+    },
+    {
+      "citation": "UNEP. 2012. Report of the Queen Conch Expert Workshop. United Nations Environment  Programme (UNEP), May 22–24, Miami, FL.",
+      "year": "2012",
+      "title": "Report of the Queen Conch Expert Workshop. United Nations Environment  Programme (UNEP), May 22–24, Miami, FL.",
+      "author": "UNEP",
+      "citation_short": null
+    },
+    {
+      "citation": "Voss, J.N., Sandbank, E., Glazer, R.A. and Delgado, G.A. 2024. Aftereffects of Hurricanes Irma and Ian on queen conch <i>Aliger gigas</i> in the Florida Keys, USA. <i>Marine Ecology Progress Series</i> 733: 129-135.",
+      "year": "2024",
+      "title": "Aftereffects of Hurricanes Irma and Ian on queen conch <i>Aliger gigas</i> in the Florida Keys, USA",
+      "author": "Voss, J.N., Sandbank, E., Glazer, R.A. and Delgado, G.A.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Weil, E. and Laughlin, R.A. 1984. Biology, population dynamics and reproduction of the queen  conch, <i>Strombus gigas</i> Linne in the Archipelago de Los Roques National Park. <i>Journal of Shellfish Research</i> 4(1): 45-62.",
+      "year": "1984",
+      "title": "Biology, population dynamics and reproduction of the queen  conch, <i>Strombus gigas</i> Linne in the Archipelago de Los Roques National Park",
+      "author": "Weil, E. and Laughlin, R.A.",
+      "citation_short": ""
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [
+    {
+      "description": {
+        "en": "Caribbean Sea"
+      },
+      "code": "3_1_1"
+    },
+    {
+      "description": {
+        "en": "Gulf of Mexico"
+      },
+      "code": "3_1_2"
+    },
+    {
+      "description": {
+        "en": "SE US Continental Shelf"
+      },
+      "code": "4_1_4"
+    }
+  ],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Reduced reproductive success"
+      },
+      "code": "2_3_7"
+    },
+    {
+      "description": {
+        "en": "Other"
+      },
+      "code": "2_3_8"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Marine"
+      },
+      "code": "2"
+    }
+  ]
+}

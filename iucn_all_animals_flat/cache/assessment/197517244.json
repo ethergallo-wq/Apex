@@ -1,0 +1,614 @@
+{
+  "assessment_date": "2016-09-04T01:00:00.000+01:00",
+  "year_published": "2021",
+  "latest": true,
+  "possibly_extinct": false,
+  "possibly_extinct_in_the_wild": false,
+  "sis_taxon_id": 10912,
+  "criteria": null,
+  "url": "https://www.iucnredlist.org/species/10912/197517244",
+  "citation": "Amori, G., Hutterer, R., Kryštufek, B., Yigit, N., Mitsainas, G., Palomo, L.J. & Aulagnier, S. 2021. Jaculus jaculus (amended version of 2016 assessment). The IUCN Red List of Threatened Species 2021: e.T10912A197517244. Accessed on 05 May 2026.",
+  "assessment_id": 197517244,
+  "assessment_points": false,
+  "assessment_ranges": true,
+  "taxon": {
+    "sis_id": 10912,
+    "scientific_name": "Jaculus jaculus",
+    "species_taxa": [],
+    "subpopulation_taxa": [],
+    "infrarank_taxa": [],
+    "kingdom_name": "ANIMALIA",
+    "phylum_name": "CHORDATA",
+    "class_name": "MAMMALIA",
+    "order_name": "RODENTIA",
+    "family_name": "DIPODIDAE",
+    "genus_name": "Jaculus",
+    "species_name": "jaculus",
+    "subpopulation_name": null,
+    "infra_name": null,
+    "authority": "(Linnaeus, 1758)",
+    "species": true,
+    "subpopulation": false,
+    "infrarank": false,
+    "ssc_groups": [
+      {
+        "name": "IUCN SSC Small Mammal Specialist Group",
+        "url": "http://www.small-mammals.org/",
+        "description": "Co-Chairs: Thomas Lacher (email: tlacher@tamu.edu) and Rosalind Kennerley (email: Rosalind.Kennerley@durrell.org)\nRed List Authority Coordinator: Roslaind Kennedy (email: Rosalind.Kennerley@durrell.org)"
+      }
+    ],
+    "common_names": [
+      {
+        "main": false,
+        "name": "Lesser Jerboa",
+        "language": "eng"
+      },
+      {
+        "main": true,
+        "name": "Lesser Egyptian Jerboa",
+        "language": "eng"
+      }
+    ],
+    "synonyms": [
+      {
+        "name": "Mus jaculus Linnaeus, 1758",
+        "status": "ACCEPTED",
+        "genus_name": "Mus",
+        "species_name": "jaculus",
+        "species_author": "Linnaeus, 1758",
+        "infrarank_author": null,
+        "subpopulation_name": null,
+        "infra_type": null,
+        "infra_name": null
+      }
+    ]
+  },
+  "population_trend": {
+    "description": {
+      "en": "Unknown"
+    },
+    "code": "3"
+  },
+  "red_list_category": {
+    "version": "3.1",
+    "description": {
+      "en": "Least Concern"
+    },
+    "code": "LC"
+  },
+  "supplementary_info": {
+    "area_restricted_is_restricted": null,
+    "number_of_locations": null,
+    "upper_elevation_limit": 1500,
+    "lower_elevation_limit": null,
+    "lower_depth_limit": null,
+    "upper_depth_limit": null,
+    "population_size": null,
+    "population_severely_fragmented": "No",
+    "population_continuing_decline": null,
+    "generational_length": "2",
+    "congregatory": null,
+    "movement_patterns": null,
+    "continuing_decline_in_area": null,
+    "conservation_actions_in_place": [
+      {
+        "name": "In-place land/water protection",
+        "actions": [
+          {
+            "name": "Conservation sites identified",
+            "value": "Yes, over entire range"
+          }
+        ]
+      }
+    ],
+    "identification_information": null,
+    "extreme_fluctuations": null,
+    "no_of_subpopulations": null,
+    "continuing_decline_in_subpopulations": null,
+    "extreme_fluctuations_in_subpopulations": null,
+    "all_individuals_in_one_subpopulation": null,
+    "no_of_individuals_in_largest_subpopulation": null,
+    "estimated_area_of_occupancy": null,
+    "continuing_decline_in_area_of_occupancy": null,
+    "extreme_fluctuations_in_area_of_occupancy": null,
+    "estimated_extent_of_occurence": "18361761",
+    "continuing_decline_in_extent_of_occurence": null,
+    "extreme_fluctuations_in_extent_of_occurence": null,
+    "continuing_decline_in_number_of_locations": null,
+    "extreme_fluctuations_in_number_of_locations": null
+  },
+  "documentation": {
+    "range": "This species is found throughout North Africa and the Arabian Peninsula as far east as southwestern Iran. It is found in desert and semi-desert with patchy records from Senegal and Mali through Mauritania and Morocco to Algeria, Tunisia, Libya, Egypt, Eritrea and Somalia (though absent from the Nile Delta). The distribution is likely somewhat more continuous, though nevertheless dependent on suitable habitat. The species has been recorded to elevations of 1,500 m asl (Egypt).",
+    "population": "A widespread species, although somewhat patchily distributed in parts of its range. Reported to be common in a number of range states (e.g. Qatar, Jordan), but not considered an abundant species in African parts of the range.",
+    "habitats": "The habitat of this species varies across the range, from sand dunes to rocky substrates, however, it is always found near to vegetation. It is a strictly nocturnal species, and its remains are commonly found in owl pellets. The species has a litter size of four to five young.",
+    "threats": "In some areas in Jordan, the species is spotlighted and hunted for food and bait for falconry. Locally eaten by humans, since they are easily caught through their burrow systems. Can be trapped during grooming outside the burrow and are considered edible by several tribes of Bedouin in Jordan and the Negev (Qumsiyeh 1996). In Syria, there is massive capture (using spotlights at night), and the species is sold to falconers for food (G. Serra pers. comm.). In Africa there are no major threats to the species.",
+    "measures": "It is presumed to occur in a number of protected areas throughout its range.",
+    "use_trade": "The species is used for falcon food and bait in Jordan and Syria.",
+    "rationale": "Listed as Least Concern because this species has a wide (albeit patchy) distribution range and a large population. Although there is significant exploitation in parts of the range, this is not currently thought to be causing population declines sufficient to trigger listing in a more threatened category.",
+    "trend_justification": null,
+    "taxonomic_notes": null
+  },
+  "biogeographical_realms": [
+    {
+      "description": {
+        "en": "Afrotropical"
+      },
+      "code": "0"
+    },
+    {
+      "description": {
+        "en": "Palearctic"
+      },
+      "code": "7"
+    }
+  ],
+  "conservation_actions": [],
+  "faos": [],
+  "habitats": [
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Shrubland - Subtropical/Tropical Dry"
+      },
+      "code": "3_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Grassland - Subtropical/Tropical Dry"
+      },
+      "code": "4_5"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Rocky areas (eg. inland cliffs, mountain peaks)"
+      },
+      "code": "6"
+    },
+    {
+      "majorImportance": null,
+      "season": null,
+      "suitability": "Suitable",
+      "description": {
+        "en": "Desert - Hot"
+      },
+      "code": "8_1"
+    }
+  ],
+  "locations": [
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Libya"
+      },
+      "code": "LY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Algeria"
+      },
+      "code": "DZ"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Egypt"
+      },
+      "code": "EG"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Israel"
+      },
+      "code": "IL"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Morocco"
+      },
+      "code": "MA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Tunisia"
+      },
+      "code": "TN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Sudan"
+      },
+      "code": "SD"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Saudi Arabia"
+      },
+      "code": "SA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Iran, Islamic Republic of"
+      },
+      "code": "IR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Western Sahara"
+      },
+      "code": "EH"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Burkina Faso"
+      },
+      "code": "BF"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Eritrea"
+      },
+      "code": "ER"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Oman"
+      },
+      "code": "OM"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Syrian Arab Republic"
+      },
+      "code": "SY"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mali"
+      },
+      "code": "ML"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Mauritania"
+      },
+      "code": "MR"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Niger"
+      },
+      "code": "NE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Somalia"
+      },
+      "code": "SO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Qatar"
+      },
+      "code": "QA"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "United Arab Emirates"
+      },
+      "code": "AE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Senegal"
+      },
+      "code": "SN"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Jordan"
+      },
+      "code": "JO"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Yemen"
+      },
+      "code": "YE"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Kuwait"
+      },
+      "code": "KW"
+    },
+    {
+      "is_endemic": false,
+      "formerlyBred": null,
+      "origin": "Native",
+      "presence": "Extant",
+      "seasonality": null,
+      "description": {
+        "en": "Nigeria"
+      },
+      "code": "NG"
+    }
+  ],
+  "researches": [
+    {
+      "note": null,
+      "code": "3_1",
+      "description": {
+        "en": "Population trends"
+      }
+    }
+  ],
+  "use_and_trade": [
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - human"
+      },
+      "code": "1"
+    },
+    {
+      "international": null,
+      "national": null,
+      "other": null,
+      "subsistence": true,
+      "description": {
+        "en": "Food - animal"
+      },
+      "code": "2"
+    }
+  ],
+  "threats": [
+    {
+      "scope": null,
+      "timing": "Ongoing",
+      "internationalTrade": null,
+      "score": "Low Impact: 3",
+      "severity": null,
+      "ancestry": null,
+      "virus": null,
+      "ias": null,
+      "text": null,
+      "description": {
+        "en": "Intentional use (species is the target)"
+      },
+      "code": "5_1_1"
+    }
+  ],
+  "credits": [
+    {
+      "credit_type_name": "assessor",
+      "full": "Amori, G., Hutterer, R., Kryštufek, B., Yigit, N., Mitsainas, G., Palomo, L.J. & Aulagnier, S.",
+      "value": [
+        "Giovanni Amori (Italian National Research Council, La Sapienza University in Rome, Italy)",
+        "L.J. Palomo",
+        "G. Mitsainas",
+        "Nuri Yigit",
+        "Boris Kryštufek",
+        "Stéphane Aulagnier (Société Française pour l' Étude et la Protection des Mammifères)",
+        "Rainer Hutterer (IUCN SSC Insectivore Specialist Group)"
+      ]
+    },
+    {
+      "credit_type_name": "evaluator",
+      "full": "Cassola, F.",
+      "value": [
+        "Francesca Cassola (Global Mammal Assessment)"
+      ]
+    }
+  ],
+  "errata": [
+    {
+      "reason": "The Assessor name 'Mitsain, G.' has been corrected to 'Mitsainas, G.' in this amended assessment. A previous erratum assessment attached the distribution map that was accidentally omitted from the original version of this assessment."
+    }
+  ],
+  "references": [
+    {
+      "citation": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C. 2013. Generation length for mammals. <i>Nature Conservation</i> 5: 87–94.",
+      "year": "2013",
+      "title": "Generation length for mammals",
+      "author": "Pacifici, M., Santini, L., Di Marco, M., Baisero, D., Francucci, L., Grottolo Marasini, G., Visconti, P. and Rondinini, C.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Qumsiyeh, M.B. 1996. <i>Mammals of the Holy Land</i>. Texas Tech University Press, Lubbock.",
+      "year": "1996",
+      "title": "Mammals of the Holy Land",
+      "author": "Qumsiyeh, M.B.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Amr, Z.S. 2000. <i>Jordan Country Study of Biological Diversity. Mammals of Jordan</i>. United Nations Environment Programme and National Library, Amman, Jordan.",
+      "year": "2000",
+      "title": "Jordan Country Study of Biological Diversity. Mammals of Jordan",
+      "author": "Amr, Z.S.",
+      "citation_short": ""
+    },
+    {
+      "citation": "Nader, I. A. 1984. First records of rodents from the State of Qatar (Mammalia: Rodentia) with a checklist of the mammals of the State. <i>Zeitschrift für Säugetierkunde</i> 49(2): 117-121.",
+      "year": "1984",
+      "title": "First records of rodents from the State of Qatar (Mammalia: Rodentia) with a checklist of the mammals of the State",
+      "author": "Nader, I. A.",
+      "citation_short": null
+    },
+    {
+      "citation": "Kingdon, J. 1991. <i>Arabian Mammals: A Natural History</i>. Academic Press, London, UK.",
+      "year": "1991",
+      "title": "Arabian Mammals: A Natural History",
+      "author": "Kingdon, J.",
+      "citation_short": null
+    },
+    {
+      "citation": "IUCN. 2016. The IUCN Red List of Threatened Species. Version 2016-3. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 07 December 2016).",
+      "year": "2016",
+      "title": "The IUCN Red List of Threatened Species. Version 2016-3",
+      "author": "IUCN",
+      "citation_short": "IUCN 2016-3"
+    },
+    {
+      "citation": "IUCN. 2021. The IUCN Red List of Threatened Species. Version 2021-1. Available at: <a href=\"www.iucnredlist.org\">www.iucnredlist.org</a>. (Accessed: 25 March 2021).",
+      "year": "2021",
+      "title": "The IUCN Red List of Threatened Species. Version 2021-1",
+      "author": "IUCN",
+      "citation_short": "IUCN 2021-1"
+    }
+  ],
+  "growth_forms": [],
+  "lmes": [],
+  "scopes": [
+    {
+      "description": {
+        "en": "Global"
+      },
+      "code": "1"
+    }
+  ],
+  "stresses": [
+    {
+      "description": {
+        "en": "Species mortality"
+      },
+      "code": "2_1"
+    }
+  ],
+  "systems": [
+    {
+      "description": {
+        "en": "Terrestrial"
+      },
+      "code": "0"
+    }
+  ]
+}
