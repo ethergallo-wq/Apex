@@ -217,14 +217,27 @@ function mergeRemoteWithLocalBioregions(remoteList = []) {
     const local = LOCAL_ANIMAL_BY_ID[remote.id];
     if (!local) return remote;
     const remoteIds = getAnimalBioregionIdsV4(remote);
-    if (remoteIds.length) return remote;
-    return {
+    const hasStats = remote.stats && Object.keys(remote.stats || {}).length > 0;
+    const hasCats = remote.categories && remote.categories.length > 0;
+    const enrichedRemote = {
       ...remote,
+      foodweb: remote.foodweb || local.foodweb || null,
+      lifespan: remote.lifespan ?? local.lifespan,
+      wt: remote.wt || local.wt || '',
+      ln: remote.ln || local.ln || '',
+      trophic: remote.trophic || local.trophic,
+      stats: hasStats ? remote.stats : (local.stats || {}),
+      categories: hasCats ? remote.categories : (local.categories || []),
+      cat_curiosities: Object.keys(remote.cat_curiosities || {}).length ? remote.cat_curiosities : (local.cat_curiosities || {}),
+      distribution: remote.distribution?.countries_present?.length ? remote.distribution : local.distribution,
+    };
+    if (remoteIds.length) return enrichedRemote;
+    return {
+      ...enrichedRemote,
       geo:{ ...(remote.geo || {}), ...(local.geo || {}) },
       bioregions_v4: local.bioregions_v4 || [],
       map_bioregion_ids_v4: local.map_bioregion_ids_v4 || [],
       map_bioregion_domains_v4: local.map_bioregion_domains_v4 || [],
-      distribution: remote.distribution?.countries_present?.length ? remote.distribution : local.distribution,
       bio_regions: remote.bio_regions?.length ? remote.bio_regions : local.bio_regions,
       game_regions: remote.game_regions?.length ? remote.game_regions : local.game_regions,
       habitats: remote.habitats?.length ? remote.habitats : local.habitats,
@@ -1681,7 +1694,7 @@ function useAnimaldexSound(enabled = true) {
         comp.attack.setValueAtTime(0.004, now);
         comp.release.setValueAtTime(0.16, now);
 
-        const level = type==='reward' ? 0.18 : type==='capture' ? 0.16 : type==='map' ? 0.115 : type==='back' ? 0.09 : type==='filter' ? 0.085 : 0.075;
+        const level = type==='reward' ? 0.18 : type==='capture' ? 0.16 : type==='compare' ? 0.14 : type==='map' ? 0.115 : type==='back' ? 0.09 : type==='filter' ? 0.085 : 0.075;
         master.gain.setValueAtTime(0.0001, now);
         master.gain.exponentialRampToValueAtTime(level, now + 0.012);
         master.gain.exponentialRampToValueAtTime(0.0001, now + (type==='reward' ? 0.56 : type==='capture' ? 0.38 : type==='map' ? 0.26 : 0.16));
@@ -1722,6 +1735,8 @@ function useAnimaldexSound(enabled = true) {
           clickDust(0,.04,.018); tone(146.8,0,.09,'triangle',.44,-.1); tone(293.7,.052,.12,'triangle',.24,.1);
         } else if (type === 'reward') {
           clickDust(0,.08,.022); [523.25,659.25,783.99,1046.5].forEach((f,i)=>tone(f,i*.055,.16,'sine',.25,(i-1.5)*.07));
+        } else if (type === 'compare') {
+          clickDust(0,.045,.018); tone(220,0,.10,'triangle',.28,-.10); tone(440,.045,.13,'sine',.22,.08); tone(660,.105,.12,'sine',.12,0);
         } else if (type === 'back') {
           tone(240,0,.07,'triangle',.34,.08); tone(170,.04,.09,'triangle',.18,-.08);
         } else if (type === 'filter') {
@@ -1745,6 +1760,7 @@ function useAnimaldexSound(enabled = true) {
       const sound = el.getAttribute?.('data-sound')
         || (text.includes('cattur') || text.includes('fotograf') ? 'capture'
         : text.includes('map') || text.includes('mappa') || text.includes('ricentra') ? 'map'
+        : text.includes('compar') || text.includes('vs') ? 'compare'
         : text.includes('badge') || text.includes('award') || text.includes('reward') ? 'reward'
         : text.includes('filtr') || text.includes('ordina') || text.includes('cerca') ? 'filter'
         : text.includes('indietro') || text.includes('‹') || text.includes('×') || text.includes('chiudi') ? 'back'
@@ -2625,7 +2641,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
 
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
-function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -2841,6 +2857,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, tutorialStep=null, c
         <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
+        <button data-sound="compare" onClick={()=>onOpenComparator?.(a)} style={{ width:'100%', margin:'18px 0 8px', minHeight:58, border:'1px solid rgba(255,255,255,.10)', borderRadius:18, background:'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontSize:15, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(168,70,55,.20)', display:'flex', alignItems:'center', justifyContent:'center', gap:10 }}>⚔️ Confronta questo animale</button>
       </div>
 
       {captureStamp && (
@@ -3710,6 +3727,7 @@ const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert'
 function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null }) {
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁', bg:'#2E5A10', desc:'Griglia animali' },
+    { id:'compare', label:'Comparatore', icon:'⚔️', bg:'#A84637', desc:'Confronta specie' },
     { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Continenti e scratch map' },
     { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Award e obiettivi' },
     { id:'abilities', label:'Abilità', icon:'✨', bg:'#5A2E80', desc:'Catalogo abilità' },
@@ -4264,6 +4282,230 @@ function AbilitiesPage({ onBack, onOpenAbility }) {
 }
 
 
+// ── Comparator ────────────────────────────────────────────────────────
+function parseRangeAverage(value, unitKind='mass') {
+  if (value == null) return null;
+  const s = String(value).toLowerCase().replace(/,/g,'.').replace(/[–—]/g,'-');
+  const nums = [...s.matchAll(/\d+(?:\.\d+)?/g)].map(m => Number(m[0])).filter(Number.isFinite);
+  if (!nums.length) return null;
+  let n = nums.length >= 2 ? (nums[0] + nums[1]) / 2 : nums[0];
+  if (unitKind === 'mass') {
+    if (/\bton|\bt\b|tonnell/.test(s)) n *= 1000000;
+    else if (/\bkg\b|chil/.test(s)) n *= 1000;
+    else if (/\bmg\b/.test(s)) n /= 1000;
+    return n;
+  }
+  if (unitKind === 'length') {
+    if (/\bkm\b/.test(s)) n *= 100000;
+    else if (/\bm\b|metro|metri/.test(s)) n *= 100;
+    else if (/\bmm\b/.test(s)) n /= 10;
+    return n;
+  }
+  return n;
+}
+function getAnimalMassG(a) {
+  const m = Number(a?.foodweb?.body_mass_g);
+  if (Number.isFinite(m) && m > 0) return m;
+  return parseRangeAverage(a?.wt, 'mass') || 1;
+}
+function getAnimalLengthCm(a) {
+  return parseRangeAverage(a?.ln, 'length') || 1;
+}
+function getCountriesCount(a) {
+  return toArraySafe(a?.distribution?.countries_present || a?.geo?.iso?.primary || a?.geo?.iso?.iucn || a?.geo?.iso).length;
+}
+function percentileRank(value, values) {
+  const clean = values.map(Number).filter(v => Number.isFinite(v));
+  if (!clean.length || !Number.isFinite(Number(value))) return 0;
+  const below = clean.filter(v => v <= Number(value)).length;
+  return Math.round((below / clean.length) * 100);
+}
+function minMaxScore(value, values) {
+  const clean = values.map(Number).filter(v => Number.isFinite(v));
+  if (!clean.length || !Number.isFinite(Number(value))) return 0;
+  const min = Math.min(...clean); const max = Math.max(...clean);
+  if (max <= min) return 50;
+  return Math.round(((Number(value) - min) / (max - min)) * 100);
+}
+function vulnerabilityScore(a) {
+  const s = String(a?.cons || '').toUpperCase();
+  const map = { EX:100, EW:96, CR:92, EN:78, VU:64, NT:42, LC:16, DD:50, NE:45 };
+  return map[s] ?? Math.max(0, Math.min(100, 100 - Number(a?.stats?.resistenza || 45)));
+}
+function getComparatorBenchmarks(animals=[]) {
+  const list = (animals || []).filter(Boolean);
+  return {
+    massLog: list.map(a => Math.log10(getAnimalMassG(a) + 1)),
+    lengthLog: list.map(a => Math.log10(getAnimalLengthCm(a) + 1)),
+    speeds: list.map(a => Number(a?.stats?.velocita || 0)),
+    countries: list.map(getCountriesCount),
+  };
+}
+function getComparatorMetrics(a, benchmarks) {
+  const massG = getAnimalMassG(a);
+  const lengthCm = getAnimalLengthCm(a);
+  const countries = getCountriesCount(a);
+  const speed = Number(a?.stats?.velocita || 0);
+  return {
+    radar: [
+      { key:'vulnerabilita', label:'Vulnerabilità', value:vulnerabilityScore(a), raw:String(a?.cons || 'DD') },
+      { key:'dimensioni', label:'Dimensioni log', value:minMaxScore(Math.log10(lengthCm + 1), benchmarks.lengthLog), raw:a?.ln || `${Math.round(lengthCm)} cm` },
+      { key:'velocita', label:'Velocità centili', value:percentileRank(speed, benchmarks.speeds), raw:speed ? `${speed}` : 'n/d' },
+      { key:'peso', label:'Peso log', value:minMaxScore(Math.log10(massG + 1), benchmarks.massLog), raw:a?.wt || `${Math.round(massG)} g` },
+      { key:'adattabilita', label:'Adattabilità', value:percentileRank(countries, benchmarks.countries), raw:`${countries} paesi` },
+    ],
+    massG, lengthCm, countries, speed,
+  };
+}
+function polarPoint(cx, cy, r, angleDeg) {
+  const rad = (Math.PI / 180) * angleDeg;
+  return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+}
+function RadarPolygon({ values, color, opacity=.24, strokeWidth=4, cx=170, cy=170, r=112 }) {
+  const pts = values.map((v,i)=>{
+    const angle = -90 + i * (360 / values.length);
+    const [x,y] = polarPoint(cx, cy, r * Math.max(0, Math.min(100, v.value)) / 100, angle);
+    return `${x},${y}`;
+  }).join(' ');
+  return <polygon points={pts} fill={color} fillOpacity={opacity} stroke={color} strokeWidth={strokeWidth} strokeLinejoin="round" />;
+}
+function ComparatorRadar({ left, right, colorLeft, colorRight }) {
+  const axes = left?.radar || right?.radar || [];
+  const cx = 170, cy = 170, r = 112;
+  return (
+    <div style={{ background:'radial-gradient(circle at 50% 44%,rgba(168,70,55,.15),rgba(0,0,0,.38) 58%,rgba(0,0,0,.58))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:'12px 4px 8px', boxShadow:'inset 0 0 40px rgba(0,0,0,.35)' }}>
+      <svg viewBox="0 0 340 340" style={{ width:'100%', maxWidth:390, display:'block', margin:'0 auto' }}>
+        {[.25,.5,.75,1].map((s,i)=>{
+          const pts = axes.map((_,j)=>{
+            const [x,y] = polarPoint(cx, cy, r*s, -90 + j*(360/axes.length));
+            return `${x},${y}`;
+          }).join(' ');
+          return <polygon key={i} points={pts} fill="none" stroke="rgba(255,255,255,.20)" strokeWidth="1" strokeDasharray="4 5" />;
+        })}
+        {axes.map((axis,i)=>{
+          const angle = -90 + i*(360/axes.length);
+          const [x2,y2] = polarPoint(cx, cy, r, angle);
+          const [lx,ly] = polarPoint(cx, cy, r+37, angle);
+          const anchor = Math.abs(lx-cx) < 10 ? 'middle' : (lx > cx ? 'start' : 'end');
+          return <g key={axis.key}>
+            <line x1={cx} y1={cy} x2={x2} y2={y2} stroke="rgba(255,255,255,.18)" strokeWidth="1.2" />
+            <text x={lx} y={ly} fill="rgba(255,255,255,.92)" fontSize="11.5" fontWeight="900" textAnchor={anchor} dominantBaseline="middle">{axis.label}</text>
+          </g>;
+        })}
+        {left && <RadarPolygon values={left.radar} color={colorLeft} opacity={.24} />}
+        {right && <RadarPolygon values={right.radar} color={colorRight} opacity={.20} />}
+        {left && left.radar.map((v,i)=>{ const [x,y]=polarPoint(cx,cy,r*v.value/100,-90+i*(360/left.radar.length)); return <circle key={`l${i}`} cx={x} cy={y} r="4" fill={colorLeft} stroke="white" strokeOpacity=".65"/>; })}
+        {right && right.radar.map((v,i)=>{ const [x,y]=polarPoint(cx,cy,r*v.value/100,-90+i*(360/right.radar.length)); return <circle key={`r${i}`} cx={x} cy={y} r="4" fill={colorRight} stroke="white" strokeOpacity=".65"/>; })}
+      </svg>
+    </div>
+  );
+}
+function ComparatorSelector({ label, value, animals, onChange, accent }) {
+  const [open,setOpen] = useState(false);
+  const [q,setQ] = useState('');
+  const rows = animals.filter(a => !q.trim() || `${a.com} ${a.sci} ${a.com_en}`.toLowerCase().includes(q.toLowerCase())).slice(0,80);
+  const c = CLS[value?.cls] || CLS.Mammalia;
+  return (
+    <div style={{ position:'relative' }}>
+      <button data-sound="compare" onClick={()=>setOpen(v=>!v)} style={{ width:'100%', border:'1px solid rgba(255,255,255,.10)', background:'linear-gradient(180deg,rgba(255,255,255,.07),rgba(0,0,0,.20))', borderRadius:20, padding:10, color:'white', cursor:'pointer', textAlign:'left', display:'flex', alignItems:'center', gap:10 }}>
+        <div style={{ width:58, height:58, borderRadius:16, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>
+          {value ? <AnimalImg a={{...value,status:'avvistato'}} size={52} fontSize={30} overrideStatus="avvistato" /> : <span style={{ fontSize:24 }}>＋</span>}
+        </div>
+        <div style={{ minWidth:0, flex:1 }}>
+          <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.6 }}>{label}</div>
+          <div style={{ color:'white', fontSize:14, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{value?.com || 'Seleziona animale'}</div>
+          <div style={{ color:'rgba(255,255,255,.48)', fontSize:10, fontStyle:'italic', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{value?.sci || 'tocca per cercare'}</div>
+        </div>
+      </button>
+      {open && <div style={{ position:'absolute', left:0, right:0, top:'calc(100% + 8px)', zIndex:70, background:'#171719', border:'1px solid rgba(255,255,255,.12)', borderRadius:18, padding:10, boxShadow:'0 22px 60px rgba(0,0,0,.55)' }}>
+        <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Cerca nome o scientifico..." autoFocus style={{ width:'100%', height:40, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'#252529', color:'white', padding:'0 12px', boxSizing:'border-box', outline:'none', marginBottom:8 }} />
+        <div style={{ maxHeight:280, overflowY:'auto', display:'flex', flexDirection:'column', gap:7 }}>
+          {rows.map(a=>{
+            const ca = CLS[a.cls] || CLS.Mammalia;
+            return <button data-sound="compare" key={a.id} onClick={()=>{onChange(a); setOpen(false); setQ('');}} style={{ border:'none', background:'rgba(255,255,255,.05)', borderRadius:13, padding:8, color:'white', display:'flex', alignItems:'center', gap:9, cursor:'pointer', textAlign:'left' }}>
+              <div style={{ width:38, height:38, borderRadius:12, background:ca.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}><AnimalImg a={{...a,status:'avvistato'}} size={34} fontSize={22} overrideStatus="avvistato" /></div>
+              <div style={{ minWidth:0 }}><div style={{ fontSize:12.5, fontWeight:900, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.com}</div><div style={{ fontSize:10, color:'rgba(255,255,255,.45)', fontStyle:'italic', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.sci}</div></div>
+            </button>;
+          })}
+        </div>
+      </div>}
+    </div>
+  );
+}
+function CompareInfoCard({ animal, metrics, accent, sideLabel }) {
+  if (!animal) return <div style={{ minHeight:240, borderRadius:22, background:'rgba(255,255,255,.05)', border:'1px dashed rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.45)', fontWeight:850 }}>Scegli un animale</div>;
+  const c = CLS[animal.cls] || CLS.Mammalia;
+  const abilities = toArraySafe(animal.categories).slice(0,4);
+  const stat = (label,value,sub,icon) => <div style={{ background:'rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.06)', borderRadius:14, padding:'9px 10px' }}><div style={{ color:'rgba(255,255,255,.55)', fontSize:10, fontWeight:850, textTransform:'uppercase' }}>{icon} {label}</div><div style={{ color:'white', fontSize:14, fontWeight:950, marginTop:3 }}>{value}</div>{sub && <div style={{ color:'rgba(255,255,255,.42)', fontSize:9.5, marginTop:1 }}>{sub}</div>}</div>;
+  return (
+    <div style={{ borderRadius:24, overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop || '#2A2A2C'},#111113)`, border:`1px solid ${accent}33`, boxShadow:'0 16px 48px rgba(0,0,0,.28)' }}>
+      <div style={{ padding:14, display:'flex', alignItems:'center', gap:12 }}>
+        <div style={{ width:76, height:76, borderRadius:22, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
+        <div style={{ minWidth:0 }}>
+          <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.8 }}>{sideLabel}</div>
+          <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.05 }}>{animal.com}</div>
+          <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontStyle:'italic', marginTop:3 }}>{animal.sci}</div>
+        </div>
+      </div>
+      <div style={{ padding:'0 14px 14px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
+        {stat('Morso', animal.stats?.morso != null ? `${animal.stats.morso} PSI` : 'n/d', null, '🦷')}
+        {stat('Lifespan', animal.lifespan != null ? `${animal.lifespan} anni` : 'n/d', null, '⏳')}
+        {stat('Classe', CLS[animal.cls]?.label || animal.cls || 'n/d', animal.cls, '🧬')}
+        {stat('Adattabilità', metrics?.radar?.find(x=>x.key==='adattabilita')?.value + '/100', `${metrics?.countries || 0} paesi`, '🌍')}
+      </div>
+      <div style={{ padding:'0 14px 16px' }}>
+        <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, margin:'0 0 8px 2px', textTransform:'uppercase' }}>Abilità</div>
+        {abilities.length ? <div style={{ display:'flex', flexDirection:'column', gap:7 }}>{abilities.map(id=>{
+          const meta = CATEGORY_META?.[id] || { label:id, icon:'🔹', color:accent };
+          return <div key={id} style={{ display:'flex', alignItems:'center', gap:9, background:'rgba(255,255,255,.055)', border:`1px solid ${(meta.color || accent)}33`, borderRadius:13, padding:'8px 9px' }}>
+            <img src={`/badges/${id.toLowerCase()}.png`} alt="" onError={e=>{e.currentTarget.style.display='none';}} style={{ width:34, height:34, objectFit:'contain', filter:`drop-shadow(0 0 8px ${(meta.color || accent)}44)` }} />
+            <div style={{ color:'white', fontSize:11.5, lineHeight:1.2, fontWeight:900 }}>{meta.label}</div>
+          </div>;
+        })}</div> : <div style={{ color:'rgba(255,255,255,.45)', fontSize:12, background:'rgba(255,255,255,.05)', borderRadius:13, padding:12 }}>Nessuna abilità speciale registrata.</div>}
+      </div>
+    </div>
+  );
+}
+function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = null }) {
+  const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })), [animals, statusMap]);
+  const firstDefault = initialAnimal ? normalized.find(a=>a.id===initialAnimal.id) || initialAnimal : normalized[0];
+  const [left,setLeft] = useState(firstDefault || null);
+  const [right,setRight] = useState(() => normalized.find(a => a.id !== firstDefault?.id) || null);
+  useEffect(()=>{ if (initialAnimal) setLeft(normalized.find(a=>a.id===initialAnimal.id) || initialAnimal); }, [initialAnimal?.id, normalized.length]);
+  const bench = useMemo(() => getComparatorBenchmarks(normalized), [normalized]);
+  const leftMetrics = left ? getComparatorMetrics(left, bench) : null;
+  const rightMetrics = right ? getComparatorMetrics(right, bench) : null;
+  const colorLeft = (CLS[left?.cls]?.accent || '#5BBEF8');
+  const colorRight = (CLS[right?.cls]?.accent || '#FF7A88');
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+      <PageHeader title="Comparatore" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'14px 14px 28px' }}>
+        <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.28),rgba(20,20,22,.88))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:16, marginBottom:14 }}>
+          <div style={{ color:'#C85D44', fontSize:11, fontWeight:950, textTransform:'uppercase', letterSpacing:1 }}>Analisi comparativa</div>
+          <div style={{ color:'white', fontSize:25, fontWeight:1000, lineHeight:1.05, marginTop:4 }}>Duello biologico</div>
+          <div style={{ color:'rgba(255,255,255,.56)', fontSize:12, lineHeight:1.55, marginTop:8 }}>Radar su vulnerabilità, dimensioni logaritmiche, velocità in centili, peso logaritmico e adattabilità geografica.</div>
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
+          <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} />
+          <ComparatorSelector label="Destra" value={right} animals={normalized} onChange={setRight} accent={colorRight} />
+        </div>
+        <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left?.com || 'Sinistra'}</div>
+          <div style={{ color:'rgba(255,255,255,.26)', fontSize:13, fontWeight:950 }}>VS</div>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorRight, display:'inline-block' }} />{right?.com || 'Destra'}</div>
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12 }}>
+          <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} sideLabel="Animale A" />
+          <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} sideLabel="Animale B" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 // ── Root ──────────────────────────────────────────────────────────────
 
 export default function App() {
@@ -4285,6 +4527,7 @@ export default function App() {
   const [gridPreset,setGridPreset]=useState(null);
   const [gridReturnTarget,setGridReturnTarget]=useState(null);
   const [regionsInitialView,setRegionsInitialView]=useState(null);
+  const [comparatorInitialAnimal,setComparatorInitialAnimal]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
@@ -4680,8 +4923,13 @@ const openPage = (nextPage) => {
   setSel(null);
   setGridReturnTarget(null);
   if (nextPage !== 'regions') setRegionsInitialView(null);
+  if (nextPage !== 'compare') setComparatorInitialAnimal(null);
   if (nextPage === 'grid') { setGridPreset(null); setPage('grid'); return; }
   setPage(nextPage || 'menu');
+};
+const openComparator = (animal=null) => {
+  const enrichedAnimal = animal ? { ...animal, status: normalizeAnimalStatus(statusMap[animal.id] ?? animal.status) } : null;
+  setSel(null); setGridReturnTarget(null); setComparatorInitialAnimal(enrichedAnimal); setPage('compare');
 };
 const openGridWithStatus = (statuses) => {
   setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
@@ -4705,7 +4953,7 @@ const returnFromFilteredGrid = () => {
   setSel(null); setPage('grid');
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -4744,6 +4992,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} />;
+    if (page === 'compare') return <ComparatorPage onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} />{renderDetailOverlay()}</div>;
