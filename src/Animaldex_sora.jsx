@@ -1674,35 +1674,54 @@ function useInteractiveMapControls() {
   return { zoom, pan, reset, handlers, transform, setZoom, setPan };
 }
 
+
+function countryPseudoPolygon(code, radiusLon=3.2, radiusLat=2.0) {
+  const p = countryMapPoint(code);
+  if (!Number.isFinite(p?.lon) || !Number.isFinite(p?.lat)) return null;
+  const pts = [];
+  const latScale = Math.max(.5, Math.cos((Math.PI/180) * p.lat));
+  const rLon = radiusLon / latScale;
+  for (let i=0;i<18;i++) {
+    const a = (Math.PI*2*i)/18;
+    pts.push([p.lon + Math.cos(a)*rLon, p.lat + Math.sin(a)*radiusLat]);
+  }
+  pts.push(pts[0]);
+  return { type:'Polygon', coordinates:[pts] };
+}
+
 function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#A84637', height=230, title='Mappa paesi', pointMode=false }) {
-  const { data, error } = useBioregionGeoJson();
-  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,190);
+  const { data:countryData, error:countryError } = useCountryGeoJson();
+  const { data:bioregionData } = useBioregionGeoJson();
+  const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,220);
   const selected = selectedCountry || null;
   const [hoverCountry, setHoverCountry] = useState(null);
-  const features = data?.features || [];
   const mapControls = useInteractiveMapControls();
   const points = codes.map(code => ({ code, ...countryMapPoint(code) }));
-  const featureIso2 = (feature) => String(feature?.properties?.countries_iso2 || feature?.properties?.countries_iso2_list || '')
-    .split(/[;,\s]+/)
-    .map(v => v.trim().toUpperCase())
-    .filter(Boolean);
-  const landFeatures = features.filter(f => (f.properties || {}).domain !== 'marine');
-  const activeFeatures = !pointMode ? landFeatures.filter(f => featureIso2(f).some(code => codes.includes(code))) : [];
-  const activeBounds = mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry)));
+  const activeCodeSet = new Set(codes);
+  const countryFeatures = countryData?.features || [];
+  const activeCountryFeatures = countryFeatures.filter(f => activeCodeSet.has(getCountryFeatureIso2(f)));
+  const fallbackFeatures = bioregionData?.features || [];
+  const featureIso2 = (feature) => {
+    const p = feature?.properties || {};
+    const raw = Array.isArray(p.countries_iso2_list) ? p.countries_iso2_list.join(';') : (p.countries_iso2 || p.countries_iso2_list || '');
+    return String(raw).split(/[;,\s]+/).map(v => v.trim().toUpperCase()).filter(Boolean);
+  };
+  const pseudoCountryFeatures = codes.map(code => ({ type:'Feature', properties:{ iso2:code, name:getCountryDisplayName(code) }, geometry:countryPseudoPolygon(code) })).filter(f => !!f.geometry);
+  const fallbackActive = pseudoCountryFeatures.length ? pseudoCountryFeatures : fallbackFeatures.filter(f => (f.properties || {}).domain !== 'marine' && featureIso2(f).some(code => activeCodeSet.has(code)));
+  const activeBounds = mergeProjectedBounds((activeCountryFeatures.length ? activeCountryFeatures : fallbackActive).map(f => geometryProjectedBounds(f.geometry)));
   const pointBounds = mergeProjectedBounds(points.map(p => ({ minX:p.px, minY:p.py, maxX:p.px, maxY:p.py })));
   const viewBox = pointMode
-    ? boundsToViewBox(pointBounds, codes.length > 12 ? .18 : .42)
-    : boundsToViewBox(activeBounds || pointBounds, activeFeatures.length > 8 ? .16 : .30);
+    ? boundsToViewBox(pointBounds || activeBounds, codes.length > 12 ? .18 : .42)
+    : boundsToViewBox(activeBounds || pointBounds, activeCountryFeatures.length > 14 ? .16 : .28);
   const activeCountryLabel = hoverCountry || selected;
-  const hasVector = !!data && !error;
+  const hasCountries = !!countryData && !countryError;
+  const baseCountryFeatures = hasCountries ? countryFeatures : (pseudoCountryFeatures.length ? pseudoCountryFeatures : fallbackFeatures.filter(f => (f.properties || {}).domain !== 'marine'));
 
   const countryMark = (p) => {
     const active = p.code === selected || p.code === hoverCountry;
-    const rx = active ? 13 : 8.5;
-    const fill = active ? '#72D6FF' : 'rgba(114,205,255,.20)';
     return (
       <g key={p.code} onClick={(e)=>{e.stopPropagation(); onSelectCountry?.(p.code);}} onMouseEnter={()=>setHoverCountry(p.code)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }}>
-        <circle cx={p.px} cy={p.py} r={rx} fill={fill} stroke="#72D6FF" strokeWidth={active ? 3.2 : 2.2} opacity=".98" />
+        <circle cx={p.px} cy={p.py} r={active ? 13 : 8.5} fill={active ? '#72D6FF' : 'rgba(114,205,255,.20)'} stroke="#72D6FF" strokeWidth={active ? 3.2 : 2.2} opacity=".98" />
         <circle cx={p.px} cy={p.py} r={active ? 22 : 15} fill="none" stroke="#72D6FF" strokeWidth={active ? 3 : 2} opacity={active ? .34 : .22} />
       </g>
     );
@@ -1715,47 +1734,40 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
-          <filter id="countrySatNoise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+          <filter id="countrySatNoiseV37">
+            <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="17" result="n"/>
             <feColorMatrix in="n" type="saturate" values="0"/>
-            <feComponentTransfer><feFuncA type="table" tableValues="0 0.16"/></feComponentTransfer>
+            <feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer>
           </filter>
-          <radialGradient id="countryOcean" cx="50%" cy="45%" r="70%"><stop offset="0%" stopColor="#0B2635"/><stop offset="65%" stopColor="#06131C"/><stop offset="100%" stopColor="#02070B"/></radialGradient>
+          <radialGradient id="countryOceanV37" cx="50%" cy="45%" r="72%"><stop offset="0%" stopColor="#0E3444"/><stop offset="62%" stopColor="#061722"/><stop offset="100%" stopColor="#02070B"/></radialGradient>
         </defs>
-        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#countryOcean)" />
-        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#countrySatNoise)" opacity=".55" />
+        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#countryOceanV37)" />
+        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#countrySatNoiseV37)" opacity=".62" />
         <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
-          {hasVector ? (
-            <>
-              <g opacity=".95">
-                {landFeatures.map(f => {
-                  const d = geometryToSvgPath(f.geometry, 100);
-                  if (!d) return null;
-                  return <path key={`base:${getFeatureBioregionId(f)}`} d={d} fill="rgba(86,45,40,.42)" stroke="rgba(95,190,235,.28)" strokeWidth=".42" opacity=".78" />;
-                })}
-              </g>
-              {!pointMode && (
-                <g>
-                  {activeFeatures.map(f => {
-                    const id = String(getFeatureBioregionId(f) || '');
-                    const isoCodes = featureIso2(f);
-                    const active = selected ? isoCodes.includes(selected) : isoCodes.some(code => codes.includes(code));
-                    const hovered = hoverCountry ? isoCodes.includes(hoverCountry) : false;
-                    const d = geometryToSvgPath(f.geometry, active || hovered ? 260 : 180);
-                    if (!d) return null;
-                    return <path key={`hit:${id}`} d={d} onClick={(e)=>{ e.stopPropagation(); const pick = hovered ? hoverCountry : isoCodes.find(code => codes.includes(code)); if (pick) onSelectCountry?.(pick); }} onMouseEnter={()=>setHoverCountry(isoCodes.find(code => codes.includes(code)) || null)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }} fill={active || hovered ? `${accent}CC` : `${accent}88`} stroke={active || hovered ? '#FFD9C5' : 'rgba(255,255,255,.14)'} strokeWidth={active || hovered ? 1.2 : .55} opacity={active || hovered ? .95 : .66} />;
-                  })}
-                </g>
-              )}
-              {pointMode && <g>{points.map(countryMark)}</g>}
-            </>
-          ) : (
-            <g>{points.map(countryMark)}</g>
+          <g opacity=".86">
+            {baseCountryFeatures.map((f,idx) => {
+              const iso = hasCountries ? getCountryFeatureIso2(f) : (getCountryFeatureIso2(f) || featureIso2(f).join('-'));
+              const d = geometryToSvgPath(f.geometry, 120);
+              if (!d) return null;
+              return <path key={`base-country:${iso || idx}`} d={d} fill="rgba(85,53,43,.42)" stroke="rgba(100,190,235,.24)" strokeWidth=".38" opacity=".78" />;
+            })}
+          </g>
+          {!pointMode && (
+            <g>
+              {(activeCountryFeatures.length ? activeCountryFeatures : fallbackActive).map((f,idx) => {
+                const iso = hasCountries ? getCountryFeatureIso2(f) : (getCountryFeatureIso2(f) || featureIso2(f).find(code => activeCodeSet.has(code)) || '');
+                const active = iso && (iso === selected || iso === hoverCountry);
+                const d = geometryToSvgPath(f.geometry, active ? 320 : 220);
+                if (!d) return null;
+                return <path key={`active-country:${iso || idx}`} d={d} onClick={(e)=>{ e.stopPropagation(); if (iso) onSelectCountry?.(iso); }} onMouseEnter={()=>iso && setHoverCountry(iso)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }} fill={active ? `${accent}DD` : `${accent}99`} stroke={active ? '#FFD9C5' : 'rgba(255,255,255,.18)'} strokeWidth={active ? 1.35 : .7} opacity={active ? .98 : .76} />;
+              })}
+            </g>
           )}
+          {pointMode && <g>{points.map(countryMark)}</g>}
         </g>
       </svg>
 
-      <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.86)', fontSize:12, fontWeight:950, pointerEvents:'none', textShadow:'0 2px 10px rgba(0,0,0,.65)' }}>{title}</div>
+      <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.90)', fontSize:12, fontWeight:950, pointerEvents:'none', textShadow:'0 2px 10px rgba(0,0,0,.65)' }}>{title}</div>
       <div style={{ position:'absolute', right:10, top:10, display:'flex', gap:6 }}>
         <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900 }}>⌖</button>
       </div>
@@ -2742,7 +2754,112 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
 
 // ── Detail ────────────────────────────────────────────────────────────
 const TAB_ORDER = ['abilita','statistiche','tassonomia'];
-function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
+
+function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm }) {
+  const [file, setFile] = useState(null);
+  const [preview, setPreview] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [matches, setMatches] = useState([]);
+  const [gps, setGps] = useState(null);
+  const expectedHabitats = getAnimalHabitatIds(animal || {});
+  useEffect(() => {
+    if (!navigator?.geolocation) return;
+    navigator.geolocation.getCurrentPosition(
+      pos => setGps({ lat:pos.coords.latitude, lng:pos.coords.longitude, accuracy:pos.coords.accuracy }),
+      () => setGps(null),
+      { enableHighAccuracy:true, timeout:6500, maximumAge:60000 }
+    );
+  }, []);
+  useEffect(() => {
+    if (!file) { setPreview(''); return; }
+    const url = URL.createObjectURL(file);
+    setPreview(url);
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
+  const runIdentification = async () => {
+    if (!file) { setError('Scatta o carica prima una foto.'); return; }
+    setLoading(true); setError(''); setMatches([]);
+    let publicUrl = '';
+    try {
+      if (user?.id && supabase?.storage) {
+        const cleanName = String(file.name || 'photo.jpg').replace(/[^a-z0-9._-]/gi,'_');
+        const path = `${user.id}/${animal?.id || 'unknown'}/${Date.now()}-${cleanName}`;
+        const { error:uploadError } = await supabase.storage.from('animal-photos').upload(path, file, { upsert:false, contentType:file.type || 'image/jpeg' });
+        if (!uploadError) {
+          const { data } = supabase.storage.from('animal-photos').getPublicUrl(path);
+          publicUrl = data?.publicUrl || '';
+        }
+      }
+      const payload = {
+        image_url: publicUrl,
+        expected_animal_id: animal?.id,
+        expected_sci: animal?.sci,
+        gps,
+        expected_habitat_ids: expectedHabitats,
+        candidates: (animals || []).slice(0,1200).map(a => ({ id:a.id, sci:a.sci, com:a.com, com_en:a.com_en, cls:a.cls, countries:a?.distribution?.countries_present || a?.geo?.iso?.primary || [], habitat_ids:getAnimalHabitatIds(a) }))
+      };
+      let aiMatches = [];
+      try {
+        const { data, error:fnError } = await supabase.functions.invoke('identify-animal', { body:payload });
+        if (!fnError && data?.matches?.length) aiMatches = data.matches;
+      } catch (fnErr) {
+        console.warn('[Animaldex] identify-animal non disponibile:', fnErr);
+      }
+      if (!aiMatches.length) {
+        // Fallback sicuro: non riconosce davvero l'immagine, propone conferma manuale con controlli habitat/GPS.
+        const expected = animal ? [{ animal_id:animal.id, confidence:0.72, basis:'fallback/manual-confirmation', geo_match:!!gps, habitat_match:expectedHabitats.length>0 }] : [];
+        const sameHabitat = expectedHabitats.length ? (animals || []).filter(a => a.id !== animal?.id && getAnimalHabitatIds(a).some(id => expectedHabitats.includes(id))).slice(0,2).map((a,i)=>({ animal_id:a.id, confidence:0.52 - i*.05, basis:'habitat-similar', geo_match:false, habitat_match:true })) : [];
+        aiMatches = [...expected, ...sameHabitat];
+      }
+      const hydrated = aiMatches.map(m => {
+        const a = (animals || []).find(x => Number(x.id) === Number(m.animal_id || m.id)) || (Number(m.animal_id || m.id) === Number(animal?.id) ? animal : null);
+        return a ? { ...m, animal:a } : null;
+      }).filter(Boolean).slice(0,3);
+      setMatches(hydrated);
+    } catch (err) {
+      console.warn('[Animaldex] photo recognition:', err);
+      setError(err?.message || 'Riconoscimento non riuscito.');
+    } finally {
+      setLoading(false);
+    }
+  };
+  const confirmMatch = (match) => {
+    if (!match?.animal) return;
+    onConfirm?.(match.animal, { confidence:match.confidence, gps, file, image_url:preview });
+  };
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:260, background:'rgba(0,0,0,.82)', display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:460, maxHeight:'92%', overflowY:'auto', borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:'1px solid rgba(255,255,255,.10)', boxShadow:'0 30px 80px rgba(0,0,0,.65)', padding:18 }}>
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
+          <div><div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Animaldex Vision</div><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>Fotografa e verifica</div></div>
+          <button onClick={onClose} style={{ width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button>
+        </div>
+        <label style={{ display:'block', border:'1px dashed rgba(255,255,255,.22)', borderRadius:20, padding:14, background:'rgba(255,255,255,.04)', cursor:'pointer', textAlign:'center' }}>
+          {preview ? <img src={preview} alt="foto" style={{ width:'100%', maxHeight:260, objectFit:'contain', borderRadius:16 }} /> : <div style={{ minHeight:150, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.62)', fontWeight:900 }}>📷 Scatta o carica una foto</div>}
+          <input type="file" accept="image/*" capture="environment" onChange={e=>setFile(e.target.files?.[0] || null)} style={{ display:'none' }} />
+        </label>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+          <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>GPS</div><div style={{ color:gps?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{gps ? `agganciato ±${Math.round(gps.accuracy || 0)}m` : 'in attesa / non disponibile'}</div></div>
+          <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>Habitat</div><div style={{ color:expectedHabitats.length?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{expectedHabitats.length ? `${expectedHabitats.length} habitat attesi` : 'non mappato'}</div></div>
+        </div>
+        {error && <div style={{ marginTop:12, borderRadius:14, background:'rgba(168,70,55,.18)', border:'1px solid rgba(168,70,55,.45)', color:'#FFC8BE', padding:12, fontSize:12, fontWeight:800 }}>{error}</div>}
+        <button disabled={loading} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:loading?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14 }}>{loading ? 'Analisi in corso…' : 'Analizza foto'}</button>
+        {!!matches.length && <div style={{ marginTop:16 }}>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12, fontWeight:900, marginBottom:8 }}>Risultati verificati</div>
+          {matches.map(m => <button key={m.animal.id} onClick={()=>confirmMatch(m)} style={{ width:'100%', minHeight:62, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', display:'flex', alignItems:'center', gap:12, padding:10, marginBottom:8, cursor:'pointer', fontFamily:'inherit', textAlign:'left' }}>
+            <AnimalImg a={m.animal} size={44} fontSize={22} overrideStatus="catturato" />
+            <div style={{ flex:1, minWidth:0 }}><div style={{ fontWeight:1000, fontSize:13 }}>{m.animal.com}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:11 }}>{Math.round((m.confidence || 0) * 100)}% · GPS {m.geo_match?'ok':'manuale'} · habitat {m.habitat_match?'ok':'da verificare'}</div></div>
+            <div style={{ color:'#90D84A', fontWeight:1000, fontSize:12 }}>Conferma</div>
+          </button>)}
+        </div>}
+        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>Lo status “fotografato” viene applicato solo dopo la conferma. Il riconoscimento AI è filtrato da GPS e habitat; se la Edge Function non è ancora attiva, la conferma resta manuale.</div>
+      </div>
+    </div>
+  );
+}
+
+function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, onOpenPhoto, tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -2958,7 +3075,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
         <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, margin:'18px 0 8px' }}><button data-sound="compare" onClick={()=>onOpenComparator?.(a)} style={{ aspectRatio:'1 / 1', minHeight:74, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontSize:14, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(168,70,55,.20)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:8 }}> <span style={{ fontSize:26 }}>⚔️</span><span>Comparazione</span></button><button data-sound="map" onClick={()=>onOpenLifeWeb?.(a)} style={{ aspectRatio:'1 / 1', minHeight:74, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#244A70,#2D6E96)', color:'white', fontSize:14, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(36,74,112,.24)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:8 }}> <span style={{ fontSize:26 }}>🕸️</span><span>Web</span></button></div>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10, margin:'18px 0 8px' }}><button data-sound="compare" onClick={()=>onOpenComparator?.(a)} style={{ aspectRatio:'1 / 1', minHeight:70, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontSize:12.5, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(168,70,55,.20)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:7 }}> <span style={{ fontSize:24 }}>⚔️</span><span>Comparazione</span></button><button data-sound="map" onClick={()=>onOpenLifeWeb?.(a)} style={{ aspectRatio:'1 / 1', minHeight:70, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#244A70,#2D6E96)', color:'white', fontSize:12.5, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(36,74,112,.24)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:7 }}> <span style={{ fontSize:24 }}>🕸️</span><span>Web</span></button><button data-sound="capture" onClick={()=>onOpenPhoto?.(a)} style={{ aspectRatio:'1 / 1', minHeight:70, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#2E6F56,#58A56A)', color:'white', fontSize:12.5, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(46,111,86,.24)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:7 }}> <span style={{ fontSize:24 }}>📷</span><span>Fotografa</span></button></div>
       </div>
 
       {captureStamp && (
@@ -3139,6 +3256,45 @@ function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], gray
     return <img src={current} alt="" onError={()=>setIdx(i=>i+1)} style={{ width:'100%', height, objectFit:'cover', filter:grayscale?'grayscale(1) saturate(.1)':'none', display:'block' }} />;
   }
   return <div style={{ width:'100%', height, background:`linear-gradient(125deg, ${fallbackColors[0]}, ${fallbackColors[1]} 55%, ${fallbackColors[2]})`, filter:grayscale?'grayscale(1)':'none' }} />;
+}
+
+
+let COUNTRY_GEOJSON_CACHE = null;
+let COUNTRY_GEOJSON_PROMISE = null;
+const COUNTRY_GEOJSON_URLS = ['/geo/countries.geojson','/countries.geojson','/geo/countries-lowres.geojson','/countries-lowres.geojson'];
+function useCountryGeoJson() {
+  const [data, setData] = useState(COUNTRY_GEOJSON_CACHE);
+  const [error, setError] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    if (COUNTRY_GEOJSON_CACHE) { setData(COUNTRY_GEOJSON_CACHE); return; }
+    if (!COUNTRY_GEOJSON_PROMISE) {
+      COUNTRY_GEOJSON_PROMISE = (async () => {
+        let lastErr;
+        for (const url of COUNTRY_GEOJSON_URLS) {
+          try {
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const json = await res.json();
+            COUNTRY_GEOJSON_CACHE = json;
+            return json;
+          } catch (err) { lastErr = err; }
+        }
+        throw lastErr;
+      })();
+    }
+    COUNTRY_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Animaldex] country geojson:', err); if (alive) setError(true); });
+    return () => { alive = false; };
+  }, []);
+  return { data, error };
+}
+function getCountryFeatureIso2(feature) {
+  const p = feature?.properties || {};
+  return String(p.iso2 || p.ISO_A2 || p.iso_a2 || p.ADM0_A3 || '').toUpperCase();
+}
+function getCountryFeatureName(feature) {
+  const p = feature?.properties || {};
+  return p.name || p.NAME || p.name_en || p.sovereignt || '';
 }
 
 let BIOREGION_GEOJSON_CACHE = null;
@@ -3386,7 +3542,7 @@ function AwardToast({ award, onOpen, onDismiss }) {
 
 
 
-function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish, onSkip }) {
+function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onCapture, onFinish, onSkip }) {
   if (!step) return null;
   const OCHRE = '#A84637';
   const sequence = ['grid','detail-stats','detail-abilities','detail-capture','rewards','reward-modal','regions','profile'];
@@ -3471,8 +3627,8 @@ function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish,
   return (
     <div style={{ position:'absolute', inset:0, zIndex:260, pointerEvents:'none' }}>
       <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 50% 28%, rgba(168,70,55,.08), rgba(0,0,0,.58) 42%, rgba(0,0,0,.72))', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', left:12, right:12, bottom:14, pointerEvents:'auto' }}>
-        <div style={{ background:'linear-gradient(180deg,rgba(28,28,31,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, borderRadius:28, padding:16, boxShadow:`0 24px 80px rgba(0,0,0,.62), 0 0 34px ${OCHRE}28`, overflow:'hidden' }}>
+      <div style={{ position:'absolute', left:12, right:12, bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)', pointerEvents:'auto', maxHeight:'calc(var(--animaldex-app-height, 100dvh) - 42px)', overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
+        <div style={{ background:'linear-gradient(180deg,rgba(28,28,31,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, borderRadius:28, padding:16, boxShadow:`0 24px 80px rgba(0,0,0,.62), 0 0 34px ${OCHRE}28`, overflow:'visible' }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
             <div style={{ width:52, height:52, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:27, boxShadow:`0 0 28px ${OCHRE}55`, flexShrink:0 }}>{copy.icon}</div>
             <div style={{ flex:1, minWidth:0 }}>
@@ -3504,7 +3660,8 @@ function OperationalTutorialOverlay({ step, animal, onNext, onCapture, onFinish,
           )}
 
           <div style={{ display:'flex', gap:9, marginTop:14 }}>
-            <button onClick={onSkip} style={{ height:44, padding:'0 14px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.62)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Salta</button>
+            <button onClick={onSkip} style={{ height:44, padding:'0 12px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.04)', color:'rgba(255,255,255,.62)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Salta</button>
+            {index > 0 && <button onClick={onPrev} style={{ height:44, padding:'0 12px', borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.82)', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Indietro</button>}
             {!noPrimary && <button onClick={primary} style={{ flex:1, height:44, borderRadius:15, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 12px 32px ${OCHRE}40` }}>{copy.action}</button>}
           </div>
         </div>
@@ -3537,6 +3694,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     if (!selectedCountries.length) return [];
     const set = new Set(selectedCountries);
     return animals
+      .map(a => ({ ...(LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id)) || {}), ...a }))
       .filter(a => {
         const iso = a.distribution?.countries_present || a.geo?.iso || a.iso || [];
         return iso.some(code => set.has(code));
@@ -3561,6 +3719,14 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const markRadar = (seen) => {
     if (seen && currentAnimal) setSeenAnimals(prev => Array.from(new Set([...prev, currentAnimal.id])));
     setCardIndex(i => i + 1);
+  };
+  const goBack = () => {
+    if (step === 'intro' || step === 'sync') return;
+    if (step === 'nickname') { setStep('intro'); return; }
+    if (step === 'countries') { setStep('nickname'); return; }
+    if (step === 'radar') { setStep('countries'); return; }
+    if (step === 'review') { setStep('radar'); return; }
+    if (step === 'wow') { setStep('review'); return; }
   };
 
   const runSync = async () => {
@@ -3592,7 +3758,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     }
   };
 
-  const panel = { margin:16, borderRadius:30, background:'linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.035))', border:'1px solid rgba(255,255,255,.10)', padding:18, boxShadow:'0 28px 80px rgba(0,0,0,.46)' };
+  const panel = { margin:16, borderRadius:30, background:'linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.035))', border:'1px solid rgba(255,255,255,.10)', padding:18, boxShadow:'0 28px 80px rgba(0,0,0,.46)', overflowY:'auto', WebkitOverflowScrolling:'touch' };
   const primaryButton = { width:'100%', minHeight:50, borderRadius:18, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 14px 34px ${OCHRE}38` };
   const disabledButton = { ...primaryButton, background:'#3A3A3C', color:'rgba(255,255,255,.42)', boxShadow:'none', cursor:'default' };
   const Pill = ({ children, active=false, onClick }) => <button onClick={onClick} style={{ borderRadius:999, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.10)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.055)', color:active?'#FFD4C8':'rgba(255,255,255,.74)', padding:'8px 11px', fontSize:11.5, fontWeight:900, cursor:'pointer', fontFamily:'inherit' }}>{children}</button>;
@@ -3601,7 +3767,8 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     <div style={{ height:'100%', background:`radial-gradient(circle at 50% 0%, ${OCHRE}2A, transparent 36%), linear-gradient(180deg,#111113,#050506)`, color:'white', display:'flex', flexDirection:'column', overflow:'hidden' }}>
       <div style={{ padding:'20px 18px 8px', flexShrink:0 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12 }}>
-          <div>
+          {step !== 'intro' && step !== 'sync' && <button onClick={goBack} aria-label="Indietro" style={{ width:38, height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', fontSize:22, fontWeight:1000, cursor:'pointer', flexShrink:0 }}>‹</button>}
+          <div style={{ flex:1, minWidth:0 }}>
             <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Avvio sistema</div>
             <div style={{ color:'white', fontSize:28, fontWeight:1000, letterSpacing:'-.8px', marginTop:3 }}>
               {step==='intro'?'Benvenuto esploratore':step==='nickname'?'Nome in codice':step==='countries'?'Terre esplorate':step==='radar'?'Radar avvistamenti':step==='review'?'Riepilogo missione':step==='sync'?'Sincronizzazione':'Sistema online'}
@@ -3641,7 +3808,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         <div style={panel}>
           <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Scegli un nickname. Verrà salvato nel profilo e usato come identità esploratore.</p>
           <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Lynx-7" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit' }} />
-          <button disabled={!nickname.trim()} onClick={()=>setStep('countries')} style={{ ...(nickname.trim()?primaryButton:disabledButton), marginTop:16 }}>Continua</button>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim()} onClick={()=>setStep('countries')} style={nickname.trim()?primaryButton:disabledButton}>Continua</button></div>
         </div>
       )}
 
@@ -3668,7 +3835,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{selectedCountries.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>nazioni</div></div>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{predictedUnlocks}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali potenziali</div></div>
           </div>
-          <button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={{ ...(selectedCountries.length?primaryButton:disabledButton), marginTop:12 }}>Apri radar</button>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Apri radar</button></div>
         </div>
       )}
 
@@ -3689,7 +3856,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
           ) : (
             <div style={{ flex:1, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
               <div style={{ width:'86%', maxWidth:292, borderRadius:28, background:'#202024', overflow:'hidden', boxShadow:'0 28px 70px rgba(0,0,0,.48)', border:`1px solid ${OCHRE}44` }}>
-                <AnimalImg a={{...currentAnimal, status:'ricercato'}} size={230} fontSize={82} overrideStatus="ricercato" />
+                <AnimalImg a={{...currentAnimal, status:'catturato'}} size={230} fontSize={82} overrideStatus="catturato" />
                 <div style={{ padding:15, textAlign:'center' }}>
                   <div style={{ color:'white', fontSize:19, fontWeight:1000, lineHeight:1.12 }}>{currentAnimal.com}</div>
                   <div style={{ color:'rgba(255,255,255,.45)', fontSize:12, marginTop:5, fontStyle:'italic' }}>{currentAnimal.sci}</div>
@@ -3701,7 +3868,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               </div>
             </div>
           )}
-          <button onClick={()=>setStep('review')} style={{ ...primaryButton, marginTop:14 }}>Vai al riepilogo</button>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:14 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('review')} style={primaryButton}>Vai al riepilogo</button></div>
         </div>
       )}
 
@@ -3725,7 +3892,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             {error && <div style={{ marginTop:12, borderRadius:16, background:'rgba(255,70,70,.12)', border:'1px solid rgba(255,70,70,.22)', color:'#FF9A9A', padding:12, fontSize:12, lineHeight:1.45 }}>{error}</div>}
           </div>
           <div style={{ display:'grid', gap:9 }}>
-            <button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Sincronizza e sblocca'}</button>
+            <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10 }}><button onClick={goBack} disabled={loading} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px', opacity:loading?.45:1 }}>Indietro</button><button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Sincronizza e sblocca'}</button></div>
             {error && <button onClick={()=>{ setError(''); onFinish?.({ skipReload:true }); }} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Continua comunque</button>}
           </div>
         </div>
@@ -4219,66 +4386,52 @@ function resourceFeedsAnimal(resourceId, animal) {
   if (resourceId === 'detritus') return /detrit|deposit|benthic/.test(tags) || ['filter','herbivore'].includes(group);
   return false;
 }
-function getFoodWebCandidateAnimals(allAnimals, territory, habitat, limit=10, focusAnimal=null) {
+function getFoodWebCandidateAnimals(allAnimals, territory, habitat, limit=120, focusAnimal=null) {
   const filterValue = territory?.filterValue || (territory?.id ? `ecoregion:${territory.id}` : '');
   const focus = focusAnimal ? (allAnimals || []).find(a => a.id === focusAnimal.id) || focusAnimal : null;
   let list = (allAnimals || []).filter(a => (!filterValue || matchGeographySelection(a, [filterValue])) && (!habitat?.id || animalMatchesHabitat(a, habitat?.id)));
   if (focus) {
     const focusHabitats = getAnimalHabitatIds(focus);
     const focusCountries = new Set(toArraySafe(focus?.distribution?.countries_present || focus?.geo?.iso?.primary || []));
-    list = (allAnimals || []).filter(a => {
+    const contextual = (allAnimals || []).filter(a => {
       const sameHabitat = !focusHabitats.length || getAnimalHabitatIds(a).some(id => focusHabitats.includes(id));
       const sameCountry = !focusCountries.size || toArraySafe(a?.distribution?.countries_present || a?.geo?.iso?.primary || []).some(code => focusCountries.has(code));
       return (sameHabitat || sameCountry) && (!filterValue || matchGeographySelection(a, [filterValue]));
     });
+    if (contextual.length) list = contextual;
   }
   if (list.length < 6 && habitat?.id) list = (allAnimals || []).filter(a => animalMatchesHabitat(a, habitat?.id));
-  const groups = ['herbivore','filter','omnivore','carnivore','apex'];
-  const picked = [];
-  if (focus && !picked.some(p=>p.id===focus.id)) picked.push(focus);
-  groups.forEach(g => {
-    const found = list.find(a => trophicGroup(a) === g && !picked.some(p=>p.id===a.id));
-    if (found) picked.push(found);
-  });
   list.sort((a,b)=>getAnimalPowerScore(b)-getAnimalPowerScore(a));
-  for (const a of list) { if (picked.length >= limit) break; if (!picked.some(p=>p.id===a.id)) picked.push(a); }
-  return picked.slice(0, limit);
+  if (focus && !list.some(a => a.id === focus.id)) list = [focus, ...list];
+  return Array.from(new Map(list.map(a => [a.id, a])).values()).slice(0, limit);
 }
 
 function autoArrangeLifeWebNodes(nodes = [], focusAnimalId = null) {
-  const byTier = { apex:12, carnivore:28, omnivore:48, filter:69, herbivore:74, producer:84, resource:88 };
-  const grouped = nodes.reduce((acc, node) => {
-    const key = node.group || 'omnivore';
-    (acc[key] ||= []).push(node);
-    return acc;
-  }, {});
+  const order = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
+  const yByGroup = { apex:13, carnivore:29, omnivore:48, filter:66, herbivore:73, producer:84, resource:90 };
+  const grouped = nodes.reduce((acc,node)=>{ (acc[node.group || 'omnivore'] ||= []).push(node); return acc; }, {});
+  const maxCount = Math.max(1, ...Object.values(grouped).map(arr => arr.length));
+  const canvasWidth = Math.max(100, 24 + maxCount * 13);
   const arranged = [];
-  Object.entries(grouped).forEach(([group, groupNodes]) => {
-    const count = groupNodes.length;
-    const focusIndex = groupNodes.findIndex(node => node.animalId === focusAnimalId);
-    const sorted = [...groupNodes].sort((a,b)=> (a.animalId === focusAnimalId ? -1 : b.animalId === focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
-    sorted.forEach((node, idx) => {
-      let x;
-      if (group === 'resource') x = count === 1 ? 50 : 14 + idx * (72 / Math.max(1, count - 1));
-      else if (node.animalId === focusAnimalId) x = 50;
-      else {
-        const spread = Math.min(34, 18 + count * 3.2);
-        const leftCount = Math.ceil((count - (focusIndex >= 0 ? 1 : 0)) / 2);
-        const order = focusIndex >= 0 && idx > 0 ? idx - 1 : idx;
-        const side = order < leftCount ? -1 : 1;
-        const laneIndex = order < leftCount ? leftCount - order : order - leftCount + 1;
-        x = 50 + side * Math.min(spread, 8 + laneIndex * (spread / Math.max(2, leftCount + 1)));
-      }
-      arranged.push({ ...node, x:Math.max(10, Math.min(90, x)), y:byTier[group] ?? 50 });
+  order.forEach(group => {
+    const arr = [...(grouped[group] || [])].sort((a,b)=> (a.animalId === focusAnimalId ? -1 : b.animalId === focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
+    const count = arr.length;
+    if (!count) return;
+    const usable = canvasWidth - 18;
+    const step = count === 1 ? 0 : usable / (count - 1);
+    arr.forEach((node,idx) => {
+      const baseX = count === 1 ? canvasWidth / 2 : 9 + idx * step;
+      const wobble = (idx % 2 ? 2.6 : -2.6) * Math.min(1, count / 12);
+      arranged.push({ ...node, x: node.animalId === focusAnimalId ? canvasWidth / 2 : Math.max(7, Math.min(canvasWidth - 7, baseX + wobble)), y:yByGroup[group] ?? 50, layoutWidth:canvasWidth });
     });
   });
   return arranged;
 }
 
 function buildLifeWebGraph(allAnimals, territory, habitat, focusAnimal=null, forcedAnimalIds=[]) {
-  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 12, focusAnimal);
+  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 120, focusAnimal);
   const extra = (allAnimals || []).filter(a => forcedAnimalIds.includes(a.id) && !animals.some(p => p.id === a.id));
-  const pickedAnimals = [...animals, ...extra].slice(0, 14);
+  const pickedAnimals = [...animals, ...extra].slice(0, 120);
   const resourceIds = (HABITAT_RESOURCE_MAP[normalizeHabitatId(habitat?.id)] || inferDefaultHabitatsForTerritory(territory).flatMap(h=>HABITAT_RESOURCE_MAP[h] || []) || ['grass','insects','detritus']).slice(0,5);
   const animalNodes = pickedAnimals.map(a => ({ id:`a:${a.id}`, animalId:a.id, type:'animal', label:a.com, sci:a.sci, group:trophicGroup(a), cls:a.cls, power:getAnimalPowerScore(a), image_url:a.image_url }));
   const resourceNodes = resourceIds.map((r)=>({ id:`res:${r}`, type:'resource', label:RESOURCE_LABELS[r] || r, group:'resource', power:0 }));
@@ -4290,7 +4443,7 @@ function buildLifeWebGraph(allAnimals, territory, habitat, focusAnimal=null, for
     if (rel) edges.push({ id:`a:${prey.id}->a:${pred.id}`, source:`a:${prey.id}`, target:`a:${pred.id}`, relation_type:'eats', ...rel });
   }
   const edgeWeight = { likely:3, possible:2, rare:1 };
-  const limitedEdges = edges.sort((a,b)=>((edgeWeight[b.confidence] || 0) - (edgeWeight[a.confidence] || 0)) || (a.relation_type==='resource_use'?-1:1)).slice(0,28);
+  const limitedEdges = edges.sort((a,b)=>((edgeWeight[b.confidence] || 0) - (edgeWeight[a.confidence] || 0)) || (a.relation_type==='resource_use'?-1:1)).slice(0,180);
   return { nodes, edges:limitedEdges, animals:pickedAnimals, resources:resourceIds, focusAnimalId:focusAnimal?.id || null };
 }
 
@@ -4321,96 +4474,291 @@ function LifeWebMiniGrid({ animals = [], onOpenAnimal }) {
   );
 }
 
+function LifeWebNodeModal({ node, graph, nodes, onClose, onOpenAnimal, onToggleRemove, removed }) {
+  if (!node) return null;
+  const nodeById = Object.fromEntries((nodes || []).map(n => [n.id, n]));
+  const animalById = Object.fromEntries((graph.allAnimals || graph.animals || []).map(a => [a.id, a]));
+  const incoming = (graph.edges || []).filter(e => e.target === node.id).map(e => nodeById[e.source]).filter(Boolean);
+  const outgoing = (graph.edges || []).filter(e => e.source === node.id).map(e => nodeById[e.target]).filter(Boolean);
+  const currentAnimal = node.type === 'animal' ? animalById[node.animalId] : null;
+  const row = (label, arr, tone) => (
+    <div style={{ marginTop:14 }}>
+      <div style={{ color:tone, fontSize:12, fontWeight:1000, marginBottom:8 }}>{label}</div>
+      <div style={{ display:'flex', gap:10, overflowX:'auto', WebkitOverflowScrolling:'touch', paddingBottom:4 }}>
+        {arr.length ? arr.map(n => {
+          const a = n.type === 'animal' ? animalById[n.animalId] : null;
+          return <button key={n.id} onClick={()=>a && onOpenAnimal?.(a)} style={{ width:86, flex:'0 0 86px', minHeight:100, borderRadius:16, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.055)', color:'white', padding:8, fontFamily:'inherit', cursor:a?'pointer':'default' }}>{a ? <AnimalImg a={a} size={56} fontSize={22} overrideStatus="catturato" /> : <div style={{ width:56, height:56, borderRadius:18, margin:'0 auto', background:'rgba(144,216,74,.15)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:22 }}>✦</div>}<div style={{ fontSize:10.5, fontWeight:900, lineHeight:1.1, marginTop:6 }}>{clampWholeWords(n.label, 22)}</div></button>;
+        }) : <div style={{ color:'rgba(255,255,255,.42)', fontSize:12 }}>Nessun nodo diretto</div>}
+      </div>
+    </div>
+  );
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.80)', zIndex:240, display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:460, maxHeight:'92%', overflowY:'auto', borderRadius:28, background:'linear-gradient(180deg,#202126,#111216)', border:`1px solid ${nodeColorForGroup(node.group)}66`, boxShadow:'0 30px 80px rgba(0,0,0,.58)', padding:18 }}>
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>{node.label}</div><button onClick={onClose} style={{ width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button></div>
+        <div style={{ display:'flex', gap:14, alignItems:'center' }}>
+          <div style={{ width:104, height:104, borderRadius:34, background:`${nodeColorForGroup(node.group)}22`, border:`3px solid ${nodeColorForGroup(node.group)}`, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>{currentAnimal ? <AnimalImg a={currentAnimal} size={94} fontSize={32} overrideStatus="catturato" /> : <span style={{ fontSize:44, color:'white' }}>✦</span>}</div>
+          <div style={{ flex:1, minWidth:0 }}><div style={{ color:nodeColorForGroup(node.group), fontSize:12, fontWeight:1000, textTransform:'uppercase' }}>{node.type==='resource'?'Risorsa':node.group}</div><div style={{ color:'rgba(255,255,255,.66)', fontSize:12, lineHeight:1.5, marginTop:6 }}>{node.type==='animal' ? `${node.cls || ''} · power ${node.power || 0}` : 'Nodo base che sostiene la rete.'}</div></div>
+        </div>
+        {row('Predatori / consumatori collegati', outgoing, '#FF7A88')}
+        {row('Prede / risorse consumate', incoming, '#90D84A')}
+        {currentAnimal && <button onClick={()=>onOpenAnimal?.(currentAnimal)} style={{ marginTop:16, width:'100%', height:44, borderRadius:14, border:'none', background:'#244A70', color:'white', fontWeight:1000 }}>Apri scheda animale</button>}
+        <button onClick={()=>onToggleRemove?.(node.id)} style={{ marginTop:10, width:'100%', height:44, borderRadius:14, border:'none', background:removed?.has?.(node.id)?'#90D84A':'#A84637', color:'white', fontWeight:1000 }}>{removed?.has?.(node.id)?'Ripristina nodo':'Rimuovi dal web'}</button>
+      </div>
+    </div>
+  );
+}
+
+
 function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
-  const [nodes, setNodes] = useState(graph.nodes || []);
+  const WIDTH = 920;
+  const HEIGHT = 650;
+  const [nodes, setNodes] = useState([]);
+  const nodesRef = useRef([]);
+  const alphaRef = useRef(0.9);
+  const rafRef = useRef(null);
+  const dragRef = useRef(null);
   const [removed, setRemoved] = useState(new Set());
   const [selected, setSelected] = useState(null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [availableAnimals, setAvailableAnimals] = useState([]);
   const [equilibrium, setEquilibrium] = useState(100);
-  const dragRef = useRef(null);
   const mapControls = useInteractiveMapControls();
 
-  useEffect(()=>{
-    setNodes(graph.nodes || []);
+  const radiusFor = (n) => n.type === 'resource' ? 22 : n.group === 'apex' ? 34 : n.group === 'carnivore' ? 31 : n.group === 'omnivore' ? 29 : 27;
+  const tierY = (group) => ({ apex:96, carnivore:190, omnivore:315, filter:442, herbivore:465, producer:535, resource:575 }[group] ?? 330);
+
+  const initNodes = (sourceNodes = graph.nodes || []) => {
+    const grouped = sourceNodes.reduce((acc,n)=>{ (acc[n.group || 'omnivore'] ||= []).push(n); return acc; }, {});
+    const order = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
+    const out = [];
+    order.forEach(group => {
+      const arr = [...(grouped[group] || [])].sort((a,b)=> (a.animalId === graph.focusAnimalId ? -1 : b.animalId === graph.focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
+      const count = arr.length;
+      if (!count) return;
+      const rowW = Math.min(WIDTH - 120, Math.max(260, count * 78));
+      const startX = WIDTH/2 - rowW/2;
+      arr.forEach((n, idx) => {
+        const x = count === 1 ? WIDTH/2 : startX + (idx + .5) * (rowW / count);
+        out.push({ ...n, x, y:tierY(group) + (idx % 2 ? 12 : -12), vx:0, vy:0, fx:null, fy:null });
+      });
+    });
+    return out;
+  };
+
+  const nodeById = Object.fromEntries((nodes || []).map(n => [n.id, n]));
+  const stressSet = new Set((graph.edges || []).filter(e => removed.has(e.source) || removed.has(e.target)).flatMap(e => [e.source, e.target]));
+
+  const stepSimulation = () => {
+    const arr = nodesRef.current;
+    if (!arr.length) return;
+    const map = Object.fromEntries(arr.map(n => [n.id, n]));
+    const alpha = alphaRef.current;
+
+    // Link spring: source -> target
+    (graph.edges || []).forEach(edge => {
+      const s = map[edge.source], t = map[edge.target];
+      if (!s || !t) return;
+      const dx = (t.x - s.x) || 0.01;
+      const dy = (t.y - s.y) || 0.01;
+      const dist = Math.sqrt(dx*dx + dy*dy) || 1;
+      const desired = edge.relation_type === 'resource_use' ? 138 : 172;
+      const force = (dist - desired) * 0.010 * alpha;
+      const fx = dx / dist * force;
+      const fy = dy / dist * force;
+      if (!s.fx && !removed.has(s.id)) { s.vx += fx; s.vy += fy; }
+      if (!t.fx && !removed.has(t.id)) { t.vx -= fx; t.vy -= fy; }
+    });
+
+    // Repulsion and collision
+    for (let i=0; i<arr.length; i++) {
+      const a = arr[i];
+      if (removed.has(a.id)) continue;
+      for (let j=i+1; j<arr.length; j++) {
+        const b = arr[j];
+        if (removed.has(b.id)) continue;
+        let dx = (b.x - a.x) || 0.01;
+        let dy = (b.y - a.y) || 0.01;
+        let dist2 = dx*dx + dy*dy;
+        let dist = Math.sqrt(dist2) || 1;
+        const minDist = radiusFor(a) + radiusFor(b) + 42;
+        const charge = -1850 * alpha / Math.max(280, dist2);
+        const fx = dx / dist * charge;
+        const fy = dy / dist * charge;
+        if (!a.fx) { a.vx += fx; a.vy += fy; }
+        if (!b.fx) { b.vx -= fx; b.vy -= fy; }
+        if (dist < minDist) {
+          const push = (minDist - dist) * 0.038 * alpha;
+          const px = dx / dist * push;
+          const py = dy / dist * push;
+          if (!a.fx) { a.vx -= px; a.vy -= py; }
+          if (!b.fx) { b.vx += px; b.vy += py; }
+        }
+      }
+    }
+
+    arr.forEach(n => {
+      if (removed.has(n.id)) return;
+      const targetY = tierY(n.group);
+      const targetX = n.animalId === graph.focusAnimalId ? WIDTH / 2 : WIDTH / 2;
+      if (!n.fx) {
+        n.vx += (targetX - n.x) * 0.0008 * alpha;
+        n.vy += (targetY - n.y) * 0.018 * alpha;
+      }
+      // Keep inside viewport with soft walls
+      if (n.x < 56) n.vx += (56 - n.x) * 0.035;
+      if (n.x > WIDTH - 56) n.vx -= (n.x - WIDTH + 56) * 0.035;
+      if (n.y < 54) n.vy += (54 - n.y) * 0.035;
+      if (n.y > HEIGHT - 54) n.vy -= (n.y - HEIGHT + 54) * 0.035;
+
+      if (n.fx != null) { n.x = n.fx; n.y = n.fy; n.vx = 0; n.vy = 0; }
+      else {
+        n.vx *= 0.82; n.vy *= 0.82;
+        n.x += n.vx; n.y += n.vy;
+      }
+    });
+
+    alphaRef.current = Math.max(0.015, alpha * 0.985);
+    setNodes(arr.map(n => ({ ...n })));
+    rafRef.current = requestAnimationFrame(stepSimulation);
+  };
+
+  const restartSimulation = (hot=0.75) => {
+    alphaRef.current = Math.max(alphaRef.current, hot);
+    if (!rafRef.current) rafRef.current = requestAnimationFrame(stepSimulation);
+  };
+
+  useEffect(() => {
+    const init = initNodes(graph.nodes || []);
+    nodesRef.current = init;
+    setNodes(init.map(n=>({ ...n })));
     setRemoved(new Set());
     setSelected(null);
-    setAvailableAnimals((graph.allAnimals || []).filter(a => !(graph.animals || []).some(g => g.id === a.id)).slice(0, 60));
+    setAvailableAnimals((graph.allAnimals || []).filter(a => !(graph.animals || []).some(g => g.id === a.id)).slice(0, 180));
+    mapControls.reset();
+    restartSimulation(0.95);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); rafRef.current = null; };
   }, [graph]);
 
   useEffect(() => {
     const hiddenIds = new Set([...removed].filter(id => id.startsWith('a:')).map(id => id.replace(/^a:/,'')));
     const totalAnimals = nodes.filter(n => n.type === 'animal').length || 1;
     const healthyAnimals = nodes.filter(n => n.type === 'animal' && !removed.has(n.id)).length;
-    const impactedTargets = new Set(graph.edges.filter(e => removed.has(e.source) || removed.has(e.target)).map(e => e.target));
-    const eq = Math.max(0, Math.round((healthyAnimals / totalAnimals) * 100 - impactedTargets.size * 3));
+    const impactedTargets = new Set((graph.edges || []).filter(e => removed.has(e.source)).map(e => e.target));
+    const eq = Math.max(0, Math.round((healthyAnimals / totalAnimals) * 100 - impactedTargets.size * 2.5));
     setEquilibrium(Math.min(100, Math.max(0, eq)));
     onGraphChange?.({ removedIds:[...hiddenIds], visibleAnimalIds:nodes.filter(n => n.type === 'animal' && !removed.has(n.id)).map(n => n.animalId) });
-  }, [removed, nodes, graph.edges]);
+  }, [removed, nodes.length, graph.edges]);
 
-  const nodeMap = Object.fromEntries(nodes.map(n=>[n.id,n]));
-  const stressSet = new Set(graph.edges.filter(e=>removed.has(e.source) || removed.has(e.target)).flatMap(e => [e.source, e.target]));
-  const toSvgPoint = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    return { x:Math.max(5,Math.min(95,((e.clientX-rect.left)/rect.width)*100)), y:Math.max(7,Math.min(93,((e.clientY-rect.top)/rect.height)*100)) };
+  const svgPoint = (e) => {
+    const rect = e.currentTarget.ownerSVGElement?.getBoundingClientRect?.() || e.currentTarget.getBoundingClientRect();
+    return {
+      x: Math.max(30, Math.min(WIDTH - 30, ((e.clientX - rect.left) / rect.width) * WIDTH)),
+      y: Math.max(30, Math.min(HEIGHT - 30, ((e.clientY - rect.top) / rect.height) * HEIGHT)),
+    };
   };
-  const reflow = (nextNodes) => setNodes(autoArrangeLifeWebNodes(nextNodes.map(n => ({ ...n, focusAnimalId:graph.focusAnimalId })), graph.focusAnimalId));
-  const startDrag = (e,node) => { e.stopPropagation(); dragRef.current = node.id; setSelected(node); e.currentTarget.setPointerCapture?.(e.pointerId); };
-  const moveDrag = (e) => { if (!dragRef.current) return; const p=toSvgPoint(e); setNodes(prev=>prev.map(n=>n.id===dragRef.current?{...n,x:p.x,y:p.y}:n)); };
-  const stopDrag = () => { if (!dragRef.current) return; dragRef.current=null; setTimeout(()=>reflow(nodes), 120); };
-  const toggleRemoved = (id) => setRemoved(prev => { const n=new Set(prev); n.has(id)?n.delete(id):n.add(id); return n; });
+  const startDrag = (e,node) => {
+    e.stopPropagation();
+    const target = nodesRef.current.find(n => n.id === node.id);
+    if (!target) return;
+    dragRef.current = target.id;
+    target.fx = target.x;
+    target.fy = target.y;
+    alphaRef.current = 0.55;
+    restartSimulation(0.55);
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  };
+  const moveDrag = (e) => {
+    if (!dragRef.current) return;
+    const p = svgPoint(e);
+    const target = nodesRef.current.find(n => n.id === dragRef.current);
+    if (!target) return;
+    target.fx = p.x;
+    target.fy = p.y;
+    target.x = p.x;
+    target.y = p.y;
+    setNodes(nodesRef.current.map(n => ({ ...n })));
+  };
+  const stopDrag = () => {
+    if (!dragRef.current) return;
+    const target = nodesRef.current.find(n => n.id === dragRef.current);
+    if (target) { target.fx = null; target.fy = null; }
+    dragRef.current = null;
+    restartSimulation(0.45);
+  };
+  const toggleRemoved = (id) => {
+    setRemoved(prev => {
+      const next = new Set(prev);
+      next.has(id) ? next.delete(id) : next.add(id);
+      return next;
+    });
+    restartSimulation(0.6);
+  };
   const addAnimal = (animal) => {
     if (!animal) return;
-    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url };
-    const nextNodes = [...nodes.filter(n => n.id !== node.id), node];
-    reflow(nextNodes);
-    setPickerOpen(false);
+    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, x:WIDTH/2 + (Math.random()*120-60), y:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
+    if (nodesRef.current.some(n => n.id === node.id)) return;
+    nodesRef.current = [...nodesRef.current, node];
+    setNodes(nodesRef.current.map(n=>({ ...n })));
     setAvailableAnimals(prev => prev.filter(a => a.id !== animal.id));
+    setPickerOpen(false);
+    restartSimulation(0.9);
   };
+
+  const activeEdges = graph.edges || [];
   return (
     <div style={{ background:'#0E1116', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:12, boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto auto auto auto', gap:8, alignItems:'center', marginBottom:10 }}>
-        <div style={{ display:'flex', gap:10, alignItems:'center', flexWrap:'wrap' }}>
+        <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Equilibrio <span style={{ color: equilibrium >= 70 ? '#90D84A' : equilibrium >= 40 ? '#F0B24E' : '#FF6B6B' }}>{equilibrium}%</span></div>
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Animali <span style={{ color:'#74C7FF' }}>{nodes.filter(n=>n.type==='animal' && !removed.has(n.id)).length}</span></div>
         </div>
-        <button data-sound="filter" onClick={()=>setPickerOpen(v=>!v)} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>+ Aggiungi</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom ? mapControls.setZoom(z=>z-0.2) : null;}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom ? mapControls.setZoom(z=>z+0.2) : null;}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); reflow(nodes);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Ricentra</button>
+        <button data-sound="filter" onClick={()=>setPickerOpen(v=>!v)} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>+ Aggiungi</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.55,z-0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.min(3.8,z+0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); restartSimulation(0.8);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
       </div>
       {pickerOpen && (
         <div style={{ marginBottom:10, maxHeight:148, overflowY:'auto', borderRadius:16, padding:10, background:'rgba(255,255,255,.04)', border:'1px solid rgba(255,255,255,.08)', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-          {availableAnimals.slice(0,24).map(a => <button key={a.id} onClick={()=>addAnimal(a)} style={{ minHeight:40, borderRadius:11, border:'1px solid rgba(255,255,255,.08)', background:'#15171B', color:'white', display:'flex', alignItems:'center', gap:8, padding:'0 10px', cursor:'pointer', fontFamily:'inherit' }}><span style={{ width:18, textAlign:'center' }}>+</span><span style={{ flex:1, textAlign:'left', fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{a.com}</span></button>)}
+          {availableAnimals.slice(0,50).map(a => <button key={a.id} onClick={()=>addAnimal(a)} style={{ minHeight:40, borderRadius:11, border:'1px solid rgba(255,255,255,.08)', background:'#15171B', color:'white', display:'flex', alignItems:'center', gap:8, padding:'0 10px', cursor:'pointer', fontFamily:'inherit' }}><span style={{ width:18, textAlign:'center' }}>+</span><span style={{ flex:1, textAlign:'left', fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{a.com}</span></button>)}
         </div>
       )}
       <div {...mapControls.handlers} style={{ borderRadius:18, overflow:'hidden', touchAction:'none' }}>
-        <svg viewBox="0 0 100 100" onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:480, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 45%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
-          <defs><marker id="lifeArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,.55)" /></marker></defs>
+        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:560, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
+          <defs>
+            <marker id="lifeArrowV38" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker>
+            <filter id="softLifeGlow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
           <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
-            {graph.edges.map(e=>{ const s=nodeMap[e.source], t=nodeMap[e.target]; if(!s||!t || removed.has(s.id) || removed.has(t.id)) return null; const stressed = stressSet.has(e.source) || stressSet.has(e.target); return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={stressed?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={stressed?0.9:0.45} markerEnd="url(#lifeArrow)" opacity={stressed ? .95 : .74} />; })}
-            {nodes.map(n=>{ const color=nodeColorForGroup(n.group); const isRemoved=removed.has(n.id); const stressed=stressSet.has(n.id); const selectedOn=selected?.id===n.id; return (
-              <g key={n.id} transform={`translate(${n.x},${n.y})`} onPointerDown={(e)=>startDrag(e,n)} onClick={(e)=>{e.stopPropagation();setSelected(n);}} style={{ cursor:'grab', opacity:isRemoved ? .18 : 1, animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
-                <circle r={n.type==='resource'?5.9:7.3} fill={n.type==='resource' ? '#252635' : `${color}20`} stroke={isRemoved?'#666':color} strokeWidth={selectedOn?1.45:.78} filter={selectedOn?`drop-shadow(0 0 6px ${color})`:'none'} />
-                <LifeWebNodeAvatar node={{ ...n, focusAnimalId:graph.focusAnimalId }} color={color} />
-                <text y="10.8" textAnchor="middle" fill="rgba(255,255,255,.92)" fontSize="2.25" fontWeight="900">{n.type==='resource'?'Risorsa':clampWholeWords(n.label, 16)}</text>
-              </g>
-            );})}
+            {activeEdges.map(e=>{
+              const s = nodeById[e.source], t = nodeById[e.target];
+              if(!s||!t) return null;
+              const warning = removed.has(e.source) || removed.has(e.target);
+              const hidden = removed.has(e.source) && removed.has(e.target);
+              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={warning?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={warning?3:1.2} markerEnd="url(#lifeArrowV38)" strokeDasharray={warning?'8 6':'none'} opacity={hidden ? .18 : warning ? .95 : .72} />;
+            })}
+            {nodes.map(n=>{
+              const color=nodeColorForGroup(n.group);
+              const isRemoved=removed.has(n.id);
+              const stressed=stressSet.has(n.id);
+              const r = isRemoved ? 2 : radiusFor(n);
+              return (
+                <g key={n.id} transform={`translate(${n.x},${n.y})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', opacity:isRemoved ? .20 : 1, animation:stressed && !isRemoved?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
+                  <circle r={r + 7} fill={`${color}18`} filter="url(#softLifeGlow)" />
+                  <circle r={r} fill={n.type==='resource' ? '#252635' : `${color}25`} stroke={isRemoved?'#666':color} strokeWidth={n.type==='resource'?5:6} />
+                  <g transform={`scale(${Math.max(1, r/22)})`}><LifeWebNodeAvatar node={{ ...n, focusAnimalId:graph.focusAnimalId }} color={color} /></g>
+                  <text x={r + 12} y="4" fill="rgba(255,255,255,.92)" fontSize="14" fontWeight="900" pointerEvents="none">{n.type==='resource'?'Risorsa':clampWholeWords(n.label, 18)}</text>
+                </g>
+              );
+            })}
           </g>
         </svg>
       </div>
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:10, alignItems:'center', marginTop:10 }}>
-        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{removed.size ? 'Le linee rosse indicano squilibri: l’ecosistema ricalcola automaticamente la disposizione.' : 'Trascina, aggiungi o rimuovi nodi: la rete si riassesta automaticamente in una forma armonica.'}</div>
-        <button data-sound="filter" onClick={()=>{ setNodes(graph.nodes || []); setRemoved(new Set()); setSelected(null); mapControls.reset(); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
+        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{removed.size ? 'Le linee rosse tratteggiate mostrano dipendenze colpite: doppio tap o dettaglio nodo per ripristinare.' : 'Force layout attivo: trascina un nodo, doppio tap per rimuoverlo, usa pinch/zoom per esplorare la rete.'}</div>
+        <button data-sound="filter" onClick={()=>{ const init = initNodes(graph.nodes || []); nodesRef.current = init; setNodes(init.map(n=>({ ...n }))); setRemoved(new Set()); setSelected(null); mapControls.reset(); restartSimulation(0.95); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
       </div>
-      {selected && (
-        <div style={{ marginTop:10, borderRadius:16, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:12, display:'flex', gap:10, alignItems:'center' }}>
-          <div style={{ width:44, height:44, borderRadius:15, background:`${nodeColorForGroup(selected.group)}22`, color:nodeColorForGroup(selected.group), display:'flex', alignItems:'center', justifyContent:'center', fontSize:20, fontWeight:1000 }}>{selected.type==='resource'?'✦':'●'}</div>
-          <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontWeight:1000, fontSize:14, lineHeight:1.15 }}>{selected.label}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:11, marginTop:3 }}>{selected.type==='resource'?'Risorsa non animale':`${selected.group} · power ${selected.power}`}</div></div>
-          {selected.type==='animal' && <button data-sound="tap" onClick={()=>onOpenAnimal?.(graph.allAnimals.find(a=>a.id===selected.animalId) || graph.animals.find(a=>a.id===selected.animalId))} style={{ height:36, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 10px' }}>Scheda</button>}
-          <button data-sound="capture" onClick={()=>toggleRemoved(selected.id)} style={{ height:36, borderRadius:12, border:'none', background:removed.has(selected.id)?'#90D84A':'#A84637', color:'white', fontWeight:900, padding:'0 10px' }}>{removed.has(selected.id)?'Ripristina':'Rimuovi'}</button>
-        </div>
-      )}
+      {selected && <LifeWebNodeModal node={selected} graph={graph} nodes={nodes} removed={removed} onClose={()=>setSelected(null)} onOpenAnimal={onOpenAnimal} onToggleRemove={toggleRemoved} />}
     </div>
   );
 }
@@ -5059,10 +5407,10 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel }) {
 }
 function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = null }) {
   const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })), [animals, statusMap]);
-  const firstDefault = initialAnimal ? normalized.find(a=>a.id===initialAnimal.id) || initialAnimal : normalized[0];
+  const firstDefault = initialAnimal ? normalized.find(a=>a.id===initialAnimal.id) || initialAnimal : null;
   const [left,setLeft] = useState(firstDefault || null);
-  const [right,setRight] = useState(() => normalized.find(a => a.id !== firstDefault?.id) || null);
-  useEffect(()=>{ if (initialAnimal) setLeft(normalized.find(a=>a.id===initialAnimal.id) || initialAnimal); }, [initialAnimal?.id, normalized.length]);
+  const [right,setRight] = useState(null);
+  useEffect(()=>{ setLeft(initialAnimal ? (normalized.find(a=>a.id===initialAnimal.id) || initialAnimal) : null); setRight(null); }, [initialAnimal?.id, normalized.length]);
   const bench = useMemo(() => getComparatorBenchmarks(normalized), [normalized]);
   const leftMetrics = left ? getComparatorMetrics(left, bench) : null;
   const rightMetrics = right ? getComparatorMetrics(right, bench) : null;
@@ -5120,6 +5468,7 @@ export default function App() {
   const [regionsInitialView,setRegionsInitialView]=useState(null);
   const [comparatorInitialAnimal,setComparatorInitialAnimal]=useState(null);
   const [lifeWebInitialAnimal,setLifeWebInitialAnimal]=useState(null);
+  const [photoTarget,setPhotoTarget]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
@@ -5433,6 +5782,14 @@ export default function App() {
     if (tutorialStep === 'reward-modal') { setSel(null); setRegionsInitialView('continents'); setPage('regions'); setTutorialStep('regions'); return; }
     if (tutorialStep === 'regions') { setSel(null); setPage('profile'); setTutorialStep('profile'); return; }
   };
+  const handleTutorialPrev = () => {
+    if (tutorialStep === 'profile') { setPage('regions'); setTutorialStep('regions'); return; }
+    if (tutorialStep === 'regions') { setPage('badges'); setTutorialStep('reward-modal'); return; }
+    if (tutorialStep === 'reward-modal') { setTutorialStep('rewards'); return; }
+    if (tutorialStep === 'detail-capture') { setTutorialStep('detail-abilities'); return; }
+    if (tutorialStep === 'detail-abilities') { setTutorialStep('detail-stats'); return; }
+    if (tutorialStep === 'detail-stats') { setSel(null); setPage('grid'); setTutorialStep('grid'); return; }
+  };
 
   const handleTutorialAbilityClick = () => {
     if (tutorialStep === 'detail-abilities') {
@@ -5519,8 +5876,9 @@ export default function App() {
 const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
 const openPage = (nextPage) => {
   setSel(null);
+  setPhotoTarget(null);
   setGridReturnTarget(null);
-  if (nextPage !== 'regions') setRegionsInitialView(null);
+  setRegionsInitialView(null);
   if (nextPage !== 'compare') setComparatorInitialAnimal(null);
   if (nextPage !== 'lifeweb') setLifeWebInitialAnimal(null);
   if (nextPage === 'grid') { setGridPreset(null); setPage('grid'); return; }
@@ -5533,6 +5891,31 @@ const openComparator = (animal=null) => {
 const openLifeWeb = (animal=null) => {
   const enrichedAnimal = animal ? { ...animal, status: normalizeAnimalStatus(statusMap[animal.id] ?? animal.status) } : null;
   setSel(null); setGridReturnTarget(null); setLifeWebInitialAnimal(enrichedAnimal); setPage('lifeweb');
+};
+const openPhotoRecognition = (animal=null) => {
+  const enrichedAnimal = animal ? { ...animal, status: normalizeAnimalStatus(statusMap[animal.id] ?? animal.status) } : null;
+  setPhotoTarget(enrichedAnimal);
+};
+const confirmPhotoRecognition = async (animal, meta={}) => {
+  if (!animal?.id) return;
+  setPhotoTarget(null);
+  await handleStatusChange(animal.id, 'catturato');
+  try {
+    if (user?.id) {
+      await supabase.from('animal_photos').insert({
+        user_id:user.id,
+        animal_id:animal.id,
+        ai_guess_animal_id:animal.id,
+        ai_confidence:meta.confidence || null,
+        confirmed_by_user:true,
+        lat:meta.gps?.lat || null,
+        lng:meta.gps?.lng || null,
+        created_at:new Date().toISOString(),
+      });
+    }
+  } catch (err) {
+    console.warn('[Animaldex] animal_photos non bloccante:', err);
+  }
 };
 const openHabitatGrid = (ecoregion, habitat) => {
   if (!ecoregion || !habitat) return;
@@ -5563,7 +5946,7 @@ const returnFromFilteredGrid = () => {
   setSel(null); setPage('grid');
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -5616,9 +5999,10 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   return (
     <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
-      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
+      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
+      {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
     </div>
   );
 }
