@@ -1531,6 +1531,34 @@ function clampWholeWords(text, maxChars = 31) {
   return out || clean.slice(0, maxChars).replace(/\s+\S*$/,'');
 }
 
+
+function useAppViewportHeight() {
+  const [h, setH] = useState('100dvh');
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const apply = () => {
+      const vv = window.visualViewport;
+      const next = Math.max(320, Math.round(vv?.height || window.innerHeight || document.documentElement.clientHeight || 800));
+      const px = `${next}px`;
+      document.documentElement.style.setProperty('--animaldex-app-height', px);
+      document.body.style.minHeight = px;
+      setH(px);
+    };
+    apply();
+    window.addEventListener('resize', apply);
+    window.addEventListener('orientationchange', apply);
+    window.visualViewport?.addEventListener('resize', apply);
+    window.visualViewport?.addEventListener('scroll', apply);
+    return () => {
+      window.removeEventListener('resize', apply);
+      window.removeEventListener('orientationchange', apply);
+      window.visualViewport?.removeEventListener('resize', apply);
+      window.visualViewport?.removeEventListener('scroll', apply);
+    };
+  }, []);
+  return h;
+}
+
 function useInteractiveMapControls() {
   const [zoom, setZoomState] = useState(1);
   const [pan, setPanState] = useState({x:0,y:0});
@@ -2584,7 +2612,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
   };
 
   const boxStyle = visible ? {
-    position:'fixed', left:0, top:0, width:'100vw', height:'100vh',
+    position:'fixed', left:0, top:0, width:'100vw', height:'var(--animaldex-app-height, 100dvh)',
     background: bgColor || '#1a1a1c',
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
@@ -3078,7 +3106,7 @@ function RegionArt({ src, fallbackColors = ['#2B5D58','#4F8B78','#203A3B'], gray
 
 let BIOREGION_GEOJSON_CACHE = null;
 let BIOREGION_GEOJSON_PROMISE = null;
-const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson'];
+const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson'];
 function useBioregionGeoJson() {
   const [data, setData] = useState(BIOREGION_GEOJSON_CACHE);
   const [error, setError] = useState(false);
@@ -3742,7 +3770,7 @@ function AuthScreen({ onAuthReady }) {
   };
 
   return (
-    <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
+    <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
       <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,#222226,#161618)', border:'1px solid rgba(255,255,255,.10)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.45)' }}>
         <div style={{ color:'#90D84A', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Animaldex</div>
         <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
@@ -3982,6 +4010,276 @@ function VisitedCountryCard({ code, onOpenAnimals, onRemove }) {
   );
 }
 
+
+// ── LifeWeb / Food Web prototype ──────────────────────────────────────
+const HABITAT_LABELS = {
+  FOREST_TEMP:'Foresta temperata', FOREST_TROP:'Foresta tropicale', FOREST_BOREAL:'Foresta boreale', FOREST_MONTANE:'Foresta montana',
+  GRASS_TEMP:'Prateria temperata', GRASS_TROP:'Savana / prateria tropicale', DES_HOT:'Deserto caldo', DES_COLD:'Deserto freddo',
+  WET_WETLANDS:'Zone umide', WET_RIVER:'Fiumi', WET_LAKE:'Laghi', WET_POOL:'Pozze temporanee', MAR_SHORELINES:'Coste e litorali',
+  MAR_CORAL:'Barriera corallina', MAR_PELAGIC:'Pelagico', MAR_BENTHIC:'Benthos marino', MAR_KELP:'Foreste di kelp', MAR_ESTUARY:'Estuari',
+  ART_URBAN:'Urbano', ART_CANAL:'Canali e aree artificiali', CAVE:'Grotte', TUNDRA:'Tundra', SHRUB:'Arbusteti', MOUNTAIN:'Montagna'
+};
+const HABITAT_RESOURCE_MAP = {
+  FOREST_TEMP:['leaves','fruit','seeds','insects','detritus'], FOREST_TROP:['fruit','leaves','nectar','insects','detritus'], FOREST_BOREAL:['seeds','leaves','insects','detritus'],
+  GRASS_TEMP:['grass','seeds','insects','small_mammals'], GRASS_TROP:['grass','seeds','insects','carrion'], DES_HOT:['seeds','insects','detritus','carrion'], DES_COLD:['seeds','detritus','insects'],
+  WET_WETLANDS:['algae','aquatic_plants','insects','larvae','small_fish'], WET_RIVER:['algae','insects','larvae','small_fish'], WET_LAKE:['algae','zooplankton','small_fish','larvae'],
+  MAR_SHORELINES:['algae','detritus','crustaceans','small_fish'], MAR_CORAL:['algae','coral_polyps','plankton','small_fish'], MAR_PELAGIC:['phytoplankton','zooplankton','krill','small_fish'],
+  MAR_BENTHIC:['detritus','algae','crustaceans'], MAR_KELP:['algae','small_fish','crustaceans'], MAR_ESTUARY:['detritus','algae','small_fish','crustaceans'],
+  ART_URBAN:['seeds','fruit','insects','detritus'], TUNDRA:['grass','seeds','insects','carrion'], SHRUB:['leaves','fruit','seeds','insects'], MOUNTAIN:['grass','seeds','insects','small_mammals']
+};
+const RESOURCE_LABELS = {
+  grass:'Grass', leaves:'Leaves', fruit:'Fruit', seeds:'Seeds', nectar:'Nectar', algae:'Algae', aquatic_plants:'Aquatic plants', phytoplankton:'Phytoplankton', zooplankton:'Zooplankton', plankton:'Plankton', detritus:'Detritus', carrion:'Carrion', insects:'Insects', larvae:'Larvae', krill:'Krill', coral_polyps:'Coral polyps', small_fish:'Small fish', small_mammals:'Small mammals', crustaceans:'Crustaceans'
+};
+function normalizeHabitatId(id) {
+  const s = String(id || '').trim();
+  if (!s) return '';
+  const u = s.toUpperCase().replace(/[^A-Z0-9]+/g,'_').replace(/^_+|_+$/g,'');
+  if (/FOREST.*TEMP|TEMP.*FOREST|1_4/.test(u)) return 'FOREST_TEMP';
+  if (/FOREST.*TROP|TROP.*FOREST|1_6/.test(u)) return 'FOREST_TROP';
+  if (/BOREAL|TAIGA/.test(u)) return 'FOREST_BOREAL';
+  if (/MONTANE|MOUNTAIN/.test(u)) return 'MOUNTAIN';
+  if (/GRASS|PRAIRIE|SAVANNA|STEPPE/.test(u)) return /TROP|SAVANNA/.test(u) ? 'GRASS_TROP' : 'GRASS_TEMP';
+  if (/DESERT|DES_|ARID/.test(u)) return /COLD/.test(u) ? 'DES_COLD' : 'DES_HOT';
+  if (/WETLAND|SWAMP|MARSH/.test(u)) return 'WET_WETLANDS';
+  if (/RIVER|STREAM/.test(u)) return 'WET_RIVER';
+  if (/LAKE/.test(u)) return 'WET_LAKE';
+  if (/CORAL|REEF/.test(u)) return 'MAR_CORAL';
+  if (/PELAGIC|EPIPELAGIC|OCEANIC/.test(u)) return 'MAR_PELAGIC';
+  if (/BENTHIC|SEAFLOOR/.test(u)) return 'MAR_BENTHIC';
+  if (/KELP/.test(u)) return 'MAR_KELP';
+  if (/ESTUAR/.test(u)) return 'MAR_ESTUARY';
+  if (/SHORE|COAST|LITTORAL|BEACH|MARINE/.test(u)) return 'MAR_SHORELINES';
+  if (/URBAN|ART|CANAL|GARDEN|CITY/.test(u)) return 'ART_URBAN';
+  if (/TUNDRA/.test(u)) return 'TUNDRA';
+  if (/SHRUB|SCRUB/.test(u)) return 'SHRUB';
+  return u;
+}
+function getAnimalHabitatIds(a) {
+  return Array.from(new Set(toArraySafe(
+    a?.geo?.habitat_ids || a?.habitat_ids || a?.habitats || a?.geo?.habitats || a?.foodweb?.habitat_iucn_codes || []
+  ).map(normalizeHabitatId).filter(Boolean)));
+}
+function habitatLabel(id) {
+  const key = normalizeHabitatId(id);
+  return HABITAT_LABELS[key] || String(id || 'Habitat').replace(/_/g,' ').toLowerCase().replace(/^\w/, c=>c.toUpperCase());
+}
+function inferDefaultHabitatsForTerritory(territory) {
+  const label = `${territory?.label || ''} ${territory?.name_en || ''}`.toLowerCase();
+  if (/coral|reef|pacific|atlantic|ocean|marine|sea|indo/.test(label)) return ['MAR_PELAGIC','MAR_SHORELINES','MAR_CORAL'];
+  if (/desert|arid|sahara|arab|persian|messic/.test(label)) return ['DES_HOT','SHRUB'];
+  if (/tundra|greenland|arctic|antart|boreal|siber|alaska|canadian/.test(label)) return ['TUNDRA','FOREST_BOREAL'];
+  if (/savanna|grass|prairie|steppe|plain|praterie|grandi pianure/.test(label)) return ['GRASS_TEMP','GRASS_TROP'];
+  if (/forest|foreste|amazon|congo|sundaland|indochina|tropical|madagascar/.test(label)) return ['FOREST_TROP','FOREST_TEMP'];
+  if (/coast|costa|caraibi|isole|islands|oceania/.test(label)) return ['MAR_SHORELINES','FOREST_TROP'];
+  return ['FOREST_TEMP','GRASS_TEMP','WET_WETLANDS'];
+}
+function animalMatchesHabitat(a, habitatId) {
+  const h = normalizeHabitatId(habitatId);
+  const ids = getAnimalHabitatIds(a);
+  if (!h) return true;
+  if (ids.includes(h)) return true;
+  if (!ids.length) return false;
+  const group = h.split('_')[0];
+  return ids.some(id => id.startsWith(group + '_'));
+}
+function getHabitatsForTerritory(territory, animals = []) {
+  const rows = new Map();
+  const filterValue = territory?.filterValue || (territory?.id ? `ecoregion:${territory.id}` : '');
+  const matching = animals.filter(a => !filterValue || matchGeographySelection(a, [filterValue]));
+  matching.forEach(a => getAnimalHabitatIds(a).forEach(id => {
+    const key = normalizeHabitatId(id);
+    if (!rows.has(key)) rows.set(key, { id:key, label:habitatLabel(key), count:0, animals:[] });
+    const row = rows.get(key); row.count += 1; row.animals.push(a);
+  }));
+  if (!rows.size) {
+    inferDefaultHabitatsForTerritory(territory).forEach(id => rows.set(id, { id, label:habitatLabel(id), count:0, animals:[] }));
+  }
+  return Array.from(rows.values()).sort((a,b)=>b.count-a.count || a.label.localeCompare(b.label)).slice(0,10);
+}
+function trophicGroup(a) {
+  const fw = a?.foodweb || {};
+  const raw = String(fw.consumer_group || fw.feeding_mode || a?.diet || a?.trophic_group || '').toLowerCase();
+  const tags = toArraySafe(fw.diet_tags || a?.diet_tags || []).join(' ').toLowerCase();
+  const trophic = String(a?.trophic || '').toLowerCase();
+  if (/producer|plant|algae/.test(raw)) return 'producer';
+  if (/filter|plankton|suspension/.test(raw + tags) || trophic === 'f') return 'filter';
+  if (/herb|grazer|nectar|frug|foliv|seed/.test(raw + tags) || trophic === '1') return 'herbivore';
+  if (/omni/.test(raw + tags) || trophic === '2') return 'omnivore';
+  if (/apex|top/.test(raw + tags) || trophic === '4') return 'apex';
+  if (/carn|pred|pisc|insectiv/.test(raw + tags) || trophic === '3') return 'carnivore';
+  if (['Insecta','Bivalvia','Gastropoda'].includes(a?.cls)) return 'herbivore';
+  if (['Aves','Mammalia','Reptilia','Amphibia','Actinopterygii','Elasmobranchii','Cephalopoda'].includes(a?.cls)) return 'omnivore';
+  return 'omnivore';
+}
+function nodeColorForGroup(group) {
+  if (group === 'resource' || group === 'producer') return '#76D17B';
+  if (group === 'herbivore' || group === 'filter') return '#74C7FF';
+  if (group === 'omnivore') return '#F0B24E';
+  if (group === 'carnivore' || group === 'apex') return '#FF7E8F';
+  return '#B9B8C8';
+}
+function getAnimalPowerScore(a) {
+  const mass = Math.log10(getAnimalMassG(a) + 10) * 12;
+  const stats = a?.stats || {};
+  const bite = Number(stats.morso || 0) / 3;
+  const speed = Number(stats.velocita || 0) / 4;
+  const strength = Number(stats.forza || 0) / 3;
+  const cats = toArraySafe(a?.categories).join(' ');
+  const traitBoost = (/VENOM|TOXIN|ARMOR|SPINES|POWER|BITE|CLAWS|APEX|AMBUSH|PACK/i.test(cats) ? 18 : 0) + (/SHELL|CAMOUFLAGE|FLIGHT/i.test(cats) ? 8 : 0);
+  return Math.max(1, Math.round(mass + bite + speed + strength + traitBoost));
+}
+function animalPreyCategory(a) {
+  if (['Insecta','Arachnida','Malacostraca','Chilopoda','Diplopoda'].includes(a?.cls)) return 'invertebrate';
+  if (['Actinopterygii','Elasmobranchii'].includes(a?.cls)) return 'fish';
+  if (['Aves'].includes(a?.cls)) return 'bird';
+  if (['Mammalia'].includes(a?.cls)) return 'mammal';
+  if (['Reptilia','Amphibia'].includes(a?.cls)) return 'herp';
+  return 'animal';
+}
+function predatorCanEat(pred, prey) {
+  if (!pred || !prey || pred.id === prey.id) return null;
+  const group = trophicGroup(pred);
+  if (!['omnivore','carnivore','apex'].includes(group)) return null;
+  const predMass = getAnimalMassG(pred), preyMass = getAnimalMassG(prey);
+  const predPower = getAnimalPowerScore(pred), preyPower = getAnimalPowerScore(prey);
+  const predTags = toArraySafe(pred?.foodweb?.diet_tags || pred?.diet_tags || []).join(' ').toLowerCase();
+  const preyCat = animalPreyCategory(prey);
+  const preyCats = toArraySafe(prey?.categories).join(' ');
+  if (/VENOM|TOXIN|POISON/i.test(preyCats) && predPower < preyPower * 1.35 && !/toxin|venom|specialist|resistant/.test(predTags)) return null;
+  let dietOk = /animal|meat|vertebrate|prey|carn|fish|insect|mammal|bird|egg|crustacean|amphibian|reptile/.test(predTags);
+  if (preyCat === 'fish' && /fish|pisc|aquatic|marine/.test(predTags)) dietOk = true;
+  if (preyCat === 'invertebrate' && /insect|invertebrate|crustacean|arthropod/.test(predTags)) dietOk = true;
+  if (!dietOk && group === 'omnivore' && preyMass > predMass * 0.08) return null;
+  if (preyMass > predMass * (group === 'apex' ? 1.8 : .75) && predPower < preyPower * 1.15) return null;
+  if (predPower < preyPower * .62 && preyMass > predMass * .25) return null;
+  const confidence = predPower > preyPower * 1.35 ? 'likely' : predPower > preyPower ? 'possible' : 'rare';
+  return { confidence, role: confidence === 'likely' ? 'core' : confidence === 'possible' ? 'secondary' : 'opportunistic', basis:['habitat condiviso','geografia condivisa','taglia/potenza compatibile'] };
+}
+function resourceFeedsAnimal(resourceId, animal) {
+  const group = trophicGroup(animal);
+  const tags = toArraySafe(animal?.foodweb?.diet_tags || animal?.diet_tags || []).join(' ').toLowerCase();
+  if (resourceId === 'grass') return group === 'herbivore' || /grass|grazer|herb/.test(tags);
+  if (resourceId === 'leaves') return group === 'herbivore' || /leaf|leaves|foliv/.test(tags);
+  if (resourceId === 'fruit') return /fruit|frug|omni/.test(tags) || group === 'omnivore';
+  if (resourceId === 'seeds') return /seed|grain|graniv|omni/.test(tags) || group === 'omnivore';
+  if (resourceId === 'nectar') return /nectar|pollin/.test(tags);
+  if (['algae','phytoplankton','zooplankton','plankton','krill'].includes(resourceId)) return group === 'filter' || /plankton|filter|krill|algae/.test(tags);
+  if (['insects','larvae','crustaceans','small_fish','small_mammals'].includes(resourceId)) return /insect|larvae|crustacean|fish|mammal|animal|carn|omni/.test(tags) || ['omnivore','carnivore','apex'].includes(group);
+  if (resourceId === 'carrion') return /carrion|scav/.test(tags) || group === 'omnivore';
+  if (resourceId === 'detritus') return /detrit|deposit|benthic/.test(tags) || ['filter','herbivore'].includes(group);
+  return false;
+}
+function getFoodWebCandidateAnimals(allAnimals, territory, habitat, limit=10) {
+  const filterValue = territory?.filterValue || (territory?.id ? `ecoregion:${territory.id}` : '');
+  let list = (allAnimals || []).filter(a => (!filterValue || matchGeographySelection(a, [filterValue])) && animalMatchesHabitat(a, habitat?.id));
+  if (list.length < 6) list = (allAnimals || []).filter(a => animalMatchesHabitat(a, habitat?.id));
+  const groups = ['herbivore','filter','omnivore','carnivore','apex'];
+  const picked = [];
+  groups.forEach(g => {
+    const found = list.find(a => trophicGroup(a) === g && !picked.some(p=>p.id===a.id));
+    if (found) picked.push(found);
+  });
+  list.sort((a,b)=>getAnimalPowerScore(b)-getAnimalPowerScore(a));
+  for (const a of list) { if (picked.length >= limit) break; if (!picked.some(p=>p.id===a.id)) picked.push(a); }
+  return picked.slice(0, limit);
+}
+function buildLifeWebGraph(allAnimals, territory, habitat) {
+  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 10);
+  const resourceIds = (HABITAT_RESOURCE_MAP[normalizeHabitatId(habitat?.id)] || inferDefaultHabitatsForTerritory(territory).flatMap(h=>HABITAT_RESOURCE_MAP[h] || []) || ['grass','insects','detritus']).slice(0,5);
+  const nodes = [];
+  resourceIds.forEach((r,i)=>nodes.push({ id:`res:${r}`, type:'resource', label:RESOURCE_LABELS[r] || r, group:'resource', x:12 + i*(76/Math.max(1,resourceIds.length-1)), y:86, power:0 }));
+  const rowFor = (g) => g === 'apex' ? 16 : g === 'carnivore' ? 30 : g === 'omnivore' ? 48 : g === 'filter' ? 66 : 70;
+  const grouped = animals.reduce((acc,a)=>{ const g=trophicGroup(a); (acc[g] ||= []).push(a); return acc; }, {});
+  Object.entries(grouped).forEach(([g, arr]) => arr.forEach((a,i)=>nodes.push({ id:`a:${a.id}`, animalId:a.id, type:'animal', label:a.com, sci:a.sci, group:g, cls:a.cls, power:getAnimalPowerScore(a), x:18 + i*(64/Math.max(1,arr.length-1)) + (g==='carnivore'?8:g==='apex'?16:0), y:rowFor(g) })));
+  const edges = [];
+  for (const a of animals) resourceIds.forEach(r => { if (resourceFeedsAnimal(r,a)) edges.push({ id:`res:${r}->a:${a.id}`, source:`res:${r}`, target:`a:${a.id}`, relation_type:'resource_use', confidence:'likely', role:'core', basis:['risorsa compatibile con habitat','diet_tags/consumer_group'] }); });
+  for (const pred of animals) for (const prey of animals) {
+    const rel = predatorCanEat(pred, prey);
+    if (rel) edges.push({ id:`a:${prey.id}->a:${pred.id}`, source:`a:${prey.id}`, target:`a:${pred.id}`, relation_type:'eats', ...rel });
+  }
+  const edgeWeight = { likely:3, possible:2, rare:1 };
+  const limitedEdges = edges.sort((a,b)=>((edgeWeight[b.confidence] || 0) - (edgeWeight[a.confidence] || 0)) || (a.relation_type==='resource_use'?-1:1)).slice(0,22);
+  return { nodes, edges:limitedEdges, animals, resources:resourceIds };
+}
+function LifeWebGraph({ graph, onOpenAnimal }) {
+  const [nodes, setNodes] = useState(graph.nodes || []);
+  const [removed, setRemoved] = useState(new Set());
+  const [selected, setSelected] = useState(null);
+  const dragRef = useRef(null);
+  useEffect(()=>{ setNodes(graph.nodes || []); setRemoved(new Set()); setSelected(null); }, [graph]);
+  const nodeMap = Object.fromEntries(nodes.map(n=>[n.id,n]));
+  const stressSet = new Set(graph.edges.filter(e=>removed.has(e.source)).map(e=>e.target));
+  const toSvgPoint = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    return { x:Math.max(5,Math.min(95,((e.clientX-rect.left)/rect.width)*100)), y:Math.max(7,Math.min(93,((e.clientY-rect.top)/rect.height)*100)) };
+  };
+  const startDrag = (e,node) => { e.stopPropagation(); dragRef.current = node.id; setSelected(node); e.currentTarget.setPointerCapture?.(e.pointerId); };
+  const moveDrag = (e) => { if (!dragRef.current) return; const p=toSvgPoint(e); setNodes(prev=>prev.map(n=>n.id===dragRef.current?{...n,x:p.x,y:p.y}:n)); };
+  const stopDrag = () => { dragRef.current=null; };
+  const toggleRemoved = (id) => setRemoved(prev => { const n=new Set(prev); n.has(id)?n.delete(id):n.add(id); return n; });
+  return (
+    <div style={{ background:'#0E1116', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:12, boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
+      <svg viewBox="0 0 100 100" onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:430, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 45%,rgba(168,70,55,.12),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
+        <defs><marker id="lifeArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="rgba(255,255,255,.55)" /></marker></defs>
+        {graph.edges.map(e=>{ const s=nodeMap[e.source], t=nodeMap[e.target]; if(!s||!t) return null; const hit=removed.has(e.source); const dim=removed.has(e.target); return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={hit?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={hit?0.75:0.45} markerEnd="url(#lifeArrow)" opacity={dim?.35:hit?.95:.72} />; })}
+        {nodes.map(n=>{ const color=nodeColorForGroup(n.group); const isRemoved=removed.has(n.id); const stressed=stressSet.has(n.id); const selectedOn=selected?.id===n.id; return (
+          <g key={n.id} transform={`translate(${n.x},${n.y})`} onPointerDown={(e)=>startDrag(e,n)} onClick={(e)=>{e.stopPropagation();setSelected(n);}} style={{ cursor:'grab', opacity:isRemoved?.28:1, animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
+            <circle r={n.type==='resource'?5.8:6.9} fill="#252635" stroke={isRemoved?'#666':color} strokeWidth={selectedOn?1.3:.75} filter={selectedOn?`drop-shadow(0 0 5px ${color})`:'none'} />
+            <text y="1" textAnchor="middle" dominantBaseline="middle" fill="white" fontSize="2.2" fontWeight="800">{n.type==='resource'?n.label.split(' ')[0]:clampWholeWords(n.label, 10)}</text>
+            <text y="10" textAnchor="middle" fill="rgba(255,255,255,.88)" fontSize="2.1" fontWeight="900">{n.type==='resource'?'Risorsa':clampWholeWords(n.label, 14)}</text>
+          </g>
+        );})}
+      </svg>
+      <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:10, alignItems:'center', marginTop:10 }}>
+        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{removed.size ? 'Impact Preview: linee rosse = dipendenza colpita; nodi tremanti = stress trofico.' : 'Trascina un nodo: la rete si deforma. Tocca un nodo per simulare rimozione o aprire specie.'}</div>
+        <button data-sound="filter" onClick={()=>{setNodes(graph.nodes || []); setRemoved(new Set()); setSelected(null);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
+      </div>
+      {selected && (
+        <div style={{ marginTop:10, borderRadius:16, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:12, display:'flex', gap:10, alignItems:'center' }}>
+          <div style={{ width:44, height:44, borderRadius:15, background:`${nodeColorForGroup(selected.group)}22`, color:nodeColorForGroup(selected.group), display:'flex', alignItems:'center', justifyContent:'center', fontSize:20, fontWeight:1000 }}>{selected.type==='resource'?'✦':'●'}</div>
+          <div style={{ flex:1, minWidth:0 }}><div style={{ color:'white', fontWeight:1000, fontSize:14, lineHeight:1.15 }}>{selected.label}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:11, marginTop:3 }}>{selected.type==='resource'?'Risorsa non animale':`${selected.group} · power ${selected.power}`}</div></div>
+          {selected.type==='animal' && <button data-sound="tap" onClick={()=>onOpenAnimal?.(graph.animals.find(a=>a.id===selected.animalId))} style={{ height:36, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 10px' }}>Scheda</button>}
+          <button data-sound="capture" onClick={()=>toggleRemoved(selected.id)} style={{ height:36, borderRadius:12, border:'none', background:removed.has(selected.id)?'#90D84A':'#A84637', color:'white', fontWeight:900, padding:'0 10px' }}>{removed.has(selected.id)?'Ripristina':'Rimuovi'}</button>
+        </div>
+      )}
+    </div>
+  );
+}
+function LifeWebPage({ territory, habitat, animals, onOpenAnimal }) {
+  const graph = useMemo(()=>buildLifeWebGraph(animals, territory, habitat), [animals, territory?.id, habitat?.id]);
+  const resourceList = graph.resources.map(r=>RESOURCE_LABELS[r] || r).join(' · ');
+  return (
+    <div>
+      <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.25),rgba(22,25,32,.92))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:16, marginBottom:12 }}>
+        <div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>LifeWeb Prototype</div>
+        <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:4, lineHeight:1.08 }}>{habitat?.label || 'Habitat'} · {territory?.label}</div>
+        <div style={{ color:'rgba(255,255,255,.60)', fontSize:12, lineHeight:1.5, marginTop:8 }}>Rete trofica inferita, contestuale e WIP: habitat + geografia filtrano gli incontri; le relazioni mostrano probabilità, non certezza scientifica.</div>
+        <div style={{ marginTop:10, color:'rgba(255,255,255,.46)', fontSize:11, lineHeight:1.4 }}>Risorse base: {resourceList || 'risorse habitat'}</div>
+      </div>
+      <LifeWebGraph graph={graph} onOpenAnimal={onOpenAnimal} />
+      <div style={{ marginTop:12, display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+        <div style={{ borderRadius:18, background:'#15171B', border:'1px solid rgba(255,255,255,.07)', padding:12 }}><div style={{ color:'#74C7FF', fontSize:22, fontWeight:1000 }}>{graph.nodes.filter(n=>n.type==='animal').length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali nel prototipo</div></div>
+        <div style={{ borderRadius:18, background:'#15171B', border:'1px solid rgba(255,255,255,.07)', padding:12 }}><div style={{ color:'#F0B24E', fontSize:22, fontWeight:1000 }}>{graph.edges.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>relazioni inferite</div></div>
+      </div>
+    </div>
+  );
+}
+function HabitatCard({ row, onOpen }) {
+  const resources = (HABITAT_RESOURCE_MAP[row.id] || []).slice(0,4).map(r=>RESOURCE_LABELS[r] || r);
+  return (
+    <button data-sound="map" onClick={()=>onOpen?.(row)} style={{ width:'100%', textAlign:'left', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'linear-gradient(135deg,#181A1F,#101216)', color:'white', padding:14, marginBottom:10, cursor:'pointer', fontFamily:'inherit' }}>
+      <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+        <div style={{ width:48, height:48, borderRadius:17, background:'rgba(168,70,55,.18)', color:'#E68B73', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>☍</div>
+        <div style={{ flex:1, minWidth:0 }}>
+          <div style={{ fontSize:17, fontWeight:1000 }}>{row.label}</div>
+          <div style={{ color:'rgba(255,255,255,.52)', fontSize:11.5, marginTop:4 }}>{row.count || 'demo'} animali compatibili · {resources.join(' · ')}</div>
+        </div>
+        <div style={{ height:36, padding:'0 12px', borderRadius:12, background:'#244A70', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950 }}>LifeWeb</div>
+      </div>
+    </button>
+  );
+}
+
 function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false }) {
   const normalizeInitialView = (v) => {
     if (v === 'countries') return 'countries';
@@ -3992,6 +4290,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [selectedContinentId, setSelectedContinentId] = useState(null);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [selectedTerritory, setSelectedTerritory] = useState(null);
+  const [selectedEcoregion, setSelectedEcoregion] = useState(null);
+  const [selectedHabitat, setSelectedHabitat] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
@@ -4025,6 +4325,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   };
   const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
   const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
+  const habitatRows = selectedEcoregion ? getHabitatsForTerritory({ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}` }, allAnimalsWithStatus) : [];
   const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
     if (view === 'countries') return 'Paesi visitati';
@@ -4032,6 +4333,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'marine') return 'Dominio marino';
     if (view === 'regions') return continent?.label || 'Regioni';
     if (view === 'ecoregions') return region?.label || 'Ecoregioni';
+    if (view === 'habitats') return selectedEcoregion?.label || 'Habitat';
+    if (view === 'lifeweb') return selectedHabitat?.label || 'LifeWeb';
     if (view === 'animals') return selectedTerritory?.label || 'Animali';
     return 'Territori';
   })();
@@ -4041,6 +4344,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'terrestrial' || view === 'marine') return setView('planet');
     if (view === 'regions') return setView('terrestrial');
     if (view === 'ecoregions') return setView('regions');
+    if (view === 'lifeweb') return setView('habitats');
+    if (view === 'habitats') return setView('ecoregions');
     if (view === 'animals') {
       if (selectedTerritory?.kind === 'marine') return setView('marine');
       if (selectedTerritory?.kind === 'ecoregion') return setView('ecoregions');
@@ -4094,8 +4399,20 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='ecoregions' && region && region.ecoregions.map(eco => {
           const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(eco, `ecoregion:${eco.id}`, 'ecoregion')} mapIds={[eco.id]} />;
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Habitat" onOpen={()=>{setSelectedEcoregion(eco); setSelectedHabitat(null); setView('habitats');}} mapIds={[eco.id]} />;
         })}
+
+        {view==='habitats' && selectedEcoregion && (
+          <div>
+            <div style={{ margin:'0 -14px 12px' }}><BioregionVectorMap highlightIds={[selectedEcoregion.id]} accent={'#A84637'} height={220} showLabels fullBleed /></div>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, margin:'12px 0 14px' }}>Scegli un habitat per generare una rete trofica contestuale. In questa versione la rete è una simulazione WIP basata su habitat, geografia, dieta, massa e traits.</div>
+            {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory({ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'ecoregion', label:selectedEcoregion.label }); setView('lifeweb');}} />)}
+          </div>
+        )}
+
+        {view==='lifeweb' && selectedEcoregion && selectedHabitat && (
+          <LifeWebPage territory={{ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'ecoregion', label:selectedEcoregion.label }} habitat={selectedHabitat} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
+        )}
 
         {view==='countries' && (
           <div>
@@ -4586,6 +4903,7 @@ export default function App() {
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
+  const appHeight = useAppViewportHeight();
   const getTutorialAnimal = () => {
     const list = (animalsData || []).map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
     return list.find(a => !isMysteryStatus(a.status) && a.image_url)
@@ -4599,9 +4917,14 @@ export default function App() {
     l.rel='stylesheet';
     l.href='https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap';
     document.head.appendChild(l);
-    document.body.style.cssText='margin:0;background:#1C1C1E;overflow:hidden';
+    document.body.style.cssText='margin:0;background:#1C1C1E;overflow:hidden;overscroll-behavior:none;touch-action:manipulation';
+    const meta = document.querySelector('meta[name=viewport]') || document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1';
+    if (!meta.parentNode) document.head.appendChild(meta);
     const style=document.createElement('style');
-    style.textContent = RARITY_CSS;
+    style.textContent = RARITY_CSS + `
+@keyframes ecosystemStress { 0%,100%{ transform:translate(0,0); } 25%{ transform:translate(1.5px,-1px); } 50%{ transform:translate(-1.3px,1px); } 75%{ transform:translate(1px,1.2px); } }`;
     document.head.appendChild(style);
     return () => { try { document.head.removeChild(l); document.head.removeChild(style); } catch {} };
   },[]);
@@ -5008,7 +5331,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (authLoading) {
     return (
-      <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+      <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento sessione...</div>
       </div>
     );
@@ -5018,7 +5341,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (!userProfile && dataLoading) {
     return (
-      <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+      <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
       </div>
     );
@@ -5027,7 +5350,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   if (!userProfile && !dataLoading) {
     setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
     return (
-      <div style={{ height:'100vh', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+      <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Animaldex...</div>
       </div>
     );
@@ -5035,7 +5358,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (userProfile && userProfile.onboarding_completed === false) {
     return (
-      <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
+      <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
         <OnboardingFlow user={user} animals={animalsData} initialNickname={userProfile.nickname || userProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
       </div>
     );
@@ -5054,7 +5377,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   };
 
   return (
-    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'100vh', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
+    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}

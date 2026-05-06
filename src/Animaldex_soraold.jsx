@@ -1532,10 +1532,31 @@ function clampWholeWords(text, maxChars = 31) {
 }
 
 function useInteractiveMapControls() {
-  const [zoom, setZoom] = useState(1);
-  const [pan, setPan] = useState({x:0,y:0});
+  const [zoom, setZoomState] = useState(1);
+  const [pan, setPanState] = useState({x:0,y:0});
   const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
-  const reset = () => { setZoom(1); setPan({x:0,y:0}); };
+  const clampZoom = (z) => Math.max(1, Math.min(4.5, Number(z) || 1));
+  const clampPan = (nextPan, z = zoom) => {
+    if (z <= 1.01) return { x:0, y:0 };
+    const maxX = 160 * (z - 1);
+    const maxY = 95 * (z - 1);
+    return {
+      x: Math.max(-maxX, Math.min(maxX, nextPan.x || 0)),
+      y: Math.max(-maxY, Math.min(maxY, nextPan.y || 0)),
+    };
+  };
+  const setZoom = (updater) => {
+    setZoomState(prev => {
+      const next = clampZoom(typeof updater === 'function' ? updater(prev) : updater);
+      if (next <= 1.01) setPanState({ x:0, y:0 });
+      else setPanState(p => clampPan(p, next));
+      return next;
+    });
+  };
+  const setPan = (updater) => {
+    setPanState(prev => clampPan(typeof updater === 'function' ? updater(prev) : updater, zoom));
+  };
+  const reset = () => { setZoomState(1); setPanState({x:0,y:0}); };
   const dist = (touches) => {
     if (!touches || touches.length < 2) return 0;
     const dx = touches[0].clientX - touches[1].clientX;
@@ -1546,16 +1567,16 @@ function useInteractiveMapControls() {
     onWheel:(e)=> {
       e.preventDefault?.();
       const delta = e.deltaY > 0 ? -0.12 : 0.12;
-      setZoom(z => Math.max(1, Math.min(4.5, z + delta)));
+      setZoom(z => z + delta);
     },
     onPointerDown:(e)=> {
-      if (e.pointerType === 'touch') return;
+      if (e.pointerType === 'touch' || zoom <= 1.01) return;
       ref.current.dragging = true;
       ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
       e.currentTarget.setPointerCapture?.(e.pointerId);
     },
     onPointerMove:(e)=> {
-      if (!ref.current.dragging) return;
+      if (!ref.current.dragging || zoom <= 1.01) return;
       const dx = e.clientX - ref.current.lastX;
       const dy = e.clientY - ref.current.lastY;
       ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
@@ -1571,7 +1592,7 @@ function useInteractiveMapControls() {
         ref.current.pinch = true;
         ref.current.startDist = dist(e.touches);
         ref.current.startZoom = zoom;
-      } else if (e.touches?.length === 1) {
+      } else if (e.touches?.length === 1 && zoom > 1.01) {
         ref.current.dragging = true;
         ref.current.lastX = e.touches[0].clientX;
         ref.current.lastY = e.touches[0].clientY;
@@ -1581,8 +1602,8 @@ function useInteractiveMapControls() {
       if (e.touches?.length === 2 && ref.current.pinch) {
         e.preventDefault?.();
         const d = dist(e.touches);
-        if (ref.current.startDist > 0) setZoom(Math.max(1, Math.min(4.5, ref.current.startZoom * (d/ref.current.startDist))));
-      } else if (e.touches?.length === 1 && ref.current.dragging) {
+        if (ref.current.startDist > 0) setZoom(ref.current.startZoom * (d/ref.current.startDist));
+      } else if (e.touches?.length === 1 && ref.current.dragging && zoom > 1.01) {
         e.preventDefault?.();
         const dx = e.touches[0].clientX - ref.current.lastX;
         const dy = e.touches[0].clientY - ref.current.lastY;
@@ -1597,7 +1618,7 @@ function useInteractiveMapControls() {
   return { zoom, pan, reset, handlers, transform };
 }
 
-function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#A84637', height=230, title='Mappa paesi' }) {
+function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#A84637', height=230, title='Mappa paesi', pointMode=false }) {
   const { data, error } = useBioregionGeoJson();
   const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,190);
   const selected = selectedCountry || null;
@@ -1609,6 +1630,31 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   const activeCountryLabel = hoverCountry || selected;
   const landFeatures = features.filter(f => (f.properties || {}).domain !== 'marine');
   const hasVector = !!data && !error;
+
+  const countryMark = (p) => {
+    const active = p.code === selected || p.code === hoverCountry;
+    const rx = pointMode ? (active ? 13 : 8.5) : (active ? 20 : 15);
+    const ry = pointMode ? (active ? 13 : 8.5) : (active ? 14 : 10.5);
+    const fill = pointMode
+      ? (active ? '#72D6FF' : 'rgba(114,205,255,.20)')
+      : (active ? accent : `${accent}66`);
+    const stroke = pointMode ? '#72D6FF' : '#FFD0B7';
+    return (
+      <g key={p.code} onClick={(e)=>{e.stopPropagation(); onSelectCountry?.(p.code);}} onMouseEnter={()=>setHoverCountry(p.code)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }}>
+        {pointMode ? (
+          <>
+            <circle cx={p.px} cy={p.py} r={rx} fill={fill} stroke={stroke} strokeWidth={active ? 3.2 : 2.2} opacity=".98" />
+            <circle cx={p.px} cy={p.py} r={active ? 22 : 15} fill="none" stroke="#72D6FF" strokeWidth={active ? 3 : 2} opacity={active ? .34 : .22} />
+          </>
+        ) : (
+          <>
+            <ellipse cx={p.px} cy={p.py} rx={rx} ry={ry} fill={fill} stroke={stroke} strokeWidth={active ? 2.5 : 1.35} opacity={active ? .82 : .52} />
+            <ellipse cx={p.px} cy={p.py} rx={rx*1.6} ry={ry*1.45} fill="none" stroke={accent} strokeWidth={active ? 2.2 : 1.2} opacity={active ? .28 : .14} />
+          </>
+        )}
+      </g>
+    );
+  };
 
   return (
     <div
@@ -1636,22 +1682,12 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
                 return <path key={id} d={d} fill="rgba(86,45,40,.46)" stroke="rgba(95,190,235,.28)" strokeWidth=".45" opacity=".78" />;
               })}
             </g>
-            <g>
-              {points.map(p => {
-                const active = p.code === selected;
-                return (
-                  <g key={p.code} onClick={(e)=>{e.stopPropagation(); onSelectCountry?.(p.code);}} onMouseEnter={()=>setHoverCountry(p.code)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }}>
-                    <circle cx={p.px} cy={p.py} r={active ? 13 : 9} fill={active ? accent : 'rgba(114,205,255,.18)'} stroke={active ? '#FFE1D2' : '#72D6FF'} strokeWidth={active ? 3.4 : 2.4} opacity=".98" />
-                    <circle cx={p.px} cy={p.py} r={active ? 22 : 15} fill="none" stroke={active ? accent : '#72D6FF'} strokeWidth={active ? 3 : 2} opacity={active ? .34 : .22} />
-                  </g>
-                );
-              })}
-            </g>
+            <g>{points.map(countryMark)}</g>
           </svg>
         ) : (
           <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
             <rect x="-2000" y="-2000" width="5000" height="5000" fill="#071017" />
-            {points.map(p => <circle key={p.code} cx={p.px} cy={p.py} r="11" fill="rgba(114,205,255,.18)" stroke="#72D6FF" strokeWidth="2.5" />)}
+            {points.map(countryMark)}
           </svg>
         )}
       </div>
@@ -1800,7 +1836,7 @@ function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[], animal }
   return (
     <div style={{ borderRadius:12, overflow:'hidden', background:'#07131F' }}>
       {hasCountries ? (
-        <CountryPresenceMap countryCodes={countryCodes} selectedCountry={activeCountry} onSelectCountry={setSelectedCountry} accent={accentColor} height={280} title="Mappa paesi di presenza" />
+        <CountryPresenceMap countryCodes={countryCodes} selectedCountry={activeCountry} onSelectCountry={setSelectedCountry} accent={accentColor} height={280} title="Mappa paesi di presenza" pointMode={animal?.cls === "Aves"} />
       ) : (
         <div style={{ padding:12, borderBottom:'1px solid rgba(255,255,255,.1)' }}>
           <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE</div>
@@ -3019,6 +3055,9 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
           <div style={{ color:'white', fontSize:15, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
         </div>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'13px 14px 13px 94px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.44),rgba(255,255,255,.04))' }}>
+          <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ position:'absolute', top:8, right:8, width:26, height:26, borderRadius:9, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.32)', color:'white', fontSize:13, fontWeight:900, cursor:'pointer', zIndex:3 }}>↺</button>
+          <img src={badgeUrl} alt="" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='inline-flex';}} style={{ position:'absolute', left:14, top:'50%', transform:'translateY(-50%)', width:66, height:66, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 14px ${(meta.color || accentColor)}44)` }} />
+          <span style={{ display:'none', position:'absolute', left:14, top:'50%', transform:'translateY(-50%)', width:66, height:66, alignItems:'center', justifyContent:'center', fontSize:36, flexShrink:0 }}>{meta.icon}</span>
           <div style={{ color:'rgba(255,255,255,.75)', fontSize:12, lineHeight:1.45, fontWeight:650, textAlign:'left' }}>{curiosity}</div>
         </div>
       </div>
@@ -3914,7 +3953,7 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
         <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Paesi visitati</div>
         <div style={{ color:'#90D84A', fontSize:13, fontWeight:1000 }}>{visited.length}</div>
       </div>
-      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" />
+      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" pointMode={false} />
       {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese visitato per evidenziarlo sulla mappa.</div>}
     </div>
   );
@@ -4361,7 +4400,7 @@ function polarPoint(cx, cy, r, angleDeg) {
   const rad = (Math.PI / 180) * angleDeg;
   return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
 }
-function RadarPolygon({ values, color, opacity=.24, strokeWidth=4, cx=170, cy=170, r=112 }) {
+function RadarPolygon({ values, color, opacity=.24, strokeWidth=4, cx=220, cy=205, r=105 }) {
   const pts = values.map((v,i)=>{
     const angle = -90 + i * (360 / values.length);
     const [x,y] = polarPoint(cx, cy, r * Math.max(0, Math.min(100, v.value)) / 100, angle);
@@ -4369,12 +4408,21 @@ function RadarPolygon({ values, color, opacity=.24, strokeWidth=4, cx=170, cy=17
   }).join(' ');
   return <polygon points={pts} fill={color} fillOpacity={opacity} stroke={color} strokeWidth={strokeWidth} strokeLinejoin="round" />;
 }
+function radarLabelLines(label='') {
+  const s = String(label);
+  if (s === 'Velocità centili') return ['Velocità', 'centili'];
+  if (s === 'Dimensioni log') return ['Dimensioni', 'log'];
+  if (s === 'Peso log') return ['Peso', 'log'];
+  if (s === 'Adattabilità') return ['Adattabilità'];
+  if (s === 'Vulnerabilità') return ['Vulnerabilità'];
+  return s.split(' ');
+}
 function ComparatorRadar({ left, right, colorLeft, colorRight }) {
   const axes = left?.radar || right?.radar || [];
-  const cx = 170, cy = 170, r = 112;
+  const cx = 220, cy = 205, r = 105;
   return (
-    <div style={{ background:'radial-gradient(circle at 50% 44%,rgba(168,70,55,.15),rgba(0,0,0,.38) 58%,rgba(0,0,0,.58))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:'12px 4px 8px', boxShadow:'inset 0 0 40px rgba(0,0,0,.35)' }}>
-      <svg viewBox="0 0 340 340" style={{ width:'100%', maxWidth:390, display:'block', margin:'0 auto' }}>
+    <div style={{ background:'radial-gradient(circle at 50% 44%,rgba(168,70,55,.15),rgba(0,0,0,.38) 58%,rgba(0,0,0,.58))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:'10px 2px 8px', boxShadow:'inset 0 0 40px rgba(0,0,0,.35)', overflow:'hidden' }}>
+      <svg viewBox="0 0 440 390" style={{ width:'100%', maxWidth:440, display:'block', margin:'0 auto', overflow:'visible' }}>
         {[.25,.5,.75,1].map((s,i)=>{
           const pts = axes.map((_,j)=>{
             const [x,y] = polarPoint(cx, cy, r*s, -90 + j*(360/axes.length));
@@ -4385,15 +4433,18 @@ function ComparatorRadar({ left, right, colorLeft, colorRight }) {
         {axes.map((axis,i)=>{
           const angle = -90 + i*(360/axes.length);
           const [x2,y2] = polarPoint(cx, cy, r, angle);
-          const [lx,ly] = polarPoint(cx, cy, r+37, angle);
+          const [lx,ly] = polarPoint(cx, cy, r+50, angle);
           const anchor = Math.abs(lx-cx) < 10 ? 'middle' : (lx > cx ? 'start' : 'end');
+          const lines = radarLabelLines(axis.label);
           return <g key={axis.key}>
             <line x1={cx} y1={cy} x2={x2} y2={y2} stroke="rgba(255,255,255,.18)" strokeWidth="1.2" />
-            <text x={lx} y={ly} fill="rgba(255,255,255,.92)" fontSize="11.5" fontWeight="900" textAnchor={anchor} dominantBaseline="middle">{axis.label}</text>
+            <text x={lx} y={ly - (lines.length-1)*6} fill="rgba(255,255,255,.92)" fontSize="12" fontWeight="900" textAnchor={anchor} dominantBaseline="middle">
+              {lines.map((t,k)=><tspan key={k} x={lx} dy={k===0?0:13}>{t}</tspan>)}
+            </text>
           </g>;
         })}
-        {left && <RadarPolygon values={left.radar} color={colorLeft} opacity={.24} />}
-        {right && <RadarPolygon values={right.radar} color={colorRight} opacity={.20} />}
+        {left && <RadarPolygon values={left.radar} color={colorLeft} opacity={.24} cx={cx} cy={cy} r={r} />}
+        {right && <RadarPolygon values={right.radar} color={colorRight} opacity={.20} cx={cx} cy={cy} r={r} />}
         {left && left.radar.map((v,i)=>{ const [x,y]=polarPoint(cx,cy,r*v.value/100,-90+i*(360/left.radar.length)); return <circle key={`l${i}`} cx={x} cy={y} r="4" fill={colorLeft} stroke="white" strokeOpacity=".65"/>; })}
         {right && right.radar.map((v,i)=>{ const [x,y]=polarPoint(cx,cy,r*v.value/100,-90+i*(360/right.radar.length)); return <circle key={`r${i}`} cx={x} cy={y} r="4" fill={colorRight} stroke="white" strokeOpacity=".65"/>; })}
       </svg>
