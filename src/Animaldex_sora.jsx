@@ -4024,7 +4024,6 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
 
 
 function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
-function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
   const visited = Array.from(new Set((visitedCountries || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0, 120);
   return (
     <div style={{ marginBottom:12 }}>
