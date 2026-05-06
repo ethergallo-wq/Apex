@@ -3299,7 +3299,7 @@ function getCountryFeatureName(feature) {
 
 let BIOREGION_GEOJSON_CACHE = null;
 let BIOREGION_GEOJSON_PROMISE = null;
-const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson'];
+const BIOREGION_GEOJSON_URLS = ['/geo/bioregions-v4-terrestrial-marine-kepler.geojson','/geo/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/geo/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson','/bioregions-v4-terrestrial-marine-kepler.geojson.geojson','/bioregions-v4-terrestrial-marine-kepler_paesi_med-atlantic-split.geojson'];
 function useBioregionGeoJson() {
   const [data, setData] = useState(BIOREGION_GEOJSON_CACHE);
   const [error, setError] = useState(false);
@@ -4245,7 +4245,25 @@ const HABITAT_RESOURCE_MAP = {
   ART_URBAN:['seeds','fruit','insects','detritus'], TUNDRA:['grass','seeds','insects','carrion'], SHRUB:['leaves','fruit','seeds','insects'], MOUNTAIN:['grass','seeds','insects','small_mammals']
 };
 const RESOURCE_LABELS = {
-  grass:'Grass', leaves:'Leaves', fruit:'Fruit', seeds:'Seeds', nectar:'Nectar', algae:'Algae', aquatic_plants:'Aquatic plants', phytoplankton:'Phytoplankton', zooplankton:'Zooplankton', plankton:'Plankton', detritus:'Detritus', carrion:'Carrion', insects:'Insects', larvae:'Larvae', krill:'Krill', coral_polyps:'Coral polyps', small_fish:'Small fish', small_mammals:'Small mammals', crustaceans:'Crustaceans'
+  grass:'Erbe e graminacee',
+  leaves:'Foglie e germogli',
+  fruit:'Frutti',
+  seeds:'Semi',
+  nectar:'Nettare',
+  algae:'Alghe',
+  aquatic_plants:'Piante acquatiche',
+  phytoplankton:'Fitoplancton',
+  zooplankton:'Zooplancton',
+  plankton:'Plancton',
+  detritus:'Detrito organico',
+  carrion:'Carogne',
+  insects:'Insetti',
+  larvae:'Larve',
+  krill:'Krill',
+  coral_polyps:'Polipi corallini',
+  small_fish:'Piccoli pesci',
+  small_mammals:'Piccoli mammiferi',
+  crustaceans:'Crostacei'
 };
 function normalizeHabitatId(id) {
   const s = String(id || '').trim();
@@ -4511,8 +4529,9 @@ function LifeWebNodeModal({ node, graph, nodes, onClose, onOpenAnimal, onToggleR
 
 
 function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
-  const WIDTH = 920;
-  const HEIGHT = 650;
+  const WIDTH = 980;
+  const HEIGHT = 680;
+  const WAIT_Y = HEIGHT - 74;
   const [nodes, setNodes] = useState([]);
   const nodesRef = useRef([]);
   const alphaRef = useRef(0.9);
@@ -4525,29 +4544,33 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const [equilibrium, setEquilibrium] = useState(100);
   const mapControls = useInteractiveMapControls();
 
-  const radiusFor = (n) => n.type === 'resource' ? 22 : n.group === 'apex' ? 34 : n.group === 'carnivore' ? 31 : n.group === 'omnivore' ? 29 : 27;
-  const tierY = (group) => ({ apex:96, carnivore:190, omnivore:315, filter:442, herbivore:465, producer:535, resource:575 }[group] ?? 330);
-
+  const tierY = (group) => ({ apex:82, carnivore:184, omnivore:310, filter:435, herbivore:488, producer:555, resource:606 }[group] ?? 330);
+  const radiusFor = (n) => n.type === 'resource' ? 22 : n.group === 'apex' ? 35 : n.group === 'carnivore' ? 32 : n.group === 'omnivore' ? 30 : 28;
   const initNodes = (sourceNodes = graph.nodes || []) => {
     const grouped = sourceNodes.reduce((acc,n)=>{ (acc[n.group || 'omnivore'] ||= []).push(n); return acc; }, {});
     const order = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
     const out = [];
-    order.forEach(group => {
+    order.forEach((group, gi) => {
       const arr = [...(grouped[group] || [])].sort((a,b)=> (a.animalId === graph.focusAnimalId ? -1 : b.animalId === graph.focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
       const count = arr.length;
       if (!count) return;
-      const rowW = Math.min(WIDTH - 120, Math.max(260, count * 78));
-      const startX = WIDTH/2 - rowW/2;
+      const rowW = Math.min(WIDTH - 130, Math.max(300, count * 78));
+      const center = WIDTH / 2 + (gi % 2 ? 18 : -18);
       arr.forEach((n, idx) => {
-        const x = count === 1 ? WIDTH/2 : startX + (idx + .5) * (rowW / count);
-        out.push({ ...n, x, y:tierY(group) + (idx % 2 ? 12 : -12), vx:0, vy:0, fx:null, fy:null });
+        const phase = (idx * 137.508 + gi * 41) * Math.PI / 180;
+        const norm = count === 1 ? 0 : ((idx / Math.max(1,count - 1)) - .5);
+        const x = center + norm * rowW + Math.sin(phase) * 30;
+        const y = tierY(group) + Math.cos(phase * .72) * 26 + (idx % 3 - 1) * 10;
+        out.push({ ...n, x:Math.max(58, Math.min(WIDTH - 58, x)), y:Math.max(48, Math.min(HEIGHT - 104, y)), vx:0, vy:0, fx:null, fy:null });
       });
     });
     return out;
   };
 
-  const nodeById = Object.fromEntries((nodes || []).map(n => [n.id, n]));
-  const stressSet = new Set((graph.edges || []).filter(e => removed.has(e.source) || removed.has(e.target)).flatMap(e => [e.source, e.target]));
+  const restartSimulation = (hot=0.75) => {
+    alphaRef.current = Math.max(alphaRef.current, hot);
+    if (!rafRef.current) rafRef.current = requestAnimationFrame(stepSimulation);
+  };
 
   const stepSimulation = () => {
     const arr = nodesRef.current;
@@ -4555,22 +4578,20 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     const map = Object.fromEntries(arr.map(n => [n.id, n]));
     const alpha = alphaRef.current;
 
-    // Link spring: source -> target
     (graph.edges || []).forEach(edge => {
       const s = map[edge.source], t = map[edge.target];
-      if (!s || !t) return;
+      if (!s || !t || removed.has(s.id) || removed.has(t.id)) return;
       const dx = (t.x - s.x) || 0.01;
       const dy = (t.y - s.y) || 0.01;
       const dist = Math.sqrt(dx*dx + dy*dy) || 1;
-      const desired = edge.relation_type === 'resource_use' ? 138 : 172;
-      const force = (dist - desired) * 0.010 * alpha;
+      const desired = edge.relation_type === 'resource_use' ? 142 : edge.confidence === 'likely' ? 172 : 200;
+      const force = (dist - desired) * 0.012 * alpha;
       const fx = dx / dist * force;
       const fy = dy / dist * force;
-      if (!s.fx && !removed.has(s.id)) { s.vx += fx; s.vy += fy; }
-      if (!t.fx && !removed.has(t.id)) { t.vx -= fx; t.vy -= fy; }
+      if (s.fx == null) { s.vx += fx; s.vy += fy; }
+      if (t.fx == null) { t.vx -= fx; t.vy -= fy; }
     });
 
-    // Repulsion and collision
     for (let i=0; i<arr.length; i++) {
       const a = arr[i];
       if (removed.has(a.id)) continue;
@@ -4581,51 +4602,44 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
         let dy = (b.y - a.y) || 0.01;
         let dist2 = dx*dx + dy*dy;
         let dist = Math.sqrt(dist2) || 1;
-        const minDist = radiusFor(a) + radiusFor(b) + 42;
-        const charge = -1850 * alpha / Math.max(280, dist2);
+        const minDist = radiusFor(a) + radiusFor(b) + 54;
+        const charge = -3600 * alpha / Math.max(340, dist2);
         const fx = dx / dist * charge;
         const fy = dy / dist * charge;
-        if (!a.fx) { a.vx += fx; a.vy += fy; }
-        if (!b.fx) { b.vx -= fx; b.vy -= fy; }
+        if (a.fx == null) { a.vx += fx; a.vy += fy; }
+        if (b.fx == null) { b.vx -= fx; b.vy -= fy; }
         if (dist < minDist) {
-          const push = (minDist - dist) * 0.038 * alpha;
+          const push = (minDist - dist) * 0.072 * alpha;
           const px = dx / dist * push;
           const py = dy / dist * push;
-          if (!a.fx) { a.vx -= px; a.vy -= py; }
-          if (!b.fx) { b.vx += px; b.vy += py; }
+          if (a.fx == null) { a.vx -= px; a.vy -= py; }
+          if (b.fx == null) { b.vx += px; b.vy += py; }
         }
       }
     }
 
-    arr.forEach(n => {
+    arr.forEach((n, idx) => {
       if (removed.has(n.id)) return;
       const targetY = tierY(n.group);
-      const targetX = n.animalId === graph.focusAnimalId ? WIDTH / 2 : WIDTH / 2;
-      if (!n.fx) {
-        n.vx += (targetX - n.x) * 0.0008 * alpha;
-        n.vy += (targetY - n.y) * 0.018 * alpha;
+      const phase = (idx * 2.399 + targetY * .03);
+      const targetX = n.animalId === graph.focusAnimalId
+        ? WIDTH / 2
+        : WIDTH / 2 + Math.sin(phase) * (n.group === 'resource' ? 290 : 230);
+      if (n.fx == null) {
+        n.vx += (targetX - n.x) * 0.0011 * alpha;
+        n.vy += (targetY - n.y) * 0.014 * alpha;
       }
-      // Keep inside viewport with soft walls
-      if (n.x < 56) n.vx += (56 - n.x) * 0.035;
-      if (n.x > WIDTH - 56) n.vx -= (n.x - WIDTH + 56) * 0.035;
-      if (n.y < 54) n.vy += (54 - n.y) * 0.035;
-      if (n.y > HEIGHT - 54) n.vy -= (n.y - HEIGHT + 54) * 0.035;
-
+      if (n.x < 58) n.vx += (58 - n.x) * 0.035;
+      if (n.x > WIDTH - 58) n.vx -= (n.x - WIDTH + 58) * 0.035;
+      if (n.y < 48) n.vy += (48 - n.y) * 0.035;
+      if (n.y > HEIGHT - 112) n.vy -= (n.y - HEIGHT + 112) * 0.035;
       if (n.fx != null) { n.x = n.fx; n.y = n.fy; n.vx = 0; n.vy = 0; }
-      else {
-        n.vx *= 0.82; n.vy *= 0.82;
-        n.x += n.vx; n.y += n.vy;
-      }
+      else { n.vx *= 0.80; n.vy *= 0.80; n.x += n.vx; n.y += n.vy; }
     });
 
-    alphaRef.current = Math.max(0.015, alpha * 0.985);
+    alphaRef.current = Math.max(0.018, alpha * 0.985);
     setNodes(arr.map(n => ({ ...n })));
     rafRef.current = requestAnimationFrame(stepSimulation);
-  };
-
-  const restartSimulation = (hot=0.75) => {
-    alphaRef.current = Math.max(alphaRef.current, hot);
-    if (!rafRef.current) rafRef.current = requestAnimationFrame(stepSimulation);
   };
 
   useEffect(() => {
@@ -4650,6 +4664,9 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     onGraphChange?.({ removedIds:[...hiddenIds], visibleAnimalIds:nodes.filter(n => n.type === 'animal' && !removed.has(n.id)).map(n => n.animalId) });
   }, [removed, nodes.length, graph.edges]);
 
+  const nodeById = Object.fromEntries((nodes || []).map(n => [n.id, n]));
+  const waitingNodes = nodes.filter(n => removed.has(n.id) && n.type === 'animal');
+  const stressSet = new Set((graph.edges || []).filter(e => removed.has(e.source) || removed.has(e.target)).flatMap(e => [e.source, e.target]));
   const svgPoint = (e) => {
     const rect = e.currentTarget.ownerSVGElement?.getBoundingClientRect?.() || e.currentTarget.getBoundingClientRect();
     return {
@@ -4660,10 +4677,9 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const startDrag = (e,node) => {
     e.stopPropagation();
     const target = nodesRef.current.find(n => n.id === node.id);
-    if (!target) return;
+    if (!target || removed.has(target.id)) return;
     dragRef.current = target.id;
-    target.fx = target.x;
-    target.fy = target.y;
+    target.fx = target.x; target.fy = target.y;
     alphaRef.current = 0.55;
     restartSimulation(0.55);
     e.currentTarget.setPointerCapture?.(e.pointerId);
@@ -4673,18 +4689,22 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     const p = svgPoint(e);
     const target = nodesRef.current.find(n => n.id === dragRef.current);
     if (!target) return;
-    target.fx = p.x;
-    target.fy = p.y;
-    target.x = p.x;
-    target.y = p.y;
+    target.fx = p.x; target.fy = p.y; target.x = p.x; target.y = p.y;
     setNodes(nodesRef.current.map(n => ({ ...n })));
   };
   const stopDrag = () => {
     if (!dragRef.current) return;
     const target = nodesRef.current.find(n => n.id === dragRef.current);
-    if (target) { target.fx = null; target.fy = null; }
+    if (target) {
+      const droppedInWaitingZone = target.y > WAIT_Y && target.type === 'animal';
+      target.fx = null; target.fy = null;
+      if (droppedInWaitingZone) {
+        setRemoved(prev => new Set([...prev, target.id]));
+        setSelected(null);
+      }
+    }
     dragRef.current = null;
-    restartSimulation(0.45);
+    restartSimulation(0.55);
   };
   const toggleRemoved = (id) => {
     setRemoved(prev => {
@@ -4692,11 +4712,11 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       next.has(id) ? next.delete(id) : next.add(id);
       return next;
     });
-    restartSimulation(0.6);
+    restartSimulation(0.65);
   };
   const addAnimal = (animal) => {
     if (!animal) return;
-    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, x:WIDTH/2 + (Math.random()*120-60), y:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
+    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, x:WIDTH/2 + (Math.random()*160-80), y:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
     if (nodesRef.current.some(n => n.id === node.id)) return;
     nodesRef.current = [...nodesRef.current, node];
     setNodes(nodesRef.current.map(n=>({ ...n })));
@@ -4705,7 +4725,6 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     restartSimulation(0.9);
   };
 
-  const activeEdges = graph.edges || [];
   return (
     <div style={{ background:'#0E1116', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:12, boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto auto auto auto', gap:8, alignItems:'center', marginBottom:10 }}>
@@ -4714,9 +4733,9 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Animali <span style={{ color:'#74C7FF' }}>{nodes.filter(n=>n.type==='animal' && !removed.has(n.id)).length}</span></div>
         </div>
         <button data-sound="filter" onClick={()=>setPickerOpen(v=>!v)} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>+ Aggiungi</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.55,z-0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.52,z-0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
         <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.min(3.8,z+0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); restartSimulation(0.8);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); restartSimulation(0.85);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
       </div>
       {pickerOpen && (
         <div style={{ marginBottom:10, maxHeight:148, overflowY:'auto', borderRadius:16, padding:10, background:'rgba(255,255,255,.04)', border:'1px solid rgba(255,255,255,.08)', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
@@ -4726,36 +4745,51 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       <div {...mapControls.handlers} style={{ borderRadius:18, overflow:'hidden', touchAction:'none' }}>
         <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:560, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
           <defs>
-            <marker id="lifeArrowV38" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker>
-            <filter id="softLifeGlow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <marker id="lifeArrowV40" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker>
+            <filter id="softLifeGlowV40"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
           </defs>
           <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
-            {activeEdges.map(e=>{
+            {(graph.edges || []).map(e=>{
               const s = nodeById[e.source], t = nodeById[e.target];
               if(!s||!t) return null;
               const warning = removed.has(e.source) || removed.has(e.target);
-              const hidden = removed.has(e.source) && removed.has(e.target);
-              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={warning?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={warning?3:1.2} markerEnd="url(#lifeArrowV38)" strokeDasharray={warning?'8 6':'none'} opacity={hidden ? .18 : warning ? .95 : .72} />;
+              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={warning?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={warning?3:1.2} markerEnd="url(#lifeArrowV40)" strokeDasharray={warning?'8 6':'none'} opacity={warning ? .92 : .72} />;
             })}
+            <rect x="20" y={WAIT_Y} width={WIDTH-40} height="56" rx="20" fill="rgba(168,70,55,.10)" stroke="rgba(168,70,55,.34)" strokeDasharray="8 8" />
+            <text x={WIDTH/2} y={WAIT_Y+34} textAnchor="middle" fill="rgba(255,255,255,.42)" fontSize="15" fontWeight="900" pointerEvents="none">trascina qui per mettere in attesa</text>
             {nodes.map(n=>{
+              if (removed.has(n.id)) return null;
               const color=nodeColorForGroup(n.group);
-              const isRemoved=removed.has(n.id);
               const stressed=stressSet.has(n.id);
-              const r = isRemoved ? 2 : radiusFor(n);
+              const r = radiusFor(n);
               return (
-                <g key={n.id} transform={`translate(${n.x},${n.y})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', opacity:isRemoved ? .20 : 1, animation:stressed && !isRemoved?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
-                  <circle r={r + 7} fill={`${color}18`} filter="url(#softLifeGlow)" />
-                  <circle r={r} fill={n.type==='resource' ? '#252635' : `${color}25`} stroke={isRemoved?'#666':color} strokeWidth={n.type==='resource'?5:6} />
+                <g key={n.id} transform={`translate(${n.x},${n.y})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
+                  <circle r={r + 7} fill={`${color}18`} filter="url(#softLifeGlowV40)" />
+                  <circle r={r} fill={n.type==='resource' ? '#252635' : `${color}25`} stroke={color} strokeWidth={n.type==='resource'?5:6} />
                   <g transform={`scale(${Math.max(1, r/22)})`}><LifeWebNodeAvatar node={{ ...n, focusAnimalId:graph.focusAnimalId }} color={color} /></g>
-                  <text x={r + 12} y="4" fill="rgba(255,255,255,.92)" fontSize="14" fontWeight="900" pointerEvents="none">{n.type==='resource'?'Risorsa':clampWholeWords(n.label, 18)}</text>
+                  <text x={r + 13} y="4" fill="rgba(255,255,255,.92)" fontSize="14" fontWeight="900" pointerEvents="none">{clampWholeWords(n.label, 20)}</text>
                 </g>
               );
             })}
           </g>
         </svg>
       </div>
+      {waitingNodes.length > 0 && (
+        <div style={{ marginTop:10, borderRadius:18, background:'rgba(168,70,55,.08)', border:'1px solid rgba(168,70,55,.28)', padding:10 }}>
+          <div style={{ color:'#E8A08E', fontSize:11, fontWeight:1000, textTransform:'uppercase', marginBottom:8 }}>Attesa · specie rimosse</div>
+          <div style={{ display:'flex', gap:9, overflowX:'auto', WebkitOverflowScrolling:'touch', paddingBottom:3 }}>
+            {waitingNodes.map(n => {
+              const a = (graph.allAnimals || graph.animals || []).find(x => x.id === n.animalId);
+              return <button key={n.id} onClick={()=>toggleRemoved(n.id)} style={{ flex:'0 0 82px', minHeight:92, borderRadius:15, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.055)', color:'white', padding:7, fontFamily:'inherit', cursor:'pointer' }}>
+                {a ? <AnimalImg a={{...a,status:'catturato'}} size={52} fontSize={20} overrideStatus="catturato" /> : <div style={{ width:52, height:52, borderRadius:16, margin:'0 auto', background:'rgba(255,255,255,.08)' }} />}
+                <div style={{ fontSize:9.8, lineHeight:1.1, fontWeight:900, marginTop:5 }}>{clampWholeWords(n.label, 18)}</div>
+              </button>;
+            })}
+          </div>
+        </div>
+      )}
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:10, alignItems:'center', marginTop:10 }}>
-        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{removed.size ? 'Le linee rosse tratteggiate mostrano dipendenze colpite: doppio tap o dettaglio nodo per ripristinare.' : 'Force layout attivo: trascina un nodo, doppio tap per rimuoverlo, usa pinch/zoom per esplorare la rete.'}</div>
+        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{waitingNodes.length ? 'Le specie in attesa restano fuori dalla rete: toccale nella riga per reinserirle.' : 'Force layout attivo: trascina un nodo, doppio tap per rimuoverlo, o trascinalo nella zona attesa.'}</div>
         <button data-sound="filter" onClick={()=>{ const init = initNodes(graph.nodes || []); nodesRef.current = init; setNodes(init.map(n=>({ ...n }))); setRemoved(new Set()); setSelected(null); mapControls.reset(); restartSimulation(0.95); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
       </div>
       {selected && <LifeWebNodeModal node={selected} graph={graph} nodes={nodes} removed={removed} onClose={()=>setSelected(null)} onOpenAnimal={onOpenAnimal} onToggleRemove={toggleRemoved} />}
@@ -5209,7 +5243,59 @@ function AbilitiesPage({ onBack, onOpenAbility }) {
 
 
 // ── Comparator ────────────────────────────────────────────────────────
-// ── Comparator ────────────────────────────────────────────────────────
+const COMPARE_LEFT_COLOR = '#5BB8F5';
+const COMPARE_RIGHT_COLOR = '#F0A840';
+const COMPARE_LEFT_GRADIENT = 'linear-gradient(135deg,#5BB8F5,#245B9B)';
+const COMPARE_RIGHT_GRADIENT = 'linear-gradient(135deg,#F0A840,#A84637)';
+function ComparatorInfoModal({ onClose }) {
+  return (
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:240, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, maxHeight:'86%', overflowY:'auto', borderRadius:26, background:'linear-gradient(180deg,#222226,#111113)', border:'1px solid rgba(255,255,255,.10)', boxShadow:'0 30px 80px rgba(0,0,0,.58)', padding:20 }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, marginBottom:12 }}>
+          <div style={{ color:'white', fontSize:22, fontWeight:1000 }}>Come funziona il duello</div>
+          <button onClick={onClose} style={{ width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button>
+        </div>
+        {[
+          ['Vulnerabilità', 'Deriva dallo stato di conservazione IUCN quando disponibile; in mancanza usa una stima inversa basata sulla resistenza. Valori alti indicano fragilità maggiore.'],
+          ['Dimensioni log', 'Usa la lunghezza corporea media stimata. La scala è logaritmica per confrontare microfauna, uccelli, mammiferi e grandi vertebrati senza schiacciare i piccoli.'],
+          ['Velocità centili', 'Usa il valore di velocità/statistica del dataset e lo trasforma in percentile rispetto agli animali presenti nel database.'],
+          ['Peso log', 'Usa foodweb.body_mass_g quando presente, altrimenti stima dal campo peso. Anche qui scala logaritmica per evitare che i giganti dominino tutto il grafico.'],
+          ['Adattabilità', 'Percentile del numero di paesi in cui la specie è presente: più paesi = distribuzione più ampia e maggiore adattabilità geografica.'],
+          ['Abilità', 'Le abilità sono trait contestuali. Nel duello puoi toccarle: sul retro trovi perché quell’animale le possiede o come vengono interpretate.']
+        ].map(([title, body])=>(
+          <div key={title} style={{ borderRadius:16, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.07)', padding:13, marginBottom:9 }}>
+            <div style={{ color:'#F0A840', fontSize:13, fontWeight:1000 }}>{title}</div>
+            <div style={{ color:'rgba(255,255,255,.72)', fontSize:12, lineHeight:1.48, marginTop:5 }}>{body}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+function ComparatorAbilityChip({ animal, id, accent }) {
+  const [flipped,setFlipped]=useState(false);
+  const meta = CATEGORY_META?.[id] || { label:id, icon:'🔹', color:accent };
+  const badgeUrl = `/badges/${id.toLowerCase()}.png`;
+  const why = animal?.cat_curiosities?.[id] || animal?.raw?.cat_curiosities?.[id] || getAbilityDescription(id, meta);
+  return (
+    <button onClick={()=>setFlipped(v=>!v)} style={{ minHeight:74, perspective:800, border:'none', background:'transparent', padding:0, cursor:'pointer', fontFamily:'inherit', color:'white', textAlign:'left' }}>
+      <div style={{ position:'relative', minHeight:74, transformStyle:'preserve-3d', transition:'transform .34s ease', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', display:'grid', gridTemplateColumns:'44px 1fr', alignItems:'center', gap:9, background:'rgba(255,255,255,.055)', border:`1px solid ${(meta.color || accent)}44`, borderRadius:15, padding:'9px 10px', boxSizing:'border-box', overflow:'hidden' }}>
+          <img src={badgeUrl} alt="" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:40, height:40, objectFit:'contain', filter:`drop-shadow(0 0 9px ${(meta.color || accent)}55)` }} />
+          <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:40, height:40, fontSize:24 }}>{meta.icon}</span>
+          <div style={{ color:'white', fontSize:11.5, lineHeight:1.15, fontWeight:950, overflow:'hidden' }}>{meta.label}</div>
+        </div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', display:'grid', gridTemplateColumns:'38px 1fr', alignItems:'center', gap:8, background:'rgba(0,0,0,.34)', border:`1px solid ${(meta.color || accent)}55`, borderRadius:15, padding:'8px 9px', boxSizing:'border-box', overflow:'hidden' }}>
+          <img src={badgeUrl} alt="" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:34, height:34, objectFit:'contain', filter:`drop-shadow(0 0 8px ${(meta.color || accent)}55)` }} />
+          <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:34, height:34, fontSize:22 }}>{meta.icon}</span>
+          <div style={{ color:'rgba(255,255,255,.80)', fontSize:10.4, lineHeight:1.22, fontWeight:720, maxHeight:56, overflowY:'auto' }}>{why}</div>
+        </div>
+      </div>
+    </button>
+  );
+}
+
+
 function parseRangeAverage(value, unitKind='mass') {
   if (value == null) return null;
   const s = String(value).toLowerCase().replace(/,/g,'.').replace(/[–—]/g,'-');
@@ -5339,16 +5425,16 @@ function ComparatorRadar({ left, right, colorLeft, colorRight }) {
     </div>
   );
 }
-function ComparatorSelector({ label, value, animals, onChange, accent }) {
+function ComparatorSelector({ label, value, animals, onChange, accent, gradient }) {
   const [open,setOpen] = useState(false);
   const [q,setQ] = useState('');
   const rows = animals.filter(a => !q.trim() || `${a.com} ${a.sci} ${a.com_en}`.toLowerCase().includes(q.toLowerCase())).slice(0,80);
   const c = CLS[value?.cls] || CLS.Mammalia;
   return (
     <div style={{ position:'relative' }}>
-      <button data-sound="compare" onClick={()=>setOpen(v=>!v)} style={{ width:'100%', border:'1px solid rgba(255,255,255,.10)', background:'linear-gradient(180deg,rgba(255,255,255,.07),rgba(0,0,0,.20))', borderRadius:20, padding:10, color:'white', cursor:'pointer', textAlign:'left', display:'flex', alignItems:'center', gap:10 }}>
-        <div style={{ width:58, height:58, borderRadius:16, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>
-          {value ? <AnimalImg a={{...value,status:'avvistato'}} size={52} fontSize={30} overrideStatus="avvistato" /> : <span style={{ fontSize:24 }}>＋</span>}
+      <button data-sound="compare" onClick={()=>setOpen(v=>!v)} style={{ width:'100%', border:'1px solid transparent', background:`linear-gradient(180deg,rgba(18,18,20,.92),rgba(0,0,0,.36)) padding-box, ${gradient || accent} border-box`, borderRadius:20, padding:10, color:'white', cursor:'pointer', textAlign:'left', display:'flex', alignItems:'center', gap:10, boxShadow:`0 0 0 1px ${accent}33, 0 14px 34px rgba(0,0,0,.26)` }}>
+        <div style={{ width:58, height:58, borderRadius:16, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 18px ${accent}33` }}>
+          {value ? <AnimalImg a={{...value,status:'avvistato'}} size={52} fontSize={30} overrideStatus="avvistato" /> : <span style={{ fontSize:24, color:accent }}>＋</span>}
         </div>
         <div style={{ minWidth:0, flex:1 }}>
           <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.6 }}>{label}</div>
@@ -5371,15 +5457,15 @@ function ComparatorSelector({ label, value, animals, onChange, accent }) {
     </div>
   );
 }
-function CompareInfoCard({ animal, metrics, accent, sideLabel }) {
+function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient }) {
   if (!animal) return <div style={{ minHeight:240, borderRadius:22, background:'rgba(255,255,255,.05)', border:'1px dashed rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.45)', fontWeight:850 }}>Scegli un animale</div>;
   const c = CLS[animal.cls] || CLS.Mammalia;
-  const abilities = toArraySafe(animal.categories).slice(0,4);
+  const abilities = toArraySafe(animal.categories).slice(0,6);
   const stat = (label,value,sub,icon) => <div style={{ background:'rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.06)', borderRadius:14, padding:'9px 10px' }}><div style={{ color:'rgba(255,255,255,.55)', fontSize:10, fontWeight:850, textTransform:'uppercase' }}>{icon} {label}</div><div style={{ color:'white', fontSize:14, fontWeight:950, marginTop:3 }}>{value}</div>{sub && <div style={{ color:'rgba(255,255,255,.42)', fontSize:9.5, marginTop:1 }}>{sub}</div>}</div>;
   return (
-    <div style={{ borderRadius:24, overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop || '#2A2A2C'},#111113)`, border:`1px solid ${accent}33`, boxShadow:'0 16px 48px rgba(0,0,0,.28)' }}>
+    <div style={{ borderRadius:24, overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop || '#2A2A2C'},#111113) padding-box, ${gradient || accent} border-box`, border:'1px solid transparent', boxShadow:`0 16px 48px rgba(0,0,0,.28), 0 0 0 1px ${accent}22` }}>
       <div style={{ padding:14, display:'flex', alignItems:'center', gap:12 }}>
-        <div style={{ width:76, height:76, borderRadius:22, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
+        <div style={{ width:76, height:76, borderRadius:22, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${accent}33` }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
         <div style={{ minWidth:0 }}>
           <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.8 }}>{sideLabel}</div>
           <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.05 }}>{animal.com}</div>
@@ -5394,13 +5480,7 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel }) {
       </div>
       <div style={{ padding:'0 14px 16px' }}>
         <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, margin:'0 0 8px 2px', textTransform:'uppercase' }}>Abilità</div>
-        {abilities.length ? <div style={{ display:'flex', flexDirection:'column', gap:7 }}>{abilities.map(id=>{
-          const meta = CATEGORY_META?.[id] || { label:id, icon:'🔹', color:accent };
-          return <div key={id} style={{ display:'flex', alignItems:'center', gap:9, background:'rgba(255,255,255,.055)', border:`1px solid ${(meta.color || accent)}33`, borderRadius:13, padding:'8px 9px' }}>
-            <img src={`/badges/${id.toLowerCase()}.png`} alt="" onError={e=>{e.currentTarget.style.display='none';}} style={{ width:34, height:34, objectFit:'contain', filter:`drop-shadow(0 0 8px ${(meta.color || accent)}44)` }} />
-            <div style={{ color:'white', fontSize:11.5, lineHeight:1.2, fontWeight:900 }}>{meta.label}</div>
-          </div>;
-        })}</div> : <div style={{ color:'rgba(255,255,255,.45)', fontSize:12, background:'rgba(255,255,255,.05)', borderRadius:13, padding:12 }}>Nessuna abilità speciale registrata.</div>}
+        {abilities.length ? <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>{abilities.map(id=><ComparatorAbilityChip key={id} animal={animal} id={id} accent={accent} />)}</div> : <div style={{ color:'rgba(255,255,255,.45)', fontSize:12, background:'rgba(255,255,255,.05)', borderRadius:13, padding:12 }}>Nessuna abilità speciale registrata.</div>}
       </div>
     </div>
   );
@@ -5414,20 +5494,26 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = 
   const bench = useMemo(() => getComparatorBenchmarks(normalized), [normalized]);
   const leftMetrics = left ? getComparatorMetrics(left, bench) : null;
   const rightMetrics = right ? getComparatorMetrics(right, bench) : null;
-  const colorLeft = (CLS[left?.cls]?.accent || '#5BBEF8');
-  const colorRight = (CLS[right?.cls]?.accent || '#FF7A88');
+  const colorLeft = COMPARE_LEFT_COLOR;
+  const colorRight = COMPARE_RIGHT_COLOR;
+  const [showInfo,setShowInfo]=useState(false);
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
       <PageHeader title="Comparatore" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:'14px 14px 28px' }}>
         <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.28),rgba(20,20,22,.88))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:16, marginBottom:14 }}>
-          <div style={{ color:'#C85D44', fontSize:11, fontWeight:950, textTransform:'uppercase', letterSpacing:1 }}>Analisi comparativa</div>
-          <div style={{ color:'white', fontSize:25, fontWeight:1000, lineHeight:1.05, marginTop:4 }}>Duello biologico</div>
+          <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:12 }}>
+            <div>
+              <div style={{ color:'#C85D44', fontSize:11, fontWeight:950, textTransform:'uppercase', letterSpacing:1 }}>Analisi comparativa</div>
+              <div style={{ color:'white', fontSize:25, fontWeight:1000, lineHeight:1.05, marginTop:4 }}>Duello biologico</div>
+            </div>
+            <button onClick={()=>setShowInfo(true)} aria-label="Info comparatore" style={{ width:36, height:36, borderRadius:13, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'#F0A840', fontSize:18, fontWeight:1000, cursor:'pointer' }}>i</button>
+          </div>
           <div style={{ color:'rgba(255,255,255,.56)', fontSize:12, lineHeight:1.55, marginTop:8 }}>Radar su vulnerabilità, dimensioni logaritmiche, velocità in centili, peso logaritmico e adattabilità geografica.</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
-          <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} />
-          <ComparatorSelector label="Destra" value={right} animals={normalized} onChange={setRight} accent={colorRight} />
+          <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} />
+          <ComparatorSelector label="Destra" value={right} animals={normalized} onChange={setRight} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} />
         </div>
         <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
@@ -5436,10 +5522,11 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = 
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorRight, display:'inline-block' }} />{right?.com || 'Destra'}</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12 }}>
-          <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} sideLabel="Animale A" />
-          <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} sideLabel="Animale B" />
+          <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} sideLabel="Animale A" />
+          <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} sideLabel="Animale B" />
         </div>
       </div>
+      {showInfo && <ComparatorInfoModal onClose={()=>setShowInfo(false)} />}
     </div>
   );
 }
