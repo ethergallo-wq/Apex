@@ -521,10 +521,9 @@ const ABILITY_GROUPS = [
   { id:'cognition', label:'Cognizione', color:'#D980FA', prefixes:['COG_'] },
   { id:'physical', label:'Prestazioni fisiche', color:'#F5B041', prefixes:['PHYS_'] },
   { id:'behavior', label:'Comportamento', color:'#58D68D', prefixes:['BEH_'] },
-  { id:'survival', label:'Sopravvivenza', color:'#EB984E', prefixes:['SURV_'] },
   { id:'ecology', label:'Ecologia', color:'#45B39D', prefixes:['ECO_'] },
   { id:'evolution', label:'Evoluzione', color:'#EC7063', prefixes:['EVO_'] },
-  { id:'special', label:'Speciali', color:'#AAB7B8', prefixes:['LIFESPAN_','HAB_'] },
+  { id:'special', label:'Speciali', color:'#AAB7B8', prefixes:['SURV_','LIFESPAN_','HAB_'] },
 ];
 function getAbilityGroupId(categoryId='') {
   const id = String(categoryId || '').toUpperCase();
@@ -1460,12 +1459,12 @@ function StatRow({ label, base, scale, color, unit }) {
   const realValue = Math.round(base * scale);
   const barWidth = Math.min(100, Math.round((realValue / maxValue) * 100));
   return (
-    <div style={{ display:'grid', gridTemplateColumns:'112px 1fr 78px', alignItems:'center', gap:12, minHeight:38 }}>
-      <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>{label}</span>
-      <div style={{ height:14, background:'rgba(0,0,0,.42)', borderRadius:999, overflow:'hidden', boxShadow:'inset 0 1px 3px rgba(255,255,255,.04)' }}>
-        <div style={{ height:'100%', width:`${barWidth}%`, background:`linear-gradient(90deg, ${color}CC, ${color})`, borderRadius:999, transition:'width .65s cubic-bezier(.4,0,.2,1)', boxShadow:`0 0 14px ${color}55` }} />
+    <div style={{ minHeight:50, borderRadius:13, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'10px 12px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'104px 1fr 72px', alignItems:'center', gap:11 }}>
+      <span style={{ color:'rgba(255,255,255,.80)', fontSize:12.5, fontWeight:950, lineHeight:1.05 }}>{label}</span>
+      <div style={{ height:12, background:'rgba(0,0,0,.48)', borderRadius:999, overflow:'hidden', boxShadow:'inset 0 1px 3px rgba(255,255,255,.04)' }}>
+        <div style={{ height:'100%', width:`${barWidth}%`, background:`linear-gradient(90deg, ${color}A8, ${color})`, borderRadius:999, transition:'width .65s cubic-bezier(.4,0,.2,1)', boxShadow:`0 0 16px ${color}55` }} />
       </div>
-      <span style={{ color:'white', fontSize:12.5, fontWeight:900, textAlign:'right', lineHeight:1.1 }}>{realValue} {unit}</span>
+      <span style={{ color:'white', fontSize:12.5, fontWeight:950, textAlign:'right', lineHeight:1.05 }}>{realValue} {unit}</span>
     </div>
   );
 }
@@ -1590,7 +1589,7 @@ function useInteractiveMapControls() {
   const [zoom, setZoomState] = useState(1);
   const [pan, setPanState] = useState({x:0,y:0});
   const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
-  const clampZoom = (z) => Math.max(0.58, Math.min(4.5, Number(z) || 1));
+  const clampZoom = (z) => Math.max(1, Math.min(4.5, Number(z) || 1));
   const clampPan = (nextPan, z = zoom) => {
     if (z <= 1.01) return { x:0, y:0 };
     const maxX = 160 * (z - 1);
@@ -2834,7 +2833,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
           {preview ? <img src={preview} alt="foto" style={{ width:'100%', maxHeight:260, objectFit:'contain', borderRadius:16 }} /> : <div style={{ minHeight:150, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.62)', fontWeight:900 }}>📷 Scatta o carica una foto</div>}
           <input type="file" accept="image/*" capture="environment" onChange={e=>setFile(e.target.files?.[0] || null)} style={{ display:'none' }} />
         </label>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>GPS</div><div style={{ color:gps?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{gps ? `agganciato ±${Math.round(gps.accuracy || 0)}m` : 'in attesa / non disponibile'}</div></div>
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>Habitat</div><div style={{ color:expectedHabitats.length?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{expectedHabitats.length ? `${expectedHabitats.length} habitat attesi` : 'non mappato'}</div></div>
         </div>
@@ -3021,11 +3020,11 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
               {/* Statistiche */}
               {statMode==='statistiche'&&(
                 isRevealedStatus(localStatus) ? (
-                  <div data-tour="animal-stats" style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'16px 14px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:12, justifyContent:'space-between' }}>
+                  <div data-tour="animal-stats" style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'14px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:9, justifyContent:'space-between' }}>
                     <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
                     <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
                     {a.lifespan != null && (
-                      <div style={{ display:'grid', gridTemplateColumns:'112px 1fr 78px', alignItems:'center', gap:12 }}>
+                      <div style={{ minHeight:50, borderRadius:13, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'10px 12px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'104px 1fr 72px', alignItems:'center', gap:11 }}>
                         <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>Vita</span>
                         <div style={{ flex:1, height:7, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
                           <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
@@ -3231,11 +3230,9 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
           <span style={{ display:'none', width:66, height:66, alignItems:'center', justifyContent:'center', fontSize:36, flexShrink:0 }}>{meta.icon}</span>
           <div style={{ color:'white', fontSize:15, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'13px 14px 13px 94px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.44),rgba(255,255,255,.04))' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'12px 42px 12px 14px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.50),rgba(255,255,255,.04))' }}>
           <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ position:'absolute', top:8, right:8, width:26, height:26, borderRadius:9, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.32)', color:'white', fontSize:13, fontWeight:900, cursor:'pointer', zIndex:3 }}>↺</button>
-          <img src={badgeUrl} alt="" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='inline-flex';}} style={{ position:'absolute', left:14, top:'50%', transform:'translateY(-50%)', width:66, height:66, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 14px ${(meta.color || accentColor)}44)` }} />
-          <span style={{ display:'none', position:'absolute', left:14, top:'50%', transform:'translateY(-50%)', width:66, height:66, alignItems:'center', justifyContent:'center', fontSize:36, flexShrink:0 }}>{meta.icon}</span>
-          <div style={{ color:'rgba(255,255,255,.75)', fontSize:12, lineHeight:1.45, fontWeight:650, textAlign:'left' }}>{curiosity}</div>
+          <div style={{ color:'rgba(255,255,255,.80)', fontSize:11.2, lineHeight:1.28, fontWeight:720, textAlign:'left', maxHeight:62, overflowY:'auto', paddingRight:2 }}>{curiosity}</div>
         </div>
       </div>
     </div>
@@ -3459,7 +3456,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
     onOpen?.();
   };
   return (
-    <div style={{ marginBottom:14, borderRadius:22, width:'100%', maxWidth:'100%', overflow:'hidden', height:flipped?274:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
+    <div style={{ marginBottom:14, borderRadius:22, width:'100%', maxWidth:'100%', overflow:'hidden', height:flipped?292:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
       <div style={{ position:'relative', height:'100%', transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div onClick={handleOpen} style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
           <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={204} />
@@ -3494,7 +3491,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
             <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer', flexShrink:0 }}>↺</button>
           </div>
           <div style={{ padding:'0 0 0', marginTop:-6 }}>
-            <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={186} fullBleed />
+            <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={198} fullBleed />
           </div>
           <div style={{ display:'flex', gap:8, padding:'10px 12px 12px', background:'rgba(16,17,20,.98)' }}>
             <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
@@ -3830,7 +3827,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               );
             })}
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{selectedCountries.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>nazioni</div></div>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{predictedUnlocks}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali potenziali</div></div>
           </div>
@@ -3876,7 +3873,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
           <div>
             <div style={{ color:'white', fontSize:21, fontWeight:1000, lineHeight:1.12 }}>Pacchetto iniziale pronto</div>
             <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6 }}>Ora una singola RPC batch sincronizza nazioni, animali ricercati, avvistamenti e primo award. Se la rete rallenta, l’app non resta bloccata.</p>
-            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
               {[
                 ['🗺️', selectedCountries.length, 'nazioni visitate'],
                 ['🎯', predictedUnlocks, 'ricercati potenziali'],
@@ -4102,7 +4099,6 @@ function AwardCard({ rule, unlocked, onOpen, tutorialHighlight=false }) {
         justifyContent:'space-between'
       }}
     >
-      <div style={{ position:'absolute', top:8, right:8, fontSize:10, fontWeight:1000, color:borderColor, background:'rgba(0,0,0,.28)', border:`1px solid ${borderColor}66`, borderRadius:999, padding:'3px 7px' }}>{Number(rule.level) === 1 ? 'Bronzo' : Number(rule.level) === 2 ? 'Argento' : 'Oro'}</div>
       <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'92%', maxWidth:118, height:108, objectFit:'contain', filter:unlocked?'drop-shadow(0 6px 12px rgba(0,0,0,.36))':'grayscale(1) opacity(.7)' }} />
       <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:108, height:108, fontSize:50 }}>🏅</span>
       <div style={{ color:unlocked?'#fff':'rgba(255,255,255,.62)', fontSize:12.5, fontWeight:900, lineHeight:1.13, textAlign:'center', minHeight:30, display:'flex', alignItems:'center' }}>{rule.name}</div>
@@ -4122,7 +4118,6 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
         <button onClick={onPrev} style={{ position:'absolute', top:'50%', left:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>‹</button>
         <button onClick={onNext} style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>›</button>
         <div style={{ height:8 }} />
-        <div style={{ display:'inline-flex', alignItems:'center', gap:8, padding:'5px 10px', borderRadius:999, border:`1px solid ${borderColor}66`, color:borderColor, background:`${borderColor}22`, fontSize:11, fontWeight:900, marginBottom:10 }}>{Number(rule.level) === 1 ? 'Bronzo' : Number(rule.level) === 2 ? 'Argento' : 'Oro'}</div>
         <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
         <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:266, height:266, maxWidth:'82vw', fontSize:104, margin:'0 auto 8px' }}>🏅</span>
         <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
@@ -4446,9 +4441,9 @@ function autoArrangeLifeWebNodes(nodes = [], focusAnimalId = null) {
 }
 
 function buildLifeWebGraph(allAnimals, territory, habitat, focusAnimal=null, forcedAnimalIds=[]) {
-  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 42, focusAnimal);
+  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 36, focusAnimal);
   const extra = (allAnimals || []).filter(a => forcedAnimalIds.includes(a.id) && !animals.some(p => p.id === a.id));
-  const pickedAnimals = [...animals, ...extra].slice(0, 42);
+  const pickedAnimals = [...animals, ...extra].slice(0, 36);
   const habitatResourceIds = (HABITAT_RESOURCE_MAP[normalizeHabitatId(habitat?.id)] || inferDefaultHabitatsForTerritory(territory).flatMap(h=>HABITAT_RESOURCE_MAP[h] || []) || ['grass','insects','detritus']).slice(0,8);
   const animalLikeResources = new Set(['crustaceans','small_fish','small_mammals']);
   const resourceIds = habitatResourceIds.filter(r => !animalLikeResources.has(r));
@@ -4561,8 +4556,8 @@ function LifeWebNodeModal({ node, graph, nodes, onClose, onOpenAnimal, onToggleR
 
 
 function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
-  const WIDTH = 980;
-  const HEIGHT = 760;
+  const WIDTH = 1280;
+  const HEIGHT = 1040;
   const WAIT_Y = HEIGHT - 88;
   const [nodes, setNodes] = useState([]);
   const nodesRef = useRef([]);
@@ -4576,25 +4571,26 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const [equilibrium, setEquilibrium] = useState(100);
   const mapControls = useInteractiveMapControls();
 
-  const tierY = (group) => ({ apex:82, carnivore:206, omnivore:334, filter:454, herbivore:540, producer:622, resource:674 }[group] ?? 330);
-  const boxFor = (n) => n.type === 'resource' ? { w:126, h:50 } : { w:118, h:126 };
+  const groupOrder = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
+  const baseY = { apex:78, carnivore:214, omnivore:370, filter:526, herbivore:622, producer:720, resource:815 };
+  const boxFor = (n) => n.type === 'resource' ? { w:128, h:54 } : { w:96, h:122 };
   const initNodes = (sourceNodes = graph.nodes || []) => {
     const grouped = sourceNodes.reduce((acc,n)=>{ (acc[n.group || 'omnivore'] ||= []).push(n); return acc; }, {});
-    const order = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
     const out = [];
-    order.forEach((group, gi) => {
+    groupOrder.forEach((group) => {
       const arr = [...(grouped[group] || [])].sort((a,b)=> (a.animalId === graph.focusAnimalId ? -1 : b.animalId === graph.focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
-      const count = arr.length;
-      if (!count) return;
-      const spread = Math.min(WIDTH - 160, Math.max(340, count * (group === 'resource' ? 82 : 96)));
-      const center = WIDTH / 2 + (gi % 2 ? 12 : -12);
+      const maxPerRow = group === 'resource' ? 7 : 8;
+      const vGap = group === 'resource' ? 76 : 142;
       arr.forEach((n, idx) => {
-        const phase = (idx * 137.508 + gi * 41) * Math.PI / 180;
-        const norm = count === 1 ? 0 : ((idx / Math.max(1,count - 1)) - .5);
-        const x = center + norm * spread + Math.sin(phase) * 22;
-        const y = tierY(group) + Math.cos(phase * .72) * 16 + (idx % 3 - 1) * 6;
+        const row = Math.floor(idx / maxPerRow);
+        const col = idx % maxPerRow;
+        const rowCount = Math.min(maxPerRow, arr.length - row * maxPerRow);
         const box = boxFor(n);
-        out.push({ ...n, ...box, x:Math.max(box.w/2 + 16, Math.min(WIDTH - box.w/2 - 16, x)), y:Math.max(box.h/2 + 14, Math.min(HEIGHT - 140, y)), vx:0, vy:0, fx:null, fy:null });
+        const spacing = group === 'resource' ? 152 : 138;
+        const rowWidth = (rowCount - 1) * spacing;
+        const x = WIDTH / 2 - rowWidth / 2 + col * spacing + (row % 2 ? 18 : -18);
+        const y = (baseY[group] || 380) + row * vGap;
+        out.push({ ...n, ...box, x, y, tx:x, ty:y, vx:0, vy:0, fx:null, fy:null });
       });
     });
     return out;
@@ -4617,66 +4613,56 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       const dx = (t.x - s.x) || 0.01;
       const dy = (t.y - s.y) || 0.01;
       const dist = Math.sqrt(dx*dx + dy*dy) || 1;
-      const desired = edge.relation_type === 'resource_use' ? 165 : edge.confidence === 'likely' ? 208 : 236;
-      const force = (dist - desired) * 0.009 * alpha;
+      const desired = edge.relation_type === 'resource_use' ? 178 : edge.confidence === 'likely' ? 230 : 260;
+      const force = (dist - desired) * 0.0045 * alpha;
       const fx = dx / dist * force;
       const fy = dy / dist * force;
       if (s.fx == null) { s.vx += fx; s.vy += fy; }
       if (t.fx == null) { t.vx -= fx; t.vy -= fy; }
     });
 
-    for (let i=0; i<arr.length; i++) {
-      const a = arr[i];
-      if (removed.has(a.id)) continue;
-      for (let j=i+1; j<arr.length; j++) {
-        const b = arr[j];
-        if (removed.has(b.id)) continue;
-        const dx = (b.x - a.x) || 0.01;
-        const dy = (b.y - a.y) || 0.01;
-        const dist2 = dx*dx + dy*dy;
-        const dist = Math.sqrt(dist2) || 1;
-        const charge = -6200 * alpha / Math.max(420, dist2);
-        const fx = dx / dist * charge;
-        const fy = dy / dist * charge;
-        if (a.fx == null) { a.vx += fx; a.vy += fy; }
-        if (b.fx == null) { b.vx -= fx; b.vy -= fy; }
-        const overlapX = (a.w + b.w) / 2 + 16 - Math.abs(dx);
-        const overlapY = (a.h + b.h) / 2 + 18 - Math.abs(dy);
-        if (overlapX > 0 && overlapY > 0) {
-          if (overlapX < overlapY) {
-            const push = overlapX * 0.085 * alpha * (dx < 0 ? -1 : 1);
-            if (a.fx == null) a.vx -= push;
-            if (b.fx == null) b.vx += push;
-          } else {
-            const push = overlapY * 0.11 * alpha * (dy < 0 ? -1 : 1);
-            if (a.fx == null) a.vy -= push;
-            if (b.fx == null) b.vy += push;
+    for (let iter=0; iter<3; iter++) {
+      for (let i=0; i<arr.length; i++) {
+        const a = arr[i];
+        if (removed.has(a.id)) continue;
+        for (let j=i+1; j<arr.length; j++) {
+          const b = arr[j];
+          if (removed.has(b.id)) continue;
+          const dx = (b.x - a.x) || 0.01;
+          const dy = (b.y - a.y) || 0.01;
+          const overlapX = (a.w + b.w) / 2 + 22 - Math.abs(dx);
+          const overlapY = (a.h + b.h) / 2 + 22 - Math.abs(dy);
+          if (overlapX > 0 && overlapY > 0) {
+            if (overlapX < overlapY) {
+              const push = overlapX * 0.16 * (dx < 0 ? -1 : 1);
+              if (a.fx == null) a.vx -= push;
+              if (b.fx == null) b.vx += push;
+            } else {
+              const push = overlapY * 0.18 * (dy < 0 ? -1 : 1);
+              if (a.fx == null) a.vy -= push;
+              if (b.fx == null) b.vy += push;
+            }
           }
         }
       }
     }
 
-    arr.forEach((n, idx) => {
+    arr.forEach((n) => {
       if (removed.has(n.id)) return;
-      const targetY = tierY(n.group);
-      const phase = (idx * 2.399 + targetY * .03);
-      const targetX = n.animalId === graph.focusAnimalId
-        ? WIDTH / 2
-        : WIDTH / 2 + Math.sin(phase) * (n.group === 'resource' ? 320 : 248);
       if (n.fx == null) {
-        n.vx += (targetX - n.x) * 0.0011 * alpha;
-        n.vy += (targetY - n.y) * 0.013 * alpha;
+        n.vx += (n.tx - n.x) * 0.010 * alpha;
+        n.vy += (n.ty - n.y) * 0.012 * alpha;
       }
-      const left = n.w/2 + 14, right = WIDTH - n.w/2 - 14, top = n.h/2 + 14, bottom = HEIGHT - 116 - n.h/2;
-      if (n.x < left) n.vx += (left - n.x) * 0.035;
-      if (n.x > right) n.vx -= (n.x - right) * 0.035;
-      if (n.y < top) n.vy += (top - n.y) * 0.035;
-      if (n.y > bottom) n.vy -= (n.y - bottom) * 0.035;
+      const left = n.w/2 + 20, right = WIDTH - n.w/2 - 20, top = n.h/2 + 18, bottom = HEIGHT - 116 - n.h/2;
+      if (n.x < left) n.vx += (left - n.x) * 0.08;
+      if (n.x > right) n.vx -= (n.x - right) * 0.08;
+      if (n.y < top) n.vy += (top - n.y) * 0.08;
+      if (n.y > bottom) n.vy -= (n.y - bottom) * 0.08;
       if (n.fx != null) { n.x = n.fx; n.y = n.fy; n.vx = 0; n.vy = 0; }
-      else { n.vx *= 0.78; n.vy *= 0.78; n.x += n.vx; n.y += n.vy; }
+      else { n.vx *= 0.66; n.vy *= 0.66; n.x += n.vx; n.y += n.vy; }
     });
 
-    alphaRef.current = Math.max(0.018, alpha * 0.985);
+    alphaRef.current = Math.max(0.016, alpha * 0.982);
     setNodes(arr.map(n => ({ ...n })));
     rafRef.current = requestAnimationFrame(stepSimulation);
   };
@@ -4689,7 +4675,6 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     setSelected(null);
     setAvailableAnimals((graph.allAnimals || []).filter(a => !(graph.animals || []).some(g => g.id === a.id)).slice(0, 160));
     mapControls.reset();
-    mapControls.setZoom(0.8);
     restartSimulation(0.95);
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); rafRef.current = null; };
   }, [graph]);
@@ -4709,10 +4694,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const stressSet = new Set((graph.edges || []).filter(e => removed.has(e.source) || removed.has(e.target)).flatMap(e => [e.source, e.target]));
   const svgPoint = (e) => {
     const rect = e.currentTarget.ownerSVGElement?.getBoundingClientRect?.() || e.currentTarget.getBoundingClientRect();
-    return {
-      x: Math.max(30, Math.min(WIDTH - 30, ((e.clientX - rect.left) / rect.width) * WIDTH)),
-      y: Math.max(30, Math.min(HEIGHT - 30, ((e.clientY - rect.top) / rect.height) * HEIGHT)),
-    };
+    return { x:Math.max(30, Math.min(WIDTH - 30, ((e.clientX - rect.left) / rect.width) * WIDTH)), y:Math.max(30, Math.min(HEIGHT - 30, ((e.clientY - rect.top) / rect.height) * HEIGHT)) };
   };
   const startDrag = (e,node) => {
     e.stopPropagation();
@@ -4720,8 +4702,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     if (!target || removed.has(target.id)) return;
     dragRef.current = target.id;
     target.fx = target.x; target.fy = target.y;
-    alphaRef.current = 0.55;
-    restartSimulation(0.55);
+    alphaRef.current = 0.65;
+    restartSimulation(0.65);
     e.currentTarget.setPointerCapture?.(e.pointerId);
   };
   const moveDrag = (e) => {
@@ -4738,53 +4720,47 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     if (target) {
       const droppedInWaitingZone = target.y > WAIT_Y && target.type === 'animal';
       target.fx = null; target.fy = null;
-      if (droppedInWaitingZone) {
-        setRemoved(prev => new Set([...prev, target.id]));
-        setSelected(null);
-      }
+      if (droppedInWaitingZone) { setRemoved(prev => new Set([...prev, target.id])); setSelected(null); }
     }
     dragRef.current = null;
-    restartSimulation(0.55);
+    restartSimulation(0.7);
   };
   const toggleRemoved = (id) => {
-    setRemoved(prev => {
-      const next = new Set(prev);
-      next.has(id) ? next.delete(id) : next.add(id);
-      return next;
-    });
-    restartSimulation(0.65);
+    setRemoved(prev => { const next = new Set(prev); next.has(id) ? next.delete(id) : next.add(id); return next; });
+    restartSimulation(0.75);
   };
   const addAnimal = (animal) => {
     if (!animal) return;
-    const box = { w:118, h:126 };
-    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, ...box, x:WIDTH/2 + (Math.random()*160-80), y:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
+    const box = { w:96, h:122 };
+    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, ...box, x:WIDTH/2, y:HEIGHT/2, tx:WIDTH/2, ty:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
     if (nodesRef.current.some(n => n.id === node.id)) return;
     nodesRef.current = [...nodesRef.current, node];
     setNodes(nodesRef.current.map(n=>({ ...n })));
     setAvailableAnimals(prev => prev.filter(a => a.id !== animal.id));
     setPickerOpen(false);
-    restartSimulation(0.9);
+    restartSimulation(0.95);
   };
   const renderNodeCard = (n) => {
     const color = nodeColorForGroup(n.group);
     const isAnimal = n.type === 'animal';
     const stressed = stressSet.has(n.id);
     const currentAnimal = isAnimal ? (graph.allAnimals || graph.animals || []).find(a => a.id === n.animalId) : null;
+    const clsBg = isAnimal ? ((CLS[n.cls] || CLS.Mammalia).img || 'linear-gradient(135deg,#333,#111)') : 'linear-gradient(135deg,#243421,#151D13)';
     return (
       <g key={n.id} transform={`translate(${n.x - n.w/2},${n.y - n.h/2})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
         <foreignObject x="0" y="0" width={n.w} height={n.h}>
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ width:'100%', height:'100%', boxSizing:'border-box', borderRadius:isAnimal?18:15, overflow:'hidden', background:isAnimal?'linear-gradient(180deg,#18202A,#12161B)':'linear-gradient(180deg,#1C2430,#151821)', border:`2px solid ${color}`, boxShadow:`0 0 0 1px ${color}25, 0 12px 22px rgba(0,0,0,.28)` }}>
+          <div xmlns="http://www.w3.org/1999/xhtml" style={{ width:'100%', height:'100%', boxSizing:'border-box', borderRadius:isAnimal?18:15, overflow:'hidden', background:clsBg, border:`2px solid ${color}`, boxShadow:`0 0 0 1px ${color}28, 0 12px 22px rgba(0,0,0,.28)` }}>
             {isAnimal ? (
               <>
-                <div style={{ height:84, background:(CLS[n.cls] || CLS.Mammalia).img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+                <div style={{ height:84, background:'rgba(0,0,0,.06)', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
                   {currentAnimal ? <AnimalImg a={{...currentAnimal,status:'catturato'}} size={76} fontSize={34} overrideStatus="catturato" gridMode /> : <div style={{ color:'white', fontSize:26 }}>•</div>}
                 </div>
-                <div style={{ padding:'7px 8px 8px', display:'flex', flexDirection:'column', justifyContent:'space-between', height:42 }}>
-                  <div style={{ color:'white', fontSize:11.5, lineHeight:1.12, fontWeight:950, textAlign:'center', display:'-webkit-box', WebkitBoxOrient:'vertical', WebkitLineClamp:2, overflow:'hidden' }}>{clampWholeWords(n.label, 26)}</div>
+                <div style={{ padding:'7px 8px 8px', display:'flex', flexDirection:'column', justifyContent:'center', height:38, background:'linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.40))' }}>
+                  <div style={{ color:'white', fontSize:11, lineHeight:1.08, fontWeight:950, textAlign:'center', display:'-webkit-box', WebkitBoxOrient:'vertical', WebkitLineClamp:2, overflow:'hidden', textShadow:'0 2px 7px rgba(0,0,0,.45)' }}>{clampWholeWords(n.label, 24)}</div>
                 </div>
               </>
             ) : (
-              <div style={{ width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 8px', boxSizing:'border-box', textAlign:'center', color:'white', fontSize:11.5, lineHeight:1.12, fontWeight:950 }}>{clampWholeWords(n.label, 22)}</div>
+              <div style={{ width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 8px', boxSizing:'border-box', textAlign:'center', color:'white', fontSize:11.2, lineHeight:1.12, fontWeight:950 }}>{clampWholeWords(n.label, 22)}</div>
             )}
           </div>
         </foreignObject>
@@ -4800,9 +4776,9 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Animali <span style={{ color:'#74C7FF' }}>{nodes.filter(n=>n.type==='animal' && !removed.has(n.id)).length}</span></div>
         </div>
         <button data-sound="filter" onClick={()=>setPickerOpen(v=>!v)} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>+ Aggiungi</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.58,z-0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(1,z-0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
         <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.min(3.8,z+0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); mapControls.setZoom(0.8); restartSimulation(0.85);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); restartSimulation(0.85);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
       </div>
       {pickerOpen && (
         <div style={{ marginBottom:10, maxHeight:148, overflowY:'auto', borderRadius:16, padding:10, background:'rgba(255,255,255,.04)', border:'1px solid rgba(255,255,255,.08)', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
@@ -4810,16 +4786,13 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
         </div>
       )}
       <div {...mapControls.handlers} style={{ borderRadius:18, overflow:'hidden', touchAction:'none' }}>
-        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:592, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
-          <defs>
-            <marker id="lifeArrowV41" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker>
-          </defs>
+        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:620, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
+          <defs><marker id="lifeArrowV42" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker></defs>
           <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
             {(graph.edges || []).map(e=>{
               const s = nodeById[e.source], t = nodeById[e.target];
               if(!s||!t || removed.has(s.id) || removed.has(t.id)) return null;
-              const warning = removed.has(e.source) || removed.has(e.target);
-              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={warning?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={warning?3:1.2} markerEnd="url(#lifeArrowV41)" strokeDasharray={warning?'8 6':'none'} opacity={warning ? .92 : .72} />;
+              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={1.15} markerEnd="url(#lifeArrowV42)" opacity={.72} />;
             })}
             <rect x="20" y={WAIT_Y} width={WIDTH-40} height="60" rx="20" fill="rgba(168,70,55,.10)" stroke="rgba(168,70,55,.34)" strokeDasharray="8 8" />
             <text x={WIDTH/2} y={WAIT_Y+37} textAnchor="middle" fill="rgba(255,255,255,.42)" fontSize="15" fontWeight="900" pointerEvents="none">trascina qui per mettere in attesa</text>
@@ -4842,8 +4815,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
         </div>
       )}
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:10, alignItems:'center', marginTop:10 }}>
-        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{waitingNodes.length ? 'Le specie in attesa restano fuori dalla rete: toccale nella riga per reinserirle.' : 'I riquadri non devono sovrapporsi: la rete parte già in zoom-out, poi l’utente può zoomare manualmente.'}</div>
-        <button data-sound="filter" onClick={()=>{ const init = initNodes(graph.nodes || []); nodesRef.current = init; setNodes(init.map(n=>({ ...n }))); setRemoved(new Set()); setSelected(null); mapControls.reset(); mapControls.setZoom(0.8); restartSimulation(0.95); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
+        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>Rete trofica con riquadri distanziati: se lo spazio visibile è stretto, usa pinch/zoom e trascinamento della mappa.</div>
+        <button data-sound="filter" onClick={()=>{ const init = initNodes(graph.nodes || []); nodesRef.current = init; setNodes(init.map(n=>({ ...n }))); setRemoved(new Set()); setSelected(null); mapControls.reset(); restartSimulation(0.95); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
       </div>
       {selected && <LifeWebNodeModal node={selected} graph={graph} nodes={nodes} removed={removed} onClose={()=>setSelected(null)} onOpenAnimal={onOpenAnimal} onToggleRemove={toggleRemoved} />}
     </div>
@@ -4866,7 +4839,7 @@ function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=nu
         <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:4, lineHeight:1.08 }}>{habitat?.label || 'Habitat'}{territory?.label ? ` · ${territory.label}` : ''}</div>
         <div style={{ color:'rgba(255,255,255,.60)', fontSize:12, lineHeight:1.5, marginTop:8 }}>Rete trofica dinamica e contestuale: se sposti, aggiungi o rimuovi un animale, la disposizione si ricalcola automaticamente con il focus sull’equilibrio.</div>
         <div style={{ marginTop:10, color:'rgba(255,255,255,.46)', fontSize:11, lineHeight:1.4 }}>Risorse base: {resourceList || 'risorse habitat'}</div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
           <button onClick={()=>setMode('web')} style={{ height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:mode==='web'?'#244A70':'rgba(255,255,255,.05)', color:'white', fontWeight:900, cursor:'pointer' }}>Web</button>
           <button onClick={()=>setMode('grid')} style={{ height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:mode==='grid'?'#244A70':'rgba(255,255,255,.05)', color:'white', fontWeight:900, cursor:'pointer' }}>Grid</button>
         </div>
@@ -4895,9 +4868,10 @@ function StandaloneLifeWebPage({ onBack, animals = [], initialAnimal = null, onO
 }
 
 function HabitatCard({ row, onOpen, onOpenGrid }) {
-  const resources = (HABITAT_RESOURCE_MAP[row.id] || []).slice(0,4).map(r=>RESOURCE_LABELS[r] || r);
+  const animalLikeResources = new Set(['crustaceans','small_fish','small_mammals']);
+  const resources = (HABITAT_RESOURCE_MAP[row.id] || []).filter(r=>!animalLikeResources.has(r)).slice(0,4).map(r=>RESOURCE_LABELS[r] || r);
   return (
-    <div style={{ width:'100%', textAlign:'left', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'linear-gradient(135deg,#181A1F,#101216)', color:'white', padding:14, marginBottom:10 }}>
+    <div style={{ width:'100%', maxWidth:'100%', boxSizing:'border-box', textAlign:'left', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'linear-gradient(135deg,#181A1F,#101216)', color:'white', padding:14, marginBottom:10, overflow:'hidden' }}>
       <div style={{ display:'flex', alignItems:'center', gap:12 }}>
         <div style={{ width:48, height:48, borderRadius:17, background:'rgba(168,70,55,.18)', color:'#E68B73', display:'flex', alignItems:'center', justifyContent:'center', fontSize:24 }}>☍</div>
         <div style={{ flex:1, minWidth:0 }}>
@@ -4905,9 +4879,9 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
           <div style={{ color:'rgba(255,255,255,.52)', fontSize:11.5, marginTop:4 }}>{row.count || 'demo'} animali compatibili · {resources.join(' · ')}</div>
         </div>
       </div>
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
-        <button data-sound="map" onClick={()=>onOpen?.(row)} style={{ height:40, borderRadius:12, border:'none', background:'#244A70', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950, cursor:'pointer' }}>LifeWeb</button>
-        <button data-sound="tap" onClick={()=>onOpenGrid?.(row)} style={{ height:40, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950, cursor:'pointer' }}>Grid</button>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
+        <button data-sound="map" onClick={()=>onOpen?.(row)} style={{ height:40, minWidth:0, borderRadius:12, border:'none', background:'#244A70', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950, cursor:'pointer' }}>LifeWeb</button>
+        <button data-sound="tap" onClick={()=>onOpenGrid?.(row)} style={{ height:40, minWidth:0, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950, cursor:'pointer' }}>Grid</button>
       </div>
     </div>
   );
@@ -5003,7 +4977,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
+      <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
         {view==='planet' && (
           <>
             <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:24, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
@@ -5345,10 +5319,8 @@ function ComparatorAbilityChip({ animal, id, accent }) {
           <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:40, height:40, fontSize:24 }}>{meta.icon}</span>
           <div style={{ color:'white', fontSize:11.5, lineHeight:1.15, fontWeight:950, overflow:'hidden' }}>{meta.label}</div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', display:'grid', gridTemplateColumns:'38px 1fr', alignItems:'center', gap:8, background:'rgba(0,0,0,.34)', border:`1px solid ${(meta.color || accent)}55`, borderRadius:15, padding:'8px 9px', boxSizing:'border-box', overflow:'hidden' }}>
-          <img src={badgeUrl} alt="" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:34, height:34, objectFit:'contain', filter:`drop-shadow(0 0 8px ${(meta.color || accent)}55)` }} />
-          <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:34, height:34, fontSize:22 }}>{meta.icon}</span>
-          <div style={{ color:'rgba(255,255,255,.80)', fontSize:10.4, lineHeight:1.22, fontWeight:720, maxHeight:56, overflowY:'auto' }}>{why}</div>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', display:'flex', alignItems:'center', background:'rgba(0,0,0,.40)', border:`1px solid ${(meta.color || accent)}55`, borderRadius:15, padding:'8px 10px', boxSizing:'border-box', overflow:'hidden' }}>
+          <div style={{ color:'rgba(255,255,255,.82)', fontSize:10.2, lineHeight:1.18, fontWeight:720, maxHeight:58, overflowY:'auto' }}>{why}</div>
         </div>
       </div>
     </button>

@@ -634,18 +634,18 @@ const RARITY_CSS = `
   background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,.14) 40%, rgba(255,255,255,.03) 54%, transparent 70%);
   mix-blend-mode: screen;
 }
-.rarity-badge.compact { min-height: 28px; padding: 5px 10px 5px 40px; border-radius: 999px; }
-.rarity-badge.compact::before { inset: 3px 4px 3px 21px; border-radius: 999px; }
-.rarity-badge.compact::after { inset: 2px 5px 2px 22px; border-radius: 999px; }
-.rarity-badge.compact .rarity-shield-wrap { width: 36px; height: 36px; left: -4px; }
+.rarity-badge.compact { min-height: 24px; padding: 3px 8px 3px 34px; border-radius: 999px; font-size: 11px; }
+.rarity-badge.compact::before { inset: 2px 4px 2px 18px; border-radius: 999px; }
+.rarity-badge.compact::after { inset: 1px 5px 1px 19px; border-radius: 999px; }
+.rarity-badge.compact .rarity-shield-wrap { width: 30px; height: 30px; left: -2px; }
 .rarity-badge.small { min-height: 26px; padding: 4px 9px 4px 38px; font-size: 11px; border-radius: 999px; }
 .rarity-badge.small::before { inset: 3px 4px 3px 20px; border-radius: 999px; }
 .rarity-badge.small::after { inset: 2px 5px 2px 21px; border-radius: 999px; }
 .rarity-badge.small .rarity-shield-wrap { width: 34px; height: 34px; left: -4px; }
-.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:82px; }
-.rarity-badge.full::before { left: 48px; }
-.rarity-badge.full::after { left: 49px; }
-.rarity-badge.full .rarity-shield-wrap { left: 5px; width:58px; height:58px; }
+.rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:70px; min-height:34px; font-size:12px; }
+.rarity-badge.full::before { left: 40px; }
+.rarity-badge.full::after { left: 41px; }
+.rarity-badge.full .rarity-shield-wrap { left: 4px; width:46px; height:46px; }
 .rarity-metal-comune { background: linear-gradient(180deg,#f4c39a 0%,#d0895c 45%,#7b3c1d 100%); }
 .rarity-metal-comune::before { background: radial-gradient(circle at 25% 20%, rgba(255,238,210,.42), transparent 28%), linear-gradient(135deg,#532311,#d0895c 38%,#ffd0a4 50%,#8a421f 72%,#3b170a 100%); }
 .rarity-metal-non-comune { background: linear-gradient(180deg,#eef2f6 0%,#a1a8b2 48%,#4e5660 100%); }
@@ -1460,8 +1460,8 @@ function StatRow({ label, base, scale, color, unit }) {
   const realValue = Math.round(base * scale);
   const barWidth = Math.min(100, Math.round((realValue / maxValue) * 100));
   return (
-    <div style={{ display:'grid', gridTemplateColumns:'96px 1fr 72px', alignItems:'center', gap:10, minHeight:42, marginBottom:13 }}>
-      <span style={{ color:'rgba(255,255,255,.75)', fontSize:13, fontWeight:800, lineHeight:1.15 }}>{label}</span>
+    <div style={{ display:'grid', gridTemplateColumns:'112px 1fr 78px', alignItems:'center', gap:12, minHeight:38 }}>
+      <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>{label}</span>
       <div style={{ height:14, background:'rgba(0,0,0,.42)', borderRadius:999, overflow:'hidden', boxShadow:'inset 0 1px 3px rgba(255,255,255,.04)' }}>
         <div style={{ height:'100%', width:`${barWidth}%`, background:`linear-gradient(90deg, ${color}CC, ${color})`, borderRadius:999, transition:'width .65s cubic-bezier(.4,0,.2,1)', boxShadow:`0 0 14px ${color}55` }} />
       </div>
@@ -1469,7 +1469,6 @@ function StatRow({ label, base, scale, color, unit }) {
     </div>
   );
 }
-
 
 function useAutoUnflip(flipped, setFlipped, delay = 5000) {
   useEffect(() => {
@@ -1591,7 +1590,7 @@ function useInteractiveMapControls() {
   const [zoom, setZoomState] = useState(1);
   const [pan, setPanState] = useState({x:0,y:0});
   const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
-  const clampZoom = (z) => Math.max(1, Math.min(4.5, Number(z) || 1));
+  const clampZoom = (z) => Math.max(0.58, Math.min(4.5, Number(z) || 1));
   const clampPan = (nextPan, z = zoom) => {
     if (z <= 1.01) return { x:0, y:0 };
     const maxX = 160 * (z - 1);
@@ -1708,14 +1707,10 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   };
   const pseudoCountryFeatures = codes.map(code => ({ type:'Feature', properties:{ iso2:code, name:getCountryDisplayName(code) }, geometry:countryPseudoPolygon(code) })).filter(f => !!f.geometry);
   const fallbackActive = pseudoCountryFeatures.length ? pseudoCountryFeatures : fallbackFeatures.filter(f => (f.properties || {}).domain !== 'marine' && featureIso2(f).some(code => activeCodeSet.has(code)));
-  const activeBounds = mergeProjectedBounds((activeCountryFeatures.length ? activeCountryFeatures : fallbackActive).map(f => geometryProjectedBounds(f.geometry)));
-  const pointBounds = mergeProjectedBounds(points.map(p => ({ minX:p.px, minY:p.py, maxX:p.px, maxY:p.py })));
-  const viewBox = pointMode
-    ? boundsToViewBox(pointBounds || activeBounds, codes.length > 12 ? .18 : .42)
-    : boundsToViewBox(activeBounds || pointBounds, activeCountryFeatures.length > 14 ? .16 : .28);
   const activeCountryLabel = hoverCountry || selected;
   const hasCountries = !!countryData && !countryError;
   const baseCountryFeatures = hasCountries ? countryFeatures : (pseudoCountryFeatures.length ? pseudoCountryFeatures : fallbackFeatures.filter(f => (f.properties || {}).domain !== 'marine'));
+  const viewBox = '0 0 1000 500';
 
   const countryMark = (p) => {
     const active = p.code === selected || p.code === hoverCountry;
@@ -1730,24 +1725,24 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   return (
     <div
       {...mapControls.handlers}
-      style={{ position:'relative', height, borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%, #143244 0%, #071521 62%, #03080E 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:'none' }}
+      style={{ position:'relative', width:'100%', aspectRatio:'2 / 1', minHeight:Math.min(230, height || 230), borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 46%, #153245 0%, #0A1722 62%, #05090D 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:'none' }}
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
-          <filter id="countrySatNoiseV37">
+          <filter id="countrySatNoiseV41">
             <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="17" result="n"/>
             <feColorMatrix in="n" type="saturate" values="0"/>
             <feComponentTransfer><feFuncA type="table" tableValues="0 0.13"/></feComponentTransfer>
           </filter>
-          <radialGradient id="countryOceanV37" cx="50%" cy="45%" r="72%"><stop offset="0%" stopColor="#0E3444"/><stop offset="62%" stopColor="#061722"/><stop offset="100%" stopColor="#02070B"/></radialGradient>
+          <radialGradient id="countryOceanV41" cx="50%" cy="45%" r="72%"><stop offset="0%" stopColor="#0E3444"/><stop offset="62%" stopColor="#061722"/><stop offset="100%" stopColor="#02070B"/></radialGradient>
         </defs>
-        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#countryOceanV37)" />
-        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#countrySatNoiseV37)" opacity=".62" />
+        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#countryOceanV41)" />
+        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#countrySatNoiseV41)" opacity=".62" />
         <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
           <g opacity=".86">
             {baseCountryFeatures.map((f,idx) => {
               const iso = hasCountries ? getCountryFeatureIso2(f) : (getCountryFeatureIso2(f) || featureIso2(f).join('-'));
-              const d = geometryToSvgPath(f.geometry, 120);
+              const d = geometryToSvgPath(f.geometry, 150);
               if (!d) return null;
               return <path key={`base-country:${iso || idx}`} d={d} fill="rgba(85,53,43,.42)" stroke="rgba(100,190,235,.24)" strokeWidth=".38" opacity=".78" />;
             })}
@@ -1757,9 +1752,9 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
               {(activeCountryFeatures.length ? activeCountryFeatures : fallbackActive).map((f,idx) => {
                 const iso = hasCountries ? getCountryFeatureIso2(f) : (getCountryFeatureIso2(f) || featureIso2(f).find(code => activeCodeSet.has(code)) || '');
                 const active = iso && (iso === selected || iso === hoverCountry);
-                const d = geometryToSvgPath(f.geometry, active ? 320 : 220);
+                const d = geometryToSvgPath(f.geometry, active ? 360 : 240);
                 if (!d) return null;
-                return <path key={`active-country:${iso || idx}`} d={d} onClick={(e)=>{ e.stopPropagation(); if (iso) onSelectCountry?.(iso); }} onMouseEnter={()=>iso && setHoverCountry(iso)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }} fill={active ? `${accent}DD` : `${accent}99`} stroke={active ? '#FFD9C5' : 'rgba(255,255,255,.18)'} strokeWidth={active ? 1.35 : .7} opacity={active ? .98 : .76} />;
+                return <path key={`active-country:${iso || idx}`} d={d} onClick={(e)=>{ e.stopPropagation(); if (iso) onSelectCountry?.(iso); }} onMouseEnter={()=>iso && setHoverCountry(iso)} onMouseLeave={()=>setHoverCountry(null)} style={{ cursor:'pointer' }} fill={active ? `${accent}DD` : `${accent}99`} stroke={active ? '#FFD9C5' : 'rgba(255,255,255,.18)'} strokeWidth={active ? 1.35 : .7} opacity={active ? .98 : .78} />;
               })}
             </g>
           )}
@@ -2179,7 +2174,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
           if (isRarity) {
             return (
               <div key={opt.value} onClick={()=>toggle(opt.value)} style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, padding:'8px 6px 8px 18px', marginBottom:8, borderRadius:14, background:on?'rgba(255,255,255,.08)':'rgba(0,0,0,.12)', border:`1.5px solid ${on?'rgba(255,255,255,.28)':'transparent'}`, cursor:'pointer' }}>
-                <RarityBadge rarity={opt.value} compact style={{ flex:1, minWidth:0 }} />
+                <RarityBadge rarity={opt.value} small style={{ flex:1, minWidth:0 }} />
                 <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?'rgba(255,255,255,0.65)':'rgba(255,255,255,.25)'}`, background:on?'rgba(255,255,255,0.25)':'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
                   {on&&<span style={{ fontSize:13, fontWeight:900, lineHeight:1 }}>✓</span>}
                 </div>
@@ -2328,7 +2323,7 @@ function RarityLegendRows() {
         {k:'Leggendario',desc:'Specie estremamente rara e leggendaria'},
       ].map(({k,desc})=>(
         <div key={k} style={{ display:'flex', gap:12, alignItems:'center' }}>
-          <RarityBadge rarity={k} compact style={{ width:150, flexShrink:0 }} />
+          <RarityBadge rarity={k} small style={{ width:132, flexShrink:0 }} />
           <div style={{ flex:1 }}>
             <div style={{ color:'rgba(255,255,255,.75)', fontSize:11, marginTop:2 }}>{desc}</div>
           </div>
@@ -2947,7 +2942,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           </div>
           <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
             {/* Rarità con stemma */}
-            <div data-tour="animal-rarity"><RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:14 }} /></div>
+            <div data-tour="animal-rarity"><RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:12.5 }} /></div>
             <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
             <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%' }}>
               <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/></div>
@@ -2999,7 +2994,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           </div>
 
           {/* Fixed-height content — height sized to tassonomia (tallest tab) */}
-          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 14px 14px', padding:'12px 10px', height:290, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
+          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 14px 14px', padding:'12px 10px', height:336, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
             <div key={statMode} className={slideDir>0?'tab-from-right':'tab-from-left'} style={{ height:'100%' }}>
 
               {/* Abilità */}
@@ -3026,16 +3021,16 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
               {/* Statistiche */}
               {statMode==='statistiche'&&(
                 isRevealedStatus(localStatus) ? (
-                  <div data-tour="animal-stats" style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'16px 14px 10px', minHeight:320, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+                  <div data-tour="animal-stats" style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'16px 14px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:12, justifyContent:'space-between' }}>
                     <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
                     <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
                     {a.lifespan != null && (
-                      <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:11 }}>
-                        <span style={{ color:'rgba(255,255,255,.6)', fontSize:12, fontWeight:600, width:90, flexShrink:0 }}>Vita</span>
+                      <div style={{ display:'grid', gridTemplateColumns:'112px 1fr 78px', alignItems:'center', gap:12 }}>
+                        <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>Vita</span>
                         <div style={{ flex:1, height:7, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
                           <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
                         </div>
-                        <span style={{ color:'white', fontSize:12, fontWeight:700, minWidth:60, textAlign:'right' }}>{a.lifespan} anni</span>
+                        <span style={{ color:'white', fontSize:12.5, fontWeight:900, textAlign:'right' }}>{a.lifespan} anni</span>
                       </div>
                     )}
                     <StatRow label='Forza' base={a.stats?.forza ?? 0} scale={scale} color={c.accent} unit='%'/>
@@ -3456,7 +3451,6 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
 }
 function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', mapIds=[], mapDisabled=false }) {
   const [flipped, setFlipped] = useState(false);
-  useAutoUnflip(flipped, setFlipped, 5000);
   const isMarine = item?.realmType === 'marine' || item?.kind === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
   const coverSources = getRegionCoverSources(item, image || item?.image);
@@ -3465,22 +3459,22 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
     onOpen?.();
   };
   return (
-    <div onClick={handleOpen} style={{ marginBottom:14, borderRadius:22, height:flipped?252:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
+    <div style={{ marginBottom:14, borderRadius:22, width:'100%', maxWidth:'100%', overflow:'hidden', height:flipped?274:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
       <div style={{ position:'relative', height:'100%', transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
+        <div onClick={handleOpen} style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
           <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={204} />
           <div style={{
             position:'absolute',
             left:0,
             right:0,
             bottom:0,
-            minHeight:94,
-            padding:'38px 16px 14px',
+            minHeight:96,
+            padding:'40px 16px 14px',
             boxSizing:'border-box',
             display:'flex',
             alignItems:'flex-end',
             gap:12,
-            background:'linear-gradient(180deg, rgba(38,38,40,0) 0%, rgba(38,38,40,.30) 34%, rgba(38,38,40,.72) 68%, rgba(38,38,40,.98) 100%)'
+            background:'linear-gradient(180deg, rgba(38,38,40,0) 0%, rgba(38,38,40,.26) 28%, rgba(38,38,40,.70) 62%, rgba(38,38,40,.98) 100%)'
           }}>
             <div style={{ flex:1, minWidth:0, textShadow:'0 2px 10px rgba(0,0,0,.72)' }}>
               <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
@@ -3491,15 +3485,20 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
               : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation();setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Map</button>)}
           </div>
         </div>
-        <div style={{ position:'absolute', top:0, bottom:0, left:-14, right:-14, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
-          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'11px 13px', background:'rgba(38,38,40,.72)', backdropFilter:'blur(8px)' }}>
-            <div style={{ color:'white', fontSize:14, fontWeight:1000, lineHeight:1.1 }}>{title || item?.label}</div>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer' }}>↺</button>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
+          <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:12, padding:'12px 14px 10px', background:'linear-gradient(180deg, rgba(50,56,66,.98) 0%, rgba(30,34,42,.88) 44%, rgba(22,24,30,.50) 76%, rgba(16,17,20,0) 100%)', backdropFilter:'blur(8px)' }}>
+            <div style={{ minWidth:0 }}>
+              <div style={{ color:'white', fontSize:15, fontWeight:1000, lineHeight:1.08 }}>{title || item?.label}</div>
+              {subtitle && <div style={{ color:'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.28, marginTop:4 }}>{subtitle}</div>}
+            </div>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer', flexShrink:0 }}>↺</button>
           </div>
-          <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={144} fullBleed />
-          <div style={{ display:'flex', gap:8, padding:'9px 12px 11px', background:'rgba(16,17,20,.96)' }}>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:11, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
-            <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
+          <div style={{ padding:'0 0 0', marginTop:-6 }}>
+            <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={186} fullBleed />
+          </div>
+          <div style={{ display:'flex', gap:8, padding:'10px 12px 12px', background:'rgba(16,17,20,.98)' }}>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
+            <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:38, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
           </div>
         </div>
       </div>
@@ -4447,21 +4446,54 @@ function autoArrangeLifeWebNodes(nodes = [], focusAnimalId = null) {
 }
 
 function buildLifeWebGraph(allAnimals, territory, habitat, focusAnimal=null, forcedAnimalIds=[]) {
-  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 120, focusAnimal);
+  const animals = getFoodWebCandidateAnimals(allAnimals, territory, habitat, 42, focusAnimal);
   const extra = (allAnimals || []).filter(a => forcedAnimalIds.includes(a.id) && !animals.some(p => p.id === a.id));
-  const pickedAnimals = [...animals, ...extra].slice(0, 120);
-  const resourceIds = (HABITAT_RESOURCE_MAP[normalizeHabitatId(habitat?.id)] || inferDefaultHabitatsForTerritory(territory).flatMap(h=>HABITAT_RESOURCE_MAP[h] || []) || ['grass','insects','detritus']).slice(0,5);
+  const pickedAnimals = [...animals, ...extra].slice(0, 42);
+  const habitatResourceIds = (HABITAT_RESOURCE_MAP[normalizeHabitatId(habitat?.id)] || inferDefaultHabitatsForTerritory(territory).flatMap(h=>HABITAT_RESOURCE_MAP[h] || []) || ['grass','insects','detritus']).slice(0,8);
+  const animalLikeResources = new Set(['crustaceans','small_fish','small_mammals']);
+  const resourceIds = habitatResourceIds.filter(r => !animalLikeResources.has(r));
   const animalNodes = pickedAnimals.map(a => ({ id:`a:${a.id}`, animalId:a.id, type:'animal', label:a.com, sci:a.sci, group:trophicGroup(a), cls:a.cls, power:getAnimalPowerScore(a), image_url:a.image_url }));
   const resourceNodes = resourceIds.map((r)=>({ id:`res:${r}`, type:'resource', label:RESOURCE_LABELS[r] || r, group:'resource', power:0 }));
   const nodes = autoArrangeLifeWebNodes([...animalNodes, ...resourceNodes], focusAnimal?.id);
-  const edges = [];
-  for (const a of pickedAnimals) resourceIds.forEach(r => { if (resourceFeedsAnimal(r,a)) edges.push({ id:`res:${r}->a:${a.id}`, source:`res:${r}`, target:`a:${a.id}`, relation_type:'resource_use', confidence:'likely', role:'core', basis:['risorsa compatibile con habitat','diet_tags/consumer_group'] }); });
+  const edgeMap = new Map();
+  const addEdge = (edge) => { if (!edge?.id || edge.source === edge.target || edgeMap.has(edge.id)) return; edgeMap.set(edge.id, edge); };
+  const byCls = (clsList=[]) => pickedAnimals.filter(a => clsList.includes(a.cls));
+  const crustaceanPrey = pickedAnimals.filter(a => ['Malacostraca','Branchiopoda','Maxillopoda','Thecostraca'].includes(a.cls) || /crust/i.test(toArraySafe(a?.categories).join(' ')) || /crust/i.test(String(a?.com || '') + ' ' + String(a?.sci || '')));
+  const fishPrey = byCls(['Actinopterygii','Elasmobranchii']).filter(a => getAnimalMassG(a) <= 20000 || getAnimalPowerScore(a) <= 110);
+  const mammalPrey = byCls(['Mammalia']).filter(a => getAnimalMassG(a) <= 25000 || getAnimalPowerScore(a) <= 135);
+
+  for (const a of pickedAnimals) {
+    resourceIds.forEach(r => {
+      if (resourceFeedsAnimal(r,a)) addEdge({ id:`res:${r}->a:${a.id}`, source:`res:${r}`, target:`a:${a.id}`, relation_type:'resource_use', confidence:'likely', role:'core', basis:['risorsa compatibile con habitat','diet_tags/consumer_group'] });
+    });
+  }
+
+  const linkDietGroup = (pred, preyList, tagRegex, label) => {
+    const tags = toArraySafe(pred?.foodweb?.diet_tags || pred?.diet_tags || []).join(' ').toLowerCase();
+    const wants = tagRegex.test(tags) || habitatResourceIds.includes(label);
+    if (!wants) return;
+    preyList
+      .filter(prey => prey.id !== pred.id && getAnimalPowerScore(pred) > getAnimalPowerScore(prey) * 1.08)
+      .sort((a,b) => getAnimalPowerScore(a) - getAnimalPowerScore(b))
+      .slice(0, 4)
+      .forEach(prey => {
+        const rel = predatorCanEat(pred, prey);
+        if (rel) addEdge({ id:`a:${prey.id}->a:${pred.id}`, source:`a:${prey.id}`, target:`a:${pred.id}`, relation_type:'eats', confidence: rel.confidence === 'rare' ? 'possible' : rel.confidence, role: rel.role, basis:[...(rel.basis || []), `predazione reale su ${label}`] });
+      });
+  };
+
+  for (const pred of pickedAnimals) {
+    linkDietGroup(pred, crustaceanPrey, /crustacean|crab|shrimp|prawn|lobster/, 'crustaceans');
+    linkDietGroup(pred, fishPrey, /fish|pisc|anchov|herring|small fish/, 'small_fish');
+    linkDietGroup(pred, mammalPrey, /mammal|rodent|small mammal/, 'small_mammals');
+  }
+
   for (const pred of pickedAnimals) for (const prey of pickedAnimals) {
     const rel = predatorCanEat(pred, prey);
-    if (rel) edges.push({ id:`a:${prey.id}->a:${pred.id}`, source:`a:${prey.id}`, target:`a:${pred.id}`, relation_type:'eats', ...rel });
+    if (rel) addEdge({ id:`a:${prey.id}->a:${pred.id}`, source:`a:${prey.id}`, target:`a:${pred.id}`, relation_type:'eats', ...rel });
   }
   const edgeWeight = { likely:3, possible:2, rare:1 };
-  const limitedEdges = edges.sort((a,b)=>((edgeWeight[b.confidence] || 0) - (edgeWeight[a.confidence] || 0)) || (a.relation_type==='resource_use'?-1:1)).slice(0,180);
+  const limitedEdges = Array.from(edgeMap.values()).sort((a,b)=>((edgeWeight[b.confidence] || 0) - (edgeWeight[a.confidence] || 0)) || (a.relation_type==='resource_use'?-1:1)).slice(0,220);
   return { nodes, edges:limitedEdges, animals:pickedAnimals, resources:resourceIds, focusAnimalId:focusAnimal?.id || null };
 }
 
@@ -4530,8 +4562,8 @@ function LifeWebNodeModal({ node, graph, nodes, onClose, onOpenAnimal, onToggleR
 
 function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const WIDTH = 980;
-  const HEIGHT = 680;
-  const WAIT_Y = HEIGHT - 74;
+  const HEIGHT = 760;
+  const WAIT_Y = HEIGHT - 88;
   const [nodes, setNodes] = useState([]);
   const nodesRef = useRef([]);
   const alphaRef = useRef(0.9);
@@ -4544,8 +4576,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const [equilibrium, setEquilibrium] = useState(100);
   const mapControls = useInteractiveMapControls();
 
-  const tierY = (group) => ({ apex:82, carnivore:184, omnivore:310, filter:435, herbivore:488, producer:555, resource:606 }[group] ?? 330);
-  const radiusFor = (n) => n.type === 'resource' ? 22 : n.group === 'apex' ? 35 : n.group === 'carnivore' ? 32 : n.group === 'omnivore' ? 30 : 28;
+  const tierY = (group) => ({ apex:82, carnivore:206, omnivore:334, filter:454, herbivore:540, producer:622, resource:674 }[group] ?? 330);
+  const boxFor = (n) => n.type === 'resource' ? { w:126, h:50 } : { w:118, h:126 };
   const initNodes = (sourceNodes = graph.nodes || []) => {
     const grouped = sourceNodes.reduce((acc,n)=>{ (acc[n.group || 'omnivore'] ||= []).push(n); return acc; }, {});
     const order = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
@@ -4554,14 +4586,15 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       const arr = [...(grouped[group] || [])].sort((a,b)=> (a.animalId === graph.focusAnimalId ? -1 : b.animalId === graph.focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
       const count = arr.length;
       if (!count) return;
-      const rowW = Math.min(WIDTH - 130, Math.max(300, count * 78));
-      const center = WIDTH / 2 + (gi % 2 ? 18 : -18);
+      const spread = Math.min(WIDTH - 160, Math.max(340, count * (group === 'resource' ? 82 : 96)));
+      const center = WIDTH / 2 + (gi % 2 ? 12 : -12);
       arr.forEach((n, idx) => {
         const phase = (idx * 137.508 + gi * 41) * Math.PI / 180;
         const norm = count === 1 ? 0 : ((idx / Math.max(1,count - 1)) - .5);
-        const x = center + norm * rowW + Math.sin(phase) * 30;
-        const y = tierY(group) + Math.cos(phase * .72) * 26 + (idx % 3 - 1) * 10;
-        out.push({ ...n, x:Math.max(58, Math.min(WIDTH - 58, x)), y:Math.max(48, Math.min(HEIGHT - 104, y)), vx:0, vy:0, fx:null, fy:null });
+        const x = center + norm * spread + Math.sin(phase) * 22;
+        const y = tierY(group) + Math.cos(phase * .72) * 16 + (idx % 3 - 1) * 6;
+        const box = boxFor(n);
+        out.push({ ...n, ...box, x:Math.max(box.w/2 + 16, Math.min(WIDTH - box.w/2 - 16, x)), y:Math.max(box.h/2 + 14, Math.min(HEIGHT - 140, y)), vx:0, vy:0, fx:null, fy:null });
       });
     });
     return out;
@@ -4584,8 +4617,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       const dx = (t.x - s.x) || 0.01;
       const dy = (t.y - s.y) || 0.01;
       const dist = Math.sqrt(dx*dx + dy*dy) || 1;
-      const desired = edge.relation_type === 'resource_use' ? 142 : edge.confidence === 'likely' ? 172 : 200;
-      const force = (dist - desired) * 0.012 * alpha;
+      const desired = edge.relation_type === 'resource_use' ? 165 : edge.confidence === 'likely' ? 208 : 236;
+      const force = (dist - desired) * 0.009 * alpha;
       const fx = dx / dist * force;
       const fy = dy / dist * force;
       if (s.fx == null) { s.vx += fx; s.vy += fy; }
@@ -4598,22 +4631,27 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       for (let j=i+1; j<arr.length; j++) {
         const b = arr[j];
         if (removed.has(b.id)) continue;
-        let dx = (b.x - a.x) || 0.01;
-        let dy = (b.y - a.y) || 0.01;
-        let dist2 = dx*dx + dy*dy;
-        let dist = Math.sqrt(dist2) || 1;
-        const minDist = radiusFor(a) + radiusFor(b) + 54;
-        const charge = -3600 * alpha / Math.max(340, dist2);
+        const dx = (b.x - a.x) || 0.01;
+        const dy = (b.y - a.y) || 0.01;
+        const dist2 = dx*dx + dy*dy;
+        const dist = Math.sqrt(dist2) || 1;
+        const charge = -6200 * alpha / Math.max(420, dist2);
         const fx = dx / dist * charge;
         const fy = dy / dist * charge;
         if (a.fx == null) { a.vx += fx; a.vy += fy; }
         if (b.fx == null) { b.vx -= fx; b.vy -= fy; }
-        if (dist < minDist) {
-          const push = (minDist - dist) * 0.072 * alpha;
-          const px = dx / dist * push;
-          const py = dy / dist * push;
-          if (a.fx == null) { a.vx -= px; a.vy -= py; }
-          if (b.fx == null) { b.vx += px; b.vy += py; }
+        const overlapX = (a.w + b.w) / 2 + 16 - Math.abs(dx);
+        const overlapY = (a.h + b.h) / 2 + 18 - Math.abs(dy);
+        if (overlapX > 0 && overlapY > 0) {
+          if (overlapX < overlapY) {
+            const push = overlapX * 0.085 * alpha * (dx < 0 ? -1 : 1);
+            if (a.fx == null) a.vx -= push;
+            if (b.fx == null) b.vx += push;
+          } else {
+            const push = overlapY * 0.11 * alpha * (dy < 0 ? -1 : 1);
+            if (a.fx == null) a.vy -= push;
+            if (b.fx == null) b.vy += push;
+          }
         }
       }
     }
@@ -4624,17 +4662,18 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       const phase = (idx * 2.399 + targetY * .03);
       const targetX = n.animalId === graph.focusAnimalId
         ? WIDTH / 2
-        : WIDTH / 2 + Math.sin(phase) * (n.group === 'resource' ? 290 : 230);
+        : WIDTH / 2 + Math.sin(phase) * (n.group === 'resource' ? 320 : 248);
       if (n.fx == null) {
         n.vx += (targetX - n.x) * 0.0011 * alpha;
-        n.vy += (targetY - n.y) * 0.014 * alpha;
+        n.vy += (targetY - n.y) * 0.013 * alpha;
       }
-      if (n.x < 58) n.vx += (58 - n.x) * 0.035;
-      if (n.x > WIDTH - 58) n.vx -= (n.x - WIDTH + 58) * 0.035;
-      if (n.y < 48) n.vy += (48 - n.y) * 0.035;
-      if (n.y > HEIGHT - 112) n.vy -= (n.y - HEIGHT + 112) * 0.035;
+      const left = n.w/2 + 14, right = WIDTH - n.w/2 - 14, top = n.h/2 + 14, bottom = HEIGHT - 116 - n.h/2;
+      if (n.x < left) n.vx += (left - n.x) * 0.035;
+      if (n.x > right) n.vx -= (n.x - right) * 0.035;
+      if (n.y < top) n.vy += (top - n.y) * 0.035;
+      if (n.y > bottom) n.vy -= (n.y - bottom) * 0.035;
       if (n.fx != null) { n.x = n.fx; n.y = n.fy; n.vx = 0; n.vy = 0; }
-      else { n.vx *= 0.80; n.vy *= 0.80; n.x += n.vx; n.y += n.vy; }
+      else { n.vx *= 0.78; n.vy *= 0.78; n.x += n.vx; n.y += n.vy; }
     });
 
     alphaRef.current = Math.max(0.018, alpha * 0.985);
@@ -4648,8 +4687,9 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     setNodes(init.map(n=>({ ...n })));
     setRemoved(new Set());
     setSelected(null);
-    setAvailableAnimals((graph.allAnimals || []).filter(a => !(graph.animals || []).some(g => g.id === a.id)).slice(0, 180));
+    setAvailableAnimals((graph.allAnimals || []).filter(a => !(graph.animals || []).some(g => g.id === a.id)).slice(0, 160));
     mapControls.reset();
+    mapControls.setZoom(0.8);
     restartSimulation(0.95);
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); rafRef.current = null; };
   }, [graph]);
@@ -4716,7 +4756,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   };
   const addAnimal = (animal) => {
     if (!animal) return;
-    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, x:WIDTH/2 + (Math.random()*160-80), y:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
+    const box = { w:118, h:126 };
+    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, ...box, x:WIDTH/2 + (Math.random()*160-80), y:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
     if (nodesRef.current.some(n => n.id === node.id)) return;
     nodesRef.current = [...nodesRef.current, node];
     setNodes(nodesRef.current.map(n=>({ ...n })));
@@ -4724,18 +4765,44 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     setPickerOpen(false);
     restartSimulation(0.9);
   };
+  const renderNodeCard = (n) => {
+    const color = nodeColorForGroup(n.group);
+    const isAnimal = n.type === 'animal';
+    const stressed = stressSet.has(n.id);
+    const currentAnimal = isAnimal ? (graph.allAnimals || graph.animals || []).find(a => a.id === n.animalId) : null;
+    return (
+      <g key={n.id} transform={`translate(${n.x - n.w/2},${n.y - n.h/2})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
+        <foreignObject x="0" y="0" width={n.w} height={n.h}>
+          <div xmlns="http://www.w3.org/1999/xhtml" style={{ width:'100%', height:'100%', boxSizing:'border-box', borderRadius:isAnimal?18:15, overflow:'hidden', background:isAnimal?'linear-gradient(180deg,#18202A,#12161B)':'linear-gradient(180deg,#1C2430,#151821)', border:`2px solid ${color}`, boxShadow:`0 0 0 1px ${color}25, 0 12px 22px rgba(0,0,0,.28)` }}>
+            {isAnimal ? (
+              <>
+                <div style={{ height:84, background:(CLS[n.cls] || CLS.Mammalia).img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+                  {currentAnimal ? <AnimalImg a={{...currentAnimal,status:'catturato'}} size={76} fontSize={34} overrideStatus="catturato" gridMode /> : <div style={{ color:'white', fontSize:26 }}>•</div>}
+                </div>
+                <div style={{ padding:'7px 8px 8px', display:'flex', flexDirection:'column', justifyContent:'space-between', height:42 }}>
+                  <div style={{ color:'white', fontSize:11.5, lineHeight:1.12, fontWeight:950, textAlign:'center', display:'-webkit-box', WebkitBoxOrient:'vertical', WebkitLineClamp:2, overflow:'hidden' }}>{clampWholeWords(n.label, 26)}</div>
+                </div>
+              </>
+            ) : (
+              <div style={{ width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 8px', boxSizing:'border-box', textAlign:'center', color:'white', fontSize:11.5, lineHeight:1.12, fontWeight:950 }}>{clampWholeWords(n.label, 22)}</div>
+            )}
+          </div>
+        </foreignObject>
+      </g>
+    );
+  };
 
   return (
-    <div style={{ background:'#0E1116', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:12, boxShadow:'inset 0 0 44px rgba(0,0,0,.45)' }}>
+    <div style={{ background:'#0E1116', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:12, boxShadow:'inset 0 0 44px rgba(0,0,0,.45)', overflow:'hidden' }}>
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto auto auto auto', gap:8, alignItems:'center', marginBottom:10 }}>
         <div style={{ display:'flex', gap:8, alignItems:'center', flexWrap:'wrap' }}>
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Equilibrio <span style={{ color: equilibrium >= 70 ? '#90D84A' : equilibrium >= 40 ? '#F0B24E' : '#FF6B6B' }}>{equilibrium}%</span></div>
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Animali <span style={{ color:'#74C7FF' }}>{nodes.filter(n=>n.type==='animal' && !removed.has(n.id)).length}</span></div>
         </div>
         <button data-sound="filter" onClick={()=>setPickerOpen(v=>!v)} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>+ Aggiungi</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.52,z-0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.min(3.8,z+0.18));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); restartSimulation(0.85);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.58,z-0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.min(3.8,z+0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); mapControls.setZoom(0.8); restartSimulation(0.85);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
       </div>
       {pickerOpen && (
         <div style={{ marginBottom:10, maxHeight:148, overflowY:'auto', borderRadius:16, padding:10, background:'rgba(255,255,255,.04)', border:'1px solid rgba(255,255,255,.08)', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
@@ -4743,34 +4810,20 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
         </div>
       )}
       <div {...mapControls.handlers} style={{ borderRadius:18, overflow:'hidden', touchAction:'none' }}>
-        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:560, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
+        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:592, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
           <defs>
-            <marker id="lifeArrowV40" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker>
-            <filter id="softLifeGlowV40"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            <marker id="lifeArrowV41" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker>
           </defs>
           <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
             {(graph.edges || []).map(e=>{
               const s = nodeById[e.source], t = nodeById[e.target];
-              if(!s||!t) return null;
+              if(!s||!t || removed.has(s.id) || removed.has(t.id)) return null;
               const warning = removed.has(e.source) || removed.has(e.target);
-              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={warning?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={warning?3:1.2} markerEnd="url(#lifeArrowV40)" strokeDasharray={warning?'8 6':'none'} opacity={warning ? .92 : .72} />;
+              return <line key={e.id} x1={s.x} y1={s.y} x2={t.x} y2={t.y} stroke={warning?'#FF4C4C':e.confidence==='likely'?'rgba(255,255,255,.30)':'rgba(255,255,255,.16)'} strokeWidth={warning?3:1.2} markerEnd="url(#lifeArrowV41)" strokeDasharray={warning?'8 6':'none'} opacity={warning ? .92 : .72} />;
             })}
-            <rect x="20" y={WAIT_Y} width={WIDTH-40} height="56" rx="20" fill="rgba(168,70,55,.10)" stroke="rgba(168,70,55,.34)" strokeDasharray="8 8" />
-            <text x={WIDTH/2} y={WAIT_Y+34} textAnchor="middle" fill="rgba(255,255,255,.42)" fontSize="15" fontWeight="900" pointerEvents="none">trascina qui per mettere in attesa</text>
-            {nodes.map(n=>{
-              if (removed.has(n.id)) return null;
-              const color=nodeColorForGroup(n.group);
-              const stressed=stressSet.has(n.id);
-              const r = radiusFor(n);
-              return (
-                <g key={n.id} transform={`translate(${n.x},${n.y})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
-                  <circle r={r + 7} fill={`${color}18`} filter="url(#softLifeGlowV40)" />
-                  <circle r={r} fill={n.type==='resource' ? '#252635' : `${color}25`} stroke={color} strokeWidth={n.type==='resource'?5:6} />
-                  <g transform={`scale(${Math.max(1, r/22)})`}><LifeWebNodeAvatar node={{ ...n, focusAnimalId:graph.focusAnimalId }} color={color} /></g>
-                  <text x={r + 13} y="4" fill="rgba(255,255,255,.92)" fontSize="14" fontWeight="900" pointerEvents="none">{clampWholeWords(n.label, 20)}</text>
-                </g>
-              );
-            })}
+            <rect x="20" y={WAIT_Y} width={WIDTH-40} height="60" rx="20" fill="rgba(168,70,55,.10)" stroke="rgba(168,70,55,.34)" strokeDasharray="8 8" />
+            <text x={WIDTH/2} y={WAIT_Y+37} textAnchor="middle" fill="rgba(255,255,255,.42)" fontSize="15" fontWeight="900" pointerEvents="none">trascina qui per mettere in attesa</text>
+            {nodes.map(n => removed.has(n.id) ? null : renderNodeCard(n))}
           </g>
         </svg>
       </div>
@@ -4789,8 +4842,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
         </div>
       )}
       <div style={{ display:'grid', gridTemplateColumns:'1fr auto', gap:10, alignItems:'center', marginTop:10 }}>
-        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{waitingNodes.length ? 'Le specie in attesa restano fuori dalla rete: toccale nella riga per reinserirle.' : 'Force layout attivo: trascina un nodo, doppio tap per rimuoverlo, o trascinalo nella zona attesa.'}</div>
-        <button data-sound="filter" onClick={()=>{ const init = initNodes(graph.nodes || []); nodesRef.current = init; setNodes(init.map(n=>({ ...n }))); setRemoved(new Set()); setSelected(null); mapControls.reset(); restartSimulation(0.95); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
+        <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, lineHeight:1.4 }}>{waitingNodes.length ? 'Le specie in attesa restano fuori dalla rete: toccale nella riga per reinserirle.' : 'I riquadri non devono sovrapporsi: la rete parte già in zoom-out, poi l’utente può zoomare manualmente.'}</div>
+        <button data-sound="filter" onClick={()=>{ const init = initNodes(graph.nodes || []); nodesRef.current = init; setNodes(init.map(n=>({ ...n }))); setRemoved(new Set()); setSelected(null); mapControls.reset(); mapControls.setZoom(0.8); restartSimulation(0.95); }} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Reset</button>
       </div>
       {selected && <LifeWebNodeModal node={selected} graph={graph} nodes={nodes} removed={removed} onClose={()=>setSelected(null)} onOpenAnimal={onOpenAnimal} onToggleRemove={toggleRemoved} />}
     </div>
@@ -4834,7 +4887,7 @@ function StandaloneLifeWebPage({ onBack, animals = [], initialAnimal = null, onO
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
       <PageHeader title={focusAnimal ? `Web · ${focusAnimal.com}` : 'LifeWeb'} onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:'12px 14px 28px' }}>
+      <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
         <LifeWebPage territory={null} habitat={habitat} animals={animals} focusAnimal={focusAnimal} onOpenAnimal={onOpenAnimal} />
       </div>
     </div>
@@ -4880,6 +4933,13 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   });
   useEffect(()=>{ try { window.localStorage.setItem('animaldex_region_unlocks_v4', JSON.stringify(unlockMap)); } catch {} }, [unlockMap]);
   useEffect(()=>{ setView(normalizeInitialView(initialView)); }, [initialView]);
+  useEffect(() => {
+    if (view !== 'lifeweb') setSelectedHabitat(null);
+    if (!['habitats','lifeweb'].includes(view)) setSelectedEcoregion(null);
+    if (!['ecoregions','habitats','lifeweb'].includes(view)) setSelectedRegionId(null);
+    if (!['regions','ecoregions','habitats','lifeweb'].includes(view)) setSelectedContinentId(null);
+    if (view !== 'animals') setSelectedTerritory(prev => prev?.kind === 'ecoregion' && selectedEcoregion ? { ...prev, label:selectedEcoregion.label } : prev);
+  }, [view]);
 
   const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === selectedContinentId) || null;
   const region = continent?.regions.find(r => r.id === selectedRegionId) || null;
@@ -4923,9 +4983,9 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'countries') return setView('planet');
     if (view === 'terrestrial' || view === 'marine') return setView('planet');
     if (view === 'regions') return setView('terrestrial');
-    if (view === 'ecoregions') return setView('regions');
+    if (view === 'ecoregions') { setSelectedEcoregion(null); return setView('regions'); }
     if (view === 'lifeweb') return setView('habitats');
-    if (view === 'habitats') return setView('ecoregions');
+    if (view === 'habitats') { setSelectedHabitat(null); return setView('ecoregions'); }
     if (view === 'animals') {
       if (selectedTerritory?.kind === 'marine') return setView('marine');
       if (selectedTerritory?.kind === 'ecoregion') return setView('ecoregions');
@@ -4983,8 +5043,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         })}
 
         {view==='habitats' && selectedEcoregion && (
-          <div>
-            <div style={{ margin:'0 -14px 12px' }}><BioregionVectorMap highlightIds={[selectedEcoregion.id]} accent={'#A84637'} height={220} showLabels fullBleed /></div>
+          <div style={{ width:'100%', maxWidth:'100%', overflowX:'hidden' }}>
+            <div style={{ margin:'0 0 12px', borderRadius:22, overflow:'hidden' }}><BioregionVectorMap highlightIds={[selectedEcoregion.id]} accent={'#A84637'} height={220} showLabels fullBleed /></div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, margin:'12px 0 14px' }}>Scegli un habitat per generare una rete trofica contestuale. In questa versione la rete è una simulazione WIP basata su habitat, geografia, dieta, massa e traits.</div>
             {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory({ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'ecoregion', label:selectedEcoregion.label }); setView('lifeweb');}} onOpenGrid={(h)=>onOpenHabitatGrid?.(selectedEcoregion, h)} />)}
           </div>
