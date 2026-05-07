@@ -84,10 +84,10 @@ const GRID_MYSTERY_SCALE = 1.14;
 const GRID_SILHOUETTE_SCALE = 0.74;
 
 const ANIMAL_STATUS = {
-  misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Bloccato: identità nascosta e nome non mostrato.' },
-  ricercato:  { label:'Ricercato',  short:'RIC.',  c:'#ffffff', bg:'rgba(255,255,255,.10)', border:'1.5px solid rgba(255,255,255,.24)', dot:'#ffffff', desc:'Non visto: nome visibile, animale ancora da trovare.' },
-  avvistato:  { label:'Avvistato',  short:'AVV.',  c:'#90D84A', bg:'rgba(144,216,74,.12)', border:'1.5px solid #90D84A', dot:'#90D84A', desc:'Avvistato in natura.' },
-  catturato:  { label:'Catturato',  short:'CAT.',  c:'#ffffff', bg:'#90D84A', border:'1.5px solid rgba(255,255,255,.32)', dot:'#ffffff', desc:'Catturato/registrato: massimo riconoscimento.' },
+  misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Identità non ancora sbloccata.' },
+  ricercato:  { label:'Ricercato',  short:'RIC.',  c:'#ffffff', bg:'rgba(255,255,255,.10)', border:'1.5px solid rgba(255,255,255,.24)', dot:'#ffffff', desc:'Specie sbloccata nei tuoi territori, ma non ancora vista.' },
+  avvistato:  { label:'Avvistato',  short:'AVV.',  c:'#90D84A', bg:'rgba(144,216,74,.12)', border:'1.5px solid #90D84A', dot:'#90D84A', desc:'Dichiarata come vista dal vivo.' },
+  catturato:  { label:'Catturato',  short:'CAT.',  c:'#ffffff', bg:'#90D84A', border:'1.5px solid rgba(255,255,255,.32)', dot:'#ffffff', desc:'Registrato nel tuo Animaldex tramite foto o conferma.' },
 };
 const ANIMAL_STATUS_ORDER = ['misterioso','ricercato','avvistato','catturato'];
 
@@ -105,6 +105,112 @@ function isRevealedStatus(status) {
   return s === 'avvistato' || s === 'catturato';
 }
 function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(status)] || ANIMAL_STATUS.ricercato; }
+
+const STATUS_CARD_STYLE = {
+  misterioso: { border:'1.5px solid rgba(255,255,255,.12)', glow:'none' },
+  ricercato: { border:'2px solid rgba(255,255,255,.38)', glow:'none' },
+  avvistato: { border:'2px solid #90D84A', glow:'0 0 18px rgba(144,216,74,.18)' },
+  catturato: { border:'2px solid #F0C84E', glow:'0 0 22px rgba(240,200,78,.28)' },
+};
+const XP_BY_RARITY = {
+  seen:{ Comune:10, 'Non comune':20, Raro:50, Leggendario:120 },
+  captured:{ Comune:25, 'Non comune':60, Raro:150, Leggendario:400 },
+};
+const QUICK_SEEN_DAILY_LIMIT = 20;
+
+function getAnimalCountryCodes(animal) {
+  return toArraySafe(animal?.distribution?.countries_present || animal?.geo?.iso?.primary || animal?.geo?.iso || animal?.iso || []);
+}
+function isAnimalInVisitedCountries(animal, visitedCountries = []) {
+  const visited = new Set((visitedCountries || []).map(c => String(c).toUpperCase()));
+  if (!visited.size) return false;
+  return getAnimalCountryCodes(animal).some(code => visited.has(String(code).toUpperCase()));
+}
+function getResolvedAnimalStatus(animal, statusMap = {}, visitedCountries = []) {
+  const manualStatus = normalizeAnimalStatus(statusMap?.[animal?.id] ?? animal?.status);
+  if (manualStatus === 'avvistato' || manualStatus === 'catturato') return manualStatus;
+  if (isAnimalInVisitedCountries(animal, visitedCountries)) return 'ricercato';
+  return manualStatus === 'misterioso' ? 'misterioso' : (visitedCountries?.length ? 'misterioso' : manualStatus);
+}
+function countCountryMatches(animal, visitedSet) {
+  return getAnimalCountryCodes(animal).filter(c => visitedSet.has(String(c).toUpperCase())).length;
+}
+function computeTotalXP({ animalsWithStatus = [], visitedCountries = [], earnedBadgeIds = [] }) {
+  let xp = 0;
+  for (const a of animalsWithStatus) {
+    const rarity = a.rarity || 'Comune';
+    if (a.status === 'avvistato') xp += XP_BY_RARITY.seen[rarity] || 10;
+    if (a.status === 'catturato') xp += (XP_BY_RARITY.seen[rarity] || 10) + (XP_BY_RARITY.captured[rarity] || 25);
+  }
+  xp += visitedCountries?.length ? 100 + Math.max(0, visitedCountries.length - 1) * 40 : 0;
+  xp += (earnedBadgeIds || []).length * 120;
+  return Math.round(xp);
+}
+function xpForLevel(level) { return Math.round(100 * Math.pow(Math.max(1, level - 1), 1.65)); }
+function computeLevelFromXP(totalXP) {
+  let level = 1;
+  while (totalXP >= xpForLevel(level + 1)) level++;
+  return level;
+}
+function getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds) {
+  const metrics = computeAwardMetrics(statusMap, visitedCountries);
+  const unlocked = new Set((earnedBadgeIds || []).map(normalizeBadgeId));
+  return AWARD_RULES
+    .map(rule => {
+      const current = metrics[rule.metric] || 0;
+      const target = rule.threshold || 1;
+      const progress = Math.min(1, current / target);
+      return { ...rule, current, target, progress };
+    })
+    .filter(rule => !unlocked.has(normalizeBadgeId(rule.badgeId)) && rule.progress >= 0.6 && rule.progress < 1)
+    .sort((a,b)=>b.progress-a.progress)
+    .slice(0,3);
+}
+function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCountries = [], earnedBadgeIds = [] }) {
+  const animalsWithStatus = (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
+  const searched = animalsWithStatus.filter(a => a.status === 'ricercato');
+  const seen = animalsWithStatus.filter(a => a.status === 'avvistato');
+  const captured = animalsWithStatus.filter(a => a.status === 'catturato');
+  const xp = computeTotalXP({ animalsWithStatus, visitedCountries, earnedBadgeIds });
+  return {
+    animalsWithStatus,
+    searchedCount: searched.length,
+    seenCount: seen.length,
+    capturedCount: captured.length,
+    visitedCountriesCount: visitedCountries.length,
+    nearlyCompletedBadges: getNearlyCompletedBadges(statusMap, visitedCountries, earnedBadgeIds),
+    xp,
+    level: computeLevelFromXP(xp),
+  };
+}
+function getStatusActions(status) {
+  const s = normalizeAnimalStatus(status);
+  if (s === 'ricercato') return [{ label:'Ho avvistato', action:'mark-seen' }, { label:'Cattura', action:'capture' }];
+  if (s === 'avvistato') return [{ label:'Cattura', action:'capture' }];
+  return [];
+}
+function getQuickSeenStorageKey() {
+  const d = new Date();
+  return `animaldex_quick_seen_${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+function getQuickSeenToday() {
+  try { return JSON.parse(localStorage.getItem(getQuickSeenStorageKey()) || '[]'); } catch { return []; }
+}
+function saveQuickSeenToday(ids) {
+  try { localStorage.setItem(getQuickSeenStorageKey(), JSON.stringify(Array.from(new Set(ids)))); } catch {}
+}
+function getQuickSeenCandidates(animals, statusMap, visitedCountries) {
+  const visitedSet = new Set((visitedCountries || []).map(c => String(c).toUpperCase()));
+  return (animals || [])
+    .map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries), countryMatchCount:countCountryMatches(a, visitedSet), observationCount:getObservationCount(a), rarityScore:RARITY[a.rarity]?.s || 1 }))
+    .filter(a => a.status === 'ricercato' && a.countryMatchCount > 0)
+    .sort((a,b) => (a.rarityScore - b.rarityScore) || (b.observationCount - a.observationCount) || (b.countryMatchCount - a.countryMatchCount))
+    .slice(0, QUICK_SEEN_DAILY_LIMIT);
+}
+function track(eventName, payload = {}) {
+  try { console.log('[track]', eventName, payload); } catch {}
+}
+
 
 
 function appStatusToSupabase(status) {
@@ -523,7 +629,7 @@ const ABILITY_GROUPS = [
   { id:'behavior', label:'Comportamento', color:'#58D68D', prefixes:['BEH_'] },
   { id:'ecology', label:'Ecologia', color:'#45B39D', prefixes:['ECO_'] },
   { id:'evolution', label:'Evoluzione', color:'#EC7063', prefixes:['EVO_'] },
-  { id:'special', label:'Speciali', color:'#AAB7B8', prefixes:['SURV_','LIFESPAN_','HAB_'] },
+  { id:'special', label:'Speciali', color:'#D8B070', prefixes:['SURV_','RES_','LIFESPAN_','HAB_'] },
 ];
 function getAbilityGroupId(categoryId='') {
   const id = String(categoryId || '').toUpperCase();
@@ -604,7 +710,7 @@ const RARITY_CSS = `
   inset: 2px 5px 2px 25px;
   border-radius: 10px;
   z-index: 3;
-  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.012) 22%, rgba(255,255,255,.155) 42%, rgba(255,255,255,.024) 58%, transparent 76%);
+  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.006) 22%, rgba(255,255,255,.078) 42%, rgba(255,255,255,.012) 58%, transparent 76%);
   mix-blend-mode: screen;
   pointer-events: none;
 }
@@ -630,17 +736,17 @@ const RARITY_CSS = `
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,.14) 40%, rgba(255,255,255,.03) 54%, transparent 70%);
+  background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,.07) 40%, rgba(255,255,255,.015) 54%, transparent 70%);
   mix-blend-mode: screen;
 }
 .rarity-badge.compact { min-height: 24px; padding: 3px 8px 3px 34px; border-radius: 999px; font-size: 11px; }
 .rarity-badge.compact::before { inset: 2px 4px 2px 18px; border-radius: 999px; }
 .rarity-badge.compact::after { inset: 1px 5px 1px 19px; border-radius: 999px; }
 .rarity-badge.compact .rarity-shield-wrap { width: 30px; height: 30px; left: -2px; }
-.rarity-badge.small { min-height: 26px; padding: 4px 9px 4px 38px; font-size: 11px; border-radius: 999px; }
-.rarity-badge.small::before { inset: 3px 4px 3px 20px; border-radius: 999px; }
-.rarity-badge.small::after { inset: 2px 5px 2px 21px; border-radius: 999px; }
-.rarity-badge.small .rarity-shield-wrap { width: 34px; height: 34px; left: -4px; }
+.rarity-badge.small { min-height: 30px; padding: 4px 9px 4px 34px; font-size: 10.5px; border-radius: 999px; overflow:hidden; }
+.rarity-badge.small::before { inset: 3px 4px 3px 18px; border-radius: 999px; }
+.rarity-badge.small::after { inset: 2px 5px 2px 19px; border-radius: 999px; }
+.rarity-badge.small .rarity-shield-wrap { width: 28px; height: 28px; left: 0px; }
 .rarity-badge.full { width: 100%; box-sizing: border-box; padding-left:70px; min-height:34px; font-size:12px; }
 .rarity-badge.full::before { left: 40px; }
 .rarity-badge.full::after { left: 41px; }
@@ -1585,11 +1691,11 @@ function useAppViewportHeight() {
   return h;
 }
 
-function useInteractiveMapControls() {
-  const [zoom, setZoomState] = useState(1);
+function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
+  const [zoom, setZoomState] = useState(initialZoom);
   const [pan, setPanState] = useState({x:0,y:0});
   const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
-  const clampZoom = (z) => Math.max(1, Math.min(4.5, Number(z) || 1));
+  const clampZoom = (z) => Math.max(minZoom, Math.min(maxZoom, Number(z) || initialZoom));
   const clampPan = (nextPan, z = zoom) => {
     if (z <= 1.01) return { x:0, y:0 };
     const maxX = 160 * (z - 1);
@@ -1610,7 +1716,7 @@ function useInteractiveMapControls() {
   const setPan = (updater) => {
     setPanState(prev => clampPan(typeof updater === 'function' ? updater(prev) : updater, zoom));
   };
-  const reset = () => { setZoomState(1); setPanState({x:0,y:0}); };
+  const reset = () => { setZoomState(initialZoom); setPanState({x:0,y:0}); };
   const dist = (touches) => {
     if (!touches || touches.length < 2) return 0;
     const dx = touches[0].clientX - touches[1].clientX;
@@ -2060,6 +2166,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   const labelH = isNarrow ? 36 : 38;
   const imageH = imageVisible ? cardH : cardH - labelH + 8;
   const photographed = status === 'catturato' || !!a.photo_url || !!a.userAnimal?.photo_url || !!a.userAnimal?.photo_path;
+  const statusStyle = STATUS_CARD_STYLE[status] || STATUS_CARD_STYLE.ricercato;
   const displayName = clampWholeWords(a.com, isNarrow ? 25 : 31);
   return (
     <div
@@ -2073,11 +2180,12 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         position:'relative',
         userSelect:'none',
         transition:'transform .1s ease, box-shadow .3s ease, opacity .2s ease',
-        boxShadow:tutorialHighlight ? `0 0 0 3px #90D84A, 0 0 34px 8px ${glowAccent}88` : glowShadow,
+        boxShadow:tutorialHighlight ? `0 0 0 3px #90D84A, 0 0 34px 8px ${glowAccent}88` : statusStyle.glow,
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
-        background: imageVisible ? c.img : '#27282D'
+        background: imageVisible ? c.img : '#27282D',
+        border: statusStyle.border
       }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
@@ -2148,12 +2256,29 @@ function Sheet({ title, onClose, children, tall }) {
   );
 }
 
+
+function prettyFilterLabel(value, title='') {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+  if (title === 'Geografia') return getCountryDisplayName(raw);
+  if (/^[A-Z]{2}$/.test(raw)) return getCountryDisplayName(raw);
+  let cleaned = raw
+    .replace(/^T[_-]/i, '')
+    .replace(/^BIO[_-]/i, '')
+    .replace(/^GAME[_-]/i, '')
+    .replace(/^HAB[_-]/i, '')
+    .replace(/[_-]+/g, ' ')
+    .toLowerCase()
+    .replace(/\b\w/g, c => c.toUpperCase());
+  return cleaned || raw;
+}
+
 function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) {
   const [local, setLocal] = useState(new Set(selected));
   const [search, setSearch] = useState('');
   const toggle = v => setLocal(s => { const n=new Set(s); n.has(v)?n.delete(v):n.add(v); return n; });
   const allKeys = options.map(o=>o.value);
-  const filteredOptions = search.trim() ? options.filter(opt => opt.label.toLowerCase().includes(search.toLowerCase())) : options;
+  const filteredOptions = search.trim() ? options.filter(opt => prettyFilterLabel(opt.label || opt.value, title).toLowerCase().includes(search.toLowerCase())) : options;
   return (
     <Sheet title={title} onClose={onClose}>
       {withSearch && (
@@ -2168,7 +2293,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
       <div style={{ padding:'0 14px 80px' }}>
         {filteredOptions.length > 0 ? filteredOptions.map(opt => {
           const on = local.has(opt.value);
-          const flag = withSearch ? getFlagEmoji(opt.value) : '';
+          const flag = title === 'Geografia' ? getFlagEmoji(opt.value) : '';
           const isRarity = ['Comune','Non comune','Raro','Leggendario'].includes(opt.value);
           if (isRarity) {
             return (
@@ -2194,7 +2319,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
             >
               <div style={{ display:'flex', alignItems:'center', gap:10, flex:1 }}>
                 {flag && <span style={{ fontSize:16 }}>{flag}</span>}
-                <span style={{ fontSize:14, fontWeight:700 }}>{opt.label}</span>
+                <span style={{ fontSize:14, fontWeight:700 }}>{prettyFilterLabel(opt.label || opt.value, title)}</span>
               </div>
               <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?(opt.c||'#666'):'rgba(255,255,255,.25)'}`, background:on?(opt.c||'#666'):'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
                 {on&&<span style={{ fontSize:13, fontWeight:900, lineHeight:1 }}>✓</span>}
@@ -2350,7 +2475,7 @@ function StatusLegendRows() {
 
 // ── Grid ──────────────────────────────────────────────────────────────
 
-function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect }) {
+function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -2392,11 +2517,13 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
     setSortBy(preset.sortBy || 'no');
   }, [preset?.id]);
 
+  const hasExplicitPreset = !!preset?.id;
   const list = ANIMALS
-    .map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }))
+    .map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }))
     .filter(a => {
       const q = search.toLowerCase().trim();
       const status = normalizeAnimalStatus(a.status);
+      if (!hasExplicitPreset && !['ricercato','avvistato','catturato'].includes(status)) return false;
       if (q && !getAnimalSearchText(a).includes(q)) return false;
       if (clsF && a.cls !== clsF) return false;
       if (fRarity.length   && !fRarity.includes(a.rarity)) return false;
@@ -2436,7 +2563,7 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
   const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
   const geographyOpts = [...GEO_FILTER_OPTIONS, ...COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))];
   const categoryOpts = Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` }));
-  const uniqueOpt = (values, color='#7AC7FF') => Array.from(new Set(values.flatMap(v => toArraySafe(v)).filter(Boolean))).sort().map(v=>({ value:v, label:v, c:color, bg:`${color}22` }));
+  const uniqueOpt = (values, color='#7AC7FF') => Array.from(new Set(values.flatMap(v => toArraySafe(v)).filter(Boolean))).sort().map(v=>({ value:v, label:prettyFilterLabel(v), c:color, bg:`${color}22` }));
   const confidenceOpts = ['high','medium','low'].map(v=>({ value:v, label:`confidence ${v}`, c:v==='high'?'#90D84A':v==='medium'?'#F0C449':'#F06060', bg:'rgba(255,255,255,.10)' }));
   const mapProfileOpts = uniqueOpt(ANIMALS.map(a=>a.map_profile || a.geo?.map_profile), '#5BBEF8');
   const bioRegionOpts = uniqueOpt(ANIMALS.map(a=>a.bio_regions || a.geo?.bio_regions), '#6CE5C7');
@@ -2481,15 +2608,31 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
           {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
           {fConfidence.map(v=><span key={v} onClick={()=>setFConfidence(p=>p.filter(x=>x!==v))} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>confidence {v} ×</span>)}
           {fMapProfile.map(v=><span key={v} onClick={()=>setFMapProfile(p=>p.filter(x=>x!==v))} style={{ background:'rgba(91,190,248,.16)', color:'#5BBEF8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
-          {fBioRegion.map(v=><span key={v} onClick={()=>setFBioRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(108,229,199,.16)', color:'#6CE5C7', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
-          {fGameRegion.map(v=><span key={v} onClick={()=>setFGameRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(184,96,248,.16)', color:'#B860F8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
-          {fHabitat.map(v=><span key={v} onClick={()=>setFHabitat(p=>p.filter(x=>x!==v))} style={{ background:'rgba(240,168,64,.16)', color:'#F0A840', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
+          {fBioRegion.map(v=><span key={v} onClick={()=>setFBioRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(108,229,199,.16)', color:'#6CE5C7', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{prettyFilterLabel(v)} ×</span>)}
+          {fGameRegion.map(v=><span key={v} onClick={()=>setFGameRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(184,96,248,.16)', color:'#B860F8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{prettyFilterLabel(v)} ×</span>)}
+          {fHabitat.map(v=><span key={v} onClick={()=>setFHabitat(p=>p.filter(x=>x!==v))} style={{ background:'rgba(240,168,64,.16)', color:'#F0A840', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{prettyFilterLabel(v)} ×</span>)}
           {sortBy!=='no' && <span onClick={()=>setSortBy('no')} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>↕ {sortOpts.find(o=>o.value===sortBy)?.label||'Ordina'} ×</span>}
         </div>
       )}
 
+      <div style={{ display:'flex', gap:8, overflowX:'auto', padding:'8px 12px 4px', flexShrink:0, WebkitOverflowScrolling:'touch' }}>
+        {[
+          ['ricercato','Ricercati'],
+          ['avvistato','Avvistati'],
+          ['catturato','Catturati'],
+          ['all','Tutti sbloccati'],
+          ['rare','Rari']
+        ].map(([key,label]) => {
+          const active = key==='all' ? (!fStatus.length && !fRarity.length) : key==='rare' ? fRarity.includes('Raro') || fRarity.includes('Leggendario') : fStatus.includes(key);
+          return <button key={key} onClick={()=>{
+            if (key==='all') { setFStatus([]); setFRarity([]); }
+            else if (key==='rare') { setFStatus([]); setFRarity(['Raro','Leggendario']); }
+            else { setFRarity([]); setFStatus([key]); }
+          }} style={{ flex:'0 0 auto', height:34, padding:'0 13px', borderRadius:999, border:'1px solid rgba(255,255,255,.08)', background:active?'#A84637':'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:900, fontFamily:'inherit' }}>{label}</button>
+        })}
+      </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
-        {list.length===0 ? <p style={{ color:'#555', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale trovato</p> : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
+        {list.length===0 ? <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>Nessun animale ricercato</div><div>Aggiungi un paese visitato per sbloccare i primi animali.</div><button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'#A84637', color:'white', fontWeight:950 }}>Aggiungi paese</button></div> : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
@@ -2498,7 +2641,7 @@ function Grid({ onSelect, statusMap = {}, onHome, preset, onBackToOrigin, tutori
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{list.length} risultati</div>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{fStatus.length ? `${list.length} ${fStatus.join(' / ')}` : `${list.length} sbloccati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0 }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -2826,19 +2969,19 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
     <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:260, background:'rgba(0,0,0,.82)', display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
       <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:460, maxHeight:'92%', overflowY:'auto', borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:'1px solid rgba(255,255,255,.10)', boxShadow:'0 30px 80px rgba(0,0,0,.65)', padding:18 }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
-          <div><div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Animaldex Vision</div><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>Fotografa e verifica</div></div>
+          <div><div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Cattura Dex</div><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>Registra nel Dex</div></div>
           <button onClick={onClose} style={{ width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button>
         </div>
         <label style={{ display:'block', border:'1px dashed rgba(255,255,255,.22)', borderRadius:20, padding:14, background:'rgba(255,255,255,.04)', cursor:'pointer', textAlign:'center' }}>
           {preview ? <img src={preview} alt="foto" style={{ width:'100%', maxHeight:260, objectFit:'contain', borderRadius:16 }} /> : <div style={{ minHeight:150, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.62)', fontWeight:900 }}>📷 Scatta o carica una foto</div>}
           <input type="file" accept="image/*" capture="environment" onChange={e=>setFile(e.target.files?.[0] || null)} style={{ display:'none' }} />
         </label>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>GPS</div><div style={{ color:gps?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{gps ? `agganciato ±${Math.round(gps.accuracy || 0)}m` : 'in attesa / non disponibile'}</div></div>
           <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:'white', fontSize:12, fontWeight:900 }}>Habitat</div><div style={{ color:expectedHabitats.length?'#90D84A':'#F0B24E', fontSize:11, marginTop:4 }}>{expectedHabitats.length ? `${expectedHabitats.length} habitat attesi` : 'non mappato'}</div></div>
         </div>
         {error && <div style={{ marginTop:12, borderRadius:14, background:'rgba(168,70,55,.18)', border:'1px solid rgba(168,70,55,.45)', color:'#FFC8BE', padding:12, fontSize:12, fontWeight:800 }}>{error}</div>}
-        <button disabled={loading} onClick={runIdentification} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:loading?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14 }}>{loading ? 'Analisi in corso…' : 'Analizza foto'}</button>
+        <button disabled={loading || !file} onClick={()=>animal ? onConfirm?.(animal,{ gps, file, image_url:preview, confidence:1 }) : runIdentification()} style={{ marginTop:14, width:'100%', height:50, borderRadius:16, border:'none', background:(loading || !file)?'#444':'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:14 }}>{loading ? 'Registrazione…' : 'Conferma cattura nel Dex'}</button>
         {!!matches.length && <div style={{ marginTop:16 }}>
           <div style={{ color:'rgba(255,255,255,.62)', fontSize:12, fontWeight:900, marginBottom:8 }}>Risultati verificati</div>
           {matches.map(m => <button key={m.animal.id} onClick={()=>confirmMatch(m)} style={{ width:'100%', minHeight:62, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', display:'flex', alignItems:'center', gap:12, padding:10, marginBottom:8, cursor:'pointer', fontFamily:'inherit', textAlign:'left' }}>
@@ -2847,13 +2990,13 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
             <div style={{ color:'#90D84A', fontWeight:1000, fontSize:12 }}>Conferma</div>
           </button>)}
         </div>}
-        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>Lo status “fotografato” viene applicato solo dopo la conferma. Il riconoscimento AI è filtrato da GPS e habitat; se la Edge Function non è ancora attiva, la conferma resta manuale.</div>
+        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>“Catturato” significa registrato nel tuo Animaldex. Nessun animale viene catturato fisicamente.</div>
       </div>
     </div>
   );
 }
 
-function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, onOpenPhoto, tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -2902,6 +3045,16 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
 
   const scale = 1;
   const longName = String(a.com || '').length > 24;
+  const statusActions = getStatusActions(localStatus);
+  const visitedMatches = countCountryMatches(a, new Set((visitedCountries || []).map(c => String(c).toUpperCase())));
+  const handleStatusAction = (action) => {
+    if (action === 'mark-seen') {
+      setLocalStatus('avvistato');
+      onStatusChange?.(a.id, 'avvistato');
+      track('animal_marked_seen', { animal_id:a.id, animal_name:a.com, source:'detail' });
+    }
+    if (action === 'capture') onOpenPhoto?.(a);
+  };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
@@ -2943,13 +3096,11 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
             {/* Rarità con stemma */}
             <div data-tour="animal-rarity"><RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:12.5 }} /></div>
             <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
-            <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%' }}>
-              <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent} onClick={()=>setShowStatusMenu(!showStatusMenu)}/></div>
-              {showStatusMenu && (
-                <div style={{ position:'absolute', top:40, left:0, right:0, background:c.detailBg, border:`1px solid ${c.accent}33`, borderRadius:12, padding:8, display:'flex', flexDirection:'column', gap:6, zIndex:10 }}>
-                  {ANIMAL_STATUS_ORDER.map(s=>(
-                    <button key={s} onClick={()=>{const next=normalizeAnimalStatus(s);setLocalStatus(next);setShowStatusMenu(false);if(onStatusChange)onStatusChange(a.id,next);}} style={{ background:'transparent', border:'none', color:c.accent, cursor:'pointer', padding:'6px 12px', borderRadius:8, fontSize:13, fontWeight:700, textAlign:'left', textTransform:'capitalize' }}>{getStatusMeta(s).label}</button>
-                  ))}
+            <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%', flexDirection:'column', gap:7 }}>
+              <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+              {statusActions.length > 0 && (
+                <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
+                  {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{act.label}</button>)}
                 </div>
               )}
             </div>
@@ -2959,8 +3110,11 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           <h1 style={{ margin:0, color:'white', fontSize:longName?22:26, fontWeight:900, letterSpacing:longName?-.6:-.3, lineHeight:1.06, transform:longName?'scaleX(.8)':'none', transformOrigin:'center', maxWidth:'124%', marginLeft:longName?'-12%':0, marginRight:longName?'-12%':0 }}>{a.com}</h1>
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
-        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:16 }}>
+        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:10 }}>
           <p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
+        </div>
+        <div style={{ color:'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
+          {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Animaldex, non cattura fisica.
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
           {/* PESO: tachimetro */}
@@ -3067,9 +3221,9 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
         )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Etimologia</p>
         <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
-        <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
+        <p data-distribution-anchor style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10, margin:'18px 0 8px' }}><button data-sound="compare" onClick={()=>onOpenComparator?.(a)} style={{ aspectRatio:'1 / 1', minHeight:70, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontSize:12.5, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(168,70,55,.20)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:7 }}> <span style={{ fontSize:24 }}>⚔️</span><span>Comparazione</span></button><button data-sound="map" onClick={()=>onOpenLifeWeb?.(a)} style={{ aspectRatio:'1 / 1', minHeight:70, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#244A70,#2D6E96)', color:'white', fontSize:12.5, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(36,74,112,.24)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:7 }}> <span style={{ fontSize:24 }}>🕸️</span><span>Web</span></button><button data-sound="capture" onClick={()=>onOpenPhoto?.(a)} style={{ aspectRatio:'1 / 1', minHeight:70, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(135deg,#2E6F56,#58A56A)', color:'white', fontSize:12.5, fontWeight:950, cursor:'pointer', boxShadow:'0 14px 34px rgba(46,111,86,.24)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:7 }}> <span style={{ fontSize:24 }}>📷</span><span>Fotografa</span></button></div>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, margin:'18px 0 8px' }}><button data-sound="compare" onClick={()=>onOpenComparator?.(a)} style={{ minHeight:50, border:'1px solid rgba(255,255,255,.10)', borderRadius:16, background:'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:950, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>Confronta</button><button data-sound="map" onClick={()=>onOpenLifeWeb?.(a)} style={{ minHeight:50, border:'1px solid rgba(255,255,255,.10)', borderRadius:16, background:'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:950, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>LifeWeb</button><button data-sound="map" onClick={()=>document.querySelector('[data-distribution-anchor]')?.scrollIntoView({behavior:'smooth', block:'start'})} style={{ minHeight:50, border:'1px solid rgba(255,255,255,.10)', borderRadius:16, background:'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:950, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>Distribuzione</button></div>
       </div>
 
       {captureStamp && (
@@ -3214,7 +3368,7 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
       className="interactive-hint"
       onClick={()=>{setFlipped(v=>!v); if(tutorialActive) onTutorialClick?.();}}
       style={{
-        minHeight:86,
+        minHeight:104,
         borderRadius:14,
         background:'rgba(0,0,0,.35)',
         overflow:'hidden',
@@ -3224,15 +3378,15 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
         boxShadow:tutorialActive?'0 0 0 3px rgba(168,70,55,.32), 0 0 28px rgba(168,70,55,.34)':'none'
       }}
     >
-      <div style={{ position:'relative', minHeight:86, transformStyle:'preserve-3d', transition:'transform .36s cubic-bezier(.2,.8,.2,1)', transform:flipped?'rotateX(180deg)':'rotateX(0deg)' }}>
+      <div style={{ position:'relative', minHeight:104, transformStyle:'preserve-3d', transition:'transform .36s cubic-bezier(.2,.8,.2,1)', transform:flipped?'rotateX(180deg)':'rotateX(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', padding:'12px 14px', display:'flex', alignItems:'center', gap:14, boxSizing:'border-box' }}>
           <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='inline-flex';}} style={{ width:66, height:66, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 14px ${(meta.color || accentColor)}44)` }} />
           <span style={{ display:'none', width:66, height:66, alignItems:'center', justifyContent:'center', fontSize:36, flexShrink:0 }}>{meta.icon}</span>
           <div style={{ color:'white', fontSize:15, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'12px 42px 12px 14px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.50),rgba(255,255,255,.04))' }}>
+        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'12px 36px 12px 14px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.50),rgba(255,255,255,.04))' }}>
           <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ position:'absolute', top:8, right:8, width:26, height:26, borderRadius:9, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.32)', color:'white', fontSize:13, fontWeight:900, cursor:'pointer', zIndex:3 }}>↺</button>
-          <div style={{ color:'rgba(255,255,255,.80)', fontSize:11.2, lineHeight:1.28, fontWeight:720, textAlign:'left', maxHeight:62, overflowY:'auto', paddingRight:2 }}>{curiosity}</div>
+          <div style={{ color:'rgba(255,255,255,.80)', fontSize:10.4, lineHeight:1.18, fontWeight:720, textAlign:'left', maxHeight:80, overflowY:'auto', paddingRight:2 }}>{curiosity}</div>
         </div>
       </div>
     </div>
@@ -3402,7 +3556,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     return highlightSet.has(id) || isoActive;
   };
   const activeFeatures = relevant.filter(isActiveFeature);
-  const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .22 : .42);
+  const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .08 : .12);
 
   if (!data && !error) {
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
@@ -3415,7 +3569,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
       {...mapControls.handlers}
       style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:'none' }}
     >
-      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%', transform:mapControls.transform, transformOrigin:'50% 50%', willChange:'transform' }}>
+      <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
           <filter id="bioSatNoise">
             <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" seed="11" result="n"/>
@@ -3424,6 +3578,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
           </filter>
           <radialGradient id="bioOcean" cx="50%" cy="45%" r="75%"><stop offset="0%" stopColor="#102630"/><stop offset="62%" stopColor="#0B0A09"/><stop offset="100%" stopColor="#030202"/></radialGradient>
         </defs>
+        <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
         <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#bioOcean)" />
         <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#bioSatNoise)" opacity=".6" />
         <g opacity=".22">
@@ -3439,6 +3594,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
             if (!d) return null;
             return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(64,90,100,.42)' : 'rgba(82,58,45,.48)')} stroke={active ? '#FFD0B7' : 'rgba(110,210,245,.18)'} strokeWidth={active ? 1.55 : 0.42} opacity={active ? 0.95 : selected ? .66 : .50} />;
           })}
+        </g>
         </g>
       </svg>
       <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900 }}>⌖</button>
@@ -3456,7 +3612,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
     onOpen?.();
   };
   return (
-    <div style={{ marginBottom:14, borderRadius:22, width:'100%', maxWidth:'100%', overflow:'hidden', height:flipped?292:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
+    <div style={{ marginBottom:14, borderRadius:22, width:'100%', maxWidth:'100%', overflow:'hidden', height:flipped?356:204, perspective:900, cursor:locked?'default':'pointer', transition:'height .28s ease' }}>
       <div style={{ position:'relative', height:'100%', transition:'transform .35s ease', transformStyle:'preserve-3d', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div onClick={handleOpen} style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', borderRadius:22, overflow:'hidden', background:'#1A1A1C', border:'1px solid rgba(255,255,255,.08)' }}>
           <RegionArt src={coverSources} grayscale={locked} fallbackColors={fallbackColors || (isMarine ? ['#0B314A','#116B89','#051B2A'] : ['#30494D','#53706D','#1C2B2E'])} height={204} />
@@ -3488,14 +3644,14 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
               <div style={{ color:'white', fontSize:15, fontWeight:1000, lineHeight:1.08 }}>{title || item?.label}</div>
               {subtitle && <div style={{ color:'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.28, marginTop:4 }}>{subtitle}</div>}
             </div>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer', flexShrink:0 }}>↺</button>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, display:'flex', alignItems:'center', justifyContent:'center', border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer', flexShrink:0 }}>↺</button>
           </div>
           <div style={{ padding:'0 0 0', marginTop:-6 }}>
-            <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={198} fullBleed />
+            <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={236} fullBleed />
           </div>
-          <div style={{ display:'flex', gap:8, padding:'10px 12px 12px', background:'rgba(16,17,20,.98)' }}>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
-            <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:38, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
+          <div style={{ display:'flex', gap:8, padding:'8px 12px 12px', background:'rgba(16,17,20,.98)', boxSizing:'border-box' }}>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
+            <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
           </div>
         </div>
       </div>
@@ -3827,11 +3983,11 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               );
             })}
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{selectedCountries.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>nazioni</div></div>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{predictedUnlocks}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali potenziali</div></div>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Apri radar</button></div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:8, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Apri radar</button></div>
         </div>
       )}
 
@@ -3873,7 +4029,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
           <div>
             <div style={{ color:'white', fontSize:21, fontWeight:1000, lineHeight:1.12 }}>Pacchetto iniziale pronto</div>
             <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6 }}>Ora una singola RPC batch sincronizza nazioni, animali ricercati, avvistamenti e primo award. Se la rete rallenta, l’app non resta bloccata.</p>
-            <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
               {[
                 ['🗺️', selectedCountries.length, 'nazioni visitate'],
                 ['🎯', predictedUnlocks, 'ricercati potenziali'],
@@ -3991,34 +4147,149 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null }) {
+function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto }) {
+  const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+  const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
+  const nextLevelXP = xpForLevel(progress.level + 1);
+  const currLevelXP = xpForLevel(progress.level);
+  const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
+  const animalsWithStatus = progress.animalsWithStatus;
+  const seenNotCaptured = animalsWithStatus.filter(a => a.status === 'avvistato');
+  const searchedAnimals = animalsWithStatus.filter(a => a.status === 'ricercato');
+  let mission = {
+    title:'Scopri una nuova regione',
+    desc:'Esplora territori e habitat per trovare nuovi animali.',
+    cta:'Apri regioni',
+    action:onOpenRegions || (()=>onOpen('regions')),
+  };
+  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per sbloccare i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
+  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
+  else if (searchedAnimals.length > 0) mission = { title:'Prossima missione', desc:`Hai ${searchedAnimals.length} animali ricercati nei tuoi paesi visitati.`, cta:'Esplora ricercati', action:()=>onOpenGridStatus?.(['ricercato']) };
   const items = [
-    { id:'grid', label:'Animaldex', icon:'🦁', bg:'#2E5A10', desc:'Griglia animali' },
-    { id:'compare', label:'Comparatore', icon:'⚔️', bg:'#A84637', desc:'Confronta specie' },
-    { id:'regions', label:'Regioni', icon:'🗺️', bg:'#256344', desc:'Continenti e scratch map' },
-    { id:'badges', label:'Badge', icon:'🏅', bg:'#7A3A1B', desc:'Award e obiettivi' },
-    { id:'abilities', label:'Abilità', icon:'✨', bg:'#5A2E80', desc:'Catalogo abilità' },
-    { id:'profile', label:'Profilo', icon:'👤', bg:'#254A70', desc:'Statistiche giocatore' },
-    { id:'settings', label:'Impostazioni', icon:'⚙️', bg:'#4A4A50', desc:'Preferenze app' },
+    { id:'grid', label:'Animaldex', icon:'🦁' },
+    { id:'regions', label:'Regioni', icon:'🗺️' },
+    { id:'badges', label:'Badge', icon:'🏅' },
+    { id:'compare', label:'Comparatore', icon:'⚔️' },
+    { id:'abilities', label:'Abilità', icon:'✨' },
+    { id:'profile', label:'Profilo', icon:'👤' },
+    { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'center', padding:'18px 12px 14px', borderBottom:'1px solid #2A2A2C', background:'#1C1C1E', flexShrink:0 }}>
-        <div style={{ color:'white', fontSize:22, fontWeight:900, letterSpacing:'-.3px' }}>Menu</div>
-      </div>
-      <div style={{ flex:1, overflowY:'auto', padding:'18px 16px 24px' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+      <PageHeader title="Mission Control" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 28px' }}>
+        <div style={{ borderRadius:24, padding:16, background:'linear-gradient(135deg,#20242B,#121316)', border:'1px solid rgba(255,255,255,.08)', marginBottom:14 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+            <div style={{ width:54, height:54, borderRadius:18, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', color:'#90D84A', fontSize:28 }}>🧭</div>
+            <div style={{ flex:1, minWidth:0 }}>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · Esploratore urbano · {progress.xp} / {nextLevelXP} XP</div>
+              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#90D84A,#F0C84E)', borderRadius:999 }} /></div>
+            </div>
+            <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
+          </div>
+        </div>
+
+        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg,rgba(168,70,55,.42),rgba(20,20,22,.92))', border:'1px solid rgba(168,70,55,.45)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
+          <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
+          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
+          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
+        </div>
+
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, marginBottom:14 }}>
+          {[
+            ['📷','Cattura',()=>onOpenGridStatus?.(['avvistato'])],
+            ['✓','Visti rapidi',onQuickSeen],
+            ['🎯','Ricercati',()=>onOpenGridStatus?.(['ricercato'])],
+            ['🌍','Paese',onOpenRegions || (()=>onOpen('regions'))],
+          ].map(([icon,label,action])=><button key={label} onClick={action} style={{ minHeight:76, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:7, alignItems:'center', justifyContent:'center' }}><span style={{ fontSize:21 }}>{icon}</span><span>{label}</span></button>)}
+        </div>
+
+        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
+          <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
+          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, marginTop:5 }}>Ricercati {progress.searchedCount} · Avvistati {progress.seenCount} · Catturati {progress.capturedCount}</div>
+          <div style={{ height:10, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:12 }}><div style={{ width:`${Math.min(100, progress.capturedCount / Math.max(1, ANIMALS.length) * 100)}%`, height:'100%', background:'#F0C84E' }} /></div>
+        </button>
+
+        {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
+          <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
+          <div style={{ display:'grid', gap:8 }}>
+            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
+              <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
+              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'#90D84A' }} /></div>
+            </button>)}
+          </div>
+        </div>}
+
+        <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
           {items.map(item=>{
             const focused = tutorialFocus === item.id;
-            return (
-            <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:138, border:'none', borderRadius:20, background:item.bg, color:'white', cursor:'pointer', padding:16, display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'space-between', textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'0 12px 34px rgba(0,0,0,.28)', opacity:tutorialFocus && !focused ? .42 : 1, position:'relative', zIndex:focused?180:1 }}>
-
-              <div style={{ width:54, height:54, borderRadius:18, background:'rgba(255,255,255,.16)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:28 }}>{item.icon}</div>
-              <div><div style={{ fontSize:17, fontWeight:900, marginBottom:4 }}>{item.label}</div><div style={{ fontSize:11, color:'rgba(255,255,255,.66)', lineHeight:1.35 }}>{item.desc}</div></div>
+            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
+              <span style={{ width:38, height:38, borderRadius:14, background:'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
+              <span style={{ fontSize:13, fontWeight:950 }}>{item.label}</span>
             </button>
-            );
           })}
         </div>
+      </div>
+    </div>
+  );
+}
+
+
+function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect }) {
+  const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
+  const [index, setIndex] = useState(0);
+  const candidates = getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !dailyIds.includes(a.id));
+  const doneToday = dailyIds.length;
+  const current = candidates[index] || null;
+  const markDaily = (id) => {
+    const next = Array.from(new Set([...dailyIds, id]));
+    setDailyIds(next);
+    saveQuickSeenToday(next);
+  };
+  const nextCard = () => setIndex(i => i + 1);
+  const yes = async () => {
+    if (!current) return;
+    markDaily(current.id);
+    await onStatusChange?.(current.id, 'avvistato');
+    track('quick_seen_yes', { animal_id:current.id, animal_name:current.com });
+    nextCard();
+  };
+  const no = () => {
+    if (!current) return;
+    markDaily(current.id);
+    track('quick_seen_no', { animal_id:current.id, animal_name:current.com });
+    nextCard();
+  };
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+      <PageHeader title="Visti rapidi" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:18 }}>
+        <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginBottom:14 }}>Ti proponiamo animali che potresti aver visto in base ai tuoi paesi visitati. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
+        {!visitedCountries.length ? (
+          <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Visti rapidi.</div>
+        ) : doneToday >= QUICK_SEEN_DAILY_LIMIT ? (
+          <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Limite giornaliero raggiunto. Torna domani.</div>
+        ) : current ? (
+          <div style={{ borderRadius:30, background:'linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035))', border:'1px solid rgba(255,255,255,.10)', padding:18, boxShadow:'0 24px 70px rgba(0,0,0,.42)' }}>
+            <div onClick={()=>onSelect?.(current)} style={{ height:260, borderRadius:24, background:(CLS[current.cls] || CLS.Mammalia).img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', cursor:'pointer' }}>
+              <AnimalImg a={{...current,status:'ricercato'}} size={230} fontSize={70} overrideStatus="ricercato" />
+            </div>
+            <div style={{ textAlign:'center', marginTop:16 }}>
+              <div style={{ color:'white', fontSize:24, fontWeight:1000, lineHeight:1.05 }}>{current.com}</div>
+              <div style={{ color:'rgba(255,255,255,.52)', fontSize:12, fontStyle:'italic', marginTop:4 }}>{current.sci}</div>
+              <div style={{ color:'#F0A840', fontSize:11, fontWeight:900, marginTop:8 }}>{current.rarity || 'Comune'} · {getAnimalCountryCodes(current).slice(0,3).map(getCountryDisplayName).join(', ')}</div>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginTop:18 }}>
+              <button onClick={no} style={{ height:56, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:18, fontWeight:1000 }}>✕ No</button>
+              <button onClick={yes} style={{ height:56, borderRadius:18, border:'none', background:'linear-gradient(135deg,#90D84A,#4E9E42)', color:'#071017', fontSize:18, fontWeight:1000 }}>✓ Visto</button>
+            </div>
+          </div>
+        ) : (
+          <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Nessun altro ricercato disponibile oggi.</div>
+        )}
       </div>
     </div>
   );
@@ -4035,7 +4306,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const residenceCountry = userProfile?.residence_country || userProfile?.country || visitedCountries?.[0] || null;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
-    { label:'Fotografati', value:capturedCount, onClick:onOpenGallery },
+    { label:'Catturati', value:capturedCount, onClick:onOpenGallery },
     { label:'Badge', value:badgeCount, onClick:onOpenBadges },
     { label:'Regioni', value:regionsCount, onClick:onOpenRegions },
   ];
@@ -4121,7 +4392,7 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
         <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
         <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:266, height:266, maxWidth:'82vw', fontSize:104, margin:'0 auto 8px' }}>🏅</span>
         <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
-        <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro} · Livello {rule.level}</div>
+        <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro}</div>
         <div style={{ color:'rgba(255,255,255,.76)', fontSize:14, lineHeight:1.55, marginTop:18 }}>{getAwardDescription(rule)}</div>
         {!unlocked && (
           <div style={{ marginTop:18, background:'rgba(255,255,255,.07)', borderRadius:16, padding:14 }}>
@@ -4556,8 +4827,8 @@ function LifeWebNodeModal({ node, graph, nodes, onClose, onOpenAnimal, onToggleR
 
 
 function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
-  const WIDTH = 1280;
-  const HEIGHT = 1040;
+  const WIDTH = 1520;
+  const HEIGHT = 1120;
   const WAIT_Y = HEIGHT - 88;
   const [nodes, setNodes] = useState([]);
   const nodesRef = useRef([]);
@@ -4569,24 +4840,24 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const [pickerOpen, setPickerOpen] = useState(false);
   const [availableAnimals, setAvailableAnimals] = useState([]);
   const [equilibrium, setEquilibrium] = useState(100);
-  const mapControls = useInteractiveMapControls();
+  const mapControls = useInteractiveMapControls(0.72, 3.6, 0.82);
 
   const groupOrder = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
   const baseY = { apex:78, carnivore:214, omnivore:370, filter:526, herbivore:622, producer:720, resource:815 };
-  const boxFor = (n) => n.type === 'resource' ? { w:128, h:54 } : { w:96, h:122 };
+  const boxFor = (n) => n.type === 'resource' ? { w:132, h:56 } : { w:104, h:124 };
   const initNodes = (sourceNodes = graph.nodes || []) => {
     const grouped = sourceNodes.reduce((acc,n)=>{ (acc[n.group || 'omnivore'] ||= []).push(n); return acc; }, {});
     const out = [];
     groupOrder.forEach((group) => {
       const arr = [...(grouped[group] || [])].sort((a,b)=> (a.animalId === graph.focusAnimalId ? -1 : b.animalId === graph.focusAnimalId ? 1 : (b.power || 0) - (a.power || 0)));
-      const maxPerRow = group === 'resource' ? 7 : 8;
+      const maxPerRow = group === 'resource' ? 8 : 9;
       const vGap = group === 'resource' ? 76 : 142;
       arr.forEach((n, idx) => {
         const row = Math.floor(idx / maxPerRow);
         const col = idx % maxPerRow;
         const rowCount = Math.min(maxPerRow, arr.length - row * maxPerRow);
         const box = boxFor(n);
-        const spacing = group === 'resource' ? 152 : 138;
+        const spacing = group === 'resource' ? 168 : 154;
         const rowWidth = (rowCount - 1) * spacing;
         const x = WIDTH / 2 - rowWidth / 2 + col * spacing + (row % 2 ? 18 : -18);
         const y = (baseY[group] || 380) + row * vGap;
@@ -4613,7 +4884,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       const dx = (t.x - s.x) || 0.01;
       const dy = (t.y - s.y) || 0.01;
       const dist = Math.sqrt(dx*dx + dy*dy) || 1;
-      const desired = edge.relation_type === 'resource_use' ? 178 : edge.confidence === 'likely' ? 230 : 260;
+      const desired = edge.relation_type === 'resource_use' ? 210 : edge.confidence === 'likely' ? 268 : 300;
       const force = (dist - desired) * 0.0045 * alpha;
       const fx = dx / dist * force;
       const fy = dy / dist * force;
@@ -4621,7 +4892,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
       if (t.fx == null) { t.vx -= fx; t.vy -= fy; }
     });
 
-    for (let iter=0; iter<3; iter++) {
+    for (let iter=0; iter<6; iter++) {
       for (let i=0; i<arr.length; i++) {
         const a = arr[i];
         if (removed.has(a.id)) continue;
@@ -4630,15 +4901,15 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
           if (removed.has(b.id)) continue;
           const dx = (b.x - a.x) || 0.01;
           const dy = (b.y - a.y) || 0.01;
-          const overlapX = (a.w + b.w) / 2 + 22 - Math.abs(dx);
-          const overlapY = (a.h + b.h) / 2 + 22 - Math.abs(dy);
+          const overlapX = (a.w + b.w) / 2 + 34 - Math.abs(dx);
+          const overlapY = (a.h + b.h) / 2 + 34 - Math.abs(dy);
           if (overlapX > 0 && overlapY > 0) {
             if (overlapX < overlapY) {
-              const push = overlapX * 0.16 * (dx < 0 ? -1 : 1);
+              const push = overlapX * 0.26 * (dx < 0 ? -1 : 1);
               if (a.fx == null) a.vx -= push;
               if (b.fx == null) b.vx += push;
             } else {
-              const push = overlapY * 0.18 * (dy < 0 ? -1 : 1);
+              const push = overlapY * 0.30 * (dy < 0 ? -1 : 1);
               if (a.fx == null) a.vy -= push;
               if (b.fx == null) b.vy += push;
             }
@@ -4731,7 +5002,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   };
   const addAnimal = (animal) => {
     if (!animal) return;
-    const box = { w:96, h:122 };
+    const box = { w:104, h:124 };
     const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, ...box, x:WIDTH/2, y:HEIGHT/2, tx:WIDTH/2, ty:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
     if (nodesRef.current.some(n => n.id === node.id)) return;
     nodesRef.current = [...nodesRef.current, node];
@@ -4740,33 +5011,45 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     setPickerOpen(false);
     restartSimulation(0.95);
   };
+  const splitLabelLines = (label, limit=13) => {
+    const words = String(label || '').split(/\s+/).filter(Boolean);
+    const lines = [''];
+    for (const w of words) {
+      const i = lines.length - 1;
+      if ((lines[i] + ' ' + w).trim().length <= limit) lines[i] = (lines[i] + ' ' + w).trim();
+      else if (lines.length < 2) lines.push(w);
+      else break;
+    }
+    return lines.filter(Boolean).slice(0,2);
+  };
+  const imageHrefFor = (a) => getImageSrcCandidates(a?.image_url)[0] || a?.image_url || '';
   const renderNodeCard = (n) => {
     const color = nodeColorForGroup(n.group);
     const isAnimal = n.type === 'animal';
     const stressed = stressSet.has(n.id);
     const currentAnimal = isAnimal ? (graph.allAnimals || graph.animals || []).find(a => a.id === n.animalId) : null;
-    const clsBg = isAnimal ? ((CLS[n.cls] || CLS.Mammalia).img || 'linear-gradient(135deg,#333,#111)') : 'linear-gradient(135deg,#243421,#151D13)';
+    const cls = isAnimal ? (CLS[n.cls] || CLS.Mammalia) : null;
+    const lines = splitLabelLines(n.label, isAnimal ? 13 : 18);
     return (
       <g key={n.id} transform={`translate(${n.x - n.w/2},${n.y - n.h/2})`} onPointerDown={(e)=>startDrag(e,n)} onDoubleClick={(e)=>{e.stopPropagation();toggleRemoved(n.id);}} onClick={(e)=>{e.stopPropagation(); if(!dragRef.current) setSelected(n);}} style={{ cursor:'grab', animation:stressed?'ecosystemStress .75s ease-in-out infinite':'none', transformBox:'fill-box', transformOrigin:'center' }}>
-        <foreignObject x="0" y="0" width={n.w} height={n.h}>
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ width:'100%', height:'100%', boxSizing:'border-box', borderRadius:isAnimal?18:15, overflow:'hidden', background:clsBg, border:`2px solid ${color}`, boxShadow:`0 0 0 1px ${color}28, 0 12px 22px rgba(0,0,0,.28)` }}>
-            {isAnimal ? (
-              <>
-                <div style={{ height:84, background:'rgba(0,0,0,.06)', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
-                  {currentAnimal ? <AnimalImg a={{...currentAnimal,status:'catturato'}} size={76} fontSize={34} overrideStatus="catturato" gridMode /> : <div style={{ color:'white', fontSize:26 }}>•</div>}
-                </div>
-                <div style={{ padding:'7px 8px 8px', display:'flex', flexDirection:'column', justifyContent:'center', height:38, background:'linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.40))' }}>
-                  <div style={{ color:'white', fontSize:11, lineHeight:1.08, fontWeight:950, textAlign:'center', display:'-webkit-box', WebkitBoxOrient:'vertical', WebkitLineClamp:2, overflow:'hidden', textShadow:'0 2px 7px rgba(0,0,0,.45)' }}>{clampWholeWords(n.label, 24)}</div>
-                </div>
-              </>
-            ) : (
-              <div style={{ width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', padding:'0 8px', boxSizing:'border-box', textAlign:'center', color:'white', fontSize:11.2, lineHeight:1.12, fontWeight:950 }}>{clampWholeWords(n.label, 22)}</div>
-            )}
-          </div>
-        </foreignObject>
+        <rect x="0" y="0" width={n.w} height={n.h} rx={isAnimal?18:15} fill={isAnimal ? (cls?.img || '#24303A') : '#25321F'} stroke={color} strokeWidth="3" />
+        <rect x="2" y="2" width={n.w-4} height={n.h-4} rx={isAnimal?16:13} fill={isAnimal ? 'rgba(0,0,0,.03)' : 'rgba(0,0,0,.10)'} stroke={`rgba(255,255,255,.10)`} strokeWidth="1" />
+        {isAnimal ? (
+          <>
+            {currentAnimal?.image_url ? <image href={imageHrefFor(currentAnimal)} x="10" y="8" width={n.w-20} height="76" preserveAspectRatio="xMidYMid meet" opacity=".96" /> : <text x={n.w/2} y="52" textAnchor="middle" fontSize="28" fill="white">•</text>}
+            <rect x="0" y={n.h-42} width={n.w} height="42" rx="14" fill="rgba(0,0,0,.40)" />
+            {lines.map((line,i)=><text key={i} x={n.w/2} y={n.h-25+i*12} textAnchor="middle" fontSize="10.5" fontWeight="900" fill="white">{line}</text>)}
+          </>
+        ) : (
+          <>
+            <text x={n.w/2} y={n.h/2-4} textAnchor="middle" fontSize="12" fontWeight="900" fill="white">{lines[0] || 'Risorsa'}</text>
+            {lines[1] && <text x={n.w/2} y={n.h/2+11} textAnchor="middle" fontSize="12" fontWeight="900" fill="white">{lines[1]}</text>}
+          </>
+        )}
       </g>
     );
   };
+
 
   return (
     <div style={{ background:'#0E1116', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:12, boxShadow:'inset 0 0 44px rgba(0,0,0,.45)', overflow:'hidden' }}>
@@ -4776,7 +5059,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
           <div style={{ padding:'8px 12px', borderRadius:12, background:'rgba(255,255,255,.05)', border:'1px solid rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:900 }}>Animali <span style={{ color:'#74C7FF' }}>{nodes.filter(n=>n.type==='animal' && !removed.has(n.id)).length}</span></div>
         </div>
         <button data-sound="filter" onClick={()=>setPickerOpen(v=>!v)} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>+ Aggiungi</button>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(1,z-0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.max(0.72,z-0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>−</button>
         <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.setZoom(z=>Math.min(3.8,z+0.16));}} style={{ height:38, width:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, cursor:'pointer' }}>+</button>
         <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset(); restartSimulation(0.85);}} style={{ height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:900, padding:'0 10px', cursor:'pointer' }}>⌖</button>
       </div>
@@ -4839,7 +5122,7 @@ function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=nu
         <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:4, lineHeight:1.08 }}>{habitat?.label || 'Habitat'}{territory?.label ? ` · ${territory.label}` : ''}</div>
         <div style={{ color:'rgba(255,255,255,.60)', fontSize:12, lineHeight:1.5, marginTop:8 }}>Rete trofica dinamica e contestuale: se sposti, aggiungi o rimuovi un animale, la disposizione si ricalcola automaticamente con il focus sull’equilibrio.</div>
         <div style={{ marginTop:10, color:'rgba(255,255,255,.46)', fontSize:11, lineHeight:1.4 }}>Risorse base: {resourceList || 'risorse habitat'}</div>
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
           <button onClick={()=>setMode('web')} style={{ height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:mode==='web'?'#244A70':'rgba(255,255,255,.05)', color:'white', fontWeight:900, cursor:'pointer' }}>Web</button>
           <button onClick={()=>setMode('grid')} style={{ height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:mode==='grid'?'#244A70':'rgba(255,255,255,.05)', color:'white', fontWeight:900, cursor:'pointer' }}>Grid</button>
         </div>
@@ -4879,7 +5162,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
           <div style={{ color:'rgba(255,255,255,.52)', fontSize:11.5, marginTop:4 }}>{row.count || 'demo'} animali compatibili · {resources.join(' · ')}</div>
         </div>
       </div>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
         <button data-sound="map" onClick={()=>onOpen?.(row)} style={{ height:40, minWidth:0, borderRadius:12, border:'none', background:'#244A70', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950, cursor:'pointer' }}>LifeWeb</button>
         <button data-sound="tap" onClick={()=>onOpenGrid?.(row)} style={{ height:40, minWidth:0, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:950, cursor:'pointer' }}>Grid</button>
       </div>
@@ -5312,15 +5595,15 @@ function ComparatorAbilityChip({ animal, id, accent }) {
   const badgeUrl = `/badges/${id.toLowerCase()}.png`;
   const why = animal?.cat_curiosities?.[id] || animal?.raw?.cat_curiosities?.[id] || getAbilityDescription(id, meta);
   return (
-    <button onClick={()=>setFlipped(v=>!v)} style={{ minHeight:74, perspective:800, border:'none', background:'transparent', padding:0, cursor:'pointer', fontFamily:'inherit', color:'white', textAlign:'left' }}>
-      <div style={{ position:'relative', minHeight:74, transformStyle:'preserve-3d', transition:'transform .34s ease', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
+    <button onClick={()=>setFlipped(v=>!v)} style={{ minHeight:86, perspective:800, border:'none', background:'transparent', padding:0, cursor:'pointer', fontFamily:'inherit', color:'white', textAlign:'left' }}>
+      <div style={{ position:'relative', minHeight:86, transformStyle:'preserve-3d', transition:'transform .34s ease', transform:flipped?'rotateY(180deg)':'rotateY(0deg)' }}>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', display:'grid', gridTemplateColumns:'44px 1fr', alignItems:'center', gap:9, background:'rgba(255,255,255,.055)', border:`1px solid ${(meta.color || accent)}44`, borderRadius:15, padding:'9px 10px', boxSizing:'border-box', overflow:'hidden' }}>
           <img src={badgeUrl} alt="" onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:40, height:40, objectFit:'contain', filter:`drop-shadow(0 0 9px ${(meta.color || accent)}55)` }} />
           <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:40, height:40, fontSize:24 }}>{meta.icon}</span>
           <div style={{ color:'white', fontSize:11.5, lineHeight:1.15, fontWeight:950, overflow:'hidden' }}>{meta.label}</div>
         </div>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', display:'flex', alignItems:'center', background:'rgba(0,0,0,.40)', border:`1px solid ${(meta.color || accent)}55`, borderRadius:15, padding:'8px 10px', boxSizing:'border-box', overflow:'hidden' }}>
-          <div style={{ color:'rgba(255,255,255,.82)', fontSize:10.2, lineHeight:1.18, fontWeight:720, maxHeight:58, overflowY:'auto' }}>{why}</div>
+          <div style={{ color:'rgba(255,255,255,.82)', fontSize:9.6, lineHeight:1.16, fontWeight:720, maxHeight:72, overflowY:'auto' }}>{why}</div>
         </div>
       </div>
     </button>
@@ -5424,53 +5707,44 @@ function radarLabelLines(label='') {
   return s.split(' ');
 }
 function ComparatorRadar({ left, right, colorLeft, colorRight }) {
-  const axes = left?.radar || right?.radar || [];
-  const cx = 220, cy = 205, r = 105;
+  const size = 330, cx = size/2, cy = size/2, r = 102;
+  const axes = left?.radar || right?.radar || COMPARATOR_METRICS.map(m=>({ ...m, value:0 }));
+  const pt = (idx,value)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); const rr=r*(Number(value||0)/100); return [cx+Math.cos(angle)*rr, cy+Math.sin(angle)*rr]; };
+  const poly = (data)=> data ? data.radar.map((m,i)=>pt(i,m.value).join(',')).join(' ') : '';
+  const grid = [20,40,60,80,100].map(v=> axes.map((_,i)=>pt(i,v).join(',')).join(' '));
+  const labelPt = (idx)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); return [cx+Math.cos(angle)*(r+38), cy+Math.sin(angle)*(r+38)]; };
   return (
-    <div style={{ background:'radial-gradient(circle at 50% 44%,rgba(168,70,55,.15),rgba(0,0,0,.38) 58%,rgba(0,0,0,.58))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:'10px 2px 8px', boxShadow:'inset 0 0 40px rgba(0,0,0,.35)', overflow:'hidden' }}>
-      <svg viewBox="0 0 440 390" style={{ width:'100%', maxWidth:440, display:'block', margin:'0 auto', overflow:'visible' }}>
-        {[.25,.5,.75,1].map((s,i)=>{
-          const pts = axes.map((_,j)=>{
-            const [x,y] = polarPoint(cx, cy, r*s, -90 + j*(360/axes.length));
-            return `${x},${y}`;
-          }).join(' ');
-          return <polygon key={i} points={pts} fill="none" stroke="rgba(255,255,255,.20)" strokeWidth="1" strokeDasharray="4 5" />;
-        })}
-        {axes.map((axis,i)=>{
-          const angle = -90 + i*(360/axes.length);
-          const [x2,y2] = polarPoint(cx, cy, r, angle);
-          const [lx,ly] = polarPoint(cx, cy, r+50, angle);
-          const anchor = Math.abs(lx-cx) < 10 ? 'middle' : (lx > cx ? 'start' : 'end');
-          const lines = radarLabelLines(axis.label);
-          return <g key={axis.key}>
-            <line x1={cx} y1={cy} x2={x2} y2={y2} stroke="rgba(255,255,255,.18)" strokeWidth="1.2" />
-            <text x={lx} y={ly - (lines.length-1)*6} fill="rgba(255,255,255,.92)" fontSize="12" fontWeight="900" textAnchor={anchor} dominantBaseline="middle">
-              {lines.map((t,k)=><tspan key={k} x={lx} dy={k===0?0:13}>{t}</tspan>)}
-            </text>
-          </g>;
-        })}
-        {left && <RadarPolygon values={left.radar} color={colorLeft} opacity={.24} cx={cx} cy={cy} r={r} />}
-        {right && <RadarPolygon values={right.radar} color={colorRight} opacity={.20} cx={cx} cy={cy} r={r} />}
-        {left && left.radar.map((v,i)=>{ const [x,y]=polarPoint(cx,cy,r*v.value/100,-90+i*(360/left.radar.length)); return <circle key={`l${i}`} cx={x} cy={y} r="4" fill={colorLeft} stroke="white" strokeOpacity=".65"/>; })}
-        {right && right.radar.map((v,i)=>{ const [x,y]=polarPoint(cx,cy,r*v.value/100,-90+i*(360/right.radar.length)); return <circle key={`r${i}`} cx={x} cy={y} r="4" fill={colorRight} stroke="white" strokeOpacity=".65"/>; })}
+    <div style={{ borderRadius:24, background:'radial-gradient(circle at center,rgba(168,70,55,.16),rgba(0,0,0,.40) 56%,rgba(0,0,0,.74))', border:'1px solid rgba(255,255,255,.08)', padding:10, overflow:'hidden' }}>
+      <svg viewBox={`0 0 ${size} ${size}`} style={{ width:'100%', maxWidth:430, display:'block', margin:'0 auto' }}>
+        {grid.map((g,i)=><polygon key={i} points={g} fill="none" stroke="rgba(255,255,255,.18)" strokeDasharray="5 6" strokeWidth="1" />)}
+        {axes.map((m,i)=>{ const [x,y]=pt(i,100); return <line key={m.key} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(255,255,255,.20)" strokeWidth="1" />; })}
+        {right && <polygon points={poly(right)} fill={`${colorRight}33`} stroke={colorRight} strokeWidth="4" />}
+        {left && <polygon points={poly(left)} fill={`${colorLeft}33`} stroke={colorLeft} strokeWidth="4" />}
+        {[left,right].filter(Boolean).map((data,di)=>data.radar.map((m,i)=>{ const [x,y]=pt(i,m.value); const col=di===0?colorLeft:colorRight; return <circle key={`${di}-${m.key}`} cx={x} cy={y} r="4.8" fill={col} stroke="rgba(255,255,255,.65)" strokeWidth="1.2" />; }))}
+        {axes.map((m,i)=>{ const [x,y]=labelPt(i); const anchor=x<cx-20?'end':x>cx+20?'start':'middle'; const ly = y < cy ? y-2 : y+12; const lv=left?.radar?.[i]?.value ?? null; const rv=right?.radar?.[i]?.value ?? null; return <g key={m.key}>
+          <text x={x} y={ly} fill="white" fontSize="13" fontWeight="900" textAnchor={anchor}>{m.label}</text>
+          <text x={x} y={ly+15} fill={colorLeft} fontSize="10.5" fontWeight="900" textAnchor={anchor}>{lv!=null?`A ${lv}`:''}</text>
+          <text x={x} y={ly+28} fill={colorRight} fontSize="10.5" fontWeight="900" textAnchor={anchor}>{rv!=null?`B ${rv}`:''}</text>
+        </g>; })}
       </svg>
     </div>
   );
 }
-function ComparatorSelector({ label, value, animals, onChange, accent, gradient }) {
+function ComparatorSelector({ label, value, animals, onChange, accent, gradient, onZoom, compact=false }) {
   const [open,setOpen] = useState(false);
   const [q,setQ] = useState('');
   const rows = animals.filter(a => !q.trim() || `${a.com} ${a.sci} ${a.com_en}`.toLowerCase().includes(q.toLowerCase())).slice(0,80);
   const c = CLS[value?.cls] || CLS.Mammalia;
+  const shownLabel = compact ? '' : label;
   return (
-    <div style={{ position:'relative' }}>
-      <button data-sound="compare" onClick={()=>setOpen(v=>!v)} style={{ width:'100%', border:'1px solid transparent', background:`linear-gradient(180deg,rgba(18,18,20,.92),rgba(0,0,0,.36)) padding-box, ${gradient || accent} border-box`, borderRadius:20, padding:10, color:'white', cursor:'pointer', textAlign:'left', display:'flex', alignItems:'center', gap:10, boxShadow:`0 0 0 1px ${accent}33, 0 14px 34px rgba(0,0,0,.26)` }}>
-        <div style={{ width:58, height:58, borderRadius:16, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 18px ${accent}33` }}>
-          {value ? <AnimalImg a={{...value,status:'avvistato'}} size={52} fontSize={30} overrideStatus="avvistato" /> : <span style={{ fontSize:24, color:accent }}>＋</span>}
+    <div style={{ position:'relative', minWidth:0, width:'100%' }}>
+      <button data-sound="compare" onClick={()=>setOpen(v=>!v)} style={{ width:'100%', minWidth:0, boxSizing:'border-box', border:'1px solid transparent', background:`linear-gradient(180deg,rgba(18,18,20,.92),rgba(0,0,0,.36)) padding-box, ${gradient || accent} border-box`, borderRadius:20, padding:compact?8:10, color:'white', cursor:'pointer', textAlign:'left', display:'flex', alignItems:'center', gap:compact?8:10, boxShadow:`0 0 0 1px ${accent}33, 0 14px 34px rgba(0,0,0,.26)` }}>
+        <div onClick={e=>{ if (value && onZoom) { e.stopPropagation(); onZoom(value); } }} style={{ width:compact?54:58, height:compact?54:58, borderRadius:16, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 18px ${accent}33`, cursor:value?'zoom-in':'pointer' }}>
+          {value ? <AnimalImg a={{...value,status:'avvistato'}} size={compact?48:52} fontSize={30} overrideStatus="avvistato" /> : <span style={{ fontSize:24, color:accent }}>＋</span>}
         </div>
         <div style={{ minWidth:0, flex:1 }}>
-          <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.6 }}>{label}</div>
-          <div style={{ color:'white', fontSize:14, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{value?.com || 'Seleziona animale'}</div>
+          {shownLabel && <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.6 }}>{shownLabel}</div>}
+          <div style={{ color:'white', fontSize:compact?15:14, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{value?.com || 'Seleziona animale'}</div>
           <div style={{ color:'rgba(255,255,255,.48)', fontSize:10, fontStyle:'italic', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{value?.sci || 'tocca per cercare'}</div>
         </div>
       </button>
@@ -5489,14 +5763,14 @@ function ComparatorSelector({ label, value, animals, onChange, accent, gradient 
     </div>
   );
 }
-function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient }) {
+function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom }) {
   if (!animal) return <div style={{ minHeight:240, borderRadius:22, background:'rgba(255,255,255,.05)', border:'1px dashed rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.45)', fontWeight:850 }}>Scegli un animale</div>;
   const c = CLS[animal.cls] || CLS.Mammalia;
   const abilities = toArraySafe(animal.categories).slice(0,6);
   const stat = (label,value,sub,icon) => <div style={{ background:'rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.06)', borderRadius:14, padding:'9px 10px' }}><div style={{ color:'rgba(255,255,255,.55)', fontSize:10, fontWeight:850, textTransform:'uppercase' }}>{icon} {label}</div><div style={{ color:'white', fontSize:14, fontWeight:950, marginTop:3 }}>{value}</div>{sub && <div style={{ color:'rgba(255,255,255,.42)', fontSize:9.5, marginTop:1 }}>{sub}</div>}</div>;
   return (
     <div style={{ borderRadius:24, overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop || '#2A2A2C'},#111113) padding-box, ${gradient || accent} border-box`, border:'1px solid transparent', boxShadow:`0 16px 48px rgba(0,0,0,.28), 0 0 0 1px ${accent}22` }}>
-      <div style={{ padding:14, display:'flex', alignItems:'center', gap:12 }}>
+      <div onClick={()=>onZoom?.(animal)} style={{ padding:14, display:'flex', alignItems:'center', gap:12, cursor:'zoom-in' }}>
         <div style={{ width:76, height:76, borderRadius:22, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${accent}33` }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
         <div style={{ minWidth:0 }}>
           <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.8 }}>{sideLabel}</div>
@@ -5529,10 +5803,12 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = 
   const colorLeft = COMPARE_LEFT_COLOR;
   const colorRight = COMPARE_RIGHT_COLOR;
   const [showInfo,setShowInfo]=useState(false);
+  const [zoomAnimal,setZoomAnimal]=useState(null);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 560;
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
       <PageHeader title="Comparatore" onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:'14px 14px 28px' }}>
+      <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'14px 14px 28px', boxSizing:'border-box' }}>
         <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.28),rgba(20,20,22,.88))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:16, marginBottom:14 }}>
           <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:12 }}>
             <div>
@@ -5543,22 +5819,23 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = 
           </div>
           <div style={{ color:'rgba(255,255,255,.56)', fontSize:12, lineHeight:1.55, marginTop:8 }}>Radar su vulnerabilità, dimensioni logaritmiche, velocità in centili, peso logaritmico e adattabilità geografica.</div>
         </div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
-          <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} />
-          <ComparatorSelector label="Destra" value={right} animals={normalized} onChange={setRight} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} />
+        <div style={{ display:'grid', gridTemplateColumns:isMobile?'1fr':'1fr 1fr', gap:10, marginBottom:12, minWidth:0 }}>
+          <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
+          <ComparatorSelector label="Destra" value={right} animals={normalized} onChange={setRight} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
         </div>
         <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left?.com || 'Sinistra'}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
           <div style={{ color:'rgba(255,255,255,.26)', fontSize:13, fontWeight:950 }}>VS</div>
-          <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorRight, display:'inline-block' }} />{right?.com || 'Destra'}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorRight, display:'inline-block' }} />{right?.com || 'Animale B'}</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12 }}>
-          <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} sideLabel="Animale A" />
-          <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} sideLabel="Animale B" />
+          <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} sideLabel="Animale A" onZoom={setZoomAnimal} />
+          <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} sideLabel="Animale B" onZoom={setZoomAnimal} />
         </div>
       </div>
       {showInfo && <ComparatorInfoModal onClose={()=>setShowInfo(false)} />}
+      {zoomAnimal && <ImageLightbox src={zoomAnimal.image_url} alt={zoomAnimal.com} accentColor={(CLS[zoomAnimal.cls]||CLS.Mammalia).accent} bgColor={(CLS[zoomAnimal.cls]||CLS.Mammalia).img} animal={zoomAnimal} onClose={()=>setZoomAnimal(null)} />}
     </div>
   );
 }
@@ -5756,10 +6033,14 @@ export default function App() {
   const handleStatusChange = async (id, status) => {
     if (!user?.id) return;
     const nextStatus = normalizeAnimalStatus(status);
+    const previousStatus = normalizeAnimalStatus(statusMap[id]);
     const currentAnimal = animalsData.find(a => a.id === id);
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     try {
+      track('animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, previous_status:previousStatus, next_status:nextStatus });
+      if (nextStatus === 'avvistato') track('animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com });
+      if (nextStatus === 'catturato') track('animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com });
       await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
       await reloadSupabaseData(user);
     } catch (err) {
@@ -6065,7 +6346,7 @@ const returnFromFilteredGrid = () => {
   setSel(null); setPage('grid');
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -6103,7 +6384,8 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} />;
+    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>setPage('quickSeen')} onOpenPhoto={openPhotoRecognition} />;
+    if (page === 'quickSeen') return <QuickSeenPage onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
     if (page === 'compare') return <ComparatorPage onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
@@ -6112,7 +6394,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage onBack={()=>setPage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} onHome={()=>openPage('menu')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
 
   return (
