@@ -199,11 +199,27 @@ function getQuickSeenToday() {
 function saveQuickSeenToday(ids) {
   try { localStorage.setItem(getQuickSeenStorageKey(), JSON.stringify(Array.from(new Set(ids)))); } catch {}
 }
+function getAnimalVisitedCountryMatches(animal, visitedCountries = []) {
+  const visited = (visitedCountries || []).map(c => String(c).toUpperCase());
+  const available = new Set(getAnimalCountryCodes(animal).map(c => String(c).toUpperCase()));
+  return visited.filter(code => available.has(code));
+}
 function getQuickSeenCandidates(animals, statusMap, visitedCountries) {
-  const visitedSet = new Set((visitedCountries || []).map(c => String(c).toUpperCase()));
+  const visited = (visitedCountries || []).map(c => String(c).toUpperCase()).filter(Boolean);
   return (animals || [])
-    .map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries), countryMatchCount:countCountryMatches(a, visitedSet), observationCount:getObservationCount(a), rarityScore:RARITY[a.rarity]?.s || 1 }))
-    .filter(a => a.status === 'ricercato' && a.countryMatchCount > 0)
+    .map(a => {
+      const matchedVisitedCountries = getAnimalVisitedCountryMatches(a, visited);
+      return {
+        ...a,
+        status:getResolvedAnimalStatus(a, statusMap, visitedCountries),
+        matchedVisitedCountries,
+        countryMatchCount:matchedVisitedCountries.length,
+        observationCount:getObservationCount(a),
+        rarityScore:RARITY[a.rarity]?.s || 1,
+      };
+    })
+    .filter(a => a.status === 'ricercato')
+    .filter(a => visited.length > 0 && a.countryMatchCount === visited.length)
     .sort((a,b) => (a.rarityScore - b.rarityScore) || (b.observationCount - a.observationCount) || (b.countryMatchCount - a.countryMatchCount))
     .slice(0, QUICK_SEEN_DAILY_LIMIT);
 }
@@ -4205,9 +4221,30 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         </div>
 
         <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
-          <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
-          <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, marginTop:5 }}>Ricercati {progress.searchedCount} · Avvistati {progress.seenCount} · Catturati {progress.capturedCount}</div>
-          <div style={{ height:10, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:12 }}><div style={{ width:`${Math.min(100, progress.capturedCount / Math.max(1, ANIMALS.length) * 100)}%`, height:'100%', background:'#F0C84E' }} /></div>
+          {(() => {
+            const totalAnimals = Math.max(1, ANIMALS.length);
+            const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
+            const searchedPct = Math.max(0, Math.min(100, (unlockedCount / totalAnimals) * 100));
+            const seenPct = Math.max(0, Math.min(100, (progress.seenCount / Math.max(1, unlockedCount)) * 100));
+            const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / Math.max(1, unlockedCount)) * 100));
+            const Row = ({ label, valueText, pct, color, hint }) => (
+              <div style={{ marginTop:10 }}>
+                <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
+                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
+                  <div style={{ color:'rgba(255,255,255,.64)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
+                </div>
+                <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
+                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
+              </div>
+            );
+            return <>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, marginTop:5 }}>Ricercati {unlockedCount} · Avvistati {progress.seenCount} · Catturati {progress.capturedCount}</div>
+              <Row label="Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D7DCE8,#AEB7C9)" hint="Animali sbloccati sul totale del Dex" />
+              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#90D84A,#4E9E42)" hint="Animali avvistati sui ricercati sbloccati" />
+              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#F0C84E,#D49B1C)" hint="Animali catturati sui ricercati sbloccati" />
+            </>;
+          })()}
         </button>
 
         {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
@@ -4278,7 +4315,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
             <div style={{ textAlign:'center', marginTop:16 }}>
               <div style={{ color:'white', fontSize:24, fontWeight:1000, lineHeight:1.05 }}>{current.com}</div>
               <div style={{ color:'rgba(255,255,255,.52)', fontSize:12, fontStyle:'italic', marginTop:4 }}>{current.sci}</div>
-              <div style={{ color:'#F0A840', fontSize:11, fontWeight:900, marginTop:8 }}>{current.rarity || 'Comune'} · {getAnimalCountryCodes(current).slice(0,3).map(getCountryDisplayName).join(', ')}</div>
+              <div style={{ color:'#F0A840', fontSize:11, fontWeight:900, marginTop:8 }}>{current.rarity || 'Comune'} · {getAnimalVisitedCountryMatches(current, visitedCountries).slice(0,4).map(getCountryDisplayName).join(', ') || 'Paesi visitati compatibili'}</div>
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginTop:18 }}>
               <button onClick={no} style={{ height:56, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:18, fontWeight:1000 }}>✕ No</button>
@@ -5692,6 +5729,13 @@ function getComparatorBenchmarks(animals=[]) {
     countries: list.map(getCountriesCount),
   };
 }
+const COMPARATOR_METRICS = [
+  { key:'vulnerabilita', label:'Vulnerabilità' },
+  { key:'dimensioni', label:'Dimensioni log' },
+  { key:'velocita', label:'Velocità centili' },
+  { key:'peso', label:'Peso log' },
+  { key:'adattabilita', label:'Adattabilità' },
+];
 function getComparatorMetrics(a, benchmarks) {
   const massG = getAnimalMassG(a);
   const lengthCm = getAnimalLengthCm(a);
@@ -5846,6 +5890,7 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = 
           <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
           <ComparatorSelector label="Destra" value={right} animals={normalized} onChange={setRight} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
         </div>
+        {!left && !right && <div style={{ marginBottom:12, borderRadius:18, border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.04)', padding:'12px 14px', color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.45 }}>Seleziona uno o due animali per iniziare il confronto. Da mobile, tocca le card sopra per aprire la ricerca.</div>}
         <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
