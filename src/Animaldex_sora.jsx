@@ -416,35 +416,35 @@ async function fetchUserProfile(user) {
 
     const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
     if (!data) {
-      return {
+      return mergeProfileDemographics({
         user_id: user.id,
         username,
         nickname: username,
         onboarding_completed: false,
         has_completed_tutorial: false,
         first_login_reward_shown: false,
-      };
+      }, user.id);
     }
 
-    return {
+    return mergeProfileDemographics({
       ...data,
       nickname: data.nickname || data.username || username,
       onboarding_completed: Boolean(data.onboarding_completed),
       has_completed_tutorial: Boolean(data.has_completed_tutorial),
       tutorial_completed_at: data.tutorial_completed_at || null,
       first_login_reward_shown: Boolean(data.first_login_reward_shown),
-    };
+    }, user.id);
   } catch (err) {
     console.warn('[Animaldex] fetchUserProfile fallback:', err);
     const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
-    return {
+    return mergeProfileDemographics({
       user_id: user.id,
       username,
       nickname: username,
       onboarding_completed: false,
       has_completed_tutorial: false,
       first_login_reward_shown: false,
-    };
+    }, user.id);
   }
 }
 
@@ -462,16 +462,115 @@ function withTimeout(promiseLike, ms, fallbackValue, label='timeout') {
   ]);
 }
 
+const PROFILE_DEMOGRAPHICS_STORAGE_PREFIX = 'animaldex_profile_demographics_';
+function getProfileDemographicsLocal(userId) {
+  if (!userId || typeof window === 'undefined') return {};
+  try {
+    const raw = localStorage.getItem(`${PROFILE_DEMOGRAPHICS_STORAGE_PREFIX}${userId}`);
+    return raw ? JSON.parse(raw) || {} : {};
+  } catch {
+    return {};
+  }
+}
+function normalizeProfileQuestionnaire(data = {}) {
+  return {
+    date_of_birth: data?.date_of_birth || data?.dob || '',
+    residence_country: data?.residence_country || data?.country || '',
+    gender: data?.gender || '',
+    nationality: data?.nationality || '',
+    phone: data?.phone || '',
+    onboarding_objectives: Array.isArray(data?.onboarding_objectives) ? data.onboarding_objectives : Array.isArray(data?.objectives) ? data.objectives : [],
+    onboarding_objective_other: data?.onboarding_objective_other || data?.objective_other || '',
+    is_collector: data?.is_collector ?? data?.collector ?? null,
+    annual_abroad_vacations: data?.annual_abroad_vacations || data?.vacations_abroad || '',
+    pokemon_affinity: data?.pokemon_affinity || '',
+    consent_terms_privacy: Boolean(data?.consent_terms_privacy || data?.termsAccepted),
+    consent_analytics: Boolean(data?.consent_analytics),
+    consent_marketing: Boolean(data?.consent_marketing),
+    consent_personalization: Boolean(data?.consent_personalization),
+    consent_newsletter: Boolean(data?.consent_newsletter),
+  };
+}
+function persistProfileDemographicsLocal(userId, data = {}) {
+  if (!userId || typeof window === 'undefined') return;
+  try {
+    const current = getProfileDemographicsLocal(userId);
+    localStorage.setItem(`${PROFILE_DEMOGRAPHICS_STORAGE_PREFIX}${userId}`, JSON.stringify({
+      ...current,
+      ...normalizeProfileQuestionnaire(data),
+    }));
+  } catch {}
+}
+function mergeProfileDemographics(profile = {}, userId) {
+  const local = getProfileDemographicsLocal(userId || profile?.user_id);
+  const normalizedLocal = normalizeProfileQuestionnaire(local);
+  return {
+    ...profile,
+    date_of_birth: profile?.date_of_birth || normalizedLocal.date_of_birth || '',
+    residence_country: profile?.residence_country || profile?.country || normalizedLocal.residence_country || '',
+    gender: profile?.gender || normalizedLocal.gender || '',
+    nationality: profile?.nationality || normalizedLocal.nationality || '',
+    phone: profile?.phone || normalizedLocal.phone || '',
+    onboarding_objectives: profile?.onboarding_objectives || normalizedLocal.onboarding_objectives || [],
+    onboarding_objective_other: profile?.onboarding_objective_other || normalizedLocal.onboarding_objective_other || '',
+    is_collector: profile?.is_collector ?? normalizedLocal.is_collector,
+    annual_abroad_vacations: profile?.annual_abroad_vacations || normalizedLocal.annual_abroad_vacations || '',
+    pokemon_affinity: profile?.pokemon_affinity || normalizedLocal.pokemon_affinity || '',
+    consent_terms_privacy: Boolean(profile?.consent_terms_privacy || normalizedLocal.consent_terms_privacy),
+    consent_analytics: Boolean(profile?.consent_analytics || normalizedLocal.consent_analytics),
+    consent_marketing: Boolean(profile?.consent_marketing || normalizedLocal.consent_marketing),
+    consent_personalization: Boolean(profile?.consent_personalization || normalizedLocal.consent_personalization),
+    consent_newsletter: Boolean(profile?.consent_newsletter || normalizedLocal.consent_newsletter),
+  };
+}
+async function persistOnboardingQuestionnaire(user, payload = {}) {
+  if (!user?.id) return;
+  const q = normalizeProfileQuestionnaire(payload);
+  persistProfileDemographicsLocal(user.id, q);
+  const answers = {
+    ...q,
+    email: user?.email || '',
+    auth_provider: user?.app_metadata?.provider || user?.identities?.[0]?.provider || 'email',
+    updated_at: new Date().toISOString(),
+  };
+  try {
+    await supabase.from('user_profiles').upsert({
+      user_id: user.id,
+      email: user?.email || null,
+      auth_provider: user?.app_metadata?.provider || user?.identities?.[0]?.provider || 'email',
+      date_of_birth: q.date_of_birth || null,
+      residence_country: q.residence_country || null,
+      gender: q.gender || null,
+      nationality: q.nationality || null,
+      phone: q.phone || null,
+      onboarding_objectives: q.onboarding_objectives,
+      onboarding_objective_other: q.onboarding_objective_other || null,
+      is_collector: q.is_collector,
+      annual_abroad_vacations: q.annual_abroad_vacations || null,
+      pokemon_affinity: q.pokemon_affinity || null,
+      consent_terms_privacy: q.consent_terms_privacy,
+      consent_analytics: q.consent_analytics,
+      consent_marketing: q.consent_marketing,
+      consent_personalization: q.consent_personalization,
+      consent_newsletter: q.consent_newsletter,
+      onboarding_answers: answers,
+      updated_at: new Date().toISOString(),
+    }, { onConflict:'user_id' });
+  } catch (err) {
+    console.warn('[Animaldex] Questionario onboarding salvato solo localmente:', err);
+  }
+}
+
 function buildFallbackProfile(user, onboardingCompleted = true) {
   const username = String(user?.email || 'esploratore').split('@')[0] || 'esploratore';
-  return {
+  return mergeProfileDemographics({
     user_id: user?.id,
     username,
     nickname: username,
     onboarding_completed: onboardingCompleted,
     has_completed_tutorial: true,
     first_login_reward_shown: false,
-  };
+  }, user?.id);
 }
 
 async function fetchAnimalsFromSupabase(userId) {
@@ -2215,7 +2314,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         </div>
       )}
       {photographed && <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div>}
-      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
+      <RarityBadge rarity={a.rarity || 'Comune'} compact style={{ position:'absolute', top:6, right:6, zIndex:3, transform:'scale(.9)', transformOrigin:'top right', pointerEvents:'none' }} />
       {!mystery && (
         <div
           style={{
@@ -2637,7 +2736,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           ['ricercato','Ricercati'],
           ['avvistato','Avvistati'],
           ['catturato','Catturati'],
-          ['all','Tutti sbloccati'],
+          ['all','Tutti ricercati'],
           ['rare','Rari']
         ].map(([key,label]) => {
           const active = key==='all' ? (!fStatus.length && !fRarity.length) : key==='rare' ? fRarity.includes('Raro') || fRarity.includes('Leggendario') : fStatus.includes(key);
@@ -2649,7 +2748,18 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
-        {list.length===0 ? <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>Nessun animale ricercato</div><div>Aggiungi un paese visitato per sbloccare i primi animali.</div><button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'#A84637', color:'white', fontWeight:950 }}>Aggiungi paese</button></div> : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
+        {list.length===0 ? (() => {
+          const statusOnly = new Set(fStatus);
+          const isSeenTab = statusOnly.size === 1 && statusOnly.has('avvistato');
+          const isCapturedTab = statusOnly.size === 1 && statusOnly.has('catturato');
+          const title = isSeenTab ? 'Nessun animale avvistato' : isCapturedTab ? 'Nessun animale catturato' : 'Nessun animale ricercato';
+          const body = isSeenTab
+            ? 'Qui compaiono gli animali che hai dichiarato come visti dal vivo.'
+            : isCapturedTab
+              ? 'Qui compaiono gli animali fotografati e registrati nel tuo Animaldex.'
+              : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
+          return <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'#A84637', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
+        })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
@@ -2658,7 +2768,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{fStatus.length ? `${list.length} ${fStatus.join(' / ')}` : `${list.length} sbloccati`}</div>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{fStatus.length ? `${list.length} ${fStatus.join(' / ')}` : `${list.length} ricercati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0 }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -3847,6 +3957,17 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const [countrySearch,setCountrySearch]=useState('');
   const [selectedCountries,setSelectedCountries]=useState([]);
   const [selectedTripTags,setSelectedTripTags]=useState(['nature']);
+  const [gender,setGender]=useState('');
+  const [nationality,setNationality]=useState('');
+  const [phone,setPhone]=useState('');
+  const [dateOfBirth,setDateOfBirth]=useState('');
+  const [residenceCountry,setResidenceCountry]=useState('');
+  const [objectives,setObjectives]=useState([]);
+  const [objectiveOther,setObjectiveOther]=useState('');
+  const [isCollector,setIsCollector]=useState('');
+  const [annualAbroadVacations,setAnnualAbroadVacations]=useState('');
+  const [pokemonAffinity,setPokemonAffinity]=useState('');
+  const [consents,setConsents]=useState({ terms:false, analytics:false, marketing:false, personalization:false, newsletter:false });
   const [cardIndex,setCardIndex]=useState(0);
   const [seenAnimals,setSeenAnimals]=useState([]);
   const [loading,setLoading]=useState(false);
@@ -3861,15 +3982,31 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
 
   const radarAnimals = useMemo(() => {
     if (!selectedCountries.length) return [];
-    const set = new Set(selectedCountries);
-    return animals
-      .map(a => ({ ...(LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id)) || {}), ...a }))
-      .filter(a => {
-        const iso = a.distribution?.countries_present || a.geo?.iso || a.iso || [];
-        return iso.some(code => set.has(code));
-      })
-      .filter(a => a.image_url)
-      .slice(0, 10);
+    const normalizedAnimals = animals.map(a => ({ ...(LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id)) || {}), ...a })).filter(a => a.image_url);
+    const byCountry = selectedCountries.map(code => normalizedAnimals
+      .filter(a => getAnimalCountryCodes(a).includes(String(code).toUpperCase()))
+      .sort((a,b) => (RARITY[a.rarity]?.s || 1) - (RARITY[b.rarity]?.s || 1) || (b.obs_count || b.observations || 0) - (a.obs_count || a.observations || 0))
+    );
+    const picked = [];
+    const seen = new Set();
+    for (let round = 0; picked.length < 20 && round < 80; round++) {
+      for (const list of byCountry) {
+        const next = list.find(a => !seen.has(Number(a.id)));
+        if (next) {
+          seen.add(Number(next.id));
+          picked.push(next);
+          if (picked.length >= 20) break;
+        }
+      }
+      if (byCountry.every(list => list.every(a => seen.has(Number(a.id))))) break;
+    }
+    if (picked.length < 20) {
+      const selectedSet = new Set(selectedCountries.map(c => String(c).toUpperCase()));
+      normalizedAnimals
+        .filter(a => getAnimalCountryCodes(a).some(code => selectedSet.has(code)))
+        .forEach(a => { if (picked.length < 20 && !seen.has(Number(a.id))) { seen.add(Number(a.id)); picked.push(a); } });
+    }
+    return picked.slice(0, 20);
   }, [animals, selectedCountries]);
 
   const currentAnimal = radarAnimals[cardIndex] || null;
@@ -3902,7 +4039,23 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     setLoading(true);
     setError('');
     setStep('sync');
-    const payload = { nickname, countries:selectedCountries, seenAnimalIds:seenAnimals, tripTags:selectedTripTags };
+    const payload = { nickname, countries:selectedCountries, seenAnimalIds:seenAnimals, tripTags:selectedTripTags, demographics:{
+      gender,
+      nationality,
+      phone,
+      date_of_birth:dateOfBirth,
+      residence_country:residenceCountry,
+      onboarding_objectives:objectives,
+      onboarding_objective_other:objectiveOther,
+      is_collector:isCollector === 'yes' ? true : isCollector === 'no' ? false : null,
+      annual_abroad_vacations:annualAbroadVacations,
+      pokemon_affinity:pokemonAffinity,
+      consent_terms_privacy:consents.terms,
+      consent_analytics:consents.analytics,
+      consent_marketing:consents.marketing,
+      consent_personalization:consents.personalization,
+      consent_newsletter:consents.newsletter,
+    } };
     try {
       const timeoutResult = {
         ok:true,
@@ -3931,6 +4084,11 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const primaryButton = { width:'100%', minHeight:50, borderRadius:18, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit', boxShadow:`0 14px 34px ${OCHRE}38` };
   const disabledButton = { ...primaryButton, background:'#3A3A3C', color:'rgba(255,255,255,.42)', boxShadow:'none', cursor:'default' };
   const Pill = ({ children, active=false, onClick }) => <button onClick={onClick} style={{ borderRadius:999, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.10)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.055)', color:active?'#FFD4C8':'rgba(255,255,255,.74)', padding:'8px 11px', fontSize:11.5, fontWeight:900, cursor:'pointer', fontFamily:'inherit' }}>{children}</button>;
+  const ObjectivePill = ({ value, label }) => <Pill active={objectives.includes(value)} onClick={()=>setObjectives(prev => prev.includes(value) ? prev.filter(x=>x!==value) : [...prev, value])}>{label}</Pill>;
+  const ConsentRow = ({ keyName, label, required=false }) => <button type="button" onClick={()=>setConsents(prev => ({ ...prev, [keyName]:!prev[keyName] }))} style={{ display:'flex', alignItems:'center', gap:10, width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:14, background:'rgba(255,255,255,.045)', padding:'10px 12px', color:'white', fontFamily:'inherit', textAlign:'left' }}>
+    <span style={{ width:22, height:22, borderRadius:8, background:consents[keyName]?OCHRE:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000 }}>{consents[keyName]?'✓':''}</span>
+    <span style={{ flex:1, fontSize:12, color:'rgba(255,255,255,.72)', lineHeight:1.35 }}>{label} {required && <b style={{ color:'#FFD4C8' }}>*</b>}</span>
+  </button>;
 
   return (
     <div style={{ height:'100%', background:`radial-gradient(circle at 50% 0%, ${OCHRE}2A, transparent 36%), linear-gradient(180deg,#111113,#050506)`, color:'white', display:'flex', flexDirection:'column', overflow:'hidden' }}>
@@ -3958,7 +4116,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <p style={{ color:'rgba(255,255,255,.68)', fontSize:13.5, lineHeight:1.6 }}>In pochi passaggi registriamo nickname, nazioni visitate e primi avvistamenti. Una sola sincronizzazione batch sbloccherà animali locali, status iniziali e primo reward.</p>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:14 }}>
               {[
-                ['🗺️','Regioni','le nazioni sbloccano animali locali'],
+                ['🗺️','Regioni','le nazioni rivelano animali locali'],
                 ['🎯','Ricercati','PNG visibile, ancora da trovare'],
                 ['✨','Abilità','adattamenti e curiosità filtrabili'],
                 ['🏅','Rewards','badge permanenti sul profilo'],
@@ -3975,9 +4133,47 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
 
       {step==='nickname' && (
         <div style={panel}>
-          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Scegli un nickname. Verrà salvato nel profilo e usato come identità esploratore.</p>
-          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Lynx-7" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit' }} />
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim()} onClick={()=>setStep('countries')} style={nickname.trim()?primaryButton:disabledButton}>Continua</button></div>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Configuriamo identità, profilo e preferenze. Email e provider arrivano dal login; il resto serve per missioni, contenuti e personalizzazione futura.</p>
+          <div style={{ borderRadius:16, background:'rgba(255,255,255,.045)', border:'1px solid rgba(255,255,255,.08)', padding:12, marginBottom:12 }}>
+            <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>Account</div>
+            <div style={{ color:'white', fontSize:13, fontWeight:900, marginTop:4 }}>{user?.email || 'Email non disponibile'}</div>
+            <div style={{ color:'rgba(255,255,255,.50)', fontSize:11, marginTop:3 }}>Provider: {user?.app_metadata?.provider || user?.identities?.[0]?.provider || 'email'}</div>
+          </div>
+          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Nickname Dex" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginBottom:10 }} />
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+            <input type="date" value={dateOfBirth} onChange={e=>setDateOfBirth(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }} />
+            <select value={residenceCountry} onChange={e=>setResidenceCountry(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }}>
+              <option value="">Paese residenza</option>
+              {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
+            </select>
+            <select value={gender} onChange={e=>setGender(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }}>
+              <option value="">Genere</option><option>Donna</option><option>Uomo</option><option>Non binario</option><option>Preferisco non dirlo</option>
+            </select>
+            <select value={nationality} onChange={e=>setNationality(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }}>
+              <option value="">Nazionalità</option>
+              {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
+            </select>
+          </div>
+          <input value={phone} onChange={e=>setPhone(e.target.value)} placeholder="Numero di telefono" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:10 }} />
+          <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'16px 0 8px', textTransform:'uppercase' }}>Obiettivo principale</div>
+          <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
+            <ObjectivePill value="collection" label="Collezione" /><ObjectivePill value="travel" label="Viaggio" /><ObjectivePill value="photo_ai" label="Foto / AI" /><ObjectivePill value="education" label="Education" /><ObjectivePill value="travel_planning" label="Travel planning" /><ObjectivePill value="other" label="Altro" />
+          </div>
+          {objectives.includes('other') && <input value={objectiveOther} onChange={e=>setObjectiveOther(e.target.value)} placeholder="Specifica altro obiettivo" style={{ width:'100%', height:44, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:8 }} />}
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
+            <select value={isCollector} onChange={e=>setIsCollector(e.target.value)} style={{ height:46, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:12.5 }}><option value="">Sei collezionista?</option><option value="yes">Sì</option><option value="no">No</option></select>
+            <select value={annualAbroadVacations} onChange={e=>setAnnualAbroadVacations(e.target.value)} style={{ height:46, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:12.5 }}><option value="">Vacanze estero/anno</option><option value="1">1</option><option value="2-4">2-4</option><option value="5-10">5-10</option><option value="10+">10+</option></select>
+          </div>
+          <select value={pokemonAffinity} onChange={e=>setPokemonAffinity(e.target.value)} style={{ width:'100%', height:46, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:12.5, marginTop:10 }}><option value="">Sei appassionato di Pokémon?</option><option value="no">No</option><option value="apprezzo">Apprezzo</option><option value="fan_sfegatato">Fan sfegatato</option></select>
+          <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'16px 0 8px', textTransform:'uppercase' }}>Consensi</div>
+          <div style={{ display:'grid', gap:7 }}>
+            <ConsentRow keyName="terms" label="Accetto termini, privacy e trattamento dati necessario al funzionamento dell’app" required />
+            <ConsentRow keyName="analytics" label="Analytics per migliorare prodotto e stabilità" />
+            <ConsentRow keyName="marketing" label="Marketing e offerte future" />
+            <ConsentRow keyName="personalization" label="Personalizzazione missioni, contenuti e suggerimenti" />
+            <ConsentRow keyName="newsletter" label="Newsletter e aggiornamenti Animaldex" />
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim() || !consents.terms} onClick={()=>setStep('countries')} style={nickname.trim() && consents.terms ? primaryButton : disabledButton}>Continua</button></div>
         </div>
       )}
 
@@ -4008,7 +4204,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       {step==='radar' && (
         <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.45, margin:0 }}>Hai già incrociato alcune specie?</p>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.45, margin:0 }}>Hai già incrociato alcune specie? Te ne proponiamo fino a 20, bilanciate sui paesi visitati.</p>
             <span style={{ color:OCHRE, fontWeight:1000, fontSize:12 }}>{Math.min(cardIndex+1, Math.max(1, radarAnimals.length))}/{Math.max(1, radarAnimals.length)}</span>
           </div>
           {!currentAnimal ? (
@@ -4048,7 +4244,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
                 ['🗺️', selectedCountries.length, 'nazioni visitate'],
                 ['🎯', predictedUnlocks, 'ricercati potenziali'],
                 ['👁️', seenAnimals.length, 'avvistati radar'],
-                ['🏅', 1, 'award iniziale'],
+                ['🏅', 1, 'badge iniziale'],
               ].map(([ic,n,l])=>(
                 <div key={l} style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:13 }}>
                   <div style={{ fontSize:24 }}>{ic}</div><div style={{ color:OCHRE, fontSize:24, fontWeight:1000, marginTop:4 }}>{n}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11, lineHeight:1.2 }}>{l}</div>
@@ -4080,11 +4276,11 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ fontSize:64, marginBottom:12 }}>🏅</div>
             <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
             <div style={{ color:'white', fontSize:42, fontWeight:1000, marginTop:8 }}>{result?.unlocked_count ?? predictedUnlocks}</div>
-            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati caricati nel tuo Animaldex</div>
+            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati registrati nel tuo Animaldex</div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Oltre ai 10 animali proposti dal radar, potrai dichiarare altri avvistamenti filtrando la grid per paese oppure aprendo la scratch map: tocca un paese visitato e usa “Vedi animali” per trovarli già filtrati.</div>
             {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Animaldex entra subito, la sincronizzazione continua in background.</div>}
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:20 }}>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🎯</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercati visibili</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🎯</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercati attivi</div></div>
               <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>✨</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Abilità filtrabili</div></div>
               <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🏅</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Rewards attivi</div></div>
               <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>📊</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Statistiche profilo</div></div>
@@ -4176,7 +4372,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     cta:'Apri regioni',
     action:onOpenRegions || (()=>onOpen('regions')),
   };
-  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per sbloccare i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
+  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per vedere i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
   else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
   else if (searchedAnimals.length > 0) mission = { title:'Prossima missione', desc:`Hai ${searchedAnimals.length} animali ricercati nei tuoi paesi visitati.`, cta:'Esplora ricercati', action:()=>onOpenGridStatus?.(['ricercato']) };
   const items = [
@@ -4240,9 +4436,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             return <>
               <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
               <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, marginTop:5 }}>Ricercati {unlockedCount} · Avvistati {progress.seenCount} · Catturati {progress.capturedCount}</div>
-              <Row label="Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D7DCE8,#AEB7C9)" hint="Animali sbloccati sul totale del Dex" />
-              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#90D84A,#4E9E42)" hint="Animali avvistati sui ricercati sbloccati" />
-              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#F0C84E,#D49B1C)" hint="Animali catturati sui ricercati sbloccati" />
+              <Row label="Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D7DCE8,#AEB7C9)" hint="Animali ricercati sul totale del Dex" />
+              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#90D84A,#4E9E42)" hint="Animali avvistati sui ricercati" />
+              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#F0C84E,#D49B1C)" hint="Animali catturati sui ricercati" />
             </>;
           })()}
         </button>
@@ -4252,6 +4448,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <div style={{ display:'grid', gap:8 }}>
             {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>Come si ottiene: {rule.sub} · {rule.goal}</div>
               <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'#90D84A' }} /></div>
             </button>)}
           </div>
@@ -4363,6 +4560,14 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
           {[
             ['Nome', displayName],
             ['Email', user?.email || '—'],
+            ['Data di nascita', userProfile?.date_of_birth || 'Non impostata'],
+            ['Genere', userProfile?.gender || 'Non impostato'],
+            ['Nazionalità', userProfile?.nationality ? `${getFlagEmoji(userProfile.nationality)} ${getCountryDisplayName(userProfile.nationality)}` : 'Non impostata'],
+            ['Telefono', userProfile?.phone || 'Non impostato'],
+            ['Obiettivi', Array.isArray(userProfile?.onboarding_objectives) && userProfile.onboarding_objectives.length ? userProfile.onboarding_objectives.join(', ') : 'Non impostati'],
+            ['Collezionista', userProfile?.is_collector === true ? 'Sì' : userProfile?.is_collector === false ? 'No' : 'Non impostato'],
+            ['Vacanze estero/anno', userProfile?.annual_abroad_vacations || 'Non impostato'],
+            ['Pokémon', userProfile?.pokemon_affinity || 'Non impostato'],
             ['Paese di residenza', residenceCountry ? `${getFlagEmoji(residenceCountry)} ${getCountryDisplayName(residenceCountry)}` : 'Non impostato'],
             ['Amici', 'In arrivo'],
           ].map(([label,value])=>(
@@ -6143,7 +6348,7 @@ export default function App() {
   };
 
 
-  const handleCompleteOnboarding = async ({ nickname, countries, seenAnimalIds, tripTags }) => {
+  const handleCompleteOnboarding = async ({ nickname, countries, seenAnimalIds, tripTags, demographics = {} }) => {
     if (!user?.id) throw new Error('Sessione non valida');
     setDataError('');
     try {
@@ -6163,6 +6368,7 @@ export default function App() {
       if (error) throw error;
 
       const badgeIds = (data?.badge_ids || data?.badges || []).map(normalizeBadgeId);
+      await persistOnboardingQuestionnaire(user, demographics || {});
       if (badgeIds.length) {
         setEarnedBadgeIds(prev => Array.from(new Set([...prev.map(normalizeBadgeId), ...badgeIds])));
         const awards = badgeIds.map(id => AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === id)).filter(Boolean);
@@ -6183,6 +6389,7 @@ export default function App() {
       }
 
       const now = new Date().toISOString();
+      await persistOnboardingQuestionnaire(user, demographics || {});
       if (seenAnimalIds?.length) {
         const rows = seenAnimalIds.map(animal_id => ({
           user_id: user.id,
@@ -6213,12 +6420,12 @@ export default function App() {
   };
 
   const finishOnboarding = async (options = {}) => {
-    setUserProfile(prev => ({
+    setUserProfile(prev => mergeProfileDemographics({
       ...(prev || buildFallbackProfile(user, true)),
       onboarding_completed:true,
       has_completed_tutorial:false,
       onboarding_completed_at:new Date().toISOString(),
-    }));
+    }, user?.id));
     setSel(null);
     setPage('grid');
     // Ricarica silenziosa: non bloccare mai la schermata finale dell’onboarding.
