@@ -208,18 +208,21 @@ function getQuickSeenCandidates(animals, statusMap, visitedCountries) {
   const visited = (visitedCountries || []).map(c => String(c).toUpperCase()).filter(Boolean);
   return (animals || [])
     .map(a => {
-      const matchedVisitedCountries = getAnimalVisitedCountryMatches(a, visited);
+      const local = LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id) || x.sci === a.sci) || {};
+      const merged = { ...local, ...a, image_url:a.image_url || local.image_url || local.img || '' };
+      const matchedVisitedCountries = getAnimalVisitedCountryMatches(merged, visited);
       return {
-        ...a,
-        status:getResolvedAnimalStatus(a, statusMap, visitedCountries),
+        ...merged,
+        status:getResolvedAnimalStatus(merged, statusMap, visitedCountries),
         matchedVisitedCountries,
         countryMatchCount:matchedVisitedCountries.length,
-        observationCount:getObservationCount(a),
-        rarityScore:RARITY[a.rarity]?.s || 1,
+        observationCount:getObservationCount(merged),
+        rarityScore:RARITY[merged.rarity]?.s || 1,
       };
     })
     .filter(a => a.status === 'ricercato')
     .filter(a => visited.length > 0 && a.countryMatchCount === visited.length)
+    .filter(a => !!a.image_url)
     .sort((a,b) => (a.rarityScore - b.rarityScore) || (b.observationCount - a.observationCount) || (b.countryMatchCount - a.countryMatchCount))
     .slice(0, QUICK_SEEN_DAILY_LIMIT);
 }
@@ -1527,14 +1530,48 @@ function rarityMetalClass(rarity) {
 
 function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
   const r = RARITY[rarity] ? rarity : 'Comune';
-  const classes = ['rarity-badge', rarityMetalClass(r), compact ? 'compact' : '', small ? 'small' : '', full ? 'full' : ''].filter(Boolean).join(' ');
+  const cfg = {
+    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.34),rgba(78,35,20,.54))', border:'rgba(208,137,92,.70)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D' },
+    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.30),rgba(62,72,84,.55))', border:'rgba(210,220,232,.72)', glow:'0 0 10px rgba(190,210,232,.10)', text:'#E7EEF5' },
+    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.34),rgba(113,78,8,.58))', border:'rgba(246,210,92,.82)', glow:'0 0 15px rgba(240,196,73,.20)', text:'#FFE08A' },
+    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.38),rgba(34,12,70,.62))', border:'rgba(190,118,255,.88)', glow:'0 0 18px rgba(143,52,245,.32)', text:'#F0D9FF' },
+  }[r];
+  const h = full ? 44 : small ? 38 : compact ? 30 : 40;
+  const shield = full ? 52 : small ? 40 : compact ? 30 : 44;
   return (
-    <div className={classes} onClick={onClick} style={{ cursor:onClick?'pointer':'default', ...style }}>
-      <span className="rarity-shield-wrap" aria-hidden="true">
-        <img className="rarity-shield" src={SHIELD_PATHS[r]} alt="" />
-        <span className="rarity-shield-sheen" />
+    <div onClick={onClick} title={`${r} · sigillo Dex ${cfg.material}`} style={{
+      height:h,
+      minWidth: compact ? 0 : small ? 132 : 148,
+      maxWidth:'100%',
+      display:'inline-flex',
+      alignItems:'center',
+      gap:8,
+      borderRadius:999,
+      padding:`0 ${full ? 16 : 12}px 0 ${Math.max(8, Math.round(shield*.30))}px`,
+      position:'relative',
+      cursor:onClick?'pointer':'default',
+      background:cfg.bg,
+      border:`1.5px solid ${cfg.border}`,
+      boxShadow:cfg.glow,
+      overflow:'visible',
+      boxSizing:'border-box',
+      ...style,
+    }}>
+      <span aria-hidden="true" style={{
+        width:shield,
+        height:shield,
+        borderRadius:shield>=44?16:12,
+        flex:'0 0 auto',
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        marginLeft: full ? -18 : -14,
+        filter: r==='Leggendario' ? 'drop-shadow(0 0 10px rgba(143,52,245,.55))' : r==='Raro' ? 'drop-shadow(0 0 7px rgba(240,196,73,.34))' : 'drop-shadow(0 2px 5px rgba(0,0,0,.32))',
+      }}>
+        <img src={SHIELD_PATHS[r]} alt="" style={{ width:'100%', height:'100%', objectFit:'contain' }} />
       </span>
-      <span style={{ position:'relative', zIndex:4 }}>{r}{suffix}</span>
+      {!compact && <span style={{ color:cfg.text, fontSize:full?14:small?12:13, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.45)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{r}{suffix}</span>}
+      {compact && <span style={{ color:cfg.text, fontSize:10, fontWeight:1000, whiteSpace:'nowrap' }}>{suffix || ''}</span>}
     </div>
   );
 }
@@ -2241,14 +2278,15 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
     );
   }
 
-  if (a.image_url && !imgErr) {
+  const localImageUrl = a.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id) || x.sci === a.sci)?.image_url || '');
+  if (localImageUrl && !imgErr) {
     const glowColor = getClassGlowColor(a.cls);
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
     return (
       <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
-        <img src={a.image_url} alt={a.sci} onError={()=>setImgErr(true)}
+        <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
             filter: dropShadow,
@@ -2314,7 +2352,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         </div>
       )}
       {photographed && <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div>}
-      <RarityBadge rarity={a.rarity || 'Comune'} compact style={{ position:'absolute', top:6, right:6, zIndex:3, transform:'scale(.9)', transformOrigin:'top right', pointerEvents:'none' }} />
+      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
       {!mystery && (
         <div
           style={{
@@ -4372,8 +4410,8 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     action:onOpenRegions || (()=>onOpen('regions')),
   };
   if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per vedere i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
-  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
   else if (searchedAnimals.length > 0) mission = { title:'Prossima missione', desc:`Hai ${searchedAnimals.length} animali ricercati nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
+  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁' },
     { id:'regions', label:'Regioni', icon:'🗺️' },
@@ -4408,8 +4446,8 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, marginBottom:14 }}>
           {[
-            ['📷','Cattura',()=>onOpenGridStatus?.(['avvistato'])],
             ['🔭','Ricercati',()=>onOpenGridStatus?.(['ricercato'])],
+            ['📷','Cattura',()=>onOpenGridStatus?.(['avvistato'])],
             ['🌍','Paese',onOpenRegions || (()=>onOpen('regions'))],
           ].map(([icon,label,action])=><button key={label} onClick={action} style={{ minHeight:76, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:7, alignItems:'center', justifyContent:'center' }}><span style={{ fontSize:21 }}>{icon}</span><span>{label}</span></button>)}
         </div>
@@ -4446,7 +4484,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <div style={{ display:'grid', gap:8 }}>
             {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
-              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>Come si ottiene: {rule.sub} · {rule.goal}</div>
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
               <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'#90D84A' }} /></div>
             </button>)}
           </div>
