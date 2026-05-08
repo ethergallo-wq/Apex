@@ -1697,7 +1697,7 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
   const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
   const clampZoom = (z) => Math.max(minZoom, Math.min(maxZoom, Number(z) || initialZoom));
   const clampPan = (nextPan, z = zoom) => {
-    if (z <= 1.01) return { x:0, y:0 };
+    if (z <= minZoom + 0.01) return { x:0, y:0 };
     const maxX = 160 * (z - 1);
     const maxY = 95 * (z - 1);
     return {
@@ -1708,7 +1708,7 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
   const setZoom = (updater) => {
     setZoomState(prev => {
       const next = clampZoom(typeof updater === 'function' ? updater(prev) : updater);
-      if (next <= 1.01) setPanState({ x:0, y:0 });
+      if (next <= minZoom + 0.01) setPanState({ x:0, y:0 });
       else setPanState(p => clampPan(p, next));
       return next;
     });
@@ -1730,13 +1730,13 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
       setZoom(z => z + delta);
     },
     onPointerDown:(e)=> {
-      if (e.pointerType === 'touch' || zoom <= 1.01) return;
+      if (e.pointerType === 'touch' || zoom <= minZoom + 0.01) return;
       ref.current.dragging = true;
       ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
       e.currentTarget.setPointerCapture?.(e.pointerId);
     },
     onPointerMove:(e)=> {
-      if (!ref.current.dragging || zoom <= 1.01) return;
+      if (!ref.current.dragging || zoom <= minZoom + 0.01) return;
       const dx = e.clientX - ref.current.lastX;
       const dy = e.clientY - ref.current.lastY;
       ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
@@ -1752,7 +1752,7 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
         ref.current.pinch = true;
         ref.current.startDist = dist(e.touches);
         ref.current.startZoom = zoom;
-      } else if (e.touches?.length === 1 && zoom > 1.01) {
+      } else if (e.touches?.length === 1 && zoom > minZoom + 0.01) {
         ref.current.dragging = true;
         ref.current.lastX = e.touches[0].clientX;
         ref.current.lastY = e.touches[0].clientY;
@@ -1763,7 +1763,7 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
         e.preventDefault?.();
         const d = dist(e.touches);
         if (ref.current.startDist > 0) setZoom(ref.current.startZoom * (d/ref.current.startDist));
-      } else if (e.touches?.length === 1 && ref.current.dragging && zoom > 1.01) {
+      } else if (e.touches?.length === 1 && ref.current.dragging && zoom > minZoom + 0.01) {
         e.preventDefault?.();
         const dx = e.touches[0].clientX - ref.current.lastX;
         const dy = e.touches[0].clientY - ref.current.lastY;
@@ -1815,7 +1815,7 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   const activeCountryLabel = hoverCountry || selected;
   const hasCountries = !!countryData && !countryError;
   const baseCountryFeatures = hasCountries ? countryFeatures : (pseudoCountryFeatures.length ? pseudoCountryFeatures : fallbackFeatures.filter(f => (f.properties || {}).domain !== 'marine'));
-  const viewBox = '0 0 1000 500';
+  const viewBox = '0 0 1000 486';
 
   const countryMark = (p) => {
     const active = p.code === selected || p.code === hoverCountry;
@@ -1869,7 +1869,7 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
 
       <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.90)', fontSize:12, fontWeight:950, pointerEvents:'none', textShadow:'0 2px 10px rgba(0,0,0,.65)' }}>{title}</div>
       <div style={{ position:'absolute', right:10, top:10, display:'flex', gap:6 }}>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900 }}>⌖</button>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
       </div>
 
       {activeCountryLabel && (
@@ -2283,7 +2283,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
     <Sheet title={title} onClose={onClose}>
       {withSearch && (
         <div style={{ padding:'0 14px 12px', flexShrink:0 }}>
-          <input type="text" placeholder={title==='Geografia'?'Cerca nazione...':'Cerca...'} value={search} onChange={e => setSearch(e.target.value)} style={{ width:'100%', height:38, borderRadius:10, background:'#2A2A2C', color:'white', border:'1px solid rgba(255,255,255,.2)', padding:'0 12px', fontSize:14, outline:'none' }} />
+          <input type="text" placeholder={title==='Geografia'?'Cerca nazione o regione...':'Cerca...'} value={search} onChange={e => setSearch(e.target.value)} style={{ width:'100%', height:38, borderRadius:10, background:'#2A2A2C', color:'white', border:'1px solid rgba(255,255,255,.2)', padding:'0 12px', fontSize:14, outline:'none' }} />
         </div>
       )}
       <div style={{ display:'flex', gap:8, padding:'0 14px 12px', flexShrink:0 }}>
@@ -2293,7 +2293,8 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
       <div style={{ padding:'0 14px 80px' }}>
         {filteredOptions.length > 0 ? filteredOptions.map(opt => {
           const on = local.has(opt.value);
-          const flag = title === 'Geografia' ? getFlagEmoji(opt.value) : '';
+          const isIsoCountryOption = /^[A-Z]{2}$/.test(String(opt.value || ''));
+          const flag = title === 'Geografia' && isIsoCountryOption ? getFlagEmoji(opt.value) : '';
           const isRarity = ['Comune','Non comune','Raro','Leggendario'].includes(opt.value);
           if (isRarity) {
             return (
@@ -3385,7 +3386,7 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
           <div style={{ color:'white', fontSize:15, fontWeight:900, lineHeight:1.2 }}>{meta.label}</div>
         </div>
         <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateX(180deg)', padding:'12px 36px 12px 14px', boxSizing:'border-box', display:'flex', alignItems:'center', background:'linear-gradient(135deg,rgba(0,0,0,.50),rgba(255,255,255,.04))' }}>
-          <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ position:'absolute', top:8, right:8, width:26, height:26, borderRadius:9, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.32)', color:'white', fontSize:13, fontWeight:900, cursor:'pointer', zIndex:3 }}>↺</button>
+          <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ position:'absolute', top:8, right:8, width:26, height:26, borderRadius:9, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.32)', color:'white', fontSize:13, fontWeight:900, cursor:'pointer', zIndex:3, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1, padding:0 }}>↺</button>
           <div style={{ color:'rgba(255,255,255,.80)', fontSize:10.4, lineHeight:1.18, fontWeight:720, textAlign:'left', maxHeight:80, overflowY:'auto', paddingRight:2 }}>{curiosity}</div>
         </div>
       </div>
@@ -3540,7 +3541,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
   const isoHighlightSet = new Set((highlightIsoCodes || []).map(code => String(code).toUpperCase()).filter(Boolean));
   const features = data?.features || [];
   const [hoverId, setHoverId] = useState(null);
-  const mapControls = useInteractiveMapControls();
+  const mapControls = useInteractiveMapControls(1, 4.5, 1);
   const relevant = features.filter(f => {
     const p = f.properties || {};
     if (marine) return p.domain === 'marine';
@@ -3597,7 +3598,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
         </g>
         </g>
       </svg>
-      <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900 }}>⌖</button>
+      <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
       {showLabels && (hoverId || selectedId) && <div style={{ position:'absolute', left:10, bottom:10, right:10, padding:'8px 10px', borderRadius:12, background:'rgba(0,0,0,.58)', color:'white', fontSize:11, fontWeight:900 }}>{BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId}</div>}
     </div>
   );
@@ -3644,7 +3645,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
               <div style={{ color:'white', fontSize:15, fontWeight:1000, lineHeight:1.08 }}>{title || item?.label}</div>
               {subtitle && <div style={{ color:'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.28, marginTop:4 }}>{subtitle}</div>}
             </div>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, display:'flex', alignItems:'center', justifyContent:'center', border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer', flexShrink:0 }}>↺</button>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} aria-label="Gira card" style={{ width:30, height:30, borderRadius:10, display:'flex', alignItems:'center', justifyContent:'center', border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:15, fontWeight:900, cursor:'pointer', flexShrink:0, lineHeight:1, padding:0 }}>↺</button>
           </div>
           <div style={{ padding:'0 0 0', marginTop:-6 }}>
             <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={236} fullBleed />
@@ -3968,9 +3969,6 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
           <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona le nazioni in cui sei stato. Non scriviamo ancora nulla: restano in memoria fino alla sincronizzazione finale.</p>
           <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione o ISO..." style={{ width:'100%', height:44, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10, fontFamily:'inherit' }} />
-          <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginBottom:10 }}>
-            {TRIP_TAGS.map(tag=><Pill key={tag} active={selectedTripTags.includes(tag)} onClick={()=>toggleTripTag(tag)}>{tag}</Pill>)}
-          </div>
           <div style={{ flex:1, overflowY:'auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, paddingRight:2 }}>
             {filteredCountries.map(code => {
               const active = selectedCountries.includes(code);
@@ -5185,6 +5183,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
+  const [selectedDestinationIsos, setSelectedDestinationIsos] = useState([]);
   const [unlockMap, setUnlockMap] = useState(() => {
     try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks_v4') || '{}'); } catch { return {}; }
   });
@@ -5207,13 +5206,22 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     return code.toLowerCase().includes(q) || getCountryDisplayName(code).toLowerCase().includes(q);
   }).slice(0,160);
   const submitDestination = async () => {
-    if (!selectedDestinationIso) return;
-    const iso = selectedDestinationIso;
-    const next = Array.from(new Set([...visitedCountries, iso])).sort();
+    const selectedList = selectedDestinationIsos.length ? selectedDestinationIsos : (selectedDestinationIso ? [selectedDestinationIso] : []);
+    if (!selectedList.length) return;
+    const cleanList = Array.from(new Set(selectedList.map(c => String(c).toUpperCase()).filter(Boolean)));
+    const next = Array.from(new Set([...visitedCountries, ...cleanList])).sort();
     onVisitedCountriesChange?.(next);
-    setSelectedCountry(iso);
+    setSelectedCountry(cleanList[cleanList.length - 1] || null);
     setSelectedDestinationIso('');
-    try { await onAddDestination?.(iso, []); } catch (err) { console.warn('[Animaldex] aggiunta paese non bloccante:', err); }
+    setSelectedDestinationIsos([]);
+    try {
+      for (const iso of cleanList) await onAddDestination?.(iso, []);
+    } catch (err) { console.warn('[Animaldex] aggiunta paese non bloccante:', err); }
+  };
+  const toggleDestinationIso = (code) => {
+    const iso = String(code).toUpperCase();
+    setSelectedDestinationIso(iso);
+    setSelectedDestinationIsos(prev => prev.includes(iso) ? prev.filter(x => x !== iso) : [...prev, iso]);
   };
   const removeVisitedCountry = (code) => {
     const list = visitedCountries.filter(c=>c!==code);
@@ -5256,10 +5264,24 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setView('animals');
   };
   const unlock = (id) => setUnlockMap(prev => ({ ...prev, [id]: true }));
+  const navChips = [
+    { label:'Pianeta', active:view==='planet', action:()=>setView('planet') },
+    { label:'Paesi', active:view==='countries', action:()=>setView('countries') },
+    { label:'Terrestre', active:['terrestrial','regions','ecoregions','habitats','lifeweb'].includes(view), action:()=>setView('terrestrial') },
+    { label:'Marino', active:view==='marine', action:()=>setView('marine') },
+    ...(selectedContinentId ? [{ label:continent?.label || 'Continente', active:view==='regions', action:()=>setView('regions') }] : []),
+    ...(selectedRegionId ? [{ label:'Regioni', active:view==='ecoregions', action:()=>setView('ecoregions') }] : []),
+    ...(selectedEcoregion ? [{ label:'Habitat', active:['habitats','lifeweb'].includes(view), action:()=>setView('habitats') }] : []),
+  ];
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} />
+      {view !== 'planet' && (
+        <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', display:'flex', gap:8, padding:'9px 14px 7px', borderBottom:'1px solid rgba(255,255,255,.06)', background:'rgba(12,12,14,.92)' }}>
+          {navChips.map(chip => <button key={chip.label} onClick={chip.action} style={{ flex:'0 0 auto', height:32, padding:'0 12px', borderRadius:999, border:`1px solid ${chip.active?'rgba(168,70,55,.70)':'rgba(255,255,255,.08)'}`, background:chip.active?'rgba(168,70,55,.24)':'rgba(255,255,255,.045)', color:chip.active?'#FFD4C8':'rgba(255,255,255,.72)', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{chip.label}</button>)}
+        </div>
+      )}
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
         {view==='planet' && (
           <>
@@ -5320,6 +5342,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   <span style={{ fontSize:28 }}>{getFlagEmoji(selectedCountry)}</span>
                   <div style={{ flex:1 }}><div style={{ color:'white', fontWeight:900 }}>{getCountryDisplayName(selectedCountry)}</div><div style={{ color:'rgba(255,255,255,.52)', fontSize:12 }}>{countAnimalsForGeoValue(selectedCountry)} animali associati</div></div>
                   <button onClick={()=>onOpenCountry?.(selectedCountry)} style={{ height:36, borderRadius:11, border:'none', background:'#244A70', color:'white', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Vedi animali</button>
+                  {!visitedSet.has(selectedCountry) && <button onClick={()=>{ setSelectedDestinationIsos(prev => Array.from(new Set([...prev, selectedCountry]))); }} style={{ height:36, borderRadius:11, border:'none', background:'#90D84A', color:'#111', fontWeight:900, padding:'0 12px', cursor:'pointer' }}>Aggiungi</button>}
                 </div>
               </div>
             )}
@@ -5336,11 +5359,11 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca paese..." style={{ marginTop:12, width:'100%', height:42, borderRadius:12, background:'#252527', color:'white', border:'1px solid rgba(255,255,255,.12)', padding:'0 12px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, maxHeight:230, overflowY:'auto', marginTop:10, paddingRight:2 }}>
                 {scratchCountries.map(code => {
-                  const active = visitedSet.has(code) || selectedDestinationIso === code;
-                  return <button key={code} onClick={()=>setSelectedDestinationIso(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
+                  const active = visitedSet.has(code) || selectedDestinationIsos.includes(code);
+                  return <button key={code} onClick={()=>toggleDestinationIso(code)} style={{ minHeight:44, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.65)':'rgba(255,255,255,.08)'}`, background:active?'rgba(144,216,74,.18)':'#1A1A1C', color:active?'#D8FFC4':'white', padding:'8px 10px', display:'flex', alignItems:'center', gap:8, cursor:'pointer', textAlign:'left', fontFamily:'inherit' }}><span style={{ fontSize:20 }}>{getFlagEmoji(code)}</span><span style={{ flex:1, fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{getCountryDisplayName(code)}</span><span style={{ color:active?'#90D84A':'rgba(255,255,255,.22)', fontSize:15 }}>{active?'✓':'+'}</span></button>;
                 })}
               </div>
-              <button disabled={!selectedDestinationIso || destinationsLoading} onClick={submitDestination} style={{ marginTop:12, width:'100%', height:42, borderRadius:13, border:'none', background:selectedDestinationIso?'#90D84A':'#3A3A3C', color:selectedDestinationIso?'#111':'rgba(255,255,255,.38)', fontWeight:900, cursor:selectedDestinationIso?'pointer':'default' }}>{destinationsLoading ? 'Sblocco animali...' : selectedDestinationIso ? `Aggiungi ${getCountryDisplayName(selectedDestinationIso)}` : 'Seleziona un paese'}</button>
+              <button disabled={(!selectedDestinationIsos.length && !selectedDestinationIso) || destinationsLoading} onClick={submitDestination} style={{ marginTop:12, width:'100%', height:42, borderRadius:13, border:'none', background:(selectedDestinationIsos.length || selectedDestinationIso)?'#90D84A':'#3A3A3C', color:(selectedDestinationIsos.length || selectedDestinationIso)?'#111':'rgba(255,255,255,.38)', fontWeight:900, cursor:(selectedDestinationIsos.length || selectedDestinationIso)?'pointer':'default' }}>{destinationsLoading ? 'Sblocco animali...' : selectedDestinationIsos.length > 1 ? `Aggiungi ${selectedDestinationIsos.length} paesi` : (selectedDestinationIsos[0] || selectedDestinationIso) ? `Aggiungi ${getCountryDisplayName(selectedDestinationIsos[0] || selectedDestinationIso)}` : 'Seleziona uno o più paesi'}</button>
             </div>
           </div>
         )}
