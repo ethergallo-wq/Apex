@@ -4509,9 +4509,17 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect }) {
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
   const [index, setIndex] = useState(0);
-  const candidates = getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !dailyIds.includes(a.id));
+  const [busy, setBusy] = useState(false);
+  // IMPORTANT: keep a stable queue for this session.
+  // Previously the queue was recalculated after every “Visto/No”; because the current
+  // card was removed from the filtered list and then index was incremented, the next
+  // animal could be skipped and appear to disappear without a user action.
+  const [queue] = useState(() => {
+    const alreadyDone = new Set(getQuickSeenToday());
+    return getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !alreadyDone.has(a.id));
+  });
   const doneToday = dailyIds.length;
-  const current = candidates[index] || null;
+  const current = queue[index] || null;
   const markDaily = (id) => {
     const next = Array.from(new Set([...dailyIds, id]));
     setDailyIds(next);
@@ -4519,17 +4527,24 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
   };
   const nextCard = () => setIndex(i => i + 1);
   const yes = async () => {
-    if (!current) return;
-    markDaily(current.id);
-    await onStatusChange?.(current.id, 'avvistato');
-    track('quick_seen_yes', { animal_id:current.id, animal_name:current.com });
-    nextCard();
+    if (!current || busy) return;
+    setBusy(true);
+    try {
+      markDaily(current.id);
+      await onStatusChange?.(current.id, 'avvistato');
+      track('quick_seen_yes', { animal_id:current.id, animal_name:current.com });
+      nextCard();
+    } finally {
+      setBusy(false);
+    }
   };
   const no = () => {
-    if (!current) return;
+    if (!current || busy) return;
+    setBusy(true);
     markDaily(current.id);
     track('quick_seen_no', { animal_id:current.id, animal_name:current.com });
     nextCard();
+    setBusy(false);
   };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
@@ -4551,8 +4566,8 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
               <div style={{ color:'#F0A840', fontSize:11, fontWeight:900, marginTop:8 }}>{current.rarity || 'Comune'} · {getAnimalVisitedCountryMatches(current, visitedCountries).slice(0,4).map(getCountryDisplayName).join(', ') || 'Paesi visitati compatibili'}</div>
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12, marginTop:18 }}>
-              <button onClick={no} style={{ height:56, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:18, fontWeight:1000 }}>✕ No</button>
-              <button onClick={yes} style={{ height:56, borderRadius:18, border:'none', background:'linear-gradient(135deg,#90D84A,#4E9E42)', color:'#071017', fontSize:18, fontWeight:1000 }}>✓ Visto</button>
+              <button disabled={busy} onClick={no} style={{ height:56, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontSize:18, fontWeight:1000, opacity:busy?.65:1 }}>✕ No</button>
+              <button disabled={busy} onClick={yes} style={{ height:56, borderRadius:18, border:'none', background:'linear-gradient(135deg,#90D84A,#4E9E42)', color:'#071017', fontSize:18, fontWeight:1000, opacity:busy?.65:1 }}>✓ Visto</button>
             </div>
           </div>
         ) : (
