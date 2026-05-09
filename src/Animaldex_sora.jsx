@@ -2021,11 +2021,10 @@ function parseAnimalLengthCm(lengthValue) {
   return max;
 }
 
-const PUBLIC_ASSET_BASE = process.env.PUBLIC_URL || '';
 const DIMENSION_REFERENCE_ASSETS = [
-  { type:'full', label:'Corpo umano 175 cm', cm:175, src:`${PUBLIC_ASSET_BASE}/dimensioni/corpo.png` },
-  { type:'bust', label:'Busto umano 50 cm', cm:50, src:`${PUBLIC_ASSET_BASE}/dimensioni/busto.png` },
-  { type:'hand', label:'Mano umana 20 cm', cm:20, src:`${PUBLIC_ASSET_BASE}/dimensioni/mano.png` },
+  { type:'full', label:'Corpo umano 175 cm', cm:175, src:'/dimensioni/corpo.png' },
+  { type:'bust', label:'Busto umano 50 cm', cm:50, src:'/dimensioni/busto.png' },
+  { type:'hand', label:'Mano umana 20 cm', cm:20, src:'/dimensioni/mano.png' },
 ];
 
 function getLengthReference(lengthCm) {
