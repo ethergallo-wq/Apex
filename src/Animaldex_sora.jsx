@@ -1076,13 +1076,13 @@ const RARITY_CSS = `
 .animal-card.class-arachnida { --class-glow: rgba(190, 70, 70, 0.30); }
 .animal-card.class-marine { --class-glow: rgba(80, 155, 190, 0.30); }
 .dex-number { position: absolute; top: 12px; left: 12px; z-index: 3; font-size: 13px; font-weight: 950; letter-spacing: 0.02em; color: rgba(245,241,234,0.46); text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
-.rarity-sigil { position: absolute; top: 10px; right: 10px; z-index: 4; width: 28px; height: 28px; border-radius: 9px; transform: rotate(45deg); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 3px rgba(0,0,0,0.26), 0 5px 12px rgba(0,0,0,0.22); }
+.rarity-sigil { position: absolute; top: 10px; right: 10px; z-index: 5; width: 30px; height: 30px; border-radius: 9px; transform: rotate(45deg); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 3px rgba(0,0,0,0.26), 0 5px 12px rgba(0,0,0,0.22); }
 .rarity-sigil::after { content: ""; position: absolute; inset: 7px; border-radius: 4px; background: rgba(255,255,255,0.38); transform: rotate(-45deg); opacity: 0.65; }
 .rarity-common { background: linear-gradient(135deg, #F0B179 0%, #B87345 45%, #693821 100%); border: 1px solid rgba(255,205,158,0.65); }
 .rarity-uncommon { background: linear-gradient(135deg, #FFFFFF 0%, #C8CDD2 42%, #6F7780 100%); border: 1px solid rgba(255,255,255,0.72); }
 .rarity-rare { background: linear-gradient(135deg, #FFE680 0%, #D9A928 44%, #7E5A0F 100%); border: 1px solid rgba(255,231,128,0.80); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 0 16px rgba(217,169,40,0.34); }
 .rarity-legendary { background: linear-gradient(135deg, #F1D9FF 0%, #8F45FF 42%, #39156F 100%); border: 1px solid rgba(220,185,255,0.82); box-shadow: inset 0 1px 0 rgba(255,255,255,0.50), 0 0 18px rgba(143,69,255,0.45); }
-.rarity-dot { display:none !important; }
+.rarity-dot, .rarity-dot::after { display:none !important; opacity:0 !important; visibility:hidden !important; width:0 !important; height:0 !important; }
 .animal-image-wrap { position: absolute; inset: 28px 10px 44px; display: flex; align-items: center; justify-content: center; z-index: 2; }
 .animal-image-wrap > div { background: transparent !important; }
 .animal-image-wrap img { max-width: 88% !important; max-height: 88% !important; object-fit: contain !important; filter: drop-shadow(0 10px 12px rgba(0,0,0,0.34)) saturate(1.04) !important; -webkit-filter: drop-shadow(0 10px 12px rgba(0,0,0,0.34)) saturate(1.04) !important; }
@@ -1880,21 +1880,21 @@ function RaritySigil({ rarity='Comune' }) {
 function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
   const r = RARITY[rarity] ? rarity : 'Comune';
   const cfg = {
-    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.28),rgba(78,35,20,.48))', border:'rgba(208,137,92,.54)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D', orb:'linear-gradient(135deg,#D78E61,#7A3F24)' },
-    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.22),rgba(62,72,84,.48))', border:'rgba(210,220,232,.58)', glow:'0 0 10px rgba(190,210,232,.08)', text:'#E7EEF5', orb:'linear-gradient(135deg,#F2F6FB,#7F8FA2)' },
-    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.26),rgba(113,78,8,.54))', border:'rgba(246,210,92,.70)', glow:'0 0 15px rgba(240,196,73,.16)', text:'#FFE08A', orb:'linear-gradient(135deg,#FFE08A,#9F6E0E)' },
-    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.26),rgba(34,12,70,.56))', border:'rgba(190,118,255,.76)', glow:'0 0 18px rgba(143,52,245,.24)', text:'#F0D9FF', orb:'linear-gradient(135deg,#F0D9FF,#8E34F5)' },
+    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.28),rgba(78,35,20,.48))', border:'rgba(208,137,92,.54)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D' },
+    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.22),rgba(62,72,84,.48))', border:'rgba(210,220,232,.58)', glow:'0 0 10px rgba(190,210,232,.08)', text:'#E7EEF5' },
+    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.26),rgba(113,78,8,.54))', border:'rgba(246,210,92,.70)', glow:'0 0 15px rgba(240,196,73,.16)', text:'#FFE08A' },
+    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.26),rgba(34,12,70,.56))', border:'rgba(190,118,255,.76)', glow:'0 0 18px rgba(143,52,245,.24)', text:'#F0D9FF' },
   }[r];
   const h = full ? 42 : small ? 36 : compact ? 28 : 38;
-  const orb = full ? 17 : small ? 15 : compact ? 12 : 16;
   return (
-    <div className="rarity-badge" onClick={onClick} title={`${r} · sigillo Dex ${cfg.material}`} style={{
+    <div className={`rarity-badge ${compact ? 'compact' : ''} ${small ? 'small' : ''} ${full ? 'full' : ''}`} onClick={onClick} title={`${r} · sigillo Dex ${cfg.material}`} style={{
       height:h,
       minWidth: compact ? 0 : small ? 128 : 140,
       maxWidth:'100%',
       display:'inline-flex',
       alignItems:'center',
-      gap:8,
+      justifyContent:'center',
+      gap:0,
       borderRadius:14,
       padding:`0 ${full ? 14 : 12}px`,
       position:'relative',
@@ -1906,17 +1906,7 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
       boxSizing:'border-box',
       ...style,
     }}>
-      <span aria-hidden="true" style={{
-        width:orb,
-        height:orb,
-        borderRadius:'50%',
-        flex:'0 0 auto',
-        background:cfg.orb,
-        boxShadow:r==='Leggendario' ? '0 0 12px rgba(143,52,245,.55)' : r==='Raro' ? '0 0 8px rgba(240,196,73,.36)' : '0 0 0 rgba(0,0,0,0)',
-        border:'1px solid rgba(255,255,255,.30)',
-      }} />
-      {!compact && <span style={{ color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.45)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{r}{suffix}</span>}
-      {compact && <span style={{ color:cfg.text, fontSize:10, fontWeight:1000, whiteSpace:'nowrap' }}>{suffix || ''}</span>}
+      <span style={{ color:cfg.text, fontSize:compact ? 10 : full ? 13.5 : small ? 11.5 : 12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.45)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{compact ? (suffix || r) : `${r}${suffix}`}</span>
     </div>
   );
 }
@@ -2030,191 +2020,135 @@ function parseAnimalLengthCm(lengthValue) {
   if (/\bm\b|metri|metro/.test(raw) && !/\bcm\b/.test(raw) && !/\bmm\b/.test(raw)) return max * 100;
   return max;
 }
+
+const PUBLIC_ASSET_BASE = process.env.PUBLIC_URL || '';
+const DIMENSION_REFERENCE_ASSETS = [
+  { type:'full', label:'Corpo umano 175 cm', cm:175, src:`${PUBLIC_ASSET_BASE}/dimensioni/corpo.png` },
+  { type:'bust', label:'Busto umano 50 cm', cm:50, src:`${PUBLIC_ASSET_BASE}/dimensioni/busto.png` },
+  { type:'hand', label:'Mano umana 20 cm', cm:20, src:`${PUBLIC_ASSET_BASE}/dimensioni/mano.png` },
+];
+
 function getLengthReference(lengthCm) {
-  if (lengthCm >= 20) return { type:'full', label:'Uomo 175 cm', cm:175 };
-  if (lengthCm >= 5) return { type:'bust', label:'Busto umano 45 cm', cm:45 };
-  return { type:'ear', label:'Orecchio umano 6 cm', cm:6 };
+  if (!Number.isFinite(lengthCm) || lengthCm <= 0) return DIMENSION_REFERENCE_ASSETS[1];
+  return DIMENSION_REFERENCE_ASSETS.reduce((best, ref) => {
+    const bestScore = Math.abs(Math.log(lengthCm / best.cm));
+    const nextScore = Math.abs(Math.log(lengthCm / ref.cm));
+    return nextScore < bestScore ? ref : best;
+  }, DIMENSION_REFERENCE_ASSETS[0]);
 }
-// ── Human/reference silhouettes and trophic pyramid ───────────────────
-function HumanSilhouette({ h = 78 }) {
-  const w = Math.max(18, Math.round(h * 0.28));
+
+function useTrimmedImageMetrics(src) {
+  const [metrics, setMetrics] = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    if (!src) {
+      setMetrics(null);
+      return undefined;
+    }
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const naturalWidth = img.naturalWidth || 1;
+      const naturalHeight = img.naturalHeight || 1;
+      const fallback = { naturalWidth, naturalHeight, trimX:0, trimY:0, trimWidth:naturalWidth, trimHeight:naturalHeight };
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = naturalWidth;
+        canvas.height = naturalHeight;
+        const ctx = canvas.getContext('2d', { willReadFrequently:true });
+        if (!ctx) throw new Error('no-ctx');
+        ctx.drawImage(img, 0, 0);
+        const { data } = ctx.getImageData(0, 0, naturalWidth, naturalHeight);
+        let minX = naturalWidth, minY = naturalHeight, maxX = -1, maxY = -1;
+        for (let y = 0; y < naturalHeight; y++) {
+          for (let x = 0; x < naturalWidth; x++) {
+            if (data[(y * naturalWidth + x) * 4 + 3] > 8) {
+              if (x < minX) minX = x;
+              if (y < minY) minY = y;
+              if (x > maxX) maxX = x;
+              if (y > maxY) maxY = y;
+            }
+          }
+        }
+        const result = maxX >= minX && maxY >= minY
+          ? { naturalWidth, naturalHeight, trimX:minX, trimY:minY, trimWidth:maxX - minX + 1, trimHeight:maxY - minY + 1 }
+          : fallback;
+        if (!cancelled) setMetrics(result);
+      } catch {
+        if (!cancelled) setMetrics(fallback);
+      }
+    };
+    img.onerror = () => { if (!cancelled) setMetrics(null); };
+    img.src = src;
+    return () => { cancelled = true; };
+  }, [src]);
+  return metrics;
+}
+
+function TrimmedImage({ src, alt='', targetVisibleHeight=null, targetVisibleMax=null, tint=true, style={} }) {
+  const metrics = useTrimmedImageMetrics(src);
+  const naturalWidth = metrics?.naturalWidth || 1;
+  const naturalHeight = metrics?.naturalHeight || 1;
+  const trimX = metrics?.trimX || 0;
+  const trimY = metrics?.trimY || 0;
+  const trimWidth = Math.max(1, metrics?.trimWidth || naturalWidth);
+  const trimHeight = Math.max(1, metrics?.trimHeight || naturalHeight);
+  const scale = targetVisibleHeight != null
+    ? targetVisibleHeight / trimHeight
+    : targetVisibleMax != null
+      ? targetVisibleMax / Math.max(trimWidth, trimHeight)
+      : 1;
+  const boxWidth = trimWidth * scale;
+  const boxHeight = trimHeight * scale;
   return (
-    <svg viewBox="0 0 46 170" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
-      <circle cx="23" cy="13" r="12" fill="rgba(255,255,255,.94)"/>
-      <path d="M16 29h14c4 0 7 3 7 7v45c0 4-3 7-7 7H16c-4 0-7-3-7-7V36c0-4 3-7 7-7Z" fill="rgba(255,255,255,.94)"/>
-      <path d="M9 39c-5 11-7 25-7 42 0 4 3 7 7 7s7-3 7-7c0-15 2-27 6-35Z" fill="rgba(255,255,255,.94)"/>
-      <path d="M37 39c5 11 7 25 7 42 0 4-3 7-7 7s-7-3-7-7c0-15-2-27-6-35Z" fill="rgba(255,255,255,.94)"/>
-      <path d="M15 87h12l-2 69c0 5-4 8-8 8s-8-3-8-8Z" fill="rgba(255,255,255,.94)"/>
-      <path d="M31 87H19l2 69c0 5 4 8 8 8s8-3 8-8Z" fill="rgba(255,255,255,.94)"/>
-    </svg>
+    <div style={{ position:'relative', width:boxWidth, height:boxHeight, overflow:'hidden', flexShrink:0, ...style }}>
+      <img
+        src={src}
+        alt={alt}
+        draggable={false}
+        style={{
+          position:'absolute',
+          left:-trimX * scale,
+          top:-trimY * scale,
+          width:naturalWidth * scale,
+          height:naturalHeight * scale,
+          objectFit:'contain',
+          imageRendering:'-webkit-optimize-contrast',
+          filter:tint ? 'brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0,0,0,.28))' : 'none',
+          userSelect:'none',
+          pointerEvents:'none',
+        }}
+      />
+    </div>
   );
 }
-function BustSilhouette({ h = 72 }) {
-  const w = Math.max(34, Math.round(h * 0.72));
-  return (
-    <svg viewBox="0 0 72 80" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
-      <circle cx="36" cy="16" r="13" fill="rgba(255,255,255,.94)"/>
-      <path d="M14 76c2-19 13-29 22-29s20 10 22 29Z" fill="rgba(255,255,255,.94)"/>
-      <rect x="24" y="31" width="24" height="22" rx="8" fill="rgba(255,255,255,.94)"/>
-    </svg>
-  );
-}
-function EarSilhouette({ h = 72 }) {
-  const w = Math.max(28, Math.round(h * 0.52));
-  return (
-    <svg viewBox="0 0 46 76" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
-      <path d="M28 5c9 0 15 8 15 19 0 8-4 13-7 18-4 5-6 10-6 17 0 7-6 12-13 12S5 64 5 55c0-10 6-15 11-20 5-5 7-9 7-16 0-7 2-14 5-14Z" fill="rgba(255,255,255,.94)"/>
-      <path d="M25 21c5 0 9 4 9 9 0 4-2 7-4 10-3 3-5 6-5 11" fill="none" stroke="#111113" strokeWidth="3" strokeLinecap="round"/>
-    </svg>
-  );
-}
+
 function ScaleComparison({ animal, full=false }) {
   const lengthCm = parseAnimalLengthCm(animal?.ln);
   const ref = getLengthReference(lengthCm);
-  const maxPx = full ? 164 : 62;
-  const minPx = full ? 18 : 8;
-  const maxCm = Math.max(ref.cm, lengthCm || 0.1);
+  const maxPx = full ? 190 : 66;
+  const minAnimalPx = full ? 20 : 9;
+  const maxCm = Math.max(ref.cm, lengthCm || ref.cm * 0.35);
   const pxPerCm = maxPx / maxCm;
-  const referencePx = Math.max(full ? 34 : 28, Math.round(ref.cm * pxPerCm));
-  const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
-  const renderRef = () => ref.type === 'full' ? <HumanSilhouette h={referencePx} /> : ref.type === 'bust' ? <BustSilhouette h={referencePx} /> : <EarSilhouette h={referencePx} />;
+  const referenceVisibleHeight = Math.max(full ? 42 : 28, ref.cm * pxPerCm);
+  const animalVisibleMax = Math.max(minAnimalPx, (lengthCm || ref.cm * 0.25) * pxPerCm);
   return (
-    <div style={{ width:'100%', minHeight:full?210:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?64:28, padding:full?'18px 12px 10px':'5px 6px 2px', boxSizing:'border-box' }}>
-        <div style={{ width:full?112:54, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>{renderRef()}</div>
-        <div style={{ width:full?180:78, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-          <img src={animal?.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0,0,0,.28))', imageRendering:'-webkit-optimize-contrast' }} />
+    <div style={{ width:'100%', minHeight:full?224:74, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?58:24, padding:full?'18px 12px 10px':'6px 6px 2px', boxSizing:'border-box' }}>
+        <div style={{ width:full?128:58, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
+          <TrimmedImage src={ref.src} alt={ref.label} targetVisibleHeight={referenceVisibleHeight} />
+        </div>
+        <div style={{ width:full?200:82, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
+          <TrimmedImage src={animal?.image_url || MYSTERY_PLACEHOLDER} alt={animal?.com || ''} targetVisibleMax={animalVisibleMax} />
         </div>
       </div>
-      {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · scala proporzionale sulla misura massima dell’animale</div>}
+      {full && (
+        <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:800, marginTop:4, textAlign:'center', lineHeight:1.45 }}>
+          {ref.label} · rapporto calcolato sulla parte visibile delle PNG. Per l’animale viene usata la misura reale più lunga disponibile in <strong style={{ color:'rgba(255,255,255,.76)', fontWeight:900 }}>ln</strong> (di solito lunghezza corporea per coccodrilli, bovini, pesci e specie allungate).
+        </div>
+      )}
     </div>
   );
-}
-function TrophicPyramid({ trophic, compact = false, showLabels = false }) {
-  const activeKey = getPyramidKey(trophic);
-  const widths = compact ? [20, 32, 46, 60, 74] : [42, 62, 86, 108, 128];
-  const rowH = compact ? 9 : 18;
-  const barH = compact ? 6 : 12;
-  const vbW = compact ? 78 : 132;
-  const svgW = compact ? 72 : 130;
-  const svgH = compact ? 50 : 96;
-  return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap: showLabels ? 16 : 0 }}>
-      <svg viewBox={`0 0 ${vbW} ${rowH*5}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg" style={{ overflow:'visible' }}>
-        {PYRAMID_LEVELS.map((lv, i) => {
-          const isActive = lv.key === activeKey;
-          const x = (vbW - widths[i]) / 2;
-          return <rect key={lv.key} x={x} y={i*rowH} width={widths[i]} height={barH} rx="2.5" fill={isActive ? lv.c : 'rgba(255,255,255,.16)'} opacity={isActive ? 1 : .82} />;
-        })}
-      </svg>
-      {showLabels && <div style={{ display:'grid', gap:6, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv => <div key={lv.key} style={{ display:'flex', alignItems:'center', gap:8, color:'rgba(255,255,255,.78)', fontSize:12, fontWeight:750 }}><span style={{ width:18, height:8, borderRadius:5, background:lv.c, flexShrink:0 }} />{lv.label}</div>)}</div>}
-    </div>
-  );
-}
-
-// ── Helpers ───────────────────────────────────────────────────────────
-function StatRow({ label, base, scale, color, unit }) {
-  const statKey = Object.keys(STAT_MAXES).find(k => STATS_DEF.some(s => s.k === k && s.l === label));
-  const maxValue = statKey ? STAT_MAXES[statKey] : 100;
-  const realValue = Math.round(base * scale);
-  const barWidth = Math.min(100, Math.round((realValue / maxValue) * 100));
-  return (
-    <div style={{ minHeight:40, borderRadius:13, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
-      <span style={{ color:'rgba(255,255,255,.80)', fontSize:12, fontWeight:950, lineHeight:1.05 }}>{label}</span>
-      <div style={{ height:9, background:'rgba(0,0,0,.48)', borderRadius:999, overflow:'hidden', boxShadow:'inset 0 1px 3px rgba(255,255,255,.04)' }}>
-        <div style={{ height:'100%', width:`${barWidth}%`, background:`linear-gradient(90deg, ${color}A8, ${color})`, borderRadius:999, transition:'width .65s cubic-bezier(.4,0,.2,1)', boxShadow:`0 0 16px ${color}55` }} />
-      </div>
-      <span style={{ color:'white', fontSize:12.5, fontWeight:950, textAlign:'right', lineHeight:1.05 }}>{realValue} {unit}</span>
-    </div>
-  );
-}
-
-function useAutoUnflip(flipped, setFlipped, delay = 5000) {
-  useEffect(() => {
-    if (!flipped) return undefined;
-    const t = setTimeout(() => setFlipped(false), delay);
-    return () => clearTimeout(t);
-  }, [flipped, setFlipped, delay]);
-}
-
-function getCountryRegionGroup(code) {
-  const c = String(code || '').toUpperCase();
-  const groups = {
-    northAmerica:['US','CA','MX','GL','BM','PM'],
-    centralAmerica:['BZ','GT','HN','SV','NI','CR','PA','CU','JM','HT','DO','PR','VI','VG','AI','AG','BL','MF','SX','KN','LC','VC','DM','GP','MQ','MS','GD','BB','TT','TC','AW','CW','BQ','BS','KY'],
-    southAmerica:['CO','VE','EC','PE','BO','BR','GF','GY','SR','AR','CL','UY','PY','FK'],
-    europe:['IS','NO','SE','FI','DK','FO','AX','IE','GB','GG','IM','JE','FR','BE','NL','LU','DE','CH','AT','LI','MC','AD','PL','CZ','SK','HU','RO','BG','MD','UA','BY','LT','LV','EE','ES','PT','IT','MT','SM','VA','GI','GR','CY','AL','HR','BA','ME','SI','MK','RS','XK'],
-    africa:['MA','DZ','TN','LY','EG','EH','MR','ML','NE','TD','SD','SN','GM','GW','GN','SL','LR','CI','GH','TG','BJ','BF','NG','CV','CM','CF','GQ','GA','CG','CD','ST','STP','AO','ET','ER','DJ','SO','KE','TZ','UG','RW','BI','SS','ZA','NA','BW','ZW','ZM','MW','MZ','SZ','LS','MG','MU','RE','YT','KM','SC','IO','SH'],
-    asia:['RU','KZ','MN','TR','GE','AM','AZ','IR','IL','PS','JO','LB','SY','IQ','SA','YE','OM','AE','QA','BH','KW','UZ','TM','TJ','KG','AF','PK','IN','BD','LK','NP','BT','MV','CN','HK','MO','TW','KR','KP','JP','MM','TH','LA','KH','VN','MY','SG','ID','BN','TL','PH'],
-    oceania:['AU','NF','CX','CC','NZ','PG','SB','VU','NC','FJ','FM','GU','KI','MH','MP','NR','PW','UM','AS','CK','NU','PF','PN','TK','TO','TV','WF','WS'],
-    antarctic:['AQ','BV','GS','HM','TF']
-  };
-  for (const [group, codes] of Object.entries(groups)) if (codes.includes(c)) return { group, index: codes.indexOf(c), total: codes.length };
-  return { group:'other', index:(c.charCodeAt(0)||0)+(c.charCodeAt(1)||0), total:16 };
-}
-
-const COUNTRY_LONLAT = {
-  // Europe
-  IS:[-19,65], NO:[10,62], SE:[15,62], FI:[26,64], DK:[10,56], FO:[-7,62], AX:[20,60], IE:[-8,53], GB:[-2,54], GG:[-2.6,49.5], IM:[-4.5,54.2], JE:[-2.1,49.2], FR:[2,46], BE:[4.5,50.5], NL:[5.3,52.2], LU:[6.1,49.8], DE:[10,51], CH:[8.2,46.8], AT:[14,47.5], LI:[9.5,47.1], MC:[7.4,43.7], AD:[1.6,42.5], PL:[19,52], CZ:[15.5,49.8], SK:[19.5,48.7], HU:[19,47.2], RO:[25,45.8], BG:[25.5,42.8], MD:[28.5,47.2], UA:[31,49], BY:[28,53], LT:[24,55.2], LV:[25,57], EE:[25.5,58.7], ES:[-3.7,40.4], PT:[-8,39.5], IT:[12.5,42.8], MT:[14.4,35.9], SM:[12.5,43.9], VA:[12.45,41.9], GI:[-5.35,36.1], GR:[22,39], CY:[33,35], AL:[20,41], HR:[16,45], BA:[18,44], ME:[19.3,42.7], SI:[14.8,46.1], MK:[21.7,41.6], RS:[20.8,44],
-  // Americas
-  CA:[-105,57], US:[-98,39], MX:[-102,23], GL:[-42,72], BM:[-64.8,32.3], PM:[-56.3,46.8], BZ:[-88.7,17.2], GT:[-90.2,15.7], HN:[-86.2,14.8], SV:[-88.9,13.8], NI:[-85,13], CR:[-84,9.9], PA:[-80,8.5], CU:[-79.5,21.7], JM:[-77.3,18.1], HT:[-72.3,19], DO:[-70.2,19], PR:[-66.5,18.2], VI:[-64.8,18.1], VG:[-64.6,18.4], AI:[-63.1,18.2], AG:[-61.8,17.1], BL:[-62.8,17.9], MF:[-63.1,18.1], SX:[-63.05,18.04], KN:[-62.7,17.3], LC:[-60.98,13.9], VC:[-61.2,13.2], DM:[-61.35,15.4], GP:[-61.55,16.2], MQ:[-61,14.6], MS:[-62.2,16.7], GD:[-61.7,12.1], BB:[-59.5,13.2], TT:[-61.2,10.6], TC:[-71.8,21.7], AW:[-69.97,12.5], CW:[-69,12.2], BQ:[-68.3,12.2], BS:[-76,24.5], KY:[-80.5,19.4], CO:[-74,4.6], VE:[-66,7], EC:[-78.2,-1.5], PE:[-75,-9], BO:[-64.7,-16.3], BR:[-52,-10], GF:[-53.1,4], GY:[-58.9,5], SR:[-56,4], AR:[-64,-34], CL:[-71,-30], UY:[-56,-32.7], PY:[-58,-23.4], FK:[-59,-51.7],
-  // Africa
-  MA:[-6,32], DZ:[2,28], TN:[9,34], LY:[17,27], EG:[30,27], EH:[-13,24], MR:[-10,20], ML:[-4,17], NE:[8,17], TD:[18,15], SD:[30,15], SN:[-14,14.5], GM:[-15.3,13.4], GW:[-15,12], GN:[-10.9,10.4], SL:[-11.8,8.5], LR:[-9.4,6.5], CI:[-5.5,7.5], GH:[-1.2,7.9], TG:[1.1,8.6], BJ:[2.3,9.3], BF:[-1.7,12.2], NG:[8,9], CV:[-23.6,15.1], CM:[12,5.7], CF:[20.5,6.6], GQ:[10.3,1.6], GA:[11.6,-0.6], CG:[15.2,-1], CD:[23.7,-2.9], ST:[6.7,0.2], AO:[17.9,-12.3], ET:[40,9], ER:[39,15], DJ:[42.6,11.8], SO:[45.3,5.2], KE:[37.8,0.5], TZ:[35,-6], UG:[32.3,1.3], RW:[29.9,-1.9], BI:[29.9,-3.4], SS:[31.6,7.8], ZA:[24,-29], NA:[17,-22], BW:[24,-22], ZW:[29,-19], ZM:[27.8,-13.1], MW:[34,-13.3], MZ:[35.5,-18.5], SZ:[31.5,-26.5], LS:[28.2,-29.6], MG:[47,-19],
-  // Asia
-  RU:[90,60], KZ:[67,48], MN:[103,46], TR:[35,39], GE:[43.5,42], AM:[45,40], AZ:[47.5,40.3], IR:[53,32], IL:[35,31.5], PS:[35.2,31.9], JO:[36,31], LB:[35.9,33.9], SY:[38,35], IQ:[44,33], SA:[45,24], YE:[48,15.5], OM:[57,21], AE:[54,24], QA:[51.2,25.3], BH:[50.5,26], KW:[47.5,29.3], UZ:[64,41], TM:[59,39], TJ:[71,38.5], KG:[74.6,41.5], AF:[66,34], PK:[69,30], IN:[78,22], BD:[90.3,23.7], LK:[80.7,7.7], NP:[84,28.2], BT:[90.4,27.5], MV:[73.2,3.2], CN:[104,35], HK:[114.1,22.3], MO:[113.6,22.2], TW:[121,23.7], KR:[127.8,36], KP:[127,40], JP:[138,37], MM:[96,21], TH:[101,15], LA:[103.8,18], KH:[104.9,12.7], VN:[106,16], MY:[102,4], SG:[103.8,1.35], ID:[118,-2], BN:[114.7,4.5], TL:[125.7,-8.8], PH:[122,12],
-  // Oceania / Antarctica / islands
-  AU:[134,-25], NF:[167.9,-29], CX:[105.7,-10.5], CC:[96.9,-12.1], NZ:[172,-41], PG:[145,-6], SB:[160,-9], VU:[167,-16], NC:[165.5,-21.3], FJ:[178,-17.8], FM:[158,6.9], GU:[144.8,13.5], KI:[-157,1.9], MH:[171,7], MP:[145.7,15.2], NR:[166.9,-0.5], PW:[134.6,7.5], UM:[-162,6], AS:[-170.7,-14.3], CK:[-159.8,-21.2], NU:[-169.9,-19.1], PF:[-149,-17.7], PN:[-128.3,-24.4], TK:[-172,-9], TO:[-175.2,-21.2], TV:[179,-8], WF:[-176.2,-13.8], WS:[-172,-13.8], MU:[57.6,-20.2], RE:[55.5,-21.1], YT:[45.2,-12.8], KM:[43.3,-11.9], SC:[55.4,-4.6], IO:[72.4,-7.3], SJ:[20,78], AQ:[20,-82], BV:[3.4,-54.4], GS:[-36,-54.3], HM:[73.5,-53.1], TF:[69.3,-49.3], SH:[-5.7,-15.9]
-};
-
-function countryMapPoint(code) {
-  const c = String(code || '').toUpperCase();
-  const lonlat = COUNTRY_LONLAT[c];
-  if (lonlat) {
-    const [x,y] = projectLonLat(lonlat[0], lonlat[1]);
-    return { x:x/10, y:y/5, lon:lonlat[0], lat:lonlat[1], px:x, py:y };
-  }
-  const { group, index, total } = getCountryRegionGroup(c);
-  const t = total > 1 ? index / (total - 1) : 0;
-  const wobble = ((String(c).charCodeAt(0) || 65) % 7 - 3) * .8;
-  const lerp = (a,b,v)=>a+(b-a)*v;
-  const ranges = {
-    northAmerica:[20,28,24,48],
-    centralAmerica:[26,42,48,62],
-    southAmerica:[33,43,58,83],
-    europe:[44,57,26,43],
-    africa:[46,60,47,78],
-    asia:[59,80,24,58],
-    oceania:[73,90,65,84],
-    antarctic:[45,62,88,94],
-    other:[50,56,48,58],
-  };
-  const [x1,x2,y1,y2] = ranges[group] || ranges.other;
-  const x = lerp(x1,x2,t) + wobble;
-  const y = lerp(y1,y2, (t*1.37)%1);
-  return { x, y, px:x*10, py:y*5 };
-}
-
-function pointsToViewBox(points = [], padRatio=.22) {
-  const valid = points.filter(p => Number.isFinite(p?.px) && Number.isFinite(p?.py));
-  if (!valid.length) return '0 0 1000 500';
-  const b = valid.reduce((acc,p)=>({
-    minX:Math.min(acc.minX,p.px), minY:Math.min(acc.minY,p.py),
-    maxX:Math.max(acc.maxX,p.px), maxY:Math.max(acc.maxY,p.py),
-  }), {minX:Infinity,minY:Infinity,maxX:-Infinity,maxY:-Infinity});
-  return boundsToViewBox(b, padRatio);
-}
-
-function clampWholeWords(text, maxChars = 31) {
-  const clean = String(text || '').trim().replace(/\s+/g,' ');
-  if (clean.length <= maxChars) return clean;
-  const words = clean.split(' ');
-  let out = '';
-  for (const word of words) {
-    const next = out ? `${out} ${word}` : word;
-    if (next.length > maxChars) break;
-    out = next;
-  }
-  return out || clean.slice(0, maxChars).replace(/\s+\S*$/,'');
 }
 
 
@@ -3054,7 +2988,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       return noA - noB;
     });
 
-  const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
+  const anyExtra = fRarity.length||fCons.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
   const handleCardClick = (animal) => {
     if (tutorialActive && tutorialAnimalId && animal.id !== tutorialAnimalId) return;
     onSelect?.(animal);
@@ -3105,7 +3039,6 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           {fTax && <span onClick={()=>setFTax(null)} style={{ background:'rgba(232,192,64,.2)', color:'#E8C040', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{fTax.label} ×</span>}
           {fRarity.map(r=><RarityBadge key={r} rarity={r} small suffix=" ×" onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ flexShrink:0 }} />)}
           {fCons.map(c=><span key={c} onClick={()=>setFCons(p=>p.filter(x=>x!==c))} style={{ background:CONS[c].bg, color:CONS[c].c, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{c} ×</span>)}
-          {fStatus.map(s=>{ const so = getStatusMeta(s); return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>; })}
           {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
           {fGeography.map(g=>{ const opt = geographyOpts.find(o=>o.value===g); return <span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{opt?.label || g} ×</span>; })}
           {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
