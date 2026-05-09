@@ -4730,31 +4730,18 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const nextLevelXP = xpForLevel(progress.level + 1);
   const currLevelXP = xpForLevel(progress.level);
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
-  const seenNotCaptured = progress.animalsWithStatus.filter(a => a.status === 'avvistato');
+  const animalsWithStatus = progress.animalsWithStatus;
+  const seenNotCaptured = animalsWithStatus.filter(a => a.status === 'avvistato');
+  const searchedAnimals = animalsWithStatus.filter(a => a.status === 'ricercato');
   let mission = {
     title:'Scopri una nuova regione',
     desc:'Esplora territori e habitat per trovare nuovi animali.',
     cta:'Apri regioni',
     action:onOpenRegions || (()=>onOpen('regions')),
   };
-  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per rivelare i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
-  else if (progress.searchedCount > 0) mission = { title:'Prossima missione', desc:`Hai ${pluralizeCount(progress.searchedCount, 'animale ricercato', 'animali ricercati')} nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
-  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${pluralizeCount(progress.seenCount, 'animale avvistato', 'animali avvistati')} non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
-
-  const totalAnimals = Math.max(1, ANIMALS.length);
-  const searchedPct = Math.max(0, Math.min(100, (progress.searchedCount / totalAnimals) * 100));
-  const seenPct = Math.max(0, Math.min(100, (progress.seenCount / totalAnimals) * 100));
-  const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / totalAnimals) * 100));
-  const ProgressRow = ({ label, valueText, pct, fillClass }) => (
-    <div className="progress-row">
-      <div className="progress-row-head">
-        <div className="progress-row-title">{label}</div>
-        <div className="progress-row-value">{valueText}</div>
-      </div>
-      <div className="progress-track"><div className={`progress-fill ${fillClass}`} style={{ width:`${pct}%` }} /></div>
-    </div>
-  );
-
+  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per vedere i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
+  else if (searchedAnimals.length > 0) mission = { title:'Prossima missione', desc:`Hai ${searchedAnimals.length} animali ricercati nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
+  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁' },
     { id:'regions', label:'Regioni', icon:'🗺️' },
@@ -4764,84 +4751,80 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     { id:'profile', label:'Profilo', icon:'👤' },
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
-
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'transparent', overflow:'hidden' }}>
-      <div style={{ flexShrink:0, padding:'14px 12px 10px', display:'grid', gridTemplateColumns:'46px 1fr 46px', alignItems:'center', borderBottom:'1px solid var(--border-soft)', background:'rgba(8,10,13,.38)', backdropFilter:'blur(12px)' }}>
-        <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:14, background:'rgba(255,255,255,.04)', border:'1px solid var(--border-soft)', color:'var(--text-main)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </button>
-        <div style={{ textAlign:'center', minWidth:0 }}>
-          <div className="page-title">Mission Control</div>
-          <div className="page-subtitle">Centro operativo del tuo Animaldex</div>
-        </div>
-        <button onClick={onLogout} aria-label="Logout" style={{ width:46, height:46, borderRadius:14, background:'rgba(255,255,255,.04)', border:'1px solid var(--border-soft)', color:'var(--text-muted)', cursor:'pointer', fontWeight:900 }}>⎋</button>
-      </div>
-
-      <div style={{ flex:1, overflowY:'auto', padding:'0 0 34px' }}>
-        <div className="profile-pass">
-          <div style={{ display:'flex', alignItems:'center', gap:14 }}>
-            <div className="profile-avatar" style={{ display:'flex', alignItems:'center', justifyContent:'center', fontSize:34 }}>🧭</div>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
+      <PageHeader title="Mission Control" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
+        <div style={{ borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+            <div style={{ width:54, height:54, borderRadius:18, background:'linear-gradient(135deg,rgba(216,210,196,.14),rgba(184,77,58,.16))', display:'flex', alignItems:'center', justifyContent:'center', color:'#D8D2C4', border:'1px solid rgba(255,255,255,.10)', fontSize:28 }}>🧭</div>
             <div style={{ flex:1, minWidth:0 }}>
-              <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
-                <div className="profile-name" style={{ whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
-                <div style={{ color:'#F0B85B', fontWeight:1000, fontSize:18, flexShrink:0 }}>🔥 3</div>
-              </div>
-              <div className="profile-meta">Liv. {progress.level} · Esploratore urbano</div>
-              <div className="xp-track"><div className="xp-fill" style={{ width:`${xpPct}%` }} /></div>
-              <div style={{ marginTop:7, color:'var(--text-muted)', fontSize:12, fontWeight:800 }}>{progress.xp} / {nextLevelXP} XP</div>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · Esploratore urbano · {progress.xp} / {nextLevelXP} XP</div>
+              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
             </div>
+            <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
           </div>
         </div>
 
-        <div className="main-mission-card">
-          <div style={{ position:'relative', zIndex:1 }}>
-            <div className="mission-kicker">Missione principale</div>
-            <div className="mission-title">{mission.title}</div>
-            <div className="mission-body">{mission.desc}</div>
-            <button onClick={mission.action} className="mission-cta">{mission.cta}</button>
-          </div>
+        <div style={{ borderRadius:26, padding:18, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.44)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
+          <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
+          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
+          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
         </div>
 
-        <div className="quick-actions">
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:9, marginBottom:14 }}>
           {[
-            ['🔭','Ricercati',`${progress.searchedCount} specie`,()=>onOpenGridStatus?.(['ricercato'])],
+            ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
             ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
             ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,sub,action])=>(
-            <button key={label} onClick={action} className="quick-action-card">
-              <span className="quick-action-icon">{icon}</span>
-              <span className="quick-action-label">{label}</span>
-              <span className="quick-action-sub">{sub}</span>
-            </button>
-          ))}
+          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
         </div>
 
-        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} className="progress-card">
-          <div className="progress-title">Animaldex</div>
-          <div className="progress-subtitle">Progressi personali nel Dex</div>
-          <ProgressRow label="Ricercati" valueText={`${progress.searchedCount} / ${totalAnimals}`} pct={searchedPct} fillClass="progress-fill-searched" />
-          <ProgressRow label="Avvistati" valueText={`${progress.seenCount} / ${totalAnimals}`} pct={seenPct} fillClass="progress-fill-seen" />
-          <ProgressRow label="Catturati" valueText={`${progress.capturedCount} / ${totalAnimals}`} pct={capturedPct} fillClass="progress-fill-captured" />
+        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
+          {(() => {
+            const totalAnimals = Math.max(1, ANIMALS.length);
+            const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
+            const searchedPct = Math.max(0, Math.min(100, (unlockedCount / totalAnimals) * 100));
+            const seenPct = Math.max(0, Math.min(100, (progress.seenCount / Math.max(1, unlockedCount)) * 100));
+            const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / Math.max(1, unlockedCount)) * 100));
+            const Row = ({ label, valueText, pct, color, hint }) => (
+              <div style={{ marginTop:10 }}>
+                <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
+                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
+                  <div style={{ color:'rgba(255,255,255,.64)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
+                </div>
+                <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
+                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
+              </div>
+            );
+            return <>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
+              <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
+              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
+              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
+            </>;
+          })()}
         </button>
 
-        {!!progress.nearlyCompletedBadges.length && <div style={{ margin:'24px 16px 14px' }}>
-          <div style={{ color:'var(--text-muted)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px', letterSpacing:.8 }}>Badge quasi completati</div>
+        {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
+          <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
           <div style={{ display:'grid', gap:8 }}>
-            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid var(--border-soft)', borderRadius:20, background:'linear-gradient(180deg,#1A1E24,#14171C)', padding:14, textAlign:'left', color:'var(--text-main)', fontFamily:'inherit' }}>
+            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
-              <div style={{ color:'var(--text-muted)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
-              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#F1E4CF,#D99262,#B84D3A)' }} /></div>
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
+              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div>
             </button>)}
           </div>
         </div>}
 
-        <div style={{ color:'var(--text-muted)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'26px 18px 10px', letterSpacing:.8 }}>Navigazione</div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, margin:'0 16px' }}>
+        <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
           {items.map(item=>{
             const focused = tutorialFocus === item.id;
-            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid var(--border-soft)', borderRadius:24, background:'linear-gradient(180deg,#1D2128,#15181D)', color:'var(--text-main)', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #D8D2C4, 0 0 34px rgba(216,210,196,.34)':'inset 0 1px 0 rgba(255,255,255,.05)', opacity:tutorialFocus && !focused ? .42 : 1, fontFamily:'inherit' }}>
-              <span style={{ width:42, height:42, borderRadius:16, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:22 }}>{item.icon}</span>
+            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
+              <span style={{ width:38, height:38, borderRadius:14, background:'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
               <span style={{ fontSize:13, fontWeight:950 }}>{item.label}</span>
             </button>
           })}
@@ -4850,6 +4833,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     </div>
   );
 }
+
+
+
 
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect }) {
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
