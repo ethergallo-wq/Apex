@@ -56,6 +56,57 @@ const DEX = {
     catturato:'0 0 26px rgba(184,77,58,.30)',
   }
 };
+
+const TAXONOMY_CLASS_BY_ORDER = {
+  Passeriformes:'Aves',
+  Perciformes:'Actinopterygii',
+  Acipenseriformes:'Actinopterygii',
+  Siluriformes:'Actinopterygii',
+  Amiiformes:'Actinopterygii',
+  Anguilliformes:'Actinopterygii',
+  Beryciformes:'Actinopterygii',
+  Osteoglossiformes:'Actinopterygii',
+  Lepisosteiformes:'Actinopterygii',
+  Tetraodontiformes:'Actinopterygii',
+  Cypriniformes:'Actinopterygii',
+  Stomiiformes:'Actinopterygii',
+  Clupeiformes:'Actinopterygii',
+  Gymnotiformes:'Actinopterygii',
+  Esociformes:'Actinopterygii',
+  Saccopharyngiformes:'Actinopterygii',
+  Beloniformes:'Actinopterygii',
+  Gasterosteiformes:'Actinopterygii',
+  Pleuronectiformes:'Actinopterygii',
+  Gadiformes:'Actinopterygii',
+  Osmeriformes:'Actinopterygii',
+  Mugiliformes:'Actinopterygii',
+  Cyprinodontiformes:'Actinopterygii',
+  Polypteriformes:'Actinopterygii',
+  Scorpaeniformes:'Actinopterygii',
+  Characiformes:'Actinopterygii',
+  Salmoniformes:'Actinopterygii',
+  Lampriformes:'Actinopterygii',
+  Zeiformes:'Actinopterygii',
+};
+const TAXONOMY_OVERRIDES_BY_SCI = {
+  'Passer Sahari': { cls:'Aves', ord:'Passeriformes', fam:'Passeridae', gen:'Passer' },
+};
+function patchAnimalTaxonomy(raw = {}) {
+  const next = { ...(raw || {}) };
+  const sci = String(next.sci || next.scientific_name || '').trim();
+  const override = TAXONOMY_OVERRIDES_BY_SCI[sci];
+  if (override) {
+    if (!String(next.gen || next.genus || '').trim() && override.gen) next.gen = override.gen;
+    if (!String(next.fam || next.family || '').trim() && override.fam) next.fam = override.fam;
+    if (!String(next.ord || next.order || '').trim() && override.ord) next.ord = override.ord;
+    if (!String(next.cls || next.class || '').trim() && override.cls) next.cls = override.cls;
+  }
+  const ord = String(next.ord || next.order || '').trim();
+  const cls = String(next.cls || next.class || '').trim();
+  if (!cls && TAXONOMY_CLASS_BY_ORDER[ord]) next.cls = TAXONOMY_CLASS_BY_ORDER[ord];
+  return next;
+}
+
 function hexToRgba(hex, alpha = 1) {
   const clean = String(hex || '#ffffff').replace('#','');
   const full = clean.length === 3 ? clean.split('').map(ch=>ch+ch).join('') : clean;
@@ -299,7 +350,7 @@ function toArraySafe(value) {
 }
 
 function normalizeSupabaseAnimal(row, userAnimal) {
-  const raw = row?.raw && typeof row.raw === 'object' ? row.raw : {};
+  const raw = patchAnimalTaxonomy(row?.raw && typeof row.raw === 'object' ? row.raw : {});
   const geoRow = Array.isArray(row?.animal_geo) ? row.animal_geo[0] : row?.animal_geo;
   const rawGeo = raw?.geo && typeof raw.geo === 'object' ? raw.geo : {};
   const rawGeoFromRow = geoRow?.raw_geo && typeof geoRow.raw_geo === 'object' ? geoRow.raw_geo : {};
@@ -318,7 +369,7 @@ function normalizeSupabaseAnimal(row, userAnimal) {
     sci: row?.sci || raw.sci || raw.scientific_name || '',
     com_en: row?.com_en || raw.com_en || '',
     no: row?.no || raw.no || String(row?.id || '').padStart(3, '0'),
-    cls: row?.cls || raw.cls || raw.class || 'Mammalia',
+    cls: row?.cls || raw.cls || raw.class || '',
     ord: row?.ord || raw.ord || raw.order || '',
     fam: row?.fam || raw.fam || raw.family || '',
     gen: row?.gen || raw.gen || raw.genus || '',
@@ -352,8 +403,9 @@ function normalizeSupabaseAnimal(row, userAnimal) {
 }
 
 function normalizeLocalAnimal(a) {
+  const patched = patchAnimalTaxonomy(a || {});
   return {
-    ...a,
+    ...patched,
     geo: a.geo || null,
     bioregions_v4: toArraySafe(a.bioregions_v4 || a.geo?.bioregions_v4),
     map_bioregion_ids_v4: toArraySafe(a.map_bioregion_ids_v4 || a.geo?.map_bioregion_ids_v4),
@@ -726,13 +778,33 @@ function normalizeBadgeId(id) {
   return String(id || '').trim().toUpperCase();
 }
 const TROPHIC = {
-  1:{ label:'Produttore',      c:'#5CC85A', bg:'#1A3B19' },
-  2:{ label:'Erbivoro',        c:'#A8D84A', bg:'#283B14' },
-  3:{ label:'Predatore',       c:'#F5A828', bg:'#3B2205' },
-  4:{ label:'Predatore Apice', c:'#F55454', bg:'#3B0B0B' },
-  D:{ label:'Decomponente',    c:'#9E7CF5', bg:'#20153B' },
-  F:{ label:'Filtratore',      c:'#5BB8F5', bg:'#0A1E3B' },
+  1:{ label:'Produttore',      c:'#5CC85A', bg:'#123819', desc:'Organismi autotrofi alla base della rete.' },
+  2:{ label:'Erbivoro',        c:'#A8D84A', bg:'#263714', desc:'Consumatori primari che si nutrono di piante, semi, frutti o alghe.' },
+  3:{ label:'Predatore',       c:'#F5A828', bg:'#3B2205', desc:'Carnivori e onnivori predatori intermedi.' },
+  4:{ label:'Predatore Apex',  c:'#F55454', bg:'#3B0B0B', desc:'Vertice della catena alimentare nel suo contesto.' },
+  D:{ label:'Decompositore',   c:'#B47A3C', bg:'#3B2410', desc:'Ricicla detrito, carcasse e materia organica.' },
+  F:{ label:'Filtratore',      c:'#A8D84A', bg:'#263714', desc:'Filtra particelle, plankton o micro-risorse dall’acqua.' },
 };
+const PYRAMID_LEVELS = [
+  { key:'4', value:4, label:'Predatore Apex', c:'#F55454', bg:'#3B0B0B', desc:'Vertice della catena alimentare.' },
+  { key:'3', value:3, label:'Predatore', c:'#F5A828', bg:'#3B2205', desc:'Carnivoro o onnivoro predatore.' },
+  { key:'2F', value:'2F', label:'Erbivori e Filtratori', c:'#A8D84A', bg:'#263714', desc:'Consumatori primari: si nutrono di piante, alghe, plankton o particelle filtrate.' },
+  { key:'1', value:1, label:'Produttori', c:'#5CC85A', bg:'#123819', desc:'Organismi autotrofi alla base della rete.' },
+  { key:'D', value:'D', label:'Decompositori', c:'#B47A3C', bg:'#3B2410', desc:'Riciclano detrito, carcasse e materia organica.' },
+];
+function getPyramidKey(trophic) {
+  const t = String(trophic ?? '').toUpperCase();
+  if (t === '4') return '4';
+  if (t === '3') return '3';
+  if (t === '2' || t === 'F') return '2F';
+  if (t === '1') return '1';
+  if (t === 'D') return 'D';
+  return '3';
+}
+function getPyramidLevel(trophic) {
+  const key = getPyramidKey(trophic);
+  return PYRAMID_LEVELS.find(l => l.key === key) || PYRAMID_LEVELS[1];
+}
 
 const CATEGORY_META = {
   OFF_PERFECT_STRIKE:       { label:'Colpo Perfetto',        icon:'🎯', color:'#FF4444' },
@@ -1703,61 +1775,96 @@ function GaugeSVG({ wt_str }) {
   );
 }
 
-// ── Human silhouette SVG ────────────────────────────────────────────────
-function HumanSilhouette({ h = 50 }) {
+
+function parseAnimalLengthCm(lengthValue) {
+  const raw = String(lengthValue || '').toLowerCase().replace(',', '.');
+  const nums = (raw.match(/\d+(?:\.\d+)?/g) || []).map(Number).filter(n => Number.isFinite(n));
+  if (!nums.length) return 0;
+  const max = Math.max(...nums);
+  if (/\bmm\b|millimet/.test(raw)) return max / 10;
+  if (/\bcm\b|centimet/.test(raw)) return max;
+  if (/\bm\b|metri|metro/.test(raw) && !/\bcm\b/.test(raw) && !/\bmm\b/.test(raw)) return max * 100;
+  return max;
+}
+function getLengthReference(lengthCm) {
+  if (lengthCm >= 20) return { type:'full', label:'Uomo 175 cm', cm:175 };
+  if (lengthCm >= 5) return { type:'bust', label:'Busto umano 45 cm', cm:45 };
+  return { type:'ear', label:'Orecchio umano 6 cm', cm:6 };
+}
+// ── Human/reference silhouettes and trophic pyramid ───────────────────
+function HumanSilhouette({ h = 78 }) {
+  const w = Math.max(18, Math.round(h * 0.28));
   return (
-    <svg viewBox="0 0 32 120" width="14" height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block' }}>
-      <circle cx="16" cy="15" r="8" fill="rgba(255,255,255,.92)"/>
-      <rect x="14" y="23" width="4" height="4" fill="rgba(255,255,255,.92)"/>
-      <ellipse cx="16" cy="32" rx="14" ry="7" fill="rgba(255,255,255,.92)"/>
-      <rect x="8" y="35" width="16" height="18" rx="4" fill="rgba(255,255,255,.92)"/>
-      <rect x="9" y="53" width="14" height="14" rx="3" fill="rgba(255,255,255,.92)"/>
-      <ellipse cx="16" cy="72" rx="13" ry="8" fill="rgba(255,255,255,.92)"/>
-      <rect x="6" y="77" width="6" height="38" rx="3" fill="rgba(255,255,255,.92)"/>
-      <rect x="20" y="77" width="6" height="38" rx="3" fill="rgba(255,255,255,.92)"/>
-      <rect x="2" y="37" width="5" height="28" rx="2.5" fill="rgba(255,255,255,.92)" transform="rotate(-20 4.5 37)"/>
-      <rect x="25" y="37" width="5" height="28" rx="2.5" fill="rgba(255,255,255,.92)" transform="rotate(20 27.5 37)"/>
+    <svg viewBox="0 0 46 170" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
+      <circle cx="23" cy="13" r="12" fill="rgba(255,255,255,.94)"/>
+      <path d="M16 29h14c4 0 7 3 7 7v45c0 4-3 7-7 7H16c-4 0-7-3-7-7V36c0-4 3-7 7-7Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M9 39c-5 11-7 25-7 42 0 4 3 7 7 7s7-3 7-7c0-15 2-27 6-35Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M37 39c5 11 7 25 7 42 0 4-3 7-7 7s-7-3-7-7c0-15-2-27-6-35Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M15 87h12l-2 69c0 5-4 8-8 8s-8-3-8-8Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M31 87H19l2 69c0 5 4 8 8 8s8-3 8-8Z" fill="rgba(255,255,255,.94)"/>
     </svg>
   );
 }
-
-function BustSilhouette({ h = 50 }) {
+function BustSilhouette({ h = 72 }) {
+  const w = Math.max(34, Math.round(h * 0.72));
   return (
-    <svg viewBox="0 0 52 60" width="26" height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block' }}>
-      <circle cx="26" cy="12" r="9" fill="rgba(255,255,255,.92)"/>
-      <path d="M8 54c2-12 10-18 18-18s16 6 18 18Z" fill="rgba(255,255,255,.92)"/>
-      <rect x="16" y="22" width="20" height="15" rx="6" fill="rgba(255,255,255,.92)"/>
+    <svg viewBox="0 0 72 80" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
+      <circle cx="36" cy="16" r="13" fill="rgba(255,255,255,.94)"/>
+      <path d="M14 76c2-19 13-29 22-29s20 10 22 29Z" fill="rgba(255,255,255,.94)"/>
+      <rect x="24" y="31" width="24" height="22" rx="8" fill="rgba(255,255,255,.94)"/>
     </svg>
   );
 }
-
-function EarSilhouette({ h = 50 }) {
+function EarSilhouette({ h = 72 }) {
+  const w = Math.max(28, Math.round(h * 0.52));
   return (
-    <svg viewBox="0 0 40 60" width="24" height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block' }}>
-      <path d="M23 5c8 0 13 6 13 15 0 6-3 10-6 14-3 4-5 8-5 13 0 5-4 9-10 9S5 50 5 43c0-8 5-12 9-16 4-4 5-7 5-12 0-5 2-10 4-10Z" fill="rgba(255,255,255,.92)"/>
-      <path d="M21 17c4 0 7 3 7 7 0 3-1 5-3 7-2 2-4 4-4 7" fill="none" stroke="#111113" strokeWidth="2.5" strokeLinecap="round"/>
+    <svg viewBox="0 0 46 76" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
+      <path d="M28 5c9 0 15 8 15 19 0 8-4 13-7 18-4 5-6 10-6 17 0 7-6 12-13 12S5 64 5 55c0-10 6-15 11-20 5-5 7-9 7-16 0-7 2-14 5-14Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M25 21c5 0 9 4 9 9 0 4-2 7-4 10-3 3-5 6-5 11" fill="none" stroke="#111113" strokeWidth="3" strokeLinecap="round"/>
     </svg>
   );
 }
-
-// ── Trophic pyramid ────────────────────────────────────────────────────
-function TrophicPyramid({ trophic, compact = false }) {
-  const levels = [4, 3, 2, 1];
-  const widths = compact ? [22, 32, 44, 56] : [32, 46, 62, 76];
-  const vbW = compact ? 60 : 80;
-  const rowH = compact ? 9 : 13;
-  const barH = compact ? 6 : 9;
-  const svgW = compact ? 52 : 68;
-  const svgH = compact ? 36 : 52;
-  const colors = { 1:'#5CC85A', 2:'#A8D84A', 3:'#F5A828', 4:'#F55454' };
+function ScaleComparison({ animal, full=false }) {
+  const lengthCm = parseAnimalLengthCm(animal?.ln);
+  const ref = getLengthReference(lengthCm);
+  const maxPx = full ? 164 : 62;
+  const minPx = full ? 18 : 8;
+  const maxCm = Math.max(ref.cm, lengthCm || 0.1);
+  const pxPerCm = maxPx / maxCm;
+  const referencePx = Math.max(full ? 34 : 28, Math.round(ref.cm * pxPerCm));
+  const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
+  const renderRef = () => ref.type === 'full' ? <HumanSilhouette h={referencePx} /> : ref.type === 'bust' ? <BustSilhouette h={referencePx} /> : <EarSilhouette h={referencePx} />;
   return (
-    <svg viewBox={`0 0 ${vbW} ${rowH*4}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg">
-      {levels.map((lv, i) => {
-        const isActive = lv === trophic;
-        const x = (vbW - widths[i]) / 2;
-        return <rect key={lv} x={x} y={i*rowH} width={widths[i]} height={barH} rx="2" fill={isActive ? colors[lv] : 'rgba(255,255,255,.1)'} />;
-      })}
-    </svg>
+    <div style={{ width:'100%', minHeight:full?210:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?64:28, padding:full?'18px 12px 10px':'5px 6px 2px', boxSizing:'border-box' }}>
+        <div style={{ width:full?112:54, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>{renderRef()}</div>
+        <div style={{ width:full?180:78, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
+          <img src={animal?.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0,0,0,.28))', imageRendering:'-webkit-optimize-contrast' }} />
+        </div>
+      </div>
+      {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · scala proporzionale sulla misura massima dell’animale</div>}
+    </div>
+  );
+}
+function TrophicPyramid({ trophic, compact = false, showLabels = false }) {
+  const activeKey = getPyramidKey(trophic);
+  const widths = compact ? [20, 32, 46, 60, 74] : [42, 62, 86, 108, 128];
+  const rowH = compact ? 9 : 18;
+  const barH = compact ? 6 : 12;
+  const vbW = compact ? 78 : 132;
+  const svgW = compact ? 72 : 130;
+  const svgH = compact ? 50 : 96;
+  return (
+    <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap: showLabels ? 16 : 0 }}>
+      <svg viewBox={`0 0 ${vbW} ${rowH*5}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg" style={{ overflow:'visible' }}>
+        {PYRAMID_LEVELS.map((lv, i) => {
+          const isActive = lv.key === activeKey;
+          const x = (vbW - widths[i]) / 2;
+          return <rect key={lv.key} x={x} y={i*rowH} width={widths[i]} height={barH} rx="2.5" fill={isActive ? lv.c : 'rgba(255,255,255,.16)'} opacity={isActive ? 1 : .82} />;
+        })}
+      </svg>
+      {showLabels && <div style={{ display:'grid', gap:6, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv => <div key={lv.key} style={{ display:'flex', alignItems:'center', gap:8, color:'rgba(255,255,255,.78)', fontSize:12, fontWeight:750 }}><span style={{ width:18, height:8, borderRadius:5, background:lv.c, flexShrink:0 }} />{lv.label}</div>)}</div>}
+    </div>
   );
 }
 
@@ -3288,12 +3395,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const longName = String(a.com || '').length > 24;
   const statusActions = getStatusActions(localStatus);
   const visitedMatches = countCountryMatches(a, new Set((visitedCountries || []).map(c => String(c).toUpperCase())));
-  const lengthNums = String(a.ln || '').match(/[\d.]+/g) || [];
-  const lengthCm = lengthNums.length ? Math.max(...lengthNums.map(v => parseFloat(v))) : 0;
-  const referenceType = lengthCm >= 20 ? 'full' : lengthCm >= 5 ? 'bust' : 'ear';
-  const refSize = referenceType === 'full' ? 175 : referenceType === 'bust' ? 18 : 6;
-  const animalScalePct = Math.max(16, Math.min(100, (lengthCm / refSize) * 100));
-  const renderReference = (h=48) => referenceType === 'full' ? <HumanSilhouette h={h} /> : referenceType === 'bust' ? <BustSilhouette h={h} /> : <EarSilhouette h={h} />;
+  const lengthCm = parseAnimalLengthCm(a.ln);
+  const activePyramidLevel = getPyramidLevel(a.trophic);
   const handleStatusAction = (action) => {
     if (action === 'mark-seen') {
       setLocalStatus('avvistato');
@@ -3370,19 +3473,14 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
           </button>
 
-          <button onClick={()=>setMetricModal('dimensioni')} style={{ background:'#111113', borderRadius:12, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', minHeight:92, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
-            <div style={{ flex:1, display:'flex', alignItems:'flex-end', justifyContent:'space-between', gap:8 }}>
-              <div style={{ width:30, display:'flex', alignItems:'flex-end', justifyContent:'center' }}>{renderReference(44)}</div>
-              <div style={{ flex:1, minWidth:0, display:'flex', alignItems:'flex-end', justifyContent:'center' }}>
-                <img src={a.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxHeight:Math.max(16, Math.round((44 * animalScalePct) / 100)), maxWidth:'54px', objectFit:'contain', filter:'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast' }} />
-              </div>
-            </div>
-            <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:6 }}>{a.ln}</div>
+          <button onClick={()=>setMetricModal('dimensioni')} style={{ background:'#111113', borderRadius:12, padding:'6px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', minHeight:92, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
+            <ScaleComparison animal={a} />
+            <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:2 }}>{a.ln}</div>
           </button>
 
-          <button onClick={()=>setMetricModal('trofico')} style={{ background:'#111113', borderRadius:12, padding:'8px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:4, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
-            <TrophicPyramid trophic={a.trophic} compact={false} />
-            <div style={{ fontSize:11, fontWeight:800, color:'white', textAlign:'center', letterSpacing:'-.2px', lineHeight:1.2 }}>{TROPHIC[a.trophic]?.label || ''}</div>
+          <button onClick={()=>setMetricModal('trofico')} style={{ background:'#111113', borderRadius:12, padding:'6px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
+            <TrophicPyramid trophic={a.trophic} compact />
+            <div style={{ fontSize:10.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.2px', lineHeight:1.15 }}>{activePyramidLevel.label}</div>
           </button>
         </div>
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
@@ -3490,20 +3588,17 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           <div style={{ color:'white', fontSize:30, fontWeight:1000, marginTop:6 }}>{a.wt}</div>
         </div>
       </FullscreenMetricModal>
-      <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="La sagoma umana a sinistra offre un riferimento immediato. La sagoma dell’animale a destra è scalata in proporzione rispetto alla sua misura principale." onClose={()=>setMetricModal(null)}>
-        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, display:'flex', alignItems:'flex-end', justifyContent:'space-between', gap:20 }}>
-          <div style={{ width:'34%', display:'flex', justifyContent:'center' }}>{renderReference(140)}</div>
-          <div style={{ flex:1, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-            <img src={a.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxHeight:Math.max(48, Math.round((140 * animalScalePct) / 100)), maxWidth:'170px', objectFit:'contain', filter:'brightness(0) invert(1)' }} />
-          </div>
+      <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri, così animali grandi come bovini o cervi non risultano artificialmente minuscoli." onClose={()=>setMetricModal(null)}>
+        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
+          <ScaleComparison animal={a} full />
         </div>
         <div style={{ color:'white', textAlign:'center', fontSize:28, fontWeight:1000, marginTop:12 }}>{a.ln}</div>
       </FullscreenMetricModal>
-      <FullscreenMetricModal open={metricModal==='trofico'} title="Piramide alimentare" subtitle="Nel riquadro piccolo vedi la fascia vicina al gradino dell’animale. Qui sotto la piramide completa evidenzia il livello trofico corrispondente." onClose={()=>setMetricModal(null)}>
+      <FullscreenMetricModal open={metricModal==='trofico'} title="Piramide alimentare" subtitle="La piramide mostra sempre tutti i gradini della rete trofica. Il gradino colorato indica il ruolo dell’animale." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <TrophicPyramid trophic={a.trophic} compact={false} />
-          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:10 }}>{TROPHIC[a.trophic]?.label || ''}</div>
-          <div style={{ display:'grid', gap:6, marginTop:14, textAlign:'left' }}>{[4,3,2,1].map(l=><div key={l} style={{ display:'flex', alignItems:'center', gap:10, color:'rgba(255,255,255,.78)', fontSize:12 }}><div style={{ width:18, height:8, borderRadius:4, background:TROPHIC[l]?.c || '#888' }} /><span>{TROPHIC[l]?.label || ''}</span></div>)}</div>
+          <TrophicPyramid trophic={a.trophic} showLabels />
+          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:10 }}>{activePyramidLevel.label}</div>
+          <div style={{ display:'grid', gap:8, marginTop:16, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv=><div key={lv.key} style={{ display:'grid', gridTemplateColumns:'22px 150px 1fr', alignItems:'center', gap:10, color:'rgba(255,255,255,.78)', fontSize:12 }}><div style={{ width:18, height:8, borderRadius:4, background:lv.c }} /><strong style={{ color:'white' }}>{lv.label}</strong><span>{lv.desc}</span></div>)}</div>
         </div>
       </FullscreenMetricModal>
       {showInfoModal && (
