@@ -33,6 +33,39 @@ const CLS = {
   Coelacanthi:    { mid:'#1C3A80', img:'#2A52A8', badge:'#0C1840', accent:'#6088F8', detailTop:'#102258', detailBg:'#081438', label:'Celacanto',    icon:'🐟' },
 };
 
+const DEX = {
+  bgApp:'#101216',
+  bgDeep:'#0B0D10',
+  surface1:'#171A20',
+  surface2:'#1D222B',
+  surface3:'#242A34',
+  textMain:'#F5F1EA',
+  textMuted:'rgba(245,241,234,.62)',
+  borderSoft:'rgba(255,255,255,.08)',
+  borderMedium:'rgba(255,255,255,.16)',
+  status:{
+    misterioso:'#45464C',
+    ricercato:'#D8D2C4',
+    avvistato:'#C87955',
+    catturato:'#B84D3A',
+  },
+  glow:{
+    misterioso:'none',
+    ricercato:'0 0 18px rgba(216,210,196,.10)',
+    avvistato:'0 0 20px rgba(200,121,85,.20)',
+    catturato:'0 0 26px rgba(184,77,58,.30)',
+  }
+};
+function hexToRgba(hex, alpha = 1) {
+  const clean = String(hex || '#ffffff').replace('#','');
+  const full = clean.length === 3 ? clean.split('').map(ch=>ch+ch).join('') : clean;
+  const n = parseInt(full, 16);
+  const r = (n >> 16) & 255;
+  const g = (n >> 8) & 255;
+  const b = n & 255;
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
 // Icone silhouette per stato "non visto" — una per ogni classe
 const CLASS_ICONS = {
   Mammalia:       '/icone_unknown/class-mammalia.png',
@@ -86,8 +119,8 @@ const GRID_SILHOUETTE_SCALE = 0.74;
 const ANIMAL_STATUS = {
   misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Identità non ancora rivelata.' },
   ricercato:  { label:'Ricercato',  short:'RIC.',  c:'#ffffff', bg:'rgba(255,255,255,.10)', border:'1.5px solid rgba(255,255,255,.24)', dot:'#ffffff', desc:'Specie ricercata nei tuoi territori, ma non ancora vista.' },
-  avvistato:  { label:'Avvistato',  short:'AVV.',  c:'#90D84A', bg:'rgba(144,216,74,.12)', border:'1.5px solid #90D84A', dot:'#90D84A', desc:'Dichiarata come vista dal vivo.' },
-  catturato:  { label:'Catturato',  short:'CAT.',  c:'#ffffff', bg:'#90D84A', border:'1.5px solid rgba(255,255,255,.32)', dot:'#ffffff', desc:'Registrato nel tuo Animaldex tramite foto o conferma.' },
+  avvistato:  { label:'Avvistato',  short:'AVV.',  c:'#C87955', bg:'rgba(200,121,85,.14)', border:'1.5px solid #C87955', dot:'#C87955', desc:'Dichiarata come vista dal vivo.' },
+  catturato:  { label:'Catturato',  short:'CAT.',  c:'#F5F1EA', bg:'rgba(184,77,58,.86)', border:'1.5px solid rgba(184,77,58,.72)', dot:'#B84D3A', desc:'Registrato nel tuo Animaldex tramite foto o conferma.' },
 };
 const ANIMAL_STATUS_ORDER = ['misterioso','ricercato','avvistato','catturato'];
 
@@ -107,10 +140,10 @@ function isRevealedStatus(status) {
 function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(status)] || ANIMAL_STATUS.ricercato; }
 
 const STATUS_CARD_STYLE = {
-  misterioso: { border:'1.5px solid rgba(255,255,255,.12)', glow:'none' },
-  ricercato: { border:'2px solid rgba(255,255,255,.38)', glow:'none' },
-  avvistato: { border:'2px solid #90D84A', glow:'0 0 18px rgba(144,216,74,.18)' },
-  catturato: { border:'2px solid #F0C84E', glow:'0 0 22px rgba(240,200,78,.28)' },
+  misterioso: { border:'1.5px solid rgba(255,255,255,.10)', glow:'none', color:DEX.status.misterioso },
+  ricercato: { border:`2px solid ${DEX.status.ricercato}`, glow:DEX.glow.ricercato, color:DEX.status.ricercato },
+  avvistato: { border:`2px solid ${DEX.status.avvistato}`, glow:DEX.glow.avvistato, color:DEX.status.avvistato },
+  catturato: { border:`2px solid ${DEX.status.catturato}`, glow:DEX.glow.catturato, color:DEX.status.catturato },
 };
 const XP_BY_RARITY = {
   seen:{ Comune:10, 'Non comune':20, Raro:50, Leggendario:120 },
@@ -2331,6 +2364,9 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   const revealed = imageVisible;
   const unrevealed = false;
   const glowAccent = getClassGlowColor(a.cls);
+  const classAccentSoft = hexToRgba(c.accent, .20);
+  const classAccentBare = hexToRgba(c.accent, .09);
+  const classAccentLine = hexToRgba(c.accent, .28);
   const glowShadow = 'none';
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const cardH = isNarrow ? 124 : 134;
@@ -2355,7 +2391,9 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
-        background: imageVisible ? c.img : '#27282D',
+        background: imageVisible
+          ? `radial-gradient(circle at 50% 36%, ${classAccentSoft} 0%, transparent 48%), linear-gradient(180deg, ${classAccentBare}, rgba(0,0,0,.38)), #171B22`
+          : 'linear-gradient(180deg, rgba(255,255,255,.045), rgba(0,0,0,.34)), #15171B',
         border: statusStyle.border
       }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
@@ -2369,7 +2407,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
           <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
         </div>
       )}
-      {photographed && <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div>}
+      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.44)', fontSize:9, fontWeight:1000, letterSpacing:.4 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
       <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
       {!mystery && (
         <div
@@ -2382,14 +2420,14 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
             padding:'8px 8px 8px',
             boxSizing:'border-box',
             background: found
-              ? `linear-gradient(180deg, transparent 0%, ${c.mid}D8 26%, ${c.mid} 100%)`
-              : 'linear-gradient(180deg, transparent 0%, rgba(125,132,141,.84) 34%, rgba(114,121,130,.98) 100%)',
+              ? `linear-gradient(180deg, transparent 0%, rgba(10,12,16,.66) 28%, rgba(10,12,16,.94) 100%), linear-gradient(90deg, ${classAccentLine}, transparent 34%)`
+              : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.82) 34%, rgba(18,20,24,.98) 100%)',
             color: unrevealed ? '#272B32' : 'white',
             fontSize:isNarrow ? 10.5 : 11.5,
             fontWeight:900,
             textAlign:'center',
             lineHeight:'12.5px',
-            textShadow: found ? '0 1px 2px rgba(0,0,0,.55)' : 'none',
+            textShadow: found ? '0 1px 3px rgba(0,0,0,.70)' : 'none',
             display:'flex',
             alignItems:'center',
             justifyContent:'center',
@@ -2752,7 +2790,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const buttonSize = isNarrow ? 40 : 46;
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', position:'relative', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
@@ -2795,7 +2833,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           ['catturato','Catturati']
         ].map(([key,label]) => {
           const active = fStatus.length === 1 && fStatus.includes(key) && !fRarity.length;
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:38, padding:'0 8px', borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:active?'#A84637':'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:900, fontFamily:'inherit' }}>{label}</button>
+          const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : 'rgba(255,255,255,.28)';
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:38, padding:'0 8px', borderRadius:12, border:`1px solid ${active ? activeColor : 'rgba(255,255,255,.10)'}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .22 : .28)}, rgba(255,255,255,.035))`:'rgba(255,255,255,.055)', color:active ? '#F5F1EA' : 'rgba(245,241,234,.88)', boxShadow:active ? `0 0 18px ${hexToRgba(activeColor, .16)}` : 'none', fontSize:11.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
@@ -2812,7 +2851,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
               : isCapturedTab
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Animaldex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
-          return <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'#A84637', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
+          return <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
         })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
@@ -3884,7 +3923,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
             <BioregionVectorMap highlightIds={ids} marine={isMarine} accent={'#A84637'} height={236} fullBleed />
           </div>
           <div style={{ display:'flex', gap:8, padding:'8px 12px 12px', background:'rgba(16,17,20,.98)', boxSizing:'border-box' }}>
-            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:900 }}>Indietro</button>
+            <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'linear-gradient(180deg,rgba(255,255,255,.060),rgba(255,255,255,.030))', color:'white', fontWeight:900 }}>Indietro</button>
             <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
           </div>
         </div>
@@ -4492,34 +4531,34 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
       <PageHeader title="Mission Control" onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 28px' }}>
-        <div style={{ borderRadius:24, padding:16, background:'linear-gradient(135deg,#20242B,#121316)', border:'1px solid rgba(255,255,255,.08)', marginBottom:14 }}>
+      <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
+        <div style={{ borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14 }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <div style={{ width:54, height:54, borderRadius:18, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', color:'#90D84A', fontSize:28 }}>🧭</div>
+            <div style={{ width:54, height:54, borderRadius:18, background:'linear-gradient(135deg,rgba(216,210,196,.14),rgba(184,77,58,.16))', display:'flex', alignItems:'center', justifyContent:'center', color:'#D8D2C4', border:'1px solid rgba(255,255,255,.10)', fontSize:28 }}>🧭</div>
             <div style={{ flex:1, minWidth:0 }}>
               <div style={{ color:'white', fontSize:18, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
               <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · Esploratore urbano · {progress.xp} / {nextLevelXP} XP</div>
-              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#90D84A,#F0C84E)', borderRadius:999 }} /></div>
+              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
             </div>
             <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
           </div>
         </div>
 
-        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg,rgba(168,70,55,.42),rgba(20,20,22,.92))', border:'1px solid rgba(168,70,55,.45)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
+        <div style={{ borderRadius:26, padding:18, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.44)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
           <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
           <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
-          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#A84637,#C45A3E)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
+          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
         </div>
 
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, marginBottom:14 }}>
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:9, marginBottom:14 }}>
           {[
-            ['🔭','Ricercati',()=>onOpenGridStatus?.(['ricercato'])],
-            ['📷','Cattura',()=>onOpenGridStatus?.(['avvistato'])],
-            ['🌍','Paese',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,action])=><button key={label} onClick={action} style={{ minHeight:76, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:7, alignItems:'center', justifyContent:'center' }}><span style={{ fontSize:21 }}>{icon}</span><span>{label}</span></button>)}
+            ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
+            ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
+            ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
+          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
         </div>
 
         <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
@@ -4541,9 +4580,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             );
             return <>
               <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
-              <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D7DCE8,#AEB7C9)" hint="Animali ricercati sul totale del Dex" />
-              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#90D84A,#4E9E42)" hint="Animali avvistati sui ricercati" />
-              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#F0C84E,#D49B1C)" hint="Animali catturati sui ricercati" />
+              <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
+              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
+              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
             </>;
           })()}
         </button>
@@ -4554,7 +4593,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
               <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
-              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'#90D84A' }} /></div>
+              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div>
             </button>)}
           </div>
         </div>}

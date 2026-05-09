@@ -56,6 +56,57 @@ const DEX = {
     catturato:'0 0 26px rgba(184,77,58,.30)',
   }
 };
+
+const TAXONOMY_CLASS_BY_ORDER = {
+  Passeriformes:'Aves',
+  Perciformes:'Actinopterygii',
+  Acipenseriformes:'Actinopterygii',
+  Siluriformes:'Actinopterygii',
+  Amiiformes:'Actinopterygii',
+  Anguilliformes:'Actinopterygii',
+  Beryciformes:'Actinopterygii',
+  Osteoglossiformes:'Actinopterygii',
+  Lepisosteiformes:'Actinopterygii',
+  Tetraodontiformes:'Actinopterygii',
+  Cypriniformes:'Actinopterygii',
+  Stomiiformes:'Actinopterygii',
+  Clupeiformes:'Actinopterygii',
+  Gymnotiformes:'Actinopterygii',
+  Esociformes:'Actinopterygii',
+  Saccopharyngiformes:'Actinopterygii',
+  Beloniformes:'Actinopterygii',
+  Gasterosteiformes:'Actinopterygii',
+  Pleuronectiformes:'Actinopterygii',
+  Gadiformes:'Actinopterygii',
+  Osmeriformes:'Actinopterygii',
+  Mugiliformes:'Actinopterygii',
+  Cyprinodontiformes:'Actinopterygii',
+  Polypteriformes:'Actinopterygii',
+  Scorpaeniformes:'Actinopterygii',
+  Characiformes:'Actinopterygii',
+  Salmoniformes:'Actinopterygii',
+  Lampriformes:'Actinopterygii',
+  Zeiformes:'Actinopterygii',
+};
+const TAXONOMY_OVERRIDES_BY_SCI = {
+  'Passer Sahari': { cls:'Aves', ord:'Passeriformes', fam:'Passeridae', gen:'Passer' },
+};
+function patchAnimalTaxonomy(raw = {}) {
+  const next = { ...(raw || {}) };
+  const sci = String(next.sci || next.scientific_name || '').trim();
+  const override = TAXONOMY_OVERRIDES_BY_SCI[sci];
+  if (override) {
+    if (!String(next.gen || next.genus || '').trim() && override.gen) next.gen = override.gen;
+    if (!String(next.fam || next.family || '').trim() && override.fam) next.fam = override.fam;
+    if (!String(next.ord || next.order || '').trim() && override.ord) next.ord = override.ord;
+    if (!String(next.cls || next.class || '').trim() && override.cls) next.cls = override.cls;
+  }
+  const ord = String(next.ord || next.order || '').trim();
+  const cls = String(next.cls || next.class || '').trim();
+  if (!cls && TAXONOMY_CLASS_BY_ORDER[ord]) next.cls = TAXONOMY_CLASS_BY_ORDER[ord];
+  return next;
+}
+
 function hexToRgba(hex, alpha = 1) {
   const clean = String(hex || '#ffffff').replace('#','');
   const full = clean.length === 3 ? clean.split('').map(ch=>ch+ch).join('') : clean;
@@ -299,7 +350,7 @@ function toArraySafe(value) {
 }
 
 function normalizeSupabaseAnimal(row, userAnimal) {
-  const raw = row?.raw && typeof row.raw === 'object' ? row.raw : {};
+  const raw = patchAnimalTaxonomy(row?.raw && typeof row.raw === 'object' ? row.raw : {});
   const geoRow = Array.isArray(row?.animal_geo) ? row.animal_geo[0] : row?.animal_geo;
   const rawGeo = raw?.geo && typeof raw.geo === 'object' ? raw.geo : {};
   const rawGeoFromRow = geoRow?.raw_geo && typeof geoRow.raw_geo === 'object' ? geoRow.raw_geo : {};
@@ -318,7 +369,7 @@ function normalizeSupabaseAnimal(row, userAnimal) {
     sci: row?.sci || raw.sci || raw.scientific_name || '',
     com_en: row?.com_en || raw.com_en || '',
     no: row?.no || raw.no || String(row?.id || '').padStart(3, '0'),
-    cls: row?.cls || raw.cls || raw.class || 'Mammalia',
+    cls: row?.cls || raw.cls || raw.class || '',
     ord: row?.ord || raw.ord || raw.order || '',
     fam: row?.fam || raw.fam || raw.family || '',
     gen: row?.gen || raw.gen || raw.genus || '',
@@ -352,8 +403,9 @@ function normalizeSupabaseAnimal(row, userAnimal) {
 }
 
 function normalizeLocalAnimal(a) {
+  const patched = patchAnimalTaxonomy(a || {});
   return {
-    ...a,
+    ...patched,
     geo: a.geo || null,
     bioregions_v4: toArraySafe(a.bioregions_v4 || a.geo?.bioregions_v4),
     map_bioregion_ids_v4: toArraySafe(a.map_bioregion_ids_v4 || a.geo?.map_bioregion_ids_v4),
