@@ -34,26 +34,42 @@ const CLS = {
 };
 
 const DEX = {
-  bgApp:'#101216',
-  bgDeep:'#0B0D10',
+  bgApp:'#0E1014',
+  bgSoft:'#11151B',
+  bgDeep:'#080A0D',
   surface1:'#171A20',
-  surface2:'#1D222B',
+  surface2:'#1C212A',
   surface3:'#242A34',
+  surfaceWarm:'#231614',
   textMain:'#F5F1EA',
-  textMuted:'rgba(245,241,234,.62)',
+  textSoft:'rgba(245,241,234,.74)',
+  textMuted:'rgba(245,241,234,.52)',
+  textFaint:'rgba(245,241,234,.34)',
   borderSoft:'rgba(255,255,255,.08)',
   borderMedium:'rgba(255,255,255,.16)',
+  borderStrong:'rgba(255,255,255,.28)',
+  rarity:{
+    comune:'#B87345',
+    nonComune:'#C8CDD2',
+    raro:'#D9A928',
+    leggendario:'#8F45FF',
+  },
   status:{
-    misterioso:'#45464C',
+    misterioso:'#3F4148',
     ricercato:'#D8D2C4',
     avvistato:'#C87955',
     catturato:'#B84D3A',
   },
   glow:{
-    misterioso:'none',
-    ricercato:'0 0 18px rgba(216,210,196,.10)',
-    avvistato:'0 0 20px rgba(200,121,85,.20)',
-    catturato:'0 0 26px rgba(184,77,58,.30)',
+    misterioso:'transparent',
+    ricercato:'rgba(216,210,196,.18)',
+    avvistato:'rgba(200,121,85,.24)',
+    catturato:'rgba(184,77,58,.34)',
+  },
+  cta:{
+    primary:'#B84D3A',
+    primaryLight:'#D46549',
+    secondary:'#C87955',
   }
 };
 
@@ -145,15 +161,15 @@ const CONS = {
   DD: { lbl:'DD', full:'Data Deficient',          c:'#FFFFFF', bg:'#808080' },
 };
 const RARITY = {
-  'Comune':      { c:'#d0895c', bg:'#4a2412', s:1, label:'Comune', shield:'/shields/common_shield.png' },
-  'Non comune':  { c:'#a1a8b2', bg:'#343a42', s:2, label:'Non comune', shield:'/shields/noncommon_shield.png' },
-  'Raro':        { c:'#f0c449', bg:'#5f4200', s:3, label:'Raro', glow:true, shield:'/shields/rare_shield.png' },
-  'Leggendario': { c:'#8f34f5', bg:'#25003f', s:4, label:'Leggendario', glow:true, animate:true, shield:'/shields/legendary_shield.png' },
+  'Comune':      { c:'#B87345', bg:'#3B2318', s:1, label:'Comune', shield:'/shields/common_shield.png' },
+  'Non comune':  { c:'#C8CDD2', bg:'#30343A', s:2, label:'Non comune', shield:'/shields/noncommon_shield.png' },
+  'Raro':        { c:'#D9A928', bg:'#4A3410', s:3, label:'Raro', glow:true, shield:'/shields/rare_shield.png' },
+  'Leggendario': { c:'#8F45FF', bg:'#24103F', s:4, label:'Leggendario', glow:true, animate:true, shield:'/shields/legendary_shield.png' },
 };
 const RARITY_CYCLE = ['Comune','Non comune','Raro','Leggendario'];
-const RARITY_COLOR = {'Comune':'#d0895c','Non comune':'#a1a8b2','Raro':'#f0c449','Leggendario':'#8f34f5'};
-const RARITY_BG = {'Comune':'#4a2412','Non comune':'#343a42','Raro':'#5f4200','Leggendario':'#25003f'};
-const RARITY_BORDER = {'Comune':'#d0895c','Non comune':'#a1a8b2','Raro':'#f0c449','Leggendario':'#8f34f5'};
+const RARITY_COLOR = {'Comune':'#B87345','Non comune':'#C8CDD2','Raro':'#D9A928','Leggendario':'#8F45FF'};
+const RARITY_BG = {'Comune':'#3B2318','Non comune':'#30343A','Raro':'#4A3410','Leggendario':'#24103F'};
+const RARITY_BORDER = {'Comune':'#B87345','Non comune':'#C8CDD2','Raro':'#D9A928','Leggendario':'#8F45FF'};
 
 const SHIELD_PATHS = {
   'Comune': '/shields/common_shield.png',
@@ -191,10 +207,10 @@ function isRevealedStatus(status) {
 function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(status)] || ANIMAL_STATUS.ricercato; }
 
 const STATUS_CARD_STYLE = {
-  misterioso: { border:'1.5px solid rgba(255,255,255,.10)', glow:'none', color:DEX.status.misterioso },
-  ricercato: { border:`2px solid ${DEX.status.ricercato}`, glow:DEX.glow.ricercato, color:DEX.status.ricercato },
-  avvistato: { border:`2px solid ${DEX.status.avvistato}`, glow:DEX.glow.avvistato, color:DEX.status.avvistato },
-  catturato: { border:`2px solid ${DEX.status.catturato}`, glow:DEX.glow.catturato, color:DEX.status.catturato },
+  misterioso: { border:'2.5px solid #3F4148', glow:'none', color:'#3F4148' },
+  ricercato: { border:'2.5px solid #D8D2C4', glow:'0 0 18px rgba(216,210,196,.18)', color:'#D8D2C4' },
+  avvistato: { border:'2.5px solid #C87955', glow:'0 0 18px rgba(200,121,85,.24)', color:'#C87955' },
+  catturato: { border:'2.5px solid #B84D3A', glow:'0 0 18px rgba(184,77,58,.34)', color:'#B84D3A' },
 };
 const XP_BY_RARITY = {
   seen:{ Comune:10, 'Non comune':20, Raro:50, Leggendario:120 },
@@ -266,6 +282,9 @@ function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCo
     xp,
     level: computeLevelFromXP(xp),
   };
+}
+function pluralizeCount(count, singular, plural) {
+  return `${count} ${count === 1 ? singular : plural}`;
 }
 function getStatusActions(status) {
   const s = normalizeAnimalStatus(status);
@@ -886,6 +905,207 @@ const SCALE = { Min:0.7, Base:1, Max:1.3 };
 
 // ── Rarity CSS injection ──────────────────────────────────────────────
 const RARITY_CSS = `
+
+:root {
+  --bg-app: #0E1014;
+  --bg-app-soft: #11151B;
+  --bg-app-deep: #080A0D;
+  --surface-1: #171A20;
+  --surface-2: #1C212A;
+  --surface-3: #242A34;
+  --surface-warm: #231614;
+  --text-main: #F5F1EA;
+  --text-soft: rgba(245, 241, 234, 0.74);
+  --text-muted: rgba(245, 241, 234, 0.52);
+  --text-faint: rgba(245, 241, 234, 0.34);
+  --border-soft: rgba(255,255,255,0.08);
+  --border-medium: rgba(255,255,255,0.16);
+  --border-strong: rgba(255,255,255,0.28);
+  --rarity-common: #B87345;
+  --rarity-uncommon: #C8CDD2;
+  --rarity-rare: #D9A928;
+  --rarity-legendary: #8F45FF;
+  --status-mystery: #3F4148;
+  --status-searched: #D8D2C4;
+  --status-seen: #C87955;
+  --status-captured: #B84D3A;
+  --glow-searched: rgba(216,210,196,0.18);
+  --glow-seen: rgba(200,121,85,0.24);
+  --glow-captured: rgba(184,77,58,0.34);
+  --cta-primary: #B84D3A;
+  --cta-primary-light: #D46549;
+  --cta-secondary: #C87955;
+  --radius-card: 28px;
+  --radius-panel: 32px;
+  --radius-pill: 999px;
+}
+.app-root {
+  min-height: 100vh;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 50% -10%, rgba(184,77,58,0.16), transparent 36%),
+    radial-gradient(circle at 10% 20%, rgba(60,92,80,0.10), transparent 34%),
+    linear-gradient(180deg, #11151B 0%, #0E1014 42%, #080A0D 100%);
+}
+.page-title {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--text-main);
+  line-height: 1;
+}
+.page-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+.profile-pass {
+  margin: 20px 16px 0;
+  padding: 18px;
+  border-radius: 30px;
+  min-height: 132px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(216,210,196,0.12), transparent 34%),
+    linear-gradient(135deg, #1C222B 0%, #14181F 52%, #101318 100%);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 18px 44px rgba(0,0,0,0.34);
+}
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 40% 30%, rgba(255,255,255,0.22), transparent 35%),
+    linear-gradient(135deg, #3A414D, #262B35);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.12),
+    0 10px 24px rgba(0,0,0,0.28);
+}
+.profile-name { font-size: 30px; line-height: 1; font-weight: 900; letter-spacing: -0.04em; }
+.profile-meta { margin-top: 6px; font-size: 15px; font-weight: 700; color: var(--text-muted); }
+.xp-track { height: 8px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 12px; }
+.xp-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #F1E4CF 0%, #D99262 48%, #B84D3A 100%); box-shadow: 0 0 16px rgba(184,77,58,0.32); }
+.main-mission-card {
+  margin: 24px 16px 0;
+  padding: 24px;
+  border-radius: 34px;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(216,169,40,0.12), transparent 26%),
+    radial-gradient(circle at 12% 20%, rgba(184,77,58,0.22), transparent 38%),
+    linear-gradient(135deg, #351A16 0%, #221514 54%, #151316 100%);
+  border: 1px solid rgba(184,77,58,0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    0 22px 54px rgba(0,0,0,0.38);
+}
+.main-mission-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.10;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: radial-gradient(circle at 50% 40%, black, transparent 78%);
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, black, transparent 78%);
+}
+.mission-kicker { font-size: 14px; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; color: #F0B85B; }
+.mission-title { margin-top: 14px; font-size: 42px; line-height: 0.98; font-weight: 950; letter-spacing: -0.06em; color: var(--text-main); }
+.mission-body { margin-top: 18px; font-size: 18px; line-height: 1.35; font-weight: 600; color: var(--text-soft); }
+.mission-cta { margin-top: 28px; width: 100%; height: 70px; border-radius: 24px; border: none; background: linear-gradient(180deg, #D8684A 0%, #B84D3A 100%); color: #FFF7EF; font-size: 20px; font-weight: 900; box-shadow: inset 0 1px 0 rgba(255,255,255,0.20), 0 14px 28px rgba(184,77,58,0.28); transition: transform 120ms ease; }
+.mission-cta:active { transform: scale(0.985); }
+.quick-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 16px 0; }
+.quick-action-card { height: 118px; border-radius: 28px; padding: 14px 10px; background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 36%), linear-gradient(180deg, #1D2128 0%, #15181D 100%); border: 1px solid rgba(255,255,255,0.10); box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 28px rgba(0,0,0,0.24); color: var(--text-main); font-family: inherit; cursor: pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.quick-action-icon { font-size: 27px; margin-bottom: 10px; }
+.quick-action-label { font-size: 17px; font-weight: 900; color: var(--text-main); }
+.quick-action-sub { margin-top: 6px; font-size: 12px; font-weight: 800; color: var(--text-muted); text-align:center; line-height:1.15; }
+.progress-card { margin: 24px 16px 0; padding: 22px; border-radius: 32px; background: linear-gradient(180deg, #1A1E24 0%, #14171C 100%); border: 1px solid rgba(255,255,255,0.10); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 18px 38px rgba(0,0,0,0.28); color: var(--text-main); font-family: inherit; width:auto; text-align:left; }
+.progress-title { font-size: 31px; font-weight: 950; letter-spacing: -0.04em; }
+.progress-subtitle { margin-top: 8px; font-size: 17px; color: var(--text-muted); font-weight: 700; }
+.progress-row { margin-top: 18px; }
+.progress-row-head { display: flex; justify-content: space-between; align-items: baseline; gap:12px; }
+.progress-row-title { font-size: 21px; font-weight: 950; }
+.progress-row-value { font-size: 17px; font-weight: 900; color: var(--text-muted); }
+.progress-track { margin-top: 9px; height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
+.progress-fill { height:100%; border-radius:999px; }
+.progress-fill-searched { background: var(--status-searched); }
+.progress-fill-seen { background: var(--status-seen); }
+.progress-fill-captured { background: var(--status-captured); }
+.animal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 16px; padding-bottom: 110px; box-sizing: border-box; }
+.animal-card {
+  position: relative;
+  aspect-ratio: 1 / 1.18;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 38%, var(--class-glow, rgba(255,255,255,.12)) 0%, transparent 46%),
+    linear-gradient(180deg, rgba(255,255,255,0.045) 0%, rgba(0,0,0,0.42) 100%),
+    #171A20;
+  border: 2.5px solid var(--status-color, var(--status-searched));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.09),
+    inset 0 -1px 0 rgba(0,0,0,0.22),
+    0 12px 26px rgba(0,0,0,0.28),
+    0 0 18px var(--status-glow, transparent);
+  transition: transform 120ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  cursor:pointer;
+  user-select:none;
+}
+.animal-card:active { transform: scale(0.975); }
+.animal-card.status-ricercato { --status-color: var(--status-searched); --status-glow: var(--glow-searched); }
+.animal-card.status-avvistato { --status-color: var(--status-seen); --status-glow: var(--glow-seen); }
+.animal-card.status-catturato { --status-color: var(--status-captured); --status-glow: var(--glow-captured); }
+.animal-card.status-misterioso { --status-color: var(--status-mystery); --status-glow: transparent; filter: saturate(0.45) brightness(0.72); }
+.animal-card.class-mammalia { --class-glow: rgba(183, 127, 47, 0.34); }
+.animal-card.class-aves { --class-glow: rgba(58, 155, 218, 0.34); }
+.animal-card.class-reptilia { --class-glow: rgba(111, 190, 67, 0.34); }
+.animal-card.class-insecta { --class-glow: rgba(199, 126, 54, 0.34); }
+.animal-card.class-actinopterygii, .animal-card.class-elasmobranchii, .animal-card.class-chondrichthyes { --class-glow: rgba(47, 142, 190, 0.34); }
+.animal-card.class-amphibia { --class-glow: rgba(54, 190, 166, 0.30); }
+.animal-card.class-arachnida { --class-glow: rgba(190, 70, 70, 0.30); }
+.animal-card.class-marine { --class-glow: rgba(80, 155, 190, 0.30); }
+.dex-number { position: absolute; top: 12px; left: 12px; z-index: 3; font-size: 13px; font-weight: 950; letter-spacing: 0.02em; color: rgba(245,241,234,0.46); text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+.rarity-sigil { position: absolute; top: 10px; right: 10px; z-index: 4; width: 28px; height: 28px; border-radius: 9px; transform: rotate(45deg); box-shadow: inset 0 1px 0 rgba(255,255,255,0.35), inset 0 -2px 3px rgba(0,0,0,0.26), 0 5px 12px rgba(0,0,0,0.22); }
+.rarity-sigil::after { content: ""; position: absolute; inset: 7px; border-radius: 4px; background: rgba(255,255,255,0.38); transform: rotate(-45deg); opacity: 0.65; }
+.rarity-common { background: linear-gradient(135deg, #F0B179 0%, #B87345 45%, #693821 100%); border: 1px solid rgba(255,205,158,0.65); }
+.rarity-uncommon { background: linear-gradient(135deg, #FFFFFF 0%, #C8CDD2 42%, #6F7780 100%); border: 1px solid rgba(255,255,255,0.72); }
+.rarity-rare { background: linear-gradient(135deg, #FFE680 0%, #D9A928 44%, #7E5A0F 100%); border: 1px solid rgba(255,231,128,0.80); box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), 0 0 16px rgba(217,169,40,0.34); }
+.rarity-legendary { background: linear-gradient(135deg, #F1D9FF 0%, #8F45FF 42%, #39156F 100%); border: 1px solid rgba(220,185,255,0.82); box-shadow: inset 0 1px 0 rgba(255,255,255,0.50), 0 0 18px rgba(143,69,255,0.45); }
+.rarity-dot { display:none !important; }
+.animal-image-wrap { position: absolute; inset: 28px 10px 44px; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.animal-image-wrap > div { background: transparent !important; }
+.animal-image-wrap img { max-width: 88% !important; max-height: 88% !important; object-fit: contain !important; filter: drop-shadow(0 10px 12px rgba(0,0,0,0.34)) saturate(1.04) !important; -webkit-filter: drop-shadow(0 10px 12px rgba(0,0,0,0.34)) saturate(1.04) !important; }
+.card-name-band { position: absolute; left: 0; right: 0; bottom: 0; min-height: 48px; padding: 18px 8px 9px; display: flex; align-items: flex-end; justify-content: center; z-index: 3; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.58) 42%, rgba(0,0,0,0.78) 100%); box-sizing:border-box; }
+.animal-card-name { color: var(--text-main); font-size: 15px; line-height: 0.98; font-weight: 950; text-align: center; letter-spacing: -0.04em; text-shadow: 0 2px 4px rgba(0,0,0,0.55); max-width: 96%; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+@keyframes statusPulse { 0% { box-shadow: 0 0 0 rgba(255,255,255,0); } 45% { box-shadow: 0 0 28px var(--status-glow); } 100% { box-shadow: 0 0 18px var(--status-glow); } }
+.animal-card.status-pulse { animation: statusPulse 600ms ease-out; }
+.grid-tabs { display: flex; gap: 10px; padding: 12px 16px 8px; overflow-x: auto; flex-shrink:0; scrollbar-width:none; }
+.grid-tabs::-webkit-scrollbar { display:none; }
+.grid-tab { min-width: 112px; height: 58px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.10); background: linear-gradient(180deg, #202329 0%, #171A20 100%); color: var(--text-soft); font-size: 17px; font-weight: 900; box-shadow: inset 0 1px 0 rgba(255,255,255,0.06); font-family:inherit; cursor:pointer; }
+.grid-tab.active-ricercati { color: var(--text-main); border-color: var(--status-searched); box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 0 18px rgba(216,210,196,0.16); }
+.grid-tab.active-avvistati { color: var(--text-main); border-color: var(--status-seen); box-shadow: 0 0 18px rgba(200,121,85,0.18); }
+.grid-tab.active-catturati { color: var(--text-main); border-color: var(--status-captured); box-shadow: 0 0 20px rgba(184,77,58,0.22); }
+.grid-tab.active-misteriosi { color: var(--text-main); border-color: var(--status-mystery); box-shadow: 0 0 18px rgba(63,65,72,0.22); }
+.grid-toolbar { position: absolute; left: 0; right: 0; bottom: 0; height: 88px; padding: 12px 16px 18px; display: grid; grid-template-columns: 64px 1fr 64px 64px; gap: 12px; align-items: center; background: linear-gradient(180deg, rgba(26,18,17,0.92), rgba(184,77,58,0.88)); backdrop-filter: blur(16px); border-top: 1px solid rgba(255,255,255,0.12); box-shadow: 0 -18px 42px rgba(0,0,0,0.30); box-sizing: border-box; z-index: 45; }
+.toolbar-button { width: 64px; height: 64px; border-radius: 22px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.08); color: #FFF7EF; display: flex; align-items: center; justify-content: center; font-size: 28px; cursor:pointer; }
+.toolbar-count { text-align: center; font-size: 17px; font-weight: 950; color: #FFF7EF; }
+.cta-seen { background: linear-gradient(180deg, #D28C68 0%, #C87955 100%) !important; }
+.cta-captured { background: linear-gradient(180deg, #D8684A 0%, #B84D3A 100%) !important; }
+.animal-micro-info { margin-top: 8px; font-size: 12px; line-height: 1.3; color: var(--text-muted); font-weight: 700; }
+.reward-toast { position: fixed; left: 50%; bottom: 104px; transform: translateX(-50%); padding: 14px 18px; border-radius: 999px; background: rgba(20,20,20,0.92); border: 1px solid rgba(255,255,255,0.14); color: var(--text-main); font-size: 15px; font-weight: 900; box-shadow: 0 16px 34px rgba(0,0,0,0.34); z-index: 1000; animation: toastInOut 2.35s ease-in-out forwards; white-space:nowrap; }
+@keyframes toastInOut { 0% { opacity: 0; transform: translate(-50%, 12px) scale(0.96); } 12% { opacity: 1; transform: translate(-50%, 0) scale(1); } 84% { opacity: 1; transform: translate(-50%, 0) scale(1); } 100% { opacity: 0; transform: translate(-50%, 8px) scale(0.98); } }
+
 /* ── Tab slide transitions ── */
 @keyframes tabFromRight {
   from { transform: translateX(56px); opacity: 0; }
@@ -1631,6 +1851,30 @@ function rarityDotClass(rarity) {
 }
 function rarityMetalClass(rarity) {
   return 'rarity-metal-' + (rarity || 'Comune').toLowerCase().replace(' ', '-');
+}
+
+function raritySigilClass(rarity) {
+  const r = String(rarity || 'Comune').toLowerCase();
+  if (r.includes('leggendario')) return 'rarity-legendary';
+  if (r.includes('raro')) return 'rarity-rare';
+  if (r.includes('non')) return 'rarity-uncommon';
+  return 'rarity-common';
+}
+function animalCardClassGlow(cls='') {
+  const c = String(cls || '').toLowerCase();
+  if (c === 'mammalia') return 'class-mammalia';
+  if (c === 'aves') return 'class-aves';
+  if (c === 'reptilia') return 'class-reptilia';
+  if (c === 'insecta') return 'class-insecta';
+  if (c === 'actinopterygii') return 'class-actinopterygii';
+  if (c === 'elasmobranchii' || c === 'chondrichthyes') return 'class-elasmobranchii';
+  if (c === 'amphibia') return 'class-amphibia';
+  if (c === 'arachnida') return 'class-arachnida';
+  if (['malacostraca','anthozoa','asteroidea','cephalopoda','gastropoda','bivalvia','scyphozoa','holothuroidea','echinoidea','hydrozoa','coelacanthi'].includes(c)) return 'class-marine';
+  return '';
+}
+function RaritySigil({ rarity='Comune' }) {
+  return <div className={`rarity-sigil ${raritySigilClass(rarity)}`} title={`Rarità: ${rarity}`} aria-label={`Rarità ${rarity}`} />;
 }
 
 function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
@@ -2425,7 +2669,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
   if (mystery) {
     return (
-      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:gridMode?'transparent':'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
         {!mysteryErr ? (
           <img src={MYSTERY_PLACEHOLDER} alt="misterioso" onError={()=>setMysteryErr(true)}
             style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.68, transform:`scale(${gridMode ? GRID_MYSTERY_SCALE : 1.15})`, filter:'drop-shadow(0 0 10px rgba(255,255,255,.10))' }} />
@@ -2443,7 +2687,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
     return (
-      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
+      <div style={{ width:'100%', height:size, background:gridMode?'transparent':c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
@@ -2454,103 +2698,44 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   }
 
   return (
-    <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:gridMode?'transparent':c.img, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
 
 
 
-function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) {
-  const c = CLS[a.cls] || CLS.Mammalia;
+function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false, statusPulse=false }) {
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
-  const imageVisible = !mystery;
-  // Ricercato, Avvistato e Catturato condividono la resa grafica completa in griglia.
-  const found = imageVisible;
-  const revealed = imageVisible;
-  const unrevealed = false;
-  const glowAccent = getClassGlowColor(a.cls);
-  const classAccentSoft = hexToRgba(c.accent, .20);
-  const classAccentBare = hexToRgba(c.accent, .09);
-  const classAccentLine = hexToRgba(c.accent, .28);
-  const glowShadow = 'none';
-  const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
-  const cardH = isNarrow ? 124 : 134;
-  const labelH = isNarrow ? 36 : 38;
-  const imageH = imageVisible ? cardH : cardH - labelH + 8;
-  const photographed = status === 'catturato' || !!a.photo_url || !!a.userAnimal?.photo_url || !!a.userAnimal?.photo_path;
-  const statusStyle = STATUS_CARD_STYLE[status] || STATUS_CARD_STYLE.ricercato;
-  const displayName = clampWholeWords(a.com, isNarrow ? 25 : 31);
+  const displayName = clampWholeWords(a.com, 31);
+  const cardClasses = [
+    'animal-card',
+    `status-${status}`,
+    animalCardClassGlow(a.cls),
+    statusPulse ? 'status-pulse' : '',
+  ].filter(Boolean).join(' ');
   return (
     <div
       data-tour={tutorialHighlight ? 'grid-first-animal' : undefined}
+      className={cardClasses}
       onClick={()=>onClick(a)}
       style={{
-        height:cardH,
-        borderRadius:18,
-        overflow:'hidden',
-        cursor:'pointer',
-        position:'relative',
-        userSelect:'none',
-        transition:'transform .1s ease, box-shadow .3s ease, opacity .2s ease',
-        boxShadow:tutorialHighlight ? `0 0 0 3px #90D84A, 0 0 34px 8px ${glowAccent}88` : statusStyle.glow,
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
+        boxShadow:tutorialHighlight ? '0 0 0 3px #D8D2C4, 0 0 34px rgba(216,210,196,.28)' : undefined,
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
-        background: imageVisible
-          ? `radial-gradient(circle at 50% 36%, ${classAccentSoft} 0%, transparent 48%), linear-gradient(180deg, ${classAccentBare}, rgba(0,0,0,.38)), #171B22`
-          : 'linear-gradient(180deg, rgba(255,255,255,.045), rgba(0,0,0,.34)), #15171B',
-        border: statusStyle.border
       }}
-      onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
-      onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
-      onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}
     >
-      {imageVisible ? (
-        <AnimalImg a={a} size={cardH} fontSize={52} gridMode={true} />
-      ) : (
-        <div style={{ position:'absolute', left:0, right:0, top:0, height:imageH, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
-          <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
-        </div>
-      )}
-      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.44)', fontSize:9, fontWeight:1000, letterSpacing:.4 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
-      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
+      <div className="dex-number">#{String(a.no || a.id || '').padStart(3,'0')}</div>
+      <RaritySigil rarity={a.rarity || 'Comune'} />
+      <div className="animal-image-wrap">
+        <AnimalImg a={a} size={132} fontSize={52} gridMode={true} />
+      </div>
       {!mystery && (
-        <div
-          style={{
-            position:'absolute',
-            left:0,
-            right:0,
-            bottom:0,
-            minHeight:labelH,
-            padding:'8px 8px 8px',
-            boxSizing:'border-box',
-            background: found
-              ? `linear-gradient(180deg, transparent 0%, rgba(10,12,16,.66) 28%, rgba(10,12,16,.94) 100%), linear-gradient(90deg, ${classAccentLine}, transparent 34%)`
-              : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.82) 34%, rgba(18,20,24,.98) 100%)',
-            color: unrevealed ? '#272B32' : 'white',
-            fontSize:isNarrow ? 10.5 : 11.5,
-            fontWeight:900,
-            textAlign:'center',
-            lineHeight:'12.5px',
-            textShadow: found ? '0 1px 3px rgba(0,0,0,.70)' : 'none',
-            display:'flex',
-            alignItems:'center',
-            justifyContent:'center',
-            overflow:'hidden',
-          }}
-        ><span style={{
-            display:'-webkit-box',
-            WebkitLineClamp:2,
-            WebkitBoxOrient:'vertical',
-            overflow:'hidden',
-            textOverflow:'clip',
-            wordBreak:'normal',
-            overflowWrap:'normal',
-            textWrap:'balance',
-            width:'100%'
-          }}>{displayName}</span></div>
+        <div className="card-name-band">
+          <span className="animal-card-name">{displayName}</span>
+        </div>
       )}
     </div>
   );
@@ -2792,7 +2977,7 @@ function StatusLegendRows() {
 
 // ── Grid ──────────────────────────────────────────────────────────────
 
-function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions }) {
+function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions, statusPulseId=null }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -2813,6 +2998,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
+  const gridProgress = useMemo(() => buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries }), [statusMap, visitedCountries, ANIMALS.length]);
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
 
   useEffect(() => {
@@ -2932,19 +3118,18 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         </div>
       )}
 
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:6, padding:'8px 12px 4px', flexShrink:0 }}>
+      <div className="grid-tabs">
         {[
-          ['misterioso','Misteriosi'],
-          ['ricercato','Ricercati'],
-          ['avvistato','Avvistati'],
-          ['catturato','Catturati']
-        ].map(([key,label]) => {
+          ['misterioso','Misteriosi','active-misteriosi'],
+          ['ricercato','Ricercati','active-ricercati'],
+          ['avvistato','Avvistati','active-avvistati'],
+          ['catturato','Catturati','active-catturati']
+        ].map(([key,label,activeClass]) => {
           const active = fStatus.length === 1 && fStatus.includes(key) && !fRarity.length;
-          const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : 'rgba(255,255,255,.28)';
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:38, padding:'0 8px', borderRadius:12, border:`1px solid ${active ? activeColor : 'rgba(255,255,255,.10)'}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .22 : .28)}, rgba(255,255,255,.035))`:'rgba(255,255,255,.055)', color:active ? '#F5F1EA' : 'rgba(245,241,234,.88)', boxShadow:active ? `0 0 18px ${hexToRgba(activeColor, .16)}` : 'none', fontSize:11.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} className={`grid-tab ${active ? activeClass : ''}`}>{label}</button>
         })}
       </div>
-      <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
+      <div style={{ flex:1, overflowY:'auto', padding:0, position:'relative' }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -2959,25 +3144,30 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Animaldex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
           return <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
-        })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
+        })() : <div className="animal-grid">{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId} statusPulse={statusPulseId === a.id}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
-      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 6px':'7px 12px 6px', flexShrink:0, position:'relative' }}>
-        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
-          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-            <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
-          </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{`${list.length} ${(fStatus[0] && ANIMAL_STATUS[fStatus[0]]?.label.toLowerCase()) || 'ricercati'}`}</div>
-          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
-            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0 }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </button>
-            <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} aria-label="Filtra" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
-              <svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round"/></svg>
-            </button>
-          </div>
-        </div>
+      <div className="grid-toolbar">
+        <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" className="toolbar-button">
+          <svg width="25" height="25" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
+        </button>
+        <div className="toolbar-count">{(() => {
+          const statusKey = fStatus.length === 1 ? fStatus[0] : 'ricercato';
+          if (statusKey === 'avvistato') return pluralizeCount(gridProgress.seenCount, 'avvistato', 'avvistati');
+          if (statusKey === 'catturato') return pluralizeCount(gridProgress.capturedCount, 'catturato', 'catturati');
+          if (statusKey === 'misterioso') {
+            const mysteryCount = Math.max(0, ANIMALS.length - gridProgress.searchedCount - gridProgress.seenCount - gridProgress.capturedCount);
+            return pluralizeCount(mysteryCount, 'misterioso', 'misteriosi');
+          }
+          return pluralizeCount(gridProgress.searchedCount, 'ricercato', 'ricercati');
+        })()}</div>
+        <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" className="toolbar-button">
+          <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
+        <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} aria-label="Filtra" className="toolbar-button">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round"/></svg>
+        </button>
       </div>
 
       {showMenu && (
@@ -3019,10 +3209,11 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       {showInfoModalGrid && (
         <div style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.8)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:100, padding:16 }}>
           <div style={{ background:'#1A1A1C', borderRadius:20, padding:28, maxHeight:'90vh', overflowY:'auto', maxWidth:520, width:'100%', border:'2px solid #A84637' }}>
-            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:24 }}><h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>📚 Legenda Completa</h2><button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'none', border:'none', color:'#A84637', fontSize:24, cursor:'pointer', padding:0 }}>×</button></div>
+            <div style={{ position:'sticky', top:-28, zIndex:3, margin:'-28px -28px 24px', padding:'22px 28px 16px', background:'rgba(26,26,28,.98)', borderTopLeftRadius:20, borderTopRightRadius:20, borderBottom:'1px solid rgba(255,255,255,.08)', display:'flex', justifyContent:'space-between', alignItems:'center', gap:14 }}><h2 style={{ margin:0, color:'#A84637', fontSize:22, fontWeight:900 }}>📚 Legenda Completa</h2><button onClick={()=>setShowInfoModalGrid(false)} style={{ background:'rgba(168,70,55,.10)', border:'1px solid rgba(168,70,55,.34)', color:'#A84637', fontSize:24, cursor:'pointer', width:38, height:38, borderRadius:12, display:'flex', alignItems:'center', justifyContent:'center', padding:0, flexShrink:0 }}>×</button></div>
             <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>🛡 Stato Conservazione (IUCN)</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}>{[{k:'LC',full:'Least Concern',desc:'Specie non in pericolo'},{k:'NT',full:'Near Threatened',desc:'Prossima a essere minacciata'},{k:'VU',full:'Vulnerable',desc:'A rischio di estinzione'},{k:'EN',full:'Endangered',desc:'Fortemente minacciata'},{k:'CR',full:'Critically Endangered',desc:'Gravissimamente minacciata'},{k:'EW',full:'Extinct in the Wild',desc:'Estinta in natura'},{k:'EX',full:'Extinct',desc:'Completamente estinta'},{k:'DD',full:'Data Deficient',desc:'Dati insufficienti'}].map(({k,full,desc})=>{const co=CONS[k]||CONS.DD;return <div key={k} style={{display:'flex',gap:10,alignItems:'flex-start'}}><div style={{background:co.bg,color:co.c,padding:'6px 12px',borderRadius:8,fontSize:12,fontWeight:700,whiteSpace:'nowrap',flexShrink:0}}>{k}</div><div style={{flex:1}}><div style={{color:'white',fontSize:12,fontWeight:700}}>{full}</div><div style={{color:'rgba(255,255,255,.55)',fontSize:11,marginTop:2}}>{desc}</div></div></div>;})}</div></div>
             <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>★ Rarità Animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><RarityLegendRows /></div></div>
             <div style={{ marginBottom:24 }}><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>📷 Status Animale</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><StatusLegendRows /></div></div>
+            <div><h3 style={{ margin:'0 0 12px', color:'#A84637', fontSize:14, fontWeight:800, textTransform:'uppercase', letterSpacing:.5 }}>⛓ Gerarchia Alimentare</h3><div style={{ display:'flex', flexDirection:'column', gap:8 }}><TrophicLegendRows /></div></div>
           </div>
         </div>
       )}
@@ -3449,9 +3640,12 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
             <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%', flexDirection:'column', gap:7 }}>
               <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
               {statusActions.length > 0 && (
-                <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
-                  {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{act.label}</button>)}
-                </div>
+                <>
+                  <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
+                    {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} className={act.action==='capture'?'cta-captured':'cta-seen'} style={{ height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer', boxShadow:'inset 0 1px 0 rgba(255,255,255,.16), 0 10px 18px rgba(0,0,0,.22)' }}>{act.label}</button>)}
+                  </div>
+                  <div className="animal-micro-info" style={{ textAlign:'center' }}>{visitedMatches ? `Presente in ${visitedMatches} tuoi paesi · ` : ''}2 badge collegati · {(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'}</div>
+                </>
               )}
             </div>
           </div>
@@ -4604,18 +4798,31 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const nextLevelXP = xpForLevel(progress.level + 1);
   const currLevelXP = xpForLevel(progress.level);
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
-  const animalsWithStatus = progress.animalsWithStatus;
-  const seenNotCaptured = animalsWithStatus.filter(a => a.status === 'avvistato');
-  const searchedAnimals = animalsWithStatus.filter(a => a.status === 'ricercato');
+  const seenNotCaptured = progress.animalsWithStatus.filter(a => a.status === 'avvistato');
   let mission = {
     title:'Scopri una nuova regione',
     desc:'Esplora territori e habitat per trovare nuovi animali.',
     cta:'Apri regioni',
     action:onOpenRegions || (()=>onOpen('regions')),
   };
-  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per vedere i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
-  else if (searchedAnimals.length > 0) mission = { title:'Prossima missione', desc:`Hai ${searchedAnimals.length} animali ricercati nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
-  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
+  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per rivelare i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
+  else if (progress.searchedCount > 0) mission = { title:'Prossima missione', desc:`Hai ${pluralizeCount(progress.searchedCount, 'animale ricercato', 'animali ricercati')} nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
+  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${pluralizeCount(progress.seenCount, 'animale avvistato', 'animali avvistati')} non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
+
+  const totalAnimals = Math.max(1, ANIMALS.length);
+  const searchedPct = Math.max(0, Math.min(100, (progress.searchedCount / totalAnimals) * 100));
+  const seenPct = Math.max(0, Math.min(100, (progress.seenCount / totalAnimals) * 100));
+  const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / totalAnimals) * 100));
+  const ProgressRow = ({ label, valueText, pct, fillClass }) => (
+    <div className="progress-row">
+      <div className="progress-row-head">
+        <div className="progress-row-title">{label}</div>
+        <div className="progress-row-value">{valueText}</div>
+      </div>
+      <div className="progress-track"><div className={`progress-fill ${fillClass}`} style={{ width:`${pct}%` }} /></div>
+    </div>
+  );
+
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁' },
     { id:'regions', label:'Regioni', icon:'🗺️' },
@@ -4625,80 +4832,84 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     { id:'profile', label:'Profilo', icon:'👤' },
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
+
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
-      <PageHeader title="Mission Control" onBack={onBack} />
-      <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
-        <div style={{ borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14 }}>
-          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <div style={{ width:54, height:54, borderRadius:18, background:'linear-gradient(135deg,rgba(216,210,196,.14),rgba(184,77,58,.16))', display:'flex', alignItems:'center', justifyContent:'center', color:'#D8D2C4', border:'1px solid rgba(255,255,255,.10)', fontSize:28 }}>🧭</div>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'transparent', overflow:'hidden' }}>
+      <div style={{ flexShrink:0, padding:'14px 12px 10px', display:'grid', gridTemplateColumns:'46px 1fr 46px', alignItems:'center', borderBottom:'1px solid var(--border-soft)', background:'rgba(8,10,13,.38)', backdropFilter:'blur(12px)' }}>
+        <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:14, background:'rgba(255,255,255,.04)', border:'1px solid var(--border-soft)', color:'var(--text-main)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
+        <div style={{ textAlign:'center', minWidth:0 }}>
+          <div className="page-title">Mission Control</div>
+          <div className="page-subtitle">Centro operativo del tuo Animaldex</div>
+        </div>
+        <button onClick={onLogout} aria-label="Logout" style={{ width:46, height:46, borderRadius:14, background:'rgba(255,255,255,.04)', border:'1px solid var(--border-soft)', color:'var(--text-muted)', cursor:'pointer', fontWeight:900 }}>⎋</button>
+      </div>
+
+      <div style={{ flex:1, overflowY:'auto', padding:'0 0 34px' }}>
+        <div className="profile-pass">
+          <div style={{ display:'flex', alignItems:'center', gap:14 }}>
+            <div className="profile-avatar" style={{ display:'flex', alignItems:'center', justifyContent:'center', fontSize:34 }}>🧭</div>
             <div style={{ flex:1, minWidth:0 }}>
-              <div style={{ color:'white', fontSize:18, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
-              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · Esploratore urbano · {progress.xp} / {nextLevelXP} XP</div>
-              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
+              <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
+                <div className="profile-name" style={{ whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
+                <div style={{ color:'#F0B85B', fontWeight:1000, fontSize:18, flexShrink:0 }}>🔥 3</div>
+              </div>
+              <div className="profile-meta">Liv. {progress.level} · Esploratore urbano</div>
+              <div className="xp-track"><div className="xp-fill" style={{ width:`${xpPct}%` }} /></div>
+              <div style={{ marginTop:7, color:'var(--text-muted)', fontSize:12, fontWeight:800 }}>{progress.xp} / {nextLevelXP} XP</div>
             </div>
-            <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
           </div>
         </div>
 
-        <div style={{ borderRadius:26, padding:18, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.44)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
-          <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
-          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
-          <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
-          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
+        <div className="main-mission-card">
+          <div style={{ position:'relative', zIndex:1 }}>
+            <div className="mission-kicker">Missione principale</div>
+            <div className="mission-title">{mission.title}</div>
+            <div className="mission-body">{mission.desc}</div>
+            <button onClick={mission.action} className="mission-cta">{mission.cta}</button>
+          </div>
         </div>
 
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:9, marginBottom:14 }}>
+        <div className="quick-actions">
           {[
-            ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
+            ['🔭','Ricercati',`${progress.searchedCount} specie`,()=>onOpenGridStatus?.(['ricercato'])],
             ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
             ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
+          ].map(([icon,label,sub,action])=>(
+            <button key={label} onClick={action} className="quick-action-card">
+              <span className="quick-action-icon">{icon}</span>
+              <span className="quick-action-label">{label}</span>
+              <span className="quick-action-sub">{sub}</span>
+            </button>
+          ))}
         </div>
 
-        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
-          {(() => {
-            const totalAnimals = Math.max(1, ANIMALS.length);
-            const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
-            const searchedPct = Math.max(0, Math.min(100, (unlockedCount / totalAnimals) * 100));
-            const seenPct = Math.max(0, Math.min(100, (progress.seenCount / Math.max(1, unlockedCount)) * 100));
-            const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / Math.max(1, unlockedCount)) * 100));
-            const Row = ({ label, valueText, pct, color, hint }) => (
-              <div style={{ marginTop:10 }}>
-                <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
-                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
-                  <div style={{ color:'rgba(255,255,255,.64)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
-                </div>
-                <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
-                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
-              </div>
-            );
-            return <>
-              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
-              <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
-              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
-              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
-            </>;
-          })()}
+        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} className="progress-card">
+          <div className="progress-title">Animaldex</div>
+          <div className="progress-subtitle">Progressi personali nel Dex</div>
+          <ProgressRow label="Ricercati" valueText={`${progress.searchedCount} / ${totalAnimals}`} pct={searchedPct} fillClass="progress-fill-searched" />
+          <ProgressRow label="Avvistati" valueText={`${progress.seenCount} / ${totalAnimals}`} pct={seenPct} fillClass="progress-fill-seen" />
+          <ProgressRow label="Catturati" valueText={`${progress.capturedCount} / ${totalAnimals}`} pct={capturedPct} fillClass="progress-fill-captured" />
         </button>
 
-        {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
-          <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
+        {!!progress.nearlyCompletedBadges.length && <div style={{ margin:'24px 16px 14px' }}>
+          <div style={{ color:'var(--text-muted)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px', letterSpacing:.8 }}>Badge quasi completati</div>
           <div style={{ display:'grid', gap:8 }}>
-            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
+            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid var(--border-soft)', borderRadius:20, background:'linear-gradient(180deg,#1A1E24,#14171C)', padding:14, textAlign:'left', color:'var(--text-main)', fontFamily:'inherit' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
-              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
-              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div>
+              <div style={{ color:'var(--text-muted)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
+              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#F1E4CF,#D99262,#B84D3A)' }} /></div>
             </button>)}
           </div>
         </div>}
 
-        <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+        <div style={{ color:'var(--text-muted)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'26px 18px 10px', letterSpacing:.8 }}>Navigazione</div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, margin:'0 16px' }}>
           {items.map(item=>{
             const focused = tutorialFocus === item.id;
-            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
-              <span style={{ width:38, height:38, borderRadius:14, background:'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
+            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid var(--border-soft)', borderRadius:24, background:'linear-gradient(180deg,#1D2128,#15181D)', color:'var(--text-main)', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #D8D2C4, 0 0 34px rgba(216,210,196,.34)':'inset 0 1px 0 rgba(255,255,255,.05)', opacity:tutorialFocus && !focused ? .42 : 1, fontFamily:'inherit' }}>
+              <span style={{ width:42, height:42, borderRadius:16, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:22 }}>{item.icon}</span>
               <span style={{ fontSize:13, fontWeight:950 }}>{item.label}</span>
             </button>
           })}
@@ -4707,7 +4918,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     </div>
   );
 }
-
 
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect }) {
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
@@ -6382,6 +6592,8 @@ export default function App() {
   const [photoTarget,setPhotoTarget]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
+  const [rewardToast,setRewardToast]=useState(null);
+  const [statusPulseId,setStatusPulseId]=useState(null);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
   const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
@@ -6401,7 +6613,7 @@ export default function App() {
     l.rel='stylesheet';
     l.href='https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap';
     document.head.appendChild(l);
-    document.body.style.cssText='margin:0;background:#1C1C1E;overflow:hidden;overscroll-behavior:none;touch-action:manipulation';
+    document.body.style.cssText='margin:0;background:#080A0D;overflow:hidden;overscroll-behavior:none;touch-action:manipulation';
     const meta = document.querySelector('meta[name=viewport]') || document.createElement('meta');
     meta.name = 'viewport';
     meta.content = 'width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1';
@@ -6545,11 +6757,28 @@ export default function App() {
     return () => clearTimeout(t);
   }, [activeAwardToast]);
 
+  useEffect(() => {
+    if (!rewardToast) return;
+    const t = setTimeout(() => setRewardToast(null), 2350);
+    return () => clearTimeout(t);
+  }, [rewardToast]);
+
   const handleStatusChange = async (id, status) => {
     if (!user?.id) return;
     const nextStatus = normalizeAnimalStatus(status);
     const previousStatus = normalizeAnimalStatus(statusMap[id]);
     const currentAnimal = animalsData.find(a => a.id === id);
+    if (nextStatus !== previousStatus && (nextStatus === 'avvistato' || nextStatus === 'catturato')) {
+      const rarity = currentAnimal?.rarity || 'Comune';
+      const xpGain = nextStatus === 'catturato' ? (XP_BY_RARITY.captured[rarity] || 25) : (XP_BY_RARITY.seen[rarity] || 10);
+      setStatusPulseId(id);
+      window.setTimeout(() => setStatusPulseId(prev => prev === id ? null : prev), 700);
+      setRewardToast({
+        id:`${id}-${Date.now()}`,
+        label: nextStatus === 'catturato' ? `Catturato! +${xpGain} XP` : `Avvistato! +${xpGain} XP`,
+        color: nextStatus === 'catturato' ? 'var(--status-captured)' : 'var(--status-seen)',
+      });
+    }
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     try {
@@ -6928,15 +7157,16 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} statusPulseId={statusPulseId} />{renderDetailOverlay()}</div>;
   };
 
   return (
-    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
+    <div className="app-root" style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
+      {rewardToast && <div key={rewardToast.id} className="reward-toast" style={{ borderColor:rewardToast.color, boxShadow:`0 16px 34px rgba(0,0,0,0.34), 0 0 22px ${rewardToast.color}` }}>{rewardToast.label}</div>}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
     </div>
   );
