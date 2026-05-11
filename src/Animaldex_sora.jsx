@@ -898,61 +898,6 @@ const RARITY_CSS = `
 .tab-from-right { animation: tabFromRight 0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
 .tab-from-left  { animation: tabFromLeft  0.22s cubic-bezier(.25,.46,.45,.94) forwards; }
 
-
-/* rarità in griglia: sigillo, non pallino */
-.rarity-sigil {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  z-index: 4;
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  transform: rotate(45deg);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.35),
-    inset 0 -2px 3px rgba(0,0,0,0.26),
-    0 5px 12px rgba(0,0,0,0.22);
-}
-.rarity-sigil::after {
-  content: "";
-  position: absolute;
-  inset: 7px;
-  border-radius: 3px;
-  background: rgba(255,255,255,0.38);
-  transform: rotate(-45deg);
-  opacity: 0.65;
-}
-.rarity-common {
-  background: linear-gradient(135deg, #F0B179 0%, #B87345 45%, #693821 100%);
-  border: 1px solid rgba(255,205,158,0.65);
-}
-.rarity-uncommon {
-  background: linear-gradient(135deg, #FFFFFF 0%, #C8CDD2 42%, #6F7780 100%);
-  border: 1px solid rgba(255,255,255,0.72);
-}
-.rarity-rare {
-  background: linear-gradient(135deg, #FFE680 0%, #D9A928 44%, #7E5A0F 100%);
-  border: 1px solid rgba(255,231,128,0.80);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.45),
-    0 0 16px rgba(217,169,40,0.34);
-}
-.rarity-legendary {
-  background: linear-gradient(135deg, #F1D9FF 0%, #8F45FF 42%, #39156F 100%);
-  border: 1px solid rgba(220,185,255,0.82);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.50),
-    0 0 18px rgba(143,69,255,0.45);
-}
-.rarity-dot, .rarity-dot::after {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  width: 0 !important;
-  height: 0 !important;
-}
-
 /* rarità: barra con stemma e lastra metallica/amethyst */
 .rarity-badge {
   position: relative;
@@ -1082,299 +1027,6 @@ const RARITY_CSS = `
 }
 .interactive-hint {
   animation: interactiveWiggle .46s ease-in-out .55s 1;
-}
-
-/* ── Premium Animaldex tokens and device UI ── */
-:root {
-  --bg-app: #0E1014;
-  --bg-app-soft: #11151B;
-  --bg-app-deep: #080A0D;
-  --surface-1: #171A20;
-  --surface-2: #1C212A;
-  --surface-3: #242A34;
-  --surface-warm: #231614;
-  --text-main: #F5F1EA;
-  --text-soft: rgba(245, 241, 234, 0.74);
-  --text-muted: rgba(245, 241, 234, 0.52);
-  --text-faint: rgba(245, 241, 234, 0.34);
-  --border-soft: rgba(255,255,255,0.08);
-  --border-medium: rgba(255,255,255,0.16);
-  --border-strong: rgba(255,255,255,0.28);
-  --rarity-common: #B87345;
-  --rarity-uncommon: #C8CDD2;
-  --rarity-rare: #D9A928;
-  --rarity-legendary: #8F45FF;
-  --status-mystery: #3F4148;
-  --status-searched: #D8D2C4;
-  --status-seen: #C87955;
-  --status-captured: #B84D3A;
-  --glow-searched: rgba(216,210,196,0.18);
-  --glow-seen: rgba(200,121,85,0.24);
-  --glow-captured: rgba(184,77,58,0.34);
-  --cta-primary: #B84D3A;
-  --cta-primary-light: #D46549;
-  --cta-secondary: #C87955;
-  --radius-card: 28px;
-  --radius-panel: 32px;
-  --radius-pill: 999px;
-}
-.app-root {
-  min-height: 100vh;
-  color: var(--text-main);
-  background:
-    radial-gradient(circle at 50% -10%, rgba(184,77,58,0.16), transparent 36%),
-    radial-gradient(circle at 10% 20%, rgba(60,92,80,0.10), transparent 34%),
-    linear-gradient(180deg, #11151B 0%, #0E1014 42%, #080A0D 100%) !important;
-}
-.page-title { font-size: 34px; font-weight: 900; letter-spacing: -0.04em; color: var(--text-main); line-height:1; }
-.page-subtitle { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-top: 4px; }
-.mission-control-page {
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 50% -10%, rgba(184,77,58,0.16), transparent 36%),
-    radial-gradient(circle at 10% 20%, rgba(60,92,80,0.10), transparent 34%),
-    linear-gradient(180deg, #11151B 0%, #0E1014 42%, #080A0D 100%);
-}
-.mission-control-header {
-  flex-shrink:0;
-  min-height:82px;
-  padding:14px 14px 10px;
-  display:grid;
-  grid-template-columns:46px 1fr 46px;
-  align-items:center;
-  border-bottom:1px solid rgba(255,255,255,.06);
-  box-sizing:border-box;
-}
-.mission-control-back {
-  width:46px;
-  height:46px;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(255,255,255,.045);
-  color:#F5F1EA;
-  font-size:28px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-}
-.profile-pass {
-  margin: 20px 16px 0;
-  padding: 18px;
-  border-radius: 30px;
-  min-height: 132px;
-  background:
-    radial-gradient(circle at 16% 20%, rgba(216,210,196,0.12), transparent 34%),
-    linear-gradient(135deg, #1C222B 0%, #14181F 52%, #101318 100%);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 18px 44px rgba(0,0,0,0.34);
-  box-sizing:border-box;
-}
-.profile-avatar {
-  width: 72px;
-  height: 72px;
-  border-radius: 22px;
-  background: radial-gradient(circle at 40% 30%, rgba(255,255,255,0.22), transparent 35%), linear-gradient(135deg, #3A414D, #262B35);
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.12), 0 10px 24px rgba(0,0,0,0.28);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-}
-.profile-name { font-size: 30px; line-height: 1; font-weight: 900; letter-spacing: -0.04em; color:var(--text-main); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.profile-meta { margin-top: 6px; font-size: 15px; font-weight: 700; color: var(--text-muted); }
-.xp-track { height: 8px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; margin-top: 12px; }
-.xp-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #F1E4CF 0%, #D99262 48%, #B84D3A 100%); box-shadow: 0 0 16px rgba(184,77,58,0.32); }
-.main-mission-card {
-  margin: 24px 16px 0;
-  padding: 24px;
-  border-radius: 34px;
-  min-height: 260px;
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(circle at 82% 12%, rgba(216,169,40,0.12), transparent 26%), radial-gradient(circle at 12% 20%, rgba(184,77,58,0.22), transparent 38%), linear-gradient(135deg, #351A16 0%, #221514 54%, #151316 100%);
-  border: 1px solid rgba(184,77,58,0.42);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 22px 54px rgba(0,0,0,0.38);
-  box-sizing:border-box;
-}
-.main-mission-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.10;
-  pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
-  background-size: 34px 34px;
-  -webkit-mask-image: radial-gradient(circle at 50% 40%, black, transparent 78%);
-  mask-image: radial-gradient(circle at 50% 40%, black, transparent 78%);
-}
-.main-mission-card > * { position:relative; z-index:1; }
-.mission-kicker { font-size: 14px; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; color: #F0B85B; }
-.mission-title { margin-top: 14px; font-size: 42px; line-height: 0.98; font-weight: 950; letter-spacing: -0.06em; color: var(--text-main); }
-.mission-body { margin-top: 18px; font-size: 18px; line-height: 1.35; font-weight: 600; color: var(--text-soft); }
-.mission-cta {
-  margin-top: 28px;
-  width: 100%;
-  height: 70px;
-  border-radius: 24px;
-  border: none;
-  background: linear-gradient(180deg, #D8684A 0%, #B84D3A 100%);
-  color: #FFF7EF;
-  font-size: 20px;
-  font-weight: 900;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.20), 0 14px 28px rgba(184,77,58,0.28);
-  font-family:inherit;
-  cursor:pointer;
-  transition:transform 120ms ease;
-}
-.mission-cta:active { transform: scale(0.985); }
-.quick-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 22px 16px 0; }
-.quick-action-card {
-  height: 118px;
-  border-radius: 28px;
-  padding: 14px 10px;
-  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 36%), linear-gradient(180deg, #1D2128 0%, #15181D 100%);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.07), 0 12px 28px rgba(0,0,0,0.24);
-  color:var(--text-main);
-  font-family:inherit;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-}
-.quick-action-icon { font-size: 27px; margin-bottom: 10px; }
-.quick-action-label { font-size: 17px; font-weight: 900; color: var(--text-main); }
-.quick-action-sub { margin-top: 6px; font-size: 12px; font-weight: 800; color: var(--text-muted); text-align:center; }
-.progress-card {
-  margin: 24px 16px 0;
-  padding: 22px;
-  border-radius: 32px;
-  background: linear-gradient(180deg, #1A1E24 0%, #14171C 100%);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 18px 38px rgba(0,0,0,0.28);
-  color:var(--text-main);
-  width:calc(100% - 32px);
-  text-align:left;
-  font-family:inherit;
-  cursor:pointer;
-  box-sizing:border-box;
-}
-.progress-title { font-size: 31px; font-weight: 950; letter-spacing: -0.04em; }
-.progress-subtitle { margin-top: 8px; font-size: 17px; color: var(--text-muted); font-weight: 700; }
-.progress-row { margin-top: 18px; }
-.progress-row-head { display: flex; justify-content: space-between; align-items: baseline; }
-.progress-row-title { font-size: 21px; font-weight: 950; }
-.progress-row-value { font-size: 17px; font-weight: 900; color: var(--text-muted); }
-.progress-track { margin-top: 9px; height: 10px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
-.progress-fill { height:100%; border-radius:999px; }
-.progress-fill-searched { background: var(--status-searched); }
-.progress-fill-seen { background: var(--status-seen); }
-.progress-fill-captured { background: var(--status-captured); }
-.grid-tabs { display: flex; gap: 10px; padding: 12px 16px 8px; overflow-x: auto; flex-shrink:0; scrollbar-width:none; }
-.grid-tabs::-webkit-scrollbar { display:none; }
-.grid-tab {
-  min-width: 112px;
-  height: 58px;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: linear-gradient(180deg, #202329 0%, #171A20 100%);
-  color: var(--text-soft);
-  font-size: 17px;
-  font-weight: 900;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
-  font-family:inherit;
-  cursor:pointer;
-}
-.grid-tab.active-ricercati { color: var(--text-main); border-color: var(--status-searched); box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 0 18px rgba(216,210,196,0.16); }
-.grid-tab.active-avvistati { color: var(--text-main); border-color: var(--status-seen); box-shadow: 0 0 18px rgba(200,121,85,0.18); }
-.grid-tab.active-catturati { color: var(--text-main); border-color: var(--status-captured); box-shadow: 0 0 20px rgba(184,77,58,0.22); }
-.grid-tab.active-misteriosi { color: var(--text-main); border-color: var(--status-mystery); box-shadow: 0 0 18px rgba(63,65,72,0.22); }
-.animal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; padding:16px; padding-bottom:110px; box-sizing:border-box; }
-.grid-toolbar {
-  flex-shrink:0;
-  height: 88px;
-  padding: 12px 16px 18px;
-  display: grid;
-  grid-template-columns: 64px 1fr 64px 64px;
-  gap: 12px;
-  align-items: center;
-  background: linear-gradient(180deg, rgba(26,18,17,0.92), rgba(184,77,58,0.88));
-  backdrop-filter: blur(16px);
-  border-top: 1px solid rgba(255,255,255,0.12);
-  box-shadow: 0 -18px 42px rgba(0,0,0,0.30);
-  box-sizing:border-box;
-}
-.toolbar-button {
-  width: 64px;
-  height: 64px;
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.08);
-  color: #FFF7EF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-family:inherit;
-  cursor:pointer;
-}
-.toolbar-count { text-align:center; font-size:17px; font-weight:950; color:#FFF7EF; }
-.reward-toast {
-  position: fixed;
-  left: 50%;
-  bottom: 104px;
-  transform: translateX(-50%);
-  padding: 14px 18px;
-  border-radius: 999px;
-  background: rgba(20,20,20,0.92);
-  border: 1px solid rgba(255,255,255,0.14);
-  color: var(--text-main);
-  font-size: 15px;
-  font-weight: 900;
-  box-shadow: 0 16px 34px rgba(0,0,0,0.34);
-  z-index: 1000;
-  animation: toastInOut 2.2s ease forwards;
-}
-@keyframes toastInOut {
-  0% { opacity: 0; transform: translate(-50%, 12px) scale(0.96); }
-  12% { opacity: 1; transform: translate(-50%, 0) scale(1); }
-  84% { opacity: 1; transform: translate(-50%, 0) scale(1); }
-  100% { opacity: 0; transform: translate(-50%, 8px) scale(0.98); }
-}
-/* forza badge rarità senza riquadro interno/pallino */
-.rarity-badge {
-  isolation:auto !important;
-  padding-left:14px !important;
-  overflow:hidden !important;
-  justify-content:center !important;
-}
-.rarity-badge::before,
-.rarity-badge::after,
-.rarity-shield-wrap,
-.rarity-shield,
-.rarity-shield-sheen {
-  display:none !important;
-  content:none !important;
-}
-.rarity-badge.compact,
-.rarity-badge.small,
-.rarity-badge.full {
-  padding-left:14px !important;
-}
-.rarity-badge.compact::before,
-.rarity-badge.compact::after,
-.rarity-badge.small::before,
-.rarity-badge.small::after,
-.rarity-badge.full::before,
-.rarity-badge.full::after {
-  display:none !important;
-  content:none !important;
 }
 
 `;
@@ -1981,36 +1633,24 @@ function rarityMetalClass(rarity) {
   return 'rarity-metal-' + (rarity || 'Comune').toLowerCase().replace(' ', '-');
 }
 
-
-function raritySigilClass(rarity) {
-  const r = String(rarity || 'Comune').toLowerCase();
-  if (r.includes('leggendario')) return 'rarity-legendary';
-  if (r.includes('raro')) return 'rarity-rare';
-  if (r.includes('non')) return 'rarity-uncommon';
-  return 'rarity-common';
-}
-function RaritySigil({ rarity='Comune', style={} }) {
-  return <div className={`rarity-sigil ${raritySigilClass(rarity)}`} style={style} title={`Rarità: ${rarity}`} aria-label={`Rarità ${rarity}`} />;
-}
-
 function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
   const r = RARITY[rarity] ? rarity : 'Comune';
   const cfg = {
-    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.28),rgba(78,35,20,.48))', border:'rgba(208,137,92,.54)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D' },
-    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.22),rgba(62,72,84,.48))', border:'rgba(210,220,232,.58)', glow:'0 0 10px rgba(190,210,232,.08)', text:'#E7EEF5' },
-    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.26),rgba(113,78,8,.54))', border:'rgba(246,210,92,.70)', glow:'0 0 15px rgba(240,196,73,.16)', text:'#FFE08A' },
-    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.26),rgba(34,12,70,.56))', border:'rgba(190,118,255,.76)', glow:'0 0 18px rgba(143,52,245,.24)', text:'#F0D9FF' },
+    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.28),rgba(78,35,20,.48))', border:'rgba(208,137,92,.54)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D', orb:'linear-gradient(135deg,#D78E61,#7A3F24)' },
+    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.22),rgba(62,72,84,.48))', border:'rgba(210,220,232,.58)', glow:'0 0 10px rgba(190,210,232,.08)', text:'#E7EEF5', orb:'linear-gradient(135deg,#F2F6FB,#7F8FA2)' },
+    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.26),rgba(113,78,8,.54))', border:'rgba(246,210,92,.70)', glow:'0 0 15px rgba(240,196,73,.16)', text:'#FFE08A', orb:'linear-gradient(135deg,#FFE08A,#9F6E0E)' },
+    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.26),rgba(34,12,70,.56))', border:'rgba(190,118,255,.76)', glow:'0 0 18px rgba(143,52,245,.24)', text:'#F0D9FF', orb:'linear-gradient(135deg,#F0D9FF,#8E34F5)' },
   }[r];
   const h = full ? 42 : small ? 36 : compact ? 28 : 38;
+  const orb = full ? 17 : small ? 15 : compact ? 12 : 16;
   return (
-    <div className={`rarity-badge ${compact ? 'compact' : ''} ${small ? 'small' : ''} ${full ? 'full' : ''}`} onClick={onClick} title={`${r} · sigillo Dex ${cfg.material}`} style={{
+    <div className="rarity-badge" onClick={onClick} title={`${r} · sigillo Dex ${cfg.material}`} style={{
       height:h,
       minWidth: compact ? 0 : small ? 128 : 140,
       maxWidth:'100%',
       display:'inline-flex',
       alignItems:'center',
-      justifyContent:'center',
-      gap:0,
+      gap:8,
       borderRadius:14,
       padding:`0 ${full ? 14 : 12}px`,
       position:'relative',
@@ -2022,7 +1662,17 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
       boxSizing:'border-box',
       ...style,
     }}>
-      <span style={{ color:cfg.text, fontSize:compact ? 10 : full ? 13.5 : small ? 11.5 : 12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.45)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{compact ? (suffix || r) : `${r}${suffix}`}</span>
+      <span aria-hidden="true" style={{
+        width:orb,
+        height:orb,
+        borderRadius:'50%',
+        flex:'0 0 auto',
+        background:cfg.orb,
+        boxShadow:r==='Leggendario' ? '0 0 12px rgba(143,52,245,.55)' : r==='Raro' ? '0 0 8px rgba(240,196,73,.36)' : '0 0 0 rgba(0,0,0,0)',
+        border:'1px solid rgba(255,255,255,.30)',
+      }} />
+      {!compact && <span style={{ color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.45)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{r}{suffix}</span>}
+      {compact && <span style={{ color:cfg.text, fontSize:10, fontWeight:1000, whiteSpace:'nowrap' }}>{suffix || ''}</span>}
     </div>
   );
 }
@@ -2136,136 +1786,66 @@ function parseAnimalLengthCm(lengthValue) {
   if (/\bm\b|metri|metro/.test(raw) && !/\bcm\b/.test(raw) && !/\bmm\b/.test(raw)) return max * 100;
   return max;
 }
-
-const DIMENSION_REFERENCE_ASSETS = [
-  { type:'full', label:'Corpo umano 175 cm', cm:175, src:'/dimensioni/corpo.png' },
-  { type:'bust', label:'Busto umano 50 cm', cm:50, src:'/dimensioni/busto.png' },
-  { type:'hand', label:'Mano umana 20 cm', cm:20, src:'/dimensioni/mano.png' },
-];
-
 function getLengthReference(lengthCm) {
-  if (!Number.isFinite(lengthCm) || lengthCm <= 0) return DIMENSION_REFERENCE_ASSETS[1];
-  return DIMENSION_REFERENCE_ASSETS.reduce((best, ref) => {
-    const bestScore = Math.abs(Math.log(lengthCm / best.cm));
-    const nextScore = Math.abs(Math.log(lengthCm / ref.cm));
-    return nextScore < bestScore ? ref : best;
-  }, DIMENSION_REFERENCE_ASSETS[0]);
+  if (lengthCm >= 20) return { type:'full', label:'Uomo 175 cm', cm:175 };
+  if (lengthCm >= 5) return { type:'bust', label:'Busto umano 45 cm', cm:45 };
+  return { type:'ear', label:'Orecchio umano 6 cm', cm:6 };
 }
-
-function useTrimmedImageMetrics(src) {
-  const [metrics, setMetrics] = useState(null);
-  useEffect(() => {
-    let cancelled = false;
-    if (!src) {
-      setMetrics(null);
-      return undefined;
-    }
-    const img = new Image();
-    img.onload = () => {
-      const naturalWidth = img.naturalWidth || 1;
-      const naturalHeight = img.naturalHeight || 1;
-      const fallback = { naturalWidth, naturalHeight, trimX:0, trimY:0, trimWidth:naturalWidth, trimHeight:naturalHeight };
-      try {
-        const canvas = document.createElement('canvas');
-        canvas.width = naturalWidth;
-        canvas.height = naturalHeight;
-        const ctx = canvas.getContext('2d', { willReadFrequently:true });
-        if (!ctx) throw new Error('no-ctx');
-        ctx.drawImage(img, 0, 0);
-        const { data } = ctx.getImageData(0, 0, naturalWidth, naturalHeight);
-        let minX = naturalWidth, minY = naturalHeight, maxX = -1, maxY = -1;
-        for (let y = 0; y < naturalHeight; y++) {
-          for (let x = 0; x < naturalWidth; x++) {
-            if (data[(y * naturalWidth + x) * 4 + 3] > 8) {
-              if (x < minX) minX = x;
-              if (y < minY) minY = y;
-              if (x > maxX) maxX = x;
-              if (y > maxY) maxY = y;
-            }
-          }
-        }
-        const result = maxX >= minX && maxY >= minY
-          ? { naturalWidth, naturalHeight, trimX:minX, trimY:minY, trimWidth:maxX - minX + 1, trimHeight:maxY - minY + 1 }
-          : fallback;
-        if (!cancelled) setMetrics(result);
-      } catch {
-        if (!cancelled) setMetrics(fallback);
-      }
-    };
-    img.onerror = () => { if (!cancelled) setMetrics(null); };
-    img.src = src;
-    return () => { cancelled = true; };
-  }, [src]);
-  return metrics;
-}
-
-function TrimmedImage({ src, alt='', targetVisibleHeight=null, targetVisibleMax=null, tint=true, style={} }) {
-  const metrics = useTrimmedImageMetrics(src);
-  const naturalWidth = metrics?.naturalWidth || 1;
-  const naturalHeight = metrics?.naturalHeight || 1;
-  const trimX = metrics?.trimX || 0;
-  const trimY = metrics?.trimY || 0;
-  const trimWidth = Math.max(1, metrics?.trimWidth || naturalWidth);
-  const trimHeight = Math.max(1, metrics?.trimHeight || naturalHeight);
-  const scale = targetVisibleHeight != null
-    ? targetVisibleHeight / trimHeight
-    : targetVisibleMax != null
-      ? targetVisibleMax / Math.max(trimWidth, trimHeight)
-      : 1;
-  const boxWidth = trimWidth * scale;
-  const boxHeight = trimHeight * scale;
+// ── Human/reference silhouettes and trophic pyramid ───────────────────
+function HumanSilhouette({ h = 78 }) {
+  const w = Math.max(18, Math.round(h * 0.28));
   return (
-    <div style={{ position:'relative', width:boxWidth, height:boxHeight, overflow:'hidden', flexShrink:0, ...style }}>
-      <img
-        src={src}
-        alt={alt}
-        draggable={false}
-        style={{
-          position:'absolute',
-          left:-trimX * scale,
-          top:-trimY * scale,
-          width:naturalWidth * scale,
-          height:naturalHeight * scale,
-          objectFit:'contain',
-          imageRendering:'-webkit-optimize-contrast',
-          filter:tint ? 'brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0,0,0,.28))' : 'none',
-          userSelect:'none',
-          pointerEvents:'none',
-        }}
-      />
-    </div>
+    <svg viewBox="0 0 46 170" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
+      <circle cx="23" cy="13" r="12" fill="rgba(255,255,255,.94)"/>
+      <path d="M16 29h14c4 0 7 3 7 7v45c0 4-3 7-7 7H16c-4 0-7-3-7-7V36c0-4 3-7 7-7Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M9 39c-5 11-7 25-7 42 0 4 3 7 7 7s7-3 7-7c0-15 2-27 6-35Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M37 39c5 11 7 25 7 42 0 4-3 7-7 7s-7-3-7-7c0-15-2-27-6-35Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M15 87h12l-2 69c0 5-4 8-8 8s-8-3-8-8Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M31 87H19l2 69c0 5 4 8 8 8s8-3 8-8Z" fill="rgba(255,255,255,.94)"/>
+    </svg>
   );
 }
-
+function BustSilhouette({ h = 72 }) {
+  const w = Math.max(34, Math.round(h * 0.72));
+  return (
+    <svg viewBox="0 0 72 80" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
+      <circle cx="36" cy="16" r="13" fill="rgba(255,255,255,.94)"/>
+      <path d="M14 76c2-19 13-29 22-29s20 10 22 29Z" fill="rgba(255,255,255,.94)"/>
+      <rect x="24" y="31" width="24" height="22" rx="8" fill="rgba(255,255,255,.94)"/>
+    </svg>
+  );
+}
+function EarSilhouette({ h = 72 }) {
+  const w = Math.max(28, Math.round(h * 0.52));
+  return (
+    <svg viewBox="0 0 46 76" width={w} height={h} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', overflow:'visible' }}>
+      <path d="M28 5c9 0 15 8 15 19 0 8-4 13-7 18-4 5-6 10-6 17 0 7-6 12-13 12S5 64 5 55c0-10 6-15 11-20 5-5 7-9 7-16 0-7 2-14 5-14Z" fill="rgba(255,255,255,.94)"/>
+      <path d="M25 21c5 0 9 4 9 9 0 4-2 7-4 10-3 3-5 6-5 11" fill="none" stroke="#111113" strokeWidth="3" strokeLinecap="round"/>
+    </svg>
+  );
+}
 function ScaleComparison({ animal, full=false }) {
   const lengthCm = parseAnimalLengthCm(animal?.ln);
   const ref = getLengthReference(lengthCm);
-  const referenceVisualScale = ref.type === 'bust' ? 0.72 : 1;
-  const maxPx = (full ? 190 : 66) * referenceVisualScale;
-  const minAnimalPx = (full ? 20 : 9) * referenceVisualScale;
-  const maxCm = Math.max(ref.cm, lengthCm || ref.cm * 0.35);
+  const maxPx = full ? 164 : 62;
+  const minPx = full ? 18 : 8;
+  const maxCm = Math.max(ref.cm, lengthCm || 0.1);
   const pxPerCm = maxPx / maxCm;
-  const referenceVisibleHeight = Math.max(full ? 42 : 28, ref.cm * pxPerCm);
-  const animalVisibleMax = Math.max(minAnimalPx, (lengthCm || ref.cm * 0.25) * pxPerCm);
+  const referencePx = Math.max(full ? 34 : 28, Math.round(ref.cm * pxPerCm));
+  const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
+  const renderRef = () => ref.type === 'full' ? <HumanSilhouette h={referencePx} /> : ref.type === 'bust' ? <BustSilhouette h={referencePx} /> : <EarSilhouette h={referencePx} />;
   return (
-    <div style={{ width:'100%', minHeight:full?224:74, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?58:24, padding:full?'18px 12px 10px':'6px 6px 2px', boxSizing:'border-box' }}>
-        <div style={{ width:full?128:58, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-          <TrimmedImage src={ref.src} alt={ref.label} targetVisibleHeight={referenceVisibleHeight} />
-        </div>
-        <div style={{ width:full?200:82, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-          <TrimmedImage src={animal?.image_url || MYSTERY_PLACEHOLDER} alt={animal?.com || ''} targetVisibleMax={animalVisibleMax} />
+    <div style={{ width:'100%', minHeight:full?210:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?64:28, padding:full?'18px 12px 10px':'5px 6px 2px', boxSizing:'border-box' }}>
+        <div style={{ width:full?112:54, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>{renderRef()}</div>
+        <div style={{ width:full?180:78, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
+          <img src={animal?.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0,0,0,.28))', imageRendering:'-webkit-optimize-contrast' }} />
         </div>
       </div>
-      {full && (
-        <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:800, marginTop:4, textAlign:'center', lineHeight:1.45 }}>
-          {ref.label} · rapporto calcolato sulla parte visibile delle PNG. Per l’animale viene usata la misura reale più lunga disponibile in <strong style={{ color:'rgba(255,255,255,.76)', fontWeight:900 }}>ln</strong> (di solito lunghezza corporea per coccodrilli, bovini, pesci e specie allungate).
-        </div>
-      )}
+      {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · scala proporzionale sulla misura massima dell’animale</div>}
     </div>
   );
 }
-
 function TrophicPyramid({ trophic, compact = false, showLabels = false }) {
   const activeKey = getPyramidKey(trophic);
   const widths = compact ? [20, 32, 46, 60, 74] : [42, 62, 86, 108, 128];
@@ -2881,7 +2461,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
 
 
-function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false, statusPulse=false }) {
+function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
@@ -2914,7 +2494,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false, st
         position:'relative',
         userSelect:'none',
         transition:'transform .1s ease, box-shadow .3s ease, opacity .2s ease',
-        boxShadow:tutorialHighlight ? `0 0 0 3px #90D84A, 0 0 34px 8px ${glowAccent}88` : (statusPulse ? `0 0 28px ${hexToRgba(statusStyle.color || '#ffffff', .42)}` : statusStyle.glow),
+        boxShadow:tutorialHighlight ? `0 0 0 3px #90D84A, 0 0 34px 8px ${glowAccent}88` : statusStyle.glow,
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
@@ -2935,7 +2515,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false, st
         </div>
       )}
       {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.44)', fontSize:9, fontWeight:1000, letterSpacing:.4 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
-      <RaritySigil rarity={a.rarity || 'Comune'} />
+      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
       {!mystery && (
         <div
           style={{
@@ -3212,7 +2792,7 @@ function StatusLegendRows() {
 
 // ── Grid ──────────────────────────────────────────────────────────────
 
-function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions, statusPulseId=null }) {
+function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -3233,7 +2813,6 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
-  const gridProgress = useMemo(() => buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries }), [statusMap, visitedCountries]);
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
 
   useEffect(() => {
@@ -3289,7 +2868,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       return noA - noB;
     });
 
-  const anyExtra = fRarity.length||fCons.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
+  const anyExtra = fRarity.length||fCons.length||fStatus.length||fTrophic.length||fGeography.length||fCategory.length||fConfidence.length||fMapProfile.length||fBioRegion.length||fGameRegion.length||fHabitat.length||fTax||sortBy!=='no';
   const handleCardClick = (animal) => {
     if (tutorialActive && tutorialAnimalId && animal.id !== tutorialAnimalId) return;
     onSelect?.(animal);
@@ -3340,6 +2919,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           {fTax && <span onClick={()=>setFTax(null)} style={{ background:'rgba(232,192,64,.2)', color:'#E8C040', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{fTax.label} ×</span>}
           {fRarity.map(r=><RarityBadge key={r} rarity={r} small suffix=" ×" onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ flexShrink:0 }} />)}
           {fCons.map(c=><span key={c} onClick={()=>setFCons(p=>p.filter(x=>x!==c))} style={{ background:CONS[c].bg, color:CONS[c].c, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{c} ×</span>)}
+          {fStatus.map(s=>{ const so = getStatusMeta(s); return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>; })}
           {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
           {fGeography.map(g=>{ const opt = geographyOpts.find(o=>o.value===g); return <span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{opt?.label || g} ×</span>; })}
           {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
@@ -3352,15 +2932,16 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         </div>
       )}
 
-      <div className="grid-tabs">
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:6, padding:'8px 12px 4px', flexShrink:0 }}>
         {[
-          ['misterioso','Misteriosi','active-misteriosi'],
-          ['ricercato','Ricercati','active-ricercati'],
-          ['avvistato','Avvistati','active-avvistati'],
-          ['catturato','Catturati','active-catturati']
-        ].map(([key,label,activeClass]) => {
+          ['misterioso','Misteriosi'],
+          ['ricercato','Ricercati'],
+          ['avvistato','Avvistati'],
+          ['catturato','Catturati']
+        ].map(([key,label]) => {
           const active = fStatus.length === 1 && fStatus.includes(key) && !fRarity.length;
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} className={`grid-tab ${active ? activeClass : ''}`}>{label}</button>
+          const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : 'rgba(255,255,255,.28)';
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:38, padding:'0 8px', borderRadius:12, border:`1px solid ${active ? activeColor : 'rgba(255,255,255,.10)'}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .22 : .28)}, rgba(255,255,255,.035))`:'rgba(255,255,255,.055)', color:active ? '#F5F1EA' : 'rgba(245,241,234,.88)', boxShadow:active ? `0 0 18px ${hexToRgba(activeColor, .16)}` : 'none', fontSize:11.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
@@ -3378,30 +2959,25 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Animaldex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
           return <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
-        })() : <div className="animal-grid">{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId} statusPulse={statusPulseId === a.id}/>)}</div>}
+        })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
-      <div className="grid-toolbar">
-        <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" className="toolbar-button">
-          <svg width="25" height="25" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
-        </button>
-        <div className="toolbar-count">{(() => {
-          const statusKey = fStatus.length === 1 ? fStatus[0] : 'ricercato';
-          if (statusKey === 'avvistato') return pluralizeCount(gridProgress.seenCount, 'avvistato', 'avvistati');
-          if (statusKey === 'catturato') return pluralizeCount(gridProgress.capturedCount, 'catturato', 'catturati');
-          if (statusKey === 'misterioso') {
-            const mysteryCount = Math.max(0, ANIMALS.length - gridProgress.searchedCount - gridProgress.seenCount - gridProgress.capturedCount);
-            return pluralizeCount(mysteryCount, 'misterioso', 'misteriosi');
-          }
-          return pluralizeCount(gridProgress.searchedCount, 'ricercato', 'ricercati');
-        })()}</div>
-        <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" className="toolbar-button">
-          <svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
-        </button>
-        <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} aria-label="Filtra" className="toolbar-button">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round"/></svg>
-        </button>
+      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 6px':'7px 12px 6px', flexShrink:0, position:'relative' }}>
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
+          <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+            <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
+          </button>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{`${list.length} ${(fStatus[0] && ANIMAL_STATUS[fStatus[0]]?.label.toLowerCase()) || 'ricercati'}`}</div>
+          <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
+            <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0 }}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            </button>
+            <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} aria-label="Filtra" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+              <svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round"/></svg>
+            </button>
+          </div>
+        </div>
       </div>
 
       {showMenu && (
@@ -5028,31 +4604,18 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const nextLevelXP = xpForLevel(progress.level + 1);
   const currLevelXP = xpForLevel(progress.level);
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
-  const seenNotCaptured = progress.animalsWithStatus.filter(a => a.status === 'avvistato');
+  const animalsWithStatus = progress.animalsWithStatus;
+  const seenNotCaptured = animalsWithStatus.filter(a => a.status === 'avvistato');
+  const searchedAnimals = animalsWithStatus.filter(a => a.status === 'ricercato');
   let mission = {
     title:'Scopri una nuova regione',
     desc:'Esplora territori e habitat per trovare nuovi animali.',
     cta:'Apri regioni',
     action:onOpenRegions || (()=>onOpen('regions')),
   };
-  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per rivelare i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
-  else if (progress.searchedCount > 0) mission = { title:'Prossima missione', desc:`Hai ${pluralizeCount(progress.searchedCount, 'animale ricercato', 'animali ricercati')} nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
-  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${pluralizeCount(progress.seenCount, 'animale avvistato', 'animali avvistati')} non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
-
-  const totalAnimals = Math.max(1, ANIMALS.length);
-  const searchedPct = Math.max(0, Math.min(100, (progress.searchedCount / totalAnimals) * 100));
-  const seenPct = Math.max(0, Math.min(100, (progress.seenCount / totalAnimals) * 100));
-  const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / totalAnimals) * 100));
-  const ProgressRow = ({ label, valueText, pct, fillClass }) => (
-    <div className="progress-row">
-      <div className="progress-row-head">
-        <div className="progress-row-title">{label}</div>
-        <div className="progress-row-value">{valueText}</div>
-      </div>
-      <div className="progress-track"><div className={`progress-fill ${fillClass}`} style={{ width:`${pct}%` }} /></div>
-    </div>
-  );
-
+  if (!visitedCountries.length) mission = { title:'Inizia il tuo Animaldex', desc:'Aggiungi un paese visitato per vedere i primi animali ricercati.', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
+  else if (searchedAnimals.length > 0) mission = { title:'Prossima missione', desc:`Hai ${searchedAnimals.length} animali ricercati nei tuoi paesi visitati.`, cta:'Visti rapidi', action:onQuickSeen };
+  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁' },
     { id:'regions', label:'Regioni', icon:'🗺️' },
@@ -5062,67 +4625,67 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     { id:'profile', label:'Profilo', icon:'👤' },
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
-
   return (
-    <div className="mission-control-page">
-      <div className="mission-control-header">
-        <button onClick={onBack} aria-label="Torna alla grid" className="mission-control-back">‹</button>
-        <div style={{ textAlign:'center', minWidth:0 }}>
-          <div className="page-title">Mission Control</div>
-          <div className="page-subtitle">Centro operativo del tuo Animaldex</div>
-        </div>
-        <div style={{ width:46, height:46 }} />
-      </div>
-
-      <div style={{ flex:1, overflowY:'auto', paddingBottom:30 }}>
-        <div className="profile-pass">
-          <div style={{ display:'flex', alignItems:'center', gap:14 }}>
-            <div className="profile-avatar">🧭</div>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
+      <PageHeader title="Mission Control" onBack={onBack} />
+      <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
+        <div style={{ borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+            <div style={{ width:54, height:54, borderRadius:18, background:'linear-gradient(135deg,rgba(216,210,196,.14),rgba(184,77,58,.16))', display:'flex', alignItems:'center', justifyContent:'center', color:'#D8D2C4', border:'1px solid rgba(255,255,255,.10)', fontSize:28 }}>🧭</div>
             <div style={{ flex:1, minWidth:0 }}>
-              <div style={{ display:'flex', alignItems:'center', gap:10 }}>
-                <div className="profile-name">{displayName}</div>
-                <div style={{ marginLeft:'auto', color:'#F0B85B', fontWeight:1000, fontSize:18, whiteSpace:'nowrap' }}>🔥 3</div>
-              </div>
-              <div className="profile-meta">Liv. {progress.level} · Esploratore urbano</div>
-              <div className="xp-track"><div className="xp-fill" style={{ width:`${xpPct}%` }} /></div>
-              <div style={{ color:'var(--text-muted)', fontSize:12, fontWeight:800, marginTop:7 }}>{progress.xp} / {nextLevelXP} XP</div>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
+              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · Esploratore urbano · {progress.xp} / {nextLevelXP} XP</div>
+              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
             </div>
+            <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
           </div>
         </div>
 
-        <div className="main-mission-card">
-          <div className="mission-kicker">Missione principale</div>
-          <div className="mission-title">{mission.title}</div>
-          <div className="mission-body">{mission.desc}</div>
-          <button onClick={mission.action} className="mission-cta">{mission.cta}</button>
+        <div style={{ borderRadius:26, padding:18, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.44)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
+          <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
+          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
+          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
         </div>
 
-        <div className="quick-actions">
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:9, marginBottom:14 }}>
           {[
-            ['🔭','Ricercati',pluralizeCount(progress.searchedCount, 'specie', 'specie'),()=>onOpenGridStatus?.(['ricercato'])],
+            ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
             ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
             ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,sub,action])=>(
-            <button key={label} onClick={action} className="quick-action-card">
-              <span className="quick-action-icon">{icon}</span>
-              <span className="quick-action-label">{label}</span>
-              <span className="quick-action-sub">{sub}</span>
-            </button>
-          ))}
+          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
         </div>
 
-        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} className="progress-card">
-          <div className="progress-title">Animaldex</div>
-          <div className="progress-subtitle">Stato operativo della tua collezione</div>
-          <ProgressRow label="Ricercati" valueText={`${progress.searchedCount} / ${totalAnimals}`} pct={searchedPct} fillClass="progress-fill-searched" />
-          <ProgressRow label="Avvistati" valueText={`${progress.seenCount} / ${totalAnimals}`} pct={seenPct} fillClass="progress-fill-seen" />
-          <ProgressRow label="Catturati" valueText={`${progress.capturedCount} / ${totalAnimals}`} pct={capturedPct} fillClass="progress-fill-captured" />
+        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
+          {(() => {
+            const totalAnimals = Math.max(1, ANIMALS.length);
+            const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
+            const searchedPct = Math.max(0, Math.min(100, (unlockedCount / totalAnimals) * 100));
+            const seenPct = Math.max(0, Math.min(100, (progress.seenCount / Math.max(1, unlockedCount)) * 100));
+            const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / Math.max(1, unlockedCount)) * 100));
+            const Row = ({ label, valueText, pct, color, hint }) => (
+              <div style={{ marginTop:10 }}>
+                <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
+                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
+                  <div style={{ color:'rgba(255,255,255,.64)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
+                </div>
+                <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
+                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
+              </div>
+            );
+            return <>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
+              <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
+              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
+              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
+            </>;
+          })()}
         </button>
 
-        {!!progress.nearlyCompletedBadges.length && <div style={{ margin:'24px 16px 14px' }}>
-          <div style={{ color:'rgba(245,241,234,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
+        {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
+          <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
           <div style={{ display:'grid', gap:8 }}>
-            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
+            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
               <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
               <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div>
@@ -5130,11 +4693,11 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>}
 
-        <div style={{ color:'rgba(245,241,234,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'24px 16px 8px' }}>Navigazione</div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, margin:'0 16px' }}>
+        <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
           {items.map(item=>{
             const focused = tutorialFocus === item.id;
-            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035))', color:'white', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #D8D2C4, 0 0 34px rgba(216,210,196,.35)':'none', opacity:tutorialFocus && !focused ? .42 : 1, fontFamily:'inherit' }}>
+            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
               <span style={{ width:38, height:38, borderRadius:14, background:'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
               <span style={{ fontSize:13, fontWeight:950 }}>{item.label}</span>
             </button>
@@ -6819,8 +6382,6 @@ export default function App() {
   const [photoTarget,setPhotoTarget]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
-  const [rewardToast,setRewardToast]=useState(null);
-  const [statusPulseId,setStatusPulseId]=useState(null);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
   const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
@@ -6989,12 +6550,6 @@ export default function App() {
     const nextStatus = normalizeAnimalStatus(status);
     const previousStatus = normalizeAnimalStatus(statusMap[id]);
     const currentAnimal = animalsData.find(a => a.id === id);
-    if (nextStatus === 'avvistato' || nextStatus === 'catturato') {
-      setStatusPulseId(id);
-      setRewardToast({ text: nextStatus === 'catturato' ? 'Catturato! +XP' : 'Avvistato! +XP', status: nextStatus, key: `${id}-${nextStatus}-${Date.now()}` });
-      setTimeout(() => setStatusPulseId(prev => prev === id ? null : prev), 650);
-      setTimeout(() => setRewardToast(null), 2300);
-    }
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     try {
@@ -7373,16 +6928,15 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} statusPulseId={statusPulseId} />{renderDetailOverlay()}</div>;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
 
   return (
-    <div className="app-root" style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', position:'relative' }}>
+    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
-      {rewardToast && <div key={rewardToast.key} className="reward-toast" style={{ borderColor: rewardToast.status === 'catturato' ? 'rgba(184,77,58,.46)' : 'rgba(200,121,85,.42)' }}>{rewardToast.text}</div>}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
     </div>
   );
