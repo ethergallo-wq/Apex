@@ -192,9 +192,10 @@ function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(stat
 
 const STATUS_CARD_STYLE = {
   misterioso: { border:'1.5px solid rgba(255,255,255,.10)', glow:'none', color:DEX.status.misterioso },
-  ricercato: { border:`2px solid ${DEX.status.ricercato}`, glow:DEX.glow.ricercato, color:DEX.status.ricercato },
-  avvistato: { border:`2px solid ${DEX.status.avvistato}`, glow:DEX.glow.avvistato, color:DEX.status.avvistato },
-  catturato: { border:`2px solid ${DEX.status.catturato}`, glow:DEX.glow.catturato, color:DEX.status.catturato },
+  // Ricercato e Avvistato: bordo al 60% dello spessore precedente, niente glow.
+  ricercato: { border:`1.2px solid ${DEX.status.ricercato}`, glow:'none', color:DEX.status.ricercato },
+  avvistato: { border:`1.2px solid ${DEX.status.avvistato}`, glow:'none', color:DEX.status.avvistato },
+  catturato: { border:`2px solid ${DEX.status.catturato}`, glow:'none', color:DEX.status.catturato },
 };
 const XP_BY_RARITY = {
   seen:{ Comune:10, 'Non comune':20, Raro:50, Leggendario:120 },
@@ -1068,12 +1069,31 @@ const RARITY_CSS = `
   animation: interactiveWiggle .46s ease-in-out .55s 1;
 }
 
+
+@keyframes rarityWaterReflect {
+  0%,100% { transform: translateX(-18%) skewX(-18deg); opacity:.20; }
+  50% { transform: translateX(18%) skewX(-18deg); opacity:.42; }
+}
+@keyframes rarityGemTwinkle {
+  0%,100% { opacity:.42; transform:scale(.92); }
+  50% { opacity:1; transform:scale(1.12); }
+}
+.rarity-legendary-water { animation: rarityWaterReflect 3.8s ease-in-out infinite; }
+.rarity-rare-gems { animation: rarityGemTwinkle 2.4s ease-in-out infinite; }
+.gebco-map-label {
+  position:absolute; left:10px; bottom:8px; z-index:4; pointer-events:none;
+  color:rgba(180,226,255,.58); font-size:9px; font-weight:1000; letter-spacing:.7px; text-transform:uppercase;
+  text-shadow:0 2px 8px rgba(0,0,0,.75);
+}
+
 `;
 
 // ── Flag Emoji Generator ──────────────────────────────────────────────
 const getFlagEmoji = (code) => {
+  const clean = String(code || '').toUpperCase();
+  if (!/^[A-Z]{2}$/.test(clean)) return '🌍';
   try {
-    return String.fromCodePoint(...[...code.toUpperCase()].map(char => 127397 + char.charCodeAt(0)));
+    return String.fromCodePoint(...[...clean].map(char => 127397 + char.charCodeAt(0)));
   } catch {
     return '🌍';
   }
@@ -1140,7 +1160,7 @@ const COUNTRIES = [
   {code:'ER',name:'Eritrea'},{code:'MG',name:'Madagascar'},{code:'MU',name:'Mauritius'},{code:'SC',name:'Seychelles'},{code:'KM',name:'Comore'},
   {code:'MR',name:'Mauritania'},{code:'ML',name:'Mali'},{code:'BF',name:'Burkina Faso'},{code:'NE',name:'Niger'},{code:'TD',name:'Ciad'},
   {code:'CF',name:'Repubblica Centrafricana'},{code:'CG',name:'Congo'},{code:'CD',name:'Rep. Democratica del Congo'},{code:'GA',name:'Gabon'},{code:'GQ',name:'Guinea Equatoriale'},
-  {code:'STP',name:'São Tomé e Príncipe'},{code:'LR',name:'Liberia'},{code:'SL',name:'Sierra Leone'},{code:'GM',name:'Gambia'},{code:'GW',name:'Guinea-Bissau'},
+  {code:'ST',name:'São Tomé e Príncipe'},{code:'LR',name:'Liberia'},{code:'SL',name:'Sierra Leone'},{code:'GM',name:'Gambia'},{code:'GW',name:'Guinea-Bissau'},
   {code:'GN',name:'Guinea'},{code:'BJ',name:'Benin'},{code:'TG',name:'Togo'},{code:'LV',name:'Lettonia'},{code:'LT',name:'Lituania'},
   {code:'EE',name:'Estonia'},{code:'BY',name:'Bielorussia'},{code:'MD',name:'Moldavia'},{code:'RS',name:'Serbia'},{code:'BA',name:'Bosnia ed Erzegovina'},
   {code:'ME',name:'Montenegro'},{code:'MK',name:'Macedonia del Nord'},{code:'AL',name:'Albania'},{code:'XK',name:'Kosovo'},{code:'IE',name:'Irlanda'},
@@ -1381,13 +1401,19 @@ function getRegionCoverSources(item, provided) {
 
 
 
+function normalizeIsoList(list = []) {
+  return Array.from(new Set((list || [])
+    .map(c => String(c || '').trim().toUpperCase())
+    .filter(c => /^[A-Z]{2}$/.test(c))
+  )).sort((a,b)=>getCountryDisplayName(a).localeCompare(getCountryDisplayName(b),'it'));
+}
 function getVisitedCountries() {
   if (typeof window === 'undefined') return [];
-  try { return JSON.parse(window.localStorage.getItem('animaldex_visited_countries') || '[]'); } catch { return []; }
+  try { return normalizeIsoList(JSON.parse(window.localStorage.getItem('animaldex_visited_countries') || '[]')); } catch { return []; }
 }
 function saveVisitedCountries(list = []) {
   if (typeof window === 'undefined') return;
-  try { window.localStorage.setItem('animaldex_visited_countries', JSON.stringify(Array.from(new Set(list)).sort())); } catch {}
+  try { window.localStorage.setItem('animaldex_visited_countries', JSON.stringify(normalizeIsoList(list))); } catch {}
 }
 function getCountryDisplayName(code) {
   const c = String(code || '').toUpperCase();
@@ -1412,14 +1438,14 @@ function getCountryDisplayName(code) {
     AQ:'Antartide', BV:'Isola Bouvet', GS:'Georgia del Sud e Sandwich Australi', HM:'Heard e McDonald',
     TF:'Terre australi francesi', SH:'Sant’Elena'
   };
-  return overrides[c] || 'Nazione';
+  return overrides[c] || (/^[A-Z]{2}$/.test(c) ? c : String(code || ''));
 }
 function getAllScratchCountries() {
   const set = new Set([
     ...COUNTRIES.map(c => c.code),
     ...GEO_REGION_MAP.flatMap(r => r.iso),
   ]);
-  return Array.from(set).sort((a,b)=>getCountryDisplayName(a).localeCompare(getCountryDisplayName(b),'it'));
+  return normalizeIsoList(Array.from(set));
 }
 
 function getGeoOptionIsoCodes(value) {
@@ -1701,7 +1727,10 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
       boxSizing:'border-box',
       ...style,
     }}>
-      <span style={{ color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.50)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{label}</span>
+      {r === 'Non comune' && <span aria-hidden style={{ position:'absolute', inset:0, background:'linear-gradient(115deg, transparent 12%, rgba(255,255,255,.16) 42%, transparent 62%)', opacity:.42, mixBlendMode:'screen', pointerEvents:'none' }} />}
+      {r === 'Raro' && <span aria-hidden className="rarity-rare-gems" style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 18% 28%, rgba(255,255,255,.95) 0 1.4px, transparent 2.3px), radial-gradient(circle at 78% 24%, rgba(255,255,255,.82) 0 1.2px, transparent 2.2px), radial-gradient(circle at 68% 72%, rgba(255,244,164,.86) 0 1.3px, transparent 2.4px), radial-gradient(circle at 34% 74%, rgba(255,255,255,.70) 0 1px, transparent 2px)', pointerEvents:'none', mixBlendMode:'screen' }} />}
+      {r === 'Leggendario' && <span aria-hidden className="rarity-legendary-water" style={{ position:'absolute', inset:'-20% -35%', background:'repeating-linear-gradient(110deg, transparent 0 13px, rgba(170,225,255,.22) 14px 17px, transparent 18px 30px)', filter:'blur(.35px)', mixBlendMode:'screen', pointerEvents:'none' }} />}
+      <span style={{ position:'relative', zIndex:2, color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.50)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{label}</span>
     </div>
   );
 }
@@ -1758,7 +1787,7 @@ function getGaugeAngle(wt_str) {
   return seg.start + (seg.end - seg.start) * ratio;
 }
 
-function GaugeSVG({ wt_str }) {
+function GaugeSVG({ wt_str, large=false }) {
   const cat = getWeightCat(wt_str);
   const angle = getGaugeAngle(wt_str);
   const col = cat.color;
@@ -1795,7 +1824,7 @@ function GaugeSVG({ wt_str }) {
   const n2 = polarToXY(angle + 4, 8);
 
   return (
-    <svg viewBox="0 0 120 82" width="100%" height="52" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 120 82" width="100%" height={large ? 142 : 52} xmlns="http://www.w3.org/2000/svg">
       <g dangerouslySetInnerHTML={{ __html: arcs }} />
       <polygon points={`${n1.x},${n1.y} ${nx},${ny} ${n2.x},${n2.y}`} fill={col} />
       <circle cx={cx} cy={cy} r="4.6" fill={col} />
@@ -1816,9 +1845,9 @@ function parseAnimalLengthCm(lengthValue) {
   return max;
 }
 function getLengthReference(lengthCm) {
-  if (lengthCm >= 20) return { type:'full', label:'Uomo 175 cm', cm:175 };
-  if (lengthCm >= 5) return { type:'bust', label:'Busto umano 45 cm', cm:45 };
-  return { type:'ear', label:'Orecchio umano 6 cm', cm:6 };
+  if (lengthCm > 50) return { type:'corpo', label:'Corpo umano 175 cm', cm:175, src:'/dimensioni/corpo.png' };
+  if (lengthCm >= 20) return { type:'busto', label:'Busto umano 50 cm', cm:50, src:'/dimensioni/busto.png' };
+  return { type:'mano', label:'Mano 20 cm', cm:20, src:'/dimensioni/mano.png' };
 }
 // ── Human/reference silhouettes and trophic pyramid ───────────────────
 function HumanSilhouette({ h = 78 }) {
@@ -1862,27 +1891,29 @@ function ScaleComparison({ animal, full=false }) {
   const pxPerCm = maxPx / maxCm;
   const referencePx = Math.max(full ? 34 : 28, Math.round(ref.cm * pxPerCm));
   const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
-  const renderRef = () => ref.type === 'full' ? <HumanSilhouette h={referencePx} /> : ref.type === 'bust' ? <BustSilhouette h={referencePx} /> : <EarSilhouette h={referencePx} />;
+  const renderRef = () => (
+    <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?132:56, width:'auto', height:'auto', objectFit:'contain', display:'block', opacity:.96 }} />
+  );
   return (
-    <div style={{ width:'100%', minHeight:full?210:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?64:28, padding:full?'18px 12px 10px':'5px 6px 2px', boxSizing:'border-box' }}>
-        <div style={{ width:full?112:54, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>{renderRef()}</div>
-        <div style={{ width:full?180:78, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-          <img src={animal?.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1) drop-shadow(0 2px 2px rgba(0,0,0,.28))', imageRendering:'-webkit-optimize-contrast' }} />
+    <div style={{ width:'100%', minHeight:full?236:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?70:28, padding:full?'22px 12px 12px':'5px 6px 2px', boxSizing:'border-box' }}>
+        <div style={{ width:full?132:58, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>{renderRef()}</div>
+        <div style={{ width:full?190:78, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
+          <img src={animal?.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast' }} />
         </div>
       </div>
       {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · scala proporzionale sulla misura massima dell’animale</div>}
     </div>
   );
 }
-function TrophicPyramid({ trophic, compact = false, showLabels = false }) {
+function TrophicPyramid({ trophic, compact = false, showLabels = false, large=false }) {
   const activeKey = getPyramidKey(trophic);
-  const widths = compact ? [20, 32, 46, 60, 74] : [42, 62, 86, 108, 128];
-  const rowH = compact ? 9 : 18;
-  const barH = compact ? 6 : 12;
-  const vbW = compact ? 78 : 132;
-  const svgW = compact ? 72 : 130;
-  const svgH = compact ? 50 : 96;
+  const widths = compact ? [20, 32, 46, 60, 74] : large ? [70, 104, 142, 178, 214] : [42, 62, 86, 108, 128];
+  const rowH = compact ? 9 : large ? 25 : 18;
+  const barH = compact ? 6 : large ? 18 : 12;
+  const vbW = compact ? 78 : large ? 224 : 132;
+  const svgW = compact ? 72 : large ? 220 : 130;
+  const svgH = compact ? 50 : large ? 156 : 96;
   return (
     <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap: showLabels ? 16 : 0 }}>
       <svg viewBox={`0 0 ${vbW} ${rowH*5}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg" style={{ overflow:'visible' }}>
@@ -2457,7 +2488,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
       <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
         {!mysteryErr ? (
           <img src={MYSTERY_PLACEHOLDER} alt="misterioso" onError={()=>setMysteryErr(true)}
-            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.68, transform:`scale(${gridMode ? GRID_MYSTERY_SCALE : 1.15})`, filter:'drop-shadow(0 0 10px rgba(255,255,255,.10))' }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.68, transform:`scale(${gridMode ? GRID_MYSTERY_SCALE : 1.15})`, filter:'none' }} />
         ) : (
           <div style={{ width:54, height:54, borderRadius:'50%', background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.14)', color:'rgba(255,255,255,.34)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30, fontWeight:900 }}>?</div>
         )}
@@ -2467,26 +2498,22 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
   const localImageUrl = a.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id) || x.sci === a.sci)?.image_url || '');
   if (localImageUrl && !imgErr) {
-    const glowColor = getClassGlowColor(a.cls);
-    const dropShadow = gridMode
-      ? `drop-shadow(0 0 ${Math.round(size*0.04)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.085)}px ${glowColor}66) drop-shadow(0 0 ${Math.round(size*0.125)}px ${glowColor}33)`
-      : `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
-    const imageBg = `radial-gradient(circle at 50% 52%, ${hexToRgba(glowColor, gridMode ? .19 : .30)} 0%, ${hexToRgba(glowColor, gridMode ? .09 : .13)} 28%, rgba(34,36,42,.96) 58%, #202228 100%)`;
+    const imageBg = '#202228';
     return (
       <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
-            filter: dropShadow,
-            WebkitFilter: dropShadow }} />
+            filter:'none',
+            WebkitFilter:'none' }} />
       </div>
     );
   }
 
   return (
-    <div style={{ width:'100%', height:size, background:`radial-gradient(circle at 50% 52%, ${hexToRgba(getClassGlowColor(a.cls), gridMode ? .11 : .22)} 0%, rgba(34,36,42,.96) 56%, #202228 100%)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:'#202228', display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
@@ -2499,7 +2526,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   const imageVisible = !mystery;
   // Ricercato, Avvistato e Catturato condividono la resa grafica completa in griglia.
   const found = imageVisible;
-  const glowAccent = getClassGlowColor(a.cls);
+  const classMeta = CLS[a.cls] || CLS.Mammalia;
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const cardH = isNarrow ? 124 : 134;
   const labelH = isNarrow ? 36 : 38;
@@ -2519,7 +2546,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         position:'relative',
         userSelect:'none',
         transition:'transform .1s ease, box-shadow .3s ease, opacity .2s ease',
-        boxShadow:tutorialHighlight ? `0 0 0 3px #90D84A, 0 0 34px 8px ${glowAccent}88` : statusStyle.glow,
+        boxShadow:tutorialHighlight ? '0 0 0 3px #90D84A, 0 0 24px rgba(144,216,74,.34)' : statusStyle.glow,
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
@@ -2554,7 +2581,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
             background: found
               ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.70) 28%, rgba(10,12,16,.96) 100%)'
               : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.82) 34%, rgba(18,20,24,.98) 100%)',
-            color:'white',
+            color:classMeta.accent,
             fontSize:isNarrow ? 10.5 : 11.5,
             fontWeight:900,
             textAlign:'center',
@@ -2601,7 +2628,7 @@ function Sheet({ title, onClose, children, tall }) {
 function prettyFilterLabel(value, title='') {
   const raw = String(value || '').trim();
   if (!raw) return '';
-  if (title === 'Geografia') return getCountryDisplayName(raw);
+  if (title === 'Geografia' && /^[A-Z]{2}$/.test(raw)) return getCountryDisplayName(raw);
   if (/^[A-Z]{2}$/.test(raw)) return getCountryDisplayName(raw);
   let cleaned = raw
     .replace(/^T[_-]/i, '')
@@ -2903,7 +2930,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const consOpts   = Object.entries(CONS).map(([k,v])=>({ value:k, label:`${k} · ${v.full}`, c:v.c, bg:v.bg }));
   const statusOpts = ANIMAL_STATUS_ORDER.map(k => ({ value:k, label:ANIMAL_STATUS[k].label, c:ANIMAL_STATUS[k].c, bg:ANIMAL_STATUS[k].bg }));
   const trophicOpts = Object.entries(TROPHIC).map(([k,v])=>({ value:String(k), label:v.label, c:v.c, bg:v.bg }));
-  const geographyOpts = [...GEO_FILTER_OPTIONS, ...COUNTRIES.map(c=>({ value:c.code, label:c.name, c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))];
+  const geographyOpts = [...GEO_FILTER_OPTIONS, ...getAllScratchCountries().map(code=>({ value:code, label:getCountryDisplayName(code), c:'#20B2AA', bg:'rgba(32,178,170,.15)' }))];
   const categoryOpts = Object.entries(CATEGORY_META).map(([id,meta])=>({ value:id, label:meta.label, c:meta.color, bg:`${meta.color}22` }));
   const uniqueOpt = (values, color='#7AC7FF') => Array.from(new Set(values.flatMap(v => toArraySafe(v)).filter(Boolean))).sort().map(v=>({ value:v, label:prettyFilterLabel(v), c:color, bg:`${color}22` }));
   const confidenceOpts = ['high','medium','low'].map(v=>({ value:v, label:`confidence ${v}`, c:v==='high'?'#90D84A':v==='medium'?'#F0C449':'#F06060', bg:'rgba(255,255,255,.10)' }));
@@ -2998,12 +3025,6 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
               { label:'Status', icon:'📷', onClick:()=>{setSheet('status');setShowMenu(false);}, active:fStatus.length>0, color:'#00BFFF' },
               { label:'Categorie', icon:'◉', onClick:()=>{setSheet('category');setShowMenu(false);}, active:fCategory.length>0, color:'#B860F8' },
               { label:'Geografia', icon:'🌍', onClick:()=>{setSheet('geography');setShowMenu(false);}, active:fGeography.length>0, color:'#20B2AA' },
-              { label:'Confidence', icon:'✓', onClick:()=>{setSheet('confidence');setShowMenu(false);}, active:fConfidence.length>0, color:'#90D84A' },
-              { label:'Map profile', icon:'▣', onClick:()=>{setSheet('mapProfile');setShowMenu(false);}, active:fMapProfile.length>0, color:'#5BBEF8' },
-              { label:'Bio regioni', icon:'☘', onClick:()=>{setSheet('bioRegion');setShowMenu(false);}, active:fBioRegion.length>0, color:'#6CE5C7' },
-              { label:'Game regioni', icon:'◆', onClick:()=>{setSheet('gameRegion');setShowMenu(false);}, active:fGameRegion.length>0, color:'#B860F8' },
-              { label:'Habitat', icon:'⌁', onClick:()=>{setSheet('habitat');setShowMenu(false);}, active:fHabitat.length>0, color:'#F0A840' },
-              { label:'Classe', icon:'🧬', onClick:()=>{setSheet('cls');setShowMenu(false);}, active:!!clsF, color:'#90D84A' },
             ].map((item,i)=>(
               <button key={i} onClick={item.onClick} style={{ width:'100%', padding:'14px 16px', borderBottom:'1px solid rgba(255,255,255,.05)', background:'transparent', border:'none', display:'flex', alignItems:'center', gap:12, cursor:'pointer', color:item.active?item.color:'white', fontWeight:item.active?700:600 }}>
                 <span style={{ fontSize:18 }}>{item.icon}</span>
@@ -3034,18 +3055,12 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         </div>
       )}
 
-      {sheet==='cls' && <ClassSheet sel={clsF} onSel={k=>{setClsF(k);setSheet(null);}} onClose={()=>setSheet(null)}/>}
       {sheet==='rarity'  && <MultiSheet title="Rarità" options={rarityOpts} selected={fRarity} onApply={setFRarity} onClose={()=>setSheet(null)}/>}
       {sheet==='cons'    && <MultiSheet title="Stato di Conservazione" options={consOpts} selected={fCons} onApply={setFCons} onClose={()=>setSheet(null)}/>}
       {sheet==='status'  && <MultiSheet title="Status Animale" options={statusOpts} selected={fStatus} onApply={setFStatus} onClose={()=>setSheet(null)}/>}
       {sheet==='trophic' && <MultiSheet title="Catena Alimentare" options={trophicOpts} selected={fTrophic} onApply={setFTrophic} onClose={()=>setSheet(null)}/>}
       {sheet==='geography' && <MultiSheet title="Geografia" options={geographyOpts} selected={fGeography} onApply={setFGeography} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='category' && <MultiSheet title="Categorie" options={categoryOpts} selected={fCategory} onApply={setFCategory} onClose={()=>setSheet(null)} withSearch/>}
-      {sheet==='confidence' && <MultiSheet title="Confidence" options={confidenceOpts} selected={fConfidence} onApply={setFConfidence} onClose={()=>setSheet(null)} />}
-      {sheet==='mapProfile' && <MultiSheet title="Map profile" options={mapProfileOpts} selected={fMapProfile} onApply={setFMapProfile} onClose={()=>setSheet(null)} withSearch/>}
-      {sheet==='bioRegion' && <MultiSheet title="Bio regioni" options={bioRegionOpts} selected={fBioRegion} onApply={setFBioRegion} onClose={()=>setSheet(null)} withSearch/>}
-      {sheet==='gameRegion' && <MultiSheet title="Game regioni" options={gameRegionOpts} selected={fGameRegion} onApply={setFGameRegion} onClose={()=>setSheet(null)} withSearch/>}
-      {sheet==='habitat' && <MultiSheet title="Habitat" options={habitatOpts} selected={fHabitat} onApply={setFHabitat} onClose={()=>setSheet(null)} withSearch/>}
       {sheet==='sort' && <SortSheet title="Ordina" options={sortOpts} selected={sortBy} onApply={setSortBy} onClose={()=>setSheet(null)}/>}
       {sheet==='tax' && <TaxSheet current={fTax} onApply={v=>{setFTax(v);}} onClose={()=>setSheet(null)}/>}
     </div>
@@ -3435,31 +3450,32 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   ))}
 </div>
 
-        <div style={{ display:'flex', gap:12, marginBottom:16, padding:'0 4px' }}>
-          <div ref={imgRef}
-            onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
-            style={{
-              width: Math.round(168 + pullProgress * (window.innerWidth - 168)),
-              height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
-              borderRadius: Math.round(16 - pullProgress * 16),
-              overflow:'hidden', flexShrink:0, background:'#202228',
-              cursor: canViewImage ? 'zoom-in' : 'default',
-              boxShadow: canViewImage ? `0 0 18px 3px ${c.accent}44` : 'none',
-              transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
-            }}>
-            <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
-          </div>
-          <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
-            {/* Rarità con stemma */}
-            <div data-tour="animal-rarity"><RarityBadge rarity={a.rarity || 'Comune'} full style={{ fontSize:12.5 }} /></div>
-            <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
-            <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%', flexDirection:'column', gap:7 }}>
-              <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
-              {statusActions.length > 0 && (
-                <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
-                  {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{act.label}</button>)}
-                </div>
-              )}
+        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:16, padding:'0 4px' }}>
+          <div data-tour="animal-rarity" style={{ width:'100%' }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
+          <div style={{ display:'flex', gap:12 }}>
+            <div ref={imgRef}
+              onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
+              style={{
+                width: Math.round(168 + pullProgress * (window.innerWidth - 168)),
+                height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
+                borderRadius: Math.round(16 - pullProgress * 16),
+                overflow:'hidden', flexShrink:0, background:'#202228',
+                cursor: canViewImage ? 'zoom-in' : 'default',
+                boxShadow:'none',
+                transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
+              }}>
+              <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
+            </div>
+            <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
+              <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
+              <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%', flexDirection:'column', gap:7 }}>
+                <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+                {statusActions.length > 0 && (
+                  <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
+                    {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{act.label}</button>)}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -3590,7 +3606,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
       {/* Info Modal */}
       <FullscreenMetricModal open={metricModal==='peso'} title="Peso" subtitle="Il tachimetro divide il peso in tre fasce: pesi piuma, pesi medi e pesi massimi. La lancetta si muove solo dentro la fascia corretta: a sinistra per i valori più leggeri della categoria, a destra per i più pesanti." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <div style={{ maxWidth:280, margin:'0 auto' }}><GaugeSVG wt_str={a.wt} /></div>
+          <div style={{ maxWidth:420, margin:'0 auto' }}><GaugeSVG wt_str={a.wt} large /></div>
           <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:10 }}>{getWeightCat(a.wt).label}</div>
           <div style={{ color:'white', fontSize:30, fontWeight:1000, marginTop:6 }}>{a.wt}</div>
         </div>
@@ -3603,7 +3619,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
       </FullscreenMetricModal>
       <FullscreenMetricModal open={metricModal==='trofico'} title="Piramide alimentare" subtitle="La piramide mostra sempre tutti i gradini della rete trofica. Il gradino colorato indica il ruolo dell’animale." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <TrophicPyramid trophic={a.trophic} showLabels />
+          <TrophicPyramid trophic={a.trophic} showLabels large />
           <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:10 }}>{activePyramidLevel.label}</div>
           <div style={{ display:'grid', gap:8, marginTop:16, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv=><div key={lv.key} style={{ display:'grid', gridTemplateColumns:'22px 150px 1fr', alignItems:'center', gap:10, color:'rgba(255,255,255,.78)', fontSize:12 }}><div style={{ width:18, height:8, borderRadius:4, background:lv.c }} /><strong style={{ color:'white' }}>{lv.label}</strong><span>{lv.desc}</span></div>)}</div>
         </div>
@@ -3939,10 +3955,11 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
   if (error) {
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
+  const gebcoBackground = "linear-gradient(rgba(5,13,22,.20), rgba(5,13,22,.20)), url('/mappaGEBCO.png'), url('/mappaGEBCO.jpg'), url('/geo/mappaGEBCO.png'), url('/geo/mappaGEBCO.jpg'), radial-gradient(circle at 50% 45%,#16486A,#061923 58%,#02070B)";
   return (
     <div
       {...mapControls.handlers}
-      style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:'none' }}
+      style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background: marine ? gebcoBackground : 'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', backgroundSize: marine ? 'cover, cover, cover, cover, cover, cover' : undefined, backgroundPosition: marine ? 'center' : undefined, border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:'none' }}
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
@@ -3954,8 +3971,8 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
           <radialGradient id="bioOcean" cx="50%" cy="45%" r="75%"><stop offset="0%" stopColor="#102630"/><stop offset="62%" stopColor="#0B0A09"/><stop offset="100%" stopColor="#030202"/></radialGradient>
         </defs>
         <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
-        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#bioOcean)" />
-        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#bioSatNoise)" opacity=".6" />
+        <rect x="-2000" y="-2000" width="5000" height="5000" fill="url(#bioOcean)" opacity={marine ? .18 : 1} />
+        <rect x="-2000" y="-2000" width="5000" height="5000" filter="url(#bioSatNoise)" opacity={marine ? .32 : .6} />
         <g opacity=".22">
           <path d="M0 110 C160 60 250 130 390 92 S660 62 1000 132" fill="none" stroke="#C87555" strokeWidth="1.2" />
           <path d="M0 375 C150 325 320 404 498 350 S760 330 1000 400" fill="none" stroke="#C87555" strokeWidth="1.2" />
@@ -3972,6 +3989,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
         </g>
         </g>
       </svg>
+      {marine && <div className="gebco-map-label">mappa GEBCO</div>}
       <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
       {showLabels && (hoverId || selectedId) && <div style={{ position:'absolute', left:10, bottom:10, right:10, padding:'8px 10px', borderRadius:12, background:'rgba(0,0,0,.58)', color:'white', fontSize:11, fontWeight:900 }}>{BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId}</div>}
     </div>
@@ -4081,7 +4099,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onCapture, o
       icon:'🧭',
       title:'Terminale Animaldex',
       kicker:'Database biologico',
-      body:`Questa è la griglia principale. Cerca, ordina e filtra per nome, scientifico, tassonomia, status, rarità, geografia, habitat, confidence e abilità. Il bersaglio evidenziato${animal?.com ? ` (${animal.com})` : ''} è già disponibile: aprilo per leggere la scheda.`,
+      body:`Questa è la griglia principale. Cerca, ordina e filtra per nome, scientifico, tassonomia, status, rarità, geografia, conservazione, gerarchia e abilità. Il bersaglio evidenziato${animal?.com ? ` (${animal.com})` : ''} è già disponibile: aprilo per leggere la scheda.`,
       chips:['Misterioso: identità nascosta','Ricercato: PNG visibile, da trovare','Avvistato: registrato','Catturato: confermato'],
       hint:'Tocca la card evidenziata nella griglia.',
       action:null,
@@ -4091,7 +4109,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onCapture, o
       title:'Scheda animale: dati e legenda',
       kicker:'Rarità, status e statistiche',
       body:'Qui leggi la specie in profondità. La Rarità ha quattro livelli: Comune, Non comune, Raro e Leggendario. I comuni sono la base del catalogo, i non comuni richiedono più attenzione, i rari sono bersagli di valore, i leggendari sono specie eccezionali o iconiche. Il box conservazione usa sigle IUCN come LC, NT, VU, EN, CR o DD: tocca “i” per più dettagli.',
-      chips:['Statistiche: velocità, vita, forza, resistenza, agilità','Status: ricercato, avvistato, catturato','Tassonomia cliccabile dalla classe'],
+      chips:['Statistiche: peso, dimensioni e piramide si aprono in zoom','Abilità e tassonomia sono interattive','Status: ricercato, avvistato, catturato'],
       action:'Mostra abilità',
     },
     'detail-abilities': {
@@ -4115,7 +4133,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onCapture, o
       icon:'🏅',
       title:'Sezione Rewards',
       kicker:'Award e memoria di progresso',
-      body:'Ora sei nella sezione Badge. Le card reward sono interattive: aprono un dettaglio con immagine grande, descrizione e progresso. Gli award premiano tassonomia, geografia, abilità, rarità, conservazione, massa, foto e costanza.',
+      body:'Ora sei nella sezione Badge. Le card reward sono interattive: cliccandole aprono un dettaglio con immagine grande, descrizione e progresso. Anche i badge quasi completati nella home aprono direttamente il badge selezionato.',
       chips:['Tocca un badge evidenziato','Il dettaglio mostra come ottenerlo','Le notifiche reward sono cliccabili'],
       hint:'Tocca un badge nella griglia per aprire il dettaglio.',
       action:null,
@@ -4692,11 +4710,14 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
           <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
           <div style={{ display:'grid', gap:8 }}>
-            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit', cursor:'pointer' }}>
-              <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
-              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
-              <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div>
-            </button>)}
+            {progress.nearlyCompletedBadges.map(rule => {
+              const badgeColor = BADGE_LEVEL_COLORS[rule.level] || '#C0C0C0';
+              return <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:`1.8px solid ${badgeColor}`, borderRadius:16, background:`linear-gradient(135deg, ${hexToRgba(badgeColor,.20)}, rgba(18,18,20,.84))`, boxShadow:`inset 0 1px 0 rgba(255,255,255,.08), 0 0 0 1px rgba(0,0,0,.18)`, padding:12, textAlign:'left', color:'white', fontFamily:'inherit', cursor:'pointer' }}>
+                <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span style={{ color:badgeColor }}>{rule.current} / {rule.target}</span></div>
+                <div style={{ color:'rgba(255,255,255,.62)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
+                <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:`linear-gradient(90deg, ${hexToRgba(badgeColor,.65)}, ${badgeColor})` }} /></div>
+              </button>;
+            })}
           </div>
         </div>}
 
@@ -5707,7 +5728,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
   const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === selectedContinentId) || null;
   const region = continent?.regions.find(r => r.id === selectedRegionId) || null;
-  const visitedSet = new Set(visitedCountries);
+  const visitedSet = new Set(normalizeIsoList(visitedCountries));
   const scratchCountries = getAllScratchCountries().filter(code => {
     const q = countrySearch.trim().toLowerCase();
     if (!q) return true;
@@ -5732,7 +5753,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setSelectedDestinationIsos(prev => prev.includes(iso) ? prev.filter(x => x !== iso) : [...prev, iso]);
   };
   const removeVisitedCountry = (code) => {
-    const list = visitedCountries.filter(c=>c!==code);
+    const list = normalizeIsoList(visitedCountries.filter(c=>c!==code));
     onVisitedCountriesChange?.(list);
     if (selectedCountry === code) setSelectedCountry(null);
   };
@@ -6408,7 +6429,7 @@ export default function App() {
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
-  const [visitedCountries,setVisitedCountries]=useState(() => getVisitedCountries());
+  const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
@@ -6502,7 +6523,7 @@ export default function App() {
       const nextStatusMap = Object.fromEntries((nextAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
       setStatusMap(nextStatusMap);
 
-      const nextDestinations = destinations || [];
+      const nextDestinations = normalizeIsoList(destinations || []);
       setVisitedCountries(nextDestinations);
       saveVisitedCountries(nextDestinations);
 
