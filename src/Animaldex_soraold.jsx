@@ -983,6 +983,10 @@ const RARITY_CSS = `
 .rarity-metal-leggendario { background: linear-gradient(180deg,#d2a9ff 0%,#8f34f5 48%,#2d064e 100%); border-color: rgba(220,220,235,.86); box-shadow: inset 0 1px 0 rgba(255,255,255,.82), inset 0 -2px 5px rgba(0,0,0,.48), 0 0 16px rgba(143,52,245,.38), 0 0 32px rgba(143,52,245,.15), 0 5px 12px rgba(0,0,0,.28); }
 .rarity-metal-leggendario::before { background: radial-gradient(circle at 28% 22%, rgba(255,255,255,.44), transparent 18%), radial-gradient(circle at 72% 64%, rgba(255,255,255,.14), transparent 14%), linear-gradient(135deg,#210036 0%,#8f34f5 34%,#f4d9ff 50%,#7b1de1 66%,#260046 100%); }
 
+/* rarità essenziale: solo piastra + testo, niente pallino interno o riquadro intermedio */
+.rarity-badge::before,
+.rarity-badge::after { content:none !important; display:none !important; }
+
 /* pallino rarità nella griglia: fisso, nessun glow */
 .rarity-dot { position: relative; overflow: hidden; box-shadow: none !important; border:1px solid rgba(255,255,255,.2); }
 .rarity-dot::after {
@@ -1636,43 +1640,33 @@ function rarityMetalClass(rarity) {
 function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, onClick, suffix='', style={} }) {
   const r = RARITY[rarity] ? rarity : 'Comune';
   const cfg = {
-    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.28),rgba(78,35,20,.48))', border:'rgba(208,137,92,.54)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D', orb:'linear-gradient(135deg,#D78E61,#7A3F24)' },
-    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.22),rgba(62,72,84,.48))', border:'rgba(210,220,232,.58)', glow:'0 0 10px rgba(190,210,232,.08)', text:'#E7EEF5', orb:'linear-gradient(135deg,#F2F6FB,#7F8FA2)' },
-    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.26),rgba(113,78,8,.54))', border:'rgba(246,210,92,.70)', glow:'0 0 15px rgba(240,196,73,.16)', text:'#FFE08A', orb:'linear-gradient(135deg,#FFE08A,#9F6E0E)' },
-    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.26),rgba(34,12,70,.56))', border:'rgba(190,118,255,.76)', glow:'0 0 18px rgba(143,52,245,.24)', text:'#F0D9FF', orb:'linear-gradient(135deg,#F0D9FF,#8E34F5)' },
+    Comune: { material:'rame', bg:'linear-gradient(135deg,rgba(168,92,54,.30),rgba(78,35,20,.54))', border:'rgba(208,137,92,.58)', glow:'0 0 0 rgba(0,0,0,0)', text:'#F2C09D' },
+    'Non comune': { material:'argento', bg:'linear-gradient(135deg,rgba(180,190,202,.24),rgba(62,72,84,.54))', border:'rgba(210,220,232,.60)', glow:'0 0 10px rgba(190,210,232,.08)', text:'#E7EEF5' },
+    Raro: { material:'oro', bg:'linear-gradient(135deg,rgba(240,196,73,.28),rgba(113,78,8,.58))', border:'rgba(246,210,92,.72)', glow:'0 0 15px rgba(240,196,73,.14)', text:'#FFE08A' },
+    Leggendario: { material:'cristallo', bg:'linear-gradient(135deg,rgba(143,52,245,.28),rgba(34,12,70,.60))', border:'rgba(190,118,255,.78)', glow:'0 0 18px rgba(143,52,245,.20)', text:'#F0D9FF' },
   }[r];
   const h = full ? 42 : small ? 36 : compact ? 28 : 38;
-  const orb = full ? 17 : small ? 15 : compact ? 12 : 16;
+  const label = compact ? (suffix || r) : `${r}${suffix}`;
   return (
-    <div className="rarity-badge" onClick={onClick} title={`${r} · sigillo Dex ${cfg.material}`} style={{
+    <div className="rarity-badge" onClick={onClick} title={`${r} · rarità ${cfg.material}`} style={{
       height:h,
-      minWidth: compact ? 0 : small ? 128 : 140,
+      minWidth: compact ? 0 : small ? 118 : 132,
       maxWidth:'100%',
       display:'inline-flex',
       alignItems:'center',
-      gap:8,
+      justifyContent:'center',
       borderRadius:14,
-      padding:`0 ${full ? 14 : 12}px`,
+      padding:`0 ${full ? 16 : 12}px`,
       position:'relative',
       cursor:onClick?'pointer':'default',
       background:cfg.bg,
       border:`1.2px solid ${cfg.border}`,
-      boxShadow:cfg.glow,
+      boxShadow:`inset 0 1px 0 rgba(255,255,255,.18), inset 0 -8px 18px rgba(0,0,0,.22), ${cfg.glow}`,
       overflow:'hidden',
       boxSizing:'border-box',
       ...style,
     }}>
-      <span aria-hidden="true" style={{
-        width:orb,
-        height:orb,
-        borderRadius:'50%',
-        flex:'0 0 auto',
-        background:cfg.orb,
-        boxShadow:r==='Leggendario' ? '0 0 12px rgba(143,52,245,.55)' : r==='Raro' ? '0 0 8px rgba(240,196,73,.36)' : '0 0 0 rgba(0,0,0,0)',
-        border:'1px solid rgba(255,255,255,.30)',
-      }} />
-      {!compact && <span style={{ color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.45)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{r}{suffix}</span>}
-      {compact && <span style={{ color:cfg.text, fontSize:10, fontWeight:1000, whiteSpace:'nowrap' }}>{suffix || ''}</span>}
+      <span style={{ color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.50)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{label}</span>
     </div>
   );
 }
@@ -2442,8 +2436,9 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
     const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
+    const imageBg = `radial-gradient(circle at 50% 52%, ${hexToRgba(glowColor, gridMode ? .38 : .30)} 0%, ${hexToRgba(glowColor, gridMode ? .18 : .13)} 28%, rgba(34,36,42,.96) 58%, #202228 100%)`;
     return (
-      <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
+      <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
@@ -2454,7 +2449,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   }
 
   return (
-    <div style={{ width:'100%', height:size, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:`radial-gradient(circle at 50% 52%, ${hexToRgba(getClassGlowColor(a.cls), .22)} 0%, rgba(34,36,42,.96) 56%, #202228 100%)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
@@ -2462,19 +2457,12 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
 
 function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) {
-  const c = CLS[a.cls] || CLS.Mammalia;
   const status = normalizeAnimalStatus(a.status);
   const mystery = isMysteryStatus(status);
   const imageVisible = !mystery;
   // Ricercato, Avvistato e Catturato condividono la resa grafica completa in griglia.
   const found = imageVisible;
-  const revealed = imageVisible;
-  const unrevealed = false;
   const glowAccent = getClassGlowColor(a.cls);
-  const classAccentSoft = hexToRgba(c.accent, .20);
-  const classAccentBare = hexToRgba(c.accent, .09);
-  const classAccentLine = hexToRgba(c.accent, .28);
-  const glowShadow = 'none';
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const cardH = isNarrow ? 124 : 134;
   const labelH = isNarrow ? 36 : 38;
@@ -2499,7 +2487,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
         background: imageVisible
-          ? `radial-gradient(circle at 50% 36%, ${classAccentSoft} 0%, transparent 48%), linear-gradient(180deg, ${classAccentBare}, rgba(0,0,0,.38)), #171B22`
+          ? 'linear-gradient(180deg, #24272E 0%, #1B1E24 54%, #111318 100%)'
           : 'linear-gradient(180deg, rgba(255,255,255,.045), rgba(0,0,0,.34)), #15171B',
         border: statusStyle.border
       }}
@@ -2527,9 +2515,9 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
             padding:'8px 8px 8px',
             boxSizing:'border-box',
             background: found
-              ? `linear-gradient(180deg, transparent 0%, rgba(10,12,16,.66) 28%, rgba(10,12,16,.94) 100%), linear-gradient(90deg, ${classAccentLine}, transparent 34%)`
+              ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.70) 28%, rgba(10,12,16,.96) 100%)'
               : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.82) 34%, rgba(18,20,24,.98) 100%)',
-            color: unrevealed ? '#272B32' : 'white',
+            color:'white',
             fontSize:isNarrow ? 10.5 : 11.5,
             fontWeight:900,
             textAlign:'center',
@@ -2912,27 +2900,9 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10, flexShrink:0 }}>ⓘ</button>
       </div>
 
-      {(anyExtra||clsF||search) && (
-        <div style={{ display:'flex', gap:6, padding:'8px 12px 4px', flexWrap:'wrap', flexShrink:0 }}>
-          {search && <span onClick={()=>setSearch('')} style={{ background:'rgba(255,255,255,.1)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>🔎 {search} ×</span>}
-          {clsF && <span onClick={()=>setClsF(null)} style={{ background:CLS[clsF].mid, color:CLS[clsF].accent, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{CLS[clsF].icon} {CLS[clsF].label} ×</span>}
-          {fTax && <span onClick={()=>setFTax(null)} style={{ background:'rgba(232,192,64,.2)', color:'#E8C040', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{fTax.label} ×</span>}
-          {fRarity.map(r=><RarityBadge key={r} rarity={r} small suffix=" ×" onClick={()=>setFRarity(p=>p.filter(x=>x!==r))} style={{ flexShrink:0 }} />)}
-          {fCons.map(c=><span key={c} onClick={()=>setFCons(p=>p.filter(x=>x!==c))} style={{ background:CONS[c].bg, color:CONS[c].c, fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{c} ×</span>)}
-          {fStatus.map(s=>{ const so = getStatusMeta(s); return <span key={s} onClick={()=>setFStatus(p=>p.filter(x=>x!==s))} style={{ background:so.bg||'#2A2A2C', color:so.c||'rgba(255,255,255,.6)', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{so.label} ×</span>; })}
-          {fTrophic.map(t=><span key={t} onClick={()=>setFTrophic(p=>p.filter(x=>x!==t))} style={{ background:TROPHIC[t]?.bg||'#222', color:TROPHIC[t]?.c||'#aaa', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{TROPHIC[t]?.label||t} ×</span>)}
-          {fGeography.map(g=>{ const opt = geographyOpts.find(o=>o.value===g); return <span key={g} onClick={()=>setFGeography(p=>p.filter(x=>x!==g))} style={{ background:'rgba(32,178,170,.15)', color:'#20B2AA', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{opt?.label || g} ×</span>; })}
-          {fCategory.map(cat=>{ const meta=CATEGORY_META[cat]; return <span key={cat} onClick={()=>setFCategory(p=>p.filter(x=>x!==cat))} style={{ background:`${meta?.color||'#777'}22`, color:meta?.color||'#ccc', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{meta?.label||cat} ×</span>; })}
-          {fConfidence.map(v=><span key={v} onClick={()=>setFConfidence(p=>p.filter(x=>x!==v))} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>confidence {v} ×</span>)}
-          {fMapProfile.map(v=><span key={v} onClick={()=>setFMapProfile(p=>p.filter(x=>x!==v))} style={{ background:'rgba(91,190,248,.16)', color:'#5BBEF8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{v} ×</span>)}
-          {fBioRegion.map(v=><span key={v} onClick={()=>setFBioRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(108,229,199,.16)', color:'#6CE5C7', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{prettyFilterLabel(v)} ×</span>)}
-          {fGameRegion.map(v=><span key={v} onClick={()=>setFGameRegion(p=>p.filter(x=>x!==v))} style={{ background:'rgba(184,96,248,.16)', color:'#B860F8', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{prettyFilterLabel(v)} ×</span>)}
-          {fHabitat.map(v=><span key={v} onClick={()=>setFHabitat(p=>p.filter(x=>x!==v))} style={{ background:'rgba(240,168,64,.16)', color:'#F0A840', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>{prettyFilterLabel(v)} ×</span>)}
-          {sortBy!=='no' && <span onClick={()=>setSortBy('no')} style={{ background:'rgba(255,255,255,.10)', color:'#fff', fontSize:11, fontWeight:700, padding:'4px 10px', borderRadius:20, cursor:'pointer' }}>↕ {sortOpts.find(o=>o.value===sortBy)?.label||'Ordina'} ×</span>}
-        </div>
-      )}
+      {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:6, padding:'8px 12px 4px', flexShrink:0 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, padding:isNarrow?'10px 10px 8px':'12px 12px 10px', flexShrink:0 }}>
         {[
           ['misterioso','Misteriosi'],
           ['ricercato','Ricercati'],
@@ -2941,7 +2911,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         ].map(([key,label]) => {
           const active = fStatus.length === 1 && fStatus.includes(key) && !fRarity.length;
           const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : 'rgba(255,255,255,.28)';
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:38, padding:'0 8px', borderRadius:12, border:`1px solid ${active ? activeColor : 'rgba(255,255,255,.10)'}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .22 : .28)}, rgba(255,255,255,.035))`:'rgba(255,255,255,.055)', color:active ? '#F5F1EA' : 'rgba(245,241,234,.88)', boxShadow:active ? `0 0 18px ${hexToRgba(activeColor, .16)}` : 'none', fontSize:11.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?50:54, padding:'0 8px', borderRadius:16, border:`1px solid ${active ? activeColor : 'rgba(255,255,255,.10)'}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .22 : .28)}, rgba(255,255,255,.035))`:'rgba(255,255,255,.055)', color:active ? '#F5F1EA' : 'rgba(245,241,234,.88)', boxShadow:active ? `0 0 18px ${hexToRgba(activeColor, .16)}` : 'none', fontSize:isNarrow?11.5:12.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
@@ -3435,7 +3405,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
               width: Math.round(168 + pullProgress * (window.innerWidth - 168)),
               height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
               borderRadius: Math.round(16 - pullProgress * 16),
-              overflow:'hidden', flexShrink:0, background:c.img,
+              overflow:'hidden', flexShrink:0, background:'#202228',
               cursor: canViewImage ? 'zoom-in' : 'default',
               boxShadow: canViewImage ? `0 0 18px 3px ${c.accent}44` : 'none',
               transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
@@ -3467,18 +3437,18 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Animaldex, non cattura fisica.
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
-          <button onClick={()=>setMetricModal('peso')} style={{ background:'#111113', borderRadius:12, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
+          <button onClick={()=>setMetricModal('peso')} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box' }}>
             <div style={{ width:'100%', maxWidth:'116px', marginTop:-2 }}><GaugeSVG wt_str={a.wt} /></div>
             <div style={{ fontSize:9.8, fontWeight:900, color:getWeightCat(a.wt).color, textAlign:'center', lineHeight:1.05, marginTop:-2 }}>{getWeightCat(a.wt).label}</div>
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
           </button>
 
-          <button onClick={()=>setMetricModal('dimensioni')} style={{ background:'#111113', borderRadius:12, padding:'6px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', minHeight:92, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
+          <button onClick={()=>setMetricModal('dimensioni')} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'6px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box' }}>
             <ScaleComparison animal={a} />
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:2 }}>{a.ln}</div>
           </button>
 
-          <button onClick={()=>setMetricModal('trofico')} style={{ background:'#111113', borderRadius:12, padding:'6px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer' }}>
+          <button onClick={()=>setMetricModal('trofico')} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'6px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box' }}>
             <TrophicPyramid trophic={a.trophic} compact />
             <div style={{ fontSize:10.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.2px', lineHeight:1.15 }}>{activePyramidLevel.label}</div>
           </button>

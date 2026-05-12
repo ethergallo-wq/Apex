@@ -283,6 +283,40 @@ function getQuickSeenToday() {
 function saveQuickSeenToday(ids) {
   try { localStorage.setItem(getQuickSeenStorageKey(), JSON.stringify(Array.from(new Set(ids)))); } catch {}
 }
+const QUICK_SEEN_REJECT_COOLDOWN_DAYS = 14;
+const QUICK_SEEN_REJECTED_KEY = 'animaldex_quick_seen_rejected_until';
+function getQuickSeenRejectedMap() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(QUICK_SEEN_REJECTED_KEY) || '{}') || {};
+    const now = Date.now();
+    const clean = {};
+    Object.entries(raw).forEach(([id, until]) => {
+      const ts = Number(until || 0);
+      if (ts > now) clean[id] = ts;
+    });
+    if (Object.keys(clean).length !== Object.keys(raw).length) localStorage.setItem(QUICK_SEEN_REJECTED_KEY, JSON.stringify(clean));
+    return clean;
+  } catch { return {}; }
+}
+function rejectQuickSeenForCooldown(id) {
+  if (!id) return;
+  try {
+    const map = getQuickSeenRejectedMap();
+    const until = Date.now() + QUICK_SEEN_REJECT_COOLDOWN_DAYS * 24 * 60 * 60 * 1000;
+    map[String(id)] = until;
+    localStorage.setItem(QUICK_SEEN_REJECTED_KEY, JSON.stringify(map));
+  } catch {}
+}
+function isQuickSeenRejected(id) {
+  const map = getQuickSeenRejectedMap();
+  return Number(map[String(id)] || 0) > Date.now();
+}
+function quickSeenDailyShuffleScore(animal) {
+  const d = new Date();
+  const seed = Number(`${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`);
+  const n = Number(animal?.id || animal?.no || 0);
+  return ((n * 9301 + seed * 49297) % 233280) / 233280;
+}
 function getAnimalVisitedCountryMatches(animal, visitedCountries = []) {
   const visited = (visitedCountries || []).map(c => String(c).toUpperCase());
   const available = new Set(getAnimalCountryCodes(animal).map(c => String(c).toUpperCase()));
@@ -306,9 +340,10 @@ function getQuickSeenCandidates(animals, statusMap, visitedCountries) {
     })
     .filter(a => a.status === 'ricercato')
     .filter(a => visited.length > 0 && a.countryMatchCount === visited.length)
+    .filter(a => !isQuickSeenRejected(a.id))
     .filter(a => !!a.image_url)
-    .sort((a,b) => (a.rarityScore - b.rarityScore) || (b.observationCount - a.observationCount) || (b.countryMatchCount - a.countryMatchCount))
-    .slice(0, QUICK_SEEN_DAILY_LIMIT);
+    .sort((a,b) => (a.rarityScore - b.rarityScore) || (b.observationCount - a.observationCount) || (quickSeenDailyShuffleScore(a) - quickSeenDailyShuffleScore(b)))
+    .slice(0, QUICK_SEEN_DAILY_LIMIT * 3);
 }
 function track(eventName, payload = {}) {
   try { console.log('[track]', eventName, payload); } catch {}
@@ -2433,10 +2468,12 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   const localImageUrl = a.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id) || x.sci === a.sci)?.image_url || '');
   if (localImageUrl && !imgErr) {
     const glowColor = getClassGlowColor(a.cls);
-    const dropShadow = `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
+    const dropShadow = gridMode
+      ? `drop-shadow(0 0 ${Math.round(size*0.04)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.085)}px ${glowColor}66) drop-shadow(0 0 ${Math.round(size*0.125)}px ${glowColor}33)`
+      : `drop-shadow(0 0 ${Math.round(size*0.08)}px ${glowColor}ff) drop-shadow(0 0 ${Math.round(size*0.17)}px ${glowColor}cc) drop-shadow(0 0 ${Math.round(size*0.25)}px ${glowColor}66)`;
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
-    const imageBg = `radial-gradient(circle at 50% 52%, ${hexToRgba(glowColor, gridMode ? .38 : .30)} 0%, ${hexToRgba(glowColor, gridMode ? .18 : .13)} 28%, rgba(34,36,42,.96) 58%, #202228 100%)`;
+    const imageBg = `radial-gradient(circle at 50% 52%, ${hexToRgba(glowColor, gridMode ? .19 : .30)} 0%, ${hexToRgba(glowColor, gridMode ? .09 : .13)} 28%, rgba(34,36,42,.96) 58%, #202228 100%)`;
     return (
       <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
@@ -2449,7 +2486,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   }
 
   return (
-    <div style={{ width:'100%', height:size, background:`radial-gradient(circle at 50% 52%, ${hexToRgba(getClassGlowColor(a.cls), .22)} 0%, rgba(34,36,42,.96) 56%, #202228 100%)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:`radial-gradient(circle at 50% 52%, ${hexToRgba(getClassGlowColor(a.cls), gridMode ? .11 : .22)} 0%, rgba(34,36,42,.96) 56%, #202228 100%)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
@@ -4568,7 +4605,7 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto }) {
+function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge }) {
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
   const nextLevelXP = xpForLevel(progress.level + 1);
@@ -4599,7 +4636,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
       <PageHeader title="Mission Control" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
-        <div style={{ borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14 }}>
+        <button onClick={()=>onOpen('profile')} style={{ width:'100%', borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14, color:'white', fontFamily:'inherit', textAlign:'left', cursor:'pointer' }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
             <div style={{ width:54, height:54, borderRadius:18, background:'linear-gradient(135deg,rgba(216,210,196,.14),rgba(184,77,58,.16))', display:'flex', alignItems:'center', justifyContent:'center', color:'#D8D2C4', border:'1px solid rgba(255,255,255,.10)', fontSize:28 }}>🧭</div>
             <div style={{ flex:1, minWidth:0 }}>
@@ -4609,7 +4646,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             </div>
             <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
           </div>
-        </div>
+        </button>
 
         <div style={{ borderRadius:26, padding:18, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.44)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
           <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
@@ -4655,7 +4692,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
           <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
           <div style={{ display:'grid', gap:8 }}>
-            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpen('badges')} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit' }}>
+            {progress.nearlyCompletedBadges.map(rule => <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:16, background:'rgba(255,255,255,.055)', padding:12, textAlign:'left', color:'white', fontFamily:'inherit', cursor:'pointer' }}>
               <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span>{rule.current} / {rule.target}</span></div>
               <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
               <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div>
@@ -4682,27 +4719,37 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect }) {
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
   const [busy, setBusy] = useState(false);
-  const [queue, setQueue] = useState(() => {
-    const alreadyDone = new Set(getQuickSeenToday());
-    return getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !alreadyDone.has(a.id));
-  });
+  const buildQueue = () => {
+    const alreadyDone = new Set(getQuickSeenToday().map(String));
+    return getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !alreadyDone.has(String(a.id)));
+  };
+  const [queue, setQueue] = useState(buildQueue);
+  useEffect(() => {
+    const alreadyDone = new Set(getQuickSeenToday().map(String));
+    setQueue(prev => {
+      const stillValid = (prev || []).filter(a => !alreadyDone.has(String(a.id)) && !isQuickSeenRejected(a.id) && normalizeAnimalStatus(statusMap[a.id] ?? a.status) === 'ricercato');
+      const existing = new Set(stillValid.map(a => String(a.id)));
+      const additions = getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !alreadyDone.has(String(a.id)) && !existing.has(String(a.id)));
+      return [...stillValid, ...additions].slice(0, QUICK_SEEN_DAILY_LIMIT * 3);
+    });
+  }, [animals, statusMap, visitedCountries]);
   const doneToday = dailyIds.length;
   const current = queue[0] || null;
   const markDaily = (id) => {
-    const next = Array.from(new Set([...dailyIds, id]));
+    const next = Array.from(new Set([...dailyIds.map(String), String(id)]));
     setDailyIds(next);
     saveQuickSeenToday(next);
   };
-  const advanceQueue = () => setQueue(prev => prev.slice(1));
+  const advanceQueue = (id) => setQueue(prev => (prev || []).filter(a => String(a.id) !== String(id)).slice(0));
   const yes = async () => {
     if (!current || busy) return;
     const picked = current;
     setBusy(true);
+    markDaily(picked.id);
+    advanceQueue(picked.id);
+    track('quick_seen_yes', { animal_id:picked.id, animal_name:picked.com });
     try {
       await onStatusChange?.(picked.id, 'avvistato');
-      markDaily(picked.id);
-      track('quick_seen_yes', { animal_id:picked.id, animal_name:picked.com });
-      advanceQueue();
     } finally {
       setBusy(false);
     }
@@ -4711,13 +4758,11 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     if (!current || busy) return;
     const picked = current;
     setBusy(true);
-    try {
-      markDaily(picked.id);
-      track('quick_seen_no', { animal_id:picked.id, animal_name:picked.com });
-      advanceQueue();
-    } finally {
-      setBusy(false);
-    }
+    markDaily(picked.id);
+    rejectQuickSeenForCooldown(picked.id);
+    advanceQueue(picked.id);
+    track('quick_seen_no', { animal_id:picked.id, animal_name:picked.com, cooldown_days:QUICK_SEEN_REJECT_COOLDOWN_DAYS });
+    setBusy(false);
   };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
@@ -4759,6 +4804,10 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
   const badgeCount = new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)).size;
   const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
+  const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+  const nextLevelXP = xpForLevel(progress.level + 1);
+  const currLevelXP = xpForLevel(progress.level);
+  const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const residenceCountry = userProfile?.residence_country || userProfile?.country || visitedCountries?.[0] || null;
   const statCards = [
     { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
@@ -4775,6 +4824,12 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
           <input ref={fileInputRef} type="file" accept="image/*" style={{ display:'none' }} onChange={()=>{}} />
           <div style={{ color:'white', fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>{displayName}</div>
           <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>{user?.email || 'Profilo Animaldex'}</div>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:10, marginTop:14, flexWrap:'wrap' }}>
+            <span style={{ color:'#F5F1EA', fontSize:12, fontWeight:1000, background:'rgba(255,255,255,.10)', border:'1px solid rgba(255,255,255,.10)', borderRadius:999, padding:'7px 10px' }}>Liv. {progress.level}</span>
+            <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000, background:'rgba(240,168,64,.12)', border:'1px solid rgba(240,168,64,.20)', borderRadius:999, padding:'7px 10px' }}>🔥 3 slancio</span>
+            <span style={{ color:'#B9D7EF', fontSize:12, fontWeight:1000, background:'rgba(91,190,248,.10)', border:'1px solid rgba(91,190,248,.18)', borderRadius:999, padding:'7px 10px' }}>{progress.xp} / {nextLevelXP} XP</span>
+          </div>
+          <div style={{ height:9, borderRadius:999, background:'rgba(255,255,255,.12)', overflow:'hidden', marginTop:13 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
           {statCards.map(card=>(<button key={card.label} onClick={card.onClick} style={{ background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit' }}><div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1 }}>{card.value}</div><div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{card.label}</div></button>))}
@@ -6888,7 +6943,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>setPage('quickSeen')} onOpenPhoto={openPhotoRecognition} />;
+    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>setPage('quickSeen')} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
     if (page === 'compare') return <ComparatorPage onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
