@@ -58,6 +58,9 @@ const DEX = {
 };
 
 const ANIMALDEX_THEME_KEY = 'animaldex_theme';
+const LIGHT_APP_BG = '#F3EFE6';
+const LIGHT_HEADER_BG = '#F8F3EA';
+const LIGHT_CARD_BG = '#FBF7EF';
 function getInitialAnimaldexTheme() {
   if (typeof window === 'undefined') return 'dark';
   const saved = window.localStorage.getItem(ANIMALDEX_THEME_KEY);
@@ -68,12 +71,12 @@ function applyAnimaldexThemeToDocument(theme) {
   const normalized = theme === 'light' ? 'light' : 'dark';
   document.documentElement.dataset.animaldexTheme = normalized;
   document.body.dataset.animaldexTheme = normalized;
-  document.body.style.background = normalized === 'light' ? '#ffffff' : '#1C1C1E';
+  document.body.style.background = normalized === 'light' ? LIGHT_APP_BG : '#1C1C1E';
   try { window.localStorage.setItem(ANIMALDEX_THEME_KEY, normalized); } catch {}
 }
 const lightText = (theme, dark='white') => theme === 'light' ? '#171717' : dark;
 const lightMuted = (theme, dark='rgba(255,255,255,.62)') => theme === 'light' ? 'rgba(0,0,0,.60)' : dark;
-const lightSurface = (theme, dark='#1C1C1E') => theme === 'light' ? '#ffffff' : dark;
+const lightSurface = (theme, dark='#1C1C1E') => theme === 'light' ? LIGHT_CARD_BG : dark;
 
 const TAXONOMY_CLASS_BY_ORDER = {
   Passeriformes:'Aves',
@@ -1088,29 +1091,36 @@ const RARITY_CSS = `
 }
 
 
-@keyframes rarityWaterReflect {
-  0%,100% { transform: translateX(-18%) skewX(-18deg); opacity:.20; }
-  50% { transform: translateX(18%) skewX(-18deg); opacity:.42; }
+@keyframes rarityContinuousSweep {
+  0%   { transform: translateX(-105%) skewX(-18deg); opacity:.10; }
+  35%  { opacity:.42; }
+  100% { transform: translateX(105%) skewX(-18deg); opacity:.10; }
 }
-@keyframes rarityGemTwinkle {
-  0%,100% { opacity:.42; transform:scale(.92); }
-  50% { opacity:1; transform:scale(1.12); }
+@keyframes rarityGemDrift {
+  0%   { transform: translateX(-18%); opacity:.48; }
+  100% { transform: translateX(18%); opacity:.92; }
 }
-.rarity-legendary-water { animation: rarityWaterReflect 3.8s ease-in-out infinite; }
-.rarity-rare-gems { animation: rarityGemTwinkle 2.4s ease-in-out infinite; }
+@keyframes rarityWaterCaustics {
+  0%   { transform: translate3d(-16%,-10%,0) rotate(0deg); background-position:0% 50%, 100% 30%, 0% 0%; opacity:.22; }
+  50%  { opacity:.46; }
+  100% { transform: translate3d(16%,10%,0) rotate(.001deg); background-position:100% 50%, 0% 70%, 220% 0%; opacity:.22; }
+}
+.rarity-silver-sheen { animation: rarityContinuousSweep 5.6s linear infinite; }
+.rarity-legendary-water { animation: rarityWaterCaustics 7.8s linear infinite; }
+.rarity-rare-gems { animation: rarityGemDrift 6.4s linear infinite; }
 .gebco-map-label {
   position:absolute; left:10px; bottom:8px; z-index:4; pointer-events:none;
   color:rgba(180,226,255,.58); font-size:9px; font-weight:1000; letter-spacing:.7px; text-transform:uppercase;
   text-shadow:0 2px 8px rgba(0,0,0,.75);
 }
 
-#animaldex-app-root[data-theme="light"] { background:#ffffff !important; color:#171717 !important; }
+#animaldex-app-root[data-theme="light"] { background:#F3EFE6 !important; color:#171717 !important; }
 #animaldex-app-root[data-theme="light"] * { text-shadow:none !important; }
 #animaldex-app-root[data-theme="light"] input::placeholder { color:rgba(0,0,0,.42) !important; }
 #animaldex-app-root[data-theme="light"] input { color:#171717; }
 #animaldex-app-root[data-theme="light"] .rarity-badge span { color:inherit; }
 #animaldex-app-root[data-theme="light"] .light-surface-card {
-  background:#F6F4EF !important;
+  background:#FBF7EF !important;
   border-color:rgba(0,0,0,.10) !important;
   box-shadow:0 14px 34px rgba(20,20,20,.08) !important;
 }
@@ -1758,9 +1768,9 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
       boxSizing:'border-box',
       ...style,
     }}>
-      {r === 'Non comune' && <span aria-hidden style={{ position:'absolute', inset:0, background:'linear-gradient(115deg, transparent 12%, rgba(255,255,255,.16) 42%, transparent 62%)', opacity:.42, mixBlendMode:'screen', pointerEvents:'none' }} />}
+      {r === 'Non comune' && <span aria-hidden className="rarity-silver-sheen" style={{ position:'absolute', inset:'-8% -38%', width:'46%', background:'linear-gradient(115deg, transparent 8%, rgba(255,255,255,.20) 44%, rgba(255,255,255,.06) 56%, transparent 78%)', opacity:.48, mixBlendMode:'screen', pointerEvents:'none' }} />}
       {r === 'Raro' && <span aria-hidden className="rarity-rare-gems" style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 18% 28%, rgba(255,255,255,.95) 0 1.4px, transparent 2.3px), radial-gradient(circle at 78% 24%, rgba(255,255,255,.82) 0 1.2px, transparent 2.2px), radial-gradient(circle at 68% 72%, rgba(255,244,164,.86) 0 1.3px, transparent 2.4px), radial-gradient(circle at 34% 74%, rgba(255,255,255,.70) 0 1px, transparent 2px)', pointerEvents:'none', mixBlendMode:'screen' }} />}
-      {r === 'Leggendario' && <span aria-hidden className="rarity-legendary-water" style={{ position:'absolute', inset:'-20% -35%', background:'repeating-linear-gradient(110deg, transparent 0 13px, rgba(170,225,255,.22) 14px 17px, transparent 18px 30px)', filter:'blur(.35px)', mixBlendMode:'screen', pointerEvents:'none' }} />}
+      {r === 'Leggendario' && <span aria-hidden className="rarity-legendary-water" style={{ position:'absolute', inset:'-28% -42%', background:'radial-gradient(ellipse at 22% 38%, rgba(118,220,255,.26), transparent 34%), radial-gradient(ellipse at 74% 64%, rgba(255,255,255,.18), transparent 32%), linear-gradient(100deg, transparent 0%, rgba(87,214,255,.16) 24%, transparent 46%, rgba(255,255,255,.14) 64%, transparent 100%)', backgroundSize:'180% 180%, 160% 160%, 240% 100%', filter:'blur(.45px)', mixBlendMode:'screen', pointerEvents:'none' }} />}
       <span style={{ position:'relative', zIndex:2, color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.50)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{label}</span>
     </div>
   );
@@ -2987,8 +2997,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const buttonSize = isNarrow ? 40 : 46;
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#ffffff':'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?'#FFFFFF':'transparent', flexShrink:0 }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?LIGHT_APP_BG:'transparent', flexShrink:0 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -3015,7 +3025,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : (isLightTheme ? '#8F8F8F' : 'rgba(255,255,255,.28)');
           const inactiveColor = isLightTheme ? 'rgba(0,0,0,.50)' : 'rgba(245,241,234,.88)';
           const activeText = isLightTheme ? '#171717' : '#F5F1EA';
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?50:54, padding:'0 8px', borderRadius:16, border:`1px solid ${active ? activeColor : (isLightTheme?'rgba(0,0,0,.14)':'rgba(255,255,255,.10)')}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .16 : .20)}, ${isLightTheme?'rgba(255,255,255,.92)':'rgba(255,255,255,.035)'})`:(isLightTheme?'#FFFFFF':'rgba(255,255,255,.055)'), color:active ? activeText : inactiveColor, boxShadow:active ? `0 10px 22px ${hexToRgba(activeColor, .12)}` : (isLightTheme?'0 6px 16px rgba(0,0,0,.05)':'none'), fontSize:isNarrow?11.5:12.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?50:54, padding:'0 8px', borderRadius:16, border:`1px solid ${active ? activeColor : (isLightTheme?'rgba(0,0,0,.14)':'rgba(255,255,255,.10)')}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .16 : .20)}, ${isLightTheme?'rgba(255,255,255,.92)':'rgba(255,255,255,.035)'})`:(isLightTheme?LIGHT_APP_BG:'rgba(255,255,255,.055)'), color:active ? activeText : inactiveColor, boxShadow:active ? `0 10px 22px ${hexToRgba(activeColor, .12)}` : (isLightTheme?'0 6px 16px rgba(0,0,0,.05)':'none'), fontSize:isNarrow?11.5:12.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
@@ -3473,7 +3483,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
     if (action === 'capture') onOpenPhoto?.(a);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? `linear-gradient(180deg,${c.detailTop} 0%,${hexToRgba(c.accent,.22)} 42%,#FFFFFF 88%)` : `linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? `linear-gradient(180deg,${c.detailTop} 0%,${hexToRgba(c.accent,.22)} 42%,${LIGHT_APP_BG} 88%)` : `linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
         <button onClick={onBack} style={{ background:'none', border:'none', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:0 }}>‹ Animaldex</button>
         <span style={{ color:detailText, fontSize:longName?14:17, fontWeight:800, maxWidth:180, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', transform:longName?'scaleX(.8)':'none', transformOrigin:'center' }}>{a.com}</span>
@@ -3728,7 +3738,7 @@ function PageHeader({ title, onBack, right, theme }) {
   const inferredTheme = theme || (typeof window !== 'undefined' ? window.localStorage?.getItem(ANIMALDEX_THEME_KEY) : 'dark');
   const isLightTheme = inferredTheme === 'light';
   return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?'#FFFFFF':'#1C1C1E' }}>
+    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'#1C1C1E' }}>
       <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
@@ -4703,7 +4713,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
       <PageHeader title="Mission Control" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
         <button onClick={()=>onOpen('profile')} style={{ width:'100%', borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14, color:'white', fontFamily:'inherit', textAlign:'left', cursor:'pointer' }}>
@@ -4730,7 +4740,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
             ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
             ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.10)'}`, borderRadius:20, background:isLightTheme?'#FFFFFF':'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:isLightTheme?'0 12px 24px rgba(0,0,0,.08)':'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
+          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.10)'}`, borderRadius:20, background:isLightTheme?LIGHT_CARD_BG:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:isLightTheme?'0 12px 24px rgba(0,0,0,.08)':'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
         </div>
 
         <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:`1px solid ${lightPanelBorder}`, borderRadius:22, background:lightPanel, padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.06)':'none' }}>
@@ -4764,10 +4774,13 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <div style={{ display:'grid', gap:8 }}>
             {progress.nearlyCompletedBadges.map(rule => {
               const badgeColor = BADGE_LEVEL_COLORS[rule.level] || '#C0C0C0';
-              return <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:`1.8px solid ${badgeColor}`, borderRadius:16, background:`linear-gradient(135deg, ${hexToRgba(badgeColor,.20)}, rgba(18,18,20,.84))`, boxShadow:`inset 0 1px 0 rgba(255,255,255,.08), 0 0 0 1px rgba(0,0,0,.18)`, padding:12, textAlign:'left', color:'white', fontFamily:'inherit', cursor:'pointer' }}>
+              const badgeBg = isLightTheme ? `linear-gradient(135deg, ${hexToRgba(badgeColor,.30)}, rgba(251,247,239,.96))` : `linear-gradient(135deg, ${hexToRgba(badgeColor,.20)}, rgba(18,18,20,.84))`;
+              const badgeText = isLightTheme ? '#171717' : 'white';
+              const badgeMuted = isLightTheme ? 'rgba(0,0,0,.62)' : 'rgba(255,255,255,.62)';
+              return <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:`1.8px solid ${badgeColor}`, borderRadius:16, background:badgeBg, boxShadow:isLightTheme?`0 10px 24px ${hexToRgba(badgeColor,.16)}, inset 0 1px 0 rgba(255,255,255,.68)`: `inset 0 1px 0 rgba(255,255,255,.08), 0 0 0 1px rgba(0,0,0,.18)`, padding:12, textAlign:'left', color:badgeText, fontFamily:'inherit', cursor:'pointer' }}>
                 <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span style={{ color:badgeColor }}>{rule.current} / {rule.target}</span></div>
-                <div style={{ color:'rgba(255,255,255,.62)', fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
-                <div style={{ height:7, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:`linear-gradient(90deg, ${hexToRgba(badgeColor,.65)}, ${badgeColor})` }} /></div>
+                <div style={{ color:badgeMuted, fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
+                <div style={{ height:7, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:`linear-gradient(90deg, ${hexToRgba(badgeColor,.65)}, ${badgeColor})` }} /></div>
               </button>;
             })}
           </div>
@@ -4790,6 +4803,12 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 
 
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark' }) {
+  const isLightTheme = theme === 'light';
+  const quickIntroColor = isLightTheme ? '#171717' : 'rgba(255,255,255,.62)';
+  const quickPanelBg = isLightTheme ? 'linear-gradient(180deg,#252932,#16181D)' : 'linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035))';
+  const quickPanelBorder = isLightTheme ? '1px solid rgba(0,0,0,.18)' : '1px solid rgba(255,255,255,.10)';
+  const quickNoticeBg = isLightTheme ? '#252932' : 'rgba(255,255,255,.055)';
+  const quickNoticeBorder = isLightTheme ? '1px solid rgba(0,0,0,.18)' : '1px solid rgba(255,255,255,.08)';
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
   const [busy, setBusy] = useState(false);
   const buildQueue = () => {
@@ -4838,16 +4857,16 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     setBusy(false);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#111113', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#111113', overflow:'hidden' }}>
       <PageHeader title="Visti rapidi" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
-        <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginBottom:14 }}>Ti proponiamo animali che potresti aver visto in base ai tuoi paesi visitati. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
+        <div style={{ color:quickIntroColor, fontSize:13, lineHeight:1.55, marginBottom:14 }}>Ti proponiamo animali che potresti aver visto in base ai tuoi paesi visitati. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
         {!visitedCountries.length ? (
-          <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Visti rapidi.</div>
+          <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Visti rapidi.</div>
         ) : doneToday >= QUICK_SEEN_DAILY_LIMIT ? (
-          <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Limite giornaliero raggiunto. Torna domani.</div>
+          <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Limite giornaliero raggiunto. Torna domani.</div>
         ) : current ? (
-          <div style={{ borderRadius:30, background:'linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035))', border:'1px solid rgba(255,255,255,.10)', padding:18, boxShadow:'0 24px 70px rgba(0,0,0,.42)' }}>
+          <div style={{ borderRadius:30, background:quickPanelBg, border:quickPanelBorder, padding:18, boxShadow:isLightTheme?'0 24px 60px rgba(0,0,0,.22)':'0 24px 70px rgba(0,0,0,.42)' }}>
             <div onClick={()=>onSelect?.(current)} style={{ height:260, borderRadius:24, background:(CLS[current.cls] || CLS.Mammalia).img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', cursor:'pointer' }}>
               <AnimalImg a={{...current,status:'ricercato'}} size={230} fontSize={70} overrideStatus="ricercato" />
             </div>
@@ -4862,7 +4881,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
             </div>
           </div>
         ) : (
-          <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Nessun altro ricercato disponibile oggi.</div>
+          <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Nessun altro ricercato disponibile oggi.</div>
         )}
       </div>
     </div>
@@ -4889,7 +4908,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
     { label:'Regioni', value:regionsCount, onClick:onOpenRegions },
   ];
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#1C1C1E', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title="Profilo" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ background:'linear-gradient(135deg,#102B4D 0%,#1B567B 58%,#0B1D35 100%)', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.08)' }}>
@@ -5028,7 +5047,7 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
     setSelectedAward(orderedAwards[nextIndex]);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#2A2A2C', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?LIGHT_APP_BG:'#2A2A2C', overflow:'hidden' }}>
       <PageHeader title="Badge" onBack={onBack} theme={theme} />
       <div style={{ padding:'12px 12px 8px', flexShrink:0 }}>
         <div style={{ display:'flex', gap:8, overflowX:'auto', paddingBottom:6 }}>
@@ -5722,7 +5741,7 @@ function StandaloneLifeWebPage({ onBack, animals = [], initialAnimal = null, onO
   const derivedHabitatId = focusAnimal ? (getAnimalHabitatIds(focusAnimal)[0] || null) : null;
   const habitat = derivedHabitatId ? { id:derivedHabitatId, label:habitatLabel(derivedHabitatId) } : { id:'FOREST_TEMP', label:'Habitat contestuale' };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'#050505', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
       <PageHeader title={focusAnimal ? `Web · ${focusAnimal.com}` : 'LifeWeb'} onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
         <LifeWebPage territory={null} habitat={habitat} animals={resolvedAnimals} focusAnimal={focusAnimal} onOpenAnimal={onOpenAnimal} />
@@ -5859,21 +5878,21 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   ];
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'#050505', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} theme={theme} />
       {view !== 'planet' && (
-        <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', display:'flex', gap:8, padding:'9px 14px 7px', borderBottom:'1px solid rgba(255,255,255,.06)', background:'rgba(12,12,14,.92)' }}>
-          {navChips.map(chip => <button key={chip.label} onClick={chip.action} style={{ flex:'0 0 auto', height:32, padding:'0 12px', borderRadius:999, border:`1px solid ${chip.active?'rgba(168,70,55,.70)':'rgba(255,255,255,.08)'}`, background:chip.active?'rgba(168,70,55,.24)':'rgba(255,255,255,.045)', color:chip.active?'#FFD4C8':'rgba(255,255,255,.72)', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{chip.label}</button>)}
+        <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', display:'flex', gap:8, padding:'9px 14px 7px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.06)', background:isLightTheme?'rgba(248,243,234,.96)':'rgba(12,12,14,.92)' }}>
+          {navChips.map(chip => <button key={chip.label} onClick={chip.action} style={{ flex:'0 0 auto', height:32, padding:'0 12px', borderRadius:999, border:`1px solid ${chip.active?'rgba(168,70,55,.70)':'rgba(255,255,255,.08)'}`, background:chip.active?(isLightTheme?'rgba(168,70,55,.16)':'rgba(168,70,55,.24)'):(isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'), color:chip.active?(isLightTheme?'#7B2D24':'#FFD4C8'):(isLightTheme?'rgba(0,0,0,.72)':'rgba(255,255,255,.72)'), fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{chip.label}</button>)}
         </div>
       )}
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
         {view==='planet' && (
           <>
-            <button onClick={()=>setView('countries')} style={{ width:'100%', border:'1px solid rgba(144,216,74,.28)', borderRadius:24, background:'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit' }}>
+            <button onClick={()=>setView('countries')} style={{ width:'100%', border:`1px solid ${isLightTheme?'rgba(38,118,94,.22)':'rgba(144,216,74,.28)'}`, borderRadius:24, background:isLightTheme?'linear-gradient(135deg,rgba(144,216,74,.22),rgba(251,247,239,.94))':'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:isLightTheme?'#171717':'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 28px rgba(0,0,0,.06)':'none' }}>
               <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ width:58, height:58, borderRadius:20, background:'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
-                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
-                <div style={{ color:'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
+                <div style={{ width:58, height:58, borderRadius:20, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
+                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
+                <div style={{ color:isLightTheme?'#2B7A4B':'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
               </div>
             </button>
             <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
@@ -5984,7 +6003,7 @@ function ToggleRow({ label, initial = true }) {
 
 function SettingsSubPage({ title, onBack, children, theme='dark' }) {
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#1C1C1E', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title={title} onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>{children}</div>
     </div>
@@ -6037,7 +6056,7 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
         { value:'light', label:'Chiaro', desc:'Sfondo bianco per menu, griglia, paesi e schede' },
       ].map(opt=>{
         const active = theme === opt.value;
-        return <button key={opt.value} onClick={()=>onThemeChange?.(opt.value)} style={{ width:'100%', background:active?(opt.value==='light'?'#FFFFFF':'#222222'):(theme==='light'?'#F3F3F3':'#222222'), border:`1.5px solid ${active?'#90D84A':theme==='light'?'rgba(0,0,0,.10)':'rgba(255,255,255,.06)'}`, borderRadius:14, padding:16, marginBottom:10, color:theme==='light'?'#171717':'white', textAlign:'left', fontSize:14, fontWeight:900, cursor:'pointer', fontFamily:'inherit', boxShadow:active?'0 10px 28px rgba(144,216,74,.20)':'none' }}>
+        return <button key={opt.value} onClick={()=>onThemeChange?.(opt.value)} style={{ width:'100%', background:active?(opt.value==='light'?LIGHT_CARD_BG:'#222222'):(theme==='light'?LIGHT_CARD_BG:'#222222'), border:`1.5px solid ${active?'#90D84A':theme==='light'?'rgba(0,0,0,.10)':'rgba(255,255,255,.06)'}`, borderRadius:14, padding:16, marginBottom:10, color:theme==='light'?'#171717':'white', textAlign:'left', fontSize:14, fontWeight:900, cursor:'pointer', fontFamily:'inherit', boxShadow:active?'0 10px 28px rgba(144,216,74,.20)':'none' }}>
           <div>{active?'●':'○'} {opt.label}</div>
           <div style={{ marginTop:5, fontSize:11.5, fontWeight:700, color:theme==='light'?'rgba(0,0,0,.55)':'rgba(255,255,255,.48)', lineHeight:1.35 }}>{opt.desc}</div>
         </button>;
@@ -6090,21 +6109,22 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
 
 
 
-function AbilityCard({ meta, onOpen }) {
+function AbilityCard({ meta, onOpen, theme='dark' }) {
   const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
   const group = getAbilityGroupMeta(meta.id);
+  const isLightTheme = theme === 'light';
   return (
     <button
       className="interactive-hint"
       onClick={()=>onOpen?.(meta)}
-      style={{ minHeight:116, borderRadius:18, background:'rgba(255,255,255,.05)', border:`1px solid ${group.color}66`, boxShadow:`inset 0 0 0 1px ${meta.color}22`, cursor:'pointer', marginBottom:10, padding:14, display:'flex', alignItems:'center', gap:16, width:'100%', textAlign:'left', fontFamily:'inherit', color:'white', overflow:'hidden' }}
+      style={{ minHeight:116, borderRadius:18, background:isLightTheme?LIGHT_CARD_BG:'rgba(255,255,255,.05)', border:`1px solid ${group.color}66`, boxShadow:isLightTheme?`0 10px 22px rgba(0,0,0,.06), inset 0 0 0 1px ${meta.color}14`:`inset 0 0 0 1px ${meta.color}22`, cursor:'pointer', marginBottom:10, padding:14, display:'flex', alignItems:'center', gap:16, width:'100%', textAlign:'left', fontFamily:'inherit', color:isLightTheme?'#171717':'white', overflow:'hidden' }}
     >
-      <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:96, height:96, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 18px ${meta.color}44)` }} />
+      <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:96, height:96, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 18px ${meta.color}${isLightTheme?'22':'44'})` }} />
       <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:96, height:96, fontSize:50, flexShrink:0 }}>{meta.icon}</span>
       <div style={{ flex:1, minWidth:0 }}>
         <div style={{ display:'inline-flex', alignItems:'center', gap:6, padding:'4px 8px', borderRadius:999, background:`${group.color}22`, border:`1px solid ${group.color}55`, color:group.color, fontSize:10.5, fontWeight:900, marginBottom:8 }}>{group.label}</div>
-        <div style={{ color:'white', fontSize:17, fontWeight:900, lineHeight:1.18 }}>{meta.label}</div>
-        <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.4, marginTop:7 }}>{meta.description}</div>
+        <div style={{ color:isLightTheme?'#171717':'white', fontSize:17, fontWeight:900, lineHeight:1.18 }}>{meta.label}</div>
+        <div style={{ color:isLightTheme?'rgba(0,0,0,.66)':'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.4, marginTop:7 }}>{meta.description}</div>
       </div>
     </button>
   );
@@ -6137,6 +6157,7 @@ function AbilityModal({ meta, onClose, onOpenAnimals, onPrev, onNext }) {
 }
 
 function AbilitiesPage({ onBack, onOpenAbility, theme='dark' }) {
+  const isLightTheme = theme === 'light';
   const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, description:getAbilityDescription(id, meta), count: ANIMALS.filter(a=>a.categories?.includes(id)).length, group:getAbilityGroupId(id) }));
   const [search, setSearch] = useState('');
   const [selectedAbility, setSelectedAbility] = useState(null);
@@ -6151,7 +6172,7 @@ function AbilitiesPage({ onBack, onOpenAbility, theme='dark' }) {
   };
   const openAnimals = (id, label) => { setSelectedAbility(null); onOpenAbility?.(id, label); };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#111113', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#111113', overflow:'hidden' }}>
       <PageHeader title="Abilità" onBack={onBack} theme={theme} />
       <div style={{ padding:'12px 14px', flexShrink:0 }}>
         <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca abilità..." style={{ width:'100%', height:44, borderRadius:12, background:theme==='light'?'#F3F1EC':'#222226', color:theme==='light'?'#171717':'white', border:`1px solid ${theme==='light'?'rgba(0,0,0,.12)':'rgba(255,255,255,.1)'}`, padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
@@ -6163,8 +6184,8 @@ function AbilitiesPage({ onBack, onOpenAbility, theme='dark' }) {
               <div style={{ color:group.color, fontSize:15, fontWeight:1000 }}>{group.label}</div>
               <div style={{ color:theme==='light'?'rgba(0,0,0,.45)':'rgba(255,255,255,.42)', fontSize:11, fontWeight:900 }}>{group.rows.length}</div>
             </div>
-            <div style={{ borderRadius:18, border:`1px solid ${group.color}44`, padding:10, background:'rgba(255,255,255,.03)' }}>
-              {group.rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpen={setSelectedAbility} />)}
+            <div style={{ borderRadius:18, border:`1px solid ${group.color}44`, padding:10, background:isLightTheme?hexToRgba(group.color,.055):'rgba(255,255,255,.03)' }}>
+              {group.rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpen={setSelectedAbility} theme={theme} />)}
             </div>
           </div>
         ))}
@@ -6429,7 +6450,7 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
   const [zoomAnimal,setZoomAnimal]=useState(null);
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 560;
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#111113', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?LIGHT_APP_BG:'#111113', overflow:'hidden' }}>
       <PageHeader title="Comparatore" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'14px 14px 28px', boxSizing:'border-box' }}>
         <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.28),rgba(20,20,22,.88))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:16, marginBottom:14 }}>
@@ -6995,7 +7016,7 @@ const returnFromFeaturePage = (fallback='menu') => {
   setPage(fallback);
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?'#FFFFFF':'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -7047,7 +7068,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   };
 
   return (
-    <div id="animaldex-app-root" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?'#FFFFFF':'#1C1C1E', position:'relative' }}>
+    <div id="animaldex-app-root" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
