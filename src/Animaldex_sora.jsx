@@ -57,6 +57,24 @@ const DEX = {
   }
 };
 
+const ANIMALDEX_THEME_KEY = 'animaldex_theme';
+function getInitialAnimaldexTheme() {
+  if (typeof window === 'undefined') return 'dark';
+  const saved = window.localStorage.getItem(ANIMALDEX_THEME_KEY);
+  return saved === 'light' ? 'light' : 'dark';
+}
+function applyAnimaldexThemeToDocument(theme) {
+  if (typeof document === 'undefined') return;
+  const normalized = theme === 'light' ? 'light' : 'dark';
+  document.documentElement.dataset.animaldexTheme = normalized;
+  document.body.dataset.animaldexTheme = normalized;
+  document.body.style.background = normalized === 'light' ? '#ffffff' : '#1C1C1E';
+  try { window.localStorage.setItem(ANIMALDEX_THEME_KEY, normalized); } catch {}
+}
+const lightText = (theme, dark='white') => theme === 'light' ? '#171717' : dark;
+const lightMuted = (theme, dark='rgba(255,255,255,.62)') => theme === 'light' ? 'rgba(0,0,0,.60)' : dark;
+const lightSurface = (theme, dark='#1C1C1E') => theme === 'light' ? '#ffffff' : dark;
+
 const TAXONOMY_CLASS_BY_ORDER = {
   Passeriformes:'Aves',
   Perciformes:'Actinopterygii',
@@ -1086,6 +1104,19 @@ const RARITY_CSS = `
   text-shadow:0 2px 8px rgba(0,0,0,.75);
 }
 
+#animaldex-app-root[data-theme="light"] { background:#ffffff !important; color:#171717 !important; }
+#animaldex-app-root[data-theme="light"] * { text-shadow:none !important; }
+#animaldex-app-root[data-theme="light"] input::placeholder { color:rgba(0,0,0,.42) !important; }
+#animaldex-app-root[data-theme="light"] [style*="color: white"],
+#animaldex-app-root[data-theme="light"] [style*="color:white"] { color:#171717 !important; }
+#animaldex-app-root[data-theme="light"] [style*="rgba(255, 255, 255, 0.62)"],
+#animaldex-app-root[data-theme="light"] [style*="rgba(255,255,255,.62)"],
+#animaldex-app-root[data-theme="light"] [style*="rgba(255,255,255,.66)"],
+#animaldex-app-root[data-theme="light"] [style*="rgba(255,255,255,.72)"] { color:rgba(0,0,0,.62) !important; }
+#animaldex-app-root[data-theme="light"] button,
+#animaldex-app-root[data-theme="light"] input { color:#171717; }
+#animaldex-app-root[data-theme="light"] .rarity-badge span { color:inherit; }
+
 `;
 
 // ── Flag Emoji Generator ──────────────────────────────────────────────
@@ -1824,7 +1855,7 @@ function GaugeSVG({ wt_str, large=false }) {
   const n2 = polarToXY(angle + 4, 8);
 
   return (
-    <svg viewBox="0 0 120 82" width="100%" height={large ? 142 : 52} xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 120 82" width="100%" height={large ? 185 : 52} xmlns="http://www.w3.org/2000/svg">
       <g dangerouslySetInnerHTML={{ __html: arcs }} />
       <polygon points={`${n1.x},${n1.y} ${nx},${ny} ${n2.x},${n2.y}`} fill={col} />
       <circle cx={cx} cy={cy} r="4.6" fill={col} />
@@ -1885,22 +1916,24 @@ function EarSilhouette({ h = 72 }) {
 function ScaleComparison({ animal, full=false }) {
   const lengthCm = parseAnimalLengthCm(animal?.ln);
   const ref = getLengthReference(lengthCm);
-  const maxPx = full ? 164 : 62;
-  const minPx = full ? 18 : 8;
+  const maxPx = full ? 178 : 62;
+  const minPx = full ? 20 : 8;
   const maxCm = Math.max(ref.cm, lengthCm || 0.1);
   const pxPerCm = maxPx / maxCm;
-  const referencePx = Math.max(full ? 34 : 28, Math.round(ref.cm * pxPerCm));
+  const referencePx = Math.max(full ? 40 : 28, Math.round(ref.cm * pxPerCm));
   const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
+  const animalIsMystery = isMysteryStatus(animal?.status);
+  const animalSrc = animalIsMystery ? MYSTERY_PLACEHOLDER : (animal?.image_url || MYSTERY_PLACEHOLDER);
   const renderRef = () => (
-    <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?132:56, width:'auto', height:'auto', objectFit:'contain', display:'block', opacity:.96 }} />
+    <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', display:'block', opacity:.96 }} />
   );
   return (
-    <div style={{ width:'100%', minHeight:full?236:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?70:28, padding:full?'22px 12px 12px':'5px 6px 2px', boxSizing:'border-box' }}>
-        <div style={{ width:full?132:58, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>{renderRef()}</div>
-        <div style={{ width:full?190:78, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-          <img src={animal?.image_url || MYSTERY_PLACEHOLDER} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast' }} />
+    <div style={{ width:'100%', minHeight:full?252:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?58:18, padding:full?'22px 12px 12px':'5px 0 2px', boxSizing:'border-box' }}>
+        <div style={{ width:full?178:66, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
+          <img src={animalSrc} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
         </div>
+        <div style={{ width:full?144:58, display:'flex', justifyContent:'center', alignItems:'flex-end', transform:full?'translateX(22px)':'translateX(14px)' }}>{renderRef()}</div>
       </div>
       {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · scala proporzionale sulla misura massima dell’animale</div>}
     </div>
@@ -1908,12 +1941,12 @@ function ScaleComparison({ animal, full=false }) {
 }
 function TrophicPyramid({ trophic, compact = false, showLabels = false, large=false }) {
   const activeKey = getPyramidKey(trophic);
-  const widths = compact ? [20, 32, 46, 60, 74] : large ? [70, 104, 142, 178, 214] : [42, 62, 86, 108, 128];
-  const rowH = compact ? 9 : large ? 25 : 18;
-  const barH = compact ? 6 : large ? 18 : 12;
-  const vbW = compact ? 78 : large ? 224 : 132;
-  const svgW = compact ? 72 : large ? 220 : 130;
-  const svgH = compact ? 50 : large ? 156 : 96;
+  const widths = compact ? [20, 32, 46, 60, 74] : large ? [90, 134, 180, 228, 272] : [42, 62, 86, 108, 128];
+  const rowH = compact ? 9 : large ? 34 : 18;
+  const barH = compact ? 6 : large ? 24 : 12;
+  const vbW = compact ? 78 : large ? 286 : 132;
+  const svgW = compact ? 72 : large ? 286 : 130;
+  const svgH = compact ? 50 : large ? 220 : 96;
   return (
     <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap: showLabels ? 16 : 0 }}>
       <svg viewBox={`0 0 ${vbW} ${rowH*5}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg" style={{ overflow:'visible' }}>
@@ -2480,7 +2513,8 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [mysteryErr, setMysteryErr] = useState(false);
-  const status = normalizeAnimalStatus(overrideStatus !== undefined ? overrideStatus : a.status);
+  const baseStatus = normalizeAnimalStatus(a.status);
+  const status = baseStatus === 'misterioso' ? 'misterioso' : normalizeAnimalStatus(overrideStatus !== undefined ? overrideStatus : a.status);
   const mystery = isMysteryStatus(status);
 
   if (mystery) {
@@ -2568,42 +2602,40 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
       )}
       {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.44)', fontSize:9, fontWeight:1000, letterSpacing:.4 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
       <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
-      {!mystery && (
-        <div
-          style={{
-            position:'absolute',
-            left:0,
-            right:0,
-            bottom:0,
-            minHeight:labelH,
-            padding:'8px 8px 8px',
-            boxSizing:'border-box',
-            background: found
-              ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.70) 28%, rgba(10,12,16,.96) 100%)'
-              : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.82) 34%, rgba(18,20,24,.98) 100%)',
-            color:classMeta.accent,
-            fontSize:isNarrow ? 10.5 : 11.5,
-            fontWeight:900,
-            textAlign:'center',
-            lineHeight:'12.5px',
-            textShadow: found ? '0 1px 3px rgba(0,0,0,.70)' : 'none',
-            display:'flex',
-            alignItems:'center',
-            justifyContent:'center',
-            overflow:'hidden',
-          }}
-        ><span style={{
-            display:'-webkit-box',
-            WebkitLineClamp:2,
-            WebkitBoxOrient:'vertical',
-            overflow:'hidden',
-            textOverflow:'clip',
-            wordBreak:'normal',
-            overflowWrap:'normal',
-            textWrap:'balance',
-            width:'100%'
-          }}>{displayName}</span></div>
-      )}
+      <div
+        style={{
+          position:'absolute',
+          left:0,
+          right:0,
+          bottom:0,
+          minHeight:labelH,
+          padding:'8px 8px 8px',
+          boxSizing:'border-box',
+          background: found
+            ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.70) 28%, rgba(10,12,16,.96) 100%)'
+            : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.78) 34%, rgba(18,20,24,.96) 100%)',
+          color:mystery ? 'rgba(245,241,234,.82)' : classMeta.accent,
+          fontSize:isNarrow ? 10.5 : 11.5,
+          fontWeight:900,
+          textAlign:'center',
+          lineHeight:'12.5px',
+          textShadow: found ? '0 1px 3px rgba(0,0,0,.70)' : 'none',
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center',
+          overflow:'hidden',
+        }}
+      ><span style={{
+          display:'-webkit-box',
+          WebkitLineClamp:2,
+          WebkitBoxOrient:'vertical',
+          overflow:'hidden',
+          textOverflow:'clip',
+          wordBreak:'normal',
+          overflowWrap:'normal',
+          textWrap:'balance',
+          width:'100%'
+        }}>{displayName}</span></div>
     </div>
   );
 }
@@ -2688,7 +2720,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
             >
               <div style={{ display:'flex', alignItems:'center', gap:10, flex:1 }}>
                 {flag && <span style={{ fontSize:16 }}>{flag}</span>}
-                <span style={{ fontSize:14, fontWeight:700 }}>{prettyFilterLabel(opt.label || opt.value, title)}</span>
+                <span style={{ fontSize:14, fontWeight:700 }}>{title === 'Geografia' && isIsoCountryOption ? getCountryDisplayName(opt.value) : prettyFilterLabel(opt.label || opt.value, title)}</span>
               </div>
               <div style={{ width:22, height:22, borderRadius:6, border:`2px solid ${on?(opt.c||'#666'):'rgba(255,255,255,.25)'}`, background:on?(opt.c||'#666'):'transparent', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
                 {on&&<span style={{ fontSize:13, fontWeight:900, lineHeight:1 }}>✓</span>}
@@ -2844,7 +2876,7 @@ function StatusLegendRows() {
 
 // ── Grid ──────────────────────────────────────────────────────────────
 
-function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions }) {
+function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset, onBackToOrigin, tutorialActive=false, tutorialAnimalId=null, onTutorialAnimalSelect, onOpenRegions, theme='dark' }) {
   const [search, setSearch]   = useState('');
   const [clsF, setClsF]       = useState(null);
   const [sheet, setSheet]     = useState(null);
@@ -2866,6 +2898,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
+  const isLightTheme = theme === 'light';
 
   useEffect(() => {
     if (!preset?.id) return;
@@ -2892,7 +2925,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     .filter(a => {
       const q = search.toLowerCase().trim();
       const status = normalizeAnimalStatus(a.status);
-      if (!hasExplicitPreset && !['ricercato','avvistato','catturato'].includes(status)) return false;
+      const wantsMystery = fStatus.includes('misterioso');
+      if (!hasExplicitPreset && !wantsMystery && !['ricercato','avvistato','catturato'].includes(status)) return false;
       if (q && !getAnimalSearchText(a).includes(q)) return false;
       if (clsF && a.cls !== clsF) return false;
       if (fRarity.length   && !fRarity.includes(a.rarity)) return false;
@@ -2949,7 +2983,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const buttonSize = isNarrow ? 40 : 46;
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#ffffff':'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
@@ -3365,7 +3399,7 @@ function FullscreenMetricModal({ open, title, subtitle='', onClose, children }) 
   );
 }
 
-function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], tutorialStep=null, captureStamp=false, onTutorialAbilityClick }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], tutorialStep=null, captureStamp=false, onTutorialAbilityClick, theme='dark' }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -3379,6 +3413,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const imgRef = useRef(null);
   const touchStartY = useRef(0);
   const c=CLS[a.cls]||CLS.Mammalia;
+  const isLightTheme = theme === 'light';
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
   const canViewImage = !isMysteryStatus(localStatus) && !!a.image_url;
@@ -3428,7 +3463,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
     if (action === 'capture') onOpenPhoto?.(a);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? `linear-gradient(180deg,${c.detailTop} 0%,${hexToRgba(c.accent,.22)} 42%,#FFFFFF 88%)` : `linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
         <button onClick={onBack} style={{ background:'none', border:'none', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:0 }}>‹ Animaldex</button>
         <span style={{ color:'white', fontSize:longName?14:17, fontWeight:800, maxWidth:180, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', transform:longName?'scaleX(.8)':'none', transformOrigin:'center' }}>{a.com}</span>
@@ -3451,7 +3486,6 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
 </div>
 
         <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:16, padding:'0 4px' }}>
-          <div data-tour="animal-rarity" style={{ width:'100%' }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
           <div style={{ display:'flex', gap:12 }}>
             <div ref={imgRef}
               onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
@@ -3467,6 +3501,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
               <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
             </div>
             <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
+              <div data-tour="animal-rarity" style={{ width:'100%' }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
               <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center' }}>{co.lbl} · {co.full}</div>
               <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%', flexDirection:'column', gap:7 }}>
                 <div data-tour="animal-status" style={{ width:'100%' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
@@ -3502,7 +3537,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           </button>
 
           <button onClick={()=>setMetricModal('trofico')} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'6px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box' }}>
-            <TrophicPyramid trophic={a.trophic} compact />
+            <div style={{ transform:'translateY(10px)', marginTop:6 }}><TrophicPyramid trophic={a.trophic} compact /></div>
             <div style={{ fontSize:10.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.2px', lineHeight:1.15 }}>{activePyramidLevel.label}</div>
           </button>
         </div>
@@ -3606,7 +3641,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
       {/* Info Modal */}
       <FullscreenMetricModal open={metricModal==='peso'} title="Peso" subtitle="Il tachimetro divide il peso in tre fasce: pesi piuma, pesi medi e pesi massimi. La lancetta si muove solo dentro la fascia corretta: a sinistra per i valori più leggeri della categoria, a destra per i più pesanti." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <div style={{ maxWidth:420, margin:'0 auto' }}><GaugeSVG wt_str={a.wt} large /></div>
+          <div style={{ maxWidth:500, margin:'0 auto' }}><GaugeSVG wt_str={a.wt} large /></div>
           <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:10 }}>{getWeightCat(a.wt).label}</div>
           <div style={{ color:'white', fontSize:30, fontWeight:1000, marginTop:6 }}>{a.wt}</div>
         </div>
@@ -3619,7 +3654,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
       </FullscreenMetricModal>
       <FullscreenMetricModal open={metricModal==='trofico'} title="Piramide alimentare" subtitle="La piramide mostra sempre tutti i gradini della rete trofica. Il gradino colorato indica il ruolo dell’animale." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <TrophicPyramid trophic={a.trophic} showLabels large />
+          <div style={{ transform:'translateY(8px)' }}><TrophicPyramid trophic={a.trophic} showLabels large /></div>
           <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:10 }}>{activePyramidLevel.label}</div>
           <div style={{ display:'grid', gap:8, marginTop:16, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv=><div key={lv.key} style={{ display:'grid', gridTemplateColumns:'22px 150px 1fr', alignItems:'center', gap:10, color:'rgba(255,255,255,.78)', fontSize:12 }}><div style={{ width:18, height:8, borderRadius:4, background:lv.c }} /><strong style={{ color:'white' }}>{lv.label}</strong><span>{lv.desc}</span></div>)}</div>
         </div>
@@ -4243,7 +4278,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const steps = ['intro','nickname','countries','radar','review','sync','wow'];
   const stepIndex = Math.max(0, steps.indexOf(step));
   const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
-  const allCountries = useMemo(() => getAllScratchCountries(), []);
+  const allCountries = useMemo(() => normalizeIsoList(getAllScratchCountries()), []);
   const filteredCountries = allCountries.filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
 
   const radarAnimals = useMemo(() => {
@@ -4285,7 +4320,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     }).length;
   }, [animals, selectedCountries]);
 
-  const toggleCountry = (code) => setSelectedCountries(prev => prev.includes(code) ? prev.filter(x=>x!==code) : [...prev, code]);
+  const toggleCountry = (code) => setSelectedCountries(prev => normalizeIsoList(prev.includes(code) ? prev.filter(x=>x!==code) : [...prev, code]));
   const toggleTripTag = (tag) => setSelectedTripTags(prev => prev.includes(tag) ? prev.filter(x=>x!==tag) : [...prev, tag]);
 
   const markRadar = (seen) => {
@@ -4305,7 +4340,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     setLoading(true);
     setError('');
     setStep('sync');
-    const payload = { nickname, countries:selectedCountries, seenAnimalIds:seenAnimals, tripTags:selectedTripTags, demographics:{
+    const payload = { nickname, countries:normalizeIsoList(selectedCountries), seenAnimalIds:Array.from(new Set(seenAnimals)), tripTags:selectedTripTags, demographics:{
       gender,
       nationality,
       phone,
@@ -4623,8 +4658,9 @@ function AuthScreen({ onAuthReady }) {
 
 const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert','mountain'];
 
-function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge }) {
+function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark' }) {
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+  const isLightTheme = theme === 'light';
   const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
   const nextLevelXP = xpForLevel(progress.level + 1);
   const currLevelXP = xpForLevel(progress.level);
@@ -4651,7 +4687,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
       <PageHeader title="Mission Control" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
         <button onClick={()=>onOpen('profile')} style={{ width:'100%', borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14, color:'white', fontFamily:'inherit', textAlign:'left', cursor:'pointer' }}>
@@ -4819,7 +4855,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
 
 function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, userProfile, user, onLogout }) {
   const fileInputRef = useRef(null);
-  const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
+  const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
   const regionsCount = new Set(animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').flatMap(a => a.distribution?.countries_present || [])).size;
@@ -4837,7 +4873,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
     { label:'Regioni', value:regionsCount, onClick:onOpenRegions },
   ];
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title="Profilo" onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ background:'linear-gradient(135deg,#102B4D 0%,#1B567B 58%,#0B1D35 100%)', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.08)' }}>
@@ -5258,7 +5294,7 @@ function buildLifeWebGraph(allAnimals, territory, habitat, focusAnimal=null, for
   const habitatResourceIds = (HABITAT_RESOURCE_MAP[normalizeHabitatId(habitat?.id)] || inferDefaultHabitatsForTerritory(territory).flatMap(h=>HABITAT_RESOURCE_MAP[h] || []) || ['grass','insects','detritus']).slice(0,8);
   const animalLikeResources = new Set(['crustaceans','small_fish','small_mammals']);
   const resourceIds = habitatResourceIds.filter(r => !animalLikeResources.has(r));
-  const animalNodes = pickedAnimals.map(a => ({ id:`a:${a.id}`, animalId:a.id, type:'animal', label:a.com, sci:a.sci, group:trophicGroup(a), cls:a.cls, power:getAnimalPowerScore(a), image_url:a.image_url }));
+  const animalNodes = pickedAnimals.map(a => ({ id:`a:${a.id}`, animalId:a.id, type:'animal', label:a.com, sci:a.sci, group:trophicGroup(a), cls:a.cls, power:getAnimalPowerScore(a), image_url:isMysteryStatus(a.status)?'':a.image_url }));
   const resourceNodes = resourceIds.map((r)=>({ id:`res:${r}`, type:'resource', label:RESOURCE_LABELS[r] || r, group:'resource', power:0 }));
   const nodes = autoArrangeLifeWebNodes([...animalNodes, ...resourceNodes], focusAnimal?.id);
   const edgeMap = new Map();
@@ -5543,7 +5579,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   const addAnimal = (animal) => {
     if (!animal) return;
     const box = { w:104, h:124 };
-    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:animal.image_url, ...box, x:WIDTH/2, y:HEIGHT/2, tx:WIDTH/2, ty:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
+    const node = { id:`a:${animal.id}`, animalId:animal.id, type:'animal', label:animal.com, sci:animal.sci, group:trophicGroup(animal), cls:animal.cls, power:getAnimalPowerScore(animal), image_url:isMysteryStatus(animal.status)?'':animal.image_url, ...box, x:WIDTH/2, y:HEIGHT/2, tx:WIDTH/2, ty:HEIGHT/2, vx:0, vy:0, fx:null, fy:null };
     if (nodesRef.current.some(n => n.id === node.id)) return;
     nodesRef.current = [...nodesRef.current, node];
     setNodes(nodesRef.current.map(n=>({ ...n })));
@@ -5562,7 +5598,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
     }
     return lines.filter(Boolean).slice(0,2);
   };
-  const imageHrefFor = (a) => getImageSrcCandidates(a?.image_url)[0] || a?.image_url || '';
+  const imageHrefFor = (a) => isMysteryStatus(a?.status) ? MYSTERY_PLACEHOLDER : (getImageSrcCandidates(a?.image_url)[0] || a?.image_url || '');
   const renderNodeCard = (n) => {
     const color = nodeColorForGroup(n.group);
     const isAnimal = n.type === 'animal';
@@ -5576,7 +5612,7 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
         <rect x="2" y="2" width={n.w-4} height={n.h-4} rx={isAnimal?16:13} fill={isAnimal ? 'rgba(0,0,0,.03)' : 'rgba(0,0,0,.10)'} stroke={`rgba(255,255,255,.10)`} strokeWidth="1" />
         {isAnimal ? (
           <>
-            {currentAnimal?.image_url ? <image href={imageHrefFor(currentAnimal)} x="10" y="8" width={n.w-20} height="76" preserveAspectRatio="xMidYMid meet" opacity=".96" /> : <text x={n.w/2} y="52" textAnchor="middle" fontSize="28" fill="white">•</text>}
+            {currentAnimal && (currentAnimal.image_url || isMysteryStatus(currentAnimal.status)) ? <image href={imageHrefFor(currentAnimal)} x="10" y="8" width={n.w-20} height="76" preserveAspectRatio="xMidYMid meet" opacity=".96" /> : <text x={n.w/2} y="52" textAnchor="middle" fontSize="28" fill="white">•</text>}
             <rect x="0" y={n.h-42} width={n.w} height="42" rx="14" fill="rgba(0,0,0,.40)" />
             {lines.map((line,i)=><text key={i} x={n.w/2} y={n.h-25+i*12} textAnchor="middle" fontSize="10.5" fontWeight="900" fill="white">{line}</text>)}
           </>
@@ -5663,15 +5699,17 @@ function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=nu
   );
 }
 
-function StandaloneLifeWebPage({ onBack, animals = [], initialAnimal = null, onOpenAnimal }) {
-  const focusAnimal = initialAnimal || animals[0] || null;
+function StandaloneLifeWebPage({ onBack, animals = [], initialAnimal = null, onOpenAnimal, theme='dark', statusMap = {}, visitedCountries = [] }) {
+  const isLightTheme = theme === 'light';
+  const resolvedAnimals = useMemo(() => (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
+  const focusAnimal = initialAnimal || resolvedAnimals[0] || null;
   const derivedHabitatId = focusAnimal ? (getAnimalHabitatIds(focusAnimal)[0] || null) : null;
   const habitat = derivedHabitatId ? { id:derivedHabitatId, label:habitatLabel(derivedHabitatId) } : { id:'FOREST_TEMP', label:'Habitat contestuale' };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'#050505', overflow:'hidden' }}>
       <PageHeader title={focusAnimal ? `Web · ${focusAnimal.com}` : 'LifeWeb'} onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
-        <LifeWebPage territory={null} habitat={habitat} animals={animals} focusAnimal={focusAnimal} onOpenAnimal={onOpenAnimal} />
+        <LifeWebPage territory={null} habitat={habitat} animals={resolvedAnimals} focusAnimal={focusAnimal} onOpenAnimal={onOpenAnimal} />
       </div>
     </div>
   );
@@ -5697,7 +5735,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
   );
 }
 
-function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid }) {
+function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark' }) {
   const normalizeInitialView = (v) => {
     if (v === 'countries') return 'countries';
     if (v === 'continents' || v === 'realms' || !v) return 'planet';
@@ -5757,7 +5795,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     onVisitedCountriesChange?.(list);
     if (selectedCountry === code) setSelectedCountry(null);
   };
-  const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
+  const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
+  const isLightTheme = theme === 'light';
   const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
   const habitatRows = selectedEcoregion ? getHabitatsForTerritory({ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}` }, allAnimalsWithStatus) : [];
   const title = (() => {
@@ -5804,7 +5843,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   ];
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#050505', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} />
       {view !== 'planet' && (
         <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', display:'flex', gap:8, padding:'9px 14px 7px', borderBottom:'1px solid rgba(255,255,255,.06)', background:'rgba(12,12,14,.92)' }}>
@@ -5927,9 +5966,9 @@ function ToggleRow({ label, initial = true }) {
   );
 }
 
-function SettingsSubPage({ title, onBack, children }) {
+function SettingsSubPage({ title, onBack, children, theme='dark' }) {
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#1C1C1E', overflow:'hidden' }}>
       <PageHeader title={title} onBack={onBack} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>{children}</div>
     </div>
@@ -5966,27 +6005,36 @@ function GalleryPage({ onBack, statusMap = {}, onSelect }) {
   );
 }
 
-function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial }) {
+function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTutorial, theme='dark', onThemeChange }) {
   const [sub, setSub] = useState(null);
   if (sub === 'audio') return (
-    <SettingsSubPage title="Audio" onBack={()=>setSub(null)}>
+    <SettingsSubPage title="Audio" onBack={()=>setSub(null)} theme={theme}>
       <ToggleRow label="Suoni interfaccia" />
       <ToggleRow label="Versi degli animali" />
       <ToggleRow label="Notifiche push eventi" />
     </SettingsSubPage>
   );
   if (sub === 'theme') return (
-    <SettingsSubPage title="Tema" onBack={()=>setSub(null)}>
-      {['Scuro','Chiaro','Sistema','Modalità daltonismo'].map((t,i)=><button key={t} style={{ width:'100%', background:'#222222', border:`1px solid ${i===0?'#90D84A':'rgba(255,255,255,.06)'}`, borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{i===0?'●':'○'} {t}</button>)}
+    <SettingsSubPage title="Tema" onBack={()=>setSub(null)} theme={theme}>
+      {[
+        { value:'dark', label:'Scuro', desc:'Tema attuale Animaldex, nero e contrastato' },
+        { value:'light', label:'Chiaro', desc:'Sfondo bianco per menu, griglia, paesi e schede' },
+      ].map(opt=>{
+        const active = theme === opt.value;
+        return <button key={opt.value} onClick={()=>onThemeChange?.(opt.value)} style={{ width:'100%', background:active?(opt.value==='light'?'#FFFFFF':'#222222'):(theme==='light'?'#F3F3F3':'#222222'), border:`1.5px solid ${active?'#90D84A':theme==='light'?'rgba(0,0,0,.10)':'rgba(255,255,255,.06)'}`, borderRadius:14, padding:16, marginBottom:10, color:theme==='light'?'#171717':'white', textAlign:'left', fontSize:14, fontWeight:900, cursor:'pointer', fontFamily:'inherit', boxShadow:active?'0 10px 28px rgba(144,216,74,.20)':'none' }}>
+          <div>{active?'●':'○'} {opt.label}</div>
+          <div style={{ marginTop:5, fontSize:11.5, fontWeight:700, color:theme==='light'?'rgba(0,0,0,.55)':'rgba(255,255,255,.48)', lineHeight:1.35 }}>{opt.desc}</div>
+        </button>;
+      })}
     </SettingsSubPage>
   );
   if (sub === 'data') return (
-    <SettingsSubPage title="Dati" onBack={()=>setSub(null)}>
+    <SettingsSubPage title="Dati" onBack={()=>setSub(null)} theme={theme}>
       {['Sincronizza ora sul Cloud','Esporta dati Animaldex','Spazio foto: placeholder'].map(t=><button key={t} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
     </SettingsSubPage>
   );
   if (sub === 'privacy') return (
-    <SettingsSubPage title="Privacy" onBack={()=>setSub(null)}>
+    <SettingsSubPage title="Privacy" onBack={()=>setSub(null)} theme={theme}>
       <ToggleRow label="Permesso fotocamera" />
       <ToggleRow label="Posizione GPS per geotag" />
       {['Termini di servizio','Elimina account'].map((t,i)=><button key={t} style={{ width:'100%', background:i?'rgba(255,59,48,.12)':'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:i?'#FF6B6B':'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
@@ -6350,8 +6398,8 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom 
     </div>
   );
 }
-function ComparatorPage({ onBack, animals = [], statusMap = {}, initialAnimal = null }) {
-  const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })), [animals, statusMap]);
+function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries = [], initialAnimal = null }) {
+  const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
   const firstDefault = initialAnimal ? normalized.find(a=>a.id===initialAnimal.id) || initialAnimal : null;
   const [left,setLeft] = useState(firstDefault || null);
   const [right,setRight] = useState(null);
@@ -6429,13 +6477,14 @@ export default function App() {
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
+  const [theme,setTheme]=useState(getInitialAnimaldexTheme);
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
   const appHeight = useAppViewportHeight();
   const getTutorialAnimal = () => {
-    const list = (animalsData || []).map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) }));
+    const list = (animalsData || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
     return list.find(a => !isMysteryStatus(a.status) && a.image_url)
       || list.find(a => a.image_url)
       || list[0]
@@ -6458,6 +6507,10 @@ export default function App() {
     document.head.appendChild(style);
     return () => { try { document.head.removeChild(l); document.head.removeChild(style); } catch {} };
   },[]);
+
+  useEffect(()=>{
+    applyAnimaldexThemeToDocument(theme);
+  }, [theme]);
 
   useEffect(()=>{
     let mounted = true;
@@ -6836,7 +6889,7 @@ export default function App() {
     }));
   };
 
-const enriched = sel ? { ...sel, status: statusMap[sel.id] ?? sel.status } : null;
+const enriched = sel ? { ...sel, status: getResolvedAnimalStatus(sel, statusMap, visitedCountries) } : null;
 const openPage = (nextPage) => {
   setSel(null);
   setPhotoTarget(null);
@@ -6849,15 +6902,15 @@ const openPage = (nextPage) => {
   setPage(nextPage || 'menu');
 };
 const openComparator = (animal=null) => {
-  const enrichedAnimal = animal ? { ...animal, status: normalizeAnimalStatus(statusMap[animal.id] ?? animal.status) } : null;
+  const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
   setFeatureReturnAnimal(enrichedAnimal); setSel(null); setGridReturnTarget(null); setComparatorInitialAnimal(enrichedAnimal); setPage('compare');
 };
 const openLifeWeb = (animal=null) => {
-  const enrichedAnimal = animal ? { ...animal, status: normalizeAnimalStatus(statusMap[animal.id] ?? animal.status) } : null;
+  const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
   setFeatureReturnAnimal(enrichedAnimal); setSel(null); setGridReturnTarget(null); setLifeWebInitialAnimal(enrichedAnimal); setPage('lifeweb');
 };
 const openPhotoRecognition = (animal=null) => {
-  const enrichedAnimal = animal ? { ...animal, status: normalizeAnimalStatus(statusMap[animal.id] ?? animal.status) } : null;
+  const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
   setPhotoTarget(enrichedAnimal);
 };
 const confirmPhotoRecognition = async (animal, meta={}) => {
@@ -6926,7 +6979,7 @@ const returnFromFeaturePage = (fallback='menu') => {
   setPage(fallback);
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:'#1C1C1E' }}><Detail a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?'#FFFFFF':'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} captureStamp={tutorialStamp} onTutorialAbilityClick={handleTutorialAbilityClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -6964,21 +7017,21 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-    if (page === 'menu') return <MainMenu onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>setPage('quickSeen')} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges');}} />;
+    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>setPage('quickSeen')} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
-    if (page === 'compare') return <ComparatorPage onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'compare') return <ComparatorPage onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
     if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
-    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
+    if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
-    if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
-    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} />;
+    if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
+    if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
     if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
-    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
+    return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
 
   return (
-    <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:'#1C1C1E', position:'relative' }}>
+    <div id="animaldex-app-root" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?'#FFFFFF':'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
