@@ -1107,15 +1107,15 @@ const RARITY_CSS = `
 #animaldex-app-root[data-theme="light"] { background:#ffffff !important; color:#171717 !important; }
 #animaldex-app-root[data-theme="light"] * { text-shadow:none !important; }
 #animaldex-app-root[data-theme="light"] input::placeholder { color:rgba(0,0,0,.42) !important; }
-#animaldex-app-root[data-theme="light"] [style*="color: white"],
-#animaldex-app-root[data-theme="light"] [style*="color:white"] { color:#171717 !important; }
-#animaldex-app-root[data-theme="light"] [style*="rgba(255, 255, 255, 0.62)"],
-#animaldex-app-root[data-theme="light"] [style*="rgba(255,255,255,.62)"],
-#animaldex-app-root[data-theme="light"] [style*="rgba(255,255,255,.66)"],
-#animaldex-app-root[data-theme="light"] [style*="rgba(255,255,255,.72)"] { color:rgba(0,0,0,.62) !important; }
-#animaldex-app-root[data-theme="light"] button,
 #animaldex-app-root[data-theme="light"] input { color:#171717; }
 #animaldex-app-root[data-theme="light"] .rarity-badge span { color:inherit; }
+#animaldex-app-root[data-theme="light"] .light-surface-card {
+  background:#F6F4EF !important;
+  border-color:rgba(0,0,0,.10) !important;
+  box-shadow:0 14px 34px rgba(20,20,20,.08) !important;
+}
+#animaldex-app-root[data-theme="light"] .light-readable-text { color:#171717 !important; }
+#animaldex-app-root[data-theme="light"] .light-readable-muted { color:rgba(0,0,0,.58) !important; }
 
 `;
 
@@ -1924,18 +1924,22 @@ function ScaleComparison({ animal, full=false }) {
   const animalPx = Math.max(minPx, Math.round((lengthCm || ref.cm * .25) * pxPerCm));
   const animalIsMystery = isMysteryStatus(animal?.status);
   const animalSrc = animalIsMystery ? MYSTERY_PLACEHOLDER : (animal?.image_url || MYSTERY_PLACEHOLDER);
-  const renderRef = () => (
-    <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', display:'block', opacity:.96 }} />
-  );
+  const stageHeight = full ? 196 : 68;
+  const refSlotW = full ? 170 : 66;
+  const animalSlotW = full ? 190 : 72;
+  const refNudge = full ? 18 : 10;
+  const animalNudge = full ? -8 : -4;
   return (
     <div style={{ width:'100%', minHeight:full?252:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:'100%', display:'flex', alignItems:'flex-end', justifyContent:'center', gap:full?58:18, padding:full?'22px 12px 12px':'5px 0 2px', boxSizing:'border-box' }}>
-        <div style={{ width:full?178:66, display:'flex', justifyContent:'center', alignItems:'flex-end' }}>
-          <img src={animalSrc} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
+      <div style={{ width:'100%', height:stageHeight, display:'grid', gridTemplateColumns:`${refSlotW}px ${animalSlotW}px`, justifyContent:'center', alignItems:'end', columnGap:full?20:6, padding:full?'18px 10px 8px':'2px 0 0', boxSizing:'border-box' }}>
+        <div style={{ height:'100%', width:refSlotW, display:'flex', justifyContent:'flex-end', alignItems:'flex-end', transform:`translateX(${refNudge}px)` }}>
+          <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', opacity:.96 }} />
         </div>
-        <div style={{ width:full?144:58, display:'flex', justifyContent:'center', alignItems:'flex-end', transform:full?'translateX(22px)':'translateX(14px)' }}>{renderRef()}</div>
+        <div style={{ height:'100%', width:animalSlotW, display:'flex', justifyContent:'flex-start', alignItems:'flex-end', transform:`translateX(${animalNudge}px)` }}>
+          <img src={animalSrc} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
+        </div>
       </div>
-      {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · scala proporzionale sulla misura massima dell’animale</div>}
+      {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · appoggio sulla stessa linea di base</div>}
     </div>
   );
 }
@@ -2984,18 +2988,18 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#ffffff':'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:'1px solid #2A2A2C', flexShrink:0 }}>
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?'#FFFFFF':'transparent', flexShrink:0 }}>
         {onBackToOrigin ? (
-          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         ) : (
-          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:'white', fontSize:isNarrow?17:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Animaldex'}</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10, flexShrink:0 }}>ⓘ</button>
+        <span style={{ color:isLightTheme?'#171717':'white', fontSize:isNarrow?17:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Animaldex'}</span>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:isLightTheme?'rgba(0,0,0,.68)':'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10, flexShrink:0 }}>ⓘ</button>
       </div>
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
@@ -3008,8 +3012,10 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           ['catturato','Catturati']
         ].map(([key,label]) => {
           const active = fStatus.length === 1 && fStatus.includes(key) && !fRarity.length;
-          const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : 'rgba(255,255,255,.28)';
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?50:54, padding:'0 8px', borderRadius:16, border:`1px solid ${active ? activeColor : 'rgba(255,255,255,.10)'}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .22 : .28)}, rgba(255,255,255,.035))`:'rgba(255,255,255,.055)', color:active ? '#F5F1EA' : 'rgba(245,241,234,.88)', boxShadow:active ? `0 0 18px ${hexToRgba(activeColor, .16)}` : 'none', fontSize:isNarrow?11.5:12.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
+          const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : (isLightTheme ? '#8F8F8F' : 'rgba(255,255,255,.28)');
+          const inactiveColor = isLightTheme ? 'rgba(0,0,0,.50)' : 'rgba(245,241,234,.88)';
+          const activeText = isLightTheme ? '#171717' : '#F5F1EA';
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?50:54, padding:'0 8px', borderRadius:16, border:`1px solid ${active ? activeColor : (isLightTheme?'rgba(0,0,0,.14)':'rgba(255,255,255,.10)')}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .16 : .20)}, ${isLightTheme?'rgba(255,255,255,.92)':'rgba(255,255,255,.035)'})`:(isLightTheme?'#FFFFFF':'rgba(255,255,255,.055)'), color:active ? activeText : inactiveColor, boxShadow:active ? `0 10px 22px ${hexToRgba(activeColor, .12)}` : (isLightTheme?'0 6px 16px rgba(0,0,0,.05)':'none'), fontSize:isNarrow?11.5:12.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
@@ -3026,7 +3032,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
               : isCapturedTab
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Animaldex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
-          return <div style={{ color:'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
+          return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
         })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
@@ -3414,6 +3420,10 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const touchStartY = useRef(0);
   const c=CLS[a.cls]||CLS.Mammalia;
   const isLightTheme = theme === 'light';
+  const detailText = isLightTheme ? '#171717' : 'white';
+  const detailMuted = isLightTheme ? 'rgba(0,0,0,.62)' : 'rgba(255,255,255,.62)';
+  const detailPanel = isLightTheme ? 'rgba(255,255,255,.74)' : 'rgba(0,0,0,.35)';
+  const detailPanelBorder = isLightTheme ? '1px solid rgba(0,0,0,.08)' : 'none';
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
   const canViewImage = !isMysteryStatus(localStatus) && !!a.image_url;
@@ -3466,8 +3476,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? `linear-gradient(180deg,${c.detailTop} 0%,${hexToRgba(c.accent,.22)} 42%,#FFFFFF 88%)` : `linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
         <button onClick={onBack} style={{ background:'none', border:'none', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:0 }}>‹ Animaldex</button>
-        <span style={{ color:'white', fontSize:longName?14:17, fontWeight:800, maxWidth:180, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', transform:longName?'scaleX(.8)':'none', transformOrigin:'center' }}>{a.com}</span>
-        <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
+        <span style={{ color:detailText, fontSize:longName?14:17, fontWeight:800, maxWidth:180, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', transform:longName?'scaleX(.8)':'none', transformOrigin:'center' }}>{a.com}</span>
+        <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
       </div>
       <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
         style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
@@ -3515,19 +3525,19 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
           </div>
         </div>
         <div style={{ textAlign:'center', marginBottom:18 }}>
-          <h1 style={{ margin:0, color:'white', fontSize:longName?22:26, fontWeight:900, letterSpacing:longName?-.6:-.3, lineHeight:1.06, transform:longName?'scaleX(.8)':'none', transformOrigin:'center', maxWidth:'124%', marginLeft:longName?'-12%':0, marginRight:longName?'-12%':0 }}>{a.com}</h1>
+          <h1 style={{ margin:0, color:detailText, fontSize:longName?22:26, fontWeight:900, letterSpacing:longName?-.6:-.3, lineHeight:1.06, transform:longName?'scaleX(.8)':'none', transformOrigin:'center', maxWidth:'124%', marginLeft:longName?'-12%':0, marginRight:longName?'-12%':0 }}>{a.com}</h1>
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
-        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:10 }}>
-          <p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
+        <div style={{ background:detailPanel, border:detailPanelBorder, borderRadius:14, padding:14, marginBottom:10 }}>
+          <p style={{ margin:0, color:isLightTheme?'rgba(0,0,0,.74)':'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
         </div>
-        <div style={{ color:'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
+        <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
           {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Animaldex, non cattura fisica.
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
-          <button onClick={()=>setMetricModal('peso')} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box' }}>
-            <div style={{ width:'100%', maxWidth:'116px', marginTop:-2 }}><GaugeSVG wt_str={a.wt} /></div>
-            <div style={{ fontSize:9.8, fontWeight:900, color:getWeightCat(a.wt).color, textAlign:'center', lineHeight:1.05, marginTop:-2 }}>{getWeightCat(a.wt).label}</div>
+          <button onClick={()=>setMetricModal('peso')} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:3, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box' }}>
+            <div style={{ width:'100%', maxWidth:'116px', transform:'translateY(8px)', marginBottom:2 }}><GaugeSVG wt_str={a.wt} /></div>
+            <div style={{ fontSize:9.8, fontWeight:900, color:getWeightCat(a.wt).color, textAlign:'center', lineHeight:1.05, marginTop:0 }}>{getWeightCat(a.wt).label}</div>
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
           </button>
 
@@ -3640,9 +3650,9 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
 
       {/* Info Modal */}
       <FullscreenMetricModal open={metricModal==='peso'} title="Peso" subtitle="Il tachimetro divide il peso in tre fasce: pesi piuma, pesi medi e pesi massimi. La lancetta si muove solo dentro la fascia corretta: a sinistra per i valori più leggeri della categoria, a destra per i più pesanti." onClose={()=>setMetricModal(null)}>
-        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <div style={{ maxWidth:500, margin:'0 auto' }}><GaugeSVG wt_str={a.wt} large /></div>
-          <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:10 }}>{getWeightCat(a.wt).label}</div>
+        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'26px 18px 18px', textAlign:'center' }}>
+          <div style={{ maxWidth:500, margin:'10px auto -4px', transform:'translateY(18px)' }}><GaugeSVG wt_str={a.wt} large /></div>
+          <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:0 }}>{getWeightCat(a.wt).label}</div>
           <div style={{ color:'white', fontSize:30, fontWeight:1000, marginTop:6 }}>{a.wt}</div>
         </div>
       </FullscreenMetricModal>
@@ -3714,13 +3724,15 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
 
 // ── Main Menu & Extra Pages ──────────────────────────────────────────
 
-function PageHeader({ title, onBack, right }) {
+function PageHeader({ title, onBack, right, theme }) {
+  const inferredTheme = theme || (typeof window !== 'undefined' ? window.localStorage?.getItem(ANIMALDEX_THEME_KEY) : 'dark');
+  const isLightTheme = inferredTheme === 'light';
   return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:'1px solid #2A2A2C', flexShrink:0, background:'#1C1C1E' }}>
-      <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?'#FFFFFF':'#1C1C1E' }}>
+      <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
-      <div style={{ color:'white', fontSize:20, fontWeight:900, letterSpacing:'-.2px', flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{title}</div>
+      <div style={{ color:isLightTheme?'#171717':'white', fontSize:20, fontWeight:900, letterSpacing:'-.2px', flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{title}</div>
       <div style={{ width:46, height:46, display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>{right}</div>
     </div>
   );
@@ -4661,6 +4673,10 @@ const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert'
 function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark' }) {
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const isLightTheme = theme === 'light';
+  const pageText = isLightTheme ? '#171717' : 'white';
+  const mutedText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)';
+  const lightPanel = isLightTheme ? '#F6F4EF' : 'rgba(255,255,255,.055)';
+  const lightPanelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
   const displayName = userProfile?.nickname || userProfile?.username || user?.email?.split('@')[0] || 'Esploratore';
   const nextLevelXP = xpForLevel(progress.level + 1);
   const currLevelXP = xpForLevel(progress.level);
@@ -4688,7 +4704,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
-      <PageHeader title="Mission Control" onBack={onBack} />
+      <PageHeader title="Mission Control" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
         <button onClick={()=>onOpen('profile')} style={{ width:'100%', borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14, color:'white', fontFamily:'inherit', textAlign:'left', cursor:'pointer' }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
@@ -4714,10 +4730,10 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
             ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
             ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:'1px solid rgba(255,255,255,.10)', borderRadius:20, background:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
+          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.10)'}`, borderRadius:20, background:isLightTheme?'#FFFFFF':'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:isLightTheme?'0 12px 24px rgba(0,0,0,.08)':'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
         </div>
 
-        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:22, background:'rgba(255,255,255,.05)', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit' }}>
+        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:`1px solid ${lightPanelBorder}`, borderRadius:22, background:lightPanel, padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.06)':'none' }}>
           {(() => {
             const totalAnimals = Math.max(1, ANIMALS.length);
             const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
@@ -4727,15 +4743,15 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             const Row = ({ label, valueText, pct, color, hint }) => (
               <div style={{ marginTop:10 }}>
                 <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
-                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
-                  <div style={{ color:'rgba(255,255,255,.64)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
+                  <div style={{ color:pageText, fontSize:12.5, fontWeight:900 }}>{label}</div>
+                  <div style={{ color:mutedText, fontSize:11.5, fontWeight:800 }}>{valueText}</div>
                 </div>
-                <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
-                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
+                <div style={{ color:isLightTheme?'rgba(0,0,0,.48)':'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
+                <div style={{ height:8, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
               </div>
             );
             return <>
-              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
+              <div style={{ color:pageText, fontSize:18, fontWeight:1000 }}>Animaldex</div>
               <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
               <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
               <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
@@ -4744,7 +4760,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         </button>
 
         {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
-          <div style={{ color:'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
+          <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
           <div style={{ display:'grid', gap:8 }}>
             {progress.nearlyCompletedBadges.map(rule => {
               const badgeColor = BADGE_LEVEL_COLORS[rule.level] || '#C0C0C0';
@@ -4757,12 +4773,12 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>}
 
-        <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
+        <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
           {items.map(item=>{
             const focused = tutorialFocus === item.id;
-            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:'1px solid rgba(255,255,255,.08)', borderRadius:18, background:'rgba(255,255,255,.055)', color:'white', cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
-              <span style={{ width:38, height:38, borderRadius:14, background:'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
+            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:`1px solid ${lightPanelBorder}`, borderRadius:18, background:lightPanel, color:pageText, cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
+              <span style={{ width:38, height:38, borderRadius:14, background:isLightTheme?'rgba(0,0,0,.06)':'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
               <span style={{ fontSize:13, fontWeight:950 }}>{item.label}</span>
             </button>
           })}
@@ -4773,7 +4789,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 }
 
 
-function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect }) {
+function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark' }) {
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
   const [busy, setBusy] = useState(false);
   const buildQueue = () => {
@@ -4822,8 +4838,8 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     setBusy(false);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <PageHeader title="Visti rapidi" onBack={onBack} />
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#111113', overflow:'hidden' }}>
+      <PageHeader title="Visti rapidi" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ color:'rgba(255,255,255,.62)', fontSize:13, lineHeight:1.55, marginBottom:14 }}>Ti proponiamo animali che potresti aver visto in base ai tuoi paesi visitati. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
         {!visitedCountries.length ? (
@@ -4853,7 +4869,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
   );
 }
 
-function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, userProfile, user, onLogout }) {
+function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], onOpenGridStatus, onOpenBadges, onOpenRegions, onOpenGallery, userProfile, user, onLogout, theme='dark' }) {
   const fileInputRef = useRef(null);
   const animalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
@@ -4874,7 +4890,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#1C1C1E', overflow:'hidden' }}>
-      <PageHeader title="Profilo" onBack={onBack} />
+      <PageHeader title="Profilo" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ background:'linear-gradient(135deg,#102B4D 0%,#1B567B 58%,#0B1D35 100%)', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.08)' }}>
           <button onClick={()=>fileInputRef.current?.click()} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(135,198,255,.18)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)' }}>👤</button>
@@ -4985,7 +5001,7 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
   );
 }
 
-function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], openBadgeId=null, onBadgeOpened, tutorialActive=false, onTutorialBadgeOpen }) {
+function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], openBadgeId=null, onBadgeOpened, tutorialActive=false, onTutorialBadgeOpen, theme='dark' }) {
   const [macro, setMacro] = useState('Tutti');
   const [onlyUnlocked, setOnlyUnlocked] = useState(false);
   const [selectedAward, setSelectedAward] = useState(null);
@@ -5012,13 +5028,13 @@ function BadgesPage({ onBack, statusMap = {}, visitedCountries = [], earnedBadge
     setSelectedAward(orderedAwards[nextIndex]);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#2A2A2C', overflow:'hidden' }}>
-      <PageHeader title="Badge" onBack={onBack} />
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#2A2A2C', overflow:'hidden' }}>
+      <PageHeader title="Badge" onBack={onBack} theme={theme} />
       <div style={{ padding:'12px 12px 8px', flexShrink:0 }}>
         <div style={{ display:'flex', gap:8, overflowX:'auto', paddingBottom:6 }}>
-          {macros.map(c=><button key={c} onClick={()=>setMacro(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:macro===c?'#777':'#3A3A3C', color:'white', fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>)}
+          {macros.map(c=><button key={c} onClick={()=>setMacro(c)} style={{ padding:'8px 14px', borderRadius:12, border:'none', background:macro===c?(theme==='light'?'#171717':'#777'):(theme==='light'?'#F3F1EC':'#3A3A3C'), color:macro===c?'white':(theme==='light'?'#171717':'white'), fontSize:13, fontWeight:800, whiteSpace:'nowrap', cursor:'pointer' }}>{c}</button>)}
         </div>
-        <button onClick={()=>setOnlyUnlocked(v=>!v)} style={{ marginTop:8, width:'100%', height:40, borderRadius:12, background:onlyUnlocked?'rgba(144,216,74,.2)':'#3A3A3C', border:'1px solid rgba(255,255,255,.08)', color:onlyUnlocked?'#90D84A':'white', fontWeight:800, cursor:'pointer' }}>{onlyUnlocked ? 'Mostra tutti' : 'Solo ricercati'}</button>
+        <button onClick={()=>setOnlyUnlocked(v=>!v)} style={{ marginTop:8, width:'100%', height:40, borderRadius:12, background:onlyUnlocked?'rgba(144,216,74,.2)':(theme==='light'?'#F3F1EC':'#3A3A3C'), border:`1px solid ${theme==='light'?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)'}`, color:onlyUnlocked?'#90D84A':(theme==='light'?'#171717':'white'), fontWeight:800, cursor:'pointer' }}>{onlyUnlocked ? 'Mostra tutti' : 'Solo ricercati'}</button>
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'10px 12px 28px' }}>
         <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
@@ -5707,7 +5723,7 @@ function StandaloneLifeWebPage({ onBack, animals = [], initialAnimal = null, onO
   const habitat = derivedHabitatId ? { id:derivedHabitatId, label:habitatLabel(derivedHabitatId) } : { id:'FOREST_TEMP', label:'Habitat contestuale' };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'#050505', overflow:'hidden' }}>
-      <PageHeader title={focusAnimal ? `Web · ${focusAnimal.com}` : 'LifeWeb'} onBack={onBack} />
+      <PageHeader title={focusAnimal ? `Web · ${focusAnimal.com}` : 'LifeWeb'} onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
         <LifeWebPage territory={null} habitat={habitat} animals={resolvedAnimals} focusAnimal={focusAnimal} onOpenAnimal={onOpenAnimal} />
       </div>
@@ -5844,7 +5860,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?'#FFFFFF':'#050505', overflow:'hidden' }}>
-      <PageHeader title={title} onBack={goBack} />
+      <PageHeader title={title} onBack={goBack} theme={theme} />
       {view !== 'planet' && (
         <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', display:'flex', gap:8, padding:'9px 14px 7px', borderBottom:'1px solid rgba(255,255,255,.06)', background:'rgba(12,12,14,.92)' }}>
           {navChips.map(chip => <button key={chip.label} onClick={chip.action} style={{ flex:'0 0 auto', height:32, padding:'0 12px', borderRadius:999, border:`1px solid ${chip.active?'rgba(168,70,55,.70)':'rgba(255,255,255,.08)'}`, background:chip.active?'rgba(168,70,55,.24)':'rgba(255,255,255,.045)', color:chip.active?'#FFD4C8':'rgba(255,255,255,.72)', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{chip.label}</button>)}
@@ -5969,18 +5985,18 @@ function ToggleRow({ label, initial = true }) {
 function SettingsSubPage({ title, onBack, children, theme='dark' }) {
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#1C1C1E', overflow:'hidden' }}>
-      <PageHeader title={title} onBack={onBack} />
+      <PageHeader title={title} onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>{children}</div>
     </div>
   );
 }
 
 
-function GalleryPage({ onBack, statusMap = {}, onSelect }) {
+function GalleryPage({ onBack, statusMap = {}, onSelect, theme='dark' }) {
   const captured = ANIMALS.map(a => ({ ...a, status: normalizeAnimalStatus(statusMap[a.id] ?? a.status) })).filter(a => a.status === 'catturato');
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <PageHeader title="Galleria" onBack={onBack} />
+      <PageHeader title="Galleria" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:'14px 12px 28px' }}>
         {captured.length === 0 ? (
           <div style={{ color:'rgba(255,255,255,.45)', textAlign:'center', padding:40, fontSize:14 }}>Nessun animale fotografato/catturato.</div>
@@ -6048,7 +6064,7 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#1C1C1E', overflow:'hidden' }}>
-      <PageHeader title="Impostazioni" onBack={onBack} />
+      <PageHeader title="Impostazioni" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:16 }}>
         <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.20),rgba(240,168,64,.08))', border:'1px solid rgba(168,70,55,.42)', borderRadius:24, padding:16, marginBottom:14, boxShadow:'0 18px 50px rgba(0,0,0,.22)' }}>
           <div style={{ color:'#D98674', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Percorsi guidati</div>
@@ -6120,7 +6136,7 @@ function AbilityModal({ meta, onClose, onOpenAnimals, onPrev, onNext }) {
   );
 }
 
-function AbilitiesPage({ onBack, onOpenAbility }) {
+function AbilitiesPage({ onBack, onOpenAbility, theme='dark' }) {
   const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, description:getAbilityDescription(id, meta), count: ANIMALS.filter(a=>a.categories?.includes(id)).length, group:getAbilityGroupId(id) }));
   const [search, setSearch] = useState('');
   const [selectedAbility, setSelectedAbility] = useState(null);
@@ -6135,17 +6151,17 @@ function AbilitiesPage({ onBack, onOpenAbility }) {
   };
   const openAnimals = (id, label) => { setSelectedAbility(null); onOpenAbility?.(id, label); };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <PageHeader title="Abilità" onBack={onBack} />
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#111113', overflow:'hidden' }}>
+      <PageHeader title="Abilità" onBack={onBack} theme={theme} />
       <div style={{ padding:'12px 14px', flexShrink:0 }}>
-        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca abilità..." style={{ width:'100%', height:44, borderRadius:12, background:'#222226', color:'white', border:'1px solid rgba(255,255,255,.1)', padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
+        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca abilità..." style={{ width:'100%', height:44, borderRadius:12, background:theme==='light'?'#F3F1EC':'#222226', color:theme==='light'?'#171717':'white', border:`1px solid ${theme==='light'?'rgba(0,0,0,.12)':'rgba(255,255,255,.1)'}`, padding:'0 14px', fontSize:14, outline:'none', boxSizing:'border-box' }} />
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:'0 14px 28px' }}>
         {groupedRows.map(group => (
           <div key={group.id} style={{ marginBottom:18 }}>
             <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', margin:'6px 2px 10px' }}>
               <div style={{ color:group.color, fontSize:15, fontWeight:1000 }}>{group.label}</div>
-              <div style={{ color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:900 }}>{group.rows.length}</div>
+              <div style={{ color:theme==='light'?'rgba(0,0,0,.45)':'rgba(255,255,255,.42)', fontSize:11, fontWeight:900 }}>{group.rows.length}</div>
             </div>
             <div style={{ borderRadius:18, border:`1px solid ${group.color}44`, padding:10, background:'rgba(255,255,255,.03)' }}>
               {group.rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpen={setSelectedAbility} />)}
@@ -6398,7 +6414,7 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom 
     </div>
   );
 }
-function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries = [], initialAnimal = null }) {
+function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries = [], initialAnimal = null, theme='dark' }) {
   const normalized = useMemo(() => (animals || ANIMALS || []).map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
   const firstDefault = initialAnimal ? normalized.find(a=>a.id===initialAnimal.id) || initialAnimal : null;
   const [left,setLeft] = useState(firstDefault || null);
@@ -6413,8 +6429,8 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
   const [zoomAnimal,setZoomAnimal]=useState(null);
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 560;
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:'#111113', overflow:'hidden' }}>
-      <PageHeader title="Comparatore" onBack={onBack} />
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?'#FFFFFF':'#111113', overflow:'hidden' }}>
+      <PageHeader title="Comparatore" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'14px 14px 28px', boxSizing:'border-box' }}>
         <div style={{ background:'linear-gradient(135deg,rgba(168,70,55,.28),rgba(20,20,22,.88))', border:'1px solid rgba(255,255,255,.08)', borderRadius:24, padding:16, marginBottom:14 }}>
           <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:12 }}>
@@ -7018,15 +7034,15 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   const renderPage = () => {
     if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='regions'?'regions':tutorialStep==='profile'?'profile':tutorialStep==='rewards'?'badges':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>setPage('quickSeen')} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges');}} />;
-    if (page === 'quickSeen') return <QuickSeenPage onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
-    if (page === 'compare') return <ComparatorPage onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
-    if (page === 'profile') return <ProfilePage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
+    if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
+    if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
+    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={tutorialStep==='rewards'} onTutorialBadgeOpen={handleTutorialBadgeOpen} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
-    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
+    if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
-    if (page === 'abilities') return <AbilitiesPage onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
+    if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid'} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
 
