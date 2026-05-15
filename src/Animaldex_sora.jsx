@@ -4880,13 +4880,12 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
         </div>
 
-        <div style={{ position:'relative', marginBottom:22 }}>
+        <div style={{ marginBottom:14 }}>
           <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.12)'}`, borderRadius:28, background:isLightTheme?'linear-gradient(135deg,#F7F4EC,#ECE7DA)':'radial-gradient(circle at 80% 0%, rgba(108,229,199,.18), transparent 34%), linear-gradient(135deg,rgba(26,43,48,.94),rgba(15,18,22,.98))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
             <div style={{ color:isLightTheme?'#A84637':'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
             <div style={{ fontSize:28, fontWeight:1000, lineHeight:1.02, marginTop:6 }}>Territori</div>
             <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(245,241,234,.64)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
           </button>
-          <button aria-label="Apri fotocamera" onClick={()=>onOpenPhoto?.()} style={{ position:'absolute', left:'50%', bottom:-24, transform:'translateX(-50%)', width:72, height:72, borderRadius:'50%', border:'3px solid rgba(255,255,255,.92)', background:'linear-gradient(135deg,#A84637,#F0A840)', color:'white', boxShadow:'0 18px 42px rgba(0,0,0,.38), 0 0 0 6px rgba(168,70,55,.16)', fontSize:28, display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer' }}>📷</button>
         </div>
 
         <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:`1px solid ${lightPanelBorder}`, borderRadius:22, background:lightPanel, padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.06)':'none' }}>
@@ -4943,6 +4942,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           })}
         </div>
       </div>
+      <button aria-label="Apri fotocamera" onClick={()=>onOpenPhoto?.()} style={{ position:'absolute', left:'50%', bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)', transform:'translateX(-50%)', width:76, height:76, borderRadius:'50%', border:'3px solid rgba(255,255,255,.92)', background:'linear-gradient(135deg,#A84637,#F0A840)', color:'white', boxShadow:'0 18px 42px rgba(0,0,0,.42), 0 0 0 7px rgba(168,70,55,.18)', fontSize:30, display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', zIndex:80 }}>📷</button>
     </div>
   );
 }
@@ -6621,17 +6621,17 @@ function radarLabelLines(label='') {
   return s.split(' ');
 }
 function ComparatorRadar({ left, right, colorLeft, colorRight }) {
-  const width = 430, height = 390, cx = width/2, cy = 190, r = 98;
+  const width = 430, height = 390, cx = width/2, cy = 190, r = 126;
   const axes = left?.radar || right?.radar || COMPARATOR_METRICS.map(m=>({ ...m, value:0 }));
   const pt = (idx,value)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); const rr=r*(Number(value||0)/100); return [cx+Math.cos(angle)*rr, cy+Math.sin(angle)*rr]; };
   const poly = (data)=> data ? data.radar.map((m,i)=>pt(i,m.value).join(',')).join(' ') : '';
   const grid = [20,40,60,80,100].map(v=> axes.map((_,i)=>pt(i,v).join(',')).join(' '));
   const labelSlots = [
-    { x:cx, y:28, anchor:'middle' },
-    { x:width-42, y:126, anchor:'end' },
-    { x:width-64, y:336, anchor:'end' },
-    { x:64, y:336, anchor:'start' },
-    { x:42, y:126, anchor:'start' },
+    { x:cx, y:22, anchor:'middle' },
+    { x:width-18, y:116, anchor:'end' },
+    { x:width-32, y:344, anchor:'end' },
+    { x:32, y:344, anchor:'start' },
+    { x:18, y:116, anchor:'start' },
   ];
   return (
     <div style={{ borderRadius:24, background:'radial-gradient(circle at center,rgba(168,70,55,.16),rgba(0,0,0,.40) 56%,rgba(0,0,0,.74))', border:'1px solid rgba(255,255,255,.08)', padding:6, overflow:'hidden' }}>
@@ -6644,8 +6644,8 @@ function ComparatorRadar({ left, right, colorLeft, colorRight }) {
         {axes.map((m,i)=>{ const slot=labelSlots[i] || {x:cx,y:height-30,anchor:'middle'}; const lv=left?.radar?.[i]; const rv=right?.radar?.[i]; return <g key={m.key}>
           <text x={slot.x} y={slot.y} fill="white" fontSize="15" fontWeight="900" textAnchor={slot.anchor}>{radarLabelLines(m.label)[0]}</text>
           {radarLabelLines(m.label)[1] && <text x={slot.x} y={slot.y+16} fill="white" fontSize="12" fontWeight="850" opacity=".82" textAnchor={slot.anchor}>{radarLabelLines(m.label)[1]}</text>}
-          <text x={slot.x} y={slot.y+34} fill={colorLeft} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{lv?`A ${lv.value} · ${formatComparatorRaw(lv)}`:''}</text>
-          <text x={slot.x} y={slot.y+48} fill={colorRight} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{rv?`B ${rv.value} · ${formatComparatorRaw(rv)}`:''}</text>
+          <text x={slot.x} y={slot.y+34} fill={colorLeft} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{lv?`${lv.value} · ${formatComparatorRaw(lv)}`:''}</text>
+          <text x={slot.x} y={slot.y+48} fill={colorRight} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{rv?`${rv.value} · ${formatComparatorRaw(rv)}`:''}</text>
         </g>; })}
       </svg>
     </div>
