@@ -933,6 +933,7 @@ const BADGE_LEVEL_COLORS = {
   1: '#CD7F32',
   2: '#C0C0C0',
   3: '#FFD700',
+  4: '#8F34F5',
 };
 
 const STATS_DEF = [
@@ -1580,15 +1581,40 @@ function extractAverageWeightKg(wt) {
 function getObservationCount(a) {
   const keys = ['obs_total','observations_total','observations','gbif_obs','occurrence_count','obs'];
   for (const key of keys) {
-    const val = a?.[key];
+    const val = a?.[key] ?? a?.distribution?.[key];
+    if (typeof val === 'number') return val;
+    if (typeof val === 'string' && /^\d/.test(val)) return Number(val.replace(/[^\d.]/g,'')) || 0;
+  }
+  for (const key of ['wild_observations', 'total_observations']) {
+    const val = a?.distribution?.[key];
     if (typeof val === 'number') return val;
     if (typeof val === 'string' && /^\d/.test(val)) return Number(val.replace(/[^\d.]/g,'')) || 0;
   }
   return Infinity;
 }
+function normalizeBadgeBiome(value) {
+  const s = String(value || '').trim().toLowerCase();
+  if (!s) return '';
+  if (/urb|citt|giardin|parch|edificat|agricol|coltiv|rural/.test(s)) return 'Ambienti umani';
+  if (/barrier|corall|reef/.test(s)) return 'Barriere coralline';
+  if (/mangrov/.test(s)) return 'Mangrovie';
+  if (/cost|litor|spiagg|dun|estuar|intertid|subtid|fondal|roccios|sabbios|lagun/.test(s)) return 'Coste e fondali';
+  if (/pelagic|pelag|oceano|ocean|mare aperto|alto mare/.test(s)) return 'Oceano aperto';
+  if (/acqua dolce|fium|ruscell|lago|stagno|palud|umid|canal|torrente|ripar/.test(s)) return 'Acque interne e zone umide';
+  if (/tropical|pluvial|rainforest/.test(s)) return 'Foreste tropicali';
+  if (/boreal|taiga/.test(s)) return 'Foreste boreali';
+  if (/temperat|bosco|forest|foresta|macchia|margini forestali|woodland/.test(s)) return 'Foreste temperate';
+  if (/savana|savanna/.test(s)) return 'Savane';
+  if (/prater|stepp|grass|erboso|pascol/.test(s)) return 'Praterie e steppe';
+  if (/desert|arid|duna|sabbia/.test(s)) return 'Deserti e ambienti aridi';
+  if (/mont|alp|rocc|scogl|rupe|paret|altitud/.test(s)) return 'Montagne e ambienti rocciosi';
+  if (/tundra|artic|antart|polar|ghiacc|neve|pack/.test(s)) return 'Tundra e ambienti polari';
+  if (/grott|caver|sotterr/.test(s)) return 'Grotte e ambienti sotterranei';
+  return s.split(/\s+/).slice(0, 4).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
 function getAnimalBiomes(a) {
   const raw = [a.biome, a.biomes, a.habitat, a.habitats, a.hab, a.ecosystem, a.ecosystems].filter(Boolean).join(',');
-  return raw.split(/[;,|]/).map(v => String(v).trim()).filter(Boolean);
+  return Array.from(new Set(raw.split(/[;,|]/).map(normalizeBadgeBiome).filter(Boolean)));
 }
 function getUsageStreak() {
   if (typeof window === 'undefined') return 1;
@@ -1613,69 +1639,75 @@ function getHomeCountry() {
 }
 const AWARD_RULES = [
   {badgeId:'ONB-01-L1', macroId:'ONB', macro:'Onboarding', subId:'ONB-01', sub:'Primo Viaggio', level:1, name:'Primo Viaggio', goal:'1 nazione', metric:'onboarding_first_trip', threshold:1},
-  {badgeId:'ARS-01-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:1, name:'Incisore di Solchi', goal:'3 specie', metric:'bio_blades', threshold:3},
-  {badgeId:'ARS-01-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:2, name:'Curatore di Artigli', goal:'10 specie', metric:'bio_blades', threshold:10},
-  {badgeId:'ARS-01-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:3, name:'Maestro della Presa Mortale', goal:'30 specie', metric:'bio_blades', threshold:30},
-  {badgeId:'ARS-02-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:1, name:"Interprete delle Zanne", goal:'3 specie', metric:'tusks', threshold:3},
-  {badgeId:'ARS-02-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:2, name:'Archivista dei Perforatori', goal:'10 specie', metric:'tusks', threshold:10},
-  {badgeId:'ARS-02-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:3, name:'Araldo del Morso Primordiale', goal:'30 specie', metric:'tusks', threshold:30},
+  {badgeId:'ARS-01-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:1, name:'Incisore di Solchi', goal:'10 specie', metric:'bio_blades', threshold:10},
+  {badgeId:'ARS-01-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:2, name:'Curatore di Artigli', goal:'40 specie', metric:'bio_blades', threshold:40},
+  {badgeId:'ARS-01-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-01', sub:'Lame Biologiche (Artigli)', level:3, name:'Maestro della Presa Mortale', goal:'90 specie', metric:'bio_blades', threshold:90},
+  {badgeId:'ARS-02-L1', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:1, name:"Interprete delle Zanne", goal:'5 specie', metric:'tusks', threshold:5},
+  {badgeId:'ARS-02-L2', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:2, name:'Archivista dei Perforatori', goal:'25 specie', metric:'tusks', threshold:25},
+  {badgeId:'ARS-02-L3', macroId:'ARS', macro:'Arsenale', subId:'ARS-02', sub:'Zanne e Perforatori', level:3, name:'Araldo del Morso Primordiale', goal:'60 specie', metric:'tusks', threshold:60},
   {badgeId:'CON-01-L1', macroId:'CON', macro:'Conservazione', subId:'CON-01', sub:'Specie Critiche (CR)', level:1, name:'Sentinella del Rischio', goal:'1 specie', metric:'cr_count', threshold:1},
   {badgeId:'CON-01-L2', macroId:'CON', macro:'Conservazione', subId:'CON-01', sub:'Specie Critiche (CR)', level:2, name:'Cronista della Fragilità', goal:'5 specie', metric:'cr_count', threshold:5},
   {badgeId:'CON-01-L3', macroId:'CON', macro:'Conservazione', subId:'CON-01', sub:'Specie Critiche (CR)', level:3, name:'Ultimo Baluardo', goal:'15 specie', metric:'cr_count', threshold:15},
   {badgeId:'CON-02-L1', macroId:'CON', macro:'Conservazione', subId:'CON-02', sub:'Varietà Stati IUCN', level:1, name:'Cartografo del Rischio', goal:'3 stati', metric:'iucn_variety', threshold:3},
   {badgeId:'CON-02-L2', macroId:'CON', macro:'Conservazione', subId:'CON-02', sub:'Varietà Stati IUCN', level:2, name:'Atlante della Vulnerabilità', goal:'tutti i 6 stati', metric:'iucn_variety', threshold:6},
   {badgeId:'CON-02-L3', macroId:'CON', macro:'Conservazione', subId:'CON-02', sub:'Varietà Stati IUCN', level:3, name:'Sigillo della Lista Rossa', goal:'5 specie per stato', metric:'iucn_five_each', threshold:1},
-  {badgeId:'ELI-01-L1', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:1, name:'Rilevatore di Primati', goal:'1 record', metric:'record_count', threshold:1},
-  {badgeId:'ELI-01-L2', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:2, name:'Archivista dei Record', goal:'5 record', metric:'record_count', threshold:5},
-  {badgeId:'ELI-01-L3', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:3, name:'Cacciatore di Record', goal:'10 record', metric:'record_count', threshold:10},
-  {badgeId:'ELI-02-L1', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. <100)', level:1, name:"Cercatore dell'Improbabile", goal:'1 specie', metric:'obs_under_100', threshold:1},
-  {badgeId:'ELI-02-L2', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. <100)', level:2, name:'Archivista del Quasi Impossibile', goal:'5 specie', metric:'obs_under_100', threshold:5},
-  {badgeId:'ELI-02-L3', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. <100)', level:3, name:'Mito Vivente', goal:'10 specie', metric:'obs_under_100', threshold:10},
+  {badgeId:'ELI-01-L1', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:1, name:'Rilevatore di Primati', goal:'5 record', metric:'record_count', threshold:5},
+  {badgeId:'ELI-01-L2', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:2, name:'Archivista dei Record', goal:'20 record', metric:'record_count', threshold:20},
+  {badgeId:'ELI-01-L3', macroId:'ELI', macro:'Elite', subId:'ELI-01', sub:'Record Mondiali', level:3, name:'Cacciatore di Record', goal:'50 record', metric:'record_count', threshold:50},
+  {badgeId:'ELI-02-L1', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. 1-99)', level:1, name:"Cercatore dell'Improbabile", goal:'3 specie', metric:'obs_under_100', threshold:3},
+  {badgeId:'ELI-02-L2', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. 1-99)', level:2, name:'Archivista del Quasi Impossibile', goal:'10 specie', metric:'obs_under_100', threshold:10},
+  {badgeId:'ELI-02-L3', macroId:'ELI', macro:'Elite', subId:'ELI-02', sub:'Rarità Assoluta (Obs. 1-99)', level:3, name:'Mito Vivente', goal:'25 specie', metric:'obs_under_100', threshold:25},
   {badgeId:'ENG-01-L1', macroId:'ENG', macro:'Engagement', subId:'ENG-01', sub:'Giorni consecutivi', level:1, name:'Sentinella della Costanza', goal:'3 giorni', metric:'usage_streak', threshold:3},
   {badgeId:'ENG-01-L2', macroId:'ENG', macro:'Engagement', subId:'ENG-01', sub:'Giorni consecutivi', level:2, name:'Custode del Ritmo', goal:'10 giorni', metric:'usage_streak', threshold:10},
   {badgeId:'ENG-01-L3', macroId:'ENG', macro:'Engagement', subId:'ENG-01', sub:'Giorni consecutivi', level:3, name:'Naturalista Perpetuo', goal:'30 giorni', metric:'usage_streak', threshold:30},
   {badgeId:'ENG-02-L1', macroId:'ENG', macro:'Engagement', subId:'ENG-02', sub:'Correzione dati AI', level:1, name:'Occhio Critico', goal:'5 correzioni', metric:'ai_corrections', threshold:5},
   {badgeId:'ENG-02-L2', macroId:'ENG', macro:'Engagement', subId:'ENG-02', sub:'Correzione dati AI', level:2, name:'Scriba della Verifica', goal:'20 correzioni', metric:'ai_corrections', threshold:20},
   {badgeId:'ENG-02-L3', macroId:'ENG', macro:'Engagement', subId:'ENG-02', sub:'Correzione dati AI', level:3, name:"Arbitro dell'Evidenza", goal:'100 correzioni', metric:'ai_corrections', threshold:100},
-  {badgeId:'TRO-01-L1', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:1, name:'Avvistatore Alfa', goal:'3 specie', metric:'apex_count', threshold:3},
-  {badgeId:'TRO-01-L2', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:2, name:'Curatore dei Predatori Apicali', goal:'10 specie', metric:'apex_count', threshold:10},
-  {badgeId:'TRO-01-L3', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:3, name:'Sovrano della Catena', goal:'25 specie', metric:'apex_count', threshold:25},
-  {badgeId:'TRO-02-L1', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:1, name:'Rilevatore Trofico', goal:'5 specie', metric:'base_trophic_count', threshold:5},
-  {badgeId:'TRO-02-L2', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:2, name:'Atlante della Biomassa', goal:'20 specie', metric:'base_trophic_count', threshold:20},
-  {badgeId:'TRO-02-L3', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:3, name:'Custode delle Sorgenti', goal:'50 specie', metric:'base_trophic_count', threshold:50},
+  {badgeId:'TRO-01-L1', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:1, name:'Avvistatore Alfa', goal:'5 specie', metric:'apex_count', threshold:5},
+  {badgeId:'TRO-01-L2', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:2, name:'Curatore dei Predatori Apicali', goal:'25 specie', metric:'apex_count', threshold:25},
+  {badgeId:'TRO-01-L3', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-01', sub:'Predatori Apex', level:3, name:'Sovrano della Catena', goal:'60 specie', metric:'apex_count', threshold:60},
+  {badgeId:'TRO-02-L1', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:1, name:'Rilevatore Trofico', goal:'3 specie', metric:'base_trophic_count', threshold:3},
+  {badgeId:'TRO-02-L2', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:2, name:'Atlante della Biomassa', goal:'10 specie', metric:'base_trophic_count', threshold:10},
+  {badgeId:'TRO-02-L3', macroId:'TRO', macro:'Gruppo Alimentare', subId:'TRO-02', sub:'Produttori / Filtratori', level:3, name:'Custode delle Sorgenti', goal:'20 specie', metric:'base_trophic_count', threshold:20},
   {badgeId:'GEO-01-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:1, name:'Esploratore di Frontiere', goal:'3 nazioni', metric:'countries_count', threshold:3},
   {badgeId:'GEO-01-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:2, name:'Cartografo dei Continenti', goal:'10 nazioni', metric:'countries_count', threshold:10},
   {badgeId:'GEO-01-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:3, name:'Diplomatico della Biodiversità', goal:'30 nazioni', metric:'countries_count', threshold:30},
-  {badgeId:'GEO-02-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:1, name:'Rilevatore del Territorio', goal:'10%', metric:'home_country_biodiversity', threshold:10},
-  {badgeId:'GEO-02-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:2, name:'Atlante del Patrimonio Locale', goal:'50%', metric:'home_country_biodiversity', threshold:50},
-  {badgeId:'GEO-02-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:3, name:'Sigillo del Patrimonio Vivente', goal:'100%', metric:'home_country_biodiversity', threshold:100},
-  {badgeId:'GEO-03-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:1, name:'Esploratore dei Biomi', goal:'3 biomi', metric:'biomes_count', threshold:3},
-  {badgeId:'GEO-03-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:2, name:'Ecologo di Frontiera', goal:'7 biomi', metric:'biomes_count', threshold:7},
-  {badgeId:'GEO-03-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:3, name:'Signore degli Ecosistemi', goal:'tutti i biomi', metric:'all_biomes', threshold:1},
-  {badgeId:'MAS-01-L1', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:1, name:'Araldo dei Colossi', goal:'50 t', metric:'total_mass_tons', threshold:50},
-  {badgeId:'MAS-01-L2', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:2, name:'Censore di Giganti', goal:'500 t', metric:'total_mass_tons', threshold:500},
-  {badgeId:'MAS-01-L3', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:3, name:'Collezionista di Titani', goal:'2.000 t', metric:'total_mass_tons', threshold:2000},
-  {badgeId:'MAS-02-L1', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:1, name:'Rilevatore del Minuscolo', goal:'3 specie', metric:'tiny_species_count', threshold:3},
-  {badgeId:'MAS-02-L2', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:2, name:'Decifratore delle Microforme', goal:'10 specie', metric:'tiny_species_count', threshold:10},
-  {badgeId:'MAS-02-L3', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:3, name:"Maestro dell'Infinitesimo", goal:'30 specie', metric:'tiny_species_count', threshold:30},
-  {badgeId:'MOR-01-L1', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:1, name:"Misuratore d'Estremi", goal:'2 specie', metric:'extremes_count', threshold:2},
-  {badgeId:'MOR-01-L2', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:2, name:'Cartografo delle Taglie', goal:'5 specie', metric:'extremes_count', threshold:5},
-  {badgeId:'MOR-01-L3', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:3, name:'Sovrano delle Proporzioni', goal:'10 specie', metric:'extremes_count', threshold:10},
+  {badgeId:'GEO-01-L4', macroId:'GEO', macro:'Geografia', subId:'GEO-01', sub:'Numero di Nazioni diverse', level:4, name:'Atlante Vivente', goal:'75 nazioni', metric:'countries_count', threshold:75},
+  {badgeId:'GEO-02-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:1, name:'Rilevatore del Territorio', goal:'5%', metric:'home_country_biodiversity', threshold:5},
+  {badgeId:'GEO-02-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:2, name:'Atlante del Patrimonio Locale', goal:'20%', metric:'home_country_biodiversity', threshold:20},
+  {badgeId:'GEO-02-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-02', sub:'Biodiversità Nazione', level:3, name:'Sigillo del Patrimonio Vivente', goal:'50%', metric:'home_country_biodiversity', threshold:50},
+  {badgeId:'GEO-03-L1', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:1, name:'Esploratore dei Biomi', goal:'5 biomi', metric:'biomes_count', threshold:5},
+  {badgeId:'GEO-03-L2', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:2, name:'Ecologo di Frontiera', goal:'15 biomi', metric:'biomes_count', threshold:15},
+  {badgeId:'GEO-03-L3', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:3, name:'Signore degli Ecosistemi', goal:'30 biomi', metric:'biomes_count', threshold:30},
+  {badgeId:'GEO-03-L4', macroId:'GEO', macro:'Geografia', subId:'GEO-03', sub:'Diversità Biomi', level:4, name:'Custode della Biosfera', goal:'50 biomi', metric:'biomes_count', threshold:50},
+  {badgeId:'MAS-01-L1', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:1, name:'Araldo dei Colossi', goal:'25 t', metric:'total_mass_tons', threshold:25},
+  {badgeId:'MAS-01-L2', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:2, name:'Censore di Giganti', goal:'150 t', metric:'total_mass_tons', threshold:150},
+  {badgeId:'MAS-01-L3', macroId:'MAS', macro:'Massa', subId:'MAS-01', sub:'Peso Massimo (Gigantismo)', level:3, name:'Collezionista di Titani', goal:'400 t', metric:'total_mass_tons', threshold:400},
+  {badgeId:'MAS-02-L1', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:1, name:'Rilevatore del Minuscolo', goal:'25 specie', metric:'tiny_species_count', threshold:25},
+  {badgeId:'MAS-02-L2', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:2, name:'Decifratore delle Microforme', goal:'100 specie', metric:'tiny_species_count', threshold:100},
+  {badgeId:'MAS-02-L3', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:3, name:"Maestro dell'Infinitesimo", goal:'200 specie', metric:'tiny_species_count', threshold:200},
+  {badgeId:'MAS-02-L4', macroId:'MAS', macro:'Massa', subId:'MAS-02', sub:'Massa Minima', level:4, name:'Custode delle Microtaglie', goal:'250 specie', metric:'tiny_species_count', threshold:250},
+  {badgeId:'MOR-01-L1', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:1, name:"Misuratore d'Estremi", goal:'5 specie', metric:'extremes_count', threshold:5},
+  {badgeId:'MOR-01-L2', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:2, name:'Cartografo delle Taglie', goal:'20 specie', metric:'extremes_count', threshold:20},
+  {badgeId:'MOR-01-L3', macroId:'MOR', macro:'Morfologia', subId:'MOR-01', sub:'Estremi (Giganti / Nani)', level:3, name:'Sovrano delle Proporzioni', goal:'50 specie', metric:'extremes_count', threshold:50},
   {badgeId:'STA-01-L1', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:1, name:'Cronista Visivo', goal:'10 foto', metric:'captured_count', threshold:10},
   {badgeId:'STA-01-L2', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:2, name:'Fotografo Naturalista', goal:'50 foto', metric:'captured_count', threshold:50},
   {badgeId:'STA-01-L3', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:3, name:'Iconografo del Selvatico', goal:'200 foto', metric:'captured_count', threshold:200},
-  {badgeId:'STA-02-L1', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:1, name:'Scout Silenzioso', goal:'5 avvistamenti', metric:'sighting_only_count', threshold:5},
-  {badgeId:'STA-02-L2', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:2, name:'Ombra del Territorio', goal:'20 avvistamenti', metric:'sighting_only_count', threshold:20},
-  {badgeId:'STA-02-L3', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:3, name:'Fantasma dei Boschi', goal:'50 avvistamenti', metric:'sighting_only_count', threshold:50},
-  {badgeId:'TAX-01-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:1, name:'Araldista di Stirpe', goal:'3 specie', metric:'max_family_count', threshold:3},
-  {badgeId:'TAX-01-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:2, name:'Genealogista di Famiglia', goal:'10 specie', metric:'max_family_count', threshold:10},
+  {badgeId:'STA-01-L4', macroId:'STA', macro:'Status User', subId:'STA-01', sub:'Foto caricate', level:4, name:'Archivio Totale', goal:'500 foto', metric:'captured_count', threshold:500},
+  {badgeId:'STA-02-L1', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:1, name:'Scout Silenzioso', goal:'10 avvistamenti', metric:'sighting_only_count', threshold:10},
+  {badgeId:'STA-02-L2', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:2, name:'Ombra del Territorio', goal:'50 avvistamenti', metric:'sighting_only_count', threshold:50},
+  {badgeId:'STA-02-L3', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:3, name:'Fantasma dei Boschi', goal:'150 avvistamenti', metric:'sighting_only_count', threshold:150},
+  {badgeId:'STA-02-L4', macroId:'STA', macro:'Status User', subId:'STA-02', sub:'Avvistati (non foto)', level:4, name:'Osservatore Leggendario', goal:'300 avvistamenti', metric:'sighting_only_count', threshold:300},
+  {badgeId:'TAX-01-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:1, name:'Araldista di Stirpe', goal:'5 specie', metric:'max_family_count', threshold:5},
+  {badgeId:'TAX-01-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:2, name:'Genealogista di Famiglia', goal:'15 specie', metric:'max_family_count', threshold:15},
   {badgeId:'TAX-01-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-01', sub:'Specie per Famiglia', level:3, name:'Monografo di Famiglia', goal:'30 specie', metric:'max_family_count', threshold:30},
   {badgeId:'TAX-02-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:1, name:"Decifratore d'Ordine", goal:'10 specie', metric:'max_order_count', threshold:10},
-  {badgeId:'TAX-02-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:2, name:'Curatore del Clade', goal:'50 specie', metric:'max_order_count', threshold:50},
-  {badgeId:'TAX-02-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:3, name:'Architetto Filogenetico', goal:'150 specie', metric:'max_order_count', threshold:150},
-  {badgeId:'TAX-03-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:1, name:'Censitore di Generi', goal:'5 generi', metric:'genera_count', threshold:5},
-  {badgeId:'TAX-03-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:2, name:'Cartografo dei Generi', goal:'20 generi', metric:'genera_count', threshold:20},
-  {badgeId:'TAX-03-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:3, name:'Maestro della Sistematica', goal:'100 generi', metric:'genera_count', threshold:100},
+  {badgeId:'TAX-02-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:2, name:'Curatore del Clade', goal:'40 specie', metric:'max_order_count', threshold:40},
+  {badgeId:'TAX-02-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-02', sub:'Specie stesso Ordine', level:3, name:'Architetto Filogenetico', goal:'80 specie', metric:'max_order_count', threshold:80},
+  {badgeId:'TAX-03-L1', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:1, name:'Censitore di Generi', goal:'50 generi', metric:'genera_count', threshold:50},
+  {badgeId:'TAX-03-L2', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:2, name:'Cartografo dei Generi', goal:'200 generi', metric:'genera_count', threshold:200},
+  {badgeId:'TAX-03-L3', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:3, name:'Maestro della Sistematica', goal:'500 generi', metric:'genera_count', threshold:500},
+  {badgeId:'TAX-03-L4', macroId:'TAX', macro:'Tassonomia', subId:'TAX-03', sub:'Numero Generi diversi', level:4, name:'Enciclopedia dei Generi', goal:'800 generi', metric:'genera_count', threshold:800},
 ];
 const AWARD_MACROS = Array.from(new Set(AWARD_RULES.map(r => r.macro)));
 function buildAwardImagePath(badgeId) {
@@ -1688,8 +1720,8 @@ function computeAwardMetrics(statusMap = {}, visitedCountries = null) {
   const captured = recorded.filter(a => a._status === 'catturato');
   const sightOnly = recorded.filter(a => a._status === 'avvistato');
   const consCounts = recorded.reduce((acc, a) => { acc[a.cons] = (acc[a.cons] || 0) + 1; return acc; }, {});
-  const familyCounts = recorded.reduce((acc, a) => { acc[a.fam] = (acc[a.fam] || 0) + 1; return acc; }, {});
-  const orderCounts = recorded.reduce((acc, a) => { acc[a.ord] = (acc[a.ord] || 0) + 1; return acc; }, {});
+  const familyCounts = recorded.reduce((acc, a) => { if (a.fam) acc[a.fam] = (acc[a.fam] || 0) + 1; return acc; }, {});
+  const orderCounts = recorded.reduce((acc, a) => { if (a.ord) acc[a.ord] = (acc[a.ord] || 0) + 1; return acc; }, {});
   const countries = new Set(recorded.flatMap(a => a.distribution?.countries_present || []));
   const biomes = new Set(recorded.flatMap(a => getAnimalBiomes(a)));
   const recordedByHome = getHomeCountry();
@@ -1706,7 +1738,7 @@ function computeAwardMetrics(statusMap = {}, visitedCountries = null) {
     iucn_variety: iucnSet.size,
     iucn_five_each: targetSix.every(code => (consCounts[code] || 0) >= 5) ? 1 : 0,
     record_count: recorded.filter(a => (a.categories || []).includes('PHYS_RECORD_BREAKERS') || (a.categories || []).includes('ELITE_WORLD_RECORD') || !!a.world_record).length,
-    obs_under_100: recorded.filter(a => getObservationCount(a) < 100).length,
+    obs_under_100: recorded.filter(a => getObservationCount(a) > 0 && getObservationCount(a) < 100).length,
     usage_streak: getUsageStreak(),
     ai_corrections: Number((typeof window !== 'undefined' && (window.ANIMALDEX_AI_CORRECTIONS || window.localStorage.getItem('animaldex_ai_corrections'))) || 0),
     apex_count: recorded.filter(a => String(a.trophic) === '4').length,
@@ -5051,7 +5083,7 @@ function AwardCard({ rule, unlocked, onOpen, tutorialHighlight=false }) {
       }}
     >
       <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'92%', maxWidth:118, height:108, objectFit:'contain', filter:unlocked?'drop-shadow(0 6px 12px rgba(0,0,0,.36))':'grayscale(1) opacity(.7)' }} />
-      <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:108, height:108, fontSize:50 }}>🏅</span>
+      <span style={{ display:'none', alignItems:'center', justifyContent:'center', flexDirection:'column', width:108, height:108, borderRadius:24, border:`1px dashed ${borderColor}88`, color:borderColor, fontSize:24, fontWeight:1000, lineHeight:1.05, textAlign:'center' }}><span>L{rule.level}</span><span style={{ marginTop:5, color:'rgba(255,255,255,.58)', fontSize:9, fontWeight:900 }}>{String(rule.badgeId || '').toLowerCase()}.png</span></span>
       <div style={{ color:unlocked?'#fff':'rgba(255,255,255,.62)', fontSize:12.5, fontWeight:900, lineHeight:1.13, textAlign:'center', minHeight:30, display:'flex', alignItems:'center' }}>{rule.name}</div>
     </button>
   );
@@ -5070,7 +5102,7 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
         <button onClick={onNext} style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>›</button>
         <div style={{ height:8 }} />
         <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
-        <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:266, height:266, maxWidth:'82vw', fontSize:104, margin:'0 auto 8px' }}>🏅</span>
+        <span style={{ display:'none', alignItems:'center', justifyContent:'center', flexDirection:'column', width:266, height:266, maxWidth:'82vw', borderRadius:34, border:`1px dashed ${borderColor}88`, color:borderColor, fontSize:70, fontWeight:1000, margin:'0 auto 8px', lineHeight:1 }}><span>L{rule.level}</span><span style={{ marginTop:14, color:'rgba(255,255,255,.62)', fontSize:13, fontWeight:900 }}>{String(rule.badgeId || '').toLowerCase()}.png</span></span>
         <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
         <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro}</div>
         <div style={{ color:'rgba(255,255,255,.76)', fontSize:14, lineHeight:1.55, marginTop:18 }}>{getAwardDescription(rule)}</div>
