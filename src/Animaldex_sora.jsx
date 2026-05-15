@@ -314,6 +314,31 @@ function getQuickSeenToday() {
 function saveQuickSeenToday(ids) {
   try { localStorage.setItem(getQuickSeenStorageKey(), JSON.stringify(Array.from(new Set(ids)))); } catch {}
 }
+function getLocalUserStatusKey(userId) {
+  return `animaldex_user_status_${userId || 'guest'}`;
+}
+function getLocalUserStatusMap(userId) {
+  if (typeof window === 'undefined' || !userId) return {};
+  try {
+    const raw = JSON.parse(localStorage.getItem(getLocalUserStatusKey(userId)) || '{}') || {};
+    return Object.fromEntries(Object.entries(raw).map(([id, status]) => [id, normalizeAnimalStatus(status)]));
+  } catch { return {}; }
+}
+function saveLocalUserStatusMap(userId, map = {}) {
+  if (typeof window === 'undefined' || !userId) return;
+  try {
+    const clean = {};
+    Object.entries(map || {}).forEach(([id, status]) => {
+      if (id) clean[id] = normalizeAnimalStatus(status);
+    });
+    localStorage.setItem(getLocalUserStatusKey(userId), JSON.stringify(clean));
+  } catch {}
+}
+function saveLocalUserAnimalStatus(userId, animalId, status) {
+  if (!userId || !animalId) return;
+  const next = { ...getLocalUserStatusMap(userId), [animalId]: normalizeAnimalStatus(status) };
+  saveLocalUserStatusMap(userId, next);
+}
 const QUICK_SEEN_REJECT_COOLDOWN_DAYS = 14;
 const QUICK_SEEN_REJECTED_KEY = 'animaldex_quick_seen_rejected_until';
 function getQuickSeenRejectedMap() {
@@ -518,6 +543,18 @@ function mergeRemoteWithLocalBioregions(remoteList = []) {
       game_regions: remote.game_regions?.length ? remote.game_regions : local.game_regions,
       habitats: remote.habitats?.length ? remote.habitats : local.habitats,
     };
+  });
+}
+function applyCachedUserStatuses(list = [], userId) {
+  const cached = getLocalUserStatusMap(userId);
+  if (!Object.keys(cached).length) return list;
+  return (list || []).map(a => {
+    const cachedStatus = cached[a.id] ?? cached[String(a.id)];
+    if (!cachedStatus) return a;
+    const currentRank = ANIMAL_STATUS_ORDER.indexOf(normalizeAnimalStatus(a.status));
+    const cachedRank = ANIMAL_STATUS_ORDER.indexOf(normalizeAnimalStatus(cachedStatus));
+    if (cachedRank <= currentRank) return a;
+    return { ...a, status:normalizeAnimalStatus(cachedStatus), userStatus:appStatusToSupabase(cachedStatus) };
   });
 }
 
@@ -4247,8 +4284,8 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onFinish, on
     'detail-status': {
       title:'Avvistare e catturare',
       kicker:'Scheda',
-      body:'Il passaggio fondamentale è questo: Ricercato è da trovare, Avvistato è visto dal vivo, Catturato è confermato nel Dex. I progressi aggiornano profilo e badge. Per allenare il gesto, usa il tasto reale “Ho avvistato” nella scheda.',
-      hint:'Tocca “Ho avvistato” nella scheda, non il pannello tutorial.',
+      body:'Qui Apex inizia a diventare tuo. Una specie Ricercata è nel mirino; quando la incontri davvero passa ad Avvistata e il tuo percorso si aggiorna. Con una foto o una conferma completa diventa Catturata nel Dex. Ogni passo muove progressi, badge e profilo.',
+      hint:'Tocca il tasto “Ho avvistato” evidenziato sulla scheda.',
       action:null,
     },
     'home-finish': {
@@ -4264,11 +4301,14 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onFinish, on
   if (!copy) return null;
   const noPrimary = ['home','grid-open','detail-metrics','detail-abilities','detail-status'].includes(step);
   const primary = step === 'home-finish' ? onFinish : onNext;
+  const panelPosition = step === 'grid-tools'
+    ? { top:'calc(env(safe-area-inset-top, 0px) + 14px)' }
+    : { bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)' };
 
   return (
     <div style={{ position:'absolute', inset:0, zIndex:260, pointerEvents:'none' }}>
       <div style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 50% 28%, rgba(168,70,55,.08), rgba(0,0,0,.58) 42%, rgba(0,0,0,.72))', pointerEvents:'none' }} />
-      <div style={{ position:'absolute', left:12, right:12, bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)', pointerEvents:'auto', maxHeight:'calc(var(--animaldex-app-height, 100dvh) - 42px)', overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
+      <div style={{ position:'absolute', left:12, right:12, ...panelPosition, pointerEvents:'auto', maxHeight:'calc(var(--animaldex-app-height, 100dvh) - 42px)', overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
         <div style={{ background:'linear-gradient(180deg,rgba(28,28,31,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, borderRadius:28, padding:16, boxShadow:`0 24px 80px rgba(0,0,0,.62), 0 0 34px ${OCHRE}28`, overflow:'visible' }}>
           <div style={{ display:'flex', alignItems:'center', gap:12 }}>
             <div style={{ width:52, height:52, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:24, fontWeight:1000, boxShadow:`0 0 28px ${OCHRE}55`, flexShrink:0 }}>A</div>
@@ -4309,14 +4349,14 @@ function SectionIntroModal({ section, onClose }) {
   if (!section) return null;
   const OCHRE = '#A84637';
   const copy = {
-    regions:{ title:'Geografia', kicker:'Mini guida', body:'Qui esplori paesi, domini e subregioni. La geografia serve a restringere gli animali a territori concreti e a costruire percorsi di scoperta più sensati dei soli elenchi generici.' },
-    badges:{ title:'Badge', kicker:'Mini guida', body:'I badge sono riconoscimenti: si sbloccano con azioni misurabili, come avvistare specie, completare gruppi, esplorare territori o scoprire animali con abilità particolari.' },
-    abilities:{ title:'Abilità', kicker:'Mini guida', body:'Le abilità raccolgono adattamenti e comportamenti: sensi estremi, veleno, migrazioni, intelligenza, corazze, record e altri tratti biologici. Toccarne una apre la griglia filtrata.' },
+    regions:{ title:'Geografia', kicker:'Mini guida', body:'Apex organizza il mondo a livelli: Domini, cioè Terrestre e Marino; Continenti, come America o Eurasia; Regioni, grandi aree biogeografiche; Territori, cioè le nostre ecoregioni giocabili. I paesi servono come ingresso rapido, ma i Territori sono il livello più preciso: quando apri Alaska, Mediterraneo o Foreste boreali stai entrando in una unità ecologica con animali collegati a quell’ID bioregionale.' },
+    badges:{ title:'Badge', kicker:'Mini guida', body:'Qui si colleziona sul serio. I badge sono divisi per categorie: Arsenale, Elite, Trofico, Geografia, Massa, Morfologia, Status, Tassonomia, Engagement e Onboarding. Ogni linea sale di livello: Bronzo principiante, Argento intermedio, Oro esperto e Viola leggenda. Tocca una card: dentro trovi obiettivo, progresso e quanto ti manca al prossimo colpo grosso.', action:'Scelgo un badge' },
+    abilities:{ title:'Abilità', kicker:'Mini guida', body:'Le abilità sono i superpoteri biologici di Apex: veleno, mimetismo, intelligenza, velocità, migrazioni, corazze, record, vita estrema. Sono raggruppate per famiglia e ogni card mostra quanti animali la possiedono. Tocca un’abilità per aprire il dettaglio, poi puoi saltare alla griglia già filtrata con tutte le specie collegate.', action:'Scelgo un’abilità' },
     compare:{ title:'Comparatore', kicker:'Mini guida', body:'Il comparatore mette due animali fianco a fianco per confrontare dimensioni, peso, statistiche e ruolo ecologico. Usalo quando vuoi capire le differenze in modo immediato.' },
     profile:{ title:'Profilo', kicker:'Mini guida', body:'Il profilo riassume progressi, animali ricercati, avvistati e catturati, badge ottenuti e dati del tuo percorso. È la memoria personale del tuo Apex.' },
     gallery:{ title:'Galleria', kicker:'Mini guida', body:'La galleria raccoglie le immagini e le catture collegate al tuo percorso. È pensata come archivio visivo delle specie che hai documentato.' },
     lifeweb:{ title:'LifeWeb', kicker:'Mini guida', body:'LifeWeb mostra relazioni alimentari e ruoli ecologici. È una lettura della rete, non solo della singola specie: predatori, prede, risorse e connessioni.' },
-    quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'Qui registri in pochi secondi una specie che hai visto. È utile quando sei fuori: prima salvi l’avvistamento, poi potrai tornare sulla scheda per leggere biologia, descrizione e dettagli.' },
+    quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'È il modo più veloce per aggiornare l’Animaldex con gli animali che hai già avvistato. Apex ti propone specie ad alta probabilità in base alle nazioni visitate e alla facilità di incontro: tu rispondi al volo, il Dex si aggiorna e i progressi iniziano a correre.' },
   }[section];
   if (!copy) return null;
   return (
@@ -4325,7 +4365,7 @@ function SectionIntroModal({ section, onClose }) {
         <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>{copy.kicker}</div>
         <div style={{ color:'white', fontSize:23, fontWeight:1000, marginTop:5 }}>{copy.title}</div>
         <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:9 }}>{copy.body}</div>
-        <button onClick={onClose} style={{ width:'100%', height:48, borderRadius:16, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, marginTop:16 }}>Ho capito</button>
+        <button onClick={onClose} style={{ width:'100%', height:48, borderRadius:16, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, marginTop:16 }}>{copy.action || 'Ho capito'}</button>
       </div>
     </div>
   );
@@ -4837,12 +4877,13 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
         </div>
 
-        <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:9, marginBottom:14 }}>
-          {[
-            ['🔭','Ricercati',`${searchedAnimals.length} specie`,()=>onOpenGridStatus?.(['ricercato'])],
-            ['📷','Cattura','Aggiungi al Dex',()=>onOpenPhoto?.()],
-            ['🌍','Paese','Rivela territori',onOpenRegions || (()=>onOpen('regions'))],
-          ].map(([icon,label,sub,action])=><button key={label} onClick={action} style={{ minHeight:84, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.10)'}`, borderRadius:20, background:isLightTheme?LIGHT_CARD_BG:'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', fontWeight:950, fontSize:10.5, display:'flex', flexDirection:'column', gap:5, alignItems:'center', justifyContent:'center', boxShadow:isLightTheme?'0 12px 24px rgba(0,0,0,.08)':'inset 0 1px 0 rgba(255,255,255,.04), 0 10px 22px rgba(0,0,0,.18)' }}><span style={{ fontSize:22 }}>{icon}</span><span>{label}</span><span style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(245,241,234,.48)', fontSize:9.5, fontWeight:800 }}>{sub}</span></button>)}
+        <div style={{ position:'relative', marginBottom:22 }}>
+          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.12)'}`, borderRadius:28, background:isLightTheme?'linear-gradient(135deg,#F7F4EC,#ECE7DA)':'radial-gradient(circle at 80% 0%, rgba(108,229,199,.18), transparent 34%), linear-gradient(135deg,rgba(26,43,48,.94),rgba(15,18,22,.98))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
+            <div style={{ color:isLightTheme?'#A84637':'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
+            <div style={{ fontSize:28, fontWeight:1000, lineHeight:1.02, marginTop:6 }}>Territori</div>
+            <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(245,241,234,.64)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
+          </button>
+          <button aria-label="Apri fotocamera" onClick={()=>onOpenPhoto?.()} style={{ position:'absolute', left:'50%', bottom:-24, transform:'translateX(-50%)', width:72, height:72, borderRadius:'50%', border:'3px solid rgba(255,255,255,.92)', background:'linear-gradient(135deg,#A84637,#F0A840)', color:'white', boxShadow:'0 18px 42px rgba(0,0,0,.38), 0 0 0 6px rgba(168,70,55,.16)', fontSize:28, display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer' }}>📷</button>
         </div>
 
         <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:`1px solid ${lightPanelBorder}`, borderRadius:22, background:lightPanel, padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.06)':'none' }}>
@@ -4962,15 +5003,15 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#111113', overflow:'hidden' }}>
       <PageHeader title="Visti rapidi" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
-        <div style={{ color:quickIntroColor, fontSize:13, lineHeight:1.55, marginBottom:14 }}>Ti proponiamo animali che potresti aver visto in base ai tuoi paesi visitati. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
+        <div style={{ color:quickIntroColor, fontSize:13, lineHeight:1.55, marginBottom:14 }}>Il modo più veloce per aggiornare l’Animaldex: Apex propone animali ad alta probabilità in base alle nazioni visitate e alla facilità di avvistamento. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
         {!visitedCountries.length ? (
           <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Visti rapidi.</div>
         ) : doneToday >= QUICK_SEEN_DAILY_LIMIT ? (
           <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Limite giornaliero raggiunto. Torna domani.</div>
         ) : current ? (
           <div style={{ borderRadius:30, background:quickPanelBg, border:quickPanelBorder, padding:18, boxShadow:isLightTheme?'0 24px 60px rgba(0,0,0,.22)':'0 24px 70px rgba(0,0,0,.42)' }}>
-            <div onClick={()=>onSelect?.(current)} style={{ height:260, borderRadius:24, background:(CLS[current.cls] || CLS.Mammalia).img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', cursor:'pointer' }}>
-              <AnimalImg a={{...current,status:'ricercato'}} size={230} fontSize={70} overrideStatus="ricercato" />
+            <div onClick={()=>onSelect?.(current)} style={{ height:260, borderRadius:24, background:'#202228', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', cursor:'pointer' }}>
+              <AnimalImg a={{...current,status:'ricercato'}} size={260} fontSize={70} overrideStatus="ricercato" />
             </div>
             <div style={{ textAlign:'center', marginTop:16 }}>
               <div style={{ color:'white', fontSize:24, fontWeight:1000, lineHeight:1.05 }}>{current.com}</div>
@@ -6328,7 +6369,7 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
 
 
 
-function AbilityCard({ meta, onOpen, theme='dark' }) {
+function AbilityCard({ meta, onOpen, theme='dark', tutorialHighlight=false }) {
   const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
   const group = getAbilityGroupMeta(meta.id);
   const isLightTheme = theme === 'light';
@@ -6336,7 +6377,7 @@ function AbilityCard({ meta, onOpen, theme='dark' }) {
     <button
       className="interactive-hint"
       onClick={()=>onOpen?.(meta)}
-      style={{ minHeight:116, borderRadius:18, background:isLightTheme?LIGHT_CARD_BG:'rgba(255,255,255,.05)', border:`1px solid ${group.color}66`, boxShadow:isLightTheme?`0 10px 22px rgba(0,0,0,.06), inset 0 0 0 1px ${meta.color}14`:`inset 0 0 0 1px ${meta.color}22`, cursor:'pointer', marginBottom:10, padding:14, display:'flex', alignItems:'center', gap:16, width:'100%', textAlign:'left', fontFamily:'inherit', color:isLightTheme?'#171717':'white', overflow:'hidden' }}
+      style={{ minHeight:116, borderRadius:18, background:isLightTheme?LIGHT_CARD_BG:'rgba(255,255,255,.05)', border:`1px solid ${tutorialHighlight ? '#F0A840' : group.color}66`, boxShadow:tutorialHighlight ? '0 0 0 3px rgba(240,168,64,.32), 0 0 28px rgba(240,168,64,.34)' : (isLightTheme?`0 10px 22px rgba(0,0,0,.06), inset 0 0 0 1px ${meta.color}14`:`inset 0 0 0 1px ${meta.color}22`), cursor:'pointer', marginBottom:10, padding:14, display:'flex', alignItems:'center', gap:16, width:'100%', textAlign:'left', fontFamily:'inherit', color:isLightTheme?'#171717':'white', overflow:'hidden', position:'relative', zIndex:tutorialHighlight?180:1 }}
     >
       <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:96, height:96, objectFit:'contain', flexShrink:0, filter:`drop-shadow(0 0 18px ${meta.color}${isLightTheme?'22':'44'})` }} />
       <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:96, height:96, fontSize:50, flexShrink:0 }}>{meta.icon}</span>
@@ -6375,7 +6416,7 @@ function AbilityModal({ meta, onClose, onOpenAnimals, onPrev, onNext }) {
   );
 }
 
-function AbilitiesPage({ onBack, onOpenAbility, theme='dark' }) {
+function AbilitiesPage({ onBack, onOpenAbility, theme='dark', tutorialActive=false, onTutorialAbilityOpen }) {
   const isLightTheme = theme === 'light';
   const abilityRows = Object.entries(CATEGORY_META).map(([id, meta]) => ({ id, ...meta, description:getAbilityDescription(id, meta), count: ANIMALS.filter(a=>a.categories?.includes(id)).length, group:getAbilityGroupId(id) }));
   const [search, setSearch] = useState('');
@@ -6404,7 +6445,7 @@ function AbilitiesPage({ onBack, onOpenAbility, theme='dark' }) {
               <div style={{ color:theme==='light'?'rgba(0,0,0,.45)':'rgba(255,255,255,.42)', fontSize:11, fontWeight:900 }}>{group.rows.length}</div>
             </div>
             <div style={{ borderRadius:18, border:`1px solid ${group.color}44`, padding:10, background:isLightTheme?hexToRgba(group.color,.055):'rgba(255,255,255,.03)' }}>
-              {group.rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpen={setSelectedAbility} theme={theme} />)}
+	              {group.rows.map(meta=><AbilityCard key={meta.id} meta={meta} onOpen={(m)=>{ setSelectedAbility(m); if (tutorialActive) onTutorialAbilityOpen?.(m); }} theme={theme} tutorialHighlight={tutorialActive && meta.id === flatRows[0]?.id} />)}
             </div>
           </div>
         ))}
@@ -6731,6 +6772,7 @@ export default function App() {
   const [featureReturnAnimal,setFeatureReturnAnimal]=useState(null);
   const [photoTarget,setPhotoTarget]=useState(null);
   const [sectionIntro,setSectionIntro]=useState(null);
+  const [activeSectionGuide,setActiveSectionGuide]=useState(null);
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
@@ -6829,11 +6871,12 @@ export default function App() {
         'caricamento dati Supabase'
       );
 
-      const nextAnimals = remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal);
+      const nextAnimals = applyCachedUserStatuses(remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
       setAnimalsData(nextAnimals);
 
       const nextStatusMap = Object.fromEntries((nextAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
       setStatusMap(nextStatusMap);
+      saveLocalUserStatusMap(activeUser.id, nextStatusMap);
 
       const nextDestinations = normalizeIsoList(destinations || []);
       setVisitedCountries(nextDestinations);
@@ -6845,7 +6888,7 @@ export default function App() {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
 
-      const fallback = LOCAL_ANIMALS.map(normalizeLocalAnimal);
+      const fallback = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
       setAnimalsData(fallback);
       setStatusMap(Object.fromEntries(fallback.map(a => [a.id, normalizeAnimalStatus(a.status)])));
       setUserProfile(prev => prev || buildFallbackProfile(activeUser, true));
@@ -6910,6 +6953,7 @@ export default function App() {
     const currentAnimal = animalsData.find(a => a.id === id);
     setStatusMap(prev => ({ ...prev, [id]: nextStatus }));
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
+    saveLocalUserAnimalStatus(user.id, id, nextStatus);
     try {
       track('animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, previous_status:previousStatus, next_status:nextStatus });
       if (nextStatus === 'avvistato') track('animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com });
@@ -7046,6 +7090,7 @@ export default function App() {
     const enabledSections = new Set(['regions', 'badges', 'abilities', 'compare', 'profile', 'gallery', 'lifeweb', 'quickSeen']);
     if (!enabledSections.has(section)) return;
     if (tutorialStep) return;
+    setActiveSectionGuide(null);
     try {
       const key = `apex_section_intro_${section}`;
       if (window.localStorage.getItem(key)) return;
@@ -7292,12 +7337,12 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
     if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
-    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} />;
+	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
-    if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} />;
+    if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
   };
 
@@ -7305,7 +7350,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     <div id="animaldex-app-root" className="animaldex-app-frame" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', position:'relative' }}>
 	      {renderPage()}
 	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
-	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>setSectionIntro(null)} />}
+	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
 	      {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
