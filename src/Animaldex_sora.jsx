@@ -4053,7 +4053,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     </div>
   );
 }
-function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', mapIds=[], mapDisabled=false }) {
+function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', secondaryOpenLabel='', onSecondaryOpen, mapIds=[], mapDisabled=false }) {
   const [flipped, setFlipped] = useState(false);
   const isMarine = item?.realmType === 'marine' || item?.kind === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
@@ -4103,6 +4103,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
           <div style={{ display:'flex', gap:8, padding:'8px 12px 12px', background:'rgba(16,17,20,.98)', boxSizing:'border-box' }}>
             <button data-sound="back" onClick={e=>{e.stopPropagation();setFlipped(false);}} style={{ flex:1, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'linear-gradient(180deg,rgba(255,255,255,.060),rgba(255,255,255,.030))', color:'white', fontWeight:900 }}>Indietro</button>
             <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
+            {secondaryOpenLabel && <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onSecondaryOpen?.();}} style={{ flex:1, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950 }}>{secondaryOpenLabel}</button>}
           </div>
         </div>
       </div>
@@ -5301,6 +5302,10 @@ function getFoodWebCandidateAnimals(allAnimals, territory, habitat, limit=120, f
   return Array.from(new Map(list.map(a => [a.id, a])).values()).slice(0, limit);
 }
 
+function buildGeneralLifeWebHabitat(territory) {
+  return { id:'GENERAL', label:territory?.label || 'LifeWeb', count:0, animals:[] };
+}
+
 function autoArrangeLifeWebNodes(nodes = [], focusAnimalId = null) {
   const order = ['apex','carnivore','omnivore','filter','herbivore','producer','resource'];
   const yByGroup = { apex:13, carnivore:29, omnivore:48, filter:66, herbivore:73, producer:84, resource:90 };
@@ -5721,13 +5726,14 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
 function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=null }) {
   const graph = useMemo(() => buildLifeWebGraph(animals, territory, habitat, focusAnimal), [animals, territory, habitat, focusAnimal]);
   const gridAnimals = graph.animals || [];
+  const isGeneral = habitat?.id === 'GENERAL';
   return (
     <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
       <div style={{ border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.045)', borderRadius:22, padding:16 }}>
-        <div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>Habitat Dex</div>
-        <div style={{ color:'white', fontSize:23, fontWeight:1000, marginTop:4 }}>{habitat?.label || 'Habitat'}</div>
+        <div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>{isGeneral ? 'Subregion LifeWeb' : 'LifeWeb'}</div>
+        <div style={{ color:'white', fontSize:23, fontWeight:1000, marginTop:4 }}>{territory?.label || habitat?.label || 'LifeWeb'}</div>
         <div style={{ color:'rgba(255,255,255,.58)', fontSize:12.5, lineHeight:1.45, marginTop:6 }}>
-          Vista grid degli animali collegati a questo habitat. La visualizzazione Web è stata disattivata per ora: resta la struttura LifeWeb, ma il contenuto operativo è solo la grid.
+          Animali collegati a questa subregione. La rete resta generale, senza suddivisione per habitat.
         </div>
       </div>
       <LifeWebMiniGrid animals={gridAnimals} onOpenAnimal={onOpenAnimal} />
@@ -5844,7 +5850,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'regions') return continent?.label || 'Regioni';
     if (view === 'ecoregions') return region?.label || 'Subregioni';
     if (view === 'habitats') return selectedEcoregion?.label || 'Habitat';
-    if (view === 'lifeweb') return selectedHabitat?.label || 'LifeWeb';
+    if (view === 'lifeweb') return selectedEcoregion?.label || selectedHabitat?.label || 'LifeWeb';
     if (view === 'animals') return selectedTerritory?.label || 'Animali';
     return 'Territori';
   })();
@@ -5854,7 +5860,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'terrestrial' || view === 'marine') return setView('planet');
     if (view === 'regions') return setView('terrestrial');
     if (view === 'ecoregions') { setSelectedEcoregion(null); return setView('regions'); }
-    if (view === 'lifeweb') return setView('habitats');
+    if (view === 'lifeweb') return setView('ecoregions');
     if (view === 'habitats') { setSelectedHabitat(null); return setView('ecoregions'); }
     if (view === 'animals') {
       if (selectedTerritory?.kind === 'marine') return setView('marine');
@@ -5876,8 +5882,20 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     { label:'Marino', active:view==='marine', action:()=>setView('marine') },
     ...(selectedContinentId ? [{ label:continent?.label || 'Continente', active:view==='regions', action:()=>setView('regions') }] : []),
     ...(selectedRegionId ? [{ label:'Subregioni', active:view==='ecoregions', action:()=>setView('ecoregions') }] : []),
-    ...(selectedEcoregion ? [{ label:'Habitat', active:['habitats','lifeweb'].includes(view), action:()=>setView('habitats') }] : []),
+    ...(selectedEcoregion ? [{ label:'LifeWeb', active:view==='lifeweb', action:()=>setView('lifeweb') }] : []),
   ];
+
+  const openSubregionLifeWeb = (eco) => {
+    const territory = { ...eco, filterValue:`ecoregion:${eco.id}`, kind:'subregion', label:eco.label };
+    setSelectedEcoregion(eco);
+    setSelectedTerritory(territory);
+    setSelectedHabitat(buildGeneralLifeWebHabitat(territory));
+    setView('lifeweb');
+  };
+  const openSubregionGrid = (eco) => {
+    const territory = { ...eco, filterValue:`ecoregion:${eco.id}`, kind:'subregion', label:eco.label };
+    onOpenHabitatGrid?.(territory, buildGeneralLifeWebHabitat(territory));
+  };
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
@@ -5923,19 +5941,11 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='ecoregions' && region && region.ecoregions.map(eco => {
           const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Habitat" onOpen={()=>{setSelectedEcoregion(eco); setSelectedHabitat(null); setView('habitats');}} mapIds={[eco.id]} />;
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="LifeWeb" onOpen={()=>openSubregionLifeWeb(eco)} secondaryOpenLabel="Grid" onSecondaryOpen={()=>openSubregionGrid(eco)} mapIds={[eco.id]} />;
         })}
 
-        {view==='habitats' && selectedSubregionTerritory && (
-          <div style={{ width:'100%', maxWidth:'100%', overflowX:'hidden' }}>
-            <div style={{ margin:'0 0 12px', borderRadius:22, overflow:'hidden' }}><BioregionVectorMap highlightIds={[selectedEcoregion.id]} selectedId={selectedEcoregion.id} accent={'#A84637'} height={220} showLabels fullBleed /></div>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, margin:'12px 0 14px' }}>Scegli un habitat per generare una rete trofica contestuale. In questa versione la rete è una simulazione WIP basata su habitat, geografia, dieta, massa e traits.</div>
-            {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory(selectedSubregionTerritory); setView('lifeweb');}} onOpenGrid={(h)=>onOpenHabitatGrid?.(selectedSubregionTerritory, h)} />)}
-          </div>
-        )}
-
-        {view==='lifeweb' && selectedSubregionTerritory && selectedHabitat && (
-          <LifeWebPage territory={selectedSubregionTerritory} habitat={selectedHabitat} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
+        {view==='lifeweb' && selectedSubregionTerritory && (
+          <LifeWebPage territory={selectedSubregionTerritory} habitat={selectedHabitat || buildGeneralLifeWebHabitat(selectedSubregionTerritory)} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
         )}
 
         {view==='countries' && (
@@ -6976,9 +6986,10 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
 const openHabitatGrid = (territory, habitat) => {
   if (!territory || !habitat) return;
   const geographyFilter = territory.filterValue || (territory.kind === 'region' ? `territory-region:${territory.id}` : `ecoregion:${territory.id}`);
+  const isGeneralHabitat = habitat.id === 'GENERAL';
   setSel(null);
-  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> matchGeographySelection(a, [geographyFilter]) && animalMatchesHabitat(a, habitat.id), title:`${habitat.label}` });
-  setGridReturnTarget({ page:'regions', view:'habitats' });
+  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> matchGeographySelection(a, [geographyFilter]) && (isGeneralHabitat || animalMatchesHabitat(a, habitat.id)), title:isGeneralHabitat ? territory.label : `${habitat.label}` });
+  setGridReturnTarget({ page:'regions', view:'ecoregions' });
   setPage('grid');
 };
 const openGridWithStatus = (statuses) => {
