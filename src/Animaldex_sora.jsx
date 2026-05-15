@@ -61,6 +61,7 @@ const ANIMALDEX_THEME_KEY = 'animaldex_theme';
 const LIGHT_APP_BG = '#F3EFE6';
 const LIGHT_HEADER_BG = '#F8F3EA';
 const LIGHT_CARD_BG = '#FBF7EF';
+const APP_FRAME_PROPS = { className:'animaldex-app-frame' };
 function getInitialAnimaldexTheme() {
   if (typeof window === 'undefined') return 'dark';
   const saved = window.localStorage.getItem(ANIMALDEX_THEME_KEY);
@@ -4659,7 +4660,7 @@ function AuthScreen({ onAuthReady }) {
   };
 
   return (
-    <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
+    <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
       <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,#222226,#161618)', border:'1px solid rgba(255,255,255,.10)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.45)' }}>
         <div style={{ color:'#90D84A', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Animaldex</div>
         <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
@@ -5780,7 +5781,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [selectedContinentId, setSelectedContinentId] = useState(null);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [selectedTerritory, setSelectedTerritory] = useState(null);
-  const [selectedEcoregion, setSelectedEcoregion] = useState(null);
   const [selectedHabitat, setSelectedHabitat] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [countrySearch, setCountrySearch] = useState('');
@@ -5793,10 +5793,9 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   useEffect(()=>{ setView(normalizeInitialView(initialView)); }, [initialView]);
   useEffect(() => {
     if (view !== 'lifeweb') setSelectedHabitat(null);
-    if (!['habitats','lifeweb'].includes(view)) setSelectedEcoregion(null);
-    if (!['ecoregions','habitats','lifeweb'].includes(view)) setSelectedRegionId(null);
-    if (!['regions','ecoregions','habitats','lifeweb'].includes(view)) setSelectedContinentId(null);
-    if (view !== 'animals') setSelectedTerritory(prev => prev?.kind === 'ecoregion' && selectedEcoregion ? { ...prev, label:selectedEcoregion.label } : prev);
+    if (!['habitats','lifeweb'].includes(view)) setSelectedRegionId(null);
+    if (!['regions','habitats','lifeweb'].includes(view)) setSelectedContinentId(null);
+    if (view !== 'animals') setSelectedTerritory(prev => prev?.kind === 'region' && region ? { ...prev, label:region.label } : prev);
   }, [view]);
 
   const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === selectedContinentId) || null;
@@ -5833,15 +5832,15 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
   const isLightTheme = theme === 'light';
   const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
-  const habitatRows = selectedEcoregion ? getHabitatsForTerritory({ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}` }, allAnimalsWithStatus) : [];
+  const selectedRegionTerritory = region ? { ...region, filterValue:`territory-region:${region.id}`, kind:'region', label:region.label } : null;
+  const habitatRows = selectedRegionTerritory ? getHabitatsForTerritory(selectedRegionTerritory, allAnimalsWithStatus) : [];
   const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
     if (view === 'countries') return 'Paesi visitati';
     if (view === 'terrestrial') return 'Dominio terrestre';
     if (view === 'marine') return 'Dominio marino';
     if (view === 'regions') return continent?.label || 'Regioni';
-    if (view === 'ecoregions') return region?.label || 'Ecoregioni';
-    if (view === 'habitats') return selectedEcoregion?.label || 'Habitat';
+    if (view === 'habitats') return region?.label || 'Habitat';
     if (view === 'lifeweb') return selectedHabitat?.label || 'LifeWeb';
     if (view === 'animals') return selectedTerritory?.label || 'Animali';
     return 'Territori';
@@ -5851,12 +5850,10 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'countries') return setView('planet');
     if (view === 'terrestrial' || view === 'marine') return setView('planet');
     if (view === 'regions') return setView('terrestrial');
-    if (view === 'ecoregions') { setSelectedEcoregion(null); return setView('regions'); }
     if (view === 'lifeweb') return setView('habitats');
-    if (view === 'habitats') { setSelectedHabitat(null); return setView('ecoregions'); }
+    if (view === 'habitats') { setSelectedHabitat(null); return setView('regions'); }
     if (view === 'animals') {
       if (selectedTerritory?.kind === 'marine') return setView('marine');
-      if (selectedTerritory?.kind === 'ecoregion') return setView('ecoregions');
       if (selectedTerritory?.kind === 'region') return setView('regions');
       return setView('terrestrial');
     }
@@ -5870,11 +5867,10 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const navChips = [
     { label:'Pianeta', active:view==='planet', action:()=>setView('planet') },
     { label:'Paesi', active:view==='countries', action:()=>setView('countries') },
-    { label:'Terrestre', active:['terrestrial','regions','ecoregions','habitats','lifeweb'].includes(view), action:()=>setView('terrestrial') },
+    { label:'Terrestre', active:['terrestrial','regions','habitats','lifeweb'].includes(view), action:()=>setView('terrestrial') },
     { label:'Marino', active:view==='marine', action:()=>setView('marine') },
     ...(selectedContinentId ? [{ label:continent?.label || 'Continente', active:view==='regions', action:()=>setView('regions') }] : []),
-    ...(selectedRegionId ? [{ label:'Regioni', active:view==='ecoregions', action:()=>setView('ecoregions') }] : []),
-    ...(selectedEcoregion ? [{ label:'Habitat', active:['habitats','lifeweb'].includes(view), action:()=>setView('habitats') }] : []),
+    ...(selectedRegionId ? [{ label:'Habitat', active:['habitats','lifeweb'].includes(view), action:()=>setView('habitats') }] : []),
   ];
 
   return (
@@ -5898,15 +5894,15 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
               <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
               <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un dominio</div>
-              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Il dominio terrestre porta a continenti, regioni ed ecoregioni. Il dominio marino usa i 12 grandi bacini biogeografici.</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Il dominio terrestre porta a continenti e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.</div>
             </div>
-            <TerritoryCard item={{label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} ecoregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} mapDisabled />
+            <TerritoryCard item={{label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} mapDisabled />
             <TerritoryCard item={{label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} mapDisabled />
           </>
         )}
 
         {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni · ${cont.bioregionIds.length} ecoregioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} subregioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
         ))}
 
         {view==='marine' && MARINE_REALMS.map(m => {
@@ -5916,24 +5912,19 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='regions' && continent && continent.regions.map(reg => {
           const locked = !unlockMap[reg.id];
-          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} ecoregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.iso?.length || 0} codici ISO`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Habitat" onOpen={()=>{setSelectedRegionId(reg.id); setSelectedHabitat(null); setView('habitats');}} mapIds={reg.bioregionIds} />;
         })}
 
-        {view==='ecoregions' && region && region.ecoregions.map(eco => {
-          const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'ecoregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Habitat" onOpen={()=>{setSelectedEcoregion(eco); setSelectedHabitat(null); setView('habitats');}} mapIds={[eco.id]} />;
-        })}
-
-        {view==='habitats' && selectedEcoregion && (
+        {view==='habitats' && selectedRegionTerritory && (
           <div style={{ width:'100%', maxWidth:'100%', overflowX:'hidden' }}>
-            <div style={{ margin:'0 0 12px', borderRadius:22, overflow:'hidden' }}><BioregionVectorMap highlightIds={[selectedEcoregion.id]} accent={'#A84637'} height={220} showLabels fullBleed /></div>
+            <div style={{ margin:'0 0 12px', borderRadius:22, overflow:'hidden' }}><BioregionVectorMap highlightIds={selectedRegionTerritory.bioregionIds || []} accent={'#A84637'} height={220} showLabels fullBleed /></div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, margin:'12px 0 14px' }}>Scegli un habitat per generare una rete trofica contestuale. In questa versione la rete è una simulazione WIP basata su habitat, geografia, dieta, massa e traits.</div>
-            {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory({ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'ecoregion', label:selectedEcoregion.label }); setView('lifeweb');}} onOpenGrid={(h)=>onOpenHabitatGrid?.(selectedEcoregion, h)} />)}
+            {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory(selectedRegionTerritory); setView('lifeweb');}} onOpenGrid={(h)=>onOpenHabitatGrid?.(selectedRegionTerritory, h)} />)}
           </div>
         )}
 
-        {view==='lifeweb' && selectedEcoregion && selectedHabitat && (
-          <LifeWebPage territory={{ ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'ecoregion', label:selectedEcoregion.label }} habitat={selectedHabitat} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
+        {view==='lifeweb' && selectedRegionTerritory && selectedHabitat && (
+          <LifeWebPage territory={selectedRegionTerritory} habitat={selectedHabitat} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
         )}
 
         {view==='countries' && (
@@ -5975,7 +5966,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
           <>
             <div style={{ margin:'0 -14px 12px' }}><BioregionVectorMap highlightIds={selectedTerritory.bioregionIds || (selectedTerritory.bioregionId ? [selectedTerritory.bioregionId] : [])} marine={selectedTerritory.kind==='marine'} accent={'#A84637'} height={240} showLabels fullBleed /></div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, margin:'12px 0' }}>
-              Animali filtrati per {selectedTerritory.kind === 'marine' ? 'reame marino' : selectedTerritory.kind === 'region' ? 'regione' : 'ecoregione'}.
+              Animali filtrati per {selectedTerritory.kind === 'marine' ? 'reame marino' : 'subregione'}.
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:10 }}>
               {territoryAnimals.map(a => <AnimalCard key={a.id} a={a} onClick={onSelect} />)}
@@ -6533,7 +6524,7 @@ export default function App() {
     l.rel='stylesheet';
     l.href='https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap';
     document.head.appendChild(l);
-    document.body.style.cssText='margin:0;background:#1C1C1E;overflow:hidden;overscroll-behavior:none;touch-action:manipulation';
+    document.body.style.cssText='margin:0;background:#1C1C1E;overflow:hidden;overscroll-behavior:none;touch-action:manipulation;width:100%;min-width:0';
     const meta = document.querySelector('meta[name=viewport]') || document.createElement('meta');
     meta.name = 'viewport';
     meta.content = 'width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1';
@@ -6971,10 +6962,11 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
     console.warn('[Animaldex] animal_photos non bloccante:', err);
   }
 };
-const openHabitatGrid = (ecoregion, habitat) => {
-  if (!ecoregion || !habitat) return;
+const openHabitatGrid = (territory, habitat) => {
+  if (!territory || !habitat) return;
+  const geographyFilter = territory.filterValue || (territory.kind === 'region' ? `territory-region:${territory.id}` : `ecoregion:${territory.id}`);
   setSel(null);
-  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> matchGeographySelection(a, [`ecoregion:${ecoregion.id}`]) && animalMatchesHabitat(a, habitat.id), title:`${habitat.label}` });
+  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> matchGeographySelection(a, [geographyFilter]) && animalMatchesHabitat(a, habitat.id), title:`${habitat.label}` });
   setGridReturnTarget({ page:'regions', view:'habitats' });
   setPage('grid');
 };
@@ -7020,7 +7012,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (authLoading) {
     return (
-      <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento sessione...</div>
       </div>
     );
@@ -7030,7 +7022,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (!userProfile && dataLoading) {
     return (
-      <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Caricamento profilo...</div>
       </div>
     );
@@ -7039,7 +7031,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   if (!userProfile && !dataLoading) {
     setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
     return (
-      <div style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
+      <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
         <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Animaldex...</div>
       </div>
     );
@@ -7047,7 +7039,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   if (userProfile && userProfile.onboarding_completed === false) {
     return (
-      <div style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
+      <div {...APP_FRAME_PROPS} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', overflow:'hidden', background:'#111113', position:'relative' }}>
         <OnboardingFlow user={user} animals={animalsData} initialNickname={userProfile.nickname || userProfile.username} onComplete={handleCompleteOnboarding} onFinish={finishOnboarding} />
       </div>
     );
@@ -7068,7 +7060,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   };
 
   return (
-    <div id="animaldex-app-root" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', position:'relative' }}>
+    <div id="animaldex-app-root" className="animaldex-app-frame" data-theme={theme} style={{ fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', display:'flex', flexDirection:'column', overflow:'hidden', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', position:'relative' }}>
       {renderPage()}
       {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onCapture={handleTutorialCapture} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
       {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
