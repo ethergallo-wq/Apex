@@ -5781,6 +5781,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [selectedContinentId, setSelectedContinentId] = useState(null);
   const [selectedRegionId, setSelectedRegionId] = useState(null);
   const [selectedTerritory, setSelectedTerritory] = useState(null);
+  const [selectedEcoregion, setSelectedEcoregion] = useState(null);
   const [selectedHabitat, setSelectedHabitat] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [countrySearch, setCountrySearch] = useState('');
@@ -5793,9 +5794,10 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   useEffect(()=>{ setView(normalizeInitialView(initialView)); }, [initialView]);
   useEffect(() => {
     if (view !== 'lifeweb') setSelectedHabitat(null);
-    if (!['habitats','lifeweb'].includes(view)) setSelectedRegionId(null);
-    if (!['regions','habitats','lifeweb'].includes(view)) setSelectedContinentId(null);
-    if (view !== 'animals') setSelectedTerritory(prev => prev?.kind === 'region' && region ? { ...prev, label:region.label } : prev);
+    if (!['habitats','lifeweb'].includes(view)) setSelectedEcoregion(null);
+    if (!['ecoregions','habitats','lifeweb'].includes(view)) setSelectedRegionId(null);
+    if (!['regions','ecoregions','habitats','lifeweb'].includes(view)) setSelectedContinentId(null);
+    if (view !== 'animals') setSelectedTerritory(prev => prev?.kind === 'subregion' && selectedEcoregion ? { ...prev, label:selectedEcoregion.label } : prev);
   }, [view]);
 
   const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === selectedContinentId) || null;
@@ -5832,15 +5834,16 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const allAnimalsWithStatus = ANIMALS.map(a => ({ ...a, status: getResolvedAnimalStatus(a, statusMap, visitedCountries) }));
   const isLightTheme = theme === 'light';
   const territoryAnimals = selectedTerritory ? allAnimalsWithStatus.filter(a => matchGeographySelection(a, [selectedTerritory.filterValue])) : [];
-  const selectedRegionTerritory = region ? { ...region, filterValue:`territory-region:${region.id}`, kind:'region', label:region.label } : null;
-  const habitatRows = selectedRegionTerritory ? getHabitatsForTerritory(selectedRegionTerritory, allAnimalsWithStatus) : [];
+  const selectedSubregionTerritory = selectedEcoregion ? { ...selectedEcoregion, filterValue:`ecoregion:${selectedEcoregion.id}`, kind:'subregion', label:selectedEcoregion.label } : null;
+  const habitatRows = selectedSubregionTerritory ? getHabitatsForTerritory(selectedSubregionTerritory, allAnimalsWithStatus) : [];
   const title = (() => {
     if (view === 'planet') return 'Pianeta Terra';
     if (view === 'countries') return 'Paesi visitati';
     if (view === 'terrestrial') return 'Dominio terrestre';
     if (view === 'marine') return 'Dominio marino';
     if (view === 'regions') return continent?.label || 'Regioni';
-    if (view === 'habitats') return region?.label || 'Habitat';
+    if (view === 'ecoregions') return region?.label || 'Subregioni';
+    if (view === 'habitats') return selectedEcoregion?.label || 'Habitat';
     if (view === 'lifeweb') return selectedHabitat?.label || 'LifeWeb';
     if (view === 'animals') return selectedTerritory?.label || 'Animali';
     return 'Territori';
@@ -5850,10 +5853,12 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view === 'countries') return setView('planet');
     if (view === 'terrestrial' || view === 'marine') return setView('planet');
     if (view === 'regions') return setView('terrestrial');
+    if (view === 'ecoregions') { setSelectedEcoregion(null); return setView('regions'); }
     if (view === 'lifeweb') return setView('habitats');
-    if (view === 'habitats') { setSelectedHabitat(null); return setView('regions'); }
+    if (view === 'habitats') { setSelectedHabitat(null); return setView('ecoregions'); }
     if (view === 'animals') {
       if (selectedTerritory?.kind === 'marine') return setView('marine');
+      if (selectedTerritory?.kind === 'subregion') return setView('ecoregions');
       if (selectedTerritory?.kind === 'region') return setView('regions');
       return setView('terrestrial');
     }
@@ -5867,10 +5872,11 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const navChips = [
     { label:'Pianeta', active:view==='planet', action:()=>setView('planet') },
     { label:'Paesi', active:view==='countries', action:()=>setView('countries') },
-    { label:'Terrestre', active:['terrestrial','regions','habitats','lifeweb'].includes(view), action:()=>setView('terrestrial') },
+    { label:'Terrestre', active:['terrestrial','regions','ecoregions','habitats','lifeweb'].includes(view), action:()=>setView('terrestrial') },
     { label:'Marino', active:view==='marine', action:()=>setView('marine') },
     ...(selectedContinentId ? [{ label:continent?.label || 'Continente', active:view==='regions', action:()=>setView('regions') }] : []),
-    ...(selectedRegionId ? [{ label:'Habitat', active:['habitats','lifeweb'].includes(view), action:()=>setView('habitats') }] : []),
+    ...(selectedRegionId ? [{ label:'Subregioni', active:view==='ecoregions', action:()=>setView('ecoregions') }] : []),
+    ...(selectedEcoregion ? [{ label:'Habitat', active:['habitats','lifeweb'].includes(view), action:()=>setView('habitats') }] : []),
   ];
 
   return (
@@ -5894,15 +5900,15 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
               <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
               <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un dominio</div>
-              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Il dominio terrestre porta a continenti e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Il dominio terrestre porta a continenti, regioni e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.</div>
             </div>
-            <TerritoryCard item={{label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} mapDisabled />
+            <TerritoryCard item={{label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} mapDisabled />
             <TerritoryCard item={{label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} mapDisabled />
           </>
         )}
 
         {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} subregioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
         ))}
 
         {view==='marine' && MARINE_REALMS.map(m => {
@@ -5912,19 +5918,24 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='regions' && continent && continent.regions.map(reg => {
           const locked = !unlockMap[reg.id];
-          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.iso?.length || 0} codici ISO`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Habitat" onOpen={()=>{setSelectedRegionId(reg.id); setSelectedHabitat(null); setView('habitats');}} mapIds={reg.bioregionIds} />;
+          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
         })}
 
-        {view==='habitats' && selectedRegionTerritory && (
+        {view==='ecoregions' && region && region.ecoregions.map(eco => {
+          const locked = !unlockMap[eco.id];
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Habitat" onOpen={()=>{setSelectedEcoregion(eco); setSelectedHabitat(null); setView('habitats');}} mapIds={[eco.id]} />;
+        })}
+
+        {view==='habitats' && selectedSubregionTerritory && (
           <div style={{ width:'100%', maxWidth:'100%', overflowX:'hidden' }}>
-            <div style={{ margin:'0 0 12px', borderRadius:22, overflow:'hidden' }}><BioregionVectorMap highlightIds={selectedRegionTerritory.bioregionIds || []} accent={'#A84637'} height={220} showLabels fullBleed /></div>
+            <div style={{ margin:'0 0 12px', borderRadius:22, overflow:'hidden' }}><BioregionVectorMap highlightIds={[selectedEcoregion.id]} selectedId={selectedEcoregion.id} accent={'#A84637'} height={220} showLabels fullBleed /></div>
             <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, margin:'12px 0 14px' }}>Scegli un habitat per generare una rete trofica contestuale. In questa versione la rete è una simulazione WIP basata su habitat, geografia, dieta, massa e traits.</div>
-            {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory(selectedRegionTerritory); setView('lifeweb');}} onOpenGrid={(h)=>onOpenHabitatGrid?.(selectedRegionTerritory, h)} />)}
+            {habitatRows.map(row => <HabitatCard key={row.id} row={row} onOpen={(h)=>{setSelectedHabitat(h); setSelectedTerritory(selectedSubregionTerritory); setView('lifeweb');}} onOpenGrid={(h)=>onOpenHabitatGrid?.(selectedSubregionTerritory, h)} />)}
           </div>
         )}
 
-        {view==='lifeweb' && selectedRegionTerritory && selectedHabitat && (
-          <LifeWebPage territory={selectedRegionTerritory} habitat={selectedHabitat} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
+        {view==='lifeweb' && selectedSubregionTerritory && selectedHabitat && (
+          <LifeWebPage territory={selectedSubregionTerritory} habitat={selectedHabitat} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
         )}
 
         {view==='countries' && (
