@@ -2025,7 +2025,6 @@ function ScaleComparison({ animal, full=false }) {
   return (
 	    <div style={{ width:'100%', minHeight:full?252:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
 	      <div style={{ width:'100%', height:stageHeight, position:'relative', display:'grid', gridTemplateColumns:`${refSlotW}px ${animalSlotW}px`, justifyContent:'center', alignItems:'end', columnGap:full?20:6, padding:full?'18px 10px 8px':'2px 0 0', boxSizing:'border-box' }}>
-	        <div aria-hidden style={{ position:'absolute', left:'50%', bottom:`${stageHeight - floorY}px`, transform:'translateX(-50%)', width:full?320:132, height:1, background:'rgba(255,255,255,.18)' }} />
 	        <div style={{ height:'100%', width:refSlotW, display:'flex', justifyContent:'flex-end', alignItems:'flex-end', transform:`translateX(${refNudge}px)`, paddingBottom:Math.max(0, stageHeight - floorY), boxSizing:'border-box' }}>
 	          <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', opacity:.96 }} />
 	        </div>
@@ -2033,7 +2032,6 @@ function ScaleComparison({ animal, full=false }) {
 	          <img src={animalSrc} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
 	        </div>
       </div>
-      {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · appoggio sulla stessa linea di base</div>}
     </div>
   );
 }
@@ -2711,14 +2709,14 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
           padding:'8px 8px 8px',
           boxSizing:'border-box',
           background: found
-            ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.70) 28%, rgba(10,12,16,.96) 100%)'
-            : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.78) 34%, rgba(18,20,24,.96) 100%)',
-          color:mystery ? 'rgba(245,241,234,.82)' : classMeta.accent,
-          fontSize:isNarrow ? 10.5 : 11.5,
-          fontWeight:900,
+            ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.58) 30%, rgba(10,12,16,.94) 100%)'
+            : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.68) 34%, rgba(18,20,24,.94) 100%)',
+          color:mystery ? 'rgba(245,241,234,.74)' : 'rgba(245,241,234,.92)',
+          fontSize:isNarrow ? 10 : 11,
+          fontWeight:800,
           textAlign:'center',
-          lineHeight:'12.5px',
-          textShadow: found ? '0 1px 3px rgba(0,0,0,.70)' : 'none',
+          lineHeight:'12.8px',
+          textShadow: found ? '0 1px 2px rgba(0,0,0,.48)' : 'none',
           display:'flex',
           alignItems:'center',
           justifyContent:'center',
@@ -4873,7 +4871,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </button>
 
-        <div style={{ borderRadius:26, padding:18, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.44)', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
+        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg, rgba(6,7,9,.70), rgba(10,10,12,.94) 68%), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(245,241,234,.14)', boxShadow:'0 18px 44px rgba(0,0,0,.30)', marginBottom:14, overflow:'hidden' }}>
           <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
           <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
@@ -4881,14 +4879,14 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         </div>
 
         <div style={{ marginBottom:14 }}>
-          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.12)'}`, borderRadius:28, background:isLightTheme?'linear-gradient(135deg,#F7F4EC,#ECE7DA)':'radial-gradient(circle at 80% 0%, rgba(108,229,199,.18), transparent 34%), linear-gradient(135deg,rgba(26,43,48,.94),rgba(15,18,22,.98))', color:isLightTheme?'#171717':'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
-            <div style={{ color:isLightTheme?'#A84637':'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
+          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.20)'}`, borderRadius:28, background:'linear-gradient(90deg, rgba(5,11,13,.92), rgba(5,11,13,.58) 56%, rgba(5,11,13,.28)), url("/regions/home_regioni.png")', backgroundSize:'cover', backgroundPosition:'center', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
+            <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
             <div style={{ fontSize:28, fontWeight:1000, lineHeight:1.02, marginTop:6 }}>Territori</div>
-            <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(245,241,234,.64)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
+            <div style={{ color:'rgba(245,241,234,.70)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
           </button>
         </div>
 
-        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:`1px solid ${lightPanelBorder}`, borderRadius:22, background:lightPanel, padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.06)':'none' }}>
+        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(184,77,58,.44)', borderRadius:22, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.09)':'0 14px 34px rgba(0,0,0,.20)' }}>
           {(() => {
             const totalAnimals = Math.max(1, ANIMALS.length);
             const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
@@ -4898,15 +4896,15 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             const Row = ({ label, valueText, pct, color, hint }) => (
               <div style={{ marginTop:10 }}>
                 <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
-                  <div style={{ color:pageText, fontSize:12.5, fontWeight:900 }}>{label}</div>
-                  <div style={{ color:mutedText, fontSize:11.5, fontWeight:800 }}>{valueText}</div>
+                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
+                  <div style={{ color:'rgba(255,255,255,.68)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
                 </div>
-                <div style={{ color:isLightTheme?'rgba(0,0,0,.48)':'rgba(255,255,255,.46)', fontSize:10.5, marginTop:2 }}>{hint}</div>
-                <div style={{ height:8, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
+                <div style={{ color:'rgba(255,255,255,.48)', fontSize:10.5, marginTop:2 }}>{hint}</div>
+                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.10)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
               </div>
             );
             return <>
-              <div style={{ color:pageText, fontSize:18, fontWeight:1000 }}>Animaldex</div>
+              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
               <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
               <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
               <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
@@ -6142,14 +6140,14 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} theme={theme} />
       {view !== 'planet' && breadcrumbItems.length > 0 && (
-        <div ref={breadcrumbScrollRef} style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', padding:'10px 14px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.06)', background:isLightTheme?'rgba(248,243,234,.96)':'rgba(12,12,14,.92)', scrollPaddingRight:14 }}>
-          <div style={{ display:'flex', alignItems:'center', gap:7, minWidth:'max-content' }}>
+        <div ref={breadcrumbScrollRef} style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', padding:'10px 14px 9px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.07)', background:isLightTheme?'rgba(248,243,234,.96)':'linear-gradient(180deg,rgba(17,18,21,.96),rgba(10,10,12,.94))', scrollPaddingRight:14 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:8, minWidth:'max-content' }}>
             {breadcrumbItems.map((item, index) => {
               const last = index === breadcrumbItems.length - 1;
               return (
                 <React.Fragment key={`${item.view}-${item.label}`}>
-                  <button onClick={()=>!last && goBreadcrumb(item.view)} disabled={last} style={{ flex:'0 0 auto', height:34, padding:'0 12px', borderRadius:999, border:`1px solid ${last?'rgba(168,70,55,.70)':'rgba(255,255,255,.09)'}`, background:last?(isLightTheme?'rgba(168,70,55,.16)':'rgba(168,70,55,.25)'):(isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'), color:last?(isLightTheme?'#7B2D24':'#FFD4C8'):(isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.70)'), fontSize:12, fontWeight:1000, fontFamily:'inherit', cursor:last?'default':'pointer', whiteSpace:'nowrap' }}>{item.label}</button>
-                  {!last && <span style={{ flex:'0 0 auto', color:isLightTheme?'rgba(0,0,0,.36)':'rgba(255,255,255,.34)', fontSize:16, fontWeight:1000 }}>›</span>}
+                  <button onClick={()=>!last && goBreadcrumb(item.view)} disabled={last} style={{ flex:'0 0 auto', minHeight:38, padding:'0 13px', borderRadius:11, border:`1px solid ${last?'rgba(184,77,58,.72)':(isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.11)')}`, background:last?(isLightTheme?'linear-gradient(135deg,rgba(184,77,58,.20),rgba(248,243,234,.92))':'linear-gradient(135deg,rgba(184,77,58,.36),rgba(44,22,21,.82))'):(isLightTheme?'linear-gradient(180deg,rgba(255,255,255,.84),rgba(238,233,224,.90))':'linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035))'), color:last?(isLightTheme?'#7B2D24':'#FFE0D6'):(isLightTheme?'rgba(0,0,0,.72)':'rgba(255,255,255,.72)'), fontSize:12, fontWeight:950, fontFamily:'inherit', cursor:last?'default':'pointer', whiteSpace:'nowrap', boxShadow:last?'0 8px 20px rgba(184,77,58,.14), inset 0 1px 0 rgba(255,255,255,.08)':'inset 0 1px 0 rgba(255,255,255,.06)' }}>{item.label}</button>
+                  {!last && <span style={{ flex:'0 0 auto', color:isLightTheme?'rgba(0,0,0,.34)':'rgba(255,255,255,.30)', fontSize:15, fontWeight:1000 }}>›</span>}
                 </React.Fragment>
               );
             })}
@@ -6474,9 +6472,9 @@ function ComparatorInfoModal({ onClose }) {
         </div>
         {[
           ['Vulnerabilità', 'Deriva dallo stato di conservazione IUCN quando disponibile; in mancanza usa una stima inversa basata sulla resistenza. Valori alti indicano fragilità maggiore.'],
-          ['Dimensioni log', 'Usa la lunghezza corporea media stimata. La scala è logaritmica per confrontare microfauna, uccelli, mammiferi e grandi vertebrati senza schiacciare i piccoli.'],
-          ['Velocità centili', 'Usa il valore di velocità/statistica del dataset e lo trasforma in percentile rispetto agli animali presenti nel database.'],
-          ['Peso log', 'Usa foodweb.body_mass_g quando presente, altrimenti stima dal campo peso. Anche qui scala logaritmica per evitare che i giganti dominino tutto il grafico.'],
+          ['Dimensioni', 'Nel radar leggi il valore reale. Se nel dataset c’è un range, Apex usa la fascia più alta: per esempio 34-38 cm diventa 38 cm. Il pentagono usa poi una scala logaritmica interna per confrontare piccoli e giganti senza schiacciare nessuno.'],
+          ['Velocità', 'Leggi la velocità reale in km/h quando disponibile. Il pentagono la posiziona rispetto agli altri animali del database, così capisci subito chi sta davvero correndo forte.'],
+          ['Peso', 'Nel radar leggi il valore reale. Se il peso è indicato come range, Apex usa la fascia più alta; se esiste body_mass_g lo usa come riferimento diretto. La scala del pentagono resta logaritmica per rendere leggibili anche gli estremi.'],
           ['Adattabilità', 'Percentile del numero di paesi in cui la specie è presente: più paesi = distribuzione più ampia e maggiore adattabilità geografica.'],
           ['Abilità', 'Le abilità sono trait contestuali. Nel duello puoi toccarle: sul retro trovi perché quell’animale le possiede o come vengono interpretate.']
         ].map(([title, body])=>(
@@ -6531,6 +6529,26 @@ function parseRangeAverage(value, unitKind='mass') {
   }
   return n;
 }
+function parseRangeMax(value, unitKind='mass') {
+  if (value == null) return null;
+  const s = String(value).toLowerCase().replace(/,/g,'.').replace(/[–—]/g,'-');
+  const nums = [...s.matchAll(/\d+(?:\.\d)?\d*/g)].map(m => Number(m[0])).filter(Number.isFinite);
+  if (!nums.length) return null;
+  let n = Math.max(...nums);
+  if (unitKind === 'mass') {
+    if (/\bton|\bt\b|tonnell/.test(s)) n *= 1000000;
+    else if (/\bkg\b|chil/.test(s)) n *= 1000;
+    else if (/\bmg\b/.test(s)) n /= 1000;
+    return n;
+  }
+  if (unitKind === 'length') {
+    if (/\bkm\b/.test(s)) n *= 100000;
+    else if (/\bm\b|metro|metri/.test(s)) n *= 100;
+    else if (/\bmm\b/.test(s)) n /= 10;
+    return n;
+  }
+  return n;
+}
 function getAnimalMassG(a) {
   const m = Number(a?.foodweb?.body_mass_g);
   if (Number.isFinite(m) && m > 0) return m;
@@ -6538,6 +6556,14 @@ function getAnimalMassG(a) {
 }
 function getAnimalLengthCm(a) {
   return parseRangeAverage(a?.ln, 'length') || 1;
+}
+function getComparatorMassG(a) {
+  const m = Number(a?.foodweb?.body_mass_g);
+  if (Number.isFinite(m) && m > 0) return m;
+  return parseRangeMax(a?.wt, 'mass') || 1;
+}
+function getComparatorLengthCm(a) {
+  return parseRangeMax(a?.ln, 'length') || 1;
 }
 function getCountriesCount(a) {
   return toArraySafe(a?.distribution?.countries_present || a?.geo?.iso?.primary || a?.geo?.iso?.iucn || a?.geo?.iso).length;
@@ -6563,30 +6589,30 @@ function vulnerabilityScore(a) {
 function getComparatorBenchmarks(animals=[]) {
   const list = (animals || []).filter(Boolean);
   return {
-    massLog: list.map(a => Math.log10(getAnimalMassG(a) + 1)),
-    lengthLog: list.map(a => Math.log10(getAnimalLengthCm(a) + 1)),
+    massLog: list.map(a => Math.log10(getComparatorMassG(a) + 1)),
+    lengthLog: list.map(a => Math.log10(getComparatorLengthCm(a) + 1)),
     speeds: list.map(a => Number(a?.stats?.velocita || 0)),
     countries: list.map(getCountriesCount),
   };
 }
 const COMPARATOR_METRICS = [
   { key:'vulnerabilita', label:'Vulnerabilità' },
-  { key:'dimensioni', label:'Dimensioni log' },
-  { key:'velocita', label:'Velocità centili' },
-  { key:'peso', label:'Peso log' },
+  { key:'dimensioni', label:'Dimensioni' },
+  { key:'velocita', label:'Velocità' },
+  { key:'peso', label:'Peso' },
   { key:'adattabilita', label:'Adattabilità' },
 ];
 function getComparatorMetrics(a, benchmarks) {
-  const massG = getAnimalMassG(a);
-  const lengthCm = getAnimalLengthCm(a);
+  const massG = getComparatorMassG(a);
+  const lengthCm = getComparatorLengthCm(a);
   const countries = getCountriesCount(a);
   const speed = Number(a?.stats?.velocita || 0);
   return {
     radar: [
       { key:'vulnerabilita', label:'Vulnerabilità', value:vulnerabilityScore(a), raw:String(a?.cons || 'DD') },
-      { key:'dimensioni', label:'Dimensioni log', value:minMaxScore(Math.log10(lengthCm + 1), benchmarks.lengthLog), raw:a?.ln || `${Math.round(lengthCm)} cm` },
-      { key:'velocita', label:'Velocità centili', value:percentileRank(speed, benchmarks.speeds), raw:speed ? `${speed}` : 'n/d' },
-      { key:'peso', label:'Peso log', value:minMaxScore(Math.log10(massG + 1), benchmarks.massLog), raw:a?.wt || `${Math.round(massG)} g` },
+      { key:'dimensioni', label:'Dimensioni', value:minMaxScore(Math.log10(lengthCm + 1), benchmarks.lengthLog), raw:lengthCm ? `${Math.round(lengthCm)} cm` : 'n/d' },
+      { key:'velocita', label:'Velocità', value:percentileRank(speed, benchmarks.speeds), raw:speed ? `${speed}` : 'n/d' },
+      { key:'peso', label:'Peso', value:minMaxScore(Math.log10(massG + 1), benchmarks.massLog), raw:formatComparatorMassG(massG) },
       { key:'adattabilita', label:'Adattabilità', value:percentileRank(countries, benchmarks.countries), raw:`${countries} paesi` },
     ],
     massG, lengthCm, countries, speed,
@@ -6598,6 +6624,14 @@ function formatComparatorRaw(metric) {
   if (metric.key === 'vulnerabilita') return `IUCN ${raw || 'DD'}`;
   if (metric.key === 'velocita') return raw && raw !== 'n/d' ? `${raw} km/h` : 'n/d';
   return raw || 'n/d';
+}
+function formatComparatorMassG(g) {
+  const n = Number(g);
+  if (!Number.isFinite(n) || n <= 0) return 'n/d';
+  if (n >= 1000000) return `${Number((n / 1000000).toFixed(n >= 10000000 ? 0 : 1))} t`;
+  if (n >= 1000) return `${Number((n / 1000).toFixed(n >= 10000 ? 0 : 1))} kg`;
+  if (n < 1) return `${Number((n * 1000).toFixed(1))} mg`;
+  return `${Number(n.toFixed(n < 10 ? 1 : 0))} g`;
 }
 function polarPoint(cx, cy, r, angleDeg) {
   const rad = (Math.PI / 180) * angleDeg;
@@ -6621,20 +6655,20 @@ function radarLabelLines(label='') {
   return s.split(' ');
 }
 function ComparatorRadar({ left, right, colorLeft, colorRight }) {
-  const width = 430, height = 390, cx = width/2, cy = 190, r = 126;
+  const width = 430, height = 410, cx = width/2, cy = 206, r = 120;
   const axes = left?.radar || right?.radar || COMPARATOR_METRICS.map(m=>({ ...m, value:0 }));
   const pt = (idx,value)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); const rr=r*(Number(value||0)/100); return [cx+Math.cos(angle)*rr, cy+Math.sin(angle)*rr]; };
   const poly = (data)=> data ? data.radar.map((m,i)=>pt(i,m.value).join(',')).join(' ') : '';
   const grid = [20,40,60,80,100].map(v=> axes.map((_,i)=>pt(i,v).join(',')).join(' '));
   const labelSlots = [
-    { x:cx, y:22, anchor:'middle' },
-    { x:width-18, y:116, anchor:'end' },
-    { x:width-32, y:344, anchor:'end' },
-    { x:32, y:344, anchor:'start' },
-    { x:18, y:116, anchor:'start' },
+    { x:cx, y:34, anchor:'middle' },
+    { x:width-52, y:126, anchor:'end' },
+    { x:width-68, y:356, anchor:'end' },
+    { x:68, y:356, anchor:'start' },
+    { x:52, y:126, anchor:'start' },
   ];
   return (
-    <div style={{ borderRadius:24, background:'radial-gradient(circle at center,rgba(168,70,55,.16),rgba(0,0,0,.40) 56%,rgba(0,0,0,.74))', border:'1px solid rgba(255,255,255,.08)', padding:6, overflow:'hidden' }}>
+    <div style={{ borderRadius:24, background:'radial-gradient(circle at 50% 48%,rgba(168,70,55,.14),rgba(0,0,0,.36) 58%,rgba(0,0,0,.76))', border:'1px solid rgba(255,255,255,.08)', padding:8, overflow:'hidden', boxShadow:'inset 0 1px 0 rgba(255,255,255,.04)' }}>
       <svg viewBox={`0 0 ${width} ${height}`} style={{ width:'100%', maxWidth:430, display:'block', margin:'0 auto' }}>
         {grid.map((g,i)=><polygon key={i} points={g} fill="none" stroke="rgba(255,255,255,.18)" strokeDasharray="5 6" strokeWidth="1" />)}
         {axes.map((m,i)=>{ const [x,y]=pt(i,100); return <line key={m.key} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(255,255,255,.20)" strokeWidth="1" />; })}
@@ -6644,8 +6678,8 @@ function ComparatorRadar({ left, right, colorLeft, colorRight }) {
         {axes.map((m,i)=>{ const slot=labelSlots[i] || {x:cx,y:height-30,anchor:'middle'}; const lv=left?.radar?.[i]; const rv=right?.radar?.[i]; return <g key={m.key}>
           <text x={slot.x} y={slot.y} fill="white" fontSize="15" fontWeight="900" textAnchor={slot.anchor}>{radarLabelLines(m.label)[0]}</text>
           {radarLabelLines(m.label)[1] && <text x={slot.x} y={slot.y+16} fill="white" fontSize="12" fontWeight="850" opacity=".82" textAnchor={slot.anchor}>{radarLabelLines(m.label)[1]}</text>}
-          <text x={slot.x} y={slot.y+34} fill={colorLeft} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{lv?`${lv.value} · ${formatComparatorRaw(lv)}`:''}</text>
-          <text x={slot.x} y={slot.y+48} fill={colorRight} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{rv?`${rv.value} · ${formatComparatorRaw(rv)}`:''}</text>
+          <text x={slot.x} y={slot.y+32} fill={colorLeft} fontSize="10.5" fontWeight="900" textAnchor={slot.anchor}>{lv?formatComparatorRaw(lv):''}</text>
+          <text x={slot.x} y={slot.y+45} fill={colorRight} fontSize="10.5" fontWeight="900" textAnchor={slot.anchor}>{rv?formatComparatorRaw(rv):''}</text>
         </g>; })}
       </svg>
     </div>
@@ -6694,7 +6728,7 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom 
       <div onClick={()=>onZoom?.(animal)} style={{ padding:14, display:'flex', alignItems:'center', gap:12, cursor:'zoom-in' }}>
         <div style={{ width:76, height:76, borderRadius:22, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${accent}33` }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
         <div style={{ minWidth:0 }}>
-          <div style={{ color:accent, fontSize:10, fontWeight:950, textTransform:'uppercase', letterSpacing:.8 }}>{sideLabel}</div>
+          <div aria-label={sideLabel} style={{ width:38, height:5, borderRadius:999, background:accent, marginBottom:7, boxShadow:`0 0 14px ${accent}44` }} />
           <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.05 }}>{animal.com}</div>
           <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontStyle:'italic', marginTop:3 }}>{animal.sci}</div>
         </div>
@@ -6738,7 +6772,7 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
             </div>
             <button onClick={()=>setShowInfo(true)} aria-label="Info comparatore" style={{ width:36, height:36, borderRadius:13, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'#F0A840', fontSize:18, fontWeight:1000, cursor:'pointer' }}>i</button>
           </div>
-          <div style={{ color:'rgba(255,255,255,.56)', fontSize:12, lineHeight:1.55, marginTop:8 }}>Radar su vulnerabilità, dimensioni logaritmiche, velocità in centili, peso logaritmico e adattabilità geografica.</div>
+          <div style={{ color:'rgba(255,255,255,.56)', fontSize:12, lineHeight:1.55, marginTop:8 }}>Il radar mostra i valori reali accanto a ogni voce; il pentagono li normalizza solo per rendere il confronto immediato.</div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:isMobile?'1fr':'1fr 1fr', gap:10, marginBottom:12, minWidth:0 }}>
           <ComparatorSelector label="Sinistra" value={left} animals={normalized} onChange={setLeft} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} compact={isMobile} onZoom={setZoomAnimal} />
