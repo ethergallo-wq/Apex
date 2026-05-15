@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
 import { supabase } from './supabaseClient';
 
@@ -1555,6 +1555,10 @@ function matchGeographySelection(animal, selections = []) {
     }
     return countries.includes(sel);
   });
+}
+function matchExactBioregion(animal, bioregionId) {
+  if (!bioregionId) return false;
+  return getAnimalBioregionIdsV4(animal).includes(String(bioregionId));
 }
 function extractAverageWeightKg(wt) {
   if (!wt) return 0;
@@ -5284,26 +5288,32 @@ function resourceFeedsAnimal(resourceId, animal) {
 }
 function getFoodWebCandidateAnimals(allAnimals, territory, habitat, limit=120, focusAnimal=null) {
   const filterValue = territory?.filterValue || (territory?.id ? `ecoregion:${territory.id}` : '');
+  const exactBioregionId = habitat?.id === 'GENERAL' ? (habitat?.exactBioregionId || territory?.bioregionId || territory?.id) : null;
   const focus = focusAnimal ? (allAnimals || []).find(a => a.id === focusAnimal.id) || focusAnimal : null;
-  let list = (allAnimals || []).filter(a => (!filterValue || matchGeographySelection(a, [filterValue])) && (!habitat?.id || animalMatchesHabitat(a, habitat?.id)));
+  let list = (allAnimals || []).filter(a => {
+    const geoOk = exactBioregionId ? matchExactBioregion(a, exactBioregionId) : (!filterValue || matchGeographySelection(a, [filterValue]));
+    const habitatOk = !habitat?.id || habitat.id === 'GENERAL' || animalMatchesHabitat(a, habitat?.id);
+    return geoOk && habitatOk;
+  });
   if (focus) {
     const focusHabitats = getAnimalHabitatIds(focus);
     const focusCountries = new Set(toArraySafe(focus?.distribution?.countries_present || focus?.geo?.iso?.primary || []));
     const contextual = (allAnimals || []).filter(a => {
       const sameHabitat = !focusHabitats.length || getAnimalHabitatIds(a).some(id => focusHabitats.includes(id));
       const sameCountry = !focusCountries.size || toArraySafe(a?.distribution?.countries_present || a?.geo?.iso?.primary || []).some(code => focusCountries.has(code));
-      return (sameHabitat || sameCountry) && (!filterValue || matchGeographySelection(a, [filterValue]));
+      const geoOk = exactBioregionId ? matchExactBioregion(a, exactBioregionId) : (!filterValue || matchGeographySelection(a, [filterValue]));
+      return (sameHabitat || sameCountry) && geoOk;
     });
     if (contextual.length) list = contextual;
   }
-  if (list.length < 6 && habitat?.id) list = (allAnimals || []).filter(a => animalMatchesHabitat(a, habitat?.id));
+  if (list.length < 6 && habitat?.id && habitat.id !== 'GENERAL') list = (allAnimals || []).filter(a => animalMatchesHabitat(a, habitat?.id));
   list.sort((a,b)=>getAnimalPowerScore(b)-getAnimalPowerScore(a));
   if (focus && !list.some(a => a.id === focus.id)) list = [focus, ...list];
   return Array.from(new Map(list.map(a => [a.id, a])).values()).slice(0, limit);
 }
 
 function buildGeneralLifeWebHabitat(territory) {
-  return { id:'GENERAL', label:territory?.label || 'LifeWeb', count:0, animals:[] };
+  return { id:'GENERAL', label:territory?.label || 'LifeWeb', exactBioregionId:territory?.bioregionId || territory?.id || null, count:0, animals:[] };
 }
 
 function autoArrangeLifeWebNodes(nodes = [], focusAnimalId = null) {
@@ -5723,18 +5733,75 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
   );
 }
 
-function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=null }) {
+function getSubregionAnimals(animals = [], territory) {
+  const bioregionId = territory?.bioregionId || territory?.id;
+  if (!bioregionId) return [];
+  return (animals || []).filter(a => matchExactBioregion(a, bioregionId));
+}
+function getSubregionApexPredators(animals = [], territory) {
+  const zoneAnimals = getSubregionAnimals(animals, territory);
+  const apex = zoneAnimals.filter(a => trophicGroup(a) === 'apex' || String(a.trophic) === '4');
+  const predators = apex.length ? apex : zoneAnimals.filter(a => ['carnivore','apex'].includes(trophicGroup(a)) || String(a.trophic) === '3');
+  return predators.sort((a,b)=>getAnimalPowerScore(b)-getAnimalPowerScore(a)).slice(0,16);
+}
+function buildSubregionDescription(territory) {
+  const label = territory?.label || 'Questa subregione';
+  const en = territory?.name_en ? ` (${territory.name_en})` : '';
+  const area = territory?.area_km2 ? `${Math.round(territory.area_km2).toLocaleString('it-IT')} km²` : 'un mosaico esteso';
+  const source = String(territory?.source_ecoregions || '').split(';').map(s=>s.trim()).filter(Boolean);
+  const examples = source.slice(0, 5).join(', ');
+  const tail = examples ? ` Comprende ambienti come ${examples}, che rendono il confine ecologico più preciso dei soli codici paese.` : '';
+  return `${label}${en} copre ${area} di paesaggi collegati da clima, vegetazione e storia geologica. La composizione del terreno alterna substrati minerali, suoli giovani o torbosi, zone drenate e aree più umide dove acqua, gelo, vento o stagionalità modellano la disponibilità di rifugi e prede. La fauna tende a concentrarsi lungo corridoi ecologici: coste, foreste, praterie, tundre, rilievi o bacini interni secondo la subregione. Per Animaldex questa pagina usa la subregione biogeografica come unità principale, così la lista animali resta più coerente della semplice presenza nazionale.${tail}`;
+}
+function RegionActionBox({ title, text, label, tone='#244A70', onClick, disabled=false }) {
+  return (
+    <button onClick={disabled ? undefined : onClick} style={{ minHeight:112, borderRadius:18, border:`1px solid ${disabled?'rgba(255,255,255,.08)':'rgba(255,255,255,.12)'}`, background:disabled?'rgba(255,255,255,.035)':`linear-gradient(135deg,${tone},rgba(255,255,255,.045))`, color:'white', textAlign:'left', padding:14, fontFamily:'inherit', cursor:disabled?'default':'pointer', opacity:disabled ? .85 : 1 }}>
+      <div style={{ fontSize:17, fontWeight:1000 }}>{title}</div>
+      <div style={{ color:'rgba(255,255,255,.62)', fontSize:12, lineHeight:1.35, marginTop:6 }}>{text}</div>
+      <div style={{ marginTop:12, height:34, borderRadius:12, background:disabled?'rgba(255,255,255,.06)':'rgba(0,0,0,.22)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000, fontSize:12.5 }}>{label}</div>
+    </button>
+  );
+}
+function ApexPredatorStrip({ animals = [], onOpenAnimal }) {
+  return (
+    <div style={{ border:'1px solid rgba(255,255,255,.08)', background:'linear-gradient(180deg,#15171C,#0E0F12)', borderRadius:20, padding:12, overflow:'hidden' }}>
+      <div style={{ display:'flex', justifyContent:'space-between', alignItems:'baseline', gap:10, marginBottom:10 }}>
+        <div style={{ color:'white', fontSize:16, fontWeight:1000 }}>Predatori apex</div>
+        <div style={{ color:'rgba(255,255,255,.42)', fontSize:11, fontWeight:900 }}>{animals.length || 'da affinare'} specie</div>
+      </div>
+      <div style={{ display:'flex', gap:10, overflowX:'auto', WebkitOverflowScrolling:'touch', paddingBottom:2 }}>
+        {animals.length ? animals.map(a => (
+          <button key={a.id} onClick={()=>onOpenAnimal?.(a)} style={{ flex:'0 0 116px', height:136, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.045)', color:'white', padding:8, fontFamily:'inherit', cursor:'pointer', overflow:'hidden' }}>
+            <div style={{ height:82, borderRadius:13, overflow:'hidden', background:'#202228' }}><AnimalImg a={a} size={82} fontSize={28} overrideStatus="catturato" /></div>
+            <div style={{ fontSize:11.5, fontWeight:1000, lineHeight:1.12, marginTop:8 }}>{clampWholeWords(a.com || a.sci, 26)}</div>
+          </button>
+        )) : <div style={{ color:'rgba(255,255,255,.50)', fontSize:12, lineHeight:1.4, padding:'8px 2px 12px' }}>Nessun predatore apex collegato con ID bioregionale preciso in questa versione dei dati.</div>}
+      </div>
+    </div>
+  );
+}
+
+function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=null, onOpenGrid }) {
   const graph = useMemo(() => buildLifeWebGraph(animals, territory, habitat, focusAnimal), [animals, territory, habitat, focusAnimal]);
   const gridAnimals = graph.animals || [];
-  const isGeneral = habitat?.id === 'GENERAL';
+  const zoneAnimals = useMemo(() => getSubregionAnimals(animals, territory), [animals, territory]);
+  const apexAnimals = useMemo(() => getSubregionApexPredators(animals, territory), [animals, territory]);
+  const description = useMemo(() => buildSubregionDescription(territory), [territory]);
   return (
     <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
-      <div style={{ border:'1px solid rgba(255,255,255,.08)', background:'rgba(255,255,255,.045)', borderRadius:22, padding:16 }}>
-        <div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>{isGeneral ? 'Subregion LifeWeb' : 'LifeWeb'}</div>
+      <div style={{ border:'1px solid rgba(255,255,255,.08)', background:'linear-gradient(180deg,rgba(255,255,255,.060),rgba(255,255,255,.030))', borderRadius:22, padding:16 }}>
+        <div style={{ color:'#C85D44', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>Subregione</div>
         <div style={{ color:'white', fontSize:23, fontWeight:1000, marginTop:4 }}>{territory?.label || habitat?.label || 'LifeWeb'}</div>
-        <div style={{ color:'rgba(255,255,255,.58)', fontSize:12.5, lineHeight:1.45, marginTop:6 }}>
-          Animali collegati a questa subregione. La rete resta generale, senza suddivisione per habitat.
+        <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.48, marginTop:8 }}>{description}</div>
+        <div style={{ display:'flex', gap:8, marginTop:12, overflowX:'auto', WebkitOverflowScrolling:'touch' }}>
+          <div style={{ flex:'0 0 auto', borderRadius:999, background:'rgba(144,216,74,.13)', border:'1px solid rgba(144,216,74,.25)', color:'#CFF2A0', padding:'7px 10px', fontSize:11, fontWeight:950 }}>{zoneAnimals.length} animali con ID bioregione</div>
+          <div style={{ flex:'0 0 auto', borderRadius:999, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', color:'rgba(255,255,255,.66)', padding:'7px 10px', fontSize:11, fontWeight:900 }}>{territory?.name_en || 'Subregion'}</div>
         </div>
+      </div>
+      <ApexPredatorStrip animals={apexAnimals} onOpenAnimal={onOpenAnimal} />
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10 }}>
+        <RegionActionBox title="Grid animali" text="Mostra solo gli animali agganciati all'ID bioregionale della subregione, senza fallback ISO." label="Apri Grid" tone="#244A70" onClick={onOpenGrid} />
+        <RegionActionBox title="LifeWeb" text="Spazio pronto per la rete trofica completa della subregione." label="In preparazione" tone="#3A2A22" disabled />
       </div>
       <LifeWebMiniGrid animals={gridAnimals} onOpenAnimal={onOpenAnimal} />
     </div>
@@ -5875,15 +5942,27 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setView('animals');
   };
   const unlock = (id) => setUnlockMap(prev => ({ ...prev, [id]: true }));
-  const navChips = [
-    { label:'Pianeta', active:view==='planet', action:()=>setView('planet') },
-    { label:'Paesi', active:view==='countries', action:()=>setView('countries') },
-    { label:'Terrestre', active:['terrestrial','regions','ecoregions','habitats','lifeweb'].includes(view), action:()=>setView('terrestrial') },
-    { label:'Marino', active:view==='marine', action:()=>setView('marine') },
-    ...(selectedContinentId ? [{ label:continent?.label || 'Continente', active:view==='regions', action:()=>setView('regions') }] : []),
-    ...(selectedRegionId ? [{ label:'Subregioni', active:view==='ecoregions', action:()=>setView('ecoregions') }] : []),
-    ...(selectedEcoregion ? [{ label:'LifeWeb', active:view==='lifeweb', action:()=>setView('lifeweb') }] : []),
-  ];
+  const goBreadcrumb = (targetView) => {
+    if (targetView === 'planet') { setSelectedContinentId(null); setSelectedRegionId(null); setSelectedEcoregion(null); setView('planet'); return; }
+    if (targetView === 'terrestrial') { setSelectedRegionId(null); setSelectedEcoregion(null); setView('terrestrial'); return; }
+    if (targetView === 'marine') { setView('marine'); return; }
+    if (targetView === 'regions') { setSelectedRegionId(null); setSelectedEcoregion(null); setView('regions'); return; }
+    if (targetView === 'ecoregions') { setSelectedEcoregion(null); setView('ecoregions'); return; }
+    if (targetView === 'lifeweb') { setView('lifeweb'); return; }
+    setView(targetView);
+  };
+  const breadcrumbItems = (() => {
+    if (view === 'countries') return [{ label:'Pianeta', view:'planet' }, { label:'Paesi visitati', view:'countries' }];
+    if (view === 'marine') return [{ label:'Pianeta', view:'planet' }, { label:'Reame marino', view:'marine' }];
+    if (['terrestrial','regions','ecoregions','lifeweb','animals'].includes(view) || selectedContinentId) {
+      const items = [{ label:'Reame terrestre', view:'terrestrial' }];
+      if (continent) items.push({ label:continent.label, view:'regions' });
+      if (region) items.push({ label:region.label, view:'ecoregions' });
+      if (selectedEcoregion) items.push({ label:selectedEcoregion.label, view:'lifeweb' });
+      return items;
+    }
+    return [];
+  })();
 
   const openSubregionLifeWeb = (eco) => {
     const territory = { ...eco, filterValue:`ecoregion:${eco.id}`, kind:'subregion', label:eco.label };
@@ -5900,9 +5979,19 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} theme={theme} />
-      {view !== 'planet' && (
-        <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', display:'flex', gap:8, padding:'9px 14px 7px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.06)', background:isLightTheme?'rgba(248,243,234,.96)':'rgba(12,12,14,.92)' }}>
-          {navChips.map(chip => <button key={chip.label} onClick={chip.action} style={{ flex:'0 0 auto', height:32, padding:'0 12px', borderRadius:999, border:`1px solid ${chip.active?'rgba(168,70,55,.70)':'rgba(255,255,255,.08)'}`, background:chip.active?(isLightTheme?'rgba(168,70,55,.16)':'rgba(168,70,55,.24)'):(isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'), color:chip.active?(isLightTheme?'#7B2D24':'#FFD4C8'):(isLightTheme?'rgba(0,0,0,.72)':'rgba(255,255,255,.72)'), fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer' }}>{chip.label}</button>)}
+      {view !== 'planet' && breadcrumbItems.length > 0 && (
+        <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', padding:'10px 14px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.06)', background:isLightTheme?'rgba(248,243,234,.96)':'rgba(12,12,14,.92)' }}>
+          <div style={{ display:'flex', alignItems:'center', gap:7, minWidth:'max-content' }}>
+            {breadcrumbItems.map((item, index) => {
+              const last = index === breadcrumbItems.length - 1;
+              return (
+                <React.Fragment key={`${item.view}-${item.label}`}>
+                  <button onClick={()=>!last && goBreadcrumb(item.view)} disabled={last} style={{ flex:'0 0 auto', height:34, padding:'0 12px', borderRadius:999, border:`1px solid ${last?'rgba(168,70,55,.70)':'rgba(255,255,255,.09)'}`, background:last?(isLightTheme?'rgba(168,70,55,.16)':'rgba(168,70,55,.25)'):(isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'), color:last?(isLightTheme?'#7B2D24':'#FFD4C8'):(isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.70)'), fontSize:12, fontWeight:1000, fontFamily:'inherit', cursor:last?'default':'pointer', whiteSpace:'nowrap' }}>{item.label}</button>
+                  {!last && <span style={{ flex:'0 0 auto', color:isLightTheme?'rgba(0,0,0,.36)':'rgba(255,255,255,.34)', fontSize:16, fontWeight:1000 }}>›</span>}
+                </React.Fragment>
+              );
+            })}
+          </div>
         </div>
       )}
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
@@ -5926,7 +6015,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         )}
 
         {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setView('regions');}} mapIds={cont.bioregionIds} />
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setSelectedRegionId(null);setSelectedEcoregion(null);setView('regions');}} mapIds={cont.bioregionIds} />
         ))}
 
         {view==='marine' && MARINE_REALMS.map(m => {
@@ -5936,7 +6025,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='regions' && continent && continent.regions.map(reg => {
           const locked = !unlockMap[reg.id];
-          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setSelectedEcoregion(null);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
         })}
 
         {view==='ecoregions' && region && region.ecoregions.map(eco => {
@@ -5945,7 +6034,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         })}
 
         {view==='lifeweb' && selectedSubregionTerritory && (
-          <LifeWebPage territory={selectedSubregionTerritory} habitat={selectedHabitat || buildGeneralLifeWebHabitat(selectedSubregionTerritory)} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} />
+          <LifeWebPage territory={selectedSubregionTerritory} habitat={selectedHabitat || buildGeneralLifeWebHabitat(selectedSubregionTerritory)} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} onOpenGrid={()=>openSubregionGrid(selectedEcoregion)} />
         )}
 
         {view==='countries' && (
@@ -6987,8 +7076,9 @@ const openHabitatGrid = (territory, habitat) => {
   if (!territory || !habitat) return;
   const geographyFilter = territory.filterValue || (territory.kind === 'region' ? `territory-region:${territory.id}` : `ecoregion:${territory.id}`);
   const isGeneralHabitat = habitat.id === 'GENERAL';
+  const exactBioregionId = isGeneralHabitat ? (habitat.exactBioregionId || territory.bioregionId || territory.id) : null;
   setSel(null);
-  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> matchGeographySelection(a, [geographyFilter]) && (isGeneralHabitat || animalMatchesHabitat(a, habitat.id)), title:isGeneralHabitat ? territory.label : `${habitat.label}` });
+  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> (exactBioregionId ? matchExactBioregion(a, exactBioregionId) : matchGeographySelection(a, [geographyFilter])) && (isGeneralHabitat || animalMatchesHabitat(a, habitat.id)), title:isGeneralHabitat ? territory.label : `${habitat.label}` });
   setGridReturnTarget({ page:'regions', view:'ecoregions' });
   setPage('grid');
 };
