@@ -196,6 +196,7 @@ const ANIMAL_STATUS = {
   catturato:  { label:'Catturato',  short:'CAT.',  c:'#F5F1EA', bg:'rgba(184,77,58,.86)', border:'1.5px solid rgba(184,77,58,.72)', dot:'#B84D3A', desc:'Registrato nel tuo Animaldex tramite foto o conferma.' },
 };
 const ANIMAL_STATUS_ORDER = ['misterioso','ricercato','avvistato','catturato'];
+const ANIMAL_REVEALED_FIRST_ORDER = ['catturato','avvistato','ricercato','misterioso'];
 
 function normalizeAnimalStatus(status) {
   const s = String(status || '').toLowerCase().trim();
@@ -209,6 +210,13 @@ function isMysteryStatus(status) { return normalizeAnimalStatus(status) === 'mis
 function isRevealedStatus(status) {
   const s = normalizeAnimalStatus(status);
   return s === 'avvistato' || s === 'catturato';
+}
+function compareAnimalsRevealedFirst(a, b) {
+  const sa = normalizeAnimalStatus(a?.status);
+  const sb = normalizeAnimalStatus(b?.status);
+  const statusRank = ANIMAL_REVEALED_FIRST_ORDER.indexOf(sa) - ANIMAL_REVEALED_FIRST_ORDER.indexOf(sb);
+  if (statusRank) return statusRank;
+  return getAnimalPowerScore(b) - getAnimalPowerScore(a) || Number(a?.no || a?.id || 0) - Number(b?.no || b?.id || 0);
 }
 function getStatusMeta(status) { return ANIMAL_STATUS[normalizeAnimalStatus(status)] || ANIMAL_STATUS.ricercato; }
 
@@ -2964,6 +2972,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       return true;
     })
     .sort((a,b) => {
+      if (typeof preset?.customSort === 'function') return preset.customSort(a, b);
       const noA = Number(a.no || a.id || 0), noB = Number(b.no || b.id || 0);
       if (sortBy === 'name_asc') return String(a.com).localeCompare(String(b.com), 'it');
       if (sortBy === 'name_desc') return String(b.com).localeCompare(String(a.com), 'it');
@@ -4282,7 +4291,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onCapture, o
 function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, onFinish }) {
   const OCHRE = '#A84637';
   const [step,setStep]=useState('intro');
-  const [nickname,setNickname]=useState(initialNickname || String(user?.email || 'esploratore').split('@')[0] || 'Esploratore');
+  const [nickname,setNickname]=useState(initialNickname || String(user?.email || 'utente').split('@')[0] || 'Esploratore');
   const [countrySearch,setCountrySearch]=useState('');
   const [selectedCountries,setSelectedCountries]=useState([]);
   const [selectedTripTags,setSelectedTripTags]=useState(['nature']);
@@ -4303,11 +4312,14 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const [result,setResult]=useState(null);
   const [error,setError]=useState('');
 
-  const steps = ['intro','nickname','countries','radar','review','sync','wow'];
+  const steps = ['intro','identity','birth','location','goals','travel','countries','radar','review','sync','wow'];
   const stepIndex = Math.max(0, steps.indexOf(step));
   const progress = Math.round(((stepIndex + 1) / steps.length) * 100);
   const allCountries = useMemo(() => normalizeIsoList(getAllScratchCountries()), []);
   const filteredCountries = allCountries.filter(code => !countrySearch.trim() || getCountryDisplayName(code).toLowerCase().includes(countrySearch.toLowerCase()) || code.toLowerCase().includes(countrySearch.toLowerCase()));
+  const animalCount = animals?.length || LOCAL_ANIMALS.length;
+  const classCount = new Set((animals?.length ? animals : LOCAL_ANIMALS).map(a => a.cls).filter(Boolean)).size;
+  const countryCount = allCountries.length;
 
   const radarAnimals = useMemo(() => {
     if (!selectedCountries.length) return [];
@@ -4318,24 +4330,24 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
     );
     const picked = [];
     const seen = new Set();
-    for (let round = 0; picked.length < 20 && round < 80; round++) {
+    for (let round = 0; picked.length < 14 && round < 80; round++) {
       for (const list of byCountry) {
         const next = list.find(a => !seen.has(Number(a.id)));
         if (next) {
           seen.add(Number(next.id));
           picked.push(next);
-          if (picked.length >= 20) break;
+          if (picked.length >= 14) break;
         }
       }
       if (byCountry.every(list => list.every(a => seen.has(Number(a.id))))) break;
     }
-    if (picked.length < 20) {
+    if (picked.length < 14) {
       const selectedSet = new Set(selectedCountries.map(c => String(c).toUpperCase()));
       normalizedAnimals
         .filter(a => getAnimalCountryCodes(a).some(code => selectedSet.has(code)))
-        .forEach(a => { if (picked.length < 20 && !seen.has(Number(a.id))) { seen.add(Number(a.id)); picked.push(a); } });
+        .forEach(a => { if (picked.length < 14 && !seen.has(Number(a.id))) { seen.add(Number(a.id)); picked.push(a); } });
     }
-    return picked.slice(0, 20);
+    return picked.slice(0, 14);
   }, [animals, selectedCountries]);
 
   const currentAnimal = radarAnimals[cardIndex] || null;
@@ -4357,11 +4369,8 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   };
   const goBack = () => {
     if (step === 'intro' || step === 'sync') return;
-    if (step === 'nickname') { setStep('intro'); return; }
-    if (step === 'countries') { setStep('nickname'); return; }
-    if (step === 'radar') { setStep('countries'); return; }
-    if (step === 'review') { setStep('radar'); return; }
-    if (step === 'wow') { setStep('review'); return; }
+    const idx = steps.indexOf(step);
+    if (idx > 0) setStep(steps[idx - 1]);
   };
 
   const runSync = async () => {
@@ -4401,7 +4410,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       setStep('wow');
     } catch (err) {
       console.warn('[Animaldex] Onboarding sync failed:', err);
-      setError(err?.message || 'Sincronizzazione non completata. Puoi riprovare o continuare: Animaldex tenterà di salvare in background.');
+      setError(err?.message || 'Sincronizzazione non completata. Puoi riprovare o continuare: Apex tenterà di salvare in background.');
       setResult({ ok:false, unlocked_count:Math.max(predictedUnlocks, selectedCountries.length), seen_count:seenAnimals.length, badge_ids:['ONB-01-L1'] });
       setStep('review');
     } finally {
@@ -4425,12 +4434,12 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12 }}>
           {step !== 'intro' && step !== 'sync' && <button onClick={goBack} aria-label="Indietro" style={{ width:38, height:38, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', fontSize:22, fontWeight:1000, cursor:'pointer', flexShrink:0 }}>‹</button>}
           <div style={{ flex:1, minWidth:0 }}>
-            <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Avvio sistema</div>
+            <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>Apex setup</div>
             <div style={{ color:'white', fontSize:28, fontWeight:1000, letterSpacing:'-.8px', marginTop:3 }}>
-              {step==='intro'?'Benvenuto esploratore':step==='nickname'?'Nome in codice':step==='countries'?'Terre esplorate':step==='radar'?'Radar avvistamenti':step==='review'?'Riepilogo missione':step==='sync'?'Sincronizzazione':'Sistema online'}
+              {step==='intro'?'Benvenuto in Apex':step==='identity'?'Come ti chiami':step==='birth'?'Profilo base':step==='location'?'Da dove parti':step==='goals'?'Cosa vuoi fare':step==='travel'?'Stile di esplorazione':step==='countries'?'Paesi visitati':step==='radar'?'Primi avvistamenti':step==='review'?'Riepilogo':step==='sync'?'Sincronizzazione':'Apex è pronto'}
             </div>
           </div>
-          <div style={{ width:54, height:54, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:26, boxShadow:`0 0 32px ${OCHRE}44` }}>🧬</div>
+          <div style={{ width:54, height:54, borderRadius:20, background:`linear-gradient(135deg,${OCHRE},#6F2D24)`, display:'flex', alignItems:'center', justifyContent:'center', fontSize:26, boxShadow:`0 0 32px ${OCHRE}44` }}>A</div>
         </div>
         <div style={{ height:8, background:'rgba(255,255,255,.08)', borderRadius:999, overflow:'hidden', marginTop:14 }}>
           <div style={{ width:`${progress}%`, height:'100%', background:`linear-gradient(90deg,${OCHRE},#F0A840)`, borderRadius:999, transition:'width .28s ease' }} />
@@ -4440,75 +4449,121 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       {step==='intro' && (
         <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
           <div>
-            <div style={{ fontSize:48, marginBottom:12 }}>🛰️</div>
-            <div style={{ color:'white', fontSize:22, fontWeight:1000, letterSpacing:'-.4px', lineHeight:1.1 }}>Il tuo Animaldex parte già con progressi reali.</div>
-            <p style={{ color:'rgba(255,255,255,.68)', fontSize:13.5, lineHeight:1.6 }}>In pochi passaggi registriamo nickname, nazioni visitate e primi avvistamenti. Una sola sincronizzazione batch sbloccherà animali locali, status iniziali e primo reward.</p>
+            <div style={{ color:OCHRE, fontSize:12, fontWeight:1000, textTransform:'uppercase', letterSpacing:.9 }}>Atlante vivo della fauna</div>
+            <div style={{ color:'white', fontSize:27, fontWeight:1000, letterSpacing:'-.7px', lineHeight:1.06, marginTop:8 }}>Apex ti aiuta a scoprire, riconoscere e collezionare gli animali del mondo.</div>
+            <p style={{ color:'rgba(255,255,255,.68)', fontSize:13.5, lineHeight:1.6 }}>L'app combina catalogo, geografia, rarità, stato di conservazione, abilità biologiche e progressi personali. In pochi passaggi prepariamo il tuo profilo e ti spieghiamo le parole chiave che incontrerai.</p>
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:14 }}>
               {[
-                ['🗺️','Regioni','le nazioni rivelano animali locali'],
-                ['🔭','Ricercati','PNG visibile, ancora da trovare'],
-                ['✨','Abilità','adattamenti e curiosità filtrabili'],
-                ['🏅','Rewards','badge permanenti sul profilo'],
+                [`${animalCount}`,'Animali','specie catalogate, divise per classe e dati ecologici'],
+                [`${classCount}`,'Classi','mammiferi, uccelli, rettili, pesci, insetti e altri gruppi'],
+                [`${countryCount}`,'Paesi','geografia usata per esplorare fauna e regioni'],
+                ['Badge','Progressi','riconoscimenti per viaggi, catture, rarità e abilità'],
               ].map(([ic,t,d])=>(
                 <div key={t} style={{ borderRadius:20, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:12 }}>
-                  <div style={{ fontSize:24 }}>{ic}</div><div style={{ fontWeight:1000, fontSize:13, marginTop:5 }}>{t}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, lineHeight:1.3, marginTop:3 }}>{d}</div>
+                  <div style={{ color:'#FFD4C8', fontSize:20, fontWeight:1000 }}>{ic}</div><div style={{ fontWeight:1000, fontSize:13, marginTop:5 }}>{t}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, lineHeight:1.3, marginTop:3 }}>{d}</div>
                 </div>
               ))}
             </div>
           </div>
-          <button onClick={()=>setStep('nickname')} style={primaryButton}>Inizia configurazione</button>
+          <button onClick={()=>setStep('identity')} style={primaryButton}>Inizia</button>
         </div>
       )}
 
-      {step==='nickname' && (
-        <div style={panel}>
-          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Configuriamo identità, profilo e preferenze. Email e provider arrivano dal login; il resto serve per missioni, contenuti e personalizzazione futura.</p>
+      {step==='identity' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Scegli il nome che Apex userà nel profilo, nelle schermate di progresso e nei riconoscimenti.</p>
           <div style={{ borderRadius:16, background:'rgba(255,255,255,.045)', border:'1px solid rgba(255,255,255,.08)', padding:12, marginBottom:12 }}>
             <div style={{ color:'rgba(255,255,255,.46)', fontSize:10.5, fontWeight:900, textTransform:'uppercase' }}>Account</div>
             <div style={{ color:'white', fontSize:13, fontWeight:900, marginTop:4 }}>{user?.email || 'Email non disponibile'}</div>
             <div style={{ color:'rgba(255,255,255,.50)', fontSize:11, marginTop:3 }}>Provider: {user?.app_metadata?.provider || user?.identities?.[0]?.provider || 'email'}</div>
           </div>
-          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Nickname Dex" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginBottom:10 }} />
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
-            <input type="date" value={dateOfBirth} onChange={e=>setDateOfBirth(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }} />
-            <select value={residenceCountry} onChange={e=>setResidenceCountry(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }}>
-              <option value="">Paese residenza</option>
+          <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Nickname</label>
+          <input value={nickname} onChange={e=>setNickname(e.target.value)} placeholder="Es. Andrea" style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:`1px solid ${OCHRE}55`, color:'white', padding:'0 15px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:8 }} />
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim()} onClick={()=>setStep('birth')} style={nickname.trim() ? primaryButton : disabledButton}>Continua</button></div>
+        </div>
+      )}
+
+      {step==='birth' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Questi dati servono a leggere meglio il pubblico di Apex e, più avanti, a calibrare contenuti e missioni. Puoi lasciare vuoti i campi non essenziali.</p>
+            <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Data di nascita</label>
+            <input type="date" value={dateOfBirth} onChange={e=>setDateOfBirth(e.target.value)} aria-label="Data di nascita" style={{ width:'100%', height:56, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:16, boxSizing:'border-box', fontFamily:'inherit', marginTop:8, colorScheme:'dark' }} />
+            <div style={{ color:'rgba(255,255,255,.42)', fontSize:11.5, lineHeight:1.4, marginTop:8 }}>Apri il calendario oppure digita la data nel formato del tuo dispositivo.</div>
+            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Genere</label>
+            <select value={gender} onChange={e=>setGender(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
+              <option value="">Seleziona, oppure salta</option><option>Donna</option><option>Uomo</option><option>Non binario</option><option>Preferisco non dirlo</option>
+            </select>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('location')} style={primaryButton}>Continua</button></div>
+        </div>
+      )}
+
+      {step==='location' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>La residenza e la nazionalità aiutano Apex a capire il punto di partenza del tuo atlante personale.</p>
+            <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Paese di residenza</label>
+            <select value={residenceCountry} onChange={e=>setResidenceCountry(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
+              <option value="">Seleziona paese</option>
               {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
             </select>
-            <select value={gender} onChange={e=>setGender(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }}>
-              <option value="">Genere</option><option>Donna</option><option>Uomo</option><option>Non binario</option><option>Preferisco non dirlo</option>
-            </select>
-            <select value={nationality} onChange={e=>setNationality(e.target.value)} style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:13, boxSizing:'border-box', fontFamily:'inherit' }}>
-              <option value="">Nazionalità</option>
+            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Nazionalità</label>
+            <select value={nationality} onChange={e=>setNationality(e.target.value)} style={{ width:'100%', height:54, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', fontFamily:'inherit', marginTop:8 }}>
+              <option value="">Seleziona nazionalità</option>
               {allCountries.map(code => <option key={code} value={code}>{getCountryDisplayName(code)}</option>)}
             </select>
+            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Telefono</label>
+            <input value={phone} onChange={e=>setPhone(e.target.value)} placeholder="Facoltativo" style={{ width:'100%', height:52, borderRadius:18, background:'#202024', border:'1px solid rgba(255,255,255,.14)', color:'white', padding:'0 14px', fontSize:15, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:8 }} />
           </div>
-          <input value={phone} onChange={e=>setPhone(e.target.value)} placeholder="Numero di telefono" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:10 }} />
-          <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'16px 0 8px', textTransform:'uppercase' }}>Obiettivo principale</div>
-          <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
-            <ObjectivePill value="collection" label="Collezione" /><ObjectivePill value="travel" label="Viaggio" /><ObjectivePill value="photo_ai" label="Foto / AI" /><ObjectivePill value="education" label="Education" /><ObjectivePill value="travel_planning" label="Travel planning" /><ObjectivePill value="other" label="Altro" />
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('goals')} style={primaryButton}>Continua</button></div>
+        </div>
+      )}
+
+      {step==='goals' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Cosa vuoi ottenere da Apex? Puoi scegliere più opzioni.</p>
+            <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
+              <ObjectivePill value="collection" label="Collezionare specie" /><ObjectivePill value="travel" label="Preparare viaggi" /><ObjectivePill value="photo_ai" label="Riconoscere da foto" /><ObjectivePill value="education" label="Imparare biologia" /><ObjectivePill value="badges" label="Completare badge" /><ObjectivePill value="other" label="Altro" />
+            </div>
+            {objectives.includes('other') && <input value={objectiveOther} onChange={e=>setObjectiveOther(e.target.value)} placeholder="Scrivi il tuo obiettivo" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:12 }} />}
+            <div style={{ marginTop:18, borderRadius:18, background:'rgba(168,70,55,.12)', border:'1px solid rgba(168,70,55,.24)', padding:13, color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.45 }}>I badge si ottengono completando azioni misurabili: visitare paesi, avvistare o catturare animali, scoprire predatori apex, raccogliere specie rare, esplorare classi tassonomiche e abilità biologiche.</div>
           </div>
-          {objectives.includes('other') && <input value={objectiveOther} onChange={e=>setObjectiveOther(e.target.value)} placeholder="Specifica altro obiettivo" style={{ width:'100%', height:44, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:8 }} />}
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:12 }}>
-            <select value={isCollector} onChange={e=>setIsCollector(e.target.value)} style={{ height:46, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:12.5 }}><option value="">Sei collezionista?</option><option value="yes">Sì</option><option value="no">No</option></select>
-            <select value={annualAbroadVacations} onChange={e=>setAnnualAbroadVacations(e.target.value)} style={{ height:46, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:12.5 }}><option value="">Vacanze estero/anno</option><option value="1">1</option><option value="2-4">2-4</option><option value="5-10">5-10</option><option value="10+">10+</option></select>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('travel')} style={primaryButton}>Continua</button></div>
+        </div>
+      )}
+
+      {step==='travel' && (
+        <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+          <div>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6, marginTop:0 }}>Queste preferenze aiutano a capire che tipo di esplorazione ti interessa.</p>
+            <label style={{ color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900 }}>Ti consideri collezionista?</label>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginTop:8 }}>
+              {[['yes','Sì'],['no','No']].map(([value,label]) => <button key={value} onClick={()=>setIsCollector(value)} style={{ minHeight:48, borderRadius:16, border:`1px solid ${isCollector===value?OCHRE:'rgba(255,255,255,.10)'}`, background:isCollector===value?'rgba(168,70,55,.22)':'rgba(255,255,255,.045)', color:'white', fontWeight:1000 }}>{label}</button>)}
+            </div>
+            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Viaggi all'estero in un anno</label>
+            <select value={annualAbroadVacations} onChange={e=>setAnnualAbroadVacations(e.target.value)} style={{ width:'100%', height:52, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 12px', fontSize:14, marginTop:8 }}><option value="">Seleziona frequenza</option><option value="0">Nessuno</option><option value="1">1</option><option value="2-4">2-4</option><option value="5-10">5-10</option><option value="10+">10+</option></select>
+            <label style={{ display:'block', color:'rgba(255,255,255,.58)', fontSize:12, fontWeight:900, marginTop:18 }}>Rapporto con i giochi di collezione</label>
+            <select value={pokemonAffinity} onChange={e=>setPokemonAffinity(e.target.value)} style={{ width:'100%', height:52, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 12px', fontSize:14, marginTop:8 }}><option value="">Seleziona</option><option value="no">Non mi interessano</option><option value="apprezzo">Mi piacciono</option><option value="fan_sfegatato">Sono un riferimento importante</option></select>
+            <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'18px 0 8px', textTransform:'uppercase' }}>Consensi</div>
+            <div style={{ display:'grid', gap:7 }}>
+              <ConsentRow keyName="terms" label="Accetto termini, privacy e trattamento dati necessario al funzionamento di Apex" required />
+              <ConsentRow keyName="analytics" label="Analytics per migliorare prodotto e stabilità" />
+              <ConsentRow keyName="marketing" label="Comunicazioni commerciali e offerte future" />
+              <ConsentRow keyName="personalization" label="Personalizzazione di missioni, contenuti e suggerimenti" />
+              <ConsentRow keyName="newsletter" label="Newsletter e aggiornamenti Apex" />
+            </div>
           </div>
-          <select value={pokemonAffinity} onChange={e=>setPokemonAffinity(e.target.value)} style={{ width:'100%', height:46, borderRadius:15, background:'#202024', border:'1px solid rgba(255,255,255,.10)', color:'white', padding:'0 12px', fontSize:12.5, marginTop:10 }}><option value="">Sei appassionato di Pokémon?</option><option value="no">No</option><option value="apprezzo">Apprezzo</option><option value="fan_sfegatato">Fan sfegatato</option></select>
-          <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'16px 0 8px', textTransform:'uppercase' }}>Consensi</div>
-          <div style={{ display:'grid', gap:7 }}>
-            <ConsentRow keyName="terms" label="Accetto termini, privacy e trattamento dati necessario al funzionamento dell’app" required />
-            <ConsentRow keyName="analytics" label="Analytics per migliorare prodotto e stabilità" />
-            <ConsentRow keyName="marketing" label="Marketing e offerte future" />
-            <ConsentRow keyName="personalization" label="Personalizzazione missioni, contenuti e suggerimenti" />
-            <ConsentRow keyName="newsletter" label="Newsletter e aggiornamenti Animaldex" />
-          </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!nickname.trim() || !consents.terms} onClick={()=>setStep('countries')} style={nickname.trim() && consents.terms ? primaryButton : disabledButton}>Continua</button></div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!consents.terms} onClick={()=>setStep('countries')} style={consents.terms ? primaryButton : disabledButton}>Continua</button></div>
         </div>
       )}
 
       {step==='countries' && (
         <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
-          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona le nazioni in cui sei stato. Non scriviamo ancora nulla: restano in memoria fino alla sincronizzazione finale.</p>
+          <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.55, marginTop:0 }}>Seleziona i paesi in cui sei stato. Apex li userà per proporre animali compatibili con i tuoi viaggi.</p>
           <input value={countrySearch} onChange={e=>setCountrySearch(e.target.value)} placeholder="Cerca nazione o ISO..." style={{ width:'100%', height:44, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:14, boxSizing:'border-box', outline:'none', marginBottom:10, fontFamily:'inherit' }} />
           <div style={{ flex:1, overflowY:'auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, paddingRight:2 }}>
             {filteredCountries.map(code => {
@@ -4526,14 +4581,14 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{selectedCountries.length}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>nazioni</div></div>
             <div style={{ borderRadius:18, background:'rgba(255,255,255,.055)', padding:12 }}><div style={{ color:OCHRE, fontWeight:1000, fontSize:18 }}>{predictedUnlocks}</div><div style={{ color:'rgba(255,255,255,.55)', fontSize:11 }}>animali potenziali</div></div>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:8, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Apri radar</button></div>
+          <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:8, marginTop:12 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button disabled={!selectedCountries.length} onClick={()=>{ setCardIndex(0); setStep('radar'); }} style={selectedCountries.length?primaryButton:disabledButton}>Mostra specie possibili</button></div>
         </div>
       )}
 
       {step==='radar' && (
         <div style={{ ...panel, flex:1, minHeight:0, display:'flex', flexDirection:'column' }}>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.45, margin:0 }}>Hai già incrociato alcune specie? Te ne proponiamo fino a 20, bilanciate sui paesi visitati.</p>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.45, margin:0 }}>Se riconosci una specie che hai già visto dal vivo, segnala l'avvistamento. Potrai modificarlo più avanti.</p>
             <span style={{ color:OCHRE, fontWeight:1000, fontSize:12 }}>{Math.min(cardIndex+1, Math.max(1, radarAnimals.length))}/{Math.max(1, radarAnimals.length)}</span>
           </div>
           {!currentAnimal ? (
@@ -4555,7 +4610,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               </div>
               <div style={{ display:'flex', gap:12, marginTop:18, width:'100%' }}>
                 <button onClick={()=>markRadar(false)} style={{ flex:1, height:50, borderRadius:17, border:'1px solid rgba(255,255,255,.12)', background:'#2A2A2C', color:'rgba(255,255,255,.72)', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Mai visto</button>
-                <button onClick={()=>markRadar(true)} style={{ flex:1, height:50, borderRadius:17, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Visto</button>
+                <button onClick={()=>markRadar(true)} style={{ flex:1, height:50, borderRadius:17, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, cursor:'pointer', fontFamily:'inherit' }}>Già visto</button>
               </div>
             </div>
           )}
@@ -4567,7 +4622,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         <div style={{ ...panel, flex:1, display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
           <div>
             <div style={{ color:'white', fontSize:21, fontWeight:1000, lineHeight:1.12 }}>Pacchetto iniziale pronto</div>
-            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6 }}>Ora una singola RPC batch sincronizza nazioni, animali ricercati, avvistamenti e primo award. Se la rete rallenta, l’app non resta bloccata.</p>
+            <p style={{ color:'rgba(255,255,255,.66)', fontSize:13.5, lineHeight:1.6 }}>Ora salviamo profilo, paesi visitati, primi avvistamenti e badge iniziale. Da qui in poi potrai esplorare liberamente griglia, geografia, badge, profilo e riconoscimento foto.</p>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, marginTop:12, width:'100%', maxWidth:'100%', boxSizing:'border-box' }}>
               {[
                 ['🗺️', selectedCountries.length, 'nazioni visitate'],
@@ -4582,8 +4637,8 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             </div>
             {error && <div style={{ marginTop:12, borderRadius:16, background:'rgba(255,70,70,.12)', border:'1px solid rgba(255,70,70,.22)', color:'#FF9A9A', padding:12, fontSize:12, lineHeight:1.45 }}>{error}</div>}
           </div>
-          <div style={{ display:'grid', gap:9 }}>
-            <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10 }}><button onClick={goBack} disabled={loading} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px', opacity:loading?.45:1 }}>Indietro</button><button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Sincronizza e rivela'}</button></div>
+            <div style={{ display:'grid', gap:9 }}>
+            <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10 }}><button onClick={goBack} disabled={loading} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px', opacity:loading ? .45 : 1 }}>Indietro</button><button onClick={runSync} disabled={loading || !selectedCountries.length} style={selectedCountries.length && !loading ? primaryButton : disabledButton}>{loading?'Sincronizzazione...':'Salva e continua'}</button></div>
             {error && <button onClick={()=>{ setError(''); onFinish?.({ skipReload:true }); }} style={{ minHeight:46, borderRadius:16, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, cursor:'pointer', fontFamily:'inherit' }}>Continua comunque</button>}
           </div>
         </div>
@@ -4593,8 +4648,8 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
         <div style={{ ...panel, flex:1, display:'flex', alignItems:'center', justifyContent:'center', textAlign:'center' }}>
           <div>
             <div style={{ width:98, height:98, borderRadius:'50%', margin:'0 auto 18px', background:`conic-gradient(from 90deg,${OCHRE},#F0A840,#8f34f5,${OCHRE})`, boxShadow:`0 0 46px ${OCHRE}50`, animation:'interactiveWiggle .7s ease-in-out infinite' }} />
-            <div style={{ color:'white', fontSize:19, fontWeight:1000 }}>Sincronizzazione database biologico</div>
-            <div style={{ color:'rgba(255,255,255,.55)', fontSize:12.5, marginTop:8, lineHeight:1.45 }}>RPC batch in corso: destinazioni, animali ricercati, avvistamenti, rewards.</div>
+            <div style={{ color:'white', fontSize:19, fontWeight:1000 }}>Prepariamo il tuo atlante</div>
+            <div style={{ color:'rgba(255,255,255,.55)', fontSize:12.5, marginTop:8, lineHeight:1.45 }}>Salvataggio di profilo, paesi visitati, primi avvistamenti e badge iniziale.</div>
           </div>
         </div>
       )}
@@ -4605,17 +4660,17 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
             <div style={{ fontSize:64, marginBottom:12 }}>🏅</div>
             <div style={{ color:'#F0C449', fontSize:13, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Primo viaggio registrato</div>
             <div style={{ color:'white', fontSize:42, fontWeight:1000, marginTop:8 }}>{result?.unlocked_count ?? predictedUnlocks}</div>
-            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali ricercati o avvistati registrati nel tuo Animaldex</div>
-            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Oltre ai 10 animali proposti dal radar, potrai dichiarare altri avvistamenti filtrando la grid per paese oppure aprendo la scratch map: tocca un paese visitato e usa “Vedi animali” per trovarli già filtrati.</div>
-            {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Animaldex entra subito, la sincronizzazione continua in background.</div>}
+            <div style={{ color:'rgba(255,255,255,.64)', fontSize:13, marginTop:4 }}>animali collegati ai tuoi paesi visitati</div>
+            <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, lineHeight:1.45, marginTop:12 }}>Nella griglia trovi gli animali. In geografia esplori paesi e subregioni. Nei badge vedi gli obiettivi. Nel profilo segui progressi, catture e riconoscimenti.</div>
+            {result?.timed_out && <div style={{ color:'#FFD4C8', fontSize:11.5, marginTop:12, lineHeight:1.4 }}>La rete è lenta: Apex entra subito, la sincronizzazione continua in background.</div>}
             <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:20 }}>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🔭</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercati attivi</div></div>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>✨</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Abilità filtrabili</div></div>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🏅</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Rewards attivi</div></div>
-              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>📊</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Statistiche profilo</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🔭</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Ricercato: da trovare</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>👁️</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Avvistato: visto dal vivo</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>📸</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Catturato: confermato</div></div>
+              <div style={{ borderRadius:20, background:'rgba(168,70,55,.14)', padding:12 }}><div style={{ fontSize:25 }}>🏅</div><div style={{ fontWeight:1000, fontSize:12, marginTop:5 }}>Badge: obiettivi completati</div></div>
             </div>
           </div>
-          <button onClick={()=>onFinish?.()} style={primaryButton}>Entra nell’Animaldex</button>
+          <button onClick={()=>onFinish?.()} style={primaryButton}>Entra in Apex</button>
         </div>
       )}
     </div>
@@ -4672,7 +4727,7 @@ function AuthScreen({ onAuthReady }) {
         <p style={{ margin:'0 0 18px', color:'rgba(255,255,255,.58)', fontSize:13, lineHeight:1.45 }}>Login richiesto per sincronizzare animali, destinazioni, status e badge con Supabase.</p>
         <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10 }} />
         <input type="password" required value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:14 }} />
-        <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading?.7:1 }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
+        <button disabled={loading} type="submit" style={{ width:'100%', height:48, borderRadius:15, border:'none', background:'#90D84A', color:'#101410', fontWeight:900, fontSize:15, cursor:loading?'default':'pointer', opacity:loading ? .7 : 1 }}>{loading ? 'Attendi...' : mode === 'signup' ? 'Crea account' : 'Login'}</button>
         <button disabled={loading} type="button" onClick={loginWithGoogle} style={{ width:'100%', height:46, marginTop:10, borderRadius:14, border:'1px solid rgba(255,255,255,.14)', background:'#FFFFFF', color:'#151515', fontWeight:900, fontSize:14, cursor:loading?'default':'pointer', display:'flex', alignItems:'center', justifyContent:'center', gap:10 }}>
           <span style={{ width:20, height:20, borderRadius:'50%', background:'linear-gradient(135deg,#4285F4 0 25%,#34A853 25% 50%,#FBBC05 50% 75%,#EA4335 75% 100%)', display:'inline-block' }} />
           Continua con Google
@@ -5742,7 +5797,7 @@ function getSubregionApexPredators(animals = [], territory) {
   const zoneAnimals = getSubregionAnimals(animals, territory);
   const apex = zoneAnimals.filter(a => trophicGroup(a) === 'apex' || String(a.trophic) === '4');
   const predators = apex.length ? apex : zoneAnimals.filter(a => ['carnivore','apex'].includes(trophicGroup(a)) || String(a.trophic) === '3');
-  return predators.sort((a,b)=>getAnimalPowerScore(b)-getAnimalPowerScore(a)).slice(0,16);
+  return predators.sort(compareAnimalsRevealedFirst).slice(0,16);
 }
 function buildSubregionDescription(territory) {
   const label = territory?.label || 'Questa subregione';
@@ -5846,6 +5901,7 @@ function HabitatCard({ row, onOpen, onOpenGrid }) {
 
 function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedCountriesChange, initialView, onSelect, onOpenCountry, onOpenRegion, onAddDestination, destinationsLoading=false, onOpenHabitatGrid, theme='dark' }) {
   const normalizeInitialView = (v) => {
+    if (v && typeof v === 'object') return normalizeInitialView(v.view);
     if (v === 'countries') return 'countries';
     if (v === 'continents' || v === 'realms' || !v) return 'planet';
     return v;
@@ -5860,11 +5916,19 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
   const [selectedDestinationIsos, setSelectedDestinationIsos] = useState([]);
+  const breadcrumbScrollRef = useRef(null);
   const [unlockMap, setUnlockMap] = useState(() => {
     try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks_v4') || '{}'); } catch { return {}; }
   });
   useEffect(()=>{ try { window.localStorage.setItem('animaldex_region_unlocks_v4', JSON.stringify(unlockMap)); } catch {} }, [unlockMap]);
-  useEffect(()=>{ setView(normalizeInitialView(initialView)); }, [initialView]);
+  useEffect(()=>{
+    if (initialView && typeof initialView === 'object') {
+      setSelectedContinentId(initialView.continentId || null);
+      setSelectedRegionId(initialView.regionId || null);
+      setSelectedEcoregion(initialView.ecoregion || null);
+    }
+    setView(normalizeInitialView(initialView));
+  }, [initialView]);
   useEffect(() => {
     if (view !== 'lifeweb') setSelectedHabitat(null);
     if (!['habitats','lifeweb'].includes(view)) setSelectedEcoregion(null);
@@ -5873,8 +5937,15 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     if (view !== 'animals') setSelectedTerritory(prev => prev?.kind === 'subregion' && selectedEcoregion ? { ...prev, label:selectedEcoregion.label } : prev);
   }, [view]);
 
-  const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === selectedContinentId) || null;
-  const region = continent?.regions.find(r => r.id === selectedRegionId) || null;
+  const selectedEcoPath = selectedEcoregion ? BIOREGION_V4_CONTINENTS.reduce((found, cont) => {
+    if (found) return found;
+    const reg = cont.regions.find(r => r.ecoregions.some(e => e.id === selectedEcoregion.id));
+    return reg ? { continent:cont, region:reg } : null;
+  }, null) : null;
+  const effectiveContinentId = selectedContinentId || selectedEcoPath?.continent?.id || null;
+  const continent = BIOREGION_V4_CONTINENTS.find(c => c.id === effectiveContinentId) || null;
+  const effectiveRegionId = selectedRegionId || selectedEcoPath?.region?.id || null;
+  const region = continent?.regions.find(r => r.id === effectiveRegionId) || null;
   const visitedSet = new Set(normalizeIsoList(visitedCountries));
   const scratchCountries = getAllScratchCountries().filter(code => {
     const q = countrySearch.trim().toLowerCase();
@@ -5963,6 +6034,13 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     }
     return [];
   })();
+  useEffect(() => {
+    const node = breadcrumbScrollRef.current;
+    if (!node) return;
+    requestAnimationFrame(() => {
+      node.scrollTo({ left: node.scrollWidth - node.clientWidth, behavior:'smooth' });
+    });
+  }, [view, selectedContinentId, selectedRegionId, selectedEcoregion?.id, breadcrumbItems.length]);
 
   const openSubregionLifeWeb = (eco) => {
     const territory = { ...eco, filterValue:`ecoregion:${eco.id}`, kind:'subregion', label:eco.label };
@@ -5973,14 +6051,14 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   };
   const openSubregionGrid = (eco) => {
     const territory = { ...eco, filterValue:`ecoregion:${eco.id}`, kind:'subregion', label:eco.label };
-    onOpenHabitatGrid?.(territory, buildGeneralLifeWebHabitat(territory));
+    onOpenHabitatGrid?.(territory, buildGeneralLifeWebHabitat(territory), { view:'ecoregions', continentId:effectiveContinentId, regionId:effectiveRegionId, ecoregion:eco });
   };
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} theme={theme} />
       {view !== 'planet' && breadcrumbItems.length > 0 && (
-        <div style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', padding:'10px 14px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.06)', background:isLightTheme?'rgba(248,243,234,.96)':'rgba(12,12,14,.92)' }}>
+        <div ref={breadcrumbScrollRef} style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', padding:'10px 14px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.06)', background:isLightTheme?'rgba(248,243,234,.96)':'rgba(12,12,14,.92)', scrollPaddingRight:14 }}>
           <div style={{ display:'flex', alignItems:'center', gap:7, minWidth:'max-content' }}>
             {breadcrumbItems.map((item, index) => {
               const last = index === breadcrumbItems.length - 1;
@@ -7072,14 +7150,14 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
     console.warn('[Animaldex] animal_photos non bloccante:', err);
   }
 };
-const openHabitatGrid = (territory, habitat) => {
+const openHabitatGrid = (territory, habitat, returnContext = null) => {
   if (!territory || !habitat) return;
   const geographyFilter = territory.filterValue || (territory.kind === 'region' ? `territory-region:${territory.id}` : `ecoregion:${territory.id}`);
   const isGeneralHabitat = habitat.id === 'GENERAL';
   const exactBioregionId = isGeneralHabitat ? (habitat.exactBioregionId || territory.bioregionId || territory.id) : null;
   setSel(null);
-  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> (exactBioregionId ? matchExactBioregion(a, exactBioregionId) : matchGeographySelection(a, [geographyFilter])) && (isGeneralHabitat || animalMatchesHabitat(a, habitat.id)), title:isGeneralHabitat ? territory.label : `${habitat.label}` });
-  setGridReturnTarget({ page:'regions', view:'ecoregions' });
+  setGridPreset({ id: Date.now(), type:'habitat-grid', customFilter:(a)=> (exactBioregionId ? matchExactBioregion(a, exactBioregionId) : matchGeographySelection(a, [geographyFilter])) && (isGeneralHabitat || animalMatchesHabitat(a, habitat.id)), customSort:isGeneralHabitat ? compareAnimalsRevealedFirst : null, title:isGeneralHabitat ? territory.label : `${habitat.label}` });
+  setGridReturnTarget({ page:'regions', view:returnContext || 'ecoregions' });
   setPage('grid');
 };
 const openGridWithStatus = (statuses) => {
