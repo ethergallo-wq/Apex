@@ -2017,19 +2017,21 @@ function ScaleComparison({ animal, full=false }) {
   const animalIsMystery = isMysteryStatus(animal?.status);
   const animalSrc = animalIsMystery ? MYSTERY_PLACEHOLDER : (animal?.image_url || MYSTERY_PLACEHOLDER);
   const stageHeight = full ? 196 : 68;
+  const floorY = full ? 178 : 62;
   const refSlotW = full ? 170 : 66;
   const animalSlotW = full ? 190 : 72;
   const refNudge = full ? 18 : 10;
   const animalNudge = full ? -8 : -4;
   return (
-    <div style={{ width:'100%', minHeight:full?252:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
-      <div style={{ width:'100%', height:stageHeight, display:'grid', gridTemplateColumns:`${refSlotW}px ${animalSlotW}px`, justifyContent:'center', alignItems:'end', columnGap:full?20:6, padding:full?'18px 10px 8px':'2px 0 0', boxSizing:'border-box' }}>
-        <div style={{ height:'100%', width:refSlotW, display:'flex', justifyContent:'flex-end', alignItems:'flex-end', transform:`translateX(${refNudge}px)` }}>
-          <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', opacity:.96 }} />
-        </div>
-        <div style={{ height:'100%', width:animalSlotW, display:'flex', justifyContent:'flex-start', alignItems:'flex-end', transform:`translateX(${animalNudge}px)` }}>
-          <img src={animalSrc} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
-        </div>
+	    <div style={{ width:'100%', minHeight:full?252:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+	      <div style={{ width:'100%', height:stageHeight, position:'relative', display:'grid', gridTemplateColumns:`${refSlotW}px ${animalSlotW}px`, justifyContent:'center', alignItems:'end', columnGap:full?20:6, padding:full?'18px 10px 8px':'2px 0 0', boxSizing:'border-box' }}>
+	        <div aria-hidden style={{ position:'absolute', left:'50%', bottom:`${stageHeight - floorY}px`, transform:'translateX(-50%)', width:full?320:132, height:1, background:'rgba(255,255,255,.18)' }} />
+	        <div style={{ height:'100%', width:refSlotW, display:'flex', justifyContent:'flex-end', alignItems:'flex-end', transform:`translateX(${refNudge}px)`, paddingBottom:Math.max(0, stageHeight - floorY), boxSizing:'border-box' }}>
+	          <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', opacity:.96 }} />
+	        </div>
+	        <div style={{ height:'100%', width:animalSlotW, display:'flex', justifyContent:'flex-start', alignItems:'flex-end', transform:`translateX(${animalNudge}px)`, paddingBottom:Math.max(0, stageHeight - floorY), boxSizing:'border-box' }}>
+	          <img src={animalSrc} alt="" style={{ maxWidth:animalPx, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
+	        </div>
       </div>
       {full && <div style={{ color:'rgba(255,255,255,.55)', fontSize:12, fontWeight:800, marginTop:2 }}>{ref.label} · appoggio sulla stessa linea di base</div>}
     </div>
@@ -2223,10 +2225,11 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
     return Math.sqrt(dx*dx + dy*dy);
   };
   const handlers = {
-    onWheel:(e)=> {
-      e.preventDefault?.();
-      const delta = e.deltaY > 0 ? -0.12 : 0.12;
-      setZoom(z => z + delta);
+	    onWheel:(e)=> {
+	      if (zoom <= minZoom + 0.01 && !e.metaKey && !e.ctrlKey) return;
+	      e.preventDefault?.();
+	      const delta = e.deltaY > 0 ? -0.12 : 0.12;
+	      setZoom(z => z + delta);
     },
     onPointerDown:(e)=> {
       if (e.pointerType === 'touch' || zoom <= minZoom + 0.01) return;
@@ -2329,7 +2332,7 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   return (
     <div
       {...mapControls.handlers}
-      style={{ position:'relative', width:'100%', aspectRatio:'2 / 1', minHeight:Math.min(230, height || 230), borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 46%, #153245 0%, #0A1722 62%, #05090D 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:'none' }}
+	      style={{ position:'relative', width:'100%', aspectRatio:'2 / 1', minHeight:Math.min(230, height || 230), borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 46%, #153245 0%, #0A1722 62%, #05090D 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:mapControls.zoom > 1.01 ? 'none' : 'pan-y' }}
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
@@ -3740,8 +3743,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
       {/* Info Modal */}
       <FullscreenMetricModal open={metricModal==='peso'} title="Peso" subtitle="Il tachimetro divide il peso in tre fasce: pesi piuma, pesi medi e pesi massimi. La lancetta si muove solo dentro la fascia corretta: a sinistra per i valori più leggeri della categoria, a destra per i più pesanti." onClose={()=>setMetricModal(null)}>
         <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'26px 18px 18px', textAlign:'center' }}>
-          <div style={{ maxWidth:500, margin:'10px auto -4px', transform:'translateY(18px)' }}><GaugeSVG wt_str={a.wt} large /></div>
-          <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:0 }}>{getWeightCat(a.wt).label}</div>
+	          <div style={{ maxWidth:500, margin:'10px auto -22px', transform:'translateY(18px)' }}><GaugeSVG wt_str={a.wt} large /></div>
+	          <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:-10, marginBottom:10 }}>{getWeightCat(a.wt).label}</div>
           <div style={{ color:'white', fontSize:30, fontWeight:1000, marginTop:6 }}>{a.wt}</div>
         </div>
       </FullscreenMetricModal>
@@ -4095,7 +4098,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
   return (
     <div
       {...mapControls.handlers}
-      style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background: marine ? gebcoBackground : 'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', backgroundSize: marine ? 'cover, cover, cover, cover, cover, cover' : undefined, backgroundPosition: marine ? 'center' : undefined, border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:'none' }}
+	      style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background: marine ? gebcoBackground : 'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', backgroundSize: marine ? 'cover, cover, cover, cover, cover, cover' : undefined, backgroundPosition: marine ? 'center' : undefined, border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:mapControls.zoom > 1.01 ? 'none' : 'pan-y' }}
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
@@ -5831,8 +5834,8 @@ function LifeWebGraph({ graph, onOpenAnimal, onGraphChange }) {
           {availableAnimals.slice(0,50).map(a => <button key={a.id} onClick={()=>addAnimal(a)} style={{ minHeight:40, borderRadius:11, border:'1px solid rgba(255,255,255,.08)', background:'#15171B', color:'white', display:'flex', alignItems:'center', gap:8, padding:'0 10px', cursor:'pointer', fontFamily:'inherit' }}><span style={{ width:18, textAlign:'center' }}>+</span><span style={{ flex:1, textAlign:'left', fontSize:11.5, fontWeight:800, lineHeight:1.15 }}>{a.com}</span></button>)}
         </div>
       )}
-      <div {...mapControls.handlers} style={{ borderRadius:18, overflow:'hidden', touchAction:'none' }}>
-        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:620, display:'block', touchAction:'none', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
+	      <div {...mapControls.handlers} style={{ borderRadius:18, overflow:'hidden', touchAction:mapControls.zoom > 1.01 ? 'none' : 'pan-y' }}>
+	        <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} onPointerMove={moveDrag} onPointerUp={stopDrag} onPointerCancel={stopDrag} style={{ width:'100%', height:620, display:'block', touchAction:mapControls.zoom > 1.01 ? 'none' : 'pan-y', background:'radial-gradient(circle at 50% 46%,rgba(168,70,55,.10),rgba(6,8,12,.96) 58%)', borderRadius:18 }}>
           <defs><marker id="lifeArrowV42" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="rgba(255,255,255,.55)" /></marker></defs>
           <g style={{ transform:mapControls.transform, transformOrigin:'50% 50%' }}>
             {(graph.edges || []).map(e=>{
@@ -6589,6 +6592,13 @@ function getComparatorMetrics(a, benchmarks) {
     massG, lengthCm, countries, speed,
   };
 }
+function formatComparatorRaw(metric) {
+  if (!metric) return '';
+  const raw = String(metric.raw || '').trim();
+  if (metric.key === 'vulnerabilita') return `IUCN ${raw || 'DD'}`;
+  if (metric.key === 'velocita') return raw && raw !== 'n/d' ? `${raw} km/h` : 'n/d';
+  return raw || 'n/d';
+}
 function polarPoint(cx, cy, r, angleDeg) {
   const rad = (Math.PI / 180) * angleDeg;
   return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
@@ -6611,24 +6621,31 @@ function radarLabelLines(label='') {
   return s.split(' ');
 }
 function ComparatorRadar({ left, right, colorLeft, colorRight }) {
-  const size = 330, cx = size/2, cy = size/2, r = 102;
+  const width = 430, height = 390, cx = width/2, cy = 190, r = 98;
   const axes = left?.radar || right?.radar || COMPARATOR_METRICS.map(m=>({ ...m, value:0 }));
   const pt = (idx,value)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); const rr=r*(Number(value||0)/100); return [cx+Math.cos(angle)*rr, cy+Math.sin(angle)*rr]; };
   const poly = (data)=> data ? data.radar.map((m,i)=>pt(i,m.value).join(',')).join(' ') : '';
   const grid = [20,40,60,80,100].map(v=> axes.map((_,i)=>pt(i,v).join(',')).join(' '));
-  const labelPt = (idx)=>{ const angle=-Math.PI/2 + idx*(2*Math.PI/axes.length); return [cx+Math.cos(angle)*(r+38), cy+Math.sin(angle)*(r+38)]; };
+  const labelSlots = [
+    { x:cx, y:28, anchor:'middle' },
+    { x:width-42, y:126, anchor:'end' },
+    { x:width-64, y:336, anchor:'end' },
+    { x:64, y:336, anchor:'start' },
+    { x:42, y:126, anchor:'start' },
+  ];
   return (
-    <div style={{ borderRadius:24, background:'radial-gradient(circle at center,rgba(168,70,55,.16),rgba(0,0,0,.40) 56%,rgba(0,0,0,.74))', border:'1px solid rgba(255,255,255,.08)', padding:10, overflow:'hidden' }}>
-      <svg viewBox={`0 0 ${size} ${size}`} style={{ width:'100%', maxWidth:430, display:'block', margin:'0 auto' }}>
+    <div style={{ borderRadius:24, background:'radial-gradient(circle at center,rgba(168,70,55,.16),rgba(0,0,0,.40) 56%,rgba(0,0,0,.74))', border:'1px solid rgba(255,255,255,.08)', padding:6, overflow:'hidden' }}>
+      <svg viewBox={`0 0 ${width} ${height}`} style={{ width:'100%', maxWidth:430, display:'block', margin:'0 auto' }}>
         {grid.map((g,i)=><polygon key={i} points={g} fill="none" stroke="rgba(255,255,255,.18)" strokeDasharray="5 6" strokeWidth="1" />)}
         {axes.map((m,i)=>{ const [x,y]=pt(i,100); return <line key={m.key} x1={cx} y1={cy} x2={x} y2={y} stroke="rgba(255,255,255,.20)" strokeWidth="1" />; })}
         {right && <polygon points={poly(right)} fill={`${colorRight}33`} stroke={colorRight} strokeWidth="4" />}
         {left && <polygon points={poly(left)} fill={`${colorLeft}33`} stroke={colorLeft} strokeWidth="4" />}
         {[left,right].filter(Boolean).map((data,di)=>data.radar.map((m,i)=>{ const [x,y]=pt(i,m.value); const col=di===0?colorLeft:colorRight; return <circle key={`${di}-${m.key}`} cx={x} cy={y} r="4.8" fill={col} stroke="rgba(255,255,255,.65)" strokeWidth="1.2" />; }))}
-        {axes.map((m,i)=>{ const [x,y]=labelPt(i); const anchor=x<cx-20?'end':x>cx+20?'start':'middle'; const ly = y < cy ? y-2 : y+12; const lv=left?.radar?.[i]?.value ?? null; const rv=right?.radar?.[i]?.value ?? null; return <g key={m.key}>
-          <text x={x} y={ly} fill="white" fontSize="13" fontWeight="900" textAnchor={anchor}>{m.label}</text>
-          <text x={x} y={ly+15} fill={colorLeft} fontSize="10.5" fontWeight="900" textAnchor={anchor}>{lv!=null?`A ${lv}`:''}</text>
-          <text x={x} y={ly+28} fill={colorRight} fontSize="10.5" fontWeight="900" textAnchor={anchor}>{rv!=null?`B ${rv}`:''}</text>
+        {axes.map((m,i)=>{ const slot=labelSlots[i] || {x:cx,y:height-30,anchor:'middle'}; const lv=left?.radar?.[i]; const rv=right?.radar?.[i]; return <g key={m.key}>
+          <text x={slot.x} y={slot.y} fill="white" fontSize="15" fontWeight="900" textAnchor={slot.anchor}>{radarLabelLines(m.label)[0]}</text>
+          {radarLabelLines(m.label)[1] && <text x={slot.x} y={slot.y+16} fill="white" fontSize="12" fontWeight="850" opacity=".82" textAnchor={slot.anchor}>{radarLabelLines(m.label)[1]}</text>}
+          <text x={slot.x} y={slot.y+34} fill={colorLeft} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{lv?`A ${lv.value} · ${formatComparatorRaw(lv)}`:''}</text>
+          <text x={slot.x} y={slot.y+48} fill={colorRight} fontSize="11" fontWeight="900" textAnchor={slot.anchor}>{rv?`B ${rv.value} · ${formatComparatorRaw(rv)}`:''}</text>
         </g>; })}
       </svg>
     </div>
