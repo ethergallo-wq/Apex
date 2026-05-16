@@ -892,6 +892,120 @@ async function persistUserDestination(userId, iso, tripTags = []) {
   return true;
 }
 
+function normalizeSocialProfile(row = {}) {
+  const profile = row.profile || row;
+  const username = profile?.username || profile?.nickname || String(profile?.email || 'esploratore').split('@')[0] || 'esploratore';
+  return {
+    user_id: profile?.user_id || profile?.id || row.user_id || row.id,
+    username,
+    nickname: profile?.nickname || username,
+    avatar_url: profile?.avatar_url || '',
+    level: Number(profile?.level || 1),
+    xp: Number(profile?.xp || 0),
+  };
+}
+
+function buildSocialFallback(user, profile, progress = {}) {
+  const baseName = profile?.nickname || profile?.username || String(user?.email || 'esploratore').split('@')[0] || 'Esploratore';
+  return {
+    friends: [
+      { user_id:'demo-luna', nickname:'LunaWild', username:'lunawild', level:5, xp:1260, streak:7, seenCount:118, capturedCount:42, challenge:'Sfida attiva: 3 avvistamenti questa settimana' },
+      { user_id:'demo-nico', nickname:'NicoBio', username:'nicobio', level:3, xp:720, streak:3, seenCount:64, capturedCount:19, challenge:'Ti ha superato nei badge Trofici' },
+    ],
+    requestsIn: [],
+    requestsOut: [],
+    challenges: [
+      { id:'demo-weekly', title:`${baseName} vs amici`, text:'Chi registra piu avvistamenti questa settimana?', progress:Math.min(100, Math.round(((progress.seenCount || 0) % 8) / 8 * 100)), status:'Demo' },
+    ],
+    socialReady:false,
+  };
+}
+
+async function fetchSocialSnapshot(userId, currentProfile, progress) {
+  if (!userId) return buildSocialFallback(null, currentProfile, progress);
+  try {
+    const { data: friendships, error } = await supabase
+      .from('friendships')
+      .select('*')
+      .or(`requester_id.eq.${userId},addressee_id.eq.${userId}`)
+      .order('updated_at', { ascending:false });
+    if (error) throw error;
+
+    const rows = friendships || [];
+    const otherIds = Array.from(new Set(rows.map(r => r.requester_id === userId ? r.addressee_id : r.requester_id).filter(Boolean)));
+    const { data: profiles, error: profileError } = otherIds.length
+      ? await supabase.from('user_profiles').select('user_id, username, nickname, avatar_url').in('user_id', otherIds)
+      : { data:[], error:null };
+    if (profileError) throw profileError;
+    const byId = Object.fromEntries((profiles || []).map(p => [p.user_id, normalizeSocialProfile(p)]));
+    const decorate = (row) => {
+      const otherId = row.requester_id === userId ? row.addressee_id : row.requester_id;
+      return { ...row, profile:byId[otherId] || normalizeSocialProfile({ user_id:otherId, username:'Esploratore' }) };
+    };
+    const accepted = rows.filter(r => r.status === 'accepted').map(decorate);
+    const incoming = rows.filter(r => r.status === 'pending' && r.addressee_id === userId).map(decorate);
+    const outgoing = rows.filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
+    let challenges = [];
+    if (accepted.length) {
+      const { data: challengeRows, error: challengeError } = await supabase
+        .from('friend_challenges')
+        .select('*')
+        .in('friendship_id', accepted.map(r => r.id))
+        .eq('status', 'active')
+        .order('created_at', { ascending:false });
+      if (!challengeError) challenges = challengeRows || [];
+    }
+    return {
+      friends: accepted.map(r => ({ ...r.profile, friendship_id:r.id, since:r.accepted_at || r.created_at, challenge:challenges.find(c => c.friendship_id === r.id)?.title || 'Pronto per una nuova sfida' })),
+      requestsIn: incoming,
+      requestsOut: outgoing,
+      challenges: challenges.map(c => ({ id:c.id, title:c.title, text:`Target ${c.target_value}`, progress:Math.min(100, Math.round(((c.progress_requester || 0) + (c.progress_addressee || 0)) / Math.max(1, c.target_value) * 100)), status:c.challenge_type })),
+      socialReady:true,
+    };
+  } catch (err) {
+    console.warn('[Animaldex] Social fallback:', err);
+    return buildSocialFallback({ id:userId }, currentProfile, progress);
+  }
+}
+
+async function searchSocialProfiles(userId, query) {
+  const q = String(query || '').trim();
+  if (!q || q.length < 2) return [];
+  const { data, error } = await supabase
+    .from('user_profiles')
+    .select('user_id, username, nickname, avatar_url')
+    .neq('user_id', userId)
+    .or(`username.ilike.%${q}%,nickname.ilike.%${q}%`)
+    .limit(12);
+  if (error) throw error;
+  return (data || []).map(normalizeSocialProfile);
+}
+
+async function requestFriendship(userId, friendId) {
+  if (!userId || !friendId || userId === friendId) return false;
+  const { error } = await supabase.from('friendships').insert({
+    requester_id:userId,
+    addressee_id:friendId,
+    status:'pending',
+  });
+  if (error && error.code !== '23505') throw error;
+  return true;
+}
+
+async function updateFriendshipStatus(friendshipId, status) {
+  const payload = { status, updated_at:new Date().toISOString() };
+  if (status === 'accepted') payload.accepted_at = new Date().toISOString();
+  const { error } = await supabase.from('friendships').update(payload).eq('id', friendshipId);
+  if (error) throw error;
+  return true;
+}
+
+async function deleteFriendship(friendshipId) {
+  const { error } = await supabase.from('friendships').delete().eq('id', friendshipId);
+  if (error) throw error;
+  return true;
+}
+
 function normalizeBadgeId(id) {
   return String(id || '').trim().toUpperCase();
 }
@@ -3124,7 +3238,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const buttonSize = isNarrow ? 40 : 46;
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(184,77,58,.10), transparent 34%), #101216', position:'relative', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.20), transparent 32%), radial-gradient(circle at 12% 44%, rgba(184,77,58,.12), transparent 36%), linear-gradient(180deg,#15110E,#101216 42%,#0B0D10)', position:'relative', overflow:'hidden' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?LIGHT_APP_BG:'transparent', flexShrink:0 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
@@ -3324,9 +3438,10 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
     setLastTap(now);
   };
 
+  const neutralZoomBg = 'radial-gradient(circle at 50% 44%, rgba(255,255,255,.055), rgba(18,18,20,.98) 58%, #08080A 100%)';
   const boxStyle = visible ? {
     position:'fixed', left:0, top:0, width:'100vw', height:'var(--animaldex-app-height, 100dvh)',
-    background: bgColor || '#1a1a1c',
+    background: neutralZoomBg,
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
     zIndex:300, cursor:'default', overflow:'hidden',
@@ -3336,7 +3451,7 @@ function ImageLightbox({ src, alt, accentColor, bgColor, originRect, onClose, an
     left: startLeft, top: startTop,
     width: startW, height: startH,
     borderRadius: 16,
-    background: bgColor || '#1a1a1c',
+    background: neutralZoomBg,
     transition:'all .38s cubic-bezier(.4,0,.2,1)',
     display:'flex', alignItems:'center', justifyContent:'center',
     zIndex:300, cursor:'default', overflow:'hidden',
@@ -3871,7 +3986,10 @@ function PageHeader({ title, onBack, right, theme }) {
 
 function getAwardDescription(rule) {
   if (!rule) return '';
-  return `Sblocca questo award completando l'obiettivo: ${rule.goal.toLowerCase()} in ${rule.sub}.`;
+  const target = Number(rule.threshold || rule.target || 0);
+  const goal = String(rule.goal || '').replace(/\.$/, '');
+  const sub = String(rule.sub || '').replace(/\.$/, '');
+  return `Come si ottiene: raggiungi ${target} in ${sub}. Obiettivo: ${goal}.`;
 }
 
 function getAbilityDescription(id, meta = {}) {
@@ -4420,6 +4538,7 @@ function SectionIntroModal({ section, onClose }) {
     abilities:{ title:'Abilità', kicker:'Mini guida', body:'Le abilità sono i superpoteri biologici di Apex: veleno, mimetismo, intelligenza, velocità, migrazioni, corazze, record, vita estrema. Sono raggruppate per famiglia e ogni card mostra quanti animali la possiedono. Tocca un’abilità per aprire il dettaglio, poi puoi saltare alla griglia già filtrata con tutte le specie collegate.', action:'Scelgo un’abilità' },
     compare:{ title:'Comparatore', kicker:'Mini guida', body:'Il comparatore mette due animali fianco a fianco per confrontare dimensioni, peso, statistiche e ruolo ecologico. Usalo quando vuoi capire le differenze in modo immediato.' },
     profile:{ title:'Profilo', kicker:'Mini guida', body:'Il profilo riassume progressi, animali ricercati, avvistati e catturati, badge ottenuti e dati del tuo percorso. È la memoria personale del tuo Apex.' },
+    friends:{ title:'Amici', kicker:'Mini guida', body:'Qui Apex diventa una spedizione condivisa: cerca altri giocatori, manda richieste, guarda i loro progressi e segui piccole sfide settimanali. L’idea è semplice: meno chat, più slancio da esploratori.' },
     gallery:{ title:'Galleria', kicker:'Mini guida', body:'La galleria raccoglie le immagini e le catture collegate al tuo percorso. È pensata come archivio visivo delle specie che hai documentato.' },
     lifeweb:{ title:'LifeWeb', kicker:'Mini guida', body:'LifeWeb mostra relazioni alimentari e ruoli ecologici. È una lettura della rete, non solo della singola specie: predatori, prede, risorse e connessioni.' },
     quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'È il modo più veloce per aggiornare l’Animaldex con gli animali che hai già avvistato. Apex ti propone specie ad alta probabilità in base alle nazioni visitate e alla facilità di incontro: tu rispondi al volo, il Dex si aggiorna e i progressi iniziano a correre.' },
@@ -4914,6 +5033,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const items = [
     { id:'grid', label:'Animaldex', icon:'🦁' },
     { id:'regions', label:'Regioni', icon:'🗺️' },
+    { id:'friends', label:'Amici', icon:'🤝' },
     { id:'badges', label:'Badge', icon:'🏅' },
     { id:'compare', label:'Comparatore', icon:'⚔️' },
     { id:'abilities', label:'Abilità', icon:'✨' },
@@ -4936,7 +5056,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </button>
 
-        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg, rgba(6,7,9,.36), rgba(10,10,12,.78) 72%), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(245,241,234,.18)', boxShadow:'0 18px 44px rgba(0,0,0,.30)', marginBottom:14, overflow:'hidden' }}>
+        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg, rgba(22,10,5,.22), rgba(8,8,10,.48) 58%, rgba(8,8,10,.70)), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(245,241,234,.18)', boxShadow:'0 18px 44px rgba(0,0,0,.30)', marginBottom:14, overflow:'hidden' }}>
           <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
           <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
@@ -4948,6 +5068,19 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
             <div style={{ fontSize:28, fontWeight:1000, lineHeight:1.02, marginTop:6 }}>Territori</div>
             <div style={{ color:'rgba(245,241,234,.70)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
+          </button>
+        </div>
+
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:14 }}>
+          <button onClick={()=>onOpen('grid')} style={{ minHeight:112, border:'1px solid rgba(184,77,58,.38)', borderRadius:22, background:'linear-gradient(135deg,#7A331F 0%,#B84D3A 48%,#F0A840 100%)', color:'white', textAlign:'left', padding:14, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(184,77,58,.20)' }}>
+            <div style={{ color:'#FFE1BF', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Animali</div>
+            <div style={{ fontSize:20, fontWeight:1000, marginTop:6 }}>Grid</div>
+            <div style={{ color:'rgba(255,255,255,.74)', fontSize:11.5, lineHeight:1.35, marginTop:5 }}>Catalogo, filtri e schede.</div>
+          </button>
+          <button onClick={()=>onOpen('friends')} style={{ minHeight:112, border:'1px solid rgba(240,168,64,.34)', borderRadius:22, background:'radial-gradient(circle at 92% 12%, rgba(240,168,64,.32), transparent 34%), linear-gradient(135deg,#1B1A18,#3B2415 72%)', color:'white', textAlign:'left', padding:14, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)' }}>
+            <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
+            <div style={{ fontSize:20, fontWeight:1000, marginTop:6 }}>Amici</div>
+            <div style={{ color:'rgba(255,255,255,.68)', fontSize:11.5, lineHeight:1.35, marginTop:5 }}>Sfide, richieste e progressi.</div>
           </button>
         </div>
 
@@ -5014,10 +5147,10 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark' }) {
   const isLightTheme = theme === 'light';
   const quickIntroColor = isLightTheme ? '#171717' : 'rgba(255,255,255,.62)';
-  const quickPanelBg = isLightTheme ? 'linear-gradient(180deg,#252932,#16181D)' : 'linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035))';
-  const quickPanelBorder = isLightTheme ? '1px solid rgba(0,0,0,.18)' : '1px solid rgba(255,255,255,.10)';
-  const quickNoticeBg = isLightTheme ? '#252932' : 'rgba(255,255,255,.055)';
-  const quickNoticeBorder = isLightTheme ? '1px solid rgba(0,0,0,.18)' : '1px solid rgba(255,255,255,.08)';
+  const quickPanelBg = 'linear-gradient(180deg,rgba(128,60,22,.98),rgba(80,32,12,.96))';
+  const quickPanelBorder = '1px solid rgba(255,218,176,.22)';
+  const quickNoticeBg = 'linear-gradient(135deg,rgba(128,60,22,.92),rgba(64,28,12,.96))';
+  const quickNoticeBorder = '1px solid rgba(255,218,176,.18)';
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
   const [busy, setBusy] = useState(false);
   const buildQueue = () => {
@@ -5092,6 +5225,136 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
         ) : (
           <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Nessun altro ricercato disponibile oggi.</div>
         )}
+      </div>
+    </div>
+  );
+}
+
+function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], theme='dark' }) {
+  const isLightTheme = theme === 'light';
+  const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+  const [snapshot, setSnapshot] = useState(() => buildSocialFallback(user, userProfile, progress));
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [searching, setSearching] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const load = async () => {
+    setLoading(true);
+    const next = await fetchSocialSnapshot(user?.id, userProfile, progress);
+    setSnapshot(next);
+    setLoading(false);
+  };
+  useEffect(() => { load(); }, [user?.id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length]);
+  useEffect(() => {
+    let alive = true;
+    const t = setTimeout(async () => {
+      const q = query.trim();
+      if (q.length < 2) { setResults([]); return; }
+      setSearching(true);
+      try {
+        const rows = await searchSocialProfiles(user?.id, q);
+        if (alive) setResults(rows);
+      } catch (err) {
+        if (alive) {
+          setMessage('Ricerca amici disponibile dopo lo script Supabase.');
+          setResults([]);
+        }
+      } finally {
+        if (alive) setSearching(false);
+      }
+    }, 260);
+    return () => { alive = false; clearTimeout(t); };
+  }, [query, user?.id]);
+
+  const sendRequest = async (profile) => {
+    setMessage('');
+    try {
+      await requestFriendship(user.id, profile.user_id);
+      setMessage(`Richiesta inviata a ${profile.nickname}.`);
+      setQuery('');
+      setResults([]);
+      load();
+    } catch (err) {
+      setMessage('Non riesco ancora a inviare: applica lo script Supabase amicizie.');
+    }
+  };
+  const accept = async (row) => {
+    await updateFriendshipStatus(row.id, 'accepted').catch(()=>setMessage('Accettazione non riuscita: controlla Supabase.'));
+    load();
+  };
+  const decline = async (row) => {
+    await deleteFriendship(row.id).catch(()=>setMessage('Operazione non riuscita: controlla Supabase.'));
+    load();
+  };
+  const FriendAvatar = ({ p }) => (
+    <div style={{ width:48, height:48, borderRadius:17, background:'linear-gradient(135deg,#7A331F,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:18, fontWeight:1000, flexShrink:0, overflow:'hidden' }}>
+      {p?.avatar_url ? <img src={p.avatar_url} alt="" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> : String(p?.nickname || p?.username || 'A').slice(0,1).toUpperCase()}
+    </div>
+  );
+  const friendRows = snapshot.friends || [];
+  const challengeRows = snapshot.challenges?.length ? snapshot.challenges : buildSocialFallback(user, userProfile, progress).challenges;
+  return (
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.18), transparent 42%), linear-gradient(180deg,#111113,#08090B)', overflow:'hidden' }}>
+      <PageHeader title="Amici" onBack={onBack} theme={theme} />
+      <div style={{ flex:1, overflowY:'auto', padding:16, WebkitOverflowScrolling:'touch' }}>
+        <div style={{ borderRadius:28, padding:18, background:'linear-gradient(135deg,rgba(122,51,31,.92),rgba(24,18,15,.96) 68%)', border:'1px solid rgba(240,168,64,.24)', color:'white', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
+          <div style={{ color:'#FFD4A3', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Compagni di esplorazione</div>
+          <div style={{ fontSize:26, fontWeight:1000, marginTop:5 }}>Sfide e progressi</div>
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici, confronta il passo e lancia piccole missioni settimanali. Apex resta un gioco di scoperta, ma con qualcuno accanto spinge di piu.</div>
+          {!snapshot.socialReady && <div style={{ marginTop:10, color:'#FFE0B8', fontSize:11, fontWeight:850 }}>Modalita anteprima: lancia lo script Supabase per attivare amici reali.</div>}
+        </div>
+
+        <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:14, marginBottom:14 }}>
+          <div style={{ color:'white', fontSize:16, fontWeight:1000 }}>Cerca giocatori</div>
+          <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Nickname o username" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:'rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
+          {searching && <div style={{ color:'rgba(255,255,255,.50)', fontSize:12, marginTop:8 }}>Ricerca...</div>}
+          {!!results.length && <div style={{ display:'grid', gap:8, marginTop:10 }}>
+            {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', padding:10, textAlign:'left', fontFamily:'inherit' }}>
+              <FriendAvatar p={p} />
+              <div style={{ flex:1, minWidth:0 }}><div style={{ fontSize:14, fontWeight:1000 }}>{p.nickname}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:11 }}>@{p.username}</div></div>
+              <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>Aggiungi</span>
+            </button>)}
+          </div>}
+          {message && <div style={{ color:'#FFD4A3', fontSize:11.5, lineHeight:1.4, marginTop:10, fontWeight:850 }}>{message}</div>}
+        </div>
+
+        {!!snapshot.requestsIn?.length && <div style={{ marginBottom:14 }}>
+          <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste</div>
+          {snapshot.requestsIn.map(row => <div key={row.id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:10, marginBottom:8 }}>
+            <FriendAvatar p={row.profile} />
+            <div style={{ flex:1, color:'white', fontWeight:950 }}>{row.profile.nickname}</div>
+            <button onClick={()=>decline(row)} style={{ width:38, height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:1000 }}>×</button>
+            <button onClick={()=>accept(row)} style={{ height:38, borderRadius:13, border:'none', background:'#F0A840', color:'#17100A', padding:'0 12px', fontWeight:1000 }}>Accetta</button>
+          </div>)}
+        </div>}
+
+        <div style={{ marginBottom:14 }}>
+          <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Sfide</div>
+          <div style={{ display:'grid', gap:9 }}>
+            {challengeRows.map(c => <div key={c.id} style={{ borderRadius:18, background:'linear-gradient(135deg,rgba(240,168,64,.16),rgba(255,255,255,.045))', border:'1px solid rgba(240,168,64,.20)', padding:13 }}>
+              <div style={{ display:'flex', justifyContent:'space-between', gap:10 }}><div style={{ color:'white', fontSize:14, fontWeight:1000 }}>{c.title}</div><div style={{ color:'#F0A840', fontSize:11, fontWeight:1000 }}>{c.status}</div></div>
+              <div style={{ color:'rgba(255,255,255,.58)', fontSize:11.5, marginTop:5 }}>{c.text}</div>
+              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', marginTop:10, overflow:'hidden' }}><div style={{ height:'100%', width:`${c.progress || 0}%`, background:'linear-gradient(90deg,#B84D3A,#F0A840)' }} /></div>
+            </div>)}
+          </div>
+        </div>
+
+        <div>
+          <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Amici</div>
+          {loading ? <div style={{ color:'rgba(255,255,255,.48)', padding:18 }}>Carico amici...</div> : <div style={{ display:'grid', gap:9 }}>
+            {friendRows.map(p => <div key={p.user_id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:11 }}>
+              <FriendAvatar p={p} />
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ color:'white', fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{p.nickname}</div>
+                <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, marginTop:3 }}>Liv. {p.level || 1} · {p.challenge}</div>
+              </div>
+              <div style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>{p.streak ? `🔥 ${p.streak}` : 'VS'}</div>
+            </div>)}
+            {!friendRows.length && <div style={{ color:'rgba(255,255,255,.45)', fontSize:13, textAlign:'center', padding:22 }}>Cerca un giocatore e manda la prima richiesta.</div>}
+          </div>}
+        </div>
       </div>
     </div>
   );
@@ -5211,9 +5474,9 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
       <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, borderRadius:28, background:'linear-gradient(180deg,#2D2D31,#151517)', border:`1px solid ${borderColor}88`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
-        <button onClick={onClose} style={{ position:'absolute', top:14, right:14, width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer', zIndex:2 }}>×</button>
-        <button onClick={onPrev} style={{ position:'absolute', top:'50%', left:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>‹</button>
-        <button onClick={onNext} style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>›</button>
+        <button onClick={onClose} aria-label="Chiudi" style={{ position:'absolute', top:14, right:14, width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:24, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>×</button>
+        <button onClick={onPrev} aria-label="Badge precedente" style={{ position:'absolute', top:'50%', left:12, transform:'translateY(-50%)', width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:28, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>‹</button>
+        <button onClick={onNext} aria-label="Badge successivo" style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:28, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>›</button>
         <div style={{ height:8 }} />
         <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
         <span style={{ display:'none', alignItems:'center', justifyContent:'center', flexDirection:'column', width:266, height:266, maxWidth:'82vw', borderRadius:34, border:`1px dashed ${borderColor}88`, color:borderColor, fontSize:70, fontWeight:1000, margin:'0 auto 8px', lineHeight:1 }}><span>L{rule.level}</span><span style={{ marginTop:14, color:'rgba(255,255,255,.62)', fontSize:13, fontWeight:900 }}>{String(rule.badgeId || '').toLowerCase()}.png</span></span>
@@ -6025,14 +6288,15 @@ function buildMediterraneanConceptGroups(animals = [], territory) {
 function ConceptLifeWebMap({ animals = [], territory, onOpenAnimal }) {
   const groups = useMemo(() => buildMediterraneanConceptGroups(animals, territory), [animals, territory]);
   const [zoom, setZoom] = useState(.62);
-  const boardW = 1180;
-  const boardH = 820;
+  const showAnimals = zoom >= .82;
+  const boardW = 1320;
+  const boardH = 920;
   const rows = [
-    { key:'apex', label:'Predatori apex', sub:'Vertice della rete', y:34, color:'#FF5B66', items:groups.apex, type:'animal', maxPerRow:6 },
-    { key:'predators', label:'Predatori', sub:'Cacciano, scavengono o controllano popolazioni', y:202, color:'#F0A840', items:groups.predators, type:'animal', maxPerRow:8 },
-    { key:'herbivores', label:'Erbivori e onnivori base', sub:'Trasformano risorse vegetali e piccola fauna in biomassa', y:382, color:'#A9DD45', items:groups.herbivores, type:'animal', maxPerRow:8 },
-    { key:'resources', label:'Risorse', sub:'Energia e materia disponibili nel paesaggio mediterraneo', y:560, color:'#6CE5C7', items:groups.resources, type:'resource', maxPerRow:9 },
-    { key:'filters', label:'Filtratori e acque basse', sub:'Legano zone umide, coste e corsi d’acqua', y:704, color:'#5BB8F5', items:groups.filters, type:'animal', maxPerRow:7 },
+    { key:'apex', label:'Predatori apex', sub:'Vertice della rete', y:36, color:'#FF5B66', items:groups.apex, type:'animal', maxPerRow:6 },
+    { key:'predators', label:'Predatori', sub:'Controllano popolazioni e carcasse', y:220, color:'#F0A840', items:groups.predators, type:'animal', maxPerRow:7 },
+    { key:'herbivores', label:'Erbivori e onnivori base', sub:'Trasformano risorse in biomassa', y:420, color:'#A9DD45', items:groups.herbivores, type:'animal', maxPerRow:7 },
+    { key:'resources', label:'Risorse', sub:'Energia e materia del paesaggio', y:635, color:'#6CE5C7', items:groups.resources, type:'resource', maxPerRow:5 },
+    { key:'filters', label:'Filtratori e acque basse', sub:'Connettono coste, zone umide e corsi d’acqua', y:780, color:'#5BB8F5', items:groups.filters, type:'animal', maxPerRow:6 },
   ];
   const itemW = 116;
   const itemH = 124;
@@ -6076,7 +6340,7 @@ function ConceptLifeWebMap({ animals = [], territory, onOpenAnimal }) {
         <button onClick={()=>setZoom(z=>Math.min(1.35, Number((z+.08).toFixed(2))))} style={{ width:38, height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:1000 }}>+</button>
         <button onClick={()=>setZoom(.62)} style={{ height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950, padding:'0 10px' }}>Reset</button>
       </div>
-      <div style={{ height:560, overflow:'auto', borderRadius:20, background:'radial-gradient(circle at 50% 20%,rgba(108,229,199,.10),rgba(7,9,12,.96) 52%)', border:'1px solid rgba(255,255,255,.07)', WebkitOverflowScrolling:'touch' }}>
+      <div style={{ height:560, overflow:'auto', borderRadius:20, background:'radial-gradient(circle at 50% 20%,rgba(240,168,64,.14),rgba(84,38,20,.20) 34%,rgba(7,9,12,.96) 62%)', border:'1px solid rgba(255,255,255,.07)', WebkitOverflowScrolling:'touch' }}>
         <div style={{ width:boardW*zoom, height:boardH*zoom, position:'relative' }}>
           <div style={{ width:boardW, height:boardH, position:'relative', transform:`scale(${zoom})`, transformOrigin:'top left' }}>
             <svg width={boardW} height={boardH} style={{ position:'absolute', inset:0, pointerEvents:'none' }}>
@@ -6100,11 +6364,19 @@ function ConceptLifeWebMap({ animals = [], territory, onOpenAnimal }) {
                 </div>
               </div>
             ))}
-            {rows.flatMap(row => layoutItems(row).map(pos => row.type === 'resource' ? resourceCard(pos.item, row, pos) : animalCard(pos.item, row, pos)))}
+            {rows.map(row => {
+              const count = (row.items || []).length;
+              if (showAnimals || row.type === 'resource') return null;
+              return <button key={`macro-${row.key}`} onClick={()=>setZoom(1)} style={{ position:'absolute', left:120, right:120, top:row.y+58, height:92, borderRadius:24, border:`2px solid ${hexToRgba(row.color,.46)}`, background:`linear-gradient(135deg,${hexToRgba(row.color,.18)},rgba(14,15,18,.96))`, color:'white', fontFamily:'inherit', cursor:'zoom-in', textAlign:'left', padding:'0 24px', boxShadow:'0 20px 46px rgba(0,0,0,.26)' }}>
+                <div style={{ fontSize:24, fontWeight:1000 }}>{row.label}</div>
+                <div style={{ color:'rgba(255,255,255,.60)', fontSize:13, marginTop:5 }}>{count} elementi · zoom per aprire il gruppo</div>
+              </button>;
+            })}
+            {rows.flatMap(row => layoutItems(row).map(pos => row.type === 'resource' || showAnimals ? (row.type === 'resource' ? resourceCard(pos.item, row, pos) : animalCard(pos.item, row, pos)) : null))}
           </div>
         </div>
       </div>
-      <div style={{ color:'rgba(255,255,255,.54)', fontSize:11.5, lineHeight:1.45, marginTop:10 }}>Scorri la board e usa zoom. I collegamenti sono tra gruppi ecologici, così la lettura resta chiara: non tutti gli animali vengono collegati a tutti gli altri.</div>
+      <div style={{ color:'rgba(255,255,255,.54)', fontSize:11.5, lineHeight:1.45, marginTop:10 }}>Dall’alto leggi i macrogruppi. Zoomando si aprono gli animali: i collegamenti restano tra gruppi ecologici, non tra ogni singola card.</div>
     </div>
   );
 }
@@ -6128,11 +6400,7 @@ function LifeWebPage({ territory, habitat, animals, onOpenAnimal, focusAnimal=nu
         </div>
       </div>
       <ApexPredatorStrip animals={apexAnimals} onOpenAnimal={onOpenAnimal} />
-      {mediterraneanConcept && <ConceptLifeWebMap animals={animals} territory={territory} onOpenAnimal={onOpenAnimal} />}
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10 }}>
-        <RegionActionBox title="Grid animali" text="Mostra solo gli animali agganciati all'ID bioregionale della subregione, senza fallback ISO." label="Apri Grid" tone="#244A70" onClick={onOpenGrid} />
-        <RegionActionBox title="LifeWeb" text={mediterraneanConcept ? 'Mappa concettuale a gruppi già attiva per il Mediterraneo.' : 'Spazio pronto per la rete trofica completa della subregione.'} label={mediterraneanConcept ? 'Test attivo' : 'In preparazione'} tone="#3A2A22" disabled />
-      </div>
+      {mediterraneanConcept ? <ConceptLifeWebMap animals={animals} territory={territory} onOpenAnimal={onOpenAnimal} /> : <div style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:22, padding:18, background:'linear-gradient(135deg,rgba(255,255,255,.055),rgba(255,255,255,.025))', color:'rgba(255,255,255,.68)', fontSize:13, lineHeight:1.5 }}>LifeWeb per questo territorio è pronto come struttura. Il test interattivo completo è attivo sul Mediterraneo.</div>}
       <LifeWebMiniGrid animals={gridAnimals} onOpenAnimal={onOpenAnimal} />
     </div>
   );
@@ -6383,8 +6651,22 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='ecoregions' && region && region.ecoregions.map(eco => {
           const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="LifeWeb" onOpen={()=>openSubregionLifeWeb(eco)} secondaryOpenLabel="Grid" onSecondaryOpen={()=>openSubregionGrid(eco)} mapIds={[eco.id]} />;
+          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Apri" onOpen={()=>{setSelectedEcoregion(eco); setView('habitats');}} mapIds={[eco.id]} />;
         })}
+
+        {view==='habitats' && selectedSubregionTerritory && (
+          <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+            <div style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:22, padding:16, background:'linear-gradient(135deg,rgba(184,77,58,.14),rgba(255,255,255,.045))' }}>
+              <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Territorio</div>
+              <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:5 }}>{selectedEcoregion.label}</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:8 }}>{buildSubregionDescription(selectedEcoregion)}</div>
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
+              <RegionActionBox title="Grid animali" text="Lista filtrata sugli animali collegati a questo ID bioregionale." label="Apri Grid" tone="#244A70" onClick={()=>openSubregionGrid(selectedEcoregion)} />
+              <RegionActionBox title="LifeWeb" text={isMediterraneanTerritory(selectedEcoregion) ? 'Mappa a gruppi pronta per il test Mediterraneo.' : 'Pronta per la rete concettuale del territorio.'} label="Apri LifeWeb" tone="#3A2A22" onClick={()=>openSubregionLifeWeb(selectedEcoregion)} />
+            </div>
+          </div>
+        )}
 
         {view==='lifeweb' && selectedSubregionTerritory && (
           <LifeWebPage territory={selectedSubregionTerritory} habitat={selectedHabitat || buildGeneralLifeWebHabitat(selectedSubregionTerritory)} animals={allAnimalsWithStatus} onOpenAnimal={onSelect} onOpenGrid={()=>openSubregionGrid(selectedEcoregion)} />
@@ -7332,7 +7614,7 @@ export default function App() {
   };
 
   function maybeShowSectionIntro(section) {
-    const enabledSections = new Set(['regions', 'badges', 'abilities', 'compare', 'profile', 'gallery', 'lifeweb', 'quickSeen']);
+    const enabledSections = new Set(['regions', 'badges', 'abilities', 'compare', 'profile', 'gallery', 'lifeweb', 'quickSeen', 'friends']);
     if (!enabledSections.has(section)) return;
     if (tutorialStep) return;
     setActiveSectionGuide(null);
@@ -7581,6 +7863,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
     if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
