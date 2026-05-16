@@ -339,6 +339,21 @@ function saveLocalUserAnimalStatus(userId, animalId, status) {
   const next = { ...getLocalUserStatusMap(userId), [animalId]: normalizeAnimalStatus(status) };
   saveLocalUserStatusMap(userId, next);
 }
+function strongestAnimalStatus(...statuses) {
+  return statuses
+    .map(normalizeAnimalStatus)
+    .filter(Boolean)
+    .sort((a,b)=>ANIMAL_STATUS_ORDER.indexOf(b)-ANIMAL_STATUS_ORDER.indexOf(a))[0] || 'misterioso';
+}
+function mergeStatusMapsByRank(...maps) {
+  const ids = new Set();
+  maps.forEach(map => Object.keys(map || {}).forEach(id => ids.add(String(id))));
+  const merged = {};
+  ids.forEach(id => {
+    merged[id] = strongestAnimalStatus(...maps.map(map => map?.[id]));
+  });
+  return merged;
+}
 const QUICK_SEEN_REJECT_COOLDOWN_DAYS = 14;
 const QUICK_SEEN_REJECTED_KEY = 'animaldex_quick_seen_rejected_until';
 function getQuickSeenRejectedMap() {
@@ -2190,15 +2205,19 @@ function useAppViewportHeight() {
   return h;
 }
 
-function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
+function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1, options={}) {
   const [zoom, setZoomState] = useState(initialZoom);
   const [pan, setPanState] = useState({x:0,y:0});
   const ref = useRef({ dragging:false, lastX:0, lastY:0, pinch:false, startDist:0, startZoom:1 });
+  const allowPanAtMin = !!options.allowPanAtMin;
+  const panLimitX = Number(options.panLimitX || 190);
+  const panLimitY = Number(options.panLimitY || 120);
   const clampZoom = (z) => Math.max(minZoom, Math.min(maxZoom, Number(z) || initialZoom));
   const clampPan = (nextPan, z = zoom) => {
-    if (z <= minZoom + 0.01) return { x:0, y:0 };
-    const maxX = 160 * (z - 1);
-    const maxY = 95 * (z - 1);
+    if (!allowPanAtMin && z <= minZoom + 0.01) return { x:0, y:0 };
+    const travel = allowPanAtMin ? Math.max(.65, z - minZoom + .65) : Math.max(0, z - minZoom);
+    const maxX = panLimitX * travel;
+    const maxY = panLimitY * travel;
     return {
       x: Math.max(-maxX, Math.min(maxX, nextPan.x || 0)),
       y: Math.max(-maxY, Math.min(maxY, nextPan.y || 0)),
@@ -2224,19 +2243,18 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
   };
   const handlers = {
 	    onWheel:(e)=> {
-	      if (zoom <= minZoom + 0.01 && !e.metaKey && !e.ctrlKey) return;
 	      e.preventDefault?.();
 	      const delta = e.deltaY > 0 ? -0.12 : 0.12;
 	      setZoom(z => z + delta);
     },
     onPointerDown:(e)=> {
-      if (e.pointerType === 'touch' || zoom <= minZoom + 0.01) return;
+      if (e.pointerType === 'touch' || (!allowPanAtMin && zoom <= minZoom + 0.01)) return;
       ref.current.dragging = true;
       ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
       e.currentTarget.setPointerCapture?.(e.pointerId);
     },
     onPointerMove:(e)=> {
-      if (!ref.current.dragging || zoom <= minZoom + 0.01) return;
+      if (!ref.current.dragging || (!allowPanAtMin && zoom <= minZoom + 0.01)) return;
       const dx = e.clientX - ref.current.lastX;
       const dy = e.clientY - ref.current.lastY;
       ref.current.lastX = e.clientX; ref.current.lastY = e.clientY;
@@ -2249,10 +2267,11 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
     onPointerCancel:()=> { ref.current.dragging = false; },
     onTouchStart:(e)=> {
       if (e.touches?.length === 2) {
+        e.preventDefault?.();
         ref.current.pinch = true;
         ref.current.startDist = dist(e.touches);
         ref.current.startZoom = zoom;
-      } else if (e.touches?.length === 1 && zoom > minZoom + 0.01) {
+      } else if (e.touches?.length === 1 && (allowPanAtMin || zoom > minZoom + 0.01)) {
         ref.current.dragging = true;
         ref.current.lastX = e.touches[0].clientX;
         ref.current.lastY = e.touches[0].clientY;
@@ -2263,7 +2282,7 @@ function useInteractiveMapControls(minZoom=1, maxZoom=4.5, initialZoom=1) {
         e.preventDefault?.();
         const d = dist(e.touches);
         if (ref.current.startDist > 0) setZoom(ref.current.startZoom * (d/ref.current.startDist));
-      } else if (e.touches?.length === 1 && ref.current.dragging && zoom > minZoom + 0.01) {
+      } else if (e.touches?.length === 1 && ref.current.dragging && (allowPanAtMin || zoom > minZoom + 0.01)) {
         e.preventDefault?.();
         const dx = e.touches[0].clientX - ref.current.lastX;
         const dy = e.touches[0].clientY - ref.current.lastY;
@@ -2293,13 +2312,14 @@ function countryPseudoPolygon(code, radiusLon=3.2, radiusLat=2.0) {
   return { type:'Polygon', coordinates:[pts] };
 }
 
-function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#A84637', height=230, title='Mappa paesi', pointMode=false }) {
+function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountry, accent='#A84637', height=230, title='Mappa paesi', pointMode=false, fullscreen=false, onCloseFullscreen }) {
   const { data:countryData, error:countryError } = useCountryGeoJson();
   const { data:bioregionData } = useBioregionGeoJson();
   const codes = Array.from(new Set((countryCodes || []).map(c=>String(c).toUpperCase()).filter(Boolean))).slice(0,220);
   const selected = selectedCountry || null;
   const [hoverCountry, setHoverCountry] = useState(null);
-  const mapControls = useInteractiveMapControls();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const mapControls = useInteractiveMapControls(1, fullscreen ? 8 : 4.5, 1, { allowPanAtMin:fullscreen, panLimitX:fullscreen ? 420 : 190, panLimitY:fullscreen ? 260 : 120 });
   const points = codes.map(code => ({ code, ...countryMapPoint(code) }));
   const activeCodeSet = new Set(codes);
   const countryFeatures = countryData?.features || [];
@@ -2315,7 +2335,12 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   const activeCountryLabel = hoverCountry || selected;
   const hasCountries = !!countryData && !countryError;
   const baseCountryFeatures = hasCountries ? countryFeatures : (pseudoCountryFeatures.length ? pseudoCountryFeatures : fallbackFeatures.filter(f => (f.properties || {}).domain !== 'marine'));
-  const viewBox = '0 0 1000 486';
+  const activeBounds = mergeProjectedBounds(
+    (activeCountryFeatures.length ? activeCountryFeatures : fallbackActive)
+      .map(f => geometryProjectedBounds(f.geometry))
+  ) || pointProjectedBounds(points, pointMode ? 42 : 26, pointMode ? 32 : 22);
+  const viewBox = boundsToViewBox(activeBounds, codes.length > 8 ? .12 : .22);
+  const openFullscreen = () => { if (!fullscreen) setIsFullscreen(true); };
 
   const countryMark = (p) => {
     const active = p.code === selected || p.code === hoverCountry;
@@ -2328,9 +2353,11 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   };
 
   return (
+    <>
     <div
       {...mapControls.handlers}
-	      style={{ position:'relative', width:'100%', aspectRatio:'2 / 1', minHeight:Math.min(230, height || 230), borderRadius:16, overflow:'hidden', background:'radial-gradient(circle at 50% 46%, #153245 0%, #0A1722 62%, #05090D 100%)', border:'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:mapControls.zoom > 1.01 ? 'none' : 'pan-y' }}
+      onClick={openFullscreen}
+	      style={{ position:'relative', width:'100%', height:fullscreen?'100%':undefined, aspectRatio:fullscreen?undefined:'2 / 1', minHeight:fullscreen?undefined:Math.min(230, Number(height) || 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:'radial-gradient(circle at 50% 46%, #153245 0%, #0A1722 62%, #05090D 100%)', border:fullscreen?'none':'1px solid rgba(255,255,255,.08)', boxShadow:'inset 0 0 46px rgba(0,0,0,.48)', touchAction:fullscreen || mapControls.zoom > 1.01 ? 'none' : 'pan-y', cursor:fullscreen?'grab':'zoom-in' }}
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
@@ -2370,6 +2397,7 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
       <div style={{ position:'absolute', left:12, top:10, color:'rgba(255,255,255,.90)', fontSize:12, fontWeight:950, pointerEvents:'none', textShadow:'0 2px 10px rgba(0,0,0,.65)' }}>{title}</div>
       <div style={{ position:'absolute', right:10, top:10, display:'flex', gap:6 }}>
         <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
+        {fullscreen && <button data-sound="back" onClick={(e)=>{e.stopPropagation(); onCloseFullscreen?.();}} aria-label="Chiudi mappa" style={{ width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:18, fontWeight:900, lineHeight:1, padding:0 }}>×</button>}
       </div>
 
       {activeCountryLabel && (
@@ -2378,6 +2406,14 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
         </div>
       )}
     </div>
+    {isFullscreen && (
+      <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
+        <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:'#07131F', border:'1px solid rgba(255,255,255,.10)' }}>
+          <CountryPresenceMap countryCodes={countryCodes} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent={accent} title={title} pointMode={pointMode} fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} />
+        </div>
+      </div>
+    )}
+    </>
   );
 }
 
@@ -2605,6 +2641,14 @@ function getClassGlowColor(cls) {
   if (cls === 'Insecta') return '#FFD890';
   return (CLS[cls] || CLS.Mammalia).accent;
 }
+function rarityBorderColor(rarity) {
+  const r = String(rarity || 'Comune').toLowerCase();
+  if (r === 'comune') return '#9D6845';
+  if (r === 'non comune') return '#A1A8B2';
+  if (r === 'raro') return '#F0C449';
+  if (r === 'leggendario') return '#8F34F5';
+  return '#9D6845';
+}
 
 function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
@@ -2616,7 +2660,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
   if (mystery) {
     return (
-      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'#242428', display:'flex', alignItems:'center', justifyContent:'center' }}>
+      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'transparent', display:'flex', alignItems:'center', justifyContent:'center' }}>
         {!mysteryErr ? (
           <img src={MYSTERY_PLACEHOLDER} alt="misterioso" onError={()=>setMysteryErr(true)}
             style={{ width:'100%', height:'100%', objectFit:'contain', opacity:0.68, transform:`scale(${gridMode ? GRID_MYSTERY_SCALE : 1.15})`, filter:'none' }} />
@@ -2631,7 +2675,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   if (localImageUrl && !imgErr) {
     const pad = gridMode ? 0 : Math.round(size * 0.12);
     const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
-    const imageBg = '#202228';
+    const imageBg = 'transparent';
     return (
       <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
@@ -2644,7 +2688,7 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
   }
 
   return (
-    <div style={{ width:'100%', height:size, background:'#202228', display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
+    <div style={{ width:'100%', height:size, background:'transparent', display:'flex', alignItems:'center', justifyContent:'center', fontSize }}>{c.icon}</div>
   );
 }
 
@@ -2663,8 +2707,8 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   const labelH = isNarrow ? 36 : 38;
   const imageH = imageVisible ? cardH : cardH - labelH + 8;
   const photographed = status === 'catturato' || !!a.photo_url || !!a.userAnimal?.photo_url || !!a.userAnimal?.photo_path;
-  const statusStyle = STATUS_CARD_STYLE[status] || STATUS_CARD_STYLE.ricercato;
   const displayName = clampWholeWords(a.com, isNarrow ? 25 : 31);
+  const rarityColor = rarityBorderColor(a.rarity);
   return (
     <div
       data-tour={tutorialHighlight ? 'grid-first-animal' : undefined}
@@ -2677,14 +2721,14 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
         position:'relative',
         userSelect:'none',
         transition:'transform .1s ease, box-shadow .3s ease, opacity .2s ease',
-        boxShadow:tutorialHighlight ? '0 0 0 3px #90D84A, 0 0 24px rgba(144,216,74,.34)' : statusStyle.glow,
+        boxShadow:tutorialHighlight ? '0 0 0 3px #90D84A, 0 0 24px rgba(144,216,74,.34)' : `0 10px 24px rgba(0,0,0,.22), 0 0 0 1px ${hexToRgba(rarityColor,.10)}`,
         outline:tutorialHighlight ? '1px solid rgba(255,255,255,.55)' : 'none',
         zIndex:tutorialHighlight ? 180 : 1,
         opacity:tutorialDim ? .38 : 1,
         background: imageVisible
-          ? 'linear-gradient(180deg, #24272E 0%, #1B1E24 54%, #111318 100%)'
-          : 'linear-gradient(180deg, rgba(255,255,255,.045), rgba(0,0,0,.34)), #15171B',
-        border: statusStyle.border
+          ? 'linear-gradient(180deg, #191B20 0%, #14161A 58%, #0F1013 100%)'
+          : 'linear-gradient(180deg, rgba(255,255,255,.035), rgba(0,0,0,.30)), #14161A',
+        border:`1.5px solid ${rarityColor}B8`
       }}
       onMouseDown={e=>e.currentTarget.style.transform='scale(0.94)'}
       onMouseUp={e=>e.currentTarget.style.transform='scale(1)'}
@@ -2697,8 +2741,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
           <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
         </div>
       )}
-      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.44)', fontSize:9, fontWeight:1000, letterSpacing:.4 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
-      <div className={`rarity-dot ${rarityDotClass(a.rarity)}`} style={{ position:'absolute', top:8, right:8, zIndex:3, width:11, height:11, borderRadius:'50%' }}/>
+      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.38)', fontSize:8.5, fontWeight:800, letterSpacing:.2 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
       <div
         style={{
           position:'absolute',
@@ -2706,17 +2749,17 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
           right:0,
           bottom:0,
           minHeight:labelH,
-          padding:'8px 8px 8px',
+          padding:'7px 7px 7px',
           boxSizing:'border-box',
           background: found
             ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.58) 30%, rgba(10,12,16,.94) 100%)'
             : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.68) 34%, rgba(18,20,24,.94) 100%)',
           color:mystery ? 'rgba(245,241,234,.74)' : 'rgba(245,241,234,.92)',
-          fontSize:isNarrow ? 10 : 11,
-          fontWeight:800,
+          fontSize:isNarrow ? 9.5 : 10.3,
+          fontWeight:700,
           textAlign:'center',
           lineHeight:'12.8px',
-          textShadow: found ? '0 1px 2px rgba(0,0,0,.48)' : 'none',
+          textShadow: found ? '0 1px 1px rgba(0,0,0,.38)' : 'none',
           display:'flex',
           alignItems:'center',
           justifyContent:'center',
@@ -3569,10 +3612,10 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
     if (action === 'capture') onOpenPhoto?.(a);
   };
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? `linear-gradient(180deg,${c.detailTop} 0%,${hexToRgba(c.accent,.22)} 42%,${LIGHT_APP_BG} 88%)` : `linear-gradient(180deg,${c.detailTop} 0%,${c.detailBg} 45%,#1A1A1C 85%)` }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? LIGHT_APP_BG : 'linear-gradient(180deg,#101216 0%,#17191D 44%,#1A1A1C 100%)' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
         <button onClick={onBack} style={{ background:'none', border:'none', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:0 }}>‹ Animaldex</button>
-        <span style={{ color:detailText, fontSize:longName?14:17, fontWeight:800, maxWidth:180, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', transform:longName?'scaleX(.8)':'none', transformOrigin:'center' }}>{a.com}</span>
+        <span aria-hidden style={{ flex:1 }} />
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
       </div>
       <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
@@ -3591,38 +3634,35 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   ))}
 </div>
 
-        <div style={{ display:'flex', flexDirection:'column', gap:10, marginBottom:16, padding:'0 4px' }}>
-          <div style={{ display:'flex', gap:12 }}>
-            <div ref={imgRef}
-              onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
-              style={{
-                width: Math.round(168 + pullProgress * (window.innerWidth - 168)),
-                height: Math.round(168 + pullProgress * (window.innerWidth - 168)),
-                borderRadius: Math.round(16 - pullProgress * 16),
-                overflow:'hidden', flexShrink:0, background:'#202228',
-                cursor: canViewImage ? 'zoom-in' : 'default',
-                boxShadow:'none',
-                transition: pullProgress===0 ? 'width .25s ease, height .25s ease, border-radius .25s ease' : 'none',
-              }}>
-              <AnimalImg a={a} size={168} fontSize={88} overrideStatus={localStatus} />
-            </div>
-            <div style={{ flex:1, minWidth:0, display:'flex', flexDirection:'column', gap:8, justifyContent:'center' }}>
-              <div data-tour="animal-rarity" style={{ width:'100%', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:14 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
-              <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
-              <div style={{ display:'flex', justifyContent:'center', position:'relative', width:'100%', flexDirection:'column', gap:7 }}>
-                <div data-tour="animal-status" style={{ width:'100%', borderRadius:14, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
-                {statusActions.length > 0 && (
-                  <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
-                    {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer', boxShadow:tutorialStep==='detail-status' && act.action==='mark-seen' ? '0 0 0 3px rgba(240,168,64,.32), 0 0 26px rgba(240,168,64,.34)' : 'none' }}>{act.label}</button>)}
-                  </div>
-                )}
-              </div>
-            </div>
+        <div style={{ display:'flex', flexDirection:'column', gap:12, marginBottom:16, padding:'0 4px' }}>
+          <div ref={imgRef}
+            onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
+            style={{
+              width:'100%',
+              height: Math.round(268 + pullProgress * 70),
+              borderRadius:18,
+              overflow:'hidden',
+              background:'#202228',
+              cursor: canViewImage ? 'zoom-in' : 'default',
+              boxShadow:'inset 0 0 0 1px rgba(255,255,255,.06)',
+              transition: pullProgress===0 ? 'height .25s ease, border-radius .25s ease' : 'none',
+            }}>
+            <AnimalImg a={a} size={Math.round(268 + pullProgress * 70)} fontSize={88} overrideStatus={localStatus} />
           </div>
         </div>
-        <div style={{ textAlign:'center', marginBottom:18 }}>
+        <div style={{ textAlign:'center', marginBottom:14 }}>
           <h1 style={{ margin:0, color:detailText, fontSize:longName?22:26, fontWeight:900, letterSpacing:longName?-.6:-.3, lineHeight:1.06, transform:longName?'scaleX(.8)':'none', transformOrigin:'center', maxWidth:'124%', marginLeft:longName?'-12%':0, marginRight:longName?'-12%':0 }}>{a.com}</h1>
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
+        </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:14, padding:'0 4px' }}>
+          <div data-tour="animal-rarity" style={{ width:'100%', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:14 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
+          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
+          <div data-tour="animal-status" style={{ width:'100%', borderRadius:14, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+          {statusActions.length > 0 && (
+            <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
+              {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer', boxShadow:tutorialStep==='detail-status' && act.action==='mark-seen' ? '0 0 0 3px rgba(240,168,64,.32), 0 0 26px rgba(240,168,64,.34)' : 'none' }}>{act.label}</button>)}
+            </div>
+          )}
         </div>
         <div style={{ background:detailPanel, border:detailPanelBorder, borderRadius:14, padding:14, marginBottom:10, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.22), 0 0 24px rgba(240,168,64,.18)':'none' }}>
           <p style={{ margin:0, color:isLightTheme?'rgba(0,0,0,.74)':'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
@@ -4048,6 +4088,18 @@ function mergeProjectedBounds(bounds = []) {
     maxX:Math.max(acc.maxX,b.maxX), maxY:Math.max(acc.maxY,b.maxY),
   }), { minX:Infinity, minY:Infinity, maxX:-Infinity, maxY:-Infinity });
 }
+function pointProjectedBounds(points = [], radiusX=34, radiusY=24) {
+  const valid = points.filter(p => Number.isFinite(p?.lon) && Number.isFinite(p?.lat));
+  if (!valid.length) return null;
+  const projected = valid.map(p => {
+    const [x,y] = projectLonLat(p.lon, p.lat);
+    return { x, y };
+  });
+  return projected.reduce((acc,p)=>({
+    minX:Math.min(acc.minX,p.x - radiusX), minY:Math.min(acc.minY,p.y - radiusY),
+    maxX:Math.max(acc.maxX,p.x + radiusX), maxY:Math.max(acc.maxY,p.y + radiusY),
+  }), { minX:Infinity, minY:Infinity, maxX:-Infinity, maxY:-Infinity });
+}
 function boundsToViewBox(b, padRatio=.34) {
   if (!b) return '0 0 1000 500';
   let w = Math.max(95, b.maxX - b.minX);
@@ -4062,13 +4114,14 @@ function boundsToViewBox(b, padRatio=.34) {
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
 
-function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, showLabels=false, fullBleed=false }) {
+function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const isoHighlightSet = new Set((highlightIsoCodes || []).map(code => String(code).toUpperCase()).filter(Boolean));
   const features = data?.features || [];
   const [hoverId, setHoverId] = useState(null);
-  const mapControls = useInteractiveMapControls(1, 4.5, 1);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const mapControls = useInteractiveMapControls(1, fullscreen ? 8 : 4.5, 1, { allowPanAtMin:fullscreen, panLimitX:fullscreen ? 420 : 190, panLimitY:fullscreen ? 260 : 120 });
   const relevant = features.filter(f => {
     const p = f.properties || {};
     if (marine) return p.domain === 'marine';
@@ -4084,7 +4137,8 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     return highlightSet.has(id) || isoActive;
   };
   const activeFeatures = relevant.filter(isActiveFeature);
-  const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .08 : .12);
+  const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .08 : .14);
+  const openFullscreen = () => { if (!fullscreen) setIsFullscreen(true); };
 
   if (!data && !error) {
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.50)', fontSize:11, fontWeight:800 }}>Caricamento mappa vettoriale…</div>;
@@ -4092,11 +4146,13 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
   if (error) {
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
-  const gebcoBackground = "linear-gradient(rgba(5,13,22,.20), rgba(5,13,22,.20)), url('/mappaGEBCO.png'), url('/mappaGEBCO.jpg'), url('/geo/mappaGEBCO.png'), url('/geo/mappaGEBCO.jpg'), radial-gradient(circle at 50% 45%,#16486A,#061923 58%,#02070B)";
+  const seabedBackground = "radial-gradient(ellipse at 44% 40%, rgba(72,157,187,.42) 0 9%, transparent 24%), radial-gradient(ellipse at 62% 64%, rgba(18,76,118,.54) 0 16%, transparent 38%), linear-gradient(135deg, rgba(98,177,188,.22) 0 10%, transparent 10% 21%, rgba(31,95,132,.24) 21% 28%, transparent 28% 45%, rgba(8,45,81,.34) 45% 54%, transparent 54%), url('/mappaGEBCO.png'), url('/mappaGEBCO.jpg'), url('/geo/mappaGEBCO.png'), url('/geo/mappaGEBCO.jpg'), radial-gradient(circle at 50% 45%,#1D607E,#08283A 55%,#02070B)";
   return (
+    <>
     <div
       {...mapControls.handlers}
-	      style={{ position:'relative', height, borderRadius:fullBleed?0:16, overflow:'hidden', background: marine ? gebcoBackground : 'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', backgroundSize: marine ? 'cover, cover, cover, cover, cover, cover' : undefined, backgroundPosition: marine ? 'center' : undefined, border:fullBleed?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:mapControls.zoom > 1.01 ? 'none' : 'pan-y' }}
+      onClick={openFullscreen}
+	      style={{ position:'relative', height:fullscreen?'100%':height, borderRadius:fullscreen||fullBleed?0:16, overflow:'hidden', background: marine ? seabedBackground : 'radial-gradient(circle at 50% 45%,#2A1C18,#130C0A 58%,#050303)', backgroundSize: marine ? 'cover, cover, cover, cover, cover, cover, cover, cover' : undefined, backgroundPosition: marine ? 'center' : undefined, border:(fullscreen||fullBleed)?'none':'1px solid rgba(255,255,255,.10)', boxShadow:'inset 0 0 44px rgba(0,0,0,.55)', touchAction:fullscreen || mapControls.zoom > 1.01 ? 'none' : 'pan-y', cursor:fullscreen?'grab':'zoom-in' }}
     >
       <svg viewBox={viewBox} preserveAspectRatio="xMidYMid meet" style={{ position:'absolute', inset:0, width:'100%', height:'100%' }}>
         <defs>
@@ -4126,10 +4182,19 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
         </g>
         </g>
       </svg>
-      {marine && <div className="gebco-map-label">mappa GEBCO</div>}
+      {marine && <div className="gebco-map-label">fondali GEBCO</div>}
       <button data-sound="map" onClick={(e)=>{e.stopPropagation(); mapControls.reset();}} aria-label="Ricentra mappa" style={{ position:'absolute', right:10, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
+      {fullscreen && <button data-sound="back" onClick={(e)=>{e.stopPropagation(); onCloseFullscreen?.();}} aria-label="Chiudi mappa" style={{ position:'absolute', right:50, top:10, width:34, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.13)', background:'rgba(0,0,0,.45)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:18, fontWeight:900, lineHeight:1, padding:0 }}>×</button>}
       {showLabels && (hoverId || selectedId) && <div style={{ position:'absolute', left:10, bottom:10, right:10, padding:'8px 10px', borderRadius:12, background:'rgba(0,0,0,.58)', color:'white', fontSize:11, fontWeight:900 }}>{BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId}</div>}
     </div>
+    {isFullscreen && (
+      <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
+        <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)' }}>
+          <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} />
+        </div>
+      </div>
+    )}
+    </>
   );
 }
 function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D84A', fallbackColors, locked=false, onUnlock, onOpen, openLabel='Apri', secondaryOpenLabel='', onSecondaryOpen, mapIds=[], mapDisabled=false }) {
@@ -4871,7 +4936,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </button>
 
-        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg, rgba(6,7,9,.70), rgba(10,10,12,.94) 68%), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(245,241,234,.14)', boxShadow:'0 18px 44px rgba(0,0,0,.30)', marginBottom:14, overflow:'hidden' }}>
+        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg, rgba(6,7,9,.36), rgba(10,10,12,.78) 72%), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(245,241,234,.18)', boxShadow:'0 18px 44px rgba(0,0,0,.30)', marginBottom:14, overflow:'hidden' }}>
           <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Missione principale</div>
           <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
@@ -4879,7 +4944,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         </div>
 
         <div style={{ marginBottom:14 }}>
-          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.20)'}`, borderRadius:28, background:'linear-gradient(90deg, rgba(5,11,13,.92), rgba(5,11,13,.58) 56%, rgba(5,11,13,.28)), url("/regions/home_regioni.png")', backgroundSize:'cover', backgroundPosition:'center', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
+          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:28, background:'linear-gradient(90deg, rgba(5,11,13,.72), rgba(5,11,13,.34) 58%, rgba(5,11,13,.16)), url("/regions/home_regioni.png")', backgroundSize:'cover', backgroundPosition:'center', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
             <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
             <div style={{ fontSize:28, fontWeight:1000, lineHeight:1.02, marginTop:6 }}>Territori</div>
             <div style={{ color:'rgba(245,241,234,.70)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
@@ -5046,10 +5111,10 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const residenceCountry = userProfile?.residence_country || userProfile?.country || visitedCountries?.[0] || null;
   const statCards = [
-    { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
+    { label:'Animali visti', value:seenCount, onClick:()=>onOpenGridStatus?.(['avvistato','catturato']), bg:'mission' },
     { label:'Catturati', value:capturedCount, onClick:onOpenGallery },
     { label:'Badge', value:badgeCount, onClick:onOpenBadges },
-    { label:'Regioni', value:regionsCount, onClick:onOpenRegions },
+    { label:'Regioni', value:regionsCount, onClick:onOpenRegions, bg:'regions' },
   ];
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:theme==='light'?LIGHT_APP_BG:'#1C1C1E', overflow:'hidden' }}>
@@ -5068,7 +5133,14 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
           <div style={{ height:9, borderRadius:999, background:'rgba(255,255,255,.12)', overflow:'hidden', marginTop:13 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
-          {statCards.map(card=>(<button key={card.label} onClick={card.onClick} style={{ background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit' }}><div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1 }}>{card.value}</div><div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25 }}>{card.label}</div></button>))}
+          {statCards.map(card=>{
+            const cardBg = card.bg === 'regions'
+              ? 'linear-gradient(90deg, rgba(5,11,13,.72), rgba(5,11,13,.34) 58%, rgba(5,11,13,.16)), url("/regions/home_regioni.png")'
+              : card.bg === 'mission'
+                ? 'linear-gradient(135deg, rgba(6,7,9,.36), rgba(10,10,12,.78) 72%), url("/regions/animals_general.png")'
+                : '#222222';
+            return <button key={card.label} onClick={card.onClick} style={{ background:cardBg, backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(255,255,255,.10)', borderRadius:12, padding:16, minHeight:112, textAlign:'left', cursor:'pointer', display:'flex', flexDirection:'column', justifyContent:'space-between', fontFamily:'inherit', overflow:'hidden' }}><div style={{ color:'#90D84A', fontSize:28, fontWeight:900, lineHeight:1, textShadow:'0 2px 10px rgba(0,0,0,.35)' }}>{card.value}</div><div style={{ color:'white', fontSize:13, fontWeight:900, lineHeight:1.25, textShadow:'0 2px 10px rgba(0,0,0,.45)' }}>{card.label}</div></button>;
+          })}
         </div>
         <div style={{ marginTop:16, background:'#222226', border:'1px solid rgba(255,255,255,.08)', borderRadius:18, padding:16 }}>
           <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:12 }}>Account</div>
@@ -6810,12 +6882,11 @@ function ComparatorSelector({ label, value, animals, onChange, accent, gradient,
   const [open,setOpen] = useState(false);
   const [q,setQ] = useState('');
   const rows = animals.filter(a => !q.trim() || `${a.com} ${a.sci} ${a.com_en}`.toLowerCase().includes(q.toLowerCase())).slice(0,80);
-  const c = CLS[value?.cls] || CLS.Mammalia;
   const shownLabel = compact ? '' : label;
   return (
     <div style={{ position:'relative', minWidth:0, width:'100%' }}>
       <button data-sound="compare" onClick={()=>setOpen(v=>!v)} style={{ width:'100%', minWidth:0, boxSizing:'border-box', border:'1px solid transparent', background:`linear-gradient(180deg,rgba(18,18,20,.92),rgba(0,0,0,.36)) padding-box, ${gradient || accent} border-box`, borderRadius:20, padding:compact?8:10, color:'white', cursor:'pointer', textAlign:'left', display:'flex', alignItems:'center', gap:compact?8:10, boxShadow:`0 0 0 1px ${accent}33, 0 14px 34px rgba(0,0,0,.26)` }}>
-        <div onClick={e=>{ if (value && onZoom) { e.stopPropagation(); onZoom(value); } }} style={{ width:compact?54:58, height:compact?54:58, borderRadius:16, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 18px ${accent}33`, cursor:value?'zoom-in':'pointer' }}>
+        <div onClick={e=>{ if (value && onZoom) { e.stopPropagation(); onZoom(value); } }} style={{ width:compact?54:58, height:compact?54:58, borderRadius:16, background:'#202228', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 18px ${accent}22`, cursor:value?'zoom-in':'pointer' }}>
           {value ? <AnimalImg a={{...value,status:'avvistato'}} size={compact?48:52} fontSize={30} overrideStatus="avvistato" /> : <span style={{ fontSize:24, color:accent }}>＋</span>}
         </div>
         <div style={{ minWidth:0, flex:1 }}>
@@ -6824,13 +6895,12 @@ function ComparatorSelector({ label, value, animals, onChange, accent, gradient,
           <div style={{ color:'rgba(255,255,255,.48)', fontSize:10, fontStyle:'italic', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{value?.sci || 'tocca per cercare'}</div>
         </div>
       </button>
-      {open && <div style={{ position:'absolute', left:0, right:0, top:'calc(100% + 8px)', zIndex:70, background:'#171719', border:'1px solid rgba(255,255,255,.12)', borderRadius:18, padding:10, boxShadow:'0 22px 60px rgba(0,0,0,.55)' }}>
-        <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Cerca nome o scientifico..." autoFocus style={{ width:'100%', height:40, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'#252529', color:'white', padding:'0 12px', boxSizing:'border-box', outline:'none', marginBottom:8 }} />
-        <div style={{ maxHeight:280, overflowY:'auto', display:'flex', flexDirection:'column', gap:7 }}>
+      {open && <div style={{ position:'fixed', left:14, right:14, top:'calc(env(safe-area-inset-top, 0px) + 86px)', bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)', zIndex:260, background:'#171719', border:'1px solid rgba(255,255,255,.12)', borderRadius:20, padding:10, boxShadow:'0 22px 70px rgba(0,0,0,.72)', display:'flex', flexDirection:'column' }}>
+        <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Cerca nome o scientifico..." autoFocus style={{ width:'100%', height:44, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:'#252529', color:'white', padding:'0 12px', boxSizing:'border-box', outline:'none', marginBottom:8, fontSize:16 }} />
+        <div style={{ flex:1, minHeight:0, overflowY:'auto', display:'flex', flexDirection:'column', gap:7, WebkitOverflowScrolling:'touch' }}>
           {rows.map(a=>{
-            const ca = CLS[a.cls] || CLS.Mammalia;
             return <button data-sound="compare" key={a.id} onClick={()=>{onChange(a); setOpen(false); setQ('');}} style={{ border:'none', background:'rgba(255,255,255,.05)', borderRadius:13, padding:8, color:'white', display:'flex', alignItems:'center', gap:9, cursor:'pointer', textAlign:'left' }}>
-              <div style={{ width:38, height:38, borderRadius:12, background:ca.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}><AnimalImg a={{...a,status:'avvistato'}} size={34} fontSize={22} overrideStatus="avvistato" /></div>
+              <div style={{ width:38, height:38, borderRadius:12, background:'#202228', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}><AnimalImg a={{...a,status:'avvistato'}} size={34} fontSize={22} overrideStatus="avvistato" /></div>
               <div style={{ minWidth:0 }}><div style={{ fontSize:12.5, fontWeight:900, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.com}</div><div style={{ fontSize:10, color:'rgba(255,255,255,.45)', fontStyle:'italic', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{a.sci}</div></div>
             </button>;
           })}
@@ -6847,7 +6917,7 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom 
   return (
     <div style={{ borderRadius:24, overflow:'hidden', background:`linear-gradient(180deg,${c.detailTop || '#2A2A2C'},#111113) padding-box, ${gradient || accent} border-box`, border:'1px solid transparent', boxShadow:`0 16px 48px rgba(0,0,0,.28), 0 0 0 1px ${accent}22` }}>
       <div onClick={()=>onZoom?.(animal)} style={{ padding:14, display:'flex', alignItems:'center', gap:12, cursor:'zoom-in' }}>
-        <div style={{ width:76, height:76, borderRadius:22, background:c.img, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${accent}33` }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
+        <div style={{ width:76, height:76, borderRadius:22, background:'#202228', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${accent}22` }}><AnimalImg a={{...animal,status:'avvistato'}} size={70} fontSize={38} overrideStatus="avvistato" /></div>
         <div style={{ minWidth:0 }}>
           <div aria-label={sideLabel} style={{ width:38, height:5, borderRadius:999, background:accent, marginBottom:7, boxShadow:`0 0 14px ${accent}44` }} />
           <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.05 }}>{animal.com}</div>
@@ -7043,10 +7113,11 @@ export default function App() {
         'caricamento dati Supabase'
       );
 
-      const nextAnimals = applyCachedUserStatuses(remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
+      const sourceAnimals = applyCachedUserStatuses(remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
+      const remoteStatusMap = Object.fromEntries((sourceAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
+      const nextStatusMap = mergeStatusMapsByRank(remoteStatusMap, getLocalUserStatusMap(activeUser.id), statusMap);
+      const nextAnimals = (sourceAnimals || []).map(a => ({ ...a, status:nextStatusMap[a.id] || normalizeAnimalStatus(a.status), userStatus:appStatusToSupabase(nextStatusMap[a.id] || a.status) }));
       setAnimalsData(nextAnimals);
-
-      const nextStatusMap = Object.fromEntries((nextAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
       setStatusMap(nextStatusMap);
       saveLocalUserStatusMap(activeUser.id, nextStatusMap);
 
@@ -7060,9 +7131,11 @@ export default function App() {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
 
-      const fallback = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
+      const fallbackSource = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
+      const fallbackStatusMap = mergeStatusMapsByRank(Object.fromEntries(fallbackSource.map(a => [a.id, normalizeAnimalStatus(a.status)])), getLocalUserStatusMap(activeUser.id), statusMap);
+      const fallback = fallbackSource.map(a => ({ ...a, status:fallbackStatusMap[a.id] || normalizeAnimalStatus(a.status), userStatus:appStatusToSupabase(fallbackStatusMap[a.id] || a.status) }));
       setAnimalsData(fallback);
-      setStatusMap(Object.fromEntries(fallback.map(a => [a.id, normalizeAnimalStatus(a.status)])));
+      setStatusMap(fallbackStatusMap);
       setUserProfile(prev => prev || buildFallbackProfile(activeUser, true));
     } finally {
       setDataLoading(false);
