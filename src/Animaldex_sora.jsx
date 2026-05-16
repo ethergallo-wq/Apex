@@ -2456,6 +2456,49 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
   const viewBox = boundsToViewBox(activeBounds, codes.length > 8 ? .12 : .22);
   const openFullscreen = () => { if (!fullscreen) setIsFullscreen(true); };
 
+  const mapLibreFeatures = baseCountryFeatures.map(f => {
+    const iso = hasCountries ? getCountryFeatureIso2(f) : (getCountryFeatureIso2(f) || featureIso2(f).find(code => activeCodeSet.has(code)) || '');
+    return cloneFeatureWithProps(f, { iso2:iso });
+  });
+  const mapLibreActiveIds = pointMode ? [] : codes;
+  const mapLibreBounds = mergeLngLatBounds(
+    (activeCountryFeatures.length ? activeCountryFeatures : fallbackActive).map(f => geometryLngLatBounds(f.geometry))
+  ) || pointLngLatBounds(points, pointMode ? 5 : 3, pointMode ? 4 : 2.5);
+
+  if (countryData || bioregionData) {
+    const map = (
+      <MapLibreGeoJsonMap
+        data={featureCollection(mapLibreFeatures)}
+        activeFeatureIds={mapLibreActiveIds}
+        selectedId={selected}
+        getFeatureId={getCountryFeatureIso2}
+        onFeatureClick={(id)=>id && onSelectCountry?.(String(id).toUpperCase())}
+        points={pointMode ? points : []}
+        pointMode={pointMode}
+        height={fullscreen ? undefined : height}
+        fullscreen={fullscreen}
+        onCloseFullscreen={onCloseFullscreen}
+        title={title}
+        label={activeCountryLabel ? `${getFlagEmoji(activeCountryLabel)} ${getCountryDisplayName(activeCountryLabel)}` : ''}
+        accent={accent}
+        fitBounds={mapLibreBounds}
+        onOpenFullscreen={openFullscreen}
+      />
+    );
+    return (
+      <>
+        {map}
+        {isFullscreen && (
+          <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
+            <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:'#07131F', border:'1px solid rgba(255,255,255,.10)' }}>
+              <CountryPresenceMap countryCodes={countryCodes} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent={accent} title={title} pointMode={pointMode} fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} />
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
+
   const countryMark = (p) => {
     const active = p.code === selected || p.code === hoverCountry;
     return (
@@ -2663,7 +2706,11 @@ function DistMap({ hab, accentColor, countriesPresent, bioregionIds=[], animal }
   return (
     <div style={{ borderRadius:12, overflow:'hidden', background:'#07131F' }}>
       {hasCountries ? (
-        <CountryPresenceMap countryCodes={countryCodes} selectedCountry={activeCountry} onSelectCountry={setSelectedCountry} accent={accentColor} height={280} title="Mappa paesi di presenza" pointMode={animal?.cls === 'Aves'} />
+        <SpeciesRangeMap
+          animal={animal}
+          accentColor={accentColor}
+          fallbackCountryMap={<CountryPresenceMap countryCodes={countryCodes} selectedCountry={activeCountry} onSelectCountry={setSelectedCountry} accent={accentColor} height={280} title="Mappa paesi di presenza" pointMode={animal?.cls === 'Aves'} />}
+        />
       ) : (
         <div style={{ padding:12, borderBottom:'1px solid rgba(255,255,255,.1)' }}>
           <div style={{ color:'rgba(255,255,255,.5)', fontSize:11, fontWeight:700, marginBottom:8, letterSpacing:.3 }}>DISTRIBUZIONE</div>
@@ -4218,6 +4265,321 @@ function pointProjectedBounds(points = [], radiusX=34, radiusY=24) {
     maxX:Math.max(acc.maxX,p.x + radiusX), maxY:Math.max(acc.maxY,p.y + radiusY),
   }), { minX:Infinity, minY:Infinity, maxX:-Infinity, maxY:-Infinity });
 }
+const MAPLIBRE_VERSION = '5.7.1';
+const MAPLIBRE_JS_URL = `https://unpkg.com/maplibre-gl@${MAPLIBRE_VERSION}/dist/maplibre-gl.js`;
+const MAPLIBRE_CSS_URL = `https://unpkg.com/maplibre-gl@${MAPLIBRE_VERSION}/dist/maplibre-gl.css`;
+const OPENFREEMAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
+let MAPLIBRE_PROMISE = null;
+
+function loadMapLibreRuntime() {
+  if (typeof window === 'undefined') return Promise.reject(new Error('MapLibre richiede il browser'));
+  if (window.maplibregl) return Promise.resolve(window.maplibregl);
+  if (MAPLIBRE_PROMISE) return MAPLIBRE_PROMISE;
+  MAPLIBRE_PROMISE = new Promise((resolve, reject) => {
+    if (!document.querySelector(`link[href="${MAPLIBRE_CSS_URL}"]`)) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = MAPLIBRE_CSS_URL;
+      document.head.appendChild(link);
+    }
+    const existing = document.querySelector(`script[src="${MAPLIBRE_JS_URL}"]`);
+    if (existing) {
+      existing.addEventListener('load', () => resolve(window.maplibregl));
+      existing.addEventListener('error', reject);
+      return;
+    }
+    const script = document.createElement('script');
+    script.src = MAPLIBRE_JS_URL;
+    script.async = true;
+    script.onload = () => window.maplibregl ? resolve(window.maplibregl) : reject(new Error('MapLibre non disponibile'));
+    script.onerror = () => reject(new Error('Caricamento MapLibre fallito'));
+    document.head.appendChild(script);
+  });
+  return MAPLIBRE_PROMISE;
+}
+
+function geometryLngLatBounds(geometry) {
+  if (!geometry) return null;
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  const visit = (coord) => {
+    const lon = Number(coord?.[0]);
+    const lat = Number(coord?.[1]);
+    if (!Number.isFinite(lon) || !Number.isFinite(lat)) return;
+    minX = Math.min(minX, lon); maxX = Math.max(maxX, lon);
+    minY = Math.min(minY, lat); maxY = Math.max(maxY, lat);
+  };
+  const walk = (coords) => {
+    if (!Array.isArray(coords)) return;
+    if (typeof coords[0] === 'number') visit(coords);
+    else coords.forEach(walk);
+  };
+  walk(geometry.coordinates);
+  if (!Number.isFinite(minX)) return null;
+  return [minX, minY, maxX, maxY];
+}
+function mergeLngLatBounds(bounds = []) {
+  const valid = bounds.filter(Boolean);
+  if (!valid.length) return null;
+  return valid.reduce((acc,b)=>[
+    Math.min(acc[0], b[0]), Math.min(acc[1], b[1]),
+    Math.max(acc[2], b[2]), Math.max(acc[3], b[3])
+  ], [Infinity, Infinity, -Infinity, -Infinity]);
+}
+function padLngLatBounds(bounds, padRatio=.12) {
+  if (!bounds) return null;
+  const [minX,minY,maxX,maxY] = bounds;
+  const dx = Math.max(.4, maxX - minX);
+  const dy = Math.max(.4, maxY - minY);
+  return [
+    Math.max(-179.5, minX - dx * padRatio),
+    Math.max(-84, minY - dy * padRatio),
+    Math.min(179.5, maxX + dx * padRatio),
+    Math.min(84, maxY + dy * padRatio),
+  ];
+}
+function pointLngLatBounds(points = [], radiusLon=4, radiusLat=3) {
+  const valid = points.filter(p => Number.isFinite(p?.lon) && Number.isFinite(p?.lat));
+  if (!valid.length) return null;
+  return valid.reduce((acc,p)=>[
+    Math.min(acc[0], p.lon - radiusLon), Math.min(acc[1], p.lat - radiusLat),
+    Math.max(acc[2], p.lon + radiusLon), Math.max(acc[3], p.lat + radiusLat),
+  ], [Infinity, Infinity, -Infinity, -Infinity]);
+}
+function featureCollection(features = []) {
+  return { type:'FeatureCollection', features:features.filter(f => f?.geometry) };
+}
+function cloneFeatureWithProps(feature, extra = {}) {
+  return { ...feature, properties:{ ...(feature?.properties || {}), ...extra } };
+}
+function MapLibreGeoJsonMap({
+  data,
+  activeFeatureIds = [],
+  selectedId = null,
+  getFeatureId = getFeatureBioregionId,
+  onFeatureClick,
+  points = [],
+  pointMode = false,
+  height = 230,
+  fullscreen = false,
+  onCloseFullscreen,
+  title = '',
+  label = '',
+  accent = '#A84637',
+  marine = false,
+  onOpenFullscreen,
+  fitBounds,
+}) {
+  const containerRef = useRef(null);
+  const mapRef = useRef(null);
+  const loadedRef = useRef(false);
+  const activeSet = useMemo(() => new Set((activeFeatureIds || []).map(String)), [JSON.stringify(activeFeatureIds || [])]);
+  const mapData = useMemo(() => {
+    const features = (data?.features || []).map(f => {
+      const id = String(getFeatureId(f) || '');
+      return cloneFeatureWithProps(f, { __animaldex_id:id, __animaldex_active:activeSet.has(id), __animaldex_selected:selectedId && String(selectedId) === id });
+    });
+    return featureCollection(features);
+  }, [data, activeSet, selectedId, getFeatureId]);
+  const markerData = useMemo(() => featureCollection(points.map(p => ({
+    type:'Feature',
+    properties:{ code:p.code, name:getCountryDisplayName(p.code), __animaldex_active:true, __animaldex_selected:p.code === selectedId },
+    geometry:{ type:'Point', coordinates:[p.lon, p.lat] }
+  })).filter(f => Number.isFinite(f.geometry.coordinates[0]) && Number.isFinite(f.geometry.coordinates[1]))), [points, selectedId]);
+  const [ready, setReady] = useState(false);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+    let map;
+    loadMapLibreRuntime().then((maplibregl) => {
+      if (cancelled || !containerRef.current || mapRef.current) return;
+      map = new maplibregl.Map({
+        container: containerRef.current,
+        style: OPENFREEMAP_STYLE_URL,
+        center:[12, 18],
+        zoom:1.1,
+        minZoom:0.7,
+        maxZoom:9,
+        attributionControl:false,
+        dragRotate:false,
+        pitchWithRotate:false,
+        touchPitch:false,
+      });
+      mapRef.current = map;
+      map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
+      map.on('load', () => {
+        if (cancelled) return;
+        loadedRef.current = true;
+        map.addSource('animaldex-polygons', { type:'geojson', data:mapData });
+        map.addSource('animaldex-points', { type:'geojson', data:markerData });
+        map.addLayer({ id:'animaldex-base-fill', type:'fill', source:'animaldex-polygons', paint:{ 'fill-color': marine ? '#153C4D' : '#735343', 'fill-opacity': marine ? .18 : .24 } });
+        map.addLayer({ id:'animaldex-base-line', type:'line', source:'animaldex-polygons', paint:{ 'line-color': marine ? 'rgba(120,210,245,.28)' : 'rgba(255,255,255,.16)', 'line-width':.75 } });
+        map.addLayer({ id:'animaldex-active-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':accent, 'fill-opacity':['case', ['==', ['get','__animaldex_selected'], true], .78, .52] } });
+        map.addLayer({ id:'animaldex-active-line', type:'line', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'line-color':'#FFE0D4', 'line-width':['interpolate', ['linear'], ['zoom'], 1, 1.5, 6, 4.5] } });
+        map.addLayer({ id:'animaldex-point-halo', type:'circle', source:'animaldex-points', paint:{ 'circle-radius':['case', ['==', ['get','__animaldex_selected'], true], 18, 12], 'circle-color':'rgba(114,214,255,.20)', 'circle-stroke-color':'#72D6FF', 'circle-stroke-width':2 } });
+        map.addLayer({ id:'animaldex-point-dot', type:'circle', source:'animaldex-points', paint:{ 'circle-radius':['case', ['==', ['get','__animaldex_selected'], true], 7, 5], 'circle-color':'#72D6FF', 'circle-stroke-color':'white', 'circle-stroke-width':1 } });
+        map.on('click', 'animaldex-active-fill', (e) => {
+          const f = e.features?.[0];
+          if (f) onFeatureClick?.(f.properties?.__animaldex_id, f.properties);
+        });
+        map.on('click', 'animaldex-point-dot', (e) => {
+          const f = e.features?.[0];
+          if (f) onFeatureClick?.(f.properties?.code, f.properties);
+        });
+        ['animaldex-active-fill','animaldex-point-dot','animaldex-point-halo'].forEach(id => {
+          map.on('mouseenter', id, () => { map.getCanvas().style.cursor = 'pointer'; });
+          map.on('mouseleave', id, () => { map.getCanvas().style.cursor = ''; });
+        });
+        setReady(true);
+      });
+      map.on('error', (evt) => console.warn('[Animaldex] MapLibre:', evt?.error || evt));
+    }).catch(err => {
+      console.warn('[Animaldex] MapLibre runtime:', err);
+      if (!cancelled) setError(err?.message || 'Mappa non disponibile');
+    });
+    return () => {
+      cancelled = true;
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+        loadedRef.current = false;
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !loadedRef.current) return;
+    map.getSource('animaldex-polygons')?.setData(mapData);
+    map.getSource('animaldex-points')?.setData(markerData);
+  }, [mapData, markerData]);
+
+  const recenter = () => {
+    const map = mapRef.current;
+    if (!map) return;
+    const target = padLngLatBounds(fitBounds, fullscreen ? .10 : .18) || [-170,-58,170,76];
+    map.fitBounds([[target[0], target[1]], [target[2], target[3]]], { padding:fullscreen ? 58 : 26, duration:900, maxZoom:fullscreen ? 6.4 : 4.2 });
+  };
+  useEffect(() => {
+    if (!ready) return;
+    recenter();
+  }, [ready, fitBounds, fullscreen]);
+
+  return (
+    <div onClick={() => !fullscreen && onOpenFullscreen?.()} style={{ position:'relative', width:'100%', height:fullscreen?'100%':height, minHeight:fullscreen?undefined:Math.min(Number(height) || 230, 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:marine?'#061923':'#101114', border:fullscreen?'none':'1px solid rgba(255,255,255,.09)', cursor:fullscreen?'grab':'zoom-in' }}>
+      <div ref={containerRef} style={{ position:'absolute', inset:0 }} />
+      {marine && <div style={{ position:'absolute', inset:0, pointerEvents:'none', mixBlendMode:'screen', opacity:.36, background:'radial-gradient(ellipse at 36% 34%, rgba(80,184,205,.22), transparent 30%), radial-gradient(ellipse at 66% 62%, rgba(6,54,112,.36), transparent 38%), repeating-linear-gradient(135deg, rgba(120,220,255,.08) 0 1px, transparent 1px 14px)' }} />}
+      {!ready && !error && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, background:'linear-gradient(135deg,rgba(14,32,42,.94),rgba(5,8,12,.94))' }}>Caricamento mappa interattiva...</div>}
+      {error && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.68)', fontSize:11, fontWeight:900, textAlign:'center', padding:18, background:'linear-gradient(135deg,#151515,#07131F)' }}>{error}</div>}
+      {title && <div style={{ position:'absolute', left:12, top:10, color:'white', fontSize:12, fontWeight:1000, textShadow:'0 2px 10px rgba(0,0,0,.85)', pointerEvents:'none' }}>{title}</div>}
+      <div style={{ position:'absolute', right:10, top:10, display:'flex', gap:6 }}>
+        <button data-sound="map" onClick={(e)=>{e.stopPropagation();recenter();}} aria-label="Ricentra mappa" style={{ width:36, height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.54)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
+        {fullscreen && <button data-sound="back" onClick={(e)=>{e.stopPropagation(); onCloseFullscreen?.();}} aria-label="Chiudi mappa" style={{ width:36, height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.54)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:18, fontWeight:900, lineHeight:1, padding:0 }}>×</button>}
+      </div>
+      {label && <div style={{ position:'absolute', left:10, right:10, bottom:10, background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)', pointerEvents:'none' }}>{label}</div>}
+      {marine && <div className="gebco-map-label">fondali stilizzati</div>}
+    </div>
+  );
+}
+let SPECIES_RANGE_INDEX_CACHE = null;
+let SPECIES_RANGE_INDEX_PROMISE = null;
+const SPECIES_RANGE_INDEX_URL = '/data/species-ranges/index.json';
+function scientificRangeKey(value) {
+  return String(value || '').trim().toLowerCase();
+}
+async function fetchJsonMaybeGzip(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const encoding = String(res.headers.get('content-encoding') || '').toLowerCase();
+  const type = String(res.headers.get('content-type') || '').toLowerCase();
+  if (encoding.includes('gzip') || type.includes('json')) return res.json();
+  const buffer = await res.arrayBuffer();
+  if (typeof DecompressionStream !== 'undefined') {
+    const stream = new Blob([buffer]).stream().pipeThrough(new DecompressionStream('gzip'));
+    return new Response(stream).json();
+  }
+  const text = new TextDecoder().decode(buffer);
+  return JSON.parse(text);
+}
+function useSpeciesRange(animal) {
+  const sci = scientificRangeKey(animal?.sci || animal?.scientific_name);
+  const [state, setState] = useState({ meta:null, data:null, loading:false, error:null });
+  useEffect(() => {
+    let alive = true;
+    if (!sci) { setState({ meta:null, data:null, loading:false, error:null }); return; }
+    setState(prev => ({ ...prev, loading:true, error:null }));
+    if (!SPECIES_RANGE_INDEX_PROMISE) {
+      SPECIES_RANGE_INDEX_PROMISE = fetch(SPECIES_RANGE_INDEX_URL)
+        .then(res => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.json();
+        })
+        .then(json => {
+          SPECIES_RANGE_INDEX_CACHE = json;
+          return json;
+        });
+    }
+    SPECIES_RANGE_INDEX_PROMISE
+      .then(index => {
+        const meta = index?.[sci] || null;
+        if (!meta) return { meta:null, data:null };
+        return fetchJsonMaybeGzip(meta.url).then(data => ({ meta, data }));
+      })
+      .then(next => { if (alive) setState({ ...next, loading:false, error:null }); })
+      .catch(err => { console.warn('[Animaldex] range specie:', err); if (alive) setState({ meta:null, data:null, loading:false, error:err }); });
+    return () => { alive = false; };
+  }, [sci]);
+  return state;
+}
+function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor }) {
+  const { meta, data, loading } = useSpeciesRange(animal);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const features = data?.features || [];
+  const rangeData = useMemo(() => featureCollection(features.map((f, idx) => cloneFeatureWithProps(f, { __range_id:`range-${idx}` }))), [data]);
+  const activeIds = useMemo(() => features.map((_, idx) => `range-${idx}`), [features.length]);
+  const bounds = meta?.bbox || mergeLngLatBounds(features.map(f => geometryLngLatBounds(f.geometry)));
+  if (!data || !features.length) {
+    return fallbackCountryMap || (
+      <div style={{ height:280, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:900 }}>
+        {loading ? 'Caricamento distribuzione...' : 'Distribuzione non disponibile'}
+      </div>
+    );
+  }
+  return (
+    <>
+      <MapLibreGeoJsonMap
+        data={rangeData}
+        activeFeatureIds={activeIds}
+        getFeatureId={(f)=>f?.properties?.__range_id}
+        height={280}
+        title="Distribuzione specie"
+        label={`${meta.sci_name || animal?.sci || 'Specie'} · ${meta.n_features || features.length} aree`}
+        accent={accentColor}
+        marine={!!meta.marine}
+        fitBounds={bounds}
+        onOpenFullscreen={()=>setIsFullscreen(true)}
+      />
+      {isFullscreen && (
+        <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
+          <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:'#07131F', border:'1px solid rgba(255,255,255,.10)' }}>
+            <MapLibreGeoJsonMap
+              data={rangeData}
+              activeFeatureIds={activeIds}
+              getFeatureId={(f)=>f?.properties?.__range_id}
+              fullscreen
+              onCloseFullscreen={()=>setIsFullscreen(false)}
+              title="Distribuzione specie"
+              label={`${meta.sci_name || animal?.sci || 'Specie'} · ${meta.n_features || features.length} aree`}
+              accent={accentColor}
+              marine={!!meta.marine}
+              fitBounds={bounds}
+            />
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
 function boundsToViewBox(b, padRatio=.34) {
   if (!b) return '0 0 1000 500';
   let w = Math.max(95, b.maxX - b.minX);
@@ -4263,6 +4625,40 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
   }
   if (error) {
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
+  }
+  const activeIds = activeFeatures.map(f => String(getFeatureBioregionId(f) || '')).filter(Boolean);
+  const mapLibreBounds = mergeLngLatBounds(activeFeatures.map(f => geometryLngLatBounds(f.geometry)));
+  const mapLibreLabel = showLabels && (hoverId || selectedId)
+    ? (BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId)
+    : '';
+  if (data) {
+    return (
+      <>
+        <MapLibreGeoJsonMap
+          data={featureCollection(relevant)}
+          activeFeatureIds={activeIds}
+          selectedId={selectedId}
+          getFeatureId={getFeatureBioregionId}
+          onFeatureClick={(id, props)=>clickable && onSelect?.(id, props)}
+          height={fullscreen ? undefined : height}
+          fullscreen={fullscreen}
+          onCloseFullscreen={onCloseFullscreen}
+          title={marine ? 'Dominio marino' : ''}
+          label={mapLibreLabel}
+          accent={accent}
+          marine={marine}
+          fitBounds={mapLibreBounds}
+          onOpenFullscreen={openFullscreen}
+        />
+        {isFullscreen && (
+          <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
+            <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)' }}>
+              <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} />
+            </div>
+          </div>
+        )}
+      </>
+    );
   }
   const seabedBackground = "radial-gradient(ellipse at 44% 40%, rgba(72,157,187,.42) 0 9%, transparent 24%), radial-gradient(ellipse at 62% 64%, rgba(18,76,118,.54) 0 16%, transparent 38%), linear-gradient(135deg, rgba(98,177,188,.22) 0 10%, transparent 10% 21%, rgba(31,95,132,.24) 21% 28%, transparent 28% 45%, rgba(8,45,81,.34) 45% 54%, transparent 54%), url('/mappaGEBCO.png'), url('/mappaGEBCO.jpg'), url('/geo/mappaGEBCO.png'), url('/geo/mappaGEBCO.jpg'), radial-gradient(circle at 50% 45%,#1D607E,#08283A 55%,#02070B)";
   return (
@@ -6596,6 +6992,37 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     const territory = { ...eco, filterValue:`ecoregion:${eco.id}`, kind:'subregion', label:eco.label };
     onOpenHabitatGrid?.(territory, buildGeneralLifeWebHabitat(territory), { view:'ecoregions', continentId:effectiveContinentId, regionId:effectiveRegionId, ecoregion:eco });
   };
+  const findHierarchyByBioregionId = (id) => {
+    const cleanId = String(id || '');
+    for (const cont of BIOREGION_V4_CONTINENTS) {
+      for (const reg of cont.regions || []) {
+        const eco = (reg.ecoregions || []).find(e => String(e.id) === cleanId);
+        if (eco) return { cont, reg, eco };
+      }
+    }
+    return null;
+  };
+  const openMapHierarchyTarget = (id) => {
+    const hit = findHierarchyByBioregionId(id);
+    if (!hit) return;
+    if (view === 'terrestrial') {
+      setSelectedContinentId(hit.cont.id);
+      setSelectedRegionId(null);
+      setSelectedEcoregion(null);
+      setView('regions');
+      return;
+    }
+    if (view === 'regions') {
+      setSelectedRegionId(hit.reg.id);
+      setSelectedEcoregion(null);
+      setView('ecoregions');
+      return;
+    }
+    if (view === 'ecoregions') {
+      setSelectedEcoregion(hit.eco);
+      setView('habitats');
+    }
+  };
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
@@ -6635,24 +7062,52 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
           </>
         )}
 
-        {view==='terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setSelectedRegionId(null);setSelectedEcoregion(null);setView('regions');}} mapIds={cont.bioregionIds} />
-        ))}
+        {view==='terrestrial' && (
+          <>
+            <div style={{ margin:'0 -14px 14px' }}>
+              <BioregionVectorMap highlightIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} accent="#6CE5C7" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
+            </div>
+            {BIOREGION_V4_CONTINENTS.map(cont => (
+              <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setSelectedRegionId(null);setSelectedEcoregion(null);setView('regions');}} mapIds={cont.bioregionIds} />
+            ))}
+          </>
+        )}
 
-        {view==='marine' && MARINE_REALMS.map(m => {
-          const locked = !unlockMap[m.id];
-          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
-        })}
+        {view==='marine' && (
+          <>
+            <div style={{ margin:'0 -14px 14px' }}>
+              <BioregionVectorMap highlightIds={MARINE_REALMS.map(m=>m.id)} marine accent="#4FB3FF" height={310} fullBleed clickable onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }} />
+            </div>
+            {MARINE_REALMS.map(m => {
+              const locked = !unlockMap[m.id];
+              return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} mapIds={[m.id]} />;
+            })}
+          </>
+        )}
 
-        {view==='regions' && continent && continent.regions.map(reg => {
-          const locked = !unlockMap[reg.id];
-          return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setSelectedEcoregion(null);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
-        })}
+        {view==='regions' && continent && (
+          <>
+            <div style={{ margin:'0 -14px 14px' }}>
+              <BioregionVectorMap highlightIds={continent.bioregionIds} accent="#20B2AA" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
+            </div>
+            {continent.regions.map(reg => {
+              const locked = !unlockMap[reg.id];
+              return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setSelectedEcoregion(null);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+            })}
+          </>
+        )}
 
-        {view==='ecoregions' && region && region.ecoregions.map(eco => {
-          const locked = !unlockMap[eco.id];
-          return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Apri" onOpen={()=>{setSelectedEcoregion(eco); setView('habitats');}} mapIds={[eco.id]} />;
-        })}
+        {view==='ecoregions' && region && (
+          <>
+            <div style={{ margin:'0 -14px 14px' }}>
+              <BioregionVectorMap highlightIds={region.bioregionIds} accent="#90D84A" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
+            </div>
+            {region.ecoregions.map(eco => {
+              const locked = !unlockMap[eco.id];
+              return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Apri" onOpen={()=>{setSelectedEcoregion(eco); setView('habitats');}} mapIds={[eco.id]} />;
+            })}
+          </>
+        )}
 
         {view==='habitats' && selectedSubregionTerritory && (
           <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
