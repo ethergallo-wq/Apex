@@ -1520,6 +1520,7 @@ const RARITY_CSS = `
   color:rgba(180,226,255,.58); font-size:9px; font-weight:1000; letter-spacing:.7px; text-transform:uppercase;
   text-shadow:0 2px 8px rgba(0,0,0,.75);
 }
+.maplibregl-ctrl-attrib, .maplibregl-ctrl-logo { display:none !important; }
 
 #animaldex-app-root[data-theme="light"] { background:#F3EFE6 !important; color:#171717 !important; }
 #animaldex-app-root[data-theme="light"] * { text-shadow:none !important; }
@@ -3042,7 +3043,47 @@ function rarityBorderColor(rarity) {
   return '#9D6845';
 }
 
-function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false }) {
+function measureImageVisibleBox(img) {
+  try {
+    const naturalW = img.naturalWidth || 0;
+    const naturalH = img.naturalHeight || 0;
+    if (!naturalW || !naturalH) return null;
+    const maxSide = 160;
+    const scale = Math.min(1, maxSide / Math.max(naturalW, naturalH));
+    const w = Math.max(1, Math.round(naturalW * scale));
+    const h = Math.max(1, Math.round(naturalH * scale));
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d', { willReadFrequently:true });
+    if (!ctx) return null;
+    ctx.drawImage(img, 0, 0, w, h);
+    const data = ctx.getImageData(0, 0, w, h).data;
+    let minX = w, minY = h, maxX = -1, maxY = -1;
+    for (let y = 0; y < h; y += 1) {
+      for (let x = 0; x < w; x += 1) {
+        if (data[(y * w + x) * 4 + 3] > 14) {
+          minX = Math.min(minX, x);
+          minY = Math.min(minY, y);
+          maxX = Math.max(maxX, x);
+          maxY = Math.max(maxY, y);
+        }
+      }
+    }
+    if (maxX < 0 || maxY < 0) return null;
+    const visibleW = maxX - minX + 1;
+    const visibleH = maxY - minY + 1;
+    return {
+      visibleWidthRatio: visibleW / w,
+      visibleHeightRatio: visibleH / h,
+      visibleAreaRatio: (visibleW * visibleH) / (w * h),
+    };
+  } catch {
+    return null;
+  }
+}
+
+function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false, detailScaleBoost=1, onImageMetrics }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [mysteryErr, setMysteryErr] = useState(false);
@@ -3066,11 +3107,11 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, d
   const localImageUrl = a.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id) || x.sci === a.sci)?.image_url || '');
   if (localImageUrl && !imgErr) {
     const pad = gridMode ? 0 : Math.round(size * (detailMode ? 0.07 : 0.12));
-    const imgScale = detailMode ? 1.18 : gridMode ? GRID_IMAGE_SCALE : 1.2;
+    const imgScale = detailMode ? 1.18 * detailScaleBoost : gridMode ? GRID_IMAGE_SCALE : 1.2;
     const imageBg = 'transparent';
     return (
       <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:detailMode?'flex-end':'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
-        <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
+        <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)} onLoad={(e)=>detailMode && onImageMetrics?.(measureImageVisibleBox(e.currentTarget))}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
             transformOrigin:detailMode?'center bottom':'center',
@@ -3546,7 +3587,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : (isLightTheme ? '#8F8F8F' : 'rgba(255,255,255,.28)');
           const inactiveColor = isLightTheme ? 'rgba(0,0,0,.50)' : 'rgba(245,241,234,.88)';
           const activeText = isLightTheme ? '#171717' : '#F5F1EA';
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?50:54, padding:'0 8px', borderRadius:16, border:`1px solid ${tutorialStatusHighlight ? '#F0A840' : (active ? activeColor : (isLightTheme?'rgba(0,0,0,.14)':'rgba(255,255,255,.10)'))}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .16 : .20)}, ${isLightTheme?'rgba(255,255,255,.92)':'rgba(255,255,255,.035)'})`:(isLightTheme?LIGHT_APP_BG:'rgba(255,255,255,.055)'), color:active ? activeText : inactiveColor, boxShadow:tutorialStatusHighlight ? '0 0 0 3px rgba(240,168,64,.28), 0 0 24px rgba(240,168,64,.28)' : (active ? `0 10px 22px ${hexToRgba(activeColor, .12)}` : (isLightTheme?'0 6px 16px rgba(0,0,0,.05)':'none')), fontSize:isNarrow?11.5:12.5, fontWeight:950, fontFamily:'inherit' }}>{label}</button>
+          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?38:42, padding:'0 6px', borderRadius:12, border:`1px solid ${tutorialStatusHighlight ? '#F0A840' : (active ? activeColor : (isLightTheme?'rgba(0,0,0,.12)':'rgba(255,255,255,.09)'))}`, background:active?`linear-gradient(180deg, ${hexToRgba(activeColor, key==='misterioso' ? .14 : .18)}, ${isLightTheme?'rgba(255,255,255,.92)':'rgba(255,255,255,.03)'})`:(isLightTheme?LIGHT_APP_BG:'rgba(255,255,255,.045)'), color:active ? activeText : inactiveColor, boxShadow:tutorialStatusHighlight ? '0 0 0 3px rgba(240,168,64,.28), 0 0 24px rgba(240,168,64,.28)' : (active ? `0 7px 16px ${hexToRgba(activeColor, .10)}` : (isLightTheme?'0 4px 12px rgba(0,0,0,.04)':'none')), fontSize:isNarrow?10.2:11, fontWeight:950, fontFamily:'inherit', lineHeight:1 }}>{label}</button>
         })}
       </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
@@ -3952,6 +3993,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const [lightboxRect,setLightboxRect]=useState(null);
   const [metricModal,setMetricModal]=useState(null);
   const [pullProgress,setPullProgress]=useState(0);
+  const [imageMetrics,setImageMetrics]=useState(null);
   const scrollRef = useRef(null);
   const imgRef = useRef(null);
   const touchStartY = useRef(0);
@@ -3964,6 +4006,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
   const canViewImage = !isMysteryStatus(localStatus) && !!a.image_url;
+  useEffect(() => { setImageMetrics(null); }, [a.id, a.image_url]);
 
   const handleTab = (m) => {
     if (m===statMode) return;
@@ -3998,6 +4041,12 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const scale = 1;
   const longName = String(a.com || '').length > 24;
   const statusActions = getStatusActions(localStatus);
+  const visibleArea = imageMetrics?.visibleAreaRatio || .62;
+  const visibleHeight = imageMetrics?.visibleHeightRatio || .70;
+  const compactImage = visibleArea < .36 || visibleHeight < .54;
+  const detailImageBase = Math.round(Math.max(218, Math.min(306, 224 + visibleHeight * 92)));
+  const detailImageSize = Math.round(detailImageBase + pullProgress * 76);
+  const detailScaleBoost = compactImage ? Math.min(1.44, 1.05 + (.36 - Math.min(visibleArea, .36)) * 1.35) : 1;
   const visitedMatches = countCountryMatches(a, new Set((visitedCountries || []).map(c => String(c).toUpperCase())));
   const lengthCm = parseAnimalLengthCm(a.ln);
   const activePyramidLevel = getPyramidLevel(a.trophic);
@@ -4038,7 +4087,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
             onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
             style={{
               width:'100%',
-              height: Math.round(300 + pullProgress * 76),
+              height: detailImageSize,
               borderRadius:0,
               overflow:'visible',
               background:'transparent',
@@ -4046,7 +4095,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
               boxShadow:'none',
               transition: pullProgress===0 ? 'height .25s ease, border-radius .25s ease' : 'none',
             }}>
-            <AnimalImg a={a} size={Math.round(300 + pullProgress * 76)} fontSize={88} overrideStatus={localStatus} detailMode />
+            <AnimalImg a={a} size={detailImageSize} fontSize={88} overrideStatus={localStatus} detailMode detailScaleBoost={detailScaleBoost} onImageMetrics={setImageMetrics} />
           </div>
         </div>
         <div style={{ textAlign:'center', marginBottom:14 }}>
@@ -4633,6 +4682,7 @@ function MapLibreGeoJsonMap({
   label = '',
   accent = '#A84637',
   marine = false,
+  rangeTone = null,
   onOpenFullscreen,
   fitBounds,
   showFeatureBoundaries = true,
@@ -4657,6 +4707,8 @@ function MapLibreGeoJsonMap({
   })).filter(f => Number.isFinite(f.geometry.coordinates[0]) && Number.isFinite(f.geometry.coordinates[1]))), [points, selectedId]);
   const [ready, setReady] = useState(false);
   const [error, setError] = useState('');
+  const rangeAccent = rangeTone === 'marine' ? '#FF9F1C' : rangeTone === 'terrestrial' ? '#FF4FB8' : accent;
+  const rangeFillOpacity = rangeTone === 'marine' ? .58 : rangeTone === 'terrestrial' ? .62 : null;
 
   useEffect(() => {
     let cancelled = false;
@@ -4671,6 +4723,7 @@ function MapLibreGeoJsonMap({
         minZoom:0.7,
         maxZoom:9,
         attributionControl:false,
+        maplibreLogo:false,
         dragRotate:false,
         pitchWithRotate:false,
         touchPitch:false,
@@ -4683,11 +4736,14 @@ function MapLibreGeoJsonMap({
         loadedRef.current = true;
         map.addSource('animaldex-polygons', { type:'geojson', data:mapData });
         map.addSource('animaldex-points', { type:'geojson', data:markerData });
-        map.addLayer({ id:'animaldex-base-fill', type:'fill', source:'animaldex-polygons', paint:{ 'fill-color': marine ? '#153C4D' : '#735343', 'fill-opacity': marine ? .18 : .24 } });
+        map.addLayer({ id:'animaldex-base-fill', type:'fill', source:'animaldex-polygons', paint:{ 'fill-color': rangeTone ? rangeAccent : (marine ? '#153C4D' : '#735343'), 'fill-opacity': rangeTone ? .18 : (marine ? .18 : .24) } });
         if (showFeatureBoundaries) {
           map.addLayer({ id:'animaldex-base-line', type:'line', source:'animaldex-polygons', paint:{ 'line-color': marine ? 'rgba(120,210,245,.28)' : 'rgba(255,255,255,.16)', 'line-width':.75 } });
         }
-        map.addLayer({ id:'animaldex-active-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':accent, 'fill-opacity':['case', ['==', ['get','__animaldex_selected'], true], .78, .52] } });
+        if (rangeTone) {
+          map.addLayer({ id:'animaldex-active-halo-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':rangeAccent, 'fill-opacity':rangeTone === 'marine' ? .18 : .20 } });
+        }
+        map.addLayer({ id:'animaldex-active-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':rangeAccent, 'fill-opacity':rangeTone ? rangeFillOpacity : ['case', ['==', ['get','__animaldex_selected'], true], .78, .52] } });
         if (showFeatureBoundaries) {
           map.addLayer({ id:'animaldex-active-line', type:'line', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'line-color':'#FFE0D4', 'line-width':['interpolate', ['linear'], ['zoom'], 1, 1.5, 6, 4.5] } });
         }
@@ -4843,6 +4899,8 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor }) {
   const rangeData = useMemo(() => featureCollection(features.map((f, idx) => cloneFeatureWithProps(f, { __range_id:`range-${idx}` }))), [data]);
   const activeIds = useMemo(() => features.map((_, idx) => `range-${idx}`), [features.length]);
   const bounds = meta?.bbox || mergeLngLatBounds(features.map(f => geometryLngLatBounds(f.geometry)));
+  const rangeTone = meta?.marine ? 'marine' : 'terrestrial';
+  const rangeAccent = meta?.marine ? '#FF9F1C' : '#FF4FB8';
   if (!data || !features.length) {
     return fallbackCountryMap || (
       <div style={{ height:280, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.52)', fontSize:11, fontWeight:900 }}>
@@ -4857,11 +4915,12 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor }) {
         activeFeatureIds={activeIds}
         getFeatureId={(f)=>f?.properties?.__range_id}
         height={280}
-        title="Distribuzione specie"
-        label={`${meta.sci_name || animal?.sci || 'Specie'} · ${meta.n_features || features.length} aree`}
-        accent={accentColor}
+        title={animal?.com || animal?.common_name || 'Distribuzione'}
+        label=""
+        accent={rangeAccent}
         marine={!!meta.marine}
         fitBounds={bounds}
+        rangeTone={rangeTone}
         showFeatureBoundaries={false}
         onOpenFullscreen={()=>setIsFullscreen(true)}
       />
@@ -4874,11 +4933,12 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor }) {
               getFeatureId={(f)=>f?.properties?.__range_id}
               fullscreen
               onCloseFullscreen={()=>setIsFullscreen(false)}
-              title="Distribuzione specie"
-              label={`${meta.sci_name || animal?.sci || 'Specie'} · ${meta.n_features || features.length} aree`}
-              accent={accentColor}
+              title={animal?.com || animal?.common_name || 'Distribuzione'}
+              label=""
+              accent={rangeAccent}
               marine={!!meta.marine}
               fitBounds={bounds}
+              rangeTone={rangeTone}
               showFeatureBoundaries={false}
             />
           </div>
