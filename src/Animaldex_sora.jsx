@@ -7328,6 +7328,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
   const [selectedDestinationIsos, setSelectedDestinationIsos] = useState([]);
+  const [regionNavMode, setRegionNavMode] = useState('both');
   const breadcrumbScrollRef = useRef(null);
   const [unlockMap, setUnlockMap] = useState(() => {
     try { return JSON.parse(window.localStorage.getItem('animaldex_region_unlocks_v4') || '{}'); } catch { return {}; }
@@ -7496,6 +7497,40 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
       setView('habitats');
     }
   };
+  const openContinent = (cont) => {
+    setSelectedContinentId(cont.id);
+    setSelectedRegionId(null);
+    setSelectedEcoregion(null);
+    setView('regions');
+  };
+  const openRegion = (reg) => {
+    setSelectedRegionId(reg.id);
+    setSelectedEcoregion(null);
+    setView('ecoregions');
+  };
+  const openEcoregion = (eco) => {
+    setSelectedEcoregion(eco);
+    setView('habitats');
+  };
+  const showRegionMap = regionNavMode !== 'boxes';
+  const showRegionBoxes = regionNavMode !== 'map';
+  const RegionNavModeSwitch = ({ helper }) => (
+    <div style={{ margin:'0 0 12px', padding:10, borderRadius:18, border:`1px solid ${isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)'}`, background:isLightTheme?'rgba(255,255,255,.62)':'rgba(255,255,255,.045)' }}>
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:6 }}>
+        {[
+          ['both','Entrambi'],
+          ['map','Mappa'],
+          ['boxes','Box'],
+        ].map(([mode, text]) => {
+          const active = regionNavMode === mode;
+          return (
+            <button key={mode} onClick={()=>setRegionNavMode(mode)} style={{ height:34, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.55)':(isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)')}`, background:active?'linear-gradient(135deg,rgba(144,216,74,.26),rgba(32,178,170,.18))':(isLightTheme?'rgba(251,247,239,.78)':'rgba(0,0,0,.16)'), color:active?(isLightTheme?'#17422D':'#DFFFD0'):(isLightTheme?'rgba(0,0,0,.66)':'rgba(255,255,255,.66)'), fontFamily:'inherit', fontSize:11, fontWeight:1000, cursor:'pointer' }}>{text}</button>
+          );
+        })}
+      </div>
+      {helper && <div style={{ marginTop:8, color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.52)', fontSize:11.5, fontWeight:750, lineHeight:1.35 }}>{helper}</div>}
+    </div>
+  );
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
@@ -7537,11 +7572,14 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='terrestrial' && (
           <>
-            <div style={{ margin:'0 -14px 14px' }}>
-              <BioregionVectorMap highlightIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} accent="#6CE5C7" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
-            </div>
-            {BIOREGION_V4_CONTINENTS.map(cont => (
-              <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>{setSelectedContinentId(cont.id);setSelectedRegionId(null);setSelectedEcoregion(null);setView('regions');}} mapIds={cont.bioregionIds} />
+            <RegionNavModeSwitch helper="Tocca una zona sul globo o apri un box: entrambe le strade aggiornano lo stesso percorso." />
+            {showRegionMap && (
+              <div style={{ margin:'0 -14px 14px' }}>
+                <BioregionVectorMap highlightIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} accent="#6CE5C7" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
+              </div>
+            )}
+            {showRegionBoxes && BIOREGION_V4_CONTINENTS.map(cont => (
+              <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} mapIds={cont.bioregionIds} />
             ))}
           </>
         )}
@@ -7560,24 +7598,30 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='regions' && continent && (
           <>
-            <div style={{ margin:'0 -14px 14px' }}>
-              <BioregionVectorMap highlightIds={continent.bioregionIds} accent="#20B2AA" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
-            </div>
-            {continent.regions.map(reg => {
+            <RegionNavModeSwitch helper={`Stai esplorando ${continent.label}: un click sulla mappa o su un box apre le regioni interne.`} />
+            {showRegionMap && (
+              <div style={{ margin:'0 -14px 14px' }}>
+                <BioregionVectorMap highlightIds={continent.bioregionIds} accent="#20B2AA" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
+              </div>
+            )}
+            {showRegionBoxes && continent.regions.map(reg => {
               const locked = !unlockMap[reg.id];
-              return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>{setSelectedRegionId(reg.id);setSelectedEcoregion(null);setView('ecoregions');}} mapIds={reg.bioregionIds} />;
+              return <TerritoryCard key={reg.id} item={reg} title={reg.label} subtitle={`${reg.ecoregions.length} subregioni`} image={reg.image} icon="" accent="#20B2AA" locked={locked} onUnlock={()=>unlock(reg.id)} openLabel="Apri" onOpen={()=>openRegion(reg)} mapIds={reg.bioregionIds} />;
             })}
           </>
         )}
 
         {view==='ecoregions' && region && (
           <>
-            <div style={{ margin:'0 -14px 14px' }}>
-              <BioregionVectorMap highlightIds={region.bioregionIds} accent="#90D84A" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
-            </div>
-            {region.ecoregions.map(eco => {
+            <RegionNavModeSwitch helper={`Dentro ${region.label}: scegli una subregione dalla mappa o dai box per aprire habitat, Grid e LifeWeb.`} />
+            {showRegionMap && (
+              <div style={{ margin:'0 -14px 14px' }}>
+                <BioregionVectorMap highlightIds={region.bioregionIds} accent="#90D84A" height={310} fullBleed clickable onSelect={openMapHierarchyTarget} />
+              </div>
+            )}
+            {showRegionBoxes && region.ecoregions.map(eco => {
               const locked = !unlockMap[eco.id];
-              return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Apri" onOpen={()=>{setSelectedEcoregion(eco); setView('habitats');}} mapIds={[eco.id]} />;
+              return <TerritoryCard key={eco.id} item={eco} title={eco.label} subtitle={`${eco.iso?.length || 0} codici ISO · ${eco.name_en || 'subregione'}`} image={eco.image} icon="" accent="#90D84A" locked={locked} onUnlock={()=>unlock(eco.id)} openLabel="Apri" onOpen={()=>openEcoregion(eco)} mapIds={[eco.id]} />;
             })}
           </>
         )}
