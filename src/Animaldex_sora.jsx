@@ -420,6 +420,45 @@ function track(eventName, payload = {}) {
   try { console.log('[track]', eventName, payload); } catch {}
 }
 
+function getAnimaldexSessionId() {
+  if (typeof window === 'undefined') return '';
+  const key = 'animaldex_session_id';
+  try {
+    const existing = window.sessionStorage.getItem(key);
+    if (existing) return existing;
+    const id = `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+    window.sessionStorage.setItem(key, id);
+    return id;
+  } catch {
+    return '';
+  }
+}
+
+async function trackUserEvent(user, eventName, payload = {}, profile = null) {
+  track(eventName, payload);
+  if (!user?.id) return;
+  if (profile && profile.consent_analytics === false) return;
+  try {
+    const cleanPayload = payload && typeof payload === 'object' ? { ...payload } : {};
+    await supabase.from('user_events').insert({
+      user_id: user.id,
+      event_name: eventName,
+      source_screen: cleanPayload.source_screen || cleanPayload.source || null,
+      session_id: getAnimaldexSessionId() || null,
+      app_version: process.env.REACT_APP_VERSION || null,
+      plan: profile?.plan_key || profile?.plan || 'free',
+      animal_id: cleanPayload.animal_id || null,
+      previous_status: cleanPayload.previous_status || null,
+      next_status: cleanPayload.next_status || null,
+      rarity: cleanPayload.rarity || null,
+      country_iso: cleanPayload.country_iso || cleanPayload.iso || null,
+      payload: cleanPayload,
+    });
+  } catch (err) {
+    console.warn('[Animaldex] tracking evento non salvato:', err);
+  }
+}
+
 
 
 function appStatusToSupabase(status) {
@@ -690,6 +729,9 @@ function normalizeProfileQuestionnaire(data = {}) {
     is_collector: data?.is_collector ?? data?.collector ?? null,
     annual_abroad_vacations: data?.annual_abroad_vacations || data?.vacations_abroad || '',
     pokemon_affinity: data?.pokemon_affinity || '',
+    acquisition_source: data?.acquisition_source || '',
+    acquisition_source_other: data?.acquisition_source_other || '',
+    water_activity_interests: Array.isArray(data?.water_activity_interests) ? data.water_activity_interests : [],
     consent_terms_privacy: Boolean(data?.consent_terms_privacy || data?.termsAccepted),
     consent_analytics: Boolean(data?.consent_analytics),
     consent_marketing: Boolean(data?.consent_marketing),
@@ -722,6 +764,9 @@ function mergeProfileDemographics(profile = {}, userId) {
     is_collector: profile?.is_collector ?? normalizedLocal.is_collector,
     annual_abroad_vacations: profile?.annual_abroad_vacations || normalizedLocal.annual_abroad_vacations || '',
     pokemon_affinity: profile?.pokemon_affinity || normalizedLocal.pokemon_affinity || '',
+    acquisition_source: profile?.acquisition_source || normalizedLocal.acquisition_source || '',
+    acquisition_source_other: profile?.acquisition_source_other || normalizedLocal.acquisition_source_other || '',
+    water_activity_interests: profile?.water_activity_interests || normalizedLocal.water_activity_interests || [],
     consent_terms_privacy: Boolean(profile?.consent_terms_privacy || normalizedLocal.consent_terms_privacy),
     consent_analytics: Boolean(profile?.consent_analytics || normalizedLocal.consent_analytics),
     consent_marketing: Boolean(profile?.consent_marketing || normalizedLocal.consent_marketing),
@@ -754,6 +799,9 @@ async function persistOnboardingQuestionnaire(user, payload = {}) {
       is_collector: q.is_collector,
       annual_abroad_vacations: q.annual_abroad_vacations || null,
       pokemon_affinity: q.pokemon_affinity || null,
+      acquisition_source: q.acquisition_source || null,
+      acquisition_source_other: q.acquisition_source_other || null,
+      water_activity_interests: q.water_activity_interests || [],
       consent_terms_privacy: q.consent_terms_privacy,
       consent_analytics: q.consent_analytics,
       consent_marketing: q.consent_marketing,
@@ -1451,17 +1499,22 @@ const RARITY_CSS = `
   100% { transform: translateX(105%) skewX(-18deg); opacity:.10; }
 }
 @keyframes rarityGemDrift {
-  0%   { transform: translateX(-18%); opacity:.48; }
-  100% { transform: translateX(18%); opacity:.92; }
+  0%   { transform: translate3d(0,-46%,0); opacity:0; }
+  14%  { opacity:.55; }
+  50%  { opacity:.95; }
+  86%  { opacity:.55; }
+  100% { transform: translate3d(0,46%,0); opacity:0; }
 }
 @keyframes rarityWaterCaustics {
-  0%   { transform: translate3d(-16%,-10%,0) rotate(0deg); background-position:0% 50%, 100% 30%, 0% 0%; opacity:.22; }
-  50%  { opacity:.46; }
-  100% { transform: translate3d(16%,10%,0) rotate(.001deg); background-position:100% 50%, 0% 70%, 220% 0%; opacity:.22; }
+  0%   { transform: translate3d(-12%,-38%,0) rotate(-5deg) scale(.98); background-position:0% 45%, 100% 30%, 0% 0%; opacity:0; }
+  16%  { opacity:.34; }
+  50%  { opacity:.58; }
+  84%  { opacity:.34; }
+  100% { transform: translate3d(12%,38%,0) rotate(5deg) scale(1.04); background-position:100% 55%, 0% 70%, 220% 0%; opacity:0; }
 }
 .rarity-silver-sheen { animation: rarityContinuousSweep 5.6s linear infinite; }
-.rarity-legendary-water { animation: rarityWaterCaustics 7.8s linear infinite; }
-.rarity-rare-gems { animation: rarityGemDrift 6.4s linear infinite; }
+.rarity-legendary-water { animation: rarityWaterCaustics 8.8s ease-in-out infinite; }
+.rarity-rare-gems { animation: rarityGemDrift 7.2s ease-in-out infinite; }
 .gebco-map-label {
   position:absolute; left:10px; bottom:8px; z-index:4; pointer-events:none;
   color:rgba(180,226,255,.58); font-size:9px; font-weight:1000; letter-spacing:.7px; text-transform:uppercase;
@@ -2158,8 +2211,8 @@ function RarityBadge({ rarity='Comune', compact=false, small=false, full=false, 
       ...style,
     }}>
       {r === 'Non comune' && <span aria-hidden className="rarity-silver-sheen" style={{ position:'absolute', inset:'-8% -38%', width:'46%', background:'linear-gradient(115deg, transparent 8%, rgba(255,255,255,.20) 44%, rgba(255,255,255,.06) 56%, transparent 78%)', opacity:.48, mixBlendMode:'screen', pointerEvents:'none' }} />}
-      {r === 'Raro' && <span aria-hidden className="rarity-rare-gems" style={{ position:'absolute', inset:0, background:'radial-gradient(circle at 18% 28%, rgba(255,255,255,.95) 0 1.4px, transparent 2.3px), radial-gradient(circle at 78% 24%, rgba(255,255,255,.82) 0 1.2px, transparent 2.2px), radial-gradient(circle at 68% 72%, rgba(255,244,164,.86) 0 1.3px, transparent 2.4px), radial-gradient(circle at 34% 74%, rgba(255,255,255,.70) 0 1px, transparent 2px)', pointerEvents:'none', mixBlendMode:'screen' }} />}
-      {r === 'Leggendario' && <span aria-hidden className="rarity-legendary-water" style={{ position:'absolute', inset:'-28% -42%', background:'radial-gradient(ellipse at 22% 38%, rgba(118,220,255,.26), transparent 34%), radial-gradient(ellipse at 74% 64%, rgba(255,255,255,.18), transparent 32%), linear-gradient(100deg, transparent 0%, rgba(87,214,255,.16) 24%, transparent 46%, rgba(255,255,255,.14) 64%, transparent 100%)', backgroundSize:'180% 180%, 160% 160%, 240% 100%', filter:'blur(.45px)', mixBlendMode:'screen', pointerEvents:'none' }} />}
+      {r === 'Raro' && <span aria-hidden className="rarity-rare-gems" style={{ position:'absolute', inset:'-38% 0', background:'radial-gradient(circle at 18% 28%, rgba(255,255,255,.95) 0 1.4px, transparent 2.3px), radial-gradient(circle at 78% 24%, rgba(255,255,255,.82) 0 1.2px, transparent 2.2px), radial-gradient(circle at 68% 72%, rgba(255,244,164,.86) 0 1.3px, transparent 2.4px), radial-gradient(circle at 34% 74%, rgba(255,255,255,.70) 0 1px, transparent 2px), radial-gradient(circle at 52% 48%, rgba(255,232,126,.62) 0 1px, transparent 2.1px)', pointerEvents:'none', mixBlendMode:'screen' }} />}
+      {r === 'Leggendario' && <span aria-hidden className="rarity-legendary-water" style={{ position:'absolute', inset:'-50% -42%', background:'radial-gradient(ellipse at 22% 38%, rgba(118,220,255,.28), transparent 34%), radial-gradient(ellipse at 74% 64%, rgba(255,255,255,.20), transparent 32%), radial-gradient(circle at 50% 50%, rgba(244,217,255,.16), transparent 18%), linear-gradient(100deg, transparent 0%, rgba(87,214,255,.18) 24%, transparent 46%, rgba(255,255,255,.16) 64%, transparent 100%)', backgroundSize:'180% 180%, 160% 160%, 120% 120%, 240% 100%', filter:'blur(.45px)', mixBlendMode:'screen', pointerEvents:'none' }} />}
       <span style={{ position:'relative', zIndex:2, color:cfg.text, fontSize:full?13.5:small?11.5:12.5, fontWeight:1000, letterSpacing:.2, textShadow:'0 1px 4px rgba(0,0,0,.50)', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{label}</span>
     </div>
   );
@@ -2989,7 +3042,7 @@ function rarityBorderColor(rarity) {
   return '#9D6845';
 }
 
-function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false }) {
+function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [mysteryErr, setMysteryErr] = useState(false);
@@ -3012,14 +3065,15 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false })
 
   const localImageUrl = a.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(a.id) || x.sci === a.sci)?.image_url || '');
   if (localImageUrl && !imgErr) {
-    const pad = gridMode ? 0 : Math.round(size * 0.12);
-    const imgScale = gridMode ? GRID_IMAGE_SCALE : 1.2;
+    const pad = gridMode ? 0 : Math.round(size * (detailMode ? 0.07 : 0.12));
+    const imgScale = detailMode ? 1.18 : gridMode ? GRID_IMAGE_SCALE : 1.2;
     const imageBg = 'transparent';
     return (
-      <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
+      <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:detailMode?'flex-end':'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
         <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
           style={{ width:'100%', height:'100%', objectFit:'contain',
             transform: `scale(${imgScale})`,
+            transformOrigin:detailMode?'center bottom':'center',
             filter:'none',
             WebkitFilter:'none' }} />
       </div>
@@ -3766,6 +3820,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
   const [error, setError] = useState('');
   const [matches, setMatches] = useState([]);
   const [gps, setGps] = useState(null);
+  const [uploadedPhoto, setUploadedPhoto] = useState({ publicUrl:'', storagePath:'' });
   const expectedHabitats = getAnimalHabitatIds(animal || {});
   useEffect(() => {
     if (!navigator?.geolocation) return;
@@ -3784,15 +3839,19 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
   const runIdentification = async () => {
     if (!file) { setError('Scatta o carica prima una foto.'); return; }
     setLoading(true); setError(''); setMatches([]);
+    setUploadedPhoto({ publicUrl:'', storagePath:'' });
     let publicUrl = '';
+    let storagePath = '';
     try {
       if (user?.id && supabase?.storage) {
         const cleanName = String(file.name || 'photo.jpg').replace(/[^a-z0-9._-]/gi,'_');
         const path = `${user.id}/${animal?.id || 'unknown'}/${Date.now()}-${cleanName}`;
         const { error:uploadError } = await supabase.storage.from('animal-photos').upload(path, file, { upsert:false, contentType:file.type || 'image/jpeg' });
         if (!uploadError) {
+          storagePath = path;
           const { data } = supabase.storage.from('animal-photos').getPublicUrl(path);
           publicUrl = data?.publicUrl || '';
+          setUploadedPhoto({ publicUrl, storagePath });
         }
       }
       const payload = {
@@ -3830,7 +3889,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
   };
   const confirmMatch = (match) => {
     if (!match?.animal) return;
-    onConfirm?.(match.animal, { confidence:match.confidence, gps, file, image_url:preview });
+    onConfirm?.(match.animal, { confidence:match.confidence, gps, file, image_url:uploadedPhoto.publicUrl || preview, public_url:uploadedPhoto.publicUrl || '', storage_path:uploadedPhoto.storagePath || '' });
   };
   return (
     <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:260, background:'rgba(0,0,0,.82)', display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
@@ -3979,15 +4038,15 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
             onClick={()=>openLightbox(imgRef.current?.getBoundingClientRect())}
             style={{
               width:'100%',
-              height: Math.round(268 + pullProgress * 70),
-              borderRadius:18,
-              overflow:'hidden',
-              background:'#202228',
+              height: Math.round(300 + pullProgress * 76),
+              borderRadius:0,
+              overflow:'visible',
+              background:'transparent',
               cursor: canViewImage ? 'zoom-in' : 'default',
-              boxShadow:'inset 0 0 0 1px rgba(255,255,255,.06)',
+              boxShadow:'none',
               transition: pullProgress===0 ? 'height .25s ease, border-radius .25s ease' : 'none',
             }}>
-            <AnimalImg a={a} size={Math.round(268 + pullProgress * 70)} fontSize={88} overrideStatus={localStatus} />
+            <AnimalImg a={a} size={Math.round(300 + pullProgress * 76)} fontSize={88} overrideStatus={localStatus} detailMode />
           </div>
         </div>
         <div style={{ textAlign:'center', marginBottom:14 }}>
@@ -5208,6 +5267,9 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const [residenceCountry,setResidenceCountry]=useState('');
   const [objectives,setObjectives]=useState([]);
   const [objectiveOther,setObjectiveOther]=useState('');
+  const [acquisitionSource,setAcquisitionSource]=useState('');
+  const [acquisitionSourceOther,setAcquisitionSourceOther]=useState('');
+  const [waterActivityInterests,setWaterActivityInterests]=useState([]);
   const [isCollector,setIsCollector]=useState('');
   const [annualAbroadVacations,setAnnualAbroadVacations]=useState('');
   const [consents,setConsents]=useState({ terms:false, analytics:false, marketing:false, personalization:false, newsletter:false });
@@ -5290,6 +5352,9 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       residence_country:residenceCountry,
       onboarding_objectives:objectives,
       onboarding_objective_other:objectiveOther,
+      acquisition_source:acquisitionSource,
+      acquisition_source_other:acquisitionSourceOther,
+      water_activity_interests:waterActivityInterests,
       is_collector:isCollector === 'yes' ? true : isCollector === 'no' ? false : null,
       annual_abroad_vacations:annualAbroadVacations,
       pokemon_affinity:'',
@@ -5328,6 +5393,12 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
   const disabledButton = { ...primaryButton, background:'#3A3A3C', color:'rgba(255,255,255,.42)', boxShadow:'none', cursor:'default' };
   const Pill = ({ children, active=false, onClick }) => <button onClick={onClick} style={{ borderRadius:999, border:`1px solid ${active?OCHRE:'rgba(255,255,255,.10)'}`, background:active?`rgba(168,70,55,.22)`:'rgba(255,255,255,.055)', color:active?'#FFD4C8':'rgba(255,255,255,.74)', padding:'8px 11px', fontSize:11.5, fontWeight:900, cursor:'pointer', fontFamily:'inherit' }}>{children}</button>;
   const ObjectivePill = ({ value, label }) => <Pill active={objectives.includes(value)} onClick={()=>setObjectives(prev => prev.includes(value) ? prev.filter(x=>x!==value) : [...prev, value])}>{label}</Pill>;
+  const SourcePill = ({ value, label }) => <Pill active={acquisitionSource === value} onClick={()=>setAcquisitionSource(value)}>{label}</Pill>;
+  const WaterPill = ({ value, label }) => <Pill active={waterActivityInterests.includes(value)} onClick={()=>setWaterActivityInterests(prev => {
+    if (value === 'not_interested') return prev.includes(value) ? [] : [value];
+    const withoutNone = prev.filter(x => x !== 'not_interested');
+    return withoutNone.includes(value) ? withoutNone.filter(x=>x!==value) : [...withoutNone, value];
+  })}>{label}</Pill>;
   const ConsentRow = ({ keyName, label, required=false }) => <button type="button" onClick={()=>setConsents(prev => ({ ...prev, [keyName]:!prev[keyName] }))} style={{ display:'flex', alignItems:'center', gap:10, width:'100%', border:'1px solid rgba(255,255,255,.08)', borderRadius:14, background:'rgba(255,255,255,.045)', padding:'10px 12px', color:'white', fontFamily:'inherit', textAlign:'left' }}>
     <span style={{ width:22, height:22, borderRadius:8, background:consents[keyName]?OCHRE:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000 }}>{consents[keyName]?'✓':''}</span>
     <span style={{ flex:1, fontSize:12, color:'rgba(255,255,255,.72)', lineHeight:1.35 }}>{label} {required && <b style={{ color:'#FFD4C8' }}>*</b>}</span>
@@ -5435,6 +5506,15 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
               <ObjectivePill value="collection" label="Collezionare specie" /><ObjectivePill value="travel" label="Preparare viaggi" /><ObjectivePill value="photo_ai" label="Riconoscere da foto" /><ObjectivePill value="education" label="Imparare biologia" /><ObjectivePill value="badges" label="Completare badge" /><ObjectivePill value="other" label="Altro" />
             </div>
             {objectives.includes('other') && <input value={objectiveOther} onChange={e=>setObjectiveOther(e.target.value)} placeholder="Scrivi il tuo obiettivo" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:12 }} />}
+            <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'20px 0 8px', textTransform:'uppercase' }}>Come ci hai conosciuti?</div>
+            <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
+              <SourcePill value="instagram" label="Instagram" /><SourcePill value="tiktok" label="TikTok" /><SourcePill value="youtube" label="YouTube" /><SourcePill value="google_search" label="Google" /><SourcePill value="friend" label="Amico" /><SourcePill value="app_store" label="Store" /><SourcePill value="school_event" label="Scuola/evento" /><SourcePill value="park_museum" label="Parco/museo" /><SourcePill value="other" label="Altro" />
+            </div>
+            {acquisitionSource === 'other' && <input value={acquisitionSourceOther} onChange={e=>setAcquisitionSourceOther(e.target.value)} placeholder="Raccontaci dove ci hai scoperti" style={{ width:'100%', height:48, borderRadius:16, background:'#202024', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', fontSize:13, boxSizing:'border-box', outline:'none', fontFamily:'inherit', marginTop:12 }} />}
+            <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:900, margin:'20px 0 8px', textTransform:'uppercase' }}>Mondo marino</div>
+            <div style={{ display:'flex', flexWrap:'wrap', gap:8 }}>
+              <WaterPill value="scuba_diver" label="Scuba diver" /><WaterPill value="snorkeler" label="Snorkeler" /><WaterPill value="freediver" label="Freediver" /><WaterPill value="marine_life_fan" label="Fauna marina" /><WaterPill value="beginner_interested" label="Vorrei iniziare" /><WaterPill value="not_interested" label="Non ora" />
+            </div>
             <div style={{ marginTop:18, borderRadius:18, background:'rgba(168,70,55,.12)', border:'1px solid rgba(168,70,55,.24)', padding:13, color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.45 }}>I badge si ottengono completando azioni misurabili: visitare paesi, avvistare o catturare animali, scoprire predatori apex, raccogliere specie rare, esplorare classi tassonomiche e abilità biologiche.</div>
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'auto 1fr', gap:10, marginTop:16 }}><button onClick={goBack} style={{ minHeight:50, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.055)', color:'white', fontWeight:950, padding:'0 14px' }}>Indietro</button><button onClick={()=>setStep('travel')} style={primaryButton}>Continua</button></div>
@@ -5803,13 +5883,12 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           })}
         </div>
       </div>
-      <button aria-label="Apri fotocamera" onClick={()=>onOpenPhoto?.()} style={{ position:'absolute', left:'50%', bottom:'calc(env(safe-area-inset-bottom, 0px) + 18px)', transform:'translateX(-50%)', width:76, height:76, borderRadius:'50%', border:'3px solid rgba(255,255,255,.92)', background:'linear-gradient(135deg,#A84637,#F0A840)', color:'white', boxShadow:'0 18px 42px rgba(0,0,0,.42), 0 0 0 7px rgba(168,70,55,.18)', fontSize:30, display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', zIndex:80 }}>📷</button>
     </div>
   );
 }
 
 
-function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark' }) {
+function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark', user=null, userProfile=null }) {
   const isLightTheme = theme === 'light';
   const quickIntroColor = isLightTheme ? '#171717' : 'rgba(255,255,255,.62)';
   const quickPanelBg = 'linear-gradient(180deg,rgba(128,60,22,.98),rgba(80,32,12,.96))';
@@ -5846,7 +5925,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     setBusy(true);
     markDaily(picked.id);
     advanceQueue(picked.id);
-    track('quick_seen_yes', { animal_id:picked.id, animal_name:picked.com });
+    trackUserEvent(user, 'quick_seen_yes', { animal_id:picked.id, animal_name:picked.com, rarity:picked.rarity, source_screen:'quick_seen' }, userProfile);
     try {
       await onStatusChange?.(picked.id, 'avvistato');
     } finally {
@@ -5860,7 +5939,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     markDaily(picked.id);
     rejectQuickSeenForCooldown(picked.id);
     advanceQueue(picked.id);
-    track('quick_seen_no', { animal_id:picked.id, animal_name:picked.com, cooldown_days:QUICK_SEEN_REJECT_COOLDOWN_DAYS });
+    trackUserEvent(user, 'quick_seen_no', { animal_id:picked.id, animal_name:picked.com, rarity:picked.rarity, cooldown_days:QUICK_SEEN_REJECT_COOLDOWN_DAYS, source_screen:'quick_seen' }, userProfile);
     setBusy(false);
   };
   return (
@@ -8295,6 +8374,7 @@ export default function App() {
     if (fresh.length) {
       setAwardQueue(prev => [...prev, ...fresh]);
       if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Animaldex] Evento badge non salvato:', err)));
+      if (user?.id) fresh.forEach(award => trackUserEvent(user, 'badge_earned', { badge_id:award.badgeId, badge_name:award.name, badge_macro:award.macro, source_screen:'badges' }, userProfile));
     }
 
     const merged = Array.from(new Set([...(earnedBadgeIds || []).map(normalizeBadgeId), ...current]));
@@ -8327,9 +8407,9 @@ export default function App() {
     setAnimalsData(prev => prev.map(a => a.id === id ? { ...a, status: nextStatus, userStatus: appStatusToSupabase(nextStatus) } : a));
     saveLocalUserAnimalStatus(user.id, id, nextStatus);
     try {
-      track('animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, previous_status:previousStatus, next_status:nextStatus });
-      if (nextStatus === 'avvistato') track('animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com });
-      if (nextStatus === 'catturato') track('animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com });
+      await trackUserEvent(user, 'animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, previous_status:previousStatus, next_status:nextStatus, source_screen:'animal_status' }, userProfile);
+      if (nextStatus === 'avvistato') await trackUserEvent(user, 'animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile);
+      if (nextStatus === 'catturato') await trackUserEvent(user, 'animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile);
       await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
       if (isSocialCaptureEventWorthy(currentAnimal, nextStatus, previousStatus)) {
         await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Animaldex] Evento social non salvato:', err));
@@ -8357,6 +8437,7 @@ export default function App() {
         p_trip_tags: tripTags || [],
       }), 7000, { error:null }, 'unlock_animals_for_destination');
       if (rpcError) throw rpcError;
+      await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
       reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload destinazione non bloccante:', err));
     } catch (err) {
       console.warn('[Animaldex] Aggiungi destinazione fallito:', err);
@@ -8388,6 +8469,14 @@ export default function App() {
 
       const badgeIds = (data?.badge_ids || data?.badges || []).map(normalizeBadgeId);
       await persistOnboardingQuestionnaire(user, demographics || {});
+      await trackUserEvent(user, 'onboarding_completed', {
+        source_screen:'onboarding',
+        countries_count:(countries || []).length,
+        seen_count:(seenAnimalIds || []).length,
+        trip_tags:tripTags || [],
+        acquisition_source:demographics?.acquisition_source || '',
+        water_activity_interests:demographics?.water_activity_interests || [],
+      }, { ...userProfile, consent_analytics:demographics?.consent_analytics });
       if (badgeIds.length) {
         setEarnedBadgeIds(prev => Array.from(new Set([...prev.map(normalizeBadgeId), ...badgeIds])));
         const awards = badgeIds.map(id => AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === id)).filter(Boolean);
@@ -8409,6 +8498,15 @@ export default function App() {
 
       const now = new Date().toISOString();
       await persistOnboardingQuestionnaire(user, demographics || {});
+      await trackUserEvent(user, 'onboarding_completed', {
+        source_screen:'onboarding',
+        fallback:true,
+        countries_count:cleanCountries.length,
+        seen_count:seenAnimalIds?.length || 0,
+        trip_tags:tripTags || [],
+        acquisition_source:demographics?.acquisition_source || '',
+        water_activity_interests:demographics?.water_activity_interests || [],
+      }, { ...userProfile, consent_analytics:demographics?.consent_analytics });
       if (seenAnimalIds?.length) {
         const rows = seenAnimalIds.map(animal_id => ({
           user_id: user.id,
@@ -8599,11 +8697,13 @@ const openPage = (nextPage) => {
 	};
 const openPhotoRecognition = (animal=null) => {
   const enrichedAnimal = animal ? { ...animal, status: getResolvedAnimalStatus(animal, statusMap, visitedCountries) } : null;
+  trackUserEvent(user, 'photo_recognition_started', { animal_id:enrichedAnimal?.id || null, animal_name:enrichedAnimal?.com || null, source_screen:'camera' }, userProfile);
   setPhotoTarget(enrichedAnimal);
 };
 const confirmPhotoRecognition = async (animal, meta={}) => {
   if (!animal?.id) return;
   setPhotoTarget(null);
+  await trackUserEvent(user, 'photo_recognition_confirmed', { animal_id:animal.id, animal_name:animal.com, rarity:animal.rarity, ai_confidence:meta.confidence || null, has_gps:!!meta.gps, source_screen:'photo_recognition' }, userProfile);
   await handleStatusChange(animal.id, 'catturato');
   try {
     if (user?.id) {
@@ -8613,8 +8713,13 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
         ai_guess_animal_id:animal.id,
         ai_confidence:meta.confidence || null,
         confirmed_by_user:true,
+        storage_path:meta.storage_path || null,
+        public_url:meta.public_url || null,
+        photo_source:meta.file ? 'upload' : null,
+        recognition_status:'confirmed',
         lat:meta.gps?.lat || null,
         lng:meta.gps?.lng || null,
+        location_accuracy:meta.gps?.accuracy || null,
         created_at:new Date().toISOString(),
       });
     }
@@ -8709,7 +8814,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 
   const renderPage = () => {
 	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
-    if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} />;
+    if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
     if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
