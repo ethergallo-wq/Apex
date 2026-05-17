@@ -3124,14 +3124,13 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, d
     const iconSrc = CLASS_ICONS[a.cls] || CLASS_ICONS.Mammalia;
     const label = CLS[a.cls]?.label || a.cls || 'Animale';
     return (
-      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'transparent', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:gridMode ? 2 : 8, padding:gridMode ? 6 : Math.round(size * .08), boxSizing:'border-box' }}>
+      <div style={{ width:'100%', height:size, position:'relative', overflow:'hidden', background:'transparent', display:'flex', alignItems:'center', justifyContent:'center', padding:gridMode ? 6 : Math.round(size * .08), boxSizing:'border-box' }}>
         {!mysteryErr && iconSrc ? (
           <img src={iconSrc} alt={label} onError={()=>setMysteryErr(true)}
-            style={{ width:'100%', height:gridMode?'78%':'74%', objectFit:'contain', opacity:.92, filter:'none' }} />
+            style={{ width:'100%', height:'100%', objectFit:'contain', opacity:.92, filter:'none' }} />
         ) : (
           <div style={{ width:54, height:54, borderRadius:'50%', background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.14)', color:'rgba(255,255,255,.34)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30, fontWeight:900 }}>?</div>
         )}
-        <div style={{ color:'rgba(255,255,255,.74)', fontSize:gridMode?8.5:12, fontWeight:950, lineHeight:1, textAlign:'center', textTransform:'uppercase', letterSpacing:.2 }}>{label}</div>
       </div>
     );
   }
@@ -3590,7 +3589,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const buttonSize = isNarrow ? 40 : 46;
 
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.20), transparent 32%), radial-gradient(circle at 12% 44%, rgba(184,77,58,.12), transparent 36%), linear-gradient(180deg,#15110E,#101216 42%,#0B0D10)', position:'relative', overflow:'hidden' }}>
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
       <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?LIGHT_APP_BG:'transparent', flexShrink:0 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
@@ -3622,7 +3621,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?38:42, padding:'0 6px', borderRadius:12, border:`1px solid ${tutorialStatusHighlight ? '#F0A840' : (active ? activeColor : (isLightTheme?'rgba(0,0,0,.12)':'rgba(255,255,255,.09)'))}`, background:active?(STATUS_GRADIENTS[key] || `linear-gradient(180deg, ${hexToRgba(activeColor,.18)}, rgba(255,255,255,.03))`):(STATUS_FILTER_GRADIENTS[key] || (isLightTheme?LIGHT_APP_BG:'rgba(255,255,255,.045)')), color:active ? activeText : inactiveColor, boxShadow:tutorialStatusHighlight ? '0 0 0 3px rgba(240,168,64,.28), 0 0 24px rgba(240,168,64,.28)' : (active ? `0 7px 16px ${hexToRgba(activeColor, .16)}` : (isLightTheme?'0 4px 12px rgba(0,0,0,.04)':'none')), fontSize:isNarrow?10.2:11, fontWeight:950, fontFamily:'inherit', lineHeight:1 }}>{label}</button>
         })}
       </div>
-      <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0' }}>
+      <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0', background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))' }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4015,7 +4014,7 @@ function FullscreenMetricModal({ open, title, subtitle='', onClose, children }) 
   );
 }
 
-function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], tutorialStep=null, onTutorialAbilityClick, onTutorialMetricClick, onTutorialStatusClick, theme='dark' }) {
+function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter, onOpenComparator, onOpenLifeWeb, onOpenPhoto, visitedCountries = [], tutorialStep=null, onTutorialAbilityClick, onTutorialMetricClick, onTutorialStatusClick, theme='dark' }) {
   const [statMode,setStatMode]=useState('statistiche');
   const [slideDir,setSlideDir]=useState(1);
   const [localStatus,setLocalStatus]=useState(normalizeAnimalStatus(a.status));
@@ -4037,7 +4036,6 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
   const canViewImage = !isMysteryStatus(localStatus) && !!a.image_url;
-  const mainImageBounds = useImagePixelBounds(canViewImage ? getAnimalImageUrl(a) : '');
 
   const handleTab = (m) => {
     if (m===statMode) return;
@@ -4072,10 +4070,9 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
   const scale = 1;
   const longName = String(a.com || '').length > 24;
   const statusActions = getStatusActions(localStatus);
-  const visibleHeight = mainImageBounds?.naturalHeight ? mainImageBounds.height / mainImageBounds.naturalHeight : .70;
-  const imageAspect = mainImageBounds?.width && mainImageBounds?.height ? mainImageBounds.width / mainImageBounds.height : 1;
-  const detailImageBase = Math.round(Math.max(176, Math.min(326, 176 + Math.min(1.55, 1 / Math.max(.58, imageAspect)) * 62 + visibleHeight * 64)));
-  const detailImageSize = Math.round(detailImageBase + pullProgress * 76);
+  const flatClassSet = new Set(['Actinopterygii','Elasmobranchii','Malacostraca','Gastropoda','Bivalvia','Cephalopoda','Asteroidea','Holothuroidea','Echinoidea','Chilopoda','Diplopoda','Clitellata']);
+  const tallClassSet = new Set(['Aves']);
+  const detailImageSize = tallClassSet.has(a.cls) ? 326 : flatClassSet.has(a.cls) ? 258 : 292;
   const visitedMatches = countCountryMatches(a, new Set((visitedCountries || []).map(c => String(c).toUpperCase())));
   const lengthCm = parseAnimalLengthCm(a.ln);
   const activePyramidLevel = getPyramidLevel(a.trophic);
@@ -4099,13 +4096,15 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenComparator, on
         style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
         
 <div style={{ display:'flex', flexWrap:'wrap', gap:3, alignItems:'center', marginBottom:14 }}>
-  {[a.kin,a.phy,a.cls,a.ord,a.fam].map((p,i,arr)=>(
+  {[
+    ['kin', a.kin],
+    ['phy', a.phy],
+    ['cls', a.cls],
+    ['ord', a.ord],
+    ['fam', a.fam],
+  ].map(([key,p],i,arr)=>(
     <span key={i} style={{ display:'flex', alignItems:'center', gap:3 }}>
-      {i===2 ? (
-        <button onClick={()=>onJumpToClass?.(a.cls, a)} style={{ color:c.accent, fontSize:11, fontWeight:700, background:'transparent', border:'none', padding:0, cursor:'pointer', textDecoration:'underline' }}>{p}</button>
-      ) : (
-        <span style={{ color:'rgba(255,255,255,.32)', fontSize:11, fontWeight:400, fontStyle:'italic' }}>{p}</span>
-      )}
+      <button onClick={()=>key === 'cls' ? onJumpToClass?.(a.cls, a) : onOpenTaxonomyFilter?.({ key, value:p, animal:a })} style={{ color:i===2 ? c.accent : 'rgba(255,255,255,.42)', fontSize:11, fontWeight:i===2?700:500, fontStyle:i===2?'normal':'italic', background:'transparent', border:'none', padding:0, cursor:'pointer', textDecoration:'underline', textDecorationThickness:i===2 ? 1.5 : 1, textUnderlineOffset:2 }}>{p}</button>
       {i<arr.length-1&&<span style={{ color:'rgba(255,255,255,.18)', fontSize:11 }}>›</span>}
     </span>
   ))}
@@ -5065,7 +5064,7 @@ function boundsToViewBox(b, padRatio=.34) {
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
 
-function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, levelGroups=[] }) {
+function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[] }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const groupList = Array.isArray(levelGroups) ? levelGroups : [];
@@ -5278,8 +5277,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
   );
 }
 
-function AwardToast({ award, onOpen, onDismiss }) {
-  const [imgErr, setImgErr] = useState(false);
+function SwipeDismissNotice({ children, onDismiss, className='', style }) {
   const touchStartY = useRef(null);
   const handleTouchStart = (e) => { touchStartY.current = e.touches?.[0]?.clientY ?? null; };
   const handleTouchEnd = (e) => {
@@ -5289,14 +5287,22 @@ function AwardToast({ award, onOpen, onDismiss }) {
     touchStartY.current = null;
   };
   return (
+    <div className={className} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} style={{ touchAction:'pan-y', userSelect:'none', ...style }}>
+      {children}
+    </div>
+  );
+}
+
+function AwardToast({ award, onOpen, onDismiss }) {
+  const [imgErr, setImgErr] = useState(false);
+  return (
     <div style={{ position:'absolute', top:18, left:12, right:12, zIndex:200, display:'flex', justifyContent:'center', pointerEvents:'auto' }}>
-      <div
+      <SwipeDismissNotice
         className="award-toast-sparkles"
-        onClick={()=>onOpen?.(award)}
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
+        onDismiss={onDismiss}
         style={{ position:'relative', width:'100%', maxWidth:360, background:'rgba(18,18,22,.96)', border:'1px solid rgba(255,255,255,.12)', borderRadius:22, padding:'14px 16px', boxShadow:'0 16px 40px rgba(0,0,0,.38)', display:'flex', alignItems:'center', gap:14, cursor:'pointer', userSelect:'none' }}
       >
+        <div onClick={()=>onOpen?.(award)} style={{ position:'absolute', inset:0 }} />
         <div style={{ width:64, height:64, borderRadius:16, background:'rgba(255,255,255,.08)', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>
           {!imgErr ? <img src={award.image} alt={award.name} onError={()=>setImgErr(true)} style={{ width:56, height:56, objectFit:'contain' }} /> : <span style={{ fontSize:34 }}>🏅</span>}
         </div>
@@ -5306,7 +5312,7 @@ function AwardToast({ award, onOpen, onDismiss }) {
           <div style={{ color:'rgba(255,255,255,.55)', fontSize:11, marginTop:4 }}>{award.macro} · {award.goal}</div>
           <div style={{ color:'rgba(255,255,255,.35)', fontSize:10, marginTop:3 }}>Tocca per aprire · swipe su per chiudere</div>
         </div>
-      </div>
+      </SwipeDismissNotice>
     </div>
   );
 }
@@ -5955,16 +5961,16 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const animalsWithStatus = progress.animalsWithStatus;
   const seenNotCaptured = animalsWithStatus.filter(a => a.status === 'avvistato');
-  let mission = {
-    title:'Avvista Veloce',
-    desc:'identifica animali che potresti gia aver avvistato',
-    cta:'Avvia',
-    action:onQuickSeen,
+  const searchedAnimalsCount = animalsWithStatus.filter(a => a.status === 'ricercato').length;
+  const mission = {
+    title:'Il tuo Animaldex',
+    desc: searchedAnimalsCount
+      ? `Hai ${searchedAnimalsCount} animali ricercati pronti da esplorare.`
+      : 'Apri il tuo Animaldex e continua a esplorare le specie disponibili.',
+    cta:'Apri ricercati',
+    action:()=>onOpenGridStatus?.(['ricercato']),
   };
-  if (!visitedCountries.length) mission = { title:'Avvista Veloce', desc:'identifica animali che potresti gia aver avvistato', cta:'Aggiungi paese', action:onOpenRegions || (()=>onOpen('regions')) };
-  else if (seenNotCaptured.length > 0) mission = { title:'Completa il tuo Dex', desc:`Hai ${seenNotCaptured.length} animali avvistati non ancora catturati.`, cta:'Cattura ora', action:()=>onOpenGridStatus?.(['avvistato']) };
   const items = [
-    { id:'grid', label:'Animaldex', icon:'🦁' },
     { id:'taxonomy', label:'Albero', icon:'🌿' },
     { id:'regions', label:'Regioni', icon:'🗺️' },
     { id:'friends', label:'Amici', icon:'🤝' },
@@ -6010,16 +6016,11 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:14 }}>
-          <button onClick={()=>onOpen('grid')} style={{ minHeight:112, border:'1px solid rgba(184,77,58,.38)', borderRadius:22, background:'linear-gradient(135deg,#7A331F 0%,#B84D3A 48%,#F0A840 100%)', color:'white', textAlign:'left', padding:14, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(184,77,58,.20)' }}>
-            <div style={{ color:'#FFE1BF', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Animali</div>
-            <div style={{ fontSize:20, fontWeight:1000, marginTop:6 }}>Grid</div>
-            <div style={{ color:'rgba(255,255,255,.74)', fontSize:11.5, lineHeight:1.35, marginTop:5 }}>Catalogo, filtri e schede.</div>
-          </button>
-          <button onClick={onQuickSeen} style={{ minHeight:112, border:'1px solid rgba(240,168,64,.34)', borderRadius:22, background:'radial-gradient(circle at 92% 12%, rgba(240,168,64,.32), transparent 34%), linear-gradient(135deg,#1B1A18,#3B2415 72%)', color:'white', textAlign:'left', padding:14, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)' }}>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:10, marginBottom:14 }}>
+          <button onClick={onQuickSeen} style={{ minHeight:118, border:'1px solid rgba(240,168,64,.34)', borderRadius:22, background:'radial-gradient(circle at 92% 12%, rgba(240,168,64,.32), transparent 34%), linear-gradient(135deg,#1B1A18,#3B2415 72%)', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)' }}>
             <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Avvista</div>
-            <div style={{ fontSize:20, fontWeight:1000, marginTop:6 }}>Veloce</div>
-            <div style={{ color:'rgba(255,255,255,.68)', fontSize:11.5, lineHeight:1.35, marginTop:5 }}>Specie probabili nei tuoi territori.</div>
+            <div style={{ fontSize:22, fontWeight:1000, marginTop:6 }}>Veloce</div>
+            <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:5 }}>Identifica animali che potresti gia aver avvistato nei tuoi territori.</div>
           </button>
         </div>
 
@@ -9136,6 +9137,20 @@ const openGridWithTaxonomyNode = ({ node, tax, animalIds }) => {
 const jumpToClassFromDetail = (cls, animal) => {
   setGridReturnTarget({ page:'detail', animal }); setSel(null); setGridPreset({ id: Date.now(), type:'class', cls, title:`Classe · ${cls}` }); setPage('grid');
 };
+const openTaxonomyFilterFromDetail = ({ key, value, animal }) => {
+  const labels = { kin:'Regno', phy:'Phylum', cls:'Classe', ord:'Ordine', fam:'Famiglia', gen:'Genere' };
+  if (!key || !value) return;
+  setGridReturnTarget({ page:'detail', animal });
+  setSel(null);
+  setGridPreset({
+    id: Date.now(),
+    type:'taxonomy-node',
+    tax:{ key, value, label:`${labels[key] || 'Tassonomia'}: ${value}` },
+    statuses:['misterioso','ricercato','avvistato','catturato'],
+    title:`${labels[key] || 'Tassonomia'} · ${value}`,
+  });
+  setPage('grid');
+};
 const returnFromFilteredGrid = () => {
   const target = gridReturnTarget;
   setGridReturnTarget(null);
@@ -9163,7 +9178,7 @@ const returnFromFeaturePage = (fallback='menu') => {
   setPage(fallback);
 };
 
-const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
+const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', inset:0, zIndex:80, background:theme==='light'?LIGHT_APP_BG:'#1C1C1E' }}><Detail theme={theme} a={enriched} onBack={()=>setSel(null)} onStatusChange={handleStatusChange} onJumpToClass={jumpToClassFromDetail} onOpenTaxonomyFilter={openTaxonomyFilterFromDetail} onOpenComparator={openComparator} onOpenLifeWeb={openLifeWeb} onOpenPhoto={openPhotoRecognition} visitedCountries={visitedCountries} statusMap={statusMap} tutorialStep={tutorialStep} onTutorialAbilityClick={handleTutorialAbilityClick} onTutorialMetricClick={handleTutorialMetricClick} onTutorialStatusClick={handleTutorialStatusClick}/></div> : null;
 
   if (authLoading) {
     return (
@@ -9221,7 +9236,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
 	      <div key={page} className="animaldex-page-dive" style={{ height:'100%', minHeight:0, overflow:'hidden' }}>{renderPage()}</div>
 	      {tutorialStep && <OperationalTutorialOverlay step={tutorialStep} animal={getCurrentTutorialAnimal()} onNext={handleTutorialNext} onPrev={handleTutorialPrev} onFinish={completeOperationalTutorial} onSkip={completeOperationalTutorial} />}
 	      {sectionIntro && !tutorialStep && <SectionIntroModal section={sectionIntro} onClose={()=>{ const guided = sectionIntro; setSectionIntro(null); if (guided === 'badges' || guided === 'abilities') setActiveSectionGuide(guided); }} />}
-	      {dataError && user && <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</div>}
+	      {dataError && user && <SwipeDismissNotice onDismiss={()=>setDataError('')} style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:250, borderRadius:14, padding:'10px 12px', background:'rgba(255,59,48,.92)', color:'white', fontSize:11, fontWeight:800, boxShadow:'0 10px 30px rgba(0,0,0,.35)' }}>{dataError}</SwipeDismissNotice>}
       {activeAwardToast && <AwardToast award={activeAwardToast} onOpen={openAwardFromToast} onDismiss={()=>setAwardQueue(prev => prev.slice(1))} />}
       {photoTarget && <PhotoRecognitionModal animal={photoTarget} animals={animalsData} user={user} onClose={()=>setPhotoTarget(null)} onConfirm={confirmPhotoRecognition} />}
     </div>
