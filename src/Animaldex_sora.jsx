@@ -6240,26 +6240,22 @@ function LifeProgress({ value, color }) {
 }
 function buildLifeFlow(selected, animals) {
   const visible = getLifeVisibleRoot(selected);
-  const widthGap = selected.id === 'animalia' ? 230 : 215;
-  const heightGap = selected.id === 'animalia' ? 150 : 142;
   const layoutNodes = [];
-  let leafIndex = 0;
+  const rowGap = selected.id === 'animalia' ? 118 : 112;
+  const depthGap = selected.id === 'animalia' ? 78 : 86;
+  let cursorY = 0;
   const walk = (node, depth = 0, parent = null) => {
     const children = node.children || [];
-    const row = { data:node, depth, parent, x:0, y:depth * heightGap };
-    const childRows = children.map(child => walk(child, depth + 1, row));
-    if (childRows.length) {
-      row.x = childRows.reduce((sum, child) => sum + child.x, 0) / childRows.length;
-    } else {
-      row.x = leafIndex * widthGap;
-      leafIndex += 1;
-    }
+    const row = { data:node, depth, parent, x:128 + depth * depthGap, y:cursorY };
     layoutNodes.push(row);
+    cursorY += depth === 0 ? rowGap + 10 : rowGap;
+    children.forEach((child, index) => {
+      if (index > 0 && depth === 0) cursorY += 10;
+      walk(child, depth + 1, row);
+    });
     return row;
   };
   walk(visible);
-  const minX = Math.min(...layoutNodes.map(n => n.x), 0);
-  layoutNodes.forEach(n => { n.x = n.x - minX; });
   const nodes = layoutNodes.map(d => ({
     id:d.data.id,
     x:d.x,
@@ -6280,7 +6276,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   const wrapRef = useRef(null);
   const dragRef = useRef(null);
   const [size, setSize] = useState({ w:360, h:520 });
-  const [view, setView] = useState({ x:180, y:90, k:.5 });
+  const [view, setView] = useState({ x:24, y:34, k:.92 });
   const flow = useMemo(() => buildLifeFlow(selectedNode, animals), [selectedNode, animals]);
   useEffect(() => {
     const el = wrapRef.current;
@@ -6297,19 +6293,15 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   }, []);
   useEffect(() => {
     if (!flow.nodes.length) return;
-    const nodeW = 188;
-    const nodeH = 82;
+    const nodeW = 252;
+    const nodeH = 94;
     const minX = Math.min(...flow.nodes.map(n => n.x - nodeW / 2));
     const maxX = Math.max(...flow.nodes.map(n => n.x + nodeW / 2));
     const minY = Math.min(...flow.nodes.map(n => n.y - nodeH / 2));
-    const maxY = Math.max(...flow.nodes.map(n => n.y + nodeH / 2));
     const bw = Math.max(1, maxX - minX);
-    const bh = Math.max(1, maxY - minY);
-    const maxZoom = selectedNode.id === 'animalia' ? .68 : .96;
-    const nextK = Math.max(.22, Math.min(maxZoom, Math.min((size.w - 26) / bw, (size.h - 36) / bh)));
+    const nextK = Math.max(.58, Math.min(.96, (size.w - 34) / bw));
     const cx = (minX + maxX) / 2;
-    const cy = (minY + maxY) / 2;
-    setView({ x:size.w / 2 - cx * nextK, y:size.h / 2 - cy * nextK, k:nextK });
+    setView({ x:size.w / 2 - cx * nextK, y:30 - minY * nextK, k:nextK });
   }, [flow, size.w, size.h, selectedNode.id]);
   const startDrag = (e) => {
     if (e.target.closest?.('[data-life-node="true"]')) return;
@@ -6324,7 +6316,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   const endDrag = () => { dragRef.current = null; };
   const zoomBy = (factor) => {
     setView(prev => {
-      const nextK = Math.max(.18, Math.min(1.28, prev.k * factor));
+      const nextK = Math.max(.46, Math.min(1.22, prev.k * factor));
       const cx = size.w / 2;
       const cy = size.h / 2;
       return { x:cx - ((cx - prev.x) / prev.k) * nextK, y:cy - ((cy - prev.y) / prev.k) * nextK, k:nextK };
@@ -6332,24 +6324,28 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   };
   const edgePath = (edge) => {
     const sx = edge.source.x;
-    const sy = edge.source.y + 42;
-    const tx = edge.target.x;
-    const ty = edge.target.y - 42;
-    const mid = (sy + ty) / 2;
-    return `M ${sx} ${sy} C ${sx} ${mid}, ${tx} ${mid}, ${tx} ${ty}`;
+    const sy = edge.source.y + 46;
+    const tx = edge.target.x - 126;
+    const ty = edge.target.y;
+    const midY = sy + Math.max(34, (ty - sy) * .52);
+    return `M ${sx} ${sy} C ${sx} ${midY}, ${tx - 34} ${midY}, ${tx} ${ty}`;
   };
   return (
-    <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 20%, rgba(217,184,111,.08), transparent 34%)' }}>
+    <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
+      <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
+      <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina per seguire il ramo · Tocca una placca per entrare</div>
       <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
         <button onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
         <button onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
       </div>
       <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:dragRef.current ? 'none' : 'transform .42s cubic-bezier(.2,.8,.2,1)' }}>
         <svg width="1" height="1" style={{ position:'absolute', left:0, top:0, overflow:'visible', pointerEvents:'none' }}>
-          {flow.edges.map(edge => <path key={edge.id} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth="2.2" strokeLinecap="round" opacity=".58" />)}
+          {flow.edges.map(edge => <path key={edge.id} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth="3.4" strokeLinecap="round" opacity=".30" />)}
+          {flow.edges.map(edge => <path key={`${edge.id}-core`} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth="1.15" strokeLinecap="round" opacity=".88" />)}
         </svg>
         {flow.nodes.map(({ id, x, y, node, stats, active }) => {
           const terminal = !(node.children || []).length && stats.total > 0;
+          const childCount = (node.children || []).length;
           return (
             <button
               key={id}
@@ -6357,30 +6353,30 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
               onClick={() => terminal ? onAnimalPanel(node.id) : onOpen(node.id)}
               style={{
                 position:'absolute',
-                left:x - 94,
-                top:y - 41,
-                width:188,
-                minHeight:74,
-                borderRadius:18,
+                left:x - 126,
+                top:y - 47,
+                width:252,
+                minHeight:90,
+                borderRadius:22,
                 border:`1.4px solid ${node.color}${active ? 'FF' : 'AA'}`,
-                background:active ? `linear-gradient(135deg, ${node.color}30, rgba(15,17,20,.96))` : 'linear-gradient(135deg, rgba(255,255,255,.07), rgba(12,14,17,.92))',
+                background:active ? `radial-gradient(circle at 18% 16%, ${node.color}46, transparent 42%), linear-gradient(135deg, rgba(27,28,24,.98), rgba(9,11,13,.97))` : `radial-gradient(circle at 12% 14%, ${node.color}22, transparent 38%), linear-gradient(135deg, rgba(255,255,255,.085), rgba(12,14,17,.94))`,
                 color:'white',
                 fontFamily:'inherit',
                 textAlign:'left',
-                padding:10,
-                boxShadow:active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.34)` : '0 10px 24px rgba(0,0,0,.22)',
+                padding:12,
+                boxShadow:active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.12)` : '0 12px 28px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08)',
                 cursor:'pointer',
               }}
             >
               <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-                <div style={{ width:24, height:24, borderRadius:10, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:12, fontWeight:1000 }}>✦</div>
+                <div style={{ width:30, height:30, borderRadius:12, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:14, fontWeight:1000, boxShadow:`0 0 18px ${node.color}22` }}>✦</div>
                 <div style={{ minWidth:0, flex:1 }}>
-                  <div style={{ fontSize:11.5, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
-                  <div style={{ marginTop:2, color:'rgba(255,255,255,.56)', fontSize:8, fontWeight:900, textTransform:'uppercase' }}>{node.rank} · {stats.total} specie</div>
+                  <div style={{ fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
+                  <div style={{ marginTop:2, color:node.color, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{node.rank} · {stats.total} specie · {childCount ? `${childCount} rami` : 'specie'}</div>
                 </div>
                 <LifeProgress value={stats.completion} color={node.color} />
               </div>
-              <div style={{ color:'rgba(255,255,255,.60)', fontSize:9.5, lineHeight:1.25, marginTop:6, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{node.subtitle || 'Ramo Animaldex'}</div>
+              <div style={{ color:'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{node.subtitle || 'Ramo Animaldex'}</div>
             </button>
           );
         })}
