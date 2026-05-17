@@ -6410,6 +6410,38 @@ function LifeAnimalPanel({ node, animals, onClose, onOpenAnimal, theme }) {
     </div>
   </div>;
 }
+class TaxonomyErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { error:null };
+  }
+  static getDerivedStateFromError(error) {
+    return { error };
+  }
+  componentDidCatch(error, info) {
+    console.error('[Animaldex] Errore Albero della Vita:', error, info);
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.resetKey !== this.props.resetKey && this.state.error) this.setState({ error:null });
+  }
+  render() {
+    if (!this.state.error) return this.props.children;
+    const isLight = this.props.theme === 'light';
+    return (
+      <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLight ? '#F3EFE6' : '#07090B', color:isLight ? '#171717' : 'white' }}>
+        <div style={{ display:'flex', alignItems:'center', gap:10, padding:14, borderBottom:`1px solid ${isLight ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.10)'}` }}>
+          <button onClick={this.props.onBack} style={{ width:44, height:44, borderRadius:16, border:'none', background:isLight?'rgba(0,0,0,.06)':'rgba(255,255,255,.08)', color:isLight?'#171717':'white', fontSize:24, fontWeight:1000 }}>‹</button>
+          <div style={{ fontSize:18, fontWeight:1000 }}>Albero della Vita</div>
+        </div>
+        <div style={{ margin:16, borderRadius:24, padding:18, background:isLight?'#FBF7EF':'rgba(255,255,255,.06)', border:`1px solid ${isLight ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.12)'}` }}>
+          <div style={{ fontSize:18, fontWeight:1000 }}>L’albero non si è aperto correttamente.</div>
+          <div style={{ marginTop:8, color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.64)', fontSize:13, lineHeight:1.5 }}>Animaldex è rimasto stabile: copia questo dettaglio e mandamelo, così posso correggere il punto esatto.</div>
+          <pre style={{ marginTop:14, whiteSpace:'pre-wrap', wordBreak:'break-word', fontSize:11, lineHeight:1.45, color:isLight?'#5B332A':'#FFD1C8', background:isLight?'rgba(184,77,58,.08)':'rgba(184,77,58,.14)', borderRadius:14, padding:12 }}>{String(this.state.error?.message || this.state.error || 'Errore sconosciuto')}</pre>
+        </div>
+      </div>
+    );
+  }
+}
 function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], onBack, onOpenAnimal, theme='dark' }) {
   const [selectedId, setSelectedId] = useState('animalia');
   const [infoOpen, setInfoOpen] = useState(false);
@@ -9566,7 +9598,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
-    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>setPage('menu')} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
+    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyErrorBoundary theme={theme} onBack={()=>setPage('menu')} resetKey={`${theme}-${animalsData?.length || 0}`}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>setPage('menu')} onOpenAnimal={setSel} /></TaxonomyErrorBoundary>{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
     if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
