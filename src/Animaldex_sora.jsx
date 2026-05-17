@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
 import { supabase } from './supabaseClient';
-import { hierarchy, tree as d3Tree } from 'd3-hierarchy';
 
 let ANIMALS = LOCAL_ANIMALS;
 
@@ -4723,6 +4722,9 @@ function MapLibreGeoJsonMap({
   compareRightColor = '#F0A840',
   compareOverlapColor = '#F5F1EA',
   featureColorProperty = '',
+  interactive = true,
+  autoSpin = false,
+  fitDuration = 420,
 }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
@@ -4765,6 +4767,8 @@ function MapLibreGeoJsonMap({
         zoom:1.1,
         minZoom:0.7,
         maxZoom:9,
+        interactive,
+        fadeDuration:0,
         attributionControl:false,
         maplibreLogo:false,
         dragRotate:false,
@@ -4772,7 +4776,7 @@ function MapLibreGeoJsonMap({
         touchPitch:false,
       });
       mapRef.current = map;
-      if (showControls) map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
+      if (interactive && showControls) map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
       try { map.setProjection?.({ type:'globe' }); } catch (err) { console.warn('[Animaldex] Globe projection:', err); }
       map.on('load', () => {
         if (cancelled) return;
@@ -4798,21 +4802,23 @@ function MapLibreGeoJsonMap({
         }
         map.addLayer({ id:'animaldex-point-halo', type:'circle', source:'animaldex-points', paint:{ 'circle-radius':['case', ['==', ['get','__animaldex_selected'], true], 18, 12], 'circle-color':'rgba(114,214,255,.20)', 'circle-stroke-color':'#72D6FF', 'circle-stroke-width':2 } });
         map.addLayer({ id:'animaldex-point-dot', type:'circle', source:'animaldex-points', paint:{ 'circle-radius':['case', ['==', ['get','__animaldex_selected'], true], 7, 5], 'circle-color':'#72D6FF', 'circle-stroke-color':'white', 'circle-stroke-width':1 } });
-        map.on('click', 'animaldex-active-fill', (e) => {
-          const f = e.features?.[0];
-          if (f) onFeatureClick?.(f.properties?.__animaldex_id, f.properties);
-        });
-        map.on('click', 'animaldex-point-dot', (e) => {
-          const f = e.features?.[0];
-          if (f) onFeatureClick?.(f.properties?.code, f.properties);
-        });
-        ['animaldex-active-fill','animaldex-point-dot','animaldex-point-halo'].forEach(id => {
-          map.on('mouseenter', id, () => { map.getCanvas().style.cursor = 'pointer'; });
-          map.on('mouseleave', id, () => { map.getCanvas().style.cursor = ''; });
-        });
+        if (interactive) {
+          map.on('click', 'animaldex-active-fill', (e) => {
+            const f = e.features?.[0];
+            if (f) onFeatureClick?.(f.properties?.__animaldex_id, f.properties);
+          });
+          map.on('click', 'animaldex-point-dot', (e) => {
+            const f = e.features?.[0];
+            if (f) onFeatureClick?.(f.properties?.code, f.properties);
+          });
+          ['animaldex-active-fill','animaldex-point-dot','animaldex-point-halo'].forEach(id => {
+            map.on('mouseenter', id, () => { map.getCanvas().style.cursor = 'pointer'; });
+            map.on('mouseleave', id, () => { map.getCanvas().style.cursor = ''; });
+          });
+        }
         const markUserInteraction = () => { userInteractionRef.current = Date.now(); };
         const canvas = map.getCanvas();
-        ['wheel','mousedown','touchstart','pointerdown'].forEach(eventName => canvas.addEventListener(eventName, markUserInteraction, { passive:true }));
+        if (interactive) ['wheel','mousedown','touchstart','pointerdown'].forEach(eventName => canvas.addEventListener(eventName, markUserInteraction, { passive:true }));
         setReady(true);
       });
       map.on('error', (evt) => console.warn('[Animaldex] MapLibre:', evt?.error || evt));
@@ -4843,7 +4849,8 @@ function MapLibreGeoJsonMap({
     const map = mapRef.current;
     if (!map) return;
     const target = padLngLatBounds(fitBounds, fullscreen ? .10 : .18) || [-170,-58,170,76];
-    map.fitBounds([[target[0], target[1]], [target[2], target[3]]], { padding:fullscreen ? 58 : 26, duration:900, maxZoom:fullscreen ? 6.4 : 4.2 });
+    map.stop?.();
+    map.fitBounds([[target[0], target[1]], [target[2], target[3]]], { padding:fullscreen ? 58 : 24, duration:fitDuration, essential:true, maxZoom:fullscreen ? 6.4 : 4.45 });
   };
   useEffect(() => {
     if (!ready) return;
@@ -4852,7 +4859,7 @@ function MapLibreGeoJsonMap({
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!ready || !map) return;
+    if (!ready || !map || !autoSpin || !interactive) return;
     if (spinFrameRef.current) cancelAnimationFrame(spinFrameRef.current);
     const canSpin = boundsAreGlobalEnoughForSpin(fitBounds);
     let previous = performance.now();
@@ -4875,7 +4882,7 @@ function MapLibreGeoJsonMap({
   }, [ready, fitBounds, fullscreen]);
 
   return (
-    <div onClick={() => !fullscreen && onOpenFullscreen?.()} style={{ position:'relative', width:'100%', height:fullscreen?'100%':height, minHeight:fullscreen?undefined:Math.min(Number(height) || 230, 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:'#03070D', border:fullscreen?'none':'1px solid rgba(255,255,255,.09)', cursor:fullscreen?'grab':'zoom-in', boxShadow:fullscreen?'none':'inset 0 0 48px rgba(0,0,0,.48)' }}>
+    <div onClick={() => !fullscreen && onOpenFullscreen?.()} style={{ position:'relative', width:'100%', height:fullscreen?'100%':height, minHeight:fullscreen?undefined:Math.min(Number(height) || 230, 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:'#03070D', border:fullscreen?'none':'1px solid rgba(255,255,255,.09)', cursor:interactive ? (fullscreen?'grab':'default') : 'pointer', boxShadow:fullscreen?'none':'inset 0 0 48px rgba(0,0,0,.48)' }}>
       <div ref={containerRef} style={{ position:'absolute', inset:0 }} />
       <div style={{ position:'absolute', inset:0, pointerEvents:'none', boxShadow:'inset 0 0 34px rgba(0,0,0,.55), inset 0 0 86px rgba(0,0,0,.36)' }} />
       <div style={{ position:'absolute', inset:0, pointerEvents:'none', mixBlendMode:'screen', opacity:marine ? .18 : .12, background:'radial-gradient(ellipse at 34% 28%, rgba(255,255,255,.22), transparent 26%), radial-gradient(ellipse at 72% 68%, rgba(54,132,178,.18), transparent 38%)' }} />
@@ -5064,7 +5071,7 @@ function boundsToViewBox(b, padRatio=.34) {
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
 
-function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[] }) {
+function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const groupList = Array.isArray(levelGroups) ? levelGroups : [];
@@ -5145,6 +5152,9 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
             onOpenFullscreen={openFullscreen}
             showFeatureBoundaries={groupList.length ? false : showFeatureBoundaries}
             featureColorProperty={groupList.length ? '__animaldex_level_color' : ''}
+            interactive={interactive}
+            autoSpin={false}
+            fitDuration={fullscreen ? 520 : 340}
           />
           {fullscreen && fullscreenTarget && (
             <div style={{ position:'absolute', left:14, right:14, bottom:14, zIndex:8, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'linear-gradient(135deg,rgba(9,12,16,.92),rgba(31,23,20,.92))', padding:14, boxShadow:'0 18px 42px rgba(0,0,0,.46)', backdropFilter:'blur(10px)' }}>
@@ -5161,7 +5171,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
         {isFullscreen && (
           <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
             <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)', position:'relative' }}>
-              <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} />
+              <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} />
             </div>
           </div>
         )}
@@ -5212,7 +5222,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     {isFullscreen && (
       <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
         <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)' }}>
-          <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} levelGroups={levelGroups} />
+          <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} levelGroups={levelGroups} interactive={interactive} />
         </div>
       </div>
     )}
@@ -5224,6 +5234,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
   const isMarine = item?.realmType === 'marine' || item?.kind === 'marine';
   const ids = mapIds?.length ? mapIds : (item?.bioregionIds || (item?.bioregionId ? [item.bioregionId] : []));
   const coverSources = getRegionCoverSources(item, image || item?.image);
+  const shouldRenderInlineMap = !onMapFocus && flipped;
   const handleOpen = () => {
     if (locked) return;
     onOpen?.();
@@ -5255,7 +5266,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
               : (!mapDisabled && <button data-sound="map" onClick={e=>{e.stopPropagation(); if (onMapFocus) onMapFocus(item, ids); else setFlipped(true);}} style={{ height:36, padding:'0 13px', borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950, cursor:'pointer', flexShrink:0 }}>Map</button>)}
           </div>
         </div>
-        <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
+        {shouldRenderInlineMap && <div style={{ position:'absolute', inset:0, backfaceVisibility:'hidden', transform:'rotateY(180deg)', borderRadius:22, overflow:'hidden', background:'#101114', border:`1px solid ${accent}55`, padding:0, boxSizing:'border-box', boxShadow:'0 18px 60px rgba(0,0,0,.46)' }}>
           <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:12, padding:'12px 14px 10px', background:'linear-gradient(180deg, rgba(50,56,66,.98) 0%, rgba(30,34,42,.88) 44%, rgba(22,24,30,.50) 76%, rgba(16,17,20,0) 100%)', backdropFilter:'blur(8px)' }}>
             <div style={{ minWidth:0 }}>
               <div style={{ color:'white', fontSize:15, fontWeight:1000, lineHeight:1.08 }}>{title || item?.label}</div>
@@ -5271,7 +5282,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
             <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onOpen?.();}} style={{ flex:1, height:34, borderRadius:12, border:'none', background:'#244A70', color:'white', fontWeight:950 }}>{openLabel}</button>
             {secondaryOpenLabel && <button data-sound="tap" onClick={e=>{e.stopPropagation();setFlipped(false);onSecondaryOpen?.();}} style={{ flex:1, height:34, borderRadius:12, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'white', fontWeight:950 }}>{secondaryOpenLabel}</button>}
           </div>
-        </div>
+        </div>}
       </div>
     </div>
   );
@@ -6005,7 +6016,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         <div style={{ marginBottom:14 }}>
           <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ position:'relative', width:'100%', minHeight:152, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:28, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden' }}>
             <div style={{ position:'absolute', inset:0, pointerEvents:'none', opacity:.86 }}>
-              <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={152} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} />
+              <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={152} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} fitDuration={0} />
             </div>
             <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'linear-gradient(90deg, rgba(5,11,13,.92), rgba(5,11,13,.48) 58%, rgba(5,11,13,.18))' }} />
             <div style={{ position:'relative', zIndex:1 }}>
@@ -6217,11 +6228,27 @@ function LifeProgress({ value, color }) {
 }
 function buildLifeFlow(selected, animals) {
   const visible = getLifeVisibleRoot(selected);
-  const root = hierarchy(visible);
   const widthGap = selected.id === 'animalia' ? 230 : 215;
   const heightGap = selected.id === 'animalia' ? 150 : 142;
-  d3Tree().nodeSize([widthGap, heightGap])(root);
-  const nodes = root.descendants().map(d => ({
+  const layoutNodes = [];
+  let leafIndex = 0;
+  const walk = (node, depth = 0, parent = null) => {
+    const children = node.children || [];
+    const row = { data:node, depth, parent, x:0, y:depth * heightGap };
+    const childRows = children.map(child => walk(child, depth + 1, row));
+    if (childRows.length) {
+      row.x = childRows.reduce((sum, child) => sum + child.x, 0) / childRows.length;
+    } else {
+      row.x = leafIndex * widthGap;
+      leafIndex += 1;
+    }
+    layoutNodes.push(row);
+    return row;
+  };
+  walk(visible);
+  const minX = Math.min(...layoutNodes.map(n => n.x), 0);
+  layoutNodes.forEach(n => { n.x = n.x - minX; });
+  const nodes = layoutNodes.map(d => ({
     id:d.data.id,
     x:d.x,
     y:d.y,
@@ -6229,11 +6256,11 @@ function buildLifeFlow(selected, animals) {
     stats:getLifeStats(d.data, animals),
     active:d.data.id === selected.id,
   }));
-  const edges = root.links().map(link => ({
-    id:`${link.source.data.id}-${link.target.data.id}`,
-    source:{ x:link.source.x, y:link.source.y },
-    target:{ x:link.target.x, y:link.target.y },
-    color:link.target.data.color,
+  const edges = layoutNodes.filter(d => d.parent).map(d => ({
+    id:`${d.parent.data.id}-${d.data.id}`,
+    source:{ x:d.parent.x, y:d.parent.y },
+    target:{ x:d.x, y:d.y },
+    color:d.data.color,
   }));
   return { nodes, edges };
 }
@@ -8031,16 +8058,19 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
       setSelectedRegionId(null);
       setSelectedEcoregion(null);
       setView('regions');
+      scrollToMainMap();
       return;
     }
     if (view === 'regions') {
       setSelectedRegionId(hit.reg.id);
       setSelectedEcoregion(null);
       setView('ecoregions');
+      scrollToMainMap();
       return;
     }
     if (view === 'ecoregions') {
-      setSelectedEcoregion(hit.eco);
+      openEcoregion(hit.eco);
+      return;
     }
     scrollToMainMap();
   };
@@ -8234,7 +8264,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         {view==='marine' && (
           <>
             <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
-              <BioregionVectorMap highlightIds={marineMapIds} selectedId={selectedMarineRealmId} marine accent="#4FB3FF" height={310} fullBleed clickable onSelect={(id)=>{ setSelectedMarineRealmId(id); scrollToMainMap(); }} levelGroups={marineLevelGroups} />
+              <BioregionVectorMap highlightIds={marineMapIds} selectedId={selectedMarineRealmId} marine accent="#4FB3FF" height={310} fullBleed clickable onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }} levelGroups={marineLevelGroups} />
             </div>
             {MARINE_REALMS.map(m => {
               const locked = !unlockMap[m.id];
