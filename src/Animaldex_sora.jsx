@@ -4635,6 +4635,7 @@ function MapLibreGeoJsonMap({
   marine = false,
   onOpenFullscreen,
   fitBounds,
+  showFeatureBoundaries = true,
 }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
@@ -4683,9 +4684,13 @@ function MapLibreGeoJsonMap({
         map.addSource('animaldex-polygons', { type:'geojson', data:mapData });
         map.addSource('animaldex-points', { type:'geojson', data:markerData });
         map.addLayer({ id:'animaldex-base-fill', type:'fill', source:'animaldex-polygons', paint:{ 'fill-color': marine ? '#153C4D' : '#735343', 'fill-opacity': marine ? .18 : .24 } });
-        map.addLayer({ id:'animaldex-base-line', type:'line', source:'animaldex-polygons', paint:{ 'line-color': marine ? 'rgba(120,210,245,.28)' : 'rgba(255,255,255,.16)', 'line-width':.75 } });
+        if (showFeatureBoundaries) {
+          map.addLayer({ id:'animaldex-base-line', type:'line', source:'animaldex-polygons', paint:{ 'line-color': marine ? 'rgba(120,210,245,.28)' : 'rgba(255,255,255,.16)', 'line-width':.75 } });
+        }
         map.addLayer({ id:'animaldex-active-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':accent, 'fill-opacity':['case', ['==', ['get','__animaldex_selected'], true], .78, .52] } });
-        map.addLayer({ id:'animaldex-active-line', type:'line', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'line-color':'#FFE0D4', 'line-width':['interpolate', ['linear'], ['zoom'], 1, 1.5, 6, 4.5] } });
+        if (showFeatureBoundaries) {
+          map.addLayer({ id:'animaldex-active-line', type:'line', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'line-color':'#FFE0D4', 'line-width':['interpolate', ['linear'], ['zoom'], 1, 1.5, 6, 4.5] } });
+        }
         map.addLayer({ id:'animaldex-point-halo', type:'circle', source:'animaldex-points', paint:{ 'circle-radius':['case', ['==', ['get','__animaldex_selected'], true], 18, 12], 'circle-color':'rgba(114,214,255,.20)', 'circle-stroke-color':'#72D6FF', 'circle-stroke-width':2 } });
         map.addLayer({ id:'animaldex-point-dot', type:'circle', source:'animaldex-points', paint:{ 'circle-radius':['case', ['==', ['get','__animaldex_selected'], true], 7, 5], 'circle-color':'#72D6FF', 'circle-stroke-color':'white', 'circle-stroke-width':1 } });
         map.on('click', 'animaldex-active-fill', (e) => {
@@ -4857,6 +4862,7 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor }) {
         accent={accentColor}
         marine={!!meta.marine}
         fitBounds={bounds}
+        showFeatureBoundaries={false}
         onOpenFullscreen={()=>setIsFullscreen(true)}
       />
       {isFullscreen && (
@@ -4873,6 +4879,7 @@ function SpeciesRangeMap({ animal, fallbackCountryMap, accentColor }) {
               accent={accentColor}
               marine={!!meta.marine}
               fitBounds={bounds}
+              showFeatureBoundaries={false}
             />
           </div>
         </div>
