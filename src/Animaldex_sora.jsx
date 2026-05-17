@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
 import { supabase } from './supabaseClient';
-import { Handle, Position, ReactFlow, ReactFlowProvider, useReactFlow } from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
 import { hierarchy, tree as d3Tree } from 'd3-hierarchy';
 
 let ANIMALS = LOCAL_ANIMALS;
@@ -6217,53 +6215,141 @@ function LifeProgress({ value, color }) {
   const pct = Math.max(0, Math.min(100, Number(value) || 0));
   return <div style={{ width:28, height:28, borderRadius:'50%', background:`conic-gradient(${color} ${pct}%, rgba(255,255,255,.12) 0)`, display:'grid', placeItems:'center', flexShrink:0 }}><div style={{ width:21, height:21, borderRadius:'50%', background:'#07090B', color:'white', display:'grid', placeItems:'center', fontSize:8, fontWeight:1000 }}>{pct}</div></div>;
 }
-function LifeFlowNode({ data }) {
-  const { node, stats, active, onOpen, onAnimalPanel } = data;
-  const terminal = !(node.children || []).length && stats.total > 0;
-  return (
-    <button onClick={() => terminal ? onAnimalPanel(node.id) : onOpen(node.id)} style={{ width:188, minHeight:74, borderRadius:18, border:`1.4px solid ${node.color}${active ? 'FF' : 'AA'}`, background:active ? `linear-gradient(135deg, ${node.color}30, rgba(15,17,20,.96))` : 'linear-gradient(135deg, rgba(255,255,255,.07), rgba(12,14,17,.92))', color:'white', fontFamily:'inherit', textAlign:'left', padding:10, boxShadow:active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.34)` : '0 10px 24px rgba(0,0,0,.22)', cursor:'pointer' }}>
-      <Handle type="target" position={Position.Top} style={{ opacity:0 }} />
-      <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-        <div style={{ width:24, height:24, borderRadius:10, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:12, fontWeight:1000 }}>✦</div>
-        <div style={{ minWidth:0, flex:1 }}>
-          <div style={{ fontSize:11.5, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
-          <div style={{ marginTop:2, color:'rgba(255,255,255,.56)', fontSize:8, fontWeight:900, textTransform:'uppercase' }}>{node.rank} · {stats.total} specie</div>
-        </div>
-        <LifeProgress value={stats.completion} color={node.color} />
-      </div>
-      <div style={{ color:'rgba(255,255,255,.60)', fontSize:9.5, lineHeight:1.25, marginTop:6, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{node.subtitle || 'Ramo Animaldex'}</div>
-      <Handle type="source" position={Position.Bottom} style={{ opacity:0 }} />
-    </button>
-  );
-}
-const lifeNodeTypes = { lifeNode:LifeFlowNode };
-function buildLifeFlow(selected, animals, onOpen, onAnimalPanel) {
+function buildLifeFlow(selected, animals) {
   const visible = getLifeVisibleRoot(selected);
   const root = hierarchy(visible);
-  const descCount = root.descendants().length;
   const widthGap = selected.id === 'animalia' ? 230 : 215;
   const heightGap = selected.id === 'animalia' ? 150 : 142;
   d3Tree().nodeSize([widthGap, heightGap])(root);
   const nodes = root.descendants().map(d => ({
     id:d.data.id,
-    type:'lifeNode',
-    position:{ x:d.x, y:d.y },
-    draggable:false,
-    data:{ node:d.data, stats:getLifeStats(d.data, animals), active:d.data.id === selected.id, onOpen, onAnimalPanel },
+    x:d.x,
+    y:d.y,
+    node:d.data,
+    stats:getLifeStats(d.data, animals),
+    active:d.data.id === selected.id,
   }));
-  const edges = root.links().map(link => ({ id:`${link.source.data.id}-${link.target.data.id}`, source:link.source.data.id, target:link.target.data.id, type:'smoothstep', style:{ stroke:link.target.data.color, strokeWidth:2, opacity:.58 } }));
-  return { nodes, edges, descCount };
+  const edges = root.links().map(link => ({
+    id:`${link.source.data.id}-${link.target.data.id}`,
+    source:{ x:link.source.x, y:link.source.y },
+    target:{ x:link.target.x, y:link.target.y },
+    color:link.target.data.color,
+  }));
+  return { nodes, edges };
 }
 function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
-  const { fitView } = useReactFlow();
-  const flow = useMemo(() => buildLifeFlow(selectedNode, animals, onOpen, onAnimalPanel), [selectedNode, animals, onOpen, onAnimalPanel]);
+  const wrapRef = useRef(null);
+  const dragRef = useRef(null);
+  const [size, setSize] = useState({ w:360, h:520 });
+  const [view, setView] = useState({ x:180, y:90, k:.5 });
+  const flow = useMemo(() => buildLifeFlow(selectedNode, animals), [selectedNode, animals]);
   useEffect(() => {
-    const padding = selectedNode.id === 'animalia' ? 0.28 : 0.18;
-    const t = setTimeout(() => fitView({ padding, duration:520, maxZoom:selectedNode.id === 'animalia' ? .62 : .88 }), 50);
-    return () => clearTimeout(t);
-  }, [fitView, selectedNode.id]);
-  return <ReactFlow nodes={flow.nodes} edges={flow.edges} nodeTypes={lifeNodeTypes} fitView minZoom={0.18} maxZoom={1.35} panOnDrag zoomOnPinch zoomOnScroll={false} nodesDraggable={false} elementsSelectable={false} proOptions={{ hideAttribution:true }} />;
+    const el = wrapRef.current;
+    if (!el) return;
+    const update = () => setSize({ w:Math.max(1, el.clientWidth), h:Math.max(1, el.clientHeight) });
+    update();
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', update);
+      return () => window.removeEventListener('resize', update);
+    }
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  useEffect(() => {
+    if (!flow.nodes.length) return;
+    const nodeW = 188;
+    const nodeH = 82;
+    const minX = Math.min(...flow.nodes.map(n => n.x - nodeW / 2));
+    const maxX = Math.max(...flow.nodes.map(n => n.x + nodeW / 2));
+    const minY = Math.min(...flow.nodes.map(n => n.y - nodeH / 2));
+    const maxY = Math.max(...flow.nodes.map(n => n.y + nodeH / 2));
+    const bw = Math.max(1, maxX - minX);
+    const bh = Math.max(1, maxY - minY);
+    const maxZoom = selectedNode.id === 'animalia' ? .68 : .96;
+    const nextK = Math.max(.22, Math.min(maxZoom, Math.min((size.w - 26) / bw, (size.h - 36) / bh)));
+    const cx = (minX + maxX) / 2;
+    const cy = (minY + maxY) / 2;
+    setView({ x:size.w / 2 - cx * nextK, y:size.h / 2 - cy * nextK, k:nextK });
+  }, [flow, size.w, size.h, selectedNode.id]);
+  const startDrag = (e) => {
+    if (e.target.closest?.('[data-life-node="true"]')) return;
+    dragRef.current = { x:e.clientX, y:e.clientY, view };
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  };
+  const moveDrag = (e) => {
+    const d = dragRef.current;
+    if (!d) return;
+    setView({ ...d.view, x:d.view.x + e.clientX - d.x, y:d.view.y + e.clientY - d.y });
+  };
+  const endDrag = () => { dragRef.current = null; };
+  const zoomBy = (factor) => {
+    setView(prev => {
+      const nextK = Math.max(.18, Math.min(1.28, prev.k * factor));
+      const cx = size.w / 2;
+      const cy = size.h / 2;
+      return { x:cx - ((cx - prev.x) / prev.k) * nextK, y:cy - ((cy - prev.y) / prev.k) * nextK, k:nextK };
+    });
+  };
+  const edgePath = (edge) => {
+    const sx = edge.source.x;
+    const sy = edge.source.y + 42;
+    const tx = edge.target.x;
+    const ty = edge.target.y - 42;
+    const mid = (sy + ty) / 2;
+    return `M ${sx} ${sy} C ${sx} ${mid}, ${tx} ${mid}, ${tx} ${ty}`;
+  };
+  return (
+    <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 20%, rgba(217,184,111,.08), transparent 34%)' }}>
+      <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
+        <button onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
+        <button onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
+      </div>
+      <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:dragRef.current ? 'none' : 'transform .42s cubic-bezier(.2,.8,.2,1)' }}>
+        <svg width="1" height="1" style={{ position:'absolute', left:0, top:0, overflow:'visible', pointerEvents:'none' }}>
+          {flow.edges.map(edge => <path key={edge.id} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth="2.2" strokeLinecap="round" opacity=".58" />)}
+        </svg>
+        {flow.nodes.map(({ id, x, y, node, stats, active }) => {
+          const terminal = !(node.children || []).length && stats.total > 0;
+          return (
+            <button
+              key={id}
+              data-life-node="true"
+              onClick={() => terminal ? onAnimalPanel(node.id) : onOpen(node.id)}
+              style={{
+                position:'absolute',
+                left:x - 94,
+                top:y - 41,
+                width:188,
+                minHeight:74,
+                borderRadius:18,
+                border:`1.4px solid ${node.color}${active ? 'FF' : 'AA'}`,
+                background:active ? `linear-gradient(135deg, ${node.color}30, rgba(15,17,20,.96))` : 'linear-gradient(135deg, rgba(255,255,255,.07), rgba(12,14,17,.92))',
+                color:'white',
+                fontFamily:'inherit',
+                textAlign:'left',
+                padding:10,
+                boxShadow:active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.34)` : '0 10px 24px rgba(0,0,0,.22)',
+                cursor:'pointer',
+              }}
+            >
+              <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+                <div style={{ width:24, height:24, borderRadius:10, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:12, fontWeight:1000 }}>✦</div>
+                <div style={{ minWidth:0, flex:1 }}>
+                  <div style={{ fontSize:11.5, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
+                  <div style={{ marginTop:2, color:'rgba(255,255,255,.56)', fontSize:8, fontWeight:900, textTransform:'uppercase' }}>{node.rank} · {stats.total} specie</div>
+                </div>
+                <LifeProgress value={stats.completion} color={node.color} />
+              </div>
+              <div style={{ color:'rgba(255,255,255,.60)', fontSize:9.5, lineHeight:1.25, marginTop:6, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{node.subtitle || 'Ramo Animaldex'}</div>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
+const lifeZoomButtonStyle = { width:40, height:40, borderRadius:15, border:'1px solid rgba(255,255,255,.12)', background:'rgba(13,15,18,.82)', color:'white', fontSize:18, fontWeight:1000, boxShadow:'0 12px 26px rgba(0,0,0,.28)' };
 function LifeInfoModal({ onClose, theme }) {
   const isLight = theme === 'light';
   return <div onClick={onClose} style={{ position:'absolute', inset:0, zIndex:50, background:'rgba(0,0,0,.62)', display:'flex', alignItems:'flex-end' }}>
@@ -6308,7 +6394,7 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
   const path = getLifeNodePath(selectedNode.id);
   const openNode = useCallback((id) => { setPanelNodeId(null); setSelectedId(id); }, []);
   const openPanel = useCallback((id) => setPanelNodeId(id), []);
-  return <ReactFlowProvider>
+  return (
     <div style={{ height:'100%', position:'relative', background:isLight?'#F3EFE6':'radial-gradient(circle at 50% -12%, rgba(63,183,166,.13), transparent 34%), linear-gradient(180deg,#090D0E,#050708)', overflow:'hidden' }}>
       <div style={{ position:'absolute', top:0, left:0, right:0, height:70, zIndex:24, display:'flex', alignItems:'center', gap:10, padding:'10px 12px', boxSizing:'border-box', background:isLight?'rgba(243,239,230,.90)':'linear-gradient(180deg,rgba(5,7,8,.92),rgba(5,7,8,.58))', backdropFilter:'blur(14px)', borderBottom:`1px solid ${isLight?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)'}` }}>
         <button onClick={onBack} aria-label="Torna al menu" style={{ width:46, height:46, borderRadius:17, border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(255,255,255,.56)':'rgba(255,255,255,.055)', color:isLight?'#171717':'white', fontSize:25, fontWeight:1000 }}>‹</button>
@@ -6325,7 +6411,7 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
       {panelNode && <LifeAnimalPanel node={panelNode} animals={animalsWithStatus} onClose={()=>setPanelNodeId(null)} onOpenAnimal={onOpenAnimal} theme={theme} />}
       {infoOpen && <LifeInfoModal onClose={()=>setInfoOpen(false)} theme={theme} />}
     </div>
-  </ReactFlowProvider>;
+  );
 }
 
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark', user=null, userProfile=null }) {
