@@ -4446,7 +4446,32 @@ function pointProjectedBounds(points = [], radiusX=34, radiusY=24) {
 const MAPLIBRE_VERSION = '5.7.1';
 const MAPLIBRE_JS_URL = `https://unpkg.com/maplibre-gl@${MAPLIBRE_VERSION}/dist/maplibre-gl.js`;
 const MAPLIBRE_CSS_URL = `https://unpkg.com/maplibre-gl@${MAPLIBRE_VERSION}/dist/maplibre-gl.css`;
-const OPENFREEMAP_STYLE_URL = 'https://tiles.openfreemap.org/styles/liberty';
+const GEBCO_WMS_TILE_URL = 'https://wms.gebco.net/mapserv?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=GEBCO_Latest_2&STYLES=&FORMAT=image/png&TRANSPARENT=false&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox-epsg-3857}';
+const ANIMALDEX_PHYSICAL_GLOBE_STYLE = {
+  version: 8,
+  projection: { type:'globe' },
+  sources: {
+    gebcoPhysical: {
+      type:'raster',
+      tiles:[GEBCO_WMS_TILE_URL],
+      tileSize:256,
+      attribution:'GEBCO',
+    },
+  },
+  layers: [
+    { id:'animaldex-space', type:'background', paint:{ 'background-color':'#03070D' } },
+    {
+      id:'gebco-physical',
+      type:'raster',
+      source:'gebcoPhysical',
+      paint:{
+        'raster-opacity':1,
+        'raster-saturation':0.1,
+        'raster-contrast':0.04,
+      },
+    },
+  ],
+};
 let MAPLIBRE_PROMISE = null;
 
 function loadMapLibreRuntime() {
@@ -4529,6 +4554,11 @@ function featureCollection(features = []) {
 function cloneFeatureWithProps(feature, extra = {}) {
   return { ...feature, properties:{ ...(feature?.properties || {}), ...extra } };
 }
+function boundsAreGlobalEnoughForSpin(bounds) {
+  if (!bounds) return true;
+  const [minLon, minLat, maxLon, maxLat] = bounds;
+  return (maxLon - minLon) > 118 || (maxLat - minLat) > 56;
+}
 function MapLibreGeoJsonMap({
   data,
   activeFeatureIds = [],
@@ -4550,6 +4580,8 @@ function MapLibreGeoJsonMap({
   const containerRef = useRef(null);
   const mapRef = useRef(null);
   const loadedRef = useRef(false);
+  const spinFrameRef = useRef(null);
+  const userInteractionRef = useRef(0);
   const activeSet = useMemo(() => new Set((activeFeatureIds || []).map(String)), [JSON.stringify(activeFeatureIds || [])]);
   const mapData = useMemo(() => {
     const features = (data?.features || []).map(f => {
@@ -4573,7 +4605,7 @@ function MapLibreGeoJsonMap({
       if (cancelled || !containerRef.current || mapRef.current) return;
       map = new maplibregl.Map({
         container: containerRef.current,
-        style: OPENFREEMAP_STYLE_URL,
+        style: ANIMALDEX_PHYSICAL_GLOBE_STYLE,
         center:[12, 18],
         zoom:1.1,
         minZoom:0.7,
@@ -4585,6 +4617,7 @@ function MapLibreGeoJsonMap({
       });
       mapRef.current = map;
       map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
+      try { map.setProjection?.({ type:'globe' }); } catch (err) { console.warn('[Animaldex] Globe projection:', err); }
       map.on('load', () => {
         if (cancelled) return;
         loadedRef.current = true;
@@ -4608,6 +4641,9 @@ function MapLibreGeoJsonMap({
           map.on('mouseenter', id, () => { map.getCanvas().style.cursor = 'pointer'; });
           map.on('mouseleave', id, () => { map.getCanvas().style.cursor = ''; });
         });
+        const markUserInteraction = () => { userInteractionRef.current = Date.now(); };
+        const canvas = map.getCanvas();
+        ['wheel','mousedown','touchstart','pointerdown'].forEach(eventName => canvas.addEventListener(eventName, markUserInteraction, { passive:true }));
         setReady(true);
       });
       map.on('error', (evt) => console.warn('[Animaldex] MapLibre:', evt?.error || evt));
@@ -4617,6 +4653,8 @@ function MapLibreGeoJsonMap({
     });
     return () => {
       cancelled = true;
+      if (spinFrameRef.current) cancelAnimationFrame(spinFrameRef.current);
+      spinFrameRef.current = null;
       if (mapRef.current) {
         mapRef.current.remove();
         mapRef.current = null;
@@ -4643,10 +4681,35 @@ function MapLibreGeoJsonMap({
     recenter();
   }, [ready, fitBounds, fullscreen]);
 
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map) return;
+    if (spinFrameRef.current) cancelAnimationFrame(spinFrameRef.current);
+    const canSpin = boundsAreGlobalEnoughForSpin(fitBounds);
+    let previous = performance.now();
+    const spin = (now) => {
+      const elapsed = Math.min(80, now - previous);
+      previous = now;
+      const quietFor = Date.now() - userInteractionRef.current;
+      const isOverview = map.getZoom() < (fullscreen ? 2.35 : 1.95);
+      if (canSpin && quietFor > 2800 && isOverview && !map.isMoving() && !map.isZooming() && !map.isRotating()) {
+        const center = map.getCenter();
+        map.setCenter([center.lng + elapsed * 0.00115, center.lat]);
+      }
+      spinFrameRef.current = requestAnimationFrame(spin);
+    };
+    spinFrameRef.current = requestAnimationFrame(spin);
+    return () => {
+      if (spinFrameRef.current) cancelAnimationFrame(spinFrameRef.current);
+      spinFrameRef.current = null;
+    };
+  }, [ready, fitBounds, fullscreen]);
+
   return (
-    <div onClick={() => !fullscreen && onOpenFullscreen?.()} style={{ position:'relative', width:'100%', height:fullscreen?'100%':height, minHeight:fullscreen?undefined:Math.min(Number(height) || 230, 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:marine?'#061923':'#101114', border:fullscreen?'none':'1px solid rgba(255,255,255,.09)', cursor:fullscreen?'grab':'zoom-in' }}>
+    <div onClick={() => !fullscreen && onOpenFullscreen?.()} style={{ position:'relative', width:'100%', height:fullscreen?'100%':height, minHeight:fullscreen?undefined:Math.min(Number(height) || 230, 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:'#03070D', border:fullscreen?'none':'1px solid rgba(255,255,255,.09)', cursor:fullscreen?'grab':'zoom-in', boxShadow:fullscreen?'none':'inset 0 0 48px rgba(0,0,0,.48)' }}>
       <div ref={containerRef} style={{ position:'absolute', inset:0 }} />
-      {marine && <div style={{ position:'absolute', inset:0, pointerEvents:'none', mixBlendMode:'screen', opacity:.36, background:'radial-gradient(ellipse at 36% 34%, rgba(80,184,205,.22), transparent 30%), radial-gradient(ellipse at 66% 62%, rgba(6,54,112,.36), transparent 38%), repeating-linear-gradient(135deg, rgba(120,220,255,.08) 0 1px, transparent 1px 14px)' }} />}
+      <div style={{ position:'absolute', inset:0, pointerEvents:'none', boxShadow:'inset 0 0 34px rgba(0,0,0,.55), inset 0 0 86px rgba(0,0,0,.36)' }} />
+      <div style={{ position:'absolute', inset:0, pointerEvents:'none', mixBlendMode:'screen', opacity:marine ? .18 : .12, background:'radial-gradient(ellipse at 34% 28%, rgba(255,255,255,.22), transparent 26%), radial-gradient(ellipse at 72% 68%, rgba(54,132,178,.18), transparent 38%)' }} />
       {!ready && !error && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, background:'linear-gradient(135deg,rgba(14,32,42,.94),rgba(5,8,12,.94))' }}>Caricamento mappa interattiva...</div>}
       {error && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.68)', fontSize:11, fontWeight:900, textAlign:'center', padding:18, background:'linear-gradient(135deg,#151515,#07131F)' }}>{error}</div>}
       {title && <div style={{ position:'absolute', left:12, top:10, color:'white', fontSize:12, fontWeight:1000, textShadow:'0 2px 10px rgba(0,0,0,.85)', pointerEvents:'none' }}>{title}</div>}
@@ -4655,7 +4718,7 @@ function MapLibreGeoJsonMap({
         {fullscreen && <button data-sound="back" onClick={(e)=>{e.stopPropagation(); onCloseFullscreen?.();}} aria-label="Chiudi mappa" style={{ width:36, height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.54)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:18, fontWeight:900, lineHeight:1, padding:0 }}>×</button>}
       </div>
       {label && <div style={{ position:'absolute', left:10, right:10, bottom:10, background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)', pointerEvents:'none' }}>{label}</div>}
-      {marine && <div className="gebco-map-label">fondali stilizzati</div>}
+      <div className="gebco-map-label">GEBCO physical globe</div>
     </div>
   );
 }
