@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
 import { supabase } from './supabaseClient';
 
@@ -464,7 +464,7 @@ function getQuickSeenCandidates(animals, statusMap, visitedCountries) {
       };
     })
     .filter(a => a.status === 'ricercato')
-    .filter(a => visited.length > 0 && a.countryMatchCount === visited.length)
+    .filter(a => visited.length > 0 && a.countryMatchCount > 0)
     .filter(a => !isQuickSeenRejected(a.id))
     .filter(a => !!a.image_url)
     .sort((a,b) => (a.rarityScore - b.rarityScore) || (b.observationCount - a.observationCount) || (quickSeenDailyShuffleScore(a) - quickSeenDailyShuffleScore(b)))
@@ -902,6 +902,18 @@ async function fetchAnimalsFromSupabase(userId) {
   return (animals || []).map(a => normalizeSupabaseAnimal(a, userAnimalsById[a.id]));
 }
 
+async function fetchUserAnimalStatusMap(userId) {
+  const { data, error } = await supabase
+    .from('user_animals')
+    .select('animal_id, unlock_status')
+    .eq('user_id', userId);
+
+  if (error) throw error;
+  return Object.fromEntries((data || [])
+    .filter(row => row?.animal_id !== undefined && row?.animal_id !== null)
+    .map(row => [String(row.animal_id), supabaseStatusToApp(row.unlock_status)]));
+}
+
 async function fetchUserDestinations(userId) {
   const { data, error } = await supabase
     .from('user_destinations')
@@ -969,7 +981,7 @@ async function persistEarnedBadges(userId, badgeIds = []) {
 
   const { error } = await supabase
     .from('user_badges')
-    .insert(payload);
+    .upsert(payload, { onConflict:'user_id,badge_id' });
 
   if (error) throw error;
   return cleanIds;
@@ -6482,56 +6494,66 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
   const quickNoticeBorder = '1px solid rgba(255,218,176,.18)';
   const [dailyIds, setDailyIds] = useState(getQuickSeenToday());
   const [busy, setBusy] = useState(false);
+  const [quickMessage, setQuickMessage] = useState('');
+  const [localDoneIds, setLocalDoneIds] = useState(() => new Set(getQuickSeenToday().map(String)));
   const buildQueue = () => {
-    const alreadyDone = new Set(getQuickSeenToday().map(String));
+    const alreadyDone = new Set([...getQuickSeenToday().map(String), ...Array.from(localDoneIds)]);
     return getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !alreadyDone.has(String(a.id)));
   };
   const [queue, setQueue] = useState(buildQueue);
   useEffect(() => {
-    const alreadyDone = new Set(getQuickSeenToday().map(String));
+    const alreadyDone = new Set([...getQuickSeenToday().map(String), ...Array.from(localDoneIds)]);
     setQueue(prev => {
       const stillValid = (prev || []).filter(a => !alreadyDone.has(String(a.id)) && !isQuickSeenRejected(a.id) && normalizeAnimalStatus(statusMap[a.id] ?? a.status) === 'ricercato');
       const existing = new Set(stillValid.map(a => String(a.id)));
       const additions = getQuickSeenCandidates(animals, statusMap, visitedCountries).filter(a => !alreadyDone.has(String(a.id)) && !existing.has(String(a.id)));
       return [...stillValid, ...additions].slice(0, QUICK_SEEN_DAILY_LIMIT * 3);
     });
-  }, [animals, statusMap, visitedCountries]);
+  }, [animals, statusMap, visitedCountries, localDoneIds]);
   const doneToday = dailyIds.length;
   const current = queue[0] || null;
   const markDaily = (id) => {
-    const next = Array.from(new Set([...dailyIds.map(String), String(id)]));
-    setDailyIds(next);
-    saveQuickSeenToday(next);
+    const cleanId = String(id);
+    setDailyIds(prev => {
+      const next = Array.from(new Set([...(prev || []).map(String), cleanId]));
+      saveQuickSeenToday(next);
+      return next;
+    });
+    setLocalDoneIds(prev => new Set([...Array.from(prev || []), cleanId]));
   };
   const advanceQueue = (id) => setQueue(prev => (prev || []).filter(a => String(a.id) !== String(id)).slice(0));
-  const yes = async () => {
+  const releaseBusySoon = () => setTimeout(() => setBusy(false), 90);
+  const yes = () => {
     if (!current || busy) return;
     const picked = current;
     setBusy(true);
+    setQuickMessage('');
     markDaily(picked.id);
     advanceQueue(picked.id);
     trackUserEvent(user, 'quick_seen_yes', { animal_id:picked.id, animal_name:picked.com, rarity:picked.rarity, source_screen:'quick_seen' }, userProfile);
-    try {
-      await onStatusChange?.(picked.id, 'avvistato');
-    } finally {
-      setBusy(false);
-    }
+    Promise.resolve(onStatusChange?.(picked.id, 'avvistato')).catch(err => {
+      console.warn('[Animaldex] Avvista Veloce: salvataggio in background fallito:', err);
+      setQuickMessage('Visto segnato qui. Se il salvataggio cloud tarda, riprova tra poco.');
+    });
+    releaseBusySoon();
   };
   const no = () => {
     if (!current || busy) return;
     const picked = current;
     setBusy(true);
+    setQuickMessage('');
     markDaily(picked.id);
     rejectQuickSeenForCooldown(picked.id);
     advanceQueue(picked.id);
     trackUserEvent(user, 'quick_seen_no', { animal_id:picked.id, animal_name:picked.com, rarity:picked.rarity, cooldown_days:QUICK_SEEN_REJECT_COOLDOWN_DAYS, source_screen:'quick_seen' }, userProfile);
-    setBusy(false);
+    releaseBusySoon();
   };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#111113', overflow:'hidden' }}>
       <PageHeader title="Avvista Veloce" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ color:quickIntroColor, fontSize:13, lineHeight:1.55, marginBottom:14 }}>Identifica animali che potresti gia aver avvistato. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
+        {quickMessage && <div style={{ borderRadius:16, border:'1px solid rgba(255,218,176,.22)', background:'rgba(255,218,176,.08)', color:isLightTheme?'#5A2A10':'#FFDAB0', padding:'10px 12px', fontSize:12, fontWeight:900, marginBottom:12 }}>{quickMessage}</div>}
         {!visitedCountries.length ? (
           <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Avvista Veloce.</div>
         ) : doneToday >= QUICK_SEEN_DAILY_LIMIT ? (
@@ -9054,20 +9076,28 @@ export default function App() {
       );
       setUserProfile(profile || buildFallbackProfile(activeUser, true));
 
-      const [remoteAnimals, destinations, remoteBadgeIds] = await withTimeout(
-        Promise.all([
-          fetchAnimalsFromSupabase(activeUser.id),
-          fetchUserDestinations(activeUser.id),
-          fetchUserBadgeIds(activeUser.id),
-        ]),
-        14000,
-        [null, getVisitedCountries(), []],
-        'caricamento dati Supabase'
-      );
+      const [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult] = await Promise.allSettled([
+        withTimeout(fetchAnimalsFromSupabase(activeUser.id), 10000, null, 'fetchAnimalsFromSupabase'),
+        withTimeout(fetchUserAnimalStatusMap(activeUser.id), 6500, {}, 'fetchUserAnimalStatusMap'),
+        withTimeout(fetchUserDestinations(activeUser.id), 6500, getVisitedCountries(), 'fetchUserDestinations'),
+        withTimeout(fetchUserBadgeIds(activeUser.id), 6500, null, 'fetchUserBadgeIds'),
+      ]);
+
+      const remoteAnimals = remoteAnimalsResult.status === 'fulfilled' ? remoteAnimalsResult.value : null;
+      const remoteUserStatusMap = remoteStatusResult.status === 'fulfilled' ? (remoteStatusResult.value || {}) : {};
+      const destinations = destinationsResult.status === 'fulfilled' ? destinationsResult.value : getVisitedCountries();
+      const remoteBadgeIds = badgeResult.status === 'fulfilled' ? badgeResult.value : null;
+
+      [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult].forEach((result, idx) => {
+        if (result.status === 'rejected') {
+          const label = ['animals', 'user_animals', 'destinations', 'badges'][idx];
+          console.warn(`[Animaldex] Caricamento parziale ${label} fallito:`, result.reason);
+        }
+      });
 
       const sourceAnimals = applyCachedUserStatuses(remoteAnimals?.length ? mergeRemoteWithLocalBioregions(remoteAnimals) : LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
       const remoteStatusMap = Object.fromEntries((sourceAnimals || []).map(a => [a.id, normalizeAnimalStatus(a.status)]));
-      const nextStatusMap = mergeStatusMapsByRank(remoteStatusMap, getLocalUserStatusMap(activeUser.id), statusMap);
+      const nextStatusMap = mergeStatusMapsByRank(remoteStatusMap, remoteUserStatusMap, getLocalUserStatusMap(activeUser.id), statusMap);
       const nextAnimals = (sourceAnimals || []).map(a => ({ ...a, status:nextStatusMap[a.id] || normalizeAnimalStatus(a.status), userStatus:appStatusToSupabase(nextStatusMap[a.id] || a.status) }));
       setAnimalsData(nextAnimals);
       setStatusMap(nextStatusMap);
@@ -9077,8 +9107,14 @@ export default function App() {
       setVisitedCountries(nextDestinations);
       saveVisitedCountries(nextDestinations);
 
-      setEarnedBadgeIds((remoteBadgeIds || []).map(normalizeBadgeId));
-      persistAwardUnlocks(remoteBadgeIds || []);
+      const localBadgeIds = Array.from(getAwardUnlockSet()).map(normalizeBadgeId);
+      const nextBadgeIds = Array.from(new Set([
+        ...(earnedBadgeIds || []).map(normalizeBadgeId),
+        ...localBadgeIds,
+        ...((remoteBadgeIds || []).map(normalizeBadgeId)),
+      ])).filter(Boolean);
+      setEarnedBadgeIds(nextBadgeIds);
+      persistAwardUnlocks(nextBadgeIds);
     } catch (err) {
       console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
