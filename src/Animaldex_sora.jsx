@@ -900,24 +900,65 @@ function normalizeSocialProfile(row = {}) {
     username,
     nickname: profile?.nickname || username,
     avatar_url: profile?.avatar_url || '',
-    level: Number(profile?.level || 1),
-    xp: Number(profile?.xp || 0),
   };
 }
 
+const FRIEND_REACTIONS = [
+  { key:'wow', emoji:'🤩', label:'Pazzesco' },
+  { key:'trophy', emoji:'🏆', label:'Da record' },
+  { key:'spark', emoji:'✨', label:'Magia pura' },
+  { key:'tracks', emoji:'🐾', label:'Che traccia' },
+  { key:'roar', emoji:'🦁', label:'Leggendario' },
+  { key:'gem', emoji:'💎', label:'Rarissimo' },
+];
+
 function buildSocialFallback(user, profile, progress = {}) {
-  const baseName = profile?.nickname || profile?.username || String(user?.email || 'esploratore').split('@')[0] || 'Esploratore';
   return {
-    friends: [
-      { user_id:'demo-luna', nickname:'LunaWild', username:'lunawild', level:5, xp:1260, streak:7, seenCount:118, capturedCount:42, challenge:'Sfida attiva: 3 avvistamenti questa settimana' },
-      { user_id:'demo-nico', nickname:'NicoBio', username:'nicobio', level:3, xp:720, streak:3, seenCount:64, capturedCount:19, challenge:'Ti ha superato nei badge Trofici' },
-    ],
+    friends: [],
     requestsIn: [],
     requestsOut: [],
-    challenges: [
-      { id:'demo-weekly', title:`${baseName} vs amici`, text:'Chi registra piu avvistamenti questa settimana?', progress:Math.min(100, Math.round(((progress.seenCount || 0) % 8) / 8 * 100)), status:'Demo' },
-    ],
+    leaderboard: [{ ...(normalizeSocialProfile(profile || user || {})), user_id:user?.id || profile?.user_id || 'me', nickname:profile?.nickname || profile?.username || 'Tu', username:profile?.username || 'tu', isMe:true, level:progress.level || 1, xp:progress.xp || 0, seenCount:progress.seenCount || 0, capturedCount:progress.capturedCount || 0, badgeCount:0, completionPct:0 }],
+    events: [],
+    notifications: [],
+    unreadCount:0,
     socialReady:false,
+  };
+}
+
+function getSocialEventCopy(event = {}) {
+  const rarity = event.rarity || '';
+  if (event.event_type === 'legendary_capture') return { title:'Cattura leggendaria', tone:'#F0C449', text:`ha registrato ${event.animal_name || 'una specie leggendaria'}` };
+  if (event.event_type === 'rare_capture') return { title:'Cattura rara', tone:'#B860F8', text:`ha registrato ${event.animal_name || 'una specie rara'}` };
+  if (event.event_type === 'badge_earned') return { title:'Nuovo badge', tone:'#90D84A', text:`ha ottenuto ${event.badge_name || event.badge_id || 'un badge'}` };
+  return { title:'Progressi', tone:'#5BBEF8', text:rarity ? `ha fatto un progresso ${rarity}` : 'ha fatto progressi' };
+}
+
+function summarizeUserAnimalRows(rows = []) {
+  const seenStatuses = new Set(['seen','collected','avvistato','catturato']);
+  const capturedStatuses = new Set(['collected','captured','catturato']);
+  const seenCount = rows.filter(r => seenStatuses.has(String(r.unlock_status || r.status || '').toLowerCase())).length;
+  const capturedCount = rows.filter(r => capturedStatuses.has(String(r.unlock_status || r.status || '').toLowerCase())).length;
+  return { seenCount, capturedCount };
+}
+
+function decorateFriendStats(profile, animalRows = [], badgeRows = []) {
+  const counts = summarizeUserAnimalRows(animalRows);
+  const badgeCount = new Set((badgeRows || []).map(r => normalizeBadgeId(r.badge_id)).filter(Boolean)).size;
+  const xp = computeTotalXP({
+    animalsWithStatus:[
+      ...Array.from({ length:counts.seenCount }, () => ({ status:'avvistato', rarity:'Comune' })),
+      ...Array.from({ length:counts.capturedCount }, () => ({ status:'catturato', rarity:'Comune' })),
+    ],
+    visitedCountries:[],
+    earnedBadgeIds:Array.from({ length:badgeCount }, (_, i) => `FRIEND-${i}`),
+  });
+  return {
+    ...profile,
+    ...counts,
+    badgeCount,
+    xp,
+    level:computeLevelFromXP(xp),
+    completionPct:Math.min(100, Math.round((counts.capturedCount / Math.max(1, ANIMALS.length)) * 100)),
   };
 }
 
@@ -945,21 +986,40 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
     const accepted = rows.filter(r => r.status === 'accepted').map(decorate);
     const incoming = rows.filter(r => r.status === 'pending' && r.addressee_id === userId).map(decorate);
     const outgoing = rows.filter(r => r.status === 'pending' && r.requester_id === userId).map(decorate);
-    let challenges = [];
-    if (accepted.length) {
-      const { data: challengeRows, error: challengeError } = await supabase
-        .from('friend_challenges')
-        .select('*')
-        .in('friendship_id', accepted.map(r => r.id))
-        .eq('status', 'active')
-        .order('created_at', { ascending:false });
-      if (!challengeError) challenges = challengeRows || [];
-    }
+    const friendIds = accepted.map(r => r.profile.user_id).filter(Boolean);
+    const socialIds = Array.from(new Set([userId, ...friendIds]));
+    const [{ data: animalRows }, { data: badgeRows }, { data: events }, { data: reactions }, { data: notifications }] = await Promise.all([
+      socialIds.length ? supabase.from('user_animals').select('user_id, unlock_status').in('user_id', socialIds) : { data:[] },
+      socialIds.length ? supabase.from('user_badges').select('user_id, badge_id').in('user_id', socialIds) : { data:[] },
+      socialIds.length ? supabase.from('social_events').select('*').in('user_id', socialIds).order('created_at', { ascending:false }).limit(30) : { data:[] },
+      supabase.from('social_event_reactions').select('event_id, user_id, reaction_key, created_at').order('created_at', { ascending:false }).limit(160),
+      supabase.from('social_notifications').select('*').eq('user_id', userId).order('created_at', { ascending:false }).limit(40),
+    ]);
+    const animalsByUser = (animalRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
+    const badgesByUser = (badgeRows || []).reduce((acc, row) => { (acc[row.user_id] ||= []).push(row); return acc; }, {});
+    const friends = accepted.map(r => ({
+      ...decorateFriendStats(r.profile, animalsByUser[r.profile.user_id] || [], badgesByUser[r.profile.user_id] || []),
+      friendship_id:r.id,
+      since:r.accepted_at || r.created_at,
+    }));
+    const me = decorateFriendStats(normalizeSocialProfile({ ...currentProfile, user_id:userId, username:currentProfile?.username || 'tu', nickname:currentProfile?.nickname || 'Tu' }), animalsByUser[userId] || [], badgesByUser[userId] || []);
+    const reactionByEvent = (reactions || []).reduce((acc, row) => { (acc[row.event_id] ||= []).push(row); return acc; }, {});
+    const visibleEvents = (events || [])
+      .filter(e => e.user_id === userId || friendIds.includes(e.user_id))
+      .map(e => ({
+        ...e,
+        profile:e.user_id === userId ? { ...me, isMe:true } : (friends.find(f => f.user_id === e.user_id) || byId[e.user_id] || normalizeSocialProfile({ user_id:e.user_id })),
+        reactions:reactionByEvent[e.id] || [],
+      }));
+    const unreadCount = (notifications || []).filter(n => !n.read_at).length;
     return {
-      friends: accepted.map(r => ({ ...r.profile, friendship_id:r.id, since:r.accepted_at || r.created_at, challenge:challenges.find(c => c.friendship_id === r.id)?.title || 'Pronto per una nuova sfida' })),
+      friends,
       requestsIn: incoming,
       requestsOut: outgoing,
-      challenges: challenges.map(c => ({ id:c.id, title:c.title, text:`Target ${c.target_value}`, progress:Math.min(100, Math.round(((c.progress_requester || 0) + (c.progress_addressee || 0)) / Math.max(1, c.target_value) * 100)), status:c.challenge_type })),
+      leaderboard:[{ ...me, isMe:true }, ...friends].sort((a,b)=>(b.xp || 0) - (a.xp || 0)).map((row, idx) => ({ ...row, rank:idx + 1 })),
+      events:visibleEvents,
+      notifications:notifications || [],
+      unreadCount,
       socialReady:true,
     };
   } catch (err) {
@@ -970,12 +1030,13 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
 
 async function searchSocialProfiles(userId, query) {
   const q = String(query || '').trim();
-  if (!q || q.length < 2) return [];
+  if (!q || q.length < 3) return [];
+  const safe = q.replace(/[%_]/g, '');
   const { data, error } = await supabase
     .from('user_profiles')
     .select('user_id, username, nickname, avatar_url')
     .neq('user_id', userId)
-    .or(`username.ilike.%${q}%,nickname.ilike.%${q}%`)
+    .ilike('username', `${safe}%`)
     .limit(12);
   if (error) throw error;
   return (data || []).map(normalizeSocialProfile);
@@ -983,25 +1044,142 @@ async function searchSocialProfiles(userId, query) {
 
 async function requestFriendship(userId, friendId) {
   if (!userId || !friendId || userId === friendId) return false;
-  const { error } = await supabase.from('friendships').insert({
+  const { data, error } = await supabase.from('friendships').insert({
     requester_id:userId,
     addressee_id:friendId,
     status:'pending',
-  });
+  }).select('id').maybeSingle();
   if (error && error.code !== '23505') throw error;
+  if (data?.id) {
+    await supabase.from('social_notifications').insert({
+      user_id:friendId,
+      actor_id:userId,
+      notification_type:'friend_request',
+      friendship_id:data.id,
+    }).catch(() => {});
+  }
   return true;
 }
 
-async function updateFriendshipStatus(friendshipId, status) {
+async function updateFriendshipStatus(friendshipId, status, userId) {
   const payload = { status, updated_at:new Date().toISOString() };
   if (status === 'accepted') payload.accepted_at = new Date().toISOString();
-  const { error } = await supabase.from('friendships').update(payload).eq('id', friendshipId);
+  const { data, error } = await supabase.from('friendships').update(payload).eq('id', friendshipId).select('*').maybeSingle();
   if (error) throw error;
+  const otherId = data?.requester_id === userId ? data?.addressee_id : data?.requester_id;
+  if (status === 'accepted' && otherId) {
+    await supabase.from('social_notifications').insert({
+      user_id:otherId,
+      actor_id:userId,
+      notification_type:'friend_accepted',
+      friendship_id:friendshipId,
+    }).catch(() => {});
+  }
   return true;
 }
 
 async function deleteFriendship(friendshipId) {
   const { error } = await supabase.from('friendships').delete().eq('id', friendshipId);
+  if (error) throw error;
+  return true;
+}
+
+async function blockSocialUser(userId, blockedId, friendshipId = null) {
+  if (!userId || !blockedId || userId === blockedId) return false;
+  const { error } = await supabase.from('user_blocks').insert({ blocker_id:userId, blocked_id:blockedId });
+  if (error && error.code !== '23505') throw error;
+  if (friendshipId) await deleteFriendship(friendshipId).catch(() => {});
+  return true;
+}
+
+async function reportSocialUser(userId, reportedUserId, reason = 'other', eventId = null) {
+  if (!userId) return false;
+  const { error } = await supabase.from('user_reports').insert({
+    reporter_id:userId,
+    reported_user_id:reportedUserId || null,
+    event_id:eventId || null,
+    reason,
+  });
+  if (error) throw error;
+  return true;
+}
+
+function isSocialCaptureEventWorthy(animal, nextStatus, previousStatus) {
+  if (nextStatus !== 'catturato' || previousStatus === 'catturato') return false;
+  return ['Raro','Leggendario'].includes(animal?.rarity);
+}
+
+async function createSocialCaptureEvent(userId, animal) {
+  if (!userId || !animal?.id || !['Raro','Leggendario'].includes(animal?.rarity)) return null;
+  const event_type = animal.rarity === 'Leggendario' ? 'legendary_capture' : 'rare_capture';
+  const { data, error } = await supabase.from('social_events').upsert({
+    user_id:userId,
+    event_type,
+    animal_id:animal.id,
+    animal_name:animal.com || animal.sci || 'Specie rara',
+    rarity:animal.rarity,
+    metadata:{ class:animal.cls || null, scientific_name:animal.sci || null, conservation:animal.cons || null },
+  }, { onConflict:'user_id,event_type,animal_id' }).select('*').maybeSingle();
+  if (error) throw error;
+  if (data?.id) {
+    const { data: friendships } = await supabase
+      .from('friendships')
+      .select('requester_id, addressee_id')
+      .eq('status', 'accepted')
+      .or(`requester_id.eq.${userId},addressee_id.eq.${userId}`);
+    const friendIds = (friendships || []).map(f => f.requester_id === userId ? f.addressee_id : f.requester_id).filter(Boolean);
+    if (friendIds.length) {
+      await supabase.from('social_notifications').insert(friendIds.map(friendId => ({
+        user_id:friendId,
+        actor_id:userId,
+        notification_type:event_type,
+        event_id:data.id,
+      }))).catch(() => {});
+    }
+  }
+  return data;
+}
+
+async function createSocialBadgeEvent(userId, award) {
+  if (!userId || !award?.badgeId) return null;
+  const { data, error } = await supabase.from('social_events').upsert({
+    user_id:userId,
+    event_type:'badge_earned',
+    badge_id:normalizeBadgeId(award.badgeId),
+    badge_name:award.name || award.badgeId,
+    metadata:{ macro:award.macro || null, level:award.level || null, goal:award.goal || null },
+  }, { onConflict:'user_id,event_type,badge_id' }).select('*').maybeSingle();
+  if (error) throw error;
+  return data;
+}
+
+async function reactToSocialEvent(userId, event, reactionKey) {
+  if (!userId || !event?.id || !reactionKey) return false;
+  const { error } = await supabase.from('social_event_reactions').insert({
+    event_id:event.id,
+    user_id:userId,
+    reaction_key:reactionKey,
+  });
+  if (error && error.code !== '23505') throw error;
+  if (event.user_id && event.user_id !== userId) {
+    await supabase.from('social_notifications').insert({
+      user_id:event.user_id,
+      actor_id:userId,
+      notification_type:'reaction',
+      event_id:event.id,
+      reaction_key:reactionKey,
+    }).catch(() => {});
+  }
+  return true;
+}
+
+async function markSocialNotificationsRead(userId) {
+  if (!userId) return false;
+  const { error } = await supabase
+    .from('social_notifications')
+    .update({ read_at:new Date().toISOString() })
+    .eq('user_id', userId)
+    .is('read_at', null);
   if (error) throw error;
   return true;
 }
@@ -4934,7 +5112,7 @@ function SectionIntroModal({ section, onClose }) {
     abilities:{ title:'Abilità', kicker:'Mini guida', body:'Le abilità sono i superpoteri biologici di Apex: veleno, mimetismo, intelligenza, velocità, migrazioni, corazze, record, vita estrema. Sono raggruppate per famiglia e ogni card mostra quanti animali la possiedono. Tocca un’abilità per aprire il dettaglio, poi puoi saltare alla griglia già filtrata con tutte le specie collegate.', action:'Scelgo un’abilità' },
     compare:{ title:'Comparatore', kicker:'Mini guida', body:'Il comparatore mette due animali fianco a fianco per confrontare dimensioni, peso, statistiche e ruolo ecologico. Usalo quando vuoi capire le differenze in modo immediato.' },
     profile:{ title:'Profilo', kicker:'Mini guida', body:'Il profilo riassume progressi, animali ricercati, avvistati e catturati, badge ottenuti e dati del tuo percorso. È la memoria personale del tuo Apex.' },
-    friends:{ title:'Amici', kicker:'Mini guida', body:'Qui Apex diventa una spedizione condivisa: cerca altri giocatori, manda richieste, guarda i loro progressi e segui piccole sfide settimanali. L’idea è semplice: meno chat, più slancio da esploratori.' },
+    friends:{ title:'Amici', kicker:'Mini guida', body:'Qui Animaldex diventa una spedizione condivisa: cerca altri giocatori solo per username, manda richieste, guarda i progressi degli amici e reagisci alle catture rare o leggendarie con messaggi preset. Niente chat e niente testo libero: più gioco, più privacy, meno rumore.' },
     gallery:{ title:'Galleria', kicker:'Mini guida', body:'La galleria raccoglie le immagini e le catture collegate al tuo percorso. È pensata come archivio visivo delle specie che hai documentato.' },
     lifeweb:{ title:'LifeWeb', kicker:'Mini guida', body:'LifeWeb mostra relazioni alimentari e ruoli ecologici. È una lettura della rete, non solo della singola specie: predatori, prede, risorse e connessioni.' },
     quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'È il modo più veloce per aggiornare l’Animaldex con gli animali che hai già avvistato. Apex ti propone specie ad alta probabilità in base alle nazioni visitate e alla facilità di incontro: tu rispondi al volo, il Dex si aggiorna e i progressi iniziano a correre.' },
@@ -5405,6 +5583,15 @@ const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert'
 
 function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark' }) {
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
+  const [socialPreview, setSocialPreview] = useState(() => buildSocialFallback(user, userProfile, progress));
+  useEffect(() => {
+    let alive = true;
+    if (!user?.id) return;
+    fetchSocialSnapshot(user.id, userProfile, progress).then(next => {
+      if (alive) setSocialPreview(next);
+    }).catch(() => {});
+    return () => { alive = false; };
+  }, [user?.id, userProfile?.user_id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length]);
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
   const mutedText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.62)';
@@ -5459,6 +5646,25 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
         </div>
 
+        <button onClick={()=>onOpen('friends')} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:26, background:'radial-gradient(circle at 92% 10%, rgba(240,168,64,.24), transparent 34%), linear-gradient(135deg,rgba(30,25,18,.96),rgba(15,18,16,.98))', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 16px 38px rgba(0,0,0,.22)', marginBottom:14 }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12 }}>
+            <div>
+              <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Compagni</div>
+              <div style={{ fontSize:22, fontWeight:1000, marginTop:4 }}>Amici Animaldex</div>
+            </div>
+            <div style={{ display:'flex', gap:7, flexShrink:0 }}>
+              {!!socialPreview.unreadCount && <span style={{ minWidth:28, height:28, borderRadius:999, background:'#B84D3A', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, fontWeight:1000 }}>{socialPreview.unreadCount}</span>}
+              <span style={{ minWidth:38, height:28, borderRadius:999, background:'rgba(255,255,255,.08)', color:'#FFD4A3', display:'flex', alignItems:'center', justifyContent:'center', fontSize:12, fontWeight:1000 }}>🤝 {socialPreview.friends?.length || 0}</span>
+            </div>
+          </div>
+          <div style={{ color:'rgba(255,255,255,.66)', fontSize:12.5, lineHeight:1.45, marginTop:8 }}>Richieste, leaderboard amici e reazioni alle catture rare. Nessuna chat, solo segnali positivi e sicuri.</div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, marginTop:12 }}>
+            <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10 }}><div style={{ color:'#F0A840', fontSize:16, fontWeight:1000 }}>{socialPreview.requestsIn?.length || 0}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, fontWeight:850 }}>richieste</div></div>
+            <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10 }}><div style={{ color:'#90D84A', fontSize:16, fontWeight:1000 }}>{socialPreview.leaderboard?.[0]?.isMe ? 'Tu' : `#${socialPreview.leaderboard?.find(r=>r.isMe)?.rank || 1}`}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, fontWeight:850 }}>classifica</div></div>
+            <div style={{ borderRadius:14, background:'rgba(255,255,255,.055)', padding:10 }}><div style={{ color:'#B860F8', fontSize:16, fontWeight:1000 }}>{socialPreview.events?.length || 0}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:10.5, fontWeight:850 }}>eventi</div></div>
+          </div>
+        </button>
+
         <div style={{ marginBottom:14 }}>
           <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ width:'100%', minHeight:132, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:28, background:'linear-gradient(90deg, rgba(5,11,13,.72), rgba(5,11,13,.34) 58%, rgba(5,11,13,.16)), url("/regions/home_regioni.png")', backgroundSize:'cover', backgroundPosition:'center', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'18px 92px 18px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)' }}>
             <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
@@ -5476,7 +5682,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <button onClick={()=>onOpen('friends')} style={{ minHeight:112, border:'1px solid rgba(240,168,64,.34)', borderRadius:22, background:'radial-gradient(circle at 92% 12%, rgba(240,168,64,.32), transparent 34%), linear-gradient(135deg,#1B1A18,#3B2415 72%)', color:'white', textAlign:'left', padding:14, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)' }}>
             <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
             <div style={{ fontSize:20, fontWeight:1000, marginTop:6 }}>Amici</div>
-            <div style={{ color:'rgba(255,255,255,.68)', fontSize:11.5, lineHeight:1.35, marginTop:5 }}>Sfide, richieste e progressi.</div>
+            <div style={{ color:'rgba(255,255,255,.68)', fontSize:11.5, lineHeight:1.35, marginTop:5 }}>Richieste, reazioni e progressi.</div>
           </button>
         </div>
 
@@ -5635,6 +5841,8 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
   const [message, setMessage] = useState('');
+  const [tab, setTab] = useState('feed');
+  const [selectedFriend, setSelectedFriend] = useState(null);
 
   const load = async () => {
     setLoading(true);
@@ -5647,7 +5855,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
     let alive = true;
     const t = setTimeout(async () => {
       const q = query.trim();
-      if (q.length < 2) { setResults([]); return; }
+      if (q.length < 3) { setResults([]); return; }
       setSearching(true);
       try {
         const rows = await searchSocialProfiles(user?.id, q);
@@ -5677,11 +5885,41 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
     }
   };
   const accept = async (row) => {
-    await updateFriendshipStatus(row.id, 'accepted').catch(()=>setMessage('Accettazione non riuscita: controlla Supabase.'));
+    await updateFriendshipStatus(row.id, 'accepted', user?.id).catch(()=>setMessage('Accettazione non riuscita: controlla Supabase.'));
     load();
   };
   const decline = async (row) => {
     await deleteFriendship(row.id).catch(()=>setMessage('Operazione non riuscita: controlla Supabase.'));
+    load();
+  };
+  const react = async (event, reaction) => {
+    setMessage('');
+    await reactToSocialEvent(user?.id, event, reaction.key).then(() => {
+      setMessage(`${reaction.emoji} Reazione inviata.`);
+      load();
+    }).catch(() => setMessage('Reazione non riuscita: controlla Supabase.'));
+  };
+  const removeFriend = async (friend) => {
+    await deleteFriendship(friend.friendship_id).then(() => {
+      setSelectedFriend(null);
+      setMessage(`${friend.nickname} rimosso dagli amici.`);
+      load();
+    }).catch(() => setMessage('Rimozione non riuscita.'));
+  };
+  const blockFriend = async (friend) => {
+    await blockSocialUser(user?.id, friend.user_id, friend.friendship_id).then(() => {
+      setSelectedFriend(null);
+      setMessage(`${friend.nickname} bloccato.`);
+      load();
+    }).catch(() => setMessage('Blocco non riuscito.'));
+  };
+  const reportFriend = async (friend, eventId = null) => {
+    await reportSocialUser(user?.id, friend?.user_id, 'other', eventId).then(() => {
+      setMessage('Segnalazione inviata. Grazie: la sicurezza prima di tutto.');
+    }).catch(() => setMessage('Segnalazione non riuscita.'));
+  };
+  const markRead = async () => {
+    await markSocialNotificationsRead(user?.id).catch(() => {});
     load();
   };
   const FriendAvatar = ({ p }) => (
@@ -5690,68 +5928,154 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
     </div>
   );
   const friendRows = snapshot.friends || [];
-  const challengeRows = snapshot.challenges?.length ? snapshot.challenges : buildSocialFallback(user, userProfile, progress).challenges;
+  const leaderboard = snapshot.leaderboard || [];
+  const feed = snapshot.events || [];
+  const panelBg = isLightTheme ? '#F6F4EF' : 'rgba(255,255,255,.055)';
+  const panelBorder = isLightTheme ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.08)';
+  const mainText = isLightTheme ? '#171717' : 'white';
+  const subText = isLightTheme ? 'rgba(0,0,0,.58)' : 'rgba(255,255,255,.58)';
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -12%, rgba(240,168,64,.18), transparent 42%), linear-gradient(180deg,#111113,#08090B)', overflow:'hidden' }}>
       <PageHeader title="Amici" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:16, WebkitOverflowScrolling:'touch' }}>
         <div style={{ borderRadius:28, padding:18, background:'linear-gradient(135deg,rgba(122,51,31,.92),rgba(24,18,15,.96) 68%)', border:'1px solid rgba(240,168,64,.24)', color:'white', boxShadow:'0 18px 44px rgba(0,0,0,.28)', marginBottom:14 }}>
-          <div style={{ color:'#FFD4A3', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Compagni di esplorazione</div>
-          <div style={{ fontSize:26, fontWeight:1000, marginTop:5 }}>Sfide e progressi</div>
-          <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici, confronta il passo e lancia piccole missioni settimanali. Apex resta un gioco di scoperta, ma con qualcuno accanto spinge di piu.</div>
-          {!snapshot.socialReady && <div style={{ marginTop:10, color:'#FFE0B8', fontSize:11, fontWeight:850 }}>Modalita anteprima: lancia lo script Supabase per attivare amici reali.</div>}
+          <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'flex-start' }}>
+            <div>
+              <div style={{ color:'#FFD4A3', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Compagni di esplorazione</div>
+              <div style={{ fontSize:26, fontWeight:1000, marginTop:5 }}>Catture, badge e reazioni</div>
+            </div>
+            {!!snapshot.unreadCount && <button onClick={markRead} style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'#B84D3A', color:'white', fontWeight:1000 }}>{snapshot.unreadCount}</button>}
+          </div>
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici per username, confronta i progressi e reagisci alle catture rare. Niente chat, niente testo libero: solo segnali positivi e sicuri.</div>
+          {!snapshot.socialReady && <div style={{ marginTop:10, color:'#FFE0B8', fontSize:11, fontWeight:850 }}>Applica lo script Supabase aggiornato per attivare dati social reali.</div>}
         </div>
 
-        <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:14, marginBottom:14 }}>
-          <div style={{ color:'white', fontSize:16, fontWeight:1000 }}>Cerca giocatori</div>
-          <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Nickname o username" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:'rgba(0,0,0,.28)', border:'1px solid rgba(255,255,255,.12)', color:'white', padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
-          {searching && <div style={{ color:'rgba(255,255,255,.50)', fontSize:12, marginTop:8 }}>Ricerca...</div>}
+        <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, marginBottom:14 }}>
+          {[
+            ['feed','Feed'],
+            ['search','Cerca'],
+            ['friends','Amici'],
+            ['rank','Rank'],
+          ].map(([id,label]) => <button key={id} onClick={()=>setTab(id)} style={{ height:42, borderRadius:14, border:`1px solid ${tab===id?'#F0A840':panelBorder}`, background:tab===id?'linear-gradient(135deg,#B84D3A,#F0A840)':panelBg, color:tab===id?'white':mainText, fontWeight:1000, fontSize:12, fontFamily:'inherit' }}>{label}</button>)}
+        </div>
+
+        {message && <div style={{ borderRadius:16, background:'rgba(240,168,64,.12)', border:'1px solid rgba(240,168,64,.22)', color:isLightTheme?'#6F321E':'#FFD4A3', fontSize:11.5, lineHeight:1.4, padding:11, marginBottom:14, fontWeight:850 }}>{message}</div>}
+
+        {tab === 'search' && <div style={{ borderRadius:22, background:panelBg, border:`1px solid ${panelBorder}`, padding:14, marginBottom:14 }}>
+          <div style={{ color:mainText, fontSize:16, fontWeight:1000 }}>Cerca per username</div>
+          <div style={{ color:subText, fontSize:11.5, lineHeight:1.45, marginTop:4 }}>Scrivi almeno 3 caratteri. Non cerchiamo per email e mostriamo solo profili minimi finche non diventate amici.</div>
+          <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="es. lunawild" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:isLightTheme?'rgba(0,0,0,.05)':'rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, color:mainText, padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
+          {searching && <div style={{ color:subText, fontSize:12, marginTop:8 }}>Ricerca...</div>}
           {!!results.length && <div style={{ display:'grid', gap:8, marginTop:10 }}>
-            {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'white', padding:10, textAlign:'left', fontFamily:'inherit' }}>
+            {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit' }}>
               <FriendAvatar p={p} />
-              <div style={{ flex:1, minWidth:0 }}><div style={{ fontSize:14, fontWeight:1000 }}>{p.nickname}</div><div style={{ color:'rgba(255,255,255,.50)', fontSize:11 }}>@{p.username}</div></div>
+              <div style={{ flex:1, minWidth:0 }}><div style={{ fontSize:14, fontWeight:1000 }}>{p.nickname}</div><div style={{ color:subText, fontSize:11 }}>@{p.username}</div></div>
               <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>Aggiungi</span>
             </button>)}
           </div>}
-          {message && <div style={{ color:'#FFD4A3', fontSize:11.5, lineHeight:1.4, marginTop:10, fontWeight:850 }}>{message}</div>}
-        </div>
-
-        {!!snapshot.requestsIn?.length && <div style={{ marginBottom:14 }}>
-          <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste</div>
-          {snapshot.requestsIn.map(row => <div key={row.id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:10, marginBottom:8 }}>
-            <FriendAvatar p={row.profile} />
-            <div style={{ flex:1, color:'white', fontWeight:950 }}>{row.profile.nickname}</div>
-            <button onClick={()=>decline(row)} style={{ width:38, height:38, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.05)', color:'white', fontWeight:1000 }}>×</button>
-            <button onClick={()=>accept(row)} style={{ height:38, borderRadius:13, border:'none', background:'#F0A840', color:'#17100A', padding:'0 12px', fontWeight:1000 }}>Accetta</button>
-          </div>)}
+          {!results.length && query.trim().length >= 3 && !searching && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun username trovato.</div>}
         </div>}
 
-        <div style={{ marginBottom:14 }}>
-          <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Sfide</div>
-          <div style={{ display:'grid', gap:9 }}>
-            {challengeRows.map(c => <div key={c.id} style={{ borderRadius:18, background:'linear-gradient(135deg,rgba(240,168,64,.16),rgba(255,255,255,.045))', border:'1px solid rgba(240,168,64,.20)', padding:13 }}>
-              <div style={{ display:'flex', justifyContent:'space-between', gap:10 }}><div style={{ color:'white', fontSize:14, fontWeight:1000 }}>{c.title}</div><div style={{ color:'#F0A840', fontSize:11, fontWeight:1000 }}>{c.status}</div></div>
-              <div style={{ color:'rgba(255,255,255,.58)', fontSize:11.5, marginTop:5 }}>{c.text}</div>
-              <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', marginTop:10, overflow:'hidden' }}><div style={{ height:'100%', width:`${c.progress || 0}%`, background:'linear-gradient(90deg,#B84D3A,#F0A840)' }} /></div>
+        {tab === 'feed' && <>
+          {!!snapshot.requestsIn?.length && <div style={{ marginBottom:14 }}>
+            <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste in arrivo</div>
+            {snapshot.requestsIn.map(row => <div key={row.id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:10, marginBottom:8 }}>
+              <FriendAvatar p={row.profile} />
+              <div style={{ flex:1, color:mainText, fontWeight:950 }}>{row.profile.nickname}</div>
+              <button onClick={()=>decline(row)} style={{ width:38, height:38, borderRadius:13, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.05)', color:mainText, fontWeight:1000 }}>×</button>
+              <button onClick={()=>accept(row)} style={{ height:38, borderRadius:13, border:'none', background:'#F0A840', color:'#17100A', padding:'0 12px', fontWeight:1000 }}>Accetta</button>
             </div>)}
+          </div>}
+          <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Catture e badge</div>
+          <div style={{ display:'grid', gap:10 }}>
+            {feed.map(event => {
+              const copy = getSocialEventCopy(event);
+              const mine = event.user_id === user?.id;
+              return <div key={event.id} style={{ borderRadius:20, background:panelBg, border:`1px solid ${panelBorder}`, padding:13 }}>
+                <div style={{ display:'flex', gap:10, alignItems:'flex-start' }}>
+                  <FriendAvatar p={event.profile} />
+                  <div style={{ flex:1, minWidth:0 }}>
+                    <div style={{ display:'flex', justifyContent:'space-between', gap:10 }}>
+                      <div style={{ color:mainText, fontSize:14, fontWeight:1000 }}>{mine ? 'Tu' : event.profile?.nickname}</div>
+                      <div style={{ color:copy.tone, fontSize:11, fontWeight:1000 }}>{copy.title}</div>
+                    </div>
+                    <div style={{ color:subText, fontSize:12, lineHeight:1.4, marginTop:3 }}>{copy.text}</div>
+                    <div style={{ display:'flex', flexWrap:'wrap', gap:7, marginTop:10 }}>
+                      {FRIEND_REACTIONS.map(reaction => {
+                        const count = (event.reactions || []).filter(r => r.reaction_key === reaction.key).length;
+                        const reacted = (event.reactions || []).some(r => r.reaction_key === reaction.key && r.user_id === user?.id);
+                        return <button key={reaction.key} disabled={mine || reacted} onClick={()=>react(event, reaction)} title={reaction.label} style={{ height:34, minWidth:42, borderRadius:13, border:`1px solid ${reacted?'#F0A840':panelBorder}`, background:reacted?'rgba(240,168,64,.18)':'rgba(255,255,255,.055)', color:mainText, fontWeight:950, opacity:mine ? .55 : 1 }}>{reaction.emoji}{count ? ` ${count}` : ''}</button>;
+                      })}
+                    </div>
+                  </div>
+                  {!mine && <button onClick={()=>reportFriend(event.profile, event.id)} style={{ width:32, height:32, borderRadius:12, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.04)', color:subText, fontWeight:1000 }}>!</button>}
+                </div>
+              </div>;
+            })}
+            {!feed.length && <div style={{ color:subText, fontSize:13, textAlign:'center', padding:22, borderRadius:20, background:panelBg, border:`1px solid ${panelBorder}` }}>Quando tu o un amico catturate animali rari o leggendari, compariranno qui.</div>}
           </div>
-        </div>
+        </>}
 
-        <div>
-          <div style={{ color:'rgba(255,255,255,.56)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Amici</div>
-          {loading ? <div style={{ color:'rgba(255,255,255,.48)', padding:18 }}>Carico amici...</div> : <div style={{ display:'grid', gap:9 }}>
-            {friendRows.map(p => <div key={p.user_id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:11 }}>
+        {tab === 'friends' && <div>
+          <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Amici</div>
+          {loading ? <div style={{ color:subText, padding:18 }}>Carico amici...</div> : <div style={{ display:'grid', gap:9 }}>
+            {friendRows.map(p => <button key={p.user_id} onClick={()=>setSelectedFriend(p)} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:11, textAlign:'left', fontFamily:'inherit' }}>
               <FriendAvatar p={p} />
               <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ color:'white', fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{p.nickname}</div>
-                <div style={{ color:'rgba(255,255,255,.52)', fontSize:11, marginTop:3 }}>Liv. {p.level || 1} · {p.challenge}</div>
+                <div style={{ color:mainText, fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{p.nickname}</div>
+                <div style={{ color:subText, fontSize:11, marginTop:3 }}>Liv. {p.level || 1} · {p.capturedCount || 0} catture · {p.badgeCount || 0} badge</div>
               </div>
-              <div style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>{p.streak ? `🔥 ${p.streak}` : 'VS'}</div>
-            </div>)}
-            {!friendRows.length && <div style={{ color:'rgba(255,255,255,.45)', fontSize:13, textAlign:'center', padding:22 }}>Cerca un giocatore e manda la prima richiesta.</div>}
+              <div style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>{p.completionPct || 0}%</div>
+            </button>)}
+            {!friendRows.length && <div style={{ color:subText, fontSize:13, textAlign:'center', padding:22 }}>Cerca un giocatore e manda la prima richiesta.</div>}
           </div>}
-        </div>
+        </div>}
+
+        {tab === 'rank' && <div>
+          <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Leaderboard amici</div>
+          <div style={{ display:'grid', gap:9 }}>
+            {leaderboard.map(row => <div key={row.user_id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:row.isMe?'linear-gradient(135deg,rgba(240,168,64,.18),rgba(255,255,255,.045))':panelBg, border:`1px solid ${row.isMe?'rgba(240,168,64,.28)':panelBorder}`, padding:11 }}>
+              <div style={{ width:34, height:34, borderRadius:13, background:row.rank === 1 ? '#F0C449' : row.rank === 2 ? '#C0C0C0' : row.rank === 3 ? '#CD7F32' : 'rgba(255,255,255,.08)', color:row.rank <= 3 ? '#17100A' : mainText, display:'flex', alignItems:'center', justifyContent:'center', fontWeight:1000 }}>{row.rank}</div>
+              <FriendAvatar p={row} />
+              <div style={{ flex:1, minWidth:0 }}>
+                <div style={{ color:mainText, fontSize:14, fontWeight:1000 }}>{row.isMe ? 'Tu' : row.nickname}</div>
+                <div style={{ color:subText, fontSize:11 }}>Liv. {row.level} · {row.capturedCount} catture · {row.badgeCount} badge</div>
+              </div>
+              <div style={{ color:'#90D84A', fontSize:12, fontWeight:1000 }}>{row.xp} XP</div>
+            </div>)}
+          </div>
+        </div>}
+
+        {!!snapshot.requestsOut?.length && tab === 'search' && <div style={{ marginTop:14 }}>
+          <div style={{ color:subText, fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Richieste inviate</div>
+          {snapshot.requestsOut.map(row => <div key={row.id} style={{ display:'flex', alignItems:'center', gap:10, borderRadius:18, background:panelBg, border:`1px solid ${panelBorder}`, padding:10, marginBottom:8 }}>
+            <FriendAvatar p={row.profile} />
+            <div style={{ flex:1, color:mainText, fontWeight:950 }}>{row.profile.nickname}</div>
+            <button onClick={()=>decline(row)} style={{ height:36, borderRadius:13, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.05)', color:mainText, padding:'0 10px', fontWeight:1000 }}>Annulla</button>
+          </div>)}
+        </div>}
       </div>
+      {selectedFriend && <div onClick={()=>setSelectedFriend(null)} style={{ position:'absolute', inset:0, zIndex:260, background:'rgba(0,0,0,.66)', display:'flex', alignItems:'flex-end', padding:14 }}>
+        <div onClick={e=>e.stopPropagation()} style={{ width:'100%', borderRadius:26, background:isLightTheme?'#FBF7EF':'#171719', border:`1px solid ${panelBorder}`, padding:18, boxShadow:'0 24px 80px rgba(0,0,0,.55)' }}>
+          <div style={{ display:'flex', gap:12, alignItems:'center' }}>
+            <FriendAvatar p={selectedFriend} />
+            <div style={{ flex:1 }}>
+              <div style={{ color:mainText, fontSize:20, fontWeight:1000 }}>{selectedFriend.nickname}</div>
+              <div style={{ color:subText, fontSize:12 }}>@{selectedFriend.username}</div>
+            </div>
+            <button onClick={()=>setSelectedFriend(null)} style={{ width:36, height:36, borderRadius:13, border:`1px solid ${panelBorder}`, background:'transparent', color:mainText, fontWeight:1000 }}>×</button>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, marginTop:14 }}>
+            {[['Liv.', selectedFriend.level], ['Visti', selectedFriend.seenCount], ['Catture', selectedFriend.capturedCount], ['Badge', selectedFriend.badgeCount]].map(([label,value]) => <div key={label} style={{ borderRadius:15, background:isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.055)', padding:10, textAlign:'center' }}><div style={{ color:'#F0A840', fontSize:16, fontWeight:1000 }}>{value || 0}</div><div style={{ color:subText, fontSize:10.5, fontWeight:850 }}>{label}</div></div>)}
+          </div>
+          <div style={{ height:9, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:14 }}><div style={{ width:`${selectedFriend.completionPct || 0}%`, height:'100%', background:'linear-gradient(90deg,#B84D3A,#F0A840)' }} /></div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginTop:14 }}>
+            <button onClick={()=>removeFriend(selectedFriend)} style={{ height:44, borderRadius:15, border:`1px solid ${panelBorder}`, background:'rgba(255,255,255,.04)', color:mainText, fontWeight:950 }}>Rimuovi</button>
+            <button onClick={()=>blockFriend(selectedFriend)} style={{ height:44, borderRadius:15, border:'1px solid rgba(255,59,48,.35)', background:'rgba(255,59,48,.10)', color:'#FF8A80', fontWeight:950 }}>Blocca</button>
+            <button onClick={()=>reportFriend(selectedFriend)} style={{ height:44, borderRadius:15, border:`1px solid ${panelBorder}`, background:'rgba(240,168,64,.10)', color:'#F0A840', fontWeight:950 }}>Segnala</button>
+          </div>
+        </div>
+      </div>}
     </div>
   );
 }
@@ -7905,7 +8229,10 @@ export default function App() {
     const current = unlockedAwards.map(a => normalizeBadgeId(a.badgeId));
     const fresh = unlockedAwards.filter(a => !alreadyKnown.has(normalizeBadgeId(a.badgeId)));
 
-    if (fresh.length) setAwardQueue(prev => [...prev, ...fresh]);
+    if (fresh.length) {
+      setAwardQueue(prev => [...prev, ...fresh]);
+      if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Animaldex] Evento badge non salvato:', err)));
+    }
 
     const merged = Array.from(new Set([...(earnedBadgeIds || []).map(normalizeBadgeId), ...current]));
     if (merged.length !== earnedBadgeIds.length) {
@@ -7941,6 +8268,9 @@ export default function App() {
       if (nextStatus === 'avvistato') track('animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com });
       if (nextStatus === 'catturato') track('animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com });
       await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
+      if (isSocialCaptureEventWorthy(currentAnimal, nextStatus, previousStatus)) {
+        await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Animaldex] Evento social non salvato:', err));
+      }
       await reloadSupabaseData(user);
     } catch (err) {
       console.warn('[Animaldex] Salvataggio user_animals fallito:', err);
