@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
 import { supabase } from './supabaseClient';
-import TaxonomyExplorer from './TaxonomyExplorer';
+import { Handle, Position, ReactFlow, ReactFlowProvider, useReactFlow } from '@xyflow/react';
+import '@xyflow/react/dist/style.css';
+import { hierarchy, tree as d3Tree } from 'd3-hierarchy';
 
 let ANIMALS = LOCAL_ANIMALS;
 
@@ -6089,6 +6091,243 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
 }
 
 
+const LIFE_TREE_COLORS = {
+  animalia:'#D9B86F',
+  extra:'#AFCDE0',
+  annelida:'#BF8E73',
+  arthropoda:'#E59B42',
+  mollusca:'#B88CCC',
+  chordata:'#3FB7A6',
+  amphibia:'#54D0B5',
+  reptilia:'#6E9E59',
+  pisces:'#4F8CD8',
+  aves:'#62C4D8',
+  mammalia:'#C89B5A',
+  carnivora:'#B8664D',
+  primates:'#D1A84F',
+  cetacea:'#357AB8',
+  chiroptera:'#7D69C8',
+};
+const lifeSlug = (value) => String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+const lifeNode = ({ id, label, subtitle='', rank='cluster', kind='cluster', color=LIFE_TREE_COLORS.animalia, match, matchAny, children=[] }) => ({ id:id || lifeSlug(label), label, subtitle, rank, kind, color, ...(match ? { match } : {}), ...(matchAny ? { matchAny } : {}), children });
+const lifeTaxon = (label, rank, match, children=[], options={}) => lifeNode({ label, rank, kind:'taxon', match, children, ...options });
+const lifeCluster = (label, children=[], options={}) => lifeNode({ label, rank:options.rank || 'cluster', kind:options.kind || 'cluster', children, ...options });
+const lifeLeaf = (label, subtitle='', options={}) => lifeNode({ label, subtitle, rank:options.rank || 'editorial', kind:options.kind || 'editorial', ...options });
+const lifeFamily = (name, subtitle='', children=[], color) => lifeTaxon(name, 'family', { fam:name }, children, { subtitle, color });
+const lifeOrder = (name, subtitle='', children=[], color) => lifeTaxon(name, 'order', { ord:name }, children, { subtitle, color });
+const lifeClass = (name, subtitle='', children=[], color) => lifeTaxon(name, 'class', { cls:name }, children, { subtitle, color });
+const lifePhylum = (name, subtitle='', children=[], color) => lifeTaxon(name, 'phylum', { phy:name }, children, { subtitle, color });
+
+const LIFE_TREE = lifeNode({
+  id:'animalia',
+  label:'Animalia',
+  subtitle:'Il regno animale come mappa tassonomica divulgativa Animaldex.',
+  rank:'kingdom',
+  kind:'root',
+  color:LIFE_TREE_COLORS.animalia,
+  match:{ kin:'Animalia' },
+  children:[
+    lifeCluster('Extra Animalia', [
+      lifeCluster('Cluster Ancestrali', [lifePhylum('Porifera','Spugne',[],LIFE_TREE_COLORS.extra), lifePhylum('Cnidaria','Meduse, coralli e anemoni',[],LIFE_TREE_COLORS.extra), lifePhylum('Ctenophora','Pettini di mare',[],LIFE_TREE_COLORS.extra), lifePhylum('Placozoa','Trichoplax',[],LIFE_TREE_COLORS.extra)], { color:LIFE_TREE_COLORS.extra }),
+      lifeCluster('Cluster Evoluti Marini', [lifePhylum('Echinodermata','Stelle marine e ricci di mare',[],LIFE_TREE_COLORS.extra), lifePhylum('Hemichordata','Balanoglossus',[],LIFE_TREE_COLORS.extra), lifePhylum('Brachiopoda','Lingule',[],LIFE_TREE_COLORS.extra), lifePhylum('Chaetognatha','Frecce di mare',[],LIFE_TREE_COLORS.extra)], { color:LIFE_TREE_COLORS.extra }),
+      lifeCluster('Cluster Micro-Mondo', [lifePhylum('Tardigrada',"Orsi d'acqua",[],LIFE_TREE_COLORS.extra), lifePhylum('Rotifera','Ruote animali',[],LIFE_TREE_COLORS.extra), lifePhylum('Nematoda','Vermi tondi',[],LIFE_TREE_COLORS.extra)], { color:LIFE_TREE_COLORS.extra }),
+      lifeCluster('Cluster Vermiformi', [lifePhylum('Platyhelminthes','Planarie e tenie',[],LIFE_TREE_COLORS.extra), lifePhylum('Nemertea','Vermi nastro',[],LIFE_TREE_COLORS.extra), lifePhylum('Sipuncula','Vermi arachidi',[],LIFE_TREE_COLORS.extra)], { color:LIFE_TREE_COLORS.extra }),
+    ], { color:LIFE_TREE_COLORS.extra, subtitle:'Rami fuori dai grandi phyla giocabili principali.' }),
+    lifePhylum('Annelida', 'Anellidi, lombrichi, sanguisughe e vermi marini.', [
+      lifeClass('Oligochaeta','Lombrichi e forme terrestri',[],LIFE_TREE_COLORS.annelida),
+      lifeClass('Hirudinea','Sanguisughe',[],LIFE_TREE_COLORS.annelida),
+      lifeClass('Polychaeta','Vermi marini piumosi o urticanti',[lifeFamily('Sabellidae','Vermi piumosi',[],LIFE_TREE_COLORS.annelida), lifeCluster('Vermi di fuoco',[],{ color:LIFE_TREE_COLORS.annelida })],LIFE_TREE_COLORS.annelida),
+      lifeClass('Siboglinidae','Vermi dei vulcani sottomarini',[],LIFE_TREE_COLORS.annelida),
+    ], LIFE_TREE_COLORS.annelida),
+    lifePhylum('Arthropoda', 'Insetti, aracnidi, crostacei e miriapodi.', [
+      lifeClass('Insecta','Insetti e grandi ordini terrestri',[lifeOrder('Coleoptera','Coleotteri',[lifeCluster('Lucanidae & Scarabaeidae',[],{ color:LIFE_TREE_COLORS.arthropoda, matchAny:[{ fam:'Lucanidae' },{ fam:'Scarabaeidae' }] }), lifeFamily('Coccinellidae','',[],LIFE_TREE_COLORS.arthropoda), lifeFamily('Carabidae','',[],LIFE_TREE_COLORS.arthropoda)],LIFE_TREE_COLORS.arthropoda), lifeOrder('Lepidoptera','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Hymenoptera','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Diptera','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Odonata','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Mantodea','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Orthoptera','',[],LIFE_TREE_COLORS.arthropoda)],LIFE_TREE_COLORS.arthropoda),
+      lifeClass('Arachnida','Ragni, scorpioni, acari e opilioni',[lifeOrder('Araneae','Ragni',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Scorpiones','Scorpioni',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Acari','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Opiliones','',[],LIFE_TREE_COLORS.arthropoda)],LIFE_TREE_COLORS.arthropoda),
+      lifeClass('Crustacea','Crostacei',[lifeOrder('Decapoda','Granchi, aragoste e gamberi',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Isopoda','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Cirripedia','',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Amphipoda','',[],LIFE_TREE_COLORS.arthropoda)],LIFE_TREE_COLORS.arthropoda),
+      lifeClass('Myriapoda','Centopiedi e millepiedi',[lifeOrder('Chilopoda','Centopiedi',[],LIFE_TREE_COLORS.arthropoda), lifeOrder('Diplopoda','Millepiedi',[],LIFE_TREE_COLORS.arthropoda)],LIFE_TREE_COLORS.arthropoda),
+    ], LIFE_TREE_COLORS.arthropoda),
+    lifePhylum('Mollusca', 'Gasteropodi, cefalopodi, bivalvi e forme primitive.', [
+      lifeClass('Gastropoda','Chiocciole, lumache e conchiglie',[lifeFamily('Helicidae','Chiocciole terrestri',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Limacidae','Lumache terrestri',[],LIFE_TREE_COLORS.mollusca), lifeTaxon('Nudibranchia','order',{ ord:'Nudibranchia' },[],{ color:LIFE_TREE_COLORS.mollusca }), lifeFamily('Conidae','Coni marini',[],LIFE_TREE_COLORS.mollusca)],LIFE_TREE_COLORS.mollusca),
+      lifeClass('Cephalopoda','Polpi, seppie, calamari e forme abissali',[lifeFamily('Octopodidae','Polpi',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Sepiidae','Seppie',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Loliginidae','Calamari',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Nautilidae','Nautilus',[],LIFE_TREE_COLORS.mollusca), lifeCluster('Cefalopodi Leggendari',[lifeFamily('Architeuthidae','Calamari giganti',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Vampyroteuthidae','Calamaro vampiro',[],LIFE_TREE_COLORS.mollusca)],{ color:LIFE_TREE_COLORS.mollusca, kind:'editorial', matchAny:[{ fam:'Architeuthidae' },{ fam:'Vampyroteuthidae' },{ gen:'Architeuthis' },{ gen:'Vampyroteuthis' }] })],LIFE_TREE_COLORS.mollusca),
+      lifeClass('Bivalvia','Cozze, vongole, ostriche e bivalvi speciali',[lifeFamily('Mytilidae','Cozze',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Veneridae','Vongole',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Ostreidae','Ostriche',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Pectinidae','Capesante',[],LIFE_TREE_COLORS.mollusca), lifeFamily('Tridacnidae','Vongole giganti',[],LIFE_TREE_COLORS.mollusca)],LIFE_TREE_COLORS.mollusca),
+    ], LIFE_TREE_COLORS.mollusca),
+    lifePhylum('Chordata', 'Pesci, anfibi, rettili, uccelli e mammiferi.', [
+      lifeClass('Amphibia','Rane, salamandre, tritoni e cecilie',[lifeOrder('Anura','Rane e rospi',[lifeFamily('Dendrobatidae','Rane freccia',[],LIFE_TREE_COLORS.amphibia), lifeFamily('Hylidae','Raganelle',[],LIFE_TREE_COLORS.amphibia)],LIFE_TREE_COLORS.amphibia), lifeOrder('Caudata','Salamandre e tritoni',[lifeFamily('Ambystomatidae','Axolotl',[],LIFE_TREE_COLORS.amphibia)],LIFE_TREE_COLORS.amphibia), lifeOrder('Gymnophiona','Cecilie',[],LIFE_TREE_COLORS.amphibia)],LIFE_TREE_COLORS.amphibia),
+      lifeClass('Reptilia','Rettili, serpenti, tartarughe e coccodrilli',[lifeCluster('Squamata - Lacertilia',[lifeFamily('Varanidae','Varani',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Chamaeleonidae','Camaleonti',[],LIFE_TREE_COLORS.reptilia)],{ color:LIFE_TREE_COLORS.reptilia, matchAny:[{ ord:'Squamata' },{ fam:'Varanidae' },{ fam:'Chamaeleonidae' }] }), lifeCluster('Squamata - Serpentes',[lifeFamily('Viperidae','Vipere e serpenti a sonagli',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Boidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Pythonidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Colubridae','Serpenti comuni',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Elapidae','Veleno neurotossico',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Natricidae',"Bisce d'acqua",[],LIFE_TREE_COLORS.reptilia), lifeCluster('Serpenti Primitivi & Scavatori',[lifeFamily('Anomaloepididae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Gerrhopilidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Xenotyphlopidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Loxocemidae','',[],LIFE_TREE_COLORS.reptilia)],{ color:LIFE_TREE_COLORS.reptilia, kind:'editorial' })],{ color:LIFE_TREE_COLORS.reptilia, matchAny:[{ ord:'Squamata', fam:'Viperidae' },{ fam:'Boidae' },{ fam:'Pythonidae' },{ fam:'Colubridae' },{ fam:'Elapidae' },{ fam:'Natricidae' }] }), lifeOrder('Testudines','Tartarughe',[lifeFamily('Testudinidae','Tartarughe terrestri',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Cheloniidae','Tartarughe marine',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Dermochelyidae','Tartaruga liuto',[],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia), lifeOrder('Crocodylia','Coccodrilli, gaviali e alligatori',[lifeFamily('Crocodylidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Gavialidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Alligatoridae','',[],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia),
+      lifeCluster('Pisces',[lifeClass('Actinopterygii','Pesci ossei',[lifeOrder('Perciformes','Perciformi',[lifeFamily('Scombridae','Tonni e sgombri',[],LIFE_TREE_COLORS.pisces), lifeFamily('Serranidae','Cernie',[],LIFE_TREE_COLORS.pisces), lifeFamily('Pomacentridae','Pesci pagliaccio',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sparidae','Orate e saraghi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeFamily('Salmonidae','Salmoni e trote',[],LIFE_TREE_COLORS.pisces), lifeOrder('Siluriformes','Pesci gatto',[],LIFE_TREE_COLORS.pisces), lifeOrder('Cypriniformes','Carpe e affini',[lifeFamily('Cyprinidae','Carpe e barbi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeClass('Elasmobranchii','Squali e razze',[lifeFamily('Lamnidae','Squalo bianco e mako',[],LIFE_TREE_COLORS.pisces), lifeFamily('Carcharhinidae','Squali requiem',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sphyrnidae','Squali martello',[],LIFE_TREE_COLORS.pisces), lifeFamily('Rhincodontidae','Squalo balena',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],{ color:LIFE_TREE_COLORS.pisces, matchAny:[{ cls:'Actinopterygii' },{ cls:'Elasmobranchii' },{ cls:'Coelacanthi' }] }),
+      lifeClass('Aves','Uccelli',[lifeOrder('Passeriformes','Il gruppo più vasto',[lifeCluster('Passeridae & Fringillidae',[],{ color:LIFE_TREE_COLORS.aves, matchAny:[{ fam:'Passeridae' },{ fam:'Fringillidae' }] }), lifeFamily('Corvidae','Corvi e gazze',[],LIFE_TREE_COLORS.aves), lifeFamily('Hirundinidae','Rondini',[],LIFE_TREE_COLORS.aves), lifeFamily('Paridae','Cince',[],LIFE_TREE_COLORS.aves), lifeFamily('Turdidae','Merli e tordi',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeOrder('Psittaciformes','Pappagalli',[lifeFamily('Psittacidae','',[],LIFE_TREE_COLORS.aves), lifeFamily('Cacatuidae','',[],LIFE_TREE_COLORS.aves), lifeFamily('Psittaculidae','',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeOrder('Accipitriformes','Rapaci diurni',[lifeFamily('Accipitridae','Aquile e poiane',[],LIFE_TREE_COLORS.aves), lifeFamily('Cathartidae','Avvoltoi',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeCluster('Giganti Non Volatori',[lifeOrder('Struthioniformes','Struzzi',[],LIFE_TREE_COLORS.aves), lifeOrder('Casuariiformes','Emu e casuari',[],LIFE_TREE_COLORS.aves)],{ color:LIFE_TREE_COLORS.aves, kind:'editorial', matchAny:[{ ord:'Struthioniformes' },{ ord:'Casuariiformes' }] }), lifeCluster('Colori Tropicali',[lifeOrder('Phoenicopteriformes','Fenicotteri',[],LIFE_TREE_COLORS.aves), lifeFamily('Trochilidae','Colibri',[],LIFE_TREE_COLORS.aves), lifeFamily('Ramphastidae','Tucani',[],LIFE_TREE_COLORS.aves), lifeOrder('Bucerotiformes','Hornbills',[],LIFE_TREE_COLORS.aves)],{ color:LIFE_TREE_COLORS.aves, kind:'editorial', matchAny:[{ fam:'Trochilidae' },{ fam:'Ramphastidae' },{ ord:'Phoenicopteriformes' },{ ord:'Bucerotiformes' }] })],LIFE_TREE_COLORS.aves),
+      lifeClass('Mammalia','Mammiferi',[lifeOrder('Carnivora','Predatori',[lifeFamily('Felidae','Gatti, leoni e grandi felini',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Canidae','Cani e volpi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Ursidae','Orsi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Mustelidae','Tassi e lontre',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Phocidae','Foche',[],LIFE_TREE_COLORS.carnivora)],LIFE_TREE_COLORS.carnivora), lifeOrder('Rodentia','Roditori',[lifeFamily('Muridae','Topi e ratti',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Sciuridae','Scoiattoli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Caviidae','Capibara',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeCluster('Ungulata',[lifeFamily('Equidae','Cavalli e zebre',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Bovidae','Mucche e antilopi',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Cervidae','Cervi e alci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Giraffidae','Giraffe',[],LIFE_TREE_COLORS.mammalia)],{ color:LIFE_TREE_COLORS.mammalia, matchAny:[{ fam:'Equidae' },{ fam:'Bovidae' },{ fam:'Cervidae' },{ fam:'Giraffidae' }] }), lifeOrder('Primates','Primati',[lifeFamily('Hominidae','Umani',[],LIFE_TREE_COLORS.primates), lifeFamily('Cercopithecidae','Babbuini e macachi',[],LIFE_TREE_COLORS.primates), lifeFamily('Lemuridae','Lemuri',[],LIFE_TREE_COLORS.primates)],LIFE_TREE_COLORS.primates), lifeOrder('Cetacea','Cetacei',[lifeFamily('Delphinidae','Delfini e orche',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Balaenopteridae','Balenottere',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Physeteridae','Capodogli',[],LIFE_TREE_COLORS.cetacea)],LIFE_TREE_COLORS.cetacea), lifeOrder('Chiroptera','Pipistrelli',[lifeFamily('Pteropodidae','Volpi volanti',[],LIFE_TREE_COLORS.chiroptera), lifeFamily('Vespertilionidae','Pipistrelli comuni',[],LIFE_TREE_COLORS.chiroptera)],LIFE_TREE_COLORS.chiroptera), lifeOrder('Eulipotyphla','Insettivori',[lifeFamily('Erinaceidae','Ricci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Talpidae','Talpe',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Soricidae','Toporagni',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeOrder('Lagomorpha','Lepri e pika',[lifeFamily('Leporidae','Lepri e conigli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Ochotonidae','Pika',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia),
+    ], LIFE_TREE_COLORS.chordata),
+  ],
+});
+
+function getLifeNodeById(id, root=LIFE_TREE) {
+  if (root.id === id) return root;
+  for (const child of root.children || []) {
+    const found = getLifeNodeById(id, child);
+    if (found) return found;
+  }
+  return null;
+}
+function getLifeNodePath(id, root=LIFE_TREE) {
+  const walk = (node, path=[]) => {
+    const next = [...path, node];
+    if (node.id === id) return next;
+    for (const child of node.children || []) {
+      const found = walk(child, next);
+      if (found) return found;
+    }
+    return null;
+  };
+  return walk(root) || [root];
+}
+function lifeRuleMatches(rule, animal) {
+  if (!rule || !animal) return false;
+  const aliases = { kin:['kin','kingdom'], phy:['phy','phylum'], cls:['cls','class'], ord:['ord','order'], fam:['fam','family'], gen:['gen','genus'] };
+  return Object.entries(rule).every(([key, expected]) => {
+    const actual = (aliases[key] || [key]).map(k => animal[k]).find(Boolean);
+    return String(actual || '').trim().toLowerCase() === String(expected || '').trim().toLowerCase();
+  });
+}
+function lifeNodeMatchesAnimal(node, animal) {
+  return !!((node?.match && lifeRuleMatches(node.match, animal)) || (node?.matchAny || []).some(rule => lifeRuleMatches(rule, animal)));
+}
+function getLifeAnimals(node, animals=[]) {
+  const byId = new Map();
+  const add = (animal) => byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
+  if (node?.match || node?.matchAny) animals.filter(a => lifeNodeMatchesAnimal(node, a)).forEach(add);
+  (node?.children || []).forEach(child => getLifeAnimals(child, animals).forEach(add));
+  return Array.from(byId.values());
+}
+function getLifeStats(node, animals=[]) {
+  const rows = getLifeAnimals(node, animals);
+  const captured = rows.filter(a => normalizeAnimalStatus(a.status) === 'catturato').length;
+  return { total:rows.length, captured, completion:rows.length ? Math.round(captured / rows.length * 100) : 0 };
+}
+function getLifeVisibleRoot(selected) {
+  const pickChildren = (node, depth) => {
+    const limit = selected.id === 'animalia' ? 2 : 2;
+    return {
+      ...node,
+      children: depth >= limit ? [] : (node.children || []).map(child => pickChildren(child, depth + 1)),
+    };
+  };
+  return pickChildren(selected, 0);
+}
+function LifeProgress({ value, color }) {
+  const pct = Math.max(0, Math.min(100, Number(value) || 0));
+  return <div style={{ width:28, height:28, borderRadius:'50%', background:`conic-gradient(${color} ${pct}%, rgba(255,255,255,.12) 0)`, display:'grid', placeItems:'center', flexShrink:0 }}><div style={{ width:21, height:21, borderRadius:'50%', background:'#07090B', color:'white', display:'grid', placeItems:'center', fontSize:8, fontWeight:1000 }}>{pct}</div></div>;
+}
+function LifeFlowNode({ data }) {
+  const { node, stats, active, onOpen, onAnimalPanel } = data;
+  const terminal = !(node.children || []).length && stats.total > 0;
+  return (
+    <button onClick={() => terminal ? onAnimalPanel(node.id) : onOpen(node.id)} style={{ width:188, minHeight:74, borderRadius:18, border:`1.4px solid ${node.color}${active ? 'FF' : 'AA'}`, background:active ? `linear-gradient(135deg, ${node.color}30, rgba(15,17,20,.96))` : 'linear-gradient(135deg, rgba(255,255,255,.07), rgba(12,14,17,.92))', color:'white', fontFamily:'inherit', textAlign:'left', padding:10, boxShadow:active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.34)` : '0 10px 24px rgba(0,0,0,.22)', cursor:'pointer' }}>
+      <Handle type="target" position={Position.Top} style={{ opacity:0 }} />
+      <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+        <div style={{ width:24, height:24, borderRadius:10, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:12, fontWeight:1000 }}>✦</div>
+        <div style={{ minWidth:0, flex:1 }}>
+          <div style={{ fontSize:11.5, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
+          <div style={{ marginTop:2, color:'rgba(255,255,255,.56)', fontSize:8, fontWeight:900, textTransform:'uppercase' }}>{node.rank} · {stats.total} specie</div>
+        </div>
+        <LifeProgress value={stats.completion} color={node.color} />
+      </div>
+      <div style={{ color:'rgba(255,255,255,.60)', fontSize:9.5, lineHeight:1.25, marginTop:6, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{node.subtitle || 'Ramo Animaldex'}</div>
+      <Handle type="source" position={Position.Bottom} style={{ opacity:0 }} />
+    </button>
+  );
+}
+const lifeNodeTypes = { lifeNode:LifeFlowNode };
+function buildLifeFlow(selected, animals, onOpen, onAnimalPanel) {
+  const visible = getLifeVisibleRoot(selected);
+  const root = hierarchy(visible);
+  const descCount = root.descendants().length;
+  const widthGap = selected.id === 'animalia' ? 230 : 215;
+  const heightGap = selected.id === 'animalia' ? 150 : 142;
+  d3Tree().nodeSize([widthGap, heightGap])(root);
+  const nodes = root.descendants().map(d => ({
+    id:d.data.id,
+    type:'lifeNode',
+    position:{ x:d.x, y:d.y },
+    draggable:false,
+    data:{ node:d.data, stats:getLifeStats(d.data, animals), active:d.data.id === selected.id, onOpen, onAnimalPanel },
+  }));
+  const edges = root.links().map(link => ({ id:`${link.source.data.id}-${link.target.data.id}`, source:link.source.data.id, target:link.target.data.id, type:'smoothstep', style:{ stroke:link.target.data.color, strokeWidth:2, opacity:.58 } }));
+  return { nodes, edges, descCount };
+}
+function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
+  const { fitView } = useReactFlow();
+  const flow = useMemo(() => buildLifeFlow(selectedNode, animals, onOpen, onAnimalPanel), [selectedNode, animals, onOpen, onAnimalPanel]);
+  useEffect(() => {
+    const padding = selectedNode.id === 'animalia' ? 0.28 : 0.18;
+    const t = setTimeout(() => fitView({ padding, duration:520, maxZoom:selectedNode.id === 'animalia' ? .62 : .88 }), 50);
+    return () => clearTimeout(t);
+  }, [fitView, selectedNode.id]);
+  return <ReactFlow nodes={flow.nodes} edges={flow.edges} nodeTypes={lifeNodeTypes} fitView minZoom={0.18} maxZoom={1.35} panOnDrag zoomOnPinch zoomOnScroll={false} nodesDraggable={false} elementsSelectable={false} proOptions={{ hideAttribution:true }} />;
+}
+function LifeInfoModal({ onClose, theme }) {
+  const isLight = theme === 'light';
+  return <div onClick={onClose} style={{ position:'absolute', inset:0, zIndex:50, background:'rgba(0,0,0,.62)', display:'flex', alignItems:'flex-end' }}>
+    <div onClick={e=>e.stopPropagation()} style={{ width:'100%', borderRadius:'26px 26px 0 0', background:isLight?'#FBF7EF':'#15171B', border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, padding:'20px 18px 28px', color:isLight?'#171717':'white', boxShadow:'0 -20px 50px rgba(0,0,0,.35)' }}>
+      <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
+        <div style={{ fontSize:20, fontWeight:1000 }}>Come leggere l’albero</div>
+        <button onClick={onClose} style={{ width:38, height:38, borderRadius:14, border:'none', background:isLight?'rgba(0,0,0,.06)':'rgba(255,255,255,.08)', color:isLight?'#171717':'white', fontSize:22 }}>×</button>
+      </div>
+      <p style={{ color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.66)', fontSize:13, lineHeight:1.55 }}>La tassonomia organizza gli animali per parentela: regno, phylum, classe, ordine, famiglia. Animaldex usa questa base scientifica come mappa divulgativa, aggiungendo anche cluster editoriali utili al gioco, come “Colori Tropicali” o “Cefalopodi Leggendari”.</p>
+      <p style={{ color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.66)', fontSize:13, lineHeight:1.55, marginBottom:0 }}>Tocca un nodo per entrare nel ramo: la mappa si ricentra da sola. I numeri indicano quante specie Animaldex sono collegate e il progresso di cattura. Se una specie è misteriosa, l’albero non mostra mai la sua immagine reale.</p>
+    </div>
+  </div>;
+}
+function LifeAnimalPanel({ node, animals, onClose, onOpenAnimal, theme }) {
+  const rows = getLifeAnimals(node, animals).sort((a,b)=>ANIMAL_REVEALED_FIRST_ORDER.indexOf(normalizeAnimalStatus(a.status))-ANIMAL_REVEALED_FIRST_ORDER.indexOf(normalizeAnimalStatus(b.status))).slice(0,40);
+  const isLight = theme === 'light';
+  return <div style={{ position:'absolute', left:12, right:12, bottom:12, zIndex:36, maxHeight:'42%', overflow:'hidden', borderRadius:24, background:isLight?'rgba(251,247,239,.96)':'rgba(13,15,18,.94)', border:`1px solid ${node.color}66`, boxShadow:'0 22px 60px rgba(0,0,0,.34)', padding:12 }}>
+    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:10 }}>
+      <div style={{ minWidth:0 }}><div style={{ color:isLight?'#171717':'white', fontSize:15, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div><div style={{ color:node.color, fontSize:10, fontWeight:900 }}>{rows.length} specie collegate</div></div>
+      <button onClick={onClose} style={{ width:34, height:34, borderRadius:12, border:'none', background:isLight?'rgba(0,0,0,.06)':'rgba(255,255,255,.08)', color:isLight?'#171717':'white', fontSize:20 }}>×</button>
+    </div>
+    <div style={{ display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:8, maxHeight:260, overflowY:'auto' }}>
+      {rows.length ? rows.map(animal => {
+        const status = normalizeAnimalStatus(animal.status);
+        const mystery = isMysteryStatus(status);
+        return <button key={animal.id || animal.sci} onClick={()=>onOpenAnimal?.(animal)} style={{ minHeight:58, borderRadius:16, border:`1px solid ${isLight?'rgba(0,0,0,.10)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', color:isLight?'#171717':'white', display:'flex', gap:8, alignItems:'center', padding:8, textAlign:'left', fontFamily:'inherit' }}>
+          <div style={{ width:42, height:42, borderRadius:13, background:'rgba(0,0,0,.18)', display:'grid', placeItems:'center', overflow:'hidden', flexShrink:0 }}>{mystery ? <img src={MYSTERY_PLACEHOLDER} alt="misterioso" style={{ width:34, height:34, objectFit:'contain', opacity:.72 }} /> : <AnimalImg a={animal} size={42} gridMode overrideStatus={status} />}</div>
+          <div style={{ minWidth:0 }}><div style={{ fontSize:10.5, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{animal.com || animal.sci}</div><div style={{ color:isLight?'rgba(0,0,0,.55)':'rgba(255,255,255,.55)', fontSize:8.5, fontWeight:850 }}>{animal.rarity || 'Rarità'} · {status}</div></div>
+        </button>;
+      }) : <div style={{ gridColumn:'1/-1', color:isLight?'rgba(0,0,0,.58)':'rgba(255,255,255,.58)', fontSize:12, fontWeight:800, padding:12 }}>Nessuna specie Animaldex collegata a questo nodo per ora.</div>}
+    </div>
+  </div>;
+}
+function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], onBack, onOpenAnimal, theme='dark' }) {
+  const [selectedId, setSelectedId] = useState('animalia');
+  const [infoOpen, setInfoOpen] = useState(false);
+  const [panelNodeId, setPanelNodeId] = useState(null);
+  const isLight = theme === 'light';
+  const selectedNode = getLifeNodeById(selectedId) || LIFE_TREE;
+  const panelNode = panelNodeId ? getLifeNodeById(panelNodeId) : null;
+  const animalsWithStatus = useMemo(() => (animals || []).map(a => ({ ...a, status:getResolvedAnimalStatus(a, statusMap, visitedCountries) })), [animals, statusMap, visitedCountries]);
+  const path = getLifeNodePath(selectedNode.id);
+  const openNode = useCallback((id) => { setPanelNodeId(null); setSelectedId(id); }, []);
+  const openPanel = useCallback((id) => setPanelNodeId(id), []);
+  return <ReactFlowProvider>
+    <div style={{ height:'100%', position:'relative', background:isLight?'#F3EFE6':'radial-gradient(circle at 50% -12%, rgba(63,183,166,.13), transparent 34%), linear-gradient(180deg,#090D0E,#050708)', overflow:'hidden' }}>
+      <div style={{ position:'absolute', top:0, left:0, right:0, height:70, zIndex:24, display:'flex', alignItems:'center', gap:10, padding:'10px 12px', boxSizing:'border-box', background:isLight?'rgba(243,239,230,.90)':'linear-gradient(180deg,rgba(5,7,8,.92),rgba(5,7,8,.58))', backdropFilter:'blur(14px)', borderBottom:`1px solid ${isLight?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)'}` }}>
+        <button onClick={onBack} aria-label="Torna al menu" style={{ width:46, height:46, borderRadius:17, border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(255,255,255,.56)':'rgba(255,255,255,.055)', color:isLight?'#171717':'white', fontSize:25, fontWeight:1000 }}>‹</button>
+        <div style={{ minWidth:0, flex:1 }}>
+          <div style={{ color:isLight?'#171717':'white', fontSize:17, fontWeight:1000 }}>Albero della Vita</div>
+          <div style={{ display:'flex', gap:5, overflow:'hidden', color:isLight?'rgba(0,0,0,.55)':'rgba(255,255,255,.56)', fontSize:10, fontWeight:850, whiteSpace:'nowrap' }}>{path.map((p,i)=><span key={p.id} onClick={()=>openNode(p.id)} style={{ color:i===path.length-1?p.color:'inherit' }}>{i ? '› ' : ''}{p.label}</span>)}</div>
+        </div>
+        <button onClick={()=>setInfoOpen(true)} aria-label="Informazioni" style={{ width:42, height:42, borderRadius:15, border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(255,255,255,.56)':'rgba(255,255,255,.055)', color:isLight?'#171717':'white', fontSize:18, fontWeight:1000 }}>i</button>
+      </div>
+      <div style={{ position:'absolute', inset:'70px 0 0 0' }}>
+        <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} onOpen={openNode} onAnimalPanel={openPanel} />
+      </div>
+      {selectedNode.id !== 'animalia' && <button onClick={()=>openNode(path[Math.max(0,path.length-2)]?.id || 'animalia')} style={{ position:'absolute', left:12, bottom:12, zIndex:26, borderRadius:999, border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(251,247,239,.92)':'rgba(13,15,18,.86)', color:isLight?'#171717':'white', height:42, padding:'0 14px', fontSize:12, fontWeight:950, fontFamily:'inherit', boxShadow:'0 12px 30px rgba(0,0,0,.20)' }}>Torna al ramo precedente</button>}
+      {panelNode && <LifeAnimalPanel node={panelNode} animals={animalsWithStatus} onClose={()=>setPanelNodeId(null)} onOpenAnimal={onOpenAnimal} theme={theme} />}
+      {infoOpen && <LifeInfoModal onClose={()=>setInfoOpen(false)} theme={theme} />}
+    </div>
+  </ReactFlowProvider>;
+}
+
 function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCountries = [], onStatusChange, onSelect, theme='dark', user=null, userProfile=null }) {
   const isLightTheme = theme === 'light';
   const quickIntroColor = isLightTheme ? '#171717' : 'rgba(255,255,255,.62)';
@@ -9120,20 +9359,6 @@ const openGridWithCategory = (categoryId, label) => {
 const openGridWithGeography = (geoValue, label, returnView='countries') => {
   setSel(null); setGridPreset({ id: Date.now(), type:'geography', geography:[geoValue], title: label || 'Geografia' }); setGridReturnTarget({ page:'regions', view:returnView }); setPage('grid');
 };
-const openGridWithTaxonomyNode = ({ node, tax, animalIds }) => {
-  const idSet = new Set((animalIds || []).map(String));
-  setSel(null);
-  setGridPreset({
-    id: Date.now(),
-    type:'taxonomy-node',
-    tax: tax || null,
-    statuses:['misterioso','ricercato','avvistato','catturato'],
-    customFilter: tax ? null : (a) => idSet.has(String(a.id)),
-    title: node?.label ? `Albero · ${node.label}` : 'Albero della Vita',
-  });
-  setGridReturnTarget({ page:'taxonomy' });
-  setPage('grid');
-};
 const jumpToClassFromDetail = (cls, animal) => {
   setGridReturnTarget({ page:'detail', animal }); setSel(null); setGridPreset({ id: Date.now(), type:'class', cls, title:`Classe · ${cls}` }); setPage('grid');
 };
@@ -9225,7 +9450,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'lifeweb') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><StandaloneLifeWebPage theme={theme} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>returnFromFeaturePage('grid')} animals={animalsData} initialAnimal={lifeWebInitialAnimal} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
-    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>setPage('menu')} onOpenAnimal={setSel} onFilterGrid={openGridWithTaxonomyNode} />{renderDetailOverlay()}</div>;
+    if (page === 'taxonomy') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><TaxonomyExplorer theme={theme} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onBack={()=>setPage('menu')} onOpenAnimal={setSel} />{renderDetailOverlay()}</div>;
     if (page === 'settings') return <SettingsPage onBack={()=>setPage('menu')} onStartInitialOnboarding={startInitialOnboardingFromSettings} onStartOperationalTutorial={startOperationalTutorialFromSettings} theme={theme} onThemeChange={setTheme} />;
     if (page === 'abilities') return <AbilitiesPage theme={theme} onBack={()=>setPage('menu')} onOpenAbility={openGridWithCategory} tutorialActive={activeSectionGuide==='abilities'} onTutorialAbilityOpen={()=>setActiveSectionGuide(null)} />;
     return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><Grid theme={theme} onSelect={setSel} statusMap={statusMap} visitedCountries={visitedCountries} onHome={()=>openPage('menu')} onOpenRegions={()=>openPage('regions')} preset={gridPreset} onBackToOrigin={gridReturnTarget ? returnFromFilteredGrid : null} tutorialActive={tutorialStep==='grid-open'} tutorialStep={tutorialStep} tutorialAnimalId={tutorialAnimalId} onTutorialAnimalSelect={handleTutorialAnimalSelect} />{renderDetailOverlay()}</div>;
