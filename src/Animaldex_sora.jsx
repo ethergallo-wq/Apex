@@ -4937,6 +4937,7 @@ function MapLibreGeoJsonMap({
   autoSpin = false,
   autoSpinSpeed = 0.00062,
   fitDuration = 420,
+  recenterOnChange = true,
   hideInactiveFill = false,
   layerOpacityScale = 1,
 }) {
@@ -5090,8 +5091,9 @@ function MapLibreGeoJsonMap({
   };
   useEffect(() => {
     if (!ready) return;
+    if (!recenterOnChange) return;
     recenter();
-  }, [ready, fitBounds, fitCenter, fitZoom, fullscreen]);
+  }, [ready, fitBounds, fitCenter, fitZoom, fullscreen, recenterOnChange]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -5307,7 +5309,7 @@ function boundsToViewBox(b, padRatio=.34) {
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
 
-function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true, hideInactiveFill=true, layerOpacityScale=1, autoSpin=false, cameraId=null }) {
+function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true, hideInactiveFill=true, layerOpacityScale=1, autoSpin=false, cameraId=null, fitDuration=null }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const groupList = Array.isArray(levelGroups) ? levelGroups : [];
@@ -5397,7 +5399,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
             featureColorProperty={groupList.length ? '__animaldex_level_color' : ''}
             interactive={interactive}
             autoSpin={autoSpin}
-            fitDuration={fullscreen ? 520 : 340}
+            fitDuration={Number.isFinite(fitDuration) ? fitDuration : (fullscreen ? 520 : 340)}
             hideInactiveFill={hideInactiveFill}
             layerOpacityScale={layerOpacityScale}
           />
@@ -5416,7 +5418,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
         {isFullscreen && (
           <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
             <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)', position:'relative' }}>
-              <BioregionVectorMap highlightIds={highlightIds} focusIds={focusIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} hideInactiveFill={hideInactiveFill} layerOpacityScale={layerOpacityScale} autoSpin={autoSpin} cameraId={cameraId} />
+              <BioregionVectorMap highlightIds={highlightIds} focusIds={focusIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} hideInactiveFill={hideInactiveFill} layerOpacityScale={layerOpacityScale} autoSpin={autoSpin} cameraId={cameraId} fitDuration={fitDuration} />
             </div>
           </div>
         )}
@@ -8744,6 +8746,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 showControls
                 autoSpin
                 autoSpinSpeed={0.00124}
+                recenterOnChange={false}
               />
             </div>
             {view === 'planet' && (
@@ -8788,6 +8791,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   layerOpacityScale={.6}
                   autoSpin={view === 'terrestrial' && !mapFocusIds.length}
                   cameraId={mapSelectedId || (view === 'regions' ? continent?.id : view === 'ecoregions' ? (selectedEcoregion?.id || region?.id) : null)}
+                  fitDuration={view === 'regions' ? 0 : 340}
                 />
               </div>
             )}
