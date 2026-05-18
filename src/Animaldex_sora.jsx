@@ -1749,6 +1749,27 @@ const TERRESTRIAL_REALMS = BIOREGION_V4_CONTINENTS;
 const GEO_REGION_GROUPS = TERRESTRIAL_REALMS;
 const BIOREGION_V4_ECOREGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.regions.flatMap(reg => reg.ecoregions.map(eco => ({ ...eco, parentRegionId:reg.id, parentRegionLabel:reg.label, continentId:cont.id, continentLabel:cont.label }))));
 const BIOREGION_V4_REGIONS = BIOREGION_V4_CONTINENTS.flatMap(cont => cont.regions.map(reg => ({ ...reg, type:'terrestrial_region', continentId:cont.id, continentLabel:cont.label })));
+const TERRITORY_CAMERA_PRESETS = {
+  america:{ center:[-88,18], zoom:1.55 },
+  eurasia:{ center:[72,44], zoom:1.55 },
+  africa:{ center:[20,2], zoom:1.8 },
+  'oceania-australasia':{ center:[139,-25], zoom:2.05 },
+  antartide:{ center:[15,-78], zoom:1.65 },
+  'nord-america-boreale':{ center:[-100,62], zoom:2.45 },
+  'nord-america-temperato':{ center:[-103,38], zoom:2.55 },
+  'america-centrale-e-caraibi':{ center:[-78,17], zoom:3.05 },
+  'sud-america-tropicale':{ center:[-60,-8], zoom:2.45 },
+  'sud-america-andino-e-temperato':{ center:[-68,-32], zoom:2.35 },
+  'eurasia-occidentale':{ center:[18,47], zoom:2.45 },
+  'eurasia-settentrionale':{ center:[82,61], zoom:2.15 },
+  'eurasia-centrale-orientale':{ center:[88,38], zoom:2.2 },
+  'asia-meridionale-e-sudorientale':{ center:[91,15], zoom:2.25 },
+  'africa-settentrionale':{ center:[13,24], zoom:2.45 },
+  'africa-centrale-e-orientale':{ center:[25,1], zoom:2.35 },
+  'africa-meridionale':{ center:[24,-24], zoom:2.7 },
+  australasia:{ center:[136,-8], zoom:2.65 },
+  oceania:{ center:[150,-23], zoom:2.45 },
+};
 const GEO_REGION_MAP = [
   ...BIOREGION_V4_ECOREGIONS.map(eco => ({ ...eco, type:'ecoregion', realmType:'terrestrial', label:eco.label, id:eco.id, bioregionIds:[eco.id] })),
   ...MARINE_REALMS.map(region => ({ ...region, type:'marine', continentId:'marine-realms', continentLabel:'Dominio marino', realmId:'marine-realms', realmLabel:'Dominio marino', realmType:'marine', bioregionIds:[region.id] })),
@@ -4825,6 +4846,7 @@ function MapLibreGeoJsonMap({
   onOpenFullscreen,
   fitBounds,
   fitCenter = null,
+  fitZoom = null,
   showFeatureBoundaries = true,
   showControls = true,
   compareLeftIds = [],
@@ -4979,7 +5001,7 @@ function MapLibreGeoJsonMap({
     if (fitCenter && Number.isFinite(fitCenter[0]) && Number.isFinite(fitCenter[1])) {
       map.easeTo({
         center:[normalizeLongitude(fitCenter[0]), Math.max(-82, Math.min(82, fitCenter[1]))],
-        zoom:zoomForLngLatBounds(target, fullscreen),
+        zoom:Number.isFinite(fitZoom) ? fitZoom : zoomForLngLatBounds(target, fullscreen),
         duration:fitDuration,
         essential:true,
       });
@@ -4990,7 +5012,7 @@ function MapLibreGeoJsonMap({
   useEffect(() => {
     if (!ready) return;
     recenter();
-  }, [ready, fitBounds, fitCenter, fullscreen]);
+  }, [ready, fitBounds, fitCenter, fitZoom, fullscreen]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -5206,7 +5228,7 @@ function boundsToViewBox(b, padRatio=.34) {
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
 
-function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true, hideInactiveFill=true, layerOpacityScale=1, autoSpin=false }) {
+function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true, hideInactiveFill=true, layerOpacityScale=1, autoSpin=false, cameraId=null }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const groupList = Array.isArray(levelGroups) ? levelGroups : [];
@@ -5256,7 +5278,8 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
   const activeIds = activeFeatures.map(f => String(getFeatureBioregionId(f) || '')).filter(Boolean);
   const focusOrActiveFeatures = focusFeatures.length ? focusFeatures : activeFeatures;
   const mapLibreBounds = mergeLngLatBounds(focusOrActiveFeatures.map(f => geometryLngLatBounds(f.geometry)));
-  const mapLibreCenter = mapLibreBounds && !boundsAreGlobalEnoughForSpin(mapLibreBounds) ? mergeLngLatCenters(focusOrActiveFeatures) : null;
+  const cameraPreset = TERRITORY_CAMERA_PRESETS[String(cameraId || selectedId || '')] || null;
+  const mapLibreCenter = cameraPreset?.center || (focusFeatures.length ? mergeLngLatCenters(focusOrActiveFeatures) : (mapLibreBounds && !boundsAreGlobalEnoughForSpin(mapLibreBounds) ? mergeLngLatCenters(focusOrActiveFeatures) : null));
   const mapLibreLabel = showLabels && (hoverId || selectedId)
     ? (BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId)
     : '';
@@ -5289,6 +5312,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
             marine={marine || domain === 'marine'}
             fitBounds={mapLibreBounds}
             fitCenter={mapLibreCenter}
+            fitZoom={cameraPreset?.zoom}
             onOpenFullscreen={openFullscreen}
             showFeatureBoundaries={groupList.length ? false : showFeatureBoundaries}
             featureColorProperty={groupList.length ? '__animaldex_level_color' : ''}
@@ -5313,7 +5337,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
         {isFullscreen && (
           <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
             <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)', position:'relative' }}>
-              <BioregionVectorMap highlightIds={highlightIds} focusIds={focusIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} hideInactiveFill={hideInactiveFill} layerOpacityScale={layerOpacityScale} autoSpin={autoSpin} />
+              <BioregionVectorMap highlightIds={highlightIds} focusIds={focusIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} hideInactiveFill={hideInactiveFill} layerOpacityScale={layerOpacityScale} autoSpin={autoSpin} cameraId={cameraId} />
             </div>
           </div>
         )}
@@ -8644,6 +8668,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   levelGroups={terrestrialLevelGroups}
                   layerOpacityScale={.6}
                   autoSpin={view === 'terrestrial' && !mapFocusIds.length}
+                  cameraId={mapSelectedId || (view === 'regions' ? continent?.id : view === 'ecoregions' ? (selectedEcoregion?.id || region?.id) : null)}
                 />
               </div>
             )}
