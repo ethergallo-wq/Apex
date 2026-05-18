@@ -8761,18 +8761,52 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>{view === 'terrestrial' ? 'La mappa resta ferma come riferimento: sotto trovi le macroaree terrestri disponibili.' : view === 'marine' ? 'La mappa resta ferma come riferimento: sotto trovi i grandi reami marini.' : 'Il dominio terrestre porta a continenti, regioni e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.'}</div>
             </div>
             <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px' }}>
-              <MapLibreGeoJsonMap
-                data={featureCollection([])}
-                activeFeatureIds={[]}
-                height={310}
-                fitBounds={[-180, -70, 180, 80]}
-                fitDuration={0}
-                interactive
-                showControls
-                autoSpin
-                autoSpinSpeed={0.00124}
-                recenterOnChange={false}
-              />
+              {view === 'planet' ? (
+                <MapLibreGeoJsonMap
+                  data={featureCollection([])}
+                  activeFeatureIds={[]}
+                  height={310}
+                  fitBounds={[-180, -70, 180, 80]}
+                  fitDuration={0}
+                  interactive
+                  showControls
+                  autoSpin
+                  autoSpinSpeed={0.00124}
+                  recenterOnChange={false}
+                />
+              ) : view === 'terrestrial' ? (
+                <BioregionVectorMap
+                  highlightIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)}
+                  focusIds={mapFocusIds}
+                  selectedId={mapSelectedId}
+                  accent="#6CE5C7"
+                  height={310}
+                  fullBleed
+                  clickable
+                  onSelect={openMapHierarchyTarget}
+                  levelGroups={continentLevelGroups}
+                  layerOpacityScale={.6}
+                  autoSpin={!mapFocusIds.length}
+                  cameraId={mapSelectedId}
+                  fitDuration={0}
+                />
+              ) : (
+                <BioregionVectorMap
+                  highlightIds={marineMapIds}
+                  focusIds={marineFocusIds}
+                  selectedId={selectedMarineRealmId}
+                  marine
+                  accent="#4FB3FF"
+                  height={310}
+                  fullBleed
+                  clickable
+                  onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }}
+                  levelGroups={marineLevelGroups}
+                  layerOpacityScale={.6}
+                  autoSpin={!selectedMarineRealmId}
+                  fitDuration={0}
+                />
+              )}
             </div>
             {view === 'planet' && (
               <>
