@@ -669,22 +669,34 @@ function applyCachedUserStatuses(list = [], userId) {
 async function ensureUserProfile(user) {
   if (!user?.id) return false;
 
-  const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+  const username = getDefaultUsernameFromUser(user);
 
   try {
     const { data, error } = await supabase
       .from('user_profiles')
-      .select('user_id')
+      .select('user_id, username, nickname')
       .eq('user_id', user.id)
       .maybeSingle();
 
     if (error && error.code !== 'PGRST116') throw error;
-    if (data) return true;
+    if (data) {
+      if (!data.username || !data.nickname) {
+        await supabase
+          .from('user_profiles')
+          .update({
+            username:data.username || username,
+            nickname:data.nickname || data.username || username,
+            updated_at:new Date().toISOString(),
+          })
+          .eq('user_id', user.id);
+      }
+      return true;
+    }
 
     const { error: insertError } = await supabase
       .from('user_profiles')
       .upsert(
-        { user_id: user.id, username },
+        { user_id: user.id, username, nickname:username },
         { onConflict:'user_id' }
       );
 
@@ -713,7 +725,7 @@ async function fetchUserProfile(user) {
 
     if (error && error.code !== 'PGRST116') throw error;
 
-    const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+    const username = getDefaultUsernameFromUser(user);
     if (!data) {
       return mergeProfileDemographics({
         user_id: user.id,
@@ -735,7 +747,7 @@ async function fetchUserProfile(user) {
     }, user.id);
   } catch (err) {
     console.warn('[Animaldex] fetchUserProfile fallback:', err);
-    const username = String(user.email || 'esploratore').split('@')[0] || 'esploratore';
+    const username = getDefaultUsernameFromUser(user);
     return mergeProfileDemographics({
       user_id: user.id,
       username,
@@ -870,7 +882,7 @@ async function persistOnboardingQuestionnaire(user, payload = {}) {
 }
 
 function buildFallbackProfile(user, onboardingCompleted = true) {
-  const username = String(user?.email || 'esploratore').split('@')[0] || 'esploratore';
+  const username = getDefaultUsernameFromUser(user);
   return mergeProfileDemographics({
     user_id: user?.id,
     username,
@@ -1017,6 +1029,19 @@ function normalizeSocialProfile(row = {}) {
   };
 }
 
+function getDefaultUsernameFromUser(user) {
+  return String(user?.email || 'esploratore').split('@')[0].trim() || 'esploratore';
+}
+
+function sanitizeSocialSearchQuery(query) {
+  return String(query || '')
+    .trim()
+    .replace(/^@+/, '')
+    .replace(/[%_,()]/g, '')
+    .replace(/\s+/g, ' ')
+    .slice(0, 40);
+}
+
 const FRIEND_REACTIONS = [
   { key:'wow', emoji:'🤩', label:'Pazzesco' },
   { key:'trophy', emoji:'🏆', label:'Da record' },
@@ -1143,17 +1168,30 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
 }
 
 async function searchSocialProfiles(userId, query) {
-  const q = String(query || '').trim();
+  const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
-  const safe = q.replace(/[%_]/g, '');
+  const pattern = `%${q}%`;
   const { data, error } = await supabase
     .from('user_profiles')
     .select('user_id, username, nickname, avatar_url')
     .neq('user_id', userId)
-    .ilike('username', `${safe}%`)
-    .limit(12);
+    .or(`username.ilike.${pattern},nickname.ilike.${pattern}`)
+    .order('username', { ascending:true })
+    .limit(20);
   if (error) throw error;
-  return (data || []).map(normalizeSocialProfile);
+  const normalizedQ = q.toLowerCase();
+  return (data || [])
+    .map(normalizeSocialProfile)
+    .sort((a, b) => {
+      const aExact = String(a.username || '').toLowerCase() === normalizedQ || String(a.nickname || '').toLowerCase() === normalizedQ;
+      const bExact = String(b.username || '').toLowerCase() === normalizedQ || String(b.nickname || '').toLowerCase() === normalizedQ;
+      if (aExact !== bExact) return aExact ? -1 : 1;
+      const aStarts = String(a.username || '').toLowerCase().startsWith(normalizedQ) || String(a.nickname || '').toLowerCase().startsWith(normalizedQ);
+      const bStarts = String(b.username || '').toLowerCase().startsWith(normalizedQ) || String(b.nickname || '').toLowerCase().startsWith(normalizedQ);
+      if (aStarts !== bStarts) return aStarts ? -1 : 1;
+      return String(a.username || '').localeCompare(String(b.username || ''), 'it');
+    })
+    .slice(0, 12);
 }
 
 async function requestFriendship(userId, friendId) {
@@ -4595,7 +4633,7 @@ function pointProjectedBounds(points = [], radiusX=34, radiusY=24) {
 const MAPLIBRE_VERSION = '5.7.1';
 const MAPLIBRE_JS_URL = `https://unpkg.com/maplibre-gl@${MAPLIBRE_VERSION}/dist/maplibre-gl.js`;
 const MAPLIBRE_CSS_URL = `https://unpkg.com/maplibre-gl@${MAPLIBRE_VERSION}/dist/maplibre-gl.css`;
-const GEBCO_WMS_TILE_URL = 'https://wms.gebco.net/mapserv?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=GEBCO_Latest_2&STYLES=&FORMAT=image/png&TRANSPARENT=false&WIDTH=256&HEIGHT=256&CRS=EPSG:3857&BBOX={bbox-epsg-3857}';
+const GEBCO_WMS_TILE_URL = 'https://wms.gebco.net/mapserv?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&LAYERS=GEBCO_Latest_2&STYLES=&FORMAT=image/png&TRANSPARENT=false&WIDTH=512&HEIGHT=512&CRS=EPSG:3857&BBOX={bbox-epsg-3857}';
 const ANIMALDEX_PHYSICAL_GLOBE_STYLE = {
   version: 8,
   projection: { type:'globe' },
@@ -4603,7 +4641,7 @@ const ANIMALDEX_PHYSICAL_GLOBE_STYLE = {
     gebcoPhysical: {
       type:'raster',
       tiles:[GEBCO_WMS_TILE_URL],
-      tileSize:256,
+      tileSize:512,
       attribution:'GEBCO',
     },
   },
@@ -4677,6 +4715,54 @@ function mergeLngLatBounds(bounds = []) {
     Math.max(acc[2], b[2]), Math.max(acc[3], b[3])
   ], [Infinity, Infinity, -Infinity, -Infinity]);
 }
+function normalizeLongitude(lon) {
+  const n = Number(lon);
+  if (!Number.isFinite(n)) return 0;
+  return ((((n + 180) % 360) + 360) % 360) - 180;
+}
+function geometryLngLatCenter(geometry) {
+  if (!geometry) return null;
+  let x=0, y=0, z=0, count=0, latSum=0;
+  const visit = (coord) => {
+    const lon = Number(coord?.[0]);
+    const lat = Number(coord?.[1]);
+    if (!Number.isFinite(lon) || !Number.isFinite(lat)) return;
+    const lonRad = lon * Math.PI / 180;
+    const latRad = lat * Math.PI / 180;
+    x += Math.cos(latRad) * Math.cos(lonRad);
+    y += Math.cos(latRad) * Math.sin(lonRad);
+    z += Math.sin(latRad);
+    latSum += lat;
+    count += 1;
+  };
+  const walk = (coords) => {
+    if (!Array.isArray(coords)) return;
+    if (typeof coords[0] === 'number') visit(coords);
+    else coords.forEach(walk);
+  };
+  walk(geometry.coordinates);
+  if (!count) return null;
+  const lon = Math.atan2(y / count, x / count) * 180 / Math.PI;
+  const hyp = Math.sqrt((x / count) ** 2 + (y / count) ** 2);
+  const lat = Math.atan2(z / count, hyp) * 180 / Math.PI;
+  return [normalizeLongitude(lon), Number.isFinite(lat) ? lat : latSum / count];
+}
+function mergeLngLatCenters(features = []) {
+  const centers = (features || []).map(f => geometryLngLatCenter(f.geometry)).filter(Boolean);
+  if (!centers.length) return null;
+  let x=0, y=0, z=0;
+  centers.forEach(([lon, lat]) => {
+    const lonRad = lon * Math.PI / 180;
+    const latRad = lat * Math.PI / 180;
+    x += Math.cos(latRad) * Math.cos(lonRad);
+    y += Math.cos(latRad) * Math.sin(lonRad);
+    z += Math.sin(latRad);
+  });
+  const lon = Math.atan2(y / centers.length, x / centers.length) * 180 / Math.PI;
+  const hyp = Math.sqrt((x / centers.length) ** 2 + (y / centers.length) ** 2);
+  const lat = Math.atan2(z / centers.length, hyp) * 180 / Math.PI;
+  return [normalizeLongitude(lon), lat];
+}
 function padLngLatBounds(bounds, padRatio=.12) {
   if (!bounds) return null;
   const [minX,minY,maxX,maxY] = bounds;
@@ -4708,6 +4794,18 @@ function boundsAreGlobalEnoughForSpin(bounds) {
   const [minLon, minLat, maxLon, maxLat] = bounds;
   return (maxLon - minLon) > 118 || (maxLat - minLat) > 56;
 }
+function zoomForLngLatBounds(bounds, fullscreen=false) {
+  if (!bounds) return fullscreen ? 1.45 : 1.25;
+  const [minLon, minLat, maxLon, maxLat] = bounds;
+  const span = Math.max(Math.abs(maxLon - minLon), Math.abs(maxLat - minLat) * 1.8);
+  if (span > 150) return fullscreen ? 1.45 : 1.22;
+  if (span > 95) return fullscreen ? 1.85 : 1.55;
+  if (span > 58) return fullscreen ? 2.25 : 1.95;
+  if (span > 32) return fullscreen ? 2.9 : 2.5;
+  if (span > 17) return fullscreen ? 3.5 : 3.05;
+  if (span > 8) return fullscreen ? 4.25 : 3.75;
+  return fullscreen ? 5.2 : 4.45;
+}
 function MapLibreGeoJsonMap({
   data,
   activeFeatureIds = [],
@@ -4726,6 +4824,7 @@ function MapLibreGeoJsonMap({
   rangeTone = null,
   onOpenFullscreen,
   fitBounds,
+  fitCenter = null,
   showFeatureBoundaries = true,
   showControls = true,
   compareLeftIds = [],
@@ -4799,14 +4898,14 @@ function MapLibreGeoJsonMap({
         loadedRef.current = true;
         map.addSource('animaldex-polygons', { type:'geojson', data:mapData });
         map.addSource('animaldex-points', { type:'geojson', data:markerData });
-        map.addLayer({ id:'animaldex-base-fill', type:'fill', source:'animaldex-polygons', paint:{ 'fill-color': rangeTone ? rangeAccent : (marine ? '#153C4D' : '#735343'), 'fill-opacity':baseFillOpacity } });
+        map.addLayer({ id:'animaldex-base-fill', type:'fill', source:'animaldex-polygons', paint:{ 'fill-color': rangeTone ? rangeAccent : (marine ? '#153C4D' : '#735343'), 'fill-opacity':baseFillOpacity, 'fill-antialias':false } });
         if (showFeatureBoundaries) {
           map.addLayer({ id:'animaldex-base-line', type:'line', source:'animaldex-polygons', paint:{ 'line-color': marine ? 'rgba(120,210,245,.28)' : 'rgba(255,255,255,.16)', 'line-width':.75, 'line-opacity':hideInactiveFill ? 0 : 1 } });
         }
         if (rangeTone) {
           map.addLayer({ id:'animaldex-active-halo-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':rangeAccent, 'fill-opacity':rangeTone === 'marine' ? .18 : .20 } });
         }
-        map.addLayer({ id:'animaldex-active-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':featureColorProperty ? ['case', ['has', featureColorProperty], ['get', featureColorProperty], rangeAccent] : rangeAccent, 'fill-opacity':activeFillOpacity } });
+        map.addLayer({ id:'animaldex-active-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_active'], true], paint:{ 'fill-color':featureColorProperty ? ['case', ['has', featureColorProperty], ['get', featureColorProperty], rangeAccent] : rangeAccent, 'fill-opacity':activeFillOpacity, 'fill-antialias':false } });
         if (hasCompareOverlay) {
           map.addLayer({ id:'animaldex-compare-left-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_compare'], 'left'], paint:{ 'fill-color':compareLeftColor, 'fill-opacity':.56 } });
           map.addLayer({ id:'animaldex-compare-right-fill', type:'fill', source:'animaldex-polygons', filter:['==', ['get','__animaldex_compare'], 'right'], paint:{ 'fill-color':compareRightColor, 'fill-opacity':.56 } });
@@ -4874,12 +4973,21 @@ function MapLibreGeoJsonMap({
     if (!map) return;
     const target = padLngLatBounds(fitBounds, fullscreen ? .10 : .18) || [-170,-58,170,76];
     map.stop?.();
+    if (fitCenter && Number.isFinite(fitCenter[0]) && Number.isFinite(fitCenter[1])) {
+      map.easeTo({
+        center:[normalizeLongitude(fitCenter[0]), Math.max(-82, Math.min(82, fitCenter[1]))],
+        zoom:zoomForLngLatBounds(target, fullscreen),
+        duration:fitDuration,
+        essential:true,
+      });
+      return;
+    }
     map.fitBounds([[target[0], target[1]], [target[2], target[3]]], { padding:fullscreen ? 58 : 24, duration:fitDuration, essential:true, maxZoom:fullscreen ? 6.4 : 4.45 });
   };
   useEffect(() => {
     if (!ready) return;
     recenter();
-  }, [ready, fitBounds, fullscreen]);
+  }, [ready, fitBounds, fitCenter, fullscreen]);
 
   useEffect(() => {
     const map = mapRef.current;
@@ -5143,7 +5251,9 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
   const activeIds = activeFeatures.map(f => String(getFeatureBioregionId(f) || '')).filter(Boolean);
-  const mapLibreBounds = mergeLngLatBounds((focusFeatures.length ? focusFeatures : activeFeatures).map(f => geometryLngLatBounds(f.geometry)));
+  const focusOrActiveFeatures = focusFeatures.length ? focusFeatures : activeFeatures;
+  const mapLibreBounds = mergeLngLatBounds(focusOrActiveFeatures.map(f => geometryLngLatBounds(f.geometry)));
+  const mapLibreCenter = mergeLngLatCenters(focusOrActiveFeatures);
   const mapLibreLabel = showLabels && (hoverId || selectedId)
     ? (BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId)
     : '';
@@ -5175,6 +5285,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
             accent={accent}
             marine={marine || domain === 'marine'}
             fitBounds={mapLibreBounds}
+            fitCenter={mapLibreCenter}
             onOpenFullscreen={openFullscreen}
             showFeatureBoundaries={groupList.length ? false : showFeatureBoundaries}
             featureColorProperty={groupList.length ? '__animaldex_level_color' : ''}
@@ -6867,8 +6978,8 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
 
         {tab === 'search' && <div style={{ borderRadius:22, background:panelBg, border:`1px solid ${panelBorder}`, padding:14, marginBottom:14 }}>
           <div style={{ color:mainText, fontSize:16, fontWeight:1000 }}>Cerca per username</div>
-          <div style={{ color:subText, fontSize:11.5, lineHeight:1.45, marginTop:4 }}>Scrivi almeno 3 caratteri. Non cerchiamo per email e mostriamo solo profili minimi finche non diventate amici.</div>
-          <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="es. lunawild" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:isLightTheme?'rgba(0,0,0,.05)':'rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, color:mainText, padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
+          <div style={{ color:subText, fontSize:11.5, lineHeight:1.45, marginTop:4 }}>Scrivi almeno 3 caratteri. Puoi cercare username o nickname; non cerchiamo per email.</div>
+          <input value={query} onChange={e=>setQuery(e.target.value)} placeholder="es. lunawild o Luna" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:isLightTheme?'rgba(0,0,0,.05)':'rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, color:mainText, padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
           {searching && <div style={{ color:subText, fontSize:12, marginTop:8 }}>Ricerca...</div>}
           {!!results.length && <div style={{ display:'grid', gap:8, marginTop:10 }}>
             {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit' }}>
@@ -6877,7 +6988,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
               <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>Aggiungi</span>
             </button>)}
           </div>}
-          {!results.length && query.trim().length >= 3 && !searching && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun username trovato.</div>}
+          {!results.length && query.trim().length >= 3 && !searching && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun profilo trovato.</div>}
         </div>}
 
         {tab === 'feed' && <>
@@ -8095,7 +8206,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const [countrySearch, setCountrySearch] = useState('');
   const [selectedDestinationIso, setSelectedDestinationIso] = useState('');
   const [selectedDestinationIsos, setSelectedDestinationIsos] = useState([]);
-  const [regionNavMode, setRegionNavMode] = useState('both');
+  const [regionMapExpanded, setRegionMapExpanded] = useState(true);
   const [selectedMarineRealmId, setSelectedMarineRealmId] = useState(null);
   const [planetDomainFocus, setPlanetDomainFocus] = useState('terrestrial');
   const breadcrumbScrollRef = useRef(null);
@@ -8352,15 +8463,19 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
       scrollToMainMap();
     }
   };
-  const showRegionMap = regionNavMode !== 'boxes';
-  const showRegionBoxes = regionNavMode !== 'map';
+  const showRegionMap = regionMapExpanded;
+  const showRegionBoxes = true;
   const terrestrialNavActive = ['terrestrial','regions','ecoregions'].includes(view);
   const terrestrialMapIds = view === 'terrestrial'
     ? BIOREGION_V4_ECOREGIONS.map(e=>e.id)
     : view === 'regions'
       ? (continent?.bioregionIds || [])
       : (region?.bioregionIds || []);
-  const terrestrialFocusIds = selectedEcoregion && view === 'ecoregions' ? [selectedEcoregion.id] : [];
+  const terrestrialFocusIds = view === 'regions'
+    ? (continent?.bioregionIds || [])
+    : view === 'ecoregions'
+      ? (selectedEcoregion ? [selectedEcoregion.id] : (region?.bioregionIds || []))
+      : [];
   const levelPalette = ['#FF5B66','#5BBEF8','#F0A840','#B860F8','#6CE5C7','#FF8FB3','#D8D2C4','#8FD85B'];
   const continentLevelGroups = BIOREGION_V4_CONTINENTS.map((cont, index) => ({ id:cont.id, label:cont.label, ids:cont.bioregionIds || [], color:levelPalette[index % levelPalette.length] }));
   const terrestrialLevelGroups = view === 'terrestrial'
@@ -8372,27 +8487,10 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const terrestrialMapAccent = view === 'terrestrial' ? '#6CE5C7' : view === 'regions' ? '#20B2AA' : '#90D84A';
   const marineMapIds = MARINE_REALMS.map(m=>m.id);
   const marineFocusIds = selectedMarineRealmId ? [selectedMarineRealmId] : [];
-  const terrestrialHelper = view === 'terrestrial'
-    ? 'Tocca una zona sul globo o apri un box: la mappa resta ferma e cambia solo il livello sotto.'
-    : view === 'regions'
-      ? `Stai esplorando ${continent?.label || 'questa macroarea'}: la mappa zooma qui e sotto vedi le regioni interne.`
-      : `Dentro ${region?.label || 'questa regione'}: scegli una bioregione dalla mappa o dai box.`;
-  const RegionNavModeSwitch = ({ helper }) => (
-    <div style={{ margin:'0 0 12px', padding:10, borderRadius:18, border:`1px solid ${isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)'}`, background:isLightTheme?'rgba(255,255,255,.62)':'rgba(255,255,255,.045)' }}>
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:6 }}>
-        {[
-          ['both','Entrambi'],
-          ['map','Mappa'],
-          ['boxes','Box'],
-        ].map(([mode, text]) => {
-          const active = regionNavMode === mode;
-          return (
-            <button key={mode} onClick={()=>setRegionNavMode(mode)} style={{ height:34, borderRadius:12, border:`1px solid ${active?'rgba(144,216,74,.55)':(isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.08)')}`, background:active?'linear-gradient(135deg,rgba(144,216,74,.26),rgba(32,178,170,.18))':(isLightTheme?'rgba(251,247,239,.78)':'rgba(0,0,0,.16)'), color:active?(isLightTheme?'#17422D':'#DFFFD0'):(isLightTheme?'rgba(0,0,0,.66)':'rgba(255,255,255,.66)'), fontFamily:'inherit', fontSize:11, fontWeight:1000, cursor:'pointer' }}>{text}</button>
-          );
-        })}
-      </div>
-      {helper && <div style={{ marginTop:8, color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.52)', fontSize:11.5, fontWeight:750, lineHeight:1.35 }}>{helper}</div>}
-    </div>
+  const MapCollapseToggle = () => (
+    <button onClick={()=>setRegionMapExpanded(v=>!v)} style={{ width:'100%', height:40, margin:'0 0 12px', borderRadius:14, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)'}`, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.055)', color:isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)', fontFamily:'inherit', fontSize:12, fontWeight:1000, cursor:'pointer' }}>
+      {regionMapExpanded ? 'Contrai mappa' : 'Espandi mappa'}
+    </button>
   );
 
   return (
@@ -8446,7 +8544,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {terrestrialNavActive && (
           <>
-            <RegionNavModeSwitch helper={terrestrialHelper} />
+            <MapCollapseToggle />
             {showRegionMap && (
               <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
                 <BioregionVectorMap
@@ -8507,6 +8605,17 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='habitats' && selectedSubregionTerritory && (
           <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+            <div style={{ margin:'0 -14px 0' }}>
+              <BioregionVectorMap
+                highlightIds={region?.bioregionIds || [selectedEcoregion.id]}
+                focusIds={[selectedEcoregion.id]}
+                selectedId={selectedEcoregion.id}
+                accent="#90D84A"
+                height={280}
+                fullBleed
+                layerOpacityScale={0}
+              />
+            </div>
             <div style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:22, padding:16, background:'linear-gradient(135deg,rgba(184,77,58,.14),rgba(255,255,255,.045))' }}>
               <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Territorio</div>
               <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:5 }}>{selectedEcoregion.label}</div>
