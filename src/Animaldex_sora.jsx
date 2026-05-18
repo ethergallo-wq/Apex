@@ -6535,10 +6535,10 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
   const selectedPathIds = new Set(selectedPath.map(node => node.id));
   const layoutNodes = [];
   const colGap = 292;
-  const rowGap = focusDepth === 0 ? 98 : 108;
-  const groupGap = focusDepth === 0 ? 48 : 32;
+  const rowGap = focusDepth === 0 ? 126 : 142;
+  const groupGap = focusDepth === 0 ? 72 : 52;
   const nodeW = 252;
-  const nodeH = 90;
+  const nodeH = 112;
   let cursorY = 0;
   const walk = (node, depth = 0, parent = null, parentWithinSelected = false) => {
     const withinSelected = parentWithinSelected || node.id === selected.id;
@@ -6558,7 +6558,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
     visibleChildren.forEach((child, index) => {
       childRows.push(walk(child, depth + 1, row, withinSelected));
       if (depth === 0 && index < visibleChildren.length - 1) cursorY += groupGap;
-      if (depth === 1 && focusDepth > 0 && index < visibleChildren.length - 1) cursorY += 14;
+      if (depth >= 1 && focusDepth > 0 && index < visibleChildren.length - 1) cursorY += Math.max(18, groupGap * .34);
     });
     if (childRows.length) row.y = childRows.reduce((sum, child) => sum + child.y, 0) / childRows.length;
     else {
@@ -6758,9 +6758,9 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
               style={{
                 position:'absolute',
                 left:x - 126,
-                top:y - 47,
+                top:y - 56,
                 width:252,
-                minHeight:90,
+                minHeight:generatedAnimal ? 98 : 104,
                 borderRadius:22,
                 border:`1.4px solid ${node.color}${active ? 'FF' : near ? 'AA' : '55'}`,
                 background:active ? `radial-gradient(circle at 18% 16%, ${node.color}46, transparent 42%), linear-gradient(135deg, rgba(27,28,24,.98), rgba(9,11,13,.97))` : `radial-gradient(circle at 12% 14%, ${node.color}22, transparent 38%), linear-gradient(135deg, rgba(255,255,255,.085), rgba(12,14,17,.94))`,
