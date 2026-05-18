@@ -6230,21 +6230,22 @@ function LifeProgress({ value, color }) {
 }
 function buildLifeFlow(selected, animals) {
   const selectedPath = getLifeNodePath(selected.id);
+  const focusDepth = Math.max(0, selectedPath.length - 1);
+  const maxVisibleDepth = focusDepth + 2;
   const selectedPathIds = new Set(selectedPath.map(node => node.id));
-  const selectedChildIds = new Set((selected.children || []).map(node => node.id));
-  const activeParent = selectedPath[selectedPath.length - 2] || null;
-  const activeSiblingIds = new Set((activeParent?.children || []).map(node => node.id));
   const layoutNodes = [];
-  const colGap = 314;
-  const rowGap = 118;
+  const colGap = 292;
+  const rowGap = focusDepth === 0 ? 86 : 104;
   const nodeW = 252;
   const nodeH = 90;
   let cursorY = 0;
-  const walk = (node, depth = 0, parent = null) => {
-    const children = node.children || [];
-    const row = { data:node, depth, parent, x:140 + depth * colGap, y:0 };
+  const focusRoot = focusDepth === 0 ? LIFE_TREE : selected;
+  const walk = (node, depth = focusDepth, parent = null) => {
+    const visibleChildren = depth >= maxVisibleDepth ? [] : (node.children || []);
+    const column = depth - focusDepth;
+    const row = { data:node, depth, parent, x:140 + depth * colGap, y:0, column };
     layoutNodes.push(row);
-    const childRows = children.map(child => walk(child, depth + 1, row));
+    const childRows = visibleChildren.map(child => walk(child, depth + 1, row));
     if (childRows.length) row.y = childRows.reduce((sum, child) => sum + child.y, 0) / childRows.length;
     else {
       row.y = cursorY;
@@ -6252,19 +6253,20 @@ function buildLifeFlow(selected, animals) {
     }
     return row;
   };
-  walk(LIFE_TREE);
+  walk(focusRoot);
   const minY = Math.min(...layoutNodes.map(row => row.y), 0);
-  layoutNodes.forEach(row => { row.y = row.y - minY + 80; });
+  layoutNodes.forEach(row => { row.y = row.y - minY + 124; });
   const nodes = layoutNodes.map(d => ({
     id:d.data.id,
     x:d.x,
     y:d.y,
     depth:d.depth,
+    column:d.column,
     node:d.data,
     stats:getLifeStats(d.data, animals),
     active:d.data.id === selected.id,
     inPath:selectedPathIds.has(d.data.id),
-    near:selectedPathIds.has(d.data.id) || selectedChildIds.has(d.data.id) || activeSiblingIds.has(d.data.id),
+    near:true,
   }));
   const edges = layoutNodes.filter(d => d.parent).map(d => ({
     id:`${d.parent.data.id}-${d.data.id}`,
@@ -6273,7 +6275,16 @@ function buildLifeFlow(selected, animals) {
     color:d.data.color,
     active:selectedPathIds.has(d.parent.data.id) && selectedPathIds.has(d.data.id),
   }));
-  return { nodes, edges, selectedPath, selectedNode:nodes.find(node => node.id === selected.id), colGap, nodeW, nodeH };
+  const visibleDepths = Array.from(new Set(nodes.map(node => node.depth))).sort((a,b)=>a-b);
+  const columns = visibleDepths.map(depth => {
+    const sample = nodes.find(node => node.depth === depth)?.node;
+    return {
+      depth,
+      x:140 + depth * colGap,
+      label:LIFE_RANK_LABELS[sample?.rank] || sample?.rank || `Livello ${depth + 1}`,
+    };
+  });
+  return { nodes, edges, columns, selectedPath, selectedNode:nodes.find(node => node.id === selected.id), focusDepth, colGap, rowGap, nodeW, nodeH };
 }
 function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   const wrapRef = useRef(null);
@@ -6297,11 +6308,17 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   useEffect(() => {
     if (!flow.nodes.length) return;
     const selectedRow = flow.selectedNode || flow.nodes[0];
-    const startDepth = Math.max(0, Math.min(selectedRow.depth || 0, Math.max(0, (selectedRow.depth || 0) - 1)));
     const threeColumnsW = (flow.colGap * 2) + flow.nodeW + 28;
-    const nextK = Math.max(.54, Math.min(.94, (size.w - 22) / threeColumnsW));
-    const leftEdge = 140 + startDepth * flow.colGap - flow.nodeW / 2;
-    const targetY = selectedRow.id === 'animalia' ? 54 : size.h * .34;
+    const minY = Math.min(...flow.nodes.map(node => node.y - flow.nodeH / 2));
+    const maxY = Math.max(...flow.nodes.map(node => node.y + flow.nodeH / 2));
+    const totalH = Math.max(1, maxY - minY);
+    const widthFit = (size.w - 22) / threeColumnsW;
+    const heightFit = (size.h - 74) / totalH;
+    const nextK = selectedRow.id === 'animalia'
+      ? Math.max(.34, Math.min(.88, widthFit, heightFit))
+      : Math.max(.54, Math.min(.94, widthFit));
+    const leftEdge = 140 + flow.focusDepth * flow.colGap - flow.nodeW / 2;
+    const targetY = selectedRow.id === 'animalia' ? (size.h / 2 - ((minY + maxY) / 2 - selectedRow.y) * nextK) : size.h * .34;
     setView({ x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK });
   }, [flow, size.w, size.h, selectedNode.id]);
   const startDrag = (e) => {
@@ -6340,9 +6357,14 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
         <button onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
       </div>
       <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:dragRef.current ? 'none' : 'transform .42s cubic-bezier(.2,.8,.2,1)' }}>
+        {flow.columns.map(column => (
+          <div key={column.depth} style={{ position:'absolute', left:column.x - flow.nodeW / 2, top:20, width:flow.nodeW, height:28, borderRadius:999, display:'flex', alignItems:'center', justifyContent:'center', background:'rgba(255,255,255,.045)', border:'1px solid rgba(255,255,255,.08)', color:'rgba(255,255,255,.58)', fontSize:10, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase', pointerEvents:'none' }}>{column.label}</div>
+        ))}
         <svg width="1" height="1" style={{ position:'absolute', left:0, top:0, overflow:'visible', pointerEvents:'none' }}>
           {flow.edges.map(edge => <path key={edge.id} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth={edge.active ? 4.2 : 2.4} strokeLinecap="round" opacity={edge.active ? .36 : .14} />)}
           {flow.edges.map(edge => <path key={`${edge.id}-core`} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth={edge.active ? 1.45 : .85} strokeLinecap="round" opacity={edge.active ? .95 : .30} />)}
+          {flow.edges.map(edge => <circle key={`${edge.id}-source`} cx={edge.source.x + 126} cy={edge.source.y} r={edge.active ? 4.6 : 3.2} fill="#07090B" stroke={edge.color} strokeWidth={edge.active ? 1.7 : 1} opacity={edge.active ? .95 : .42} />)}
+          {flow.edges.map(edge => <circle key={`${edge.id}-target`} cx={edge.target.x - 126} cy={edge.target.y} r={edge.active ? 4.6 : 3.2} fill={edge.color} opacity={edge.active ? .95 : .46} />)}
         </svg>
         {flow.nodes.map(({ id, x, y, node, stats, active, inPath, near }) => {
           const terminal = !(node.children || []).length && stats.total > 0;
