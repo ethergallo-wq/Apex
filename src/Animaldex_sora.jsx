@@ -6421,9 +6421,6 @@ function LifeProgress({ value, color }) {
 function lifeAnimalKey(animal) {
   return String(animal?.id || animal?.sci || animal?.com || '');
 }
-function getLifeAnimalGenus(animal) {
-  return String(animal?.gen || String(animal?.sci || '').trim().split(/\s+/)[0] || '').trim();
-}
 function getLifeUncoveredAnimals(node, visibleChildren, animals=[]) {
   const covered = new Set();
   (visibleChildren || []).forEach(child => getLifeAnimals(child, animals).forEach(animal => covered.add(lifeAnimalKey(animal))));
@@ -6437,44 +6434,22 @@ function getMysteryLifeLabel(rank='species') {
 function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
   const rows = sourceRows || getLifeAnimals(node, animals);
   if (!rows.length) return [];
-  const byGenus = new Map();
-  rows.forEach(animal => {
-    const genus = getLifeAnimalGenus(animal) || 'Genere non classificato';
-    if (!byGenus.has(genus)) byGenus.set(genus, []);
-    byGenus.get(genus).push(animal);
-  });
-  return Array.from(byGenus.entries())
-    .sort(([a], [b]) => a.localeCompare(b))
-    .slice(0, 18)
-    .map(([genus, genusAnimals]) => {
-      const allMystery = genusAnimals.every(animal => isMysteryStatus(animal.status));
+  return rows
+    .slice()
+    .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')))
+    .slice(0, 36)
+    .map(animal => {
+      const mystery = isMysteryStatus(animal.status);
       return {
-        id:`${node.id}-gen-${lifeSlug(genus)}`,
-        label:allMystery ? getMysteryLifeLabel('genus') : genus,
-        subtitle:`${genusAnimals.length} specie Animaldex`,
-        rank:'genus',
-        kind:'genus',
+        id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
+        label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Animaldex'),
+        subtitle:mystery ? 'Identità non ancora rivelata' : [animal.gen, animal.sci].filter(Boolean).join(' · '),
+        rank:'species',
+        kind:'animal',
         color:node.color,
         generated:true,
-        children:genusAnimals
-          .slice()
-          .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')))
-          .slice(0, 12)
-          .map(animal => {
-            const mystery = isMysteryStatus(animal.status);
-            return {
-              id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
-              label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Animaldex'),
-              subtitle:mystery ? 'Identità non ancora rivelata' : (animal.sci || animal.rarity || ''),
-              rank:'species',
-              kind:'animal',
-              color:node.color,
-              generated:true,
-              animal,
-              match:{ gen:genus },
-              children:[],
-            };
-          }),
+        animal,
+        children:[],
       };
     });
 }
@@ -6665,7 +6640,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     const tx = edge.target.x - 126;
     const ty = edge.target.y;
     const midX = (sx + tx) / 2;
-    return `M ${sx} ${sy} C ${midX} ${sy}, ${midX} ${ty}, ${tx} ${ty}`;
+    return `M ${sx} ${sy} H ${midX} V ${ty} H ${tx}`;
   };
   return (
     <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
