@@ -6238,7 +6238,7 @@ function getLifeAnimals(node, animals=[]) {
 function getLifeStats(node, animals=[]) {
   const rows = getLifeAnimals(node, animals);
   const captured = rows.filter(a => normalizeAnimalStatus(a.status) === 'catturato').length;
-  return { total:rows.length, captured, completion:rows.length ? Math.round(captured / rows.length * 100) : 0 };
+  return { total:rows.length, captured, completion:rows.length ? Math.round(captured / rows.length * 100) : 0, samples:rows.slice(0, 4) };
 }
 function LifeProgress({ value, color }) {
   const pct = Math.max(0, Math.min(100, Number(value) || 0));
@@ -6315,6 +6315,8 @@ function buildLifeFlow(selected, animals) {
 function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
   const wrapRef = useRef(null);
   const dragRef = useRef(null);
+  const pointersRef = useRef(new Map());
+  const pinchRef = useRef(null);
   const [size, setSize] = useState({ w:360, h:520 });
   const [view, setView] = useState({ x:24, y:34, k:.92 });
   const flow = useMemo(() => buildLifeFlow(selectedNode, animals), [selectedNode, animals]);
@@ -6347,17 +6349,69 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
     const targetY = selectedRow.id === 'animalia' ? (size.h / 2 - ((minY + maxY) / 2 - selectedRow.y) * nextK) : size.h * .34;
     setView({ x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK });
   }, [flow, size.w, size.h, selectedNode.id]);
+  const centerOnNode = (node, keepZoom = true) => {
+    if (!node) return;
+    setView(prev => {
+      const k = keepZoom ? prev.k : Math.max(.54, Math.min(.94, prev.k));
+      return { x:size.w / 2 - node.x * k, y:size.h * .36 - node.y * k, k };
+    });
+  };
+  const snapToNearest = () => {
+    if (!flow.nodes.length) return;
+    const current = view;
+    const worldX = (size.w / 2 - current.x) / current.k;
+    const worldY = (size.h * .42 - current.y) / current.k;
+    const nearest = flow.nodes.reduce((best, node) => {
+      const dx = node.x - worldX;
+      const dy = (node.y - worldY) * .72;
+      const score = dx * dx + dy * dy;
+      return !best || score < best.score ? { node, score } : best;
+    }, null)?.node;
+    if (!nearest) return;
+    if (nearest.id !== selectedNode.id && (nearest.node.children || []).length) onOpen(nearest.id);
+    else centerOnNode(nearest, true);
+  };
   const startDrag = (e) => {
-    if (e.target.closest?.('[data-life-node="true"]')) return;
-    dragRef.current = { x:e.clientX, y:e.clientY, view };
+    if (e.target.closest?.('[data-life-node="true"], [data-life-control="true"]')) return;
+    pointersRef.current.set(e.pointerId, { x:e.clientX, y:e.clientY });
+    if (pointersRef.current.size === 2) {
+      const pts = Array.from(pointersRef.current.values());
+      const dx = pts[1].x - pts[0].x;
+      const dy = pts[1].y - pts[0].y;
+      pinchRef.current = { dist:Math.hypot(dx, dy) || 1, mid:{ x:(pts[0].x + pts[1].x) / 2, y:(pts[0].y + pts[1].y) / 2 }, view };
+      dragRef.current = null;
+    } else {
+      dragRef.current = { x:e.clientX, y:e.clientY, view };
+    }
     e.currentTarget.setPointerCapture?.(e.pointerId);
   };
   const moveDrag = (e) => {
+    if (!pointersRef.current.has(e.pointerId)) return;
+    pointersRef.current.set(e.pointerId, { x:e.clientX, y:e.clientY });
+    if (pointersRef.current.size >= 2 && pinchRef.current) {
+      const pts = Array.from(pointersRef.current.values()).slice(0, 2);
+      const dx = pts[1].x - pts[0].x;
+      const dy = pts[1].y - pts[0].y;
+      const dist = Math.hypot(dx, dy) || 1;
+      const mid = { x:(pts[0].x + pts[1].x) / 2, y:(pts[0].y + pts[1].y) / 2 };
+      const start = pinchRef.current;
+      const nextK = Math.max(.32, Math.min(1.52, start.view.k * (dist / start.dist)));
+      const worldX = (start.mid.x - start.view.x) / start.view.k;
+      const worldY = (start.mid.y - start.view.y) / start.view.k;
+      setView({ x:mid.x - worldX * nextK, y:mid.y - worldY * nextK, k:nextK });
+      return;
+    }
     const d = dragRef.current;
-    if (!d) return;
-    setView({ ...d.view, x:d.view.x + e.clientX - d.x, y:d.view.y + e.clientY - d.y });
+    if (d) setView({ ...d.view, x:d.view.x + e.clientX - d.x, y:d.view.y + e.clientY - d.y });
   };
-  const endDrag = () => { dragRef.current = null; };
+  const endDrag = (e) => {
+    pointersRef.current.delete(e.pointerId);
+    if (pointersRef.current.size < 2) pinchRef.current = null;
+    if (pointersRef.current.size === 0) {
+      dragRef.current = null;
+      snapToNearest();
+    }
+  };
   const zoomBy = (factor) => {
     setView(prev => {
       const nextK = Math.max(.46, Math.min(1.22, prev.k * factor));
@@ -6365,6 +6419,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
       const cy = size.h / 2;
       return { x:cx - ((cx - prev.x) / prev.k) * nextK, y:cy - ((cy - prev.y) / prev.k) * nextK, k:nextK };
     });
+    setTimeout(snapToNearest, 180);
   };
   const edgePath = (edge) => {
     const sx = edge.source.x + 126;
@@ -6379,10 +6434,10 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
       <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
       <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina il pannello · Tocca una placca per centrare il ramo</div>
       <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
-        <button onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
-        <button onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
+        <button data-life-control="true" onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
+        <button data-life-control="true" onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
       </div>
-      <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:dragRef.current ? 'none' : 'transform .42s cubic-bezier(.2,.8,.2,1)' }}>
+      <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:(dragRef.current || pinchRef.current) ? 'none' : 'transform .72s cubic-bezier(.18,.86,.18,1)' }}>
         {flow.columns.map(column => (
           <div key={column.depth} style={{ position:'absolute', left:column.x - flow.nodeW / 2, top:20, width:flow.nodeW, height:28, borderRadius:999, display:'flex', alignItems:'center', justifyContent:'center', background:'rgba(255,255,255,.045)', border:'1px solid rgba(255,255,255,.08)', color:'rgba(255,255,255,.58)', fontSize:10, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase', pointerEvents:'none' }}>{column.label}</div>
         ))}
@@ -6418,7 +6473,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
                 cursor:'pointer',
                 opacity:muted ? .38 : 1,
                 transform:active ? 'scale(1.035)' : 'scale(1)',
-                transition:'opacity .28s ease, transform .28s ease, box-shadow .28s ease',
+                transition:'left .62s cubic-bezier(.18,.86,.18,1), top .62s cubic-bezier(.18,.86,.18,1), opacity .34s ease, transform .34s ease, box-shadow .34s ease',
               }}
             >
               <div style={{ display:'flex', alignItems:'center', gap:8 }}>
@@ -6430,6 +6485,15 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
                 <LifeProgress value={stats.completion} color={node.color} />
               </div>
               <div style={{ color:'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex')}</div>
+              {stats.samples?.length > 0 && (
+                <div style={{ marginTop:8, display:'flex', flexWrap:'wrap', gap:5 }}>
+                  {stats.samples.slice(0, 3).map(animal => {
+                    const status = normalizeAnimalStatus(animal.status);
+                    const mystery = isMysteryStatus(status);
+                    return <span key={animal.id || animal.sci} style={{ maxWidth:'100%', borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:mystery?'rgba(255,255,255,.58)':node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{mystery ? 'Specie misteriosa' : (animal.gen || animal.com || animal.sci)}</span>;
+                  })}
+                </div>
+              )}
             </button>
           );
         })}
