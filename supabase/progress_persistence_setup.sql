@@ -171,6 +171,8 @@ on public.user_destinations for delete
 to authenticated
 using ((select auth.uid()) = user_id);
 
+drop function if exists public.unlock_animals_for_destination(uuid, text, text[]);
+
 create or replace function public.unlock_animals_for_destination(
   p_user_id uuid,
   p_iso text,
