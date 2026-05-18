@@ -8551,10 +8551,10 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setView(targetView);
   };
   const breadcrumbItems = (() => {
-    if (view === 'countries') return [{ label:'Pianeta', view:'planet' }, { label:'Paesi visitati', view:'countries' }];
-    if (view === 'marine') return [{ label:'Pianeta', view:'planet' }, { label:'Reame marino', view:'marine' }];
+    if (view === 'countries') return [{ label:'Pianeta Terra', view:'planet' }, { label:'Paesi visitati', view:'countries' }];
+    if (view === 'marine') return [{ label:'Pianeta Terra', view:'planet' }, { label:'Dominio marino', view:'marine' }];
     if (['terrestrial','regions','ecoregions','lifeweb','animals'].includes(view) || selectedContinentId) {
-      const items = [{ label:'Reame terrestre', view:'terrestrial' }];
+      const items = [{ label:'Pianeta Terra', view:'planet' }, { label:'Dominio terrestre', view:'terrestrial' }];
       if (continent) items.push({ label:continent.label, view:'regions' });
       if (region) items.push({ label:region.label, view:'ecoregions' });
       if (selectedEcoregion) items.push({ label:selectedEcoregion.label, view:'lifeweb' });
@@ -8763,6 +8763,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px' }}>
               {view === 'planet' ? (
                 <MapLibreGeoJsonMap
+                  key="planet-clean-orbit-map"
                   data={featureCollection([])}
                   activeFeatureIds={[]}
                   height={310}
@@ -8776,6 +8777,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 />
               ) : view === 'terrestrial' ? (
                 <BioregionVectorMap
+                  key="terrestrial-domain-continent-map"
                   highlightIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)}
                   focusIds={mapFocusIds}
                   selectedId={mapSelectedId}
@@ -8788,10 +8790,12 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   layerOpacityScale={.6}
                   autoSpin={!mapFocusIds.length}
                   cameraId={mapSelectedId}
+                  hideInactiveFill={false}
                   fitDuration={0}
                 />
               ) : (
                 <BioregionVectorMap
+                  key="marine-domain-realm-map"
                   highlightIds={marineMapIds}
                   focusIds={marineFocusIds}
                   selectedId={selectedMarineRealmId}
