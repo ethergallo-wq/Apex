@@ -6545,6 +6545,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
   const walk = (node, depth = 0, parent = null, parentWithinSelected = false) => {
     const withinSelected = parentWithinSelected || node.id === selected.id;
     const baseChildren = (node.children || []).filter(child => {
+      if (!selectedPathIds.has(child.id) && getLifeAnimals(child, animals).length === 0) return false;
       const childDepth = depth + 1;
       const childWithinSelected = withinSelected || child.id === selected.id;
       return childDepth <= 2 || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth) || node.id === expandedGeneratedId;
@@ -6607,9 +6608,13 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   const dragRef = useRef(null);
   const pointersRef = useRef(new Map());
   const pinchRef = useRef(null);
+  const initializedRef = useRef(false);
+  const lastCenterTapRef = useRef(0);
+  const appliedResetRef = useRef(0);
   const [size, setSize] = useState({ w:360, h:520 });
   const [view, setView] = useState({ x:24, y:34, k:.92 });
   const [expandedGeneratedId, setExpandedGeneratedId] = useState(null);
+  const [resetVersion, setResetVersion] = useState(0);
   const flow = useMemo(() => buildLifeFlow(selectedNode, animals, expandedGeneratedId), [selectedNode, animals, expandedGeneratedId]);
   useEffect(() => setExpandedGeneratedId(null), [selectedNode.id]);
   useEffect(() => {
@@ -6625,22 +6630,32 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
-  useEffect(() => {
-    if (!flow.nodes.length) return;
-    const selectedRow = flow.selectedNode || flow.nodes[0];
-    const threeColumnsW = (flow.colGap * 2) + flow.nodeW + 28;
-    const minY = Math.min(...flow.nodes.map(node => node.y - flow.nodeH / 2));
-    const maxY = Math.max(...flow.nodes.map(node => node.y + flow.nodeH / 2));
+  const getInitialLifeView = (targetFlow = flow) => {
+    if (!targetFlow.nodes.length) return { x:24, y:34, k:.92 };
+    const selectedRow = targetFlow.selectedNode || targetFlow.nodes[0];
+    const threeColumnsW = (targetFlow.colGap * 2) + targetFlow.nodeW + 28;
+    const minY = Math.min(...targetFlow.nodes.map(node => node.y - targetFlow.nodeH / 2));
+    const maxY = Math.max(...targetFlow.nodes.map(node => node.y + targetFlow.nodeH / 2));
     const totalH = Math.max(1, maxY - minY);
     const widthFit = (size.w - 22) / threeColumnsW;
     const heightFit = (size.h - 74) / totalH;
     const nextK = selectedRow.id === 'animalia'
       ? Math.max(.34, Math.min(.88, widthFit, heightFit))
       : Math.max(.54, Math.min(.94, widthFit));
-    const leftEdge = 140 + flow.focusDepth * flow.colGap - flow.nodeW / 2;
+    const leftEdge = 140 + targetFlow.focusDepth * targetFlow.colGap - targetFlow.nodeW / 2;
     const targetY = selectedRow.id === 'animalia' ? (size.h / 2 - ((minY + maxY) / 2 - selectedRow.y) * nextK) : size.h * .34;
-    setView({ x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK });
-  }, [flow, size.w, size.h, selectedNode.id]);
+    return { x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK };
+  };
+  useEffect(() => {
+    if (!flow.nodes.length || initializedRef.current) return;
+    initializedRef.current = true;
+    setView(getInitialLifeView(flow));
+  }, [flow, size.w, size.h]);
+  useEffect(() => {
+    if (!flow.nodes.length || resetVersion === 0 || appliedResetRef.current === resetVersion) return;
+    appliedResetRef.current = resetVersion;
+    setView(getInitialLifeView(flow));
+  }, [resetVersion, flow, size.w, size.h]);
   const centerOnNode = (node, keepZoom = true) => {
     if (!node) return;
     setView(prev => {
@@ -6660,8 +6675,19 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
       return !best || score < best.score ? { node, score } : best;
     }, null)?.node;
     if (!nearest) return;
-    if (nearest.id !== selectedNode.id && !nearest.node.generated && (nearest.node.children || []).length) onOpen(nearest.id);
-    else centerOnNode(nearest, true);
+    centerOnNode(nearest, true);
+  };
+  const handleManualCenter = () => {
+    const now = Date.now();
+    const doubleTap = now - lastCenterTapRef.current < 900;
+    lastCenterTapRef.current = now;
+    if (doubleTap) {
+      setExpandedGeneratedId(null);
+      onOpen('animalia');
+      setResetVersion(v => v + 1);
+      return;
+    }
+    snapToNearest();
   };
   const startDrag = (e) => {
     if (e.target.closest?.('[data-life-node="true"], [data-life-control="true"]')) return;
@@ -6701,7 +6727,6 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     if (pointersRef.current.size < 2) pinchRef.current = null;
     if (pointersRef.current.size === 0) {
       dragRef.current = null;
-      snapToNearest();
     }
   };
   const zoomBy = (factor) => {
@@ -6711,7 +6736,6 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
       const cy = size.h / 2;
       return { x:cx - ((cx - prev.x) / prev.k) * nextK, y:cy - ((cy - prev.y) / prev.k) * nextK, k:nextK };
     });
-    setTimeout(snapToNearest, 180);
   };
   const edgePath = (edge) => {
     const sx = edge.source.x + 126;
@@ -6724,8 +6748,9 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   return (
     <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
       <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
-      <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina il pannello · Tocca una placca per centrare il ramo</div>
+      <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina il pannello · usa ⌖ per centrare il nodo vicino</div>
       <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
+        <button data-life-control="true" onClick={handleManualCenter} aria-label="Centra nodo vicino" style={lifeZoomButtonStyle}>⌖</button>
         <button data-life-control="true" onClick={()=>zoomBy(1.16)} style={lifeZoomButtonStyle}>+</button>
         <button data-life-control="true" onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
       </div>
@@ -6753,7 +6778,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
               data-life-node="true"
               onClick={() => {
                 if (generatedAnimal) onOpenAnimal?.(node.animal);
-                else if (generatedBranch) { setExpandedGeneratedId(id); centerOnNode({ id, x, y, node }, true); }
+                else if (generatedBranch) setExpandedGeneratedId(id);
                 else if (terminal) onOpen(node.id);
                 else onOpen(node.id);
               }}
