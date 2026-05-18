@@ -1789,7 +1789,7 @@ const TERRITORY_CAMERA_PRESETS = {
   'sud-america-tropicale':{ center:[-60,-8], zoom:2.2 },
   'sud-america-andino-e-temperato':{ center:[-68,-32], zoom:2.1 },
   'eurasia-occidentale':{ center:[18,47], zoom:2.2 },
-  'eurasia-settentrionale':{ center:[82,67], zoom:1.65 },
+  'eurasia-settentrionale':{ center:[82,68], zoom:1.25 },
   'eurasia-centrale-orientale':{ center:[88,38], zoom:2.2 },
   'asia-meridionale-e-sudorientale':{ center:[91,15], zoom:2.25 },
   'africa-settentrionale':{ center:[13,24], zoom:2.45 },
@@ -6429,6 +6429,11 @@ function getLifeUncoveredAnimals(node, visibleChildren, animals=[]) {
   (visibleChildren || []).forEach(child => getLifeAnimals(child, animals).forEach(animal => covered.add(lifeAnimalKey(animal))));
   return getLifeAnimals(node, animals).filter(animal => !covered.has(lifeAnimalKey(animal)));
 }
+function getMysteryLifeLabel(rank='species') {
+  const labels = { kingdom:'Regno', phylum:'Phylum', class:'Classe', order:'Ordine', family:'Famiglia', genus:'Genere', species:'Specie', cluster:'Cluster' };
+  const label = labels[rank] || 'Nodo';
+  return `${label} ${label === 'Specie' || label === 'Famiglia' || label === 'Classe' ? 'misteriosa' : 'misterioso'}`;
+}
 function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
   const rows = sourceRows || getLifeAnimals(node, animals);
   if (!rows.length) return [];
@@ -6445,7 +6450,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
       const allMystery = genusAnimals.every(animal => isMysteryStatus(animal.status));
       return {
         id:`${node.id}-gen-${lifeSlug(genus)}`,
-        label:allMystery ? 'Genere riservato' : genus,
+        label:allMystery ? getMysteryLifeLabel('genus') : genus,
         subtitle:`${genusAnimals.length} specie Animaldex`,
         rank:'genus',
         kind:'genus',
@@ -6459,7 +6464,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
             const mystery = isMysteryStatus(animal.status);
             return {
               id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
-              label:mystery ? 'Specie misteriosa' : (animal.com || animal.sci || 'Specie Animaldex'),
+              label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Animaldex'),
               subtitle:mystery ? 'Identità non ancora rivelata' : (animal.sci || animal.rarity || ''),
               rank:'species',
               kind:'animal',
@@ -6682,6 +6687,8 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
         </svg>
         {flow.nodes.map(({ id, x, y, node, stats, active, inPath, near }) => {
           const generatedAnimal = node.kind === 'animal' && node.animal;
+          const animalStatus = generatedAnimal ? normalizeAnimalStatus(node.animal.status) : null;
+          const animalMystery = generatedAnimal ? isMysteryStatus(animalStatus) : false;
           const generatedBranch = node.generated && !generatedAnimal;
           const terminal = !(node.children || []).length && stats.total > 0 && !generatedAnimal;
           const childCount = (node.children || []).length;
@@ -6717,14 +6724,26 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
               }}
             >
               <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-                <div style={{ width:30, height:30, borderRadius:12, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:14, fontWeight:1000, boxShadow:`0 0 18px ${node.color}22` }}>✦</div>
+                {generatedAnimal ? (
+                  <div style={{ width:42, height:42, borderRadius:15, background:animalMystery?'rgba(255,255,255,.06)':`${node.color}18`, border:`1px solid ${animalMystery?'rgba(255,255,255,.16)':`${node.color}88`}`, display:'grid', placeItems:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${node.color}1F` }}>
+                    {animalMystery ? <img src={MYSTERY_PLACEHOLDER} alt="misterioso" style={{ width:30, height:30, objectFit:'contain', opacity:.74 }} /> : <AnimalImg a={node.animal} size={42} gridMode overrideStatus={animalStatus} />}
+                  </div>
+                ) : (
+                  <div style={{ width:30, height:30, borderRadius:12, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:14, fontWeight:1000, boxShadow:`0 0 18px ${node.color}22` }}>✦</div>
+                )}
                 <div style={{ minWidth:0, flex:1 }}>
                   <div style={{ fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
-                  <div style={{ marginTop:2, color:node.color, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{LIFE_RANK_LABELS[node.rank] || node.rank} · {stats.total} specie · {childCount ? `${childCount} rami` : 'specie'}</div>
+                  <div style={{ marginTop:2, color:generatedAnimal && animalMystery ? 'rgba(255,255,255,.58)' : node.color, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{generatedAnimal ? `${LIFE_RANK_LABELS[node.rank] || 'Specie'} · ${animalStatus || 'Animaldex'}${animalMystery ? '' : ` · ${node.animal.rarity || 'Rarità'}`}` : `${LIFE_RANK_LABELS[node.rank] || node.rank} · ${stats.total} specie · ${childCount ? `${childCount} rami` : 'specie'}`}</div>
                 </div>
-                <LifeProgress value={stats.completion} color={node.color} />
+                {generatedAnimal ? <div style={{ width:28, height:28, borderRadius:12, border:`1px solid ${node.color}66`, background:`${node.color}18`, color:animalMystery?'rgba(255,255,255,.64)':node.color, display:'grid', placeItems:'center', fontSize:13, fontWeight:1000 }}>›</div> : <LifeProgress value={stats.completion} color={node.color} />}
               </div>
-              <div style={{ color:'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex')}</div>
+              <div style={{ color:'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{generatedAnimal ? (animalMystery ? 'Nodo finale protetto: dettagli non rivelati.' : (node.animal.sci || node.subtitle || 'Nodo finale Animaldex')) : (inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex'))}</div>
+              {generatedAnimal && !animalMystery && (
+                <div style={{ marginTop:8, display:'flex', gap:5, minWidth:0 }}>
+                  <span style={{ borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.animal.cons || 'Conservazione n/d'}</span>
+                  <span style={{ borderRadius:999, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:'rgba(255,255,255,.72)', padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap' }}>Apri scheda</span>
+                </div>
+              )}
               {node.kind !== 'animal' && stats.samples?.length > 0 && (
                 <div style={{ marginTop:8, display:'flex', flexWrap:'wrap', gap:5 }}>
                   {stats.samples.slice(0, 3).map(animal => {
@@ -8616,7 +8635,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     : view === 'ecoregions'
       ? (mapFocusIds.length ? mapFocusIds : (selectedEcoregion ? [selectedEcoregion.id] : (region?.bioregionIds || [])))
       : [];
-  const levelPalette = ['#FF5B66','#5BBEF8','#F0A840','#B860F8','#6CE5C7','#FF8FB3','#D8D2C4','#8FD85B'];
+  const levelPalette = ['#FF3355','#2F80FF','#8A35FF','#00C77A','#8B4A2F','#0057D8','#C0185A','#2FA35A'];
   const continentLevelGroups = BIOREGION_V4_CONTINENTS.map((cont, index) => ({ id:cont.id, label:cont.label, ids:cont.bioregionIds || [], color:levelPalette[index % levelPalette.length] }));
   const terrestrialLevelGroups = view === 'terrestrial'
     ? continentLevelGroups
@@ -8753,13 +8772,14 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             <div style={{ margin:'0 -14px 0' }}>
               <BioregionVectorMap
                 highlightIds={region?.bioregionIds || [selectedEcoregion.id]}
-                focusIds={[selectedEcoregion.id]}
+                focusIds={region?.bioregionIds || [selectedEcoregion.id]}
                 selectedId={selectedEcoregion.id}
                 accent="#90D84A"
                 height={280}
                 fullBleed
                 levelGroups={(region?.ecoregions || [selectedEcoregion]).map((eco, index) => ({ id:eco.id, label:eco.label, ids:[eco.id], color:levelPalette[index % levelPalette.length] }))}
                 layerOpacityScale={.6}
+                cameraId={region?.id || selectedEcoregion.id}
               />
             </div>
             <div style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:22, padding:16, background:'linear-gradient(135deg,rgba(184,77,58,.14),rgba(255,255,255,.045))' }}>
