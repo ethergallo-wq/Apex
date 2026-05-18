@@ -6431,7 +6431,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
               color:node.color,
               generated:true,
               animal,
-              match:{ gen },
+              match:{ gen:genus },
               children:[],
             };
           }),
