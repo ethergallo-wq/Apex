@@ -6528,7 +6528,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
       };
     });
 }
-function buildLifeFlow(selected, animals) {
+function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
   const selectedPath = getLifeNodePath(selected.id);
   const focusDepth = Math.max(0, selectedPath.length - 1);
   const maxVisibleDepth = focusDepth + 2;
@@ -6545,7 +6545,7 @@ function buildLifeFlow(selected, animals) {
     const baseChildren = (node.children || []).filter(child => {
       const childDepth = depth + 1;
       const childWithinSelected = withinSelected || child.id === selected.id;
-      return childDepth <= 2 || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth);
+      return childDepth <= 2 || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth) || node.id === expandedGeneratedId;
     });
     const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth && !(node.children || []).length;
     const uncoveredAnimals = canAttachAnimals ? getLifeUncoveredAnimals(node, baseChildren, animals) : [];
@@ -6607,7 +6607,9 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   const pinchRef = useRef(null);
   const [size, setSize] = useState({ w:360, h:520 });
   const [view, setView] = useState({ x:24, y:34, k:.92 });
-  const flow = useMemo(() => buildLifeFlow(selectedNode, animals), [selectedNode, animals]);
+  const [expandedGeneratedId, setExpandedGeneratedId] = useState(null);
+  const flow = useMemo(() => buildLifeFlow(selectedNode, animals, expandedGeneratedId), [selectedNode, animals, expandedGeneratedId]);
+  useEffect(() => setExpandedGeneratedId(null), [selectedNode.id]);
   useEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
@@ -6749,8 +6751,8 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
               data-life-node="true"
               onClick={() => {
                 if (generatedAnimal) onOpenAnimal?.(node.animal);
-                else if (generatedBranch) centerOnNode({ id, x, y, node }, true);
-                else if (terminal) onAnimalPanel(node.id);
+                else if (generatedBranch) { setExpandedGeneratedId(id); centerOnNode({ id, x, y, node }, true); }
+                else if (terminal) onOpen(node.id);
                 else onOpen(node.id);
               }}
               style={{
