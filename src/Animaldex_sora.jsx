@@ -4885,6 +4885,7 @@ function MapLibreGeoJsonMap({
   featureColorProperty = '',
   interactive = true,
   autoSpin = false,
+  autoSpinSpeed = 0.00062,
   fitDuration = 420,
   hideInactiveFill = false,
   layerOpacityScale = 1,
@@ -5055,7 +5056,7 @@ function MapLibreGeoJsonMap({
       const isOverview = map.getZoom() < (fullscreen ? 2.35 : 1.95);
       if (!userTouchedMapRef.current && canSpin && quietFor > 900 && isOverview && !map.isMoving() && !map.isZooming() && !map.isRotating()) {
         const center = map.getCenter();
-        map.setCenter([center.lng + elapsed * 0.00062, center.lat]);
+        map.setCenter([center.lng + elapsed * autoSpinSpeed, center.lat]);
       }
       spinFrameRef.current = requestAnimationFrame(spin);
     };
@@ -5064,7 +5065,7 @@ function MapLibreGeoJsonMap({
       if (spinFrameRef.current) cancelAnimationFrame(spinFrameRef.current);
       spinFrameRef.current = null;
     };
-  }, [ready, fitBounds, fullscreen]);
+  }, [ready, fitBounds, fullscreen, autoSpin, interactive, autoSpinSpeed]);
 
   return (
     <div onClick={() => !fullscreen && onOpenFullscreen?.()} style={{ position:'relative', width:'100%', height:fullscreen?'100%':height, minHeight:fullscreen?undefined:Math.min(Number(height) || 230, 230), borderRadius:fullscreen?0:16, overflow:'hidden', background:'#03070D', border:fullscreen?'none':'1px solid rgba(255,255,255,.09)', cursor:interactive ? (fullscreen?'grab':'default') : 'pointer', boxShadow:fullscreen?'none':'inset 0 0 48px rgba(0,0,0,.48)' }}>
@@ -6365,7 +6366,7 @@ const LIFE_TREE = lifeNode({
       lifeClass('Reptilia','Rettili, serpenti, tartarughe e coccodrilli',[lifeCluster('Squamata - Lacertilia',[lifeFamily('Varanidae','Varani',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Chamaeleonidae','Camaleonti',[],LIFE_TREE_COLORS.reptilia)],{ color:LIFE_TREE_COLORS.reptilia, matchAny:[{ ord:'Squamata' },{ fam:'Varanidae' },{ fam:'Chamaeleonidae' }] }), lifeCluster('Squamata - Serpentes',[lifeFamily('Viperidae','Vipere e serpenti a sonagli',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Boidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Pythonidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Colubridae','Serpenti comuni',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Elapidae','Veleno neurotossico',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Natricidae',"Bisce d'acqua",[],LIFE_TREE_COLORS.reptilia), lifeCluster('Serpenti Primitivi & Scavatori',[lifeFamily('Anomaloepididae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Gerrhopilidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Xenotyphlopidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Loxocemidae','',[],LIFE_TREE_COLORS.reptilia)],{ color:LIFE_TREE_COLORS.reptilia, kind:'editorial' })],{ color:LIFE_TREE_COLORS.reptilia, matchAny:[{ ord:'Squamata', fam:'Viperidae' },{ fam:'Boidae' },{ fam:'Pythonidae' },{ fam:'Colubridae' },{ fam:'Elapidae' },{ fam:'Natricidae' }] }), lifeOrder('Testudines','Tartarughe',[lifeFamily('Testudinidae','Tartarughe terrestri',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Cheloniidae','Tartarughe marine',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Dermochelyidae','Tartaruga liuto',[],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia), lifeOrder('Crocodylia','Coccodrilli, gaviali e alligatori',[lifeFamily('Crocodylidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Gavialidae','',[],LIFE_TREE_COLORS.reptilia), lifeFamily('Alligatoridae','',[],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia)],LIFE_TREE_COLORS.reptilia),
       lifeCluster('Pisces',[lifeClass('Actinopterygii','Pesci ossei',[lifeOrder('Perciformes','Perciformi',[lifeFamily('Scombridae','Tonni e sgombri',[],LIFE_TREE_COLORS.pisces), lifeFamily('Serranidae','Cernie',[],LIFE_TREE_COLORS.pisces), lifeFamily('Pomacentridae','Pesci pagliaccio',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sparidae','Orate e saraghi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeFamily('Salmonidae','Salmoni e trote',[],LIFE_TREE_COLORS.pisces), lifeOrder('Siluriformes','Pesci gatto',[],LIFE_TREE_COLORS.pisces), lifeOrder('Cypriniformes','Carpe e affini',[lifeFamily('Cyprinidae','Carpe e barbi',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces), lifeClass('Elasmobranchii','Squali e razze',[lifeFamily('Lamnidae','Squalo bianco e mako',[],LIFE_TREE_COLORS.pisces), lifeFamily('Carcharhinidae','Squali requiem',[],LIFE_TREE_COLORS.pisces), lifeFamily('Sphyrnidae','Squali martello',[],LIFE_TREE_COLORS.pisces), lifeFamily('Rhincodontidae','Squalo balena',[],LIFE_TREE_COLORS.pisces)],LIFE_TREE_COLORS.pisces)],{ color:LIFE_TREE_COLORS.pisces, matchAny:[{ cls:'Actinopterygii' },{ cls:'Elasmobranchii' },{ cls:'Coelacanthi' }] }),
       lifeClass('Aves','Uccelli',[lifeOrder('Passeriformes','Il gruppo più vasto',[lifeCluster('Passeridae & Fringillidae',[],{ color:LIFE_TREE_COLORS.aves, matchAny:[{ fam:'Passeridae' },{ fam:'Fringillidae' }] }), lifeFamily('Corvidae','Corvi e gazze',[],LIFE_TREE_COLORS.aves), lifeFamily('Hirundinidae','Rondini',[],LIFE_TREE_COLORS.aves), lifeFamily('Paridae','Cince',[],LIFE_TREE_COLORS.aves), lifeFamily('Turdidae','Merli e tordi',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeOrder('Psittaciformes','Pappagalli',[lifeFamily('Psittacidae','',[],LIFE_TREE_COLORS.aves), lifeFamily('Cacatuidae','',[],LIFE_TREE_COLORS.aves), lifeFamily('Psittaculidae','',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeOrder('Accipitriformes','Rapaci diurni',[lifeFamily('Accipitridae','Aquile e poiane',[],LIFE_TREE_COLORS.aves), lifeFamily('Cathartidae','Avvoltoi',[],LIFE_TREE_COLORS.aves)],LIFE_TREE_COLORS.aves), lifeCluster('Giganti Non Volatori',[lifeOrder('Struthioniformes','Struzzi',[],LIFE_TREE_COLORS.aves), lifeOrder('Casuariiformes','Emu e casuari',[],LIFE_TREE_COLORS.aves)],{ color:LIFE_TREE_COLORS.aves, kind:'editorial', matchAny:[{ ord:'Struthioniformes' },{ ord:'Casuariiformes' }] }), lifeCluster('Colori Tropicali',[lifeOrder('Phoenicopteriformes','Fenicotteri',[],LIFE_TREE_COLORS.aves), lifeFamily('Trochilidae','Colibri',[],LIFE_TREE_COLORS.aves), lifeFamily('Ramphastidae','Tucani',[],LIFE_TREE_COLORS.aves), lifeOrder('Bucerotiformes','Hornbills',[],LIFE_TREE_COLORS.aves)],{ color:LIFE_TREE_COLORS.aves, kind:'editorial', matchAny:[{ fam:'Trochilidae' },{ fam:'Ramphastidae' },{ ord:'Phoenicopteriformes' },{ ord:'Bucerotiformes' }] })],LIFE_TREE_COLORS.aves),
-      lifeClass('Mammalia','Mammiferi',[lifeOrder('Carnivora','Predatori',[lifeFamily('Felidae','Gatti, leoni e grandi felini',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Canidae','Cani e volpi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Ursidae','Orsi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Mustelidae','Tassi e lontre',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Phocidae','Foche',[],LIFE_TREE_COLORS.carnivora)],LIFE_TREE_COLORS.carnivora), lifeOrder('Rodentia','Roditori',[lifeFamily('Muridae','Topi e ratti',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Sciuridae','Scoiattoli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Caviidae','Capibara',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeCluster('Ungulata',[lifeFamily('Equidae','Cavalli e zebre',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Bovidae','Mucche e antilopi',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Cervidae','Cervi e alci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Giraffidae','Giraffe',[],LIFE_TREE_COLORS.mammalia)],{ color:LIFE_TREE_COLORS.mammalia, matchAny:[{ fam:'Equidae' },{ fam:'Bovidae' },{ fam:'Cervidae' },{ fam:'Giraffidae' }] }), lifeOrder('Primates','Primati',[lifeFamily('Hominidae','Umani',[],LIFE_TREE_COLORS.primates), lifeFamily('Cercopithecidae','Babbuini e macachi',[],LIFE_TREE_COLORS.primates), lifeFamily('Lemuridae','Lemuri',[],LIFE_TREE_COLORS.primates)],LIFE_TREE_COLORS.primates), lifeOrder('Cetacea','Cetacei',[lifeFamily('Delphinidae','Delfini e orche',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Balaenopteridae','Balenottere',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Physeteridae','Capodogli',[],LIFE_TREE_COLORS.cetacea)],LIFE_TREE_COLORS.cetacea), lifeOrder('Chiroptera','Pipistrelli',[lifeFamily('Pteropodidae','Volpi volanti',[],LIFE_TREE_COLORS.chiroptera), lifeFamily('Vespertilionidae','Pipistrelli comuni',[],LIFE_TREE_COLORS.chiroptera)],LIFE_TREE_COLORS.chiroptera), lifeOrder('Eulipotyphla','Insettivori',[lifeFamily('Erinaceidae','Ricci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Talpidae','Talpe',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Soricidae','Toporagni',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeOrder('Lagomorpha','Lepri e pika',[lifeFamily('Leporidae','Lepri e conigli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Ochotonidae','Pika',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia),
+      lifeClass('Mammalia','Mammiferi',[lifeOrder('Carnivora','Predatori',[lifeFamily('Felidae','Gatti, leoni e grandi felini',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Canidae','Cani e volpi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Ursidae','Orsi',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Mustelidae','Tassi e lontre',[],LIFE_TREE_COLORS.carnivora), lifeFamily('Phocidae','Foche',[],LIFE_TREE_COLORS.carnivora)],LIFE_TREE_COLORS.carnivora), lifeOrder('Rodentia','Roditori',[lifeFamily('Muridae','Topi e ratti',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Sciuridae','Scoiattoli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Caviidae','Capibara',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeCluster('Ungulata',[lifeFamily('Equidae','Cavalli e zebre',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Bovidae','Mucche e antilopi',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Cervidae','Cervi e alci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Giraffidae','Giraffe',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Suidae','Maiali e cinghiali',[],LIFE_TREE_COLORS.mammalia)],{ color:LIFE_TREE_COLORS.mammalia, matchAny:[{ fam:'Equidae' },{ fam:'Bovidae' },{ fam:'Cervidae' },{ fam:'Giraffidae' }] }), lifeOrder('Primates','Primati',[lifeFamily('Hominidae','Umani',[],LIFE_TREE_COLORS.primates), lifeFamily('Cercopithecidae','Babbuini e macachi',[],LIFE_TREE_COLORS.primates), lifeFamily('Lemuridae','Lemuri',[],LIFE_TREE_COLORS.primates)],LIFE_TREE_COLORS.primates), lifeOrder('Cetacea','Cetacei',[lifeFamily('Delphinidae','Delfini e orche',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Balaenopteridae','Balenottere',[],LIFE_TREE_COLORS.cetacea), lifeFamily('Physeteridae','Capodogli',[],LIFE_TREE_COLORS.cetacea)],LIFE_TREE_COLORS.cetacea), lifeOrder('Chiroptera','Pipistrelli',[lifeFamily('Pteropodidae','Volpi volanti',[],LIFE_TREE_COLORS.chiroptera), lifeFamily('Vespertilionidae','Pipistrelli comuni',[],LIFE_TREE_COLORS.chiroptera)],LIFE_TREE_COLORS.chiroptera), lifeOrder('Eulipotyphla','Insettivori',[lifeFamily('Erinaceidae','Ricci',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Talpidae','Talpe',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Soricidae','Toporagni',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia), lifeOrder('Lagomorpha','Lepri e pika',[lifeFamily('Leporidae','Lepri e conigli',[],LIFE_TREE_COLORS.mammalia), lifeFamily('Ochotonidae','Pika',[],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia)],LIFE_TREE_COLORS.mammalia),
     ], LIFE_TREE_COLORS.chordata),
   ],
 });
@@ -6421,6 +6422,9 @@ function LifeProgress({ value, color }) {
 function lifeAnimalKey(animal) {
   return String(animal?.id || animal?.sci || animal?.com || '');
 }
+function getLifeAnimalGenus(animal) {
+  return String(animal?.gen || String(animal?.sci || '').trim().split(/\s+/)[0] || '').trim();
+}
 function getLifeUncoveredAnimals(node, visibleChildren, animals=[]) {
   const covered = new Set();
   (visibleChildren || []).forEach(child => getLifeAnimals(child, animals).forEach(animal => covered.add(lifeAnimalKey(animal))));
@@ -6434,22 +6438,43 @@ function getMysteryLifeLabel(rank='species') {
 function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
   const rows = sourceRows || getLifeAnimals(node, animals);
   if (!rows.length) return [];
-  return rows
-    .slice()
-    .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')))
-    .slice(0, 36)
-    .map(animal => {
-      const mystery = isMysteryStatus(animal.status);
+  const byGenus = new Map();
+  rows.forEach(animal => {
+    const genus = getLifeAnimalGenus(animal) || 'Genere non classificato';
+    if (!byGenus.has(genus)) byGenus.set(genus, []);
+    byGenus.get(genus).push(animal);
+  });
+  return Array.from(byGenus.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .slice(0, 24)
+    .map(([genus, genusAnimals]) => {
+      const allMystery = genusAnimals.every(animal => isMysteryStatus(animal.status));
       return {
-        id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
-        label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Animaldex'),
-        subtitle:mystery ? 'Identità non ancora rivelata' : [animal.gen, animal.sci].filter(Boolean).join(' · '),
-        rank:'species',
-        kind:'animal',
+        id:`${node.id}-gen-${lifeSlug(genus)}`,
+        label:allMystery ? getMysteryLifeLabel('genus') : genus,
+        subtitle:`${genusAnimals.length} specie Animaldex`,
+        rank:'genus',
+        kind:'genus',
         color:node.color,
         generated:true,
-        animal,
-        children:[],
+        children:genusAnimals
+          .slice()
+          .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')))
+          .slice(0, 18)
+          .map(animal => {
+            const mystery = isMysteryStatus(animal.status);
+            return {
+              id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
+              label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Animaldex'),
+              subtitle:mystery ? 'Identità non ancora rivelata' : (animal.sci || animal.rarity || ''),
+              rank:'species',
+              kind:'animal',
+              color:node.color,
+              generated:true,
+              animal,
+              children:[],
+            };
+          }),
       };
     });
 }
@@ -6472,7 +6497,7 @@ function buildLifeFlow(selected, animals) {
       const childWithinSelected = withinSelected || child.id === selected.id;
       return childDepth <= 2 || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth);
     });
-    const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth;
+    const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth && !(node.children || []).length;
     const uncoveredAnimals = canAttachAnimals ? getLifeUncoveredAnimals(node, baseChildren, animals) : [];
     const animalChildren = uncoveredAnimals.length ? buildLifeAnimalBranches(node, animals, uncoveredAnimals) : [];
     const visibleChildren = [...baseChildren, ...animalChildren];
@@ -8597,7 +8622,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   };
   const showRegionMap = regionMapExpanded;
   const showRegionBoxes = true;
-  const terrestrialNavActive = ['terrestrial','regions','ecoregions'].includes(view);
+  const planetDomainShellActive = ['planet','terrestrial','marine'].includes(view);
+  const terrestrialNavActive = ['regions','ecoregions'].includes(view);
   const terrestrialMapIds = view === 'terrestrial'
     ? BIOREGION_V4_ECOREGIONS.map(e=>e.id)
     : view === 'regions'
@@ -8632,7 +8658,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'#050505', overflow:'hidden' }}>
       <PageHeader title={title} onBack={goBack} theme={theme} />
-      {view !== 'planet' && breadcrumbItems.length > 0 && (
+      {!['planet','countries'].includes(view) && breadcrumbItems.length > 0 && (
         <div ref={breadcrumbScrollRef} style={{ flexShrink:0, overflowX:'auto', WebkitOverflowScrolling:'touch', padding:'10px 14px 9px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.07)', background:isLightTheme?'rgba(248,243,234,.96)':'linear-gradient(180deg,rgba(17,18,21,.96),rgba(10,10,12,.94))', scrollPaddingRight:14 }}>
           <div style={{ display:'flex', alignItems:'center', gap:8, minWidth:'max-content' }}>
             {breadcrumbItems.map((item, index) => {
@@ -8648,19 +8674,12 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         </div>
       )}
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
-        {view==='planet' && (
+        {planetDomainShellActive && (
           <>
-            <button onClick={()=>setView('countries')} style={{ width:'100%', border:`1px solid ${isLightTheme?'rgba(38,118,94,.22)':'rgba(144,216,74,.28)'}`, borderRadius:24, background:isLightTheme?'linear-gradient(135deg,rgba(144,216,74,.22),rgba(251,247,239,.94))':'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:isLightTheme?'#171717':'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 28px rgba(0,0,0,.06)':'none' }}>
-              <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-                <div style={{ width:58, height:58, borderRadius:20, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
-                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
-                <div style={{ color:isLightTheme?'#2B7A4B':'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
-              </div>
-            </button>
             <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
               <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
-              <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Scegli un dominio</div>
-              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Il dominio terrestre porta a continenti, regioni e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.</div>
+              <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>{view === 'terrestrial' ? 'Dominio terrestre' : view === 'marine' ? 'Dominio marino' : 'Scegli un dominio'}</div>
+              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>{view === 'terrestrial' ? 'La mappa resta ferma come riferimento: sotto trovi le macroaree terrestri disponibili.' : view === 'marine' ? 'La mappa resta ferma come riferimento: sotto trovi i grandi reami marini.' : 'Il dominio terrestre porta a continenti, regioni e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.'}</div>
             </div>
             <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px' }}>
               <MapLibreGeoJsonMap
@@ -8672,10 +8691,29 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 interactive
                 showControls
                 autoSpin
+                autoSpinSpeed={0.00124}
               />
             </div>
-            <TerritoryCard item={{id:'terrestrial-domain', label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} onMapFocus={()=>{ setPlanetDomainFocus('terrestrial'); scrollToMainMap(); }} />
-            <TerritoryCard item={{id:'marine-realms', label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} onMapFocus={()=>{ setPlanetDomainFocus('marine'); scrollToMainMap(); }} />
+            {view === 'planet' && (
+              <>
+                <button onClick={()=>setView('countries')} style={{ width:'100%', border:`1px solid ${isLightTheme?'rgba(38,118,94,.22)':'rgba(144,216,74,.28)'}`, borderRadius:24, background:isLightTheme?'linear-gradient(135deg,rgba(144,216,74,.22),rgba(251,247,239,.94))':'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:isLightTheme?'#171717':'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 28px rgba(0,0,0,.06)':'none' }}>
+                  <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                    <div style={{ width:58, height:58, borderRadius:20, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
+                    <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
+                    <div style={{ color:isLightTheme?'#2B7A4B':'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
+                  </div>
+                </button>
+                <TerritoryCard item={{id:'terrestrial-domain', label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} onMapFocus={()=>{ setPlanetDomainFocus('terrestrial'); scrollToMainMap(); }} />
+                <TerritoryCard item={{id:'marine-realms', label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} onMapFocus={()=>{ setPlanetDomainFocus('marine'); scrollToMainMap(); }} />
+              </>
+            )}
+            {view === 'terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
+              <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />
+            ))}
+            {view === 'marine' && MARINE_REALMS.map(m => {
+              const locked = !unlockMap[m.id];
+              return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
+            })}
           </>
         )}
 
@@ -8701,26 +8739,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 />
               </div>
             )}
-          </>
-        )}
-
-        {view==='terrestrial' && (
-          <>
-            {showRegionBoxes && BIOREGION_V4_CONTINENTS.map(cont => (
-              <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />
-            ))}
-          </>
-        )}
-
-        {view==='marine' && (
-          <>
-            <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
-              <BioregionVectorMap highlightIds={marineMapIds} focusIds={marineFocusIds} selectedId={selectedMarineRealmId} marine accent="#4FB3FF" height={310} fullBleed clickable onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }} levelGroups={marineLevelGroups} layerOpacityScale={.6} autoSpin={!selectedMarineRealmId} />
-            </div>
-            {MARINE_REALMS.map(m => {
-              const locked = !unlockMap[m.id];
-              return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
-            })}
           </>
         )}
 
