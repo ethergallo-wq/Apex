@@ -13,12 +13,48 @@ create table if not exists public.user_animals (
   primary key (user_id, animal_id)
 );
 
+-- Repair older installs where the table existed before these columns/defaults.
+alter table if exists public.user_animals
+  add column if not exists unlock_status text not null default 'locked',
+  add column if not exists unlocked_at timestamptz,
+  add column if not exists seen_at timestamptz,
+  add column if not exists collected_at timestamptz,
+  add column if not exists updated_at timestamptz not null default now();
+
+do $$
+begin
+  if exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public'
+      and table_name = 'user_animals'
+      and column_name = 'status'
+  ) then
+    execute $sql$
+      update public.user_animals
+      set unlock_status = case lower(coalesce(status::text, ''))
+        when 'catturato' then 'collected'
+        when 'captured' then 'collected'
+        when 'collected' then 'collected'
+        when 'avvistato' then 'seen'
+        when 'seen' then 'seen'
+        when 'ricercato' then 'unlocked'
+        when 'unlocked' then 'unlocked'
+        else unlock_status
+      end
+      where unlock_status = 'locked'
+    $sql$;
+  end if;
+end $$;
+
 create table if not exists public.user_badges (
   user_id uuid not null references auth.users(id) on delete cascade,
   badge_id text not null,
   earned_at timestamptz not null default now(),
   primary key (user_id, badge_id)
 );
+
+alter table if exists public.user_badges
+  add column if not exists earned_at timestamptz not null default now();
 
 create table if not exists public.user_destinations (
   user_id uuid not null references auth.users(id) on delete cascade,
@@ -28,6 +64,11 @@ create table if not exists public.user_destinations (
   created_at timestamptz not null default now(),
   primary key (user_id, iso)
 );
+
+alter table if exists public.user_destinations
+  add column if not exists trip_tags text[] not null default '{}',
+  add column if not exists visited_at date not null default current_date,
+  add column if not exists created_at timestamptz not null default now();
 
 create index if not exists user_animals_user_status_idx
   on public.user_animals (user_id, unlock_status, updated_at desc);

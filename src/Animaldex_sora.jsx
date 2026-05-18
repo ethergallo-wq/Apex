@@ -958,6 +958,34 @@ async function saveUserAnimalStatus(userId, animal, status) {
   return true;
 }
 
+async function syncLocalStatusMapToSupabase(userId, statusMap = {}) {
+  if (!userId || !statusMap || !Object.keys(statusMap).length) return false;
+  const now = new Date().toISOString();
+  const rows = Object.entries(statusMap)
+    .map(([animalId, status]) => {
+      const appStatus = normalizeAnimalStatus(status);
+      const unlock_status = appStatusToSupabase(appStatus);
+      if (unlock_status === 'locked') return null;
+      const row = {
+        user_id:userId,
+        animal_id:Number(animalId),
+        unlock_status,
+        unlocked_at:now,
+        updated_at:now,
+      };
+      if (unlock_status === 'seen') row.seen_at = now;
+      if (unlock_status === 'collected') row.collected_at = now;
+      return Number.isFinite(row.animal_id) ? row : null;
+    })
+    .filter(Boolean);
+  if (!rows.length) return false;
+  const { error } = await supabase
+    .from('user_animals')
+    .upsert(rows, { onConflict:'user_id,animal_id' });
+  if (error) throw error;
+  return true;
+}
+
 async function fetchUserBadgeIds(userId) {
   const { data, error } = await supabase
     .from('user_badges')
@@ -5456,6 +5484,7 @@ function TerritoryCard({ item, title, subtitle, image, icon='🌍', accent='#90D
 
 function SwipeDismissNotice({ children, onDismiss, className='', style }) {
   const touchStartY = useRef(null);
+  const pointerStartY = useRef(null);
   const handleTouchStart = (e) => { touchStartY.current = e.touches?.[0]?.clientY ?? null; };
   const handleTouchEnd = (e) => {
     if (touchStartY.current == null) return;
@@ -5463,8 +5492,14 @@ function SwipeDismissNotice({ children, onDismiss, className='', style }) {
     if (touchStartY.current - endY > 42) onDismiss?.();
     touchStartY.current = null;
   };
+  const handlePointerDown = (e) => { pointerStartY.current = e.clientY; };
+  const handlePointerUp = (e) => {
+    if (pointerStartY.current == null) return;
+    if (pointerStartY.current - e.clientY > 42) onDismiss?.();
+    pointerStartY.current = null;
+  };
   return (
-    <div className={className} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} style={{ touchAction:'pan-y', userSelect:'none', ...style }}>
+    <div className={className} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} onPointerDown={handlePointerDown} onPointerUp={handlePointerUp} style={{ touchAction:'pan-y', userSelect:'none', ...style }}>
       {children}
     </div>
   );
@@ -5633,14 +5668,14 @@ function SectionIntroModal({ section, onClose }) {
   }[section];
   if (!copy) return null;
   return (
-    <div style={{ position:'absolute', inset:0, zIndex:270, background:'rgba(0,0,0,.64)', display:'flex', alignItems:'flex-end', justifyContent:'center', padding:14 }}>
+    <SwipeDismissNotice onDismiss={onClose} style={{ position:'absolute', inset:0, zIndex:270, background:'rgba(0,0,0,.64)', display:'flex', alignItems:'flex-end', justifyContent:'center', padding:14 }}>
       <div style={{ width:'100%', maxWidth:440, borderRadius:26, background:'linear-gradient(180deg,rgba(30,30,34,.98),rgba(12,12,14,.99))', border:`1px solid ${OCHRE}88`, boxShadow:'0 24px 80px rgba(0,0,0,.55)', padding:18 }}>
         <div style={{ color:OCHRE, fontSize:11, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase' }}>{copy.kicker}</div>
         <div style={{ color:'white', fontSize:23, fontWeight:1000, marginTop:5 }}>{copy.title}</div>
         <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:9 }}>{copy.body}</div>
         <button onClick={onClose} style={{ width:'100%', height:48, borderRadius:16, border:'none', background:`linear-gradient(135deg,${OCHRE},#C45D3F)`, color:'white', fontWeight:1000, marginTop:16 }}>{copy.action || 'Ho capito'}</button>
       </div>
-    </div>
+    </SwipeDismissNotice>
   );
 }
 
@@ -6108,7 +6143,7 @@ function AuthScreen({ onAuthReady }) {
           Continua con Google
         </button>
         <button type="button" onClick={()=>setMode(mode==='signup'?'login':'signup')} style={{ width:'100%', height:42, marginTop:10, borderRadius:13, border:'1px solid rgba(255,255,255,.10)', background:'transparent', color:'rgba(255,255,255,.78)', fontWeight:800, cursor:'pointer' }}>{mode === 'signup' ? 'Ho già un account' : 'Crea nuovo account'}</button>
-        {message && <div style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF7777':'#BFEFA4', fontSize:12, lineHeight:1.4 }}>{message}</div>}
+        {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ marginTop:14, color:message.toLowerCase().includes('erro')?'#FF7777':'#BFEFA4', fontSize:12, lineHeight:1.4 }}>{message}</SwipeDismissNotice>}
       </form>
     </div>
   );
@@ -6915,7 +6950,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
       <PageHeader title="Avvista Veloce" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ color:quickIntroColor, fontSize:13, lineHeight:1.55, marginBottom:14 }}>Identifica animali che potresti gia aver avvistato. {Math.min(doneToday, QUICK_SEEN_DAILY_LIMIT)} / {QUICK_SEEN_DAILY_LIMIT} oggi.</div>
-        {quickMessage && <div style={{ borderRadius:16, border:'1px solid rgba(255,218,176,.22)', background:'rgba(255,218,176,.08)', color:isLightTheme?'#5A2A10':'#FFDAB0', padding:'10px 12px', fontSize:12, fontWeight:900, marginBottom:12 }}>{quickMessage}</div>}
+        {quickMessage && <SwipeDismissNotice onDismiss={()=>setQuickMessage('')} style={{ borderRadius:16, border:'1px solid rgba(255,218,176,.22)', background:'rgba(255,218,176,.08)', color:isLightTheme?'#5A2A10':'#FFDAB0', padding:'10px 12px', fontSize:12, fontWeight:900, marginBottom:12 }}>{quickMessage}</SwipeDismissNotice>}
         {!visitedCountries.length ? (
           <div style={{ borderRadius:22, background:quickNoticeBg, border:quickNoticeBorder, padding:20, color:'white', textAlign:'center', fontWeight:900 }}>Aggiungi un paese visitato per attivare Avvista Veloce.</div>
         ) : doneToday >= QUICK_SEEN_DAILY_LIMIT ? (
@@ -7070,7 +7105,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
           ].map(([id,label]) => <button key={id} onClick={()=>setTab(id)} style={{ height:42, borderRadius:14, border:`1px solid ${tab===id?'#F0A840':panelBorder}`, background:tab===id?'linear-gradient(135deg,#B84D3A,#F0A840)':panelBg, color:tab===id?'white':mainText, fontWeight:1000, fontSize:12, fontFamily:'inherit' }}>{label}</button>)}
         </div>
 
-        {message && <div style={{ borderRadius:16, background:'rgba(240,168,64,.12)', border:'1px solid rgba(240,168,64,.22)', color:isLightTheme?'#6F321E':'#FFD4A3', fontSize:11.5, lineHeight:1.4, padding:11, marginBottom:14, fontWeight:850 }}>{message}</div>}
+        {message && <SwipeDismissNotice onDismiss={()=>setMessage('')} style={{ borderRadius:16, background:'rgba(240,168,64,.12)', border:'1px solid rgba(240,168,64,.22)', color:isLightTheme?'#6F321E':'#FFD4A3', fontSize:11.5, lineHeight:1.4, padding:11, marginBottom:14, fontWeight:850 }}>{message}</SwipeDismissNotice>}
 
         {tab === 'search' && <div style={{ borderRadius:22, background:panelBg, border:`1px solid ${panelBorder}`, padding:14, marginBottom:14 }}>
           <div style={{ color:mainText, fontSize:16, fontWeight:1000 }}>Cerca per username</div>
@@ -9482,6 +9517,7 @@ export default function App() {
       setAnimalsData(nextAnimals);
       setStatusMap(nextStatusMap);
       saveLocalUserStatusMap(activeUser.id, nextStatusMap);
+      syncLocalStatusMapToSupabase(activeUser.id, nextStatusMap).catch(err => console.warn('[Animaldex] sync progressi locali non bloccante:', err));
 
       const nextDestinations = normalizeIsoList(destinations || []);
       setVisitedCountries(nextDestinations);
@@ -9584,10 +9620,10 @@ export default function App() {
     saveLocalUserAnimalStatus(localUserId, id, nextStatus);
     if (!user?.id) return;
     try {
-      await trackUserEvent(user, 'animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, previous_status:previousStatus, next_status:nextStatus, source_screen:'animal_status' }, userProfile);
-      if (nextStatus === 'avvistato') await trackUserEvent(user, 'animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile);
-      if (nextStatus === 'catturato') await trackUserEvent(user, 'animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile);
       await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
+      trackUserEvent(user, 'animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, previous_status:previousStatus, next_status:nextStatus, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Animaldex] tracking status non bloccante:', err));
+      if (nextStatus === 'avvistato') trackUserEvent(user, 'animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Animaldex] tracking visto non bloccante:', err));
+      if (nextStatus === 'catturato') trackUserEvent(user, 'animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Animaldex] tracking cattura non bloccante:', err));
       if (isSocialCaptureEventWorthy(currentAnimal, nextStatus, previousStatus)) {
         await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Animaldex] Evento social non salvato:', err));
       }

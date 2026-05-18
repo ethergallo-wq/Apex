@@ -96,7 +96,7 @@ grant select, insert on public.social_events to authenticated;
 grant select, insert, delete on public.social_event_reactions to authenticated;
 grant select, insert, update on public.social_notifications to authenticated;
 grant insert, select on public.user_reports to authenticated;
-grant select on public.user_profiles to authenticated;
+grant select, insert, update on public.user_profiles to authenticated;
 
 drop policy if exists "friendships_select_involved" on public.friendships;
 create policy "friendships_select_involved"
@@ -161,6 +161,19 @@ using (
        or (b.blocked_id = (select auth.uid()) and b.blocker_id = user_id)
   )
 );
+
+drop policy if exists "user_profiles_insert_own_social" on public.user_profiles;
+create policy "user_profiles_insert_own_social"
+on public.user_profiles for insert
+to authenticated
+with check ((select auth.uid()) = user_id);
+
+drop policy if exists "user_profiles_update_own_social" on public.user_profiles;
+create policy "user_profiles_update_own_social"
+on public.user_profiles for update
+to authenticated
+using ((select auth.uid()) = user_id)
+with check ((select auth.uid()) = user_id);
 
 drop policy if exists "social_events_select_owner_or_friends" on public.social_events;
 create policy "social_events_select_owner_or_friends"
