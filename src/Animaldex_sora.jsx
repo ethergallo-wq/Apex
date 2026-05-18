@@ -6345,6 +6345,7 @@ function lifeNodeMatchesAnimal(node, animal) {
 function getLifeAnimals(node, animals=[]) {
   const byId = new Map();
   const add = (animal) => byId.set(String(animal?.id || animal?.sci || animal?.com), animal);
+  if (node?.animal) add(node.animal);
   if (node?.match || node?.matchAny) animals.filter(a => lifeNodeMatchesAnimal(node, a)).forEach(add);
   (node?.children || []).forEach(child => getLifeAnimals(child, animals).forEach(add));
   return Array.from(byId.values());
@@ -6357,6 +6358,61 @@ function getLifeStats(node, animals=[]) {
 function LifeProgress({ value, color }) {
   const pct = Math.max(0, Math.min(100, Number(value) || 0));
   return <div style={{ width:28, height:28, borderRadius:'50%', background:`conic-gradient(${color} ${pct}%, rgba(255,255,255,.12) 0)`, display:'grid', placeItems:'center', flexShrink:0 }}><div style={{ width:21, height:21, borderRadius:'50%', background:'#07090B', color:'white', display:'grid', placeItems:'center', fontSize:8, fontWeight:1000 }}>{pct}</div></div>;
+}
+function lifeAnimalKey(animal) {
+  return String(animal?.id || animal?.sci || animal?.com || '');
+}
+function getLifeAnimalGenus(animal) {
+  return String(animal?.gen || String(animal?.sci || '').trim().split(/\s+/)[0] || '').trim();
+}
+function getLifeUncoveredAnimals(node, visibleChildren, animals=[]) {
+  const covered = new Set();
+  (visibleChildren || []).forEach(child => getLifeAnimals(child, animals).forEach(animal => covered.add(lifeAnimalKey(animal))));
+  return getLifeAnimals(node, animals).filter(animal => !covered.has(lifeAnimalKey(animal)));
+}
+function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
+  const rows = sourceRows || getLifeAnimals(node, animals);
+  if (!rows.length) return [];
+  const byGenus = new Map();
+  rows.forEach(animal => {
+    const genus = getLifeAnimalGenus(animal) || 'Genere non classificato';
+    if (!byGenus.has(genus)) byGenus.set(genus, []);
+    byGenus.get(genus).push(animal);
+  });
+  return Array.from(byGenus.entries())
+    .sort(([a], [b]) => a.localeCompare(b))
+    .slice(0, 18)
+    .map(([genus, genusAnimals]) => {
+      const allMystery = genusAnimals.every(animal => isMysteryStatus(animal.status));
+      return {
+        id:`${node.id}-gen-${lifeSlug(genus)}`,
+        label:allMystery ? 'Genere riservato' : genus,
+        subtitle:`${genusAnimals.length} specie Animaldex`,
+        rank:'genus',
+        kind:'genus',
+        color:node.color,
+        generated:true,
+        children:genusAnimals
+          .slice()
+          .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')))
+          .slice(0, 12)
+          .map(animal => {
+            const mystery = isMysteryStatus(animal.status);
+            return {
+              id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
+              label:mystery ? 'Specie misteriosa' : (animal.com || animal.sci || 'Specie Animaldex'),
+              subtitle:mystery ? 'Identità non ancora rivelata' : (animal.sci || animal.rarity || ''),
+              rank:'species',
+              kind:'animal',
+              color:node.color,
+              generated:true,
+              animal,
+              match:{ gen },
+              children:[],
+            };
+          }),
+      };
+    });
 }
 function buildLifeFlow(selected, animals) {
   const selectedPath = getLifeNodePath(selected.id);
@@ -6372,11 +6428,15 @@ function buildLifeFlow(selected, animals) {
   let cursorY = 0;
   const walk = (node, depth = 0, parent = null, parentWithinSelected = false) => {
     const withinSelected = parentWithinSelected || node.id === selected.id;
-    const visibleChildren = (node.children || []).filter(child => {
+    const baseChildren = (node.children || []).filter(child => {
       const childDepth = depth + 1;
       const childWithinSelected = withinSelected || child.id === selected.id;
       return childDepth <= 2 || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth);
     });
+    const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth;
+    const uncoveredAnimals = canAttachAnimals ? getLifeUncoveredAnimals(node, baseChildren, animals) : [];
+    const animalChildren = uncoveredAnimals.length ? buildLifeAnimalBranches(node, animals, uncoveredAnimals) : [];
+    const visibleChildren = [...baseChildren, ...animalChildren];
     const column = depth - focusDepth;
     const row = { data:node, depth, parent, x:140 + depth * colGap, y:0, column, withinSelected };
     layoutNodes.push(row);
@@ -6426,7 +6486,7 @@ function buildLifeFlow(selected, animals) {
   });
   return { nodes, edges, columns, selectedPath, selectedNode:nodes.find(node => node.id === selected.id), focusDepth, colGap, rowGap, nodeW, nodeH };
 }
-function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
+function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAnimal }) {
   const wrapRef = useRef(null);
   const dragRef = useRef(null);
   const pointersRef = useRef(new Map());
@@ -6482,7 +6542,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
       return !best || score < best.score ? { node, score } : best;
     }, null)?.node;
     if (!nearest) return;
-    if (nearest.id !== selectedNode.id && (nearest.node.children || []).length) onOpen(nearest.id);
+    if (nearest.id !== selectedNode.id && !nearest.node.generated && (nearest.node.children || []).length) onOpen(nearest.id);
     else centerOnNode(nearest, true);
   };
   const startDrag = (e) => {
@@ -6562,14 +6622,21 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
           {flow.edges.map(edge => <circle key={`${edge.id}-target`} cx={edge.target.x - 126} cy={edge.target.y} r={edge.active ? 4.8 : 3.6} fill={edge.color} opacity={edge.active ? .96 : .62} />)}
         </svg>
         {flow.nodes.map(({ id, x, y, node, stats, active, inPath, near }) => {
-          const terminal = !(node.children || []).length && stats.total > 0;
+          const generatedAnimal = node.kind === 'animal' && node.animal;
+          const generatedBranch = node.generated && !generatedAnimal;
+          const terminal = !(node.children || []).length && stats.total > 0 && !generatedAnimal;
           const childCount = (node.children || []).length;
           const muted = !near;
           return (
             <button
               key={id}
               data-life-node="true"
-              onClick={() => terminal ? onAnimalPanel(node.id) : onOpen(node.id)}
+              onClick={() => {
+                if (generatedAnimal) onOpenAnimal?.(node.animal);
+                else if (generatedBranch) centerOnNode({ id, x, y, node }, true);
+                else if (terminal) onAnimalPanel(node.id);
+                else onOpen(node.id);
+              }}
               style={{
                 position:'absolute',
                 left:x - 126,
@@ -6594,12 +6661,12 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel }) {
                 <div style={{ width:30, height:30, borderRadius:12, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:14, fontWeight:1000, boxShadow:`0 0 18px ${node.color}22` }}>✦</div>
                 <div style={{ minWidth:0, flex:1 }}>
                   <div style={{ fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
-                  <div style={{ marginTop:2, color:node.color, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{node.rank} · {stats.total} specie · {childCount ? `${childCount} rami` : 'specie'}</div>
+                  <div style={{ marginTop:2, color:node.color, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{LIFE_RANK_LABELS[node.rank] || node.rank} · {stats.total} specie · {childCount ? `${childCount} rami` : 'specie'}</div>
                 </div>
                 <LifeProgress value={stats.completion} color={node.color} />
               </div>
               <div style={{ color:'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex')}</div>
-              {stats.samples?.length > 0 && (
+              {node.kind !== 'animal' && stats.samples?.length > 0 && (
                 <div style={{ marginTop:8, display:'flex', flexWrap:'wrap', gap:5 }}>
                   {stats.samples.slice(0, 3).map(animal => {
                     const status = normalizeAnimalStatus(animal.status);
@@ -6655,6 +6722,8 @@ const LIFE_RANK_LABELS = {
   class:'Classe',
   order:'Ordine',
   family:'Famiglia',
+  genus:'Genere',
+  species:'Specie',
   cluster:'Cluster',
   editorial:'Cluster',
 };
@@ -6745,7 +6814,7 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
         </div>
       </div>
       <div style={{ position:'absolute', inset:'104px 0 0 0' }}>
-        <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} onOpen={openNode} onAnimalPanel={openPanel} />
+        <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} onOpen={openNode} onAnimalPanel={openPanel} onOpenAnimal={onOpenAnimal} />
       </div>
       {selectedNode.id !== 'animalia' && <button onClick={()=>openNode(path[Math.max(0,path.length-2)]?.id || 'animalia')} style={{ position:'absolute', left:12, bottom:12, zIndex:26, borderRadius:999, border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(251,247,239,.92)':'rgba(13,15,18,.86)', color:isLight?'#171717':'white', height:42, padding:'0 14px', fontSize:12, fontWeight:950, fontFamily:'inherit', boxShadow:'0 12px 30px rgba(0,0,0,.20)' }}>Centra ramo precedente</button>}
       {panelNode && <LifeAnimalPanel node={panelNode} animals={animalsWithStatus} onClose={()=>setPanelNodeId(null)} onOpenAnimal={onOpenAnimal} theme={theme} />}
