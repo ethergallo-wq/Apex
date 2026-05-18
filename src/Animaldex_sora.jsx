@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import { ANIMALS as LOCAL_ANIMALS } from './animals-data';
+import { getAnimalImageBounds } from './animal-image-bounds';
 import { supabase } from './supabaseClient';
 
 let ANIMALS = LOCAL_ANIMALS;
@@ -369,6 +370,37 @@ function mergeStatusMapsByRank(...maps) {
 function getAnimalImageUrl(animal) {
   return animal?.image_url || (LOCAL_ANIMALS.find(x => Number(x.id) === Number(animal?.id) || x.sci === animal?.sci)?.image_url || '');
 }
+
+function getDetailAnimalImageLayout(bounds, cls) {
+  const fallbackTall = cls === 'Aves';
+  if (!bounds || !bounds.width || !bounds.height) {
+    return { stageHeight: fallbackTall ? 320 : 286, bounds:null };
+  }
+  const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 390;
+  const availableWidth = Math.max(300, Math.min(520, viewportWidth - 42));
+  const maxVisibleWidth = availableWidth * 0.94;
+  const visibleAspect = bounds.width / bounds.height;
+  const baseVisibleHeight = fallbackTall ? 332 : visibleAspect > 3.2 ? 178 : visibleAspect > 2.35 ? 214 : visibleAspect < .72 ? 326 : 296;
+  const maxVisibleHeight = Math.max(158, Math.min(338, baseVisibleHeight));
+  const scale = Math.min(maxVisibleWidth / bounds.width, maxVisibleHeight / bounds.height);
+  const visibleWidth = bounds.width * scale;
+  const visibleHeight = bounds.height * scale;
+  const topPad = 24;
+  const bottomPad = 24;
+  return {
+    bounds,
+    scale,
+    topPad,
+    visibleWidth,
+    visibleHeight,
+    imageWidth: bounds.naturalWidth * scale,
+    imageHeight: bounds.naturalHeight * scale,
+    imageLeftOffset: bounds.x * scale,
+    imageTopOffset: bounds.y * scale,
+    stageHeight: Math.round(visibleHeight + topPad + bottomPad),
+  };
+}
+
 function useImagePixelBounds(src) {
   const [bounds, setBounds] = useState(null);
   useEffect(() => {
@@ -3210,7 +3242,7 @@ function rarityBorderColor(rarity) {
   return '#9D6845';
 }
 
-function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false }) {
+function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, detailMode=false, detailLayout=null }) {
   const c = CLS[a.cls] || CLS.Mammalia;
   const [imgErr, setImgErr] = useState(false);
   const [mysteryErr, setMysteryErr] = useState(false);
@@ -3235,8 +3267,25 @@ function AnimalImg({ a, size=102, fontSize=52, overrideStatus, gridMode=false, d
 
   const localImageUrl = getAnimalImageUrl(a);
   if (localImageUrl && !imgErr) {
+    if (detailMode && detailLayout?.bounds) {
+      return (
+        <div style={{ width:'100%', height:size, background:'transparent', position:'relative', overflow:'hidden' }}>
+          <img src={localImageUrl} alt={a.sci} onError={()=>setImgErr(true)}
+            style={{
+              position:'absolute',
+              width:detailLayout.imageWidth,
+              height:detailLayout.imageHeight,
+              left:`calc(50% - ${detailLayout.visibleWidth / 2 + detailLayout.imageLeftOffset}px)`,
+              top:detailLayout.topPad - detailLayout.imageTopOffset,
+              objectFit:'fill',
+              filter:'none',
+              WebkitFilter:'none',
+            }} />
+        </div>
+      );
+    }
     const pad = gridMode ? 0 : Math.round(size * (detailMode ? 0.07 : 0.12));
-    const imgScale = detailMode ? 1.18 : gridMode ? GRID_IMAGE_SCALE : 1.2;
+    const imgScale = detailMode ? 1 : gridMode ? GRID_IMAGE_SCALE : 1.2;
     const imageBg = 'transparent';
     return (
       <div style={{ width:'100%', height:size, background:imageBg, display:'flex', alignItems:detailMode?'flex-end':'center', justifyContent:'center', overflow:'hidden', padding:pad, boxSizing:'border-box' }}>
@@ -4133,7 +4182,8 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   const detailPanelBorder = isLightTheme ? '1px solid rgba(0,0,0,.08)' : 'none';
   const co=CONS[a.cons]||CONS.DD;
   const found = isRevealedStatus(localStatus);
-  const canViewImage = !isMysteryStatus(localStatus) && !!a.image_url;
+  const animalImageUrl = getAnimalImageUrl(a);
+  const canViewImage = !isMysteryStatus(localStatus) && !!animalImageUrl;
 
   const handleTab = (m) => {
     if (m===statMode) return;
@@ -4168,9 +4218,9 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   const scale = 1;
   const longName = String(a.com || '').length > 24;
   const statusActions = getStatusActions(localStatus);
-  const flatClassSet = new Set(['Actinopterygii','Elasmobranchii','Malacostraca','Gastropoda','Bivalvia','Cephalopoda','Asteroidea','Holothuroidea','Echinoidea','Chilopoda','Diplopoda','Clitellata']);
-  const tallClassSet = new Set(['Aves']);
-  const detailImageSize = tallClassSet.has(a.cls) ? 326 : flatClassSet.has(a.cls) ? 258 : 292;
+  const detailImageBounds = useMemo(() => canViewImage ? getAnimalImageBounds(animalImageUrl) : null, [canViewImage, animalImageUrl]);
+  const detailImageLayout = useMemo(() => getDetailAnimalImageLayout(detailImageBounds, a.cls), [detailImageBounds, a.cls]);
+  const detailImageSize = detailImageLayout.stageHeight;
   const visitedMatches = countCountryMatches(a, new Set((visitedCountries || []).map(c => String(c).toUpperCase())));
   const lengthCm = parseAnimalLengthCm(a.ln);
   const activePyramidLevel = getPyramidLevel(a.trophic);
@@ -4219,9 +4269,9 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
               background:'transparent',
               cursor: canViewImage ? 'zoom-in' : 'default',
               boxShadow:'none',
-              transition: pullProgress===0 ? 'height .25s ease, border-radius .25s ease' : 'none',
+              transition:'none',
             }}>
-            <AnimalImg a={a} size={detailImageSize} fontSize={88} overrideStatus={localStatus} detailMode />
+            <AnimalImg a={a} size={detailImageSize} fontSize={88} overrideStatus={localStatus} detailMode detailLayout={detailImageLayout} />
           </div>
         </div>
         <div style={{ textAlign:'center', marginBottom:14 }}>
