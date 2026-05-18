@@ -5083,7 +5083,7 @@ function boundsToViewBox(b, padRatio=.34) {
   return `${x.toFixed(1)} ${y.toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`;
 }
 
-function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true }) {
+function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCodes = [], selectedId=null, onSelect, clickable=false, height=180, accent='#A84637', marine=false, domain='auto', showLabels=false, fullBleed=false, fullscreen=false, onCloseFullscreen, fullscreenSelectionResolver=null, showFeatureBoundaries=true, levelGroups=[], interactive=true }) {
   const { data, error } = useBioregionGeoJson();
   const highlightSet = new Set((highlightIds || []).map(String));
   const groupList = Array.isArray(levelGroups) ? levelGroups : [];
@@ -5119,6 +5119,8 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     return cloneFeatureWithProps(f, { __animaldex_level_group:group.id, __animaldex_level_label:group.label, __animaldex_level_color:group.color || accent });
   });
   const activeFeatures = coloredRelevant.filter(isActiveFeature);
+  const focusSet = new Set((focusIds || []).map(String).filter(Boolean));
+  const focusFeatures = focusSet.size ? coloredRelevant.filter(f => focusSet.has(String(getFeatureBioregionId(f) || ''))) : [];
   const viewBox = boundsToViewBox(mergeProjectedBounds(activeFeatures.map(f => geometryProjectedBounds(f.geometry))), activeFeatures.length > 2 ? .08 : .14);
   const openFullscreen = () => { if (!fullscreen) setIsFullscreen(true); };
 
@@ -5129,7 +5131,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     return <div style={{ height, borderRadius:fullBleed?0:16, background:'linear-gradient(135deg,#1B1513,#2B1713)', display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.55)', fontSize:11, fontWeight:800, textAlign:'center', padding:18 }}>Mappa vettoriale non trovata. Verifica public/geo/bioregions-v4-terrestrial-marine-kepler.geojson.</div>;
   }
   const activeIds = activeFeatures.map(f => String(getFeatureBioregionId(f) || '')).filter(Boolean);
-  const mapLibreBounds = mergeLngLatBounds(activeFeatures.map(f => geometryLngLatBounds(f.geometry)));
+  const mapLibreBounds = mergeLngLatBounds((focusFeatures.length ? focusFeatures : activeFeatures).map(f => geometryLngLatBounds(f.geometry)));
   const mapLibreLabel = showLabels && (hoverId || selectedId)
     ? (BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId)
     : '';
@@ -5183,7 +5185,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
         {isFullscreen && (
           <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
             <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)', position:'relative' }}>
-              <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} />
+              <BioregionVectorMap highlightIds={highlightIds} focusIds={focusIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} fullscreenSelectionResolver={fullscreenSelectionResolver} levelGroups={levelGroups} interactive={interactive} />
             </div>
           </div>
         )}
@@ -5234,7 +5236,7 @@ function BioregionVectorMap({ highlightIds = [], highlightIsoCodes = [], selecte
     {isFullscreen && (
       <div onClick={()=>setIsFullscreen(false)} style={{ position:'fixed', inset:0, zIndex:380, background:'rgba(0,0,0,.94)', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 10px calc(env(safe-area-inset-bottom, 0px) + 10px)', boxSizing:'border-box' }}>
         <div onClick={e=>e.stopPropagation()} style={{ width:'100%', height:'100%', borderRadius:18, overflow:'hidden', background:marine?'#061923':'#130C0A', border:'1px solid rgba(255,255,255,.10)' }}>
-          <BioregionVectorMap highlightIds={highlightIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} levelGroups={levelGroups} interactive={interactive} />
+          <BioregionVectorMap highlightIds={highlightIds} focusIds={focusIds} highlightIsoCodes={highlightIsoCodes} selectedId={selectedId} onSelect={onSelect} clickable={clickable} accent={accent} marine={marine} domain={domain} showLabels={showLabels} fullBleed fullscreen onCloseFullscreen={()=>setIsFullscreen(false)} levelGroups={levelGroups} interactive={interactive} />
         </div>
       </div>
     )}
@@ -8253,13 +8255,12 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   const showRegionMap = regionNavMode !== 'boxes';
   const showRegionBoxes = regionNavMode !== 'map';
   const terrestrialNavActive = ['terrestrial','regions','ecoregions'].includes(view);
-  const terrestrialMapIds = selectedEcoregion && view === 'ecoregions'
-    ? [selectedEcoregion.id]
-    : view === 'terrestrial'
+  const terrestrialMapIds = view === 'terrestrial'
     ? BIOREGION_V4_ECOREGIONS.map(e=>e.id)
     : view === 'regions'
       ? (continent?.bioregionIds || [])
       : (region?.bioregionIds || []);
+  const terrestrialFocusIds = selectedEcoregion && view === 'ecoregions' ? [selectedEcoregion.id] : [];
   const levelPalette = ['#6CE5C7','#20B2AA','#90D84A','#5BBEF8','#F0A840','#B860F8','#C87955','#D8D2C4'];
   const continentLevelGroups = BIOREGION_V4_CONTINENTS.map((cont, index) => ({ id:cont.id, label:cont.label, ids:cont.bioregionIds || [], color:levelPalette[index % levelPalette.length] }));
   const terrestrialLevelGroups = view === 'terrestrial'
@@ -8269,7 +8270,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
       : [];
   const marineLevelGroups = MARINE_REALMS.map((realm, index) => ({ id:realm.id, label:realm.label, ids:[realm.id], color:levelPalette[index % levelPalette.length] }));
   const terrestrialMapAccent = view === 'terrestrial' ? '#6CE5C7' : view === 'regions' ? '#20B2AA' : '#90D84A';
-  const marineMapIds = selectedMarineRealmId ? [selectedMarineRealmId] : MARINE_REALMS.map(m=>m.id);
+  const marineMapIds = MARINE_REALMS.map(m=>m.id);
+  const marineFocusIds = selectedMarineRealmId ? [selectedMarineRealmId] : [];
   const terrestrialHelper = view === 'terrestrial'
     ? 'Tocca una zona sul globo o apri un box: la mappa resta ferma e cambia solo il livello sotto.'
     : view === 'regions'
@@ -8333,7 +8335,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 accent={planetDomainFocus === 'marine' ? '#4FB3FF' : '#6CE5C7'}
                 height={310}
                 fullBleed
-                clickable
+                clickable={false}
                 onSelect={(id)=> {
                   if (planetDomainFocus === 'marine') {
                     setSelectedMarineRealmId(id);
@@ -8343,7 +8345,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                     openMapHierarchyTarget(id);
                   }
                 }}
-                levelGroups={planetDomainFocus === 'marine' ? marineLevelGroups : continentLevelGroups}
               />
             </div>
             <TerritoryCard item={{id:'terrestrial-domain', label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} onMapFocus={()=>{ setPlanetDomainFocus('terrestrial'); scrollToMainMap(); }} />
@@ -8358,6 +8359,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
               <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
                 <BioregionVectorMap
                   highlightIds={terrestrialMapIds}
+                  focusIds={terrestrialFocusIds}
                   selectedId={selectedEcoregion?.id || null}
                   accent={terrestrialMapAccent}
                   height={310}
@@ -8383,7 +8385,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         {view==='marine' && (
           <>
             <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
-              <BioregionVectorMap highlightIds={marineMapIds} selectedId={selectedMarineRealmId} marine accent="#4FB3FF" height={310} fullBleed clickable onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }} levelGroups={marineLevelGroups} />
+              <BioregionVectorMap highlightIds={marineMapIds} focusIds={marineFocusIds} selectedId={selectedMarineRealmId} marine accent="#4FB3FF" height={310} fullBleed clickable onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }} levelGroups={marineLevelGroups} />
             </div>
             {MARINE_REALMS.map(m => {
               const locked = !unlockMap[m.id];
