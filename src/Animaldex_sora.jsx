@@ -9564,8 +9564,10 @@ export default function App() {
   const [destinationsLoading,setDestinationsLoading]=useState(false);
   const [awardQueue,setAwardQueue]=useState([]);
   const [earnedBadgeIds,setEarnedBadgeIds]=useState([]);
+  const [progressHydrated,setProgressHydrated]=useState(false);
   const [theme,setTheme]=useState(getInitialAnimaldexTheme);
   const [visitedCountries,setVisitedCountries]=useState(() => normalizeIsoList(getVisitedCountries()));
+  const awardsHydratedRef = useRef(false);
   const unlockedAwards = useMemo(() => computeUnlockedAwards(statusMap, visitedCountries), [statusMap, visitedCountries]);
   const activeAwardToast = awardQueue[0] || null;
   useAnimaldexSound(true);
@@ -9700,23 +9702,32 @@ export default function App() {
       setUserProfile(prev => prev || buildFallbackProfile(activeUser, true));
     } finally {
       setDataLoading(false);
+      setProgressHydrated(true);
     }
   };
 
   useEffect(()=>{
+    awardsHydratedRef.current = false;
+    setProgressHydrated(false);
+    setAwardQueue([]);
     if (user?.id) reloadSupabaseData(user);
   },[user?.id]);
 
   useEffect(() => {
+    if (authLoading) return;
     if (user?.id) return;
     const localStatusMap = getLocalUserStatusMap('guest');
-    if (!Object.keys(localStatusMap).length) return;
+    if (!Object.keys(localStatusMap).length) {
+      setProgressHydrated(true);
+      return;
+    }
     setStatusMap(localStatusMap);
     setAnimalsData(prev => prev.map(a => {
       const nextStatus = localStatusMap[a.id];
       return nextStatus ? { ...a, status:nextStatus, userStatus:appStatusToSupabase(nextStatus) } : a;
     }));
-  }, [user?.id]);
+    setProgressHydrated(true);
+  }, [authLoading, user?.id]);
 
   useEffect(() => {
     if (!userProfile?.onboarding_completed) return;
@@ -9734,20 +9745,26 @@ export default function App() {
   }, [userProfile?.onboarding_completed, userProfile?.has_completed_tutorial, animalsData?.length, Object.keys(statusMap || {}).length, tutorialStep]);
 
   useEffect(() => {
+    if (!progressHydrated) return;
     const localSaved = getAwardUnlockSet();
     const dbSaved = new Set((earnedBadgeIds || []).map(normalizeBadgeId));
     const alreadyKnown = new Set([...Array.from(localSaved), ...Array.from(dbSaved)]);
     const current = unlockedAwards.map(a => normalizeBadgeId(a.badgeId));
     const fresh = unlockedAwards.filter(a => !alreadyKnown.has(normalizeBadgeId(a.badgeId)));
+    const initialHydration = !awardsHydratedRef.current;
+    awardsHydratedRef.current = true;
 
-    if (fresh.length) {
+    if (!initialHydration && fresh.length) {
       setAwardQueue(prev => [...prev, ...fresh]);
       if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Animaldex] Evento badge non salvato:', err)));
       if (user?.id) fresh.forEach(award => trackUserEvent(user, 'badge_earned', { badge_id:award.badgeId, badge_name:award.name, badge_macro:award.macro, source_screen:'badges' }, userProfile));
     }
 
-    const merged = Array.from(new Set([...(earnedBadgeIds || []).map(normalizeBadgeId), ...current]));
-    if (merged.length !== earnedBadgeIds.length) {
+    const earnedClean = (earnedBadgeIds || []).map(normalizeBadgeId).filter(Boolean);
+    const merged = Array.from(new Set([...earnedClean, ...current]));
+    const earnedSet = new Set(earnedClean);
+    const badgeSetChanged = merged.length !== earnedClean.length || merged.some(id => !earnedSet.has(id));
+    if (badgeSetChanged) {
       setEarnedBadgeIds(merged);
       persistAwardUnlocks(merged);
       if (user?.id) {
@@ -9759,7 +9776,7 @@ export default function App() {
     } else {
       persistAwardUnlocks(merged);
     }
-  }, [unlockedAwards, earnedBadgeIds, user?.id]);
+  }, [unlockedAwards, earnedBadgeIds, progressHydrated, user?.id]);
 
   useEffect(() => {
     if (!activeAwardToast) return;
