@@ -5368,6 +5368,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
     if (fullscreenSelectionResolver) {
       const target = fullscreenSelectionResolver(id, props);
       if (target) {
+        target.onFocus?.();
         setFullscreenTarget(target);
         return;
       }
@@ -8651,6 +8652,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         title:marineTarget.label,
         text:'Apri il reame marino e guarda gli animali collegati a questo territorio.',
         actionLabel:'Esplora',
+        onFocus:()=>focusTerritoryMap(marineTarget),
         onOpen:()=>openTerritoryAnimals(marineTarget, `marine:${marineTarget.id}`, 'marine'),
       };
     }
@@ -8661,6 +8663,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         title:continentTarget.label,
         text:'Esplora le regioni interne e aggiorna i box sotto la mappa.',
         actionLabel:'Esplora',
+        onFocus:()=>focusTerritoryMap(continentTarget),
         onOpen:()=>openContinent(continentTarget),
       };
     }
@@ -8671,6 +8674,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         title:regionTarget.label,
         text:'Esplora le bioregioni interne e aggiorna i box sotto la mappa.',
         actionLabel:'Esplora',
+        onFocus:()=>focusTerritoryMap(regionTarget),
         onOpen:()=>openRegion(regionTarget),
       };
     }
@@ -8681,6 +8685,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
       title:hit.eco.label,
       text:'Apri la pagina della bioregione con descrizione, Grid animali e LifeWeb.',
       actionLabel:'Esplora',
+      onFocus:()=>focusTerritoryMap(hit.eco),
       onOpen:()=>openEcoregion(hit.eco),
     };
   };
@@ -8734,19 +8739,24 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   };
   const showRegionMap = regionMapExpanded;
   const showRegionBoxes = true;
-  const planetDomainShellActive = ['planet','marine'].includes(view);
-  const terrestrialNavActive = ['terrestrial','regions','ecoregions'].includes(view);
+  const territoryMapShellActive = ['planet','terrestrial','marine','regions','ecoregions','habitats'].includes(view);
   const terrestrialMapIds = view === 'terrestrial'
     ? BIOREGION_V4_ECOREGIONS.map(e=>e.id)
     : view === 'regions'
       ? (continent?.bioregionIds || [])
-      : (region?.bioregionIds || []);
+      : view === 'ecoregions'
+        ? (region?.bioregionIds || [])
+        : view === 'habitats' && selectedEcoregion
+          ? [selectedEcoregion.id]
+          : [];
   const terrestrialFocusIds = view === 'terrestrial'
     ? mapFocusIds
     : view === 'regions'
     ? (mapFocusIds.length ? mapFocusIds : (continent?.bioregionIds || []))
     : view === 'ecoregions'
       ? (mapFocusIds.length ? mapFocusIds : (selectedEcoregion ? [selectedEcoregion.id] : (region?.bioregionIds || [])))
+      : view === 'habitats' && selectedEcoregion
+        ? [selectedEcoregion.id]
       : [];
   const levelPalette = ['#FF3355','#2F80FF','#8A35FF','#00C77A','#8B4A2F','#0057D8','#C0185A','#2FA35A'];
   const continentLevelGroups = BIOREGION_V4_CONTINENTS.map((cont, index) => ({ id:cont.id, label:cont.label, ids:cont.bioregionIds || [], color:levelPalette[index % levelPalette.length] }));
@@ -8758,9 +8768,26 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         ? (region.ecoregions || []).map((eco, index) => ({ id:eco.id, label:eco.label, ids:[eco.id], color:levelPalette[index % levelPalette.length] }))
       : [];
   const marineLevelGroups = MARINE_REALMS.map((realm, index) => ({ id:realm.id, label:realm.label, ids:[realm.id], color:levelPalette[index % levelPalette.length] }));
-  const terrestrialMapAccent = view === 'terrestrial' ? '#6CE5C7' : view === 'regions' ? '#20B2AA' : '#90D84A';
+  const terrestrialMapAccent = view === 'terrestrial' ? '#6CE5C7' : view === 'regions' ? '#20B2AA' : view === 'habitats' ? '#FF3355' : '#90D84A';
   const marineMapIds = MARINE_REALMS.map(m=>m.id);
   const marineFocusIds = selectedMarineRealmId ? [selectedMarineRealmId] : [];
+  const territoryMapIsMarine = view === 'marine';
+  const territoryMapIsPlanet = view === 'planet';
+  const territoryMapHighlightIds = territoryMapIsPlanet
+    ? []
+    : territoryMapIsMarine
+      ? marineMapIds
+      : terrestrialMapIds;
+  const territoryMapFocusIds = territoryMapIsMarine ? marineFocusIds : terrestrialFocusIds;
+  const territoryMapLevelGroups = territoryMapIsPlanet ? [] : territoryMapIsMarine ? marineLevelGroups : terrestrialLevelGroups;
+  const territoryMapSelectedId = territoryMapIsMarine
+    ? selectedMarineRealmId
+    : (mapSelectedId || selectedEcoregion?.id || null);
+  const territoryMapCameraId = territoryMapIsPlanet
+    ? null
+    : territoryMapIsMarine
+      ? selectedMarineRealmId
+      : (mapSelectedId || (view === 'regions' ? continent?.id : ['ecoregions','habitats'].includes(view) ? (selectedEcoregion?.id || region?.id) : null));
   const MapCollapseToggle = () => (
     <button onClick={()=>setRegionMapExpanded(v=>!v)} style={{ width:'100%', height:40, margin:'0 0 12px', borderRadius:14, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)'}`, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.055)', color:isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)', fontFamily:'inherit', fontSize:12, fontWeight:1000, cursor:'pointer' }}>
       {regionMapExpanded ? 'Contrai mappa' : 'Espandi mappa'}
@@ -8786,95 +8813,36 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
         </div>
       )}
       <div style={{ flex:1, overflowY:'auto', overflowX:'hidden', padding:'12px 14px 28px', boxSizing:'border-box' }}>
-        {planetDomainShellActive && (
+        {territoryMapShellActive && (
           <>
-            <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
-              <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
-              <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>{view === 'terrestrial' ? 'Dominio terrestre' : view === 'marine' ? 'Dominio marino' : 'Scegli un dominio'}</div>
-              <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>{view === 'terrestrial' ? 'La mappa resta ferma come riferimento: sotto trovi le macroaree terrestri disponibili.' : view === 'marine' ? 'La mappa resta ferma come riferimento: sotto trovi i grandi reami marini.' : 'Il dominio terrestre porta a continenti, regioni e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.'}</div>
-            </div>
-            <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px' }}>
-              {view === 'planet' ? (
-                <MapLibreGeoJsonMap
-                  key="planet-clean-orbit-map"
-                  data={featureCollection([])}
-                  activeFeatureIds={[]}
-                  height={310}
-                  fitBounds={[-180, -70, 180, 80]}
-                  fitDuration={0}
-                  interactive
-                  showControls
-                  autoSpin
-                  autoSpinSpeed={0.00124}
-                  recenterOnChange={false}
-                />
-              ) : (
-                <BioregionVectorMap
-                  key="marine-domain-realm-map"
-                  highlightIds={marineMapIds}
-                  focusIds={marineFocusIds}
-                  selectedId={selectedMarineRealmId}
-                  marine
-                  accent="#4FB3FF"
-                  height={310}
-                  fullBleed
-                  clickable
-                  onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }}
-                  fullscreenSelectionResolver={getMapSelectionTarget}
-                  levelGroups={marineLevelGroups}
-                  layerOpacityScale={.6}
-                  autoSpin={!selectedMarineRealmId}
-                  fitDuration={0}
-                />
-              )}
-            </div>
-            {view === 'planet' && (
-              <>
-                <button onClick={()=>setView('countries')} style={{ width:'100%', border:`1px solid ${isLightTheme?'rgba(38,118,94,.22)':'rgba(144,216,74,.28)'}`, borderRadius:24, background:isLightTheme?'linear-gradient(135deg,rgba(144,216,74,.22),rgba(251,247,239,.94))':'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:isLightTheme?'#171717':'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 28px rgba(0,0,0,.06)':'none' }}>
-                  <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-                    <div style={{ width:58, height:58, borderRadius:20, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
-                    <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
-                    <div style={{ color:isLightTheme?'#2B7A4B':'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
-                  </div>
-                </button>
-                <TerritoryCard item={{id:'terrestrial-domain', label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} onMapFocus={()=>{ setPlanetDomainFocus('terrestrial'); scrollToMainMap(); }} />
-                <TerritoryCard item={{id:'marine-realms', label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} onMapFocus={()=>{ setPlanetDomainFocus('marine'); scrollToMainMap(); }} />
-              </>
-            )}
-            {view === 'marine' && MARINE_REALMS.map(m => {
-              const locked = !unlockMap[m.id];
-              return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
-            })}
-          </>
-        )}
-
-        {terrestrialNavActive && (
-          <>
-            {view === 'terrestrial' && (
+            {['planet','terrestrial','marine'].includes(view) && (
               <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
                 <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
-                <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Dominio terrestre</div>
-                <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>La mappa resta ferma come riferimento: sotto trovi le macroaree terrestri disponibili.</div>
+                <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>{view === 'terrestrial' ? 'Dominio terrestre' : view === 'marine' ? 'Dominio marino' : 'Scegli un dominio'}</div>
+                <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>{view === 'terrestrial' ? 'La mappa resta ferma come riferimento: sotto trovi le macroaree terrestri disponibili.' : view === 'marine' ? 'La mappa resta ferma come riferimento: sotto trovi i grandi reami marini.' : 'Il dominio terrestre porta a continenti, regioni e subregioni. Il dominio marino usa i 12 grandi bacini biogeografici.'}</div>
               </div>
             )}
-            <MapCollapseToggle />
+            {view !== 'planet' && <MapCollapseToggle />}
             {showRegionMap && (
               <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
                 <BioregionVectorMap
-                  highlightIds={terrestrialMapIds}
-                  focusIds={terrestrialFocusIds}
-                  selectedId={mapSelectedId || selectedEcoregion?.id || null}
-                  accent={terrestrialMapAccent}
-                  height={310}
+                  highlightIds={territoryMapHighlightIds}
+                  focusIds={territoryMapFocusIds}
+                  selectedId={territoryMapSelectedId}
+                  marine={territoryMapIsMarine}
+                  domain={territoryMapIsPlanet ? 'all' : 'auto'}
+                  accent={territoryMapIsMarine ? '#4FB3FF' : terrestrialMapAccent}
+                  height={view === 'habitats' ? 280 : 310}
                   fullBleed
-                  clickable
-                  onSelect={openMapHierarchyTarget}
+                  clickable={!territoryMapIsPlanet && view !== 'habitats'}
+                  onSelect={territoryMapIsMarine ? ((id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }) : openMapHierarchyTarget}
                   fullscreenSelectionResolver={getMapSelectionTarget}
-                  levelGroups={terrestrialLevelGroups}
+                  showFeatureBoundaries={!territoryMapIsPlanet}
+                  levelGroups={territoryMapLevelGroups}
                   layerOpacityScale={.6}
-                  autoSpin={view === 'terrestrial' && !mapFocusIds.length}
-                  cameraId={mapSelectedId || (view === 'regions' ? continent?.id : view === 'ecoregions' ? (selectedEcoregion?.id || region?.id) : null)}
-                  hideInactiveFill={view !== 'terrestrial'}
+                  autoSpin={territoryMapIsPlanet || (view === 'terrestrial' && !mapFocusIds.length) || (territoryMapIsMarine && !selectedMarineRealmId)}
+                  cameraId={territoryMapCameraId}
+                  hideInactiveFill={territoryMapIsPlanet || (!territoryMapIsMarine && view !== 'terrestrial')}
                   fitDuration={520}
                 />
               </div>
@@ -8882,9 +8850,28 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
           </>
         )}
 
+        {view === 'planet' && (
+          <>
+            <button onClick={()=>setView('countries')} style={{ width:'100%', border:`1px solid ${isLightTheme?'rgba(38,118,94,.22)':'rgba(144,216,74,.28)'}`, borderRadius:24, background:isLightTheme?'linear-gradient(135deg,rgba(144,216,74,.22),rgba(251,247,239,.94))':'linear-gradient(135deg,rgba(144,216,74,.18),rgba(32,178,170,.12))', padding:16, marginBottom:14, color:isLightTheme?'#171717':'white', textAlign:'left', cursor:'pointer', fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 28px rgba(0,0,0,.06)':'none' }}>
+              <div style={{ display:'flex', alignItems:'center', gap:12 }}>
+                <div style={{ width:58, height:58, borderRadius:20, background:isLightTheme?'rgba(255,255,255,.70)':'rgba(255,255,255,.12)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:30 }}>🗺️</div>
+                <div style={{ flex:1 }}><div style={{ fontSize:19, fontWeight:1000 }}>Paesi visitati</div><div style={{ color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.58)', fontSize:12, marginTop:4 }}>Paesi visitati su mappa.</div></div>
+                <div style={{ color:isLightTheme?'#2B7A4B':'#90D84A', fontSize:20, fontWeight:1000 }}>{visitedCountries.length}</div>
+              </div>
+            </button>
+            <TerritoryCard item={{id:'terrestrial-domain', label:'Dominio terrestre', bioregionIds:BIOREGION_V4_ECOREGIONS.map(e=>e.id)}} title="Dominio terrestre" subtitle={`${BIOREGION_V4_CONTINENTS.length} macroaree · ${BIOREGION_V4_REGIONS.length} regioni · ${BIOREGION_V4_ECOREGIONS.length} subregioni`} image={['/regions/continents/pianeta_terra.jpg','/regions/america.jpg','/regions/europa.jpg']} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>setView('terrestrial')} mapIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)} onMapFocus={()=>{ setPlanetDomainFocus('terrestrial'); scrollToMainMap(); }} />
+            <TerritoryCard item={{id:'marine-realms', label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} onMapFocus={()=>{ setPlanetDomainFocus('marine'); scrollToMainMap(); }} />
+          </>
+        )}
+
         {view === 'terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
           <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />
         ))}
+
+        {view === 'marine' && MARINE_REALMS.map(m => {
+          const locked = !unlockMap[m.id];
+          return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
+        })}
 
         {view==='regions' && continent && (
           <>
@@ -8906,19 +8893,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {view==='habitats' && selectedSubregionTerritory && (
           <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
-            <div style={{ margin:'0 -14px 0' }}>
-              <BioregionVectorMap
-                highlightIds={region?.bioregionIds || [selectedEcoregion.id]}
-                focusIds={region?.bioregionIds || [selectedEcoregion.id]}
-                selectedId={selectedEcoregion.id}
-                accent="#90D84A"
-                height={280}
-                fullBleed
-                levelGroups={(region?.ecoregions || [selectedEcoregion]).map((eco, index) => ({ id:eco.id, label:eco.label, ids:[eco.id], color:levelPalette[index % levelPalette.length] }))}
-                layerOpacityScale={.6}
-                cameraId={region?.id || selectedEcoregion.id}
-              />
-            </div>
             <div style={{ border:'1px solid rgba(255,255,255,.08)', borderRadius:22, padding:16, background:'linear-gradient(135deg,rgba(184,77,58,.14),rgba(255,255,255,.045))' }}>
               <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>Territorio</div>
               <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:5 }}>{selectedEcoregion.label}</div>
