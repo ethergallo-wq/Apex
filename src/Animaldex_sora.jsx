@@ -5365,7 +5365,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
     ? (BIOREGION_V4_BY_ID[hoverId || selectedId]?.label || hoverId || selectedId)
     : '';
   const handleSelect = (id, props) => {
-    if (fullscreen && fullscreenSelectionResolver) {
+    if (fullscreenSelectionResolver) {
       const target = fullscreenSelectionResolver(id, props);
       if (target) {
         setFullscreenTarget(target);
@@ -5403,14 +5403,14 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
             hideInactiveFill={hideInactiveFill}
             layerOpacityScale={layerOpacityScale}
           />
-          {fullscreen && fullscreenTarget && (
+          {fullscreenTarget && (
             <div style={{ position:'absolute', left:14, right:14, bottom:14, zIndex:8, borderRadius:18, border:'1px solid rgba(255,255,255,.12)', background:'linear-gradient(135deg,rgba(9,12,16,.92),rgba(31,23,20,.92))', padding:14, boxShadow:'0 18px 42px rgba(0,0,0,.46)', backdropFilter:'blur(10px)' }}>
               <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8 }}>{fullscreenTarget.kicker || 'Bioregione'}</div>
               <div style={{ color:'white', fontSize:18, fontWeight:1000, lineHeight:1.12, marginTop:4 }}>{fullscreenTarget.title}</div>
               {fullscreenTarget.text && <div style={{ color:'rgba(255,255,255,.62)', fontSize:12, lineHeight:1.35, marginTop:6 }}>{fullscreenTarget.text}</div>}
               <div style={{ display:'flex', gap:8, marginTop:12 }}>
                 <button onClick={()=>setFullscreenTarget(null)} style={{ flex:1, height:40, borderRadius:13, border:'1px solid rgba(255,255,255,.12)', background:'rgba(255,255,255,.06)', color:'rgba(255,255,255,.78)', fontFamily:'inherit', fontWeight:950, cursor:'pointer' }}>Resta sulla mappa</button>
-                <button onClick={()=>{ const action = fullscreenTarget.onOpen; setFullscreenTarget(null); onCloseFullscreen?.(); action?.(); }} style={{ flex:1, height:40, borderRadius:13, border:'none', background:'#90D84A', color:'#10130E', fontFamily:'inherit', fontWeight:1000, cursor:'pointer' }}>{fullscreenTarget.actionLabel || 'Apri'}</button>
+                <button onClick={()=>{ const action = fullscreenTarget.onOpen; setFullscreenTarget(null); if (fullscreen) onCloseFullscreen?.(); action?.(); }} style={{ flex:1, height:40, borderRadius:13, border:'none', background:'#90D84A', color:'#10130E', fontFamily:'inherit', fontWeight:1000, cursor:'pointer' }}>{fullscreenTarget.actionLabel || 'Esplora'}</button>
               </div>
             </div>
           )}
@@ -5456,7 +5456,7 @@ function BioregionVectorMap({ highlightIds = [], focusIds = [], highlightIsoCode
             const selected = selectedId === id || hoverId === id;
             const d = geometryToSvgPath(f.geometry, active ? 260 : 100);
             if (!d) return null;
-            return <path key={id} d={d} onClick={clickable ? ()=>onSelect?.(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(64,90,100,.42)' : 'rgba(82,58,45,.48)')} stroke={active ? '#FFD0B7' : 'rgba(110,210,245,.18)'} strokeWidth={active ? 1.55 : 0.42} opacity={active ? 0.95 : selected ? .66 : .50} />;
+            return <path key={id} d={d} onClick={clickable ? ()=>handleSelect(id, f.properties) : undefined} onMouseEnter={()=>setHoverId(id)} onMouseLeave={()=>setHoverId(null)} style={{ cursor:clickable?'pointer':'default' }} fill={active ? accent : (marine ? 'rgba(64,90,100,.42)' : 'rgba(82,58,45,.48)')} stroke={active ? '#FFD0B7' : 'rgba(110,210,245,.18)'} strokeWidth={active ? 1.55 : 0.42} opacity={active ? 0.95 : selected ? .66 : .50} />;
           })}
         </g>
         </g>
@@ -6483,6 +6483,7 @@ function getLifeUncoveredAnimals(node, visibleChildren, animals=[]) {
   return getLifeAnimals(node, animals).filter(animal => !covered.has(lifeAnimalKey(animal)));
 }
 function getMysteryLifeLabel(rank='species') {
+  if (rank === 'species') return 'Animale misterioso';
   const labels = { kingdom:'Regno', phylum:'Phylum', class:'Classe', order:'Ordine', family:'Famiglia', genus:'Genere', species:'Specie', cluster:'Cluster' };
   const label = labels[rank] || 'Nodo';
   return `${label} ${label === 'Specie' || label === 'Famiglia' || label === 'Classe' ? 'misteriosa' : 'misterioso'}`;
@@ -6536,11 +6537,11 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
   const maxVisibleDepth = focusDepth + 2;
   const selectedPathIds = new Set(selectedPath.map(node => node.id));
   const layoutNodes = [];
-  const colGap = 292;
-  const rowGap = focusDepth === 0 ? 126 : 142;
-  const groupGap = focusDepth === 0 ? 72 : 52;
+  const colGap = 324;
+  const rowGap = focusDepth === 0 ? 138 : 164;
+  const groupGap = focusDepth === 0 ? 84 : 68;
   const nodeW = 252;
-  const nodeH = 112;
+  const nodeH = 132;
   let cursorY = 0;
   const walk = (node, depth = 0, parent = null, parentWithinSelected = false) => {
     const withinSelected = parentWithinSelected || node.id === selected.id;
@@ -6548,7 +6549,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
       if (!selectedPathIds.has(child.id) && getLifeAnimals(child, animals).length === 0) return false;
       const childDepth = depth + 1;
       const childWithinSelected = withinSelected || child.id === selected.id;
-      return childDepth <= 2 || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth) || node.id === expandedGeneratedId;
+      return childDepth <= 2 || selectedPathIds.has(node.id) || selectedPathIds.has(child.id) || (childWithinSelected && childDepth <= maxVisibleDepth) || node.id === expandedGeneratedId;
     });
     const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth && !(node.children || []).length;
     const uncoveredAnimals = canAttachAnimals ? getLifeUncoveredAnimals(node, baseChildren, animals) : [];
@@ -6640,8 +6641,8 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     const widthFit = (size.w - 22) / threeColumnsW;
     const heightFit = (size.h - 74) / totalH;
     const nextK = selectedRow.id === 'animalia'
-      ? Math.max(.34, Math.min(.88, widthFit, heightFit))
-      : Math.max(.54, Math.min(.94, widthFit));
+      ? Math.max(.18, Math.min(.88, widthFit, heightFit))
+      : Math.max(.24, Math.min(.94, widthFit));
     const leftEdge = 140 + targetFlow.focusDepth * targetFlow.colGap - targetFlow.nodeW / 2;
     const targetY = selectedRow.id === 'animalia' ? (size.h / 2 - ((minY + maxY) / 2 - selectedRow.y) * nextK) : size.h * .34;
     return { x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK };
@@ -6659,7 +6660,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   const centerOnNode = (node, keepZoom = true) => {
     if (!node) return;
     setView(prev => {
-      const k = keepZoom ? prev.k : Math.max(.54, Math.min(.94, prev.k));
+      const k = keepZoom ? prev.k : Math.max(.24, Math.min(.94, prev.k));
       return { x:size.w / 2 - node.x * k, y:size.h * .36 - node.y * k, k };
     });
   };
@@ -6713,7 +6714,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
       const dist = Math.hypot(dx, dy) || 1;
       const mid = { x:(pts[0].x + pts[1].x) / 2, y:(pts[0].y + pts[1].y) / 2 };
       const start = pinchRef.current;
-      const nextK = Math.max(.32, Math.min(1.52, start.view.k * (dist / start.dist)));
+      const nextK = Math.max(.12, Math.min(1.56, start.view.k * (dist / start.dist)));
       const worldX = (start.mid.x - start.view.x) / start.view.k;
       const worldY = (start.mid.y - start.view.y) / start.view.k;
       setView({ x:mid.x - worldX * nextK, y:mid.y - worldY * nextK, k:nextK });
@@ -6731,7 +6732,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   };
   const zoomBy = (factor) => {
     setView(prev => {
-      const nextK = Math.max(.46, Math.min(1.22, prev.k * factor));
+      const nextK = Math.max(.12, Math.min(1.56, prev.k * factor));
       const cx = size.w / 2;
       const cy = size.h / 2;
       return { x:cx - ((cx - prev.x) / prev.k) * nextK, y:cy - ((cy - prev.y) / prev.k) * nextK, k:nextK };
@@ -6755,9 +6756,6 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
         <button data-life-control="true" onClick={()=>zoomBy(.86)} style={lifeZoomButtonStyle}>−</button>
       </div>
       <div style={{ position:'absolute', left:0, top:0, width:1, height:1, transform:`translate(${view.x}px, ${view.y}px) scale(${view.k})`, transformOrigin:'0 0', transition:(dragRef.current || pinchRef.current) ? 'none' : 'transform .72s cubic-bezier(.18,.86,.18,1)' }}>
-        {flow.columns.map(column => (
-          <div key={column.depth} style={{ position:'absolute', left:column.x - flow.nodeW / 2, top:20, width:flow.nodeW, height:28, borderRadius:999, display:'flex', alignItems:'center', justifyContent:'center', background:'rgba(255,255,255,.045)', border:'1px solid rgba(255,255,255,.08)', color:'rgba(255,255,255,.58)', fontSize:10, fontWeight:1000, letterSpacing:.9, textTransform:'uppercase', pointerEvents:'none' }}>{column.label}</div>
-        ))}
         <svg width="1" height="1" style={{ position:'absolute', left:0, top:0, overflow:'visible', pointerEvents:'none' }}>
           {flow.edges.map(edge => <path key={edge.id} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth={edge.active ? 4.6 : 3} strokeLinecap="round" opacity={edge.active ? .42 : .24} />)}
           {flow.edges.map(edge => <path key={`${edge.id}-core`} d={edgePath(edge)} fill="none" stroke={edge.color} strokeWidth={edge.active ? 1.55 : 1.05} strokeLinecap="round" opacity={edge.active ? .95 : .48} />)}
@@ -6772,6 +6770,13 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
           const terminal = !(node.children || []).length && stats.total > 0 && !generatedAnimal;
           const childCount = (node.children || []).length;
           const muted = !near;
+          const displayColor = animalMystery ? '#8C949A' : node.color;
+          const borderColor = animalMystery ? 'rgba(151,160,166,.42)' : `${node.color}${active ? 'FF' : near ? 'AA' : '55'}`;
+          const cardBackground = animalMystery
+            ? 'radial-gradient(circle at 12% 14%, rgba(164,172,178,.12), transparent 38%), linear-gradient(135deg, rgba(82,88,94,.34), rgba(10,12,14,.94))'
+            : active
+              ? `radial-gradient(circle at 18% 16%, ${node.color}46, transparent 42%), linear-gradient(135deg, rgba(27,28,24,.98), rgba(9,11,13,.97))`
+              : `radial-gradient(circle at 12% 14%, ${node.color}22, transparent 38%), linear-gradient(135deg, rgba(255,255,255,.085), rgba(12,14,17,.94))`;
           return (
             <button
               key={id}
@@ -6785,19 +6790,19 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
               style={{
                 position:'absolute',
                 left:x - 126,
-                top:y - 56,
+                top:y - flow.nodeH / 2,
                 width:252,
-                minHeight:generatedAnimal ? 98 : 104,
+                minHeight:generatedAnimal ? 98 : 118,
                 borderRadius:22,
-                border:`1.4px solid ${node.color}${active ? 'FF' : near ? 'AA' : '55'}`,
-                background:active ? `radial-gradient(circle at 18% 16%, ${node.color}46, transparent 42%), linear-gradient(135deg, rgba(27,28,24,.98), rgba(9,11,13,.97))` : `radial-gradient(circle at 12% 14%, ${node.color}22, transparent 38%), linear-gradient(135deg, rgba(255,255,255,.085), rgba(12,14,17,.94))`,
+                border:`1.4px solid ${borderColor}`,
+                background:cardBackground,
                 color:'white',
                 fontFamily:'inherit',
                 textAlign:'left',
                 padding:12,
-                boxShadow:active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.12)` : '0 12px 28px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08)',
+                boxShadow:animalMystery ? '0 10px 24px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.055)' : active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.12)` : '0 12px 28px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08)',
                 cursor:'pointer',
-                opacity:muted ? .38 : 1,
+                opacity:animalMystery ? (muted ? .34 : .66) : (muted ? .38 : 1),
                 transform:active ? 'scale(1.035)' : 'scale(1)',
                 transition:'left .62s cubic-bezier(.18,.86,.18,1), top .62s cubic-bezier(.18,.86,.18,1), opacity .34s ease, transform .34s ease, box-shadow .34s ease',
               }}
@@ -6805,18 +6810,18 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
               <div style={{ display:'flex', alignItems:'center', gap:8 }}>
                 {generatedAnimal ? (
                   <div style={{ width:42, height:42, borderRadius:15, background:animalMystery?'rgba(255,255,255,.06)':`${node.color}18`, border:`1px solid ${animalMystery?'rgba(255,255,255,.16)':`${node.color}88`}`, display:'grid', placeItems:'center', overflow:'hidden', flexShrink:0, boxShadow:`0 0 20px ${node.color}1F` }}>
-                    {animalMystery ? <img src={MYSTERY_PLACEHOLDER} alt="misterioso" style={{ width:30, height:30, objectFit:'contain', opacity:.74 }} /> : <AnimalImg a={node.animal} size={42} gridMode overrideStatus={animalStatus} />}
+                    {animalMystery ? <img src={MYSTERY_PLACEHOLDER} alt="misterioso" style={{ width:30, height:30, objectFit:'contain', opacity:.50, filter:'grayscale(.65) saturate(.45)' }} /> : <AnimalImg a={node.animal} size={42} gridMode overrideStatus={animalStatus} />}
                   </div>
                 ) : (
-                  <div style={{ width:30, height:30, borderRadius:12, background:`${node.color}20`, border:`1px solid ${node.color}88`, color:node.color, display:'grid', placeItems:'center', fontSize:14, fontWeight:1000, boxShadow:`0 0 18px ${node.color}22` }}>✦</div>
+                  <div style={{ width:30, height:30, borderRadius:12, background:`${displayColor}20`, border:`1px solid ${displayColor}88`, color:displayColor, display:'grid', placeItems:'center', fontSize:14, fontWeight:1000, boxShadow:`0 0 18px ${displayColor}22` }}>✦</div>
                 )}
                 <div style={{ minWidth:0, flex:1 }}>
                   <div style={{ fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
-                  <div style={{ marginTop:2, color:generatedAnimal && animalMystery ? 'rgba(255,255,255,.58)' : node.color, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{generatedAnimal ? `${LIFE_RANK_LABELS[node.rank] || 'Specie'} · ${animalStatus || 'Animaldex'}${animalMystery ? '' : ` · ${node.animal.rarity || 'Rarità'}`}` : `${LIFE_RANK_LABELS[node.rank] || node.rank} · ${stats.total} specie · ${childCount ? `${childCount} rami` : 'specie'}`}</div>
+                  <div style={{ marginTop:2, color:generatedAnimal && animalMystery ? 'rgba(255,255,255,.48)' : displayColor, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{generatedAnimal ? `${LIFE_RANK_LABELS[node.rank] || 'Specie'} · ${animalStatus || 'Animaldex'}${animalMystery ? '' : ` · ${node.animal.rarity || 'Rarità'}`}` : `${LIFE_RANK_LABELS[node.rank] || node.rank} · ${stats.total} specie · ${childCount ? `${childCount} rami` : 'specie'}`}</div>
                 </div>
-                {generatedAnimal ? <div style={{ width:28, height:28, borderRadius:12, border:`1px solid ${node.color}66`, background:`${node.color}18`, color:animalMystery?'rgba(255,255,255,.64)':node.color, display:'grid', placeItems:'center', fontSize:13, fontWeight:1000 }}>›</div> : <LifeProgress value={stats.completion} color={node.color} />}
+                {generatedAnimal ? <div style={{ width:28, height:28, borderRadius:12, border:`1px solid ${displayColor}66`, background:`${displayColor}18`, color:animalMystery?'rgba(255,255,255,.44)':displayColor, display:'grid', placeItems:'center', fontSize:13, fontWeight:1000 }}>›</div> : <LifeProgress value={stats.completion} color={node.color} />}
               </div>
-              <div style={{ color:'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{generatedAnimal ? (animalMystery ? 'Nodo finale protetto: dettagli non rivelati.' : (node.animal.sci || node.subtitle || 'Nodo finale Animaldex')) : (inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex'))}</div>
+              <div style={{ color:animalMystery?'rgba(255,255,255,.48)':'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{generatedAnimal ? (animalMystery ? 'Animale misterioso' : (node.animal.sci || node.subtitle || 'Specie Animaldex')) : (inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex'))}</div>
               {generatedAnimal && !animalMystery && (
                 <div style={{ marginTop:8, display:'flex', gap:5, minWidth:0 }}>
                   <span style={{ borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.animal.cons || 'Conservazione n/d'}</span>
@@ -6828,7 +6833,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
                   {stats.samples.slice(0, 3).map(animal => {
                     const status = normalizeAnimalStatus(animal.status);
                     const mystery = isMysteryStatus(status);
-                    return <span key={animal.id || animal.sci} style={{ maxWidth:'100%', borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:mystery?'rgba(255,255,255,.58)':node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{mystery ? 'Specie misteriosa' : (animal.gen || animal.com || animal.sci)}</span>;
+                    return <span key={animal.id || animal.sci} style={{ maxWidth:'100%', borderRadius:999, border:`1px solid ${mystery?'rgba(155,164,170,.30)':`${node.color}44`}`, background:mystery?'rgba(150,158,164,.10)':`${node.color}18`, color:mystery?'rgba(255,255,255,.46)':node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{mystery ? 'Animale misterioso' : (animal.gen || animal.com || animal.sci)}</span>;
                   })}
                 </div>
               )}
@@ -6973,7 +6978,6 @@ function TaxonomyExplorer({ animals=ANIMALS, statusMap={}, visitedCountries=[], 
       <div style={{ position:'absolute', inset:'104px 0 0 0' }}>
         <LifeTreeCanvas selectedNode={selectedNode} animals={animalsWithStatus} onOpen={openNode} onAnimalPanel={openPanel} onOpenAnimal={onOpenAnimal} />
       </div>
-      {selectedNode.id !== 'animalia' && <button onClick={()=>openNode(path[Math.max(0,path.length-2)]?.id || 'animalia')} style={{ position:'absolute', left:12, bottom:12, zIndex:26, borderRadius:999, border:`1px solid ${isLight?'rgba(0,0,0,.12)':'rgba(255,255,255,.10)'}`, background:isLight?'rgba(251,247,239,.92)':'rgba(13,15,18,.86)', color:isLight?'#171717':'white', height:42, padding:'0 14px', fontSize:12, fontWeight:950, fontFamily:'inherit', boxShadow:'0 12px 30px rgba(0,0,0,.20)' }}>Centra ramo precedente</button>}
       {panelNode && <LifeAnimalPanel node={panelNode} animals={animalsWithStatus} onClose={()=>setPanelNodeId(null)} onOpenAnimal={onOpenAnimal} theme={theme} />}
       {infoOpen && <LifeInfoModal onClose={()=>setInfoOpen(false)} theme={theme} />}
     </div>
@@ -8639,15 +8643,44 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     }
     scrollToMainMap();
   };
-  const getFullscreenRegionTarget = (id) => {
-    if (view !== 'ecoregions') return null;
+  const getMapSelectionTarget = (id) => {
+    const marineTarget = MARINE_REALMS.find(realm => String(realm.id) === String(id));
+    if (marineTarget) {
+      return {
+        kicker:'Reame marino',
+        title:marineTarget.label,
+        text:'Apri il reame marino e guarda gli animali collegati a questo territorio.',
+        actionLabel:'Esplora',
+        onOpen:()=>openTerritoryAnimals(marineTarget, `marine:${marineTarget.id}`, 'marine'),
+      };
+    }
+    const continentTarget = BIOREGION_V4_CONTINENTS.find(cont => String(cont.id) === String(id));
+    if (continentTarget) {
+      return {
+        kicker:'Continente',
+        title:continentTarget.label,
+        text:'Esplora le regioni interne e aggiorna i box sotto la mappa.',
+        actionLabel:'Esplora',
+        onOpen:()=>openContinent(continentTarget),
+      };
+    }
+    const regionTarget = BIOREGION_V4_REGIONS.find(reg => String(reg.id) === String(id));
+    if (regionTarget) {
+      return {
+        kicker:'Regione',
+        title:regionTarget.label,
+        text:'Esplora le bioregioni interne e aggiorna i box sotto la mappa.',
+        actionLabel:'Esplora',
+        onOpen:()=>openRegion(regionTarget),
+      };
+    }
     const hit = findHierarchyByBioregionId(id);
     if (!hit?.eco) return null;
     return {
       kicker:'Bioregione',
       title:hit.eco.label,
       text:'Apri la pagina della bioregione con descrizione, Grid animali e LifeWeb.',
-      actionLabel:'Vai alla regione',
+      actionLabel:'Esplora',
       onOpen:()=>openEcoregion(hit.eco),
     };
   };
@@ -8701,8 +8734,8 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
   };
   const showRegionMap = regionMapExpanded;
   const showRegionBoxes = true;
-  const planetDomainShellActive = ['planet','terrestrial','marine'].includes(view);
-  const terrestrialNavActive = ['regions','ecoregions'].includes(view);
+  const planetDomainShellActive = ['planet','marine'].includes(view);
+  const terrestrialNavActive = ['terrestrial','regions','ecoregions'].includes(view);
   const terrestrialMapIds = view === 'terrestrial'
     ? BIOREGION_V4_ECOREGIONS.map(e=>e.id)
     : view === 'regions'
@@ -8775,24 +8808,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   autoSpinSpeed={0.00124}
                   recenterOnChange={false}
                 />
-              ) : view === 'terrestrial' ? (
-                <BioregionVectorMap
-                  key="terrestrial-domain-continent-map"
-                  highlightIds={BIOREGION_V4_ECOREGIONS.map(e=>e.id)}
-                  focusIds={mapFocusIds}
-                  selectedId={mapSelectedId}
-                  accent="#6CE5C7"
-                  height={310}
-                  fullBleed
-                  clickable
-                  onSelect={openMapHierarchyTarget}
-                  levelGroups={continentLevelGroups}
-                  layerOpacityScale={.6}
-                  autoSpin={!mapFocusIds.length}
-                  cameraId={mapSelectedId}
-                  hideInactiveFill={false}
-                  fitDuration={0}
-                />
               ) : (
                 <BioregionVectorMap
                   key="marine-domain-realm-map"
@@ -8805,6 +8820,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   fullBleed
                   clickable
                   onSelect={(id)=>{ const realm = MARINE_REALMS.find(m => String(m.id) === String(id)); if (realm) openTerritoryAnimals(realm, `marine:${realm.id}`, 'marine'); }}
+                  fullscreenSelectionResolver={getMapSelectionTarget}
                   levelGroups={marineLevelGroups}
                   layerOpacityScale={.6}
                   autoSpin={!selectedMarineRealmId}
@@ -8825,9 +8841,6 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                 <TerritoryCard item={{id:'marine-realms', label:'Dominio marino', realmType:'marine', bioregionIds:MARINE_REALMS.map(r=>r.id)}} title="Dominio marino" subtitle={`${MARINE_REALMS.length} domini marini · dati v4`} image={['/regions/marine/reami_marini.jpg','/regions/oceania.jpg']} icon="" accent="#4FB3FF" openLabel="Apri" onOpen={()=>setView('marine')} mapIds={MARINE_REALMS.map(r=>r.id)} onMapFocus={()=>{ setPlanetDomainFocus('marine'); scrollToMainMap(); }} />
               </>
             )}
-            {view === 'terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
-              <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />
-            ))}
             {view === 'marine' && MARINE_REALMS.map(m => {
               const locked = !unlockMap[m.id];
               return <TerritoryCard key={m.id} item={m} title={m.label} subtitle={m.name_en || 'Dominio marino'} image={m.image} icon="" accent="#4FB3FF" locked={locked} onUnlock={()=>unlock(m.id)} openLabel="Vedi animali" onOpen={()=>openTerritoryAnimals(m, `marine:${m.id}`, 'marine')} onMapFocus={focusTerritoryMap} mapIds={[m.id]} />;
@@ -8837,6 +8850,13 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
 
         {terrestrialNavActive && (
           <>
+            {view === 'terrestrial' && (
+              <div style={{ background:'linear-gradient(135deg,#1B2B2A,#0D1517)', border:'1px solid rgba(108,229,199,.20)', borderRadius:24, padding:16, marginBottom:14 }}>
+                <div style={{ color:'rgba(255,255,255,.58)', fontSize:11, fontWeight:900, textTransform:'uppercase', letterSpacing:.8 }}>Pianeta Terra</div>
+                <div style={{ color:'white', fontSize:26, fontWeight:1000, marginTop:4 }}>Dominio terrestre</div>
+                <div style={{ color:'rgba(255,255,255,.62)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>La mappa resta ferma come riferimento: sotto trovi le macroaree terrestri disponibili.</div>
+              </div>
+            )}
             <MapCollapseToggle />
             {showRegionMap && (
               <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
@@ -8849,17 +8869,22 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
                   fullBleed
                   clickable
                   onSelect={openMapHierarchyTarget}
-                  fullscreenSelectionResolver={getFullscreenRegionTarget}
+                  fullscreenSelectionResolver={getMapSelectionTarget}
                   levelGroups={terrestrialLevelGroups}
                   layerOpacityScale={.6}
                   autoSpin={view === 'terrestrial' && !mapFocusIds.length}
                   cameraId={mapSelectedId || (view === 'regions' ? continent?.id : view === 'ecoregions' ? (selectedEcoregion?.id || region?.id) : null)}
-                  fitDuration={view === 'regions' ? 0 : 340}
+                  hideInactiveFill={view !== 'terrestrial'}
+                  fitDuration={520}
                 />
               </div>
             )}
           </>
         )}
+
+        {view === 'terrestrial' && BIOREGION_V4_CONTINENTS.map(cont => (
+          <TerritoryCard key={cont.id} item={cont} title={cont.label} subtitle={`${cont.regions.length} regioni`} image={cont.image} icon="" accent="#6CE5C7" openLabel="Apri" onOpen={()=>openContinent(cont)} onMapFocus={focusTerritoryMap} mapIds={cont.bioregionIds} />
+        ))}
 
         {view==='regions' && continent && (
           <>
