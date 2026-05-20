@@ -6233,10 +6233,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const animalsWithStatus = progress.animalsWithStatus;
   const searchedAnimalsCount = animalsWithStatus.filter(a => a.status === 'ricercato').length;
-  const observedCount = progress.seenCount + progress.capturedCount;
-  const totalAnimals = Math.max(1, ANIMALS.length);
-  const observedPct = Math.max(0, Math.min(100, (observedCount / totalAnimals) * 100));
-  const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / totalAnimals) * 100));
   const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
   useEffect(() => {
@@ -6275,17 +6271,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     boxSizing:'border-box',
     boxShadow:isLightTheme?'0 14px 30px rgba(0,0,0,.08)':'0 16px 38px rgba(0,0,0,.22)',
   };
-  const ProgressLine = ({ label, value, pct, color }) => (
-    <div style={{ marginTop:10 }}>
-      <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
-        <div style={{ color:pageText, fontSize:12, fontWeight:950 }}>{label}</div>
-        <div style={{ color:mutedText, fontSize:11.5, fontWeight:900 }}>{value}</div>
-      </div>
-      <div style={{ height:8, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.09)', overflow:'hidden', marginTop:6 }}>
-        <div style={{ width:`${pct}%`, height:'100%', borderRadius:999, background:color }} />
-      </div>
-    </div>
-  );
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', position:'relative', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.13), transparent 36%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
       <div style={{ height:62, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'8px 14px', boxSizing:'border-box', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.08)', background:isLightTheme?LIGHT_HEADER_BG:'#14161A', flexShrink:0 }}>
@@ -6303,8 +6288,6 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
               <div style={{ color:pageText, fontSize:19, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
               <div style={{ color:mutedText, fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · {progress.xp} / {nextLevelXP} XP</div>
               <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
-              <ProgressLine label="Avvistati" value={`${observedCount} / ${totalAnimals}`} pct={observedPct} color="linear-gradient(90deg,#D49374,#C87955)" />
-              <ProgressLine label="Catturati" value={`${progress.capturedCount} / ${totalAnimals}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" />
             </div>
             <button onClick={chooseNextFeaturedBadge} style={{ width:76, minHeight:94, borderRadius:20, border:`1px solid ${hexToRgba(featuredBadgeColor,.50)}`, background:featuredBadge?`linear-gradient(180deg, ${hexToRgba(featuredBadgeColor,.22)}, rgba(0,0,0,.18))`:'rgba(255,255,255,.055)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:6, flexShrink:0, padding:8, cursor:'pointer' }}>
               {featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:54, height:54, objectFit:'contain', filter:`drop-shadow(0 0 12px ${hexToRgba(featuredBadgeColor,.45)})` }} /> : <span style={{ color:mutedText, fontSize:28, fontWeight:1000 }}>+</span>}
@@ -6313,7 +6296,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </button>
 
-        <div style={{ ...boxBase, padding:18, background:'linear-gradient(135deg, rgba(92,37,30,.82), rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.38)', marginBottom:14 }}>
+        <div style={{ ...boxBase, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.88), rgba(20,20,22,.78) 58%, rgba(20,20,22,.94)), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden' }}>
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
           <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Hai {searchedAnimalsCount} animali ricercati da avvistare.</div>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:14 }}>
@@ -6640,15 +6623,18 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   const dragRef = useRef(null);
   const pointersRef = useRef(new Map());
   const pinchRef = useRef(null);
-  const initializedRef = useRef(false);
+  const userMovedViewRef = useRef(false);
   const lastCenterTapRef = useRef(0);
   const appliedResetRef = useRef(0);
-  const [size, setSize] = useState({ w:360, h:520 });
+  const [size, setSize] = useState({ w:0, h:0 });
   const [view, setView] = useState({ x:24, y:34, k:.92 });
   const [expandedGeneratedId, setExpandedGeneratedId] = useState(null);
   const [resetVersion, setResetVersion] = useState(0);
   const flow = useMemo(() => buildLifeFlow(selectedNode, animals, expandedGeneratedId), [selectedNode, animals, expandedGeneratedId]);
-  useEffect(() => setExpandedGeneratedId(null), [selectedNode.id]);
+  useEffect(() => {
+    setExpandedGeneratedId(null);
+    userMovedViewRef.current = false;
+  }, [selectedNode.id]);
   useEffect(() => {
     const el = wrapRef.current;
     if (!el) return;
@@ -6663,6 +6649,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     return () => ro.disconnect();
   }, []);
   const getInitialLifeView = (targetFlow = flow) => {
+    if (!size.w || !size.h) return { x:24, y:34, k:.92 };
     if (!targetFlow.nodes.length) return { x:24, y:34, k:.92 };
     const selectedRow = targetFlow.selectedNode || targetFlow.nodes[0];
     const threeColumnsW = (targetFlow.colGap * 2) + targetFlow.nodeW + 28;
@@ -6679,10 +6666,9 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     return { x:14 - leftEdge * nextK, y:targetY - selectedRow.y * nextK, k:nextK };
   };
   useEffect(() => {
-    if (!flow.nodes.length || initializedRef.current) return;
-    initializedRef.current = true;
+    if (!flow.nodes.length || !size.w || !size.h || userMovedViewRef.current) return;
     setView(getInitialLifeView(flow));
-  }, [flow, size.w, size.h]);
+  }, [flow, size.w, size.h, selectedNode.id]);
   useEffect(() => {
     if (!flow.nodes.length || resetVersion === 0 || appliedResetRef.current === resetVersion) return;
     appliedResetRef.current = resetVersion;
@@ -6710,6 +6696,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     centerOnNode(nearest, true);
   };
   const handleManualCenter = () => {
+    userMovedViewRef.current = true;
     const now = Date.now();
     const doubleTap = now - lastCenterTapRef.current < 900;
     lastCenterTapRef.current = now;
@@ -6723,6 +6710,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
   };
   const startDrag = (e) => {
     if (e.target.closest?.('[data-life-node="true"], [data-life-control="true"]')) return;
+    userMovedViewRef.current = true;
     pointersRef.current.set(e.pointerId, { x:e.clientX, y:e.clientY });
     if (pointersRef.current.size === 2) {
       const pts = Array.from(pointersRef.current.values());
@@ -6762,6 +6750,7 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
     }
   };
   const zoomBy = (factor) => {
+    userMovedViewRef.current = true;
     setView(prev => {
       const nextK = Math.max(.12, Math.min(1.56, prev.k * factor));
       const cx = size.w / 2;
