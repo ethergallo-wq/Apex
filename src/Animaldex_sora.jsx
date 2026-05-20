@@ -1684,6 +1684,40 @@ const RARITY_CSS = `
 }
 .maplibregl-ctrl-attrib, .maplibregl-ctrl-logo { display:none !important; }
 
+:root {
+  --animaldex-radius-control: 18px;
+  --animaldex-radius-panel: 24px;
+  --animaldex-radius-sheet: 30px;
+}
+#animaldex-app-root button:not(.rarity-badge):not([style*="999"]):not([style*="50%"]) {
+  border-radius: var(--animaldex-radius-control) !important;
+}
+#animaldex-app-root input,
+#animaldex-app-root select,
+#animaldex-app-root textarea {
+  border-radius: var(--animaldex-radius-control) !important;
+}
+#animaldex-app-root [data-animaldex-surface="panel"] {
+  border-radius: var(--animaldex-radius-panel) !important;
+}
+#animaldex-app-root [data-animaldex-bar="true"] {
+  border-radius: 0 0 var(--animaldex-radius-panel) var(--animaldex-radius-panel) !important;
+  margin: 0 8px;
+  border-left: 1px solid rgba(255,255,255,.06);
+  border-right: 1px solid rgba(255,255,255,.06);
+}
+#animaldex-app-root [data-animaldex-bottom-bar="true"] {
+  border-radius: var(--animaldex-radius-panel) var(--animaldex-radius-panel) 0 0 !important;
+  margin: 0 8px;
+  border-left: 1px solid rgba(255,255,255,.08);
+  border-right: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 -10px 28px rgba(0,0,0,.18);
+}
+#animaldex-app-root [data-animaldex-card="true"],
+#animaldex-app-root [data-animaldex-modal="true"] {
+  border-radius: var(--animaldex-radius-panel) !important;
+}
+
 #animaldex-app-root[data-theme="light"] { background:#F3EFE6 !important; color:#171717 !important; }
 #animaldex-app-root[data-theme="light"] * { text-shadow:none !important; }
 #animaldex-app-root[data-theme="light"] input::placeholder { color:rgba(0,0,0,.42) !important; }
@@ -2638,7 +2672,7 @@ function StatRow({ label, base, scale, color, unit }) {
   const realValue = Math.round(base * scale);
   const barWidth = Math.min(100, Math.round((realValue / maxValue) * 100));
   return (
-    <div style={{ minHeight:40, borderRadius:13, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
+    <div style={{ minHeight:40, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
       <span style={{ color:'rgba(255,255,255,.80)', fontSize:12, fontWeight:950, lineHeight:1.05 }}>{label}</span>
       <div style={{ height:9, background:'rgba(0,0,0,.48)', borderRadius:999, overflow:'hidden', boxShadow:'inset 0 1px 3px rgba(255,255,255,.04)' }}>
         <div style={{ height:'100%', width:`${barWidth}%`, background:`linear-gradient(90deg, ${color}A8, ${color})`, borderRadius:999, transition:'width .65s cubic-bezier(.4,0,.2,1)', boxShadow:`0 0 16px ${color}55` }} />
@@ -3208,7 +3242,7 @@ function StatusBadge({ status, accentColor, onClick }) {
     ? { ...base, bg: accentColor, c:'#fff', dot:'#fff' }
     : base;
   return (
-    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:12, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%', boxSizing:'border-box', maxWidth:'100%' }}>
+    <div onClick={onClick} style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:7, padding:'10px 12px', borderRadius:18, background:cfg.bg, color:cfg.c, fontSize:12, fontWeight:800, border:cfg.border||'none', cursor:onClick?'pointer':'default', textTransform:'uppercase', letterSpacing:0.5, width:'100%', boxSizing:'border-box', maxWidth:'100%' }}>
       <span style={{ width:7, height:7, borderRadius:'50%', background:cfg.dot || cfg.c, display:'inline-block', boxShadow:normalized==='catturato'?'0 0 8px rgba(255,255,255,.55)':'none' }} />
       {cfg.label}
     </div>
@@ -3394,7 +3428,7 @@ function Sheet({ title, onClose, children, tall }) {
   return (
     <div style={{ position:'absolute', inset:0, zIndex:60, display:'flex', flexDirection:'column', justifyContent:'flex-end' }}>
       <div onClick={onClose} style={{ flex:1, background:'rgba(0,0,0,.72)' }}/>
-      <div style={{ background:'#2A2A2C', borderRadius:'20px 20px 0 0', display:'flex', flexDirection:'column', maxHeight: tall?'92%':'76%', overflow:'hidden' }}>
+      <div style={{ background:'#2A2A2C', borderRadius:'30px 30px 0 0', display:'flex', flexDirection:'column', maxHeight: tall?'92%':'76%', overflow:'hidden' }}>
         <div style={{ display:'flex', justifyContent:'center', padding:'12px 0 0', flexShrink:0 }}>
           <div style={{ width:40, height:4, borderRadius:2, background:'#555' }}/>
         </div>
@@ -3734,7 +3768,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?LIGHT_APP_BG:'transparent', flexShrink:0 }}>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'6px 10px 6px':'8px 12px 8px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', background:isLightTheme?LIGHT_APP_BG:'rgba(0,0,0,.10)', flexShrink:0 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -3750,7 +3784,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, padding:isNarrow?'10px 10px 8px':'12px 12px 10px', flexShrink:0 }}>
+      <div data-animaldex-bar="true" style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, padding:isNarrow?'10px 10px 8px':'12px 12px 10px', flexShrink:0, background:isLightTheme?'rgba(255,255,255,.35)':'rgba(0,0,0,.08)' }}>
         {[
           ['misterioso','Misteriosi'],
           ['ricercato','Ricercati'],
@@ -3784,7 +3818,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 6px':'7px 12px 6px', flexShrink:0, position:'relative' }}>
+      <div data-animaldex-bottom-bar="true" style={{ background:'#A84637', borderTop:'1px solid #7A3228', padding:isNarrow?'6px 10px 6px':'7px 12px 6px', flexShrink:0, position:'relative' }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
@@ -3802,7 +3836,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       </div>
 
       {showMenu && (
-        <div style={{ position:'absolute', top:isNarrow?94:100, right:12, width:280, background:'#252527', border:'1px solid #333', borderRadius:14, boxShadow:'0 12px 32px rgba(0,0,0,.5)', zIndex:40, overflow:'hidden' }}>
+        <div data-animaldex-card="true" style={{ position:'absolute', top:isNarrow?94:100, right:12, width:280, background:'#252527', border:'1px solid #333', borderRadius:24, boxShadow:'0 12px 32px rgba(0,0,0,.5)', zIndex:40, overflow:'hidden' }}>
           <div style={{ display:'flex', flexDirection:'column' }}>
             {[
               { label:'Tassonomia', icon:'⌬', onClick:()=>{setSheet('tax');setShowMenu(false);}, active:!!fTax, color:'#E8C040' },
@@ -3825,7 +3859,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       )}
 
       {showSearchBar && (
-        <div style={{ position:'absolute', top:isNarrow?52:58, left:12, right:12, background:'#252527', borderRadius:12, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
+        <div data-animaldex-card="true" style={{ position:'absolute', top:isNarrow?52:58, left:12, right:12, background:'#252527', borderRadius:24, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
           <button onClick={()=>{setSearch('');setShowSearchBar(false);}} style={{ width:40, height:40, borderRadius:8, background:'#3A3A3C', border:'none', color:'rgba(255,255,255,.6)', fontSize:18, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>×</button>
           <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca nome, scientifico, habitat o categoria..." style={{ flex:1, height:40, borderRadius:8, background:'#333', border:'1px solid #444', color:'white', fontSize:14, padding:'0 12px', outline:'none', fontFamily:'inherit' }} autoFocus/>
         </div>
@@ -4232,10 +4266,10 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   };
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? LIGHT_APP_BG : 'linear-gradient(180deg,#101216 0%,#17191D 44%,#1A1A1C 100%)' }}>
-      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0 }}>
-        <button onClick={onBack} style={{ background:'none', border:'none', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:0 }}>‹ Animaldex</button>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'rgba(0,0,0,.12)' }}>
+        <button onClick={onBack} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:'0 12px', height:36, display:'flex', alignItems:'center', justifyContent:'center' }}>‹ Animaldex</button>
         <span aria-hidden style={{ flex:1 }} />
-        <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:'none', border:'none', color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:32, height:32, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:8 }}>ⓘ</button>
+        <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:36, height:36, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:18 }}>ⓘ</button>
       </div>
       <div ref={scrollRef} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd}
         style={{ flex:1, overflowY:'auto', padding:'0 14px 48px' }}>
@@ -4276,34 +4310,34 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:14, padding:'0 4px' }}>
-          <div data-tour="animal-rarity" style={{ width:'100%', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:14 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
-          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:12, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
-          <div data-tour="animal-status" style={{ width:'100%', borderRadius:14, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+          <div data-tour="animal-rarity" style={{ width:'100%', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
+          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
+          <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
           {statusActions.length > 0 && (
             <div style={{ display:'grid', gridTemplateColumns:`repeat(${statusActions.length},1fr)`, gap:7 }}>
-              {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:38, borderRadius:12, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer', boxShadow:tutorialStep==='detail-status' && act.action==='mark-seen' ? '0 0 0 3px rgba(240,168,64,.32), 0 0 26px rgba(240,168,64,.34)' : 'none' }}>{act.label}</button>)}
+              {statusActions.map(act => <button key={act.action} onClick={()=>handleStatusAction(act.action)} style={{ height:38, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:act.action==='capture'?'linear-gradient(135deg,#A84637,#C45A3E)':'rgba(255,255,255,.08)', color:'white', fontSize:11.5, fontWeight:950, fontFamily:'inherit', cursor:'pointer', boxShadow:tutorialStep==='detail-status' && act.action==='mark-seen' ? '0 0 0 3px rgba(240,168,64,.32), 0 0 26px rgba(240,168,64,.34)' : 'none' }}>{act.label}</button>)}
             </div>
           )}
         </div>
-        <div style={{ background:detailPanel, border:detailPanelBorder, borderRadius:14, padding:14, marginBottom:10, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.22), 0 0 24px rgba(240,168,64,.18)':'none' }}>
+        <div data-animaldex-card="true" style={{ background:detailPanel, border:detailPanelBorder, borderRadius:24, padding:14, marginBottom:10, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.22), 0 0 24px rgba(240,168,64,.18)':'none' }}>
           <p style={{ margin:0, color:isLightTheme?'rgba(0,0,0,.74)':'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
         </div>
         <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
           {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Animaldex, non cattura fisica.
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
-          <button onClick={()=>{setMetricModal('peso'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:3, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+          <button onClick={()=>{setMetricModal('peso'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:20, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:3, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <div style={{ width:'100%', maxWidth:'116px', transform:'translateY(8px)', marginBottom:2 }}><GaugeSVG wt_str={a.wt} /></div>
             <div style={{ fontSize:9.8, fontWeight:900, color:getWeightCat(a.wt).color, textAlign:'center', lineHeight:1.05, marginTop:0 }}>{getWeightCat(a.wt).label}</div>
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px' }}>{a.wt}</div>
           </button>
 
-          <button onClick={()=>{setMetricModal('dimensioni'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'6px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+          <button onClick={()=>{setMetricModal('dimensioni'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:20, padding:'6px 8px 10px', display:'flex', flexDirection:'column', alignItems:'stretch', justifyContent:'space-between', border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <ScaleComparison animal={a} />
             <div style={{ fontSize:11.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.3px', marginTop:2 }}>{a.ln}</div>
           </button>
 
-          <button onClick={()=>{setMetricModal('trofico'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:12, padding:'6px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+          <button onClick={()=>{setMetricModal('trofico'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:20, padding:'6px 6px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'space-between', gap:2, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <div style={{ transform:'translateY(10px)', marginTop:6 }}><TrophicPyramid trophic={a.trophic} compact /></div>
             <div style={{ fontSize:10.5, fontWeight:900, color:'white', textAlign:'center', letterSpacing:'-.2px', lineHeight:1.15 }}>{activePyramidLevel.label}</div>
           </button>
@@ -4311,16 +4345,16 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         {/* 3 pannelli: Abilità | Statistiche | Tassonomia */}
         <div style={{ marginBottom:20 }}>
           {/* Tab bar */}
-          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'12px 12px 0 0', padding:4, gap:4 }}>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', marginBottom:0, background:'rgba(0,0,0,.38)', borderRadius:'22px 22px 0 0', padding:4, gap:4 }}>
             {['abilita','statistiche','tassonomia'].map(m=>(
-              <button key={m} onClick={()=>handleTab(m)} style={{ padding:'8px 0', borderRadius:8, background:statMode===m?c.mid:'transparent', color:statMode===m?'white':'rgba(255,255,255,.38)', fontSize:11, fontWeight:700, border:'none', cursor:'pointer', textTransform:'capitalize' }}>
+              <button key={m} onClick={()=>handleTab(m)} style={{ padding:'8px 0', borderRadius:16, background:statMode===m?c.mid:'transparent', color:statMode===m?'white':'rgba(255,255,255,.38)', fontSize:11, fontWeight:700, border:'none', cursor:'pointer', textTransform:'capitalize' }}>
                 {m==='abilita'?'Abilità':m==='statistiche'?'Statistiche':'Tassonomia'}
               </button>
             ))}
           </div>
 
           {/* Fixed-height content — height sized to tassonomia (tallest tab) */}
-          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 14px 14px', padding:'10px 10px', height:404, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
+          <div style={{ background:'rgba(0,0,0,.28)', borderRadius:'0 0 22px 22px', padding:'10px 10px', height:404, boxSizing:'border-box', overflow:'hidden', position:'relative' }}>
             <div key={statMode} className={slideDir>0?'tab-from-right':'tab-from-left'} style={{ height:'100%' }}>
 
               {/* Abilità */}
@@ -4337,7 +4371,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
                       ))}
                     </div>
                   ):(
-                    <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
+                    <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:20, textAlign:'center' }}>
                       <p style={{ color:'rgba(255,255,255,.5)', fontSize:13, margin:0 }}>Nessuna abilità speciale registrata</p>
                     </div>
                   )}
@@ -4347,11 +4381,11 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
               {/* Statistiche */}
               {statMode==='statistiche'&&(
                 isRevealedStatus(localStatus) ? (
-                  <div data-tour="animal-stats" style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'12px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:7, justifyContent:'space-between' }}>
+                  <div data-tour="animal-stats" data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:'12px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:7, justifyContent:'space-between' }}>
                     <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
                     <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
                     {a.lifespan != null && (
-                      <div style={{ minHeight:40, borderRadius:13, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
+                      <div style={{ minHeight:40, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
                         <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>Vita</span>
                         <div style={{ flex:1, height:9, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
                           <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
@@ -4365,7 +4399,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
                     <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit='%'/>
                   </div>
                 ) : (
-                  <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:20, textAlign:'center' }}>
+                  <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:20, textAlign:'center' }}>
                     <p style={{ color:'rgba(255,255,255,.6)', fontSize:13, margin:0 }}>🔒 Sblocca passando ad Avvistato o Catturato</p>
                   </div>
                 )
@@ -4373,7 +4407,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
 
               {/* Tassonomia */}
               {statMode==='tassonomia'&&(
-                <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:'4px 16px 16px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
+                <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:'4px 16px 16px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', justifyContent:'space-between' }}>
                   {[['Regno',a.kin],['Phylum',a.phy],['Classe',a.cls],['Ordine',a.ord],['Famiglia',a.fam],['Genere',a.gen],['Specie',a.sci]].map(([l,v])=>(
                     <div key={l} style={{ display:'flex', justifyContent:'space-between', padding:'10px 0', borderBottom:'1px solid rgba(255,255,255,.06)' }}>
                       <span style={{ color:'rgba(255,255,255,.35)', fontSize:12 }}>{l}</span>
@@ -4389,11 +4423,11 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         {a.bio && (
           <>
             <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Biologia</p>
-            <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.bio}</p></div>
+            <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.bio}</p></div>
           </>
         )}
         <p style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Etimologia</p>
-        <div style={{ background:'rgba(0,0,0,.35)', borderRadius:14, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
+        <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:14, marginBottom:20 }}><p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.ety}</p></div>
         <p data-distribution-anchor style={{ color:'white', fontSize:16, fontWeight:800, margin:'0 0 10px', paddingLeft:4 }}>Distribuzione</p>
         <DistMap hab={a.hab} accentColor={c.accent} countriesPresent={a.distribution?.countries_present} animal={a}/>
         <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, margin:'18px 0 8px' }}><button data-sound="compare" onClick={()=>onOpenComparator?.(a)} style={{ minHeight:50, border:'1px solid rgba(255,255,255,.10)', borderRadius:16, background:'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:950, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>Confronta</button><button data-sound="map" onClick={()=>onOpenLifeWeb?.(a)} style={{ minHeight:50, border:'1px solid rgba(255,255,255,.10)', borderRadius:16, background:'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:950, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>LifeWeb</button><button data-sound="map" onClick={()=>document.querySelector('[data-distribution-anchor]')?.scrollIntoView({behavior:'smooth', block:'start'})} style={{ minHeight:50, border:'1px solid rgba(255,255,255,.10)', borderRadius:16, background:'rgba(255,255,255,.07)', color:'white', fontSize:11.5, fontWeight:950, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center' }}>Distribuzione</button></div>
@@ -4479,8 +4513,8 @@ function PageHeader({ title, onBack, right, theme }) {
   const inferredTheme = theme || (typeof window !== 'undefined' ? window.localStorage?.getItem(ANIMALDEX_THEME_KEY) : 'dark');
   const isLightTheme = inferredTheme === 'light';
   return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'#1C1C1E' }}>
-      <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+    <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'10px 12px', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'#1C1C1E' }}>
+      <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:18, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
       <div style={{ color:isLightTheme?'#171717':'white', fontSize:20, fontWeight:900, letterSpacing:'-.2px', flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{title}</div>
