@@ -6336,10 +6336,10 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <button onClick={()=>onOpen('lifeweb')} style={{ ...boxBase, minHeight:132, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg,#F4EFE4,#FBF7EF)':'radial-gradient(circle at 92% 12%, rgba(144,216,74,.22), transparent 34%), linear-gradient(135deg,#182018,#0E1110 72%)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)' }}>
-          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Rete ecologica</div>
-          <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>LifeWeb</div>
-          <div style={{ color:mutedText, fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Apri relazioni alimentari, ruoli ecologici e connessioni tra specie.</div>
+        <button onClick={()=>onOpen('taxonomy')} style={{ ...boxBase, minHeight:132, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg,#F4EFE4,#FBF7EF)':'radial-gradient(circle at 92% 12%, rgba(144,216,74,.22), transparent 34%), linear-gradient(135deg,#182018,#0E1110 72%)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)' }}>
+          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Tassonomia</div>
+          <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>Albero della vita</div>
+          <div style={{ color:mutedText, fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Apri l’albero tassonomico e naviga i rami dell’Animaldex.</div>
         </button>
 
         {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
