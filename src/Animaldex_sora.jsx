@@ -1086,6 +1086,7 @@ function normalizeSocialProfile(row = {}) {
     username,
     nickname: profile?.nickname || username,
     avatar_url: profile?.avatar_url || '',
+    featured_badge_id: normalizeBadgeId(profile?.featured_badge_id || ''),
   };
 }
 
@@ -1174,7 +1175,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
     const rows = friendships || [];
     const otherIds = Array.from(new Set(rows.map(r => r.requester_id === userId ? r.addressee_id : r.requester_id).filter(Boolean)));
     const { data: profiles, error: profileError } = otherIds.length
-      ? await supabase.from('user_profiles').select('user_id, username, nickname, avatar_url').in('user_id', otherIds)
+      ? await supabase.from('user_profiles').select('*').in('user_id', otherIds)
       : { data:[], error:null };
     if (profileError) throw profileError;
     const byId = Object.fromEntries((profiles || []).map(p => [p.user_id, normalizeSocialProfile(p)]));
@@ -2382,6 +2383,33 @@ function getAwardUnlockSet() {
 function persistAwardUnlocks(ids = []) {
   if (typeof window === 'undefined') return;
   try { window.localStorage.setItem('animaldex_awards_unlocked', JSON.stringify(Array.from(new Set((ids || []).map(normalizeBadgeId).filter(Boolean))))); } catch {}
+}
+function getFeaturedBadgeStorageKey(userId='guest') {
+  return `animaldex_featured_badge_${userId || 'guest'}`;
+}
+function getFeaturedBadgeId(userId='guest') {
+  if (typeof window === 'undefined') return '';
+  try { return normalizeBadgeId(window.localStorage.getItem(getFeaturedBadgeStorageKey(userId)) || ''); } catch { return ''; }
+}
+function persistFeaturedBadgeId(userId='guest', badgeId='') {
+  if (typeof window === 'undefined') return;
+  try {
+    const key = getFeaturedBadgeStorageKey(userId);
+    const clean = normalizeBadgeId(badgeId);
+    if (clean) window.localStorage.setItem(key, clean);
+    else window.localStorage.removeItem(key);
+  } catch {}
+}
+async function saveFeaturedBadgeId(userId, badgeId='') {
+  const clean = normalizeBadgeId(badgeId);
+  persistFeaturedBadgeId(userId || 'guest', clean);
+  if (!userId || !clean) return true;
+  const { error } = await supabase
+    .from('user_profiles')
+    .update({ featured_badge_id:clean, updated_at:new Date().toISOString() })
+    .eq('user_id', userId);
+  if (error) throw error;
+  return true;
 }
 
 // ── Rarity class helper ───────────────────────────────────────────────
@@ -6225,6 +6253,15 @@ const TRIP_TAGS = ['city','nature','coast','diving','snorkeling','boat','desert'
 function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}, visitedCountries = [], earnedBadgeIds = [], userProfile, user, onOpenGridStatus, onOpenRegions, onQuickSeen, onOpenPhoto, onOpenBadge, theme='dark' }) {
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const [socialPreview, setSocialPreview] = useState(() => buildSocialFallback(user, userProfile, progress));
+  const [navOpen, setNavOpen] = useState(false);
+  const userIdKey = user?.id || 'guest';
+  const unlockedAwardSet = new Set([
+    ...(earnedBadgeIds || []).map(normalizeBadgeId),
+    ...computeUnlockedAwards(statusMap, visitedCountries).map(a => normalizeBadgeId(a.badgeId)),
+  ].filter(Boolean));
+  const earnedAwards = AWARD_RULES.filter(rule => unlockedAwardSet.has(normalizeBadgeId(rule.badgeId)));
+  const earnedAwardKey = earnedAwards.map(rule => normalizeBadgeId(rule.badgeId)).join('|');
+  const [featuredBadgeId, setFeaturedBadgeId] = useState(() => getFeaturedBadgeId(userIdKey));
   useEffect(() => {
     let alive = true;
     if (!user?.id) return;
@@ -6243,50 +6280,98 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const currLevelXP = xpForLevel(progress.level);
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const animalsWithStatus = progress.animalsWithStatus;
-  const seenNotCaptured = animalsWithStatus.filter(a => a.status === 'avvistato');
   const searchedAnimalsCount = animalsWithStatus.filter(a => a.status === 'ricercato').length;
-  const mission = {
-    title:'Il tuo Animaldex',
-    desc: searchedAnimalsCount
-      ? `Hai ${searchedAnimalsCount} animali ricercati pronti da esplorare.`
-      : 'Apri il tuo Animaldex e continua a esplorare le specie disponibili.',
-    cta:'Apri ricercati',
-    action:()=>onOpenGridStatus?.(['ricercato']),
+  const observedCount = progress.seenCount + progress.capturedCount;
+  const totalAnimals = Math.max(1, ANIMALS.length);
+  const observedPct = Math.max(0, Math.min(100, (observedCount / totalAnimals) * 100));
+  const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / totalAnimals) * 100));
+  const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
+  const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
+  useEffect(() => {
+    const preferred = normalizeBadgeId(userProfile?.featured_badge_id || getFeaturedBadgeId(userIdKey));
+    const validPreferred = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === preferred);
+    const next = validPreferred?.badgeId || earnedAwards[0]?.badgeId || '';
+    setFeaturedBadgeId(normalizeBadgeId(next));
+    if (next) persistFeaturedBadgeId(userIdKey, next);
+  }, [userIdKey, userProfile?.featured_badge_id, earnedAwardKey]);
+  const chooseNextFeaturedBadge = (e) => {
+    e.stopPropagation();
+    if (!earnedAwards.length) {
+      onOpen('badges');
+      return;
+    }
+    const currentIndex = Math.max(0, earnedAwards.findIndex(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)));
+    const next = earnedAwards[(currentIndex + 1) % earnedAwards.length];
+    setFeaturedBadgeId(normalizeBadgeId(next.badgeId));
+    saveFeaturedBadgeId(user?.id, next.badgeId).catch(err => console.warn('[Animaldex] Badge in evidenza non salvato su Supabase:', err));
   };
-  const items = [
-    { id:'taxonomy', label:'Albero', icon:'🌿' },
-    { id:'regions', label:'Regioni', icon:'🗺️' },
-    { id:'friends', label:'Amici', icon:'🤝' },
+  const drawerItems = [
     { id:'badges', label:'Badge', icon:'🏅' },
-    { id:'compare', label:'Comparatore', icon:'⚔️' },
     { id:'abilities', label:'Abilità', icon:'✨' },
+    { id:'compare', label:'Comparatore', icon:'⚔️' },
     { id:'profile', label:'Profilo', icon:'👤' },
     { id:'settings', label:'Impostazioni', icon:'⚙️' },
   ];
+  const boxBase = {
+    width:'100%',
+    borderRadius:24,
+    border:`1px solid ${lightPanelBorder}`,
+    color:pageText,
+    fontFamily:'inherit',
+    textAlign:'left',
+    cursor:'pointer',
+    boxSizing:'border-box',
+    boxShadow:isLightTheme?'0 14px 30px rgba(0,0,0,.08)':'0 16px 38px rgba(0,0,0,.22)',
+  };
+  const ProgressLine = ({ label, value, pct, color }) => (
+    <div style={{ marginTop:10 }}>
+      <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
+        <div style={{ color:pageText, fontSize:12, fontWeight:950 }}>{label}</div>
+        <div style={{ color:mutedText, fontSize:11.5, fontWeight:900 }}>{value}</div>
+      </div>
+      <div style={{ height:8, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.08)':'rgba(255,255,255,.09)', overflow:'hidden', marginTop:6 }}>
+        <div style={{ width:`${pct}%`, height:'100%', borderRadius:999, background:color }} />
+      </div>
+    </div>
+  );
   return (
-    <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.16), transparent 38%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
-      <PageHeader title="Mission Control" onBack={onBack} theme={theme} />
+    <div style={{ height:'100%', display:'flex', flexDirection:'column', position:'relative', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.13), transparent 36%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
+      <div style={{ height:62, display:'flex', alignItems:'center', justifyContent:'space-between', padding:'8px 14px', boxSizing:'border-box', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.08)', background:isLightTheme?LIGHT_HEADER_BG:'#14161A', flexShrink:0 }}>
+        <button onClick={()=>setNavOpen(true)} aria-label="Menu" style={{ width:44, height:44, borderRadius:14, border:'none', background:'transparent', display:'flex', flexDirection:'column', justifyContent:'center', gap:5, padding:'0 10px', cursor:'pointer' }}>
+          {[0,1,2].map(i => <span key={i} style={{ display:'block', width:22, height:2.5, borderRadius:4, background:isLightTheme?'#171717':'white' }} />)}
+        </button>
+        <div style={{ color:pageText, fontSize:20, fontWeight:1000 }}>Animaldex</div>
+        <div style={{ width:44, height:44 }} />
+      </div>
+
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
-        <button onClick={()=>onOpen('profile')} style={{ width:'100%', borderRadius:26, padding:16, background:'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', border:'1px solid rgba(255,255,255,.12)', boxShadow:'inset 0 1px 0 rgba(255,255,255,.06), 0 18px 40px rgba(0,0,0,.24)', marginBottom:14, color:'white', fontFamily:'inherit', textAlign:'left', cursor:'pointer' }}>
-          <div style={{ display:'flex', alignItems:'center', gap:12 }}>
-            <div style={{ width:54, height:54, borderRadius:18, background:'linear-gradient(135deg,rgba(216,210,196,.14),rgba(184,77,58,.16))', display:'flex', alignItems:'center', justifyContent:'center', color:'#D8D2C4', border:'1px solid rgba(255,255,255,.10)', fontSize:28 }}>🧭</div>
+        <button onClick={()=>onOpen('profile')} style={{ ...boxBase, padding:16, background:isLightTheme?'linear-gradient(135deg,#FBF7EF,#EFE7DA)':'linear-gradient(135deg,rgba(36,42,52,.96),rgba(17,19,23,.96)), radial-gradient(circle at top right, rgba(216,210,196,.10), transparent 40%)', marginBottom:14 }}>
+          <div style={{ display:'flex', alignItems:'center', gap:13 }}>
             <div style={{ flex:1, minWidth:0 }}>
-              <div style={{ color:'white', fontSize:18, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
-              <div style={{ color:'rgba(255,255,255,.56)', fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · Esploratore urbano · {progress.xp} / {nextLevelXP} XP</div>
+              <div style={{ color:pageText, fontSize:19, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
+              <div style={{ color:mutedText, fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · {progress.xp} / {nextLevelXP} XP</div>
               <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
+              <ProgressLine label="Avvistati" value={`${observedCount} / ${totalAnimals}`} pct={observedPct} color="linear-gradient(90deg,#D49374,#C87955)" />
+              <ProgressLine label="Catturati" value={`${progress.capturedCount} / ${totalAnimals}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" />
             </div>
-            <div style={{ color:'#F0A840', fontWeight:1000, fontSize:18 }}>🔥 3</div>
+            <button onClick={chooseNextFeaturedBadge} style={{ width:76, minHeight:94, borderRadius:20, border:`1px solid ${hexToRgba(featuredBadgeColor,.50)}`, background:featuredBadge?`linear-gradient(180deg, ${hexToRgba(featuredBadgeColor,.22)}, rgba(0,0,0,.18))`:'rgba(255,255,255,.055)', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:6, flexShrink:0, padding:8, cursor:'pointer' }}>
+              {featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:54, height:54, objectFit:'contain', filter:`drop-shadow(0 0 12px ${hexToRgba(featuredBadgeColor,.45)})` }} /> : <span style={{ color:mutedText, fontSize:28, fontWeight:1000 }}>+</span>}
+              <span style={{ color:featuredBadgeColor, fontSize:9.5, fontWeight:1000, lineHeight:1.1, textAlign:'center', maxWidth:'100%' }}>{featuredBadge ? `L${featuredBadge.level}` : 'Badge'}</span>
+            </button>
           </div>
         </button>
 
-        <div style={{ borderRadius:26, padding:18, background:'linear-gradient(135deg, rgba(22,10,5,.22), rgba(8,8,10,.48) 58%, rgba(8,8,10,.70)), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(245,241,234,.18)', boxShadow:'0 18px 44px rgba(0,0,0,.30)', marginBottom:14, overflow:'hidden' }}>
-          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:6 }}>{mission.title}</div>
-          <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:8 }}>{mission.desc}</div>
-          <button onClick={mission.action} style={{ marginTop:14, height:48, width:'100%', borderRadius:16, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontSize:13.5 }}>{mission.cta}</button>
+        <div style={{ ...boxBase, padding:18, background:'linear-gradient(135deg, rgba(92,37,30,.82), rgba(20,20,22,.96))', border:'1px solid rgba(184,77,58,.38)', marginBottom:14 }}>
+          <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Hai {searchedAnimalsCount} animali ricercati da avvistare.</div>
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:9, marginTop:14 }}>
+            <button onClick={()=>onOpenGridStatus?.(['ricercato'])} style={{ height:46, borderRadius:15, border:'none', background:'linear-gradient(135deg,#B84D3A,#D06A45)', color:'white', fontWeight:1000, fontFamily:'inherit' }}>Apri ricercati</button>
+            <button onClick={onQuickSeen} style={{ height:46, borderRadius:15, border:'1px solid rgba(240,168,64,.35)', background:'rgba(240,168,64,.12)', color:'#FFD4A3', fontWeight:1000, fontFamily:'inherit' }}>Avvista veloce</button>
+          </div>
         </div>
 
         <div style={{ marginBottom:14 }}>
-          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ position:'relative', width:'100%', minHeight:152, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:28, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden' }}>
+          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ position:'relative', width:'100%', minHeight:152, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:24, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden' }}>
             <div style={{ position:'absolute', inset:0, pointerEvents:'none', opacity:.86 }}>
               <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={152} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} fitDuration={0} />
             </div>
@@ -6299,38 +6384,10 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:10, marginBottom:14 }}>
-          <button onClick={onQuickSeen} style={{ minHeight:118, border:'1px solid rgba(240,168,64,.34)', borderRadius:22, background:'radial-gradient(circle at 92% 12%, rgba(240,168,64,.32), transparent 34%), linear-gradient(135deg,#1B1A18,#3B2415 72%)', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)' }}>
-            <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Avvista</div>
-            <div style={{ fontSize:22, fontWeight:1000, marginTop:6 }}>Veloce</div>
-            <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:5 }}>Identifica animali che potresti gia aver avvistato nei tuoi territori.</div>
-          </button>
-        </div>
-
-        <button onClick={()=>onOpenGridStatus?.(['ricercato','avvistato','catturato'])} style={{ width:'100%', border:'1px solid rgba(184,77,58,.44)', borderRadius:22, background:'radial-gradient(circle at 90% 0%, rgba(240,168,64,.18), transparent 30%), linear-gradient(135deg,rgba(92,37,30,.72),rgba(20,20,22,.96))', padding:16, textAlign:'left', marginBottom:14, fontFamily:'inherit', boxShadow:isLightTheme?'0 12px 30px rgba(0,0,0,.09)':'0 14px 34px rgba(0,0,0,.20)' }}>
-          {(() => {
-            const totalAnimals = Math.max(1, ANIMALS.length);
-            const unlockedCount = progress.searchedCount + progress.seenCount + progress.capturedCount;
-            const searchedPct = Math.max(0, Math.min(100, (unlockedCount / totalAnimals) * 100));
-            const seenPct = Math.max(0, Math.min(100, (progress.seenCount / Math.max(1, unlockedCount)) * 100));
-            const capturedPct = Math.max(0, Math.min(100, (progress.capturedCount / Math.max(1, unlockedCount)) * 100));
-            const Row = ({ label, valueText, pct, color, hint }) => (
-              <div style={{ marginTop:10 }}>
-                <div style={{ display:'flex', justifyContent:'space-between', gap:12, alignItems:'center' }}>
-                  <div style={{ color:'white', fontSize:12.5, fontWeight:900 }}>{label}</div>
-                  <div style={{ color:'rgba(255,255,255,.68)', fontSize:11.5, fontWeight:800 }}>{valueText}</div>
-                </div>
-                <div style={{ color:'rgba(255,255,255,.48)', fontSize:10.5, marginTop:2 }}>{hint}</div>
-                <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.10)', overflow:'hidden', marginTop:6 }}><div style={{ width:`${pct}%`, height:'100%', background:color, borderRadius:999 }} /></div>
-              </div>
-            );
-            return <>
-              <div style={{ color:'white', fontSize:18, fontWeight:1000 }}>Animaldex</div>
-              <Row label="🔭 Ricercati" valueText={`${unlockedCount} / ${totalAnimals}`} pct={searchedPct} color="linear-gradient(90deg,#D8D2C4,#F5F1EA)" hint="Animali ricercati sul totale del Dex" />
-              <Row label="Avvistati" valueText={`${progress.seenCount} / ${unlockedCount || 0}`} pct={seenPct} color="linear-gradient(90deg,#D49374,#C87955)" hint="Animali avvistati sui ricercati" />
-              <Row label="Catturati" valueText={`${progress.capturedCount} / ${unlockedCount || 0}`} pct={capturedPct} color="linear-gradient(90deg,#D06A45,#B84D3A)" hint="Animali catturati sui ricercati" />
-            </>;
-          })()}
+        <button onClick={()=>onOpen('lifeweb')} style={{ ...boxBase, minHeight:132, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg,#F4EFE4,#FBF7EF)':'radial-gradient(circle at 92% 12%, rgba(144,216,74,.22), transparent 34%), linear-gradient(135deg,#182018,#0E1110 72%)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)' }}>
+          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Evoluzione</div>
+          <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>Albero della vita</div>
+          <div style={{ color:mutedText, fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Esplora relazioni, catene e rami evolutivi del tuo Animaldex.</div>
         </button>
 
         {!!progress.nearlyCompletedBadges.length && <div style={{ marginBottom:14 }}>
@@ -6355,18 +6412,22 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
         </button>
-
-        <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.52)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Navigazione</div>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
-          {items.map(item=>{
-            const focused = tutorialFocus === item.id;
-            return <button key={item.id} data-tour={`menu-${item.id}`} onClick={()=>{ if(tutorialFocus && !focused) return; onOpen(item.id); }} style={{ minHeight:78, border:`1px solid ${lightPanelBorder}`, borderRadius:18, background:lightPanel, color:pageText, cursor:'pointer', padding:13, display:'flex', alignItems:'center', gap:10, textAlign:'left', boxShadow:focused?'0 0 0 3px #90D84A, 0 0 34px rgba(144,216,74,.45)':'none', opacity:tutorialFocus && !focused ? .42 : 1 }}>
-              <span style={{ width:38, height:38, borderRadius:14, background:isLightTheme?'rgba(0,0,0,.06)':'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:21 }}>{item.icon}</span>
-              <span style={{ fontSize:13, fontWeight:950 }}>{item.label}</span>
-            </button>
-          })}
-        </div>
       </div>
+      {navOpen && <div onClick={()=>setNavOpen(false)} style={{ position:'absolute', inset:0, zIndex:420, background:'rgba(0,0,0,.52)', display:'flex', alignItems:'stretch' }}>
+        <div onClick={e=>e.stopPropagation()} style={{ width:'min(82vw, 330px)', height:'100%', background:isLightTheme?'#FBF7EF':'#121417', borderRight:`1px solid ${lightPanelBorder}`, boxShadow:'24px 0 80px rgba(0,0,0,.45)', padding:'18px 14px', boxSizing:'border-box', color:pageText }}>
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:18 }}>
+            <div style={{ fontSize:20, fontWeight:1000 }}>Navigazione</div>
+            <button onClick={()=>setNavOpen(false)} aria-label="Chiudi" style={{ width:38, height:38, borderRadius:13, border:`1px solid ${lightPanelBorder}`, background:'transparent', color:pageText, fontSize:22, cursor:'pointer' }}>×</button>
+          </div>
+          <div style={{ display:'grid', gap:9 }}>
+            {drawerItems.map(item => <button key={item.id} onClick={()=>{ setNavOpen(false); onOpen(item.id); }} style={{ minHeight:58, border:`1px solid ${lightPanelBorder}`, borderRadius:17, background:lightPanel, color:pageText, cursor:'pointer', padding:'0 13px', display:'flex', alignItems:'center', gap:11, textAlign:'left', fontFamily:'inherit' }}>
+              <span style={{ width:38, height:38, borderRadius:14, background:isLightTheme?'rgba(0,0,0,.06)':'rgba(255,255,255,.10)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:20 }}>{item.icon}</span>
+              <span style={{ fontSize:14, fontWeight:950 }}>{item.label}</span>
+            </button>)}
+          </div>
+          <button onClick={()=>{ setNavOpen(false); onLogout?.(); }} style={{ width:'100%', height:50, marginTop:18, borderRadius:17, border:'1px solid rgba(184,77,58,.35)', background:'rgba(184,77,58,.10)', color:'#D06A45', fontWeight:1000, fontFamily:'inherit' }}>Esci</button>
+        </div>
+      </div>}
     </div>
   );
 }
@@ -7188,11 +7249,17 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
     await markSocialNotificationsRead(user?.id).catch(() => {});
     load();
   };
-  const FriendAvatar = ({ p }) => (
-    <div style={{ width:48, height:48, borderRadius:17, background:'linear-gradient(135deg,#7A331F,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:18, fontWeight:1000, flexShrink:0, overflow:'hidden' }}>
-      {p?.avatar_url ? <img src={p.avatar_url} alt="" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> : String(p?.nickname || p?.username || 'A').slice(0,1).toUpperCase()}
+  const FriendAvatar = ({ p }) => {
+    const featured = AWARD_RULES.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(p?.featured_badge_id));
+    return (
+    <div style={{ width:52, height:52, position:'relative', flexShrink:0 }}>
+      <div style={{ width:48, height:48, borderRadius:17, background:'linear-gradient(135deg,#7A331F,#F0A840)', display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:18, fontWeight:1000, overflow:'hidden' }}>
+        {p?.avatar_url ? <img src={p.avatar_url} alt="" style={{ width:'100%', height:'100%', objectFit:'cover' }} /> : String(p?.nickname || p?.username || 'A').slice(0,1).toUpperCase()}
+      </div>
+      {featured && <img src={buildAwardImagePath(featured.badgeId)} alt="" style={{ position:'absolute', right:-1, bottom:-1, width:24, height:24, objectFit:'contain', filter:'drop-shadow(0 3px 8px rgba(0,0,0,.42))' }} />}
     </div>
-  );
+    );
+  };
   const friendRows = snapshot.friends || [];
   const leaderboard = snapshot.leaderboard || [];
   const feed = snapshot.events || [];

@@ -81,6 +81,10 @@ create table if not exists public.user_reports (
 );
 
 create index if not exists user_reports_reporter_idx on public.user_reports (reporter_id, created_at desc);
+
+alter table public.user_profiles
+  add column if not exists featured_badge_id text;
+
 create index if not exists user_profiles_username_search_idx on public.user_profiles (lower(username));
 create index if not exists user_profiles_nickname_search_idx on public.user_profiles (lower(nickname));
 
