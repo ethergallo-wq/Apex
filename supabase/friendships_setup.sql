@@ -81,6 +81,8 @@ create table if not exists public.user_reports (
 );
 
 create index if not exists user_reports_reporter_idx on public.user_reports (reporter_id, created_at desc);
+create index if not exists user_profiles_username_search_idx on public.user_profiles (lower(username));
+create index if not exists user_profiles_nickname_search_idx on public.user_profiles (lower(nickname));
 
 alter table public.friendships enable row level security;
 alter table public.user_blocks enable row level security;
@@ -97,6 +99,32 @@ grant select, insert, delete on public.social_event_reactions to authenticated;
 grant select, insert, update on public.social_notifications to authenticated;
 grant insert, select on public.user_reports to authenticated;
 grant select, insert, update on public.user_profiles to authenticated;
+
+do $$
+begin
+  if exists (
+    select 1 from information_schema.columns
+    where table_schema = 'public'
+      and table_name = 'user_profiles'
+      and column_name = 'email'
+  ) then
+    update public.user_profiles
+    set
+      username = coalesce(nullif(trim(username), ''), nullif(split_part(email, '@', 1), ''), 'explorer_' || left(user_id::text, 8)),
+      nickname = coalesce(nullif(trim(nickname), ''), nullif(trim(username), ''), nullif(split_part(email, '@', 1), ''), 'Explorer ' || left(user_id::text, 4)),
+      updated_at = coalesce(updated_at, now())
+    where nullif(trim(coalesce(username, '')), '') is null
+       or nullif(trim(coalesce(nickname, '')), '') is null;
+  else
+    update public.user_profiles
+    set
+      username = coalesce(nullif(trim(username), ''), 'explorer_' || left(user_id::text, 8)),
+      nickname = coalesce(nullif(trim(nickname), ''), nullif(trim(username), ''), 'Explorer ' || left(user_id::text, 4)),
+      updated_at = coalesce(updated_at, now())
+    where nullif(trim(coalesce(username, '')), '') is null
+       or nullif(trim(coalesce(nickname, '')), '') is null;
+  end if;
+end $$;
 
 drop policy if exists "friendships_select_involved" on public.friendships;
 create policy "friendships_select_involved"

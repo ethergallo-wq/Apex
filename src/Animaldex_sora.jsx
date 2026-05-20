@@ -1231,16 +1231,33 @@ async function searchSocialProfiles(userId, query) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
   const pattern = `%${q}%`;
-  const { data, error } = await supabase
-    .from('user_profiles')
-    .select('user_id, username, nickname, avatar_url')
-    .neq('user_id', userId)
-    .or(`username.ilike.${pattern},nickname.ilike.${pattern}`)
-    .order('username', { ascending:true })
-    .limit(20);
-  if (error) throw error;
+  const baseSelect = 'user_id, username, nickname, avatar_url';
+  const [usernameResult, nicknameResult] = await Promise.all([
+    supabase
+      .from('user_profiles')
+      .select(baseSelect)
+      .neq('user_id', userId)
+      .ilike('username', pattern)
+      .order('username', { ascending:true })
+      .limit(12),
+    supabase
+      .from('user_profiles')
+      .select(baseSelect)
+      .neq('user_id', userId)
+      .ilike('nickname', pattern)
+      .order('username', { ascending:true })
+      .limit(12),
+  ]);
+  if (usernameResult.error) throw usernameResult.error;
+  if (nicknameResult.error) throw nicknameResult.error;
+  const merged = [...(usernameResult.data || []), ...(nicknameResult.data || [])]
+    .reduce((acc, row) => {
+      if (!row?.user_id || acc.some(existing => existing.user_id === row.user_id)) return acc;
+      acc.push(row);
+      return acc;
+    }, []);
   const normalizedQ = q.toLowerCase();
-  return (data || [])
+  return merged
     .map(normalizeSocialProfile)
     .sort((a, b) => {
       const aExact = String(a.username || '').toLowerCase() === normalizedQ || String(a.nickname || '').toLowerCase() === normalizedQ;
@@ -7378,6 +7395,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
           <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:12 }}>Account</div>
           {[
             ['Nome', displayName],
+            ['Username', userProfile?.username ? `@${userProfile.username}` : 'Non impostato'],
             ['Email', user?.email || '—'],
             ['Data di nascita', userProfile?.date_of_birth || 'Non impostata'],
             ['Genere', userProfile?.gender || 'Non impostato'],
