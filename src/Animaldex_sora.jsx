@@ -6319,7 +6319,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <button onClick={()=>onOpen('taxonomy')} style={{ ...boxBase, minHeight:132, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.82), rgba(251,247,239,.92)), url("/regions/tree_of_life.png")':'linear-gradient(135deg, rgba(8,14,10,.88), rgba(8,10,12,.70) 58%, rgba(8,10,12,.96)), url("/regions/tree_of_life.png")', backgroundSize:'cover', backgroundPosition:'center', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden' }}>
+        <button onClick={()=>onOpen('taxonomy')} style={{ ...boxBase, minHeight:132, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.38), rgba(251,247,239,.74)), url("/regions/tree_of_life.png")':'linear-gradient(135deg, rgba(4,8,5,.58), rgba(5,8,7,.30) 56%, rgba(5,7,8,.82)), url("/regions/tree_of_life.png")', backgroundSize:'cover', backgroundPosition:'center 46%', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden' }}>
           <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Tassonomia</div>
           <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>Albero della vita</div>
           <div style={{ color:mutedText, fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Apri l’albero tassonomico e naviga i rami dell’Animaldex.</div>
