@@ -207,7 +207,7 @@ const ANIMAL_STATUS = {
   misterioso: { label:'Misterioso', short:'MIST.', c:'#b7bbc3', bg:'rgba(255,255,255,.08)', border:'1.5px solid rgba(255,255,255,.18)', dot:'#b7bbc3', desc:'Identità non ancora rivelata.' },
   ricercato:  { label:'Ricercato',  short:'RIC.',  c:'#ffffff', bg:'rgba(255,255,255,.10)', border:'1.5px solid rgba(255,255,255,.24)', dot:'#ffffff', desc:'Specie ricercata nei tuoi territori, ma non ancora vista.' },
   avvistato:  { label:'Avvistato',  short:'AVV.',  c:'#C87955', bg:'rgba(200,121,85,.14)', border:'1.5px solid #C87955', dot:'#C87955', desc:'Dichiarata come vista dal vivo.' },
-  catturato:  { label:'Catturato',  short:'CAT.',  c:'#F5F1EA', bg:'rgba(184,77,58,.86)', border:'1.5px solid rgba(184,77,58,.72)', dot:'#B84D3A', desc:'Registrato nel tuo Animaldex tramite foto o conferma.' },
+  catturato:  { label:'Catturato',  short:'CAT.',  c:'#F5F1EA', bg:'rgba(184,77,58,.86)', border:'1.5px solid rgba(184,77,58,.72)', dot:'#B84D3A', desc:'Registrato nel tuo Apex tramite foto o conferma.' },
 };
 const ANIMAL_STATUS_ORDER = ['misterioso','ricercato','avvistato','catturato'];
 const ANIMAL_REVEALED_FIRST_ORDER = ['catturato','avvistato','ricercato','misterioso'];
@@ -314,7 +314,7 @@ function buildSimpleProgressState({ animals = ANIMALS, statusMap = {}, visitedCo
 }
 function getStatusActions(status) {
   const s = normalizeAnimalStatus(status);
-  if (s === 'ricercato') return [{ label:'Ho avvistato', action:'mark-seen' }, { label:'Cattura', action:'capture' }];
+  if (s === 'ricercato') return [{ label:'Avvistato', action:'mark-seen' }, { label:'Cattura', action:'capture' }];
   if (s === 'avvistato') return [{ label:'Cattura', action:'capture' }];
   return [];
 }
@@ -512,7 +512,7 @@ async function trackUserEvent(user, eventName, payload = {}, profile = null) {
       payload: cleanPayload,
     });
   } catch (err) {
-    console.warn('[Animaldex] tracking evento non salvato:', err);
+    console.warn('[Apex] tracking evento non salvato:', err);
   }
 }
 
@@ -706,13 +706,13 @@ async function ensureUserProfile(user) {
     // In signup con conferma email attiva Supabase può restituire un user non ancora utilizzabile
     // lato FK/RLS. Non blocchiamo l'app: riproveremo dopo login/sessione valida.
     if (insertError) {
-      console.warn('[Animaldex] Profilo non ancora creabile:', insertError);
+      console.warn('[Apex] Profilo non ancora creabile:', insertError);
       return false;
     }
 
     return true;
   } catch (err) {
-    console.warn('[Animaldex] ensureUserProfile skipped:', err);
+    console.warn('[Apex] ensureUserProfile skipped:', err);
     return false;
   }
 }
@@ -749,7 +749,7 @@ async function fetchUserProfile(user) {
       first_login_reward_shown: Boolean(data.first_login_reward_shown),
     }, user.id);
   } catch (err) {
-    console.warn('[Animaldex] fetchUserProfile fallback:', err);
+    console.warn('[Apex] fetchUserProfile fallback:', err);
     const username = getDefaultUsernameFromUser(user);
     return mergeProfileDemographics({
       user_id: user.id,
@@ -769,7 +769,7 @@ function withTimeout(promiseLike, ms, fallbackValue, label='timeout') {
     safePromise.finally(() => clearTimeout(timer)),
     new Promise(resolve => {
       timer = setTimeout(() => {
-        console.warn(`[Animaldex] ${label} dopo ${ms}ms`);
+        console.warn(`[Apex] ${label} dopo ${ms}ms`);
         resolve(fallbackValue);
       }, ms);
     })
@@ -880,7 +880,7 @@ async function persistOnboardingQuestionnaire(user, payload = {}) {
       updated_at: new Date().toISOString(),
     }, { onConflict:'user_id' });
   } catch (err) {
-    console.warn('[Animaldex] Questionario onboarding salvato solo localmente:', err);
+    console.warn('[Apex] Questionario onboarding salvato solo localmente:', err);
   }
 }
 
@@ -1195,7 +1195,7 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
       socialReady:true,
     };
   } catch (err) {
-    console.warn('[Animaldex] Social fallback:', err);
+    console.warn('[Apex] Social fallback:', err);
     return buildSocialFallback({ id:userId }, currentProfile, progress);
   }
 }
@@ -1483,8 +1483,8 @@ const BADGE_LEVEL_COLORS = {
 };
 
 const STATS_DEF = [
-  {k:'velocita',l:'Velocità', u:'km/h'},{k:'morso',l:'Morso', u:'PSI'},{k:'forza',l:'Forza', u:'%'},
-  {k:'resistenza',l:'Resistenza', u:'%'},{k:'intelligenza',l:'Intelligenza', u:'%'},{k:'agilita',l:'Agilità', u:'%'},
+  {k:'velocita',l:'Velocità', u:'km/h'},{k:'morso',l:'Morso', u:'PSI'},{k:'forza',l:'Forza', u:''},
+  {k:'resistenza',l:'Resistenza', u:''},{k:'intelligenza',l:'Intelligenza', u:''},{k:'agilita',l:'Agilità', u:''},
 ];
 
 const STAT_MAXES = {
@@ -1651,6 +1651,10 @@ const RARITY_CSS = `
   62% { transform: scale(1.018) translateY(0); opacity:1; border-radius:10px; filter:brightness(1.04); }
   100% { transform: scale(1) translateY(0); opacity:1; border-radius:0; filter:brightness(1); }
 }
+@keyframes animaldexFilterSheetUp {
+  0% { transform: translateY(24px); opacity:0; }
+  100% { transform: translateY(0); opacity:1; }
+}
 .animaldex-page-dive {
   animation: animaldexDiveIn .38s cubic-bezier(.18,.86,.24,1) both;
   transform-origin:center center;
@@ -1722,6 +1726,10 @@ const RARITY_CSS = `
 }
 
 #animaldex-app-root[data-theme="light"] { background:#F3EFE6 !important; color:#171717 !important; }
+#animaldex-app-root,
+#animaldex-app-root * {
+  box-sizing: border-box;
+}
 #animaldex-app-root[data-theme="light"] * { text-shadow:none !important; }
 #animaldex-app-root[data-theme="light"] input::placeholder { color:rgba(0,0,0,.42) !important; }
 #animaldex-app-root[data-theme="light"] input { color:#171717; }
@@ -2603,18 +2611,28 @@ const WEIGHT_CATS = [
 
 function getWeightAvgKg(wt_str) {
   if (!wt_str) return 0;
-  const s = String(wt_str).toLowerCase();
-  const mult = s.includes(' kg') ? 1 : s.includes(' g') ? 0.001 : 1;
-  const nums = s.match(/[\d.]+/g);
-  if (!nums) return 0;
-  return ((parseFloat(nums[0]) + parseFloat(nums[nums.length-1])) / 2) * mult;
+  const parsedGrams = parseRangeAverage(wt_str, 'mass');
+  if (Number.isFinite(parsedGrams) && parsedGrams > 0) return parsedGrams / 1000;
+  return 0;
+}
+function getWeightCatIndexForKg(avgKg) {
+  if (avgKg < 5) return 0;
+  if (avgKg < 100) return 1;
+  return 2;
 }
 
 function getWeightCat(wt_str) {
   const avg = getWeightAvgKg(wt_str);
-  if (avg < 5) return WEIGHT_CATS[0];
-  if (avg < 100) return WEIGHT_CATS[1];
-  return WEIGHT_CATS[2];
+  return WEIGHT_CATS[getWeightCatIndexForKg(avg)];
+}
+function getWeightCategoryBounds(catIdx) {
+  const values = (ANIMALS || [])
+    .map(a => getWeightAvgKg(a?.wt))
+    .filter(v => Number.isFinite(v) && v > 0 && getWeightCatIndexForKg(v) === catIdx)
+    .sort((a,b)=>a-b);
+  const fallback = WEIGHT_CATS[catIdx]?.range || [0.001, 1];
+  if (values.length < 2) return { min:fallback[0], max:fallback[1] };
+  return { min:values[0], max:values[values.length - 1] };
 }
 
 function getGaugeAngle(wt_str) {
@@ -2624,8 +2642,9 @@ function getGaugeAngle(wt_str) {
     { min:5, max:100, start:-26, end:26 },
     { min:100, max:2300, start:30, end:82 },
   ];
-  const idx = avg < 5 ? 0 : avg < 100 ? 1 : 2;
-  const seg = ranges[idx];
+  const idx = getWeightCatIndexForKg(avg);
+  const catBounds = getWeightCategoryBounds(idx);
+  const seg = { ...ranges[idx], min:Math.max(0.001, catBounds.min), max:Math.max(catBounds.min + 0.001, catBounds.max) };
   const ratio = Math.max(0, Math.min(1, (Math.log10(avg) - Math.log10(seg.min)) / Math.max(0.0001, (Math.log10(seg.max) - Math.log10(seg.min)))));
   return seg.start + (seg.end - seg.start) * ratio;
 }
@@ -2667,7 +2686,7 @@ function GaugeSVG({ wt_str, large=false }) {
   const n2 = polarToXY(angle + 4, 8);
 
   return (
-    <svg viewBox="0 0 120 82" width="100%" height={large ? 185 : 52} xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 120 82" width="100%" height={large ? undefined : 52} xmlns="http://www.w3.org/2000/svg" style={{ display:'block', width:'100%', height:large?'auto':52, maxHeight:large?'min(31dvh, 230px)':52 }}>
       <g dangerouslySetInnerHTML={{ __html: arcs }} />
       <polygon points={`${n1.x},${n1.y} ${nx},${ny} ${n2.x},${n2.y}`} fill={col} />
       <circle cx={cx} cy={cy} r="4.6" fill={col} />
@@ -2726,9 +2745,12 @@ function EarSilhouette({ h = 72 }) {
   );
 }
 function ScaleComparison({ animal, full=false }) {
+  const viewportW = typeof window !== 'undefined' ? window.innerWidth : 390;
+  const viewportH = typeof window !== 'undefined' ? window.innerHeight : 800;
+  const availableW = Math.max(280, Math.min(520, viewportW - 70));
   const lengthCm = parseAnimalLengthCm(animal?.ln);
   const ref = getLengthReference(lengthCm);
-  const maxPx = full ? 178 : 62;
+  const maxPx = full ? Math.min(178, Math.max(128, Math.round(viewportH * .23))) : 62;
   const minPx = full ? 20 : 8;
   const maxCm = Math.max(ref.cm, lengthCm || 0.1);
   const pxPerCm = maxPx / maxCm;
@@ -2737,22 +2759,26 @@ function ScaleComparison({ animal, full=false }) {
   const animalIsMystery = isMysteryStatus(animal?.status);
   const animalSrc = animalIsMystery ? (CLASS_ICONS[animal?.cls] || CLASS_ICONS.Mammalia) : (animal?.image_url || MYSTERY_PLACEHOLDER);
   const animalBounds = useImagePixelBounds(!animalIsMystery ? getAnimalImageUrl(animal) : '');
-  const stageHeight = full ? 196 : 68;
-  const floorY = full ? 178 : 62;
-  const refSlotW = full ? 170 : 66;
-  const animalSlotW = full ? 218 : 84;
+  const stageHeight = full ? Math.min(196, Math.max(152, Math.round(viewportH * .25))) : 68;
+  const floorY = full ? Math.max(128, stageHeight - 18) : 62;
+  const refSlotW = full ? Math.max(92, Math.min(160, Math.round(availableW * .34))) : 66;
+  const animalSlotW = full ? Math.max(130, Math.min(212, Math.round(availableW * .50))) : 84;
   const refNudge = full ? 8 : 4;
   const animalNudge = full ? 0 : -2;
   const animalVisibleAspect = animalBounds?.width && animalBounds?.height ? animalBounds.width / animalBounds.height : 1;
   const animalMaxWidth = Math.min(animalSlotW - 6, Math.max(full ? 92 : 34, animalPx * Math.max(.72, animalVisibleAspect)));
+  const naturalAspect = animalBounds?.naturalWidth && animalBounds?.naturalHeight ? animalBounds.naturalWidth / animalBounds.naturalHeight : 1;
+  const renderedAnimalHeight = Math.min(animalPx, animalMaxWidth / Math.max(.01, naturalAspect));
+  const animalTransparentBottom = animalBounds?.naturalHeight ? Math.max(0, animalBounds.naturalHeight - (animalBounds.y + animalBounds.height)) / animalBounds.naturalHeight : 0;
+  const animalBottomOffset = Math.round(renderedAnimalHeight * animalTransparentBottom);
   return (
-	    <div style={{ width:'100%', minHeight:full?252:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center' }}>
+	    <div style={{ width:'100%', minHeight:full?stageHeight + 34:72, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
 	      <div style={{ width:'100%', height:stageHeight, position:'relative', display:'grid', gridTemplateColumns:`${refSlotW}px ${animalSlotW}px`, justifyContent:'center', alignItems:'end', columnGap:full?12:2, padding:full?'18px 8px 8px':'2px 0 0', boxSizing:'border-box' }}>
 	        <div style={{ height:'100%', width:refSlotW, display:'flex', justifyContent:'flex-end', alignItems:'flex-end', transform:`translateX(${refNudge}px)`, paddingBottom:Math.max(0, stageHeight - floorY), boxSizing:'border-box' }}>
 	          <img src={ref.src} alt={ref.label} style={{ maxHeight:referencePx, maxWidth:full?144:58, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', opacity:.96 }} />
 	        </div>
 	        <div style={{ height:'100%', width:animalSlotW, display:'flex', justifyContent:'flex-start', alignItems:'flex-end', transform:`translateX(${animalNudge}px)`, paddingBottom:Math.max(0, stageHeight - floorY), boxSizing:'border-box' }}>
-	          <img src={animalSrc} alt="" style={{ maxWidth:animalMaxWidth, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
+	          <img src={animalSrc} alt="" style={{ maxWidth:animalMaxWidth, maxHeight:animalPx, width:'auto', height:'auto', objectFit:'contain', objectPosition:'center bottom', display:'block', transform:`translateY(${animalBottomOffset}px)`, filter:animalIsMystery?'none':'brightness(0) invert(1)', imageRendering:'-webkit-optimize-contrast', opacity:animalIsMystery ? .78 : 1 }} />
 	        </div>
       </div>
     </div>
@@ -2767,15 +2793,15 @@ function TrophicPyramid({ trophic, compact = false, showLabels = false, large=fa
   const svgW = compact ? 72 : large ? 286 : 130;
   const svgH = compact ? 50 : large ? 220 : 96;
   return (
-    <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap: showLabels ? 16 : 0 }}>
-      <svg viewBox={`0 0 ${vbW} ${rowH*5}`} width={svgW} height={svgH} xmlns="http://www.w3.org/2000/svg" style={{ overflow:'visible' }}>
+    <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap: showLabels ? 12 : 0, flexWrap:showLabels?'wrap':'nowrap', width:'100%', maxWidth:'100%', overflow:'hidden' }}>
+      <svg viewBox={`0 0 ${vbW} ${rowH*5}`} width={svgW} height={large ? undefined : svgH} xmlns="http://www.w3.org/2000/svg" style={{ overflow:'visible', width:large ? (showLabels ? 'clamp(132px, 44vw, 286px)' : 'min(76vw, 286px)') : svgW, height:large?'auto':svgH, maxHeight:large?'min(29dvh, 220px)':svgH, flex:'0 1 auto' }}>
         {PYRAMID_LEVELS.map((lv, i) => {
           const isActive = lv.key === activeKey;
           const x = (vbW - widths[i]) / 2;
           return <rect key={lv.key} x={x} y={i*rowH} width={widths[i]} height={barH} rx="2.5" fill={isActive ? lv.c : 'rgba(255,255,255,.16)'} opacity={isActive ? 1 : .82} />;
         })}
       </svg>
-      {showLabels && <div style={{ display:'grid', gap:6, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv => <div key={lv.key} style={{ display:'flex', alignItems:'center', gap:8, color:'rgba(255,255,255,.78)', fontSize:12, fontWeight:750 }}><span style={{ width:18, height:8, borderRadius:5, background:lv.c, flexShrink:0 }} />{lv.label}</div>)}</div>}
+      {showLabels && <div style={{ display:'grid', gap:6, textAlign:'left', minWidth:128, maxWidth:'100%', flex:'1 1 128px' }}>{PYRAMID_LEVELS.map(lv => <div key={lv.key} style={{ display:'flex', alignItems:'center', gap:8, color:'rgba(255,255,255,.78)', fontSize:12, fontWeight:750, lineHeight:1.12 }}><span style={{ width:18, height:8, borderRadius:5, background:lv.c, flexShrink:0 }} />{lv.label}</div>)}</div>}
     </div>
   );
 }
@@ -2786,15 +2812,22 @@ function StatRow({ label, base, scale, color, unit }) {
   const maxValue = statKey ? STAT_MAXES[statKey] : 100;
   const realValue = Math.round(base * scale);
   const barWidth = Math.min(100, Math.round((realValue / maxValue) * 100));
+  const valueLabel = unit ? `${realValue} ${unit}` : String(realValue);
   return (
     <div style={{ minHeight:40, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
       <span style={{ color:'rgba(255,255,255,.80)', fontSize:12, fontWeight:950, lineHeight:1.05 }}>{label}</span>
       <div style={{ height:9, background:'rgba(0,0,0,.48)', borderRadius:999, overflow:'hidden', boxShadow:'inset 0 1px 3px rgba(255,255,255,.04)' }}>
         <div style={{ height:'100%', width:`${barWidth}%`, background:`linear-gradient(90deg, ${color}A8, ${color})`, borderRadius:999, transition:'width .65s cubic-bezier(.4,0,.2,1)', boxShadow:`0 0 16px ${color}55` }} />
       </div>
-      <span style={{ color:'white', fontSize:12.5, fontWeight:950, textAlign:'right', lineHeight:1.05 }}>{realValue} {unit}</span>
+      <span style={{ color:'white', fontSize:12.5, fontWeight:950, textAlign:'right', lineHeight:1.05 }}>{valueLabel}</span>
     </div>
   );
+}
+function getLifespanLogPct(value) {
+  const n = Number(value || 0);
+  if (!Number.isFinite(n) || n <= 0) return 0;
+  const max = Math.max(1, ...(ANIMALS || []).map(a => Number(a?.lifespan || 0)).filter(v => Number.isFinite(v) && v > 0));
+  return Math.max(0, Math.min(100, Math.round((Math.log10(n + 1) / Math.log10(max + 1)) * 100)));
 }
 
 function useAutoUnflip(flipped, setFlipped, delay = 5000) {
@@ -3630,7 +3663,7 @@ function MultiSheet({ title, options, selected, onApply, onClose, withSearch }) 
         )}
       </div>
       <div style={{ position:'sticky', bottom:0, background:'#2A2A2C', padding:'10px 14px 24px', display:'flex', gap:8, flexShrink:0 }}>
-        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Annulla</button>
+        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Indietro</button>
         <button onClick={()=>{onApply([...local]);onClose();}} style={{ flex:2, height:44, borderRadius:12, background:'#E8C040', color:'#1A1000', fontSize:14, fontWeight:800, border:'none', cursor:'pointer' }}>Applica</button>
       </div>
     </Sheet>
@@ -3654,7 +3687,7 @@ function SortSheet({ title, options, selected, onApply, onClose }) {
         })}
       </div>
       <div style={{ position:'sticky', bottom:0, background:'#2A2A2C', padding:'10px 14px 24px', display:'flex', gap:8, flexShrink:0 }}>
-        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Annulla</button>
+        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Indietro</button>
         <button onClick={()=>{onApply(local);onClose();}} style={{ flex:2, height:44, borderRadius:12, background:'#E8C040', color:'#1A1000', fontSize:14, fontWeight:800, border:'none', cursor:'pointer' }}>Applica</button>
       </div>
     </Sheet>
@@ -3711,7 +3744,7 @@ function TaxSheet({ onApply, onClose, current }) {
         })}
       </div>
       <div style={{ position:'sticky', bottom:0, background:'#2A2A2C', padding:'10px 14px 28px', display:'flex', gap:8 }}>
-        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Annulla</button>
+        <button onClick={onClose} style={{ flex:1, height:44, borderRadius:12, background:'#3A3A3C', color:'rgba(255,255,255,.6)', fontSize:14, fontWeight:700, border:'none', cursor:'pointer' }}>Indietro</button>
         <button onClick={()=>{onApply(selected);onClose();}} style={{ flex:2, height:44, borderRadius:12, background:'#E8C040', color:'#1A1000', fontSize:14, fontWeight:800, border:'none', cursor:'pointer' }}>Applica filtro</button>
       </div>
     </Sheet>
@@ -3780,6 +3813,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const [sheet, setSheet]     = useState(null);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [activeFilter, setActiveFilter] = useState(null);
   const [showInfoModalGrid, setShowInfoModalGrid] = useState(false);
   const [fRarity, setFRarity]     = useState([]);
   const [fCons,   setFCons]       = useState([]);
@@ -3797,6 +3831,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
   const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
   const isLightTheme = theme === 'light';
+  const pageText = isLightTheme ? '#171717' : 'white';
 
   useEffect(() => {
     if (!preset?.id) return;
@@ -3815,6 +3850,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     setFHabitat(preset.habitats || []);
     setFTax(preset.tax || null);
     setSortBy(preset.sortBy || 'no');
+    setShowMenu(false);
+    setActiveFilter(null);
   }, [preset?.id]);
 
   const hasExplicitPreset = !!preset?.id;
@@ -3879,6 +3916,41 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     { value:'status', label:'Status', c:'#FFFFFF', bg:'rgba(255,255,255,.12)' },
     { value:'class', label:'Classe', c:'#90D84A', bg:'rgba(144,216,74,.16)' },
   ];
+  const resetFilters = () => {
+    setSearch('');
+    setClsF(null);
+    setFRarity([]);
+    setFCons([]);
+    setFStatus(['ricercato']);
+    setFTrophic([]);
+    setFGeography([]);
+    setFCategory([]);
+    setFConfidence([]);
+    setFMapProfile([]);
+    setFBioRegion([]);
+    setFGameRegion([]);
+    setFHabitat([]);
+    setFTax(null);
+    setSortBy('no');
+    setActiveFilter(null);
+  };
+  const toggleFilterValue = (setter, value) => setter(prev => {
+    const list = Array.isArray(prev) ? prev : [];
+    return list.includes(value) ? list.filter(v => v !== value) : [...list, value];
+  });
+  const filterDefs = [
+    { key:'status', label:'Status', tone:'#F0A840', selected:fStatus, setter:setFStatus, options:statusOpts, layout:'quarters', hint:'Misteriosi, ricercati, avvistati o catturati' },
+    { key:'rarity', label:'Rarità', tone:'#D9B86F', selected:fRarity, setter:setFRarity, options:rarityOpts, layout:'quarters', hint:'Comune, non comune, raro, leggendario' },
+    { key:'cons', label:'Conservazione', tone:'#EF6A63', selected:fCons, setter:setFCons, options:consOpts, hint:'Stati IUCN' },
+    { key:'trophic', label:'Catena', tone:'#90D84A', selected:fTrophic, setter:setFTrophic, options:trophicOpts, hint:'Ruolo alimentare' },
+    { key:'category', label:'Categorie', tone:'#B98CFF', selected:fCategory, setter:setFCategory, options:categoryOpts, hint:'Abilità e tag' },
+    { key:'geography', label:'Geografia', tone:'#6CE5C7', selected:fGeography, setter:setFGeography, options:geographyOpts, hint:'Nazioni e aree' },
+    { key:'tax', label:'Tassonomia', tone:'#E8C040', selected:fTax ? [fTax.value] : [], open:()=>{ setSheet('tax'); setShowMenu(false); setActiveFilter(null); }, hint:'Albero tassonomico' },
+  ];
+  const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
+  const bottomCountLabel = fStatus.length === 1 && ANIMAL_STATUS[fStatus[0]]
+    ? ANIMAL_STATUS[fStatus[0]].label.toLowerCase()
+    : 'animali filtrati';
   const buttonSize = isNarrow ? 40 : 46;
 
   return (
@@ -3893,27 +3965,12 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:isLightTheme?'#171717':'white', fontSize:isNarrow?17:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Animaldex'}</span>
+        <span style={{ color:isLightTheme?'#171717':'white', fontSize:isNarrow?17:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
         <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'none', border:'none', color:isLightTheme?'rgba(0,0,0,.68)':'rgba(255,255,255,.8)', fontSize:22, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:10, flexShrink:0 }}>ⓘ</button>
       </div>
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div data-animaldex-bar="true" style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, padding:isNarrow?'10px 10px 8px':'12px 12px 10px', flexShrink:0, background:isLightTheme?'rgba(255,255,255,.35)':'rgba(0,0,0,.08)' }}>
-        {[
-          ['misterioso','Misteriosi'],
-          ['ricercato','Ricercati'],
-          ['avvistato','Avvistati'],
-          ['catturato','Catturati']
-        ].map(([key,label]) => {
-          const active = fStatus.length === 1 && fStatus.includes(key) && !fRarity.length;
-          const tutorialStatusHighlight = tutorialStep === 'grid-status';
-          const activeColor = key === 'ricercato' ? DEX.status.ricercato : key === 'avvistato' ? DEX.status.avvistato : key === 'catturato' ? DEX.status.catturato : (isLightTheme ? '#8F8F8F' : 'rgba(255,255,255,.28)');
-          const inactiveColor = isLightTheme ? 'rgba(0,0,0,.50)' : 'rgba(245,241,234,.88)';
-          const activeText = isLightTheme ? '#171717' : '#F5F1EA';
-          return <button key={key} onClick={()=>{ setFRarity([]); setFStatus([key]); }} style={{ minWidth:0, height:isNarrow?38:42, padding:'0 6px', borderRadius:12, border:`1px solid ${tutorialStatusHighlight ? '#F0A840' : (active ? activeColor : (isLightTheme?'rgba(0,0,0,.12)':'rgba(255,255,255,.09)'))}`, background:active?(STATUS_GRADIENTS[key] || `linear-gradient(180deg, ${hexToRgba(activeColor,.18)}, rgba(255,255,255,.03))`):(STATUS_FILTER_GRADIENTS[key] || (isLightTheme?LIGHT_APP_BG:'rgba(255,255,255,.045)')), color:active ? activeText : inactiveColor, boxShadow:tutorialStatusHighlight ? '0 0 0 3px rgba(240,168,64,.28), 0 0 24px rgba(240,168,64,.28)' : (active ? `0 7px 16px ${hexToRgba(activeColor, .16)}` : (isLightTheme?'0 4px 12px rgba(0,0,0,.04)':'none')), fontSize:isNarrow?10.2:11, fontWeight:950, fontFamily:'inherit', lineHeight:1 }}>{label}</button>
-        })}
-      </div>
       <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0', background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))' }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
@@ -3926,7 +3983,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
             : isSeenTab
               ? 'Qui compaiono gli animali che hai dichiarato come visti dal vivo.'
               : isCapturedTab
-                ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Animaldex.'
+                ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Apex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
           return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
         })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
@@ -3938,12 +3995,12 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{`${list.length} ${(fStatus[0] && ANIMAL_STATUS[fStatus[0]]?.label.toLowerCase()) || 'ricercati'}`}</div>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{`${list.length} ${bottomCountLabel}`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </button>
-            <button data-tour="grid-filters" onClick={()=>setShowMenu(v=>!v)} aria-label="Filtra" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
+            <button data-tour="grid-filters" onClick={()=>{ setShowMenu(v=>!v); setActiveFilter(null); }} aria-label="Filtra" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:showMenu?'rgba(0,0,0,.28)':'rgba(0,0,0,.10)', border:`1px solid ${showMenu?'rgba(255,255,255,.24)':'rgba(255,255,255,.08)'}`, color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h13M10 17h10" stroke="currentColor" strokeWidth="2.3" strokeLinecap="round"/></svg>
             </button>
           </div>
@@ -3951,24 +4008,62 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       </div>
 
       {showMenu && (
-        <div data-animaldex-card="true" style={{ position:'absolute', top:isNarrow?94:100, right:12, width:280, background:'#252527', border:'1px solid #333', borderRadius:24, boxShadow:'0 12px 32px rgba(0,0,0,.5)', zIndex:40, overflow:'hidden' }}>
-          <div style={{ display:'flex', flexDirection:'column' }}>
-            {[
-              { label:'Tassonomia', icon:'⌬', onClick:()=>{setSheet('tax');setShowMenu(false);}, active:!!fTax, color:'#E8C040' },
-              { label:'Rarità', icon:'★', onClick:()=>{setSheet('rarity');setShowMenu(false);}, active:fRarity.length>0, color:'#C9A961' },
-              { label:'Conservazione', icon:'🛡', onClick:()=>{setSheet('cons');setShowMenu(false);}, active:fCons.length>0, color:'#DC143C' },
-              { label:'Gerarchia', icon:'⛓', onClick:()=>{setSheet('trophic');setShowMenu(false);}, active:fTrophic.length>0, color:'#F5A828' },
-              { label:'Status', icon:'📷', onClick:()=>{setSheet('status');setShowMenu(false);}, active:fStatus.length>0, color:'#00BFFF' },
-              { label:'Categorie', icon:'◉', onClick:()=>{setSheet('category');setShowMenu(false);}, active:fCategory.length>0, color:'#B860F8' },
-              { label:'Geografia', icon:'🌍', onClick:()=>{setSheet('geography');setShowMenu(false);}, active:fGeography.length>0, color:'#20B2AA' },
-            ].map((item,i)=>(
-              <button key={i} onClick={item.onClick} style={{ width:'100%', padding:'14px 16px', borderBottom:'1px solid rgba(255,255,255,.05)', background:'transparent', border:'none', display:'flex', alignItems:'center', gap:12, cursor:'pointer', color:item.active?item.color:'white', fontWeight:item.active?700:600 }}>
-                <span style={{ fontSize:18 }}>{item.icon}</span>
-                <span style={{ fontSize:14 }}>{item.label}</span>
-                {item.active && <span style={{ marginLeft:'auto', color:item.color, fontSize:12 }}>✓</span>}
-              </button>
-            ))}
-            <button onClick={()=>{setSearch('');setClsF(null);setFRarity([]);setFCons([]);setFStatus(['ricercato']);setFTrophic([]);setFGeography([]);setFCategory([]);setFConfidence([]);setFMapProfile([]);setFBioRegion([]);setFGameRegion([]);setFHabitat([]);setFTax(null);setSortBy('no');setShowMenu(false);}} style={{ width:'100%', padding:'14px 16px', background:'rgba(255,0,0,.1)', border:'none', color:'#FF6B6B', cursor:'pointer', fontWeight:700, fontSize:14 }}>Resetta filtri</button>
+        <div style={{ position:'absolute', left:0, right:0, bottom:isNarrow?52:58, zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
+          <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
+            <div style={{ width:44, height:4, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.18)':'rgba(255,255,255,.20)', margin:'0 auto 10px' }} />
+            {!activeFilterDef ? (
+              <>
+                <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:10 }}>
+                  <div>
+                    <div style={{ color:pageText, fontSize:17, fontWeight:1000, lineHeight:1 }}>Filtri</div>
+                    <div style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(255,255,255,.50)', fontSize:10.5, fontWeight:800, marginTop:3 }}>Scegli una variabile</div>
+                  </div>
+                  <button onClick={resetFilters} style={{ height:34, padding:'0 12px', borderRadius:14, border:'1px solid rgba(184,77,58,.30)', background:'rgba(184,77,58,.14)', color:isLightTheme?'#9E3F2D':'#FFB49B', fontSize:11, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Reset</button>
+                </div>
+                <div style={{ display:'flex', gap:8, overflowX:'auto', WebkitOverflowScrolling:'touch', paddingBottom:2 }}>
+                  {filterDefs.map(def => {
+                    const activeCount = Array.isArray(def.selected) ? def.selected.length : (def.selected ? 1 : 0);
+                    return (
+                      <button key={def.key} onClick={()=>def.open ? def.open() : setActiveFilter(def.key)} style={{ minWidth:isNarrow?118:128, height:74, borderRadius:18, border:`1px solid ${activeCount ? hexToRgba(def.tone,.68) : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)')}`, background:activeCount ? `linear-gradient(135deg, ${hexToRgba(def.tone,.24)}, rgba(255,255,255,.045))` : (isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.045)'), color:pageText, padding:11, textAlign:'left', fontFamily:'inherit', cursor:'pointer', flexShrink:0, boxShadow:activeCount ? `0 8px 20px ${hexToRgba(def.tone,.14)}` : 'none' }}>
+                        <div style={{ color:activeCount ? def.tone : (isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.58)'), fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.4 }}>{activeCount ? `${activeCount} attivi` : 'Filtro'}</div>
+                        <div style={{ fontSize:14, fontWeight:1000, marginTop:5, lineHeight:1.05 }}>{def.label}</div>
+                        <div style={{ color:isLightTheme?'rgba(0,0,0,.44)':'rgba(255,255,255,.42)', fontSize:9.5, fontWeight:700, marginTop:4, lineHeight:1.15 }}>{def.hint}</div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            ) : (
+              <>
+                <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:10 }}>
+                  <button onClick={()=>setActiveFilter(null)} style={{ height:34, padding:'0 12px', borderRadius:14, border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.10)', background:isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.065)', color:pageText, fontSize:11, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Indietro</button>
+                  <div style={{ minWidth:0, flex:1 }}>
+                    <div style={{ color:activeFilterDef.tone, fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.6 }}>Variabile</div>
+                    <div style={{ color:pageText, fontSize:17, fontWeight:1000, lineHeight:1.05 }}>{activeFilterDef.label}</div>
+                  </div>
+                  <button onClick={()=>activeFilterDef.setter(activeFilterDef.options.map(opt=>opt.value))} style={{ height:34, padding:'0 10px', borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:hexToRgba(activeFilterDef.tone,.18), color:activeFilterDef.tone, fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Tutti</button>
+                  <button onClick={()=>activeFilterDef.setter([])} style={{ height:34, padding:'0 10px', borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.62)', fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Cancella</button>
+                </div>
+                <div style={{ display:'grid', gridTemplateColumns:activeFilterDef.layout === 'quarters' ? 'repeat(4, minmax(0, 1fr))' : 'repeat(2, minmax(0, 1fr))', gap:8, maxHeight:activeFilterDef.layout === 'quarters' ? 92 : 238, overflowY:'auto', WebkitOverflowScrolling:'touch', paddingRight:activeFilterDef.layout === 'quarters' ? 0 : 2 }}>
+                  {activeFilterDef.options.map(opt => {
+                    const selected = activeFilterDef.selected.includes(opt.value);
+                    const tone = opt.c || activeFilterDef.tone;
+                    const isStatus = activeFilterDef.key === 'status';
+                    const isRarity = activeFilterDef.key === 'rarity';
+                    const displayLabel = isStatus ? ANIMAL_STATUS[opt.value]?.label : prettyFilterLabel(opt.label || opt.value, activeFilterDef.label);
+                    const bg = selected
+                      ? (isStatus ? (STATUS_GRADIENTS[opt.value] || opt.bg) : `linear-gradient(180deg, ${hexToRgba(tone,.22)}, rgba(255,255,255,.055))`)
+                      : (isStatus ? (STATUS_FILTER_GRADIENTS[opt.value] || 'rgba(255,255,255,.045)') : (isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'));
+                    return (
+                      <button key={opt.value} onClick={()=>toggleFilterValue(activeFilterDef.setter, opt.value)} style={{ minHeight:activeFilterDef.layout === 'quarters' ? 58 : 48, borderRadius:16, border:`1px solid ${selected ? hexToRgba(tone,.72) : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)')}`, background:bg, color:selected ? (isLightTheme?'#171717':'white') : (isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)'), fontSize:activeFilterDef.layout === 'quarters' ? (isNarrow?9.2:10) : 11.5, fontWeight:1000, lineHeight:1.08, fontFamily:'inherit', cursor:'pointer', padding:activeFilterDef.layout === 'quarters' ? '7px 4px' : '8px 10px', textAlign:'center', boxShadow:selected ? `0 8px 18px ${hexToRgba(tone,.12)}` : 'none', overflow:'hidden' }}>
+                        {isRarity && <span style={{ display:'block', width:8, height:8, borderRadius:999, background:tone, margin:'0 auto 5px', opacity:selected ? .9 : .52 }} />}
+                        <span style={{ display:'block', overflow:'hidden', textOverflow:'ellipsis' }}>{displayLabel}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
@@ -4232,7 +4327,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
         const { data, error:fnError } = await supabase.functions.invoke('identify-animal', { body:payload });
         if (!fnError && data?.matches?.length) aiMatches = data.matches;
       } catch (fnErr) {
-        console.warn('[Animaldex] identify-animal non disponibile:', fnErr);
+        console.warn('[Apex] identify-animal non disponibile:', fnErr);
       }
       if (!aiMatches.length) {
         // Fallback sicuro: non riconosce davvero l'immagine, propone conferma manuale con controlli habitat/GPS.
@@ -4246,7 +4341,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
       }).filter(Boolean).slice(0,3);
       setMatches(hydrated);
     } catch (err) {
-      console.warn('[Animaldex] photo recognition:', err);
+      console.warn('[Apex] photo recognition:', err);
       setError(err?.message || 'Riconoscimento non riuscito.');
     } finally {
       setLoading(false);
@@ -4281,7 +4376,7 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
             <div style={{ color:'#90D84A', fontWeight:1000, fontSize:12 }}>Conferma</div>
           </button>)}
         </div>}
-        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>“Catturato” significa registrato nel tuo Animaldex. Nessun animale viene catturato fisicamente.</div>
+        <div style={{ color:'rgba(255,255,255,.42)', fontSize:10.5, lineHeight:1.4, marginTop:12 }}>“Catturato” significa registrato nel tuo Apex. Nessun animale viene catturato fisicamente.</div>
       </div>
     </div>
   );
@@ -4291,15 +4386,15 @@ function PhotoRecognitionModal({ animal, animals = [], user, onClose, onConfirm 
 function FullscreenMetricModal({ open, title, subtitle='', onClose, children }) {
   if (!open) return null;
   return (
-    <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:340, background:'rgba(0,0,0,.90)', display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
-      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:520, borderRadius:28, background:'linear-gradient(180deg,#16181C,#0F1012)', border:'1px solid rgba(255,255,255,.10)', boxShadow:'0 30px 80px rgba(0,0,0,.58)', padding:20 }}>
-        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, marginBottom:14 }}>
-          <div>
+    <div onClick={onClose} style={{ position:'fixed', inset:0, zIndex:340, background:'rgba(0,0,0,.90)', display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)', overflow:'hidden' }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:520, maxHeight:'calc(var(--animaldex-app-height, 100dvh) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px)', overflowY:'auto', WebkitOverflowScrolling:'touch', overscrollBehavior:'contain', borderRadius:28, background:'linear-gradient(180deg,#16181C,#0F1012)', border:'1px solid rgba(255,255,255,.10)', boxShadow:'0 30px 80px rgba(0,0,0,.58)', padding:'clamp(14px, 4vw, 20px)' }}>
+        <div style={{ display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:10, marginBottom:14 }}>
+          <div style={{ minWidth:0, flex:1 }}>
             <div style={{ color:'#F0A840', fontSize:11, fontWeight:1000, letterSpacing:.7, textTransform:'uppercase' }}>Approfondimento</div>
-            <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>{title}</div>
+            <div style={{ color:'white', fontSize:'clamp(20px, 6vw, 24px)', fontWeight:1000, lineHeight:1.05 }}>{title}</div>
             {subtitle ? <div style={{ color:'rgba(255,255,255,.58)', fontSize:12, marginTop:5, lineHeight:1.45 }}>{subtitle}</div> : null}
           </div>
-          <button onClick={onClose} style={{ width:38, height:38, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer' }}>×</button>
+          <button onClick={onClose} style={{ width:40, height:40, borderRadius:18, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', flexShrink:0 }}>×</button>
         </div>
         {children}
       </div>
@@ -4382,7 +4477,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', overflow:'hidden', background:isLightTheme ? LIGHT_APP_BG : 'linear-gradient(180deg,#101216 0%,#17191D 44%,#1A1A1C 100%)' }}>
       <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'13px 16px 11px', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'rgba(0,0,0,.12)' }}>
-        <button onClick={onBack} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:'0 12px', height:36, display:'flex', alignItems:'center', justifyContent:'center' }}>‹ Animaldex</button>
+        <button onClick={onBack} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:c.accent, fontSize:15, fontWeight:700, cursor:'pointer', padding:'0 12px', height:36, display:'flex', alignItems:'center', justifyContent:'center' }}>‹ Apex</button>
         <span aria-hidden style={{ flex:1 }} />
         <button onClick={()=>setShowInfoModal(!showInfoModal)} style={{ background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:isLightTheme?'rgba(0,0,0,.62)':'rgba(255,255,255,.8)', fontSize:20, cursor:'pointer', padding:'4px 8px', width:36, height:36, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:18 }}>ⓘ</button>
       </div>
@@ -4425,9 +4520,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
           <p style={{ margin:'4px 0 0', color:c.accent, fontSize:15, fontStyle:'italic', fontWeight:400 }}>{a.sci}</p>
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:14, padding:'0 4px' }}>
-          <div data-tour="animal-rarity" style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
-          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
-          <div data-tour="animal-status" style={{ width:'100%', opacity:.86, filter:'saturate(.75)', borderRadius:18, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
+          <div data-tour="animal-status" style={{ width:'100%', borderRadius:18, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}><StatusBadge status={localStatus} accentColor={c.accent}/></div>
           {statusActions.length > 0 && (
             <div style={{ marginTop:4 }}>
               <div style={{ color:isLightTheme?'rgba(0,0,0,.50)':'rgba(255,255,255,.48)', fontSize:10, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase', margin:'0 0 6px 2px' }}>Azioni</div>
@@ -4440,8 +4533,12 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
         <div data-animaldex-card="true" style={{ background:detailPanel, border:detailPanelBorder, borderRadius:24, padding:14, marginBottom:10, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.22), 0 0 24px rgba(240,168,64,.18)':'none' }}>
           <p style={{ margin:0, color:isLightTheme?'rgba(0,0,0,.74)':'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{a.desc}</p>
         </div>
+        <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:8, marginBottom:10, padding:'0 4px' }}>
+          <div data-tour="animal-rarity" style={{ width:'100%', opacity:.88, filter:'saturate(.86)', boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none', borderRadius:18 }}><RarityBadge rarity={a.rarity || 'Comune'} full style={{ width:'100%', fontSize:13.5 }} /></div>
+          <div data-tour="animal-conservation" style={{ background:co.bg, borderRadius:18, padding:'9px 12px', color:co.c, fontSize:12, fontWeight:700, textAlign:'center', opacity:.90, boxShadow:tutorialStep==='detail-overview'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>{co.lbl} · {co.full}</div>
+        </div>
         <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.56)', fontSize:10.5, lineHeight:1.45, margin:'0 4px 16px' }}>
-          {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Animaldex, non cattura fisica.
+          {visitedMatches ? `Presente in ${visitedMatches} dei tuoi paesi · ` : ''}{(a.rarity || 'Comune')}, {a.rarity === 'Comune' ? 'facile da catturare' : a.rarity === 'Leggendario' ? 'molto raro' : 'da documentare'} · “Catturato” significa registrato nel tuo Apex, non cattura fisica.
         </div>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:18 }}>
           <button onClick={()=>{setMetricModal('peso'); if(tutorialStep==='detail-metrics') { setTimeout(()=>setMetricModal(null), 520); onTutorialMetricClick?.(); }}} style={{ height:112, minHeight:112, width:'100%', minWidth:0, background:'#111113', borderRadius:20, padding:'8px 8px 10px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:3, border:'1px solid rgba(255,255,255,.06)', fontFamily:'inherit', cursor:'pointer', boxSizing:'border-box', boxShadow:tutorialStep==='detail-metrics'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
@@ -4501,20 +4598,20 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
                 isRevealedStatus(localStatus) ? (
                   <div data-tour="animal-stats" data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:'12px', height:'100%', boxSizing:'border-box', display:'flex', flexDirection:'column', gap:7, justifyContent:'space-between' }}>
                     <StatRow label='Velocità' base={a.stats?.velocita ?? 0} scale={scale} color={c.accent} unit='km/h'/>
-                    <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>
+                    {Number(a.stats?.morso || 0) > 0 && <StatRow label='Morso' base={a.stats?.morso ?? 0} scale={scale} color={c.accent} unit='PSI'/>}
                     {a.lifespan != null && (
                       <div style={{ minHeight:40, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.065)', padding:'8px 11px', boxSizing:'border-box', display:'grid', gridTemplateColumns:'92px 1fr 66px', alignItems:'center', gap:9 }}>
-                        <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>Vita</span>
+                        <span style={{ color:'rgba(255,255,255,.78)', fontSize:12.5, fontWeight:900, lineHeight:1.1 }}>Lifespan</span>
                         <div style={{ flex:1, height:9, background:'rgba(0,0,0,.4)', borderRadius:4, overflow:'hidden' }}>
-                          <div style={{ height:'100%', width:`${Math.min(100, Math.round((a.lifespan / 200) * 100))}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
+                          <div style={{ height:'100%', width:`${getLifespanLogPct(a.lifespan)}%`, background:c.accent, borderRadius:4, transition:'width .65s cubic-bezier(.4,0,.2,1)' }} />
                         </div>
                         <span style={{ color:'white', fontSize:12.5, fontWeight:900, textAlign:'right' }}>{a.lifespan} anni</span>
                       </div>
                     )}
-                    <StatRow label='Forza' base={a.stats?.forza ?? 0} scale={scale} color={c.accent} unit='%'/>
-                    <StatRow label='Resistenza' base={a.stats?.resistenza ?? 0} scale={scale} color={c.accent} unit='%'/>
-                    <StatRow label='Intelligenza' base={a.stats?.intelligenza ?? 0} scale={scale} color={c.accent} unit='%'/>
-                    <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit='%'/>
+                    <StatRow label='Forza' base={a.stats?.forza ?? 0} scale={scale} color={c.accent} unit=''/>
+                    <StatRow label='Resistenza' base={a.stats?.resistenza ?? 0} scale={scale} color={c.accent} unit=''/>
+                    <StatRow label='Intelligenza' base={a.stats?.intelligenza ?? 0} scale={scale} color={c.accent} unit=''/>
+                    <StatRow label='Agilità' base={a.stats?.agilita ?? 0} scale={scale} color={c.accent} unit=''/>
                   </div>
                 ) : (
                   <div data-animaldex-card="true" style={{ background:'rgba(0,0,0,.35)', borderRadius:24, padding:20, textAlign:'center' }}>
@@ -4553,23 +4650,23 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
 
       {/* Info Modal */}
       <FullscreenMetricModal open={metricModal==='peso'} title="Peso" subtitle="Il tachimetro divide il peso in tre fasce: pesi piuma, pesi medi e pesi massimi. La lancetta si muove solo dentro la fascia corretta: a sinistra per i valori più leggeri della categoria, a destra per i più pesanti." onClose={()=>setMetricModal(null)}>
-        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'26px 18px 18px', textAlign:'center' }}>
-	          <div style={{ maxWidth:500, margin:'10px auto -22px', transform:'translateY(18px)' }}><GaugeSVG wt_str={a.wt} large /></div>
-	          <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:-10, marginBottom:10 }}>{getWeightCat(a.wt).label}</div>
-          <div style={{ color:'white', fontSize:30, fontWeight:1000, marginTop:6 }}>{a.wt}</div>
+        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'clamp(14px, 4vw, 22px)', textAlign:'center', overflow:'hidden' }}>
+	          <div style={{ width:'min(100%, 420px)', margin:'0 auto 4px' }}><GaugeSVG wt_str={a.wt} large /></div>
+	          <div style={{ color:getWeightCat(a.wt).color, fontWeight:1000, marginTop:0, marginBottom:8 }}>{getWeightCat(a.wt).label}</div>
+          <div style={{ color:'white', fontSize:'clamp(24px, 8vw, 30px)', fontWeight:1000, marginTop:6, lineHeight:1.05 }}>{a.wt}</div>
         </div>
       </FullscreenMetricModal>
       <FullscreenMetricModal open={metricModal==='dimensioni'} title="Dimensioni" subtitle="Il confronto usa sempre la stessa scala tra anteprima e zoom. Le misure in metri vengono convertite in centimetri, così animali grandi come bovini o cervi non risultano artificialmente minuscoli." onClose={()=>setMetricModal(null)}>
-        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
+        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'clamp(12px, 4vw, 18px)', textAlign:'center', overflow:'hidden' }}>
           <ScaleComparison animal={a} full />
         </div>
-        <div style={{ color:'white', textAlign:'center', fontSize:28, fontWeight:1000, marginTop:12 }}>{a.ln}</div>
+        <div style={{ color:'white', textAlign:'center', fontSize:'clamp(20px, 7vw, 28px)', fontWeight:1000, marginTop:12, lineHeight:1.08, overflowWrap:'anywhere' }}>{a.ln}</div>
       </FullscreenMetricModal>
       <FullscreenMetricModal open={metricModal==='trofico'} title="Piramide alimentare" subtitle="La piramide mostra sempre tutti i gradini della rete trofica. Il gradino colorato indica il ruolo dell’animale." onClose={()=>setMetricModal(null)}>
-        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:18, textAlign:'center' }}>
-          <div style={{ transform:'translateY(8px)' }}><TrophicPyramid trophic={a.trophic} showLabels large /></div>
-          <div style={{ color:'white', fontSize:24, fontWeight:1000, marginTop:10 }}>{activePyramidLevel.label}</div>
-          <div style={{ display:'grid', gap:8, marginTop:16, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv=><div key={lv.key} style={{ display:'grid', gridTemplateColumns:'22px 150px 1fr', alignItems:'center', gap:10, color:'rgba(255,255,255,.78)', fontSize:12 }}><div style={{ width:18, height:8, borderRadius:4, background:lv.c }} /><strong style={{ color:'white' }}>{lv.label}</strong><span>{lv.desc}</span></div>)}</div>
+        <div style={{ background:'rgba(255,255,255,.04)', borderRadius:20, padding:'clamp(12px, 4vw, 18px)', textAlign:'center', overflow:'hidden' }}>
+          <div><TrophicPyramid trophic={a.trophic} showLabels large /></div>
+          <div style={{ color:'white', fontSize:'clamp(20px, 6vw, 24px)', fontWeight:1000, marginTop:10, lineHeight:1.1 }}>{activePyramidLevel.label}</div>
+          <div style={{ display:'grid', gap:8, marginTop:16, textAlign:'left' }}>{PYRAMID_LEVELS.map(lv=><div key={lv.key} style={{ display:'grid', gridTemplateColumns:'18px minmax(92px, 132px) minmax(0,1fr)', alignItems:'center', gap:8, color:'rgba(255,255,255,.78)', fontSize:11.5, lineHeight:1.25 }}><div style={{ width:16, height:8, borderRadius:4, background:lv.c }} /><strong style={{ color:'white' }}>{lv.label}</strong><span>{lv.desc}</span></div>)}</div>
         </div>
       </FullscreenMetricModal>
       {showInfoModal && (
@@ -4773,7 +4870,7 @@ function useCountryGeoJson() {
         throw lastErr;
       })();
     }
-    COUNTRY_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Animaldex] country geojson:', err); if (alive) setError(true); });
+    COUNTRY_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Apex] country geojson:', err); if (alive) setError(true); });
     return () => { alive = false; };
   }, []);
   return { data, error };
@@ -4811,7 +4908,7 @@ function useBioregionGeoJson() {
         throw lastErr;
       })();
     }
-    BIOREGION_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Animaldex] bioregion geojson:', err); if (alive) setError(true); });
+    BIOREGION_GEOJSON_PROMISE.then(json => { if (alive) setData(json); }).catch(err => { console.warn('[Apex] bioregion geojson:', err); if (alive) setError(true); });
     return () => { alive = false; };
   }, []);
   return { data, error };
@@ -5146,7 +5243,7 @@ function MapLibreGeoJsonMap({
       });
       mapRef.current = map;
       if (interactive && showControls) map.addControl(new maplibregl.NavigationControl({ showCompass:false }), 'bottom-right');
-      try { map.setProjection?.({ type:'globe' }); } catch (err) { console.warn('[Animaldex] Globe projection:', err); }
+      try { map.setProjection?.({ type:'globe' }); } catch (err) { console.warn('[Apex] Globe projection:', err); }
       map.on('load', () => {
         if (cancelled) return;
         loadedRef.current = true;
@@ -5190,9 +5287,9 @@ function MapLibreGeoJsonMap({
         if (interactive) ['wheel','mousedown','touchstart','pointerdown'].forEach(eventName => canvas.addEventListener(eventName, markUserInteraction, { passive:true }));
         setReady(true);
       });
-      map.on('error', (evt) => console.warn('[Animaldex] MapLibre:', evt?.error || evt));
+      map.on('error', (evt) => console.warn('[Apex] MapLibre:', evt?.error || evt));
     }).catch(err => {
-      console.warn('[Animaldex] MapLibre runtime:', err);
+      console.warn('[Apex] MapLibre runtime:', err);
       if (!cancelled) setError(err?.message || 'Mappa non disponibile');
     });
     return () => {
@@ -5246,7 +5343,7 @@ function MapLibreGeoJsonMap({
 
   useEffect(() => {
     const map = mapRef.current;
-    if (!ready || !map || !autoSpin || !interactive) return;
+    if (!ready || !map || !autoSpin) return;
     if (spinFrameRef.current) cancelAnimationFrame(spinFrameRef.current);
     const canSpin = boundsAreGlobalEnoughForSpin(fitBounds);
     let previous = performance.now();
@@ -5277,7 +5374,7 @@ function MapLibreGeoJsonMap({
       {error && <div style={{ position:'absolute', inset:0, display:'flex', alignItems:'center', justifyContent:'center', color:'rgba(255,255,255,.68)', fontSize:11, fontWeight:900, textAlign:'center', padding:18, background:'linear-gradient(135deg,#151515,#07131F)' }}>{error}</div>}
       {title && <div style={{ position:'absolute', left:12, top:10, color:'white', fontSize:12, fontWeight:1000, textShadow:'0 2px 10px rgba(0,0,0,.85)', pointerEvents:'none' }}>{title}</div>}
       <div style={{ position:'absolute', right:10, top:10, display:'flex', gap:6 }}>
-        <button data-sound="map" onClick={(e)=>{e.stopPropagation();recenter();}} aria-label="Ricentra mappa" style={{ width:36, height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.54)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>
+        {showControls && <button data-sound="map" onClick={(e)=>{e.stopPropagation();recenter();}} aria-label="Ricentra mappa" style={{ width:36, height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.54)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:16, fontWeight:900, lineHeight:1, padding:0 }}>⌖</button>}
         {fullscreen && <button data-sound="back" onClick={(e)=>{e.stopPropagation(); onCloseFullscreen?.();}} aria-label="Chiudi mappa" style={{ width:36, height:36, borderRadius:12, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.54)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer', fontSize:18, fontWeight:900, lineHeight:1, padding:0 }}>×</button>}
       </div>
       {label && <div style={{ position:'absolute', left:10, right:10, bottom:10, background:'rgba(0,0,0,.58)', border:'1px solid rgba(255,255,255,.10)', borderRadius:14, padding:'8px 10px', color:'white', fontSize:11, fontWeight:900, backdropFilter:'blur(6px)', pointerEvents:'none' }}>{label}</div>}
@@ -5330,7 +5427,7 @@ function useSpeciesRange(animal) {
         return fetchJsonMaybeGzip(meta.url).then(data => ({ meta, data }));
       })
       .then(next => { if (alive) setState({ ...next, loading:false, error:null }); })
-      .catch(err => { console.warn('[Animaldex] range specie:', err); if (alive) setState({ meta:null, data:null, loading:false, error:err }); });
+      .catch(err => { console.warn('[Apex] range specie:', err); if (alive) setState({ meta:null, data:null, loading:false, error:err }); });
     return () => { alive = false; };
   }, [sci]);
   return state;
@@ -5746,7 +5843,7 @@ function OperationalTutorialOverlay({ step, animal, onNext, onPrev, onFinish, on
       title:'La tua base',
       kicker:'Home',
       body:'La Home raccoglie il tuo livello, la missione consigliata, le scorciatoie rapide e l’accesso alle sezioni. Per iniziare davvero si entra nella griglia: è il catalogo operativo di Apex.',
-      hint:'Tocca “Animaldex” nella navigazione evidenziata.',
+      hint:'Tocca “Apex” nella navigazione evidenziata.',
       action:null,
     },
     'grid-status': {
@@ -5864,10 +5961,10 @@ function SectionIntroModal({ section, onClose }) {
     abilities:{ title:'Abilità', kicker:'Mini guida', body:'Le abilità sono i superpoteri biologici di Apex: veleno, mimetismo, intelligenza, velocità, migrazioni, corazze, record, vita estrema. Sono raggruppate per famiglia e ogni card mostra quanti animali la possiedono. Tocca un’abilità per aprire il dettaglio, poi puoi saltare alla griglia già filtrata con tutte le specie collegate.', action:'Scelgo un’abilità' },
     compare:{ title:'Comparatore', kicker:'Mini guida', body:'Il comparatore mette due animali fianco a fianco per confrontare dimensioni, peso, statistiche e ruolo ecologico. Usalo quando vuoi capire le differenze in modo immediato.' },
     profile:{ title:'Profilo', kicker:'Mini guida', body:'Il profilo riassume progressi, animali ricercati, avvistati e catturati, badge ottenuti e dati del tuo percorso. È la memoria personale del tuo Apex.' },
-    friends:{ title:'Amici', kicker:'Mini guida', body:'Qui Animaldex diventa una spedizione condivisa: cerca altri giocatori solo per username, manda richieste, guarda i progressi degli amici e reagisci alle catture rare o leggendarie con messaggi preset. Niente chat e niente testo libero: più gioco, più privacy, meno rumore.' },
+    friends:{ title:'Amici', kicker:'Mini guida', body:'Qui Apex diventa una spedizione condivisa: cerca altri giocatori solo per username, manda richieste, guarda i progressi degli amici e reagisci alle catture rare o leggendarie con messaggi preset. Niente chat e niente testo libero: più gioco, più privacy, meno rumore.' },
     gallery:{ title:'Galleria', kicker:'Mini guida', body:'La galleria raccoglie le immagini e le catture collegate al tuo percorso. È pensata come archivio visivo delle specie che hai documentato.' },
     lifeweb:{ title:'LifeWeb', kicker:'Mini guida', body:'LifeWeb mostra relazioni alimentari e ruoli ecologici. È una lettura della rete, non solo della singola specie: predatori, prede, risorse e connessioni.' },
-    quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'È il modo più veloce per aggiornare l’Animaldex con gli animali che hai già avvistato. Apex ti propone specie ad alta probabilità in base alle nazioni visitate e alla facilità di incontro: tu rispondi al volo, il Dex si aggiorna e i progressi iniziano a correre.' },
+    quickSeen:{ title:'Avvistamento rapido', kicker:'Mini guida', body:'È il modo più veloce per aggiornare Apex con gli animali che hai già avvistato. Apex ti propone specie ad alta probabilità in base alle nazioni visitate e alla facilità di incontro: tu rispondi al volo, il Dex si aggiorna e i progressi iniziano a correre.' },
   }[section];
   if (!copy) return null;
   return (
@@ -6009,7 +6106,7 @@ function OnboardingFlow({ user, animals = [], initialNickname='', onComplete, on
       setResult(data || timeoutResult);
       setStep('wow');
     } catch (err) {
-      console.warn('[Animaldex] Onboarding sync failed:', err);
+      console.warn('[Apex] Onboarding sync failed:', err);
       setError(err?.message || 'Sincronizzazione non completata. Puoi riprovare o continuare: Apex tenterà di salvare in background.');
       setResult({ ok:false, unlocked_count:Math.max(predictedUnlocks, selectedCountries.length), seen_count:seenAnimals.length, badge_ids:['ONB-01-L1'] });
       setStep('review');
@@ -6335,7 +6432,7 @@ function AuthScreen({ onAuthReady }) {
   return (
     <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif", display:'flex', alignItems:'center', justifyContent:'center', padding:22, boxSizing:'border-box' }}>
       <form onSubmit={submit} style={{ width:'100%', background:'linear-gradient(180deg,#222226,#161618)', border:'1px solid rgba(255,255,255,.10)', borderRadius:28, padding:24, boxShadow:'0 28px 80px rgba(0,0,0,.45)' }}>
-        <div style={{ color:'#90D84A', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Animaldex</div>
+        <div style={{ color:'#90D84A', fontSize:13, fontWeight:900, textTransform:'uppercase', letterSpacing:.9 }}>Apex</div>
         <h1 style={{ margin:'8px 0 6px', fontSize:30, lineHeight:1.05 }}>Accedi</h1>
         <p style={{ margin:'0 0 18px', color:'rgba(255,255,255,.58)', fontSize:13, lineHeight:1.45 }}>Login richiesto per sincronizzare animali, destinazioni, status e badge con Supabase.</p>
         <input type="email" required value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" style={{ width:'100%', height:46, borderRadius:14, border:'1px solid rgba(255,255,255,.12)', background:'#2B2B30', color:'white', padding:'0 14px', fontSize:14, boxSizing:'border-box', marginBottom:10 }} />
@@ -6358,6 +6455,8 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const progress = buildSimpleProgressState({ animals:ANIMALS, statusMap, visitedCountries, earnedBadgeIds });
   const [socialPreview, setSocialPreview] = useState(() => buildSocialFallback(user, userProfile, progress));
   const [navOpen, setNavOpen] = useState(false);
+  const [territoryLaunch, setTerritoryLaunch] = useState(false);
+  const territoryLaunchTimerRef = useRef(null);
   const userIdKey = user?.id || 'guest';
   const unlockedAwardSet = new Set([
     ...(earnedBadgeIds || []).map(normalizeBadgeId),
@@ -6367,6 +6466,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const earnedAwardKey = earnedAwards.map(rule => normalizeBadgeId(rule.badgeId)).join('|');
   const [featuredBadgeId, setFeaturedBadgeId] = useState(() => getFeaturedBadgeId(userIdKey));
   const [profileBgPickerOpen, setProfileBgPickerOpen] = useState(false);
+  const [badgePickerOpen, setBadgePickerOpen] = useState(false);
   const [profileBgImage, setProfileBgImage] = useState(() => getProfileBackgroundImage(userIdKey));
   useEffect(() => {
     let alive = true;
@@ -6387,8 +6487,21 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const xpPct = Math.max(0, Math.min(100, ((progress.xp - currLevelXP) / Math.max(1, nextLevelXP - currLevelXP)) * 100));
   const animalsWithStatus = progress.animalsWithStatus;
   const searchedAnimalsCount = animalsWithStatus.filter(a => a.status === 'ricercato').length;
+  const awardMetrics = computeAwardMetrics(statusMap, visitedCountries);
   const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
+  const featuredBadgeName = featuredBadge?.name || 'Scegli badge';
+  useEffect(() => () => {
+    if (territoryLaunchTimerRef.current) window.clearTimeout(territoryLaunchTimerRef.current);
+  }, []);
+  const openTerritoriesFromHome = () => {
+    if (territoryLaunch) return;
+    setTerritoryLaunch(true);
+    territoryLaunchTimerRef.current = window.setTimeout(() => {
+      (onOpenRegions || (() => onOpen('regions')))();
+      setTerritoryLaunch(false);
+    }, 260);
+  };
   useEffect(() => {
     const preferred = normalizeBadgeId(userProfile?.featured_badge_id || getFeaturedBadgeId(userIdKey));
     const validPreferred = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === preferred);
@@ -6396,16 +6509,20 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     setFeaturedBadgeId(normalizeBadgeId(next));
     if (next) persistFeaturedBadgeId(userIdKey, next);
   }, [userIdKey, userProfile?.featured_badge_id, earnedAwardKey]);
-  const chooseNextFeaturedBadge = (e) => {
+  const openFeaturedBadgePicker = (e) => {
     e.stopPropagation();
     if (!earnedAwards.length) {
       onOpen('badges');
       return;
     }
-    const currentIndex = Math.max(0, earnedAwards.findIndex(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)));
-    const next = earnedAwards[(currentIndex + 1) % earnedAwards.length];
-    setFeaturedBadgeId(normalizeBadgeId(next.badgeId));
-    saveFeaturedBadgeId(user?.id, next.badgeId).catch(err => console.warn('[Animaldex] Badge in evidenza non salvato su Supabase:', err));
+    setBadgePickerOpen(true);
+  };
+  const chooseFeaturedBadge = (rule) => {
+    if (!rule?.badgeId) return;
+    setFeaturedBadgeId(normalizeBadgeId(rule.badgeId));
+    persistFeaturedBadgeId(userIdKey, rule.badgeId);
+    saveFeaturedBadgeId(user?.id, rule.badgeId).catch(err => console.warn('[Apex] Badge in evidenza non salvato su Supabase:', err));
+    setBadgePickerOpen(false);
   };
   useEffect(() => {
     const next = normalizeProfileBackgroundImage(userProfile?.profile_background_image || getProfileBackgroundImage(userIdKey));
@@ -6416,10 +6533,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     const clean = normalizeProfileBackgroundImage(image);
     setProfileBgImage(clean);
     persistProfileBackgroundImage(userIdKey, clean);
-    saveProfileBackgroundImage(user?.id, clean).catch(err => console.warn('[Animaldex] Sfondo profilo non salvato su Supabase:', err));
+    saveProfileBackgroundImage(user?.id, clean).catch(err => console.warn('[Apex] Sfondo profilo non salvato su Supabase:', err));
     setProfileBgPickerOpen(false);
   };
-  const profileBgLabel = String(profileBgImage || '').split('/').pop()?.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ') || 'Regione';
   const drawerItems = [
     { id:'badges', label:'Badge', icon:'🏅' },
     { id:'abilities', label:'Abilità', icon:'✨' },
@@ -6445,25 +6561,25 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         <button onClick={()=>setNavOpen(true)} aria-label="Menu" style={{ width:44, height:44, borderRadius:14, border:'none', background:'transparent', display:'flex', flexDirection:'column', justifyContent:'center', gap:5, padding:'0 10px', cursor:'pointer' }}>
           {[0,1,2].map(i => <span key={i} style={{ display:'block', width:22, height:2.5, borderRadius:4, background:isLightTheme?'#171717':'white' }} />)}
         </button>
-        <div style={{ color:pageText, fontSize:20, fontWeight:1000 }}>Animaldex</div>
+        <div style={{ color:pageText, fontSize:20, fontWeight:1000 }}>Apex</div>
         <div style={{ width:44, height:44 }} />
       </div>
 
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
-        <button onClick={()=>onOpen('profile')} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.92), rgba(251,247,239,.68) 56%, rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.94), rgba(17,19,23,.72) 56%, rgba(17,19,23,.42)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
+        <div role="button" tabIndex={0} onClick={()=>onOpen('profile')} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.92), rgba(251,247,239,.68) 56%, rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.94), rgba(17,19,23,.72) 56%, rgba(17,19,23,.42)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
           <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'radial-gradient(circle at 80% 16%, rgba(216,210,196,.16), transparent 36%)' }} />
           <div style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:14, height:'100%' }}>
             <div style={{ flex:1, minWidth:0 }}>
               <div style={{ color:pageText, fontSize:19, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{displayName}</div>
               <div style={{ color:mutedText, fontSize:11.5, marginTop:2 }}>Liv. {progress.level} · {progress.xp} / {nextLevelXP} XP</div>
               <div style={{ height:8, borderRadius:999, background:'rgba(255,255,255,.08)', overflow:'hidden', marginTop:9 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
-              <button onClick={(e)=>{ e.stopPropagation(); setProfileBgPickerOpen(true); }} style={{ marginTop:12, height:30, padding:'0 11px', borderRadius:15, border:'1px solid rgba(255,255,255,.16)', background:isLightTheme?'rgba(255,255,255,.60)':'rgba(0,0,0,.30)', color:pageText, fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer', maxWidth:'100%', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>Sfondo · {profileBgLabel}</button>
+              <button onClick={openFeaturedBadgePicker} style={{ marginTop:12, height:30, padding:'0 11px', borderRadius:15, border:'1px solid rgba(255,255,255,.16)', background:isLightTheme?'rgba(255,255,255,.60)':'rgba(0,0,0,.30)', color:pageText, fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer', maxWidth:'100%', overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>Badge · {featuredBadgeName}</button>
             </div>
-            <button onClick={chooseNextFeaturedBadge} style={{ width:104, height:116, borderRadius:24, border:`1px solid ${hexToRgba(featuredBadgeColor,.50)}`, background:featuredBadge?`linear-gradient(180deg, ${hexToRgba(featuredBadgeColor,.24)}, rgba(0,0,0,.20))`:'rgba(255,255,255,.055)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, padding:10, cursor:'pointer', boxShadow:`0 12px 30px ${hexToRgba(featuredBadgeColor,.18)}` }}>
+            <button onClick={openFeaturedBadgePicker} style={{ width:104, height:116, borderRadius:24, border:`1px solid ${hexToRgba(featuredBadgeColor,.50)}`, background:featuredBadge?`linear-gradient(180deg, ${hexToRgba(featuredBadgeColor,.24)}, rgba(0,0,0,.20))`:'rgba(255,255,255,.055)', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, padding:10, cursor:'pointer', boxShadow:`0 12px 30px ${hexToRgba(featuredBadgeColor,.18)}` }}>
               {featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:84, height:84, objectFit:'contain', filter:`drop-shadow(0 0 16px ${hexToRgba(featuredBadgeColor,.50)})` }} /> : <span style={{ color:mutedText, fontSize:34, fontWeight:1000 }}>+</span>}
             </button>
           </div>
-        </button>
+        </div>
 
         <div style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.88), rgba(20,20,22,.78) 58%, rgba(20,20,22,.94)), url("/regions/animals_general.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
@@ -6475,9 +6591,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         </div>
 
         <div style={{ marginBottom:14 }}>
-          <button onClick={onOpenRegions || (()=>onOpen('regions'))} style={{ position:'relative', width:'100%', height:homeBoxHeight, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:24, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden' }}>
-            <div style={{ position:'absolute', inset:0, pointerEvents:'none', opacity:.86 }}>
-              <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={152} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} fitDuration={0} />
+          <button onClick={openTerritoriesFromHome} style={{ position:'relative', width:'100%', height:homeBoxHeight, border:`1px solid ${isLightTheme?'rgba(0,0,0,.10)':'rgba(108,229,199,.24)'}`, borderRadius:24, background:'linear-gradient(90deg, rgba(5,11,13,.82), rgba(5,11,13,.42) 58%, rgba(5,11,13,.18))', color:'#F5F1EA', fontFamily:'inherit', textAlign:'left', padding:'20px 98px 20px 18px', cursor:'pointer', boxShadow:isLightTheme?'0 16px 34px rgba(0,0,0,.09)':'inset 0 1px 0 rgba(255,255,255,.06), 0 16px 34px rgba(0,0,0,.22)', overflow:'hidden', transform:territoryLaunch?'scale(1.045)':'scale(1)', transition:'transform .26s cubic-bezier(.2,.8,.2,1), border-color .26s ease, box-shadow .26s ease', transformOrigin:'center center' }}>
+            <div style={{ position:'absolute', inset:territoryLaunch?'-20% -10% -14% 4%':'0', pointerEvents:'none', opacity:.86, transform:territoryLaunch?'scale(1.28) translateX(-5%)':'scale(1)', transition:'inset .26s cubic-bezier(.2,.8,.2,1), transform .26s cubic-bezier(.2,.8,.2,1)' }}>
+              <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={territoryLaunch ? 214 : 152} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} autoSpin autoSpinSpeed={0.00038} fitDuration={0} />
             </div>
             <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'linear-gradient(90deg, rgba(5,11,13,.92), rgba(5,11,13,.48) 58%, rgba(5,11,13,.18))' }} />
             <div style={{ position:'relative', zIndex:1 }}>
@@ -6488,24 +6604,29 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <button onClick={()=>onOpen('taxonomy')} style={{ ...boxBase, height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.38), rgba(251,247,239,.74)), url("/regions/tree_of_life.png")':'linear-gradient(135deg, rgba(4,8,5,.58), rgba(5,8,7,.30) 56%, rgba(5,7,8,.82)), url("/regions/tree_of_life.png")', backgroundSize:'cover', backgroundPosition:'center 46%', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
-          <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Tassonomia</div>
-          <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>Albero della vita</div>
-          <div style={{ color:mutedText, fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Apri l’albero tassonomico e naviga i rami dell’Animaldex.</div>
+        <button onClick={()=>onOpen('taxonomy')} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+          <span style={{ position:'absolute', inset:0, background:'url("/regions/tree_of_life.png") center 43% / cover no-repeat', opacity:isLightTheme ? .42 : .62, filter:'saturate(.92) contrast(.95)', transform:'scale(1.02)', pointerEvents:'none' }} />
+          <span style={{ position:'absolute', inset:0, background:isLightTheme?'linear-gradient(90deg, rgba(251,247,239,.86), rgba(251,247,239,.54) 52%, rgba(251,247,239,.10))':'linear-gradient(90deg, rgba(3,8,5,.94), rgba(3,8,5,.66) 47%, rgba(3,8,5,.12))', pointerEvents:'none' }} />
+          <div style={{ position:'relative', zIndex:1, maxWidth:'76%' }}>
+            <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Tassonomia</div>
+            <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>Albero della vita</div>
+            <div style={{ color:mutedText, fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Apri l’albero tassonomico e naviga i rami di Apex.</div>
+          </div>
         </button>
 
         {!!progress.nearlyCompletedBadges.length && <div style={{ ...boxBase, height:homeBoxHeight, padding:14, marginBottom:14, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.045)', cursor:'default', overflow:'hidden', display:'flex', flexDirection:'column' }}>
-          <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge quasi completati</div>
+          <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.60)', fontSize:11, fontWeight:1000, textTransform:'uppercase', margin:'0 0 8px 2px' }}>Badge in progress</div>
           <div style={{ display:'grid', gap:8, overflowY:'auto', WebkitOverflowScrolling:'touch', paddingRight:2 }}>
             {progress.nearlyCompletedBadges.map(rule => {
-              const badgeColor = BADGE_LEVEL_COLORS[rule.level] || '#C0C0C0';
-              const badgeBg = isLightTheme ? `linear-gradient(135deg, ${hexToRgba(badgeColor,.30)}, rgba(251,247,239,.96))` : `linear-gradient(135deg, ${hexToRgba(badgeColor,.20)}, rgba(18,18,20,.84))`;
+              const softBadgeColors = { 1:'#A97D5D', 2:'#AFA99F', 3:'#C4A25C', 4:'#8E73B0' };
+              const badgeColor = softBadgeColors[rule.level] || '#AFA99F';
+              const badgeBg = isLightTheme ? `linear-gradient(135deg, ${hexToRgba(badgeColor,.18)}, rgba(251,247,239,.96))` : `linear-gradient(135deg, ${hexToRgba(badgeColor,.13)}, rgba(18,18,20,.88))`;
               const badgeText = isLightTheme ? '#171717' : 'white';
               const badgeMuted = isLightTheme ? 'rgba(0,0,0,.62)' : 'rgba(255,255,255,.62)';
-              return <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:`1.8px solid ${badgeColor}`, borderRadius:16, background:badgeBg, boxShadow:isLightTheme?`0 10px 24px ${hexToRgba(badgeColor,.16)}, inset 0 1px 0 rgba(255,255,255,.68)`: `inset 0 1px 0 rgba(255,255,255,.08), 0 0 0 1px rgba(0,0,0,.18)`, padding:12, textAlign:'left', color:badgeText, fontFamily:'inherit', cursor:'pointer' }}>
+              return <button key={rule.badgeId} onClick={()=>onOpenBadge?.(rule.badgeId)} style={{ border:`1.4px solid ${hexToRgba(badgeColor,.72)}`, borderRadius:16, background:badgeBg, boxShadow:isLightTheme?`0 10px 22px ${hexToRgba(badgeColor,.10)}, inset 0 1px 0 rgba(255,255,255,.68)`: `inset 0 1px 0 rgba(255,255,255,.07), 0 0 0 1px rgba(0,0,0,.18)`, padding:12, textAlign:'left', color:badgeText, fontFamily:'inherit', cursor:'pointer' }}>
                 <div style={{ display:'flex', justifyContent:'space-between', gap:12, fontWeight:950, fontSize:12.5 }}><span>{rule.name}</span><span style={{ color:badgeColor }}>{rule.current} / {rule.target}</span></div>
                 <div style={{ color:badgeMuted, fontSize:11, lineHeight:1.35, marginTop:5 }}>{rule.sub} · {rule.goal}</div>
-                <div style={{ height:7, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:`linear-gradient(90deg, ${hexToRgba(badgeColor,.65)}, ${badgeColor})` }} /></div>
+                <div style={{ height:7, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)', overflow:'hidden', marginTop:8 }}><div style={{ width:`${Math.round(rule.progress*100)}%`, height:'100%', background:`linear-gradient(90deg, ${hexToRgba(badgeColor,.58)}, ${hexToRgba(badgeColor,.92)})` }} /></div>
               </button>;
             })}
           </div>
@@ -6539,6 +6660,49 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
                 );
               })}
             </div>
+          </div>
+        </div>
+      )}
+      {badgePickerOpen && (
+        <div onClick={()=>setBadgePickerOpen(false)} style={{ position:'absolute', inset:0, zIndex:432, background:'rgba(0,0,0,.74)', display:'flex', alignItems:'flex-end', padding:12, boxSizing:'border-box' }}>
+          <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxHeight:'82%', background:isLightTheme?'#FBF7EF':'#17191D', border:`1px solid ${lightPanelBorder}`, borderRadius:28, padding:14, boxSizing:'border-box', boxShadow:'0 24px 80px rgba(0,0,0,.58)', display:'flex', flexDirection:'column' }}>
+            <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, marginBottom:12, flexShrink:0 }}>
+              <div style={{ minWidth:0 }}>
+                <div style={{ color:pageText, fontSize:18, fontWeight:1000 }}>Badge profilo</div>
+                <div style={{ color:mutedText, fontSize:11.5, marginTop:3, lineHeight:1.35 }}>{featuredBadge ? `${featuredBadge.name} · ${featuredBadge.sub}` : 'Scegli un badge conquistato da mostrare agli altri.'}</div>
+              </div>
+              <button onClick={()=>setBadgePickerOpen(false)} aria-label="Chiudi" style={{ width:40, height:40, borderRadius:18, border:`1px solid ${lightPanelBorder}`, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.06)', color:pageText, fontSize:22, cursor:'pointer', flexShrink:0 }}>×</button>
+            </div>
+            {featuredBadge && (
+              <div style={{ display:'grid', gridTemplateColumns:'88px 1fr', gap:12, alignItems:'center', border:`1px solid ${hexToRgba(featuredBadgeColor,.38)}`, borderRadius:22, background:`linear-gradient(135deg, ${hexToRgba(featuredBadgeColor,.16)}, rgba(255,255,255,.04))`, padding:12, marginBottom:12 }}>
+                <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:76, height:76, objectFit:'contain', filter:`drop-shadow(0 8px 18px ${hexToRgba(featuredBadgeColor,.38)})` }} />
+                <div style={{ minWidth:0 }}>
+                  <div style={{ color:pageText, fontSize:15, fontWeight:1000, lineHeight:1.1 }}>{featuredBadge.name}</div>
+                  <div style={{ color:mutedText, fontSize:11.5, lineHeight:1.35, marginTop:5 }}>{featuredBadge.macro} · {featuredBadge.goal}</div>
+                  <div style={{ color:featuredBadgeColor, fontSize:11, fontWeight:1000, marginTop:7 }}>Livello {featuredBadge.level}</div>
+                </div>
+              </div>
+            )}
+            <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch', display:'grid', gridTemplateColumns:'repeat(2, minmax(0, 1fr))', gap:10, paddingBottom:4 }}>
+              {earnedAwards.map(rule => {
+                const active = normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId);
+                const color = BADGE_LEVEL_COLORS[rule.level] || '#F0A840';
+                const current = Math.round(Number(awardMetrics[rule.metric] || 0));
+                return (
+                  <button key={rule.badgeId} onClick={()=>chooseFeaturedBadge(rule)} style={{ minHeight:134, borderRadius:20, border:`2px solid ${active ? color : 'rgba(255,255,255,.10)'}`, background:isLightTheme?`linear-gradient(180deg, ${hexToRgba(color,.10)}, rgba(251,247,239,.92))`:`linear-gradient(180deg, ${hexToRgba(color,.13)}, rgba(255,255,255,.045))`, color:pageText, fontFamily:'inherit', cursor:'pointer', padding:10, textAlign:'left', boxShadow:active?`0 0 0 3px ${hexToRgba(color,.18)}`:'none', display:'grid', gridTemplateRows:'58px auto', gap:8, overflow:'hidden' }}>
+                    <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:8 }}>
+                      <img src={buildAwardImagePath(rule.badgeId)} alt="" style={{ width:56, height:56, objectFit:'contain', filter:`drop-shadow(0 6px 14px ${hexToRgba(color,.30)})` }} />
+                      {active && <span style={{ width:24, height:24, borderRadius:12, background:color, color:'#15110A', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, fontWeight:1000, flexShrink:0 }}>✓</span>}
+                    </div>
+                    <div style={{ minWidth:0 }}>
+                      <div style={{ fontSize:11.5, fontWeight:1000, lineHeight:1.12, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{rule.name}</div>
+                      <div style={{ color:mutedText, fontSize:9.8, lineHeight:1.2, marginTop:5 }}>{current} / {rule.threshold} · L{rule.level}</div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+            <button onClick={()=>{ setBadgePickerOpen(false); setProfileBgPickerOpen(true); }} style={{ marginTop:12, height:42, borderRadius:18, border:`1px solid ${lightPanelBorder}`, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', color:pageText, fontFamily:'inherit', fontWeight:1000, cursor:'pointer' }}>Cambia sfondo profilo</button>
           </div>
         </div>
       )}
@@ -6592,7 +6756,7 @@ const lifePhylum = (name, subtitle='', children=[], color) => lifeTaxon(name, 'p
 const LIFE_TREE = lifeNode({
   id:'animalia',
   label:'Animalia',
-  subtitle:'Il regno animale come mappa tassonomica divulgativa Animaldex.',
+  subtitle:'Il regno animale come mappa tassonomica divulgativa Apex.',
   rank:'kingdom',
   kind:'root',
   color:LIFE_TREE_COLORS.animalia,
@@ -6713,7 +6877,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
       return {
         id:`${node.id}-gen-${lifeSlug(genus)}`,
         label:allMystery ? getMysteryLifeLabel('genus') : genus,
-        subtitle:`${genusAnimals.length} specie Animaldex`,
+        subtitle:`${genusAnimals.length} specie Apex`,
         rank:'genus',
         kind:'genus',
         color:node.color,
@@ -6726,7 +6890,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
             const mystery = isMysteryStatus(animal.status);
             return {
               id:`${node.id}-sp-${animal.id || lifeSlug(animal.sci || animal.com)}`,
-              label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Animaldex'),
+              label:mystery ? getMysteryLifeLabel('species') : (animal.com || animal.sci || 'Specie Apex'),
               subtitle:mystery ? 'Identità non ancora rivelata' : (animal.sci || animal.rarity || ''),
               rank:'species',
               kind:'animal',
@@ -7031,11 +7195,11 @@ function LifeTreeCanvas({ selectedNode, animals, onOpen, onAnimalPanel, onOpenAn
                 )}
                 <div style={{ minWidth:0, flex:1 }}>
                   <div style={{ fontSize:14, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.label}</div>
-                  <div style={{ marginTop:2, color:generatedAnimal && animalMystery ? 'rgba(255,255,255,.48)' : displayColor, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{generatedAnimal ? `${LIFE_RANK_LABELS[node.rank] || 'Specie'} · ${animalStatus || 'Animaldex'}${animalMystery ? '' : ` · ${node.animal.rarity || 'Rarità'}`}` : `${LIFE_RANK_LABELS[node.rank] || node.rank} · ${stats.total} specie · ${childCount ? `${childCount} rami` : 'specie'}`}</div>
+                  <div style={{ marginTop:2, color:generatedAnimal && animalMystery ? 'rgba(255,255,255,.48)' : displayColor, fontSize:8.5, fontWeight:950, textTransform:'uppercase', letterSpacing:.3 }}>{generatedAnimal ? `${LIFE_RANK_LABELS[node.rank] || 'Specie'} · ${animalStatus || 'Apex'}${animalMystery ? '' : ` · ${node.animal.rarity || 'Rarità'}`}` : `${LIFE_RANK_LABELS[node.rank] || node.rank} · ${stats.total} specie · ${childCount ? `${childCount} rami` : 'specie'}`}</div>
                 </div>
                 {generatedAnimal ? <div style={{ width:28, height:28, borderRadius:12, border:`1px solid ${displayColor}66`, background:`${displayColor}18`, color:animalMystery?'rgba(255,255,255,.44)':displayColor, display:'grid', placeItems:'center', fontSize:13, fontWeight:1000 }}>›</div> : <LifeProgress value={stats.completion} color={node.color} />}
               </div>
-              <div style={{ color:animalMystery?'rgba(255,255,255,.48)':'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{generatedAnimal ? (animalMystery ? 'Animale misterioso' : (node.animal.sci || node.subtitle || 'Specie Animaldex')) : (inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Animaldex'))}</div>
+              <div style={{ color:animalMystery?'rgba(255,255,255,.48)':'rgba(255,255,255,.66)', fontSize:10.5, lineHeight:1.28, marginTop:7, display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{generatedAnimal ? (animalMystery ? 'Animale misterioso' : (node.animal.sci || node.subtitle || 'Specie Apex')) : (inPath && !active ? 'Percorso attivo' : (node.subtitle || 'Ramo Apex'))}</div>
               {generatedAnimal && !animalMystery && (
                 <div style={{ marginTop:8, display:'flex', gap:5, minWidth:0 }}>
                   <span style={{ borderRadius:999, border:`1px solid ${node.color}44`, background:`${node.color}18`, color:node.color, padding:'3px 7px', fontSize:8.5, fontWeight:950, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{node.animal.cons || 'Conservazione n/d'}</span>
@@ -7067,8 +7231,8 @@ function LifeInfoModal({ onClose, theme }) {
         <div style={{ fontSize:20, fontWeight:1000 }}>Come leggere l’albero</div>
         <button onClick={onClose} style={{ width:38, height:38, borderRadius:14, border:'none', background:isLight?'rgba(0,0,0,.06)':'rgba(255,255,255,.08)', color:isLight?'#171717':'white', fontSize:22 }}>×</button>
       </div>
-      <p style={{ color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.66)', fontSize:13, lineHeight:1.55 }}>La tassonomia organizza gli animali per parentela: regno, phylum, classe, ordine, famiglia. Animaldex usa questa base scientifica come mappa divulgativa, aggiungendo anche cluster editoriali utili al gioco, come “Colori Tropicali” o “Cefalopodi Leggendari”.</p>
-      <p style={{ color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.66)', fontSize:13, lineHeight:1.55, marginBottom:0 }}>Tocca un nodo per entrare nel ramo: la mappa si ricentra da sola. I numeri indicano quante specie Animaldex sono collegate e il progresso di cattura. Se una specie è misteriosa, l’albero non mostra mai la sua immagine reale.</p>
+      <p style={{ color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.66)', fontSize:13, lineHeight:1.55 }}>La tassonomia organizza gli animali per parentela: regno, phylum, classe, ordine, famiglia. Apex usa questa base scientifica come mappa divulgativa, aggiungendo anche cluster editoriali utili al gioco, come “Colori Tropicali” o “Cefalopodi Leggendari”.</p>
+      <p style={{ color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.66)', fontSize:13, lineHeight:1.55, marginBottom:0 }}>Tocca un nodo per entrare nel ramo: la mappa si ricentra da sola. I numeri indicano quante specie Apex sono collegate e il progresso di cattura. Se una specie è misteriosa, l’albero non mostra mai la sua immagine reale.</p>
     </div>
   </div>;
 }
@@ -7088,7 +7252,7 @@ function LifeAnimalPanel({ node, animals, onClose, onOpenAnimal, theme }) {
           <div style={{ width:42, height:42, borderRadius:13, background:'rgba(0,0,0,.18)', display:'grid', placeItems:'center', overflow:'hidden', flexShrink:0 }}>{mystery ? <img src={MYSTERY_PLACEHOLDER} alt="misterioso" style={{ width:34, height:34, objectFit:'contain', opacity:.72 }} /> : <AnimalImg a={animal} size={42} gridMode overrideStatus={status} />}</div>
           <div style={{ minWidth:0 }}><div style={{ fontSize:10.5, fontWeight:1000, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{animal.com || animal.sci}</div><div style={{ color:isLight?'rgba(0,0,0,.55)':'rgba(255,255,255,.55)', fontSize:8.5, fontWeight:850 }}>{animal.rarity || 'Rarità'} · {status}</div></div>
         </button>;
-      }) : <div style={{ gridColumn:'1/-1', color:isLight?'rgba(0,0,0,.58)':'rgba(255,255,255,.58)', fontSize:12, fontWeight:800, padding:12 }}>Nessuna specie Animaldex collegata a questo nodo per ora.</div>}
+      }) : <div style={{ gridColumn:'1/-1', color:isLight?'rgba(0,0,0,.58)':'rgba(255,255,255,.58)', fontSize:12, fontWeight:800, padding:12 }}>Nessuna specie Apex collegata a questo nodo per ora.</div>}
     </div>
   </div>;
 }
@@ -7142,7 +7306,7 @@ class TaxonomyErrorBoundary extends React.Component {
     return { error };
   }
   componentDidCatch(error, info) {
-    console.error('[Animaldex] Errore Albero della Vita:', error, info);
+    console.error('[Apex] Errore Albero della Vita:', error, info);
   }
   componentDidUpdate(prevProps) {
     if (prevProps.resetKey !== this.props.resetKey && this.state.error) this.setState({ error:null });
@@ -7158,7 +7322,7 @@ class TaxonomyErrorBoundary extends React.Component {
         </div>
         <div style={{ margin:16, borderRadius:24, padding:18, background:isLight?'#FBF7EF':'rgba(255,255,255,.06)', border:`1px solid ${isLight ? 'rgba(0,0,0,.10)' : 'rgba(255,255,255,.12)'}` }}>
           <div style={{ fontSize:18, fontWeight:1000 }}>L’albero non si è aperto correttamente.</div>
-          <div style={{ marginTop:8, color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.64)', fontSize:13, lineHeight:1.5 }}>Animaldex è rimasto stabile: copia questo dettaglio e mandamelo, così posso correggere il punto esatto.</div>
+          <div style={{ marginTop:8, color:isLight?'rgba(0,0,0,.62)':'rgba(255,255,255,.64)', fontSize:13, lineHeight:1.5 }}>Apex è rimasto stabile: copia questo dettaglio e mandamelo, così posso correggere il punto esatto.</div>
           <pre style={{ marginTop:14, whiteSpace:'pre-wrap', wordBreak:'break-word', fontSize:11, lineHeight:1.45, color:isLight?'#5B332A':'#FFD1C8', background:isLight?'rgba(184,77,58,.08)':'rgba(184,77,58,.14)', borderRadius:14, padding:12 }}>{String(this.state.error?.message || this.state.error || 'Errore sconosciuto')}</pre>
         </div>
       </div>
@@ -7245,7 +7409,7 @@ function QuickSeenPage({ onBack, animals = ANIMALS, statusMap = {}, visitedCount
     advanceQueue(picked.id);
     trackUserEvent(user, 'quick_seen_yes', { animal_id:picked.id, animal_name:picked.com, rarity:picked.rarity, source_screen:'quick_seen' }, userProfile);
     Promise.resolve(onStatusChange?.(picked.id, 'avvistato')).catch(err => {
-      console.warn('[Animaldex] Avvista Veloce: salvataggio in background fallito:', err);
+      console.warn('[Apex] Avvista Veloce: salvataggio in background fallito:', err);
       setQuickMessage('Visto segnato qui. Se il salvataggio cloud tarda, riprova tra poco.');
     });
     releaseBusySoon();
@@ -7575,7 +7739,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
           <button onClick={()=>fileInputRef.current?.click()} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(135,198,255,.18)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)' }}>👤</button>
           <input ref={fileInputRef} type="file" accept="image/*" style={{ display:'none' }} onChange={()=>{}} />
           <div style={{ color:'white', fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>{displayName}</div>
-          <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>{user?.email || 'Profilo Animaldex'}</div>
+          <div style={{ color:'#B9D7EF', fontSize:13, marginTop:5, fontWeight:600 }}>{user?.email || 'Profilo Apex'}</div>
           <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:10, marginTop:14, flexWrap:'wrap' }}>
             <span style={{ color:'#F5F1EA', fontSize:12, fontWeight:1000, background:'rgba(255,255,255,.10)', border:'1px solid rgba(255,255,255,.10)', borderRadius:999, padding:'7px 10px' }}>Liv. {progress.level}</span>
             <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000, background:'rgba(240,168,64,.12)', border:'1px solid rgba(240,168,64,.20)', borderRadius:999, padding:'7px 10px' }}>🔥 3 slancio</span>
@@ -7661,13 +7825,13 @@ function AwardModal({ rule, unlocked, currentValue, onClose, onPrev, onNext }) {
   const progress = Math.min(100, Math.round((Number(currentValue || 0) / Math.max(1, Number(rule.threshold || 1))) * 100));
   const borderColor = BADGE_LEVEL_COLORS[Number(rule.level) || 1] || '#CD7F32';
   return (
-    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
-      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, borderRadius:28, background:'linear-gradient(180deg,#2D2D31,#151517)', border:`1px solid ${borderColor}88`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)', overflow:'hidden' }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, maxHeight:'calc(var(--animaldex-app-height, 100dvh) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px)', overflowY:'auto', WebkitOverflowScrolling:'touch', borderRadius:28, background:'linear-gradient(180deg,#2D2D31,#151517)', border:`1px solid ${borderColor}88`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:'clamp(16px, 5vw, 22px)', textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
         <button onClick={onClose} aria-label="Chiudi" style={{ position:'absolute', top:14, right:14, width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:24, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>×</button>
         <button onClick={onPrev} aria-label="Badge precedente" style={{ position:'absolute', top:'50%', left:12, transform:'translateY(-50%)', width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:28, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>‹</button>
         <button onClick={onNext} aria-label="Badge successivo" style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:42, height:42, borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.09)', color:'white', fontSize:28, cursor:'pointer', zIndex:2, display:'flex', alignItems:'center', justifyContent:'center', lineHeight:1 }}>›</button>
         <div style={{ height:8 }} />
-        <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
+        <img src={img} alt={rule.name} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'min(266px, 72vw)', height:'min(266px, 34dvh)', objectFit:'contain', filter:unlocked?'drop-shadow(0 12px 28px rgba(0,0,0,.45))':'grayscale(1) opacity(.78)', margin:'0 auto 8px', display:'block' }} />
         <span style={{ display:'none', alignItems:'center', justifyContent:'center', flexDirection:'column', width:266, height:266, maxWidth:'82vw', borderRadius:34, border:`1px dashed ${borderColor}88`, color:borderColor, fontSize:70, fontWeight:1000, margin:'0 auto 8px', lineHeight:1 }}><span>L{rule.level}</span><span style={{ marginTop:14, color:'rgba(255,255,255,.62)', fontSize:13, fontWeight:900 }}>{String(rule.badgeId || '').toLowerCase()}.png</span></span>
         <div style={{ color:'white', fontSize:24, fontWeight:900, lineHeight:1.1, marginTop:4 }}>{rule.name}</div>
         <div style={{ color:'rgba(255,255,255,.48)', fontSize:12, fontWeight:800, marginTop:6 }}>{rule.macro}</div>
@@ -8109,8 +8273,8 @@ function LifeWebNodeModal({ node, graph, nodes, onClose, onOpenAnimal, onToggleR
     </div>
   );
   return (
-    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.80)', zIndex:240, display:'flex', alignItems:'center', justifyContent:'center', padding:16 }}>
-      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:460, maxHeight:'92%', overflowY:'auto', borderRadius:28, background:'linear-gradient(180deg,#202126,#111216)', border:`1px solid ${nodeColorForGroup(node.group)}66`, boxShadow:'0 30px 80px rgba(0,0,0,.58)', padding:18 }}>
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.80)', zIndex:240, display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)', overflow:'hidden' }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:460, maxHeight:'calc(var(--animaldex-app-height, 100dvh) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px)', overflowY:'auto', WebkitOverflowScrolling:'touch', borderRadius:28, background:'linear-gradient(180deg,#202126,#111216)', border:`1px solid ${nodeColorForGroup(node.group)}66`, boxShadow:'0 30px 80px rgba(0,0,0,.58)', padding:'clamp(14px, 4vw, 18px)' }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}><div style={{ color:'white', fontSize:22, fontWeight:1000 }}>{node.label}</div><button onClick={onClose} style={{ width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20 }}>×</button></div>
         <div style={{ display:'flex', gap:14, alignItems:'center' }}>
           <div style={{ width:104, height:104, borderRadius:34, background:`${nodeColorForGroup(node.group)}22`, border:`3px solid ${nodeColorForGroup(node.group)}`, display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden', flexShrink:0 }}>{currentAnimal ? <AnimalImg a={currentAnimal} size={94} fontSize={32} overrideStatus="catturato" /> : <span style={{ fontSize:44, color:'white' }}>✦</span>}</div>
@@ -8424,7 +8588,7 @@ function buildSubregionDescription(territory) {
   const source = String(territory?.source_ecoregions || '').split(';').map(s=>s.trim()).filter(Boolean);
   const examples = source.slice(0, 5).join(', ');
   const tail = examples ? ` Comprende ambienti come ${examples}, che rendono il confine ecologico più preciso dei soli codici paese.` : '';
-  return `${label}${en} copre ${area} di paesaggi collegati da clima, vegetazione e storia geologica. La composizione del terreno alterna substrati minerali, suoli giovani o torbosi, zone drenate e aree più umide dove acqua, gelo, vento o stagionalità modellano la disponibilità di rifugi e prede. La fauna tende a concentrarsi lungo corridoi ecologici: coste, foreste, praterie, tundre, rilievi o bacini interni secondo la subregione. Per Animaldex questa pagina usa la subregione biogeografica come unità principale, così la lista animali resta più coerente della semplice presenza nazionale.${tail}`;
+  return `${label}${en} copre ${area} di paesaggi collegati da clima, vegetazione e storia geologica. La composizione del terreno alterna substrati minerali, suoli giovani o torbosi, zone drenate e aree più umide dove acqua, gelo, vento o stagionalità modellano la disponibilità di rifugi e prede. La fauna tende a concentrarsi lungo corridoi ecologici: coste, foreste, praterie, tundre, rilievi o bacini interni secondo la subregione. Per Apex questa pagina usa la subregione biogeografica come unità principale, così la lista animali resta più coerente della semplice presenza nazionale.${tail}`;
 }
 function RegionActionBox({ title, text, label, tone='#244A70', onClick, disabled=false }) {
   return (
@@ -8716,7 +8880,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
     setSelectedDestinationIsos([]);
     try {
       for (const iso of cleanList) await onAddDestination?.(iso, []);
-    } catch (err) { console.warn('[Animaldex] aggiunta paese non bloccante:', err); }
+    } catch (err) { console.warn('[Apex] aggiunta paese non bloccante:', err); }
   };
   const toggleDestinationIso = (code) => {
     const iso = String(code).toUpperCase();
@@ -9044,7 +9208,7 @@ function RegionsPage({ onBack, statusMap = {}, visitedCountries = [], onVisitedC
             )}
             {view !== 'planet' && <MapCollapseToggle />}
             {showRegionMap && (
-              <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'sticky', top:-12, zIndex:4, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
+              <div ref={mainRegionMapRef} style={{ margin:'0 -14px 14px', position:'relative', zIndex:1, background:isLightTheme?'linear-gradient(180deg,#F3EFE6 0%,rgba(243,239,230,.94) 82%,rgba(243,239,230,0) 100%)':'linear-gradient(180deg,#050505 0%,rgba(5,5,5,.94) 82%,rgba(5,5,5,0) 100%)', paddingBottom:8 }}>
                 <BioregionVectorMap
                   highlightIds={territoryMapHighlightIds}
                   focusIds={territoryMapFocusIds}
@@ -9245,7 +9409,7 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
   if (sub === 'theme') return (
     <SettingsSubPage title="Tema" onBack={()=>setSub(null)} theme={theme}>
       {[
-        { value:'dark', label:'Scuro', desc:'Tema attuale Animaldex, nero e contrastato' },
+        { value:'dark', label:'Scuro', desc:'Tema attuale Apex, nero e contrastato' },
         { value:'light', label:'Chiaro', desc:'Sfondo bianco per menu, griglia, paesi e schede' },
       ].map(opt=>{
         const active = theme === opt.value;
@@ -9258,7 +9422,7 @@ function SettingsPage({ onBack, onStartInitialOnboarding, onStartOperationalTuto
   );
   if (sub === 'data') return (
     <SettingsSubPage title="Dati" onBack={()=>setSub(null)} theme={theme}>
-      {['Sincronizza ora sul Cloud','Esporta dati Animaldex','Spazio foto: placeholder'].map(t=><button key={t} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
+      {['Sincronizza ora sul Cloud','Esporta dati Apex','Spazio foto: placeholder'].map(t=><button key={t} style={{ width:'100%', background:'#222222', border:'1px solid rgba(255,255,255,.06)', borderRadius:12, padding:16, marginBottom:10, color:'white', textAlign:'left', fontSize:14, fontWeight:800, cursor:'pointer', fontFamily:'inherit' }}>{t}</button>)}
     </SettingsSubPage>
   );
   if (sub === 'privacy') return (
@@ -9328,14 +9492,14 @@ function AbilityModal({ meta, onClose, onOpenAnimals, onPrev, onNext }) {
   const badgeUrl=`/badges/${meta.id.toLowerCase()}.png`;
   const group = getAbilityGroupMeta(meta.id);
   return (
-    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:18 }}>
-      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:`1px solid ${group.color}66`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:22, textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
+    <div onClick={onClose} style={{ position:'fixed', inset:0, background:'rgba(0,0,0,.78)', zIndex:220, display:'flex', alignItems:'center', justifyContent:'center', padding:'calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)', overflow:'hidden' }}>
+      <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:430, maxHeight:'calc(var(--animaldex-app-height, 100dvh) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px) - 24px)', overflowY:'auto', WebkitOverflowScrolling:'touch', borderRadius:28, background:'linear-gradient(180deg,#222226,#111113)', border:`1px solid ${group.color}66`, boxShadow:'0 30px 80px rgba(0,0,0,.55)', padding:'clamp(16px, 5vw, 22px)', textAlign:'center', animation:'tabFromRight .18s ease-out', position:'relative' }}>
         <button onClick={onClose} style={{ position:'absolute', top:14, right:14, width:34, height:34, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:20, cursor:'pointer', zIndex:2 }}>×</button>
         <button onClick={onPrev} style={{ position:'absolute', top:'50%', left:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>‹</button>
         <button onClick={onNext} style={{ position:'absolute', top:'50%', right:12, transform:'translateY(-50%)', width:36, height:36, borderRadius:12, border:'none', background:'rgba(255,255,255,.08)', color:'white', fontSize:22, cursor:'pointer', zIndex:2 }}>›</button>
         <div style={{ height:8 }} />
         <div style={{ display:'inline-flex', alignItems:'center', gap:6, padding:'5px 10px', borderRadius:999, background:`${group.color}22`, border:`1px solid ${group.color}55`, color:group.color, fontSize:11, fontWeight:900, marginBottom:10 }}>{group.label}</div>
-        <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:266, height:266, maxWidth:'82vw', objectFit:'contain', filter:`drop-shadow(0 12px 28px ${meta.color}44)`, margin:'0 auto 8px', display:'block' }} />
+        <img src={badgeUrl} alt={meta.label} onError={e=>{e.currentTarget.style.display='none'; const n=e.currentTarget.nextSibling; if(n) n.style.display='flex';}} style={{ width:'min(266px, 72vw)', height:'min(266px, 34dvh)', objectFit:'contain', filter:`drop-shadow(0 12px 28px ${meta.color}44)`, margin:'0 auto 8px', display:'block' }} />
         <span style={{ display:'none', alignItems:'center', justifyContent:'center', width:266, height:266, maxWidth:'82vw', fontSize:104, margin:'0 auto 8px' }}>{meta.icon}</span>
         <div style={{ color:'white', fontSize:25, fontWeight:900, lineHeight:1.1 }}>{meta.label}</div>
         <div style={{ color:'rgba(255,255,255,.70)', fontSize:14, lineHeight:1.55, marginTop:16 }}>{meta.description}</div>
@@ -9664,7 +9828,7 @@ function CompareInfoCard({ animal, metrics, accent, sideLabel, gradient, onZoom 
         </div>
       </div>
       <div style={{ padding:'0 14px 14px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:8 }}>
-        {stat('Morso', animal.stats?.morso != null ? `${animal.stats.morso} PSI` : 'n/d', null, '🦷')}
+        {stat('Morso', Number(animal.stats?.morso || 0) > 0 ? `${animal.stats.morso} PSI` : 'NA', null, '🦷')}
         {stat('Lifespan', animal.lifespan != null ? `${animal.lifespan} anni` : 'n/d', null, '⏳')}
         {stat('Classe', CLS[animal.cls]?.label || animal.cls || 'n/d', animal.cls, '🧬')}
         {stat('Adattabilità', metrics?.radar?.find(x=>x.key==='adattabilita')?.value + '/100', `${metrics?.countries || 0} paesi`, '🌍')}
@@ -9810,7 +9974,7 @@ export default function App() {
       setUser(nextSession?.user || null);
       setAuthLoading(false);
       if (nextSession?.user) {
-        try { await ensureUserProfile(nextSession.user); } catch (err) { console.warn('[Animaldex] Profilo Supabase:', err); }
+        try { await ensureUserProfile(nextSession.user); } catch (err) { console.warn('[Apex] Profilo Supabase:', err); }
       }
     });
     return () => {
@@ -9828,7 +9992,7 @@ export default function App() {
       // Non bloccare mai la UI sul profilo: se Supabase/RLS rallenta, usiamo fallback.
       await withTimeout(
         ensureUserProfile(activeUser).catch(err => {
-          console.warn('[Animaldex] ensure profile non bloccante:', err);
+          console.warn('[Apex] ensure profile non bloccante:', err);
           return false;
         }),
         3500,
@@ -9859,7 +10023,7 @@ export default function App() {
       [remoteAnimalsResult, remoteStatusResult, destinationsResult, badgeResult].forEach((result, idx) => {
         if (result.status === 'rejected') {
           const label = ['animals', 'user_animals', 'destinations', 'badges'][idx];
-          console.warn(`[Animaldex] Caricamento parziale ${label} fallito:`, result.reason);
+          console.warn(`[Apex] Caricamento parziale ${label} fallito:`, result.reason);
         }
       });
 
@@ -9870,7 +10034,7 @@ export default function App() {
       setAnimalsData(nextAnimals);
       setStatusMap(nextStatusMap);
       saveLocalUserStatusMap(activeUser.id, nextStatusMap);
-      syncLocalStatusMapToSupabase(activeUser.id, nextStatusMap).catch(err => console.warn('[Animaldex] sync progressi locali non bloccante:', err));
+      syncLocalStatusMapToSupabase(activeUser.id, nextStatusMap).catch(err => console.warn('[Apex] sync progressi locali non bloccante:', err));
 
       const nextDestinations = normalizeIsoList(destinations || []);
       setVisitedCountries(nextDestinations);
@@ -9885,7 +10049,7 @@ export default function App() {
       setEarnedBadgeIds(nextBadgeIds);
       persistAwardUnlocks(nextBadgeIds);
     } catch (err) {
-      console.warn('[Animaldex] Caricamento Supabase fallito, uso fallback locale:', err);
+      console.warn('[Apex] Caricamento Supabase fallito, uso fallback locale:', err);
       setDataError(err?.message || 'Errore caricamento Supabase');
 
       const fallbackSource = applyCachedUserStatuses(LOCAL_ANIMALS.map(normalizeLocalAnimal), activeUser.id);
@@ -9950,7 +10114,7 @@ export default function App() {
 
     if (!initialHydration && fresh.length) {
       setAwardQueue(prev => [...prev, ...fresh]);
-      if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Animaldex] Evento badge non salvato:', err)));
+      if (user?.id) fresh.forEach(award => createSocialBadgeEvent(user.id, award).catch(err => console.warn('[Apex] Evento badge non salvato:', err)));
       if (user?.id) fresh.forEach(award => trackUserEvent(user, 'badge_earned', { badge_id:award.badgeId, badge_name:award.name, badge_macro:award.macro, source_screen:'badges' }, userProfile));
     }
 
@@ -9963,7 +10127,7 @@ export default function App() {
       persistAwardUnlocks(merged);
       if (user?.id) {
         persistEarnedBadges(user.id, merged).catch(err => {
-          console.warn('[Animaldex] Salvataggio user_badges fallito:', err);
+          console.warn('[Apex] Salvataggio user_badges fallito:', err);
           setDataError(err?.message || 'Errore salvataggio badge');
         });
       }
@@ -9989,15 +10153,15 @@ export default function App() {
     if (!user?.id) return;
     try {
       await saveUserAnimalStatus(user.id, currentAnimal || { id }, nextStatus);
-      trackUserEvent(user, 'animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, previous_status:previousStatus, next_status:nextStatus, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Animaldex] tracking status non bloccante:', err));
-      if (nextStatus === 'avvistato') trackUserEvent(user, 'animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Animaldex] tracking visto non bloccante:', err));
-      if (nextStatus === 'catturato') trackUserEvent(user, 'animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Animaldex] tracking cattura non bloccante:', err));
+      trackUserEvent(user, 'animal_status_changed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, previous_status:previousStatus, next_status:nextStatus, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Apex] tracking status non bloccante:', err));
+      if (nextStatus === 'avvistato') trackUserEvent(user, 'animal_marked_seen', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Apex] tracking visto non bloccante:', err));
+      if (nextStatus === 'catturato') trackUserEvent(user, 'animal_capture_completed', { animal_id:id, animal_name:currentAnimal?.com, rarity:currentAnimal?.rarity, source_screen:'animal_status' }, userProfile).catch(err => console.warn('[Apex] tracking cattura non bloccante:', err));
       if (isSocialCaptureEventWorthy(currentAnimal, nextStatus, previousStatus)) {
-        await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Animaldex] Evento social non salvato:', err));
+        await createSocialCaptureEvent(user.id, currentAnimal).catch(err => console.warn('[Apex] Evento social non salvato:', err));
       }
       await reloadSupabaseData(user);
     } catch (err) {
-      console.warn('[Animaldex] Salvataggio user_animals fallito:', err);
+      console.warn('[Apex] Salvataggio user_animals fallito:', err);
       setDataError(err?.message || 'Errore salvataggio status animale');
     }
   };
@@ -10019,9 +10183,9 @@ export default function App() {
       }), 7000, { error:null }, 'unlock_animals_for_destination');
       if (rpcError) throw rpcError;
       await trackUserEvent(user, 'country_added', { country_iso:cleanIso, trip_tags:tripTags || [], source_screen:'regions' }, userProfile);
-      reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload destinazione non bloccante:', err));
+      reloadSupabaseData(user).catch(err => console.warn('[Apex] reload destinazione non bloccante:', err));
     } catch (err) {
-      console.warn('[Animaldex] Aggiungi destinazione fallito:', err);
+      console.warn('[Apex] Aggiungi destinazione fallito:', err);
       setDataError(err?.message || 'Errore aggiunta paese');
     } finally {
       setDestinationsLoading(false);
@@ -10065,7 +10229,7 @@ export default function App() {
       }
       return data || {};
     } catch (err) {
-      console.warn('[Animaldex] RPC onboarding fallita, uso fallback frontend:', err);
+      console.warn('[Apex] RPC onboarding fallita, uso fallback frontend:', err);
       const cleanCountries = (countries || []).map(c => String(c).toUpperCase()).filter(Boolean);
       for (const iso of cleanCountries) {
         await withTimeout(persistUserDestination(user.id, iso, tripTags || []), 3500, false, 'persistUserDestination');
@@ -10074,7 +10238,7 @@ export default function App() {
           p_iso: iso,
           p_trip_tags: tripTags || [],
         }), 4500, { error:null }, 'unlock_animals_for_destination');
-        if (rpcError) console.warn('[Animaldex] unlock fallback non riuscito:', rpcError);
+        if (rpcError) console.warn('[Apex] unlock fallback non riuscito:', rpcError);
       }
 
       const now = new Date().toISOString();
@@ -10128,7 +10292,7 @@ export default function App() {
     setPage('grid');
     // Ricarica silenziosa: non bloccare mai la schermata finale dell’onboarding.
     if (!options?.skipReload) {
-      reloadSupabaseData(user).catch(err => console.warn('[Animaldex] reload post-onboarding non bloccante:', err));
+      reloadSupabaseData(user).catch(err => console.warn('[Apex] reload post-onboarding non bloccante:', err));
     }
   };
 
@@ -10206,7 +10370,7 @@ export default function App() {
           .eq('user_id', user.id);
       }
     } catch (err) {
-      console.warn('[Animaldex] Salvataggio tutorial non bloccante:', err);
+      console.warn('[Apex] Salvataggio tutorial non bloccante:', err);
     }
     setSel(null);
     setPage('grid');
@@ -10305,7 +10469,7 @@ const confirmPhotoRecognition = async (animal, meta={}) => {
       });
     }
   } catch (err) {
-    console.warn('[Animaldex] animal_photos non bloccante:', err);
+    console.warn('[Apex] animal_photos non bloccante:', err);
   }
 };
 const openHabitatGrid = (territory, habitat, returnContext = null) => {
@@ -10319,13 +10483,32 @@ const openHabitatGrid = (territory, habitat, returnContext = null) => {
   setPage('grid');
 };
 const openGridWithStatus = (statuses) => {
-  setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Animaldex' }); setPage('grid');
+  setSel(null); setGridReturnTarget(null); setGridPreset({ id: Date.now(), type:'status', statuses, title:'Apex' }); setPage('grid');
 };
 const openGridWithCategory = (categoryId, label) => {
   setSel(null); setGridPreset({ id: Date.now(), type:'category', categories:[categoryId], title: label || 'Abilità' }); setGridReturnTarget({ page:'abilities' }); setPage('grid');
 };
 const openGridWithGeography = (geoValue, label, returnView='countries') => {
   setSel(null); setGridPreset({ id: Date.now(), type:'geography', geography:[geoValue], title: label || 'Geografia' }); setGridReturnTarget({ page:'regions', view:returnView }); setPage('grid');
+};
+const handleLogout = async () => {
+  setDataError('');
+  setAuthLoading(true);
+  try {
+    await supabase.auth.signOut({ scope:'local' });
+  } catch (err) {
+    console.warn('[Apex] logout non bloccante:', err);
+  } finally {
+    setSession(null);
+    setUser(null);
+    setUserProfile(null);
+    setSel(null);
+    setPage('grid');
+    setGridPreset(null);
+    setGridReturnTarget(null);
+    setAwardQueue([]);
+    setAuthLoading(false);
+  }
 };
 const jumpToClassFromDetail = (cls, animal) => {
   setGridReturnTarget({ page:'detail', animal }); setSel(null); setGridPreset({ id: Date.now(), type:'class', cls, title:`Classe · ${cls}` }); setPage('grid');
@@ -10395,7 +10578,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
     setTimeout(() => setUserProfile(buildFallbackProfile(user, true)), 0);
     return (
       <div {...APP_FRAME_PROPS} style={{ height:'var(--animaldex-app-height, 100dvh)', maxWidth:480, margin:'0 auto', background:'#111113', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontFamily:"'Sora',-apple-system,BlinkMacSystemFont,sans-serif" }}>
-        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Animaldex...</div>
+        <div style={{ color:'rgba(255,255,255,.65)', fontWeight:800 }}>Apertura Apex...</div>
       </div>
     );
   }
@@ -10409,11 +10592,11 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   }
 
   const renderPage = () => {
-	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={()=>supabase.auth.signOut()} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
+	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
     if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
-    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={()=>supabase.auth.signOut()} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
+    if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;
     if (page === 'regions') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><RegionsPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} onVisitedCountriesChange={setVisitedCountries} initialView={regionsInitialView} onSelect={setSel} onOpenCountry={(code)=>openGridWithGeography(code, getCountryDisplayName(code), 'countries')} onOpenRegion={(value,label)=>openGridWithGeography(value, label, 'continents')} onAddDestination={handleAddDestination} destinationsLoading={destinationsLoading} onOpenHabitatGrid={openHabitatGrid} />{renderDetailOverlay()}</div>;
     if (page === 'gallery') return <div style={{ height:'100%', position:'relative', overflow:'hidden' }}><GalleryPage theme={theme} onBack={()=>setPage('profile')} statusMap={statusMap} onSelect={setSel} />{renderDetailOverlay()}</div>;
