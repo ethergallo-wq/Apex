@@ -251,7 +251,7 @@ as $$
     cross join clean
     where clean.q <> ''
       and length(clean.q) >= 3
-      and s.user_id <> (select auth.uid())
+      and ((select auth.uid()) is null or s.user_id <> (select auth.uid()))
       and (
         lower(coalesce(s.username, '')) like '%' || clean.q || '%'
         or lower(coalesce(s.nickname, '')) like '%' || clean.q || '%'

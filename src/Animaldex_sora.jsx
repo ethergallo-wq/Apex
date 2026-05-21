@@ -1240,32 +1240,50 @@ async function searchSocialProfiles(userId, query) {
     if (!String(err?.message || err?.code || '').includes('search_social_profiles')) throw err;
   }
   const pattern = `%${q}%`;
-  const baseSelect = 'user_id, username, nickname, avatar_url';
-  const [usernameResult, nicknameResult] = await Promise.all([
-    supabase
-      .from('user_profiles')
-      .select(baseSelect)
-      .neq('user_id', userId)
-      .ilike('username', pattern)
-      .order('username', { ascending:true })
-      .limit(12),
-    supabase
-      .from('user_profiles')
-      .select(baseSelect)
-      .neq('user_id', userId)
-      .ilike('nickname', pattern)
-      .order('username', { ascending:true })
-      .limit(12),
-  ]);
-  if (usernameResult.error) throw usernameResult.error;
-  if (nicknameResult.error) throw nicknameResult.error;
-  const merged = [...(usernameResult.data || []), ...(nicknameResult.data || [])]
-    .reduce((acc, row) => {
-      if (!row?.user_id || acc.some(existing => existing.user_id === row.user_id)) return acc;
-      acc.push(row);
-      return acc;
-    }, []);
-  return sortProfiles(merged);
+  const runProfileSearch = async (selectCols, idColumn='user_id', fields=['username','nickname']) => {
+    const make = (field) => {
+      let builder = supabase
+        .from('user_profiles')
+        .select(selectCols)
+        .ilike(field, pattern)
+        .order('username', { ascending:true })
+        .limit(12);
+      if (userId && idColumn) builder = builder.neq(idColumn, userId);
+      return builder;
+    };
+    const queryResults = await Promise.all(fields.map(make));
+    const firstError = queryResults.find(result => result.error)?.error;
+    if (firstError) throw firstError;
+    return queryResults.flatMap(result => result.data || []);
+  };
+  const attempts = [
+    ['user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image', 'user_id', ['username','nickname']],
+    ['user_id, username, nickname', 'user_id', ['username','nickname']],
+    ['user_id, username', 'user_id', ['username']],
+    ['id, username, nickname, avatar_url', 'id', ['username','nickname']],
+    ['id, username, nickname', 'id', ['username','nickname']],
+    ['id, username', 'id', ['username']],
+  ];
+  let lastError = null;
+  for (const [selectCols, idColumn, fields] of attempts) {
+    try {
+      const rows = await runProfileSearch(selectCols, idColumn, fields);
+      const merged = rows.reduce((acc, row) => {
+        const id = row?.user_id || row?.id;
+        if (!id || acc.some(existing => (existing.user_id || existing.id) === id)) return acc;
+        acc.push(row);
+        return acc;
+      }, []);
+      const sorted = sortProfiles(merged);
+      if (sorted.length) return sorted;
+    } catch (err) {
+      lastError = err;
+      const msg = String(err?.message || err?.code || '');
+      if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) break;
+    }
+  }
+  if (lastError) console.warn('[Apex] fallback ricerca profili non risolutivo:', lastError);
+  return [];
 }
 
 async function requestFriendship(userId, friendId) {
@@ -4067,7 +4085,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'13px 18px 16px':'9px 12px 11px', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0, position:'relative', zIndex:2 }}>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'16px 18px 16px':'12px 12px 11px', marginTop:-3, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
