@@ -5732,6 +5732,26 @@ function ComparatorDistributionMap({ left, right, colorLeft, colorRight }) {
     </div>
   );
 }
+class ComparatorErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError:false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError:true };
+  }
+  componentDidCatch(error) {
+    console.warn('[Apex] Comparator section:', error);
+  }
+  render() {
+    if (!this.state.hasError) return this.props.children;
+    return (
+      <div style={{ borderRadius:22, background:'rgba(255,255,255,.055)', border:'1px solid rgba(240,168,64,.22)', padding:16, color:'rgba(255,255,255,.76)', fontSize:12.5, lineHeight:1.45, margin:'0 0 14px' }}>
+        Questa sezione del confronto non è disponibile per questi dati. Puoi comunque scegliere gli animali e usare il radar.
+      </div>
+    );
+  }
+}
 function boundsToViewBox(b, padRatio=.34) {
   if (!b) return '0 0 1000 500';
   let w = Math.max(95, b.maxX - b.minX);
@@ -10287,16 +10307,24 @@ function ComparatorPage({ onBack, animals = [], statusMap = {}, visitedCountries
             })}
           </div>
         </div>
-        <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
+        <ComparatorErrorBoundary>
+          <ComparatorRadar left={leftMetrics} right={rightMetrics} colorLeft={colorLeft} colorRight={colorRight} />
+        </ComparatorErrorBoundary>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:14, margin:'12px 0 16px' }}>
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorLeft, display:'inline-block' }} />{left?.com || 'Animale A'}</div>
           <div style={{ color:'rgba(255,255,255,.26)', fontSize:13, fontWeight:950 }}>VS</div>
           <div style={{ display:'flex', alignItems:'center', gap:6, color:'rgba(255,255,255,.76)', fontSize:11, fontWeight:850 }}><span style={{ width:14, height:4, borderRadius:4, background:colorRight, display:'inline-block' }} />{right?.com || 'Animale B'}</div>
         </div>
-        <ComparatorDistributionMap left={left} right={right} colorLeft={colorLeft} colorRight={colorRight} />
+        <ComparatorErrorBoundary>
+          <ComparatorDistributionMap left={left} right={right} colorLeft={colorLeft} colorRight={colorRight} />
+        </ComparatorErrorBoundary>
         <div style={{ display:'grid', gridTemplateColumns:'1fr', gap:12 }}>
-          <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} sideLabel="Animale A" onZoom={setZoomAnimal} />
-          <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} sideLabel="Animale B" onZoom={setZoomAnimal} />
+          <ComparatorErrorBoundary>
+            <CompareInfoCard animal={left} metrics={leftMetrics} accent={colorLeft} gradient={COMPARE_LEFT_GRADIENT} sideLabel="Animale A" onZoom={setZoomAnimal} />
+          </ComparatorErrorBoundary>
+          <ComparatorErrorBoundary>
+            <CompareInfoCard animal={right} metrics={rightMetrics} accent={colorRight} gradient={COMPARE_RIGHT_GRADIENT} sideLabel="Animale B" onZoom={setZoomAnimal} />
+          </ComparatorErrorBoundary>
         </div>
       </div>
       {showInfo && <ComparatorInfoModal onClose={()=>setShowInfo(false)} />}
@@ -11012,7 +11040,7 @@ const renderDetailOverlay = () => enriched ? <div style={{ position:'absolute', 
   const renderPage = () => {
 	    if (page === 'menu') return <MainMenu theme={theme} onOpen={openPage} onBack={()=>setPage('grid')} onLogout={handleLogout} tutorialFocus={tutorialStep==='home'?'grid':null} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onOpenGridStatus={openGridWithStatus} onOpenRegions={()=>openPage('regions')} onQuickSeen={()=>{ setPage('quickSeen'); maybeShowSectionIntro('quickSeen'); }} onOpenPhoto={openPhotoRecognition} onOpenBadge={(badgeId)=>{setToastOpenBadgeId(normalizeBadgeId(badgeId)); setPage('badges'); maybeShowSectionIntro('badges');}} />;
     if (page === 'quickSeen') return <QuickSeenPage theme={theme} onBack={()=>setPage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} onStatusChange={handleStatusChange} onSelect={setSel} user={user} userProfile={userProfile} />;
-    if (page === 'compare') return <ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} />;
+    if (page === 'compare') return <ComparatorErrorBoundary><ComparatorPage theme={theme} onBack={()=>returnFromFeaturePage('menu')} animals={animalsData} statusMap={statusMap} visitedCountries={visitedCountries} initialAnimal={comparatorInitialAnimal} /></ComparatorErrorBoundary>;
     if (page === 'friends') return <FriendsPage theme={theme} onBack={()=>setPage('menu')} user={user} userProfile={userProfile} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} />;
     if (page === 'profile') return <ProfilePage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} userProfile={userProfile} user={user} onLogout={handleLogout} onOpenGridStatus={openGridWithStatus} onOpenBadges={()=>openPage('badges')} onOpenRegions={()=>openPage('regions')} onOpenGallery={()=>openPage('gallery')} onOpenFriends={()=>openPage('friends')} />;
 	    if (page === 'badges') return <BadgesPage theme={theme} onBack={()=>setPage('menu')} statusMap={statusMap} visitedCountries={visitedCountries} earnedBadgeIds={earnedBadgeIds} openBadgeId={toastOpenBadgeId} onBadgeOpened={()=>setToastOpenBadgeId(null)} tutorialActive={activeSectionGuide==='badges'} onTutorialBadgeOpen={()=>setActiveSectionGuide(null)} />;

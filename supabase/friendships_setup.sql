@@ -106,7 +106,83 @@ grant select, insert, update on public.social_notifications to authenticated;
 grant insert, select on public.user_reports to authenticated;
 grant select, insert, update on public.user_profiles to authenticated;
 
+insert into public.user_profiles (user_id, username, nickname)
+with missing_auth_users as (
+  select
+    u.id as user_id,
+    u.email,
+    u.created_at,
+    coalesce(
+      nullif(regexp_replace(lower(split_part(coalesce(u.email, ''), '@', 1)), '[^a-z0-9._-]', '', 'g'), ''),
+      'explorer_' || left(u.id::text, 8)
+    ) as base_username
+  from auth.users u
+  left join public.user_profiles p on p.user_id = u.id
+  where p.user_id is null
+),
+ranked as (
+  select
+    *,
+    row_number() over (partition by base_username order by created_at, user_id) as username_rank
+  from missing_auth_users
+)
+select
+  user_id,
+  case
+    when username_rank = 1
+      and not exists (
+        select 1 from public.user_profiles existing
+        where lower(existing.username) = ranked.base_username
+      )
+      then base_username
+    else base_username || '_' || left(user_id::text, 8)
+  end as username,
+  case
+    when username_rank = 1
+      and not exists (
+        select 1 from public.user_profiles existing
+        where lower(existing.username) = ranked.base_username
+      )
+      then base_username
+    else base_username || '_' || left(user_id::text, 8)
+  end as nickname
+from ranked
+on conflict (user_id) do nothing;
+
 create schema if not exists private;
+
+create or replace function private.handle_new_auth_user_profile()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  base_username text;
+  final_username text;
+begin
+  base_username := coalesce(
+    nullif(regexp_replace(lower(split_part(coalesce(new.email, ''), '@', 1)), '[^a-z0-9._-]', '', 'g'), ''),
+    'explorer_' || left(new.id::text, 8)
+  );
+  if exists (select 1 from public.user_profiles p where lower(p.username) = base_username) then
+    final_username := base_username || '_' || left(new.id::text, 8);
+  else
+    final_username := base_username;
+  end if;
+
+  insert into public.user_profiles (user_id, username, nickname)
+  values (new.id, final_username, final_username)
+  on conflict (user_id) do nothing;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists on_auth_user_created_profile on auth.users;
+create trigger on_auth_user_created_profile
+after insert on auth.users
+for each row execute function private.handle_new_auth_user_profile();
 
 create or replace function private.search_social_profiles_impl(p_query text, p_limit integer default 12)
 returns table (
