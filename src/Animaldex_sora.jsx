@@ -1228,8 +1228,13 @@ async function searchSocialProfiles(userId, query) {
       .slice(0, 12);
   };
   try {
-    const { data, error } = await withTimeout(supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }), 7000, 'search_social_profiles');
-    if (!error && Array.isArray(data)) return sortProfiles(data);
+    const { data, error } = await withTimeout(
+      supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
+      7000,
+      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
+      'search_social_profiles'
+    );
+    if (!error && Array.isArray(data) && data.length) return sortProfiles(data);
     if (error && !['42883', 'PGRST202'].includes(error.code)) throw error;
   } catch (err) {
     if (!String(err?.message || err?.code || '').includes('search_social_profiles')) throw err;
@@ -4062,7 +4067,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'13px 18px 16px':'9px 12px 11px', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0 }}>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'13px 18px 16px':'9px 12px 11px', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0, position:'relative', zIndex:2 }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4078,7 +4083,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ flex:1, overflowY:'auto', padding:isPhone?'14px 14px 0':'12px 12px 0', background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))' }}>
+      <div style={{ flex:1, overflowY:'auto', padding:isPhone?'38px 14px 22px':'36px 12px 18px', marginTop:-24, marginBottom:-18, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', position:'relative', zIndex:1 }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4097,7 +4102,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'1px solid rgba(255,255,255,.10)', padding:isPhone?'10px 18px calc(10px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative' }}>
+      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'10px 18px calc(10px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
@@ -7150,7 +7155,25 @@ function getMysteryLifeLabel(rank='species') {
   const label = labels[rank] || 'Nodo';
   return `${label} ${label === 'Specie' || label === 'Famiglia' || label === 'Classe' ? 'misteriosa' : 'misterioso'}`;
 }
-function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
+function limitLifeEntriesWithFocus(entries, limit, hasFocus) {
+  const list = entries.slice().sort(([a], [b]) => String(a).localeCompare(String(b)));
+  if (!hasFocus) return list.slice(0, limit);
+  const focused = list.find(hasFocus);
+  const limited = list.slice(0, limit);
+  if (focused && !limited.includes(focused)) return [...limited.slice(0, Math.max(0, limit - 1)), focused];
+  return limited;
+}
+function limitLifeAnimalsWithFocus(rows, limit, focusAnimalId=null) {
+  const sorted = rows
+    .slice()
+    .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')));
+  if (!focusAnimalId) return sorted.slice(0, limit);
+  const focused = sorted.find(animal => String(animal?.id || '') === String(focusAnimalId));
+  const limited = sorted.slice(0, limit);
+  if (focused && !limited.includes(focused)) return [...limited.slice(0, Math.max(0, limit - 1)), focused];
+  return limited;
+}
+function buildLifeAnimalBranches(node, animals=[], sourceRows=null, focusAnimalId=null) {
   const rows = sourceRows || getLifeAnimals(node, animals);
   if (!rows.length) return [];
   const buildRankBranches = (field, rank, fallbackLabel, nextRowsBuilder) => {
@@ -7160,24 +7183,22 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
       if (!grouped.has(label)) grouped.set(label, []);
       grouped.get(label).push(animal);
     });
-    return Array.from(grouped.entries()).sort(([a],[b])=>a.localeCompare(b)).slice(0, 24).map(([label, rankRows]) => {
+    return limitLifeEntriesWithFocus(Array.from(grouped.entries()), 24, focusAnimalId ? ([, rankRows]) => rankRows.some(animal => String(animal?.id || '') === String(focusAnimalId)) : null).map(([label, rankRows]) => {
       const id = `${node.id}-${rank}-${lifeSlug(label)}`;
       const allMystery = rankRows.every(animal => isMysteryStatus(animal.status));
       const childNode = { id, label:allMystery ? getMysteryLifeLabel(rank) : label, subtitle:`${rankRows.length} specie Apex`, rank, kind:'taxon', color:node.color, generated:true, children:[] };
       return { ...childNode, children:nextRowsBuilder(childNode, rankRows) };
     });
   };
-  if (node.rank === 'class') return buildRankBranches('ord', 'order', 'Ordine non classificato', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows));
-  if (node.rank === 'order') return buildRankBranches('fam', 'family', 'Famiglia non classificata', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows));
+  if (node.rank === 'class') return buildRankBranches('ord', 'order', 'Ordine non classificato', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
+  if (node.rank === 'order') return buildRankBranches('fam', 'family', 'Famiglia non classificata', (childNode, rankRows) => buildLifeAnimalBranches(childNode, animals, rankRows, focusAnimalId));
   const byGenus = new Map();
   rows.forEach(animal => {
     const genus = getLifeAnimalGenus(animal) || 'Genere non classificato';
     if (!byGenus.has(genus)) byGenus.set(genus, []);
     byGenus.get(genus).push(animal);
   });
-  return Array.from(byGenus.entries())
-    .sort(([a], [b]) => a.localeCompare(b))
-    .slice(0, 24)
+  return limitLifeEntriesWithFocus(Array.from(byGenus.entries()), 24, focusAnimalId ? ([, genusAnimals]) => genusAnimals.some(animal => String(animal?.id || '') === String(focusAnimalId)) : null)
     .map(([genus, genusAnimals]) => {
       const allMystery = genusAnimals.every(animal => isMysteryStatus(animal.status));
       return {
@@ -7188,10 +7209,7 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
         kind:'genus',
         color:node.color,
         generated:true,
-        children:genusAnimals
-          .slice()
-          .sort((a,b)=>String(a.com || a.sci || '').localeCompare(String(b.com || b.sci || '')))
-          .slice(0, 18)
+        children:limitLifeAnimalsWithFocus(genusAnimals, 18, focusAnimalId)
           .map(animal => {
             const mystery = isMysteryStatus(animal.status);
             return {
@@ -7209,10 +7227,10 @@ function buildLifeAnimalBranches(node, animals=[], sourceRows=null) {
       };
     });
 }
-function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
+function buildLifeFlow(selected, animals, expandedGeneratedId = null, focusAnimalId=null) {
   const selectedPath = getLifeNodePath(selected.id);
   const focusDepth = Math.max(0, selectedPath.length - 1);
-  const maxVisibleDepth = focusDepth + 2;
+  const maxVisibleDepth = focusDepth + (focusAnimalId ? 4 : 2);
   const selectedPathIds = new Set(selectedPath.map(node => node.id));
   const layoutNodes = [];
   const colGap = 324;
@@ -7232,7 +7250,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
     });
     const canAttachAnimals = focusDepth > 0 && withinSelected && depth >= focusDepth && depth < maxVisibleDepth && !(node.children || []).length;
     const uncoveredAnimals = canAttachAnimals ? getLifeUncoveredAnimals(node, baseChildren, animals) : [];
-    const animalChildren = uncoveredAnimals.length ? buildLifeAnimalBranches(node, animals, uncoveredAnimals) : [];
+    const animalChildren = uncoveredAnimals.length ? buildLifeAnimalBranches(node, animals, uncoveredAnimals, focusAnimalId) : [];
     const visibleChildren = [...baseChildren, ...animalChildren];
     const column = depth - focusDepth;
     const row = { data:node, depth, parent, x:140 + depth * colGap, y:0, column, withinSelected };
@@ -7296,7 +7314,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const [expandedGeneratedId, setExpandedGeneratedId] = useState(null);
   const [detailNode, setDetailNode] = useState(null);
   const [resetVersion, setResetVersion] = useState(0);
-  const flow = useMemo(() => buildLifeFlow(selectedNode, animals, expandedGeneratedId), [selectedNode, animals, expandedGeneratedId]);
+  const flow = useMemo(() => buildLifeFlow(selectedNode, animals, expandedGeneratedId, focusAnimalId), [selectedNode, animals, expandedGeneratedId, focusAnimalId]);
   useEffect(() => {
     setExpandedGeneratedId(null);
     userMovedViewRef.current = false;
@@ -7816,10 +7834,17 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   const [selectedFriend, setSelectedFriend] = useState(null);
 
   const load = async () => {
+    const fallback = buildSocialFallback(user, userProfile, progress);
     setLoading(true);
-    const next = await fetchSocialSnapshot(user?.id, userProfile, progress);
-    setSnapshot(next);
-    setLoading(false);
+    try {
+      const next = await withTimeout(fetchSocialSnapshot(user?.id, userProfile, progress), 6500, fallback, 'fetchSocialSnapshot');
+      setSnapshot(next || fallback);
+    } catch (err) {
+      console.warn('[Apex] Caricamento amici non riuscito:', err);
+      setSnapshot(fallback);
+    } finally {
+      setLoading(false);
+    }
   };
   useEffect(() => { load(); }, [user?.id, progress.seenCount, progress.capturedCount, earnedBadgeIds?.length]);
   useEffect(() => {
