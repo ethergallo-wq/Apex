@@ -66,8 +66,12 @@ const ANIMALDEX_ORANGE_SOLID = '#B84D3A';
 const APP_FRAME_PROPS = { className:'animaldex-app-frame' };
 function getInitialAnimaldexTheme() {
   if (typeof window === 'undefined') return 'dark';
-  const saved = window.localStorage.getItem(ANIMALDEX_THEME_KEY);
-  return saved === 'light' ? 'light' : 'dark';
+  try {
+    const saved = window.localStorage?.getItem(ANIMALDEX_THEME_KEY);
+    return saved === 'light' ? 'light' : 'dark';
+  } catch {
+    return 'dark';
+  }
 }
 function applyAnimaldexThemeToDocument(theme) {
   if (typeof document === 'undefined') return;
