@@ -2280,7 +2280,11 @@ function getUsageStreak() {
 }
 function getHomeCountry() {
   if (typeof window === 'undefined') return '';
-  return String(window.ANIMALDEX_HOME_COUNTRY || window.localStorage.getItem('animaldex_home_country') || '').toUpperCase();
+  try {
+    return String(window.ANIMALDEX_HOME_COUNTRY || window.localStorage?.getItem('animaldex_home_country') || '').toUpperCase();
+  } catch {
+    return String(window.ANIMALDEX_HOME_COUNTRY || '').toUpperCase();
+  }
 }
 const AWARD_RULES = [
   {badgeId:'ONB-01-L1', macroId:'ONB', macro:'Onboarding', subId:'ONB-01', sub:'Primo Viaggio', level:1, name:'Primo Viaggio', goal:'1 nazione', metric:'onboarding_first_trip', threshold:1},
@@ -3595,12 +3599,14 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
   // Ricercato, Avvistato e Catturato condividono la resa grafica completa in griglia.
   const found = imageVisible;
   const classMeta = CLS[a.cls] || CLS.Mammalia;
-  const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
-  const cardH = isNarrow ? 124 : 134;
-  const labelH = isNarrow ? 36 : 38;
+  const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 390;
+  const isPhone = viewportWidth <= 560;
+  const isTinyPhone = viewportWidth <= 360;
+  const cardH = isPhone ? (isTinyPhone ? 160 : 174) : 134;
+  const labelH = isPhone ? 44 : 38;
   const imageH = imageVisible ? cardH : cardH - labelH + 8;
   const photographed = status === 'catturato' || !!a.photo_url || !!a.userAnimal?.photo_url || !!a.userAnimal?.photo_path;
-  const displayName = clampWholeWords(a.com, isNarrow ? 25 : 31);
+  const displayName = clampWholeWords(a.com, isPhone ? 34 : 31);
   const rarityColor = rarityBorderColor(a.rarity);
   return (
     <div
@@ -3634,7 +3640,7 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
           <AnimalImg a={a} size={imageH} fontSize={52} gridMode={true} />
         </div>
       )}
-      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:24, height:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.38)', fontSize:8.5, fontWeight:800, letterSpacing:.2 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
+      {photographed ? <div style={{ position:'absolute', top:7, left:7, zIndex:3, width:isPhone?28:24, height:isPhone?28:24, borderRadius:9, background:'rgba(0,0,0,.58)', color:'white', display:'flex', alignItems:'center', justifyContent:'center', fontSize:isPhone?15:13, backdropFilter:'blur(4px)', boxShadow:'0 2px 10px rgba(0,0,0,.28)' }}>📷</div> : <div style={{ position:'absolute', top:8, left:8, zIndex:3, color:'rgba(245,241,234,.38)', fontSize:isPhone?12:8.5, fontWeight:800, letterSpacing:.2 }}>#{String(a.no || a.id || '').padStart(3,'0')}</div>}
       <div
         style={{
           position:'absolute',
@@ -3648,10 +3654,10 @@ function AnimalCard({ a, onClick, tutorialHighlight=false, tutorialDim=false }) 
             ? 'linear-gradient(180deg, transparent 0%, rgba(10,12,16,.58) 30%, rgba(10,12,16,.94) 100%)'
             : 'linear-gradient(180deg, transparent 0%, rgba(35,37,42,.68) 34%, rgba(18,20,24,.94) 100%)',
           color:mystery ? 'rgba(245,241,234,.74)' : 'rgba(245,241,234,.92)',
-          fontSize:isNarrow ? 9.5 : 10.3,
+          fontSize:isPhone ? 13.2 : 10.3,
           fontWeight:700,
           textAlign:'center',
-          lineHeight:'12.8px',
+          lineHeight:isPhone ? '15.4px' : '12.8px',
           textShadow: found ? '0 1px 1px rgba(0,0,0,.38)' : 'none',
           display:'flex',
           alignItems:'center',
@@ -3931,7 +3937,9 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
   const [sortBy, setSortBy] = useState('no');
   const [fTax,    setFTax]        = useState(null);
   const TAX_KEY_MAP = { kin:'kin', phy:'phy', cls:'cls', ord:'ord', fam:'fam', gen:'gen' };
-  const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 390;
+  const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 390;
+  const isNarrow = viewportWidth <= 390;
+  const isPhone = viewportWidth <= 560;
   const isLightTheme = theme === 'light';
   const pageText = isLightTheme ? '#171717' : 'white';
 
@@ -4050,27 +4058,27 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     { key:'tax', label:'Tassonomia', tone:'#E8C040', selected:fTax ? [fTax.value] : [], open:()=>{ setSheet('tax'); setShowMenu(false); setActiveFilter(null); }, hint:'Albero tassonomico' },
   ];
   const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
-  const buttonSize = isNarrow ? 40 : 46;
+  const buttonSize = isPhone ? 56 : 46;
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isNarrow?'8px 10px 10px':'9px 12px 11px', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0 }}>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'13px 18px 16px':'9px 12px 11px', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0 }}>
         {onBackToOrigin ? (
-          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         ) : (
-          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:'white', fontSize:isNarrow?17:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08))', border:'1px solid rgba(255,255,255,.20)', color:'white', fontSize:18, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:14, flexShrink:0, fontWeight:1000 }}>i</button>
+        <span style={{ color:'white', fontSize:isPhone?26:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08))', border:'1px solid rgba(255,255,255,.20)', color:'white', fontSize:isPhone?28:18, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:isPhone?22:14, flexShrink:0, fontWeight:1000 }}>i</button>
       </div>
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ flex:1, overflowY:'auto', padding:isNarrow?'10px 10px 0':'12px 12px 0', background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))' }}>
+      <div style={{ flex:1, overflowY:'auto', padding:isPhone?'14px 14px 0':'12px 12px 0', background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))' }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4085,16 +4093,16 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                 ? 'Qui compaiono solo gli animali fotografati e registrati nel tuo Apex.'
                 : 'Aggiungi un paese visitato per vedere i primi animali ricercati.';
           return <div style={{ color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.56)', textAlign:'center', padding:34, fontSize:14 }}><div style={{ fontWeight:950, color:isLightTheme?'#171717':'white', marginBottom:8 }}>{title}</div><div>{body}</div>{!isSeenTab && !isCapturedTab && !isMysteryTab && <button onClick={()=>onOpenRegions?.()} style={{ marginTop:16, height:44, padding:'0 16px', borderRadius:14, border:'none', background:'linear-gradient(180deg,rgba(184,77,58,.96),rgba(142,58,46,.98))', color:'white', fontWeight:950 }}>Aggiungi paese</button>}</div>;
-        })() : <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:isNarrow?8:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
+        })() : <div style={{ display:'grid', gridTemplateColumns:isPhone?'repeat(2,minmax(0,1fr))':'repeat(3,minmax(0,1fr))', gap:isPhone?12:10 }}>{list.map(a=><AnimalCard key={a.id} a={a} onClick={handleCardClick} tutorialHighlight={tutorialActive && a.id === tutorialAnimalId} tutorialDim={tutorialActive && tutorialAnimalId && a.id !== tutorialAnimalId}/>)}</div>}
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'1px solid rgba(255,255,255,.10)', padding:isNarrow?'6px 10px 6px':'7px 12px 6px', flexShrink:0, position:'relative' }}>
+      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'1px solid rgba(255,255,255,.10)', padding:isPhone?'10px 18px calc(10px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative' }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:11, fontWeight:800, letterSpacing:'.1px' }}>{`${list.length} risultati`}</div>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:isPhone?18:11, fontWeight:900, letterSpacing:'.1px' }}>{`${list.length} risultati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4107,7 +4115,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       </div>
 
       {showMenu && (
-        <div style={{ position:'absolute', left:0, right:0, bottom:isNarrow?52:58, zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
+        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?84:(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
           <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
             <div style={{ width:44, height:4, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.18)':'rgba(255,255,255,.20)', margin:'0 auto 10px' }} />
             {!activeFilterDef ? (
@@ -4167,7 +4175,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       )}
 
       {showSearchBar && (
-        <div data-animaldex-card="true" style={{ position:'absolute', top:isNarrow?52:58, left:12, right:12, background:'#252527', borderRadius:24, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
+        <div data-animaldex-card="true" style={{ position:'absolute', top:isPhone?88:(isNarrow?52:58), left:12, right:12, background:'#252527', borderRadius:24, border:'1px solid #333', padding:10, zIndex:50, display:'flex', gap:8, boxShadow:'0 8px 24px rgba(0,0,0,.4)' }}>
           <button onClick={()=>{setSearch('');setShowSearchBar(false);}} style={{ width:40, height:40, borderRadius:8, background:'#3A3A3C', border:'none', color:'rgba(255,255,255,.6)', fontSize:18, cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>×</button>
           <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Cerca nome, scientifico, habitat o categoria..." style={{ flex:1, height:40, borderRadius:8, background:'#333', border:'1px solid #444', color:'white', fontSize:14, padding:'0 12px', outline:'none', fontFamily:'inherit' }} autoFocus/>
         </div>
