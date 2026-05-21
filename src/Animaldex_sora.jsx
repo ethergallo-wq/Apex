@@ -1203,6 +1203,33 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
 async function searchSocialProfiles(userId, query) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
+  const sortProfiles = (rows = []) => {
+    const normalizedQ = q.toLowerCase();
+    return rows
+      .map(normalizeSocialProfile)
+      .filter(row => row?.user_id && row.user_id !== userId)
+      .sort((a, b) => {
+        const aUsername = String(a.username || '').toLowerCase();
+        const bUsername = String(b.username || '').toLowerCase();
+        const aNickname = String(a.nickname || '').toLowerCase();
+        const bNickname = String(b.nickname || '').toLowerCase();
+        const aExact = aUsername === normalizedQ || aNickname === normalizedQ;
+        const bExact = bUsername === normalizedQ || bNickname === normalizedQ;
+        if (aExact !== bExact) return aExact ? -1 : 1;
+        const aStarts = aUsername.startsWith(normalizedQ) || aNickname.startsWith(normalizedQ);
+        const bStarts = bUsername.startsWith(normalizedQ) || bNickname.startsWith(normalizedQ);
+        if (aStarts !== bStarts) return aStarts ? -1 : 1;
+        return String(a.username || '').localeCompare(String(b.username || ''), 'it');
+      })
+      .slice(0, 12);
+  };
+  try {
+    const { data, error } = await withTimeout(supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }), 7000, 'search_social_profiles');
+    if (!error && Array.isArray(data)) return sortProfiles(data);
+    if (error && !['42883', 'PGRST202'].includes(error.code)) throw error;
+  } catch (err) {
+    if (!String(err?.message || err?.code || '').includes('search_social_profiles')) throw err;
+  }
   const pattern = `%${q}%`;
   const baseSelect = 'user_id, username, nickname, avatar_url';
   const [usernameResult, nicknameResult] = await Promise.all([
@@ -1229,19 +1256,7 @@ async function searchSocialProfiles(userId, query) {
       acc.push(row);
       return acc;
     }, []);
-  const normalizedQ = q.toLowerCase();
-  return merged
-    .map(normalizeSocialProfile)
-    .sort((a, b) => {
-      const aExact = String(a.username || '').toLowerCase() === normalizedQ || String(a.nickname || '').toLowerCase() === normalizedQ;
-      const bExact = String(b.username || '').toLowerCase() === normalizedQ || String(b.nickname || '').toLowerCase() === normalizedQ;
-      if (aExact !== bExact) return aExact ? -1 : 1;
-      const aStarts = String(a.username || '').toLowerCase().startsWith(normalizedQ) || String(a.nickname || '').toLowerCase().startsWith(normalizedQ);
-      const bStarts = String(b.username || '').toLowerCase().startsWith(normalizedQ) || String(b.nickname || '').toLowerCase().startsWith(normalizedQ);
-      if (aStarts !== bStarts) return aStarts ? -1 : 1;
-      return String(a.username || '').localeCompare(String(b.username || ''), 'it');
-    })
-    .slice(0, 12);
+  return sortProfiles(merged);
 }
 
 async function requestFriendship(userId, friendId) {
@@ -3142,7 +3157,8 @@ function CountryPresenceMap({ countryCodes = [], selectedCountry, onSelectCountr
     (activeCountryFeatures.length ? activeCountryFeatures : fallbackActive)
       .map(f => geometryProjectedBounds(f.geometry))
   ) || pointProjectedBounds(points, pointMode ? 42 : 26, pointMode ? 32 : 22);
-  const viewBox = boundsToViewBox(activeBounds, codes.length > 8 ? .12 : .22);
+  const overviewProjectedBounds = pointProjectedBounds([{ lon:-180, lat:-70 }, { lon:180, lat:80 }], 0, 0);
+  const viewBox = boundsToViewBox((globeOverview && !selected) ? overviewProjectedBounds : activeBounds, (globeOverview && !selected) ? .02 : (codes.length > 8 ? .12 : .22));
   const openFullscreen = () => { if (!fullscreen) setIsFullscreen(true); };
 
   const mapLibreFeatures = baseCountryFeatures.map(f => {
@@ -4763,7 +4779,7 @@ function Detail({ a, onBack, onStatusChange, onJumpToClass, onOpenTaxonomyFilter
               <div style={{ display:'grid', gap:10, maxHeight:bioExpanded ? 468 : 138, overflowY:bioExpanded ? 'auto' : 'hidden', WebkitOverflowScrolling:'touch', paddingRight:bioExpanded ? 2 : 0, transition:'max-height .28s ease' }}>
                 {bioPanels.map((text, index) => (
                   <div key={`${index}-${text.slice(0,18)}`} data-animaldex-card="true" style={{ background:'rgba(28,28,30,.92)', border:'1px solid rgba(255,255,255,.07)', borderRadius:24, padding:14, boxShadow:index>0?'inset 0 1px 0 rgba(255,255,255,.035)':'none' }}>
-                    <div style={{ color:index === 0 ? c.accent : 'rgba(255,255,255,.46)', fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8, marginBottom:7 }}>{index === 0 ? 'Scheda biologica' : `Curiosità docu ${index}`}</div>
+                    {index > 0 && <div style={{ color:'rgba(255,255,255,.46)', fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.8, marginBottom:7 }}>{`Curiosità docu ${index}`}</div>}
                     <p style={{ margin:0, color:'rgba(255,255,255,.82)', fontSize:13, lineHeight:1.7 }}>{text}</p>
                   </div>
                 ))}
@@ -6698,7 +6714,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
     beginHomeLaunch(event, {
       label:'Esplorazione',
       title:'Territori',
-      subtitle:'Domini, continenti, regioni e territori.',
+      subtitle:'Esplora il mondo e i suoi animali',
       color:'#90D84A',
       background:'linear-gradient(90deg, rgba(5,11,13,.62), rgba(5,11,13,.30) 58%, rgba(5,11,13,.18))',
       content:'map',
@@ -6783,9 +6799,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")' }, ()=>onOpenGridStatus?.(['avvistato','catturato']))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto' }, ()=>onOpenGridStatus?.(['avvistato','catturato']))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', backgroundRepeat:'no-repeat', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
-          <div style={{ color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Apri avvistati e catturati. Hai {searchedAnimalsCount} animali ricercati da trovare.</div>
+          <div style={{ color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Hai {searchedAnimalsCount} animali ricercati da trovare.</div>
         </button>
 
         <div style={{ marginBottom:14 }}>
@@ -6798,14 +6814,14 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
             <div style={{ position:'relative', zIndex:1 }}>
               <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Esplorazione</div>
               <div style={{ fontSize:28, fontWeight:1000, lineHeight:1.02, marginTop:6 }}>Territori</div>
-              <div style={{ color:'rgba(245,241,234,.70)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Domini, continenti, regioni e territori per scoprire animali dove il mondo cambia davvero.</div>
+              <div style={{ color:'rgba(245,241,234,.70)', fontSize:12.5, lineHeight:1.45, marginTop:7 }}>Esplora il mondo e i suoi animali</div>
             </div>
           </button>
         </div>
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Tassonomia', title:'Albero della vita', subtitle:'Naviga i rami di Apex', color:'#90D84A', background:'linear-gradient(90deg, rgba(3,8,5,.54), rgba(3,8,5,.22)), url("/backgrounds/background_tree.png")' }, ()=>onOpen('taxonomy'))} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
-          <span style={{ position:'absolute', inset:0, background:'url("/backgrounds/background_tree.png") center 43% / cover no-repeat', opacity:isLightTheme ? .58 : .88, filter:'saturate(1.08) contrast(1.04)', transform:'scale(1.02)', pointerEvents:'none' }} />
-          <span style={{ position:'absolute', inset:0, background:isLightTheme?'linear-gradient(90deg, rgba(251,247,239,.76), rgba(251,247,239,.42) 52%, rgba(251,247,239,.06))':'linear-gradient(90deg, rgba(3,8,5,.70), rgba(3,8,5,.40) 47%, rgba(3,8,5,.04))', pointerEvents:'none' }} />
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Tassonomia', title:'Albero della vita', subtitle:'Naviga i rami di Apex', color:'#90D84A', background:'linear-gradient(90deg, rgba(3,8,5,.60), rgba(3,8,5,.30)), url("/backgrounds/background_tree.png")', backgroundSize:'100% 100%, 90% auto' }, ()=>onOpen('taxonomy'))} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+          <span style={{ position:'absolute', inset:0, background:'url("/backgrounds/background_tree.png") center 43% / 90% auto no-repeat', opacity:isLightTheme ? .44 : .68, filter:'saturate(1.02) contrast(.98)', transform:'scale(1)', pointerEvents:'none' }} />
+          <span style={{ position:'absolute', inset:0, background:isLightTheme?'linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.52) 52%, rgba(251,247,239,.20))':'linear-gradient(90deg, rgba(3,8,5,.78), rgba(3,8,5,.54) 47%, rgba(3,8,5,.18))', pointerEvents:'none' }} />
           <div style={{ position:'relative', zIndex:1, maxWidth:'76%' }}>
             <div style={{ color:'#90D84A', fontSize:11, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Tassonomia</div>
             <div style={{ color:pageText, fontSize:24, fontWeight:1000, marginTop:6 }}>Albero della vita</div>
@@ -6842,7 +6858,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         const radius = homeLaunch.expanded ? 0 : 24;
         return (
           <div style={{ position:'fixed', inset:0, zIndex:470, pointerEvents:'none', background:homeLaunch.expanded?'rgba(0,0,0,.22)':'rgba(0,0,0,0)', transition:'background .38s ease' }}>
-            <div style={{ position:'fixed', left:r.left, top:r.top, width:r.width, height:r.height, borderRadius:radius, overflow:'hidden', background:homeLaunch.background || 'linear-gradient(135deg,#1B1A18,#3B2415)', backgroundSize:'cover', backgroundPosition:'center', border:`1px solid ${hexToRgba(homeLaunch.color || '#F0A840', .42)}`, boxShadow:homeLaunch.expanded?'0 0 0 999px rgba(0,0,0,.18), 0 30px 90px rgba(0,0,0,.52)':'0 16px 38px rgba(0,0,0,.22)', transition:'left .44s cubic-bezier(.16,.86,.18,1), top .44s cubic-bezier(.16,.86,.18,1), width .44s cubic-bezier(.16,.86,.18,1), height .44s cubic-bezier(.16,.86,.18,1), border-radius .44s cubic-bezier(.16,.86,.18,1), box-shadow .44s ease', transform:'translateZ(0)' }}>
+            <div style={{ position:'fixed', left:r.left, top:r.top, width:r.width, height:r.height, borderRadius:radius, overflow:'hidden', background:homeLaunch.background || 'linear-gradient(135deg,#1B1A18,#3B2415)', backgroundSize:homeLaunch.backgroundSize || 'cover', backgroundRepeat:'no-repeat', backgroundPosition:'center', border:`1px solid ${hexToRgba(homeLaunch.color || '#F0A840', .42)}`, boxShadow:homeLaunch.expanded?'0 0 0 999px rgba(0,0,0,.18), 0 30px 90px rgba(0,0,0,.52)':'0 16px 38px rgba(0,0,0,.22)', transition:'left .44s cubic-bezier(.16,.86,.18,1), top .44s cubic-bezier(.16,.86,.18,1), width .44s cubic-bezier(.16,.86,.18,1), height .44s cubic-bezier(.16,.86,.18,1), border-radius .44s cubic-bezier(.16,.86,.18,1), box-shadow .44s ease', transform:'translateZ(0)' }}>
               {homeLaunch.content === 'map' && (
                 <div style={{ position:'absolute', inset:homeLaunch.expanded ? '-6% -8%' : '0', opacity:homeLaunch.expanded ? .95 : .72, transition:'inset .44s cubic-bezier(.16,.86,.18,1), opacity .34s ease' }}>
                   <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={Math.max(180, r.height)} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} autoSpin autoSpinSpeed={0.00038} fitDuration={0} />
@@ -7222,7 +7238,7 @@ function buildLifeFlow(selected, animals, expandedGeneratedId = null) {
     source:{ x:d.parent.x, y:d.parent.y },
     target:{ x:d.x, y:d.y },
     color:d.data.color,
-    active:focusDepth === 0 ? false : d.withinSelected,
+    active:focusDepth === 0 ? false : (d.withinSelected || (selectedPathIds.has(d.parent.data.id) && selectedPathIds.has(d.data.id))),
   }));
   const visibleDepths = Array.from(new Set(nodes.map(node => node.depth))).sort((a,b)=>a-b);
   const columns = visibleDepths.map(depth => {
@@ -7386,6 +7402,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     return `M ${sx} ${sy} H ${midX} V ${ty} H ${tx}`;
   };
   const rootPlaceholderOpacity = flow.focusDepth === 0 ? Math.max(0, Math.min(.24, 1.05 - view.k)) : 0;
+  const focusAnimal = focusAnimalId ? animals.find(animal => String(animal?.id || '') === String(focusAnimalId)) : null;
   return (
     <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
       <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
@@ -7414,12 +7431,13 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
           const animalStatus = generatedAnimal ? normalizeAnimalStatus(node.animal.status) : null;
           const animalMystery = generatedAnimal ? isMysteryStatus(animalStatus) : false;
           const focusedAnimal = generatedAnimal && String(node.animal?.id || '') === String(focusAnimalId || '');
+          const focusPathNode = !!focusAnimal && (focusedAnimal || inPath || (node.generated && getLifeAnimals(node, animals).some(animal => String(animal?.id || '') === String(focusAnimalId))));
           const generatedBranch = node.generated && !generatedAnimal;
           const terminal = !(node.children || []).length && stats.total > 0 && !generatedAnimal;
           const childCount = (node.children || []).length;
           const muted = !near;
           const displayColor = animalMystery ? '#8C949A' : node.color;
-          const borderColor = animalMystery ? 'rgba(151,160,166,.42)' : `${node.color}${active ? 'FF' : near ? 'AA' : '55'}`;
+          const borderColor = animalMystery ? 'rgba(151,160,166,.42)' : `${node.color}${(active || focusPathNode) ? 'FF' : near ? 'AA' : '55'}`;
           const cardBackground = animalMystery
             ? 'radial-gradient(circle at 12% 14%, rgba(164,172,178,.12), transparent 38%), linear-gradient(135deg, rgba(82,88,94,.34), rgba(10,12,14,.94))'
             : active
@@ -7443,16 +7461,16 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
                 width:252,
                 minHeight:generatedAnimal ? 98 : 118,
                 borderRadius:22,
-                border:`${focusedAnimal ? 2.4 : 1.4}px solid ${focusedAnimal ? '#F0A840' : borderColor}`,
+                border:`${(focusedAnimal || focusPathNode) ? 2.4 : 1.4}px solid ${focusedAnimal ? '#F0A840' : borderColor}`,
                 background:cardBackground,
                 color:'white',
                 fontFamily:'inherit',
                 textAlign:'left',
                 padding:12,
-                boxShadow:focusedAnimal ? '0 0 0 2px rgba(240,168,64,.42), 0 0 34px rgba(240,168,64,.28), 0 18px 42px rgba(0,0,0,.42)' : animalMystery ? '0 10px 24px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.055)' : active ? `0 0 0 1px ${node.color}66, 0 18px 42px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.12)` : '0 12px 28px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08)',
+                boxShadow:focusedAnimal ? '0 0 0 2px rgba(240,168,64,.42), 0 0 34px rgba(240,168,64,.28), 0 18px 42px rgba(0,0,0,.42)' : animalMystery ? '0 10px 24px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.055)' : (active || focusPathNode) ? `0 0 0 1px ${node.color}88, 0 0 30px ${node.color}2E, 0 18px 42px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.12)` : '0 12px 28px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08)',
                 cursor:'pointer',
-                opacity:animalMystery ? (muted ? .34 : .66) : (muted ? .38 : 1),
-                transform:(active || focusedAnimal) ? 'scale(1.035)' : 'scale(1)',
+                opacity:focusPathNode ? 1 : (animalMystery ? (muted ? .34 : .66) : (muted ? .38 : 1)),
+                transform:(active || focusedAnimal || focusPathNode) ? 'scale(1.035)' : 'scale(1)',
                 transition:'left .72s cubic-bezier(.16,.86,.18,1), top .72s cubic-bezier(.16,.86,.18,1), opacity .46s ease, transform .46s ease, box-shadow .46s ease',
               }}
             >
@@ -7873,8 +7891,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
             </div>
             {!!snapshot.unreadCount && <button onClick={markRead} style={{ minWidth:36, height:36, borderRadius:14, border:'1px solid rgba(255,255,255,.18)', background:'#B84D3A', color:'white', fontWeight:1000 }}>{snapshot.unreadCount}</button>}
           </div>
-          <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici per username, confronta i progressi e reagisci alle catture rare. Niente chat, niente testo libero: solo segnali positivi e sicuri.</div>
-          {!snapshot.socialReady && <div style={{ marginTop:10, color:'#FFE0B8', fontSize:11, fontWeight:850 }}>Applica lo script Supabase aggiornato per attivare dati social reali.</div>}
+          <div style={{ color:'rgba(255,255,255,.72)', fontSize:12.5, lineHeight:1.5, marginTop:8 }}>Aggiungi amici per username, confronta i progressi e reagisci alle catture rare.</div>
         </div>
 
         <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:8, marginBottom:14 }}>
@@ -8117,10 +8134,10 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
         <button onClick={onOpenBadges} style={{ marginTop:16, width:'100%', minHeight:112, borderRadius:18, border:`1px solid ${hexToRgba(featuredBadgeColor,.42)}`, background:`linear-gradient(90deg,${hexToRgba(featuredBadgeColor,.16)},rgba(10,10,12,.38) 56%,rgba(10,10,12,.58)), url("/backgrounds/background_badges.png")`, backgroundSize:'cover', backgroundPosition:'center', color:mainText, padding:16, textAlign:'left', fontFamily:'inherit', display:'flex', alignItems:'center', gap:14, boxShadow:'inset 0 0 34px rgba(0,0,0,.18)' }}>
           <span><span style={{ display:'block', color:featuredBadgeColor, fontSize:11, fontWeight:1000, textTransform:'uppercase' }}>{earnedAwards.length} badge ottenuti</span><span style={{ display:'block', color:mainText, fontSize:21, fontWeight:1000, marginTop:4 }}>Bacheca badge</span></span>
         </button>
-        <button onClick={onOpenFriends} style={{ marginTop:16, width:'100%', minHeight:104, borderRadius:18, border:'1px solid rgba(240,168,64,.26)', background:'linear-gradient(90deg,rgba(22,16,12,.62),rgba(20,20,22,.38) 56%,rgba(20,20,22,.62)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', padding:16, textAlign:'left', fontFamily:'inherit' }}>
-          <div style={{ color:'#FFD4A3', fontSize:11, fontWeight:1000, textTransform:'uppercase' }}>Amici</div>
-          <div style={{ fontSize:23, fontWeight:1000, marginTop:5 }}>Compagni di esplorazione</div>
-          <div style={{ color:'rgba(255,255,255,.68)', fontSize:12, marginTop:6 }}>Apri feed, richieste e leaderboard amici.</div>
+        <button onClick={onOpenFriends} style={{ marginTop:16, width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
+          <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
+          <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
+          <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
         </button>
         <div style={{ marginTop:16, background:panelBg, border:`1px solid ${panelBorder}`, borderRadius:18, padding:16 }}>
           <div style={{ color:'white', fontSize:18, fontWeight:900, marginBottom:12 }}>Account</div>
@@ -8273,7 +8290,7 @@ function ScratchMap({ visitedCountries, selectedCountry, onSelectCountry }) {
           );
         })}
       </div>
-      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" pointMode={false} flat={flatMap} />
+      <CountryPresenceMap countryCodes={visited} selectedCountry={selectedCountry} onSelectCountry={onSelectCountry} accent="#90D84A" height={250} title="Paesi visitati" pointMode={false} flat={flatMap} globeOverview />
       {visited.length === 0 && <div style={{ marginTop:8, color:'rgba(255,255,255,.45)', fontSize:12, textAlign:'center' }}>Aggiungi un paese visitato per evidenziarlo sulla mappa.</div>}
     </div>
   );
@@ -10815,6 +10832,7 @@ const openPage = (nextPage) => {
   setPhotoTarget(null);
   setGridReturnTarget(null);
   setRegionsInitialView(null);
+  setTaxonomyInitialAnimal(null);
   if (nextPage !== 'compare') setComparatorInitialAnimal(null);
   if (nextPage !== 'lifeweb') setLifeWebInitialAnimal(null);
   setFeatureReturnAnimal(null);

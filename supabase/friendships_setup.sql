@@ -83,7 +83,9 @@ create table if not exists public.user_reports (
 create index if not exists user_reports_reporter_idx on public.user_reports (reporter_id, created_at desc);
 
 alter table public.user_profiles
-  add column if not exists featured_badge_id text;
+  add column if not exists featured_badge_id text,
+  add column if not exists profile_background_image text,
+  add column if not exists avatar_url text;
 
 create index if not exists user_profiles_username_search_idx on public.user_profiles (lower(username));
 create index if not exists user_profiles_nickname_search_idx on public.user_profiles (lower(nickname));
@@ -103,6 +105,77 @@ grant select, insert, delete on public.social_event_reactions to authenticated;
 grant select, insert, update on public.social_notifications to authenticated;
 grant insert, select on public.user_reports to authenticated;
 grant select, insert, update on public.user_profiles to authenticated;
+
+create schema if not exists private;
+
+create or replace function private.search_social_profiles_impl(p_query text, p_limit integer default 12)
+returns table (
+  user_id uuid,
+  username text,
+  nickname text,
+  avatar_url text,
+  featured_badge_id text,
+  profile_background_image text
+)
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  with clean as (
+    select lower(left(regexp_replace(regexp_replace(trim(coalesce(p_query, '')), '^@+', ''), '[%_,()]', '', 'g'), 40)) as q
+  )
+  select
+    p.user_id,
+    p.username,
+    p.nickname,
+    p.avatar_url,
+    p.featured_badge_id,
+    p.profile_background_image
+  from public.user_profiles p
+  cross join clean
+  where clean.q <> ''
+    and length(clean.q) >= 3
+    and p.user_id <> (select auth.uid())
+    and (
+      lower(coalesce(p.username, '')) like '%' || clean.q || '%'
+      or lower(coalesce(p.nickname, '')) like '%' || clean.q || '%'
+    )
+    and not exists (
+      select 1 from public.user_blocks b
+      where (b.blocker_id = (select auth.uid()) and b.blocked_id = p.user_id)
+         or (b.blocked_id = (select auth.uid()) and b.blocker_id = p.user_id)
+    )
+  order by
+    case when lower(coalesce(p.username, '')) = clean.q or lower(coalesce(p.nickname, '')) = clean.q then 0 else 1 end,
+    case when lower(coalesce(p.username, '')) like clean.q || '%' or lower(coalesce(p.nickname, '')) like clean.q || '%' then 0 else 1 end,
+    lower(coalesce(p.username, p.nickname, ''))
+  limit greatest(1, least(coalesce(p_limit, 12), 25));
+$$;
+
+revoke all on function private.search_social_profiles_impl(text, integer) from public;
+revoke all on function private.search_social_profiles_impl(text, integer) from anon;
+grant usage on schema private to authenticated;
+grant execute on function private.search_social_profiles_impl(text, integer) to authenticated;
+
+create or replace function public.search_social_profiles(p_query text, p_limit integer default 12)
+returns table (
+  user_id uuid,
+  username text,
+  nickname text,
+  avatar_url text,
+  featured_badge_id text,
+  profile_background_image text
+)
+language sql
+stable
+security invoker
+set search_path = public
+as $$
+  select * from private.search_social_profiles_impl(p_query, p_limit);
+$$;
+
+grant execute on function public.search_social_profiles(text, integer) to authenticated;
 
 do $$
 begin
