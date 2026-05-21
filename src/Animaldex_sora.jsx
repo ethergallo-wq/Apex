@@ -6633,6 +6633,9 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const [quickActionsOpen, setQuickActionsOpen] = useState(false);
   const [territoryLaunch, setTerritoryLaunch] = useState(false);
   const territoryLaunchTimerRef = useRef(null);
+  const [homeLaunch, setHomeLaunch] = useState(null);
+  const homeLaunchActionRef = useRef(null);
+  const homeLaunchTimerRef = useRef(null);
   const userIdKey = user?.id || 'guest';
   const unlockedAwardSet = new Set([
     ...(earnedBadgeIds || []).map(normalizeBadgeId),
@@ -6669,14 +6672,37 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const featuredBadgeName = featuredBadge?.name || 'Scegli badge';
   useEffect(() => () => {
     if (territoryLaunchTimerRef.current) window.clearTimeout(territoryLaunchTimerRef.current);
+    if (homeLaunchTimerRef.current) window.clearTimeout(homeLaunchTimerRef.current);
   }, []);
-  const openTerritoriesFromHome = () => {
-    if (territoryLaunch) return;
-    setTerritoryLaunch(true);
-    territoryLaunchTimerRef.current = window.setTimeout(() => {
-      (onOpenRegions || (() => onOpen('regions')))();
-      setTerritoryLaunch(false);
-    }, 260);
+  const beginHomeLaunch = (event, config, action) => {
+    if (homeLaunch) return;
+    const source = event?.currentTarget;
+    const sourceRect = source?.getBoundingClientRect?.();
+    if (!sourceRect) { action?.(); return; }
+    const appRect = document.getElementById('animaldex-app-root')?.getBoundingClientRect?.()
+      || source.closest?.('.animaldex-app-frame')?.getBoundingClientRect?.()
+      || { left:0, top:0, width:window.innerWidth, height:window.innerHeight };
+    homeLaunchActionRef.current = action;
+    setHomeLaunch({ ...config, sourceRect, appRect, expanded:false });
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => setHomeLaunch(prev => prev ? { ...prev, expanded:true } : prev));
+    });
+    homeLaunchTimerRef.current = window.setTimeout(() => {
+      const run = homeLaunchActionRef.current;
+      homeLaunchActionRef.current = null;
+      setHomeLaunch(null);
+      run?.();
+    }, 470);
+  };
+  const openTerritoriesFromHome = (event) => {
+    beginHomeLaunch(event, {
+      label:'Esplorazione',
+      title:'Territori',
+      subtitle:'Domini, continenti, regioni e territori.',
+      color:'#90D84A',
+      background:'linear-gradient(90deg, rgba(5,11,13,.62), rgba(5,11,13,.30) 58%, rgba(5,11,13,.18))',
+      content:'map',
+    }, () => (onOpenRegions || (() => onOpen('regions')))());
   };
   useEffect(() => {
     const preferred = normalizeBadgeId(userProfile?.featured_badge_id || getFeaturedBadgeId(userIdKey));
@@ -6742,7 +6768,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
       </div>
 
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
-        <div role="button" tabIndex={0} onClick={()=>onOpen('profile')} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.84), rgba(251,247,239,.50) 56%, rgba(251,247,239,.20)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
+        <div role="button" tabIndex={0} onClick={(e)=>beginHomeLaunch(e, { label:'Profilo', title:displayName, subtitle:`Liv. ${progress.level} · ${progress.xp} XP`, color:featuredBadgeColor, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.72), rgba(17,19,23,.28)), url("${profileBgImage}")` }, ()=>onOpen('profile'))} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.84), rgba(251,247,239,.50) 56%, rgba(251,247,239,.20)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
           <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'radial-gradient(circle at 80% 16%, rgba(216,210,196,.16), transparent 36%)' }} />
           <div style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:14, height:'100%' }}>
             <div style={{ flex:1, minWidth:0 }}>
@@ -6757,7 +6783,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>
 
-        <button onClick={()=>onOpenGridStatus?.(['avvistato','catturato'])} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")' }, ()=>onOpenGridStatus?.(['avvistato','catturato']))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'cover', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
           <div style={{ color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Apri avvistati e catturati. Hai {searchedAnimalsCount} animali ricercati da trovare.</div>
         </button>
@@ -6777,7 +6803,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <button onClick={()=>onOpen('taxonomy')} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Tassonomia', title:'Albero della vita', subtitle:'Naviga i rami di Apex', color:'#90D84A', background:'linear-gradient(90deg, rgba(3,8,5,.54), rgba(3,8,5,.22)), url("/backgrounds/background_tree.png")' }, ()=>onOpen('taxonomy'))} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <span style={{ position:'absolute', inset:0, background:'url("/backgrounds/background_tree.png") center 43% / cover no-repeat', opacity:isLightTheme ? .58 : .88, filter:'saturate(1.08) contrast(1.04)', transform:'scale(1.02)', pointerEvents:'none' }} />
           <span style={{ position:'absolute', inset:0, background:isLightTheme?'linear-gradient(90deg, rgba(251,247,239,.76), rgba(251,247,239,.42) 52%, rgba(251,247,239,.06))':'linear-gradient(90deg, rgba(3,8,5,.70), rgba(3,8,5,.40) 47%, rgba(3,8,5,.04))', pointerEvents:'none' }} />
           <div style={{ position:'relative', zIndex:1, maxWidth:'76%' }}>
@@ -6805,12 +6831,33 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>}
 
-        <button onClick={()=>onOpen('friends')} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")' }, ()=>onOpen('friends'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
           <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
         </button>
       </div>
+      {homeLaunch && (() => {
+        const r = homeLaunch.expanded ? homeLaunch.appRect : homeLaunch.sourceRect;
+        const radius = homeLaunch.expanded ? 0 : 24;
+        return (
+          <div style={{ position:'fixed', inset:0, zIndex:470, pointerEvents:'none', background:homeLaunch.expanded?'rgba(0,0,0,.22)':'rgba(0,0,0,0)', transition:'background .38s ease' }}>
+            <div style={{ position:'fixed', left:r.left, top:r.top, width:r.width, height:r.height, borderRadius:radius, overflow:'hidden', background:homeLaunch.background || 'linear-gradient(135deg,#1B1A18,#3B2415)', backgroundSize:'cover', backgroundPosition:'center', border:`1px solid ${hexToRgba(homeLaunch.color || '#F0A840', .42)}`, boxShadow:homeLaunch.expanded?'0 0 0 999px rgba(0,0,0,.18), 0 30px 90px rgba(0,0,0,.52)':'0 16px 38px rgba(0,0,0,.22)', transition:'left .44s cubic-bezier(.16,.86,.18,1), top .44s cubic-bezier(.16,.86,.18,1), width .44s cubic-bezier(.16,.86,.18,1), height .44s cubic-bezier(.16,.86,.18,1), border-radius .44s cubic-bezier(.16,.86,.18,1), box-shadow .44s ease', transform:'translateZ(0)' }}>
+              {homeLaunch.content === 'map' && (
+                <div style={{ position:'absolute', inset:homeLaunch.expanded ? '-6% -8%' : '0', opacity:homeLaunch.expanded ? .95 : .72, transition:'inset .44s cubic-bezier(.16,.86,.18,1), opacity .34s ease' }}>
+                  <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={Math.max(180, r.height)} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} autoSpin autoSpinSpeed={0.00038} fitDuration={0} />
+                </div>
+              )}
+              <div style={{ position:'absolute', inset:0, background:'linear-gradient(90deg, rgba(5,7,8,.78), rgba(5,7,8,.34) 58%, rgba(5,7,8,.12))' }} />
+              <div style={{ position:'absolute', left:homeLaunch.expanded ? 26 : 18, bottom:homeLaunch.expanded ? 34 : 18, right:22, color:'white', transition:'left .44s cubic-bezier(.16,.86,.18,1), bottom .44s cubic-bezier(.16,.86,.18,1)', opacity:homeLaunch.expanded ? .92 : 1 }}>
+                <div style={{ color:homeLaunch.color || '#F0A840', fontSize:homeLaunch.expanded ? 12 : 10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>{homeLaunch.label}</div>
+                <div style={{ fontSize:homeLaunch.expanded ? 34 : 24, fontWeight:1000, lineHeight:1.02, marginTop:6, transition:'font-size .44s cubic-bezier(.16,.86,.18,1)' }}>{homeLaunch.title}</div>
+                <div style={{ color:'rgba(255,255,255,.70)', fontSize:homeLaunch.expanded ? 14 : 12.5, lineHeight:1.45, marginTop:8, maxWidth:360 }}>{homeLaunch.subtitle}</div>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
       {profileBgPickerOpen && (
         <div onClick={()=>setProfileBgPickerOpen(false)} style={{ position:'absolute', inset:0, zIndex:430, background:'rgba(0,0,0,.72)', display:'flex', alignItems:'flex-end', padding:12, boxSizing:'border-box' }}>
           <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxHeight:'78%', background:isLightTheme?'#FBF7EF':'#17191D', border:`1px solid ${lightPanelBorder}`, borderRadius:28, padding:14, boxSizing:'border-box', boxShadow:'0 24px 80px rgba(0,0,0,.55)', display:'flex', flexDirection:'column' }}>
