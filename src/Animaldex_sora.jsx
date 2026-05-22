@@ -1228,7 +1228,6 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
 async function searchSocialProfiles(userId, query) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
-  let timedOut = false;
   const getSearchSession = async () => {
     const { data, error } = await supabase.auth.getSession();
     if (error) throw error;
@@ -1260,13 +1259,25 @@ async function searchSocialProfiles(userId, query) {
       })
       .slice(0, 12);
   };
+  const searchPattern = `%${q}%`;
+  const runSupabaseRpcSearch = async () => {
+    const { data, error } = await runTimedSupabaseRequest(
+      supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
+      7000,
+      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
+      'search_social_profiles'
+    );
+    if (error?.code === 'TIMEOUT') return { rows:[], timedOut:true, source:'rpc' };
+    if (error && !['42883', 'PGRST202'].includes(error.code)) throw error;
+    return { rows:sortProfiles(data || []), source:'rpc' };
+  };
   const runRestRpcSearch = async () => {
     const url = process.env.REACT_APP_SUPABASE_URL;
     const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
-    if (!url || !anonKey || typeof fetch !== 'function') return [];
+    if (!url || !anonKey || typeof fetch !== 'function') return { rows:[], source:'rest-unavailable' };
     const token = await getSearchSession();
     const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-    const timer = controller ? setTimeout(() => controller.abort(), 4500) : null;
+    const timer = controller ? setTimeout(() => controller.abort(), 7000) : null;
     try {
       const response = await fetch(`${url}/rest/v1/rpc/search_social_profiles`, {
         method:'POST',
@@ -1284,84 +1295,63 @@ async function searchSocialProfiles(userId, query) {
         throw err;
       }
       const rows = await response.json();
-      return Array.isArray(rows) ? sortProfiles(rows) : [];
+      return { rows:Array.isArray(rows) ? sortProfiles(rows) : [], source:'rest-rpc' };
     } catch (err) {
       const msg = String(err?.name || err?.message || '');
       if (/AbortError|aborted|abort/i.test(msg)) {
-        timedOut = true;
-        return [];
+        return { rows:[], timedOut:true, source:'rest-rpc' };
       }
       throw err;
     } finally {
       if (timer) clearTimeout(timer);
     }
   };
-  try {
-    const { data, error } = await runTimedSupabaseRequest(
-      supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
-      4500,
-      { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
-      'search_social_profiles'
-    );
-    if (!error && Array.isArray(data) && data.length) return sortProfiles(data);
-    if (error?.code === 'TIMEOUT') timedOut = true;
-    if (error && !['42883', 'PGRST202', 'TIMEOUT'].includes(error.code)) throw error;
-  } catch (err) {
-    if (!String(err?.message || err?.code || '').includes('search_social_profiles')) throw err;
-  }
-  const restRows = await runRestRpcSearch();
-  if (restRows.length) return restRows;
-  const pattern = `%${q}%`;
-  const runProfileSearch = async (selectCols, idColumn='user_id', fields=['username','nickname']) => {
-    const make = (field) => {
+  const runProfileTableSearch = async (selectCols='user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image', idColumn='user_id') => {
+    const make = () => {
       let builder = supabase
         .from('user_profiles')
         .select(selectCols)
-        .ilike(field, pattern)
+        .or(`username.ilike.${searchPattern},nickname.ilike.${searchPattern}`)
         .order('username', { ascending:true })
         .limit(12);
       if (userId && idColumn) builder = builder.neq(idColumn, userId);
       return builder;
     };
-    const queryResults = await Promise.all(fields.map(field => runTimedSupabaseRequest(
-      make(field),
-      3500,
-      { data:null, error:{ message:`user_profiles ${field} timeout`, code:'TIMEOUT' } },
-      `user_profiles ${field}`
-    )));
-    const firstError = queryResults.find(result => result.error && result.error.code !== 'TIMEOUT')?.error;
-    if (firstError) throw firstError;
-    if (queryResults.some(result => result.error?.code === 'TIMEOUT')) timedOut = true;
-    return queryResults.flatMap(result => result.data || []);
+    const { data, error } = await runTimedSupabaseRequest(
+      make(),
+      7000,
+      { data:null, error:{ message:'user_profiles search timeout', code:'TIMEOUT' } },
+      'user_profiles search'
+    );
+    if (error?.code === 'TIMEOUT') return { rows:[], timedOut:true, source:'table' };
+    if (error) throw error;
+    return { rows:sortProfiles(data || []), source:'table' };
   };
-  const attempts = [
-    ['user_id, username, nickname, avatar_url, featured_badge_id, profile_background_image', 'user_id', ['username','nickname']],
-    ['user_id, username, nickname', 'user_id', ['username','nickname']],
-    ['user_id, username', 'user_id', ['username']],
-    ['id, username, nickname, avatar_url', 'id', ['username','nickname']],
-    ['id, username, nickname', 'id', ['username','nickname']],
-    ['id, username', 'id', ['username']],
-  ];
-  let lastError = null;
-  for (const [selectCols, idColumn, fields] of attempts) {
+  const runProfileTableSearchWithFallback = async () => {
     try {
-      const rows = await runProfileSearch(selectCols, idColumn, fields);
-      const merged = rows.reduce((acc, row) => {
-        const id = row?.user_id || row?.id;
-        if (!id || acc.some(existing => (existing.user_id || existing.id) === id)) return acc;
-        acc.push(row);
-        return acc;
-      }, []);
-      const sorted = sortProfiles(merged);
-      if (sorted.length) return sorted;
+      return await runProfileTableSearch();
     } catch (err) {
-      lastError = err;
       const msg = String(err?.message || err?.code || '');
-      if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) break;
+      if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) throw err;
+      return runProfileTableSearch('user_id, username, nickname', 'user_id');
     }
-  }
-  if (lastError) console.warn('[Apex] fallback ricerca profili non risolutivo:', lastError);
-  if (timedOut) {
+  };
+  const settled = await Promise.allSettled([
+    runProfileTableSearchWithFallback(),
+    runSupabaseRpcSearch(),
+    runRestRpcSearch(),
+  ]);
+  const fulfilled = settled
+    .filter(result => result.status === 'fulfilled')
+    .map(result => result.value)
+    .filter(Boolean);
+  const firstRows = fulfilled.find(result => result.rows?.length);
+  if (firstRows) return firstRows.rows;
+  if (fulfilled.some(result => !result.timedOut)) return [];
+  const blockingError = settled.find(result => result.status === 'rejected')?.reason;
+  if (blockingError && blockingError.code === 'NO_AUTH_SESSION') throw blockingError;
+  if (blockingError) console.warn('[Apex] ricerca profili non risolutiva:', blockingError);
+  if (fulfilled.some(result => result.timedOut) || blockingError) {
     const err = new Error('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.');
     err.code = 'SEARCH_TIMEOUT';
     throw err;
