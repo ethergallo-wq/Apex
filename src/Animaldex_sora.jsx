@@ -1228,6 +1228,18 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
 async function searchSocialProfiles(userId, query) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
+  let timedOut = false;
+  const getSearchSession = async () => {
+    const { data, error } = await supabase.auth.getSession();
+    if (error) throw error;
+    const token = data?.session?.access_token;
+    if (!token) {
+      const err = new Error('Sessione non valida. Esci e accedi di nuovo.');
+      err.code = 'NO_AUTH_SESSION';
+      throw err;
+    }
+    return token;
+  };
   const sortProfiles = (rows = []) => {
     const normalizedQ = q.toLowerCase();
     return rows
@@ -1248,6 +1260,42 @@ async function searchSocialProfiles(userId, query) {
       })
       .slice(0, 12);
   };
+  const runRestRpcSearch = async () => {
+    const url = process.env.REACT_APP_SUPABASE_URL;
+    const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY;
+    if (!url || !anonKey || typeof fetch !== 'function') return [];
+    const token = await getSearchSession();
+    const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    const timer = controller ? setTimeout(() => controller.abort(), 4500) : null;
+    try {
+      const response = await fetch(`${url}/rest/v1/rpc/search_social_profiles`, {
+        method:'POST',
+        headers:{
+          apikey:anonKey,
+          Authorization:`Bearer ${token}`,
+          'Content-Type':'application/json',
+        },
+        body:JSON.stringify({ p_query:q, p_limit:12 }),
+        signal:controller?.signal,
+      });
+      if (!response.ok) {
+        const err = new Error(`Ricerca utenti non riuscita (${response.status})`);
+        err.code = `HTTP_${response.status}`;
+        throw err;
+      }
+      const rows = await response.json();
+      return Array.isArray(rows) ? sortProfiles(rows) : [];
+    } catch (err) {
+      const msg = String(err?.name || err?.message || '');
+      if (/AbortError|aborted|abort/i.test(msg)) {
+        timedOut = true;
+        return [];
+      }
+      throw err;
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
+  };
   try {
     const { data, error } = await runTimedSupabaseRequest(
       supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
@@ -1256,11 +1304,13 @@ async function searchSocialProfiles(userId, query) {
       'search_social_profiles'
     );
     if (!error && Array.isArray(data) && data.length) return sortProfiles(data);
-    if (error && error.code === 'TIMEOUT') return [];
-    if (error && !['42883', 'PGRST202'].includes(error.code)) throw error;
+    if (error?.code === 'TIMEOUT') timedOut = true;
+    if (error && !['42883', 'PGRST202', 'TIMEOUT'].includes(error.code)) throw error;
   } catch (err) {
     if (!String(err?.message || err?.code || '').includes('search_social_profiles')) throw err;
   }
+  const restRows = await runRestRpcSearch();
+  if (restRows.length) return restRows;
   const pattern = `%${q}%`;
   const runProfileSearch = async (selectCols, idColumn='user_id', fields=['username','nickname']) => {
     const make = (field) => {
@@ -1279,8 +1329,9 @@ async function searchSocialProfiles(userId, query) {
       { data:null, error:{ message:`user_profiles ${field} timeout`, code:'TIMEOUT' } },
       `user_profiles ${field}`
     )));
-    const firstError = queryResults.find(result => result.error)?.error;
+    const firstError = queryResults.find(result => result.error && result.error.code !== 'TIMEOUT')?.error;
     if (firstError) throw firstError;
+    if (queryResults.some(result => result.error?.code === 'TIMEOUT')) timedOut = true;
     return queryResults.flatMap(result => result.data || []);
   };
   const attempts = [
@@ -1310,6 +1361,11 @@ async function searchSocialProfiles(userId, query) {
     }
   }
   if (lastError) console.warn('[Apex] fallback ricerca profili non risolutivo:', lastError);
+  if (timedOut) {
+    const err = new Error('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.');
+    err.code = 'SEARCH_TIMEOUT';
+    throw err;
+  }
   return [];
 }
 
@@ -7997,6 +8053,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
+  const [searchError, setSearchError] = useState('');
   const [message, setMessage] = useState('');
   const [tab, setTab] = useState('feed');
   const [selectedFriend, setSelectedFriend] = useState(null);
@@ -8021,16 +8078,33 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
       const q = query.trim();
       if (q.length < 3) {
         setResults([]);
+        setSearchError('');
         setSearching(false);
         return;
       }
       setSearching(true);
       try {
-        const rows = await withTimeout(searchSocialProfiles(user?.id, q), 9000, [], 'searchSocialProfiles');
-        if (alive) setResults(rows);
+        const rows = await withTimeout(
+          searchSocialProfiles(user?.id, q),
+          9000,
+          { __searchTimedOut:true },
+          'searchSocialProfiles'
+        );
+        if (!alive) return;
+        if (rows?.__searchTimedOut) {
+          setResults([]);
+          setSearchError('La ricerca sta impiegando troppo tempo. Riprova tra poco.');
+        } else {
+          setSearchError('');
+          setResults(rows);
+        }
       } catch (err) {
         if (alive) {
-          setMessage('Ricerca amici disponibile dopo lo script Supabase.');
+          setSearchError(
+            err?.code === 'SEARCH_TIMEOUT' || err?.code === 'NO_AUTH_SESSION'
+              ? err.message
+              : 'Ricerca amici non riuscita. Controlla lo script Supabase.'
+          );
           setResults([]);
         }
       } finally {
@@ -8139,6 +8213,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
           <div style={{ color:subText, fontSize:11.5, lineHeight:1.45, marginTop:4 }}>Scrivi almeno 3 caratteri. Puoi cercare username o nickname; non cerchiamo per email.</div>
           <input id="friend-search-username" name="friend_search_username" value={query} onChange={e=>setQuery(e.target.value)} placeholder="es. lunawild o Luna" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:isLightTheme?'rgba(0,0,0,.05)':'rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, color:mainText, padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
           {searching && <div style={{ color:subText, fontSize:12, marginTop:8 }}>Ricerca...</div>}
+          {searchError && !searching && <div style={{ color:isLightTheme?'#8A321E':'#FFD4A3', textAlign:'center', padding:16, fontSize:12, fontWeight:850 }}>{searchError}</div>}
           {!!results.length && <div style={{ display:'grid', gap:8, marginTop:10 }}>
             {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit' }}>
               <FriendAvatar p={p} />
@@ -8146,7 +8221,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
               <span style={{ color:'#F0A840', fontSize:12, fontWeight:1000 }}>Aggiungi</span>
             </button>)}
           </div>}
-          {!results.length && query.trim().length >= 3 && !searching && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun profilo trovato.</div>}
+          {!results.length && query.trim().length >= 3 && !searching && !searchError && <div style={{ color:subText, textAlign:'center', padding:16, fontSize:12 }}>Nessun profilo trovato.</div>}
         </div>}
 
         {tab === 'feed' && <>
