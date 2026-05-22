@@ -780,6 +780,27 @@ function withTimeout(promiseLike, ms, fallbackValue, label='timeout') {
   ]);
 }
 
+async function runTimedSupabaseRequest(builder, ms, fallbackValue, label='supabase request') {
+  const timeoutFallback = fallbackValue ?? { data:null, error:{ message:`${label} timeout`, code:'TIMEOUT' } };
+  if (!builder || typeof builder.abortSignal !== 'function' || typeof AbortController === 'undefined') {
+    return withTimeout(builder, ms, timeoutFallback, label);
+  }
+  const controller = new AbortController();
+  const timer = setTimeout(() => {
+    console.warn(`[Apex] ${label} dopo ${ms}ms`);
+    controller.abort();
+  }, ms);
+  try {
+    return await builder.abortSignal(controller.signal);
+  } catch (err) {
+    const msg = String(err?.name || err?.message || '');
+    if (/AbortError|aborted|abort/i.test(msg)) return timeoutFallback;
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 const PROFILE_DEMOGRAPHICS_STORAGE_PREFIX = 'animaldex_profile_demographics_';
 function getProfileDemographicsLocal(userId) {
   if (!userId || typeof window === 'undefined') return {};
@@ -1228,13 +1249,14 @@ async function searchSocialProfiles(userId, query) {
       .slice(0, 12);
   };
   try {
-    const { data, error } = await withTimeout(
+    const { data, error } = await runTimedSupabaseRequest(
       supabase.rpc('search_social_profiles', { p_query:q, p_limit:12 }),
-      7000,
+      4500,
       { data:null, error:{ message:'search_social_profiles timeout', code:'TIMEOUT' } },
       'search_social_profiles'
     );
     if (!error && Array.isArray(data) && data.length) return sortProfiles(data);
+    if (error && error.code === 'TIMEOUT') return [];
     if (error && !['42883', 'PGRST202'].includes(error.code)) throw error;
   } catch (err) {
     if (!String(err?.message || err?.code || '').includes('search_social_profiles')) throw err;
@@ -1251,7 +1273,12 @@ async function searchSocialProfiles(userId, query) {
       if (userId && idColumn) builder = builder.neq(idColumn, userId);
       return builder;
     };
-    const queryResults = await Promise.all(fields.map(make));
+    const queryResults = await Promise.all(fields.map(field => runTimedSupabaseRequest(
+      make(field),
+      3500,
+      { data:null, error:{ message:`user_profiles ${field} timeout`, code:'TIMEOUT' } },
+      `user_profiles ${field}`
+    )));
     const firstError = queryResults.find(result => result.error)?.error;
     if (firstError) throw firstError;
     return queryResults.flatMap(result => result.data || []);
@@ -7992,10 +8019,14 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
     let alive = true;
     const t = setTimeout(async () => {
       const q = query.trim();
-      if (q.length < 3) { setResults([]); return; }
+      if (q.length < 3) {
+        setResults([]);
+        setSearching(false);
+        return;
+      }
       setSearching(true);
       try {
-        const rows = await searchSocialProfiles(user?.id, q);
+        const rows = await withTimeout(searchSocialProfiles(user?.id, q), 9000, [], 'searchSocialProfiles');
         if (alive) setResults(rows);
       } catch (err) {
         if (alive) {
