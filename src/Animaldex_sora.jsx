@@ -780,21 +780,74 @@ function withTimeout(promiseLike, ms, fallbackValue, label='timeout') {
   ]);
 }
 
+function getSupabaseProjectRef() {
+  try {
+    const host = new URL(process.env.REACT_APP_SUPABASE_URL || '').hostname;
+    return host.split('.')[0] || 'sconosciuto';
+  } catch {
+    return 'sconosciuto';
+  }
+}
+
+function createSocialSearchError(message, code, meta = {}) {
+  const err = new Error(message);
+  err.code = code;
+  err.searchDebug = {
+    ref:getSupabaseProjectRef(),
+    ...meta,
+  };
+  return err;
+}
+
 async function runTimedSupabaseRequest(builder, ms, fallbackValue, label='supabase request') {
   const timeoutFallback = fallbackValue ?? { data:null, error:{ message:`${label} timeout`, code:'TIMEOUT' } };
   if (!builder || typeof builder.abortSignal !== 'function' || typeof AbortController === 'undefined') {
     return withTimeout(builder, ms, timeoutFallback, label);
   }
   const controller = new AbortController();
-  const timer = setTimeout(() => {
-    console.warn(`[Apex] ${label} dopo ${ms}ms`);
-    controller.abort();
-  }, ms);
+  let timer;
+  const request = builder.abortSignal(controller.signal);
   try {
-    return await builder.abortSignal(controller.signal);
+    return await Promise.race([
+      request,
+      new Promise(resolve => {
+        timer = setTimeout(() => {
+          console.warn(`[Apex] ${label} dopo ${ms}ms`);
+          controller.abort();
+          resolve(timeoutFallback);
+        }, ms);
+      }),
+    ]);
   } catch (err) {
     const msg = String(err?.name || err?.message || '');
     if (/AbortError|aborted|abort/i.test(msg)) return timeoutFallback;
+    throw err;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function runTimedFetch(url, options = {}, ms = 8000, label='fetch') {
+  if (typeof fetch === 'undefined') return null;
+  if (typeof AbortController === 'undefined') {
+    return withTimeout(fetch(url, options), ms, null, label);
+  }
+  const controller = new AbortController();
+  let timer;
+  try {
+    return await Promise.race([
+      fetch(url, { ...options, signal:controller.signal }),
+      new Promise(resolve => {
+        timer = setTimeout(() => {
+          console.warn(`[Apex] ${label} dopo ${ms}ms`);
+          controller.abort();
+          resolve(null);
+        }, ms);
+      }),
+    ]);
+  } catch (err) {
+    const msg = String(err?.name || err?.message || '');
+    if (/AbortError|aborted|abort/i.test(msg)) return null;
     throw err;
   } finally {
     clearTimeout(timer);
@@ -1225,6 +1278,61 @@ async function fetchSocialSnapshot(userId, currentProfile, progress) {
   }
 }
 
+async function fetchSocialProfilesViaRest(userId, q, selectCols='user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image') {
+  const supabaseUrl = process.env.REACT_APP_SUPABASE_URL || '';
+  const anonKey = process.env.REACT_APP_SUPABASE_ANON_KEY || '';
+  if (!supabaseUrl || !anonKey || typeof fetch === 'undefined') {
+    throw createSocialSearchError('Configurazione Supabase non disponibile per la ricerca.', 'SEARCH_CONFIG_MISSING', { step:'rest-config' });
+  }
+  const sessionResult = await withTimeout(
+    supabase.auth.getSession(),
+    3500,
+    { data:null, error:{ code:'SESSION_TIMEOUT', message:'Session timeout' } },
+    'social search getSession'
+  );
+  const accessToken = sessionResult?.data?.session?.access_token;
+  if (!accessToken) {
+    throw createSocialSearchError('Sessione non pronta. Esci e rientra, poi riprova.', 'NO_AUTH_SESSION', { step:'rest-session' });
+  }
+
+  const endpoint = new URL('/rest/v1/user_profiles', supabaseUrl);
+  const safeTerm = String(q || '').replace(/[*"'\\]/g, '').trim();
+  endpoint.searchParams.set('select', selectCols);
+  endpoint.searchParams.set('or', `(username.ilike.*${safeTerm}*,nickname.ilike.*${safeTerm}*)`);
+  endpoint.searchParams.set('order', 'username.asc');
+  endpoint.searchParams.set('limit', '12');
+  if (userId) endpoint.searchParams.set('user_id', `neq.${userId}`);
+
+  const response = await runTimedFetch(
+    endpoint.toString(),
+    {
+      headers:{
+        apikey:anonKey,
+        Authorization:`Bearer ${accessToken}`,
+        Accept:'application/json',
+      },
+    },
+    8000,
+    'rest user_profiles search'
+  );
+  if (!response) {
+    throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'rest-timeout' });
+  }
+  const bodyText = await response.text();
+  if (!response.ok) {
+    throw createSocialSearchError('Ricerca amici non riuscita. Controlla lo script Supabase.', 'SEARCH_REST_ERROR', {
+      step:'rest-http',
+      status:response.status,
+      hint:bodyText.slice(0, 90),
+    });
+  }
+  try {
+    return bodyText ? JSON.parse(bodyText) : [];
+  } catch {
+    throw createSocialSearchError('Risposta ricerca non leggibile.', 'SEARCH_REST_PARSE', { step:'rest-parse' });
+  }
+}
+
 async function searchSocialProfiles(userId, query) {
   const q = sanitizeSocialSearchQuery(query);
   if (!q || q.length < 3) return [];
@@ -1266,19 +1374,34 @@ async function searchSocialProfiles(userId, query) {
       'user_profiles search'
     );
     if (error?.code === 'TIMEOUT') {
-      const err = new Error('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.');
-      err.code = 'SEARCH_TIMEOUT';
-      throw err;
+      throw createSocialSearchError('La ricerca utenti sta impiegando troppo tempo. Riprova tra poco.', 'SEARCH_TIMEOUT', { step:'sdk-timeout' });
     }
-    if (error) throw error;
+    if (error) {
+      throw createSocialSearchError(error.message || 'Ricerca amici non riuscita.', error.code || 'SEARCH_SDK_ERROR', {
+        step:'sdk-error',
+        hint:String(error.details || error.hint || '').slice(0, 90),
+      });
+    }
     return sortProfiles(data || []);
+  };
+  const runRestFallback = async (selectCols='user_id,username,nickname,avatar_url,featured_badge_id,profile_background_image') => {
+    const rows = await fetchSocialProfilesViaRest(userId, q, selectCols);
+    return sortProfiles(rows || []);
   };
   try {
     return await runProfileTableSearch();
   } catch (err) {
     const msg = String(err?.message || err?.code || '');
-    if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) throw err;
-    return runProfileTableSearch('user_id, username, nickname');
+    if (!/column|schema cache|PGRST|does not exist|Could not find/i.test(msg)) {
+      console.warn('[Apex] SDK ricerca amici fallback REST:', err);
+      return await runRestFallback();
+    }
+    try {
+      return await runProfileTableSearch('user_id, username, nickname');
+    } catch (fallbackErr) {
+      console.warn('[Apex] Ricerca amici fallback REST compatibile:', fallbackErr);
+      return runRestFallback('user_id,username,nickname');
+    }
   }
 }
 
@@ -7979,6 +8102,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
   const [searchError, setSearchError] = useState('');
+  const [searchDebug, setSearchDebug] = useState('');
   const [message, setMessage] = useState('');
   const [tab, setTab] = useState('feed');
   const [selectedFriend, setSelectedFriend] = useState(null);
@@ -8004,6 +8128,7 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
       if (q.length < 3) {
         setResults([]);
         setSearchError('');
+        setSearchDebug('');
         setSearching(false);
         return;
       }
@@ -8019,17 +8144,27 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
         if (rows?.__searchTimedOut) {
           setResults([]);
           setSearchError('La ricerca sta impiegando troppo tempo. Riprova tra poco.');
+          setSearchDebug(`ref ${getSupabaseProjectRef()} · browser-timeout · "${q}"`);
         } else {
           setSearchError('');
+          setSearchDebug('');
           setResults(rows);
         }
       } catch (err) {
         if (alive) {
+          const debug = err?.searchDebug;
           setSearchError(
             err?.code === 'SEARCH_TIMEOUT' || err?.code === 'NO_AUTH_SESSION'
               ? err.message
               : 'Ricerca amici non riuscita. Controlla lo script Supabase.'
           );
+          setSearchDebug(debug ? [
+            `ref ${debug.ref || getSupabaseProjectRef()}`,
+            debug.step,
+            debug.status ? `HTTP ${debug.status}` : '',
+            debug.hint ? String(debug.hint) : '',
+            `"${q}"`,
+          ].filter(Boolean).join(' · ') : `ref ${getSupabaseProjectRef()} · errore sconosciuto · "${q}"`);
           setResults([]);
         }
       } finally {
@@ -8138,7 +8273,10 @@ function FriendsPage({ onBack, user, userProfile, statusMap = {}, visitedCountri
           <div style={{ color:subText, fontSize:11.5, lineHeight:1.45, marginTop:4 }}>Scrivi almeno 3 caratteri. Puoi cercare username o nickname; non cerchiamo per email.</div>
           <input id="friend-search-username" name="friend_search_username" value={query} onChange={e=>setQuery(e.target.value)} placeholder="es. lunawild o Luna" style={{ marginTop:10, width:'100%', height:46, borderRadius:15, background:isLightTheme?'rgba(0,0,0,.05)':'rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, color:mainText, padding:'0 13px', boxSizing:'border-box', fontSize:16, outline:'none' }} />
           {searching && <div style={{ color:subText, fontSize:12, marginTop:8 }}>Ricerca...</div>}
-          {searchError && !searching && <div style={{ color:isLightTheme?'#8A321E':'#FFD4A3', textAlign:'center', padding:16, fontSize:12, fontWeight:850 }}>{searchError}</div>}
+          {searchError && !searching && <div style={{ color:isLightTheme?'#8A321E':'#FFD4A3', textAlign:'center', padding:16, fontSize:12, fontWeight:850 }}>
+            <div>{searchError}</div>
+            {searchDebug && <div style={{ color:subText, marginTop:8, fontSize:10.5, fontWeight:750, wordBreak:'break-word' }}>Debug: {searchDebug}</div>}
+          </div>}
           {!!results.length && <div style={{ display:'grid', gap:8, marginTop:10 }}>
             {results.map(p => <button key={p.user_id} onClick={()=>sendRequest(p)} style={{ display:'flex', alignItems:'center', gap:10, minHeight:64, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(255,255,255,.72)':'rgba(255,255,255,.055)', color:mainText, padding:10, textAlign:'left', fontFamily:'inherit' }}>
               <FriendAvatar p={p} />
