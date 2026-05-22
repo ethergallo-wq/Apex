@@ -6775,6 +6775,65 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
       run?.();
     }, 470);
   };
+  const renderHomeLaunchPreview = () => {
+    if (!homeLaunch?.screen) return null;
+    const accent = homeLaunch.color || '#F0A840';
+    const line = (w, h=9, o=.12) => <span style={{ display:'block', width:w, height:h, borderRadius:999, background:`rgba(255,255,255,${o})` }} />;
+    const previewCard = (key, i, color=accent) => (
+      <div key={key} style={{ borderRadius:18, border:`1px solid ${hexToRgba(color,.38)}`, background:`linear-gradient(180deg, rgba(18,20,24,.92), ${hexToRgba(color,.08)})`, minHeight:118, padding:12, boxSizing:'border-box', display:'flex', flexDirection:'column', justifyContent:'space-between', boxShadow:'0 12px 32px rgba(0,0,0,.18)' }}>
+        <div style={{ color:'rgba(255,255,255,.32)', fontSize:18, fontWeight:1000 }}>#{String(i + 1).padStart(3,'0')}</div>
+        <div style={{ width:'54%', height:26, borderRadius:999, background:hexToRgba(color,.26), margin:'8px auto' }} />
+        <div style={{ display:'grid', gap:6 }}>{line('78%', 8, .26)}{line('56%', 8, .18)}</div>
+      </div>
+    );
+    const header = (title) => (
+      <div style={{ height:72, borderRadius:'0 0 24px 24px', background:ANIMALDEX_ORANGE_GRADIENT, display:'flex', alignItems:'center', justifyContent:'center', color:'white', fontSize:24, fontWeight:1000, boxShadow:'0 14px 30px rgba(184,77,58,.24)' }}>{title}</div>
+    );
+    if (homeLaunch.screen === 'grid') {
+      return (
+        <div style={{ height:'100%', background:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), linear-gradient(180deg,#2A1208,#100B09)', color:'white' }}>
+          {header('Apex')}
+          <div style={{ padding:16, display:'grid', gridTemplateColumns:'repeat(3, minmax(0, 1fr))', gap:10 }}>
+            {[0,1,2,3,4,5,6,7,8].map(i => previewCard(`grid-${i}`, i, i % 3 === 0 ? '#D9B86F' : i % 3 === 1 ? '#B86B44' : '#AFCDE0'))}
+          </div>
+          <div style={{ position:'absolute', left:0, right:0, bottom:0, minHeight:78, borderRadius:'24px 24px 0 0', background:ANIMALDEX_ORANGE_GRADIENT, display:'flex', alignItems:'center', justifyContent:'space-around', color:'white', fontWeight:1000 }}>{line(54,54,.16)}<span style={{ fontSize:24 }}>Ricercati</span>{line(54,54,.16)}</div>
+        </div>
+      );
+    }
+    if (homeLaunch.screen === 'profile') {
+      return (
+        <div style={{ height:'100%', background:'linear-gradient(180deg,#101216,#080A0D)', padding:16, boxSizing:'border-box', color:'white' }}>
+          {header('Profilo')}
+          <div style={{ marginTop:18, borderRadius:26, border:`1px solid ${hexToRgba(accent,.34)}`, background:homeLaunch.background || 'rgba(255,255,255,.05)', backgroundSize:'cover', backgroundPosition:'center', minHeight:186, padding:22, display:'grid', gridTemplateColumns:'1fr 116px', gap:16, alignItems:'center', overflow:'hidden' }}>
+            <div><div style={{ fontSize:28, fontWeight:1000 }}>{displayName}</div><div style={{ color:'rgba(255,255,255,.62)', fontSize:14, marginTop:6 }}>Liv. {progress.level} · {progress.xp} XP</div><div style={{ height:9, borderRadius:999, background:'rgba(255,255,255,.12)', overflow:'hidden', marginTop:14 }}><div style={{ width:`${xpPct}%`, height:'100%', borderRadius:999, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)' }} /></div></div>
+            <div style={{ height:116, borderRadius:24, border:`1.5px solid ${hexToRgba(accent,.52)}`, background:`linear-gradient(180deg, ${hexToRgba(accent,.20)}, rgba(0,0,0,.20))`, display:'grid', placeItems:'center' }}>{featuredBadge && <img src={buildAwardImagePath(featuredBadge.badgeId)} alt="" style={{ width:84, height:84, objectFit:'contain' }} />}</div>
+          </div>
+          <div style={{ marginTop:16, display:'grid', gap:10 }}>{[featuredBadgeName, 'Progressi', 'Territori'].map((t,i)=><div key={t} style={{ minHeight:62, borderRadius:18, background:'rgba(255,255,255,.055)', border:'1px solid rgba(255,255,255,.08)', padding:'14px 16px', boxSizing:'border-box', fontWeight:1000 }}>{t}</div>)}</div>
+        </div>
+      );
+    }
+    if (homeLaunch.screen === 'taxonomy') {
+      const nodes = ['Animalia','Arthropoda','Chordata','Mammalia','Aves','Reptilia'];
+      return (
+        <div style={{ height:'100%', background:'radial-gradient(circle at 30% 8%, rgba(144,216,74,.14), transparent 32%), linear-gradient(180deg,#07100A,#020504)', color:'white', padding:18, boxSizing:'border-box' }}>
+          {header('Albero della Vita')}
+          <div style={{ marginTop:30, position:'relative', height:'calc(100% - 110px)' }}>
+            <div style={{ position:'absolute', left:'12%', top:'18%', bottom:'12%', width:2, background:'linear-gradient(#D9B86F,#3FB7A6)' }} />
+            {nodes.map((node,i)=><div key={node} style={{ position:'absolute', left:`${12 + (i % 3) * 24}%`, top:`${12 + i * 12}%`, width:150, minHeight:58, borderRadius:16, border:`1px solid ${hexToRgba(i < 2 ? '#D9B86F' : '#3FB7A6', .46)}`, background:'rgba(12,15,18,.88)', padding:10, boxSizing:'border-box', boxShadow:'0 14px 38px rgba(0,0,0,.28)' }}><div style={{ color:i < 2 ? '#D9B86F' : '#3FB7A6', fontSize:12, fontWeight:1000 }}>{node}</div>{line('72%', 6, .18)}</div>)}
+          </div>
+        </div>
+      );
+    }
+    if (homeLaunch.screen === 'friends') {
+      return (
+        <div style={{ height:'100%', background:'linear-gradient(180deg,#111316,#090A0C)', color:'white', padding:16, boxSizing:'border-box' }}>
+          {header('Allenatori')}
+          <div style={{ marginTop:18, display:'grid', gap:11 }}>{[displayName, 'Richieste', 'Amici attivi', 'Progressi recenti'].map((t,i)=><div key={t} style={{ minHeight:74, borderRadius:20, border:'1px solid rgba(240,168,64,.22)', background:'rgba(240,168,64,.07)', display:'grid', gridTemplateColumns:'48px 1fr auto', alignItems:'center', gap:12, padding:14, boxSizing:'border-box' }}><div style={{ width:48, height:48, borderRadius:18, background:'rgba(240,168,64,.18)' }} /> <div><div style={{ fontWeight:1000 }}>{t}</div>{line(i ? '55%' : '72%', 7, .22)}</div><div style={{ color:'#F0A840', fontWeight:1000 }}>{i ? '+' : progress.level}</div></div>)}</div>
+        </div>
+      );
+    }
+    return null;
+  };
   const openTerritoriesFromHome = (event) => {
     beginHomeLaunch(event, {
       label:'Esplorazione',
@@ -6783,6 +6842,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
       color:'#90D84A',
       background:'linear-gradient(90deg, rgba(5,11,13,.62), rgba(5,11,13,.30) 58%, rgba(5,11,13,.18))',
       content:'map',
+      screen:'regions',
     }, () => (onOpenRegions || (() => onOpen('regions')))());
   };
   useEffect(() => {
@@ -6849,7 +6909,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
       </div>
 
       <div style={{ flex:1, overflowY:'auto', padding:'16px 16px 30px' }}>
-        <div role="button" tabIndex={0} onClick={(e)=>beginHomeLaunch(e, { label:'Profilo', title:displayName, subtitle:`Liv. ${progress.level} · ${progress.xp} XP`, color:featuredBadgeColor, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.72), rgba(17,19,23,.28)), url("${profileBgImage}")` }, ()=>onOpen('profile'))} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.84), rgba(251,247,239,.50) 56%, rgba(251,247,239,.20)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
+        <div role="button" tabIndex={0} onClick={(e)=>beginHomeLaunch(e, { label:'Profilo', title:displayName, subtitle:`Liv. ${progress.level} · ${progress.xp} XP`, color:featuredBadgeColor, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.42)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.72), rgba(17,19,23,.28)), url("${profileBgImage}")`, screen:'profile' }, ()=>onOpen('profile'))} onKeyDown={(e)=>{ if (e.key === 'Enter' || e.key === ' ') onOpen('profile'); }} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:16, background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.84), rgba(251,247,239,.50) 56%, rgba(251,247,239,.20)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', marginBottom:14, overflow:'hidden' }}>
           <div style={{ position:'absolute', inset:0, pointerEvents:'none', background:'radial-gradient(circle at 80% 16%, rgba(216,210,196,.16), transparent 36%)' }} />
           <div style={{ position:'relative', zIndex:1, display:'flex', alignItems:'center', gap:14, height:'100%' }}>
             <div style={{ flex:1, minWidth:0 }}>
@@ -6864,7 +6924,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto' }, ()=>onOpenGridStatus?.(['avvistato','catturato']))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', backgroundRepeat:'no-repeat', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Collezione', title:'I tuoi animali', subtitle:'Avvistati e catturati', color:'#F0A840', background:'linear-gradient(135deg, rgba(24,10,6,.42), rgba(20,20,22,.22) 58%, rgba(20,20,22,.45)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', screen:'grid' }, ()=>onOpenGridStatus?.(['avvistato','catturato']))} style={{ ...boxBase, height:homeBoxHeight, padding:18, background:'linear-gradient(135deg, rgba(24,10,6,.50), rgba(20,20,22,.32) 58%, rgba(20,20,22,.58)), url("/backgrounds/background_grid.png")', backgroundSize:'100% 100%, 88% auto', backgroundRepeat:'no-repeat', backgroundPosition:'center', border:'1px solid rgba(184,77,58,.38)', marginBottom:14, overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <div style={{ color:'white', fontSize:24, fontWeight:1000 }}>I tuoi animali</div>
           <div style={{ color:'rgba(255,255,255,.78)', fontSize:13, lineHeight:1.55, marginTop:7 }}>Hai {searchedAnimalsCount} animali ricercati da trovare.</div>
         </button>
@@ -6884,7 +6944,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </button>
         </div>
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Tassonomia', title:'Albero della vita', subtitle:'Naviga i rami di Apex', color:'#90D84A', background:'linear-gradient(90deg, rgba(3,8,5,.60), rgba(3,8,5,.30)), url("/backgrounds/background_tree.png")', backgroundSize:'100% 100%, 90% auto' }, ()=>onOpen('taxonomy'))} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Tassonomia', title:'Albero della vita', subtitle:'Naviga i rami di Apex', color:'#90D84A', background:'linear-gradient(90deg, rgba(3,8,5,.60), rgba(3,8,5,.30)), url("/backgrounds/background_tree.png")', backgroundSize:'100% 100%, 90% auto', screen:'taxonomy' }, ()=>onOpen('taxonomy'))} style={{ ...boxBase, position:'relative', height:homeBoxHeight, padding:18, marginBottom:14, background:isLightTheme?'linear-gradient(135deg, rgba(244,239,228,.62), rgba(251,247,239,.84))':'linear-gradient(135deg, #06100A, #050708)', border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(144,216,74,.26)', overflow:'hidden', display:'flex', flexDirection:'column', justifyContent:'center' }}>
           <span style={{ position:'absolute', inset:0, background:'url("/backgrounds/background_tree.png") center 43% / 90% auto no-repeat', opacity:isLightTheme ? .44 : .68, filter:'saturate(1.02) contrast(.98)', transform:'scale(1)', pointerEvents:'none' }} />
           <span style={{ position:'absolute', inset:0, background:isLightTheme?'linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.52) 52%, rgba(251,247,239,.20))':'linear-gradient(90deg, rgba(3,8,5,.78), rgba(3,8,5,.54) 47%, rgba(3,8,5,.18))', pointerEvents:'none' }} />
           <div style={{ position:'relative', zIndex:1, maxWidth:'76%' }}>
@@ -6912,7 +6972,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
           </div>
         </div>}
 
-        <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")' }, ()=>onOpen('friends'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
+        <button onClick={(e)=>beginHomeLaunch(e, { label:'Social', title:'Allenatori', subtitle:'Feed, richieste e leaderboard amici', color:'#F0A840', background:'linear-gradient(90deg, rgba(12,10,9,.50), rgba(25,16,10,.24) 58%, rgba(12,10,9,.50)), url("/backgrounds/background_amici.png")', screen:'friends' }, ()=>onOpen('friends'))} style={{ width:'100%', border:'1px solid rgba(240,168,64,.30)', borderRadius:22, background:'linear-gradient(90deg, rgba(12,10,9,.62), rgba(25,16,10,.38) 58%, rgba(12,10,9,.60)), url("/backgrounds/background_amici.png")', backgroundSize:'cover', backgroundPosition:'center', color:'white', textAlign:'left', padding:16, fontFamily:'inherit', cursor:'pointer', boxShadow:'0 14px 34px rgba(0,0,0,.20)', marginBottom:14 }}>
           <div style={{ color:'#F0A840', fontSize:10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>Social</div>
           <div style={{ fontSize:22, fontWeight:1000, marginTop:5 }}>Allenatori</div>
           <div style={{ color:'rgba(255,255,255,.68)', fontSize:12.5, lineHeight:1.4, marginTop:6 }}>Scopri i progressi dei tuoi amici</div>
@@ -6924,13 +6984,18 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
         return (
           <div style={{ position:'absolute', inset:0, zIndex:470, pointerEvents:'none', background:homeLaunch.expanded?'rgba(0,0,0,.22)':'rgba(0,0,0,0)', transition:'background .38s ease' }}>
             <div style={{ position:'absolute', left:r.left, top:r.top, width:r.width, height:r.height, borderRadius:radius, overflow:'hidden', background:homeLaunch.background || 'linear-gradient(135deg,#1B1A18,#3B2415)', backgroundSize:homeLaunch.backgroundSize || 'cover', backgroundRepeat:'no-repeat', backgroundPosition:'center', border:`1px solid ${hexToRgba(homeLaunch.color || '#F0A840', .42)}`, boxShadow:homeLaunch.expanded?'0 0 0 999px rgba(0,0,0,.18), 0 30px 90px rgba(0,0,0,.52)':'0 16px 38px rgba(0,0,0,.22)', transition:'left .44s cubic-bezier(.16,.86,.18,1), top .44s cubic-bezier(.16,.86,.18,1), width .44s cubic-bezier(.16,.86,.18,1), height .44s cubic-bezier(.16,.86,.18,1), border-radius .44s cubic-bezier(.16,.86,.18,1), box-shadow .44s ease', transform:'translateZ(0)' }}>
+              {homeLaunch.screen && homeLaunch.screen !== 'regions' && (
+                <div style={{ position:'absolute', inset:0, opacity:homeLaunch.expanded ? 1 : 0, transform:homeLaunch.expanded ? 'scale(1)' : 'scale(.985)', transition:'opacity .22s ease .08s, transform .44s cubic-bezier(.16,.86,.18,1)', zIndex:3 }}>
+                  {renderHomeLaunchPreview()}
+                </div>
+              )}
               {homeLaunch.content === 'map' && (
                 <div style={{ position:'absolute', inset:homeLaunch.expanded ? '-6% -8%' : '0', opacity:homeLaunch.expanded ? .95 : .72, transition:'inset .44s cubic-bezier(.16,.86,.18,1), opacity .34s ease' }}>
                   <MapLibreGeoJsonMap data={featureCollection([])} activeFeatureIds={[]} height={Math.max(180, r.height)} fitBounds={[-180,-70,180,80]} showFeatureBoundaries={false} showControls={false} interactive={false} autoSpin autoSpinSpeed={0.00038} fitDuration={0} />
                 </div>
               )}
-              <div style={{ position:'absolute', inset:0, background:'linear-gradient(90deg, rgba(5,7,8,.78), rgba(5,7,8,.34) 58%, rgba(5,7,8,.12))' }} />
-              <div style={{ position:'absolute', left:homeLaunch.expanded ? 26 : 18, bottom:homeLaunch.expanded ? 34 : 18, right:22, color:'white', transition:'left .44s cubic-bezier(.16,.86,.18,1), bottom .44s cubic-bezier(.16,.86,.18,1)', opacity:homeLaunch.expanded ? .92 : 1 }}>
+              <div style={{ position:'absolute', inset:0, background:'linear-gradient(90deg, rgba(5,7,8,.78), rgba(5,7,8,.34) 58%, rgba(5,7,8,.12))', opacity:homeLaunch.screen && homeLaunch.screen !== 'regions' ? (homeLaunch.expanded ? 0 : 1) : 1, transition:'opacity .18s ease' }} />
+              <div style={{ position:'absolute', left:homeLaunch.expanded ? 26 : 18, bottom:homeLaunch.expanded ? 34 : 18, right:22, color:'white', transition:'left .44s cubic-bezier(.16,.86,.18,1), bottom .44s cubic-bezier(.16,.86,.18,1), opacity .18s ease', opacity:homeLaunch.screen && homeLaunch.screen !== 'regions' && homeLaunch.expanded ? 0 : 1, zIndex:4 }}>
                 <div style={{ color:homeLaunch.color || '#F0A840', fontSize:homeLaunch.expanded ? 12 : 10.5, fontWeight:1000, letterSpacing:.8, textTransform:'uppercase' }}>{homeLaunch.label}</div>
                 <div style={{ fontSize:homeLaunch.expanded ? 34 : 24, fontWeight:1000, lineHeight:1.02, marginTop:6, transition:'font-size .44s cubic-bezier(.16,.86,.18,1)' }}>{homeLaunch.title}</div>
                 <div style={{ color:'rgba(255,255,255,.70)', fontSize:homeLaunch.expanded ? 14 : 12.5, lineHeight:1.45, marginTop:8, maxWidth:360 }}>{homeLaunch.subtitle}</div>
