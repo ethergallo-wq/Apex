@@ -4081,11 +4081,11 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     { key:'tax', label:'Tassonomia', tone:'#E8C040', selected:fTax ? [fTax.value] : [], open:()=>{ setSheet('tax'); setShowMenu(false); setActiveFilter(null); }, hint:'Albero tassonomico' },
   ];
   const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
-  const buttonSize = isPhone ? 56 : 46;
+  const buttonSize = isPhone ? 50 : 46;
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 12px) 18px 16px':'calc(env(safe-area-inset-top, 0px) + 10px) 12px 11px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 78px)':'calc(env(safe-area-inset-top, 0px) + 60px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
+      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 7px) 18px 10px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 66px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 22px 22px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
         {onBackToOrigin ? (
           <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4120,7 +4120,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'10px 18px calc(10px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
+      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'6px 18px calc(6px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
@@ -4138,7 +4138,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       </div>
 
       {showMenu && (
-        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?84:(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
+        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 66px)':(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
           <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
             <div style={{ width:44, height:4, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.18)':'rgba(255,255,255,.20)', margin:'0 auto 10px' }} />
             {!activeFilterDef ? (
@@ -4154,8 +4154,8 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                   {filterDefs.map(def => {
                     const activeCount = Array.isArray(def.selected) ? def.selected.length : (def.selected ? 1 : 0);
                     return (
-                      <button key={def.key} onClick={()=>def.open ? def.open() : setActiveFilter(def.key)} style={{ width:isNarrow?116:126, height:54, borderRadius:17, border:`1px solid ${activeCount ? hexToRgba(def.tone,.70) : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)')}`, background:activeCount ? `linear-gradient(135deg, ${hexToRgba(def.tone,.30)}, rgba(255,255,255,.050))` : (isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.045)'), color:pageText, padding:'9px 10px', textAlign:'left', fontFamily:'inherit', cursor:'pointer', flex:'0 0 auto', boxShadow:activeCount ? `0 8px 20px ${hexToRgba(def.tone,.14)}` : 'none', display:'flex', flexDirection:'column', justifyContent:'center' }}>
-                        <div style={{ color:def.tone, fontSize:activeCount?10:11.5, fontWeight:1000, lineHeight:1.08, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{def.label}</div>
+                      <button key={def.key} onClick={()=>def.open ? def.open() : setActiveFilter(def.key)} style={{ width:isNarrow?116:126, height:54, borderRadius:17, border:`1px solid ${activeCount ? 'rgba(240,168,64,.58)' : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.09)')}`, background:activeCount ? 'linear-gradient(135deg, rgba(240,168,64,.20), rgba(255,255,255,.055))' : (isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.045)'), color:pageText, padding:'9px 10px', textAlign:'left', fontFamily:'inherit', cursor:'pointer', flex:'0 0 auto', boxShadow:activeCount ? '0 8px 20px rgba(240,168,64,.12)' : 'none', display:'flex', flexDirection:'column', justifyContent:'center' }}>
+                        <div style={{ color:activeCount ? '#F0A840' : (isLightTheme?'rgba(0,0,0,.72)':'rgba(255,255,255,.78)'), fontSize:activeCount?10:11.5, fontWeight:1000, lineHeight:1.08, whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{def.label}</div>
                         {activeCount > 0 && <div style={{ color:isLightTheme?'rgba(0,0,0,.54)':'rgba(255,255,255,.58)', fontSize:9.5, fontWeight:950, marginTop:3 }}>{activeCount} attivi</div>}
                       </button>
                     );
@@ -4167,10 +4167,10 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                 <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:10 }}>
                   <button onClick={()=>setActiveFilter(null)} style={{ height:34, padding:'0 12px', borderRadius:14, border:isLightTheme?'1px solid rgba(0,0,0,.10)':'1px solid rgba(255,255,255,.10)', background:isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.065)', color:pageText, fontSize:11, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Indietro</button>
                   <div style={{ minWidth:0, flex:1 }}>
-                    <div style={{ color:activeFilterDef.tone, fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.6 }}>Variabile</div>
+                    <div style={{ color:'#F0A840', fontSize:10, fontWeight:1000, textTransform:'uppercase', letterSpacing:.6 }}>Variabile</div>
                     <div style={{ color:pageText, fontSize:17, fontWeight:1000, lineHeight:1.05 }}>{activeFilterDef.label}</div>
                   </div>
-                  <button onClick={()=>activeFilterDef.setter(activeFilterDef.options.map(opt=>opt.value))} style={{ height:34, padding:'0 10px', borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:hexToRgba(activeFilterDef.tone,.18), color:activeFilterDef.tone, fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Tutti</button>
+                  <button onClick={()=>activeFilterDef.setter(activeFilterDef.options.map(opt=>opt.value))} style={{ height:34, padding:'0 10px', borderRadius:14, border:'1px solid rgba(240,168,64,.30)', background:'rgba(240,168,64,.14)', color:'#F0A840', fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Tutti</button>
                   <button onClick={()=>activeFilterDef.setter([])} style={{ height:34, padding:'0 10px', borderRadius:14, border:'1px solid rgba(255,255,255,.10)', background:'rgba(255,255,255,.055)', color:isLightTheme?'rgba(0,0,0,.58)':'rgba(255,255,255,.62)', fontSize:10.5, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Cancella</button>
                 </div>
                 <div style={{ display:'grid', gridTemplateColumns:activeFilterDef.layout === 'quarters' ? 'repeat(4, minmax(0, 1fr))' : 'repeat(2, minmax(0, 1fr))', gap:8, maxHeight:activeFilterDef.layout === 'quarters' ? 92 : 238, overflowY:'auto', WebkitOverflowScrolling:'touch', paddingRight:activeFilterDef.layout === 'quarters' ? 0 : 2 }}>
@@ -4179,12 +4179,15 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
                     const tone = opt.c || activeFilterDef.tone;
                     const isStatus = activeFilterDef.key === 'status';
                     const isRarity = activeFilterDef.key === 'rarity';
+                    const isSemanticValue = ['status','rarity','cons'].includes(activeFilterDef.key);
                     const displayLabel = isStatus ? ANIMAL_STATUS[opt.value]?.label : prettyFilterLabel(opt.label || opt.value, activeFilterDef.label);
                     const bg = selected
-                      ? (isStatus ? (STATUS_GRADIENTS[opt.value] || opt.bg) : `linear-gradient(180deg, ${hexToRgba(tone,.22)}, rgba(255,255,255,.055))`)
-                      : (isStatus ? (STATUS_FILTER_GRADIENTS[opt.value] || 'rgba(255,255,255,.045)') : (isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'));
+                      ? (isStatus ? (STATUS_GRADIENTS[opt.value] || opt.bg) : (isSemanticValue ? (opt.bg || `linear-gradient(180deg, ${hexToRgba(tone,.22)}, rgba(255,255,255,.055))`) : `linear-gradient(180deg, ${hexToRgba(tone,.22)}, rgba(255,255,255,.055))`))
+                      : (isSemanticValue ? (opt.bg || hexToRgba(tone,.12)) : (isLightTheme?'rgba(0,0,0,.045)':'rgba(255,255,255,.045)'));
+                    const semanticBorder = isSemanticValue ? hexToRgba(tone, selected ? .76 : .42) : null;
+                    const semanticColor = isSemanticValue ? tone : null;
                     return (
-                      <button key={opt.value} onClick={()=>toggleFilterValue(activeFilterDef.setter, opt.value)} style={{ minHeight:activeFilterDef.layout === 'quarters' ? 58 : 48, borderRadius:16, border:`1px solid ${selected ? hexToRgba(tone,.72) : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)')}`, background:bg, color:selected ? (isLightTheme?'#171717':'white') : (isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)'), fontSize:activeFilterDef.layout === 'quarters' ? (isNarrow?9.2:10) : 11.5, fontWeight:1000, lineHeight:1.08, fontFamily:'inherit', cursor:'pointer', padding:activeFilterDef.layout === 'quarters' ? '7px 4px' : '8px 10px', textAlign:'center', boxShadow:selected ? `0 8px 18px ${hexToRgba(tone,.12)}` : 'none', overflow:'hidden' }}>
+                      <button key={opt.value} onClick={()=>toggleFilterValue(activeFilterDef.setter, opt.value)} style={{ minHeight:activeFilterDef.layout === 'quarters' ? 58 : 48, borderRadius:16, border:`1px solid ${semanticBorder || (selected ? hexToRgba(tone,.72) : (isLightTheme?'rgba(0,0,0,.10)':'rgba(255,255,255,.08)'))}`, background:bg, color:semanticColor || (selected ? (isLightTheme?'#171717':'white') : (isLightTheme?'rgba(0,0,0,.70)':'rgba(255,255,255,.72)')), fontSize:activeFilterDef.layout === 'quarters' ? (isNarrow?9.2:10) : 11.5, fontWeight:1000, lineHeight:1.08, fontFamily:'inherit', cursor:'pointer', padding:activeFilterDef.layout === 'quarters' ? '7px 4px' : '8px 10px', textAlign:'center', boxShadow:selected ? `0 8px 18px ${hexToRgba(tone,.14)}` : 'none', overflow:'hidden' }}>
                         {isRarity && <span style={{ display:'block', width:8, height:8, borderRadius:999, background:tone, margin:'0 auto 5px', opacity:selected ? .9 : .52 }} />}
                         <span style={{ display:'block', overflow:'hidden', textOverflow:'ellipsis' }}>{displayLabel}</span>
                       </button>
@@ -4915,7 +4918,7 @@ function PageHeader({ title, onBack, right, theme }) {
   const inferredTheme = theme || (typeof window !== 'undefined' ? window.localStorage?.getItem(ANIMALDEX_THEME_KEY) : 'dark');
   const isLightTheme = inferredTheme === 'light';
   return (
-    <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'calc(env(safe-area-inset-top, 0px) + 10px) 12px 10px', minHeight:'calc(env(safe-area-inset-top, 0px) + 66px)', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'#1C1C1E' }}>
+    <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', padding:'calc(env(safe-area-inset-top, 0px) + 8px) 12px 8px', minHeight:'calc(env(safe-area-inset-top, 0px) + 60px)', borderBottom:isLightTheme?'1px solid rgba(0,0,0,.14)':'1px solid #2A2A2C', flexShrink:0, background:isLightTheme?LIGHT_HEADER_BG:'#1C1C1E' }}>
       <button onClick={onBack} aria-label="Indietro" style={{ width:46, height:46, borderRadius:18, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.055)', border:isLightTheme?'1px solid rgba(0,0,0,.08)':'1px solid rgba(255,255,255,.08)', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
@@ -6837,7 +6840,7 @@ function MainMenu({ onOpen, onBack, onLogout, tutorialFocus=null, statusMap = {}
   const homeBoxHeight = 164;
   return (
       <div style={{ height:'100%', display:'flex', flexDirection:'column', position:'relative', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 50% -10%, rgba(184,77,58,.13), transparent 36%), linear-gradient(180deg,#101216,#0B0D10)', overflow:'hidden' }}>
-      <div style={{ minHeight:'calc(env(safe-area-inset-top, 0px) + 68px)', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'calc(env(safe-area-inset-top, 0px) + 9px) 14px 11px', boxSizing:'border-box', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 24px 24px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0 }}>
+      <div style={{ minHeight:'calc(env(safe-area-inset-top, 0px) + 60px)', display:'flex', alignItems:'center', justifyContent:'space-between', padding:'calc(env(safe-area-inset-top, 0px) + 5px) 14px 8px', boxSizing:'border-box', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 22px 22px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0 }}>
         <button onClick={()=>setNavOpen(true)} aria-label="Menu" style={{ width:44, height:44, borderRadius:15, border:'1px solid rgba(255,255,255,.10)', background:'rgba(0,0,0,.10)', display:'flex', flexDirection:'column', justifyContent:'center', gap:5, padding:'0 10px', cursor:'pointer' }}>
           {[0,1,2].map(i => <span key={i} style={{ display:'block', width:22, height:2.5, borderRadius:4, background:isLightTheme?'#171717':'white' }} />)}
         </button>
@@ -7331,6 +7334,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const dragRef = useRef(null);
   const pointersRef = useRef(new Map());
   const pinchRef = useRef(null);
+  const touchGestureRef = useRef(null);
   const userMovedViewRef = useRef(false);
   const lastCenterTapRef = useRef(0);
   const appliedResetRef = useRef(0);
@@ -7418,24 +7422,36 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     }
     snapToNearest();
   };
+  const toLocalPoint = (clientX, clientY) => {
+    const rect = wrapRef.current?.getBoundingClientRect?.();
+    return { x:clientX - (rect?.left || 0), y:clientY - (rect?.top || 0) };
+  };
+  const touchDistance = (points) => {
+    if (!points || points.length < 2) return 1;
+    return Math.hypot(points[1].x - points[0].x, points[1].y - points[0].y) || 1;
+  };
+  const touchMidpoint = (points) => ({ x:(points[0].x + points[1].x) / 2, y:(points[0].y + points[1].y) / 2 });
+  const getTouchPoints = (e) => Array.from(e.touches || []).map(t => toLocalPoint(t.clientX, t.clientY));
   const startDrag = (e) => {
-    if (e.target.closest?.('[data-life-node="true"], [data-life-control="true"]')) return;
     userMovedViewRef.current = true;
-    pointersRef.current.set(e.pointerId, { x:e.clientX, y:e.clientY });
+    const local = toLocalPoint(e.clientX, e.clientY);
+    const blockedSingleDrag = e.target.closest?.('[data-life-node="true"], [data-life-control="true"]');
+    pointersRef.current.set(e.pointerId, local);
     if (pointersRef.current.size === 2) {
       const pts = Array.from(pointersRef.current.values());
       const dx = pts[1].x - pts[0].x;
       const dy = pts[1].y - pts[0].y;
       pinchRef.current = { dist:Math.hypot(dx, dy) || 1, mid:{ x:(pts[0].x + pts[1].x) / 2, y:(pts[0].y + pts[1].y) / 2 }, view };
       dragRef.current = null;
-    } else {
-      dragRef.current = { x:e.clientX, y:e.clientY, view };
+    } else if (!blockedSingleDrag) {
+      dragRef.current = { x:local.x, y:local.y, view };
     }
     e.currentTarget.setPointerCapture?.(e.pointerId);
   };
   const moveDrag = (e) => {
     if (!pointersRef.current.has(e.pointerId)) return;
-    pointersRef.current.set(e.pointerId, { x:e.clientX, y:e.clientY });
+    const local = toLocalPoint(e.clientX, e.clientY);
+    pointersRef.current.set(e.pointerId, local);
     if (pointersRef.current.size >= 2 && pinchRef.current) {
       const pts = Array.from(pointersRef.current.values()).slice(0, 2);
       const dx = pts[1].x - pts[0].x;
@@ -7450,7 +7466,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
       return;
     }
     const d = dragRef.current;
-    if (d) setView({ ...d.view, x:d.view.x + e.clientX - d.x, y:d.view.y + e.clientY - d.y });
+    if (d) setView({ ...d.view, x:d.view.x + local.x - d.x, y:d.view.y + local.y - d.y });
   };
   const endDrag = (e) => {
     pointersRef.current.delete(e.pointerId);
@@ -7458,6 +7474,41 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
     if (pointersRef.current.size === 0) {
       dragRef.current = null;
     }
+  };
+  const startTouch = (e) => {
+    if (e.target.closest?.('[data-life-control="true"]')) return;
+    const points = getTouchPoints(e);
+    if (!points.length) return;
+    userMovedViewRef.current = true;
+    if (points.length >= 2) {
+      touchGestureRef.current = { mode:'pinch', dist:touchDistance(points), mid:touchMidpoint(points), view };
+      e.preventDefault?.();
+      return;
+    }
+    if (e.target.closest?.('[data-life-node="true"]')) return;
+    touchGestureRef.current = { mode:'pan', start:points[0], view };
+  };
+  const moveTouch = (e) => {
+    const gesture = touchGestureRef.current;
+    if (!gesture) return;
+    const points = getTouchPoints(e);
+    if (gesture.mode === 'pinch' && points.length >= 2) {
+      const dist = touchDistance(points);
+      const mid = touchMidpoint(points);
+      const nextK = Math.max(.12, Math.min(1.56, gesture.view.k * (dist / gesture.dist)));
+      const worldX = (gesture.mid.x - gesture.view.x) / gesture.view.k;
+      const worldY = (gesture.mid.y - gesture.view.y) / gesture.view.k;
+      setView({ x:mid.x - worldX * nextK, y:mid.y - worldY * nextK, k:nextK });
+      e.preventDefault?.();
+      return;
+    }
+    if (gesture.mode === 'pan' && points.length === 1) {
+      setView({ ...gesture.view, x:gesture.view.x + points[0].x - gesture.start.x, y:gesture.view.y + points[0].y - gesture.start.y });
+      e.preventDefault?.();
+    }
+  };
+  const endTouch = () => {
+    touchGestureRef.current = null;
   };
   const zoomBy = (factor) => {
     userMovedViewRef.current = true;
@@ -7479,7 +7530,7 @@ function LifeTreeCanvas({ selectedNode, animals, focusAnimalId=null, onOpen, onA
   const rootPlaceholderOpacity = flow.focusDepth === 0 ? Math.max(0, Math.min(.24, 1.05 - view.k)) : 0;
   const focusAnimal = focusAnimalId ? animals.find(animal => String(animal?.id || '') === String(focusAnimalId)) : null;
   return (
-    <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
+    <div ref={wrapRef} onPointerDown={startDrag} onPointerMove={moveDrag} onPointerUp={endDrag} onPointerCancel={endDrag} onTouchStart={startTouch} onTouchMove={moveTouch} onTouchEnd={endTouch} onTouchCancel={endTouch} style={{ position:'relative', width:'100%', height:'100%', overflow:'hidden', touchAction:'none', background:'radial-gradient(circle at 50% 0%, rgba(217,184,111,.12), transparent 26%), radial-gradient(circle at 18% 28%, rgba(63,183,166,.12), transparent 30%), linear-gradient(180deg,rgba(18,30,26,.72),rgba(4,7,8,.98) 46%,#030506)' }}>
       <div style={{ position:'absolute', inset:0, opacity:.28, backgroundImage:'linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px)', backgroundSize:'34px 34px', maskImage:'linear-gradient(180deg,rgba(0,0,0,.9),rgba(0,0,0,.34) 55%,rgba(0,0,0,.78))' }} />
       <div style={{ position:'absolute', left:18, right:18, top:18, zIndex:8, pointerEvents:'none', color:'rgba(255,255,255,.50)', fontSize:10, fontWeight:900, letterSpacing:.4, textTransform:'uppercase' }}>Trascina il pannello · usa ⌖ per centrare il nodo vicino</div>
       <div style={{ position:'absolute', right:12, bottom:12, zIndex:20, display:'grid', gap:8 }}>
