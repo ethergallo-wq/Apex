@@ -2557,8 +2557,15 @@ const PROFILE_BACKGROUND_IMAGES = [
 function getProfileBackgroundStorageKey(userId='guest') {
   return `animaldex_profile_background_${userId || 'guest'}`;
 }
+function isAllowedProfileBackgroundImage(value='') {
+  const src = String(value || '').trim();
+  if (!src || !/^\/regions\/.+\.(png|jpe?g|webp)$/i.test(src)) return false;
+  return !/(animals_general|tree_of_life|home_regioni)/i.test(src);
+}
 function normalizeProfileBackgroundImage(value='') {
-  return PROFILE_BACKGROUND_IMAGES.includes(value) ? value : PROFILE_BACKGROUND_IMAGES[0];
+  const src = String(value || '').trim();
+  if (PROFILE_BACKGROUND_IMAGES.includes(src) || isAllowedProfileBackgroundImage(src)) return src;
+  return PROFILE_BACKGROUND_IMAGES[0];
 }
 function getProfileBackgroundImage(userId='guest') {
   if (typeof window === 'undefined') return PROFILE_BACKGROUND_IMAGES[0];
@@ -2594,6 +2601,50 @@ function persistProfileAvatarAnimalId(userId='guest', animalId='') {
     if (clean) window.localStorage.setItem(key, clean);
     else window.localStorage.removeItem(key);
   } catch {}
+}
+async function saveProfileAvatarAnimal(userId, animal) {
+  const cleanId = String(animal?.id || '');
+  persistProfileAvatarAnimalId(userId || 'guest', cleanId);
+  if (!userId || userId === 'guest' || userId === 'local' || !cleanId) return true;
+  const { error } = await supabase
+    .from('user_profiles')
+    .update({ avatar_url:animal?.image_url || '', updated_at:new Date().toISOString() })
+    .eq('user_id', userId);
+  if (error && error.code !== '42703') throw error;
+  return true;
+}
+function getProfileBackgroundChoices(animalsWithStatus = [], visitedCountries = [], currentImage = '') {
+  const choices = new Map();
+  const addChoice = (item, fallbackLabel='', source='') => {
+    const preferred = Array.isArray(item?.image) ? item.image : (item?.image ? [item.image] : []);
+    const sources = [...preferred, ...getRegionCoverSources(item, item?.image)].filter(isAllowedProfileBackgroundImage);
+    const image = sources[0];
+    if (!image || choices.has(image)) return;
+    choices.set(image, {
+      image,
+      label:item?.label || item?.display_name || item?.name_en || fallbackLabel || image.split('/').pop()?.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '),
+      source,
+    });
+  };
+  if (isAllowedProfileBackgroundImage(currentImage)) addChoice({ label:'Sfondo attuale', image:currentImage }, 'Sfondo attuale', 'Attuale');
+  normalizeIsoList(visitedCountries).forEach(code => {
+    BIOREGION_V4_ECOREGIONS.filter(eco => (eco.iso || []).includes(code)).slice(0, 8).forEach(eco => addChoice(eco, eco.label, getCountryDisplayName(code)));
+    BIOREGION_V4_REGIONS.filter(reg => (reg.iso || []).includes(code)).slice(0, 4).forEach(reg => addChoice(reg, reg.label, getCountryDisplayName(code)));
+    BIOREGION_V4_CONTINENTS.filter(cont => (cont.iso || []).includes(code)).slice(0, 2).forEach(cont => addChoice(cont, cont.label, getCountryDisplayName(code)));
+  });
+  (animalsWithStatus || [])
+    .filter(a => !isMysteryStatus(a.status))
+    .slice(0, 220)
+    .forEach(animal => {
+      getAnimalBioregionIdsV4(animal).forEach(id => {
+        const item = BIOREGION_V4_BY_ID[id];
+        if (item) addChoice(item, item.label || item.display_name, animal.com || animal.sci);
+      });
+    });
+  PROFILE_BACKGROUND_IMAGES.slice(0, 12).forEach(image => {
+    if (!choices.size || choices.size < 8) addChoice({ label:image.split('/').pop()?.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' '), image }, '', 'Base');
+  });
+  return Array.from(choices.values()).slice(0, 96);
 }
 function stripExcitementPunctuation(text='') {
   return String(text || '').replace(/!+/g, '.').replace(/\.\s*\./g, '.').replace(/\s+/g, ' ').trim();
@@ -5016,45 +5067,6 @@ function DetailAbilityCard({ cat, animal, accentColor, tutorialActive=false, onT
           <div style={{ color:'rgba(255,255,255,.80)', fontSize:10.4, lineHeight:1.18, fontWeight:720, textAlign:'left', maxHeight:80, overflowY:'auto', paddingRight:2 }}>{curiosity}</div>
         </div>
       </div>
-      {profilePicker && (
-        <div onClick={closeProfilePicker} style={{ position:'fixed', inset:0, zIndex:520, background:'rgba(0,0,0,.74)', display:'flex', alignItems:'flex-end', padding:12, boxSizing:'border-box' }}>
-          <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:480, margin:'0 auto', maxHeight:'82dvh', overflow:'hidden', borderRadius:'28px 28px 20px 20px', background:isLightTheme?'#FBF7EF':'#17191D', border:`1px solid ${panelBorder}`, boxShadow:'0 28px 90px rgba(0,0,0,.62)', padding:14, boxSizing:'border-box', display:'flex', flexDirection:'column' }}>
-            <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, marginBottom:12 }}>
-              <div>
-                <div style={{ color:mainText, fontSize:19, fontWeight:1000 }}>{profilePicker === 'cover' ? 'Copertina' : profilePicker === 'avatar' ? 'Foto profilo' : 'Badge profilo'}</div>
-                <div style={{ color:subText, fontSize:11.5, marginTop:3 }}>{profilePickerMode === 'preview' ? 'Anteprima selezione attuale' : 'Scegli una nuova alternativa'}</div>
-              </div>
-              <button onClick={closeProfilePicker} aria-label="Chiudi" style={{ width:40, height:40, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.06)', color:mainText, fontSize:22, fontWeight:1000 }}>×</button>
-            </div>
-            {profilePickerMode === 'preview' ? (
-              <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
-                <div style={{ minHeight:210, borderRadius:24, border:`1px solid ${panelBorder}`, background:profilePicker === 'cover' ? `linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.58)), url("${profileBgImage}")` : isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', backgroundSize:'cover', backgroundPosition:'center', display:'grid', placeItems:'center', padding:18 }}>
-                  {profilePicker === 'avatar' && (avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'avvistato'}} size={172} fontSize={52} overrideStatus="avvistato" /> : <span style={{ color:subText, fontSize:44 }}>👤</span>)}
-                  {profilePicker === 'badge' && (featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:170, height:170, objectFit:'contain', filter:`drop-shadow(0 0 22px ${hexToRgba(featuredBadgeColor,.44)})` }} /> : <span style={{ color:subText, fontSize:15, fontWeight:900 }}>Nessun badge selezionato</span>)}
-                </div>
-                <button onClick={()=>setProfilePickerMode('list')} style={{ width:'100%', height:48, borderRadius:17, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontSize:14, fontWeight:1000, marginTop:12 }}>Scegli alternative</button>
-              </div>
-            ) : (
-              <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch', display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, paddingBottom:4 }}>
-                {profilePicker === 'cover' && PROFILE_BACKGROUND_IMAGES.map(image => {
-                  const active = image === profileBgImage;
-                  const label = image.split('/').pop()?.replace(/\.[^.]+$/, '').replace(/[-_]+/g, ' ');
-                  return <button key={image} onClick={()=>chooseProfileCover(image)} style={{ height:112, borderRadius:20, border:`2px solid ${active ? '#F0A840' : 'rgba(255,255,255,.10)'}`, background:`linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.64)), url("${image}")`, backgroundSize:'cover', backgroundPosition:'center', color:'white', fontFamily:'inherit', fontSize:11, fontWeight:950, textAlign:'left', padding:10, display:'flex', alignItems:'flex-end' }}>{label}</button>;
-                })}
-                {profilePicker === 'avatar' && (avatarChoices.length ? avatarChoices.map(animal => {
-                  const active = String(animal.id) === String(profileAvatarAnimalId);
-                  return <button key={animal.id} onClick={()=>chooseProfileAvatar(animal)} style={{ minHeight:138, borderRadius:20, border:`2px solid ${active ? '#F0A840' : 'rgba(255,255,255,.10)'}`, background:isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', color:mainText, fontFamily:'inherit', padding:10 }}><AnimalImg a={{...animal,status:'avvistato'}} size={82} fontSize={30} overrideStatus="avvistato" /><div style={{ marginTop:8, fontSize:11, fontWeight:1000, lineHeight:1.15 }}>{animal.com || animal.sci}</div></button>;
-                }) : <div style={{ gridColumn:'1/-1', color:subText, fontSize:13, lineHeight:1.45, padding:12 }}>Avvista almeno un animale per usarlo come foto profilo.</div>)}
-                {profilePicker === 'badge' && (earnedAwards.length ? earnedAwards.map(rule => {
-                  const active = normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId);
-                  const color = BADGE_LEVEL_COLORS[rule.level] || '#F0A840';
-                  return <button key={rule.badgeId} onClick={()=>chooseProfileBadge(rule)} style={{ minHeight:148, borderRadius:20, border:`2px solid ${active ? color : 'rgba(255,255,255,.10)'}`, background:isLightTheme?`linear-gradient(180deg,${hexToRgba(color,.10)},rgba(251,247,239,.92))`:`linear-gradient(180deg,${hexToRgba(color,.13)},rgba(255,255,255,.045))`, color:mainText, fontFamily:'inherit', padding:10 }}><img src={buildAwardImagePath(rule.badgeId)} alt="" style={{ width:72, height:72, objectFit:'contain' }} /><div style={{ marginTop:8, fontSize:11, fontWeight:1000, lineHeight:1.15 }}>{rule.name}</div></button>;
-                }) : <div style={{ gridColumn:'1/-1', color:subText, fontSize:13, lineHeight:1.45, padding:12 }}>Ottieni un badge per mostrarlo nel profilo.</div>)}
-              </div>
-            )}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
@@ -8253,7 +8265,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const unlockedCount = animalsWithStatus.filter(a => !isMysteryStatus(a.status)).length;
   const seenCount = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato').length;
   const capturedCount = animalsWithStatus.filter(a => a.status === 'catturato').length;
-  const avatarChoices = animalsWithStatus.filter(a => a.status === 'avvistato' || a.status === 'catturato');
+  const avatarChoices = animalsWithStatus.filter(a => a.status === 'catturato');
   const earnedAwards = AWARD_RULES.filter(rule => new Set([...earnedBadgeIds, ...computeUnlockedAwards(statusMap, visitedCountries).map(a => a.badgeId)].map(normalizeBadgeId)).has(normalizeBadgeId(rule.badgeId)));
   const [profileBgImage,setProfileBgImage] = useState(() => getProfileBackgroundImage(userIdKey));
   const [featuredBadgeId,setFeaturedBadgeId] = useState(() => getFeaturedBadgeId(userIdKey));
@@ -8270,13 +8282,14 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const featuredBadge = earnedAwards.find(rule => normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId)) || earnedAwards[0] || null;
   const featuredBadgeColor = featuredBadge ? (BADGE_LEVEL_COLORS[featuredBadge.level] || '#F0A840') : '#D8D2C4';
   const avatarAnimal = avatarChoices.find(a => String(a.id) === String(profileAvatarAnimalId)) || avatarChoices[0] || null;
+  const profileBackgroundChoices = getProfileBackgroundChoices(animalsWithStatus, visitedCountries, profileBgImage);
   const progressRows = [
     { label:'Sbloccati', value:unlockedCount, total:ANIMALS.length, color:'#D8D2C4', onClick:()=>onOpenGridStatus?.(['ricercato','avvistato','catturato']) },
     { label:'Avvistati', value:seenCount, total:Math.max(1, unlockedCount), color:'#C87955', onClick:()=>onOpenGridStatus?.(['avvistato','catturato']) },
     { label:'Catturati', value:capturedCount, total:Math.max(1, seenCount), color:'#B84D3A', onClick:onOpenGallery },
   ];
   const cycleProfileBackground = () => {
-    const options = PROFILE_BACKGROUND_IMAGES;
+    const options = profileBackgroundChoices.map(choice => choice.image);
     const next = options[(Math.max(0, options.indexOf(profileBgImage)) + 1) % Math.max(1, options.length)] || profileBgImage;
     setProfileBgImage(next); persistProfileBackgroundImage(userIdKey, next); saveProfileBackgroundImage(user?.id, next).catch(()=>{});
   };
@@ -8288,7 +8301,9 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
   const cycleAvatarAnimal = () => {
     if (!avatarChoices.length) return;
     const next = avatarChoices[(Math.max(0, avatarChoices.findIndex(a => String(a.id) === String(profileAvatarAnimalId))) + 1) % avatarChoices.length];
-    setProfileAvatarAnimalId(String(next.id)); persistProfileAvatarAnimalId(userIdKey, next.id);
+    setProfileAvatarAnimalId(String(next.id));
+    persistProfileAvatarAnimalId(userIdKey, next.id);
+    saveProfileAvatarAnimal(user?.id, next).catch(()=>{});
   };
   const openProfilePicker = (type, mode='preview') => {
     setProfilePicker(type);
@@ -8313,6 +8328,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
     if (!animal?.id) return;
     setProfileAvatarAnimalId(String(animal.id));
     persistProfileAvatarAnimalId(userIdKey, animal.id);
+    saveProfileAvatarAnimal(user?.id, animal).catch(()=>{});
     closeProfilePicker();
   };
   return (
@@ -8320,8 +8336,8 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
       <PageHeader title="Profilo" onBack={onBack} theme={theme} />
       <div style={{ flex:1, overflowY:'auto', padding:18 }}>
         <div style={{ position:'relative', background:isLightTheme?`linear-gradient(90deg, rgba(251,247,239,.82), rgba(251,247,239,.48) 56%, rgba(251,247,239,.18)), url("${profileBgImage}")`:`linear-gradient(90deg, rgba(12,14,18,.76), rgba(17,19,23,.48) 56%, rgba(17,19,23,.18)), url("${profileBgImage}")`, backgroundSize:'cover', backgroundPosition:'center', borderRadius:24, padding:24, textAlign:'center', marginBottom:16, boxShadow:'0 18px 42px rgba(0,0,0,.28)', border:`1px solid ${panelBorder}`, overflow:'hidden' }}>
-          <button onClick={()=>openProfilePicker('cover','list')} style={{ position:'absolute', top:12, right:12, height:32, borderRadius:13, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.34)', color:'white', padding:'0 10px', fontSize:11, fontWeight:1000, fontFamily:'inherit' }}>Sfondo</button>
-          <button onClick={()=>openProfilePicker('avatar')} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(0,0,0,.30)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)', overflow:'hidden' }}>{avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'avvistato'}} size={96} fontSize={40} overrideStatus="avvistato" /> : '👤'}</button>
+          <button onClick={()=>openProfilePicker('cover','list')} style={{ position:'absolute', top:12, right:12, height:32, borderRadius:13, border:'1px solid rgba(255,255,255,.14)', background:'rgba(0,0,0,.34)', color:'white', padding:'0 10px', fontSize:11, fontWeight:1000, fontFamily:'inherit', cursor:'pointer' }}>Sfondo</button>
+          <button onClick={()=>openProfilePicker('avatar')} aria-label="Cambia foto profilo" style={{ width:102, height:102, borderRadius:'50%', background:'rgba(0,0,0,.30)', border:'1px solid rgba(255,255,255,.12)', color:'#9DD3FF', display:'flex', alignItems:'center', justifyContent:'center', fontSize:48, margin:'0 auto 14px', cursor:'pointer', boxShadow:'inset 0 0 22px rgba(255,255,255,.06)', overflow:'hidden' }}>{avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={96} fontSize={40} overrideStatus="catturato" /> : '👤'}</button>
           <input ref={fileInputRef} type="file" accept="image/*" style={{ display:'none' }} onChange={()=>{}} />
           <div style={{ color:mainText, fontSize:26, fontWeight:900, letterSpacing:'-.4px' }}>{displayName}</div>
           <div style={{ color:subText, fontSize:13, marginTop:5, fontWeight:600 }}>{userProfile?.username || user?.email || 'Profilo Apex'}</div>
@@ -8330,7 +8346,7 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
             <span style={{ color:'#B9D7EF', fontSize:12, fontWeight:1000, background:'rgba(91,190,248,.10)', border:'1px solid rgba(91,190,248,.18)', borderRadius:999, padding:'7px 10px' }}>{progress.xp} / {nextLevelXP} XP</span>
           </div>
           <div style={{ height:9, borderRadius:999, background:'rgba(255,255,255,.12)', overflow:'hidden', marginTop:13 }}><div style={{ height:'100%', width:`${xpPct}%`, background:'linear-gradient(90deg,#D8D2C4,#C87955,#B84D3A)', boxShadow:'0 0 14px rgba(184,77,58,.22)', borderRadius:999 }} /></div>
-          <button onClick={()=>openProfilePicker('badge')} style={{ marginTop:13, minHeight:54, borderRadius:18, border:`1px solid ${hexToRgba(featuredBadgeColor,.45)}`, background:`linear-gradient(135deg,${hexToRgba(featuredBadgeColor,.18)},rgba(0,0,0,.22))`, color:mainText, padding:'8px 12px', display:'inline-flex', alignItems:'center', gap:10, fontFamily:'inherit', fontWeight:1000 }}>
+          <button onClick={()=>openProfilePicker('badge')} style={{ marginTop:13, minHeight:54, borderRadius:18, border:`1px solid ${hexToRgba(featuredBadgeColor,.45)}`, background:`linear-gradient(135deg,${hexToRgba(featuredBadgeColor,.18)},rgba(0,0,0,.22))`, color:mainText, padding:'8px 12px', display:'inline-flex', alignItems:'center', gap:10, fontFamily:'inherit', fontWeight:1000, cursor:'pointer' }}>
             {featuredBadge && <img src={buildAwardImagePath(featuredBadge.badgeId)} alt="" style={{ width:38, height:38, objectFit:'contain' }} />}
             <span>{featuredBadge?.name || 'Scegli badge'}</span>
           </button>
@@ -8371,6 +8387,47 @@ function ProfilePage({ onBack, statusMap = {}, visitedCountries = [], earnedBadg
           <button data-sound="back" onClick={onLogout} style={{ marginTop:14, width:'100%', height:44, borderRadius:14, border:'none', background:'rgba(255,59,48,.16)', color:'#FF8A80', fontWeight:900, fontFamily:'inherit', cursor:'pointer' }}>Log out</button>
         </div>
       </div>
+      {profilePicker && (
+        <div onClick={closeProfilePicker} style={{ position:'fixed', inset:0, zIndex:520, background:'rgba(0,0,0,.74)', display:'flex', alignItems:'flex-end', padding:'calc(env(safe-area-inset-top, 0px) + 12px) 12px calc(env(safe-area-inset-bottom, 0px) + 12px)', boxSizing:'border-box' }}>
+          <div onClick={e=>e.stopPropagation()} style={{ width:'100%', maxWidth:480, margin:'0 auto', maxHeight:'82dvh', overflow:'hidden', borderRadius:'28px 28px 20px 20px', background:isLightTheme?'#FBF7EF':'#17191D', border:`1px solid ${panelBorder}`, boxShadow:'0 28px 90px rgba(0,0,0,.62)', padding:14, boxSizing:'border-box', display:'flex', flexDirection:'column' }}>
+            <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:12, marginBottom:12, flexShrink:0 }}>
+              <div>
+                <div style={{ color:mainText, fontSize:19, fontWeight:1000 }}>{profilePicker === 'cover' ? 'Sfondo profilo' : profilePicker === 'avatar' ? 'Immagine profilo' : 'Badge profilo'}</div>
+                <div style={{ color:subText, fontSize:11.5, marginTop:3 }}>{profilePicker === 'cover' ? 'Scegli tra le regioni che hai sbloccato.' : profilePicker === 'avatar' ? 'Scegli tra gli animali catturati.' : 'Scegli tra i badge ottenuti.'}</div>
+              </div>
+              <button onClick={closeProfilePicker} aria-label="Chiudi" style={{ width:40, height:40, borderRadius:16, border:`1px solid ${panelBorder}`, background:isLightTheme?'rgba(0,0,0,.04)':'rgba(255,255,255,.06)', color:mainText, fontSize:22, fontWeight:1000, cursor:'pointer' }}>×</button>
+            </div>
+            {profilePickerMode === 'preview' ? (
+              <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch' }}>
+                <div style={{ minHeight:210, borderRadius:24, border:`1px solid ${panelBorder}`, background:profilePicker === 'cover' ? `linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.58)), url("${profileBgImage}")` : isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', backgroundSize:'cover', backgroundPosition:'center', display:'grid', placeItems:'center', padding:18 }}>
+                  {profilePicker === 'avatar' && (avatarAnimal ? <AnimalImg a={{...avatarAnimal,status:'catturato'}} size={172} fontSize={52} overrideStatus="catturato" /> : <span style={{ color:subText, fontSize:15, fontWeight:900, textAlign:'center', lineHeight:1.35 }}>Cattura un animale per usarlo come immagine profilo.</span>)}
+                  {profilePicker === 'badge' && (featuredBadge ? <img src={buildAwardImagePath(featuredBadge.badgeId)} alt={featuredBadge.name} style={{ width:170, height:170, objectFit:'contain', filter:`drop-shadow(0 0 22px ${hexToRgba(featuredBadgeColor,.44)})` }} /> : <span style={{ color:subText, fontSize:15, fontWeight:900 }}>Nessun badge selezionato</span>)}
+                </div>
+                <button onClick={()=>setProfilePickerMode('list')} style={{ width:'100%', height:48, borderRadius:17, border:'none', background:ANIMALDEX_ORANGE_GRADIENT, color:'white', fontFamily:'inherit', fontSize:14, fontWeight:1000, marginTop:12, cursor:'pointer' }}>Scegli alternative</button>
+              </div>
+            ) : (
+              <div style={{ overflowY:'auto', WebkitOverflowScrolling:'touch', display:'grid', gridTemplateColumns:'repeat(2,minmax(0,1fr))', gap:10, paddingBottom:4 }}>
+                {profilePicker === 'cover' && (profileBackgroundChoices.length ? profileBackgroundChoices.map(choice => {
+                  const active = choice.image === profileBgImage;
+                  return <button key={choice.image} onClick={()=>chooseProfileCover(choice.image)} style={{ height:112, borderRadius:20, border:`2px solid ${active ? '#F0A840' : 'rgba(255,255,255,.10)'}`, background:`linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.64)), url("${choice.image}")`, backgroundSize:'cover', backgroundPosition:'center', color:'white', fontFamily:'inherit', fontSize:11, fontWeight:950, textAlign:'left', padding:10, display:'flex', flexDirection:'column', alignItems:'flex-start', justifyContent:'flex-end', cursor:'pointer', boxShadow:active?'0 0 0 3px rgba(240,168,64,.18)':'none' }}>
+                    <span style={{ lineHeight:1.14, textShadow:'0 2px 8px rgba(0,0,0,.70)', display:'-webkit-box', WebkitLineClamp:2, WebkitBoxOrient:'vertical', overflow:'hidden' }}>{choice.label}</span>
+                    {choice.source && <span style={{ marginTop:4, color:'rgba(255,255,255,.62)', fontSize:9.5, fontWeight:850, textShadow:'0 2px 8px rgba(0,0,0,.70)' }}>{choice.source}</span>}
+                  </button>;
+                }) : <div style={{ gridColumn:'1/-1', color:subText, fontSize:13, lineHeight:1.45, padding:12 }}>Sblocca una regione o visita un paese per usare un nuovo sfondo.</div>)}
+                {profilePicker === 'avatar' && (avatarChoices.length ? avatarChoices.map(animal => {
+                  const active = String(animal.id) === String(profileAvatarAnimalId);
+                  return <button key={animal.id} onClick={()=>chooseProfileAvatar(animal)} style={{ minHeight:138, borderRadius:20, border:`2px solid ${active ? '#F0A840' : 'rgba(255,255,255,.10)'}`, background:isLightTheme?'rgba(0,0,0,.035)':'rgba(255,255,255,.055)', color:mainText, fontFamily:'inherit', padding:10, cursor:'pointer', boxShadow:active?'0 0 0 3px rgba(240,168,64,.18)':'none' }}><AnimalImg a={{...animal,status:'catturato'}} size={82} fontSize={30} overrideStatus="catturato" /><div style={{ marginTop:8, fontSize:11, fontWeight:1000, lineHeight:1.15 }}>{animal.com || animal.sci}</div></button>;
+                }) : <div style={{ gridColumn:'1/-1', color:subText, fontSize:13, lineHeight:1.45, padding:12 }}>Cattura almeno un animale per usarlo come immagine profilo.</div>)}
+                {profilePicker === 'badge' && (earnedAwards.length ? earnedAwards.map(rule => {
+                  const active = normalizeBadgeId(rule.badgeId) === normalizeBadgeId(featuredBadgeId);
+                  const color = BADGE_LEVEL_COLORS[rule.level] || '#F0A840';
+                  return <button key={rule.badgeId} onClick={()=>chooseProfileBadge(rule)} style={{ minHeight:148, borderRadius:20, border:`2px solid ${active ? color : 'rgba(255,255,255,.10)'}`, background:isLightTheme?`linear-gradient(180deg,${hexToRgba(color,.10)},rgba(251,247,239,.92))`:`linear-gradient(180deg,${hexToRgba(color,.13)},rgba(255,255,255,.045))`, color:mainText, fontFamily:'inherit', padding:10, cursor:'pointer', boxShadow:active?`0 0 0 3px ${hexToRgba(color,.18)}`:'none' }}><img src={buildAwardImagePath(rule.badgeId)} alt="" style={{ width:72, height:72, objectFit:'contain' }} /><div style={{ marginTop:8, fontSize:11, fontWeight:1000, lineHeight:1.15 }}>{rule.name}</div></button>;
+                }) : <div style={{ gridColumn:'1/-1', color:subText, fontSize:13, lineHeight:1.45, padding:12 }}>Ottieni un badge per mostrarlo nel profilo.</div>)}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
