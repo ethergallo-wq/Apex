@@ -1881,6 +1881,12 @@ const RARITY_CSS = `
   border-right: 1px solid rgba(255,255,255,.08);
   box-shadow: 0 -10px 28px rgba(0,0,0,.18);
 }
+#animaldex-app-root [data-animaldex-grid-top="true"] {
+  border-radius: 0 0 18px 18px !important;
+}
+#animaldex-app-root [data-animaldex-grid-bottom="true"] {
+  border-radius: 18px 18px 0 0 !important;
+}
 #animaldex-app-root [data-animaldex-card="true"],
 #animaldex-app-root [data-animaldex-modal="true"] {
   border-radius: var(--animaldex-radius-panel) !important;
@@ -4251,27 +4257,27 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
     { key:'tax', label:'Tassonomia', tone:'#E8C040', selected:fTax ? [fTax.value] : [], open:()=>{ setSheet('tax'); setShowMenu(false); setActiveFilter(null); }, hint:'Albero tassonomico' },
   ];
   const activeFilterDef = filterDefs.find(f => f.key === activeFilter);
-  const buttonSize = isPhone ? 50 : 46;
+  const buttonSize = isPhone ? 42 : 46;
 
   return (
     <div style={{ height:'100%', display:'flex', flexDirection:'column', background:isLightTheme?LIGHT_APP_BG:'radial-gradient(circle at 80% -8%, rgba(240,168,64,.34), transparent 34%), radial-gradient(circle at 10% 28%, rgba(184,77,58,.24), transparent 38%), radial-gradient(circle at 92% 72%, rgba(200,121,85,.20), transparent 36%), linear-gradient(180deg,#2A1208 0%,#1B100B 44%,#100B09 100%)', position:'relative', overflow:'hidden' }}>
-      <div data-animaldex-bar="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 7px) 18px 10px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 66px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 22px 22px', boxShadow:'0 12px 28px rgba(184,77,58,.22)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
+      <div data-animaldex-bar="true" data-animaldex-grid-top="true" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10, padding:isPhone?'calc(env(safe-area-inset-top, 0px) + 2px) 16px 6px':'calc(env(safe-area-inset-top, 0px) + 9px) 12px 10px', minHeight:isPhone?'calc(env(safe-area-inset-top, 0px) + 50px)':'calc(env(safe-area-inset-top, 0px) + 56px)', marginTop:0, borderTop:'none', borderBottom:'none', background:ANIMALDEX_ORANGE_GRADIENT, borderRadius:'0 0 18px 18px', boxShadow:'0 10px 24px rgba(184,77,58,.20)', flexShrink:0, position:'relative', zIndex:2, overflow:'hidden' }}>
         {onBackToOrigin ? (
-          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <button onClick={onBackToOrigin} aria-label="Torna alla scheda" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?14:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 5L8 12l7 7" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         ) : (
-          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?18:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
+          <button onClick={onHome} aria-label="Home" style={{ width:buttonSize, height:buttonSize, borderRadius:isPhone?14:10, background:'transparent', border:'none', color:isLightTheme?'#171717':'white', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0 }}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 10.5L12 3.25l8.5 7.25" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M6.5 9.75V20h11V9.75" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M9.5 20v-6h5v6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </button>
         )}
-        <span style={{ color:'white', fontSize:isPhone?26:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
-        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,.08))', border:'1px solid rgba(255,255,255,.20)', color:'white', fontSize:isPhone?28:18, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:isPhone?22:14, flexShrink:0, fontWeight:1000 }}>i</button>
+        <span style={{ color:'white', fontSize:isPhone?22:18, fontWeight:900, flex:1, textAlign:'center', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis' }}>{preset?.title || 'Apex'}</span>
+        <button onClick={()=>setShowInfoModalGrid(!showInfoModalGrid)} style={{ background:'linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.07))', border:'1px solid rgba(255,255,255,.18)', color:'white', fontSize:isPhone?22:18, cursor:'pointer', padding:0, width:buttonSize, height:buttonSize, display:'flex', alignItems:'center', justifyContent:'center', borderRadius:isPhone?16:14, flexShrink:0, fontWeight:1000, lineHeight:1 }}>i</button>
       </div>
 
       {/* Filtri applicati nascosti: l'area libera viene usata dai filtri rapidi. */}
 
-      <div style={{ flex:1, overflowY:'auto', padding:isPhone?'38px 14px 22px':'36px 12px 18px', marginTop:-24, marginBottom:-18, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', position:'relative', zIndex:1 }}>
+      <div style={{ flex:1, overflowY:'auto', padding:isPhone?'28px 14px 16px':'36px 12px 18px', marginTop:isPhone?-18:-24, marginBottom:isPhone?-12:-18, background:isLightTheme?'transparent':'linear-gradient(180deg,rgba(240,168,64,.09),rgba(184,77,58,.08) 38%,rgba(16,11,9,.18))', position:'relative', zIndex:1 }}>
         {list.length===0 ? (() => {
           const statusOnly = new Set(fStatus);
           const isMysteryTab = statusOnly.size === 1 && statusOnly.has('misterioso');
@@ -4290,12 +4296,12 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
         <div style={{ height:6 }}/>
       </div>
 
-      <div data-animaldex-bottom-bar="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'6px 18px calc(6px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
+      <div data-animaldex-bottom-bar="true" data-animaldex-grid-bottom="true" style={{ background:ANIMALDEX_ORANGE_GRADIENT, borderTop:'none', padding:isPhone?'4px 18px calc(4px + env(safe-area-inset-bottom))':'7px 12px 6px', flexShrink:0, position:'relative', zIndex:2 }}>
         <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', gap:10 }}>
           <button data-tour="grid-search" onClick={()=>setShowSearchBar(!showSearchBar)} aria-label="Cerca" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', color:'#FFF', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
             <svg width="21" height="21" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" strokeWidth="1.7" fill="none"/><path d="M13 13L18 18" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"/></svg>
           </button>
-          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:isPhone?18:11, fontWeight:900, letterSpacing:'.1px' }}>{`${list.length} risultati`}</div>
+          <div style={{ flex:1, textAlign:'center', color:'rgba(255,255,255,.72)', fontSize:isPhone?16:11, fontWeight:900, letterSpacing:'.1px' }}>{`${list.length} risultati`}</div>
           <div style={{ display:'flex', alignItems:'center', gap:isNarrow?8:10, flexShrink:0 }}>
             <button onClick={()=>{setSheet('sort');setShowMenu(false);}} aria-label="Ordina" style={{ width:buttonSize, height:buttonSize, borderRadius:14, background:'rgba(0,0,0,.10)', border:'1px solid rgba(255,255,255,.08)', cursor:'pointer', display:'flex', alignItems:'center', justifyContent:'center', color:'white', flexShrink:0, boxShadow:tutorialStep==='grid-tools'?'0 0 0 3px rgba(240,168,64,.30), 0 0 24px rgba(240,168,64,.28)':'none' }}>
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14M8 19l-3-3M8 19l3-3M16 19V5M16 5l-3 3M16 5l3 3" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round"/></svg>
@@ -4308,7 +4314,7 @@ function Grid({ onSelect, statusMap = {}, visitedCountries = [], onHome, preset,
       </div>
 
       {showMenu && (
-        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 66px)':(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
+        <div style={{ position:'absolute', left:0, right:0, bottom:isPhone?'calc(env(safe-area-inset-bottom, 0px) + 54px)':(isNarrow?52:58), zIndex:45, padding:'0 10px 8px', pointerEvents:'none' }}>
           <div data-animaldex-bottom-bar="true" style={{ pointerEvents:'auto', background:isLightTheme?'rgba(251,247,239,.96)':'linear-gradient(180deg, rgba(35,28,24,.98), rgba(15,16,18,.98))', border:`1px solid ${isLightTheme?'rgba(0,0,0,.12)':'rgba(240,168,64,.18)'}`, boxShadow:'0 -18px 54px rgba(0,0,0,.46)', padding:isNarrow?10:12, maxHeight:'min(54dvh, 360px)', overflow:'hidden', animation:'animaldexFilterSheetUp .22s cubic-bezier(.2,.82,.2,1) both' }}>
             <div style={{ width:44, height:4, borderRadius:999, background:isLightTheme?'rgba(0,0,0,.18)':'rgba(255,255,255,.20)', margin:'0 auto 10px' }} />
             {!activeFilterDef ? (
